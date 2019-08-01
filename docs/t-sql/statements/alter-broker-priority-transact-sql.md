@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065999"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR CONVERSATION
  Spécifie le nom de la priorité de conversation à modifier. Le nom doit faire référence à une priorité de conversation dans la base de données active.  
   
  SET  
- Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. SET est requis et doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL.  
+ Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. SET est obligatoire et doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Spécifie le nom d'un contrat à utiliser comme critère pour déterminer si la priorité de conversation s'applique à une conversation. *ContractName* est un identificateur [!INCLUDE[ssDE](../../includes/ssde-md.md)], et vous devez spécifier le nom d’un contrat de base de données active.  
@@ -89,7 +88,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Spécifie le nom d'un service à utiliser comme critère pour déterminer si la priorité de conversation s'applique à un point de terminaison.  
   
- *RemoteServiceName* est un littéral de type **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *RemoteServiceName*. La comparaison respecte la casse et ne prend pas en compte le classement actuel. Le service cible peut être dans l'instance actuelle du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou dans une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* est un littéral de type **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *RemoteServiceName*. La comparaison respecte la casse et ne prend pas en compte le classement actuel. Le service cible peut être dans l'instance actuelle du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou dans une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Spécifie que la priorité de conversation doit être attribuée aux éléments suivants :  
@@ -108,12 +107,12 @@ FOR CONVERSATION
   
  Si PRIORITY_LEVEL n'est pas spécifié, la propriété du niveau de priorité de la conversation n'est pas modifiée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Aucune propriété modifiée par ALTER BROKER PRIORITY n'est appliquée aux conversations existantes. Les conversations existantes se poursuivent avec la priorité qui leur a été attribuée au démarrage.  
   
  Pour plus d’informations, consultez [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’autorisation de création d’une priorité de conversation est accordée par défaut aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner**, ainsi qu’aux membres du rôle serveur fixe **sysadmin**. Nécessite l'autorisation ALTER sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -139,7 +138,7 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129388"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  Mot de passe utilisé pour protéger la clé symétrique.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les clés symétriques ouvertes sont liées à la session et non au contexte de sécurité. Une clé ouverte est disponible tant qu'elle n'a pas été explicitement fermée ou que la session n'a pas été arrêtée. Si vous ouvrez une clé symétrique puis vous changez de contexte, la clé reste ouverte et disponible dans le contexte de substitution. Des informations relatives aux clés symétriques ouvertes sont consultables dans la vue de catalogue [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
  Si la clé symétrique a été chiffrée avec une autre clé, celle-ci doit être ouverte d'abord.  
@@ -79,10 +78,10 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
  Les clés symétriques créées à partir d'un fournisseur de chiffrement ne peuvent pas être ouvertes. Les opérations de chiffrement et déchiffrement utilisant ce type de clé symétrique s’exécutent sans l’instruction **OPEN** car le fournisseur de chiffrement ouvre et ferme la clé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'appelant doit disposer d'une autorisation sur la clé, et l'autorisation VIEW DEFINITION ne doit pas lui avoir été refusée sur la clé. D'autres conditions existent qui dépendent du mode de déchiffrement :  
   
--   ENCRYPTION BY CERTIFICATE : autorisation CONTROL sur le certificat et connaissance du mot de passe qui chiffre la clé privée.  
+-   DECRYPTION BY CERTIFICATE : autorisation CONTROL sur le certificat et connaissance du mot de passe qui chiffre la clé privée.  
   
 -   DECRYPTION BY ASYMMETRIC KEY : autorisation CONTROL sur la clé asymétrique et connaissance du mot de passe qui chiffre la clé privée.  
   
@@ -100,7 +99,7 @@ OPEN SYMMETRIC KEY SymKeyMarketing3
 GO  
 ```  
   
-### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>b. Ouverture d'une clé symétrique à l'aide d'une autre clé symétrique  
+### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. Ouverture d'une clé symétrique à l'aide d'une autre clé symétrique  
  L'exemple suivant ouvre la clé symétrique `MarketingKey11` et la déchiffre à l'aide de la clé symétrique `HarnpadoungsatayaSE3`.  
   
 ```  
@@ -114,7 +113,7 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   

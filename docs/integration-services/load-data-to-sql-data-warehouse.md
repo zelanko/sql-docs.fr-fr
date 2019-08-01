@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908632"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Charger des données dans Azure SQL Data Warehouse avec SSIS (SQL Server Integration Services)
 
@@ -53,8 +52,8 @@ SQL Server Integration Services (SSIS) est un ensemble d’outils flexible qui f
 Pour exécuter pas à pas ce tutoriel, vous avez besoin des éléments suivants :
 
 1. **SQL Server Integration Services (SSIS)** . SSIS est un composant de SQL Server et requiert une version sous licence, ou la version de développeur ou d’évaluation, de SQL Server. Pour obtenir une version d’évaluation de SQL Server, consultez [Évaluer SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
-2. **Visual Studio** (facultatif). Pour obtenir l’édition gratuite Visual Studio Community Edition, consultez [Visual Studio Community][Visual Studio Community]. Si vous ne souhaitez pas installer Visual Studio, vous pouvez installer uniquement SSDT (SQL Server Data Tools). SSDT installe une version de Visual Studio avec des fonctionnalités limitées.
-3. **SQL Server Data Tools pour Visual Studio (SSDT)** . Pour obtenir SQL Server Data Tools pour Visual Studio, consultez [Télécharger SSDT (SQL Server Data Tools)][Download SQL Server Data Tools (SSDT)].
+2. **Visual Studio** (facultatif). Pour obtenir l’édition Visual Studio Community gratuite, consultez [Visual Studio Community][Visual Studio Community]. Si vous ne souhaitez pas installer Visual Studio, vous pouvez installer uniquement SSDT (SQL Server Data Tools). SSDT installe une version de Visual Studio avec des fonctionnalités limitées.
+3. **SQL Server Data Tools pour Visual Studio (SSDT)** . Pour obtenir SQL Server Data Tools pour Visual Studio, consultez [Télécharger SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. **Base de données Azure SQL Data Warehouse et autorisations**. Dans ce didacticiel, vous vous connectez à une instance SQL Data Warehouse et y chargez des données. Vous devez disposer des autorisations pour vous connecter, créer une table et charger des données.
 
 ## <a name="create-a-new-integration-services-project"></a>Créer un projet Integration Services
@@ -79,7 +78,7 @@ La première approche est un package qui utilise la tâche de chargement SQL DW.
 
 Pour continuer le tutoriel avec cette option, vous avez besoin des éléments suivants :
 
-- [Microsoft SQL Server Integration Services Feature Pack pour Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. La tâche de chargement SQL DW est un composant de Feature Pack.
+- [Microsoft SQL Server Integration Services Feature Pack pour Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. La tâche de chargement SQL DW est un composant de Feature Pack.
 
 - Compte de [stockage Blob Azure](https://docs.microsoft.com/azure/storage/). La tâche de chargement SQL DW charge des données de Stockage Blob Azure vers Azure SQL Data Warehouse. Vous pouvez charger des fichiers qui se trouvent déjà dans Stockage Blob ou vous pouvez charger des fichiers à partir de votre ordinateur. Si vous sélectionnez des fichiers sur votre ordinateur, la tâche de chargement SQL DW les charge d’abord sur Stockage Blob pour la mise en lots, puis les charge sur SQL Data Warehouse.
 
@@ -97,7 +96,7 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
 
 Pour plus de contrôle, vous pouvez créer manuellement un package qui émule le travail effectué par la tâche de chargement SQL DW. 
 
-1. Utilisez la tâche de chargement d'objet blob Azure pour effectuer une copie intermédiaire des données dans Stockage Blob Azure. Pour obtenir la tâche de chargement d’objets blob Azure, téléchargez [Microsoft SQL Server Integration Services Feature Pack pour Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
+1. Utilisez la tâche de chargement d'objet blob Azure pour effectuer une copie intermédiaire des données dans Stockage Blob Azure. Pour obtenir la tâche de chargement d’objets blob Azure, téléchargez [Microsoft SQL Server Integration Services Feature Pack pour Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
 2. Ensuite, utilisez la tâche SSIS d’exécution de requêtes SQL pour lancer un script PolyBase qui charge les données dans SQL Data Warehouse. Pour obtenir un exemple qui charge des données de Stockage Blob Azure vers SQL Data Warehouse (mais pas avec SSIS), consultez [Tutoriel : Charger des données sur Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
@@ -190,7 +189,7 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
    
    1. Remplacez le nom de la table de destination par **SalesOrderDetail**.
    2. Supprimez la colonne **rowguid**. Le type de données **uniqueidentifier** n’est pas pris en charge dans SQL Data Warehouse.
-   3. Changez le type de données de la colonne **LineTotal** en spécifiant **money**. Le type de données **decimal** n’est pas pris en charge dans SQL Data Warehouse. Pour obtenir des informations sur les types de données pris en charge, consultez [CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
+   3. Changez le type de données de la colonne **LineTotal** en spécifiant **money**. Le type de données **decimal** n’est pas pris en charge dans SQL Data Warehouse. Pour obtenir des informations sur les types de données pris en charge, consultez [CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
       
        ![][12b]
    4. Cliquez sur **OK** pour créer la table et revenir à l’**Éditeur de destination ADO.NET**.
@@ -216,7 +215,7 @@ Félicitations ! Vous avez utilisé avec succès SQL Server Integration Services
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Découvrez comment déboguer et dépanner vos packages directement dans l’environnement de conception. Commencez ici : [Outils de dépannage pour le développement des packages][Troubleshooting Tools for Package Development].
+- Découvrez comment déboguer et dépanner vos packages directement dans l’environnement de conception. Commencez ici : [Outils de résolution des problèmes pour le développement de packages][Troubleshooting Tools for Package Development].
 
 - Découvrez comment déployer vos projets SSIS et vos packages sur le serveur Integration Services ou dans un autre emplacement de stockage. Commencez ici : [Déploiement de projets et de packages][Deployment of Projects and Packages].
 

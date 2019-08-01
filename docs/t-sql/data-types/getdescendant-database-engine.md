@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077974"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Null ou **hierarchyid** d’un enfant du nœud actuel.
   
 **Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Retourne un nœud enfant qui est un descendant du parent.
 -   Si le parent est NULL, retourne NULL.  
 -   Si parent n'est pas NULL et que enfant1 et enfant2 sont NULL, retourne un enfant du parent.  
@@ -82,7 +81,7 @@ VALUES
 'adventure-works\FirstNewEmployee', 'Application Intern', '3/11/07') ;  
 ```  
   
-### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>b. Insertion d'une ligne comme nœud descendant supérieur  
+### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Insertion d'une ligne comme nœud descendant supérieur  
 Un autre nouvel employé est embauché, avec le même responsable que dans l’exemple A. Exécutez le code suivant pour insérer la nouvelle ligne en utilisant la méthode GetDescendant à l’aide de l’argument child1 afin de spécifier que le nœud de la nouvelle ligne suit le nœud dans l’exemple A et devient `/3/1/2/` :
   
 ```sql

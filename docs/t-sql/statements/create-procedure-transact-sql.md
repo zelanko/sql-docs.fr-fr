@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006526"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,7 +156,7 @@ OR ALTER
   
  Évitez d’utiliser le préfixe **sp_** quand vous affectez un nom à une procédure. En effet, ce préfixe est utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour faire référence aux procédures système. L'utilisation de ce préfixe peut entraîner l'échec du code de l'application s'il existe une procédure système portant le même nom.  
   
- Des procédures temporaires locales ou globales peuvent être créées en faisant précéder *procedure_name* d’un seul signe dièse (#) (*#procedure_name*) pour les procédures temporaires locales et de deux signes dièse (*##procedure_name*) pour les procédures temporaires globales. Une procédure temporaire locale n'est visible que par la connexion qui l'a créée et est automatiquement supprimée au moment de la déconnexion. Une procédure temporaire globale est disponible pour toutes les connexions et est supprimée à la fin de la dernière session qui l'utilise. Des noms temporaires ne peuvent pas être indiqués pour les procédures CLR.  
+ Des procédures temporaires locales ou globales peuvent être créées en faisant précéder *procedure_name* d’un seul signe dièse (#) ( *#procedure_name*) pour les procédures temporaires locales et de deux signes dièse ( *##procedure_name*) pour les procédures temporaires globales. Une procédure temporaire locale n'est visible que par la connexion qui l'a créée et est automatiquement supprimée au moment de la déconnexion. Une procédure temporaire globale est disponible pour toutes les connexions et est supprimée à la fin de la dernière session qui l'utilise. Des noms temporaires ne peuvent pas être indiqués pour les procédures CLR.  
   
  Le nom complet d'une procédure ou d'une procédure temporaire globale, y compris les signes ##, ne peut dépasser 128 caractères. Le nom complet d'une procédure temporaire locale, y compris le signe #, ne peut dépasser 116 caractères.  
   
@@ -178,7 +177,7 @@ OR ALTER
   
  Il n'est pas possible de déclarer des paramètres si FOR REPLICATION est spécifié.  
   
- [ _type\_schema\_name_**.** *data_type*  
+ [ _type\_schema\_name_ **.** *data_type*  
  Type de données du paramètre et du schéma auquel le type de données appartient.  
   
 **Instructions pour les procédures [!INCLUDE[tsql](../../includes/tsql-md.md)]**  :  
@@ -242,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] comprenant le corps de la procédure. Vous pouvez utiliser les mots clés facultatifs BEGIN et END pour délimiter les instructions. Pour plus d'informations, consultez les sections suivantes intitulées Meilleures pratiques, Remarques d'ordre général et Limitations et restrictions.  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Spécifie la méthode d'un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour une procédure CLR à référencer. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister comme classe dans l’assembly. Si la classe possède un nom qualifié par un espace de noms qui utilise un point (**.**) pour séparer les parties constituant l’espace de noms, le nom de la classe doit être délimité à l’aide de crochets (**[]**) ou de guillemets droits (**""**). La méthode spécifiée doit être une méthode statique de la classe.  
+ Spécifie la méthode d'un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour une procédure CLR à référencer. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister comme classe dans l’assembly. Si la classe possède un nom qualifié par un espace de noms qui utilise un point ( **.** ) pour séparer les parties constituant l’espace de noms, le nom de la classe doit être délimité à l’aide de crochets ( **[]** ) ou de guillemets droits ( **""** ). La méthode spécifiée doit être une méthode statique de la classe.  
   
  Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas exécuter du code CLR. Vous pouvez créer, modifier et supprimer des objets d’une base de données qui font référence à des modules CLR (Common Language Runtime) ; cependant, vous ne pouvez pas exécuter ces références dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que vous n’avez pas activé l’[option CLR enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Pour activer cette option, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -285,7 +284,7 @@ NATIVE_COMPILATION
 SCHEMABINDING  
  **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Garantit que les tables référencées par une procédure ne peuvent pas être supprimées ou modifiées. SCHEMABINDING est requis dans les procédures stockées compilées en mode natif. (Pour plus d’informations, consultez [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).) Les restrictions SCHEMABINDING sont les mêmes que pour les fonctions définies par l'utilisateur. Pour plus d’informations, consultez la section SCHEMABINDING dans [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+ Garantit que les tables référencées par une procédure ne peuvent pas être supprimées ou modifiées. SCHEMABINDING est requis dans les procédures stockées compilées en mode natif. (Pour plus d’informations, consultez [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).) Les restrictions SCHEMABINDING sont les mêmes que pour les fonctions définies par l’utilisateur. Pour plus d’informations, consultez la section SCHEMABINDING dans [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 LANGUAGE = [N] 'language'  
  **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -344,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 ```   
 Appelez la procédure stockée avec l’instruction : `EXEC What_DB_is_this;`   
 
-Il est légèrement plus complexe de fournir un paramètre d’entrée pour rendre la procédure plus souple. Exemple :  
+Il est légèrement plus complexe de fournir un paramètre d’entrée pour rendre la procédure plus souple. Par exemple :  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
@@ -452,15 +451,15 @@ GO
   
 |Nom de l'objet de l'Analyseur de performances|Nom du compteur de l'Analyseur de performances|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: objet Plan Cache|Taux d'accès au cache|  
+|SQLServer : objet Plan Cache|Taux d'accès au cache|  
 ||Pages du cache|  
 ||Nombre d'objets cache*|  
   
- * Ces compteurs sont disponibles pour diverses catégories d'objets du cache, y compris [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, [!INCLUDE[tsql](../../includes/tsql-md.md)] préparé, procédures, déclencheurs, etc. Pour plus d’informations, consultez [SQL Server - Objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
+ \* Ces compteurs sont disponibles pour diverses catégories d'objets du cache, y compris [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, [!INCLUDE[tsql](../../includes/tsql-md.md)] préparé, procédures, déclencheurs, etc. Pour plus d’informations, consultez [SQL Server - Objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **CREATE PROCEDURE** dans la base de données et l’autorisation **ALTER** sur le schéma dans lequel la procédure est créée, ou nécessite l’appartenance au rôle de base de données fixe **db_ddladmin**.  
   
  Dans le cas de procédures stockées CLR, vous devez être propriétaire de l’assembly référencé dans la clause EXTERNAL NAME ou disposer de l’autorisation **REFERENCES** sur cet assembly.  
@@ -529,7 +528,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>b. Renvoi de plusieurs jeux de résultats  
+#### <a name="b-returning-more-than-one-result-set"></a>B. Renvoi de plusieurs jeux de résultats  
  La procédure suivante renvoie deux jeux de résultats.  
   
 ```sql  
@@ -990,7 +989,7 @@ GO
 EXEC Get10TopResellers;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [Curseurs](../../relational-databases/cursors.md)   

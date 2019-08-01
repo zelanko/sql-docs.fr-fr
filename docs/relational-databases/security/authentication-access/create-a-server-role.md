@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1467b692a574d7f3497d5f0426a841543cdeee76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094955"
 ---
 # <a name="create-a-server-role"></a>Créer un rôle serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "52520899"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Requiert l’autorisation CREATE SERVER ROLE ou l’appartenance au rôle serveur fixe sysadmin.  
   
@@ -70,15 +69,15 @@ ms.locfileid: "52520899"
   
 2.  Développez le dossier **Sécurité** .  
   
-3.  Cliquez avec le bouton droit sur le dossier **Rôles de serveur**, puis sélectionnez **Nouveau rôle de serveur...**.  
+3.  Cliquez avec le bouton droit sur le dossier **Rôles de serveur**, puis sélectionnez **Nouveau rôle de serveur...** .  
   
-4.  Dans la boîte de dialogue **Nouveau rôle de serveur –**_nom\_rôle\_serveur_, dans la page **Général**, entrez le nom du nouveau rôle de serveur dans la zone **Nom du rôle de serveur**.  
+4.  Dans la boîte de dialogue **Nouveau rôle de serveur –** _nom\_rôle\_serveur_, dans la page **Général**, entrez le nom du nouveau rôle de serveur dans la zone **Nom du rôle de serveur**.  
   
 5.  Dans la zone **Propriétaire** , entrez le nom du principal de serveur qui détiendra le nouveau rôle. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur**.  
   
 6.  Sous **Éléments sécurisables**, sélectionnez un ou plusieurs éléments sécurisables au niveau du serveur. Lorsqu'un élément sécurisable est sélectionné, ce rôle de serveur peut se voir accorder ou refuser des autorisations sur cet élément sécurisable.  
   
-7.  Dans la zone **Autorisations : explicite** , activez la case à cocher pour accorder, accorder avec transmission des droits, ou refuser une autorisation d'accès à ce rôle serveur pour les éléments sécurisables sélectionnés. Si une autorisation ne peut pas être accordée ou refusée à tous les éléments sécurisables sélectionnés, l'autorisation est représentée sous forme de sélection partielle.  
+7.  Dans la zone **Autorisations : explicite**, cochez la case pour accorder, accorder avec transmission des droits, ou refuser une autorisation d’accès à ce rôle serveur pour les éléments sécurisables sélectionnés. Si une autorisation ne peut pas être accordée ou refusée à tous les éléments sécurisables sélectionnés, l'autorisation est représentée sous forme de sélection partielle.  
   
 8.  Dans la page **Membres** , utilisez le bouton **Ajouter** pour ajouter des connexions qui représentent des individus ou des groupes au nouveau rôle serveur.  
   

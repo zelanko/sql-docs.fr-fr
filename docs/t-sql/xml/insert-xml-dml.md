@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051288"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ insert
   
 ## <a name="arguments"></a>Arguments  
  *Expression1*  
- Identifie un ou plusieurs nœuds à insérer. Il peut s’agir d’une instance XML constante, d’une référence à une instance de type de données XML typée de la même collection de schémas XML à laquelle la méthode modify est appliquée, d’une instance de type de données XML non typée à l’aide d’une fonction **sql:column()**/**sql:variable()** autonome ou encore d’une expression de requête Xml. L'expression peut résulter en un nœud, un nœud de texte ou une séquence ordonnée de nœuds. Le résultat ne peut pas être le nœud racine (/). Si l'expression a pour résultat une valeur ou une séquence de valeurs, ces valeurs sont insérées en tant que nœud de texte unique avec un espace séparant chaque valeur dans la séquence. Si vous spécifiez plusieurs nœuds sous la forme d'une constante, les nœuds sont inclus entre parenthèses et sont séparés par des virgules. Vous ne pouvez pas insérer des séquences hétérogènes telles qu'une séquence d'éléments, d'attributs ou de valeurs. Si *Expression1* est une séquence vide, aucune insertion n’a lieu et aucune erreur n’est retournée.  
+ Identifie un ou plusieurs nœuds à insérer. Il peut s’agir d’une instance XML constante, d’une référence à une instance de type de données XML typée de la même collection de schémas XML à laquelle la méthode modify est appliquée, d’une instance de type de données XML non typée à l’aide d’une fonction **sql:column()** /**sql:variable()** autonome ou encore d’une expression de requête Xml. L'expression peut résulter en un nœud, un nœud de texte ou une séquence ordonnée de nœuds. Le résultat ne peut pas être le nœud racine (/). Si l'expression a pour résultat une valeur ou une séquence de valeurs, ces valeurs sont insérées en tant que nœud de texte unique avec un espace séparant chaque valeur dans la séquence. Si vous spécifiez plusieurs nœuds sous la forme d'une constante, les nœuds sont inclus entre parenthèses et sont séparés par des virgules. Vous ne pouvez pas insérer des séquences hétérogènes telles qu'une séquence d'éléments, d'attributs ou de valeurs. Si *Expression1* est une séquence vide, aucune insertion n’a lieu et aucune erreur n’est retournée.  
   
  en  
  Les nœuds identifiés par *Expression1* sont insérés en tant que descendants directs (nœuds enfants) du nœud identifié par *Expression2*. Si le nœud dans *Expression2* a déjà un ou plusieurs nœuds enfants, vous devez utiliser **as first** ou **as last** pour spécifier où le nouveau nœud doit être ajouté. Par exemple, respectivement au début et à la fin de la liste des enfants. Les mots clés **as first** et **as last** sont ignorés lorsque des attributs sont insérés.  
@@ -105,7 +104,7 @@ GO
   
  Notez que des expressions de chemin d'accès différentes dans cet exemple spécifient "[1]" comme exigence par type statique. Cela garantit l'unicité du nœud cible.  
   
-### <a name="b-inserting-multiple-elements-into-the-document"></a>b. Insertion de plusieurs éléments dans le document  
+### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Insertion de plusieurs éléments dans le document  
  Dans l’exemple suivant, un document est affecté au préalable à une variable de type **xml**. Ensuite, une séquence de deux éléments, représentant les caractéristiques du produit, est affectée à une deuxième variable de type **xml**. Cette séquence est alors insérée dans la première variable.  
   
 ```  
@@ -212,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. Insertion de données à l'aide d'une section CDATA  
- Lorsque vous insérez du texte qui inclut des caractères non valides en XML, tels que < ou >, vous pouvez utiliser des sections CDATA pour insérer les données comme cela est illustré dans la requête ci-dessous. La requête spécifie une section CDATA, mais elle est ajoutée comme nœud de texte avec les caractères non valides convertis en entités. Par exemple, '<' est enregistré sous la forme &lt;.  
+ Quand vous insérez du texte qui inclut des caractères non valides en XML, tels que < ou >, vous pouvez utiliser des sections CDATA pour insérer les données comme cela est illustré dans la requête ci-dessous. La requête spécifie une section CDATA, mais elle est ajoutée comme nœud de texte avec les caractères non valides convertis en entités. Par exemple, '<' est enregistré sous la forme &lt;.  
   
 ```  
 USE AdventureWorks;  
@@ -232,7 +231,7 @@ SELECT @myDoc ;
 GO  
 ```  
   
- La requête insère un nœud de texte dans l'élément <`Features`> :  
+ La requête insère un nœud de texte dans l’élément <`Features`> :  
   
 ```  
 <Root>  
@@ -243,7 +242,7 @@ GO
 ```  
   
 ### <a name="g-inserting-text-node"></a>G. Insertion d'un nœud de texte  
- Dans cette requête, un document XML est d’abord affecté à une variable de type **xml**. Ensuite, XML DML est utilisé pour insérer un nœud de texte comme premier enfant de l'élément <`Root`>. Le constructeur de texte est utilisé pour spécifier le texte.  
+ Dans cette requête, un document XML est d’abord affecté à une variable de type **xml**. Ensuite, XML DML est utilisé pour insérer un nœud de texte comme premier enfant de l’élément <`Root`>. Le constructeur de texte est utilisé pour spécifier le texte.  
   
 ```  
 USE AdventureWorks;  
@@ -289,7 +288,7 @@ SET x.modify('insert <Material>Aluminium</Material> as first
 GO  
 ```  
   
- De nouveau, lorsque le nœud d'élément <`Material`> est inséré, l'expression de chemin d'accès doit retourner une seule cible. Cela est spécifié explicitement par l'ajout de [1] à la fin de l'expression.  
+ De nouveau, quand le nœud d’élément <`Material`> est inséré, l’expression de chemin d’accès doit retourner une seule cible. Cela est spécifié explicitement par l'ajout de [1] à la fin de l'expression.  
   
 ```  
 -- check the update  
@@ -299,7 +298,7 @@ GO
 ```  
   
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. Insertion basée sur une instruction de condition if  
- Dans l’exemple suivant, une condition IF est spécifiée dans le cadre d’Expression1, dans l’instruction DML XML **insert**. Si la condition a la valeur True, un attribut est ajouté à l'élément <`WorkCenter`>.  
+ Dans l’exemple suivant, une condition IF est spécifiée dans le cadre d’Expression1, dans l’instruction DML XML **insert**. Si la condition a la valeur True, un attribut est ajouté à l’élément <`WorkCenter`>.  
   
 ```  
 USE AdventureWorks;  
@@ -323,7 +322,7 @@ SELECT @myDoc;
 GO  
 ```  
   
- L’exemple suivant est similaire, si ce n’est que l’instruction DML XML **insert** insère un élément dans le document si la condition a la valeur True. C'est-à-dire, si l'élément <`WorkCenter`> possède deux ou moins de deux éléments enfants <`step`>.  
+ L’exemple suivant est similaire, si ce n’est que l’instruction DML XML **insert** insère un élément dans le document si la condition a la valeur True. C'est-à-dire, si l’élément <`WorkCenter`> possède deux ou moins de deux éléments enfants <`step`>.  
   
 ```  
 USE AdventureWorks;  
@@ -408,7 +407,7 @@ DROP TABLE T ;
 GO             
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   

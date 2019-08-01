@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e6f9b1731e49f110da9ac4dbab5ab782f30ba4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017659"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47735217"
   
  Vous pouvez appliquer plusieurs contraintes CHECK à une seule colonne. Vous pouvez aussi appliquer une seule contrainte CHECK à plusieurs colonnes en la créant au niveau de la table. Ainsi, vous pouvez utiliser une contrainte CHECK sur plusieurs colonnes pour confirmer que les lignes comportant la valeur **USA** dans leur colonne **country_region** possèdent également une valeur à deux caractères dans leur colonne **state** . Cela permet de vérifier plusieurs conditions au même emplacement.  
   
- Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. Leur différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : les contraintes FOREIGN KEY obtiennent la liste des valeurs valides d'une autre table, tandis que les contraintes CHECK déterminent ces valeurs sur la base d'une expression logique.  
+ Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. Leur différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : les contraintes FOREIGN KEY obtiennent la liste des valeurs valides d’une autre table, tandis que les contraintes CHECK déterminent ces valeurs sur la base d’une expression logique.  
   
 > [!CAUTION]  
 >  Les contraintes qui incluent une conversion de type de données implicite ou explicite peuvent causer l'échec de certaines opérations. Par exemple, ces contraintes définies sur des tables qui sont les sources d'une commutation de partition peuvent causer l'échec d'une opération ALTER TABLE...SWITCH. Évitez les conversions de types de données dans les définitions des contraintes.  

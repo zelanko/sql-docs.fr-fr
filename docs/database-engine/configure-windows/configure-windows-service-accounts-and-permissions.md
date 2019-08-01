@@ -50,13 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: deac964cb20d64d7a1dc2d1cc1e76f5004d80033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c91c4e9a432992475daef8a987dea2dc9adf913
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803292"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290374"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ ms.locfileid: "66803292"
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** : un ou plusieurs ordinateurs clients Distributed Replay qui opèrent avec un contrôleur Distributed Replay pour simuler des charges de travail simultanées sur une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  : service approuvé hébergeant les exécutables externes fournis par Microsoft, tels que le composant d’exécution R installé avec [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Le processus Launchpad peut lancer des processus satellites dont les ressources seront régies par la configuration de l’instance. Le service Launchpad s’exécute sous son propre compte d’utilisateur, et chaque processus satellite d’une exécution déclarée hérite du compte d’utilisateur de Launchpad. Les processus satellites sont créés et détruits à la demande pendant l’exécution.
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  : service approuvé hébergeant les exécutables externes fournis par Microsoft, tels que les runtimes R ou Python installés dans le cadre de R Services ou de Machine Learning Services. Le processus Launchpad peut lancer des processus satellites dont les ressources seront régies par la configuration de l’instance. Le service Launchpad s’exécute sous son propre compte d’utilisateur, et chaque processus satellite d’une exécution déclarée hérite du compte d’utilisateur de Launchpad. Les processus satellites sont créés et détruits à la demande pendant l’exécution.
 
     LaunchPad ne peut pas créer les comptes qu’elle utilise si vous installez SQL Server sur un ordinateur qui est également utilisé comme un contrôleur de domaine. Par conséquent, l’installation de R Services (en base de données) ou de Machine Learning Services (en base de données) échoue sur un contrôleur de domaine.
 
@@ -232,7 +231,7 @@ Le tableau suivant répertorie les services [!INCLUDE[ssNoVersion](../../include
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
+|R Services ou Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |Moteur PolyBase| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  \*Pour obtenir plus d’informations et un exemple de syntaxe pour des installations sans assistance, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
@@ -301,8 +300,8 @@ Cette section décrit les autorisations configurées par le programme d’instal
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client :**|**Ouvrir une session en tant que service** (SeServiceLogonRight)|  
 |**Moteur PolyBase et DMS**| **Ouvrir une session en tant que service** (SeServiceLogonRight)  |   
 |**Launchpad :**|**Ouvrir une session en tant que service** (SeServiceLogonRight) <br /><br /> **Remplacer un jeton de niveau processus** (SeAssignPrimaryTokenPrivilege)<br /><br />**Ignorer la vérification transversale** (SeChangeNotifyPrivilege)<br /><br />**Ajuster les quotas de mémoire pour un processus** (SeIncreaseQuotaPrivilege)|     
-|**R Services :** **SQLRUserGroup** (SQL 2016 et 2017)  |**Permettre l’ouverture d’une session locale** |   
-|**Machine Learning** '**Tous les packages d’application' [AppContainer]** (SQL 2019)  |**Autorisations Lire et exécuter** pour les répertoires SQL Server 'Binn', R_Services et PYTHON_Services |   
+|**R Services/Machine Learning Services :** **SQLRUserGroup** (SQL 2016 et 2017)  |Ne dispose pas par défaut de l’autorisation **Permettre l’ouverture d’une session locale** |   
+|**Machine Learning Services** **'Tous les packages d’application' [AppContainer]** (SQL 2019)  |**Autorisations Lire et exécuter** pour les répertoires SQL Server 'Binn', R_Services et PYTHON_Services |   
 
  \*Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est désactivé sur les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

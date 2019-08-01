@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100463"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,9 +146,9 @@ ms.locfileid: "54136119"
   
 1.  Dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur **Microsoft SQL Server**et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Dans le nœud **Services SQL Server** , cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, **SQL Server (MSSQLSERVER)**), puis cliquez sur **Propriétés**.  
+2.  Dans le nœud **Services SQL Server** , cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, **SQL Server (MSSQLSERVER)** ), puis cliquez sur **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server (**_nom_instance_**)** , cliquez sur l’onglet **Paramètres de démarrage** .  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server (** _nom_instance_ **)** , cliquez sur l’onglet **Paramètres de démarrage** .  
   
 4.  Dans la zone **Paramètres existants**, sélectionnez le paramètre -d pour déplacer le fichier de données MASTER. Cliquez sur **Mettre à jour** pour enregistrer les modifications.  
   
@@ -192,7 +191,7 @@ ms.locfileid: "54136119"
 ##  <a name="Resource"></a> Déplacement de la base de données Resources  
  L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
   
-##  <a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
+##  <a name="Follow"></a> Suivi : Après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
   
 -   Modifiez le chemin d'accès du journal de l'Agent SQL Server. Si vous ne mettez pas à jour ce chemin d'accès, l'Agent SQL Server ne démarre pas.  
@@ -259,7 +258,7 @@ ms.locfileid: "54136119"
   
 5.  Supprimez les fichiers `tempdb.mdf` et `templog.ldf` de l'emplacement d'origine.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Base de données Resource](../../relational-databases/databases/resource-database.md)   
  [Base de données tempdb](../../relational-databases/databases/tempdb-database.md)   
  [Base de données master](../../relational-databases/databases/master-database.md)   

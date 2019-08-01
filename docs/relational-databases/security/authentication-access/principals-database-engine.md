@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632695"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344599"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. Le champ d'influence d'un principal dépend de l'étendue de sa définition : Windows, serveur, base de données, et du fait qu'il est indivisible ou qu'il s'agit d'une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID). Cette rubrique s’applique à toutes les versions de SQL Server, mais il existe certaines restrictions sur les principaux au niveau du serveur dans SQL Database ou SQL Data Warehouse. 
+  Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. La portée de l’influence d’un principal dépend de la portée de sa définition : Windows, serveur, base de données ; et du fait que le principal est indivisible ou qu'il s’agit d’une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID). Cette rubrique s’applique à toutes les versions de SQL Server, mais il existe certaines restrictions sur les principaux au niveau du serveur dans SQL Database ou SQL Data Warehouse. 
   
 ## <a name="sql-server-level-principals"></a>Principaux au niveau de SQL Server  
   
@@ -53,12 +52,12 @@ ms.locfileid: "47632695"
   
 ## <a name="database-level-principals"></a>Principaux au niveau des bases de données
   
-- Utilisateur de base de données (il existe 11 types d’utilisateurs. Pour plus d’informations, consultez [CREATE USER ](../../../t-sql/statements/create-user-transact-sql.md).)
+- Utilisateur de base de données (il existe 12 types d’utilisateurs. Pour plus d’informations, consultez [CREATE USER ](../../../t-sql/statements/create-user-transact-sql.md).)
 - Rôle de base de données
 - Rôle d'application
   
 ## <a name="sa-login"></a>Connexion sa  
- La connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` est un principal au niveau du serveur. Par défaut, elle est créée lorsqu'une instance est installée. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de données par défaut de sa est MASTER. Il s'agit là d'une différence par rapport aux versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La connexion `sa` est un membre du rôle de base de données fixe `sysadmin`. La connexion `sa` a toutes les autorisations sur le serveur et ne peut pas être limitée. La connexion `sa` ne peut pas être supprimée, mais elle peut être désactivée afin que personne ne puisse l’utiliser.
+ La connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` est un principal au niveau du serveur. Par défaut, elle est créée lorsqu'une instance est installée. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de données par défaut de sa est MASTER. Il s'agit là d'une différence par rapport aux versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La connexion `sa` est un membre du rôle au niveau du serveur fixe `sysadmin`. La connexion `sa` a toutes les autorisations sur le serveur et ne peut pas être limitée. La connexion `sa` ne peut pas être supprimée, mais elle peut être désactivée afin que personne ne puisse l’utiliser.
 
 ## <a name="dbo-user-and-dbo-schema"></a>Utilisateur dbo et schéma dbo
 
@@ -101,7 +100,7 @@ Chaque connexion appartient au rôle serveur fixe `public` et chaque utilisateur
   
 -   [Rôles d'applications](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

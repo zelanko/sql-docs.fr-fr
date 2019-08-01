@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85643186d92e2033fc909ae166533cac0e18f44d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbe9c2805a6e8b5354207534b5758c28081011e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121284"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publication de l'exécution de procédures stockées dans la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Si vous avez une ou plusieurs procédures stockées qui s'exécutent sur le serveur de publication et qui affectent des tables publiées, vous pouvez envisager d'inclure ces procédures stockées dans votre publication en tant qu'articles d'exécution de procédure stockée. La définition de la procédure (l'instruction CREATE PROCEDURE) est répliquée vers l'Abonné quand l'abonnement est initialisé ; quand la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante sur l'Abonné. Cela peut apporter des performances significativement meilleures dans les cas où de grosses opérations de traitement sont effectuées, car seule l'exécution de la procédure est répliquée, ce qui élimine la nécessité de répliquer les modifications individuelles pour chaque ligne. Supposons par exemple que vous créez la procédure stockée suivante dans la base de données de publication :  
+  Si vous avez une ou plusieurs procédures stockées qui s'exécutent sur le serveur de publication et qui affectent des tables publiées, vous pouvez envisager d'inclure ces procédures stockées dans votre publication en tant qu'articles d'exécution de procédure stockée. La définition de la procédure (l'instruction CREATE PROCEDURE) est répliquée vers l'Abonné quand l'abonnement est initialisé ; quand la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante sur l'Abonné. Cela peut apporter des performances significativement meilleures dans les cas où de grosses opérations de traitement sont effectuées, car seule l'exécution de la procédure est répliquée, ce qui élimine la nécessité de répliquer les modifications individuelles pour chaque ligne. Supposons par exemple que vous créez la procédure stockée suivante dans la base de données de publication :  
   
 ```  
 CREATE PROC give_raise AS  
@@ -54,7 +53,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio : [Publier l’exécution d’une procédure stockée dans une publication transactionnelle &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programmation Transact-SQL de la réplication : exécutez [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) et spécifiez la valeur 'serializable proc exec' (recommandé) ou 'proc exec' pour le paramètre **@type**. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programmation Transact-SQL de la réplication : exécutez [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) et spécifiez la valeur 'serializable proc exec' (recommandé) ou 'proc exec' pour le paramètre **@type** . Pour plus d’informations sur la définition d’articles, consultez [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modification de la procédure sur l'Abonné  
  Par défaut, la définition de la procédure stockée sur le serveur de publication est propagée vers chaque Abonné. Cependant, vous pouvez aussi modifier la procédure stockée sur l'Abonné. Ceci est utile si vous souhaitez que des logiques différentes soient exécutées sur le serveur de publication et sur l'Abonné. Considérons par exemple la procédure stockée sur le serveur de publication **sp_big_delete**, qui a deux fonctions : elle supprime 1 000 000 de lignes de la table répliquée **big_table1** et met à jour la table non répliquée **big_table2**. Pour solliciter moins de ressources réseau, vous pouvez transmettre la suppression de ce million de lignes en tant que procédure stockée en publiant **sp_big_delete**. Sur l'Abonné, vous pouvez modifier **sp_big_delete** afin qu'elle supprime le million de lignes sans effectuer ensuite la mise à jour de **big_table2**.  
@@ -95,7 +94,7 @@ COMMIT TRANSACTION T2
   
  Si vous devez définir le paramètre XACT_ABORT à OFF, spécifiez le paramètre **-SkipErrors** pour l'Agent de distribution. Cela permet à l'agent de continuer l'application des modifications sur l'Abonné même si une erreur est rencontrée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

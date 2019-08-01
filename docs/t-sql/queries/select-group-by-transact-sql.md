@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948426"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -345,7 +344,7 @@ La clause GROUP BY prend en charge toutes les fonctions GROUP BY incluses dans l
 |Fonctionnalité|SQL Server Integration Services|Niveau de compatibilité SQL Server 100 ou supérieur|SQL Server 2008 ou version ultérieure avec niveau de compatibilité 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agrégats DISTINCT|Non pris en charge pour WITH CUBE ou WITH ROLLUP.|Pris en charge pour WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE ou ROLLUP.|Identique au niveau de comptabilité 100.|  
-|Fonction définie par l'utilisateur avec nom CUBE ou ROLLUP dans la clause GROUP BY|Les fonctions définies par l’utilisateur **dbo.cube(**_arg1_**,**_...argN_**)** ou **dbo.rollup(**_arg1_**,**..._argN_**)** dans la clause GROUP BY sont autorisées.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Les fonctions définies par l’utilisateur **dbo.cube (**_arg1_**,**...argN **)** ou **dbo.rollup(** arg1 **,**_...argN_**)** dans la clause GROUP BY ne sont pas autorisées.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Le message d'erreur suivant est retourné : « Syntaxe incorrecte près du mot clé 'cube'&#124;'rollup'. »<br /><br /> Pour éviter ce problème, remplacez `dbo.cube` par `[dbo].[cube]` ou `dbo.rollup` par `[dbo].[rollup]`.<br /><br /> L’exemple suivant est autorisé : `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Les fonctions définies par l’utilisateur **dbo.cube (**_arg1_**,**_...argN_) ou **dbo.rollup(**_arg1_**,**_...argN_**)** dans la clause GROUP BY sont autorisées<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Fonction définie par l'utilisateur avec nom CUBE ou ROLLUP dans la clause GROUP BY|Les fonctions définies par l’utilisateur **dbo.cube(** _arg1_ **,** _...argN_ **)** ou **dbo.rollup(** _arg1_ **,** ..._argN_ **)** dans la clause GROUP BY sont autorisées.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Les fonctions définies par l’utilisateur **dbo.cube (** _arg1_ **,** ...argN **)** ou **dbo.rollup(** arg1 **,** _...argN_ **)** dans la clause GROUP BY ne sont pas autorisées.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Le message d’erreur suivant est retourné : « Syntaxe incorrecte près du mot clé 'cube'&#124;'rollup'. »<br /><br /> Pour éviter ce problème, remplacez `dbo.cube` par `[dbo].[cube]` ou `dbo.rollup` par `[dbo].[rollup]`.<br /><br /> L’exemple suivant est autorisé : `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Les fonctions définies par l’utilisateur **dbo.cube (** _arg1_ **,** _...argN_) ou **dbo.rollup(** _arg1_ **,** _...argN_ **)** dans la clause GROUP BY sont autorisées<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Non pris en charge|Pris en charge|Pris en charge|  
 |CUBE|Non pris en charge|Pris en charge|Non pris en charge|  
 |ROLLUP|Non pris en charge|Pris en charge|Non pris en charge|  
@@ -369,7 +368,7 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>b. Utiliser une clause GROUP BY avec plusieurs tables  
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Utiliser une clause GROUP BY avec plusieurs tables  
  L'exemple suivant extrait le nombre d'employés pour chaque `City` de la table `Address` en conjonction avec la table `EmployeeAddress`. Cet exemple utilise AdventureWorks. 
   
 ```sql  
@@ -466,7 +465,7 @@ HAVING OrderDateKey > 20040000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
  [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   

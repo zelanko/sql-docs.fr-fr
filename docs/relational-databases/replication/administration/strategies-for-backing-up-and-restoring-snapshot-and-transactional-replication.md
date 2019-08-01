@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948682"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "54125269"
   
  **Pour définir l'option sync with backup**  
   
--   Programmation de la réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication : [Activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restauration des bases de données concernées par la réplication  
  Il est possible de restaurer toutes les bases de données d'une topologie de réplication s'il existe des sauvegardes récentes et si vous respectez la procédure indiquée. Les étapes de restauration de la base de données de publication dépendent du type de réplication et des options utilisées, ce qui n'est pas le cas pour toutes les autres bases de données.  
@@ -215,7 +214,7 @@ ms.locfileid: "54125269"
   
 9. Après la restauration, la plage d’identité assignée à chaque table de la base de données **A** est également utilisée dans la base de données **B**. Vérifiez que la base de données **B** restaurée a reçu toutes les modifications de la base de données **B** défaillante qui ont été propagées aux bases de données **A** et **C**, puis réattribuez une valeur de départ à la plage d’identité de chaque table.  
   
-    1.  Exécutez [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) sur la base de données **B** et récupérez le paramètre de sortie **@request_id**. Passez à l'étape b.  
+    1.  Exécutez [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) sur la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape b.  
   
     2.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Pour plus d’informations, consultez [Concepts des exécutables de l’agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) ou [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Passez à l'étape c.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125269"
   
     1.  Arrêtez toute activité sur les tables publiées dans la topologie d'égal à égal. Passez à l'étape b.  
   
-    2.  Exécutez [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) sur la base de données **B** et récupérez le paramètre de sortie **@request_id**. Passez à l'étape c.  
+    2.  Exécutez [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) sur la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape c.  
   
     3.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Passez à l'étape d.  
   
@@ -347,7 +346,7 @@ ms.locfileid: "54125269"
   
 2.  Vérifiez que les paramètres et la configuration de réplication de la base de données et ceux de la base de données de publication sont cohérents.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md)   

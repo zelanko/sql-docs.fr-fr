@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 192627d1050d7c8c87d99231770ba6bb957ac8c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 240b21b204453eb6e3645aceb3045cd9048dd84b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083033"
 ---
 # <a name="monitor-replication-agents"></a>Surveiller des Agents de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54124000"
   
     -   Agent de lecture de la file d'attente  
   
-     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Agents** (disponible pour chaque serveur de publication et publication) et **Avertissements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Accédez aux informations et aux tâches associées à ces agents par le biais des onglets suivants : **Agents** (disponible pour chaque serveur de publication et publication) et **Avertissements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Les agents suivants sont associés à des abonnements dans le moniteur de réplication :  
   
@@ -47,7 +46,7 @@ ms.locfileid: "54124000"
   
     -   Agent de fusion  
   
-     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Liste de suivi des abonnements** (disponible pour chaque serveur de publication) ou **Tous les abonnements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Accédez aux informations et aux tâches associées à ces agents par le biais des onglets suivants : **Liste de suivi des abonnements** (disponible pour chaque serveur de publication) ou **Tous les abonnements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Utiliser SQL Server Management Studio pour surveiller les agents de réplication  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] fournit les boîtes de dialogue suivantes pour la surveillance des agents de réplication :  
@@ -118,7 +117,7 @@ ms.locfileid: "54124000"
   
 5.  Cliquez sur **Fermer**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation des Agents de réplication](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

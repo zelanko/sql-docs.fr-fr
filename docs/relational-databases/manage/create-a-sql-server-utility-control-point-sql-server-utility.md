@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 398820f012e60181ec6327a67fd5e1abb7adc407
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115687"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "52503589"
   
 -   Nous recommandons d'héberger l'UCP sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]qui respecte la casse.  
   
- Tenez compte des recommandations suivantes pour planifier la capacité sur l'ordinateur de l'UCP :  
+ Tenez compte des recommandations suivantes pour planifier la capacité sur l'ordinateur de l'UCP :  
   
 -   Dans un scénario classique, l'espace disque utilisé par la base de données UMDW (sysutility_mdw) sur l'UCP est d'environ 2 Go par instance gérée de SQL Server par an. Cette évaluation peut varier selon le nombre d'objets de base de données et système collectés par l'instance gérée. Le taux de croissance de l'espace disque de la base de données UMDW (sysutility_mdw) est plus élevé pendant les deux premiers jours.  
   
@@ -78,11 +77,11 @@ ms.locfileid: "52503589"
   
 -   Cette procédure doit être exécutée par un utilisateur disposant d'autorisations sysadmin, qui sont les mêmes autorisations requises pour créer un UCP.  
   
--   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d'informations, consultez [Procédure : supprimer une instance de SQL Server de l'utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d’informations, consultez [Procédure : supprimer une instance de SQL Server de l’utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Utilisez cette procédure pour supprimer un UCP SQL Server de l'utilitaire SQL Server. Une fois l'opération terminée, il est possible de créer à nouveau un UCP sur l'instance de SQL Server.  
   
- Utilisez SQL Server Management Studio pour la connexion au point de contrôle de l'utilitaire, puis exécutez le script suivant :  
+ Utilisez SQL Server Management Studio pour la connexion au point de contrôle de l'utilitaire, puis exécutez le script suivant :  
   
 ```  
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
@@ -133,7 +132,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Spécifier une instance  
  Spécifiez les informations suivantes à propos de l'UCP que vous créez :  
   
--   **Nom de l’instance** - Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…**. Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance.  
+-   **Nom de l’instance** - Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance.  
   
 -   **Nom de l’utilitaire** - Spécifiez un nom qui sera utilisé pour identifier l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le réseau.  
   
@@ -145,7 +144,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Si la connexion est chiffrée, la connexion chiffrée sera utilisée. Si la connexion n'est pas chiffrée, l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reconnectera à l'aide d'une connexion chiffrée.  
   
- Pour continuer, cliquez sur **Se connecter…**.  
+ Pour continuer, cliquez sur **Se connecter…** .  
   
 ##  <a name="Agent_configuration"></a> Compte du jeu d'éléments de collecte de l'utilitaire  
  Spécifiez un compte de domaine Windows pour exécuter le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce compte est utilisé comme compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également utiliser le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existant. Pour satisfaire aux exigences de validation, suivez les indications suivantes pour spécifier le compte.  
@@ -227,7 +226,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

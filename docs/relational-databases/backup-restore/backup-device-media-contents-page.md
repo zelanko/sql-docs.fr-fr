@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9ac17d307e677c732fcd73602aab81416e8e366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987762"
 ---
 # <a name="backup-device-media-contents-page"></a>Unité de sauvegarde (page Contenu du support)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47649371"
  **Support de sauvegarde**  
  Un support de sauvegarde est une collection ordonnée de supports de sauvegarde dans laquelle une ou plusieurs opérations de sauvegarde ont écrit en utilisant un nombre constant d'unités de sauvegarde.  
   
- **Nom**  
+ **Name**  
  Indique le nom du support de sauvegarde, s'il existe.  
   
  **Description**  
@@ -59,9 +58,9 @@ ms.locfileid: "47649371"
   
 |En-tête|Valeurs|  
 |------------|------------|  
-|**Nom**|Nom du jeu de sauvegarde.|  
-|**Type**|Objet sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
-|**Composant**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
+|**Name**|Nom du jeu de sauvegarde.|  
+|**Type**|Objet sauvegardé : Base de données, Fichier ou *\<vide>* (pour des journaux de transactions).|  
+|**Composant**|Type de sauvegarde effectuée : Complète, Différentielle ou Journal des transactions.|  
 |**Server**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
 |**Sauvegarde de la base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  
@@ -90,7 +89,7 @@ ms.locfileid: "47649371"
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

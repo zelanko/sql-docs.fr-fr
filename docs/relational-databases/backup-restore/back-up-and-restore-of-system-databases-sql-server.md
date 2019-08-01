@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87ed4e0440f31f63d0f0ecf8456acffea4502fae
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d0998a357a115622a0c8703bd4b200cc06f86685
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941022"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Sauvegarder et restaurer des bases de données système (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "54241781"
 |[master](../../relational-databases/databases/master-database.md)|Base de données qui contient l'intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Oui|Simple|Sauvegardez la base de données **master** aussi souvent que nécessaire pour protéger suffisamment les données en fonction de vos besoins. Nous vous recommandons de définir une planification de sauvegarde régulière complétée d'une sauvegarde supplémentaire après une mise à jour substantielle.|  
 |[model](../../relational-databases/databases/model-database.md)|Modèle de toutes les bases de données créées dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Oui|Configurable par l’utilisateur*|Sauvegardez la base de données **model** aussi souvent que nécessaire en fonction de vos besoins ; par exemple, immédiatement après avoir personnalisé ses options de base de données.<br /><br /> **Bonne pratique :** Nous recommandons d’effectuer uniquement des sauvegardes complètes de **mode**, selon les besoins. Étant donné que **mode** est petit et change rarement, il n'est pas nécessaire de sauvegarder le journal.|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|La base de données est utilisée par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier les alertes et les travaux et pour enregistrer les opérateurs. La base de données**msdb** contient aussi les tables d'historique, telles que les tables d'historique de restauration et de sauvegarde.|Oui|Simple (par défaut)|Sauvegardez la base de données **msdb** chaque fois qu'elle est mise à jour.|  
-|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de données en lecture seule qui contient les copies de tous les objets système fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Non|-|La base de données **Resource** réside dans le fichier mssqlsystemresource.mdf, qui contient uniquement du code. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas sauvegarder la base de données **Resource** .<br /><br /> Remarque : Vous pouvez effectuer une sauvegarde sur fichiers ou sur disque sur le fichier mssqlsystemresource.mdf en le traitant comme s'il s'agissait d'un fichier binaire (.exe), plutôt qu'un fichier de base de données. Toutefois, vous ne pouvez pas utiliser la restauration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les sauvegardes. La restauration d’une copie de sauvegarde du fichier mssqlsystemresource.mdf peut uniquement être effectuée manuellement et vous devez alors veiller à ne pas remplacer la version actuelle de la base de données **Resource** par une version obsolète ou potentiellement instable.|  
+|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de données en lecture seule qui contient les copies de tous les objets système fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Non|-|La base de données **Resource** réside dans le fichier mssqlsystemresource.mdf, qui contient uniquement du code. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas sauvegarder la base de données **Resource** .<br /><br /> Remarque : Vous pouvez effectuer une sauvegarde sur fichiers ou sur disque sur le fichier mssqlsystemresource.mdf en le traitant comme s’il s’agissait d’un fichier binaire (.exe) plutôt que d’un fichier de base de données. Toutefois, vous ne pouvez pas utiliser la restauration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les sauvegardes. La restauration d’une copie de sauvegarde du fichier mssqlsystemresource.mdf peut uniquement être effectuée manuellement et vous devez alors veiller à ne pas remplacer la version actuelle de la base de données **Resource** par une version obsolète ou potentiellement instable.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|Espace de travail qui contient les ensembles de résultats temporaires et intermédiaires. Cette base de données est recréée chaque fois qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre. Lors de l'arrêt de l'instance du serveur, toutes les données dans **tempdb** sont supprimées définitivement.|Non|Simple|Vous ne pouvez pas sauvegarder la base de données système **tempdb** .|  
 |[Configurer la distribution](../../relational-databases/replication/configure-distribution.md)|Base de données qui existe uniquement si le serveur est configuré comme serveur de distribution de réplication. Cette base de données contient les métadonnées et les données historiques de tous les types de réplications, ainsi que les transactions de la réplication transactionnelle.|Oui|Simple|Pour savoir quand vous devez sauvegarder la base de données **distribution**, consultez [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
   
- * Pour plus d’informations sur le mode de récupération actuel du modèle, consultez [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ \* Pour plus d’informations sur le mode de récupération actuel du modèle, consultez [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="limitations-on-restoring-system-databases"></a>Limitations sur la restauration des bases de données système  
   
@@ -73,7 +72,7 @@ ms.locfileid: "54241781"
   
 -   [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Base de données de distribution](../../relational-databases/replication/distribution-database.md)   
  [Base de données master](../../relational-databases/databases/master-database.md)   
  [Base de données msdb](../../relational-databases/databases/msdb-database.md)   

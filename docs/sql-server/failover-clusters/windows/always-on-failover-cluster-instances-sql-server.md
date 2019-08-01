@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 034a46affb198c89baab3c4741ae84569c96951b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063803"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instances de cluster de basculement Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ ms.locfileid: "52509916"
   
 -   Nom du réseau  
   
--   Adresse IP  
+-   Adresse IP  
   
 -   Disques partagés  
   
@@ -157,7 +156,7 @@ ms.locfileid: "52509916"
 |----------------------------|---------------|  
 |Décrit comment installer une nouvelle instance FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Explique comment effectuer une mise à niveau vers un cluster de basculement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Mise à niveau d’une instance de cluster de basculement SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Décrit les concepts de clustering de basculement Windows et fournit des liens vers les tâches liées au clustering de basculement Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Présentation des clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2 : [Présentation des clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Décrit les concepts de clustering de basculement Windows et fournit des liens vers les tâches liées au clustering de basculement Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Vue d’ensemble des clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2 : [Vue d’ensemble des clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Décrit les différences de concepts entre les nœuds dans une instance FCI et les réplicas au sein d'un groupe de disponibilité, ainsi que les éléments à prendre en compte pour utiliser une instance FCI pour héberger un réplica pour un groupe de disponibilité.|[Clustering de basculement et groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

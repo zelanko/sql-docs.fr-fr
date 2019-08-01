@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6194b035ae28a1c70dbba2f2b72050fb87a76328
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948666"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329321"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne le nombre de caractères de l'expression de type chaîne spécifiée, à l'exception des espaces de droite.  
+  Retourne le nombre de caractères de l’expression de type chaîne spécifiée, à l’exception des espaces de fin.  
   
 > [!NOTE]  
 >  Pour retourner le nombre d’octets utilisés pour représenter une expression, utilisez la fonction [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
@@ -54,7 +53,7 @@ LEN ( string_expression )
  Si vous utilisez des classements SC, la valeur entière retournée compte les paires de substitution UTF-16 comme un caractère unique. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Notes  
- LEN exclut les espaces à droite. Si ceci pose problème, envisagez d’utiliser la fonction [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) qui ne les supprime pas. En cas de traitement d’une chaîne Unicode, DATALENGTH retourne deux fois plus de caractères. L’exemple suivant illustre les fonctions LEN et DATALENGTH avec un espace à droite.  
+ LEN exclut les espaces de fin. Si ceci pose problème, envisagez d’utiliser la fonction [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) qui ne les supprime pas. En cas de traitement d’une chaîne Unicode, DATALENGTH retourne deux fois plus de caractères. L’exemple suivant illustre les fonctions LEN et DATALENGTH avec un espace à droite.  
   
 ```  
 DECLARE @v1 varchar(40),  

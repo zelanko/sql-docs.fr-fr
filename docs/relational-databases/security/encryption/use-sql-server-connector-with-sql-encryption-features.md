@@ -1,7 +1,7 @@
 ---
 title: Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401082"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329265"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Les activités de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] courantes à l’aide d’une clé asymétrique protégée par le coffre Azure Key Vault incluent les trois domaines suivants.  
   
 -   Chiffrement TDE (Transparent Data Encryption) à l’aide d’une clé asymétrique dans Azure Key Vault  
@@ -49,8 +47,8 @@ Vous devez créer des informations d’identification et une connexion, puis cr�
      Modifiez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] ci-dessous comme suit :  
   
     -   Modifiez l’argument `IDENTITY` (`ContosoDevKeyVault`) de sorte qu’il pointe vers votre coffre Azure Key Vault.
-        - Si vous utilisez **public Azure**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
-        - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure China ou Azure Germany), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.   
+        - Si vous utilisez **Azure global**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
+        - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure Chine 21Vianet ou Azure Allemagne), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.   
   
     -   Remplacez la première partie de l’argument `SECRET` par l’ **ID client** Azure Active Directory mentionné dans la Partie I. Dans cet exemple, l’ **ID client** est `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -62,9 +60,9 @@ Vous devez créer des informations d’identification et une connexion, puis cr�
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -146,8 +144,8 @@ Le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a besoin des informations d’
      Modifiez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] ci-dessous comme suit :  
   
     -   Modifiez l’argument `IDENTITY` (`ContosoDevKeyVault`) de sorte qu’il pointe vers votre coffre Azure Key Vault.
-        - Si vous utilisez **public Azure**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
-        - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure China ou Azure Germany), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.    
+        - Si vous utilisez **Azure global**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
+        - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure Chine 21Vianet ou Azure Allemagne), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.    
   
     -   Remplacez la première partie de l’argument `SECRET` par l’ **ID client** Azure Active Directory mentionné dans la Partie I. Dans cet exemple, l’ **ID client** est `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -160,9 +158,9 @@ Le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a besoin des informations d’
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
@@ -278,7 +276,7 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Gestion de clés extensible à l'aide d'Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   

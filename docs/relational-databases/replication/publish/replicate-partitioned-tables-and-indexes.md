@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aface984e9cc370ed906ab5abef65ac6f4bb6bd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1962546b83926f1ff189ece6757ebbf3659976ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073580"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Répliquer des tables et des index partitionnés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47787257"
   
  La réplication copie les objets vers l'Abonné pendant la synchronisation initiale. Si le schéma de partition utilise des groupes de fichiers autres que le groupe de fichiers PRIMARY, ces groupes de fichiers doivent exister sur l'Abonné avant la synchronisation initiale.  
   
- Après avoir initialisé l'Abonné, les modifications de données sont propagées à l'Abonné et appliquées aux partitions appropriées. Toutefois, les modifications apportées au schéma de partition ne sont pas prises en charge. La réplication transactionnelle et de fusion ne prend pas en charge la réplication des commandes suivantes : ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou l’instruction REBUILD WITH PARTITION d’ALTER INDEX. Les modifications associées ne sont pas automatiquement répliquées sur l’Abonné. Il incombe à l'utilisateur d'apporter des modifications similaires manuellement sur l'Abonné.  
+ Après avoir initialisé l'Abonné, les modifications de données sont propagées à l'Abonné et appliquées aux partitions appropriées. Toutefois, les modifications apportées au schéma de partition ne sont pas prises en charge. La réplication transactionnelle et de fusion ne prend pas en charge la réplication des commandes suivantes : ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou l’instruction REBUILD WITH PARTITION d’ALTER INDEX. Les modifications associées ne sont pas automatiquement répliquées sur l’Abonné. Il incombe à l'utilisateur d'apporter des modifications similaires manuellement sur l'Abonné.  
   
 ## <a name="replication-support-for-partition-switching"></a>Prise en charge de la réplication pour le basculement de partition  
  La possibilité de déplacer rapidement et efficacement des sous-ensembles de données entre des partitions constitue l'un des principaux avantages du partitionnement de table. Les données sont déplacées à l'aide de la commande SWITCH PARTITION. Par défaut, lorsqu'une table est activée pour la réplication, les opérations SWITCH PARTITION sont bloquées pour les raisons suivantes :  
@@ -72,13 +71,13 @@ ms.locfileid: "47787257"
 ### <a name="enabling-partition-switching"></a>Activation du basculement de partition  
  Les propriétés suivantes pour les publications transactionnelles permettent aux utilisateurs de contrôler le comportement de l'insertion de partition dans un environnement répliqué :  
   
--   **@allow_partition_switch**, lorsque la valeur spécifiée est **true**, SWITCH PARTITION peut être exécuté sur la base de données de publication.  
+-   **@allow_partition_switch** , lorsque la valeur spécifiée est **true**, SWITCH PARTITION peut être exécuté sur la base de données de publication.  
   
 -   **@replicate_partition_switch** détermine si l'instruction SWITCH PARTITION DDL doit être répliquée sur les Abonnés. Cette option est valide uniquement lorsque **@allow_partition_switch** a la valeur **true**.  
   
  Vous pouvez définir ces propriétés en utilisant [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) lors de la création de la publication, ou en utilisant [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) après la création de la publication. Comme indiqué précédemment, la réplication de fusion ne prend pas en charge le basculement de partition. Pour exécuter SWITCH PARTITION sur une table qui est activée pour la réplication de fusion, supprimez la table de la publication.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

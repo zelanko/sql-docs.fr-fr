@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938930"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propriété)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -55,10 +54,10 @@ IDENTITY [ (seed , increment) ]
   
  Vous devez spécifier à la fois la valeur initiale et l'incrément, ou aucun des deux. Si vous n'en spécifiez aucun, la valeur par défaut est (1,1).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les colonnes d'identité peuvent être utilisées pour générer des valeurs de clé. La propriété d'identité sur une colonne garantit ce qui suit :  
   
--   Chaque nouvelle valeur est générée en fonction de la valeur et de l'incrément actuels.  
+-   Chaque nouvelle valeur est générée en fonction de la valeur initiale et de l’incrément actuels.  
   
 -   Chaque nouvelle valeur pour une transaction spécifique est différente des autres transactions simultanées sur la table.  
   
@@ -78,7 +77,7 @@ IDENTITY [ (seed , increment) ]
   
  Une seule colonne d'identité peut être créée par table.  
   
- Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». Le fait de définir la valeur initiale ou l'incrément à une valeur autre que 1 provoque l'erreur suivante : L'utilisation de valeurs autres que 1 pour la valeur initiale et l'incrément n'est pas prise en charge avec les tables optimisées en mémoire.  
+ Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». Le fait de définir la valeur initiale ou l’incrément à une valeur autre que 1 provoque l’erreur suivante : L’utilisation de valeurs autres que 1 pour la valeur initiale et l’incrément n’est pas prise en charge avec les tables optimisées en mémoire.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -110,7 +109,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>b. Utilisation d'une syntaxe générique afin de trouver des intervalles entre les valeurs d'identité  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. Utilisation d'une syntaxe générique afin de trouver des intervalles entre les valeurs d'identité  
  L'exemple suivant illustre une syntaxe générique qui permet de trouver des intervalles entre les valeurs d'identité lorsque des données sont supprimées.  
   
 > [!NOTE]  
@@ -168,7 +167,7 @@ SELECT @minidentval = MIN($IDENTITY) FROM img
 SET IDENTITY_INSERT img OFF;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   

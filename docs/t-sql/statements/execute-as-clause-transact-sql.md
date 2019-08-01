@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8b20360492be7a7667f8f43b686bc04c723bd5e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7adffba6294d2639f94f8ebe753248bcb58f39dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084470"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clause EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,12 +105,12 @@ DDL Triggers with Database Scope
   
  *login_name* ne peut pas être un groupe, un rôle, un certificat, une clé ou un compte intégré tel que NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La façon dont le [!INCLUDE[ssDE](../../includes/ssde-md.md)] évalue les autorisations sur les objets référencés dans le module dépend de la chaîne d’appartenance entre les objets appelants et les objets référencés. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la chaîne d'appartenance était la seule méthode qui permettait d'éviter d'accorder l'accès de l'utilisateur appelant à tous les objets référencés.  
   
  La chaîne d'appartenance est soumise aux limitations suivantes :  
   
--   S'applique uniquement aux instructions DML : SELECT, INSERT, UPDATE, et DELETE.  
+-   S'applique uniquement aux instructions DML : SELECT, INSERT, UPDATE et DELETE.  
   
 -   Les propriétaires des objets appelants et appelés doivent être identiques.  
   
@@ -188,7 +187,7 @@ GO
 ## <a name="best-practice"></a>Bonne pratique  
  Spécifiez une connexion ou un utilisateur qui possède les privilèges minimum requis pour effectuer les opérations définies dans le module. Par exemple, ne spécifiez pas le compte d'un propriétaire de base de données à moins que ces autorisations soient requises.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter un module spécifié avec la clause EXECUTE AS, l'appelant doit avoir les autorisations EXECUTE sur le module.  
   
  Pour exécuter un module CLR spécifié avec la clause EXECUTE AS et qui a accès aux ressources d'une autre base de données ou serveur, la base de données ou le serveur cible doit faire confiance à l'authentificateur de la base de données d'origine du module (base de données source).  
@@ -222,7 +221,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

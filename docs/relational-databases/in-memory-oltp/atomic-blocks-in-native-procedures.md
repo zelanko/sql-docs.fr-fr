@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02d5c28e975346ff048ef656fecc2e35f7c82692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951221"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocs atomiques dans des procédures en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ ORDER BY c1
 GO  
 ```  
   
- Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S’ils apparaissent dans l’étendue d’un bloc Atomic, ils entraînent l’abandon de la transaction : 10772, 41301, 41302, 41305, 41325, 41332, 41333 et 41839.  
+ Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S’ils se produisent dans l’étendue d’un bloc atomique, la transaction est abandonnée : 10772, 41301, 41302, 41305, 41325, 41332, 41333 et 41839.  
   
 ## <a name="session-settings"></a>Paramètres de session  
  Les paramètres de session dans les blocs Atomic sont fixes lorsque la procédure stockée est compilée. Certains paramètres peuvent être spécifiés avec **BEGIN ATOMIC** tandis que les autres paramètres sont toujours fixes avec la même valeur.  
@@ -165,7 +164,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Les exceptions qui ne sont pas interceptées entraînent la restauration des blocs Atomic, mais pas l'abandon de la transaction, sauf si l'erreur condamne la transaction.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067574"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul des éditions SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "52400622"
   
 -   Un processeur physique peut comprendre un ou plusieurs noyaux. Un processeur physique est identique à un package de processeurs ou à un socket.  
   
-Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si votre ordinateur a deux processeurs à quatre cœurs avec l’hyperthreading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 cœurs par processeur x 2 thread par cœur. À noter que :  
+Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si votre ordinateur a deux processeurs à quatre cœurs avec l’hyperthreading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 cœurs par processeur x 2 threads par cœur. À noter que :  
   
 -   La capacité de calcul d'un processeur logique à partir d'un thread unique d'un noyau hyperthreaded est inférieure à la capacité de calcul d'un processeur logique de ce même noyau avec l'hyperthreading désactivé.  
   
@@ -78,9 +77,9 @@ Ces limites s'appliquent à une seule instance de [!INCLUDE[ssNoVersion](../incl
   
 Le tableau suivant présente les limites de capacité de calcul pour une instance unique de chaque édition de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Capacité maximale de calcul pour une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul pour une instance unique (AS,RS)|  
+|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacité maximale de calcul pour une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul pour une instance unique (AS,RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition : contrat de licence selon le nombre de cœurs\*|Maximum du système d'exploitation|Maximum du système d'exploitation|  
+|Édition Entreprise : contrat de licence selon le nombre de cœurs\*|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Développeur|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Standard|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 24 cœurs|  
 |Express|Limité à moins de 1 socket ou 4 cœurs|Limité à moins de 1 socket ou 4 cœurs|  

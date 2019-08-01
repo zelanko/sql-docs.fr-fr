@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901096"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Problèmes et limitations de conception des serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ ms.locfileid: "54125854"
   
  Veillez également à prendre en compte les points suivants :  
   
--   Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traitent différemment la valeur NULL : Oracle autorise la présence de plusieurs lignes comportant des valeurs NULL pour les colonnes qui acceptent NULL et sont incluses dans des contraintes ou index uniques. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applique l'unicité en n'autorisant qu'une seule ligne contenant une valeur NULL pour la même colonne. Vous ne pouvez pas publier une contrainte ou un index unique qui autorise NULL car une violation de contrainte se produit au niveau de l'Abonné si la table publiée contient plusieurs lignes avec des valeurs NULL pour l'une des colonnes incluses dans l'index ou la contrainte.  
+-   Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traitent différemment les valeurs NULL : Oracle autorise la présence de plusieurs lignes comportant des valeurs NULL pour les colonnes qui acceptent NULL et sont incluses dans des contraintes ou index uniques. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applique l'unicité en n'autorisant qu'une seule ligne contenant une valeur NULL pour la même colonne. Vous ne pouvez pas publier une contrainte ou un index unique qui autorise NULL car une violation de contrainte se produit au niveau de l'Abonné si la table publiée contient plusieurs lignes avec des valeurs NULL pour l'une des colonnes incluses dans l'index ou la contrainte.  
   
 -   Lors de la vérification de l'unicité, les espaces à droite dans un champ sont ignorés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mais pas par Oracle.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "54125854"
   
  Pour plus d’informations sur la sécurité de la réplication, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Considérations sur l’administration des serveurs de publication Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  

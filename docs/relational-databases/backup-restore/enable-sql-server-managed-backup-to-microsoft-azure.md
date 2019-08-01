@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089820"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Activer la sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la créatio
   
 2.  **Vérifiez que le service SQL Server Agent est démarré et exécuté :** Démarrez SQL Server Agent s’il n’est pas exécuté actuellement.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de SQL Server Agent, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
   
-3.  **Déterminez la période de rétention :** Période de rétention en jours des fichiers de sauvegarde. La période de rétention est spécifiée en jours, sur une plage de 1 à 30.  
+3.  **Déterminez la période de rétention :** Déterminez la période de conservation des fichiers de sauvegarde. La période de rétention est spécifiée en jours, sur une plage de 1 à 30.  
   
 4.  **Activez et configurez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Démarrez SQL Server Management Studio et connectez-vous à l’instance SQL Server cible. Dans la fenêtre de requête, exécutez l'instruction suivante après avoir modifié les valeurs du nom de la base de données, de l’URL du conteneur et de la période de rétention selon vos besoins.  
   
@@ -110,7 +109,7 @@ Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la créatio
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est maintenant activée sur la base de données spécifiée. Un délai de 15 minutes au maximum peut être nécessaire pour le démarrage des opérations de sauvegarde sur la base de données.  
   
-5.  **Passez en revue la configuration par défaut des événements étendus :** Vérifiez les paramètres des événements étendus en exécutant l'instruction Transact-SQL suivante :  
+5.  **Passez en revue la configuration par défaut des événements étendus :** Vérifiez les paramètres des événements étendus en exécutant l’instruction Transact-SQL suivante.  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -133,7 +132,7 @@ Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la créatio
   
         ```  
   
-7.  **Affichez les fichiers de sauvegarde dans le compte de stockage Microsoft Azure :** Connectez-vous au compte de stockage depuis SQL Server Management Studio ou le portail de gestion Azure. Vous verrez les fichiers de sauvegarde dans le conteneur que vous avez spécifié. Notez que vous pourrez voir aussi une base de données et une sauvegarde de journal 5 minutes après l’activation de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données.  
+7.  **Affichez les fichiers de sauvegarde dans le compte de stockage Microsoft Azure :** Connectez-vous au compte de stockage à partir de SQL Server Management Studio ou du portail de gestion Azure. Vous verrez les fichiers de sauvegarde dans le conteneur que vous avez spécifié. Notez que vous pourrez voir aussi une base de données et une sauvegarde de journal 5 minutes après l’activation de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données.  
   
 8.  **Supervisez l’état d’intégrité :**  Vous pouvez le superviser au moyen des notifications par e-mail configurées précédemment, ou en supervisant activement les événements enregistrés. Voici quelques exemples d'instructions Transact SQL utilisées pour afficher les événements :  
   
@@ -183,5 +182,5 @@ Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la créatio
   
  Les étapes de cette section sont propres à la configuration initiale de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données. Vous pouvez modifier les configurations existantes à l'aide des mêmes procédures stockées système et indiquer de nouvelles valeurs.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

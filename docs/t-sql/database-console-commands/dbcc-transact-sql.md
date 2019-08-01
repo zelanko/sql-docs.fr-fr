@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040522"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,12 +100,12 @@ La définition d'une unité de progression dépend de la phase en cours d'exécu
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Durant cette phase, la cohérence logique et physique des objets de la base de données est vérifiée.|La progression est indiquée au niveau de la page de base de données.<br /><br /> La valeur de rapport de progression est actualisée toutes les 1 000 pages de base de données vérifiées.|  
 |DBCC TABLE REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs à réparer sur les objets.|La progression est indiquée au niveau de la réparation.<br /><br /> Le compteur est mis à jour pour chaque réparation terminée.|  
-|DBCC ALLOC CHECK|Durant cette phase, les structures d'allocation de la base de données sont vérifiées.<br /><br /> Remarque : DBCC CHECKALLOC exécute les mêmes vérifications.|La progression n’est pas indiquée|  
+|DBCC ALLOC CHECK|Durant cette phase, les structures d'allocation de la base de données sont vérifiées.<br /><br /> Remarque : DBCC CHECKALLOC exécute les mêmes vérifications.|La progression n’est pas indiquée|  
 |DBCC ALLOC REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs d'allocation à réparer.|La progression n'est pas indiquée.|  
 |DBCC SYS CHECK|Durant cette phase, les tables système de la base de données sont vérifiées.|La progression est indiquée au niveau de la page de base de données.<br /><br /> La valeur de progression est actualisée toutes les 1 000 pages de base de données vérifiées.|  
 |DBCC SYS REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs de tables système à réparer.|La progression est indiquée au niveau de la réparation.<br /><br /> Le compteur est mis à jour pour chaque réparation terminée.|  
-|DBCC SSB CHECK|Durant cette phase, les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker sont vérifiés.<br /><br /> Remarque : Cette phase n'est pas réalisée lors de l'exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
-|DBCC CHECKCATALOG|Durant cette phase, la cohérence des catalogues de la base de données est vérifiée.<br /><br /> Remarque : Cette phase n'est pas réalisée lors de l'exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
+|DBCC SSB CHECK|Durant cette phase, les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker sont vérifiés.<br /><br /> Remarque : Cette phase n’est pas réalisée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
+|DBCC CHECKCATALOG|Durant cette phase, la cohérence des catalogues de la base de données est vérifiée.<br /><br /> Remarque : Cette phase n’est pas réalisée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
 |DBCC IVIEW CHECK|Durant cette phase, la cohérence logique des vues indexées présentes dans la base de données est vérifiée.|La progression est indiquée au niveau de chaque vue de base de données vérifiée.|  
   
 ## <a name="informational-statements"></a>Instructions d’information  

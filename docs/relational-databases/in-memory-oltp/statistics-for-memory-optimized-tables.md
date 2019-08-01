@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23f442dcf798a1d4f1961698958673dac007a37e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b42356331d91683811472b420e656560a77d79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086258"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiques pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ Pour activer la mise à jour automatique des statistiques pour des tables optimi
 
 3. Recompilez manuellement les procédures stockées compilées en mode natif pour bénéficier des statistiques mises à jour.
 
-*Script unique pour les statistiques :* pour les tables optimisées en mémoire qui ont été créées sous un niveau de compatibilité inférieur, vous pouvez exécuter le script Transact-SQL suivant une fois pour mettre à jour les statistiques de toutes les tables optimisées en mémoire et activer la mise à jour automatique des statistiques par la suite (en supposant que le paramètre AUTO_UPDATE_STATISTICS est activé pour la base de données) :
+*Script unique pour les statistiques :* pour les tables à mémoire optimisée qui ont été créées sous un niveau de compatibilité inférieur, vous pouvez exécuter le script Transact-SQL suivant une fois pour mettre à jour les statistiques de toutes les tables à mémoire optimisée et activer la mise à jour automatique des statistiques par la suite (en supposant que le paramètre AUTO_UPDATE_STATISTICS est activé pour la base de données) :
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -75,7 +74,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*Vérifiez que la mise à jour automatique est activée :* le script suivant vérifie si la mise à jour automatique des statistiques des tables optimisées en mémoire est activée. Après l’exécution du script précédent, `1` est retourné dans la colonne `auto-update enabled` pour tous les objets de statistiques.
+*Vérifiez que la mise à jour automatique est activée :* le script suivant vérifie si la mise à jour automatique des statistiques des tables à mémoire optimisée est activée. Après l’exécution du script précédent, `1` est retourné dans la colonne `auto-update enabled` pour tous les objets de statistiques.
 
 ```
 SELECT 
@@ -99,7 +98,7 @@ WHERE o.is_memory_optimized=1
   
  La création de procédures stockées compilées en mode natif après que vous avez chargé les données garantit que l’optimiseur dispose de statistiques pour les tables optimisées en mémoire. De cette façon, les plans de requête sont efficaces lorsque la procédure est compilée.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

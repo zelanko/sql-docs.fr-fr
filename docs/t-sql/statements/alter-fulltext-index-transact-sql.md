@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067532"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ALTER FULLTEXT INDEX ON table_name
  La désactivation d'un index de recherche en texte intégral vous permet de désactiver le suivi des modifications tout en conservant l'index de recherche en texte intégral, que vous pouvez réactiver n'importe quand à l'aide de l'option ENABLE. Lorsque l'index de recherche en texte intégral est désactivé, ses métadonnées restent dans les tables système. Si CHANGE_TRACKING est à l'état activé (mise à jour manuelle ou automatique) quand l'index de recherche en texte intégral est désactivé, l'état de l'index est figé ; toute analyse en cours est arrêtée et les nouvelles modifications apportées aux données de la table ne sont pas suivies ni propagées dans l'index.  
   
  SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
- Spécifie si les modifications (mises à jour, suppressions ou insertions) apportées aux colonnes de table couvertes par l'index de recherche en texte intégral seront propagées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'index de recherche en texte intégral. Les modifications apportées aux données via WRITETEXT et UPDATETEXT ne sont pas répercutées dans l'index de texte intégral et ne sont pas prises en compte par le suivi des modifications.  
+ Spécifie si les modifications (mises à jour, suppressions ou insertions) apportées aux colonnes de table couvertes par l’index de recherche en texte intégral seront propagées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’index de recherche en texte intégral. Les modifications apportées aux données via WRITETEXT et UPDATETEXT ne sont pas répercutées dans l'index de recherche en texte intégral et ne sont pas prises en compte par le suivi des modifications.  
   
 > [!NOTE]  
 >  Pour plus d'informations sur l'interaction entre le suivi des modifications et WITH NO POPULATION, consultez la section « Remarques », plus loin dans cette rubrique.  
@@ -91,7 +90,7 @@ ALTER FULLTEXT INDEX ON table_name
  Spécifie que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne conservera pas de liste des modifications apportées aux données indexées.  
   
  ADD | DROP *column_name*  
- Spécifie les colonnes à ajouter ou à supprimer de l'index de texte intégral. Les colonnes doivent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
+ Spécifie les colonnes à ajouter ou à supprimer de l'index de texte intégral. Les colonnes doivent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
   
  Utilisez la clause DROP uniquement sur les colonnes pour lesquelles l'indexation de texte intégral a été activée.  
   
@@ -128,7 +127,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Crée les index de ressemblance de documents et d'expressions clés supplémentaires qui font partie de l'indexation sémantique statistique. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,**_...n_]  
+ [ **,** _...n_]  
  Indique que plusieurs colonnes peuvent être spécifiées pour les clauses ADD, ALTER ou DROP. Si vous spécifiez plusieurs colonnes, séparez-les par des virgules.  
   
  WITH NO POPULATION  
@@ -136,7 +135,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Lorsque NO POPULATION est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne remplit pas l'index. L'index est rempli uniquement lorsque l'utilisateur lance une commande ALTER FULLTEXT INDEX...START POPULATION. Lorsque NO POPULATION n'est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remplit l'index.  
   
- Si vous spécifiez WITH NO POPULATION alors que CHANGE_TRACKING est activé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie une erreur. Si vous ne spécifiez pas WITH NO POPULATION et que CHANGE_TRACKING est activé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procède à un remplissage complet de l'index.  
+ Si vous spécifiez WITH NO POPULATION alors que CHANGE_TRACKING est activé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie une erreur. Si vous ne spécifiez pas WITH NO POPULATION et que CHANGE_TRACKING est activé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procède à un remplissage complet de l’index.  
   
 > [!NOTE]  
 >  Pour plus d'informations sur l'interaction entre le suivi des modifications et WITH NO POPULATION, consultez la section « Remarques », plus loin dans cette rubrique.  
@@ -185,7 +184,7 @@ ALTER FULLTEXT INDEX ON table_name
  Modifie la liste de propriétés de recherche associée à l'index, le cas échéant.  
   
  OFF  
- Indique qu'aucune liste de propriétés ne doit être associée à l'index de recherche en texte intégral. Quand vous désactivez la liste des propriétés de recherche d’un index de recherche en texte intégral (ALTER FULLTEXT INDEX ... SET SEARCH PROPERTY LIST OFF), la recherche de propriétés sur la table de base n'est plus possible.  
+ Indique qu'aucune liste de propriétés ne doit être associée à l'index de recherche en texte intégral. Quand vous désactivez la liste des propriétés de recherche d’un index de recherche en texte intégral (ALTER FULLTEXT INDEX ... SET SEARCH PROPERTY LIST OFF), la recherche de propriétés sur la table de base n’est plus possible.  
   
  Par défaut, lorsque vous désactivez une liste des propriétés de recherche existante, l'index de recherche en texte intégral est rempli à nouveau automatiquement. Si vous spécifiez WITH NO POPULATION lorsque vous désactivez la liste des propriétés de recherche, le remplissage automatique n'a pas lieu. Toutefois, nous vous recommandons d'exécuter finalement un remplissage complet sur cet index de recherche en texte intégral à votre propre convenance. Le remplissage de l'index de recherche en texte intégral supprime les métadonnées spécifiques à la propriété de chaque propriété de recherche supprimée, en rendant l'index de recherche en texte intégral plus petit et plus efficace.  
   
@@ -195,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  L'ajout d'une liste de propriétés de recherche à un index de recherche en texte intégral nécessite le remplissage de l'index pour indexer les propriétés de recherche inscrites pour la liste de propriétés de recherche associée. Si vous spécifiez WITH NO POPULATION lorsque vous ajoutez la liste des propriétés de recherche, vous devrez effectuer un remplissage sur l'index, à un moment approprié.  
   
 > [!IMPORTANT]  
->  Si l'index de recherche en texte intégral était associé précédemment à une recherche différente, il doit être reconstruit suite au changement de la liste de propriétés pour remettre l'index dans un état cohérent. L'index est immédiatement tronqué et reste vide jusqu'à ce qu'à l'exécution du remplissage complet. Pour plus d'informations sur les circonstances dans lesquelles la modification de la liste des propriétés de recherche provoque une reconstruction, consultez la section « Notes » dans la suite de cette rubrique.  
+>  Si l'index de recherche en texte intégral était associé précédemment à une recherche différente, il doit être reconstruit suite au changement de la liste de propriétés pour remettre l'index dans un état cohérent. L'index est immédiatement tronqué et reste vide jusqu'à ce qu'à l'exécution du remplissage complet. Pour plus d'informations sur les circonstances dans lesquelles la modification de la liste des propriétés de recherche provoque une reconstruction, consultez la section « Notes » dans la suite de cette rubrique.  
   
 > [!NOTE]  
 >  Vous pouvez associer une liste de propriétés de recherche donnée à plusieurs index de recherche en texte intégral dans la même base de données.  
@@ -256,7 +255,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Cette instruction provoque un remplissage complet, ce qui correspond au comportement par défaut.  Toutefois, avant de commencer ce remplissage, le moteur d'indexation et de recherche en texte intégral tronque automatiquement l'index.  
   
-### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scénario B : désactivation de la liste de propriétés de recherche et association ultérieure de l'index à toute liste de propriétés de recherche  
+### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scénario B : désactivation de la liste de propriétés de recherche et association ultérieure de l’index à toute liste de propriétés de recherche  
   
 1.  Un index de recherche en texte intégral est créé sur `table_1` avec une liste de propriétés de recherche `spl_1`, suivi d’un remplissage complet automatique (comportement par défaut) :  
   
@@ -265,7 +264,7 @@ ALTER FULLTEXT INDEX ON table_name
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
-2.  La liste des propriétés de recherche est désactivée, comme suit :  
+2.  La liste des propriétés de recherche est désactivée, comme suit :  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1   
@@ -274,7 +273,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  L'index de recherche en texte intégral est encore une fois associé à la même liste de propriétés de recherche ou à une liste différente.  
   
-     Par exemple, l'instruction suivante ré-associe-l'index de recherche en texte intégral à la liste des propriétés de recherche d'origine, `spl_1` :  
+     Par exemple, l’instruction suivante ré-associe l’index de recherche en texte intégral à la liste des propriétés de recherche d’origine, `spl_1` :  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -283,9 +282,9 @@ ALTER FULLTEXT INDEX ON table_name
      Cette instruction entraîne un remplissage complet, ce qui correspond au comportement par défaut.  
   
     > [!NOTE]  
-    >  La reconstruction serait également requise pour une liste de propriétés de recherche différente, telle que `spl_2`.  
+    >  La reconstruction serait également nécessaire pour une liste de propriétés de recherche différente, telle que `spl_2`.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’utilisateur doit soit disposer de l’autorisation ALTER sur la table ou la vue indexée, soit être membre du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_ddladmin** ou **db_owner**.  
   
  Si SET STOPLIST est spécifié, l'utilisateur doit disposer de l'autorisation REFERENCES sur la liste de mots vides. Si SET SEARCH PROPERTY LIST est spécifié, l'utilisateur doit avoir l'autorisation REFERENCES sur la liste des propriétés de recherche. Le propriétaire de la liste de mots vides spécifiée ou de la liste des propriétés de recherche peut accorder l'autorisation REFERENCES, s'il dispose d'autorisations ALTER FULLTEXT CATALOG.  
@@ -348,7 +347,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   

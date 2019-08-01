@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039133"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +58,13 @@ Libère de manière asynchrone les entrées en cours d'utilisation de leurs cach
 NO_INFOMSGS  
 Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 L'exécution de DBCC FREESYSTEMCACHE efface le cache du plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d’exécution ultérieurs et peut entraîner une diminution temporaire et brutale des performances des requêtes. Pour chaque mémoire cache effacée dans le cache du plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d’opérations 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE' ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
 
 ## <a name="result-sets"></a>Jeux de résultats  
-DBCC FREESYSTEMCACHE renvoie : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
+DBCC FREESYSTEMCACHE retourne : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'autorisation ALTER SERVER STATE sur le serveur.
   
 ## <a name="examples"></a>Exemples  
@@ -78,14 +77,14 @@ L'exemple suivant illustre comment nettoyer des caches qui sont dédiés à un p
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>b. Libération des entrées de leurs caches respectifs une fois qu'elles ne sont plus utilisées  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>B. Libération des entrées de leurs caches respectifs une fois qu'elles ne sont plus utilisées  
 L'exemple suivant utilise la clause MARK_IN_USE_FOR_REMOVAL pour libérer les entrées de tous les caches actuels une fois qu'elles ne sont plus utilisées.
   
 ```sql
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  

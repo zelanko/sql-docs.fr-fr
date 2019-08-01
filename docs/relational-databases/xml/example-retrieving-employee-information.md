@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006778"
 ---
 # <a name="example-retrieving-employee-information"></a>Exemple : Extraction d’informations sur les employés
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +118,7 @@ Balise | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
   
  Ce processus est répété pour le reste des lignes de l'ensemble de lignes. Notez l'importance du tri des lignes dans la table universelle pour que FOR XML EXPLICIT puisse traiter l'ensemble de lignes dans l'ordre et générer le document XML souhaité.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

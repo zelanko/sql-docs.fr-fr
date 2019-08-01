@@ -1,5 +1,5 @@
 ---
-title: 'Réparation de page automatique (groupes de disponibilité : mise en miroir de bases de données) | Microsoft Docs'
+title: 'Réparation de page automatique (Groupes de disponibilité : Mise en miroir de bases de données) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035276"
 ---
-# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Réparation de page automatique (groupes de disponibilité : mise en miroir de bases de données)
+# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Réparation de page automatique (Groupes de disponibilité : Mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La réparation de page automatique est prise en charge par la mise en miroir de bases de données et par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Lorsque certains types d'erreurs endommagent une page et la rendent illisible, un serveur partenaire de mise en miroir de bases de données (principal ou miroir) ou un réplica de disponibilité (principal ou secondaire) tente de récupérer automatiquement la page. Le serveur partenaire/réplica qui ne peut pas lire la page demande une nouvelle copie de la page auprès de son serveur partenaire ou d'un autre réplica. Si cette demande réussit, la page illisible est remplacée par la copie lisible, ce qui permet généralement de résoudre l'erreur.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "49383564"
   
 -   Page 9 (page de démarrage de la base de données).  
   
--   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
+-   Pages d’allocation : pages Global Allocation Map (GAM), pages Shared Global Allocation Map (SGAM) et pages Page Free Space (PFS).  
   
  
 ##  <a name="PrimaryIOErrors"></a> Gestion des erreurs d’e/s sur la base de données principale/primaire  
@@ -96,7 +95,7 @@ ms.locfileid: "49383564"
  Une réparation de page automatique est un processus asynchrone qui s'exécute en arrière-plan. Par conséquent, une opération de base de données qui demande une page illisible échoue et renvoie le code d'erreur correspondant à la condition ayant provoqué l'échec. Lorsque vous développez une application pour une base de données mise en miroir ou une base de données de disponibilité, vous devez intercepter les exceptions pour les opérations ayant échoué. Si le code d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est 823, 824 ou 829, vous devez retenter l'opération ultérieurement.  
   
 
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> Procédure : Consulter les tentatives de réparation de page automatique  
  Les vues de gestion dynamique suivantes retournent les lignes correspondant aux dernières tentatives de réparation de page automatique sur une base de données de disponibilité ou une base de données mise en miroir spécifique, avec un maximum de 100 lignes par base de données.  
   
 -   **Groupes de disponibilité Always On :**  
@@ -112,7 +111,7 @@ ms.locfileid: "49383564"
      Retourne une ligne pour chaque tentative de réparation de page automatique sur toute base de données mise en miroir sur l'instance de serveur.  
   
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

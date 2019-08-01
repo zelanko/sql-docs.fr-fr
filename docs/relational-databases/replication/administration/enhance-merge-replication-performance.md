@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939201"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "54136069"
   
 -   Envisagez de surnormaliser les tables qui incluent des types de données LOB.  
   
-     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données **text**, **ntext**et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**.  
+     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données **text**, **ntext**et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** .  
   
 ## <a name="publication-design"></a>Conception de la publication  
   
@@ -142,7 +141,7 @@ ms.locfileid: "54136069"
   
 -   Réindexez occasionnellement les tables système d'une réplication de fusion  
   
-     Dans le cadre de la gestion d'une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Dans le cadre de la gestion d’une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Analysez les performances de la synchronisation à l'aide de l'onglet **Historique de synchronisation** dans le moniteur de réplication.  
   

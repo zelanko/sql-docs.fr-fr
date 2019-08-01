@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c93844267fd91f248c073b00b12c4a07d16d7da5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063971"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52525292"
   
  Les options suivantes sont disponibles pour l'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Option 1 : installation Integration avec ajout de nœud**  
+ **Option 1 : Installation Intégration avec ajout de nœud**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation intégrée de cluster de basculement comprend les étapes suivantes :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "52525292"
   
     -   Si le nœud que vous ajoutez a des sous-réseaux supplémentaires ou différents, le programme d'installation vous permet de spécifier des adresses IP supplémentaires. Si le nœud que vous ajoutez se trouve sur un sous-réseau différent, vous devez également confirmer la modification de dépendance de ressource d'adresse IP sur OR. Pour plus d’informations sur les différents scénarios possibles pendant les opérations d’ajout de nœuds, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Option 2 : installation avancée/entreprise**  
+ **Option 2 : Installation avancée/entreprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise de cluster de basculement comprend les étapes suivantes :  
   
@@ -230,7 +229,7 @@ ms.locfileid: "52525292"
   
 ##  <a name="prepare"></a> Préparation  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Installation avancée/entreprise de cluster de basculement Étape 1 : Préparer  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Étape 1 de l’installation avancée/entreprise sur un cluster de basculement : Préparation  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). Il se peut que vous deviez installer les composants requis si ceux-ci ne sont pas déjà présents sur l'ordinateur.  
   
@@ -322,7 +321,7 @@ ms.locfileid: "52525292"
   
 ## <a name="complete"></a>Terminé  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Installation avancée/entreprise de cluster de basculement Étape 2 : Finaliser  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Étape 2 de l’installation avancée/entreprise sur un cluster de basculement : Terminé  
   
 1.  Une fois tous les nœuds préparés de la façon décrite dans [l’étape de préparation](#prepare), lancez le programme d’installation sur l’un des nœuds préparés, de préférence sur le nœud propriétaire du disque partagé. Dans la page **Avancé** du Centre d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Création de cluster avancée**.  
   
@@ -401,7 +400,7 @@ ms.locfileid: "52525292"
   
  Pour plus d’informations sur l’emplacement des fichiers journaux, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

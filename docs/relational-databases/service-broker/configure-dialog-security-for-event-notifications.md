@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca2bbf04ef2132f0bf1250cd6bd5c097a5a7760b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048904"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurer la sécurité du dialogue pour les notifications d'événements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "51669368"
 > [!IMPORTANT]  
 >  Tous les certificats doivent être créés avec des dates de début et des dates d'expiration valides.  
   
- **Étape 1 : établissez un numéro de port TCP et un nom de service cible.**  
+ **Étape 1 : établir un numéro de port TCP et un nom de service cible.**  
   
  Établissez le port TCP sur lequel le serveur source et le serveur cible recevront les messages. Vous devez également définir le nom du service cible.  
   
- **Étape 2 : configurez le chiffrement et le partage de certificats pour l'authentification de niveau base de données.**  
+ **Étape 2 : configurer le chiffrement et le partage de certificats pour l’authentification de niveau base de données.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "51669368"
 |[Sauvegardez le certificat](../../t-sql/statements/backup-certificate-transact-sql.md) dans un fichier accessible par le serveur cible.|Sauvegardez le certificat dans un fichier accessible par le serveur source.|  
 |[Créez un utilisateur](../../t-sql/statements/create-user-transact-sql.md), en spécifiant l'utilisateur de la base de données cible, ainsi que WITHOUT LOGIN. Cet utilisateur sera propriétaire du certificat de la base de données cible créé à partir du fichier de sauvegarde. Il n'est pas nécessaire que l'utilisateur soit mappé à une connexion, parce que le seul objectif de cet utilisateur est d'être propriétaire du certificat de la base de données cible, créé au cours de l'étape 3 suivante.|Créez un utilisateur, en spécifiant l'utilisateur de la base de données source, ainsi que WITHOUT LOGIN. Cet utilisateur sera propriétaire du certificat de la base de données source créé à partir du fichier de sauvegarde. Il n'est pas nécessaire que l'utilisateur soit mappé à une connexion, parce que le seul objectif de cet utilisateur est d'être propriétaire du certificat de la base de données source, créé au cours de l'étape 3 suivante.|  
   
- **Étape 3 : partagez les certificats et attribuez les autorisations pour l'authentification de niveau base de données.**  
+ **Étape 3 : partager les certificats et attribuer les autorisations pour l’authentification de niveau base de données.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "51669368"
 ||[Attribuez l'autorisation SEND](../../t-sql/statements/grant-transact-sql.md) sur le service cible à l'utilisateur de la base de données source.|  
 |Fournissez au serveur cible l'identificateur Service Broker de la base de données source. Vous pouvez obtenir cet identificateur en interrogeant la colonne **service_broker_guid** de l’affichage catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Pour une notification d’événement de niveau serveur, utilisez l’identificateur Service Broker de **msdb**.|Fournissez au serveur source l'identificateur Service Broker de la base de données cible.|  
   
- **Étape 4 : créez les itinéraires et configurez l'authentification de niveau serveur.**  
+ **Étape 4 : créer les itinéraires et configurer l’authentification de niveau serveur.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "51669368"
 |[Attribuez l'autorisation CONNECT](../../t-sql/statements/grant-transact-sql.md) sur le point de terminaison à la connexion authentificatrice cible.|Attribuez l'autorisation CONNECT sur le point de terminaison à la connexion authentificatrice source.|  
 |[Créez un utilisateur](../../t-sql/statements/create-user-transact-sql.md)et spécifiez la connexion authentificatrice cible.|Créez un utilisateur et spécifiez la connexion authentificatrice source.|  
   
- **Étape 5 : partagez les certificats d'authentification de niveau serveur et créez la notification d'événement.**  
+ **Étape 5 : partager les certificats d’authentification de niveau serveur et créer la notification d’événement.**  
   
  Exécutez les actions suivantes sur le serveur source et sur le serveur cible.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "51669368"
 |Basculez vers la base de données source sur laquelle créer la notification d'événement et, si vous n'êtes pas déjà connecté en tant qu'utilisateur de la base de données source, connectez-vous maintenant.|Basculez vers la base de données cible pour recevoir les messages de notification d'événement.|  
 |[Créez la notification d'événement](../../t-sql/statements/create-event-notification-transact-sql.md)et spécifiez le Service Broker, ainsi que l'identificateur de la base de données cible.||  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

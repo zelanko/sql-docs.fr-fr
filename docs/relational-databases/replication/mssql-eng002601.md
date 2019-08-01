@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd3e274f1a8616c0d0aa9d54bcdd84a35d6936ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d24cc29fd35694ab69ad006498d3456d3ade68e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111009"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47777868"
   
 -   Une table avec une colonne d'identité est utilisée, mais la colonne n'est par gérée de façon appropriée.  
   
--   Dans la réplication de fusion, cette erreur peut également se produite lors d'une insertion dans une table système **MSmerge_contents**; l'erreur déclenchée est similaire à : impossible d'insérer une ligne de clé dupliquée dans l'objet « MSmerge_contents » d'index unique « ucl1SycContents ».  
+-   Dans la réplication de fusion, cette erreur peut également se produire durant une insertion dans la table système **MSmerge_contents**. L’erreur générée est semblable à celle-ci : Impossible d’insérer une ligne de clé en double dans l’objet 'MSmerge_contents' avec un index unique 'ucl1SycContents'.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  L'action requise dépend de la raison du déclenchement de l'erreur :  
@@ -64,7 +63,7 @@ ms.locfileid: "47777868"
   
      Cette erreur peut se produire en raison d'une valeur incorrecte pour la propriété du filtre de jointure **join_unique_key**. Cette propriété doit être définie avec la valeur TRUE seulement si la colonne de jointure dans la table parente est unique. Si la propriété est définie avec la valeur TRUE mais que la colonne n'est pas unique, cette erreur est déclenchée. Pour plus d'informations sur la définition de cette propriété, consultez [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

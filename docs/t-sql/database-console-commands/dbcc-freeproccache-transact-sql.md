@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3302577e705bf563ad54037437213a4088407f0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101904"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -89,7 +88,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], utilisez l’instruction `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` pour effacer le cache (du plan) de procédure pour la base de données dans l’étendue.
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Utilisez l'instruction DBCC FREEPROCCACHE pour effacer le cache du plan avec précaution. L’effacement du cache (du plan) de procédure entraîne la suppression de tous les plans et la compilation d’un nouveau plan par les exécutions de requêtes entrantes, et non la réutilisation d’un plan mis en cache précédemment. 
 
 Cette opération peut entraîner une baisse temporaire et brutale des performances des requêtes comme le nombre de nouvelles compilations augmente. Pour chaque mémoire cache effacée dans le cache du plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d’opérations 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE' ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
@@ -113,9 +112,9 @@ Les opérations de reconfiguration suivantes effacent également le cache de pro
 -   user options  
   
 ## <a name="result-sets"></a>Jeux de résultats  
-Lorsque la clause WITH NO_INFOMSGS n'est pas spécifiée, l'instruction DBCC FREEPROCCACHE retourne le message : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
+Quand la clause WITH NO_INFOMSGS n’est pas spécifiée, l’instruction DBCC FREEPROCCACHE retourne : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 S’applique à : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Nécessite l'autorisation ALTER SERVER STATE sur le serveur.  
 
@@ -171,7 +170,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>b. Effacement de tous les plans du cache du plan  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Effacement de tous les plans du cache du plan  
 L'exemple suivant efface tous les éléments du cache du plan. La clause WITH `NO_INFOMSGS` est spécifiée pour empêcher l’affichage du message d’information.
   
 ```sql  
@@ -215,7 +214,7 @@ GRANT ALTER SERVER STATE TO David;
 GO
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)  
 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

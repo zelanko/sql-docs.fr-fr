@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 90437ce089bba33e5282ca01e907dfac7afe77ab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 23949aec32acce44cd139ab8505cd1ffc743e64d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912703"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -83,7 +82,7 @@ RETURNS return_data_type
  Spécifiez un nom de paramètre en plaçant le signe @ comme premier caractère. Le nom de paramètre doit suivre les règles applicables aux identificateurs. Un paramètre étant local à une fonction, vous pouvez utiliser le même nom dans d'autres fonctions. Les paramètres ne peuvent que prendre la place de constantes ; ils ne peuvent pas être utilisés à la place de noms de tables, de colonnes ou d'autres objets de base de données.  
   
 > [!NOTE]  
->  ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)**, puis réglée sur une valeur supérieure à trois caractères, les données sont tronquées à la taille définie et l’instruction INSERT ou UPDATE réussit.  
+>  ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)** , puis réglée sur une valeur supérieure à trois caractères, les données sont tronquées à la taille définie et l’instruction INSERT ou UPDATE réussit.  
   
  *parameter_data_type*  
  Type de données du paramètre. Pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisés. Le type de données timestamp (rowversion) n’est pas un type pris en charge.  
@@ -154,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Métadonnées  
  Cette section répertorie les vues de catalogue système que vous pouvez utiliser pour retourner des métadonnées sur les fonctions définies par l’utilisateur.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : affiche la définition des fonctions définies par l’utilisateur [!INCLUDE[tsql](../../includes/tsql-md.md)]. Exemple :  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : Affiche la définition des fonctions définies par l’utilisateur [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
   
 ```  
 SELECT definition, type   
@@ -166,11 +165,11 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : affiche des informations sur les paramètres définis dans les fonctions définies par l’utilisateur.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : Affiche des informations sur les paramètres définis dans les fonctions définies par l'utilisateur.  
   
- [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : affiche les objets sous-jacents référencés par une fonction.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Affiche les objets sous-jacents référencés par une fonction.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisation ALTER sur le schéma dans lequel la fonction est en cours de création.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -192,7 +191,7 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   

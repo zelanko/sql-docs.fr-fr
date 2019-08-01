@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061154"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ FOR CONVERSATION
  Spécifie le nom de cette priorité de conversation. Le nom doit être unique dans la base de données active et doit se conformer aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md) du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  SET  
- Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. S'il est spécifié, SET doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL. Si SET n'est pas spécifié, les valeurs par défaut sont définies pour les trois critères.  
+ Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. S’il est spécifié, SET doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL. Si SET n'est pas spécifié, les valeurs par défaut sont définies pour les trois critères.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Spécifie le nom d'un contrat à utiliser comme critère pour déterminer si la priorité de conversation s'applique à une conversation. *ContractName* est un identificateur [!INCLUDE[ssDE](../../includes/ssde-md.md)], et vous devez spécifier le nom d’un contrat de base de données active.  
@@ -94,7 +93,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Spécifie le nom d'un service à utiliser comme critère pour déterminer si la priorité de conversation s'applique à un point de terminaison.  
   
- *RemoteServiceName* est un littéral de type **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *RemoteServiceName*. La comparaison respecte la casse et ne prend pas en compte le classement actuel. Le service cible peut être dans l'instance actuelle du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou dans une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* est un littéral de type **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *RemoteServiceName*. La comparaison respecte la casse et ne prend pas en compte le classement actuel. Le service cible peut être dans l'instance actuelle du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou dans une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Spécifie que la priorité de conversation peut être appliquée aux éléments suivants :  
@@ -111,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Spécifie la priorité à attribuer à un point de terminaison qui utilise les contrats et les services spécifiés dans la priorité de conversation. *PriorityValue* doit être un littéral entier compris entre 1 (priorité la plus faible) et 10 (priorité la plus élevée). La valeur par défaut est 5.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] assigne des niveaux de priorité aux points de terminaison de la conversation. Les niveaux de priorité contrôlent la priorité des opérations associées au point de terminaison. Chaque conversation comporte deux points de terminaison :  
   
 -   Le point de terminaison de l'initiateur associe un côté de la conversation au service et à la file d'attente de l'initiateur. Le point de terminaison de la conversation de l'initiateur est créé lors de l'exécution de l'instruction BEGIN DIALOG. Les opérations suivantes sont associées au point de terminaison de l'initiateur :  
@@ -159,7 +158,7 @@ FOR CONVERSATION
   
 -   La priorité 5 par défaut est attribuée à toutes les opérations [!INCLUDE[ssSB](../../includes/sssb-md.md)] d’une base de données si aucune priorité de conversation n’a été créée dans la base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'autorisation de création d'une priorité de conversation est accordée par défaut aux membres du rôle de base de données fixe db_ddladmin ou db_owner, ainsi qu'aux membres du rôle serveur fixe sysadmin. Nécessite l'autorisation ALTER sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -284,7 +283,7 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   

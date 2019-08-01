@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ac472b720f8c4262b657c35e2c363bae73687ab
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112921"
 ---
 # <a name="create-instances-of-xml-data"></a>Créer des instances de données XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Si le paramètre *style* n’est pas utilisé ou s’il a la valeur 0, les espaces non significatifs ne sont pas conservés durant la conversion de l’instance du type de données xml. Pour plus d’informations sur l’utilisation de l’opérateur CONVERT et de son paramètre *style* durant la conversion de données chaîne en instances du type de données xml, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemple : conversion d'une valeur chaîne en xml typé et affectation de cette valeur à une colonne  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemple : conversion d’une valeur chaîne en xml typé et affectation de cette valeur à une colonne  
  L’exemple suivant convertit une variable chaîne qui contient un fragment XML en type de données **xml** , puis la stocke dans la colonne de type **xml** :  
   
 ```  
@@ -123,7 +122,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemple : conversion d'une valeur chaîne en xml typé et affectation de cette valeur à une variable  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemple : conversion d’une valeur chaîne en xml typé et affectation de cette valeur à une variable  
  Dans l’exemple suivant, une chaîne est convertie en type **xml** , puis affectée à une variable de type **xml** :  
   
 ```  
@@ -215,7 +214,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 |-----------|-----------------|  
 |[Récupérer et interroger des données XML](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Décrit les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Langage de modification de données XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

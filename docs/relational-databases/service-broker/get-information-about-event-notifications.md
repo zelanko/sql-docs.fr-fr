@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf3cf6857f2cc82d1cb7f901614a80fdec61b4c6
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: fefdced57d611d241dbb96b71a0b220139683243
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083832"
 ---
 # <a name="get-information-about-event-notifications"></a>Obtenir des informations concernant les notifications d'événements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,14 +30,14 @@ ms.locfileid: "51570844"
 -   [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)  
   
 > [!NOTE]  
->  Pour afficher les métadonnées sur une notification d’événement dans l’affichage catalogue **sys.event_notifications** créée au niveau de la base de données, vous devez au moins disposer de l’autorisation CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur la base de données, être propriétaire de la notification d’événement ou disposer de l’autorisation ALTER ANY DATABASE EVENT NOTIFICATION. Pour les notifications d'événements créées sur une file d'attente spécifique, vous devez au moins disposer de l'autorisation CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur l'objet, être propriétaire de la notification d'événement ou disposer de l'autorisation ALTER ANY DATABASE EVENT NOTIFICATION.  
+>  Pour afficher les métadonnées sur une notification d’événement dans la vue de catalogue **sys.event_notifications** créée au niveau de la base de données, vous devez au moins disposer de l’autorisation CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur la base de données, être propriétaire de la notification d’événement ou disposer de l’autorisation ALTER ANY DATABASE EVENT NOTIFICATION. Pour les notifications d’événements créées sur une file d’attente spécifique, vous devez au moins disposer de l’autorisation CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur l’objet, être propriétaire de la notification d’événement ou disposer de l’autorisation ALTER ANY DATABASE EVENT NOTIFICATION.  
   
  **Pour obtenir des informations sur les notifications d'événements qui se produisent au niveau du serveur**  
   
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)  
   
 > [!NOTE]  
->  Vous devez au moins disposer de l’autorisation CONTROL ou VIEW ANY DEFINITION sur le serveur, être la connexion ou le propriétaire de la notification d’événement ou disposer de l’autorisation ALTER ANY EVENT NOTIFICATION pour afficher les métadonnées concernant toute notification d’événement dans **sys.server_event_notifications**.  
+>  Vous devez au moins disposer de l’autorisation CONTROL ou VIEW DEFINITION sur le serveur, être la connexion ou le propriétaire de la notification d’événement ou disposer de l’autorisation ALTER ANY EVENT NOTIFICATION pour afficher les métadonnées concernant toute notification d’événement dans la vue de catalogue **sys.server_event_notifications**.  
   
  **Pour obtenir des informations sur tous les événements pouvant déclencher des notifications**  
   
@@ -47,7 +46,7 @@ ms.locfileid: "51570844"
 > [!NOTE]  
 >  Cette vue de catalogue ne retourne pas de groupes d'événements.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Notifications d'événements](../../relational-databases/service-broker/event-notifications.md)  
   
   

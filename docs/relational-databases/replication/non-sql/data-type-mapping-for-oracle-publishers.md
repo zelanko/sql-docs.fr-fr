@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901121"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mappage de type de données pour les serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +34,30 @@ ms.locfileid: "47739187"
 |CHAR([1-2000])|CHAR([1-2000])|Oui|  
 |CLOB|VARCHAR(MAX)|Oui|  
 |DATE|DATETIME|Oui|  
-|FLOAT|FLOAT|non|  
-|FLOAT([1-53])|FLOAT([1-53])|non|  
-|FLOAT([54-126])|FLOAT|non|  
+|FLOAT|FLOAT|Non|  
+|FLOAT([1-53])|FLOAT([1-53])|Non|  
+|FLOAT([54-126])|FLOAT|Non|  
 |INT|NUMERIC(38)|Oui|  
 |INTERVAL|DATETIME|Oui|  
 |LONG|VARCHAR(MAX)|Oui|  
 |LONG RAW|IMAGE|Oui|  
-|NCHAR([1-1000])|NCHAR([1-1000])|non|  
+|NCHAR([1-1000])|NCHAR([1-1000])|Non|  
 |NCLOB|NVARCHAR(MAX)|Oui|  
 |NUMBER|FLOAT|Oui|  
-|NUMBER([1-38])|NUMERIC([1-38])|non|  
+|NUMBER([1-38])|NUMERIC([1-38])|Non|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Oui|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|non|  
-|RAW([1-2000])|VARBINARY([1-2000])|non|  
-|real|FLOAT|non|  
-|ROWID|CHAR(18)|non|  
-|TIMESTAMP|DATETIME|Oui|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Non|  
+|RAW([1-2000])|VARBINARY([1-2000])|Non|  
+|real|FLOAT|Non|  
+|ROWID|CHAR(18)|Non|  
+|timestamp|DATETIME|Oui|  
 |TIMESTAMP(0-7)|DATETIME|Oui|  
 |TIMESTAMP(8-9)|DATETIME|Oui|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Oui|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|non|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Non|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Oui|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|non|  
-|UROWID|CHAR(18)|non|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Non|  
+|UROWID|CHAR(18)|Non|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Oui|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Règles de mappage des types de données  
@@ -83,7 +82,7 @@ ms.locfileid: "47739187"
 ### <a name="float-and-number-types"></a>Types FLOAT et NUMBER  
  L'échelle et la précision spécifiées lors du mappage des types de données FLOAT et NUMBER dépendent de l'échelle et de la précision spécifiées pour la colonne utilisant le type de données dans la base de données Oracle. La précision est le nombre de chiffres qui composent un nombre. L'échelle est le nombre de chiffres à droite du séparateur décimal dans un nombre. Par exemple, le nombre 123,45 a une précision de 5 et une échelle de 2.  
   
- Oracle permet de définir des nombres dont l'échelle est supérieure à la précision, par exemple NUMBER(4,5), mais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite une précision supérieure ou égale à l'échelle. Afin d'éviter les troncations de données, si l'échelle est supérieure à la précision sur le serveur de publication Oracle, la précision est définie comme étant égale à l'échelle lorsque le type de données est mappé : NUMBER(4,5) sera mappé comme NUMERIC(5,5).  
+ Oracle permet de définir des nombres dont l'échelle est supérieure à la précision, par exemple NUMBER(4,5), mais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite une précision supérieure ou égale à l'échelle. Pour éviter les troncations de données, si l’échelle est supérieure à la précision sur le serveur de publication Oracle, la précision est définie comme étant égale à l’échelle quand le type de données est mappé : NUMBER(4,5) sera mappé NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Si vous n'indiquez pas d'échelle ni de précision pour NUMBER, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise par défaut les valeurs maximales d'échelle (8) et de précision (38). Nous vous recommandons de définir une échelle et une précision spécifiques dans Oracle, afin d'optimiser le stockage et les performances lorsque les données sont répliquées.  
@@ -106,7 +105,7 @@ ms.locfileid: "47739187"
   
  Pour spécifier des mappages de types de données de remplacement, consultez [Spécifier des mappages de types de données pour un Serveur de publication Oracle](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Problèmes et limitations de conception des serveurs de publication Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
  [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  

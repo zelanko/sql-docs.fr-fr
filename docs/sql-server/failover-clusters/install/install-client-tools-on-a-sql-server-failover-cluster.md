@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4e5c1182bb2aeb9a5a3a5c0db640b89237c58a29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063943"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installer les outils clients sur un cluster de basculement SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,26 +33,26 @@ ms.locfileid: "47792897"
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dans le dossier d'installation racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir du partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  Dans la page **Installation**, cliquez sur **Nouvelle installation autonome [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou ajout de fonctionnalités à une installation existante**. Ne cliquez pas sur **Installation d’un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  Dans la page **Installation**, cliquez sur **Nouvelle installation autonome [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou ajout de fonctionnalités à une installation existante**. Ne cliquez pas sur **Installation d’un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive.  
   
-4.  Dans la page **Type d’installation**, cliquez sur **Effectuer une nouvelle installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**.  
+4.  Dans la page **Type d’installation**, cliquez sur **Effectuer une nouvelle installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** .  
   
 5.  Dans la page **Sélection de composant**, sélectionnez les outils à installer et suivez le reste des étapes du processus d’installation.  
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Installation des outils clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'invite de commandes  
   
-1.  Pour installer les outils clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez la commande suivante : Setup.exe/q/Action=Install /Features=Tools  
+1.  Pour installer les outils clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], exécutez la commande suivante : Setup.exe/q/Action=Install /Features=Tools  
   
-2.  Pour installer uniquement les outils d'administration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de base, exécutez la commande suivante : Setup.exe/q/Action=Install Features=SSMS. Ceci installe la prise en charge de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] pour le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilitaire sqlcmd et le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Powershell.  
+2.  Pour installer uniquement les outils de gestion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de base, exécutez la commande suivante : Setup.exe/q/Action=Install Features=SSMS. Ceci installe la prise en charge de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] pour le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilitaire sqlcmd et le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Powershell.  
   
-3.  Pour installer l'ensemble des outils d'administration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez la commande suivante : Setup.exe/q/Action=Install /Features=ADV_SSMS. Pour plus d’informations sur les valeurs de paramètre pour les fonctionnalités, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+3.  Pour installer l’ensemble des outils de gestion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], exécutez la commande suivante : Setup.exe/q/Action=Install /Features=ADV_SSMS. Pour plus d’informations sur les valeurs de paramètre pour les fonctionnalités, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Désinstallation des outils clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Ils sont répertoriés avec l’intitulé **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** dans le Panneau de configuration, sous Ajout/Suppression de programmes. Vous pouvez les supprimer à partir de cet emplacement. Lorsque vous utilisez la fonctionnalité Supprimer un nœud pour désinstaller une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du cluster de basculement, les composants clients ne sont pas désinstallés en même temps.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

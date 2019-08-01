@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044749"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Stratégie de basculement pour les instances de cluster de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,17 +98,17 @@ ms.locfileid: "52398648"
 |1|Basculement ou redémarrage sur arrêt du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché en fonction de la condition suivante :<br /><br /> Le service SQL Server est fermé.|  
 |2|Basculement ou redémarrage sur non-réponse du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).|  
 |3*|Basculement ou redémarrage sur des erreurs de serveur critiques|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne « erreur système ».|  
-|4|Basculement ou redémarrage sur des erreurs de serveur modérées|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne « erreur système ».<br /><br /> La procédure stockée système sp_server_diagnostics retourne « erreur de ressource ».|  
+|4|Basculement ou redémarrage sur des erreurs de serveur modérées|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne « erreur système ».<br /><br /> La procédure stockée système sp_server_diagnostics retourne « erreur de ressource ».|  
 |5|Basculement ou redémarrage sur toutes les conditions d'échec qualifiées|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne « erreur système ».<br /><br /> La procédure stockée système sp_server_diagnostics retourne « erreur de ressource ».<br /><br /> La procédure stockée système sp_server_diagnostics retourne une « erreur query_processing ».|  
   
  *Valeur par défaut  
   
 ####  <a name="respond"></a> Réponse aux échecs  
- Lorsqu'une ou plusieurs conditions d'échec sont détectées, la manière dont le service WSFC y répond dépend de l'état du quorum WSFC et des paramètres de redémarrage et de basculement du groupe de ressources de la FCI. Si la FCI a perdu le quorum WSFC, alors elle est entièrement mise hors connexion et perd sa haute disponibilité. Si la FCI conserve son quorum WSFC, le service WSFC peut répondre en tentant d'abord de redémarrer le nœud en échec, puis tente un basculement si les tentatives de redémarrage ont échoué. Les paramètres de redémarrage et de basculement sont configurés dans le composant logiciel enfichable Gestionnaire du cluster de basculement. Pour plus d’informations sur ces paramètres, consultez [Propriétés de \<Ressource> : onglet Stratégies](https://technet.microsoft.com/library/cc725685.aspx).  
+ Lorsqu'une ou plusieurs conditions d'échec sont détectées, la manière dont le service WSFC y répond dépend de l'état du quorum WSFC et des paramètres de redémarrage et de basculement du groupe de ressources de la FCI. Si la FCI a perdu le quorum WSFC, alors elle est entièrement mise hors connexion et perd sa haute disponibilité. Si la FCI conserve son quorum WSFC, le service WSFC peut répondre en tentant d'abord de redémarrer le nœud en échec, puis tente un basculement si les tentatives de redémarrage ont échoué. Les paramètres de redémarrage et de basculement sont configurés dans le composant logiciel enfichable Gestionnaire du cluster de basculement. Pour plus d’informations sur ces paramètres, consultez [Propriétés de \<ressource> : onglet Stratégies](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Pour plus d’informations sur la conservation de l’intégrité du quorum, consultez [Modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

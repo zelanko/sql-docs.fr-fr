@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136491"
 ---
 # <a name="sql-server-2014-release-notes"></a>Notes de publication de SQL Server 2014
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ La mise à niveau est entièrement prise en charge. Plus précisément, vous pou
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>Rétrogradation de SQL Server 2014 RTM vers SQL Server 2014 CTP 2  
 Cette action n’est pas prise en charge.  
   
-**Solution de contournement :** il n'existe pas de solution de contournement pour le passage à une version antérieure. Nous vous recommandons de sauvegarder la base de données avant d’effectuer une mise à niveau vers SQL Server 2014 RTM.  
+**Solution de contournement :** Il n’existe pas de solution de contournement pour le passage à une version antérieure. Nous vous recommandons de sauvegarder la base de données avant d’effectuer une mise à niveau vers SQL Server 2014 RTM.  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Version incorrecte du client StreamInsight sur le média/ISO/CAB SQL Server 2014  
 La version incorrecte de StreamInsight.msi et StreamInsightClient.msi se trouve dans le chemin suivant du média SQL Server/ISO/CAB (StreamInsight\\\<Architecture\>\\\<ID de langue\>).  
@@ -158,7 +157,7 @@ L'édition SQL Server 2014 Standard comprend les modifications suivantes :
 -   La mémoire maximale est passée de 64 Go à 128 Go.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>Le Conseiller d’optimisation de la mémoire signale les contraintes par défaut comme incompatibles  
-**Problème :** le Conseiller d'optimisation de la mémoire dans SQL Server Management Studio signale toutes les contraintes par défaut comme étant incompatibles. Certaines contraintes par défaut ne sont pas prises en charge dans une table mémoire optimisée ; le Conseiller ne fait pas de distinction entre les types de contraintes par défaut prises en charge et non prises en charge. Les contraintes par défaut prises en charge incluent toutes les constantes, expressions et fonctions intégrées prises en charge dans les procédures stockées compilées en mode natif. Pour afficher la liste des fonctions prises en charge dans les procédures stockées compilées en mode natif, consultez [Constructions prises en charge dans les procédures stockées compilées en mode natif](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problème :** Le Conseiller d’optimisation de la mémoire dans SQL Server Management Studio signale toutes les contraintes par défaut comme étant incompatibles. Certaines contraintes par défaut ne sont pas prises en charge dans une table mémoire optimisée ; le Conseiller ne fait pas de distinction entre les types de contraintes par défaut prises en charge et non prises en charge. Les contraintes par défaut prises en charge incluent toutes les constantes, expressions et fonctions intégrées prises en charge dans les procédures stockées compilées en mode natif. Pour afficher la liste des fonctions prises en charge dans les procédures stockées compilées en mode natif, consultez [Constructions prises en charge dans les procédures stockées compilées en mode natif](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Solution de contournement :** Si vous voulez utiliser le conseiller pour identifier les bloqueurs, ignorez les contraintes par défaut compatibles. Pour utiliser le Conseiller d'optimisation de la mémoire pour migrer des tables ayant des contraintes par défaut compatibles, mais aucun autre bloqueur, suivez ces étapes :  
   
@@ -168,7 +167,7 @@ L'édition SQL Server 2014 Standard comprend les modifications suivantes :
 4.  Exécutez le script de migration.  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>Le message d’information « Accès au fichier refusé » est signalé à tort comme erreur dans le journal des erreurs de SQL Server 2014  
-**Problème :** lors du redémarrage d'un serveur qui a des bases de données contenant des tables mémoire optimisées, vous pouvez voir le type de message d'erreur suivant dans le journal des erreurs SQL Server 2014 :  
+**Problème :** Lors du redémarrage d’un serveur qui a des bases de données contenant des tables à mémoire optimisée, vous pouvez voir le type de message d’erreur suivant dans le journal des erreurs SQL Server 2014 :  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -180,19 +179,19 @@ Ce message est en fait fourni à titre d’information. Aucune action n’est re
 **Solution de contournement :** Aucun. Ce message est fourni à titre d'information.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>Les détails sur l’index manquant signalent de façon erronée des colonnes incluses pour la table à mémoire optimisée  
-**Problème :** si SQL Server 2014 détecte un index absent pour une requête sur une table mémoire optimisée, il signale un index absent dans SHOWPLAN_XML, ainsi que dans les vues de gestion dynamique de l'index absent, par exemple sys.dm_db_missing_index_details. Dans certains cas, les détails de l'index absent contiendront des colonnes incluses. Bien que toutes les colonnes soient implicitement incluses avec tous les index des tables mémoire optimisées, il n'est pas possible de spécifier explicitement les colonnes incluses avec des index mémoire optimisés.  
+**Problème :** Si SQL Server 2014 détecte un index manquant pour une requête sur une table à mémoire optimisée, il signale un index absent dans SHOWPLAN_XML, ainsi que dans les vues de gestion dynamique de l’index manquant, par exemple sys.dm_db_missing_index_details. Dans certains cas, les détails de l'index absent contiendront des colonnes incluses. Bien que toutes les colonnes soient implicitement incluses avec tous les index des tables mémoire optimisées, il n'est pas possible de spécifier explicitement les colonnes incluses avec des index mémoire optimisés.  
   
-**Solution de contournement :** ne spécifiez pas la clause INCLUDE pour des index de tables mémoire optimisées.  
+**Solution de contournement :** Ne spécifiez pas la clause INCLUDE pour des index de tables à mémoire optimisée.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>Les détails sur l’index manquant omettent les index manquants quand un index de hachage existe mais qu’il n’est pas approprié pour la requête  
-**Problème :** si un index HASH sur les colonnes d'une table mémoire optimisée est référencé dans une requête mais que l'index ne peut pas être utilisé pour la requête, SQL Server 2014 ne signale pas toujours d'index absent dans SHOWPLAN_XML et dans la vue de gestion dynamique sys.dm_db_missing_index_details.  
+**Problème :** Si un index HASH sur les colonnes d’une table à mémoire optimisée est référencé dans une requête mais que l’index ne peut pas être utilisé pour la requête, SQL Server 2014 ne signale pas toujours un index manquant dans SHOWPLAN_XML et dans la vue de gestion dynamique sys.dm_db_missing_index_details.  
   
 Notamment, si une requête contient des prédicats d'égalité qui impliquent un sous-ensemble de colonnes clés d'index ou si elle contient des prédicats d'inégalité qui impliquent des colonnes clés d'index, l'index HASH ne peut pas être utilisé tel quel, et un autre index est requis pour exécuter la requête efficacement.  
   
-**Solution de contournement :** si vous utilisez des index hach, inspectez les requêtes et les plans de requête pour déterminer si les requêtes peuvent tirer parti des opérations de recherche d'index sur un sous-ensemble de la clé d'index ou des opérations de recherche d'index sur les prédicats d'inégalité. Si vous devez effectuer une recherche sur un sous-ensemble de la clé d'index, utilisez un index NONCLUSTERED, ou un index HASH uniquement sur les colonnes qui font l'objet de votre recherche. Si vous devez effectuer une recherche sur un prédicat d'inégalité, utilisez un index NONCLUSTERED au lieu d'un index HASH.  
+**Solution de contournement :** Si vous utilisez des index de hachage, inspectez les requêtes et les plans de requête pour déterminer si les requêtes peuvent tirer parti des opérations de recherche d’index sur un sous-ensemble de la clé d’index ou des opérations de recherche d’index sur les prédicats d’inégalité. Si vous devez effectuer une recherche sur un sous-ensemble de la clé d'index, utilisez un index NONCLUSTERED, ou un index HASH uniquement sur les colonnes qui font l'objet de votre recherche. Si vous devez effectuer une recherche sur un prédicat d'inégalité, utilisez un index NONCLUSTERED au lieu d'un index HASH.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Échec lors de l’utilisation d’une table à mémoire optimisée et d’une variable de table à mémoire optimisée dans la même requête, si l’option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON  
-**Problème :** si l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON et que vous accédez à une table mémoire optimisée et à une variable de table mémoire optimisée dans la même instruction en dehors du contexte d'une transaction utilisateur, vous pouvez obtenir ce message d'erreur :  
+**Problème :** Si l’option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON et que vous accédez à une table à mémoire optimisée et à une variable de table à mémoire optimisée dans la même instruction en dehors du contexte d’une transaction utilisateur, ce message d’erreur peut s’afficher :  
   
 ```  
 Msg 41359  
@@ -202,7 +201,7 @@ READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level
 for the memory optimized table using a table hint, such as WITH (SNAPSHOT).  
 ```  
   
-**Solution de contournement :** utilisez l'indicateur de table WITH (SNAPSHOT) avec la variable de table ou affectez la valeur ON à l'option de base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT à l'aide de l'instruction suivante :  
+**Solution de contournement :** Utilisez l’indicateur de table WITH (SNAPSHOT) avec la variable de table ou affectez la valeur ON à l’option de base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT à l’aide de l’instruction suivante :  
   
 ```  
 ALTER DATABASE CURRENT   
@@ -210,12 +209,12 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>Les statistiques d’exécution des procédures et des requêtes pour les procédures stockées compilées en mode natif enregistrent le temps de travail par multiples de 1000  
-**Problème :** après l'activation de la collection de procédures ou de la collection de statistiques d'exécution de requête pour les procédures stockées compilées en mode natif avec sp_xtp_control_proc_exec_stats ou sp_xtp_control_query_exec_stats, vous verrez que le *_worker_time est indiqué par multiples de 1000 dans les vues de gestion dynamique sys.dm_exec_procedure_stats et sys.dm_exec_query_stats. Les exécutions de requête dont le temps de travail est inférieur à 500 microsecondes seront indiquées avec un worker_time de 0.  
+**Problème :** Après l’activation de la collection de procédures ou de la collection de statistiques d’exécution de requête pour les procédures stockées compilées en mode natif avec sp_xtp_control_proc_exec_stats ou sp_xtp_control_query_exec_stats, vous verrez que le *_worker_time est indiqué par multiples de 1 000 dans les vues de gestion dynamique sys.dm_exec_procedure_stats et sys.dm_exec_query_stats. Les exécutions de requête dont le temps de travail est inférieur à 500 microsecondes seront indiquées avec un worker_time de 0.  
   
 **Solution de contournement :** Aucun. Ne comptez pas sur le worker_time indiqué dans les vues de gestion dynamique des statistiques pour les requêtes à exécution courte dans les procédures stockées compilées en mode natif.  
   
 #### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Erreur avec SHOWPLAN_XML pour les procédures stockées compilées en mode natif contenant des expressions longues  
-**Problème :** si une procédure stockée compilée en mode natif contient une expression longue, l'obtention du SHOWPLAN_XML pour la procédure, à l'aide de l'option T-SQL SHOWPLAN_XML SET ON ou de l'option « Afficher le plan d'exécution estimé » dans Management Studio, peut entraîner l'erreur suivante :  
+**Problème :** Si une procédure stockée compilée en mode natif contient une expression longue, l’obtention du SHOWPLAN_XML pour la procédure, à l’aide de l’option T-SQL SHOWPLAN_XML SET ON ou de l’option « Afficher le plan d’exécution estimé » dans Management Studio, peut entraîner l’erreur suivante :  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -224,7 +223,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**Solution de contournement :** il existe deux solutions de contournement :  
+**Solution de contournement :** Il existe deux solutions de contournement :  
   
 1.  Ajoutez des parenthèses à l'expression, comme dans l'exemple suivant :  
   
@@ -255,7 +254,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>L’utilisation d’un paramètre ou d’une variable avec DATEPART et des fonctions liées dans une procédure stockée compilée en mode natif génère une erreur  
 **Problème :** Quand vous utilisez une procédure stockée compilée en mode natif qui utilise un paramètre ou une variable de chaîne avec les fonctions intégrées DATEPART, DAY, MONTH et YEAR, un message d’erreur indique que le datetimeoffset n’est pas pris en charge avec les procédures stockées compilées en mode natif.  
   
-**Solution de contournement :** attribuez le paramètre ou la variable de chaîne à une nouvelle variable de type datetime2, puis utilisez cette variable dans la fonction DATEPART, DAY, MONTH ou YEAR. Par exemple :  
+**Solution de contournement :** Attribuez le paramètre ou la variable de chaîne à une nouvelle variable de type datetime2, puis utilisez cette variable dans la fonction DATEPART, DAY, MONTH ou YEAR. Par exemple :  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -263,7 +262,7 @@ DATEPART(weekday, @d)
 ```  
   
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>Le Conseiller de compilation native signale les clauses DELETE FROM de façon incorrecte  
-**Problème :** le Conseiller de compilation native indique les clauses DELETE FROM d'une procédure stockée comme étant incompatibles, ce qui est incorrect.  
+**Problème :** Le Conseiller de compilation native indique les clauses DELETE FROM d’une procédure stockée comme étant incompatibles, ce qui est incorrect.  
   
 **Solution de contournement :** Aucun.  
   
@@ -328,7 +327,7 @@ Pour plus d'informations, consultez [Conseils, astuces et dépannage pour SQL Se
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>Ordre de mise à niveau nécessaire pour la batterie de serveurs SharePoint à plusieurs nœuds sur SQL Server 2014 Reporting Services  
 **Problème :** La génération de rapport dans une batterie de serveurs à plusieurs nœuds échoue si les instances du service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint sont mises à niveau avant toutes les instances du complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint.  
   
-**Solution de contournement :** dans une batterie de serveurs SharePoint à plusieurs nœuds :  
+**Solution de contournement :** Dans une batterie de serveurs SharePoint à plusieurs nœuds :  
   
 1.  Mettez d'abord à niveau toutes les instances du complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint.    
 2.  Mettez ensuite à niveau toutes les instances du service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint.  
@@ -338,7 +337,7 @@ Pour plus d'informations, consultez [Conseils, astuces et dépannage pour SQL Se
 ### <a name="AzureVM"></a>SQL Server 2014 RTM sur des machines virtuelles Microsoft Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>L’Assistant Ajouter un réplica Azure retourne une erreur lors de la configuration d’un écouteur de groupe de disponibilité dans Windows Azure  
-**Problème :** si un groupe de disponibilité a un écouteur, l'Assistant Ajouter un réplica Windows Azure renvoie une erreur lorsque vous tentez de configurer l'écouteur dans Windows Azure.  
+**Problème :** Si un groupe de disponibilité a un écouteur, l’Assistant Ajouter un réplica Azure retourne une erreur quand vous tentez de configurer l’écouteur dans Windows Azure.  
   
 Ce problème est dû au fait que les écouteurs de groupe de disponibilité exigent l’affectation d’une adresse IP dans chaque sous-réseau qui héberge des réplicas de groupe de disponibilité, dont le sous-réseau Azure.  
   
@@ -404,12 +403,12 @@ Ce problème est dû au fait que les écouteurs de groupe de disponibilité exig
   
 -   Master Data Services 2012 hébergé dans une base de données du moteur de base de données SQL Server dans SQL Server 2014 avec Data Quality Services 2014 installé.  
   
-**Solution de contournement :** utilisez la même version de Master Data Services que la base de données du moteur de base de données et Data Quality Services.  
+**Solution de contournement :** Utilisez la même version de Master Data Services que la base de données du moteur de base de données et Data Quality Services.  
   
 ### <a name="UA"></a>Problèmes relatifs au Conseiller de mise à niveau (version finale)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Le Conseiller de mise à niveau SQL Server 2014 signale des problèmes de mise à niveau non pertinents pour SQL Server Reporting Services  
-**Problème :** le Conseiller de mise à niveau de SQL Server (SSUA) fourni avec le média SQL Server 2014 signale incorrectement plusieurs erreurs lors de l'analyse du serveur SQL Server Reporting Services.  
+**Problème :** le Conseiller de mise à niveau de SQL Server (SSUA) fourni avec le média SQL Server 2014 signale incorrectement plusieurs erreurs lors de l’analyse du serveur SQL Server Reporting Services.  
   
 **Solution de contournement :** Ce problème est résolu dans le Conseiller de mise à niveau fourni dans [SQL Server 2014 Feature Pack pour SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   

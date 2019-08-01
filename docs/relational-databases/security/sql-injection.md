@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126856"
 ---
 # <a name="sql-injection"></a>Injection SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +85,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Ne concaténez jamais une entrée utilisateur qui n'est pas validée. La concaténation de chaîne est le point d'entrée principal pour l'injection de scripts.  
   
--   N'acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, COM1 à COM8, CON, CONFIG$, LPT1 à LPT8, NUL et PRN.  
+-   N’acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, COM1 à COM8, CON, CONFIG$, LPT1 à LPT8, NUL et PRN.  
   
  Si possible, rejetez les entrées qui contiennent les caractères suivants.  
   
@@ -339,7 +338,7 @@ GO
   
  Lorsque vous concaténez des valeurs de type sysname, vous devez utiliser des variables temporaires de taille suffisante pour contenir le maximum de 128 caractères par valeur. Dans la mesure du possible, appelez `QUOTENAME()` directement à l’intérieur du [!INCLUDE[tsql](../../includes/tsql-md.md)]dynamique. Sinon, vous pouvez calculer la taille requise de la mémoire tampon comme expliqué dans la section précédente.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd5438c72028e46578b699584a5affcd1bfba7c7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127058"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Afficher ou modifier les propriétés d'une base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "51560026"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l’autorisation ALTER sur la base de données pour modifier les propriétés de cette dernière. Requiert au minimum le rôle de base de données Public pour afficher les propriétés d’une base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -65,7 +64,7 @@ ms.locfileid: "51560026"
 3.  Dans la boîte de dialogue **Propriétés de la base de données** , sélectionnez une page pour afficher les informations correspondantes. Par exemple, sélectionnez la page **Fichiers** pour afficher les informations sur les fichiers journaux et les fichiers de données.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- Transact-SQL fournit plusieurs méthodes pour afficher et modifier les propriétés d’une base de données. Pour afficher les propriétés d’une base de données, vous pouvez utiliser la fonction [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) et l’affichage catalogue [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Pour modifier les propriétés d’une base de données, vous pouvez utiliser la version de l’instruction ALTER DATABASE correspondant à votre environnement : [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ou [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Pour afficher les propriétés étendues à la base de données, utilisez l’affichage catalogue [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) et pour modifier les propriétés étendues à la base de données, utilisez l’instruction [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
+ Transact-SQL fournit plusieurs méthodes pour afficher et modifier les propriétés d’une base de données. Pour afficher les propriétés d’une base de données, vous pouvez utiliser la fonction [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) et l’affichage catalogue [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Pour changer les propriétés d’une base de données, vous pouvez utiliser la version de l’instruction ALTER DATABASE correspondant à votre environnement :  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ou [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Pour afficher les propriétés étendues à la base de données, utilisez l’affichage catalogue [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) et pour modifier les propriétés étendues à la base de données, utilisez l’instruction [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>Afficher une propriété d’une base de données à l’aide de la fonction DATABASEPROPERTYEX  
   
@@ -135,7 +134,7 @@ ms.locfileid: "51560026"
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

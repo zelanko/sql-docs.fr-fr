@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073667"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52391243"
   
 ##  <a name="Security"></a> Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Quand vous utilisez des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous avez besoin de l’autorisation **ALTER ANY LINKED SERVER** sur le serveur ou de l’appartenance au rôle serveur fixe **setupadmin** . Quand vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous avez besoin de l’autorisation **CONTROL SERVER** ou de l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ##  <a name="Procedures"></a> Comment créer un serveur lié  
@@ -223,7 +222,7 @@ ms.locfileid: "52391243"
   
     ```  
   
-##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
+##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
   
 #### <a name="to-test-the-linked-server"></a>Pour tester le serveur lié  
   
@@ -249,7 +248,7 @@ ms.locfileid: "52391243"
   
      Lorsque NULL est retourné pour la connexion au serveur lié, cela indique que la connexion n'existe pas sur le serveur lié. Ces connexions ne seront pas en mesure d'utiliser le serveur lié, à moins que le serveur lié ne soit configuré pour passer un contexte de sécurité différent ou que le serveur lié accepte des connexions anonymes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  

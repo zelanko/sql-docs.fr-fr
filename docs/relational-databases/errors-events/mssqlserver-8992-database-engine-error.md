@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118473"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,6 +74,6 @@ Cette erreur ne peut pas être corrigée.  Si vous ne pouvez pas restaurer la ba
 ### <a name="do-not-manually-update-system-tables"></a>Ne pas mettre à jour manuellement les tables système  
 N'apportez pas de mises à jour manuelles aux tables système. SQL Server ne prend pas en charge les modifications manuelles apportées aux bases de données système. Si vous mettez à jour une table système dans une base de données SQL Server, deux événements (ID 17659 et ID 3859) sont consignés. Pour plus d'informations, consultez l'article 2688307 de la Base de connaissances « L'ID d'événement 17659 et l'ID d'événement 3859 sont consignés lorsque vous mettez à jour des tables système dans une base de données SQL Server ».  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [L’ID d’événement 17659 et l’ID d’événement 3859 sont consignés lorsque vous mettez à jour des tables système dans une base de données SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   

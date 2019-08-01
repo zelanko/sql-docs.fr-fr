@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999366"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scénarios d’utilisation de table temporelle
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ SELECT * FROM Employee
         EmployeeID = 1000 ORDER BY ValidFrom;  
 ```  
   
- Pour rechercher les versions de ligne qui étaient actives uniquement pendant une période (et pas en dehors de celle-ci), utilisez CONTAINED IN. Cette requête est très efficace, car elle interroge uniquement la table de l’historique :  
+ Pour rechercher les versions de ligne qui étaient actives uniquement pendant une période (et pas en dehors de celle-ci), utilisez CONTAINED IN. Cette requête est très efficace, car elle interroge uniquement la table de l’historique :  
   
 ```  
 SELECT * FROM Employee FOR SYSTEM_TIME    
@@ -140,7 +139,7 @@ FROM Employee
 > Si vous appliquez AT TIME ZONE à des colonnes de période, SQL Server effectue une analyse de table/index, qui peut être très coûteuse. Évitez ce type de condition dans vos requêtes :  
 > \<colonne de période>  AT TIME ZONE '\<votre fuseau horaire>'  >  {< | > | =, ...} condition_date.  
   
- Voir aussi [Interrogation des données dans une table temporelle avec versions gérées par le système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
+ Voir aussi : [Interrogation des données dans une table temporelle avec version gérée par le système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
 ## <a name="point-in-time-analysis-time-travel"></a>Analyses à un point dans le temps (voyage dans le temps)  
  À la différence de l’audit de données, qui se concentre essentiellement sur les modifications apportées à des enregistrements individuels, les scénarios de voyage dans le temps permettent aux utilisateurs de voir comment des jeux de données entiers changent au fil du temps. Parfois, le voyage dans le temps fait appel à plusieurs tables temporelles connexes, chacune évoluant à son propre rythme, dont vous pouvez analyser les éléments suivants :  
@@ -425,17 +424,17 @@ FROM CTE
 ## <a name="slowly-changing-dimensions"></a>Dimensions à variation lente  
  En règle générale, les dimensions d’entreposage de données contiennent des données relativement statiques sur les entités telles que des produits, des clients ou des emplacements géographiques. Toutefois, dans certains scénarios, vous devez également tracer les modifications de données dans des tables de dimension. Étant donné que toute modification de dimensions se produit beaucoup moins fréquemment, de manière imprévisible et en dehors de la planification des mises à jour normales qui s’applique aux tables de faits, ces types de tables de dimension sont appelés dimensions à variation lente.  
   
- Il existe plusieurs catégories de dimensions à variation lente, selon la façon dont l’historique des modifications est conservé :  
+ Il existe plusieurs catégories de dimensions à variation lente, selon la façon dont l’historique des modifications est conservé :  
   
--   Type 0 : l’historique n’est pas conservé. Les attributs de dimension reflètent les valeurs d’origine.  
+-   Type 0 :  l’historique n’est pas conservé. Les attributs de dimension reflètent les valeurs d’origine.  
   
--   Type 1 : les attributs de dimension reflètent les valeurs les plus récentes (les valeurs précédentes sont remplacées)  
+-   Type 1 :  les attributs de dimension reflètent les valeurs les plus récentes (les valeurs précédentes sont remplacées)  
   
--   Type 2 : chaque version de membre de dimension représentée par une ligne distincte dans la table, généralement avec des colonnes qui représentent la période de validité  
+-   Type 2 :  chaque version de membre de dimension représentée par une ligne distincte dans la table, généralement avec des colonnes qui représentent la période de validité  
   
--   Type 3 : conservation d’un historique limité pour des attributs sélectionnés en utilisant des colonnes supplémentaires dans la même ligne  
+-   Type 3 : conservation d’un historique limité pour des attributs sélectionnés en utilisant des colonnes supplémentaires dans la même ligne  
   
--   Type 4 : conservation de l’historique dans la table distincte tandis que la table de dimension d’origine conserve les dernières versions des membres de dimension (actuelles)  
+-   Type 4 : conservation de l’historique dans la table distincte tandis que la table de dimension d’origine conserve les dernières versions des membres de dimension (actuelles)  
   
  Quand vous choisissez la stratégie de dimension à variation lente, il revient à la couche ETL (extraction, transformation et chargement) d’assurer l’exactitude des tables de dimension, ce qui exige généralement beaucoup de code et une maintenance complexe.  
   
@@ -580,7 +579,7 @@ Si une valeur qui vient d’être mise à jour n’est pas correcte, dans de nom
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

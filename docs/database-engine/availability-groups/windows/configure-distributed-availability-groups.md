@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793738"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354601"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->L’exemple précédent utilise un amorçage direct, où **SEEDING_MODE** a la valeur **AUTOMATIC** pour les réplicas et le groupe de disponibilité distribué. Cette configuration définit les réplicas secondaires et le groupe de disponibilité secondaire pour qu’ils soient renseignés automatiquement sans qu’une sauvegarde manuelle et une restauration de base de données primaire soient nécessaires.  
+>L’exemple précédent utilise un amorçage automatique, où **SEEDING_MODE** a la valeur **AUTOMATIC** pour les réplicas et le groupe de disponibilité distribué. Cette configuration définit les réplicas secondaires et le groupe de disponibilité secondaire pour qu’ils soient renseignés automatiquement sans qu’une sauvegarde manuelle et une restauration de base de données primaire soient nécessaires.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>Joindre les réplicas secondaires au groupe de disponibilité principal  
-Les réplicas secondaires doivent être joints au groupe de disponibilité **ALTER AVAILABILITY GROUP** avec l’option **JOIN** . Étant donné que l’amorçage direct est utilisé dans cet exemple, vous devez également appeler  **ALTER AVAILABILITY GROUP** avec l’option **GRANT CREATE ANY DATABASE** . Ainsi, le groupe de disponibilité peut créer la base de données et commencer l’amorçage automatique à partir du réplica principal.  
+Les réplicas secondaires doivent être joints au groupe de disponibilité **ALTER AVAILABILITY GROUP** avec l’option **JOIN** . Étant donné que l’amorçage automatique est utilisé dans cet exemple, vous devez également appeler **ALTER AVAILABILITY GROUP** avec l’option **GRANT CREATE ANY DATABASE**. Ainsi, le groupe de disponibilité peut créer la base de données et commencer l’amorçage automatique à partir du réplica principal.  
   
 Dans cet exemple, les commandes suivantes sont exécutées sur le réplica secondaire `server2`pour rejoindre le groupe de disponibilité `ag1` . Le groupe de disponibilité est ensuite autorisé à créer des bases de données sur le réplica secondaire.  
   
@@ -136,7 +135,7 @@ GO
 > Le groupe de disponibilité secondaire doit utiliser le même point de terminaison de mise en miroir de bases de données (le port 5022 dans l’exemple). Sinon, la réplication s’arrête après un basculement local.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>Joindre les réplicas secondaires au groupe de disponibilité secondaire  
- Dans cet exemple, les commandes suivantes sont exécutées sur le réplica secondaire `server4`pour rejoindre le groupe de disponibilité `ag2` . Le groupe de disponibilité est ensuite autorisé à créer des bases de données sur le réplica secondaire pour prendre en charge l’amorçage direct.  
+ Dans cet exemple, les commandes suivantes sont exécutées sur le réplica secondaire `server4`pour rejoindre le groupe de disponibilité `ag2` . Le groupe de disponibilité est ensuite autorisé à créer des bases de données sur le réplica secondaire pour prendre en charge l’amorçage automatique.  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   

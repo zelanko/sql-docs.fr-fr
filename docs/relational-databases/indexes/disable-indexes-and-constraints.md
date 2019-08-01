@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc25fcdd81c647dcff73c047924f3fbec13b6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107144"
 ---
 # <a name="disable-indexes-and-constraints"></a>Désactiver les index et contraintes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ ms.locfileid: "47740093"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour pouvoir exécuter l'instruction ALTER INDEX, vous devez obligatoirement bénéficier au minimum d'autorisations nécessaires pour exécuter les instructions ALTER sur la table ou la vue.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -131,7 +130,7 @@ ms.locfileid: "47740093"
  Affiche le nom de la table ou de la vue sur laquelle l'index a été créé.  
   
  **Type d'index**  
- Affiche le type d’index : **Cluster**, **Non-cluster**, **Spatial**ou **XML**.  
+ Affiche le type de l’index : **Cluster**, **Non-cluster**, **Spatial** ou **XML**.  
   
  **État**  
  Affiche l'état de l'opération de désactivation. Les valeurs possibles après l'exécution sont les suivantes :  

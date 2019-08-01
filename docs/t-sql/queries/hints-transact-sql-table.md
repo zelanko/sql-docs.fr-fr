@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901961"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,13 +121,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
-WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 À quelques exceptions près, les indicateurs de table sont pris en charge dans la clause FROM uniquement lorsque les indicateurs sont spécifiés à l'aide du mot clé WITH. En outre, les indicateurs de table doivent être spécifiés avec des parenthèses.  
   
 > [!IMPORTANT]  
 > L'omission du mot clé WITH est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT, et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Exemple :  
+Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Par exemple :  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -148,7 +147,7 @@ Nous vous recommandons d'utiliser des virgules entre les indicateurs de table.
 NOEXPAND  
 Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d’informations, consultez [Utilisation de NOEXPAND](#using-noexpand).  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe INDEX = spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
   
 S'il existe un index cluster, INDEX(0) force l'analyse de ce dernier, tandis que INDEX(1) en force l'analyse ou la recherche. S'il n'existe pas d'index cluster, INDEX(0) force l'analyse d'une table et INDEX(1) est interprété comme une erreur.  
@@ -177,9 +176,9 @@ Applicable uniquement dans une instruction INSERT quand l’option BULK est util
   
 Spécifie l'insertion d'une valeur par défaut éventuelle de colonne de table, à la place de la valeur NULL, lorsqu'il manque une valeur pour la colonne dans l'enregistrement de données.  
   
-Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver les valeurs NULL ou utiliser les valeurs par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+Pour un exemple d’utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver les valeurs NULL ou utiliser les valeurs par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 Indique que l'optimiseur de requête doit utiliser uniquement une opération de recherche d'index comme chemin d'accès aux données dans la table ou la vue. 
 
 > [!NOTE]
@@ -193,7 +192,7 @@ Indique que l'optimiseur de requête doit utiliser uniquement une opération de 
   
 L'indicateur FORCESEEK peut être spécifié des manières suivantes.  
   
-|Syntaxe| Exemple|Description|  
+|Syntaxe|Exemple|Description|  
 |------------|-------------|-----------------|  
 |Sans index ou indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK)`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de tout index approprié.|  
 |Combiné avec un indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de l'index spécifié.|  
@@ -355,7 +354,7 @@ Lorsque UPDLOCK est spécifié, les indicateurs de niveau d'isolation READCOMMIT
 XLOCK  
 Spécifie que les verrous exclusifs doivent être établis et maintenus jusqu'à ce que la transaction s'achève. Si l'option ROWLOCK, PAGLOCK ou TABLOCK est spécifiée, les verrous exclusifs s'appliquent au niveau de granularité approprié.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les indicateurs de table sont ignorés si l'accès à la table ne s'effectue pas par un plan de requête. Ceci peut résulter du choix de l'optimiseur d'empêcher globalement l'accès à la table ou de l'accès à une vue indexée à la place. Dans ce dernier cas, l'accès à une vue indexée peut être proscrit à l'aide de l'indicateur de requête OPTION (EXPAND VIEWS).  
   
 Tous les indicateurs de verrou sont diffusés à toutes les vues et tables accessibles par le plan de requête ainsi que les vues et tables référencées dans une vue. En outre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les contrôles de cohérence de verrous correspondants.  
@@ -366,7 +365,7 @@ Si une table contient des colonnes calculées qui sont traitées par des express
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas plus d'un indicateur de table dans chacun des groupes suivants pour chaque table de la clause FROM :  
 -   indicateurs de granularité : PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK ou TABLOCKX.  
--   indicateurs de niveau d'isolation : HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE.  
+-   indicateurs de niveau d’isolation : HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE.  
   
 ## <a name="filtered-index-hints"></a>Indicateurs d'index filtré  
  Un index filtré peut être utilisé comme indicateur de table mais, en conséquence, l’optimiseur de requête génère l’erreur 8622 si l’index ne couvre pas toutes les lignes que la requête sélectionne. Vous trouverez ci-dessous un exemple d'indicateur d'index filtré non valide. Cet exemple illustre la création de l'index `FIBillOfMaterialsWithComponentID` filtré, puis l'utilisation de cet index comme indicateur d'index pour une instruction SELECT. Le prédicat d'index filtré inclut des lignes de données pour les ComponentID 533, 324 et 753. Le prédicat de la requête inclut également des lignes de données pour les ComponentID 533, 324 et 753 mais étend le jeu de résultats pour inclure les ComponentID 855 et 924, qui ne figurent pas dans l'index filtré. Par conséquent, l'optimiseur de requête ne peut pas utiliser l'indicateur d'index filtré et génère l'erreur 8622. Pour plus d'informations, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
@@ -412,7 +411,7 @@ Toutefois, pour que l'optimiseur prenne en considération les vues indexées pou
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilisation d'un indicateur de table comme indicateur de requête  
  Un *indicateur de table* peut également être spécifié comme indicateur de requête avec la clause OPTION (TABLE HINT). Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md). Pour les requêtes ad hoc, spécifiez ces indicateurs uniquement comme indicateurs de table. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les indicateurs KEEPIDENTITY, IGNORE_CONSTRAINTS et IGNORE_TRIGGERS requièrent des autorisations ALTER sur la table.  
   
 ## <a name="examples"></a>Exemples  
@@ -428,7 +427,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>b. Utilisation de l'indicateur FORCESEEK pour spécifier une opération de recherche d'index  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Utilisation de l'indicateur FORCESEEK pour spécifier une opération de recherche d'index  
  L'exemple ci-dessous utilise l'indicateur FORCESEEK sans spécifier d'index pour forcer l'optimiseur de requête à effectuer une opération de recherche d'index sur la table `Sales.SalesOrderDetail` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql
@@ -469,7 +468,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  

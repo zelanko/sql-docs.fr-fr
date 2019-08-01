@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024484"
 ---
 # <a name="utility-explorer-f1-help"></a>Aide sur l'Explorateur d'objets accessible via la touche F1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "52413166"
   
 -   utilisation du processeur par l'ordinateur ;  
   
--   L'état de chaque paramètre est divisé en trois catégories :  
+-   L'état de chaque paramètre est divisé en trois catégories :  
   
 -   bien utilisé : nombre d'instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d'utilisation des ressources ;  
   
@@ -65,7 +64,7 @@ ms.locfileid: "52413166"
   
  Pour créer une vue filtrée d'une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une application de la couche Données, cliquez sur le lien pour une catégorie d'utilisation en regard de son curseur dans le tableau de bord de l'utilitaire. Par exemple, si vous cliquez sur **Processeur des instances surexploité** dans le volet **Contenu de l'Explorateur de l'utilitaire** , SSMS crée une vue de liste filtrée des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont l'UCP surexploité selon les paramètres de stratégie actuels.  
   
- Remarquez que lorsque vous cliquez sur un lien pour une catégorie d’utilisation, le nœud correspondant dans le volet de navigation Explorateur de l’utilitaire est ajouté avec **(filtré)** - c’est-à-dire, **Instances gérées** est étiqueté **Instances gérées (filtré)**. Pour consulter des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Paramètres du filtre**. Pour effacer des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Supprimer le filtre**.  
+ Remarquez que lorsque vous cliquez sur un lien pour une catégorie d’utilisation, le nœud correspondant dans le volet de navigation Explorateur de l’utilitaire est ajouté avec **(filtré)** - c’est-à-dire, **Instances gérées** est étiqueté **Instances gérées (filtré)** . Pour consulter des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Paramètres du filtre**. Pour effacer des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Supprimer le filtre**.  
   
  Pour plus d’informations sur la consultation de l’état d’instances individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou pour afficher ou modifier des paramètres de configuration de stratégie, consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
   
@@ -104,7 +103,7 @@ ms.locfileid: "52413166"
   
  Les options d'intervalle de création de rapport sont les suivants :  
   
--   1 jour, affiché par intervalles de 15 minutes ;  
+-   1 jour, affiché par intervalles de 15 minutes ;  
   
 -   1 semaine, affiché par intervalles de 1 jour ;  
   
@@ -168,17 +167,17 @@ ms.locfileid: "52413166"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement activé : (True ou False)  
+-   Chiffrement activé : (True ou False)  
   
--   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
+-   Mode de récupération : (Simple, complète et utilisant les journaux de transactions)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Dernière heure signalée : cette colonne affiche l’heure et la date locales du processeur à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Onglet Utilisation du processeur  
  L'onglet d'utilisation du processeur affiche côte à côte des graphiques de données d'historique pour l'application de la couche Données et l'utilisation du processeur de l'ordinateur.  
@@ -245,17 +244,17 @@ ms.locfileid: "52413166"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement activé : (True ou False)  
+-   Chiffrement activé : (True ou False)  
   
--   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
+-   Mode de récupération : (Simple, complète et utilisant les journaux de transactions)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Dernière heure signalée : cette colonne affiche l’heure et la date locales du processeur à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
  Les informations de la vue Instances managées de l’Explorateur de l’utilitaire fournissent des données d’utilisation pour les instances individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un historique d’utilisation du processeur, les détails de l’utilisation du stockage au niveau du fichier, et la possibilité d’afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pour un ordinateur, pour les fichiers de base de données et les fichiers journaux, ainsi qu’au niveau des volumes de stockage. Vous pouvez également consulter les détails des propriétés des instances managées individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -274,7 +273,7 @@ ms.locfileid: "52413166"
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
- Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)**. Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)** . Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Par défaut, les colonnes suivantes affichent des informations sur l'état d'intégrité de chaque instance managée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -308,17 +307,17 @@ ms.locfileid: "52413166"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   En cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   Respecter la casse : (True ou False)  
+-   Respect de la casse (True ou False)  
   
--   Langue :  
+-   Langue :  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Dernière heure signalée : cette colonne affiche l’heure et la date locales du processeur à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Onglet Utilisation du processeur  
  L’onglet d’utilisation du processeur affiche côte à côte des graphiques de données d’historique pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’utilisation du processeur de l’ordinateur.  
@@ -405,13 +404,13 @@ ms.locfileid: "52413166"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   En cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   Respecter la casse : (True ou False)  
+-   Respect de la casse (True ou False)  
   
 -   Langue :  
 
@@ -487,13 +486,13 @@ Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres 
  Informations de configuration de l'entrepôt de données de l'utilitaire  
  Les paramètres de configuration suivants ne sont pas configurables dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   Nom de l’UMDW : Sysutility_mdw_\<GUID>_DATA.  
+-   Nom UMDW : Sysutility_mdw_\<GUID>_DATA.  
   
--   fréquence de téléchargement du jeu d'éléments de collecte : toutes les 15 minutes.  
+-   Fréquence de téléchargement du jeu d’éléments de collecte : toutes les 15 minutes.  
   
- Le répertoire UMDW est configurable : \<Lecteur_système:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nom_UCP>\MSSQL\Data\\, où \<Lecteur_système est normalement le lecteur C:\. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
+ Le répertoire UMDW est configurable : \<Lecteur_système>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, où \<Lecteur_système est normalement le lecteur C:\. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
   
-> **REMARQUE :** l’emplacement du fichier UMDW (sysutility_mdw) peut être modifié à l’aide des opérations de détachement et d’attachement ou d’ALTER DATABASE. Nous recommandons l'utilisation d'ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **REMARQUE :** L'emplacement du fichier UMDW (sysutility_mdw) peut être modifié à l'aide des opérations de détachement et d'attachement ou d'ALTER DATABASE. Nous recommandons l'utilisation d'ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Revenir aux valeurs par défaut prédéfinies  
  Pour rétablir les valeurs par défaut des paramètres de cet onglet, cliquez sur le bouton **Paramètres par défaut** , puis sur **Appliquer**.  
@@ -510,7 +509,7 @@ Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres 
   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

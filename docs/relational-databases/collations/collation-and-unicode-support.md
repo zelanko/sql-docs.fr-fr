@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118491"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -271,10 +270,14 @@ La table suivante présente les octets de stockage d’encodage pour chaque plag
 
 <sup>2</sup> Plage de codes de caractère pour des [caractères supplémentaires](#Supplementary_Characters).
 
-Comme décrit ci-dessus, le choix du codage Unicode et du type de données appropriés peut fournir des gains de stockage significatifs, en fonction du jeu de caractères utilisé. Par exemple, le fait de transformer un type de données de colonne existant comportant des caractères ASCII de `NCHAR(10)` en `CHAR(10)` avec un classement prenant en charge UTF-8 se traduit par une réduction de 50 % des besoins en stockage. Cette réduction correspond au fait que `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même représentation de chaîne Unicode.
+> [!TIP]   
+> Il est courant de penser en [CHAR(*n*) et en VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), ou en [NCHAR(*n*) et en NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), le *n* définissant le nombre de caractères. En effet, dans l’exemple d’une colonne de type CHAR(10), 10 caractères ASCII de la plage 0-127 peuvent être stockés à l’aide d’un classement tel que Latin1_General_100_CI_AI, car chaque caractère de cette plage utilise uniquement 1 octet.    
+> Toutefois, dans [CHAR(*n*) et VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), le *n* définit la longueur de chaîne en **octets** (0-8000), tandis que dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), le *n* définit la longueur de la chaîne en **paires d’octets** (0-4000). *n* ne définit jamais des nombres de caractères pouvant être stockés.
+
+Comme décrit ci-dessus, le choix de l’encodage Unicode et du type de données appropriés peut fournir des gains de stockage significatifs ou augmenter votre encombrement de stockage actuel, en fonction du jeu de caractères utilisé. Par exemple, lors de l’utilisation d’un classement Latin prenant en charge UTF-8, comme Latin1_General_100_CI_AI_SC_UTF8, une colonne `CHAR(10)` stocke 10 octets et peut contenir 10 caractères ASCII dans la plage 0-127, mais seulement 5 caractères dans la plage 128-2047 et seulement 3 caractères dans plage 2048-65535. En comparaison, étant donné qu’une colonne `NCHAR(10)` stocke 10 paires d’octets (20 octets), elle peut contenir 10 caractères dans la plage 0-65535.  
 
 Avant de choisir s’il faut utiliser l’encodage UTF-8 ou UTF-16 pour une base de données ou une colonne, prenez en compte la distribution des données de chaîne qui seront stockées :
--  Si elle est principalement dans la plage ASCII (par exemple, en anglais), chaque caractère nécessite alors 1 octet en UTF-8 et 2 octets en UTF-16. L’utilisation UFT-8 offre des avantages du stockage. 
+-  Si elle est principalement dans la plage ASCII 0-127 (par exemple, en anglais), chaque caractère nécessite alors 1 octet en UTF-8 et 2 octets en UTF-16. L’utilisation UFT-8 offre des avantages du stockage. Le fait de transformer un type de données de colonne existant comportant des caractères ASCII de la plage 0-127 de `NCHAR(10)` en `CHAR(10)` avec un classement prenant en charge UTF-8 se traduit par une réduction de 50 % des besoins en stockage. Cette réduction correspond au fait que `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même représentation de chaîne Unicode.    
 -  Au-dessus de la plage ASCII, presque tout l’alphabet latin et également grec, cyrillique, copte, arménien, hébreu, arabe, syriaque, Tāna et n’ko nécessitera 2 octets par caractère dans les encodages UTF-8 et UTF-16. Dans ces cas, il n’existe pas de différences significatives de stockage pour les types de données comparables (par exemple à l’aide de **char** ou **nchar**).
 -  S’il s’agit principalement d’un script d’Extrême-Orient (par exemple, coréen, chinois et japonais), chaque caractère nécessite alors 3 octets en UTF-8 et 2 octets en UTF-16. L’utilisation UFT-16 offre des avantages du stockage. 
 -  Les caractères compris entre 010000 et 10FFFF nécessitent 4 octets en encodage UTF-8 et UTF-16. Dans ces cas, il n’existe pas de différences de stockage pour les types de données comparables (par exemple à l’aide de **char** ou **nchar**).

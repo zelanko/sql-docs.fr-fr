@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039063"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +95,9 @@ Le tableau suivant décrit les informations du jeu de résultats.
 |**Extensions analysées**|Nombre d'extensions dans la table ou l'index|  
 |**Commutateurs d’extension**|Nombre de fois où l'instruction DBCC est passée d'une extension à l'autre en parcourant les pages de l'index ou de la table.|  
 |**Durée Moyenne des pages par extension**|Nombre de pages par extension dans la chaîne de pages.|  
-|**Densité d'analyse? [Meilleur nombre: Nombre réel]**|Il s'agit d'un pourcentage. Il représente le ratio **Meilleur nombre** sur **Nombre réel**. Cette valeur est de 100 si tout est contigu et elle est inférieure à 100 si certaines fragmentations existent.<br /><br /> **Meilleur nombre** correspond au nombre idéal de modifications d’extension si tout est lié en contigu. **Nombre réel** est le nombre effectif de modifications d’extension.|  
+|**Densité d’analyse [Meilleur nombre: Nombre réel]**|Il s'agit d'un pourcentage. Il représente le ratio **Meilleur nombre** sur **Nombre réel**. Cette valeur est de 100 si tout est contigu et elle est inférieure à 100 si certaines fragmentations existent.<br /><br /> **Meilleur nombre** correspond au nombre idéal de modifications d’extension si tout est lié en contigu. **Nombre réel** est le nombre effectif de modifications d’extension.|  
 |**Fragmentation d’analyse logique**|Pourcentage de pages hors service renvoyées après l'analyse des pages de feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l’index n’est pas la page désignée par le pointeur de pag*e* suivante dans la page feuille actuelle.|  
-|**Fragmentation d’analyse d’extension**|Pourcentage d'extensions déclassées lors de l'analyse des pages feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une extension hors service est une extension qui contient la page active pour un index, mais n'est pas physiquement l'extension qui suit celle contenant la page précédente pour un index.<br /><br /> Remarque : Ce nombre n'a aucune signification lorsque l'index s'étend sur plusieurs fichiers.|  
+|**Fragmentation d’analyse d’extension**|Pourcentage d'extensions déclassées lors de l'analyse des pages feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une extension hors service est une extension qui contient la page active pour un index, mais n'est pas physiquement l'extension qui suit celle contenant la page précédente pour un index.<br /><br /> Remarque : Ce nombre n’a aucune signification lorsque l’index s’étend sur plusieurs fichiers.|  
 |**Durée Moyenne d’octets libres par page**|Nombre moyen d'octets libres sur les pages analysées. Plus le nombre est élevé et moins les pages sont remplies. Les faibles valeurs sont préférables si l'index ne doit pas recevoir beaucoup d'insertions aléatoires. Ce nombre est également affecté par la taille des lignes : plus elle sera élevée, plus le nombre le sera également.|  
 |**Durée Densité de page moyenne (complète)**|Densité de page moyenne (pourcentage). Cette valeur prend en compte la taille des lignes. C'est donc une indication plus précise sur le remplissage de vos pages. Plus le pourcentage est élevé et mieux c'est.|  
   
@@ -132,7 +131,7 @@ Lorsque TABLERESULTS est spécifié, DBCC SHOWCONTIG renvoie les colonnes suivan
 |**BestCount**|Il s'agit du nombre idéal de modifications d'extension si tout est lié en contigu.|  
 |**ActualCount**|C'est le nombre effectif de modifications d'extension.|  
 |**LogicalFragmentation**|Pourcentage de pages hors service renvoyées après l'analyse des pages de feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l’index n’est pas la page désignée par le pointeur de pag*e* suivante dans la page feuille actuelle.|  
-|**ExtentFragmentation**|Pourcentage d'extensions déclassées lors de l'analyse des pages feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une extension hors service est une extension qui contient la page active pour un index, mais n'est pas physiquement l'extension qui suit celle contenant la page précédente pour un index.<br /><br /> Remarque : Ce nombre n'a aucune signification lorsque l'index s'étend sur plusieurs fichiers.|  
+|**ExtentFragmentation**|Pourcentage d'extensions déclassées lors de l'analyse des pages feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une extension hors service est une extension qui contient la page active pour un index, mais n'est pas physiquement l'extension qui suit celle contenant la page précédente pour un index.<br /><br /> Remarque : Ce nombre n’a aucune signification lorsque l’index s’étend sur plusieurs fichiers.|  
   
 Lorsque WITH TABLERESULTS et FAST sont spécifiés, l'ensemble de résultats est le même que lorsque WITH TABLERESULTS est spécifié, excepté que les colonnes suivantes auront des valeurs NULL :
 
@@ -143,15 +142,15 @@ Lorsque WITH TABLERESULTS et FAST sont spécifiés, l'ensemble de résultats est
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 L’instruction DBCC SHOWCONTIG parcourt la chaîne de la page au niveau feuille de l’index spécifié quand *index_id* est précisé. Si seule la valeur de *table_id* est précisée ou si la valeur de *index_id* correspond à 0, les pages de données de la table indiquée sont analysées. L'opération ne nécessite qu'un verrou de table intent-partagé. De cette manière, toutes les mises à jour et insertions peuvent être effectuées, sauf celles nécessitant un verrou de table exclusif (X). Cela permet un compromis entre la vitesse d'exécution et aucune réduction de la concurrence avec le nombre de statistiques renvoyées. Cependant, si la commande n'est utilisée que pour évaluer la fragmentation, nous vous recommandons d'appliquer l'option WITH FAST pour des performances optimales. Une analyse rapide ne lit pas les pages des niveaux feuille ou données de l'index. L'option WITH FAST ne s'applique pas à un segment.
   
 ## <a name="restrictions"></a>Restrictions  
 DBCC SHOWCONTIG n’affiche pas les données de type **ntext**, **text** et **image**. Cela est dû au fait que les index de texte qui stockent des données de texte et d'image n'existent plus.
   
-En outre, DBCC SHOWCONTIG ne prend pas en charge certaines fonctionnalités nouvelles. Exemple :
+En outre, DBCC SHOWCONTIG ne prend pas en charge certaines fonctionnalités nouvelles. Par exemple :
 -   Si la table ou l'index spécifié est partitionné, DBCC SHOWCONTIG n'affiche que la première partition de la table ou de l'index spécifié.  
--   DBCC SHOWCONTIG n’affiche pas d’informations de stockage de dépassement de lignes et d’autres types nouveaux de données hors ligne tels que **nvarchar(max)**, **varchar(max)**, **varbinary(max)** et **xml**.  
+-   DBCC SHOWCONTIG n’affiche pas d’informations de stockage de dépassement de lignes et d’autres types nouveaux de données hors ligne tels que **nvarchar(max)** , **varchar(max)** , **varbinary(max)** et **xml**.  
 -   Les index spatiaux ne sont pas pris en charge par DBCC SHOWCONTIG.  
   
 Toutes les nouvelles fonctionnalités sont entièrement prises en charge par la vue de gestion dynamique [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
@@ -167,7 +166,7 @@ Lorsqu'un index est très fragmenté, vous disposez des méthodes alternatives s
 -   Reconstruisez l'index.  
      Utilisez ALTER INDEX avec REBUILD pour reconstruire l'index. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-La valeur de **Moyenne d’octets libres par page** et **Densité de page moyenne (complète)** dans le jeu de résultats indiquent le remplissage des pages d’index. La valeur de **Moyenne d’octets libres par page** doit être faible et celle de **Densité de page moyenne (complète)** doit être élevée pour un index qui ne recevra pas beaucoup d’insertions aléatoires. La suppression et la recréation d'un index avec l'option FILLFACTOR spécifiée peut améliorer ces statistiques. Par ailleurs, la commande ALTER INDEX avec REORGANIZE comprimera un index en tenant compte de son option FILLFACTOR, ce qui améliore les statistiques.
+Les statistiques **Moyenne d’octets libres par page** et **Densité de page moyenne (complète)** dans le jeu de résultats indiquent le remplissage des pages d’index. Les statistiques **Moyenne d’octets libres par page** doit être faible et celle de **Densité de page moyenne (complète)** doit être élevée pour un index qui ne recevra pas beaucoup d’insertions aléatoires. La suppression et la recréation d'un index avec l'option FILLFACTOR spécifiée peut améliorer ces statistiques. Par ailleurs, la commande ALTER INDEX avec REORGANIZE comprimera un index en tenant compte de son option FILLFACTOR, ce qui améliore les statistiques.
   
 > [!NOTE]  
 >  Un index possédant de nombreuses insertions aléatoires et des pages très remplies aura un nombre accru de fractionnements de page. Cela implique une fragmentation plus importante.  
@@ -185,7 +184,7 @@ Le niveau de fragmentation d'un index peut être déterminé des manières suiva
     > [!NOTE]  
     >  La valeur **Fragmentation d’analyse d’extension** est élevée si l’index s’étend sur plusieurs fichiers. Pour réduire ces valeurs, vous devez réduire la fragmentation de l'index.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin**, du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin**.
   
 ## <a name="examples"></a>Exemples  
@@ -199,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>b. Utilisation de OBJECT_ID pour obtenir l'ID de table et sys.indexes pour obtenir l'ID d'index  
+### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilisation de OBJECT_ID pour obtenir l'ID de table et sys.indexes pour obtenir l'ID d'index  
 L’exemple suivant utilise `OBJECT_ID` et l’affichage catalogue `sys.indexes` pour obtenir l’ID de table et l’ID d’index de l’index `AK_Product_Name` de la table `Production.Product` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  
@@ -342,7 +341,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

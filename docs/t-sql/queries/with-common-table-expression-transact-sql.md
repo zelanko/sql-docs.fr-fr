@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de761d6ffe58f757b933c8235a8c82d13bda1cc0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948095"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,9 +62,9 @@ Identificateur valide pour l’expression de table commune. *expression_name* do
  *CTE_query_definition*  
  Spécifie une instruction SELECT dont le jeu de résultats remplit l'expression de table commune. L’instruction SELECT de *CTE_query_definition* doit remplir les mêmes conditions que celles requises pour la création d’une vue, mis à part qu’une expression de table commune ne peut pas en définir une autre. Pour plus d’informations, consultez la section Notes et [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si plusieurs *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, EXCEPT, ou INTERSECT.  
+ Si plusieurs *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, EXCEPT ou INTERSECT.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>Principes de création et d'utilisation des expressions de table communes  
 Les principes suivants s'appliquent à des expressions de table communes non récursives. Pour obtenir les instructions qui s’appliquent à des expressions de table communes récursives, consultez [Principes de définition et d’utilisation des expressions de table communes récursives](#guidelines-for-defining-and-using-recursive-common-table-expressions) ci-dessous.  
@@ -101,7 +100,7 @@ Les principes suivants s'appliquent à des expressions de table communes non ré
   
 -   La définition de l'expression de table commune récursive doit contenir au moins deux définitions de requête d'expression de table commune, un membre d'ancrage et un membre récursif. Plusieurs membres d'ancrage et membres récursifs peuvent être définis ; toutefois, toutes les définitions de requêtes de membres d'ancrage doivent être placées avant la première définition de membre récursif. Toutes les définitions de requête d'expression de table commune sont des membres d'ancrage à moins qu'ils ne fassent référence à l'expression de table commune elle-même.  
   
--   Les membres d'ancrage doivent être associés par l'un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT, ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
+-   Les membres d’ancrage doivent être associés par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
   
 -   Le nombre de colonnes des membres d'ancrage et récursifs doivent être identiques.  
   
@@ -196,7 +195,7 @@ GROUP BY SalesYear, SalesPersonID
 ORDER BY SalesPersonID, SalesYear;  
 ```  
   
-### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>b. Utilisation d'une expression de table commune pour limiter les nombres et les moyennes de rapports  
+### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. Utilisation d'une expression de table commune pour limiter les nombres et les moyennes de rapports  
  L'exemple suivant affiche le nombre moyen de commandes client de toutes les années pour les commerciaux.  
   
 ```sql  
@@ -658,7 +657,7 @@ UNION ALL
 SELECT TableName, TotalAvg FROM CountCustomer;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXCEPT et INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   

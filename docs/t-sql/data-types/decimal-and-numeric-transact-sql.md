@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37c2ec562f0207edcf67cb8ef9a59c2710c921b8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086737"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal et numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "56802017"
 Types de données numériques ayant une précision et une échelle fixes. Les types decimal et numeric sont synonymes et peuvent être utilisés indifféremment.
   
 ## <a name="arguments"></a>Arguments  
-**decimal**[ **(**_p_[ **,**_s_] **)**] et **numeric**[ **(**_p_[ **,**_s_] **)**]  
-Valeurs de précision et d'échelle fixes. Lorsque la précision maximale est utilisée, les valeurs valides sont comprises entre - 10^38 +1 et 10^38 - 1. Les synonymes ISO de **decimal** sont **dec** et **dec(**_p_, _s_**)**. **numeric** est fonctionnellement identique à **decimal**.
+**decimal**[ **(** _p_[ **,** _s_] **)** ] et **numeric**[ **(** _p_[ **,** _s_] **)** ]  
+Valeurs de précision et d'échelle fixes. Lorsque la précision maximale est utilisée, les valeurs valides sont comprises entre - 10^38 +1 et 10^38 - 1. Les synonymes ISO de **decimal** sont **dec** et **dec(** _p_, _s_ **)** . **numeric** est fonctionnellement identique à **decimal**.
   
 p (précision)  
 Nombre total maximal de chiffres décimaux à stocker. Ce nombre inclut le côté à gauche et le côté à droite de la virgule. La précision doit être une valeur comprise entre 1 et la précision maximale de 38. La précision par défaut est 18.
@@ -68,7 +67,7 @@ La conversion de **decimal** ou **numeric** en **float** ou **real** peut entra�
   
 Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les arrondis lors de la conversion d’un nombre en valeur **decimal** ou **numeric** avec une précision et une échelle plus faibles. À l’inverse, si l'option SET ARITHABORT a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déclenche une erreur lors du dépassement de capacité. Perdre uniquement la précision et l'échelle ne suffit pas à engendrer une erreur.
   
-Lors de la conversion de valeurs flottantes ou réelles en valeurs décimales ou numériques, la valeur décimale n'aura jamais plus de 17 décimales. Toute valeur flottante < 5E-18 sera toujours convertie en 0.
+Lors de la conversion de valeurs flottantes ou réelles en valeurs décimales ou numériques, la valeur décimale n'aura jamais plus de 17 décimales. Toute valeur flottante < 5E-18 sera toujours convertie en 0.
   
 ## <a name="examples"></a>Exemples  
 L’exemple suivant crée une table à l’aide des types de données **decimal** et **numeric**.  Les valeurs sont insérées dans chaque colonne. Les résultats sont retournés à l’aide d’une instruction SELECT.

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902809"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Arguments  
  *event_notification_name*  
- Nom de la notification d’événement. Un nom de notification d’événements doit être conforme aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et être unique dans l’étendue où il est créé : SERVER, DATABASE ou *object_name*.  
+ Nom de la notification d’événement. Un nom de notification d’événement doit être conforme aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md) et être unique dans l’étendue où il est créé : SERVER, DATABASE ou *object_name*.  
   
  SERVER  
  Applique l'étendue de la notification d'événement à l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si SERVER est spécifié, la notification se déclenche lorsque l'événement spécifié dans la clause FOR se produit n'importe où dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,13 +94,13 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Les conversations restent ouvertes jusqu'à ce que la notification d'événement soit supprimée. Certaines erreurs peuvent mettre fin aux conversations de manière anticipée. Le fait de mettre fin explicitement à certaines conversations ou à toutes les conversations peut empêcher le service cible de recevoir davantage de messages.  
   
- { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
+ { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
  Spécifie une instance de Service Broker par rapport à laquelle *broker_service* est résolu. La valeur d’un Service Broker spécifique peut être obtenue en interrogeant la colonne **service_broker_guid** de la vue de catalogue **sys.databases**. Utilisez **'current database'** pour définir l’instance de Service Broker dans la base de données actuelle. **'current database'** est un littéral de chaîne qui tient compte de la casse.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] intègre un type de message et un contrat spécialement conçus pour les notifications d'événements. Par conséquent, il n'est pas nécessaire de créer un service d'initialisation Service Broker car il en existe déjà un qui spécifie le nom de contrat suivant :`https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  Le service cible qui reçoit les notifications d'événements doit respecter ce contrat préexistant.  
@@ -117,7 +116,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Les échecs d'envoi de notification d'événement sont consignés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer une notification d'événement dont l'étendue correspond à la base de données (ON DATABASE), vous devez disposer de l'autorisation CREATE DATABASE DDL EVENT NOTIFICATION sur la base de données.  
   
  Pour créer une notification d'événement sur une instruction DDL dont l'étendue correspond au serveur (ON SERVER), vous devez disposer de l'autorisation CREATE DDL EVENT NOTIFICATION sur le serveur.  
@@ -131,7 +130,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Dans les exemples A et B ci-dessous, le GUID dans la clause `TO SERVICE 'NotifyService'` ('8140a771-3c4b-4479-8ac0-81008ab17984') est spécifique à l'ordinateur sur lequel l'exemple a été installé. Pour cette instance, il s'agit du GUID de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Pour copier et exécuter ces exemples, vous devez remplacer ce GUID par un GUID de votre ordinateur et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme expliqué dans la section Arguments ci-dessus, vous pouvez acquérir **'**_broker\_instance\_specifier_**'** en interrogeant la colonne service_broker_guid de la vue de catalogue sys.databases.  
+>  Pour copier et exécuter ces exemples, vous devez remplacer ce GUID par un GUID de votre ordinateur et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme expliqué dans la section Arguments ci-dessus, vous pouvez acquérir **'** _broker\_instance\_specifier_ **'** en interrogeant la colonne service_broker_guid de la vue de catalogue sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Création d'une notification d'événement dont l'étendue correspond au serveur  
  L'exemple suivant crée les objets nécessaires pour configurer un service cible à l'aide de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Le service cible fait référence au type de message et de contrat du service à l'origine de l'initialisation spécifique aux notifications d'événements La notification d'événement est ensuite créée sur le service cible qui envoie une notification chaque fois qu'un événement de trace `Object_Created` se produit sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -187,7 +186,7 @@ SELECT * FROM sys.event_notifications
 WHERE name = 'Notify_ALTER_T1';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Notifications d'événements](../../relational-databases/service-broker/event-notifications.md)   
  [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

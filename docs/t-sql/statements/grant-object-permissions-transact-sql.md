@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050821"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,10 +112,10 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
->  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l'exécuter. Dans ce cas, l'utilisateur aurait également besoin de l'autorisation SELECT sur la colonne calculée.  
+>  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Par exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l’exécuter. Dans ce cas, l'utilisateur aurait également besoin de l'autorisation SELECT sur la colonne calculée.  
   
  Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
@@ -137,7 +136,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  Si vous utilisez l'option AS, les conditions supplémentaires ci-dessous s'appliquent.  
@@ -163,7 +162,7 @@ GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>b. Octroi d'une autorisation EXECUTE sur une procédure stockée  
+### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. Octroi d'une autorisation EXECUTE sur une procédure stockée  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la procédure stockée `HumanResources.uspUpdateEmployeeHireInfo` est accordée à un rôle d'application nommé `Recruiting11`.  
   
 ```  
@@ -207,7 +206,7 @@ GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DENY – refus d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
  [REVOKE - Révoquer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
  [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

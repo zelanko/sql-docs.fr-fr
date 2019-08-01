@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091751"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *value* doit être égal à 0 ou un entier positif compris entre 1 et 255. Quand *value* a la valeur 0, le serveur choisit le degré maximal de parallélisme. Il s’agit de la valeur par défaut et recommandée.  
   
 > [!NOTE]  
-> La valeur réelle définie par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour MAX_DOP peut être inférieure à la valeur spécifiée. La valeur finale est déterminée par la formule min(255, *nombre d’unités centrales)*.  
+> La valeur réelle définie par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour MAX_DOP peut être inférieure à la valeur spécifiée. La valeur finale est déterminée par la formule min(255, *nombre d’unités centrales)* .  
   
 > [!CAUTION]  
 > La modification de MAX_DOP peut affecter de façon négative les performances d'un serveur. Si vous devez modifier MAX_DOP, nous recommandons qu'il soit défini sur une valeur inférieure ou égale au nombre maximal de planificateurs matériels présents dans un nœud NUMA unique. Nous vous recommandons de ne pas affecter à MAX_DOP une valeur supérieure à 8.  
@@ -144,7 +143,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > L'option "default" respecte la casse.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instruction ALTER WORKLOAD GROUP est autorisée sur le groupe par défaut.  
   
  Les modifications apportées à la configuration du groupe de charge de travail ne sont pas appliquées tant que l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE n'est pas exécutée. Quand vous modifiez un paramètre qui affecte le plan, le nouveau paramètre prend effet uniquement dans les plans précédemment mis en cache après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources Resource Governor avec lequel le groupe de charges de travail est associé.  
@@ -158,13 +157,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT : dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la création d'index est autorisée à utiliser une mémoire d'espace de travail supérieure à celle qui lui a été initialement allouée, en vue d'améliorer les performances. Cette gestion spéciale est prise en charge par le Gouverneur de ressources dans les versions ultérieures, toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
+ REQUEST_MEMORY_GRANT_PERCENT : dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la création d’index est autorisée à utiliser une mémoire d’espace de travail supérieure à celle initialement allouée afin d’améliorer les performances. Cette gestion spéciale est prise en charge par le Gouverneur de ressources dans les versions ultérieures, toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
   
  **Création d’un index sur une table partitionnée**  
   
  La mémoire consommée par la création d'index sur une table partitionnée non alignée est proportionnelle au nombre de partitions impliquées.  Si la mémoire totale requise dépasse la limite par requête (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposée par le paramètre du groupe de charges de travail du Gouverneur de ressources, cette création d'index peut ne pas s'exécuter. Étant donné que le groupe de charge de travail "default" permet à une requête de dépasser la limite par requête avec la mémoire minimale requise pour démarrer la compatibilité [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'utilisateur peut être en mesure d'exécuter la même création d'index dans le groupe de charge de travail "default", si le pool de ressources "default" possède assez de mémoire totale configurée pour exécuter cette requête.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -188,7 +187,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   

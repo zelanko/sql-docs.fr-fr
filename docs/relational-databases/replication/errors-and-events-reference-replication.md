@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d421893f8113b4657290fe6aa8ed4b6da37bf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b231b1a1f90703a26268e97401d39e3f685262
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128125"
 ---
 # <a name="errors-and-events-reference-replication"></a>Guide de référence des erreurs et des événements (réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "47827607"
 |MSSQL_ENG021642. Consultez [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé '%s' existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication.|  
 |MSSQL_ENG021663. Consultez [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Aucune clé primaire valide n'a été trouvée pour la table source [%s].[%s].|  
 |MSSQL_ENG021684. Consultez [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Les autorisations associées à la connexion administrateur du serveur de publication Oracle '% s' ne suffisent pas.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' doit être une connexion Windows valide sous la forme 'MACHINE\Login' ou 'DOMAIN\Login'. Consultez la documentation de '%s'.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' doit être une connexion Windows valide sous la forme : 'MACHINE\Connexion' ou 'DOMAIN\Connexion'. Consultez la documentation de '%s'.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|Le travail de l'Agent '%s' doit être ajouté à l'aide de '%s' avant de continuer. Consultez la documentation de '%s'.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|Le processus n'a pas pu exécuter '%1' sur '%2'.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|Le processus de fusion n'a pas pu modifier l'historique de génération sur le '%1'. Lors de la résolution du problème, redémarrez la synchronisation avec un enregistrement d'historique détaillé et spécifiez un fichier de sortie dans lequel écrire.|  

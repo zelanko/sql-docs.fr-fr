@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051262"
 ---
 # <a name="query-method-xml-data-type"></a>Méthode query() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Cette section propose des exemples d’utilisation de la méthode query() de typ
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Utilisation de la méthode query() sur une variable de type xml  
 L’exemple suivant déclare une variable **@myDoc** de type **xml** et lui affecte une instance XML. La méthode **query()** est ensuite utilisée pour spécifier une requête Xml portant sur le document.  
   
-La requête récupère l'élément enfant <`Features`> provenant de l'élément <`ProductDescription`>.  
+La requête récupère l’élément enfant <`Features`> de l’élément <`ProductDescription`> :  
   
 ```  
 declare @myDoc xml  
@@ -68,7 +67,7 @@ La sortie suivante montre le résultat :
 </Features>        
 ```  
   
-### <a name="b-using-the-query-method-against-an-xml-type-column"></a>b. Utilisation de la méthode query() sur une colonne de type XML  
+### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. Utilisation de la méthode query() sur une colonne de type XML  
 Dans l’exemple suivant, la méthode **query()** est utilisée pour indiquer une requête Xml portant sur la colonne **CatalogDescription** de type **xml** tirée de la base données **AdventureWorks** :  
   
 ```  
@@ -114,7 +113,7 @@ WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty '
 
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   

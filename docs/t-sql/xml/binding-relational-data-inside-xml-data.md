@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44eba48983d2dd9e3610b5534997ca6a4a3849b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051331"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Liaison de données relationnelles dans des données XML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "56019070"
  En outre, cette liaison est destinée à un emploi en lecture seule. Cela signifie que vous ne pouvez pas écrire de données dans les colonnes qui utilisent ces fonctions. Par exemple, l’instruction sql:variable("\@x")="*expression quelconque"* n’est pas autorisée.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemple : requête inter-domaines utilisant sql:variable()  
- Cet exemple montre comment **sql:variable()** peut permettre à une application de paramétrer une requête. Le numéro ISBN est passé en utilisant une variable SQL @isbn. En remplaçant la constante par **sql:variable()**, vous pouvez utiliser la requête pour rechercher n’importe quel numéro ISBN et pas seulement le numéro 0-7356-1588-2.  
+ Cet exemple montre comment **sql:variable()** peut permettre à une application de paramétrer une requête. Le numéro ISBN est passé en utilisant une variable SQL @isbn. En remplaçant la constante par **sql:variable()** , vous pouvez utiliser la requête pour rechercher n’importe quel numéro ISBN et pas seulement le numéro 0-7356-1588-2.  
   
 ```  
 DECLARE @isbn varchar(20)  
@@ -56,7 +55,7 @@ WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1
   
  **sql:column()** peut être utilisée de manière similaire et apporter d’autres avantages. Pour gagner en efficacité, vous pouvez placer des index sur la colonne, en suivant les suggestions de l'optimiseur de requête basé sur les coûts. De plus, la colonne calculée peut stocker une propriété promue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)  
   
   

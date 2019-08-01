@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 54863db300d7a63404161e438bede2ecc2ec8928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 681e944da0a49c6a1b485606e5ed1ed0bd8ffd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904985"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Mettre à niveau une instance de cluster de basculement SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "47783727"
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
--   [Mises à niveau de la version et de l’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) : vérifiez que vous pouvez procéder à une mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à partir de votre version du système d’exploitation Windows et de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par exemple, vous ne pouvez pas effectuer directement la mise à niveau d’une instance de cluster de basculement SQL Server 2005 vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ou mettre à niveau un cluster de basculement exécutant [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Mises à niveau de version et d’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) : vérifiez que vous pouvez procéder à une mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à partir de votre version du système d’exploitation Windows et de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par exemple, vous ne pouvez pas effectuer directement la mise à niveau d’une instance de cluster de basculement SQL Server 2005 vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ou mettre à niveau un cluster de basculement exécutant [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
+-   [Choisir une méthode de mise à niveau du moteur de base de données](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) : sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
   
--   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
+-   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) : consultez les notes de publication et les problèmes de mise à niveau connus ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) : prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
+-   [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) :  passez en revue les configurations matérielle et logicielle requises pour l’installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Exécuter une mise à jour ou mise à niveau propagée  
  Pour mettre à niveau un cluster du basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], utilisez le programme d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour mettre à niveau chaque nœud de cluster de basculement à la fois, en commençant par les nœuds passifs. Lorsque vous mettez à niveau chaque nœud, celui-ci est écarté de la liste des propriétaires possibles du cluster de basculement. En cas de basculement inattendu, les nœuds mis à niveau ne participent pas au basculement tant que la propriété du groupe de ressources de cluster n’est pas transférée vers un nœud mis à niveau par le programme d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a5ae003e6d8a9d13ac9b0d6b9dfa99a497a26c23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942743"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Réglage des performances pour les serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47595510"
   
  Il existe en outre pour les serveurs de publication Oracle deux options liées aux performances :  
   
--   Spécification des options de publication adéquates : Oracle ou Oracle Gateway.  
+-   Spécification de l’option de publication adéquate : Oracle ou Oracle Gateway.  
   
 -   Configuration du travail du jeu de transactions pour traiter les changements sur le serveur de publication selon une périodicité appropriée.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "47595510"
   
  Pour configurer le travail du jeu de transactions, consultez [Configurer le travail d’un jeu de transactions pour un serveur de publication Oracle &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

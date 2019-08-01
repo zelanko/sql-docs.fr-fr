@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117144"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ CREATE SERVER AUDIT audit_name
  MAXSIZE = { *max_size }*  
  Taille maximale que peut atteindre le fichier d'audit. La valeur *max_size* doit être un entier suivi de MB, GB, TB ou UNLIMITED. La taille minimale que vous pouvez spécifier pour *max_size* est 2 MB et la taille maximale est 2 147 483 647 TB. Lorsque UNLIMITED est spécifié, la taille du fichier peut croître jusqu'à ce que le disque soit saturé. (0 correspond également à UNLIMITED.) La spécification d’une valeur inférieure à 2 Mo génère l’erreur MSG_MAXSIZE_TOO_SMALL. La valeur par défaut est UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  Spécifie le nombre maximal de fichiers à conserver dans le système de fichiers en plus du fichier actuel. La valeur *MAX_ROLLOVER_FILES* doit être un entier ou UNLIMITED. La valeur par défaut est UNLIMITED. Ce paramètre est évalué chaque fois que l’audit redémarre (ce qui peut se produire quand l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] redémarre ou quand l’audit est désactivé, puis réactivé) ou qu’un nouveau fichier est nécessaire car la valeur de MAXSIZE a été atteinte. Quand *MAX_ROLLOVER_FILES* est évalué, si le nombre de fichiers dépasse la valeur du paramètre *MAX_ROLLOVER_FILES*, le fichier le plus ancien est supprimé. Ainsi, quand la valeur du paramètre *MAX_ROLLOVER_FILES* est 0, un fichier est créé chaque fois que le paramètre *MAX_ROLLOVER_FILES* est évalué. Un seul fichier est automatiquement supprimé quand le paramètre *MAX_ROLLOVER_FILES* est évalué. Ainsi, quand la valeur de *MAX_ROLLOVER_FILES* diminue, le nombre de fichiers n’est pas réduit tant que les anciens fichiers ne sont pas supprimés manuellement. Le nombre maximal de fichiers qui peuvent être spécifiés est 2 147 483 647.  
   
  MAX_FILES =*integer*  
@@ -146,12 +145,12 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
  Chaîne ANSI ou Unicode, comme requis par la comparaison de prédicat. Aucune conversion implicite de type chaîne n'est effectuée pour les fonctions de comparaison de prédicat. La transmission d'un type incorrect provoque une erreur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsqu'un audit de serveur est créé, il est dans un état désactivé.  
   
  L'instruction CREATE SERVER AUDIT fait partie de l'étendue d'une transaction. Si la transaction est restaurée, l'instruction l'est également.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer, modifier ou supprimer un audit du serveur, les principaux requièrent l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
   
  Lorsque vous enregistrez des informations d'audit dans un fichier, pour éviter toute falsification, limitez l'accès à l'emplacement du fichier.  
@@ -166,7 +165,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>b. Création d'un audit du serveur avec le journal des applications Windows comme cible et des options  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Création d'un audit du serveur avec le journal des applications Windows comme cible et des options  
  L'exemple suivant crée un audit du serveur nommé `HIPAA_Audit` avec la cible définie sur le journal des applications Windows. La file d'attente est écrite chaque seconde et arrête le moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cas d'échec.  
   
 ```sql  
@@ -215,7 +214,7 @@ SELECT * FROM fn_get_audit_file('C:\SQLAudit\AuditDataAccess_*.sqlaudit',default
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

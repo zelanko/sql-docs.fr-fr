@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140140"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54127709"
  Pour définir ou modifier un filtre de lignes paramétré, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Fonctionnement des filtres paramétrés  
- Un filtre de lignes paramétré utilise une clause WHERE pour sélectionner les données appropriées à publier. Au lieu de spécifier une valeur littérale dans la clause (comme c'est le cas avec un filtre de lignes statique), vous spécifiez l'une des deux fonctions système suivantes ou les deux : SUSER_SNAME() et HOST_NAME(). Il est également possible d'utiliser des fonctions définies par l'utilisateur mais elles doivent inclure SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction ou évaluer l'une de ces fonctions système (par exemple, `MyUDF(SUSER_SNAME()`). Si une fonction définie par l'utilisateur inclut SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction, vous ne pouvez pas passer de paramètres à la fonction.  
+ Un filtre de lignes paramétré utilise une clause WHERE pour sélectionner les données appropriées à publier. Au lieu de spécifier une valeur littérale dans la clause (comme c'est le cas avec un filtre de lignes statique), vous spécifiez l’une des deux fonctions système suivantes ou les deux : SUSER_SNAME() et HOST_NAME(). Il est également possible d'utiliser des fonctions définies par l'utilisateur mais elles doivent inclure SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction ou évaluer l'une de ces fonctions système (par exemple, `MyUDF(SUSER_SNAME()`). Si une fonction définie par l'utilisateur inclut SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction, vous ne pouvez pas passer de paramètres à la fonction.  
   
  Les fonctions système SUSER_SNAME() et HOST_NAME() ne sont pas propres à la réplication de fusion mais elles sont utilisées par celle-ci pour le filtrage paramétré :  
   
@@ -186,7 +185,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Si deux tables d'un serveur de publication possèdent une relation de filtre de jointure et que la table enfant contient des lignes qui ne correspondent à aucune ligne de la table parent, une insertion de la ligne parente manquante n'entraîne pas le téléchargement des lignes liées vers l'Abonné (les lignes seraient téléchargées avec des partitions qui se chevauchent). Si, par exemple, la table **SalesOrderDetail** comprend des lignes sans correspondance dans la table **SalesOrderHeader** et que vous insérez la ligne manquante dans **SalesOrderHeader**, la ligne est téléchargée sur l'Abonné mais les lignes correspondantes de la table **SalesOrderDetail** ne le sont pas.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bonnes pratiques concernant les filtres de lignes basés sur le temps](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrer des données publiées en vue de la réplication de fusion](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114803"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY – refus d'autorisations d'objet (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ PRIVILEGES
 >  Une instruction DENY de niveau table n'a pas la priorité sur une instruction GRANT de niveau colonne. Cette incohérence dans la hiérarchie des autorisations a été conservée pour des raisons de compatibilité descendante.  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- Spécifie l’objet sur lequel l’autorisation doit être refusée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l’expression OBJECT est utilisée, le qualificateur d’étendue (**::**) est obligatoire. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (**.**) est obligatoire.  
+ Spécifie l’objet sur lequel l’autorisation doit être refusée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l’expression OBJECT est utilisée, le qualificateur d’étendue ( **::** ) est obligatoire. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma ( **.** ) est obligatoire.  
   
  TO \<database_principal>  
  Spécifie le principal auquel l'autorisation est refusée.  
@@ -112,7 +111,7 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Un objet est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur un objet sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -132,7 +131,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur l'objet.  
   
  Si vous utilisez la clause AS, le principal spécifié doit posséder l'objet sur lequel les autorisations doivent être refusées.  
@@ -148,7 +147,7 @@ DENY SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>b. Refus d'une autorisation EXECUTE sur une procédure stockée  
+### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Refus d'une autorisation EXECUTE sur une procédure stockée  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la procédure stockée `HumanResources.uspUpdateEmployeeHireInfo` est refusée à un rôle d'application nommé `Recruiting11`.  
   
 ```  
@@ -166,7 +165,7 @@ DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GRANT – octroi d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [REVOKE - Révoquer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
  [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

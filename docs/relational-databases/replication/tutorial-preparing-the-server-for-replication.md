@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné) | Microsoft Docs'
+title: 'Tutoriel : Préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39eac1be5a9e6479a7607364bb194b5aa5b8716f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895430"
 ---
-# <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutoriel : Préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné)
+# <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutoriel : Préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Vous devez planifier la sécurité avant de configurer la topologie de réplication. Ce didacticiel vous explique comment mieux sécuriser une topologie de réplication. Il montre également comment configurer la distribution, ce qui constitue la première étape de la réplication des données. Ce didacticiel doit être effectué avant les autres didacticiels.  
   
@@ -57,7 +56,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
 > - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 
-**Durée estimée pour effectuer ce tutoriel : 30 minutes**
+**Durée estimée pour terminer ce didacticiel : 30 minutes**
   
 ## <a name="create-windows-accounts-for-replication"></a>Créer des comptes Windows pour la réplication
 Dans cette section, vous créez des comptes Windows pour exécuter les agents de réplication. Vous créez un compte Windows distinct sur le serveur local pour les agents suivants :  
@@ -123,16 +122,16 @@ Dans cette section, vous configurez le dossier d’instantanés utilisé pour cr
 
    ![Sélections pour le partage du dossier repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. Dans la boîte de dialogue **Autorisations pour repldata**, sélectionnez **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé précédemment, sous la forme <*nom_ordinateur_serveur_de_publication*>**\repl_snapshot**. Sélectionnez **Vérifier les noms**, puis sélectionnez **OK**.  
+6. Dans la boîte de dialogue **Autorisations pour repldata**, sélectionnez **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé précédemment, sous la forme <*nom_ordinateur_serveur_de_publication*> **\repl_snapshot**. Sélectionnez **Vérifier les noms**, puis sélectionnez **OK**.  
 
    ![Sélections pour ajouter des autorisations de partage](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. Répétez l’étape 6 pour ajouter les deux autres comptes que vous avez créés précédemment : <*nom_ordinateur_serveur_de_publication*>**\repl_merge** et <*nom_ordinateur_serveur_de_publication*>**\repl_distribution**.
+7. Répétez l’étape 6 pour ajouter les deux autres comptes que vous avez créés précédemment : <*nom_ordinateur_serveur_de_publication*> **\repl_merge** et <*nom_ordinateur_serveur_de_publication*> **\repl_distribution**.
 
 8. Après avoir ajouté les trois comptes, attribuez les autorisations suivantes :      
-   - repl_distribution : **Lecture**  
-   - repl_merge : **Lecture**  
-   - repl_snapshot : **Contrôle total**    
+   - repl_distribution : **Lecture**  
+   - repl_merge : **Lecture**  
+   - repl_snapshot : **Contrôle total**    
 
    ![Autorisations partagées pour chaque compte](media/tutorial-preparing-the-server-for-replication/sharedpermissions.png)
 
@@ -142,19 +141,19 @@ Dans cette section, vous configurez le dossier d’instantanés utilisé pour cr
 
     ![Bouton « Modifier » sous l’onglet « Sécurité »](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. Dans la boîte de dialogue **Autorisations pour repldata**, sélectionnez **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé précédemment, sous la forme <*nom_ordinateur_serveur_de_publication*>**\repl_snapshot**. Sélectionnez **Vérifier les noms**, puis sélectionnez **OK**.  
+11. Dans la boîte de dialogue **Autorisations pour repldata**, sélectionnez **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé précédemment, sous la forme <*nom_ordinateur_serveur_de_publication*> **\repl_snapshot**. Sélectionnez **Vérifier les noms**, puis sélectionnez **OK**.  
 
     ![Sélections pour ajouter des autorisations de sécurité](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12. Répétez l’étape précédente pour ajouter des autorisations pour l’Agent de distribution, sous la forme <*nom_ordinateur_serveur_de_publication*>**\repl_distribution**, et pour l’Agent de fusion, sous la forme <*nom_ordinateur_serveur_de_publication*>**\repl_merge**.  
+12. Répétez l’étape précédente pour ajouter des autorisations pour l’Agent de distribution, sous la forme <*nom_ordinateur_serveur_de_publication*> **\repl_distribution**, et pour l’Agent de fusion, sous la forme <*nom_ordinateur_serveur_de_publication*> **\repl_merge**.  
     
   
 13. Vérifiez que les autorisations suivantes sont accordées :  
   
-    - repl_distribution : **Lecture**
-    - repl_merge : **Lecture**
-    - repl_snapshot : **Contrôle total**   
+    - repl_distribution : **Lecture**
+    - repl_merge : **Lecture**
+    - repl_snapshot : **Contrôle total**   
  
     ![Autorisations d'utilisateur pour les données de réplication](media/tutorial-preparing-the-server-for-replication/replpermissions.png) 
 
@@ -181,18 +180,18 @@ La configuration d'un serveur de publication avec un serveur de distribution dis
    ![Commande « Configurer la distribution » du menu contextuel](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > Si vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de **localhost** au lieu du nom du serveur réel, un avertissement vous indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas se connecter à **'localhost'**. Sélectionnez **OK** dans la boîte de dialogue d’avertissement. Dans la boîte de dialogue **Se connecter au serveur**, remplacez **Nom du serveur**, qui indique **localhost**, par le nom de votre serveur. Sélectionnez ensuite **Se connecter**.  
+   > Si vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de **localhost** au lieu du nom du serveur réel, un avertissement vous indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas se connecter à **'localhost'** . Sélectionnez **OK** dans la boîte de dialogue d’avertissement. Dans la boîte de dialogue **Se connecter au serveur**, remplacez **Nom du serveur**, qui indique **localhost**, par le nom de votre serveur. Sélectionnez ensuite **Se connecter**.  
   
    L'Assistant Configuration de la distribution démarre.  
   
-3. Dans la page **Serveur de distribution**, sélectionnez <*'nom_serveur'*> **agit comme son propre serveur de distribution ; SQL Server crée une base de données de distribution et un journal**. Sélectionnez ensuite **Suivant**.  
+3. Dans la page **Serveur de distribution**, sélectionnez < *'nom_serveur'* > **agit comme son propre serveur de distribution ; SQL Server crée une base de données de distribution et un journal**. Sélectionnez ensuite **Suivant**.  
 
    ![Option permettant au serveur d’agir comme son propre serveur de distribution](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
 4. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne s’exécute pas, dans la page **Démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent**, sélectionnez **Oui, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour qu’il démarre automatiquement**. Sélectionnez **Suivant**.  
 
      
-5. Entrez le chemin \\\\<*nom_ordinateur_serveur_de_publication*>**\repldata** dans la zone **Dossier d’instantanés**, puis sélectionnez **Suivant**. Ce chemin doit correspondre au **Chemin réseau** du dossier des propriétés de repldata, tel que vous l’avez défini quand vous avez configuré les propriétés du partage. 
+5. Entrez le chemin \\\\<*nom_ordinateur_serveur_de_publication*> **\repldata** dans la zone **Dossier d’instantanés**, puis sélectionnez **Suivant**. Ce chemin doit correspondre au **Chemin réseau** du dossier des propriétés de repldata, tel que vous l’avez défini quand vous avez configuré les propriétés du partage. 
 
    ![Comparaison des chemins réseau dans la boîte de dialogue « Propriétés de repldata » et dans l’Assistant Configuration de la distribution](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -219,7 +218,7 @@ Si votre instance SQL Server Management Studio s’exécute avec des droits d’
 
    ![Commande « Nouvelle connexion » du menu contextuel](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2. Dans la page **Général**, sélectionnez **Rechercher**. Entrez <*nom_ordinateur_serveur_de_publication*>**\repl_snapshot** dans la zone **Entrer le nom d’objet à sélectionner**, sélectionnez **Vérifier les noms**, puis sélectionnez **OK**.  
+2. Dans la page **Général**, sélectionnez **Rechercher**. Entrez <*nom_ordinateur_serveur_de_publication*> **\repl_snapshot** dans la zone **Entrer le nom d’objet à sélectionner**, sélectionnez **Vérifier les noms**, puis sélectionnez **OK**.  
 
    ![Sélections pour entrer le nom de l’objet](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   
@@ -244,7 +243,7 @@ Pour plus d'informations, consultez :
 Vous avez correctement préparé votre serveur pour la réplication. L’article suivant vous apprend à configurer la réplication transactionnelle : 
 
 > [!div class="nextstepaction"]
-> [Tutoriel : Configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)](tutorial-replicating-data-between-continuously-connected-servers.md)
+> [Tutoriel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

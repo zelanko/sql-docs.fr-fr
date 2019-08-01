@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506496"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307627"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Index columnstore - Conseils en matière de chargement de données
 
@@ -44,11 +43,15 @@ Comme l’indique le diagramme :
 > Sur une table rowstore comportant des données d’index columnstore non-cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insère toujours les données dans la table de base. Les données ne sont jamais insérées directement dans l’index columnstore.  
 
 Le chargement en masse dispose des fonctions d’optimisation des performances intégrées suivantes :
--   **Charges parallèles :** Vous pouvez avoir plusieurs chargements en masse simultanés (BCP ou insertion en bloc) qui chargent chacun un fichier de données distinct. À la différence des chargements en masse de rowstores dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous n’avez pas besoin de spécifier l’option `TABLOCK`, car chaque thread d’importation en bloc charge des données exclusivement dans un rowgroup distinct (compressé ou delta) en lui appliquant un verrou exclusif. L’option `TABLOCK` force l’application d’un verrou exclusif à la table, qui vous empêche d’importer des données en parallèle.  
--   **Journalisation minimale :** Un chargement en masse utilise une journalisation minimale des données qui sont placées directement dans des rowgroups compressés. Toutes les données qui sont placées dans un rowgroup delta sont entièrement journalisées. Cela inclut toutes les tailles de lot inférieures à 102 400 lignes. Toutefois, avec le chargement en masse, l’objectif est que la plupart des données évitent les rowgroups delta.  
--   **Optimisation du verrouillage :** Lors du chargement dans un rowgroup compressé, le verrou X sur le rowgroup est acquis. Toutefois, lors d’un chargement en masse dans un rowgroup delta, un verrou X est acquis au niveau du rowgroup, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continue de verrouiller les verrous PAGE/EXTENT, car le verrou X du rowgroup ne fait pas partie de la hiérarchie de verrouillage.  
+-   **Charges parallèles :** Vous pouvez avoir plusieurs chargements en masse simultanés (BCP ou insertion en bloc) qui chargent chacun un fichier de données distinct. À la différence des chargements en masse de rowstores dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous n’avez pas besoin de spécifier l’option `TABLOCK` car chaque thread d’importation en bloc charge des données exclusivement dans des rowgroups distincts (compressé ou delta) en lui appliquant un verrou exclusif. 
+
+-   **Journalisation réduite :** Les données directement chargées dans des groupes de lignes compressés entraînent une réduction significative de la taille du journal. Par exemple, si les données ont été compressées 10 fois, le journal des transactions correspondant sera approximativement 10 fois plus petit sans nécessiter TABLOCK ou le mode de récupération simple/mode de récupération utilisant les journaux de transactions. Toutes les données qui sont placées dans un rowgroup delta sont entièrement journalisées. Cela inclut toutes les tailles de lot inférieures à 102 400 lignes.  La bonne pratique consiste à utiliser BatchSize > = 102400. Étant donné qu’aucun TABLOCK n’est nécessaire, vous pouvez charger les données en parallèle. 
+
+-   **Journalisation minimale :** Vous pouvez réduire davantage la journalisation si vous respectez les prérequis pour une [journalisation minimale](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Toutefois, contrairement au chargement de données dans un rowstore, TABLOCK provoque un verrou X sur la table au lieu d’un verrou BU (mise à jour en bloc) et, par conséquent, le chargement de données en parallèle ne peut pas être effectué. Pour plus d’informations sur le verrouillage, consultez [Verrouillage et gestion des versions de ligne[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+
+-   **Optimisation du verrouillage :** Le verrou X sur un groupe de lignes est automatiquement acquis lors du chargement des données dans un groupe de lignes compressé. Toutefois, lors d’un chargement en masse dans un rowgroup delta, un verrou X est acquis au niveau du rowgroup, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continue de verrouiller les verrous PAGE/EXTENT car le verrou de rowgroup X ne fait pas partie de la hiérarchie de verrouillage.  
   
-Si vous avez un index B-tree non-cluster sur un index columnstore, aucune optimisation du verrouillage ou de la journalisation n’est effectuée pour l’index proprement dit, mais les optimisations de l’index columnstore cluster décrites ci-dessus ont toujours lieu.  
+Si vous avez un index B-tree non cluster sur un index columnstore, aucune optimisation du verrouillage ou de la journalisation n’est effectuée pour l’index proprement dit, mais les optimisations de l’index columnstore cluster décrites ci-dessus sont applicables.  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planifier les tailles de chargement en masse pour réduire les rowgroups delta
 Les index columnstore fonctionnent de manière optimale quand la plupart des lignes sont compressées dans le columnstore et qu’elles ne se trouvent pas dans des rowgroups delta. Il est préférable de dimensionner vos chargements afin que les lignes soient directement placées dans le columnstore et d’ignorer autant que possible le deltastore.
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Cette commande charge les données dans l’index columnstore de manière similaire à BCP ou à une insertion en bloc, mais dans un lot unique. Si le nombre de lignes de la table de mise en lots est inférieur à 102 400, les lignes sont chargées dans un rowgroup delta. Dans le cas contraire, elles sont chargées directement dans un rowgroup compressé. Limitation importante : cette opération `INSERT` était à thread unique. Pour charger des données en parallèle, vous pouviez créer plusieurs tables de mise en lots ou envoyer des instructions `INSERT`/`SELECT` sans chevauchement des plages de lignes de la table de mise en lots. Cette limitation disparaît avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. La commande suivante charge les données de la table de mise en lots en parallèle, mais vous devez spécifier l’option `TABLOCK`.  
+ Cette commande charge les données dans l’index columnstore de manière similaire à BCP ou à une insertion en bloc, mais dans un lot unique. Si le nombre de lignes de la table de mise en lots est inférieur à 102 400, les lignes sont chargées dans un rowgroup delta. Dans le cas contraire, elles sont chargées directement dans un rowgroup compressé. Limitation importante : cette opération `INSERT` était à thread unique. Pour charger des données en parallèle, vous pouviez créer plusieurs tables de mise en lots ou envoyer des instructions `INSERT`/`SELECT` sans chevauchement des plages de lignes de la table de mise en lots. Cette limitation disparaît avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. La commande suivante charge les données de la table de mise en lots en parallèle, mais vous devez spécifier l’option `TABLOCK`. Cela peut sembler contradictoire avec ce qui a été dit précédemment concernant le chargement en masse, mais la principale différence réside dans le fait que la charge de données en parallèle de la table de mise en lots est exécutée dans le cadre de la même transaction.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,7 +94,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  Vous pouvez effectuer les optimisations suivantes pour le chargement dans un index columnstore cluster à partir d’une table de mise en lots :
--   **Optimisation du journal :** une journalisation minimale est effectuée lors du chargement des données dans le rowgroup compressé. Aucune journalisation minimale lorsque des données sont chargées dans le rowgroup delta.  
+-   **Optimisation du journal :** Une journalisation réduite lors du chargement des données dans un rowgroup compressé.   
 -   **Optimisation du verrouillage :** Lors du chargement dans un rowgroup compressé, le verrou X sur le rowgroup est acquis. Toutefois, avec un rowgroup delta, un verrou X est acquis au niveau du rowgroup, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continue de verrouiller les verrous PAGE/EXTENT, car le verrou X du rowgroup ne fait pas partie de la hiérarchie de verrouillage.  
   
  Si vous disposez d’un ou plusieurs index non cluster, aucune optimisation du verrouillage ou du journal n’est effectuée pour l’index proprement dit, mais les optimisations de l’index columnstore cluster décrites ci-dessus ont toujours lieu.  

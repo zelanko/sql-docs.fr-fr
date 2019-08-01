@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140902"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE – révocation d'autorisations d'objet (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Un objet est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer sur un objet sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -142,7 +141,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur l'objet.  
   
  Si vous utilisez la clause AS, le principal spécifié doit posséder l'objet sur lequel les autorisations doivent être révoquées.  
@@ -158,7 +157,7 @@ REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;
 GO  
 ```  
   
-### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>b. Révocation d'une autorisation EXECUTE sur une procédure stockée  
+### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>B. Révocation d'une autorisation EXECUTE sur une procédure stockée  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la procédure stockée `HumanResources.uspUpdateEmployeeHireInfo` est révoquée pour un rôle d'application nommé `Recruiting11`.  
   
 ```  
@@ -178,7 +177,7 @@ REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GRANT – octroi d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [DENY – refus d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
  [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

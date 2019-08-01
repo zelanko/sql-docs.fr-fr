@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: cc09ccfbf23e200f8771b84d40fb5a1dd3d1dc9c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136519"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notes de publication de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,17 +76,17 @@ Utilisez le tableau suivant pour identifier l'emplacement et le nom du fichier �
 |Si la version actuellement installée est...|Vous souhaitez…|Téléchargez et installez...|  
 |---|---|---|   
 |Installations 32 bits :|||  
-|Une version 32 bits de n’importe quelle édition de SQL Server 2012|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** à partir de la [page de téléchargement de SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|Une version 32 bits de SQL Server 2012 RTM Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 Express SP2|**SQLEXPR_**<arch>**8**<lang>**.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Une version 32 bits de seulement le client et les outils de gestion pour SQL Server 2012 (y compris SQL Server 2012 Management Studio)|Effectuer la mise à niveau du client et des outils de gestion vers la version 32 bits de SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**8**<lang>**.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Une version 32 bits de SQL Server 2012 Management Studio Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Une version 32 bits d'une édition quelconque de SQL Server 2012 et une version 32 bits du client et des outils de gestion (y compris SQL Server 2012 RTM Management Studio)|Effectuer la mise à niveau de tous les produits vers la version 32 bits de SQL Server 2012 SP2|**SQLEXPRADV_**<arch>**_**<lang>**.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express.](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Une version 32 bits de n’importe quelle édition de SQL Server 2012|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-** <arch> **-** <lang id> **.exe** à partir de la [page de téléchargement de SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|Une version 32 bits de SQL Server 2012 RTM Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 Express SP2|**SQLEXPR_** <arch>**8**<lang> **.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Une version 32 bits de seulement le client et les outils de gestion pour SQL Server 2012 (y compris SQL Server 2012 Management Studio)|Effectuer la mise à niveau du client et des outils de gestion vers la version 32 bits de SQL Server 2012 SP2|**SQLEXPRWT_** <arch>**8**<lang> **.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Une version 32 bits de SQL Server 2012 Management Studio Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Une version 32 bits d'une édition quelconque de SQL Server 2012 et une version 32 bits du client et des outils de gestion (y compris SQL Server 2012 RTM Management Studio)|Effectuer la mise à niveau de tous les produits vers la version 32 bits de SQL Server 2012 SP2|**SQLEXPRADV_** <arch> **_** <lang> **.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express.](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |Une version 32 bits d'un ou plusieurs outils du [Feature Pack Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=29065) ou du [Feature Pack Microsoft SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Effectuer la mise à niveau des outils vers la version 32 bits du Feature Pack Microsoft SQL Server 2012 SP2|Un ou plusieurs outils à partir de la [page de téléchargement du Feature Pack Microsoft SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401008)|  
 |Installations 64 bits :|||  
 |Une version 64 bits d'une édition quelconque de SQL Server 2012|Effectuer la mise à niveau vers la version 64 bits de SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe à partir de la [page de téléchargement de SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|Version 64 bits de SQL Server 2012 RTM Express|Effectuer la mise à niveau vers la version 64 bits de SQL Server 2012 SP2|**SQLEXPR_**<arch>**8**<lang>**.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Une version 64 bits uniquement du client et des outils de gestion de SQL Server 2012 (y compris SQL Server 2012 Management Studio)|Effectuer la mise à niveau du client et des outils de gestion vers la version 64 bits de SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**8**<lang>**.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Version 64 bits de SQL Server 2012 Management Studio Express|Effectuer la mise à niveau vers la version 64 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Version 64 bits de SQL Server 2012 RTM Express|Effectuer la mise à niveau vers la version 64 bits de SQL Server 2012 SP2|**SQLEXPR_** <arch>**8**<lang> **.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Une version 64 bits uniquement du client et des outils de gestion de SQL Server 2012 (y compris SQL Server 2012 Management Studio)|Effectuer la mise à niveau du client et des outils de gestion vers la version 64 bits de SQL Server 2012 SP2|**SQLEXPRWT_** <arch>**8**<lang> **.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Version 64 bits de SQL Server 2012 Management Studio Express|Effectuer la mise à niveau vers la version 64 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** à partir de la [page de téléchargement de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |Une version 64 bits d'un ou plusieurs outils du [Feature Pack Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=29065) ou du [Feature Pack Microsoft SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Effectuer la mise à niveau des outils vers la version 64 bits du Feature Pack Microsoft SQL Server 2012 SP2|Un ou plusieurs outils à partir de la [page de téléchargement du Feature Pack Microsoft SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401008)|   
 
 
@@ -129,14 +128,14 @@ Utilisez le tableau suivant pour déterminer le fichier à télécharger et inst
 Pour obtenir la liste complète des bogues et problèmes connus corrigés dans ce Service Pack, consultez cet [article de la Base de connaissances](https://support.microsoft.com/kb/2674319).   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>Échec de la réinstallation des instances de cluster de basculement SQL Server si vous utilisez la même adresse IP  
-**Problème :** si vous spécifiez une adresse IP incorrecte lors de l'installation d'une instance de cluster de basculement SQL Server, l'installation échoue. Après avoir désinstallé l'instance en échec, si vous tentez de réinstaller l'instance de cluster de basculement SQL Server avec le même nom d'instance et une adresse IP correcte, l'installation échoue. Cet échec est dû au groupe de ressources dupliqué conservé par l'installation précédente.  
+**Problème :** si vous spécifiez une adresse IP incorrecte lors de l’installation d’une instance de cluster de basculement SQL Server, l’installation échoue. Après avoir désinstallé l'instance en échec, si vous tentez de réinstaller l'instance de cluster de basculement SQL Server avec le même nom d'instance et une adresse IP correcte, l'installation échoue. Cet échec est dû au groupe de ressources dupliqué conservé par l'installation précédente.  
   
-**Solution de contournement :** pour résoudre ce problème, utilisez un autre nom d'instance lors de la réinstallation, ou supprimez manuellement le groupe de ressources avant la réinstallation. Pour plus d'informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
+**Solution de contournement :** pour résoudre ce problème, utilisez un autre nom d’instance durant la réinstallation, ou supprimez manuellement le groupe de ressources avant la réinstallation. Pour plus d'informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services et PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>L’outil de configuration PowerPivot ne crée pas la Galerie PowerPivot  
-**Problème :** l'outil de configuration PowerPivot configure un site d'équipe, et la Galerie PowerPivot n'est donc pas créée.  
+**Problème :** l’outil de configuration PowerPivot configure un site d’équipe, et la Galerie PowerPivot n’est donc pas créée.  
   
 **Solution de contournement :** créez une application (bibliothèque).  
   
@@ -147,9 +146,9 @@ Pour obtenir la liste complète des bogues et problèmes connus corrigés dans c
 3.  Cliquez sur **Galerie PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Pour utiliser PowerPivot pour Excel avec Excel 2013, vous devez utiliser le complément installé avec Excel  
-**Problème :** avec Office 2010, PowerPivot pour Excel est un complément autonome qui peut être téléchargé à partir de [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Sinon, vous pouvez également le télécharger depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Notez qu'il existe deux versions du complément PowerPivot disponibles en téléchargement : une qui est livrée avec SQL Server 2008 R2, et une autre qui est livrée avec SQL Server 2012. Toutefois, pour Office 2013, PowerPivot pour Excel est fourni avec Office et s'installe en même temps qu'Excel. Bien que les versions SQL Server 2008 R2 et SQL Server 2012 de PowerPivot pour Excel 2010 ne soient pas compatibles avec Excel 2013, vous pouvez toujours installer PowerPivot pour Excel 2010 sur votre ordinateur client si vous souhaitez exécuter Excel 2010 en parallèle d'Excel 2013. En d'autres termes, les deux versions d'Excel peuvent coexister, de même que les compléments PowerPivot correspondants.  
+**Problème :** avec Office 2010, PowerPivot pour Excel est un complément autonome qui peut être téléchargé à partir de [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Sinon, vous pouvez également le télécharger depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Notez qu’il existe deux versions du complément PowerPivot disponibles en téléchargement : une qui est fournie avec SQL Server 2008 R2, et une autre qui est fournie avec SQL Server 2012. Toutefois, pour Office 2013, PowerPivot pour Excel est fourni avec Office et s'installe en même temps qu'Excel. Bien que les versions SQL Server 2008 R2 et SQL Server 2012 de PowerPivot pour Excel 2010 ne soient pas compatibles avec Excel 2013, vous pouvez toujours installer PowerPivot pour Excel 2010 sur votre ordinateur client si vous souhaitez exécuter Excel 2010 en parallèle d'Excel 2013. En d'autres termes, les deux versions d'Excel peuvent coexister, de même que les compléments PowerPivot correspondants.  
   
-**Solution de contournement :** pour utiliser PowerPivot pour Excel 2013, vous devez activer le complément COM. Dans Excel 2013, sélectionnez **Fichier** | **Options** | **Compléments**. Dans la liste déroulante **Gérer** , sélectionnez **Compléments COM** , puis cliquez sur **OK**. Dans **Compléments COM**, sélectionnez **Microsoft Office PowerPivot pour Excel 2013** , puis cliquez sur **OK**.  
+**Solution de contournement :** pour utiliser PowerPivot pour Excel 2013, vous devez activer le complément COM. Dans Excel 2013, sélectionnez **Fichier** | **Options** | **Compléments**. Dans la liste déroulante **Gérer** , sélectionnez **Compléments COM** , puis cliquez sur **OK**. Dans **Compléments COM**, sélectionnez **Microsoft Office PowerPivot pour Excel 2013** , puis cliquez sur **OK**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
@@ -167,7 +166,7 @@ Pour obtenir la liste complète des bogues et problèmes connus corrigés dans c
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>Power View dans SharePoint Server 2013 nécessite Microsoft.AnalysisServices.SPClient.dll  
 **Problème :** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n’installe pas un composant requis, **Microsoft.AnalysisServices.SPClient.dll**. Si vous installez SharePoint Server 2013 Preview et [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, mais que vous ne téléchargez pas et n’installez pas le package de programme d’installation de PowerPivot pour SharePoint 2013, **spPowerPivot.msi** , Power View ne fonctionne pas et montre les symptômes suivants.  
   
-**Symptômes :** quand vous voulez créer un rapport Power View, un message d'erreur semblable au suivant s'affiche :  
+**Symptômes :** Quand vous tentez de créer un rapport Power View, un message d’erreur semblable au suivant s’affiche :  
   
 -   « Impossible de créer une connexion à la source de données... »  
   
@@ -197,9 +196,9 @@ La version SQL Server 2012 Express Service Pack 1 (SP1) inclut la version compl�
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service et concepteur pour Oracle d’Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>Mise à niveau de CDC Service et du concepteur  
-**Problème :** si le concepteur de capture de données modifiées pour Oracle et le service de capture de données modifiées pour Oracle par Attunity sont installés sur votre ordinateur quand vous installez SQL Server 2012 SP1, ces composants ne sont pas mis à niveau lors de l'installation du SP1.  
+**Problème :** Si Change Data Capture Designer pour Oracle et Change Data Capture Service pour Oracle par Attunity sont installés sur votre ordinateur quand vous installez SQL Server 2012 SP1, ces composants ne sont pas mis à niveau lors de l’installation du SP1.  
   
-**Solution de contournement :** pour mettre à niveau les composants CDC vers la version la plus récente :  
+**Solution de contournement :** Pour mettre à niveau les composants CDC vers la version la plus récente :  
   
 1.  Téléchargez les fichiers .msi pour le service de capture de données modifiées pour Oracle par Attunity à partir de la [page de téléchargement du Feature Pack SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266).  
   
@@ -242,7 +241,7 @@ Cette version introduit plusieurs scénarios de compatibilité ascendante des pa
   
 -   Tous les packages DAC créés par les versions précédentes de DACFx peuvent être consommés par cette version.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Installer des mises à jour de maintenance de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [Comment identifier la version et l'édition de votre SQL Server](https://support.microsoft.com/help/321185)
 - [Installer des mises à jour de maintenance de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)

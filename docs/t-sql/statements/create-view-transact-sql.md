@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938883"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ OR ALTER
  Chiffre les entrées de [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) qui contiennent le texte de l’instruction CREATE VIEW. L'utilisation de l'argument WITH ENCRYPTION évite la publication de la vue dans le cadre de la réplication SQL Server.  
   
  SCHEMABINDING  
- Lie la vue au schéma des tables sous-jacentes ou des autres tables. Si SCHEMABINDING est précisé, la table de base ou les tables ne peuvent alors pas être modifiées de façon à ne pas en affecter la définition de la vue. Cette dernière doit d'ailleurs être modifiée ou supprimée au préalable pour supprimer les dépendances par rapport à la table qui doit être modifiée. Quand vous utilisez l’argument SCHEMABINDING, *select_statement* doit comprendre les noms en deux parties (_schema_**.**_object_) des tables, des vues ou des fonctions définies par l’utilisateur référencées. Tous ces objets référencés doivent se trouver dans la même base de données.  
+ Lie la vue au schéma des tables sous-jacentes ou des autres tables. Si SCHEMABINDING est précisé, la table de base ou les tables ne peuvent alors pas être modifiées de façon à ne pas en affecter la définition de la vue. Cette dernière doit d'ailleurs être modifiée ou supprimée au préalable pour supprimer les dépendances par rapport à la table qui doit être modifiée. Quand vous utilisez l’argument SCHEMABINDING, *select_statement* doit comprendre les noms en deux parties (_schema_ **.** _object_) des tables, des vues ou des fonctions définies par l’utilisateur référencées. Tous ces objets référencés doivent se trouver dans la même base de données.  
   
  Les vues ou les tables impliquées dans une vue créée avec la clause SCHEMABINDING ne peuvent pas être supprimées, sauf si cette vue perd, à la suite de sa suppression ou de sa modification, la liaison au schéma. Dans le cas contraire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur. De plus, l’exécution d’instructions ALTER TABLE sur des tables impliquées dans des vues qui sont liées au schéma échoue quand ces instructions affectent la définition des vues.  
   
@@ -159,7 +158,7 @@ OR ALTER
   
  Quand une vue est créée à l’aide de WITH VIEW_METADATA, toutes ses colonnes, à l’exception d’une colonne **timestamp**, peuvent être mises à jour si la vue contient des déclencheurs INSTEAD OF INSERT ou INSTEAD OF UPDATE. Pour plus d'informations sur les vues pouvant être mises à jour, consultez les Notes ci-dessous.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous ne pouvez créer des vues que dans la base de données actuelle. CREATE VIEW doit être la première instruction d'un traitement de requêtes. Une vue ne peut faire référence qu'à un maximum de 1 024 colonnes.  
   
  Lorsque vous effectuez une requête par l'intermédiaire d'une vue, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vérifie que tous les objets de base de données référencés dans l'instruction existent, qu'ils sont bien valides dans le contexte de l'instruction et que les instructions de modification de données ne violent pas les règles d'intégrité des données. Si une vérification échoue, le système retourne un message d'erreur. Si la vérification réussit, l'action est transformée en une action applicable dans la ou les tables sous-jacentes.  
@@ -181,7 +180,7 @@ OR ALTER
   
 -   Les colonnes étant modifiées dans la vue doivent faire référence directement aux données sous-jacentes se trouvant dans les colonnes des tables. Les colonnes ne peuvent être dérivées de quelque autre façon, telle que par :  
   
-    -   Une fonction d'agrégation : AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR et VARP.  
+    -   Une fonction d’agrégation : AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR et VARP.  
   
     -   un calcul, car la colonne ne peut être calculée à partir d'une expression utilisant d'autres colonnes ; de même, les colonnes formées par le biais des opérateurs UNION, UNION ALL, CROSSJOIN, EXCEPT et INTERSECT équivalent à une somme de calculs et ne peuvent donc pas être mises à jour.  
   
@@ -347,7 +346,7 @@ FROM Tn;
   
 -   La réplication de mises à jour opérées par le biais de la vue revient à répliquer des tables tirées de deux bases de données différentes : les tables sont servies par différents agents de réplication ; l'ordre des mises à jour ne peut ainsi être garanti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE VIEW dans la base de données et l'autorisation ALTER sur le schéma dans lequel la vue est créée.  
   
 ## <a name="examples"></a>Exemples  
@@ -367,7 +366,7 @@ GO
   
 ```  
   
-### <a name="b-using-with-encryption"></a>b. Utilisation de WITH ENCRYPTION  
+### <a name="b-using-with-encryption"></a>B. Utilisation de WITH ENCRYPTION  
  Cet exemple utilise l'option `WITH ENCRYPTION` et montre les colonnes calculées, les colonnes renommées et les colonnes multiples.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -489,7 +488,7 @@ LEFT OUTER JOIN DimSalesTerritory AS dst
 ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   

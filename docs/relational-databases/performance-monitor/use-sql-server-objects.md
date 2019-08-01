@@ -30,20 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 4f842829fd3d00e6e2cc238107024fa5f284eff2
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 468d9aabd58c8fcdca8403b1177eea92ced9212d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044827"
 ---
 # <a name="use-sql-server-objects"></a>Utiliser des objets SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des objets et des compteurs qui peuvent être utilisés par le Moniteur système pour surveiller l'activité des ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objet peut être n'importe quelle ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telle qu'un verrou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un processus Windows. Chaque objet contient un ou plusieurs compteurs qui déterminent divers aspects de l'objet à surveiller. Par exemple, l’objet **SQL Server Locks** contient des compteurs appelés **Nombre d’interblocages/s** et **Dépassement du délai d’attente des verrous/s**.  
   
- Certains objets disposent de plusieurs instances si plusieurs ressources d'un type donné sont présentes sur l'ordinateur. Par exemple, le type d'objet **Processor** possède plusieurs instances si le système est multiprocesseur. Le type d'objet **Databases** dispose d'une instance pour chaque base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certains types d’objets (l’objet **Memory Manager** , par exemple) ne disposent que d’une seule instance. Si un type d'objet dispose de plusieurs instances, vous pouvez ajouter des compteurs pour suivre les statistiques de chaque instance ou, le plus souvent, de toutes les instances à la fois. Les compteurs de l’instance par défaut apparaissent au format **SQLServer:**_\<nom_objet>_. Les compteurs des instances nommées apparaissent au format **MSSQL$**_\<nom_instance>_**:**_\<nom_compteur>_ ou **SQLAgent$**_\<nom_instance>_**:**_\<nom_compteur>_.  
+ Certains objets disposent de plusieurs instances si plusieurs ressources d'un type donné sont présentes sur l'ordinateur. Par exemple, le type d'objet **Processor** possède plusieurs instances si le système est multiprocesseur. Le type d'objet **Databases** dispose d'une instance pour chaque base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certains types d’objets (l’objet **Memory Manager** , par exemple) ne disposent que d’une seule instance. Si un type d'objet dispose de plusieurs instances, vous pouvez ajouter des compteurs pour suivre les statistiques de chaque instance ou, le plus souvent, de toutes les instances à la fois. Les compteurs de l’instance par défaut apparaissent au format **SQLServer:** _\<nom_objet>_ . Les compteurs des instances nommées apparaissent au format **MSSQL$** _\<nom_instance>_ **:** _\<nom_compteur>_ ou **SQLAgent$** _\<nom_instance>_ **:** _\<nom_compteur>_ .  
   
  En ajoutant ou en supprimant des compteurs du graphique et en enregistrant les valeurs du graphique, vous pouvez spécifier les objets et compteurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surveillés lors du démarrage du Moniteur système.  
   
@@ -119,14 +118,14 @@ ms.locfileid: "54257154"
 |[SQLServer:Memory Broker Clerks](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|Statistiques relatives aux régisseurs de gestionnaire d’allocation mémoire.|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|Fournit des informations sur l'utilisation de la mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , comme le nombre total de structures de verrous actuellement allouées.|  
 |[SQLServer:Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|Fournit des informations sur le cache de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour stocker des objets tels que les procédures stockées, les déclencheurs et les plans de requête.|  
-|[SQLServer: Magasin des requêtes](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Fournit des informations sur le magasin de requêtes.|  
-|[SQLServer: Statistiques des pools de ressources](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Fournit des informations à propos des statistiques du pool de ressources de Resource Governor.|  
+|[SQLServer : Magasin des requêtes](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Fournit des informations sur le magasin de requêtes.|  
+|[SQLServer : Statistiques des pools de ressources](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Fournit des informations à propos des statistiques du pool de ressources de Resource Governor.|  
 |[SQLServer:SQL Errors](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|Fournit des informations sur les erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|Fournit des informations sur les aspects des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , comme le nombre de lots d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] reçus par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|Fournit des informations sur les transactions actives dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles que le nombre total de transactions et le nombre de transactions d'instantané.|  
 |[SQLServer:User Settable](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|Réalise une surveillance personnalisée. Chaque compteur peut être une procédure stockée personnalisée ou toute instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui renvoie une valeur à surveiller.|  
-|[SQLServer: Statistiques d’attente](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Fournit des informations sur les attentes.|  
-|[SQLServer: Statistiques des groupes de charges de travail](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Fournit des informations à propos des statistiques du groupe de charges de travail de Resource Governor.|  
+|[SQLServer : Statistiques d’attente](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Fournit des informations sur les attentes.|  
+|[SQLServer : Statistiques des groupes de charges de travail](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Fournit des informations à propos des statistiques du groupe de charges de travail de Resource Governor.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Objets de performance de la réplication de SQL Server  
  Le tableau suivant répertorie les objets de performance fournis pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -141,7 +140,7 @@ ms.locfileid: "54257154"
 ##  <a name="RequiredPermissions"></a> Autorisations requises  
  L'utilisation des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend des autorisations Windows, sauf **SQLAgent:Alerts**. Pour utiliser **SQLAgent:Alerts** , les utilisateurs doivent être membres du rôle de serveur fixe **sysadmin**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des objets de performance](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   

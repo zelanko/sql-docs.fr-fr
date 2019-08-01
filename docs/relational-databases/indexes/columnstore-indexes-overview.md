@@ -1,5 +1,5 @@
 ---
-title: 'Index columnstore : vue d’ensemble | Microsoft Docs'
+title: 'Index columnstore : vue d’ensemble | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf4644c17f9fdbb02c89edec72abd39bdd9c42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912091"
 ---
-# <a name="columnstore-indexes-overview"></a>Index columnstore : vue d’ensemble
+# <a name="columnstore-indexes-overview"></a>Index columnstore : Vue d’ensemble
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Les index columnstore sont la norme pour le stockage et l’interrogation des tables de faits d’entreposage de données de grande taille. Ils utilisent un stockage de données en colonnes et un traitement des requêtes allant jusqu’à **multiplier par 10 les performances des requêtes** dans l’entrepôt de données par rapport au stockage orienté lignes classique. Vous pouvez également atteindre une **compression de données jusqu’à 10 fois plus importante** que la taille des données non compressées. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], les index columnstore sont compatibles avec l’analytique opérationnelle, qui permet d’exécuter des analyses en temps réel performantes sur une charge de travail transactionnelle.  

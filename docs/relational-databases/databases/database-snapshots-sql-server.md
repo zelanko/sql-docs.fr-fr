@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4507a56146b6324e065d6d24a19855292ebf5276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861217"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300440"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Une capture instantanée de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Lorsque la base de données source est mise à jour, l'instantané de base de données est mis à jour. Par conséquent, plus l'existence d'un instantané de base de données est longue, plus la probabilité qu'il épuise son espace disque disponible est élevée.  
+
+Une capture instantanée de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Bien que les captures instantanées de base de données fournissent une vue en lecture seule des données dans le même état que lors de la création de la capture instantanée, la taille du fichier de capture instantanée augmente à mesure que des changements sont apportés à la base de données source. Pour plus d’informations, consultez la section [Vue d’ensemble des fonctionnalités](#FeatureOverview) ci-dessous.
   
  Plusieurs instantanés peuvent exister sur une base de données source donnée. Chaque instantané de base de données existe jusqu'à ce qu'il soit explicitement supprimé par le propriétaire de la base de données.  
   

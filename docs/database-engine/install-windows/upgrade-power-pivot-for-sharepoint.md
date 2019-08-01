@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8afd4b49a5dddd4ea9806dddd9c1cf30cd04e603
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209208"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265662"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
 
@@ -84,7 +84,7 @@ ms.locfileid: "53209208"
   
     1.  Dans l'Assistant Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Installation**.  
   
-    2.  Cliquez sur **Mettre à niveau à partir de SQL Server…**.  
+    2.  Cliquez sur **Mettre à niveau à partir de SQL Server…** .  
   
     3.  Dans la page **Sélectionner une instance** , sélectionnez l'instance **POWERPIVOT** , puis cliquez sur **Suivant**.  
   
@@ -170,13 +170,13 @@ ms.locfileid: "53209208"
   
 7.  **Exécutez l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** sur le premier serveur d’applications SharePoint qui exécute le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour mettre à niveau les solutions et les services web dans SharePoint. Vous ne pouvez pas utiliser l'Administration centrale pour cette étape.  
   
-    1.  Dans le menu **Démarrer**, pointez sur **Tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] et sur **Outils de configuration**, puis cliquez sur **Outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
+    1.  Dans le menu **Démarrer**, pointez sur **Tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] et sur **Outils de configuration**, puis cliquez sur **Outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
     2.  Au démarrage, l’outil de configuration vérifie l’état de mise à niveau de la solution de batterie de serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et de la solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si des versions antérieures de ces solutions sont détectées, le message « De nouvelles versions des fichiers de solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ont été détectées » s’affiche. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs ». Cliquez sur **OK** pour fermer le message.  
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis sur **OK** pour continuer.  
   
-    4.  L'avertissement suivant s'affiche : « Les classeurs du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
+    4.  L'avertissement suivant s’affiche : « Les classeurs du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
   
          Cet avertissement fait référence aux classeurs du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui rendent compte de l’activité d’actualisation des données. Si vous avez personnalisé ces classeurs, toutes les modifications que vous avez apportées à ces classeurs seront perdues lorsque des fichiers existants seront remplacés par des versions plus récentes.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "53209208"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Passez en revue les déploiements existants pour les informations suivantes : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+    2.  Passez en revue les déploiements existants pour obtenir les informations suivantes : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
     3.  Pour les déploiements ou les rétractions liés aux solutions [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copiez la valeur GUID de **JobId**, puis collez-la dans la commande suivante (utilisez les commandes Mark, Copy et Paste du menu Edit de l’interpréteur de commandes afin de copier le GUID) :  
   
@@ -358,7 +358,7 @@ Get-PowerPivotSystemService
   
  Pour des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [Configuration initiale (PowerPivot pour SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Installation de PowerPivot pour SharePoint 2010](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   

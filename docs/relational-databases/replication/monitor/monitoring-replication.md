@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c65f93054125090f92eb4924e1007d5b9075c0f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f58fb09416bb6cc800c31dffa47e359d361ccaf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082973"
 ---
 # <a name="monitoring-replication"></a>Surveillance (réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "54128189"
 Les outils suivants peuvent être utilisés pour surveiller la réplication :  
   
 -   **Moniteur de réplication SQL Server** - Il s’agit de l’outil de contrôle de réplication le plus important. Il présente une vue axée sur le serveur de distribution de toute l’activité de réplication. Pour plus d'informations, voir [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md). 
--   **SQL Server Management Studio** - Donne accès au moniteur de réplication. Il vous permet aussi d’afficher l’état actuel et le dernier message journalisé par les agents suivants ; il vous permet également de démarrer et d’arrêter chaque agent : Agent de lecture du journal, Agent d'instantané, Agent de fusion et Agent de distribution. Pour plus d’informations, voir [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
+-   **SQL Server Management Studio** - Donne accès au moniteur de réplication. Il vous permet aussi d’afficher l’état actuel et le dernier message journalisé par les agents suivants ; il vous permet également de démarrer et d’arrêter chaque agent : Agent de lecture du journal, Agent d’instantané, Agent de fusion et Agent de distribution. Pour plus d’informations, voir [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
 -   **Transact-SQL (T-SQL) et Replication Management Objects (RMO)** - Les deux interfaces vous permettent de superviser tous les types de réplication à partir du serveur de distribution. La réplication de fusion donne également la possibilité de surveiller la réplication à partir de l'Abonné.  
   
@@ -50,7 +49,7 @@ Les outils suivants peuvent être utilisés pour surveiller la réplication :
 -   **Moniteur système** - Il peut être utilisé pour superviser les performances à travers plusieurs compteurs dédiés à la réplication. Pour plus d’informations, voir [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
 
   

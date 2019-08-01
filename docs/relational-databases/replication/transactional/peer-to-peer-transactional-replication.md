@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121327"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Réplication transactionnelle d’égal à égal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ ms.locfileid: "54129309"
   
 -   paramètre de l'Agent de Distribution **-SubscriptionStreams** et paramètre de l'Agent de lecture du journal **-MaxCmdsInTran**;  
   
--   propriétés d'article **@destination_owner** et **@destination_table**.
+-   propriétés d'article **@destination_owner** et **@destination_table** .
 
 -   La réplication transactionnelle d’égal à égal ne prend pas en charge la création d’un abonnement transactionnel à sens unique à une publication d’égal à égal.   
   
@@ -150,7 +149,7 @@ ms.locfileid: "54129309"
   
 -   La propriété d’article **@replicate_ddl** requiert la valeur **true**; **@identityrangemanagementoption** requiert la valeur **manual**, et **@status** nécessite la définition de l’option **24** .  
   
--   Les propriétés d’article **@ins_cmd**, **@del_cmd**et **@upd_cmd** ne peuvent pas être définies sur **SQL**.  
+-   Les propriétés d’article **@ins_cmd** , **@del_cmd** et **@upd_cmd** ne peuvent pas être définies sur **SQL**.  
   
 -   La propriété d’abonnement **@sync_type** requiert la valeur **none** ou **automatic**.  
   
@@ -179,7 +178,7 @@ ms.locfileid: "54129309"
   
 -   Vous ne pouvez pas réinitialiser les abonnements dans une topologie d'égal à égal. Si vous devez faire en sorte qu'un nœud dispose d'une nouvelle copie des données, restaurez une sauvegarde sur le nœud.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Réplication transactionnelle](../../../relational-databases/replication/transactional/transactional-replication.md)  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068490"
 ---
 # <a name="device-contents-sql-server"></a>Contenu de l'unité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47686527"
  **Support de sauvegarde**  
  Un support de sauvegarde est une collection ordonnée de supports de sauvegarde dans lesquels une ou plusieurs opérations de sauvegarde ont effectué des écritures en utilisant un nombre constant d'unités de sauvegarde.  
   
- **Nom**  
+ **Name**  
  Affiche le nom du support de sauvegarde.  
   
  **Description**  
@@ -57,9 +56,9 @@ ms.locfileid: "47686527"
   
 |En-tête|Valeurs|  
 |------------|------------|  
-|**Nom**|Nom du jeu de sauvegarde.|  
-|**Type**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
-|**Composant**|Composant sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
+|**Name**|Nom du jeu de sauvegarde.|  
+|**Type**|Type de sauvegarde effectuée : Complète, Différentielle ou Journal des transactions.|  
+|**Composant**|Composant sauvegardé : Base de données, Fichier ou *\<vide>* (pour des journaux de transactions).|  
 |**Server**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
 |**Sauvegarde de la base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  
@@ -68,7 +67,7 @@ ms.locfileid: "47686527"
 |**Nom d'utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
 |**Expiration**|La date et l'heure d'expiration du jeu de sauvegarde.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

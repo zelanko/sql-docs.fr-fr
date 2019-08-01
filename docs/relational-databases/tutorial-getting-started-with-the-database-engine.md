@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Mise en route du moteur de base de données | Microsoft Docs'
+title: 'Tutoriel : Bien démarrer avec le moteur de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/21/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed7e9e5831d4a3e17d29395279b9c680afaea8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535854f49dc1271d24af5718edb4258bc76566ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075492"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Didacticiel : mise en route du moteur de base de données
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutoriel : Bien démarrer avec le moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Bienvenue dans le didacticiel de mise en route du [!INCLUDE[ssDE](../includes/ssde-md.md)] . Ce didacticiel est destiné aux nouveaux utilisateurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disposant de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Ce didacticiel sommaire vous guide dans vos premiers pas avec le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -35,10 +34,10 @@ Ce didacticiel explique comment se connecter au [!INCLUDE[ssDE](../includes/ssde
   
 Ce didacticiel est divisé en deux leçons :  
   
-[Leçon 1 : Connexion au moteur de base de données](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+[Leçon 1 : Connexion au moteur de base de données](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 Dans cette leçon, vous allez apprendre à vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] et à autoriser d’autres personnes à se connecter.  
   
-[Leçon 2 : Connexion depuis un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)  
+[Leçon 2 : Connexion à partir d’un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 Dans cette leçon, vous allez apprendre à vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d’un deuxième ordinateur, notamment en activant des protocoles et en configurant des ports et des paramètres de pare-feu.  
   
 ## <a name="requirements"></a>Spécifications  
@@ -48,8 +47,8 @@ Les éléments suivants doivent cependant être installés sur votre système :
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour installer [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], consultez[Télécharger SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a> Voir aussi  
-[Didacticiel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+## <a name="see-also"></a>Voir aussi  
+[Tutoriel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   

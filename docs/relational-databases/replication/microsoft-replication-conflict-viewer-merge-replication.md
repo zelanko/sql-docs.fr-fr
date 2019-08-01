@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d27c90646aa8bae800780af97f9100427ccc06b6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025809"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visionneuse des conflits de réplication Microsoft (réplication de fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "54124479"
  **Afficher les cinq premières colonnes et les autres colonnes qui contiennent des données conflictuelles**  
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
- **Informations sur la colonne** (**…**)  
+ **Informations sur la colonne** ( **…** )  
  Affiche les informations sur la colonne : **Nom de la table**, **Nom de la colonne**, **Type de données** et **Valeur de la colonne**. Le champ**Valeur de la colonne** est modifiable à moins que la valeur ne soit affichée en lecture seule.  
   
  **Soumettre le gagnant**  
@@ -82,9 +81,9 @@ ms.locfileid: "54124479"
  Accepte la ligne que l'outil de résolution des conflits a déterminée perdante. Vous pouvez modifier la valeur de n'importe quelle colonne qui n'est pas affichée en lecture seule avant de cliquer sur ce bouton.  
   
  **Consigner les détails de ce conflit**  
- Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration (**...**) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
+ Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration ( **...** ) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   

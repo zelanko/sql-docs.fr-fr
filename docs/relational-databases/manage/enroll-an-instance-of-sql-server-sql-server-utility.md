@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115422"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
+  Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
   
  Dans cette version, l'UCP et toutes les instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent respecter les conditions suivantes :  
   
@@ -89,12 +88,12 @@ ms.locfileid: "52509791"
 -   [Inscription de l'instance de SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introduction à l'Assistant d'inscription d'instance  
- Pour lancer l’Assistant, développez l’arborescence de l’Explorateur de l’utilitaire sur un point de contrôle d’utilitaire, cliquez avec le bouton droit sur **Instances gérées** et sélectionnez **Ajouter une instance gérée…**.  
+ Pour lancer l’Assistant, développez l’arborescence de l’Explorateur de l’utilitaire sur un point de contrôle d’utilitaire, cliquez avec le bouton droit sur **Instances gérées** et sélectionnez **Ajouter une instance gérée…** .  
   
  Pour continuer, cliquez sur **Suivant**.  
   
 ##  <a name="Instance_name"></a> Spécifiez l'instance de SQL Server.  
- Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…**. Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance. Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance. Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "52509791"
 > [!NOTE]  
 >  Si la connexion est chiffrée, la connexion chiffrée est utilisée. Si la connexion n'est pas chiffrée, l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reconnecte à l'aide d'une connexion chiffrée.  
   
- Pour continuer, cliquez sur **Se connecter…**.  
+ Pour continuer, cliquez sur **Se connecter…** .  
   
 ##  <a name="Proxy_configuration"></a> Compte du jeu d'éléments de collecte de l'utilitaire  
  Spécifiez un compte de domaine Windows pour exécuter le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce compte est utilisé comme compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également utiliser le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existant. Pour satisfaire aux exigences de validation, suivez les indications suivantes pour spécifier le compte.  
@@ -147,9 +146,9 @@ ms.locfileid: "52509791"
   
  Paramètres de l'instance gérée :  
   
--   Nom de l'instance de SQL Server: ComputerName\InstanceName  
+-   Nom de l’instance SQL Server : NomOrdinateur\NomInstance  
   
--   Compte de jeu d'éléments de collecte de l'utilitaire : DomainName\UserName  
+-   Compte du jeu d’éléments de collecte de l’utilitaire : NomDomaine\NomUtilisateur  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "52509791"
 >   
 >  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informations supplémentaires : Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT « \<Nom_Domaine\Nom_Compte> », code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
+>  Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT '\<DomainName\AccountName>', code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
 >   
 >  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
@@ -196,7 +195,7 @@ ms.locfileid: "52509791"
 > $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  

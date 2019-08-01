@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a3323e550ba3534fdc491e42c70c43ba686dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031642"
 ---
-# <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Leçon 2 : Créer et gérer des données dans une table hiérarchique
+# <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Leçon 2 : Créer et gérer des données dans une table hiérarchique
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Dans la leçon 1, vous avez modifié une table existante pour utiliser le type de données **hierarchyid** et vous avez rempli la colonne **hierarchyid** avec la représentation des données existantes. Dans cette leçon, vous allez utiliser les méthodes hiérarchiques pour créer une nouvelle table et y insérer des données. Puis, toujours à l'aide de méthodes hiérarchiques, vous interrogerez et manipulerez ces données. 
 
@@ -31,7 +30,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Téléchargez les [exemples de bases de données AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Créer une table à l’aide du type de données hierarchyid
 L'exemple suivant crée une table nommée EmployeeOrg qui inclut des données sur les employés ainsi que leur hiérarchie de création de rapports. Cet exemple crée la table dans la base de données AdventureWorks2017, mais c’est facultatif. Pour que l'exemple reste simple, cette table ne comporte que cinq colonnes :  
@@ -293,7 +292,7 @@ Maintenant que la table HumanResources.EmployeeOrg est entièrement remplie, cet
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 La réorganisation d'une hiérarchie est une tâche de maintenance courante. Dans cette tâche, nous utiliserons une instruction UPDATE avec la méthode [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) pour déplacer en premier lieu une seule ligne vers un nouvel emplacement dans la hiérarchie. Puis, nous déplacerons la totalité d'une sous-arborescence vers un nouvel emplacement.  
   
-La méthode `GetReparentedValue` accepte deux arguments. Le premier argument décrit la partie de la hiérarchie à modifier. Par exemple, si une hiérarchie est **/1/4/2/3/** et que vous souhaitez modifier la section **/1/4/** , la hiérarchie devient **/2/1/2/3/**, laissant les deux derniers nœuds (**2/3 /**) inchangés. Les nœuds à modifier (**/1/4/**) doivent être spécifiés comme premier argument. Le deuxième argument fournit le nouveau niveau de hiérarchie, dans notre exemple **/2/1/**. Les deux arguments ne doivent pas nécessairement contenir le même nombre de niveaux.  
+La méthode `GetReparentedValue` accepte deux arguments. Le premier argument décrit la partie de la hiérarchie à modifier. Par exemple, si une hiérarchie est **/1/4/2/3/** et que vous souhaitez modifier la section **/1/4/** , la hiérarchie devient **/2/1/2/3/** , laissant les deux derniers nœuds (**2/3 /** ) inchangés. Les nœuds à modifier ( **/1/4/** ) doivent être spécifiés comme premier argument. Le deuxième argument fournit le nouveau niveau de hiérarchie, dans notre exemple **/2/1/** . Les deux arguments ne doivent pas nécessairement contenir le même nombre de niveaux.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Déplacer une ligne unique vers un nouvel emplacement dans la hiérarchie  
   
@@ -323,7 +322,7 @@ La méthode `GetReparentedValue` accepte deux arguments. Le premier argument dé
     GO  
     ```  
   
-    Wanida se trouve maintenant au nœud **/3/1/**.  
+    Wanida se trouve maintenant au nœud **/3/1/** .  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>Réorganiser une section d’une hiérarchie  
   
@@ -334,7 +333,7 @@ La méthode `GetReparentedValue` accepte deux arguments. Le premier argument dé
     GO  
     ```  
   
-2.  Kevin est désormais le subalterne de Wanida, elle-même subalterne de Jill, elle-même subalterne de David. Cela signifie que Kevin est au niveau **/3/1/1/**. Pour déplacer tous les subalternes de Jill vers un nouveau responsable, nous allons mettre à jour tous les nœuds qui ont **/3/** comme valeur **OrgNode** vers une nouvelle valeur. Exécutez le code suivant pour mettre à jour Wanida de sorte que Sariya soit sa supérieure, en conservant Kevin comme subalterne de Wanida :  
+2.  Kevin est désormais le subalterne de Wanida, elle-même subalterne de Jill, elle-même subalterne de David. Cela signifie que Kevin est au niveau **/3/1/1/** . Pour déplacer tous les subalternes de Jill vers un nouveau responsable, nous allons mettre à jour tous les nœuds qui ont **/3/** comme valeur **OrgNode** vers une nouvelle valeur. Exécutez le code suivant pour mettre à jour Wanida de sorte que Sariya soit sa supérieure, en conservant Kevin comme subalterne de Wanida :  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

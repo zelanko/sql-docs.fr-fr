@@ -1,7 +1,7 @@
 ---
 title: nchar et nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,28 +15,30 @@ helpviewer_keywords:
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696727"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354589"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar et nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Les types de données de caractères qui sont soit de longueur fixe, **nchar**, soit de longueur variable, **nvarchar**. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], quand un classement prenant en charge les [caractères supplémentaires (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) est utilisé, ces types de données stockent la plage complète des données caractères [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) et utilisent le codage de caractères [UTF-16 ](https://www.wikipedia.org/wiki/UTF-16). Si un classement autre que SC est spécifié, ces types de données stockent uniquement le sous-ensemble de données caractères pris en charge par le codage de caractères [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
+Les types de données de caractères qui sont soit de taille fixe, **nchar**, soit de taille variable, **nvarchar**. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], quand un classement prenant en charge les [caractères supplémentaires (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) est utilisé, ces types de données stockent la plage complète des données caractères [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) et utilisent le codage de caractères [UTF-16 ](https://www.wikipedia.org/wiki/UTF-16). Si un classement autre que SC est spécifié, ces types de données stockent uniquement le sous-ensemble de données caractères pris en charge par le codage de caractères [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
   
 ## <a name="arguments"></a>Arguments  
 **nchar** [ ( n ) ]  
-Données de type chaîne de longueur fixe. *n* définit la longueur de chaîne en paires d’octets et doit être une valeur comprise entre 1 et 4 000. La taille de stockage est le double de *n* octets. Pour l'encodage [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), la taille de stockage est deux fois *n* octets et le nombre de caractères pouvant être stockés est également *n*. Pour l'encodage UTF-16, la taille de stockage est toujours deux fois *n* octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*, car les caractères supplémentaires utilisent deux paires d'octets (également appelées [paires de remplacement](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Les synonymes ISO de **nchar** sont **national char** et **national character**.
+Données de type chaîne de taille fixe. *n* définit la taille de chaîne en paires d’octets et doit être une valeur comprise entre 1 et 4 000. La taille de stockage est le double de *n* octets. Pour l'encodage [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), la taille de stockage est deux fois *n* octets et le nombre de caractères pouvant être stockés est également *n*. Pour l'encodage UTF-16, la taille de stockage est toujours deux fois *n* octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*, car les caractères supplémentaires utilisent deux paires d'octets (également appelées [paires de remplacement](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Les synonymes ISO de **nchar** sont **national char** et **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Données de type chaîne de longueur variable. *n* définit la longueur de chaîne en paires d’octets et peut être une valeur comprise entre 1 et 4 000. **max** indique que la taille de stockage maximale est de 2^30-1 caractères (2 Go). La taille de stockage est deux fois *n* octets + 2 octets. Pour l'encodage [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), la taille de stockage est deux fois *n* octets + 2 octests et le nombre de caractères pouvant être stockés est également *n*. Pour l'encodage UTF-16, la taille de stockage est toujours deux fois *n* octets + 2 octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*, car les caractères supplémentaires utilisent deux paires d'octets (également appelées [paires de remplacement](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Les synonymes ISO de **nvarchar** sont **national char varying** et **national character varying**.
+Données de type chaîne de taille variable. *n* définit la taille de chaîne en paires d’octets et peut être une valeur comprise entre 1 et 4 000. **max** indique que la taille de stockage maximale est de 2^30-1 caractères (2 Go). La taille de stockage est deux fois *n* octets + 2 octets. Pour l'encodage [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), la taille de stockage est deux fois *n* octets + 2 octests et le nombre de caractères pouvant être stockés est également *n*. Pour l'encodage UTF-16, la taille de stockage est toujours deux fois *n* octets + 2 octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*, car les caractères supplémentaires utilisent deux paires d'octets (également appelées [paires de remplacement](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Les synonymes ISO de **nvarchar** sont **national char varying** et **national character varying**.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
+Contrairement à l’idée fausse qui circule sur [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* ne définit pas le nombre de caractères. Dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* définit la longueur de chaîne en **paires d’octets** (0-4 000). *n* ne définit jamais le nombre de caractères pouvant être stockés. Cette définition est similaire à celle de [CHAR(*n*) et de VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
+En fait, lors de l’utilisation de caractères définis dans la plage Unicode 0-65 535, un caractère peut être stocké pour chaque paire d’octets, d’où cette idée fausse. Toutefois, dans les plages Unicode supérieures (65 536-1 114 111), un caractère peut utiliser deux paires d’octets. Par exemple, dans une colonne définie en tant que NCHAR(10), [!INCLUDE[ssde_md](../../includes/ssde_md.md)] peut stocker 10 caractères qui utilisent une paire d’octets (plage Unicode 0-65 535), mais moins de 10 caractères lors de l’utilisation de deux paires d’octets (plage Unicode 65 536-1 114 111). Pour plus d’informations sur le stockage Unicode et les plages de caractères, consultez [Différences de stockage entre UTF-8 et UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).     
+
 Quand la valeur de *n* n’est spécifiée ni dans une définition de données ni dans une instruction de déclaration de variable, la longueur par défaut est 1. Quand la valeur de *n* n’est pas précisée avec la fonction CAST, la longueur par défaut est 30.
 
 Si vous utilisez **nchar** ou **nvarchar**, nous vous recommandons de procéder comme suit :
@@ -44,7 +46,7 @@ Si vous utilisez **nchar** ou **nvarchar**, nous vous recommandons de procéder 
 - Utilisez **nvarchar** quand les tailles des entrées de données de la colonne varient considérablement.  
 - Utilisez **nvarchar(max)** quand les tailles des entrées de données de la colonne varient considérablement et que la longueur de chaîne peut dépasser 4 000 paires d’octets.  
   
-**sysname** est un type de données défini par l’utilisateur fourni par le système qui présente la même fonctionnalité que **nvarchar(128)**, à la différence qu’il n’accepte pas la valeur Null. **sysname** est utilisé pour faire référence aux noms des objets de base de données.
+**sysname** est un type de données défini par l’utilisateur fourni par le système qui présente la même fonctionnalité que **nvarchar(128)** , à la différence qu’il n’accepte pas la valeur Null. **sysname** est utilisé pour faire référence aux noms des objets de base de données.
   
 Les objets qui utilisent **nchar** ou **nvarchar** reçoivent le classement par défaut de la base de données, sauf si un classement spécifique est affecté à l’aide de la clause COLLATE.
   

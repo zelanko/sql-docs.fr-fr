@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946574"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307635"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946574"
   
 -   La table n'est pas en cours de réplication.  
   
--   Le verrouillage de la table est activé (à l'aide de TABLOCK). Concernant les tables avec index columnstore cluster, vous n’avez pas besoin de TABLOCK pour la journalisation minimale.  En outre, seul le chargement des données dans des rowgroups compressés fait l’objet d’une journalisation minimale nécessitant une valeur BatchSize de 102 400 ou plus.  
+-   Le verrouillage de la table est activé (à l'aide de TABLOCK). Concernant les tables avec index columnstore cluster, vous n’avez pas besoin de TABLOCK pour la journalisation minimale.  En outre, seules les données chargées dans des rowgroups compressés font l’objet d’une journalisation minimale nécessitant une valeur BatchSize de 102 400 ou plus.  
   
     > [!NOTE]  
     >  Bien que les insertions de données ne soient pas consignées dans le journal des transactions lors des opérations d'importation en bloc à journalisation minimale, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] consigne tout de même les allocations d'extensions chaque fois qu'une nouvelle extension est allouée à la table.  
@@ -50,17 +49,15 @@ ms.locfileid: "64946574"
   
 -   Si la table ne possède pas d'index cluster, mais possède un ou plusieurs index non cluster, les pages de données bénéficient toujours de la journalisation minimale. La manière dont les pages d'index sont journalisées dépend toutefois du remplissage de la table :  
   
-    -   Si la table est vide, les pages d'index bénéficient de la journalisation minimale.  
+    -   Si la table est vide, les pages d'index bénéficient de la journalisation minimale.  Si vous démarrez avec une table vide et importez les données en bloc en plusieurs traitements, les pages de données et d'index bénéficient de la journalisation minimale pour le premier traitement, mais à partir du deuxième traitement, seules les pages de données bénéficient de cette journalisation minimale. 
   
-    -   Si la table n'est pas vide, les pages d'index bénéficient de la journalisation complète.  
+    -   Si la table n'est pas vide, les pages d'index bénéficient de la journalisation complète.    
+
+-   Si la table possède un index cluster et est vide, les pages de données et d'index bénéficient de la journalisation minimale. En revanche, si une table possède un index cluster B-tree et n’est pas vide, les pages de données aussi bien que les pages d’index bénéficient de la journalisation complète, quel que soit le mode de récupération choisi. Si vous démarrez avec une table rowstore vide et importez les données en bloc en plusieurs lots, les pages de données et d’index bénéficient de la journalisation minimale pour le premier lot, mais à partir du deuxième lot, seules les pages de données bénéficient de la journalisation en bloc.
+
+- Pour plus d’informations sur la journalisation d’un index ColumnStore cluster (CCI), consultez les [conseils concernant le chargement de données d’index columnstore](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   
-        > [!NOTE]  
-        >  Si vous démarrez avec une table vide et importez les données en bloc en plusieurs traitements, les pages de données et d'index bénéficient de la journalisation minimale pour le premier traitement, mais à partir du deuxième traitement, seules les pages de données bénéficient de cette journalisation minimale.  
-  
--   Si la table possède un index cluster et est vide, les pages de données et d'index bénéficient de la journalisation minimale. En revanche, si une table possède un index cluster BTree et n’est pas vide, les pages de données et d’index bénéficient de la journalisation complète, quel que soit le mode de récupération choisi. Pour les tables avec index columnstore cluster, le chargement des données dans un rowgroup compressé fait toujours l’objet d’une journalisation minimale, que la table soit vide ou non lorsque la valeur BatchSize > = 102 400.  
-  
-    > [!NOTE]  
-    >  Si vous démarrez avec une table rowstore vide et importez les données en bloc en plusieurs lots, les pages de données et d’index bénéficient de la journalisation minimale pour le premier lot, mais à partir du deuxième lot, seules les pages de données bénéficient de la journalisation en bloc.  
+
   
 > [!NOTE]  
 >  Lorsque la réplication transactionnelle est activée, les opérations BULK INSERT sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  

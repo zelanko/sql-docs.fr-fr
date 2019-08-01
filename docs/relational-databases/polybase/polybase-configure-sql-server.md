@@ -7,14 +7,13 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c42ff3c215d3f252a61371ea560c2ecac7c3cf62
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5b75a57e233882540208a428e94f6aca139cd946
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730338"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307621"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 
@@ -24,7 +23,7 @@ Cet article explique comment utiliser PolyBase sur une instance de SQL Server po
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](polybase-installation.md). Cet article décrit les prérequis pour l’installation.
+Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](polybase-installation.md). Cet article décrit les prérequis pour l’installation. Une fois l’installation terminée, veillez également à [activer Polybase](polybase-installation.md#enable).
 
 La [clé principale](../../t-sql/statements/create-master-key-transact-sql.md) doit être créée avant les informations d’identification incluses dans l’étendue de la base de données. 
 

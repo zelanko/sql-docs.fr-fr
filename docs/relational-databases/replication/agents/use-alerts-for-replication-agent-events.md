@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84b1656e15f37dd0c1491d9eb8e385813f579fca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085901"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utiliser les alertes pour les événements des agents de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "51659400"
 |14150|**Réplication : succès de l'agent**|Arrêt normal de l'Agent.|Oui|  
 |14151|**Réplication : échec de l'agent**|Arrêt de l'Agent en raison d'une erreur.|Oui|  
 |14152|**Réplication : nouvelle tentative de l'agent**|L'agent s'arrête après l'échec du renouvellement d'une opération (l'Agent a rencontré une erreur de type serveur non disponible, interblocage, échec de la connexion, ou dépassement du délai d'attente).|Oui|  
-|14157|**Réplication : suppression de l'abonnement expiré**|Suppression de l'abonnement expiré|non|  
-|20572|**Réplication : abonnement réinitialisé après l'échec de validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|non|  
-|20574|**Réplication : l'Abonné n'a pas réussi la validation des données**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
-|20575|**Réplication : l'Abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
+|14157|**Réplication : suppression de l'abonnement expiré**|Suppression de l'abonnement expiré|Non|  
+|20572|**Réplication : abonnement réinitialisé après l’échec de validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|Non|  
+|20574|**Réplication : l’Abonné n’a pas réussi la validation des données**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
+|20575|**Réplication : l’Abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
 |20578|**Réplication : arrêt personnalisé de l'Agent**|||  
 |22815|**Alerte de détection de conflit d'égal à égal**|L'Agent de distribution a détecté un conflit lorsqu'il essaie d'appliquer une modification à un nœud d'égal à égal.|Oui|  
   
@@ -51,7 +50,7 @@ ms.locfileid: "51659400"
   
  **Pour configurer des alertes de réplication prédéfinies**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>Affichage direct du journal des applications  
  Pour consulter le journal des applications Windows, utilisez l'Observateur d'événements [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Le journal des applications comporte les messages d'erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ainsi que des messages se rapportant à toutes les activités de l'ordinateur. À la différence du journal des erreurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , chaque démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne crée pas un nouveau journal des applications (chaque session [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] écrit des nouveaux événements dans un journal des applications existant) ; en revanche, vous pouvez spécifier la durée de rétention des événements enregistrés. Lorsque vous affichez le journal des applications Windows, vous pouvez filtrer le journal en fonction d'événements spécifiques. Pour plus d'informations, consultez la documentation Windows.  
@@ -62,7 +61,7 @@ ms.locfileid: "51659400"
 ### <a name="framework-for-automating-responses"></a>Infrastructure d'automatisation des réponses  
  Généralement, lorsqu'une alerte survient, la seule information dont vous disposez pour vous aider à comprendre la raison de l'alerte et l'action appropriée à entreprendre, se trouve dans le message d'alerte lui-même. L'analyse de ces informations peut être fastidieuse et sujette à erreurs. La réplication facilite l'automatisation des réponses en fournissant des informations supplémentaires sur l'alerte dans la table système **sysreplicationalerts** ; les données fournies sont déjà analysées dans une forme facilement utilisable pour les programmes personnalisés.  
   
- Si, par exemple, les données de la table **Sales.SalesOrderHeader** de l'Abonné A ne peuvent pas être validées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut déclencher le message 20574, qui vous avertit de l'échec. Le message que vous recevez peut se présenter comme suit : « L'Abonné 'A' avec un abonnement à l'article 'SalesOrderHeader' de la publication 'MyPublication' n'a pas réussi la validation de données ».  
+ Si, par exemple, les données de la table **Sales.SalesOrderHeader** de l'Abonné A ne peuvent pas être validées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut déclencher le message 20574, qui vous avertit de l'échec. Le message que vous recevez peut se présenter comme suit : « L’Abonné 'A' avec un abonnement à l’article 'SalesOrderHeader' de la publication 'MyPublication' n’a pas réussi la validation de données. »  
   
  Si vous créez une réponse basée sur le message, vous devez extraire manuellement du message, le nom de l'Abonné, le nom de l'article, le nom de la publication et l'erreur. Cependant, puisque l'Agent de distribution et l'Agent de fusion écrivent ces mêmes informations dans la table **sysreplicationalerts** , ainsi que les détails comme le type d'Agent, l'heure de l'alerte, la base de données de publication, la base de données Abonné et le type de publication, le travail de réponse peut obtenir directement ces informations à partir de la table. Il n'est pas possible d'associer la ligne exacte correspondant à une instance précise de l'alerte, mais la table possède une colonne **status** qui peut être utilisée pour assurer le suivi des entrées. Les entrées de cette table sont conservées pendant la période de rétention de l'historique.  
   
@@ -88,7 +87,7 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Surveillance &#40;réplication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

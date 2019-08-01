@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eea554acc0276821c31296c91a77ed1987ef72c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69358e8163fffb0cc09e7e910a24ebc47d92a3de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027860"
 ---
 # <a name="agent-profiles-single-agent"></a>Profils de l'Agent (agent unique)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "47598509"
  **Valeur par défaut pour nouveau**  
  Sélectionnez le profil à utiliser lorsque des travaux sont créés pour un agent d'un type donné. Par exemple, si vous créez plusieurs abonnements à une publication de fusion, le travail de l'Agent de fusion pour chaque abonnement utilisera le profil sélectionné. Si vous souhaitez modifier le profil de travaux existants, sélectionnez un profil, puis cliquez sur **Modifier les Agents existants**.  
   
- **Nom**  
+ **Name**  
  Nom du profil  
   
  **Type**  
- Type de profil : **Utilisateur** (défini par l'utilisateur) ou **Système** (prédéfini).  
+ Type de profil : **Utilisateur** (défini par l’utilisateur) ou **Système** (prédéfini).  
   
  **Propriétés (...)**  
  Cliquez sur cette option pour voir les valeurs utilisées pour chaque paramètre dans le profil de l'agent.  
@@ -48,7 +47,7 @@ ms.locfileid: "47598509"
  **Modifier les Agents existants**  
  Sélectionnez un profil, puis cliquez sur **Modifier les Agents existants** afin d'indiquer que tous les travaux existants d'un agent d'un type donné doivent utiliser le profil sélectionné. Par exemple, si vous avez créé plusieurs abonnements à une publication de fusion et que vous souhaitez modifier le profil afin de spécifier que le travail d'Agent de fusion de chaque abonnement doit utiliser le **Profil de liaison lente de l'agent**, sélectionnez ce profil, puis cliquez sur **Modifier les Agents existants**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des profils d’Agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Profils de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-profiles.md)  

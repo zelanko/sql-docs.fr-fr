@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a4972e42798e1cfeb46b77fb414fa77cd4b6b86a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901142"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,21 +25,21 @@ ms.locfileid: "51512404"
   
 ## <a name="options"></a>Options  
  **Source**  
- Spécifie la source des stratégies. Pour modifier la source, cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner une source** .  
+ Spécifie la source des stratégies. Pour modifier la source, cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner une source** .  
   
  **Fichiers**  
- Tapez le chemin d’un fichier qui contient une stratégie de Gestion basée sur des stratégies, ou utilisez le bouton Parcourir (**...**) pour sélectionner le fichier.  
+ Tapez le chemin d’un fichier qui contient une stratégie de Gestion basée sur des stratégies, ou utilisez le bouton Parcourir ( **...** ) pour sélectionner le fichier.  
   
  **Server**  
  Sélectionnez cette option pour vous connecter à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui contient la stratégie souhaitée.  
   
- **Stratégies : Stratégie**  
+ **Stratégies : stratégie**  
  Cliquez sur cette option pour ouvrir la boîte de dialogue de la stratégie spécifiée.  
   
- **Stratégies : Catégorie**  
+ **Stratégies : Catégorie**  
  Indique la catégorie de la stratégie. Cette zone est en lecture seule.  
   
- **Stratégies : Facette**  
+ **Stratégies : Facette**  
  Indique la facette implémentée par la stratégie. Cette zone est en lecture seule.  
   
  **Évaluer**  
@@ -62,7 +61,7 @@ ms.locfileid: "51512404"
   
     -   Le type du serveur cible est différent du type du serveur sur lequel la stratégie est évaluée. Par exemple, dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)], si vous essayez d'évaluer une stratégie qui a été créée pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous recevez un jeu de cibles vide.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
   

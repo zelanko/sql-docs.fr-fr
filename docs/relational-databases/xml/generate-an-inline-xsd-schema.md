@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 386540c5f11561a8d576de045fd151531877b063
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943156"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Générer un schéma XSD en ligne
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +222,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Conflits de noms d'éléments  
  Dans FOR XML, le même nom peut être utilisé pour indiquer deux sous-éléments. Par exemple, la requête ci-dessous récupère les valeurs ListPrice et DealerPrice des produits, mais la requête spécifie le même alias, Price, pour ces deux colonnes. Par conséquent, l'ensemble de lignes résultant possèdera deux colonnes du même nom.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas n° 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas n° 1 : les deux sous-éléments sont des colonnes non-clés du même type et acceptent la valeur NULL  
  Dans la requête ci-dessous, les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL.  
   
 ```  
@@ -393,7 +392,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Notez dans le schéma XSD en ligne que l'élément <`Col`> correspondant à Col2 a une valeur minOccurs égale à 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas n° 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
  La requête ci-dessous est spécifiée sur l'exemple de table défini dans le cas 2 :  
   
 ```  

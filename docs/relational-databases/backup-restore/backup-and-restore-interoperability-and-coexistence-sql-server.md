@@ -1,5 +1,5 @@
 ---
-title: 'Sauvegarde et restauration : Interopérabilité et coexistence (SQL Server) | Microsoft Docs'
+title: 'Sauvegarde et restauration : interopérabilité et coexistence (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940855"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : Interopérabilité et coexistence (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : interopérabilité et coexistence (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique comprend des observations sur la sauvegarde et la restauration pour plusieurs fonctionnalités de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ces fonctionnalités concernent : la restauration de fichiers et le démarrage de bases de données, la restauration et la désactivation en ligne d'index, la mise en miroir de bases de données, la restauration fragmentaire et les index de recherche en texte intégral.  
@@ -51,7 +50,7 @@ ms.locfileid: "47723787"
   
  Si un problème se produit lors du démarrage de la base de données, la récupération échoue et la base de données est affectée de l'attribut SUSPECT. Si le problème peut être isolé dans un ou des fichiers, l'administrateur de la base de données peut placer les fichiers hors connexion et tenter de la redémarrer. Pour placer un fichier hors connexion, vous pouvez utiliser l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) suivante :  
   
- ALTER DATABASE *nom_base_de_données* MODIFY FILE (NAME **='***nom_fichier***'**, OFFLINE)  
+ ALTER DATABASE *nom_base_de_données* MODIFY FILE (NAME **='***nom_fichier***'** , OFFLINE)  
   
  Si le démarrage aboutit, les groupes de fichiers qui contiennent un fichier hors connexion demeurent hors connexion.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "47723787"
 ##  <a name="FileBnRandCompression"></a> Sauvegarde et restauration de fichiers et compression  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la compression des données du système de fichiers NTFS pour les groupes de fichiers et les bases de données en lecture seule.  
   
- La restauration des fichiers dans un groupe de fichiers en lecture seule est prise en charge sur les fichiers compressés NTFS. La sauvegarde et la restauration de ces groupes de fichiers fonctionne pour l'essentiel de la même manière que pour n'importe quel groupe de fichiers en lecture seule, à quelques exceptions près :  
+ La restauration des fichiers dans un groupe de fichiers en lecture seule est prise en charge sur les fichiers compressés NTFS. La sauvegarde et la restauration de ces groupes de fichiers fonctionne pour l'essentiel de la même manière que pour n'importe quel groupe de fichiers en lecture seule, à quelques exceptions près :  
   
 -   La restauration d'un fichier en lecture-écriture (y compris le fichier primaire et les fichiers journaux d'une base de données en lecture-écriture) vers un volume compressé échoue et génère une erreur.  
   
@@ -132,9 +131,9 @@ ms.locfileid: "47723787"
   
 -   [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[Secondaires actifs : sauvegarde sur les réplicas secondaires \(Groupes de disponibilité Always On\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[Secondaires actifs : Sauvegarde sur des réplicas secondaires \(groupes de disponibilité AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

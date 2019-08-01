@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf111cdb7490d1a7e5c57f82526d689ed3b4c7bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082981"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Contrôle de la réplication avec le Moniteur système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,20 +29,20 @@ ms.locfileid: "47730567"
   
 |Agent|Objet de performance|Compteur|Description|  
 |-----------|------------------------|-------------|-----------------|  
-|Tous les agents|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Agents de réplication|Exécution en cours|Nombre d'agents de réplication actuellement en cours d'exécution.|  
-|Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Réplication d'instantané|Instantané : commandes livrées/s|Nombre de commandes par seconde transmises au serveur de distribution.|  
-|Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Réplication d'instantané|Instantané : transactions livrées/s|Nombre de transactions par seconde transmises au serveur de distribution.|  
-|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur de journal : commandes livrées/s|Nombre de commandes par seconde transmises au serveur de distribution.|  
-|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur de journal : transactions livrées/s|Nombre de transactions par seconde transmises au serveur de distribution.|  
-|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur de journal : latence de livraison|Durée, en millisecondes, écoulée entre le moment où les transactions sont appliquées sur le serveur de publication et le moment où elles sont délivrées au serveur de distribution.|  
-|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Serveur de distribution : commandes livrées/s|Le nombre de commandes par seconde transmises à l'abonné.|  
-|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Serveur de distribution : transactions livrées/s|Nombre de transactions par seconde transmises à l'abonné.|  
-|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Serveur de distribution : latence de livraison|Durée, en millisecondes, écoulée entre le moment où les transactions sont délivrées au serveur de distribution et le moment où elles sont appliquées à l'Abonné.|  
-|Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Réplication de fusion|Conflits/seconde|Nombre de conflits par seconde qui se produisent lors du processus de fusion.|  
-|Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Réplication de fusion|Modifications téléchargées/seconde|Nombre de lignes par seconde répliquées du serveur de publication à l'Abonné.|  
-|Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Réplication de fusion|Modifications téléchargées/seconde|Nombre de lignes par seconde répliquées de l'Abonné au serveur de publication.|  
+|Tous les agents|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : Agents de réplication|Exécution en cours|Nombre d'agents de réplication actuellement en cours d'exécution.|  
+|Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantané de réplication|Capture instantanée : commandes livrées/seconde|Nombre de commandes par seconde transmises au serveur de distribution.|  
+|Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantané de réplication|Capture instantanée : transactions livrées/seconde|Nombre de transactions par seconde transmises au serveur de distribution.|  
+|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|LogReader : commandes livrées/seconde|Nombre de commandes par seconde transmises au serveur de distribution.|  
+|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur du journal : transactions livrées/seconde|Nombre de transactions par seconde transmises au serveur de distribution.|  
+|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur du journal : Latence de livraison|Durée, en millisecondes, écoulée entre le moment où les transactions sont appliquées sur le serveur de publication et le moment où elles sont délivrées au serveur de distribution.|  
+|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Distribution : commandes livrées/seconde|Le nombre de commandes par seconde transmises à l'abonné.|  
+|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Distribution : transactions livrées/seconde|Nombre de transactions par seconde transmises à l'abonné.|  
+|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Distribution : Latence de livraison|Durée, en millisecondes, écoulée entre le moment où les transactions sont délivrées au serveur de distribution et le moment où elles sont appliquées à l'Abonné.|  
+|Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Fusion de réplication|Conflits/seconde|Nombre de conflits par seconde qui se produisent lors du processus de fusion.|  
+|Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Fusion de réplication|Modifications téléchargées/seconde|Nombre de lignes par seconde répliquées du serveur de publication à l'Abonné.|  
+|Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Fusion de réplication|Modifications téléchargées/seconde|Nombre de lignes par seconde répliquées de l'Abonné au serveur de publication.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveillance &#40;réplication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

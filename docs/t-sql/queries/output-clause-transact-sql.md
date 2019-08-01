@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901870"
 ---
 # <a name="output-clause-transact-sql"></a>Clause OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Référence de colonne explicite. Toutes les références à la table en cours de modification doivent être qualifiées correctement par le préfixe INSERTED ou DELETED, le cas échéant. Exemple : INSERTED **.**_column\_name_.  
+ Référence de colonne explicite. Toutes les références à la table en cours de modification doivent être qualifiées correctement par le préfixe INSERTED ou DELETED, le cas échéant. Exemple : INSERTED **.** _column\_name_.  
   
  $action  
- Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar(10)** dans la clause OUTPUT d'une instruction MERGE qui retourne l'une des trois valeurs suivantes pour chaque ligne : « INSERT », « UPDATE » ou « DELETE », en fonction de l'action qui a été effectuée sur cette ligne.  
+ Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar(10)** dans la clause OUTPUT d'une instruction MERGE qui retourne l'une des trois valeurs suivantes pour chaque ligne : « INSERT », « UPDATE » ou « DELETE », en fonction de l’action qui a été effectuée sur cette ligne.  
   
-## <a name="remarks"></a>Notes   
- Les clauses OUTPUT \<dml_select_list> et OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
+## <a name="remarks"></a>Notes  
+ Les clauses OUTPUT \<dml_select_list> et OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Sauf indication contraire, les références à la clause OUTPUT sont relatives aux clauses OUTPUT et OUTPUT INTO.  
@@ -227,7 +226,7 @@ Dans le contexte d’une base de données définie à un niveau de compatibilit�
  Si l'option d'interdiction des résultats des déclencheurs sp_configure est définie, une clause OUTPUT sans clause INTO provoque l'échec de l'instruction lors de son appel à partir d'un déclencheur.  
   
 ## <a name="data-types"></a>Types de données  
- La clause OUTPUT prend en charge les types d’objets LOB suivants : **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image** et **xml**. Quand vous utilisez la clause .WRITE dans l’instruction UPDATE pour modifier une colonne **nvarchar(max)**, **varchar(max)** ou **varbinary(max)**, les images complètes avant et après les valeurs sont retournées si elles sont référencées. La fonction TEXTPTR( ) ne peut pas être utilisée dans une expression sur une colonne **text**, **ntext** ou **image** dans la clause OUTPUT.  
+ La clause OUTPUT prend en charge les types d’objets LOB suivants : **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** et **xml**. Quand vous utilisez la clause .WRITE dans l’instruction UPDATE pour modifier une colonne **nvarchar(max)** , **varchar(max)** ou **varbinary(max)** , les images complètes avant et après les valeurs sont retournées si elles sont référencées. La fonction TEXTPTR( ) ne peut pas être utilisée dans une expression sur une colonne **text**, **ntext** ou **image** dans la clause OUTPUT.  
   
 ## <a name="queues"></a>Files d'attente  
  Vous pouvez utiliser OUTPUT dans les applications utilisant les tables comme files d'attente ou garder les jeux de résultats intermédiaires. En d'autres termes, l'application ajoute ou supprime constamment des lignes de la table. L'exemple suivant utilise la clause OUTPUT dans une instruction DELETE afin de retourner la ligne supprimée à l'application appelante.  
@@ -307,7 +306,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Utilisez l'indicateur de table READPAST dans les instructions UPDATE et DELETE si votre scénario permet à plusieurs applications d'exécuter une lecture destructive à partir d'une table. Ce cas de figure empêche les problèmes de verrouillage qui peuvent survenir si une autre application est déjà entrain de lire le premier enregistrement dans la table.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations SELECT sont obligatoires sur toutes les colonnes récupérées par le biais de \<dml_select_list> et celles utilisées dans \<scalar_expression>.  
   
  Les autorisations INSERT sont obligatoires sur toutes les tables spécifiées dans \<output_table>.  
@@ -337,7 +336,7 @@ GO
   
 ```  
   
-### <a name="b-using-output-with-a-delete-statement"></a>b. Utilisation de OUTPUT avec une instruction DELETE  
+### <a name="b-using-output-with-a-delete-statement"></a>B. Utilisation de OUTPUT avec une instruction DELETE  
  L'exemple suivant supprime toutes les lignes de la table `ShoppingCartItem`. La clause `OUTPUT deleted.*` spécifie que les résultats de l'instruction `DELETE`, à savoir toutes les colonnes dans les lignes supprimées, sont retournés vers l'application appelante. L'instruction `SELECT` suivante vérifie les résultats de l'opération de suppression dans la table `ShoppingCartItem`.  
   
 ```  
@@ -664,7 +663,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

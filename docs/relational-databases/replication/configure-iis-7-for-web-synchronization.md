@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b7f9083bc5021415691d04da25d6e5e6297031a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903212"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47620129"
  L’ensemble du processus de configuration est présenté dans [Configurer la synchronisation web](../../relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] risquent de provoquer des erreurs, telles que : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
+>  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent provoquer des erreurs, par exemple : « Le format d’un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
   
  Pour utiliser la synchronisation Web, vous devez configurer IIS en effectuant les étapes ci-dessous. Chaque étape est détaillée dans cette rubrique.  
   
@@ -67,15 +66,15 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 6.  Créez un répertoire virtuel dans IIS. Le répertoire virtuel doit être créé sous le site Web créé à l'étape 4 et doit être mappé au répertoire créé à l'étape 1. Soyez aussi restrictif que possible lors de l'attribution des autorisations sur ce répertoire. Vous devez sélectionner au moins les autorisations **Lire** et **Exécuter** .  
   
-    1.  Dans le **Gestionnaire des services Internet (IIS)**, dans le volet **Connexions** , cliquez avec le bouton droit sur **Site Web par défaut**, puis sélectionnez **Ajouter un répertoire virtuel**.  
+    1.  Dans le **Gestionnaire des services Internet (IIS)** , dans le volet **Connexions** , cliquez avec le bouton droit sur **Site Web par défaut**, puis sélectionnez **Ajouter un répertoire virtuel**.  
   
     2.  Dans le champ **Alias**, entrez **SQLReplication**.  
   
-    3.  Pour **Chemin d’accès physique**, entrez **\<lecteur>:\Inetpub\SQLReplication\\**, puis cliquez sur **OK**.  
+    3.  Pour **Chemin d’accès physique**, entrez **\<lecteur>:\Inetpub\SQLReplication\\** , puis cliquez sur **OK**.  
   
 7.  Configurez IIS pour permettre à replisapi.dll de s'exécuter.  
   
-    1.  Dans le **Gestionnaire des services Internet (IIS)**, cliquez sur **Site Web par défaut**.  
+    1.  Dans le **Gestionnaire des services Internet (IIS)** , cliquez sur **Site Web par défaut**.  
   
     2.  Dans le volet central, cliquez sur **Mappages de gestionnaire**.  
   
@@ -104,7 +103,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 #### <a name="to-configure-iis-authentication"></a>Pour configurer l'authentification IIS  
   
-1.  Dans le **Gestionnaire des services Internet (IIS)**, cliquez sur **Site Web par défaut**.  
+1.  Dans le **Gestionnaire des services Internet (IIS)** , cliquez sur **Site Web par défaut**.  
   
 2.  Dans le volet central, double-cliquez sur **Authentification**.  
   
@@ -115,7 +114,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
 ## <a name="configuring-secure-sockets-layer"></a>Configuration de SSL (Secure Sockets Layer)  
  Pour configurer SSL, spécifiez un certificat à utiliser par l'ordinateur exécutant IIS. La synchronisation Web pour la réplication de fusion prend en charge l'utilisation des certificats de serveur, mais pas celle des certificats clients. Pour configurer IIS pour le déploiement, vous devez d'abord obtenir un certificat auprès d'une Autorité de certification. Pour plus d'informations sur les certificats, consultez la documentation de IIS.  
   
- Après avoir installé le certificat, vous devez l'associer au site Web utilisé par la synchronisation Web. Pour le développement et les tests, vous pouvez spécifier un certificat auto-signé. IIS 7 peut créer un certificat automatiquement et l'enregistrer sur votre ordinateur.  
+ Après avoir installé le certificat, vous devez l'associer au site Web utilisé par la synchronisation Web. Pour le développement et les tests, vous pouvez spécifier un certificat auto-signé. IIS 7 peut créer un certificat automatiquement et l'enregistrer sur votre ordinateur.  
   
  La différence entre un déploiement pour la production et les procédures indiquées ici est que dans le cadre de tests de production et de préproduction, vous utiliseriez un certificat délivré par une autorité de certification au lieu d'un certificat auto-signé.  
   
@@ -132,7 +131,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 #### <a name="to-require-ssl-security-for-a-web-site"></a>Pour exiger la sécurité SSL pour un site Web  
   
-1.  Dans **Gestionnaire des services Internet (IIS)**, développez le nœud de serveur local, puis cliquez sur le **Site Web par défaut** (ou votre site de synchronisation Web s'il est différent du site Web par défaut).  
+1.  Dans **Gestionnaire des services Internet (IIS)** , développez le nœud de serveur local, puis cliquez sur le **Site Web par défaut** (ou votre site de synchronisation Web s'il est différent du site Web par défaut).  
   
 2.  Dans le volet central, double-cliquez sur **Paramètres SSL**.  
   
@@ -140,7 +139,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 #### <a name="to-create-a-self-signed-certificate-for-testing"></a>Pour créer un certificat auto-signé à des fins de test  
   
-1.  Dans **Gestionnaire des services Internet (IIS)**, cliquez sur le nœud de serveur local, puis dans le volet central, double-cliquez sur **Certificats de serveur**.  
+1.  Dans **Gestionnaire des services Internet (IIS)** , cliquez sur le nœud de serveur local, puis dans le volet central, double-cliquez sur **Certificats de serveur**.  
   
 2.  Dans le volet **Actions** , cliquez sur **Créer un certificat auto-signé**.  
   
@@ -160,9 +159,9 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 1.  Dans le **Dans leternet Dans leformation Services (IIS) Manager**, cliquez sur **Site Web par défaut.**  
   
-2.  Dans le volet **Actions**, cliquez sur **Parcourir \*:443(https)**.  
+2.  Dans le volet **Actions**, cliquez sur **Parcourir \*:443(https)** .  
   
-3.  Internet Explorer ouvrira et affichera un message indiquant : « le certificat de sécurité de ce site Web présente un problème ». Cet avertissement indique que le certificat associé n'a pas été émis par une autorité de certification reconnue et n'est peut-être pas digne de confiance. Cet avertissement est attendu, donc cliquez sur **Poursuivre sur ce site Web (non recommandé)**.  
+3.  Internet Explorer ouvrira et affichera un message indiquant : « le certificat de sécurité de ce site Web présente un problème ». Cet avertissement indique que le certificat associé n'a pas été émis par une autorité de certification reconnue et n'est peut-être pas digne de confiance. Cet avertissement est attendu, donc cliquez sur **Poursuivre sur ce site Web (non recommandé)** .  
   
 4.  Si vous êtes invité à **Se connecter à localhost**, entrez un nom d'utilisateur et un mot de passe pour continuer. La page par défaut du site Web doit s'afficher.  
   
@@ -177,11 +176,11 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
  Le compte utilisé pour l'écouteur de réplication SQL Server doit avoir les autorisations décrites dans la rubrique Sécurité de l'Agent de fusion, dans la section « Se connecter au serveur de publication ou au serveur de distribution ».  
   
- En résumé, le compte doit :  
+ En résumé, le compte doit :  
   
 -   être membre de la liste d'accès à la publication (PAL) ;  
   
--   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
+-   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
   
 -   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de distribution ;  
   
@@ -221,7 +220,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     2.  Sur l'onglet **Sécurité** , cliquez sur **Modifier**.  
   
-    3.  Dans la boîte de dialogue **Autorisations pour \<nom_dossier>**, cliquez sur **Ajouter** pour ajouter le compte créé à l’étape 1.  
+    3.  Dans la boîte de dialogue **Autorisations pour \<nom_dossier>** , cliquez sur **Ajouter** pour ajouter le compte créé à l’étape 1.  
   
     4.  Vérifiez que **À partir de cet emplacement** indique le nom de l'ordinateur local (et non un domaine). Si ce champ n'indique pas le nom de l'ordinateur local, cliquez sur **Emplacements**. Dans la boîte de dialogue **Emplacements** , choisissez l'ordinateur local, puis cliquez sur **OK**.  
   
@@ -229,9 +228,9 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     6.  Sélectionnez tous les utilisateurs ou groupes qui ne requièrent pas l'accès au répertoire, cliquez sur **Supprimer**, puis sur **OK**.  
   
-4.  Créez un pool d'applications dans **Gestionnaire des services Internet (IIS)**:  
+4.  Créez un pool d'applications dans **Gestionnaire des services Internet (IIS)** :  
   
-    1.  Dans **Gestionnaire des services Internet (IIS)**, dans le volet **Connexions** développez le nœud de serveur local.  
+    1.  Dans **Gestionnaire des services Internet (IIS)** , dans le volet **Connexions** développez le nœud de serveur local.  
   
     2.  Cliquez avec le bouton droit sur **Pools d'applications**, puis cliquez sur **Ajouter un pool d'applications**.  
   
@@ -242,7 +241,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 5.  Associez le compte au pool d'applications :  
   
-    1.  Dans **Gestionnaire des services Internet (IIS)**, développez le nœud du serveur local, puis cliquez sur le nœud **Pools d'applications**.  
+    1.  Dans **Gestionnaire des services Internet (IIS)** , développez le nœud du serveur local, puis cliquez sur le nœud **Pools d'applications**.  
   
     2.  Cliquez avec le bouton droit sur le pool d'applications que vous avez créé, puis cliquez sur **Définir les valeurs par défaut des pools d'applications**.  
   
@@ -258,7 +257,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 6.  Associez le pool d'applications au site Web de réplication :  
   
-    1.  Dans **Gestionnaire des services Internet (IIS)**, développez le nœud de serveur local, puis cliquez sur le **Site Web par défaut** (ou votre site de synchronisation Web s'il est différent du site Web par défaut).  
+    1.  Dans **Gestionnaire des services Internet (IIS)** , développez le nœud de serveur local, puis cliquez sur le **Site Web par défaut** (ou votre site de synchronisation Web s'il est différent du site Web par défaut).  
   
     2.  Dans le volet **Actions** , sous **Gérer le site Web**, cliquez sur **Paramètres avancés**.  
   
@@ -310,7 +309,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
     > [!NOTE]  
     >  Les certificats sont installés pour les utilisateurs. Ce processus doit être effectué pour chaque utilisateur qui réalisera des synchronisations avec IIS.  
   
-4.  Dans la boîte de dialogue **Se connecter à \<NomServeur>**, spécifiez l’ID de connexion et le mot de passe que l’Agent de fusion utilisera pour se connecter à IIS. Ces informations d'identification seront aussi spécifiées dans l'Assistant Nouvel abonnement.  
+4.  Dans la boîte de dialogue **Se connecter à \<NomServeur>** , spécifiez l’ID de connexion et le mot de passe que l’Agent de fusion utilisera pour se connecter à IIS. Ces informations d'identification seront aussi spécifiées dans l'Assistant Nouvel abonnement.  
   
 5.  Dans la fenêtre Internet Explorer relative aux **informations de diagnostic SQL Websync**, vérifiez que la valeur de chaque colonne **État** de la page est **RÉUSSITE**.  
   
@@ -320,7 +319,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     2.  Connectez-vous au serveur en mode de diagnostic. Si le certificat est installé correctement, la boîte de dialogue **Alerte de sécurité** ne s'affiche pas. Si cette boîte de dialogue s'affiche, l'Agent de fusion échoue quand il tente de se connecter à l'ordinateur exécutant IIS. Vous devez vérifier que le certificat pour le serveur auquel vous accédez a été ajouté au magasin de certificats sur l'Abonné en tant que certificat approuvé. Pour plus d'informations sur l'exportation de certificats, consultez la documentation d'IIS.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Synchronisation web pour la réplication de fusion](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [Configurer la synchronisation web](../../relational-databases/replication/configure-web-synchronization.md)  
   

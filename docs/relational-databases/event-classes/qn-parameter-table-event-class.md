@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a450bd308e412bbfa764cf84cb46b46104ad4ffb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cb89f83f0a916a9d56443e7494ce5e8284350bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940629"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe d'événements QN:Parameter Table
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,18 +31,18 @@ ms.locfileid: "51659207"
 |ClientProcessID|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
 |DatabaseID|**Int**|ID de la base de données spécifiée par l’instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database*n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|EventClass|**Int**|Type d’événement = 200.|27|non|  
-|EventSequence|**Int**|Numéro de séquence de cet événement.|51|non|  
-|EventSubClass|**nvarchar**|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> **Table created**: indique qu’une table de paramètres a été créée dans la base de données.<br /><br /> **Table drop attempt**: indique que la base de données a tenté de supprimer automatiquement une table de paramètres inutilisée afin de libérer des ressources.<br /><br /> **Table drop attempt failed**: indique que la base de données a tenté de supprimer une table de paramètres inutilisée mais a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifie alors automatiquement la suppression de la table de paramètres afin de libérer des ressources.<br /><br /> **Table dropped**: indique que la base de données a correctement supprimé une table de paramètres.<br /><br /> **Table pinned**: indique que la table de paramètres est marquée en cours d’utilisation dans le cadre d’un traitement interne.<br /><br /> **Table unpinned**: indique que la table de paramètres est libre. Le traitement interne de la table est terminé.<br /><br /> **Number of users incremented**: indique que le nombre d’abonnements aux notifications de requêtes référençant une table de paramètres a augmenté.<br /><br /> **Number of users decremented**: indique que le nombre d’abonnements aux notifications de requêtes référençant une table de paramètres a diminué.<br /><br /> **LRU counter reset**: indique que le nombre d’utilisations de la table de paramètres a été réinitialisé.<br /><br /> **Cleanup task started**: indique à quel moment le nettoyage de tous les abonnements au sein de la table de paramètres a débuté. Ceci se produit au démarrage de la base de données ou lorsqu'une table sous-jacente des abonnements de la table de paramètres est supprimée.<br /><br /> **Cleanup task finished**: indique à quel moment le nettoyage de tous les abonnements au sein de la table de paramètres s’est terminé.|21|Oui|  
+|EventClass|**Int**|Type d’événement = 200.|27|Non|  
+|EventSequence|**Int**|Numéro de séquence de cet événement.|51|Non|  
+|EventSubClass|**nvarchar**|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> **Table created** : Indique qu’une table de paramètres a été créée dans la base de données.<br /><br /> **Table drop attempt** : Indique que la base de données a tenté de supprimer automatiquement une table de paramètres inutilisée afin de libérer des ressources.<br /><br /> **Table drop attempt failed** : Indique que la base de données a tenté de supprimer une table de paramètres inutilisée mais a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifie alors automatiquement la suppression de la table de paramètres afin de libérer des ressources.<br /><br /> **Table dropped** : Indique que la base de données a correctement supprimé une table de paramètres.<br /><br /> **Table pinned** : Indique que la table de paramètres est marquée en cours d’utilisation dans le cadre d’un traitement interne.<br /><br /> **Table unpinned** : Indique que la table de paramètres est libre. Le traitement interne de la table est terminé.<br /><br /> **Number of users incremented** : Indique que le nombre d’abonnements aux notifications de requêtes référençant une table de paramètres a augmenté.<br /><br /> **Number of users decremented** : Indique que le nombre d’abonnements aux notifications de requêtes référençant une table de paramètres a diminué.<br /><br /> **LRU counter reset** : Indique que le nombre d’utilisations de la table de paramètres a été réinitialisé.<br /><br /> **Cleanup task started** : Indique à quel moment le nettoyage de tous les abonnements au sein de la table de paramètres a débuté. Ceci se produit au démarrage de la base de données ou lorsqu'une table sous-jacente des abonnements de la table de paramètres est supprimée.<br /><br /> **Cleanup task finished** : Indique à quel moment le nettoyage de tous les abonnements au sein de la table de paramètres s’est terminé.|21|Oui|  
 |GroupID|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
-|IsSystem|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|non|  
-|LoginName|**nvarchar**|Nom de connexion de l’utilisateur (connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou informations d’identification de connexion Windows sous la forme *DOMAINE*\\*nom_utilisateur*).|11|non|  
+|IsSystem|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  
+|LoginName|**nvarchar**|Nom de connexion de l’utilisateur (connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou informations d’identification de connexion Windows sous la forme *DOMAINE*\\*nom_utilisateur*).|11|Non|  
 |LoginSID|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l'affichage catalogue sys.server_principals. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |NTDomainName|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|**nvarchar**|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  
 |RequestID|**Int**|Identificateur de la demande contenant l'instruction.|49|Oui|  
-|ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si une application se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et qu'elle exécute une commande en tant que Connexion2, SessionLoginName affiche « Connexion1 » et LoginName affiche « Connexion2 ». Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

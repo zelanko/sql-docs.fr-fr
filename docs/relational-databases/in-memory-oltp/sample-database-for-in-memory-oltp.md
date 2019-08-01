@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111806"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Exemple de base de données pour OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-## <a name="overview"></a>Vue d'ensemble  
+## <a name="overview"></a>Vue d’ensemble  
  Cet exemple présente la fonctionnalité OLTP en mémoire. Il présente les tables optimisées en mémoire et les procédures stockées compilées en mode natif, et illustre les avantages en matière de performances de l’OLTP en mémoire.  
   
 > [!NOTE]  
@@ -313,7 +312,7 @@ ms.locfileid: "54226696"
   
  Étapes d'installation :  
   
-1.  Téléchargez et exécutez le package d'installation x64 pour les utilitaires RML à partir de la page suivante : [Télécharger Report Markup Language (RML) pour SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  Téléchargez et exécutez le package d’installation x64 pour les utilitaires RML à partir de la page suivante : [Télécharger Report Markup Language (RML) pour SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
 
 2.  Si une boîte de dialogue indique que certains fichiers sont en cours d’utilisation, cliquez sur « Continuer »  
   
@@ -436,11 +435,11 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
 -   Nombre de transactions simultanées : lors de l’exécution de la charge de travail sur un seul thread, le gain de performances avec l’OLTP en mémoire sera probablement inférieur à 2X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
   
--   Nombre faible de cœurs disponibles pour SQL Server  : cela signifie qu'il y aura un niveau de simultanéité faible dans le système, car il ne peut pas y avoir plus de transactions simultanées en cours d'exécution que de cœurs disponibles pour SQL.  
+-   Nombre faible de cœurs disponibles pour SQL Server  : cela signifie qu’il y aura un niveau d’accès concurrentiel faible dans le système, car il ne peut pas y avoir plus de transactions simultanées en cours d’exécution que de cœurs disponibles pour SQL.  
   
     -   Symptôme : si l'utilisation de l'UC est élevée lors de l'exécution de la charge de travail sur les tables sur disque, cela signifie qu'il n'y a pas beaucoup de contentions, et donc qu'il n'y a pas de concurrence.  
   
--   Vitesse du lecteur de journal : si le lecteur de journal n'arrive pas à suivre le débit des transactions dans le système, la charge de travail devient un goulot d'étranglement dans les E/S du journal. Bien que la journalisation soit plus efficace avec l’OLTP en mémoire, si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
+-   Vitesse du lecteur de journal : si le lecteur de journal n’arrive pas à suivre le débit des transactions dans le système, la charge de travail devient un goulot d’étranglement dans les E/S du journal. Bien que la journalisation soit plus efficace avec l’OLTP en mémoire, si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
   
     -   Symptôme : si l'utilisation de l'UC n'est pas proche de 100 % ou varie beaucoup pendant l'exécution de la charge de travail sur les tables optimisées en mémoire, il est possible qu'il existe un goulot d'étranglement du journal des E/S. Cela peut être vérifié en ouvrant le moniteur de ressource et en examinant la longueur de la file d'attente du lecteur de journalisation.  
   
@@ -496,7 +495,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Comme vous pouvez le constater, les tables sont assez petites : SalesOrderHeader_inmem a une taille d'environ 7 Mo et SalesOrderDetail_inmem a une taille d'environ 15 Mo.  
+ Comme vous pouvez le constater, les tables sont assez petites : SalesOrderHeader_inmem a une taille d’environ 7 Mo et SalesOrderDetail_inmem a une taille d’environ 15 Mo.  
   
  Ce qui est frappant ici est la taille de la mémoire allouée aux index, par rapport à la taille des données de table. Cela est dû au fait que les index de hachage de l'exemple sont prédimensionnés pour contenir plus de données. Notez que les index de hachage ont une taille fixe, par conséquent, leur taille n'augmente pas selon la taille des données de la table.  
   
@@ -566,7 +565,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  C'est le comportement attendu : la mémoire est récupérée lorsque la charge de travail transactionnelle s'exécute.  
   
- Si vous démarrez une deuxième exécution de la charge de travail de démonstration, vous verrez que l'utilisation de la mémoire diminue au début, au fur et à mesure que les lignes précédemment supprimées sont nettoyées. À un certain moment, la taille de la mémoire augmentera de nouveau, jusqu'à ce que la charge de travail soit terminée. Une fois que les 10 millions de lignes ont été insérées après la réinitialisation de la démonstration, l'utilisation de la mémoire sera très similaire à l'utilisation après la première exécution. Exemple :  
+ Si vous démarrez une deuxième exécution de la charge de travail de démonstration, vous verrez que l'utilisation de la mémoire diminue au début, au fur et à mesure que les lignes précédemment supprimées sont nettoyées. À un certain moment, la taille de la mémoire augmentera de nouveau, jusqu'à ce que la charge de travail soit terminée. Une fois que les 10 millions de lignes ont été insérées après la réinitialisation de la démonstration, l'utilisation de la mémoire sera très similaire à l'utilisation après la première exécution. Par exemple :  
   
 ```  
 SELECT type  
@@ -740,7 +739,7 @@ ORDER BY state, file_type
   
  Après une deuxième exécution de la charge de travail de démonstration, et l'insertion de 10 millions de commandes client après la réinitialisation de la démonstration, vous constaterez que les fichiers construits lors de la première exécution de la charge de travail ont été nettoyés. Si vous exécutez la requête ci-dessus plusieurs fois pendant que la charge de travail s'exécute, vous verrez les fichiers de point de contrôle passer à travers les différentes étapes.  
   
- Après la deuxième exécution de la charge de travail et l'insertion de 10 millions de commandes, vous verrez que l'utilisation du disque est très similaire, mais pas nécessairement identique, à celle constatée après la première exécution, car le système est dynamique par nature. Exemple :  
+ Après la deuxième exécution de la charge de travail et l'insertion de 10 millions de commandes, vous verrez que l'utilisation du disque est très similaire, mais pas nécessairement identique, à celle constatée après la première exécution, car le système est dynamique par nature. Par exemple :  
   
 ```  
 SELECT state_desc  
@@ -769,7 +768,7 @@ ORDER BY state, file_type
   
  Dans ce cas, il existe deux paires de fichiers de point de contrôle avec l’état « under construction », signifiant que plusieurs paires de fichiers ont été déplacées vers l’état « under construction », probablement en raison du haut niveau de concurrence dans la charge de travail. Plusieurs threads simultanés ont nécessité une nouvelle paire de fichiers en même temps ; par conséquent, une paire est passée de l’état « precreated » à l’état « under construction ».  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

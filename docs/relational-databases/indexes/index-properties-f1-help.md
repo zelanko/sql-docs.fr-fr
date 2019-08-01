@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909714"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47846367"
  Affiche le nom de l'index. Ce champ est en lecture seule pour un index existant. Permet de taper le nom de l'index, si vous en créez un nouveau.  
   
  **Type d'index**  
- Indique le type d'index. Pour les nouveaux index, indique le type d'index sélectionné lors de l'ouverture de la boîte de dialogue. Les index peuvent être : **Cluster**, **Non cluster**, **XML primaire**, **XML secondaire**, **Spatial**, **Columnstore cluster**ou **Columnstore non cluster**.  
+ Indique le type d'index. Pour les nouveaux index, indique le type d'index sélectionné lors de l'ouverture de la boîte de dialogue. Les index peuvent être : **Cluster**, **Non cluster**, **XML primaire**, **XML secondaire**, **Spatial**, **Columnstore cluster** ou **Columnstore non cluster**.  
   
  **Remarque** Un seul index cluster est autorisé pour chaque table. Un seul index columnstore optimisé en mémoire xVelocity est autorisé pour chaque table.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "47846367"
   
  Un index spatial peut être uniquement défini sur une colonne unique qui contient un type de données spatiales (une *colonne spatiale*).  
   
- **Nom**  
+ **Name**  
  Affiche le nom de la colonne utilisée dans la clé d'index.  
   
  **Ordre de tri**  
@@ -120,7 +119,7 @@ ms.locfileid: "47846367"
  **Case à cocher**  
  Activez pour ajouter des colonnes.  
   
- **Nom**  
+ **Name**  
  Nom de la colonne.  
   
  **Type de données**  
@@ -184,7 +183,7 @@ ms.locfileid: "47846367"
 ### <a name="bounding-box"></a>Cadre englobant  
  Le *cadre englobant* est le périmètre de la grille de niveau supérieur d’un plan géométrique. Les paramètres du cadre englobant existent uniquement dans le pavage de la grille géométrique. Ces paramètres sont indisponibles si le **Schéma de pavage** est une **Grille géographique**.  
   
- Le panneau affiche les coordonnées **(**_Min. X_**,**_Min. Y_**)** et **(**_Max. X_**,**_Max. Y_**)** du cadre englobant. Il n'y a pas de valeurs de coordonnées par défaut. Par conséquent, quand vous créez un index spatial sur une colonne de type **geometry** , vous devez spécifier les valeurs des coordonnées.  
+ Le panneau affiche les coordonnées **(** _Min. X_ **,** _Min. Y_ **)** et **(** _Max. X_ **,** _Max. Y_ **)** du cadre englobant. Il n'y a pas de valeurs de coordonnées par défaut. Par conséquent, quand vous créez un index spatial sur une colonne de type **geometry** , vous devez spécifier les valeurs des coordonnées.  
   
  **Min. X**  
  Coordonnée X de l'angle inférieur gauche du cadre englobant.  
@@ -242,7 +241,7 @@ ms.locfileid: "47846367"
  **Expression de filtre**  
  Définit quelles lignes de données inclure dans l'index filtré. Par exemple : `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les options d'index](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08185a514dbba480aaef760532430ff7c1f53bf9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115321"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51663005"
 ### <a name="sql-server-utility-navigation-pane"></a>Volet Navigation de l'utilitaire SQL Server  
  Le volet Navigation de l'Explorateur de l'utilitaire fournit une arborescence des objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , groupés par point de contrôle d'utilitaire. Pour développer des dossiers, cliquez sur le signe plus (+) ou double-cliquez sur le nom de l'UCP dans le volet Navigation de l'Explorateur de l'utilitaire. Cliquez avec le bouton droit sur les dossiers ou les objets pour réaliser des tâches courantes. Les nœuds dans l'arborescence sont les suivants :  
   
--   Le nœud supérieur dans l'arborescence est le point de contrôle d'utilitaire (UCP). Le nom du nœud se compose ainsi : « Utility_Name » (ComputerName\UCP_instance_name). Si vous n'avez pas d'UCP, vous devez en créer un. Si vous n'êtes pas connecté à un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez le faire. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Cliquez sur le nom d'UCP dans l'arborescence pour remplir le volet Contenu de l'Explorateur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les données dans l'affichage Tableau de bord. Pour plus d’informations, consultez [Tableau de bord de l’utilitaire &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   Le nœud supérieur dans l'arborescence est le point de contrôle d'utilitaire (UCP). Le nom du nœud est construit ainsi : « Nom_utilitaire » (NomOrdinateur\nom_instance_UCP). Si vous n'avez pas d'UCP, vous devez en créer un. Si vous n'êtes pas connecté à un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez le faire. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Cliquez sur le nom d'UCP dans l'arborescence pour remplir le volet Contenu de l'Explorateur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les données dans l'affichage Tableau de bord. Pour plus d’informations, consultez [Tableau de bord de l’utilitaire &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Cliquez avec le bouton droit sur le nœud UCP pour actualiser des données dans le tableau de bord.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "51663005"
   
  PowerShell n’offre pas d’aide accessible via la touche F1, mais inclut une applet de commande **Get-Help** qui fournit des informations sur l’utilisation de PowerShell. Pour plus d’informations sur l’utilisation de Get-Help, consultez [Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configurer des stratégies de contrôle d’intégrité &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
  [Explorateur d’objets](../../ssms/object/object-explorer.md)  

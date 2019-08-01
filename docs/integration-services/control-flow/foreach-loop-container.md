@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403049"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316658"
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
 
@@ -508,7 +507,19 @@ Spécifie un gestionnaire de connexions Stockage Azure existant ou en crée un q
 Spécifie le chemin du dossier dont il faut énumérer les fichiers.
 
 **SearchRecursively**  
-Spécifie si la recherche doit être récursive au sein du dossier spécifié.  
+Spécifie si la recherche doit être récursive au sein du dossier spécifié.
+
+***Remarques sur la configuration des autorisations du principal de service***
+
+L’autorisation pour Data Lake Storage Gen2 est déterminée à la fois par [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) et par des [listes des contrôles d’accès (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Faites attention à ce que les listes de contrôle d’accès soient configurées à l’aide de l’ID d’objet (OID) du principal de service pour l’inscription d’application, comme indiqué [ici](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Cet ID diffère de l’ID d’application (client) utilisé avec la configuration RBAC.
+Quand un principal de sécurité reçoit des autorisations sur les données RBAC par le biais d’un rôle intégré ou personnalisé, ces autorisations sont évaluées en premier lors de l’autorisation d’une demande.
+Si l’opération demandée est autorisée par les attributions RBAC du principal de sécurité, l’autorisation est immédiatement résolue et aucune vérification de liste de contrôle d’accès supplémentaire n’est effectuée.
+Sinon, si le principal de sécurité n’a pas d’attribution RBAC ou si l’opération de la demande ne correspond pas à l’autorisation affectée, les vérifications de liste de contrôle d’accès sont effectuées pour déterminer si le principal de sécurité est autorisé à effectuer l’opération demandée.
+Pour que l’énumérateur fonctionne, accordez au moins l’autorisation d’**Exécution** à partir du système de fichiers racine, ainsi que l’autorisation de **Lecture** pour le dossier cible.
+Vous pouvez également accorder au moins le rôle **Lecteur des données Blob du stockage** avec RBAC.
+Pour plus d’informations, consultez [cet](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) article.
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Page Mappage de variables - Éditeur de boucle Foreach
  Utilisez la page **Mappage de variables** de la boîte de dialogue **Éditeur de boucle Foreach** pour mapper les variables à la valeur de la collection. La valeur de cette variable est mise à jour avec les valeurs de la collection à chaque itération de la boucle.  

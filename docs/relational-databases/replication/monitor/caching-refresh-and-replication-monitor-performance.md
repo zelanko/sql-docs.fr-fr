@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: afa70f42c2ea5602bf549a4d5596bff2c8bbff66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 56d42d7539a58d631c1776d54caee09072d22a0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018554"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Mise en cache, actualisation et performances du moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +29,9 @@ ms.locfileid: "54123879"
   
  L'actualisation du cache est gérée par un travail de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, l' **Actualisateur d'analyse de réplication pour la distribution**. Le travail s'exécute en permanence mais la planification de l'actualisation du cache prévoit l'attente d'un certain délai après l'actualisation précédente :  
   
--   En cas de modifications de l'historique de l'Agent depuis la dernière création du cache, le délai d'attente est la période la plus courte entre 4 secondes ou le temps nécessaire à la création du cache précédent.  
+-   En cas de modifications de l’historique de l’agent depuis la dernière création du cache, le délai d’attente est la période la plus courte entre 4 secondes ou le temps nécessaire à la création du cache précédent.  
   
--   En l'absence de modifications de l'historique de l'Agent depuis la dernière création du cache (d'autres modifications sont possibles), le délai d'attente est la période la plus longue entre 30 secondes ou le temps nécessaire à la création du cache précédent.  
+-   En l’absence de modifications de l’historique de l’agent depuis la dernière création du cache (d’autres modifications sont possibles), le délai d’attente est la période la plus longue entre 30 secondes ou le temps nécessaire à la création du cache précédent.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Actualisation de l'interface utilisateur du moniteur de réplication  
  L'interface utilisateur du moniteur de réplication peut être actualisée de plusieurs façons :  
@@ -54,7 +53,7 @@ ms.locfileid: "54123879"
   
 -   Évitez d'inscrire un grand nombre de serveurs de distribution et de configurer le moniteur de réplication pour qu'il se connecte automatiquement à tous.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exécuter des travaux de maintenance de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   

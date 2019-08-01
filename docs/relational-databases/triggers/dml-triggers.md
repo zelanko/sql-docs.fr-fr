@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979866917514cb10689f60bf5114d02dbe889fd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056135"
 ---
 # <a name="dml-triggers"></a>Déclencheurs DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47826707"
 |Applicabilité|Tables|Tables et vues|  
 |Quantité par table ou vue|Plusieurs par action de déclenchement (UPDATE, DELETE et INSERT)|Un par action de déclenchement (UPDATE, DELETE et INSERT)|  
 |Références en cascade|Aucune restriction|Les déclencheurs INSTEAD OF UPDATE et DELETE ne sont pas autorisés sur des tables qui sont des cibles de contraintes d'intégrité référentielle en cascade.|  
-|Exécution|Après :<br /><br /> Traitement des contraintes<br /><br /> Actions référentielles déclaratives<br /><br /> Création de tables**inserted** et **deleted** <br /><br /> L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
+|Exécution|Après :<br /><br /> Traitement des contraintes<br /><br /> Actions référentielles déclaratives<br /><br /> Création de tables**inserted** et **deleted**<br /><br /> L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de :  L'action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
 |Ordre d'exécution|La première et la dernière exécution peuvent être spécifiées|Non applicable|  
-|Références de colonnes**varchar(max)**, **nvarchar(max)** et **varbinary(max)** dans des  **inserted** et **deleted** |Autorisé|Autorisé|  
-|Références de colonnes**text**, **ntext**et **image** dans des  **inserted** et **deleted** |Non autorisées|Autorisé|  
+|Références de colonnes**varchar(max)** , **nvarchar(max)** et **varbinary(max)** dans des  **inserted** et **deleted**|Autorisé|Autorisé|  
+|Références de colonnes**text**, **ntext**et **image** dans des  **inserted** et **deleted**|Non autorisées|Autorisé|  
   
  Déclencheurs CLR  
  Un déclencheur CLR peut être un déclencheur AFTER ou INSTEAD OF. Il peut également s'agir d'un déclencheur DDL. Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -84,7 +83,7 @@ ms.locfileid: "47826707"
 |Décrit comment supprimer ou désactiver les déclencheurs DML.|[Supprimer ou désactiver les déclencheurs DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Décrit comment gérer la sécurité du déclencheur.|[Gérer la sécurité des déclencheurs](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

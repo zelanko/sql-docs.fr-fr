@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070332"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  Pour plus d’informations sur le comportement du cache, consultez [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur la façon dont les séquences sont créées et dont le cache de séquence est géré, consultez [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
  La valeur MINVALUE pour les séquences croissantes et la valeur MAXVALUE pour les séquences décroissantes ne peuvent pas être modifiées par une valeur qui n'autorise pas la valeur START WITH de la séquence. Pour modifier la valeur MINVALUE d'une séquence croissante par un nombre plus grand que la valeur START WITH ou pour modifier la valeur MAXVALUE d'une séquence décroissante par un nombre plus petit que la valeur START WITH, incluez l'argument RESTART WITH pour redémarrer la séquence à un point de votre choix compris dans la plage minimale et maximale.  
@@ -88,7 +87,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Exige l’autorisation **ALTER** sur la séquence ou l’autorisation **ALTER** sur le schéma. Pour accorder l’autorisation**ALTER** sur la séquence, utilisez **ALTER ON OBJECT** dans le format suivant :  
   
 ```  
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  Pour obtenir des exemples de création de séquences et d’utilisation de la fonction **NEXT VALUE FOR** pour générer des numéros séquentiels, consultez [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### <a name="a-altering-a-sequence"></a>A. Modification d'une séquence  
- L’exemple suivant crée un schéma nommé Test et une séquence nommée TestSeq à l’aide du type de données **int**, avec une plage comprise entre 0 et 255. La séquence démarre à 125 et est incrémentée de 25 chaque fois qu'un nombre est généré. Étant donné que la séquence est configurée pour se répéter, lorsque la valeur dépasse la valeur maximale de 200, la séquence redémarre à la valeur minimale de 100.  
+ L’exemple suivant crée un schéma nommé Test et une séquence nommée TestSeq à l’aide du type de données **int**, avec une plage comprise entre 100 et 200. La séquence démarre à 125 et est incrémentée de 25 chaque fois qu'un nombre est généré. Étant donné que la séquence est configurée pour se répéter, lorsque la valeur dépasse la valeur maximale de 200, la séquence redémarre à la valeur minimale de 100.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- L’exemple suivant modifie la séquence TestSeq pour que la plage soit comprise entre 0 et 255. La séquence redémarre la série de numérotation à 100 et est incrémentée de 50 chaque fois qu'un nombre est généré.  
+ L’exemple suivant modifie la séquence TestSeq pour que la plage soit comprise entre 50 et 200. La séquence redémarre la série de numérotation à 100 et est incrémentée de 50 chaque fois qu'un nombre est généré.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  
@@ -178,7 +177,7 @@ ALTER SEQUENCE Test.CountBy1
   
  Le propriétaire s’est rendu compte que le type de données **bigint** utilise 8 octets chaque fois qu’il est utilisé. Le type de données **int** qui utilise 4 octets est suffisant. Toutefois, le type de données d'un objet séquence ne peut pas être modifié. Pour passer à un type de données **int**, le propriétaire doit supprimer l’objet séquence et recréer l’objet avec le type de données approprié.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
