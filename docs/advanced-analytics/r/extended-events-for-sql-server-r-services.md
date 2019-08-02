@@ -6,19 +6,20 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e0e685543fe1e99f7adbfeb69567c366b0714ef7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8dc99a6f5ac1ff660f34f2248c844e5386bea5f0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470164"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715134"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Événements étendus pour SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server fournit un ensemble d’événements étendus à utiliser pour résoudre les opérations liées [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]au, ainsi que les travaux python ou R envoyés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à.
 
-**S’applique à :**  SQL Server 2016 R services, SQL Server 2017 Machine Learning Services
+**S’applique à :**  SQL Server 2016 R services, SQL Server Machine Learning Services
 
 ## <a name="sql-server-events-for-machine-learning"></a>Événements de SQL Server pour Machine Learning
 
@@ -87,7 +88,7 @@ SQL Server Machine Learning Services démarre certains services qui s’exécute
   
     Pour capturer les événements liés à Launchpad, placez le fichier *.config* dans le répertoire Binn de l’instance SQL Server.  Dans une installation par défaut, il s’agit de:
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn` .  
   
 + **BXLServer** est le processus satellite qui prend en charge l’extensibilité SQL avec les langages de script externes, tels que R ou python. Une instance distincte de BxlServer est lancée pour chaque instance de langue externe.
   

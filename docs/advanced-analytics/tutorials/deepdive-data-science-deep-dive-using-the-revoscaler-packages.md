@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470629"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714887"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutoriel : Utiliser des fonctions R RevoScaleR avec des données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ Dans ce didacticiel en plusieurs parties, vous avez introduit une série de fonc
 
 ## <a name="prerequisites"></a>Prérequis
 
-+ [SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md) avec la fonctionnalité r ou [SQL Server 2016 r services (en base de données)](../install/sql-r-services-windows-install.md)
++ [SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md) avec la fonctionnalité R ou [SQL Server R services (dans la base de données)](../install/sql-r-services-windows-install.md)
   
 + [Autorisations de base de](../security/user-permission.md) données et connexion utilisateur de base de données SQL Server
 
@@ -31,7 +32,7 @@ Dans ce didacticiel en plusieurs parties, vous avez introduit une série de fonc
 
 + Un IDE tel que RStudio ou l’outil RGUI intégré fourni avec R
 
-Pour basculer entre les contextes de calcul locaux et distants, vous avez besoin de deux systèmes. Local est généralement une station de travail de développement avec une puissance suffisante pour les charges de travail de science des données. Dans ce cas, la fonction distante est SQL Server 2017 ou SQL Server 2016 avec la fonctionnalité R activée. 
+Pour basculer entre les contextes de calcul locaux et distants, vous avez besoin de deux systèmes. Local est généralement une station de travail de développement avec une puissance suffisante pour les charges de travail de science des données. Dans ce cas, la fonction distante est SQL Server avec la fonctionnalité R activée. 
 
 Le basculement des contextes de calcul dépend de la **RevoScaleR** de la version identique sur les systèmes locaux et distants. Sur une station de travail locale, vous pouvez obtenir les packages **RevoScaleR** et les fournisseurs associés en installant Microsoft R client.
 

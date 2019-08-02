@@ -1,18 +1,19 @@
 ---
 title: Générer des prévisions et des prédictions à l’aide de modèles de Machine Learning
-description: Utilisez rxPredict ou sp_rxPredict pour la notation en temps réel, ou prédire T-SQL pour la notation native pour les prédictions et les prévisions dans R et Pythin dans SQL Server Machine Learning.
+description: Utilisez rxPredict ou sp_rxPredict pour la notation en temps réel, ou prédire T-SQL pour la notation native pour les prédictions et les prévisions dans R et Python dans SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470115"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715697"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Comment générer des prévisions et des prédictions à l’aide de modèles de Machine Learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Comme vous pouvez vous y attendre, la prise en charge de la plateforme est affec
 
 ## <a name="scoring-overview"></a>Vue d’ensemble du score
 
-Le _score_ est un processus en deux étapes. Tout d’abord, vous spécifiez un modèle déjà formé à charger à partir d’une table. Ensuite, transmettez les nouvelles données d’entrée à la fonction afin de générer des valeurs de prédiction (ou des scores). L’entrée est souvent une requête T-SQL, en retournant des lignes tabulaires ou uniques. Vous pouvez choisir de générer une valeur de colonne unique représentant une probabilité, ou vous pouvez générer plusieurs valeurs, telles qu’un intervalle de confiance, une erreur ou un autre complément utile à la prédiction.
+Le _score_ est un processus en deux étapes. Tout d’abord, vous spécifiez un modèle déjà formé à charger à partir d’une table. Ensuite, transmettez les nouvelles données d’entrée à la fonction afin de générer des valeursde prédiction (ou des scores). L’entrée est souvent une requête T-SQL, en retournant des lignes tabulaires ou uniques. Vous pouvez choisir de générer une valeur de colonne unique représentant une probabilité, ou vous pouvez générer plusieurs valeurs, telles qu’un intervalle de confiance, une erreur ou un autre complément utile à la prédiction.
 
 En effectuant un pas à pas principal, le processus global de préparation du modèle, puis de génération des scores, peut être résumé de cette façon:
 

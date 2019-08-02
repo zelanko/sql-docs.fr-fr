@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468466"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714697"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Créer des fonctionnalités de données à l’aide de R et SQL Server (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ Tout d’abord, examinons la façon dont les utilisateurs R sont habitués à: o
     
     Toutefois, quelques points méritent une attention particulière concernant rxDataStep: 
     
-    Dans d’autres sources de données, vous pouvez utiliser les arguments *varsToKeep* et *varsToDrop*, mais ceux-ci ne sont pas pris en charge pour les sources de données SQL Server. Par conséquent, dans cet exemple, nous avons utilisé  l’argument Transforms pour spécifier les colonnes directes et les colonnes transformées. En outre, lors de l’exécution dans un contexte de calcul  SQL Server, l’argument inData peut uniquement prendre une source de données SQL Server.
+    Dans d’autres sources de données, vous pouvez utiliser les arguments *varsToKeep* et *varsToDrop*, mais ceux-ci ne sont pas pris en charge pour les sources de données SQL Server. Par conséquent, dans cet exemple, nous avons utilisé l’argument Transforms pour spécifier les colonnes directes et les colonnes transformées. En outre, lors de l’exécution dans un contexte de calcul SQL Server, l’argument inData peut uniquement prendre une source de données SQL Server.
 
     Le code précédent peut également générer un message d’avertissement lorsqu’il est exécuté sur des jeux de données plus grands. Lorsque le nombre de lignes multiplié par le nombre de colonnes créées dépasse une valeur définie (la valeur par défaut est 3 millions), rxDataStep renvoie un avertissement et le nombre de lignes dans la trame de données retournée est tronqué. Pour supprimer l’avertissement, vous pouvez modifier l’argument _maxRowsByCols_ dans la fonction rxDataStep. Toutefois, si _maxRowsByCols_ est trop volumineux, vous risquez de rencontrer des problèmes lors du chargement de la trame de données en mémoire.
 
@@ -134,7 +135,7 @@ Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function calculates the direct distance between two geographical coordinates.
-    RETURNS
+    RETURNS decimal(28, 10)
     AS
     BEGIN
       DECLARE @distance decimal(28, 10)

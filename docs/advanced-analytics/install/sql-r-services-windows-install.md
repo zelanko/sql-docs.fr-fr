@@ -7,19 +7,20 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc14328e0e43106f9fec0779f073bcd1568e888
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345006"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715809"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installer SQL Server 2016 R services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article explique comment installer et configurer **SQL Server les services R 2016**. Si vous avez SQL Server 2016, installez cette fonctionnalité pour permettre l’exécution de code R dans SQL Server.
 
-Dans SQL Server 2017, l’intégration de R est proposée dans [machine learning services](../r/r-server-standalone.md), reflétant l’ajout de Python. Si vous souhaitez intégrer R et que vous disposez d’un support d’installation SQL Server 2017, consultez [installer SQL Server 2017 machine learning services](sql-machine-learning-services-windows-install.md) pour ajouter la fonctionnalité. 
+Dans SQL Server 2017, l’intégration de R est proposée dans [machine learning services](../r/r-server-standalone.md), reflétant l’ajout de Python. Si vous souhaitez intégrer R et que vous disposez d’un support d’installation SQL Server 2017, consultez [installer SQL Server machine learning services](sql-machine-learning-services-windows-install.md) pour ajouter la fonctionnalité. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -27,7 +28,7 @@ Dans SQL Server 2017, l’intégration de R est proposée dans [machine learning
 
 + Une instance du moteur de base de données est requise. Vous ne pouvez pas installer uniquement R, bien que vous puissiez l’ajouter de façon incrémentielle à une instance existante.
 
-+ Pour la continuité des activités, [Always on groupes disponibilité](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) sont pris en charge pour R services. Vous devez installer R services et configurer des packages sur chaque nœud.
++ Pour la continuité des activités, les [groupes de disponibilité Always on](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) sont pris en charge pour R services. Vous devez installer R services et configurer des packages sur chaque nœud.
 
 + N’installez pas R services sur un cluster de basculement. Le mécanisme de sécurité utilisé pour isoler les processus R n’est pas compatible avec un environnement de cluster de basculement Windows Server.
 
@@ -136,7 +137,7 @@ Une fois l’installation terminée, redémarrez le moteur de base de données a
 
 Le redémarrage du service redémarre également automatiquement le service associé [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] .
 
-Vous pouvez redémarrer le service à l’aide de la  commande de redémarrage du bouton droit de l’instance dans SSMS, ou à l’aide du panneau **services** du panneau de configuration, ou à l’aide de [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md).
+Vous pouvez redémarrer le service à l’aide de la commande de redémarrage du bouton droit de l’instance dans SSMS, ou à l’aide du panneau **services** du panneau de configuration, ou à l’aide de [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>Vérifier l'installation
 
@@ -156,7 +157,7 @@ Procédez comme suit pour vérifier que tous les composants utilisés pour lance
 
 7. Si Launchpad est en cours d’exécution, vous devez être en mesure d’exécuter un R simple pour vérifier que les runtimes de script externes peuvent communiquer avec SQL Server. 
 
-    Ouvrez une nouvelle  fenêtre de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dans, puis exécutez un script tel que le suivant:
+    Ouvrez une nouvelle fenêtre de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dans, puis exécutez un script tel que le suivant:
     
     ```sql
     EXEC sp_execute_external_script  @language =N'R',

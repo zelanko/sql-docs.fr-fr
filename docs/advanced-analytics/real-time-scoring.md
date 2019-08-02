@@ -3,16 +3,17 @@ title: Notation en temps réel à l’aide de la procédure stockée sp_rxPredic
 description: Générer des prédictions à l’aide de sp_rxPredict, notation des entrées de données par rapport à un modèle pré-formé écrit en R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 26701ac6e538d195a5a85ad66af9578848889d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469968"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715644"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Notation en temps réel avec sp_rxPredict dans SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ La notation en temps réel utilise la procédure stockée système [sp_rxPredict
 
 ## <a name="how-real-time-scoring-works"></a>Fonctionnement de la notation en temps réel
 
-La notation en temps réel est prise en charge dans SQL Server 2017 et SQL Server 2016, sur des types de modèles spécifiques basés sur des fonctions RevoScaleR ou MicrosoftML comme [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Il utilise des C++ bibliothèques natives pour générer des scores en fonction de l’entrée utilisateur fournie à un modèle de machine learning stocké dans un format binaire spécial.
+La notation en temps réel est prise en charge sur des types de modèles spécifiques basés sur des fonctions RevoScaleR ou MicrosoftML, telles que [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Il utilise des C++ bibliothèques natives pour générer des scores en fonction de l’entrée utilisateur fournie à un modèle de machine learning stocké dans un format binaire spécial.
 
 Étant donné qu’un modèle formé peut être utilisé pour le calcul de score sans avoir à appeler un Runtime de langage externe, la charge de traitement de plusieurs processus est réduite. Cela prend en charge des performances de prédiction beaucoup plus rapides pour les scénarios de calcul de score de production. Étant donné que les données ne quittent jamais SQL Server, les résultats peuvent être générés et insérés dans une nouvelle table sans aucune traduction de données entre R et SQL.
 

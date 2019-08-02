@@ -7,12 +7,13 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470135"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715686"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendre le code R opérationnel à l’aide de procédures stockées dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ La conversion de votre code R dans SQL est plus facile si certaines optimisation
 
 Le calcul des scores est une tâche importante qui peut facilement être automatisée ou démarrée à partir d’applications externes. Vous procédez à l’apprentissage préalable du modèle à l’aide de R ou python ou d’une procédure stockée, puis vous [Enregistrez le modèle au format binaire dans](../tutorials/walkthrough-build-and-save-the-model.md) une table. Ensuite, le modèle peut être chargé dans une variable dans le cadre d’un appel de procédure stockée, à l’aide de l’une de ces options pour la notation à partir de T-SQL:
 
-+ Notation en [temps réel](../real-time-scoring.md) , optimisée pour les lots de petite taille
++ [Notation en temps réel, optimisée pour les lots de petite taille
 + Notation à une seule ligne, pour appeler à partir d’une application
 + [Notation Native](../sql-native-scoring.md), pour une prédiction de lot rapide à partir de SQL Server sans appeler R
 

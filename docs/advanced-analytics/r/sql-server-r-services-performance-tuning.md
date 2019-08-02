@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9d6dbc55281a725dea0373f2a4d61293b2ddb9c0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: dd12e38e0d1f01cd142cc4c11efe43346dd1f8ce
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469936"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715620"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Réglage des performances pour R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ L’objectif de cette série est de fournir des conseils sur les types de techni
 + Le troisième article traite des optimisations dans le code R et des ressources pour la fonctionnalité de fonctionnement.
 + Le quatrième article décrit les méthodes de test en détail et signale des conclusions et des conclusions.
 
-**S’applique à :** SQL Server 2016 R services, SQL Server 2017 Machine Learning Services
+**S’applique à :** SQL Server 2016 R services, SQL Server Machine Learning Services
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>Objectifs de performances et scénarios ciblés
 

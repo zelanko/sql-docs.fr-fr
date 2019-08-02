@@ -2,16 +2,17 @@
 title: Résoudre les problèmes de collecte de données pour Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3dbca20d974570d04d65fba30110049efad4e90d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c7566d9b25b15a334e48380daca6cb81e92f6a2b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470433"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715235"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour Machine Learning
 
@@ -19,13 +20,11 @@ ms.locfileid: "68470433"
 
 Cet article décrit les méthodes de collecte des données que vous devez utiliser lorsque vous tentez de résoudre des problèmes par vous-même ou avec l’aide du support technique Microsoft.
 
-**S’applique à :** SQL Server 2016 R services, SQL Server 2017 Machine Learning Services (R et Python)
-
 ## <a name="sql-server-version-and-edition"></a>Version et édition de SQL Server
 
-SQL Server 2016 R services est la première version de SQL Server pour inclure la prise en charge de R intégrée. SQL Server 2016 Service Pack 1 (SP1) inclut plusieurs améliorations majeures, notamment la possibilité d’exécuter des scripts externes. Si vous êtes un client SQL Server 2016, vous devez envisager d’installer SP1 ou une version ultérieure.
+SQL Server 2016 R services est la première version de SQL Server pour inclure la prise en charge de R intégrée. SQL Server 2016 Service Pack 1 (SP1) inclut plusieurs améliorations majeures, notamment la possibilité d’exécuter des scripts externes. Si vous utilisez SQL Server 2016, vous devez envisager d’installer SP1 ou une version ultérieure.
 
-SQL Server 2017 a ajouté l’intégration du langage Python. Vous ne pouvez pas accéder à la fonctionnalité d’intégration de Python dans les versions antérieures.
+SQL Server 2017 et versions ultérieures intègrent l’intégration du langage Python. Vous ne pouvez pas accéder à la fonctionnalité d’intégration de Python dans les versions antérieures.
 
 Pour obtenir de l’aide sur l’édition et les versions de, consultez cet article, qui répertorie les numéros de build de chacune des [versions de SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
 

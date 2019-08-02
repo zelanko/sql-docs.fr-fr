@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fe196a82badcab9ebe05004ee05cd67131942dd1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469898"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715617"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>FAQ sur la mise à niveau et l’installation de SQL Server Machine Learning ou R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ Cette rubrique fournit des réponses à certaines questions courantes sur l’in
 + Certains problèmes se produisent uniquement avec les mises à niveau des versions préliminaires. Par conséquent, nous vous recommandons d’identifier votre version et votre édition avant de lire ces notes. Pour obtenir des informations sur la `@@VERSION` version, exécutez dans une requête à partir de SQL Server Management Studio.
 + Effectuez une mise à niveau vers la version la plus récente ou la version du service le plus rapidement possible pour résoudre les problèmes résolus dans les versions récentes.
 
-**S’applique à :** SQL Server 2016 R services, SQL Server 2017 Machine Learning Services (en base de données)
+**S’applique à :** SQL Server 2016 R services, SQL Server Machine Learning Services (en base de données)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Exigences et restrictions sur les versions antérieures de SQL Server 2016 
 

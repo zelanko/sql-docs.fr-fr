@@ -6,19 +6,20 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8db20295c2e21b6499d4d935f9c99161983b588f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469888"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715583"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Comment utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR 9.0.1 et versions ultérieures incluent des fonctions de gestion des packages R SQL Server un contexte de calcul. Ces fonctions peuvent être utilisées par des non-administrateurs distants pour installer des packages sur SQL Server sans accès direct au serveur.
 
-SQL Server 2017 Machine Learning Services contient déjà une version plus récente de RevoScaleR. SQL Server 2016 R services les clients doivent effectuer une [mise à niveau de composant](../install/upgrade-r-and-python.md) pour obtenir les fonctions de gestion des packages RevoScaleR. Pour obtenir des instructions sur la récupération de la version et du contenu d’un package, consultez [obtenir des informations](../package-management/installed-package-information.md)sur le package.
+SQL Server Machine Learning Services contient déjà une version plus récente de RevoScaleR. SQL Server 2016 R services les clients doivent effectuer une [mise à niveau de composant](../install/upgrade-r-and-python.md) pour obtenir les fonctions de gestion des packages RevoScaleR. Pour obtenir des instructions sur la récupération de la version et du contenu d’un package, consultez [obtenir des informations](../package-management/installed-package-information.md)sur le package.
 
 ## <a name="revoscaler-functions-for-package-management"></a>Fonctions RevoScaleR pour la gestion des packages
 

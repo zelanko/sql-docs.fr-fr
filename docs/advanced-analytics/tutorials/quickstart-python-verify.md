@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 98e89cf61e5c53793108a455873382da00a8ea35
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469701"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715457"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Démarrage rapide : Vérifier que Python existe dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,11 +23,11 @@ SQL Server prend en charge le langage Python pour l’analyse de la science des 
 + Procédure stockée [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) intégrée, transmettant le script Python dans en tant que paramètre d’entrée.
 + Encapsulez le script Python dans une [procédure stockée personnalisée](sqldev-in-database-r-for-sql-developers.md) que vous créez.
 
-Dans ce guide de démarrage rapide, vous allez vérifier que [SQL Server 2017 machine learning services](../what-is-sql-server-machine-learning.md) est installé et configuré.
+Dans ce guide de démarrage rapide, vous allez vérifier que [SQL Server machine learning services](../what-is-sql-server-machine-learning.md) est installé et configuré.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Cet exercice requiert l’accès à une instance de SQL Server avec [SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md) installée.
+Cet exercice requiert l’accès à une instance de SQL Server avec [SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md) installée.
 
 Votre instance de SQL Server peut se trouver dans une machine virtuelle Azure ou en local. N’oubliez pas que la fonctionnalité de script externe est désactivée par défaut. par conséquent, vous devrez peut-être [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que **SQL Server Launchpad service** est en cours d’exécution avant de commencer.
 
@@ -59,7 +60,7 @@ Vous pouvez vérifier que Machine Learning Services (est activé pour votre inst
 
 Si vous recevez des erreurs, vous pouvez effectuer diverses opérations pour vous assurer que l’instance et Python peuvent communiquer.
 
-Tout d’abord, éliminez les problèmes d’installation. La configuration après installation est requise pour permettre l’utilisation de bibliothèques de code externes. Voir [Install SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md). De même, assurez-vous que le service Launchpad est en cours d’exécution.
+Tout d’abord, éliminez les problèmes d’installation. La configuration après installation est requise pour permettre l’utilisation de bibliothèques de code externes. Consultez [installer SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md). De même, assurez-vous que le service Launchpad est en cours d’exécution.
 
 Vous devez également ajouter le groupe `SQLRUserGroup` d’utilisateurs Windows en tant que connexion sur l’instance, pour vous assurer que Launchpad peut fournir la communication entre Python et SQL Server. (Le même groupe est utilisé pour l’exécution de code R et Python.) Pour plus d’informations, consultez [créer une connexion pour SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 

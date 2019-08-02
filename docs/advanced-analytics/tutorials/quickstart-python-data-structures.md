@@ -7,19 +7,20 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 17b2c150368b32960907d6fdd2e31b109f51d771
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 13fb37bee355ce1d379d8348734293baaeb481d8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469638"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714801"
 ---
 # <a name="quickstart-python-data-structures-in-sql-server"></a>Démarrage rapide : Structures de données python dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Ce guide de démarrage rapide montre comment utiliser des structures de données lors de l’utilisation de Python dans SQL Server Machine Learning Services.
 
-SQL Server s’appuie sur le package  python pandas, qui est parfait pour travailler avec des données tabulaires. Toutefois, vous ne pouvez pas passer un scalaire de Python à SQL Server et vous attendre à ce qu’il «fonctionne» simplement. Dans ce guide de démarrage rapide, nous allons passer en revue certaines définitions de type de données de base afin de vous préparer à d’autres problèmes que vous pouvez rencontrer lors du passage de données tabulaires entre Python et SQL Server.
+SQL Server s’appuie sur le package python pandas, qui est parfait pour travailler avec des données tabulaires. Toutefois, vous ne pouvez pas passer un scalaire de Python à SQL Server et vous attendre à ce qu’il «fonctionne» simplement. Dans ce guide de démarrage rapide, nous allons passer en revue certaines définitions de type de données de base afin de vous préparer à d’autres problèmes que vous pouvez rencontrer lors du passage de données tabulaires entre Python et SQL Server.
 
 + Une trame de données est une table avec _plusieurs_ colonnes.
 + Une seule colonne d’un tableau est un objet de type liste appelé une série.

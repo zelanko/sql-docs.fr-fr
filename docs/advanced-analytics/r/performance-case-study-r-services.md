@@ -6,12 +6,13 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d7f046e961efb6129f807a7626e498062c415b6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: aa56a9367271df2172236b133d85b5771089b1ac
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470157"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715044"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R services: résultats et ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ L’effet de la compression peut être plus significatif pour les jeux de donné
 
 ### <a name="effect-of-windows-power-plan-options"></a>Effet des options du mode de gestion de l’alimentation Windows
 
-Dans cette expérience, `rxLinMod` a été utilisé avec la table *airlineWithIntCol*. Le mode de gestion de l’alimentation Windows  a été défini sur des performances équilibrées ou **élevées**. Pour tous les tests, *numTasks* a été défini sur 1. Le test a été exécuté six fois et a été exécuté deux fois sous les deux options d’alimentation pour analyser la variabilité des résultats.
+Dans cette expérience, `rxLinMod` a été utilisé avec la table *airlineWithIntCol*. Le mode de gestion de l’alimentation Windows a été défini sur des performances équilibrées ou **élevées**. Pour tous les tests, *numTasks* a été défini sur 1. Le test a été exécuté six fois et a été exécuté deux fois sous les deux options d’alimentation pour analyser la variabilité des résultats.
 
 Option de puissance **haute performance** :
 

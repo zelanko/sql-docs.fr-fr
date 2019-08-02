@@ -1,18 +1,19 @@
 ---
 title: Extension du langage de programmation python
-description: En savoir plus sur l’exécution de code Python et les bibliothèques python intégrées dans SQL Server Machine Learning Services 2017.
+description: En savoir plus sur l’exécution de code Python et les bibliothèques python intégrées dans SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f85392f8bfbb7ee89b8387b0f7d27038b9a8303b
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470465"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715873"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extension de langage Python dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Microsoftml et revoscalepy sont étroitement couplés; les sources de données u
 
 Vous importez le module **revoscalepy** dans votre code Python, puis vous appelez des fonctions à partir du module, comme n’importe quelle autre fonction Python.
 
-Les sources de données prises en charge incluent les bases de données ODBC, les SQL Server et le format de fichier XDF pour échanger des données avec d’autres sources, ou avec des solutions R. Les données d’entrée pour Python doivent être tabulaires. Tous les résultats de Python doivent être retournés sous  la forme d’une trame de données pandas.
+Les sources de données prises en charge incluent les bases de données ODBC, les SQL Server et le format de fichier XDF pour échanger des données avec d’autres sources, ou avec des solutions R. Les données d’entrée pour Python doivent être tabulaires. Tous les résultats de Python doivent être retournés sous la forme d’une trame de données pandas.
 
 Les contextes de calcul pris en charge incluent un contexte de calcul local ou distant SQL Server. Un contexte de calcul distant fait référence à l’exécution de code qui démarre sur un ordinateur, tel qu’une station de travail, mais bascule l’exécution du script sur un ordinateur distant. Le basculement du contexte de calcul nécessite que les deux systèmes aient la même bibliothèque revoscalepy.
 

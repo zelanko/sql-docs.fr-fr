@@ -1,20 +1,21 @@
 ---
 title: Comment créer un pool de ressources pour R et Python
-description: Définissez un pool de ressources de SQL Server pour les processus R ou python sur une instance de moteur de base de données SQL Server 2016 ou SQL Server 2017.
+description: Définissez un pool de ressources de SQL Server pour les processus R ou python sur une instance de moteur de base de données SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344072"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715902"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Comment créer un pool de ressources pour Machine Learning dans SQL Server
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>Comment créer un pool de ressources pour SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article explique comment vous pouvez créer et utiliser un pool de ressources spécifique pour la gestion des charges de travail R et Python Machine Learning dans SQL Server. Il part du principe que vous avez déjà installé et activé les fonctionnalités de Machine Learning, et que vous souhaitez reconfigurer l’instance pour prendre en charge une gestion plus fine des ressources utilisées par le processus externe, comme R ou python.
@@ -188,7 +189,7 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
   
      Dans ce cas, comme les pools ont été créés avec une affinité AUTO, aucune information n’est affichée. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la gestion des ressources du serveur, consultez:
 

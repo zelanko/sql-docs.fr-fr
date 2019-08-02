@@ -1,25 +1,26 @@
 ---
 title: Extension du langage de programmation R
-description: En savoir plus sur l’exécution de code R et les bibliothèques R intégrées dans SQL Server 2016 R services ou SQL Server 2017 Machine Learning Services.
+description: En savoir plus sur l’exécution de code R et les bibliothèques R intégrées dans SQL Server R Services ou SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fa39240da51d0b7a9269777f751944104d703d59
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470497"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715244"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Extension de langage R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 L’extension R fait partie du module complémentaire SQL Server Machine Learning Services au moteur de base de données relationnelle. Il ajoute un environnement d’exécution R, une distribution de base R avec des bibliothèques et des outils standard, ainsi que les bibliothèques Microsoft R: [RevoScaleR](../r/ref-r-revoscaler.md) pour l’analyse à l’échelle, [MicrosoftML](../r/ref-r-microsoftml.md) pour les algorithmes de machine learning et d’autres bibliothèques pour accéder aux données ou au code R dans SQL Server.
 
-L’intégration de r est disponible en SQL Server à partir de SQL Server 2016, avec [R services](../r/sql-server-r-services.md), et par progression dans le cadre de [SQL Server machine learning services](../what-is-sql-server-machine-learning.md).
+L’intégration de R est disponible dans [SQL Server R services](../r/sql-server-r-services.md) et [SQL Server machine learning services](../what-is-sql-server-machine-learning.md).
 
 ## <a name="r-components"></a>Composants R
 
@@ -27,7 +28,7 @@ SQL Server comprend à la fois des packages Open source et propriétaires. Les b
 
 SQL Server ne modifie pas les fichiers exécutables R de base, mais vous devez utiliser la version de R installée par le programme d’installation, car cette version est celle sur laquelle les packages propriétaires sont créés et testés. Pour plus d’informations sur la façon dont MRO diffère d’une distribution de base de R que vous pouvez obtenir de CRAN, consultez [interopérabilité avec le langage r et les produits et fonctionnalités Microsoft r](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
-La distribution du package R de base installée par le programme d’installation se trouve dans le dossier associé à l’instance. Par exemple, si vous avez installé R services sur une instance SQL Server 2016 par défaut, les bibliothèques R se trouvent dans ce dossier par `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`défaut:. De même, les outils R associés à l’instance par défaut se trouvent dans ce dossier par défaut: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
+La distribution du package R de base installée par le programme d’installation se trouve dans le dossier associé à l’instance. Par exemple, si vous avez installé R services sur une instance SQL Server par défaut, les bibliothèques R se trouvent dans ce dossier par `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`défaut:. De même, les outils R associés à l’instance par défaut se trouvent dans ce dossier par défaut: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
 
 Les packages R ajoutés par Microsoft pour les charges de travail distribuées et parallèles incluent les bibliothèques suivantes.
 

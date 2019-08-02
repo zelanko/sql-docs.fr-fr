@@ -1,18 +1,19 @@
 ---
 title: Conversions de types de données R en SQL
-description: Passez en revue le type de données implicite et explicite converstions entre R et SQL Server dans les solutions de science des données et de Machine Learning.
+description: Passez en revue les conversions de types de données implicites et explicites entre R et SQL Server dans les solutions de science des données et de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470061"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715094"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mappages de types de données entre R et SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ Pour les solutions R qui s’exécutent sur la fonctionnalité d’intégration 
 
 ## <a name="base-r-version"></a>Version de base R
 
-SQL Server 2016 R services et SQL Server 2017 Machine Learning Services avec R, sont alignés sur des versions spécifiques de Microsoft R Open. Par exemple, la dernière version, SQL Server 2017 Machine Learning Services, s’appuie sur Microsoft R Open 3.3.3.
+SQL Server 2016 R services et SQL Server Machine Learning Services avec R, sont alignés sur des versions spécifiques de Microsoft R Open. Par exemple, la dernière version, SQL Server Machine Learning Services, repose sur Microsoft R Open 3.3.3.
 
 Pour afficher la version R associée à une instance particulière de SQL Server, ouvrez **RGui**. Pour l’instance par défaut, le chemin d’accès est le suivant:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
@@ -47,14 +48,14 @@ Le tableau suivant présente les modifications de types de données et de valeur
 |**date**|`POSIXct`|**datetime**|Représenté au format GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
-|**Int**|`integer`|**int**||
+|**int**|`integer`|**int**||
 |**money**|`numeric`|**float**||
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Représenté au format GMT|
-|**smallint**|`integer`|**Int**||
+|**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
+|**tinyint**|`integer`|**Int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|

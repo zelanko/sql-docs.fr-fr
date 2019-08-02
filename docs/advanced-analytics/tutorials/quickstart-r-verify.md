@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 951ffc07a32434b2f8d333140445f12c2971b811
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 072a6f34a7cb91505d77356d6ec3835915c310d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470617"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715403"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>Démarrage rapide : Vérifier que R existe dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,13 +25,13 @@ L’exécution du script s’effectue via des procédures stockées, à l’aide
 + Procédure stockée [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) intégrée, transmettant le script R dans en tant que paramètre d’entrée.
 + Renvoyez le script R dans une [procédure stockée personnalisée](sqldev-in-database-r-for-sql-developers.md) que vous créez.
 
-Dans ce guide de démarrage rapide, vous allez vérifier que [SQL Server 2017 machine learning services](../what-is-sql-server-machine-learning.md) ou [SQL Server 2016 R services](../r/sql-server-r-services.md) est installé et configuré.
+Dans ce guide de démarrage rapide, vous allez vérifier que [SQL Server machine learning services](../what-is-sql-server-machine-learning.md) ou [SQL Server 2016 R services](../r/sql-server-r-services.md) est installé et configuré.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Cet exercice requiert l’accès à une instance de SQL Server avec l’un des éléments suivants déjà installés:
 
-+ [SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md)avec le langage R installé
++ [SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md)avec le langage R installé
 + [SQL Server 2016 R services](../install/sql-r-services-windows-install.md)
 
 Votre instance de SQL Server peut se trouver dans une machine virtuelle Azure ou en local. N’oubliez pas que la fonctionnalité de script externe est désactivée par défaut. par conséquent, vous devrez peut-être [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que **SQL Server Launchpad service** est en cours d’exécution avant de commencer.
@@ -73,7 +74,7 @@ Vous pouvez vérifier que Machine Learning Services (avec R) est activé pour vo
     nickname       Another Canoe               
     ```
 
-Si vous recevez des erreurs à partir de cette requête, éliminez les problèmes d’installation. La configuration après installation est requise pour permettre l’utilisation de bibliothèques de code externes. Consultez [installer SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md) ou [installer SQL Server les services 2016 R](../install/sql-r-services-windows-install.md). De même, assurez-vous que le service Launchpad est en cours d’exécution.
+Si vous recevez des erreurs à partir de cette requête, éliminez les problèmes d’installation. La configuration après installation est requise pour permettre l’utilisation de bibliothèques de code externes. Consultez [installer SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md) ou [installer SQL Server 2016 R services](../install/sql-r-services-windows-install.md). De même, assurez-vous que le service Launchpad est en cours d’exécution.
 
 Selon votre environnement, vous pouvez être amené à activer les comptes de travail R pour vous connecter à SQL Server, installer des bibliothèques réseau supplémentaires, activer l’exécution de code à distance ou redémarrer l’instance une fois que tout est configuré. Pour plus d’informations, consultez [FAQ sur l’installation et la mise à niveau de R services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 

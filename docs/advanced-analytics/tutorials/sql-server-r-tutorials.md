@@ -7,17 +7,18 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cd03837644ec1cd4d818615bb8a17728c58a1f17
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff1027a3a791ef0151e61982445cafff7be40329
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470584"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715424"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Didacticiels sur le langage R SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article décrit les didacticiels de langage R pour l’analyse en base de données sur [SQL Server 2016 R services](../install/sql-r-services-windows-install.md) ou [SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md).
+Cet article décrit les didacticiels de langage R pour l’analytique en base de données sur [SQL Server 2016 R services](../install/sql-r-services-windows-install.md) ou [SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md).
 
 + Découvrez comment encapsuler et exécuter du code R dans des procédures stockées.
 + Sérialisez et enregistrez les modèles basés sur r pour SQL Server bases de données.

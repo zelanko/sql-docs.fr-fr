@@ -3,24 +3,22 @@ title: Vue d’ensemble de SQL Server Machine Learning Services (R, Python)
 description: Vue d’ensemble de la fonctionnalité de Machine Learning Services dans SQL Server, dans laquelle vous pouvez intégrer Python et R avec des données relationnelles pour la modélisation statistique et de science des données, des modèles Machine Learning, des analyses prédictives, la visualisation des données et bien plus encore.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/24/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4ab4cd7c93cfd1a98a819a849e643d590450cd28
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495400"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714671"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services est une fonctionnalité de SQL Server, utilisée pour l’exécution de scripts R et Python dans la base de données. Cette fonctionnalité comprend des [packages Microsoft R et Python](#components) pour l’analyse prédictive et l’machine learning à hautes performances. Les données relationnelles peuvent être utilisées dans des scripts R et Python via des procédures stockées, un script T-SQL contenant des instructions R et Python, ou du code R et Python contenant T-SQL.
-
-Si vous avez déjà utilisé [SQL Server 2016 R services](r/sql-server-r-services.md), Machine Learning Services dans SQL Server 2017 et versions ultérieures est la nouvelle génération de prise en charge de r, avec les versions mises à jour de base r, RevoScaleR, MicrosoftML et d’autres bibliothèques introduites dans 2016.
 
 Dans Azure SQL Database, [machine learning services (avec R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) est actuellement en préversion publique.
 
@@ -39,7 +37,7 @@ En utilisant le bonne combinaison entre SQL et R pour différentes tâches de tr
 
 ## <a name="components"></a>Composants
 
-SQL Server 2017 prend en charge R et Python. Le tableau suivant décrit les composants de.
+SQL Server prend en charge R et Python. Le tableau suivant décrit les composants de.
 
 | Composant | Description |
 |-----------|-------------|
@@ -128,19 +126,6 @@ Pour tirer parti des fonctionnalités de sécurité et de gestion des ressources
 + Activation de la gouvernance des ressources (nécessite l’édition Enterprise)
 
 Pour plus d’informations, consultez [gouvernance des ressources pour r](r/resource-governance-for-r-services.md) et [r Package Management pour SQL Server](r/install-additional-r-packages-on-sql-server.md).
-
-## <a name="version-history"></a>Historique des versions
-
-SQL Server 2017 Machine Learning Services est la nouvelle génération de SQL Server 2016 R services, améliorée pour inclure Python. Le tableau suivant est une liste complète de toutes les versions de produit, de la création à la version actuelle. 
-
-| Nom de produit | Version du moteur | Date de publication |
-|--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (en base de données) | R Server 9.2.1 <br/> Python Server 9,2 | Octobre 2017 |
-| SQL Server 2017 Machine Learning Server (autonome) | R Server 9.2.1 <br/> Python Server 9,2 | Octobre 2017 |
-| SQL Server 2016 R services (en base de données) | R Server 9,1  | Juillet 2017  |
-| SQL Server 2016 R Server (autonome)  |  R Server 9,1 | Juillet 2017 |
-
-Pour les versions de package par version, consultez mappage de version dans les [composants Upgrade R et Python](install/upgrade-r-and-python.md#version-map).
 
 ## <a name="portability-and-related-products"></a>Portabilité et produits associés
 

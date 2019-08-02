@@ -3,16 +3,17 @@ title: Architecture d’extensibilité pour le langage R et le script Python
 description: Prise en charge du code externe pour le moteur de base de données SQL Server, avec une architecture double pour l’exécution de scripts R et Python sur des données relationnelles.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470458"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715255"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server a un Framework d’extensibilité pour l’exécution de scripts exte
 
 ## <a name="background"></a>Présentation
 
-L’infrastructure d’extensibilité a été introduite dans SQL Server 2016 pour prendre en charge le runtime R. SQL Server 2017 ajoute la prise en charge de Python
+L’infrastructure d’extensibilité a été introduite dans SQL Server 2016 pour prendre en charge le runtime R. SQL Server 2017 et versions ultérieures prennent en charge Python.
 
 L’objectif de l’infrastructure d’extensibilité est de fournir une interface entre les SQL Server et les langages de science des données tels que R et Python, ce qui réduit la friction lors du déplacement des solutions de science des données en production et la protection des données exposées pendant le développement traiter. En exécutant un langage de script approuvé au sein d’une infrastructure sécurisée gérée par SQL Server, les administrateurs de base de données peuvent maintenir la sécurité tout en autorisant l’accès des scientifiques des données aux données d’entreprise.
 
@@ -55,8 +56,8 @@ Le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est un ser
 
 | Lanceurs approuvés | Extension | Versions de SQL Server |
 |-------------------|-----------|---------------------|
-| RLauncher. dll pour le langage R | [Extension R](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher. dll pour Python 3,5 | [Extension Python](extension-python.md) | SQL Server 2017 |
+| RLauncher. dll pour le langage R | [Extension R](extension-r.md) | SQL Server 2016 et versions ultérieures |
+| Pythonlauncher. dll pour Python 3,5 | [Extension Python](extension-python.md) | SQL Server 2017 et versions ultérieures |
 
 Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous son propre compte d’utilisateur. Si vous modifiez le compte qui exécute Launchpad, veillez à utiliser Gestionnaire de configuration SQL Server pour vous assurer que les modifications sont écrites dans les fichiers associés.
 
@@ -70,7 +71,7 @@ Pour exécuter des tâches dans une langue spécifique prise en charge, le Launc
 
 En effet, BxlServer est un complément à un environnement d’exécution de langage qui fonctionne avec SQL Server pour transférer des données et gérer des tâches. BXL correspond au langage d’échange binaire et fait référence au format de données utilisé pour déplacer efficacement les données entre les SQL Server et les processus externes. BxlServer est également une partie importante des produits associés tels que Microsoft R Client et Microsoft R Server.
 
-**SQL satellite** est une API d’extensibilité, incluse dans le moteur de base de données à partir de SQL Server 2016, qui prend en charge le code externe C++ou les runtimes externes implémentés à l’aide de C ou.
+**SQL satellite** est une API d’extensibilité, incluse dans le moteur de base de données, qui prend en charge le code externe ou C++les runtimes externes implémentés à l’aide de C ou.
 
 BxlServer utilise SQL Satellite pour les tâches suivantes :
 

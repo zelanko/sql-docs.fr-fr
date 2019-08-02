@@ -7,17 +7,18 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469958"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715603"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-L’intégration de r est disponible dans SQL Server 2016 ou ultérieur lorsque vous incluez l’option de langage R dans une installation [SQL Server 2016 R services](../install/sql-r-services-windows-install.md) ou [SQL Server 2017 machine learning services (en base de données)](../install/sql-machine-learning-services-windows-install.md) . 
+L’intégration de r est disponible dans SQL Server 2016 ou ultérieur lorsque vous incluez l’option de langage R dans une installation [SQL Server 2016 R services](../install/sql-r-services-windows-install.md) ou [SQL Server machine learning services (en base de données)](../install/sql-machine-learning-services-windows-install.md) . 
 
 Pour développer et déployer des solutions R pour SQL Server, installez [Microsoft R client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) sur votre station de travail de développement pour obtenir [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et d’autres bibliothèques r. La bibliothèque RevoScaleR, qui est également requise sur l’instance de SQL Server distante, coordonne les demandes de calcul entre les deux systèmes. 
 

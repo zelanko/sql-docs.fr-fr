@@ -1,18 +1,19 @@
 ---
 title: Utiliser des gestionnaires de package R
-description: Utilisez les commandes R standard, telles que install. Packages, pour ajouter de nouveaux packages R à SQL Server 2016 R services ou SQL Server 2017 Machine Learning Services (dans la base de données).
+description: Utilisez les commandes R standard, telles que install. Packages, pour ajouter de nouveaux packages R à SQL Server 2016 R services ou SQL Server Machine Learning Services (dans la base de données).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469878"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715025"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Utiliser les gestionnaires de packages R pour installer des packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ Cette procédure utilise l’RGui, mais vous pouvez utiliser RTerm ou tout autre
 
 Si le package cible dépend de packages supplémentaires, le programme d’installation de R télécharge automatiquement les dépendances et les installe pour vous.
 
-Si vous avez plusieurs instances de SQL Server, telles que des instances côte à côte de SQL Server 2016 R services et SQL Server 2017 Machine Learning Services, exécutez l’installation séparément pour chaque instance si vous souhaitez utiliser le package dans les deux contextes. Les packages ne peuvent pas être partagés entre les instances.
+Si vous avez plusieurs instances de SQL Server, telles que des instances côte à côte de SQL Server 2016 R services et SQL Server Machine Learning Services, exécutez l’installation séparément pour chaque instance si vous souhaitez utiliser le package dans les deux contextes. Les packages ne peuvent pas être partagés entre les instances.
 
 ## <a name = "bkmk_offlineInstall"></a>Installation hors connexion à l’aide des outils R
 

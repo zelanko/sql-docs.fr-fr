@@ -7,14 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470147"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715703"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Créer un pProcedure stocké à l’aide de sqlrutils
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>Créer une procédure stockée à l’aide de sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Cet article décrit les étapes de conversion de votre code R pour qu’il s’exécute en tant que procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
@@ -116,7 +117,7 @@ Les deux méthodes requièrent que la procédure stockée soit enregistrée dans
 
 Vous pouvez inscrire la procédure stockée à l’aide de R, ou vous pouvez exécuter l’instruction CREATe PROCEDURE dans T-SQL.
 
-- À l’aide de T-SQL.  Si vous êtes plus familiarisé avec T-SQL, ouvrez SQL Server Management Studio (ou tout autre client qui peut exécuter des commandes DDL SQL) et exécutez l’instruction CREATE PROCEDURE à l’aide du `StoredProcedure` code préparé par la fonction.
+- À l’aide de T-SQL.  Si vous vous sentez plus à l’aise avec T-SQL, ouvrez SQL Server Management Studio (ou tout autre client qui peut exécuter des commandes DDL SQL) et exécutez l’instruction CREATE PROCEDURE à `StoredProcedure` l’aide du code préparé par la fonction.
 - À l’aide de R. Si vous êtes toujours dans votre environnement R, vous pouvez utiliser la `registerStoredProcedure` fonction dans **sqlrutils** pour enregistrer la procédure stockée avec la base de données.
 
   Par exemple, vous pouvez inscrire la procédure stockée **sp_rsample** dans l’instance et la base de données définies dans *sqlConnStr*, en effectuant cet appel R:

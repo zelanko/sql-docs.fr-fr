@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f14005b8ba9d6f05d2b69deba29d83af5695f657
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3e8293fecf351176ac2b1e88176395f6c2b34d20
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470510"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715317"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des tracés à l’aide de SQL et R (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ Cette étape suppose une session R en cours basée sur les étapes précédentes
     > [!NOTE]
     > Votre graphique est-il différent?
     >  
-    > Cela est dû  au fait que l’indatasource utilise uniquement les 1000 premières lignes. L’ordonnancement des lignes à l’aide de TOP est non déterministe en l’absence d’une clause ORDER BY. il est donc prévu que les données et le graphe résultant peuvent varier.
+    > Cela est dû au fait que l’indatasource utilise uniquement les 1000 premières lignes. L’ordonnancement des lignes à l’aide de TOP est non déterministe en l’absence d’une clause ORDER BY. il est donc prévu que les données et le graphe résultant peuvent varier.
     > Cette image a été générée à l’aide de 10 000 lignes de données environ. Nous vous recommandons de faire des essais avec différents nombres de lignes pour obtenir différents graphiques, et de noter le temps nécessaire pour retourner les résultats dans votre environnement.
 
 ## <a name="create-a-map-plot"></a>Créer un tracé de carte

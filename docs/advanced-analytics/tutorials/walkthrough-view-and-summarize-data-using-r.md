@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e209b707c3d04cef7709945dc2a32b171f90771e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 47850bebcc20fdd357b2336a9597da067cd479ca
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468835"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715364"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Afficher et résumer les données d’SQL Server à l’aide de R (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +119,7 @@ Précédemment, vous avez défini une chaîne de connexion et enregistré ces in
   
     + L’argument *rowsPerRead* est important pour la gestion de l’utilisation de la mémoire et des calculs efficaces.  La plupart des fonctions analytiques améliorées dans[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] traitent les données en segments et accumulent les résultats intermédiaires. Elles retournent les calculs finaux une fois que toutes les données ont été lues.  En ajoutant le paramètre *rowsPerRead* , vous pouvez contrôler le nombre de lignes de données lues dans chaque segment en vue de leur traitement.  Si la valeur de ce paramètre est trop grande, l’accès aux données peut être lent, car vous n’avez pas suffisamment de mémoire pour traiter efficacement un grand nombre de données.  Sur certains systèmes, la définition de *rowsPerRead* sur une valeur trop faible peut également offrir des performances plus lentes.
 
-3. À ce stade, vous avez créé l'  objet indatasource, mais il ne contient aucune donnée. Les données ne sont pas extraites de la requête SQL dans l’environnement local tant que vous n’exécutez pas une fonction telle que [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) ou [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
+3. À ce stade, vous avez créé l' objet indatasource, mais il ne contient aucune donnée. Les données ne sont pas extraites de la requête SQL dans l’environnement local tant que vous n’exécutez pas une fonction telle que [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) ou [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
 
     Toutefois, maintenant que vous avez défini les objets de données, vous pouvez l’utiliser comme argument pour d’autres fonctions.
 

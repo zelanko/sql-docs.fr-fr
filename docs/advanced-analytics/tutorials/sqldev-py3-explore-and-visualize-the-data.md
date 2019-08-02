@@ -7,12 +7,13 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0442fd942f0dd509f24b98b5ca1c6d6c31a197f0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 6ee82de1431a6bc21596505dc4b008b817b35830
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470558"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714705"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorez et Visualisez les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ La procédure stockée retourne un objet python `figure` sérialisé sous la for
 
     - La variable `@query` définit le texte `SELECT tipped FROM nyctaxi_sample`de la requête, qui est passé au bloc de code Python en tant qu’argument de la variable `@input_data_1`d’entrée de script,.
     - Le script Python est assez simple: les objets **matplotlib** `figure` sont utilisés pour créer l’histogramme et le nuage de points, et ces objets sont ensuite sérialisés à l’aide de la `pickle` bibliothèque.
-    - L’objet Graphics Python est sérialisé en un  tableau pandas pour la sortie.
+    - L’objet Graphics Python est sérialisé en un tableau pandas pour la sortie.
   
     ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;

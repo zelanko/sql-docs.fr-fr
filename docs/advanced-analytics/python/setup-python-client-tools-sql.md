@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b5f406ec4b6cfbd65db7a4ecd3a1ad14dff6d8e1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470241"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715183"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurer un client de science des données pour le développement Python sur SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +50,9 @@ Un script d’installation ajoute trois bibliothèques spécifiques à Microsoft
 
 1. Téléchargez un script d’installation.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py)installe la version 9.2.1 des packages Microsoft Python. Cette version correspond à une instance par défaut SQL Server 2017. 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py)installe la version 9.2.1 des packages Microsoft Python. Cette version correspond à une instance de SQL Server par défaut. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)installe la version 9,3 des packages Microsoft Python. Cette version est un meilleur choix si votre instance distante SQL Server 2017 est [liée à Machine Learning Server 9,3](../install/upgrade-r-and-python.md).
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)installe la version 9,3 des packages Microsoft Python. Cette version est un meilleur choix si votre instance de SQL Server à distance est [liée à Machine Learning Server 9,3](../install/upgrade-r-and-python.md).
 
 2. Ouvrez une fenêtre PowerShell avec des autorisations d’administrateur élevées (cliquez avec le bouton droit sur **exécuter en tant qu’administrateur**).
 

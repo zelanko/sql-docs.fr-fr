@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344755"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714949"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Notation native à l’aide de la fonction T-SQL PREDICT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ La fonction retourne des prédictions pour les données d’entrée, ainsi que t
 
 ## <a name="prerequisites"></a>Prérequis
 
-PREDICT est disponible dans toutes les éditions du moteur de base de données SQL Server 2017 et activé par défaut, y compris SQL Server 2017 Machine Learning Services sur Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou Azure SQL Database. Vous n’avez pas besoin d’installer R, Python ou d’activer des fonctionnalités supplémentaires.
+PREDICT est disponible dans toutes les éditions du moteur de base de données SQL Server 2017 et activé par défaut, y compris SQL Server Machine Learning Services sur Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou Azure SQL Database. Vous n’avez pas besoin d’installer R, Python ou d’activer des fonctionnalités supplémentaires.
 
 + Le modèle doit être formé à l’avance à l’aide de l’un des algorithmes **RX** pris en charge listés ci-dessous.
 
@@ -115,7 +116,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-Le code suivant crée un modèle basé sur le jeu de données **Iris** et l’enregistre dans la table nommée Models.
+Le code suivant crée un modèle basé sur le jeu de données **Iris** et l’enregistre dans latable nommée Models.
 
 ```sql
 DECLARE @model varbinary(max);

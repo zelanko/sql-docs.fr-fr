@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: effcfe458fc004fd8fb44bb58095e91a2fb56b8d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a7ab7a4ccd4956bd1752be398b25a6ff9fd92ce5
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470068"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715081"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Surveiller Machine Learning Services à l’aide de rapports personnalisés dans Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ Pour faciliter la gestion de l’instance utilisée pour Machine Learning, l’�
 - Événements étendus pour R services
 - Packages R ou python installés sur l’instance actuelle
 
-Cet article explique comment installer et utiliser les rapports personnalisés fournis spécifiquement pour l’ordinateur leaerning. 
+Cet article explique comment installer et utiliser les rapports personnalisés fournis spécifiquement pour Machine Learning. 
 
 Pour obtenir une présentation générale des rapports dans Management Studio, consultez [rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 

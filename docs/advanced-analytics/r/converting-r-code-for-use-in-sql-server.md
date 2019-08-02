@@ -7,12 +7,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a2bd6db3aaae2c07f6f46aecce3e7df913fc2a9e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 536be600d319335173dbf112ec2d8f67cc7bf14b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470246"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715746"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Convertir le code R pour l’exécuter dans les instances SQL Server (dans la base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ La modification de votre code varie selon que vous envisagez de soumettre le cod
 
 + Définissez vos données d’entrée principales en tant que requête SQL, dans la mesure du possible, afin d’éviter le déplacement des données.
 
-+ Lors de l’exécution de R dans une procédure stockée, vous  pouvez passer par plusieurs entrées scalaires. Pour tous les paramètres que vous souhaitez utiliser dans la sortie, ajoutez le mot clé **Output** . 
++ Lors de l’exécution de R dans une procédure stockée, vous pouvez passer par plusieurs entrées scalaires. Pour tous les paramètres que vous souhaitez utiliser dans la sortie, ajoutez le mot clé **Output** . 
 
     Par exemple, l’entrée `@model_name` scalaire suivante contient le nom du modèle, qui est également généré dans sa propre colonne dans les résultats:
 
@@ -115,7 +116,7 @@ La modification de votre code varie selon que vous envisagez de soumettre le cod
 
     Par exemple, cette solution R montre comment les fonctions T-SQL définies par l’utilisateur et R peuvent effectuer la même tâche d’ingénierie des fonctionnalités: [Procédure pas à pas de bout en bout de la science des données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
 
-+ Si possible, remplacez les fonctions R conventionnelles  par des fonctions scaler qui prennent en charge l’exécution distribuée. Pour plus d’informations, consultez [comparaison des fonctions r de base et](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)r.
++ Si possible, remplacez les fonctions R conventionnelles par des fonctions scaler qui prennent en charge l’exécution distribuée. Pour plus d’informations, consultez [comparaison des fonctions r de base et](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)r.
 
 + Consultez un développeur de base de données pour déterminer les moyens d’améliorer les performances en utilisant des fonctionnalités de SQL Server telles que les [tables optimisées en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)ou, si vous disposez de l’édition Enterprise, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
 

@@ -1,18 +1,19 @@
 ---
 title: package Python revoscalepy
-description: Introduction au module revoscalepy dans SQL Server 2017 Machine Learning Services avec Python.
+description: Introduction au module revoscalepy dans SQL Server Machine Learning Services avec Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 76c68d0753c4ba29387b3378c1086ce9bce4f53b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470331"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715773"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (module python dans SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ La bibliothèque **revoscalepy** est distribuée dans plusieurs produits Microso
 
 Le module **revoscalepy** est basé sur Python 3,5 et n’est disponible que lorsque vous installez l’un des produits ou téléchargements Microsoft suivants:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou version ultérieure](https://docs.microsoft.com/machine-learning-server/)
 + [Bibliothèques clientes Python pour un client de science des données](setup-python-client-tools-sql.md)
 
@@ -89,7 +90,7 @@ Vous devez également examiner les fonctions dans [microsoftml](https://docs.mic
 
 | Fonction| Description|
 | ------- | ---------- |
-| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Générer des prédictions à partir d’un modèle formé|) | Génère des prédictions à partir d’un modèle formé et peut être utilisé pour le calcul de score en temps réel. |
+| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Générer des prédictions à partir d’un modèle formé|) | Génère des prédictions à partir d’un modèle formé et peut être utilisé pour une notation en temps réel. |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Calculez les valeurs prédites et les résidus à l’aide d’objets rx_lin_mod et rx_logit. |
 |[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calcule les valeurs prédites ou ajustées d’un jeu de données à partir d’un objet rx_dforest ou rx_btrees. |
 |[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calcule les valeurs prédites ou ajustées d’un jeu de données à partir d’un objet rx_dtree. |
@@ -102,7 +103,7 @@ Lors d’une exécution locale, vous exécutez généralement un script Python �
 
 Lorsque vous êtes prêt à encapsuler le script Python à l’intérieur d’une procédure stockée, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), nous vous recommandons de réécrire le code sous la forme d’une fonction unique ayant des entrées et des sorties clairement définies. 
 
-Les entrées et les sorties  doivent être des trames de données pandas. Une fois cette opération effectuée, vous pouvez appeler la procédure stockée à partir de n’importe quel client qui prend en charge T-SQL, transmettre facilement des requêtes SQL en tant qu’entrées et enregistrer les résultats dans des tables SQL. Pour obtenir un exemple, consultez [l’analyse Python en base de données pour les développeurs SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Les entrées et les sorties doivent être des trames de données pandas. Une fois cette opération effectuée, vous pouvez appeler la procédure stockée à partir de n’importe quel client qui prend en charge T-SQL, transmettre facilement des requêtes SQL en tant qu’entrées et enregistrer les résultats dans des tables SQL. Pour obtenir un exemple, consultez [l’analyse Python en base de données pour les développeurs SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Utilisation de revoscalepy avec microsoftml
 

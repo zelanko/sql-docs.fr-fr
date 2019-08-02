@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e23c025c018811e5ef84304d0cae6bf16491f91e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469510"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715483"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Démarrage rapide : Créer, former et utiliser un modèle Python avec des procédures stockées dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ Un modèle courant dans le développement de SQL Server consiste à organiser le
 
 3. Vérifiez que la procédure stockée existe. 
 
-   Si le script T-SQL de l’étape précédente s’est exécuté sans erreur, une nouvelle procédure stockée appelée **generate_iris_model** est créée et ajoutée à la base de données **irissql** . Vous pouvez trouver des procédures stockées dans l' **Explorateur d’objets**de Management Studio, sous Programmabilité.
+   Si le script T-SQL de l’étape précédente s’est exécuté sans erreur, une nouvelle procédure stockée appelée **generate_iris_model** est créée et ajoutée à la base de données **irissql** . Vous pouvez trouver des procédures stockées dans l' **Explorateur d’objets**deManagement Studio, sous Programmabilité.
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>Exécuter la procédure pour créer et former des modèles
 

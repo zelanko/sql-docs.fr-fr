@@ -8,12 +8,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff4d0839cfdf24b1b43fe9d5a371092713bc63cf
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470285"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715795"
 ---
 #  <a name="get-r-and-python-package-information"></a>Recevoir des informations sur les packages R et Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Si vous le souhaitez, vous pouvez utiliser [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) dans les versions plus récentes de RevoScaleR dans SQL Server 2017 machine learning services ou [r services mis à niveau r vers au moins RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Cette procédure stockée retourne le chemin d’accès de la bibliothèque d’instances et la version de RevoScaleR utilisée par SQL Server:
+Si vous le souhaitez, vous pouvez utiliser [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) dans les versions plus récentes de RevoScaleR dans SQL Server machine learning services ou [r services mis à niveau r vers au moins RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Cette procédure stockée retourne le chemin d’accès de la bibliothèque d’instances et la version de RevoScaleR utilisée par SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>Obtient l’emplacement de la bibliothèque python
 
-Pour **python** dans SQL Server 2017, exécutez l’instruction suivante pour vérifier la bibliothèque par défaut de l’instance actuelle. Cet exemple retourne la liste des dossiers inclus dans la variable `sys.path` Python. La liste comprend le répertoire actif et le chemin d’accès de la bibliothèque standard.
+Pour **python**, exécutez l’instruction suivante pour vérifier la bibliothèque par défaut de l’instance actuelle. Cet exemple retourne la liste des dossiers inclus dans la variable `sys.path` Python. La liste comprend le répertoire actif et le chemin d’accès de la bibliothèque standard.
 
 ```sql
 EXECUTE sp_execute_external_script
