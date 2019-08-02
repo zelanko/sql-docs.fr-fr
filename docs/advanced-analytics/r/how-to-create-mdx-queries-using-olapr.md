@@ -1,36 +1,37 @@
 ---
-title: Comment créer des requêtes MDX dans R à l’aide d’olapR - SQL Server Machine Learning Services
-description: Utiliser la bibliothèque de packages olapR dans SQL Server pour écrire des requêtes MDX dans le script de langage R.
+title: Comment créer des requêtes MDX dans R à l’aide d’olapr
+description: Utilisez la bibliothèque de packages OLAP dans SQL Server pour écrire des requêtes MDX dans le script R Language.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 66604e44d714837ec9b974af5d0a29b56396cb45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: db9afc06a02825b8db449492d8cec6ee6d67801d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962649"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715124"
 ---
-# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Comment créer des requêtes MDX dans R à l’aide d’olapR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Comment créer des requêtes MDX dans R à l’aide d’olapr
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Le [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) package prend en charge les requêtes MDX sur des cubes hébergés dans SQL Server Analysis Services. Vous pouvez générer une requête sur un cube existant, Explorer les dimensions et autres objets de cube et coller dans des requêtes MDX existantes pour récupérer des données.
+Le package [olapr](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) prend en charge les requêtes MDX sur les cubes hébergés dans SQL Server Analysis Services. Vous pouvez créer une requête sur un cube existant, explorer des dimensions et d’autres objets de cube, et coller des requêtes MDX existantes pour récupérer des données.
 
-Cet article décrit les deux utilisations principales de la **olapR** package :
+Cet article décrit les deux utilisations principales du package **olapr** :
 
-+ [Créer une requête MDX à partir de R, à l’aide des constructeurs fournis dans le package olapR](#buildMDX)
-+ [Exécutez une requête MDX existante, valide à l’aide d’olapR et un fournisseur OLAP](#executeMDX)
++ [Créer une requête MDX à partir de R, à l’aide des constructeurs fournis dans le package olapr](#buildMDX)
++ [Exécuter une requête MDX existante et valide à l’aide d’olapr et d’un fournisseur OLAP](#executeMDX)
 
-Les opérations suivantes ne sont pas prises en charge :
+Les opérations suivantes ne sont pas prises en charge:
 
-+ Requêtes DAX portant sur un modèle tabulaire
++ Requêtes DAX sur un modèle tabulaire
 + Création de nouveaux objets OLAP
-+ Écriture différée des partitions, notamment des mesures ou des sommes
++ Écriture différée sur des partitions, y compris des mesures ou des sommes
 
-## <a name="buildMDX"></a> Créer une requête MDX à partir de R
+## <a name="buildMDX"></a>Créer une requête MDX à partir de R
 
 1. Définissez une chaîne de connexion qui spécifie la source de données OLAP (instance SSAS) et le fournisseur MSOLAP.
 
@@ -40,23 +41,23 @@ Les opérations suivantes ne sont pas prises en charge :
 
 4. Utilisez les fonctions d’assistance suivantes pour fournir plus de détails sur les dimensions et les mesures à inclure dans la requête MDX :
 
-     + `cube()` Spécifiez le nom de la base de données SSAS. Si vous vous connectez à une instance nommée, indiquez le nom de l’ordinateur et le nom de l’instance. 
-     + `columns()` Fournissez les noms des mesures à utiliser dans le **ON COLUMNS** argument.
-     + `rows()` Fournissez les noms des mesures à utiliser dans le **ON ROWS** argument.
+     + `cube()` Spécifiez le nom de la base de données SSAS. En cas de connexion à une instance nommée, indiquez le nom de l’ordinateur et le nom de l’instance. 
+     + `columns()`Fournissez les noms des mesures à utiliser dans l’argument **on Columns** .
+     + `rows()`Fournissez les noms des mesures à utiliser dans l’argument **on Rows** .
      + `slicers()` Spécifiez un ou plusieurs membres à utiliser comme segment. Un segment est comme un filtre appliqué à toutes les données de requête MDX.
      
      + `axis()` Spécifiez le nom d’un axe supplémentaire à utiliser dans la requête. 
      
-         Un cube OLAP peut contenir jusqu’à 128 axes de requête. En règle générale, les quatre premiers axes sont appelés **colonnes**, **lignes**, **Pages**, et **chapitres**. 
+         Un cube OLAP peut contenir jusqu’à 128 axes de requête. En règle générale, les quatre premiers axes sont désignés sous le terme de **colonnes**, de **lignes**, de **pages**et de **chapitres**. 
          
          Si votre requête est relativement simple, vous pouvez utiliser les fonctions `columns`, `rows`, et ainsi de suite pour créer votre requête. Toutefois, vous pouvez aussi utiliser la fonction `axis()` avec une valeur d’index non nulle pour créer une requête MDX avec de nombreux qualificateurs, ou pour ajouter des dimensions supplémentaires comme qualificateurs.
 
-5. Passez le handle et la requête MDX terminée, dans une des fonctions suivantes, selon la forme des résultats : 
+5. Transmettez le descripteur, et la requête MDX terminée, dans l’une des fonctions suivantes, en fonction de la forme des résultats: 
 
   + `executeMD` Retourne un tableau multidimensionnel
   + `execute2D` Retourne une trame de données à deux dimensions (tabulaire)
 
-## <a name="executeMDX"></a> Exécuter une requête MDX valide à partir de R
+## <a name="executeMDX"></a>Exécuter une requête MDX valide à partir de R
 
 1. Définissez une chaîne de connexion qui spécifie la source de données OLAP (instance SSAS) et le fournisseur MSOLAP.
 
@@ -71,11 +72,11 @@ Les opérations suivantes ne sont pas prises en charge :
 
 ## <a name="examples"></a>Exemples
 
-Les exemples suivants reposent sur le données mini-Data Warehouse et du cube projet d’AdventureWorks, étant donné que ce projet est largement disponible dans plusieurs versions, y compris les fichiers de sauvegarde qui peuvent facilement être restaurées à Analysis Services. Si vous n’avez pas un cube existant, obtenir un exemple de cube à l’aide d’une des options suivantes :
+Les exemples suivants sont basés sur le mini-Data Warehouse et le projet de cube AdventureWorks, car ce projet est largement disponible, dans plusieurs versions, y compris les fichiers de sauvegarde qui peuvent être facilement restaurés sur Analysis Services. Si vous ne disposez pas d’un cube existant, récupérez un exemple de cube à l’aide de l’une des options suivantes:
 
-+ Créer le cube qui est utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu'à la leçon 4 : [Création d’un cube OLAP](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
++ Créez le cube utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu’à la leçon 4: [Création d’un cube OLAP](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ Télécharger un cube existant en tant que sauvegarde et restaurez-la sur une instance d’Analysis Services. Par exemple, ce site propose un cube entièrement traité dans un format compressé : [Adventure Works modèle multidimensionnel SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier et sa restauration sur votre instance SSAS. Pour plus d’informations, consultez [sauvegarde et restauration](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), ou [applet de commande Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
++ Téléchargez un cube existant en tant que sauvegarde, puis restaurez-le dans une instance de Analysis Services. Par exemple, ce site fournit un cube entièrement traité au format zippé: [Modèle multidimensionnel Adventure Works SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier, puis restaurez-le dans votre instance SSAS. Pour plus d’informations, consultez [Backup and Restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), ou l’applet de commande Restore [-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. MDX de base avec segment
 
@@ -90,8 +91,8 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + Sur les colonnes, vous pouvez spécifier plusieurs mesures comme éléments d’une chaîne séparés par des virgules.
 + L’axe des lignes utilise toutes les valeurs possibles (tous les MEMBRES) de la dimension « Product Line ». 
-+ Cette requête retourne une table avec trois colonnes, contenant un _cumul_ récapitulatif des ventes sur Internet à partir de tous les pays.
-+ La clause WHERE spécifie la _axe de secteur_. Dans cet exemple, le segment utilise un membre de la **SalesTerritory** dimension sur laquelle filtrer la requête et que seules les ventes en Australie soient utilisées dans les calculs.
++ Cette requête retourne une table avec trois colonnes, contenant un résumé _cumulatif_ des ventes sur Internet de tous les pays.
++ La clause WHERE spécifie l' _axe de secteur_. Dans cet exemple, le segment utilise un membre de la dimension **SalesTerritory** pour filtrer la requête afin que seules les ventes en Australie soient utilisées dans les calculs.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>Pour générer cette requête à l’aide des fonctions fournies dans olapR
 
@@ -109,7 +110,7 @@ result1 <- executeMD(ocs, qry)
 
 ```
 
-Pour une instance nommée, veillez à échapper des caractères qui pourraient être considérées comme des caractères de contrôle dans R.  Par exemple, la chaîne de connexion suivante fait référence à une instance OLAP01, sur un serveur nommé ContosoHQ :
+Pour une instance nommée, veillez à échapper tous les caractères qui pourraient être considérés comme des caractères de contrôle dans R.  Par exemple, la chaîne de connexion suivante fait référence à une instance OLAP01, sur un serveur nommé ContosoHQ:
 
 ```R
 cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
@@ -126,7 +127,7 @@ mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sal
 result2 <- execute2D(ocs, mdx)
 ```
 
-Si vous définissez une requête à l’aide du Générateur MDX dans SQL Server Management Studio et enregistrez la chaîne MDX, elle numérote les axes à partir de 0, comme illustré ici : 
+Si vous définissez une requête à l’aide du générateur MDX dans SQL Server Management Studio puis enregistrez la chaîne MDX, les axes sont numérotés à partir de 0, comme illustré ici: 
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amount]} ON AXIS(0), 
@@ -135,7 +136,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
    WHERE [Sales Territory].[Sales Territory Countr,y].[Australia]
 ```
 
-Vous pouvez toujours exécuter cette requête comme chaîne MDX prédéfinie. Toutefois, pour créer la même requête à l’aide de R à l’aide du `axis()` (fonction), vous devez Renuméroter les axes en commençant à 1.
+Vous pouvez toujours exécuter cette requête comme chaîne MDX prédéfinie. Toutefois, pour générer la même requête à l’aide de `axis()` R à l’aide de la fonction, vous devez renuméroter les axes à partir de 1.
 
 ### <a name="2-explore-cubes-and-their-fields-on-an-ssas-instance"></a>2. Explorer les cubes et leurs champs sur une instance SSAS
 
@@ -146,7 +147,7 @@ Vous pouvez utiliser la fonction `explore` pour retourner une liste de cubes, de
 Pour afficher tous les cubes ou perspectives sur l’instance que vous êtes autorisé à afficher, fournissez le handle comme argument de `explore`.
 
 > [!IMPORTANT]
-> Le résultat final est **pas** un cube ; TRUE indique simplement que l’opération de métadonnées a réussi. Une erreur est levée si les arguments ne sont pas valides.
+> Le résultat final n’est **pas** un cube; TRUE indique simplement que l’opération de métadonnées a réussi. Une erreur est levée si les arguments ne sont pas valides.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
@@ -181,7 +182,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>Pour retourner tous les membres de la dimension et de la hiérarchie spécifiées
 
-Après avoir défini la source et créé le handle, spécifiez le cube, la dimension et la hiérarchie à retourner. Dans les résultats de retournés, les éléments qui sont précédés de **->** représentent les enfants du membre précédent.
+Après avoir défini la source et créé le handle, spécifiez le cube, la dimension et la hiérarchie à retourner. Dans les résultats retournés, les éléments qui sont **->** préfixés avec représentent les enfants du membre précédent.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
@@ -201,4 +202,4 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 ## <a name="see-also"></a>Voir aussi
 
-[À l’aide des données à partir de cubes OLAP dans R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)
+[Utilisation de données de cubes OLAP dans R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

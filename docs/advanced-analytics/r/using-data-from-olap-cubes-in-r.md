@@ -6,17 +6,18 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ec50ee1b10a51e16b72d7ffc110448dcf016a13f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469862"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714974"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Utilisation de données de cubes OLAP dans R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Le  package olapr est un package R, fourni par Microsoft pour une utilisation avec Machine Learning Server et SQL Server, qui vous permet d’exécuter des requêtes MDX pour obtenir des données à partir de cubes OLAP. Avec ce package, vous n’avez pas besoin de créer des serveurs liés ou de nettoyer des ensembles de lignes aplatis. vous pouvez accéder aux données OLAP directement à partir de R.
+Le package olapr est un package R, fourni par Microsoft pour une utilisation avec Machine Learning Server et SQL Server, qui vous permet d’exécuter des requêtes MDX pour obtenir des données à partir de cubes OLAP. Avec ce package, vous n’avez pas besoin de créer des serveurs liés ou de nettoyer des ensembles de lignes aplatis. vous pouvez accéder aux données OLAP directement à partir de R.
 
 Cet article décrit l’API, ainsi qu’une vue d’ensemble d’OLAP et MDX pour les utilisateurs de R qui peuvent être nouveaux dans les bases de données de cube multidimensionnels.
 
@@ -27,9 +28,9 @@ Cet article décrit l’API, ainsi qu’une vue d’ensemble d’OLAP et MDX pou
 
 OLAP est une abréviation réduite pour le traitement analytique en ligne. Les solutions OLAP sont largement utilisées pour la capture et le stockage des données d’entreprise critiques au fil du temps. Les données OLAP sont utilisées pour l’analytique d’entreprise par différents outils, tableaux de bord et visualisations. Pour plus d’informations, consultez [traitement analytique en ligne](https://en.wikipedia.org/wiki/Online_analytical_processing).
 
-Microsoft fournit [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), qui vous permet de concevoir, de déployer et d’interroger des données OLAP  sous forme de cubes ou de _modèles tabulaires_. Un cube est une base de données multidimensionnelle. Les _dimensions_ sont semblables aux facettes des données, ou facteurs dans R: vous utilisez des dimensions pour identifier un sous-ensemble particulier de données que vous souhaitez synthétiser ou analyser. Par exemple, le temps est une dimension importante, si bien que de nombreuses solutions OLAP incluent plusieurs calendriers définis par défaut, à utiliser lors du découpage et de la synthèse des données. 
+Microsoft fournit [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), qui vous permet de concevoir, de déployer et d’interroger des données OLAP sous forme de cubes ou de _modèles tabulaires_. Un cube est une base de données multidimensionnelle. Les _dimensions_ sont semblables aux facettes des données, ou facteurs dans R: vous utilisez des dimensions pour identifier un sous-ensemble particulier de données que vous souhaitez synthétiser ou analyser. Par exemple, le temps est une dimension importante, si bien que de nombreuses solutions OLAP incluent plusieurs calendriers définis par défaut, à utiliser lors du découpage et de la synthèse des données. 
 
-Pour des raisons de performances, une base de données OLAP calcule souvent des résumés (ou agrégations) à l’avance, puis les stocke pour une récupération plus rapide. Les résumés sont basés sur des *mesures*, qui représentent des formules qui peuvent être appliquées à des données numériques. Vous utilisez les dimensions pour définir un sous-ensemble de données, puis vous calculez la mesure sur ces données. Par exemple, vous pouvez utiliser une mesure pour calculer les ventes totales pour une ligne de produits donnée sur plusieurs trimestres moins les taxes, pour signaler les frais d’expédition moyens pour un fournisseur particulier, les salaires cumulatifs annuels à ce jour et ainsi de suite.
+Pour des raisons de performances, une base de données OLAP calcule souventdes résumés (ou agrégations) à l’avance, puis les stocke pour une récupération plus rapide. Les résumés sont basés sur des *mesures*, qui représentent des formules qui peuvent être appliquées à des données numériques. Vous utilisez les dimensions pour définir un sous-ensemble de données, puis vous calculez la mesure sur ces données. Par exemple, vous pouvez utiliser une mesure pour calculer les ventes totales pour une ligne de produits donnée sur plusieurs trimestres moins les taxes, pour signaler les frais d’expédition moyens pour un fournisseur particulier, les salaires cumulatifs annuels à ce jour et ainsi de suite.
 
 MDX, Short pour les expressions multidimensionnelles, est le langage utilisé pour interroger des cubes. Une requête MDX contient généralement une définition de données qui inclut une ou plusieurs dimensions, et au moins une mesure, bien que les requêtes MDX puissent devenir beaucoup plus complexes et inclure des fenêtres enchaînées, des moyennes cumulées, des sommes, des rangs ou des centile. 
 
@@ -61,7 +62,7 @@ Le package **olapR** prend en charge deux méthodes de création de requêtes MD
 
     Toutes les requêtes MDX ne peuvent pas être créées à l’aide de cette méthode, car MDX peut être complexe. Toutefois, cette API prend en charge la plupart des opérations les plus courantes et utiles, y compris les secteurs, les dés, les descente, les cumuls et les tableaux croisés dynamiques dans N.
 
-+ **MDX correctement construit de copie/collage.** Créez et collez manuellement une requête MDX. Cette option est la meilleure si vous avez des requêtes MDX existantes que vous souhaitez réutiliser, ou si la requête que vous souhaitez générer est trop complexe  pour être gérée par olapr.
++ **MDX correctement construit de copie/collage.** Créez et collez manuellement une requête MDX. Cette option est la meilleure si vous avez des requêtes MDX existantes que vous souhaitez réutiliser, ou si la requête que vous souhaitez générer est trop complexe pour être gérée par olapr.
 
     Après avoir généré votre MDX à l’aide d’un utilitaire client, tel que SSMS ou Excel, enregistrez la chaîne de requête. Fournissez cette chaîne MDX comme argument au *Gestionnaire de requêtes SSAS* dans le package **olapr** . Le fournisseur envoie la requête au serveur de Analysis Services spécifié et passe les résultats à R. 
 
@@ -69,7 +70,7 @@ Pour obtenir des exemples de création d’une requête MDX ou d’exécution d�
 
 ## <a name="known-issues"></a>Problèmes connus
 
-Cette section répertorie certains problèmes connus et les questions les  plus fréquentes concernant le package olapr.
+Cette section répertorie certains problèmes connus et les questions les plus fréquentes concernant le package olapr.
 
 ### <a name="tabular-model-support"></a>Prise en charge des modèles tabulaires
 
@@ -88,7 +89,7 @@ Une seule instance de Analysis Services ne peut contenir qu’un seul type de mo
 
 Si vous vous connectez à Analysis Services à l’aide d’un client tel que SQL Server Management Studio, vous pouvez déterminer d’un coup d’œil le type de modèle pris en charge, en examinant l’icône de la base de données.
 
-Vous pouvez également afficher et interroger les propriétés du serveur pour déterminer le type de modèle pris en charge par l’instance. La propriété **mode serveur** prend en charge deux  valeurs: multidimensionnelles ou _tabulaires_.
+Vous pouvez également afficher et interroger les propriétés du serveur pour déterminer le type de modèle pris en charge par l’instance. La propriété **mode serveur** prend en charge deux valeurs: multidimensionnelles ou _tabulaires_.
 
 Pour obtenir des informations générales sur les deux types de modèles, consultez l’article suivant:
 
@@ -110,7 +111,7 @@ En général, même lorsqu’un cube est activé pour l’écriture différée, 
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>Les requêtes MDX de longue durée bloquent le traitement du cube
 
-Bien que  le package olapr effectue uniquement des opérations de lecture, les requêtes MDX longues peuvent créer des verrous qui empêchent le traitement du cube. Testez toujours vos requêtes MDX à l’avance pour savoir quelle quantité de données doit être retournée.
+Bien que le package olapr effectue uniquement des opérations de lecture, les requêtes MDX longues peuvent créer des verrous qui empêchent le traitement du cube. Testez toujours vos requêtes MDX à l’avance pour savoir quelle quantité de données doit être retournée.
 
 Si vous essayez de vous connecter à un cube verrouillé, vous risquez d’obtenir une erreur indiquant que l’entrepôt de données SQL Server ne peut pas être atteint. Les solutions suggérées incluent l’activation des connexions à distance, la vérification du nom du serveur ou de l’instance, etc. Toutefois, tenez compte de la possibilité d’une connexion ouverte antérieure.
 
