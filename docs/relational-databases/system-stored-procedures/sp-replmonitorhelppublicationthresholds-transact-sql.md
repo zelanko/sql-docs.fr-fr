@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a80ff5308edee02d24d214a6520a090750600edc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac1efa2e63bb798ce24785e4240bd756e8737e51
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950576"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771205"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retourne l'ensemble de mesures de seuil pour une publication analysée. Cette procédure stockée, utilisée pour surveiller la réplication, est exécutée sur la base de données du serveur de distribution.  
   
@@ -41,13 +41,13 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données publiée. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données publiée. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication_type = ] publication_type` Si le type de publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @publication_type = ] publication_type`Si le type de publication. *publication_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -60,20 +60,20 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|ID de la mesure de performance de réplication qui peut correspondre à l'une des valeurs suivantes.<br /><br /> **1expiration** -supervise l’expiration imminente des abonnements aux publications transactionnelles.<br /><br /> **2latency** -contrôle les performances des abonnements aux publications transactionnelles.<br /><br /> **4mergeexpiration** -supervise l’expiration imminente des abonnements aux publications de fusion.<br /><br /> **5mergeslowrunduration** -contrôle la durée des synchronisations de fusion sur les connexions lentes (accès à distance).<br /><br /> **6mergefastrunduration** -contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).<br /><br /> **7mergefastrunspeed** -supervise le taux de synchronisation des synchronisations de fusion sur les connexions haut débit (LAN).<br /><br /> **8mergeslowrunspeed** -supervise le taux de synchronisation des synchronisations de fusion sur les connexions lentes (accès à distance).|  
+|**metric_id**|**int**|ID de la mesure de performance de réplication qui peut correspondre à l'une des valeurs suivantes.<br /><br /> **1expiration** : contrôle l’expiration imminente des abonnements aux publications transactionnelles.<br /><br /> **2latency** : analyse les performances des abonnements aux publications transactionnelles.<br /><br /> **4mergeexpiration** : contrôle l’expiration imminente des abonnements aux publications de fusion.<br /><br /> **5mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).<br /><br /> **6mergefastrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **7mergefastrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **8mergeslowrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
 |**title**|**sysname**|Nom de la mesure de performance de réplication.|  
-|**value**|**int**|Valeur seuil de la mesure de performance.|  
-|**shouldalert**|**bit**|Indique si une alerte doit être créée lorsque la mesure dépasse le seuil défini pour cette publication. la valeur **1** indique qu’une alerte doit être déclenchée.|  
-|**isenabled**|**bit**|Indique si la surveillance est activée pour cette mesure de performance de réplication pour cette publication. la valeur **1** indique qu’il est activé.|  
+|**value**|**Int**|Valeur seuil de la mesure de performance.|  
+|**shouldalert**|**bit**|Indique si une alerte doit être générée lorsque la mesure dépasse le seuil défini pour cette publication; la valeur **1** indique qu’une alerte doit être déclenchée.|  
+|**isenabled**|**bit**|Indique si l’analyse est activée pour cette mesure de performance de réplication pour cette publication; la valeur **1** indique que l’analyse est activée.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_replmonitorhelppublicationthresholds** est utilisé avec tous les types de réplication.  
+ **sp_replmonitorhelppublicationthresholds** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **db_owner** ou **replmonitor** rôle de base de données fixe sur la base de données de distribution peut exécuter **sp_replmonitorhelppublicationthresholds**.  
+ Seuls les membres du rôle de base de données fixe **db_owner** ou **replmonitor** de la base de données de distribution peuvent exécuter **sp_replmonitorhelppublicationthresholds**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller la réplication par programmation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

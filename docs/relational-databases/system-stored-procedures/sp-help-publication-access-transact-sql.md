@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085260"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770992"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retourne la liste de toutes les connexions accordées pour une publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -40,36 +40,36 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication à laquelle accéder. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication à laquelle accéder. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @return_granted = ] 'return_granted'` ID de connexion. *return_granted* est **bits**, avec 1 comme valeur par défaut. Si **0** est spécifié et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisée, les connexions disponibles qui apparaissent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si **0** est spécifié et l’authentification Windows est utilisée, les connexions ne sont pas spécifiquement d’interdiction d’accès à l’éditeur ou serveur de distribution sont retournées.  
+`[ @return_granted = ] 'return_granted'`ID de connexion. *return_granted* est de **bits**, avec 1 comme valeur par défaut. Si la **valeur 0** est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée et que l’authentification est utilisée, les connexions disponibles qui s’affichent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si la **valeur 0** est spécifiée et que l’authentification Windows est utilisée, les connexions qui n’ont pas spécifiquement refusé l’accès au serveur de publication ou au serveur de distribution sont retournées.  
   
-`[ @login = ] 'login'` L’ID de connexion de sécurité standard. *connexion* est **sysname**, avec une valeur par défaut **%** .  
+`[ @login = ] 'login'`ID de connexion de sécurité standard. *login* est de **%** **type sysname**, avec la valeur par défaut.  
   
-`[ @initial_list = ] initial_list` Spécifie s’il faut retourner tous les membres avec accès à une publication ou uniquement ceux qui y avaient accès avant de nouveaux membres ont été ajoutés à la liste. *initial_list* est de type bit, avec une valeur par défaut **0**.  
+`[ @initial_list = ] initial_list`Spécifie s’il faut retourner tous les membres avec un accès à la publication ou uniquement ceux qui ont accès avant l’ajout de nouveaux membres à la liste. *initial_list* est de valeur de bit, avec **0**comme valeur par défaut.  
   
- **1** retourne des informations pour tous les membres de la **sysadmin** rôle serveur fixe avec des connexions valides sur le serveur de distribution qui existait lors de la publication a été créée, ainsi que la connexion actuelle.  
+ **1** retourne des informations pour tous les membres du rôle serveur fixe **sysadmin** avec des connexions valides sur le serveur de distribution qui existaient lors de la création de la publication, ainsi que la connexion actuelle.  
   
- **0** retourne des informations pour tous les membres de la **sysadmin** rôle serveur fixe avec des connexions valides sur le serveur de distribution qui existait lors de la création de la publication ainsi que tous les utilisateurs dans la liste d’accès qui n’ont pas appartiennent à la **sysadmin** rôle serveur fixe.  
+ **0** retourne des informations pour tous les membres du rôle serveur fixe **sysadmin** avec des connexions valides sur le serveur de distribution qui existaient lors de la création de la publication, ainsi que tous les utilisateurs de la liste d’accès à la publication qui n’appartiennent pas à l' **administrateur système.** rôle serveur fixe.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar (256)**|Nom de connexion réel.|  
-|**isntname**|**int**|**0** = connexion n’est pas un utilisateur de Windows.<br /><br /> **1** = connexion est un utilisateur Windows.|  
-|**isntgroup**|**int**|**0** = connexion n’est pas un groupe Windows.<br /><br /> **1** = connexion est un groupe Windows.|  
+|**Isntname**|**int**|**0** = la connexion n’est pas un utilisateur Windows.<br /><br /> **1** = la connexion est un utilisateur Windows.|  
+|**Isntgroup**|**Int**|**0** = la connexion n’est pas un groupe Windows.<br /><br /> **1** = la connexion est un groupe Windows.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_help_publication_access** est utilisée dans tous les types de réplication.  
+ **sp_help_publication_access** est utilisé dans tous les types de réplications.  
   
- Lorsque les deux **Isntname** et **Isntgroup** dans le résultat sont **0**, il est supposé que la connexion est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
+ Quand **Isntname** et **Isntgroup** dans le jeu de résultats sont **0**, il est supposé que la connexion est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_help_publication_access**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_help_publication_access**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   

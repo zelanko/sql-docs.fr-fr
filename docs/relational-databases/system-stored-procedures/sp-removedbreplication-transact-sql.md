@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7d3931ff867ef1475165eb6cbac97f4ba4564bf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdae843c3918013ec850c5d807853c10a8f3f190
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006958"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771039"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cette procédure stockée supprime tous les objets de réplication sur la base de données de publication de l'instance de serveur de publication de SQL Server ou sur la base de données d'abonnement de l'instance de l'abonné de SQL Server. Procédez à l'exécution dans la base de données appropriée, ou si l'exécution est dans le contexte d'une autre base de données sur la même instance, spécifiez la base de données où les objets de réplication doivent être supprimés. Cette procédure ne supprime pas les objets à partir d'autres bases de données, telles que la base de données de distribution.  
   
@@ -41,31 +41,31 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'` Est le nom de la base de données. *dbname* est de type **sysname**, avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la base de données actuelle est utilisée.  
+`[ @dbname = ] 'dbname'`Nom de la base de données. *dbname* est de type **sysname**, avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la base de données actuelle est utilisée.  
   
-`[ @type = ] type` Est le type de réplication pour la base de données des objets doivent être supprimés. *type* est **nvarchar (5)** et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] type`Type de réplication pour lequel les objets de base de données sont supprimés. le *type* est **nvarchar (5)** et peut prendre l’une des valeurs suivantes.  
   
 |||  
 |-|-|  
 |**tran**|Supprime les objets de publication dans une réplication transactionnelle.|  
 |**merge**|Supprime les objets de publication dans une réplication de fusion.|  
-|**les deux** (valeur par défaut)|Supprime tous les objets de publication de la réplication.|  
+|**les deux** valeurs|Supprime tous les objets de publication de la réplication.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_removedbreplication** est utilisée dans tous les types de réplication.  
+ **sp_removedbreplication** est utilisé dans tous les types de réplications.  
   
- **sp_removedbreplication** est utile lorsque vous restaurez une base de données répliquée qui ne comporte aucun objet de réplication doit être restauré.  
+ **sp_removedbreplication** est utile lors de la restauration d’une base de données répliquée qui n’a pas d’objets de réplication nécessitant une restauration.  
   
- **sp_removedbreplication** ne peut pas être utilisé sur une base de données est marquée comme étant en lecture seule.  
+ **sp_removedbreplication** ne peut pas être utilisé avec une base de données marquée en lecture seule.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_removedbreplication**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_removedbreplication**.  
   
 ## <a name="example"></a>Exemple  
   

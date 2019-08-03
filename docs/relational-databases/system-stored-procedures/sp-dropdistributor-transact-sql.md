@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9943e6f3d43ff1b543a86425b2644ee4c46a105c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 032ecf59a3ffba4a7a7a6f4739c92b688858d501
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081515"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768866"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Désinstalle le serveur de distribution. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution, à l'exception de la base de données de distribution.  
   
@@ -38,33 +38,33 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @no_checks = ] no_checks` Indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est **bits**, avec 0 comme valeur par défaut.  
+`[ @no_checks = ] no_checks`Indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est de valeur de **bit**, avec 0 comme valeur par défaut.  
   
- Si **0**, **sp_dropdistributor** s’assure que tous les objets de publication et la distribution en plus du serveur de distribution ont été supprimés.  
+ Si la **valeur est 0**, **sp_dropdistributor** s’assure que tous les objets de publication et de distribution en plus du serveur de distribution ont été supprimés.  
   
- Si **1**, **sp_dropdistributor** supprime tous les objets de publication et la distribution avant de désinstaller le serveur de distribution.  
+ Si la valeur est **1**, **sp_dropdistributor** supprime tous les objets de publication et de distribution avant de désinstaller le serveur de distribution.  
   
-`[ @ignore_distributor = ] ignore_distributor` Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**.  
+`[ @ignore_distributor = ] ignore_distributor`Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de valeur de **bit**, avec **0**comme valeur par défaut.  
   
- Si **0**, **sp_dropdistributor** se connecte au serveur de distribution et supprime tous les objets de réplication. Si **sp_dropdistributor** est impossible de se connecter au serveur de distribution, la procédure stockée échoue.  
+ Si la **valeur est 0**, **sp_dropdistributor** se connecte au serveur de distribution et supprime tous les objets de réplication. Si **sp_dropdistributor** ne parvient pas à se connecter au serveur de distribution, la procédure stockée échoue.  
   
- Si **1**, aucune connexion n’est établie au serveur de distribution et les objets de réplication ne sont pas supprimés. Cette option est utilisée lors de la désinstallation du serveur de distribution ou lorsque celui-ci est mis hors ligne de façon permanente. Les objets de ce serveur de publication sur le serveur de distribution seront supprimés uniquement lors d'une réinstallation ultérieure du serveur de distribution.  
+ Si la valeur est **1**, aucune connexion n’est établie avec le serveur de distribution et les objets de réplication ne sont pas supprimés. Cette option est utilisée lors de la désinstallation du serveur de distribution ou lorsque celui-ci est mis hors ligne de façon permanente. Les objets de ce serveur de publication sur le serveur de distribution seront supprimés uniquement lors d'une réinstallation ultérieure du serveur de distribution.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_dropdistributor** est utilisée dans tous les types de réplication.  
+ **sp_dropdistributor** est utilisé dans tous les types de réplications.  
   
- Si d’autres objets de serveur de publication ou de distribution existent sur le serveur, **sp_dropdistributor** échoue, sauf si **@no_checks** a la valeur **1**.  
+ Si d’autres objets de publication ou de distribution existent sur le serveur, **@no_checks** sp_dropdistributor échoue, sauf si a la valeur **1**.  
   
- Cette procédure stockée doit être exécutée après suppression de la base de données de distribution en exécutant **sp_dropdistributiondb**.  
+ Cette procédure stockée doit être exécutée après la suppression de la base de données de distribution en exécutant **sp_dropdistributiondb**.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_dropdistributor**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_dropdistributor**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   

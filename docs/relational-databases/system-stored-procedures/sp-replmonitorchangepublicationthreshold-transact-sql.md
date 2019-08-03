@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d23822fc27e02d5f40824f738c70044c61020eb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd8dd31b1468cb718af286f6c00e26cfa2e1ba0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950657"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771219"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifie la mesure du seuil de supervision pour une publication. Cette procédure stockée, utilisée pour surveiller la réplication, est exécutée sur la base de données du serveur de distribution.  
   
@@ -45,13 +45,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données publiée. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données publiée. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication pour laquelle les attributs du seuil de surveillance sont en cours de modification. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication pour laquelle les attributs de seuil d’analyse sont modifiés. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication_type = ] publication_type` Si le type de publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @publication_type = ] publication_type`Si le type de publication. *publication_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -60,36 +60,36 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Publication de fusion.|  
 |NULL (par défaut)|La réplication essaie de déterminer le type de publication.|  
   
-`[ @metric_id = ] metric_id` Est l’ID de la mesure de seuil de publication en cours de modification. *metric_id* est **int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @metric_id = ] metric_id`ID de la métrique de seuil de publication en cours de modification. *metric_id* est de **type int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Nom de métrique|  
 |-----------|-----------------|  
 |**1**|**expiration** : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
 |**2**|**latency** : contrôle les performances des abonnements aux publications transactionnelles.|  
 |**4**|**mergeexpiration** : contrôle l'expiration imminente des abonnements aux publications de fusion.|  
-|**5**|**mergeslowrunduration** -contrôle la durée des synchronisations de fusion sur les connexions lentes (accès à distance).|  
-|**6**|**mergefastrunduration** -contrôle la durée des synchronisations de fusion sur les connexions à large bande passante réseau local (LAN).|  
+|**5**|**mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
+|**6**|**mergefastrunduration** : contrôle la durée des synchronisations de fusion sur les connexions de réseau local (LAN) à bande passante élevée.|  
 |**7**|**mergefastrunspeed** - supervise le taux de synchronisation des synchronisations de fusion sur des connexions à bande passante élevée (LAN).|  
-|**8**|**mergeslowrunspeed** -supervise le taux de synchronisation des synchronisations de fusion sur les connexions lentes (accès à distance).|  
+|**8**|**mergeslowrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
   
- Vous devez spécifier soit *metric_id* ou *thresholdmetricname*. Si *thresholdmetricname* est spécifié, puis *metric_id* doit être NULL.  
+ Vous devez spécifier *metric_id* ou *thresholdmetricname*. Si *thresholdmetricname* est spécifié, *metric_id* doit avoir la valeur null.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'` Est le nom de la mesure de seuil de publication en cours de modification. *thresholdmetricname* est **sysname**, avec NULL comme valeur par défaut. Vous devez spécifier soit *thresholdmetricname* ou *metric_id*. Si *metric_id* est spécifié, puis *thresholdmetricname* doit être NULL.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'`Nom de la métrique de seuil de publication en cours de modification. *thresholdmetricname* est de **type sysname**, avec NULL comme valeur par défaut. Vous devez spécifier *thresholdmetricname* ou *metric_id*. Si *metric_id* est spécifié, *thresholdmetricname* doit avoir la valeur null.  
   
-`[ @value = ] value` Est la nouvelle valeur de la mesure de seuil de publication. *valeur* est **int**, avec NULL comme valeur par défaut. Si **null**, la valeur de métrique n’est pas mis à jour.  
+`[ @value = ] value`Nouvelle valeur de la mesure du seuil de publication. la *valeur* est de **type int**, avec NULL comme valeur par défaut. Si la valeur est **null**, la valeur de la métrique n’est pas mise à jour.  
   
-`[ @shouldalert = ] shouldalert` Indique si une alerte est créée quand une métrique de seuil de publication est atteinte. *shouldalert* est **bits**, avec NULL comme valeur par défaut. La valeur **1** signifie qu’une alerte est générée et la valeur **0** signifie qu’une alerte n’est pas générée.  
+`[ @shouldalert = ] shouldalert`Indique si une alerte est générée lorsqu’une métrique de seuil de publication est atteinte. *ShouldAlert* est de type **bit**, avec NULL comme valeur par défaut. La valeur **1** signifie qu’une alerte est générée, tandis que la valeur **0** indique qu’une alerte n’est pas générée.  
   
-`[ @mode = ] mode` Indique si la mesure du seuil de publication est activée. *mode* est **tinyint**, avec une valeur par défaut **1**. La valeur **1** signifie que l’analyse de cette métrique est activée et la valeur **2** signifie que cette supervision est désactivée.  
+`[ @mode = ] mode`Indique si la métrique du seuil de publication est activée. *mode* est de **type tinyint**, avec **1**comme valeur par défaut. La valeur **1** signifie que la surveillance de cette métrique est activée, et la valeur **2** signifie que la surveillance de cette métrique est désactivée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_replmonitorchangepublicationthreshold** est utilisé avec tous les types de réplication.  
+ **sp_replmonitorchangepublicationthreshold** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **db_owner** ou **replmonitor** du rôle fixe de base de données dans la base de données de distribution peuvent exécuter **sp_replmonitorchangepublicationthreshold**.  
+ Seuls les membres du rôle de base de données fixe **db_owner** ou **replmonitor** de la base de données de distribution peuvent exécuter **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller la réplication par programmation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

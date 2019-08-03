@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101397"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771062"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les mappages de types de données définis entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SGBD) des systèmes de gestion de base de données. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Retourne des informations sur les mappages de types de [!INCLUDE[msCoName](../../includes/msconame-md.md)] données définis entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les systèmes de gestion de base de données (SGBD). Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,31 +43,31 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @source_dbms = ] 'source_dbms'` Est le nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
+`[ @source_dbms = ] 'source_dbms'`Nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données source au format [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**ORACLE**|Base de données Oracle source.|  
+|**SOLUTION**|Base de données Oracle source.|  
   
-`[ @source_version = ] 'source_version'` Est la version de produit du SGBD source. *source_version*est **varchar (10)** , et le cas contraire, le type de données mappages pour toutes les versions du SGBD source est retournés. Permet de filtrer le jeu de résultats en fonction de la version source du SGBD.  
+`[ @source_version = ] 'source_version'`Version du produit du SGBD source. *source_version*est de type **varchar (10)** et, s’il n’est pas spécifié, les mappages de types de données pour toutes les versions du SGBD source sont retournés. Permet de filtrer le jeu de résultats en fonction de la version source du SGBD.  
   
-`[ @source_type = ] 'source_type'` Le type de données est répertorié dans le SGBD source. *source_type* est **sysname**, et si non spécifié, les mappages pour tous les types de données dans le SGBD source sont retournés. Permet de filtrer le jeu de résultats en fonction du type de données indiqué dans le SGBD source.  
+`[ @source_type = ] 'source_type'`Type de données indiqué dans le SGBD source. *source_type* est de **type sysname**et, s’il n’est pas spécifié, les mappages de tous les types de données dans le SGBD source sont retournés. Permet de filtrer le jeu de résultats en fonction du type de données indiqué dans le SGBD source.  
   
-`[ @destination_dbms = ] 'destination_dbms'` Est le nom de la destination du SGBD. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
+`[ @destination_dbms = ] 'destination_dbms'`Nom du SGBD de destination. *destination_dbms* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destination.|  
-|**ORACLE**|Base de données Oracle de destination.|  
+|**SOLUTION**|Base de données Oracle de destination.|  
 |**DB2**|Base de données IBM DB2 de destination.|  
-|**SYBASE**|Base de données Sybase de destination.|  
+|**INTERFACES**|Base de données Sybase de destination.|  
   
-`[ @destination_version = ] 'destination_version'` Est la version de produit du SGBD de destination. *destination_version*est **varchar (10)** , et le cas contraire, les mappages de toutes les versions du SGBD de destination sont retournés. Permet de filtrer le jeu de résultats en fonction de la version de destination du SGBD.  
+`[ @destination_version = ] 'destination_version'`Version du produit du SGBD de destination. *destination_version*est de type **varchar (10)** et, s’il n’est pas spécifié, les mappages de toutes les versions du SGBD de destination sont retournés. Permet de filtrer le jeu de résultats en fonction de la version de destination du SGBD.  
   
-`[ @destination_type = ] 'destination_type'` Le type de données est répertorié dans le SGBD de destination. *destination_type*est **sysname**, et si non spécifié, les mappages pour tous les types de données du SGBD de destination sont retournés. Permet de filtrer le jeu de résultats en fonction du type de données indiqué dans le SGBD de destination.  
+`[ @destination_type = ] 'destination_type'`Type de données indiqué dans le SGBD de destination. *destination_type*est de **type sysname**et, s’il n’est pas spécifié, les mappages de tous les types de données du SGBD de destination sont retournés. Permet de filtrer le jeu de résultats en fonction du type de données indiqué dans le SGBD de destination.  
   
-`[ @defaults_only = ] defaults_only` Indique si seuls les mappages de type de données par défaut sont retournés. *defaults_only* est **bits**, avec une valeur par défaut **0**. **1** signifie que seules les données par défaut des mappages de type est retournées. **0** signifie que la valeur par défaut et toutes les données définies par l’utilisateur mappages de type est retournées.  
+`[ @defaults_only = ] defaults_only`Est si seuls les mappages de type de données par défaut sont retournés. *defaults_only* est de valeur de **bit**, avec **0**comme valeur par défaut. **1** signifie que seuls les mappages de type de données par défaut sont retournés. **0** signifie que les mappages par défaut et les mappages de types de données définis par l’utilisateur sont retournés.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -81,15 +81,15 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**is_default**|Indique si le mappage est un mappage par défaut ou un autre mappage. La valeur **0** indique que ce mappage est défini par l’utilisateur.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_helpdatatypemap** définit les mappages de types de données à partir d’éditeurs non SQL Server et à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditeurs non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
+ **sp_helpdatatypemap** définit les mappages de types de données à partir des serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non-SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des serveurs de publication vers des abonnés non-.  
   
- Lors de la combinaison spécifiée de la source et le SGBD de destination n’est pas pris en charge, **sp_helpdatatypemap** retourne un jeu de résultats vide.  
+ Lorsque la combinaison spécifiée de SGBD source et de destination n’est pas prise en charge, **sp_helpdatatypemap** retourne un jeu de résultats vide.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe sur le serveur de distribution ou les membres de la **db_owner** rôle de base de données fixe sur la base de données de distribution peut exécuter **sp_helpdatatypemap**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de distribution ou les membres du rôle de base de données fixe **db_owner** sur la base de données de distribution peuvent exécuter **sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   

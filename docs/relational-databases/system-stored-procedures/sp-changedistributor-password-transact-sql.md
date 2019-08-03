@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 29974fc7a60f675dc9921f527fd8348beb4f2134
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120081"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768901"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Modifie le mot de passe d'un serveur de distribution. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Modifie le mot de passe d'un serveur de distribution. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,19 +37,19 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @password = ] 'password'` Est le nouveau mot de passe. *mot de passe* est **sysname**, sans valeur par défaut. Si le serveur de distribution est local, le mot de passe de la **distributor_admin** connexion système est modifiée.  
+`[ @password = ] 'password'`Nouveau mot de passe. *Password* est de **type sysname**, sans valeur par défaut. Si le serveur de distribution est local, le mot de passe du compte de connexion du système **distributor_admin** est modifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_changedistributor_password** est utilisée dans tous les types de réplication.  
+ **sp_changedistributor_password** est utilisé dans tous les types de réplications.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_changedistributor_password**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_changedistributor_password**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les paramètres de sécurité de la réplication](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

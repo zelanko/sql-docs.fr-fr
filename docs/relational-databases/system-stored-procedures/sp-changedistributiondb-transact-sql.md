@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b2f098fab2856b51b389e2161fdbe3281e1e3cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120171"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768963"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Modifie les propriétés de la base de données de distribution. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Modifie les propriétés de la base de données de distribution. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,30 +39,30 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @database = ] 'database'` Est le nom de la base de données de distribution. *base de données* est **sysname**, sans valeur par défaut.  
+`[ @database = ] 'database'`Nom de la base de données de distribution. *Database est de* **type sysname**, sans valeur par défaut.  
   
-`[ @property = ] 'property'` Est la propriété à modifier pour la base de données. *propriété* est **sysname**, et peut prendre l’une des valeurs suivantes.  
+`[ @property = ] 'property'`Propriété à modifier pour la base de données spécifiée. *Property* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**history_retention**|Période de rétention de la table historique.|  
 |**max_distretention**|Période maximale de rétention de distribution.|  
 |**min_distretention**|Période de rétention de distribution minimale.|  
-|NULL (par défaut)|Tous disponibles *propriété* valeurs sont imprimées.|  
+|NULL (par défaut)|Toutes les valeurs de *propriété* disponibles sont imprimées.|  
   
-`[ @value = ] 'value'` Est la nouvelle valeur pour la propriété spécifiée. *valeur* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'`Nouvelle valeur de la propriété spécifiée. la *valeur* est de type **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_changedistributiondb** est utilisée dans tous les types de réplication.  
+ **sp_changedistributiondb** est utilisé dans tous les types de réplications.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_changedistributiondb**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

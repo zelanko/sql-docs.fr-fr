@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a7f70f5cd56867add98150d471d61cbc70faad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111921"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771142"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Supprime les enregistrements de jeton de suivi le [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) et [MStracer_history &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) tables système. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données de distribution du serveur de distribution.
+Supprime les enregistrements de jeton de suivi des tables système Transact [-SQL &#40;&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) et [ &#40;MStracer_history&#41; Transact-SQL](../../relational-databases/system-tables/mstracer-history-transact-sql.md) MStracer_tokens. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données de distribution du serveur de distribution.
 
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -46,16 +46,16 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 Nom de la publication dans laquelle le jeton de suivi a été inséré. Le type de données est **sysname**. Ce paramètre est obligatoire.
 
 `[ @tracer_id= ] tracer_id`  
-ID du jeton de suivi à supprimer. Le type de données est **int**. La valeur par défaut est *null*. Si *null*, tous les jetons de suivi appartenant à la publication sont supprimés.
+ID du jeton de suivi à supprimer. Le type de données est **int**. La valeur par défaut est *null*. Si la *valeur est null*, tous les jetons de suivi appartenant à la publication sont supprimés.
 
 `[ @cutoff_date= ] cutoff_date`  
-Jetons de suivi insérés dans la publication avant cette date soient supprimés. Le type de données est **datetime**. La valeur par défaut est *null*.
+Les jetons de suivi insérés dans la publication avant cette date sont supprimés. Le type de données est **DateTime**. La valeur par défaut est *null*.
 
 `[ @publisher= ] 'publisher'`  
 Nom du serveur de publication. Le type de données est **sysname**. La valeur par défaut est *null*.
 
 > [!NOTE]
-> Ce paramètre ne doit être spécifié pour les non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication ou de l’exécution de la procédure stockée à partir du serveur de distribution.
+> Ce paramètre doit être spécifié uniquement pour les serveurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou lors de l’exécution de la procédure stockée à partir du serveur de distribution.
 
 `[ @publisher_db= ] 'publisher_db'`  
 Nom de la base de données de publication. Le type de données est **sysname**. La valeur par défaut est NULL. Ce paramètre est ignoré si la procédure stockée est exécutée sur le serveur de publication.
@@ -65,26 +65,26 @@ Nom de la base de données de publication. Le type de données est **sysname**. 
 
 ## <a name="return-code-values"></a>Valeurs des codes de retour
 
-**0** (réussite) ou **1** (échec)
+**0** (succès) ou **1** (échec)
 
 ## <a name="remarks"></a>Notes
 
 **sp_deletetracertokenhistory** est utilisé dans la réplication transactionnelle.  
 
-Une erreur se produit si vous spécifiez les deux paramètres *tracer_id* et *cutoff_date*.
+Une erreur se produit si vous spécifiez les paramètres *tracer_id* et *cutoff_date*.
 
-Si vous n’exécutez pas **sp_deletetracertokenhistory** pour supprimer les métadonnées de jeton de suivi, les informations sont supprimées lorsque le nettoyage d’historique se produit.
+Si vous n’exécutez pas **sp_deletetracertokenhistory** pour supprimer les métadonnées de jeton de suivi, les informations sont supprimées lors du nettoyage régulier de l’historique.
 
-ID de jeton de suivi peuvent être déterminées en exécutant [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) ou en interrogeant le [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) (table système).
+Les ID de jeton de suivi peuvent être déterminés en exécutant [sp_helptracertokens &#40;Transact&#41; -SQL](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) ou en interrogeant la table système [Transact- &#40;SQL&#41; MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
 
 ## <a name="permissions"></a>Autorisations
 
-Seul le personnel suivant a l’autorité nécessaire pour exécuter **sp_deletetracertokenhistory**:
+Seul le personnel suivant est habilité à exécuter **sp_deletetracertokenhistory**:
 
-- Membres de la **replmonitor** rôles, dans la base de données de distribution
-- Membres de la **sysadmin** rôle serveur fixe.
-- Membres de la **db_owner** rôle de base de données fixe, dans la base de données de publication.
-- Le **db_owner** de la base de données fixe.
+- Membres des rôles **replmonitor** , dans la base de données de distribution
+- Membres du rôle serveur fixe **sysadmin** .
+- Membres du rôle de base de données fixe **db_owner** dans la base de données de publication.
+- **Db_owner** de la base de données fixe.
 
 ## <a name="see-also"></a>Voir aussi
 
