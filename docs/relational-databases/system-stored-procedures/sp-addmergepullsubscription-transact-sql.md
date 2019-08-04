@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042730"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769142"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ajoute un abonnement par extraction de données (pull) à une publication de fusion. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
@@ -43,30 +43,30 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *Serveur de publication* est **sysname**, avec une valeur par défaut le nom du serveur local. Le serveur de publication doit être un serveur valide.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**et sa valeur par défaut est le nom du serveur local. Le serveur de publication doit être un serveur valide.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_type = ] 'subscriber_type'` Est le type d’abonné. *subscriber_type* est **nvarchar (15)** et peut être **global**, **local** ou **anonyme**. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, abonnements locaux sont désignés comme des abonnements clients et abonnements globaux sont désignés comme des abonnements serveur.  
+`[ @subscriber_type = ] 'subscriber_type'`Type de l’abonné. *subscriber_type* est de type **nvarchar (15)** et peut être **Global**, **local** ou **anonyme**. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les abonnements locaux sont appelés abonnements client et les abonnements globaux sont appelés abonnements serveur.  
   
-`[ @subscription_priority = ] subscription_priority` Est la priorité d’abonnement. *priorité_d*est **réel**, avec NULL comme valeur par défaut. Pour les abonnements locaux et anonymes, la priorité est **0.0**. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés. Pour les abonnés globaux, la priorité de l'abonnement doit être inférieure à 100, qui correspond à la priorité du serveur de publication.  
+`[ @subscription_priority = ] subscription_priority`Priorité de l’abonnement. *subscription_priority*est de type **Real**, avec NULL comme valeur par défaut. Pour les abonnements locaux et anonymes, la priorité est **0,0**. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés. Pour les abonnés globaux, la priorité de l'abonnement doit être inférieure à 100, qui correspond à la priorité du serveur de publication.  
   
-`[ @sync_type = ] 'sync_type'` Est le type de synchronisation d’abonnement. *sync_type*est **nvarchar (15)** , avec une valeur par défaut **automatique**. Peut être **automatique** ou **aucun**. Si **automatique**, le schéma et les données initiales des tables publiées sont transférées vers l’abonné tout d’abord. Si **aucun**, il est supposé l’abonné possède déjà le schéma et les données initiales des tables publiées. Les données et les tables système sont toujours transférées.  
+`[ @sync_type = ] 'sync_type'`Type de synchronisation de l’abonnement. *sync_type*est de type **nvarchar (15)** , avec **Automatic**comme valeur par défaut. Peut être **automatique** ou **aucun**. Si la valeur est **Automatic**, le schéma et les données initiales des tables publiées sont transférés en premier vers l’abonné. Si **aucun**, il est supposé que l’abonné possède déjà le schéma et les données initiales pour les tables publiées. Les données et les tables système sont toujours transférées.  
   
 > [!NOTE]  
->  Nous ne recommandons pas la valeur **aucun**.  
+>  Nous vous déconseillons de spécifier une valeur **None**.  
   
-`[ @description = ] 'description'` Est une brève description de cet abonnement par extraction. *Description*est **nvarchar (255)** , avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans le **nom convivial** colonne, qui peut être utilisé pour trier les abonnements pour une publication analysée.  
+`[ @description = ] 'description'`Brève description de cet abonnement par extraction. *Description*est de type **nvarchar (255)** , avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans la colonne **nom convivial** , qui peut être utilisée pour trier les abonnements pour une publication analysée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_addmergepullsubscription** est utilisé pour la réplication de fusion.  
   
- Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour synchroniser l’abonnement, le [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) procédure stockée doit être exécutée sur l’abonné pour créer un agent et un travail à synchroniser avec la Publication.  
+ Si vous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisez l’agent pour synchroniser l’abonnement, la procédure stockée [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) doit être exécutée sur l’abonné pour créer un agent et un travail à synchroniser avec la publication.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_1.sql)]  
@@ -74,7 +74,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  [!code-sql[HowTo#sp_addmergepullsub_websync_anon](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_2.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addmergepullsubscription**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addmergepullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md)   

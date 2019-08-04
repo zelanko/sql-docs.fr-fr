@@ -1,5 +1,5 @@
 ---
-title: Réplication procédures stockées (Transact-SQL) | Microsoft Docs
+title: Procédures stockées de réplication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e689eea8a641e42633d179d14e3b59d88dd3dec4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f8865167aaddeed91a071992244754e307ba69e0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941894"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770974"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>Procédures stockées de réplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Les procédures stockées du système de réplication sont documentées et disponibles en tant que méthode pour accomplir des tâches qui s'exécutent une fois, comme la mise en œuvre de la réplication, et pour être utilisées dans des fichiers de commandes et des scripts.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67941894"
 |[sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)|[sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)|  
 |[sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)|[sp_helpsubscriptionerrors &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md)|  
 |[sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)|[sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)|  
-|[sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)|[sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)|  
+|[Transact &#40;-SQL de sp_articleview&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)|[sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)|  
 |[sp_attachsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attachsubscription-transact-sql.md)|[sp_helpxactsetjob &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md)|  
 |[sp_browsemergesnapshotfolder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql.md)|[sp_ivindexhasnullcols &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-ivindexhasnullcols-transact-sql.md)|  
 |[sp_browsereplcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)|[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)|  
@@ -83,7 +83,7 @@ ms.locfileid: "67941894"
 |[sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)|[sp_MSchange_logreader_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-logreader-agent-properties-transact-sql.md)|  
 |[sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)|[sp_MSchange_merge_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-merge-agent-properties-transact-sql.md)|  
 |[sp_changelogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)|[sp_MSchange_snapshot_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-snapshot-agent-properties-transact-sql.md)|  
-|[sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)|[sp_posttracertoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)|  
+|[Transact &#40;-SQL sp_changemergearticle&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)|[sp_posttracertoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)|  
 |[sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)|[sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)|  
 |[sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)|[sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)|  
 |[sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)|[sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)|  
@@ -116,7 +116,7 @@ ms.locfileid: "67941894"
 |[sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)|[sp_replrestart &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md)|  
 |[sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)|[sp_replsetoriginator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replsetoriginator-transact-sql.md)|  
 |[sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)|[sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)|  
-|[la procédure sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)|[sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)|  
+|[sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)|[sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)|  
 |[sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)|[sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)|  
 |[sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)|[sp_requestpeertopologyinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)|  
 |[sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)|[sp_resetsnapshotdeliveryprogress &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resetsnapshotdeliveryprogress-transact-sql.md)|  
@@ -124,7 +124,7 @@ ms.locfileid: "67941894"
 |[sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)|[sp_restoremergeidentityrange &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-restoremergeidentityrange-transact-sql.md)|  
 |[sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)|[sp_resyncmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resyncmergesubscription-transact-sql.md)|  
 |[sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)|[sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)|  
-|[sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)|[sp_schemafilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-schemafilter-transact-sql.md)|  
+|[- &#40;SQL-Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)|[sp_schemafilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-schemafilter-transact-sql.md)|  
 |[sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)|[sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)|  
 |[sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)|[sp_scriptdynamicupdproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-scriptdynamicupdproc-transact-sql.md)|  
 |[sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)|[sp_scriptpublicationcustomprocs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md)|  
@@ -135,13 +135,13 @@ ms.locfileid: "67941894"
 |[sp_generatefilters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-generatefilters-transact-sql.md)|[sp_showpendingchanges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)|  
 |[sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)|[sp_showrowreplicainfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-showrowreplicainfo-transact-sql.md)|  
 |[sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)|[sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)|  
-|[sp_getagentparameterlist ne &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getagentparameterlist-transact-sql.md)|[sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)|  
+|[sp_getagentparameterlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getagentparameterlist-transact-sql.md)|[sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)|  
 |[sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)|[sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)|  
 |[sp_getmergedeletetype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getmergedeletetype-transact-sql.md)|[sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)|  
 |[sp_getqueuedrows &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getqueuedrows-transact-sql.md)|[sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)|  
 |[sp_getsubscriptiondtspackagename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getsubscriptiondtspackagename-transact-sql.md)|[sp_update_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-agent-profile-transact-sql.md)|  
 |[sp_gettopologyinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)|[sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)|  
-|[sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)|[sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)|  
+|[&#40;e-SQL de l’en-langage&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)|[sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)|  
 |[sp_help_agent_default &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-default-transact-sql.md)|[sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)|  
 |[sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)|[sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)|  
 |[sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)|[sp_vupgrade_mergeobjects &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-mergeobjects-transact-sql.md)|  

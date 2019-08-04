@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 89cd3991819bdba99d3a4b95c16e7b3247808031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126378"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771582"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crée un script pour les procédures personnalisées INSERT, UPDATE et DELETE pour tous les articles de table d'une publication dans laquelle l'option de schéma de génération automatique de procédure stockée est activée. **sp_scriptpublicationcustomprocs** est particulièrement utile pour configurer des abonnements pour lesquels l’instantané est appliqué manuellement.  
   
@@ -37,18 +37,18 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication_name'` Est le nom de la publication. *publication_name* est **sysname** sans valeur par défaut.  
+`[ @publication = ] 'publication_name'`Nom de la publication. *publication_name* est de **type sysname** et n’a pas de valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Retourne un jeu de résultats qui se compose d’un seul **nvarchar (4000)** colonne. L'ensemble de résultats forme l'instruction CREATE PROCEDURE complète, nécessaire à la création de la procédure stockée personnalisée.  
+ Retourne un jeu de résultats qui se compose d’une seule colonne **nvarchar (4000)** . L'ensemble de résultats forme l'instruction CREATE PROCEDURE complète, nécessaire à la création de la procédure stockée personnalisée.  
   
 ## <a name="remarks"></a>Notes  
  Les procédures personnalisées ne font pas l'objet de scripts pour les articles sans l'option de schéma (0x2) de génération automatique de procédure personnalisée.  
   
- Les procédures suivantes sont utilisées par **sp_scriptpublicationcustomprocs** pour créer des procédures de l’abonné et ne doit pas être exécuté directement :  
+ Les procédures suivantes sont utilisées par **sp_scriptpublicationcustomprocs** pour créer des procédures pour l’abonné et ne doivent pas être exécutées directement:  
   
  **sp_script_reconciliation_delproc**  
   
@@ -75,7 +75,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>Autorisations  
- Exécutez autorisation est accordée aux **public**; une vérification procédurale de sécurité est effectuée à l’intérieur de cette procédure stockée pour restreindre l’accès aux membres de la **sysadmin** rôle serveur fixe et **db_ propriétaire** rôle de base de données fixe dans la base de données actuelle.  
+ L’autorisation EXECUTE est accordée à **public**; une vérification de sécurité procédurale est effectuée à l’intérieur de cette procédure stockée pour restreindre l’accès aux membres du rôle serveur fixe **sysadmin** et du rôle de base de données fixe **db_owner** dans la base de données actuelle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd3e27e935d7774c3882e8cc46430542351dd87c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113152"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770875"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Utilisée pour appeler un traitement et une détection en boucle au cours des réplications transactionnelles bidirectionnelles. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -38,18 +38,18 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server_name = ] 'server_name'` Est le nom du serveur où la transaction est appliquée. *originating_server* est **sysname**, sans valeur par défaut.  
+`[ @server_name = ] 'server_name'`Nom du serveur sur lequel la transaction est appliquée. *originating_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @database_name = ] 'database_name'` Est le nom de la base de données où la transaction est appliquée. *originating_db* est **sysname**, sans valeur par défaut.  
+`[ @database_name = ] 'database_name'`Nom de la base de données dans laquelle la transaction est appliquée. *originating_db* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_replsetoriginator** est exécutée par l’Agent de Distribution pour enregistrer la source des transactions appliquées par réplication. Cette information est utilisée pour appeler une détection en boucle des abonnements transactionnels bidirectionnels qui possèdent le jeu de propriétés de la boucle.  
+ **sp_replsetoriginator** est exécutée par le agent de distribution pour enregistrer la source des transactions appliquées par la réplication. Cette information est utilisée pour appeler une détection en boucle des abonnements transactionnels bidirectionnels qui possèdent le jeu de propriétés de la boucle.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres du **sysadmin** rôle serveur fixe sur le serveur de publication, les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication, ou les utilisateurs dans la liste d’accès aux publications (PAL) peuvent exécuter **sp_replsetoriginator**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de publication, les membres du rôle de base de données fixe **db_owner** sur la base de données de publication ou les utilisateurs de la liste d’accès aux publications (PAL) peuvent exécuter **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

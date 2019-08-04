@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ea4590e129812dd0acc68b6353fc4f379bb0b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110881"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771302"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Modifie les propriétés du serveur de distribution. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Modifie les propriétés du serveur de distribution. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,26 +38,26 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @property = ] 'property'` Est la propriété pour un serveur de distribution. *propriété* est **sysname**, et peut prendre l’une des valeurs suivantes.  
+`[ @property = ] 'property'`Propriété d’un serveur de distribution donné. *Property* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Nombre maximal de minutes pendant lesquelles un agent peut s'exécuter sans enregistrer de message de progression.|  
-|NULL (par défaut)|Tous disponibles *propriété* valeurs sont imprimées.|  
+|NULL (par défaut)|Toutes les valeurs de *propriété* disponibles sont imprimées.|  
   
-`[ @value = ] 'value'` Est la valeur pour la propriété de serveur de distribution donnée. *valeur* est **varchar (255)** , avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'`Valeur de la propriété de serveur de distribution donnée. la *valeur* est de type **varchar (255)** , avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_changedistributor_property** est utilisée dans tous les types de réplication.  
+ **sp_changedistributor_property** est utilisé dans tous les types de réplications.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_changedistributor_property**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

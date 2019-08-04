@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 229442fed0defba9ebe39822a6184ba3b5d35644
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137559"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771421"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retourne les propriétés de l'Agent de lecture de la file d'attente. Cette procédure stockée est exécutée sur la base de données de distribution du serveur de distribution ou sur toute base de données du serveur de publication.  
   
@@ -37,26 +37,26 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @frompublisher = ] frompublisher` Indique si la procédure stockée est appelée sur le serveur de publication ou sur le serveur de distribution. *frompublisher* est de type bit, avec 0 comme valeur par défaut. **1** signifie que la procédure stockée est appelée depuis le serveur de publication, et **0** signifie que la procédure stockée est appelée depuis le serveur de distribution.  
+`[ @frompublisher = ] frompublisher`Spécifie si la procédure stockée est appelée sur le serveur de publication ou sur le serveur de distribution. *frompublisher* est de bits, avec 0 comme valeur par défaut. **1** signifie que la procédure stockée est appelée à partir du serveur de publication, et **0** signifie que la procédure stockée est appelée à partir du serveur de distribution.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ID de l’agent.|  
+|**id**|**Int**|ID de l’agent.|  
 |**name**|**nvarchar(100)**|Nom de l'Agent.|  
 |**job_id**|**uniqueidentifier**|ID unique du travail de l'Agent.|  
-|**job_login**|**nvarchar(512)**|Est le compte Windows sous lequel l’agent de Distribution s’exécute, ce qui est retourné sous la forme *domaine*\\*nom d’utilisateur*.|  
-|**job_password**|**sysname**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* \* \* \* \* \*** est toujours retourné.|  
+|**job_login**|**nvarchar(512)**|Compte Windows sous lequel s’exécute l’agent de distribution, qui est retourné au format *domaine*\\*nom d’utilisateur*.|  
+|**job_password**|**sysname**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* esttoujours\*retournée. \* \* \* \***|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_helpqreader_agent** est utilisé dans la réplication transactionnelle.  
   
 ## <a name="permissions"></a>Autorisations  
- Lorsque la valeur de *frompublisher* est **1**, seuls les membres de la **sysadmin** rôle serveur fixe sur le serveur de publication ou les membres de la **db_owner**rôle de base de données fixe sur la base de données de publication peut exécuter **sp_helpqreader_agent**. Sinon, seuls les membres de la **sysadmin** rôle serveur fixe sur le serveur de distribution ou les membres de la **db_owner** rôle de base de données fixe sur la base de données de distribution peut exécuter **sp_helpqreader_ Agent**.  
+ Lorsque la valeur de *frompublisher* est **1**, seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de publication ou les membres du rôle de base de données fixe **db_owner** sur la base de données de publication peuvent exécuter **sp_helpqreader_agent**. Dans le cas contraire, seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de distribution ou les membres du rôle de base de données fixe **db_owner** sur la base de données de distribution peuvent exécuter **sp_helpqreader_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Activer les abonnements de mise à jour pour les publications transactionnelles](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  

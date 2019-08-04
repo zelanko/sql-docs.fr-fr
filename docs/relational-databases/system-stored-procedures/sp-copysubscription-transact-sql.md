@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1a093364192e3bab32a2fa0234c7198d8e0f3ff
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108677"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771435"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -43,24 +43,24 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @filename = ] 'file_name'` Est la chaîne qui spécifie le chemin d’accès complet, y compris nom de fichier, à laquelle une copie du fichier de données (.mdf) est enregistrée. *nom de fichier* est **nvarchar (260)** , sans valeur par défaut.  
+`[ @filename = ] 'file_name'`Chaîne qui spécifie le chemin d’accès complet, y compris le nom de fichier, vers lequel une copie du fichier de données (. mdf) est enregistrée. le *nom de fichier* est de type **nvarchar (260)** , sans valeur par défaut.  
   
-`[ @temp_dir = ] 'temp_dir'` Est le nom du répertoire qui contient les fichiers temporaires. *temp_dir* est **nvarchar (260)** , avec NULL comme valeur par défaut. Si NULL, le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] répertoire de données par défaut sera utilisé. Le répertoire doit contenir suffisamment d'espace pour stocker un fichier d'une taille équivalente à celle de tous les fichiers de bases de données d'abonnés réunis.  
+`[ @temp_dir = ] 'temp_dir'`Nom du répertoire qui contient les fichiers temporaires. *temp_dir* est de type **nvarchar (260)** , avec NULL comme valeur par défaut. Si la valeur est [!INCLUDE[msCoName](../../includes/msconame-md.md)] null, le répertoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données par défaut sera utilisé. Le répertoire doit contenir suffisamment d'espace pour stocker un fichier d'une taille équivalente à celle de tous les fichiers de bases de données d'abonnés réunis.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Indicateur booléen facultatif qui spécifie s’il faut remplacer un fichier existant du même nom que celui spécifié dans **@filename** . *overwrite_existing_file*est **bits**, avec une valeur par défaut **0**. Si **1**, il écrase le fichier spécifié par **@filename** , s’il existe. Si **0**, la procédure stockée échoue si le fichier existe et que le fichier n’est pas remplacé.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Indicateur booléen facultatif qui spécifie s’il faut ou non remplacer un fichier existant portant le même nom que celui spécifié **@filename** dans. *overwrite_existing_file*est de valeur de **bit**, avec **0**comme valeur par défaut. Si la **1**est définie, elle remplace le fichier spécifié **@filename** par, s’il existe. Si la **valeur est 0**, la procédure stockée échoue si le fichier existe et si le fichier n’est pas remplacé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_copysubscription** est utilisé dans tous les types de réplication pour copier une base de données d’abonnement dans un fichier comme alternative à l’application d’une capture instantanée sur l’abonné. La base de données doit être configurée pour prendre uniquement en charge les abonnements par extraction de données (pull). Les utilisateurs détenant les autorisations appropriées peuvent réaliser des copies de la base de données d'abonnement, puis copier ou transporter le fichier d'abonnement (.msf) vers un autre Abonné, ou le lui transmettre par courrier électronique en vue de son attachement en tant qu'abonnement.  
+ **sp_copysubscription** est utilisé dans tous les types de réplication pour copier une base de données d’abonnement dans un fichier comme alternative à l’application d’un instantané sur l’abonné. La base de données doit être configurée pour prendre uniquement en charge les abonnements par extraction de données (pull). Les utilisateurs détenant les autorisations appropriées peuvent réaliser des copies de la base de données d'abonnement, puis copier ou transporter le fichier d'abonnement (.msf) vers un autre Abonné, ou le lui transmettre par courrier électronique en vue de son attachement en tant qu'abonnement.  
   
  La taille de la base de données d'abonnement copiée doit être inférieure à 2 gigaoctets (Go).  
   
- **sp_copysubscription** est uniquement pris en charge pour les bases de données avec des abonnements clients et ne peut pas être exécutée lorsque la base de données a des abonnements serveur.  
+ **sp_copysubscription** est uniquement pris en charge pour les bases de données avec des abonnements client et ne peut pas être exécuté lorsque la base de données a des abonnements serveur.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_copysubscription**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_copysubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Autres emplacements du dossier d’instantanés](../../relational-databases/replication/snapshot-options.md)   

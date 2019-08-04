@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997509"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771480"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Indique les types des options de réplication activées pour un serveur. Cette procédure stockée est exécutée sur n'importe quelle base de données de n'importe quel serveur.  
   
@@ -37,7 +37,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @optname = ] 'option_name'` Est le nom de l’option de réplication à interroger. *option_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @optname = ] 'option_name'`Nom de l’option de réplication à interroger. *option_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -53,14 +53,14 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**révision**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**faisant**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_helpreplicationoption** est utilisé pour obtenir des informations sur les options de réplication activées sur un serveur particulier. Pour obtenir plus d’informations sur une base de données, utilisez **sp_helpreplicationdboption**.  
+ **sp_helpreplicationoption** est utilisé pour obtenir des informations sur les options de réplication activées sur un serveur particulier. Pour obtenir des informations sur une base de données particulière, utilisez **sp_helpreplicationdboption**.  
   
 ## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution reviennent par défaut au rôle **public** .  

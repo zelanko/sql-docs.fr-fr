@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 61d11dd443e68d743b30cee890d33e4852c99b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902913"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770922"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Renvoie les propriétés du serveur de distribution. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
   
@@ -40,16 +40,16 @@ sp_helpdistributor_properties
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**heartbeat_interval**|**Int**|Nombre maximal de minutes pendant lesquelles un Agent peut ne pas consigner de message de progression.|  
+|**heartbeat_interval**|**int**|Nombre maximal de minutes pendant lesquelles un Agent peut ne pas consigner de message de progression.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_helpdistributor_properties** est utilisé avec tous les types de réplication.  
+ **sp_helpdistributor_properties** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** , les membres du rôle serveur fixe le **db_owner** ou **replmonitor** rôle de base de données fixe sur la base de données de distribution et des utilisateurs dans le liste d’accès de publication (PAL) pour une publication qui utilise ce serveur de distribution peut exécuter **sp_helpdistributor_properties**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** , les membres du rôle de base de données fixe **db_owner** ou **replmonitor** de la base de données de distribution et les utilisateurs de la liste d’accès à la publication (PAL) pour une publication qui utilise ce serveur de distribution peuvent Exécutez **sp_helpdistributor_properties**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  

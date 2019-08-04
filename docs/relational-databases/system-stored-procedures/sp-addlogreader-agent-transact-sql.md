@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 062561d440a276fccf5310731db7503e67f7f43e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118096"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769223"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ajoute un Agent de lecture du journal pour une base de données. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -46,42 +46,42 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_login = ] 'job_login'` Nom de connexion pour le [!INCLUDE[msCoName](../../includes/msconame-md.md)] du compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution.  
+`[ @job_login = ] 'job_login'`Nom de [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)** , avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution.  
   
 > [!NOTE]
->  Pour les non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, il doit être la même connexion que celui spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+>  Pour les serveurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il doit s’agir de la même connexion que celle spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
-`[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, avec NULL comme valeur par défaut.  
-  
-> [!IMPORTANT]  
->  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour une sécurité optimale, les noms de connexion et les mots de passe doivent être fournis au moment de l'exécution.  
-  
-`[ @job_name = ] 'job_name'` Est le nom d’un travail d’agent existant. *job_name* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est défini que lorsque l'Agent est démarré avec un travail existant au lieu d'un nouveau travail (la valeur par défaut).  
-  
-`[ @publisher_security_mode = ] publisher_security_mode` Le mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est **smallint**, avec une valeur par défaut **1**. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, et **1** Spécifie l’authentification Windows. La valeur **0** doit être spécifié pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.  
-  
-`[ @publisher_login = ] 'publisher_login'` Est le nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est **sysname**, avec NULL comme valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **0**. Si *publisher_login* a la valeur NULL et *publisher_security_mode* est **1**, le compte Windows spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
-  
-`[ @publisher_password = ] 'publisher_password'` Est le mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour une sécurité optimale, les noms de connexion et les mots de passe doivent être fournis au moment de l'exécution.  
   
-`[ @publisher = ] 'publisher'` Est le nom de la non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom d’un travail d’agent existant. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est défini que lorsque l'Agent est démarré avec un travail existant au lieu d'un nouveau travail (la valeur par défaut).  
+  
+`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est de type **smallint**, avec **1**comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification et **1** spécifie l’authentification Windows. La valeur **0** doit être spécifiée pour les serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non-.  
+  
+`[ @publisher_login = ] 'publisher_login'`Nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est de **type sysname**, avec NULL comme valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **égal à 0**. Si *publisher_login* a la valeur null et que *publisher_security_mode* a la valeur **1**, le compte Windows spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
+  
+`[ @publisher_password = ] 'publisher_password'`Mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est de **type sysname**, avec NULL comme valeur par défaut.  
+  
+> [!IMPORTANT]  
+>  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour une sécurité optimale, les noms de connexion et les mots de passe doivent être fournis au moment de l'exécution.  
+  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ne spécifiez pas ce paramètre pour un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_addlogreader_agent** est utilisé dans la réplication transactionnelle.  
   
- Vous devez exécuter **sp_addlogreader_agent** pour ajouter un agent de lecture du journal si vous mettez à niveau une base de données qui a été activée pour la réplication vers cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant la création d’une publication qui a utilisé la base de données.  
+ Vous devez exécuter **sp_addlogreader_agent** pour ajouter un agent de lecture du journal si vous avez mis à niveau une base de données qui a été activée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la réplication vers cette version de avant la création d’une publication qui utilisait la base de données.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_addlogreader_agent**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addlogreader_agent**.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql)]  
