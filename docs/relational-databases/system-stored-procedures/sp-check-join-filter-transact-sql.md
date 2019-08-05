@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070425"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771272"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   S'utilise pour vérifier un filtre de jointure entre deux tables pour déterminer si la clause du filtre est valide. Cette procédure stockée renvoie également des informations sur le filtre de jointure fourni, y compris s'il est possible de l'utiliser avec des partitions précalculées pour la table donnée. Cette procédure stockée est exécutée sur la base de données du serveur de publication. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
@@ -45,32 +45,32 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @filtered_table = ] 'filtered_table'` Est le nom d’une table filtrée. *filtered_table* est **nvarchar (400)** , sans valeur par défaut.  
+`[ @filtered_table = ] 'filtered_table'`Nom d’une table filtrée. *filtered_table* est de type **nvarchar (400)** , sans valeur par défaut.  
   
-`[ @join_table = ] 'join_table'` Est le nom d’une table jointe à *filtered_table*. *join_table* est **nvarchar (400)** , sans valeur par défaut.  
+`[ @join_table = ] 'join_table'`Nom d’une table jointe à *filtered_table*. *join_table* est de type **nvarchar (400)** , sans valeur par défaut.  
   
-`[ @join_filterclause = ] 'join_filterclause'` La clause de filtre de jointure testée. *join_filterclause* est **nvarchar (1000)** , sans valeur par défaut.  
+`[ @join_filterclause = ] 'join_filterclause'`Clause de filtre de jointure en cours de test. *join_filterclause* est de type **nvarchar (1000)** , sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Est si la publication est éligible pour les partitions précalculées. où **1** signifie qu’il est partitions peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
-|**has_dynamic_filters**|**bit**|Si la clause de filtre fournie comprend au moins une fonction de filtrage paramétré ; où **1** signifie qu’une fonction de filtrage paramétré est utilisée, et **0** signifie qu’une telle fonction n’est pas utilisée.|  
+|**can_use_partition_groups**|**bit**|Indique si la publication est qualifiée pour les partitions précalculées; où **1** signifie que les partitions precomupted peuvent être utilisées, et **0** signifie qu’elles ne peuvent pas être utilisées.|  
+|**has_dynamic_filters**|**bit**|Indique si la clause de filtre fournie comprend au moins une fonction de filtrage paramétrée; où **1** signifie qu’une fonction de filtrage paramétrable est utilisée, et **0** signifie qu’une telle fonction n’est pas utilisée.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Liste des fonctions de la clause du filtre qui définissent un filtrage paramétré pour un article. Chaque fonction est séparée par un point-virgule.|  
-|**uses_host_name**|**bit**|Si le [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) fonction est utilisée dans la clause de filtre, où **1** signifie que cette fonction est présente.|  
-|**uses_suser_sname**|**bit**|Si le [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md) fonction est utilisée dans la clause de filtre, où **1** signifie que cette fonction est présente.|  
+|**uses_host_name**|**bit**|Si la fonction [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) est utilisée dans la clause de filtre, où **1** indique que cette fonction est présente.|  
+|**uses_suser_sname**|**bit**|Si la fonction [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) est utilisée dans la clause de filtre, où **1** indique que cette fonction est présente.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_check_join_filter** est utilisé dans la réplication de fusion.  
   
- **sp_check_join_filter** peuvent être exécutées sur toutes les tables associées, même si elles ne sont pas publiées. Cette procédure stockée peut être utilisée pour vérifier une clause de filtre de jointure avant de définir un filtre de jointure entre deux articles.  
+ **sp_check_join_filter** peut être exécuté sur toutes les tables associées, même si elles ne sont pas publiées. Cette procédure stockée peut être utilisée pour vérifier une clause de filtre de jointure avant de définir un filtre de jointure entre deux articles.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_check_join_filter**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_check_join_filter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
