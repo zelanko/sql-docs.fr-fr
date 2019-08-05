@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948682"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768729"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Lors de la conception d'une stratégie de sauvegarde et de restauration de la réplication transactionnelle et d'instantané, vous devez identifier :  
   
--   les bases de données à sauvegarder ;  
-  
--   les paramètres de sauvegarde de la réplication transactionnelle ;  
-  
+-   les bases de données à sauvegarder ;
+-   les paramètres de sauvegarde de la réplication transactionnelle ;
 -   les étapes requises pour restaurer une base de données. Celles-ci dépendent du type de réplication et des options choisies.  
   
  Cette rubrique aborde chacun de ces points au cours des trois sections suivantes. Pour plus d’informations sur la sauvegarde et la restauration de la publication Oracle, consultez [Sauvegarde et restauration des serveurs de publication Oracle](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>Sauvegarde de bases de données  
  Pour la réplication transactionnelle et d'instantané, vous devez sauvegarder régulièrement les bases de données suivantes :  

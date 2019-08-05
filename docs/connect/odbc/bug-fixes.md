@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264012"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702811"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
 Cette page contient la liste des bogues corrigés dans chaque version, [!INCLUDE[msCoName](../../includes/msconame_md.md)] à partir du pilote ODBC 17 pour[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] pilote ODBC 17,4 pour[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Correction du blocage intermittent lorsque MARS (Multiple Active Result Sets) est activé
+- Corriger la résilience de la connexion se bloquer lorsque la notification asynchrone est activée
+- Résolution d’un incident lors de la récupération des enregistrements de diagnostic pour les tentatives de connexion multithread
+- Correction du chiffrement non pris en charge lors de la reconnexion après avoir appelé SQLGetInfo () avec SQL_USER_NAME et SQL_DATA_SOURCE_READ_ONLY
+- Corriger l’erreur d’initialisation COM lors de l’Azure Active Directory de l’authentification interactive
+- Corriger SQLGetData () pour les données UTF8 sur plusieurs octets
+- Correction de la récupération de la longueur des colonnes sql_variant à l’aide de SQLGetData ()
+- Correction de l’importation de colonnes sql_variant contenant plus de 7992 octets à l’aide de BCP
+- Correction de l’envoi d’un encodage correct vers le serveur pour les données de caractères étroits
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] pilote ODBC 17,3 pour[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
