@@ -27,7 +27,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126954"
 ---
-# <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API de procédure stockée étendue)
+# <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
@@ -70,6 +70,6 @@ len
 >  La mémoire tampon retournée à partir du serveur doit être en lecture seule. Dans le cas contraire, l'état du serveur peut être endommagé.  
   
 ## <a name="remarks"></a>Notes  
- **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+ **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   
