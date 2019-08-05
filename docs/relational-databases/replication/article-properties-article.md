@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77aa27a444437a9d1fb887fe01e4cff64051f524
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085869"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768198"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La boîte de dialogue **Propriétés de l'article** est accessible depuis l'Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication** . Elle permet d'afficher et de définir les propriétés de tous les types d'articles. Certaines propriétés peuvent être définies uniquement lors de la création de la publication, et d'autres uniquement si la publication n'a pas d'abonnements actifs. Les propriétés qui ne peuvent pas être définies s'affichent en lecture seule.  
   
 > [!NOTE]  

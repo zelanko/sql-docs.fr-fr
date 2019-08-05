@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cd7983be16e77bb4273e0380c026f8b07c3f7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7143f28436de8aed4f6b0298d04a57237d88c03e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046719"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769702"
 ---
 # <a name="reinitialize-subscriptions"></a>Réinitialiser des abonnements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La réinitialisation d'un abonnement nécessite l'application d'un nouvel instantané d'un ou plusieurs articles à un ou plusieurs Abonnés : la réplication transactionnelle et la réplication d'instantané permettent à des articles individuels d'être réinitialisés ; la réplication de fusion nécessite que tous les articles soient réinitialisés. Les nœuds d'une topologie de réplication transactionnelle d'égal à égal ne peuvent pas être réinitialisés. Si vous voulez être certain qu'un nœud dispose d'une nouvelle copie des données, restaurez une sauvegarde sur le nœud. Une réinitialisation se produit pour l'une de ces deux raisons :  
   
 -   Vous marquez explicitement un abonnement pour réinitialisation.  

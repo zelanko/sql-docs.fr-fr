@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078d965fbf3963039bb54b70fd63f54aadb9eb95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005374"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768439"
 ---
 # <a name="replication-tutorials"></a>Tutoriels sur la réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 La réplication est une solution efficace pour transférer des données, ou des sous-ensembles de données, entre des serveurs. Vous pouvez répliquer des données entre des serveurs intégralement connectés à l’aide de la réplication transactionnelle. Vous pouvez également répliquer des données entre des serveurs et des clients qui sont connectés par intermittence à l’aide de la réplication de fusion. Dans cet article, vous trouverez des tutoriels qui vous aident à préparer votre serveur pour la réplication, puis vous expliquent comment configurer la réplication transactionnelle et la réplication de fusion. 
   
 Dans les tutoriels sur la réplication, « serveur de publication » fait référence au serveur qui contient les données sources en cours de réplication. « Abonné » fait référence au serveur de destination. Le serveur de publication et l’abonné peuvent partager la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais ce n’est pas une obligation. Pour plus d’informations, consultez la [présentation du modèle de publication de réplication](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  

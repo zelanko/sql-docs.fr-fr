@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24cc3942c0b4df2f49ec4f40a394f07e60b1efd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018628"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770689"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Ajouter et supprimer des serveurs de publication à partir du Moniteur de réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Le serveur à partir duquel vous lancez le moniteur de réplication est automatiquement ajouté au moniteur s'il s'agit d'un serveur de publication. D'autres serveurs de publication peuvent être ajoutés via la boîte de dialogue **Ajouter un serveur de publication** . Après l'ajout d'un serveur de publication, celui-ci est affiché dans le volet gauche du moniteur. Le groupe **Mes serveurs de publication** est inclus par défaut, mais vous pouvez créer de nouveaux groupes pour gérer une ou plusieurs topologies de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 ### <a name="to-add-a-sql-server-publisher"></a>Pour ajouter un serveur de publication SQL Server  

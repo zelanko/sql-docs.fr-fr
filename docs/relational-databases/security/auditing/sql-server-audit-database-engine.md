@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3d3981e4f9357330a5e3bcc13196255e54c48f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095137"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742884"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "68095137"
   
 |Affichages catalogue|Description|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contient des informations sur les spécifications de l'audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
+|[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contient des informations sur les spécifications de l'audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contient des informations sur les spécifications de l’audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur, pour toutes les bases de données.|  
 |[sys.server_audits](../../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)|Contient une ligne pour chaque audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une instance de serveur.|  
 |[sys.server_audit_specifications](../../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)|Contient des informations à propos des spécifications de l'audit du serveur dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
