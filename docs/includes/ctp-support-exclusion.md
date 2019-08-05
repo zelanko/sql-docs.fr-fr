@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: 522e06e85343a19f80490f07290a1435cebd2d77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220725"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419554"
 ---
-### <a name="enabled-deployment-scenarios"></a>Scénarios de déploiement rendus possibles
+## <a name="enabled-deployment-scenarios"></a>Scénarios de déploiement rendus possibles
 
-CTP 3.1 prend en charge les scénarios suivants :
+CTP 3.2 prend en charge les scénarios suivants :
 
-- Installation côte à côte. Installez des instances de SQL Server 2019 CTP 3.1 avec des instances de SQL Server 2012 à SQL Server 2017, ou d’autres instances de SQL Server 2019 CTP 3.0 ou versions ultérieures.
+- Installation côte à côte. Installez des instances de SQL Server 2019 CTP 3.2 avec des instances de SQL Server 2012 à SQL Server 2017, ou d’autres instances de SQL Server 2019 CTP 3.0 ou versions ultérieures.
    >[!NOTE]
    >Alors que le mode côte à côte n’est pas bloqué avec SQL Server 2008 et 2008 R2, il n’existe pas de versions de système d’exploitation Windows couramment prises en charge entre elles et SQL Server 2019.
-- Mise à niveau sur place. Mettez à niveau des instances de SQL Server 2019 CTP 3.1 des instances de SQL Server 2012 à SQL Server 2017 et SQL Server CTP 3.0. La mise à niveau d’une version de SQL Server 2019 CTP antérieure à 3 0 n’est pas prise en charge. Une nouvelle installation doit être effectuée.
+- Mise à niveau sur place. Mettez à niveau des instances vers SQL Server 2019 CTP 3.2, à partir d’instances de SQL Server 2012 à SQL Server 2017 et SQL Server CTP 3.0. La mise à niveau d’une version de SQL Server 2019 CTP antérieure à 3 0 n’est pas prise en charge. Une nouvelle installation doit être effectuée.
    >[!NOTE]
    >Alors que la mise à niveau sur place de SQL Server 2008 et 2008 R2 n’est pas bloquée, il n’existe pas de versions de système d’exploitation Windows couramment prises en charge entre elles et SQL Server 2019.
 
-### <a name="support"></a>Support technique
+## <a name="support"></a>Support technique
 
-SQL Server 2019 CTP 3.1 est un logiciel en préversion. Il n’est pas pris en charge publiquement pour les opérations. Les clients qui participent au [programme d’adoption anticipée de SQL](http://aka.ms/sqleap) peuvent bénéficier d’un support pour l’exécution de SQL Server 2019 CTP 3.1 par contrat spécial, en concertation avec Microsoft.
+SQL Server 2019 CTP 3.2 est un logiciel en préversion. Il n’est pas pris en charge publiquement pour les opérations. Les clients qui participent au [programme d’adoption anticipée de SQL](http://aka.ms/sqleap) peuvent bénéficier d’un support pour l’exécution de SQL Server 2019 CTP 3.2 par contrat spécial, en concertation avec Microsoft.
 
 Un support limité pour les clients ne participant pas au programme d’adoption anticipée est disponible dans l’un des emplacements suivants :
 

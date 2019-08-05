@@ -1,7 +1,7 @@
 ---
 title: Jointures (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/18/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,31 +10,33 @@ helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
 - MERGE join
+- ADAPTIVE join
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051949"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419590"
 ---
 # <a name="joins-sql-server"></a>Jointures (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les opérations de tri, d’intersection, d’union et de différentiation au moyen des technologies de jointure de hachage et de tri en mémoire. Grâce à ce type de plan de requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement vertical de tables, parfois nommé stockage en colonnes.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise trois types d'opérations de jointure :    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise quatre types d’opérations de jointure :    
 -   Jointures de boucles imbriquées     
 -   Jointures de fusion   
 -   Jointures de hachage   
+-   Jointures adaptatives (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="fundamentals"></a> Principes de base des jointures
-Les jointures permettent d'extraire des données de deux ou de plusieurs tables en fonction des relations logiques existant entre ces tables. Les jointures indiquent comment Microsoft SQL Server doit utiliser les données d’une table pour sélectionner les lignes d’une autre table.    
+Les jointures permettent d'extraire des données de deux ou de plusieurs tables en fonction des relations logiques existant entre ces tables. Les jointures indiquent comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit utiliser les données d’une table pour sélectionner les lignes d’une autre table.    
 
 Une condition de jointure définit la manière dont deux tables sont liées dans une requête :    
 -   en spécifiant la colonne de chaque table à utiliser pour la jointure. Une condition de jointure standard spécifie une clé étrangère d'une table et la clé qui lui est associée dans l'autre table ;    
@@ -115,6 +117,8 @@ Dans le cas le plus simple, la recherche analyse intégralement une table ou un 
 
 Une jointure de boucles imbriquées est particulièrement efficace si l'entrée externe est petite alors que l'entrée interne préindexée est volumineuse. Dans bon nombre de transactions réduites, comme celles concernant un petit nombre de lignes seulement, les jointures de boucles imbriquées d'index sont supérieures aux jointures de fusion et de hachage. À l'inverse, pour les requêtes de grande ampleur, les jointures de boucles imbriquées ne constituent pas le meilleur choix.    
 
+Lorsque l’attribut OPTIMIZED d’un opérateur de jointure de boucles imbriquées est défini sur **True**, une boucle imbriquée optimisée (ou tri par lot) est utilisée pour réduire les E/S lorsque la table interne est volumineuse, indépendamment de sa parallélisation. La présence de cette optimisation peut ne pas être très évidente lorsque vous analysez un plan d’exécution, étant donné que le tri est une opération cachée. Toutefois, en recherchant l’attribut OPTIMIZED dans le plan XML, vous pouvez voir que la jointure de boucles imbriquées tente de réorganiser les lignes d’entrée pour améliorer les performances d’E/S.
+
 ## <a name="merge"></a> Présentation des jointures de fusion
 Si les deux entrées de jointure ne sont pas réduites, mais triées sur leur colonne de jointure (si elles ont été obtenues par analyse des index triés, par exemple), une jointure de fusion constitue l'opération de jointure la plus rapide. Si les deux entrées de jointure sont étendues et de taille similaire, une jointure de fusion avec tri préalable et une jointure de hachage offrent des performances équivalentes. Cependant, les opérations de jointure de hachage sont souvent beaucoup plus rapides si la taille des deux entrées diffère de façon significative.       
 
@@ -142,15 +146,12 @@ Les jointures de hachage sont utilisées pour de nombreux types d'opérations de
 Les sections suivantes décrivent différents types de jointures de hachage : jointure de hachage en mémoire, jointure de hachage progressive et jointure de hachage récursive.    
 
 ### <a name="inmem_hash"></a> Jointure de hachage en mémoire
-
 La jointure de hachage analyse ou calcule l'intégralité de l'entrée de construction puis génère une table de hachage en mémoire. Chaque ligne est insérée dans un compartiment de hachage en fonction de la valeur de hachage calculée pour la clé de hachage. Si la totalité de l'entrée de construction est inférieure à la mémoire disponible, toutes les lignes peuvent être insérées dans la table de hachage. La phase de construction est suivie de la phase d'exploration. La totalité de l'entrée d'exploration est analysée ou calculée ligne par ligne puis, pour chaque ligne d'exploration, la valeur de clé de hachage est calculée, le compartiment de hachage correspondant analysé et les correspondances établies.    
 
 ### <a name="grace_hash"></a> Jointure de hachage progressive
-
 Si l'entrée de construction ne tient pas en mémoire, une jointure de hachage intervient en plusieurs étapes. Cette opération est qualifiée de jointure de hachage progressive. Chaque étape comprend une phase de construction et une phase d'exploration. Initialement, l'intégralité des entrées de construction et d'exploration est mobilisée et partitionnée (à l'aide d'une fonction de hachage appliquée aux clés de hachage) en plusieurs fichiers. L'utilisation de la fonction de hachage sur les clés de hachage garantit la présence des deux enregistrements de jointure dans la même paire de fichiers. Ainsi, la tâche consistant à joindre deux entrées volumineuses a été réduite à plusieurs instances moins importantes des mêmes tâches. La jointure de hachage est ensuite appliquée à chaque paire de fichiers partitionnés.    
 
 ### <a name="recursive_hash"></a> Jointure de hachage récursive
-
 Si l'entrée de construction est volumineuse au point que les entrées pour une fusion externe standard nécessitent plusieurs niveaux de fusion, plusieurs étapes et plusieurs niveaux de partitionnement sont nécessaires. Si seules certaines partitions sont volumineuses, des étapes de partitionnement supplémentaires ne sont utilisées que pour celles-ci. Des opérations d'E/S asynchrones sont utilisées de sorte qu'un thread unique puisse occuper plusieurs unités de disque, dans le but d'accélérer au maximum les étapes du partitionnement.    
 
 > [!NOTE]
@@ -164,14 +165,132 @@ Si l’optimiseur de requête anticipe mal laquelle des deux entrées est moins 
 > L'inversion des rôles se produit indépendamment de tous les indicateurs ou de toute structure de requête. L'inversion des rôles ne s'affiche pas dans votre plan de requête ; quand elle se produit, elle est transparente pour l'utilisateur.
 
 ### <a name="hash_bailout"></a> Interruption de hachage
-
 Le terme interruption de hachage est parfois utilisé pour décrire des jointures de hachage progressives ou des jointures de hachage récursives.    
 
 > [!NOTE]
 > Les jointures de hachage récursives ou les interruptions de hachage entraînent une diminution des performances de votre serveur. Si vous voyez de nombreux événements d’avertissements de hachage dans une trace, mettez à jour les statistiques sur les colonnes qui sont jointes.    
 
 Pour plus d’informations sur l’interruption de hachage, consultez [Hash Warning (classe d’événements)](../../relational-databases/event-classes/hash-warning-event-class.md).    
-  
+
+## <a name="adaptive"></a> Comprendre les jointures adaptatives
+En [mode batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution), les jointures adaptatives permettent de choisir entre la méthode de jointure [Jointure hachée](#hash) et la méthode [Boucles imbriquées](#nested_loops). En outre, vous pouvez **attendre** que la première entrée ait été analysée avant de procéder à la jointure. L’opérateur de jointure adaptative définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Un plan de requête peut donc passer dynamiquement à une meilleure stratégie de jointure pendant l’exécution, sans que cela nécessite une recompilation. 
+
+> [!TIP]
+> Ce sont les charges de travail avec des variations fréquentes entre les grandes et les petites analyses d’entrée de jointure qui bénéficient le plus de cette fonctionnalité.
+
+La décision d’exécution est basée sur les étapes suivantes :
+-  Si le nombre de lignes de l’entrée de jointure de génération est suffisamment petit pour qu’une jointure de boucles imbriquées soit plus optimale qu’une jointure hachée, le plan bascule vers un algorithme de boucles imbriquées.
+-  Si l’entrée de jointure de génération dépasse un seuil spécifique de nombre de lignes, aucun basculement ne se produit et votre plan se poursuit avec une jointure hachée.
+
+La requête suivante est utilisée pour illustrer un exemple de jointure adaptative :
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+Cette requête retourne 336 lignes. L’activation de l’option [Statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md) affiche le plan suivant :
+
+![Résultat de la requête : 336 lignes](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+Dans le plan, remarquez les éléments suivants :
+1. Une analyse d’index columnstore utilisée pour fournir des lignes pendant la phase de génération de la jointure hachée.
+2. Le nouvel opérateur de jointure adaptative. Cet opérateur définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Dans cet exemple, le seuil est fixé à 78 lignes. Dès que le nombre de lignes est &gt;= à 78 lignes, une jointure hachée est utilisée. Si le nombre de lignes est inférieur au seuil, une jointure de boucles imbriquées est utilisée.
+3. Le seuil a été dépassé puisque la requête a retourné 336 lignes. La deuxième branche représente donc la phase de sondage d’une opération de jointure hachée standard. Notez que les statistiques des requêtes actives affichent les lignes qui sont traitées par les opérateurs (dans notre exemple, « 672 sur 672 »).
+4. La dernière branche est la recherche d’index cluster qui aurait dû être utilisée par la jointure de boucles imbriquées si le seuil n’avait pas été dépassé. Notez que nous voyons « 0 sur 336 » lignes affichées (la branche n’est pas utilisée).
+
+Maintenant, nous allons comparer le plan avec la même requête, mais cette fois-ci, avec une valeur *Quantité* comprenant une seule ligne dans la table :
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+La requête retourne une ligne. L’activation de l’option Statistiques des requêtes actives affiche le plan suivant :
+
+![Résultat de la requête : une ligne](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+Dans le plan, remarquez les éléments suivants :
+- Avec une ligne retournée, le flux des lignes est maintenant inclus dans la recherche d’index cluster.
+- De plus, comme la phase de génération de jointure hachée n’a pas continué, aucun flux de lignes n’est inclus dans la deuxième branche.
+
+### <a name="adaptive-join-remarks"></a>Remarques concernant les jointures adaptatives
+Les jointures adaptatives nécessitent davantage de mémoire que les jointures de boucles imbriquées d’index en cas de plan équivalent. De la mémoire supplémentaire est demandée comme si les boucles imbriquées étaient une jointure hachée. Une opération discontinue engendre également une surcharge pendant la phase de génération contrairement à la diffusion d’une boucle imbriquée, en cas de jointure équivalente. Ce coût supplémentaire apporte une certaine flexibilité dans les scénarios où le nombre de lignes peut fluctuer dans l’entrée de génération.
+
+En mode batch, les jointures adaptatives sont utilisées pour l’exécution initiale d’une instruction. Une fois compilées, les exécutions consécutives restent adaptatives en fonction du seuil des jointures adaptatives compilées et du flux des lignes de runtime dans la phase de génération de l’entrée externe.
+
+Si une jointure adaptative bascule sur une opération de boucles imbriquées, elle utilise les lignes déjà lues dans la génération de jointure hachée. L’opérateur ne relit **pas** les lignes de référence externe.
+
+### <a name="tracking-adaptive-join-activity"></a>Suivi de l’activité des jointures adaptatives
+L’opérateur de jointure adaptative a les attributs d’opérateur de plan suivants :
+
+|Attribut de plan|Description|
+|---|---|
+|AdaptiveThresholdRows|Montre l’utilisation du seuil pour passer d’une jointure hachée à une jointure de boucles imbriquées.|
+|EstimatedJoinType|Type de jointure probable.|
+|ActualJoinType|Dans un plan réel, indique l’algorithme de jointure qui a finalement été choisi en fonction du seuil.|
+
+Le plan estimé montre la forme du plan de jointure adaptative, ainsi que le seuil de jointure adaptative défini et un type de jointure estimé.
+
+> [!TIP]
+> Le Magasin des requêtes capture un plan de jointure adaptative en mode batch et est capable de forcer son application.
+
+### <a name="adaptive-join-eligible-statements"></a>Instructions éligibles pour la jointure adaptative
+Une jointure logique doit respecter certaines conditions pour être assimilée à une jointure adaptative en mode batch :
+- Le niveau de compatibilité de la base de données est de 140 ou supérieur.
+- La requête est une instruction `SELECT` (les instructions de modification des données ne sont pas éligibles).
+- La jointure est éligible pour être exécutée par une jointure de boucles imbriquées indexées ou par un algorithme physique de jointure hachée.
+- La jointure hachée utilise le [mode batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) quand un index columnstore est présent dans la requête globale ou quand la jointure référence directement la table d’index columnstore.
+- Les solutions alternatives générées de la jointure de boucles imbriquées et de la jointure hachée doivent avoir le même premier enfant (référence externe).
+
+### <a name="adaptive-threshold-rows"></a>Lignes du seuil adaptatif
+Le graphique suivant montre un exemple d’intersection entre le coût d’une jointure hachée et le coût d’une jointure de boucles imbriquées alternative. À ce point d’intersection, le seuil est déterminé, qui détermine à son tour l’algorithme réel utilisé pour l’opération de jointure.
+
+![Seuil de jointure](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Désactivation des jointures adaptatives sans modifier le niveau de compatibilité
+Les jointures adaptatives peuvent être désactivées dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de base de données 140 et au-delà.  
+Si vous souhaitez désactiver les jointures adaptatives pour toutes les exécutions de requête en provenance de la base de données, exécutez le code suivant dans le contexte de la base de données applicable :
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+Pour réactiver les jointures adaptatives pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Vous pouvez également désactiver les jointures adaptatives pour une requête spécifique en désignant `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> Un indicateur de requête USE HINT est prioritaire par rapport à une configuration incluse dans l’étendue d’une base de données ou à un paramètre d’indicateur de trace. 
+
 ## <a name="nulls_joins"></a> Valeurs Null et jointures
 Si certaines colonnes de tables jointes contiennent des valeurs NULL, ces valeurs NULL ne correspondent pas les unes aux autres. La présence de valeurs Null dans une colonne d’une des tables jointes ne peut être retournée que si vous utilisez une jointure externe (sauf si la clause `WHERE` exclut les valeurs Null).     
 
@@ -236,7 +355,3 @@ Dans les résultats, il est difficile d’établir la différence entre une vale
 [Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Sous-requêtes](../../relational-databases/performance/subqueries.md)      
 [Jointures adaptatives](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

@@ -19,12 +19,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909714"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476299"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,76 @@ ms.locfileid: "67909714"
   
  **Allow Nulls**  
  Affiche **Oui** si la définition de table autorise la présence de valeurs Null dans la colonne. Affiche **Non** si la définition de la table interdit la présence de valeurs Null dans la colonne.  
+
+##  <a name="Options"></a> Options de la page Options
+ Utilisez cette page pour afficher ou modifier les options d’index.
+
+### <a name="general-options"></a>Options générales
+**Recalculer automatiquement les statistiques**<br>
+Spécifie si les statistiques de distribution sont recalculées automatiquement. La valeur par défaut est **True**, ce qui revient à affecter la valeur OFF à STATISTICS_NORECOMPUTE. Si vous définissez cette valeur sur **False**, vous activez STATISTICS_NORECOMPUTE.
+
+**Ignorer les valeurs dupliquées** <br>
+Spécifie la réponse d'erreur lorsqu'une opération d'insertion essaie d'insérer des valeurs de clés en double dans un index unique.
+
+True<br>
+Un message d'avertissement s'affichera lorsque des valeurs de clé en double sont insérées dans un index unique. Seules les lignes qui violent la contrainte d'unicité échouent.
+
+False<br>
+Un message d'erreur s'affichera lorsque des valeurs de clé en double sont insérées dans un index unique. L'intégralité de l'opération INSERT sera restaurée.
+
+### <a name="locks-options"></a>Options de verrouillage
+
+**Autoriser les verrous de ligne**<br>
+Indique si les verrous de ligne sont autorisés ou non.
+
+**Autoriser les verrous de page**<br>
+Indique si les verrous de page sont autorisés.
+
+### <a name="operation-options"></a>Options d’opération
+
+ **Autoriser le traitement des instructions DML en ligne**  
+ Permet aux utilisateurs d’accéder à la table sous-jacente ou aux données des index cluster, ainsi qu’à tous les index non cluster associés pendant une opération d’index telle que CREATE ou ALTER. Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
+> [!NOTE]  
+>  Cette option n'est pas disponible pour les index XML ou si l'index est un index cluster désactivé.  
+  
+ **Degré maximal de parallélisme**  
+ Limite le nombre de processeurs à utiliser pendant l'exécution des plans parallèles. La valeur par défaut est 0, indiquant que le nombre réel de processeurs disponibles est utilisé. Spécifier la valeur 1 supprime la génération d'un plan parallèle ; spécifier une valeur supérieure à 1 limite le nombre maximal de processeurs utilisés au cours de l'exécution d'une requête simple. Cette option est disponible seulement si la boîte de dialogue est dans l'état **Reconstruire** ou **Recréer** . Pour plus d'informations, consultez [Définir l'option max degree of parallelism pour des performances optimales](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+  
+> [!NOTE]  
+>  Si une valeur supérieure au nombre d'UC disponibles est spécifiée, le nombre réel d'UC est utilisé.  
+
+
+**Optimiser pour la clé séquentielle**<br>
+Spécifie s’il faut optimiser ou pas la contention d’insertion de la dernière page. Pour plus d’informations, consultez [Clés séquentielles](../../t-sql/statements/create-index-transact-sql.md#sequential-keys).
+
+### <a name="storage-options"></a>Option de stockage
+
+**Trier dans tempdb**<br>
+Spécifie si les résultats temporaires du tri doivent être stockés dans tempdb.
+
+True<br>
+Les résultats de tri intermédiaires utilisés pour créer l'index sont stockés dans tempdb. Cela permet de réduire la durée de création d'un index si tempdb n'est pas sur le même groupe de disques que la base de données utilisateur. Toutefois, une plus grande quantité d'espace disque est alors utilisée lors de la création de l'index.
+
+False<br>
+Les résultats de tri intermédiaires sont stockés dans la même base de données que l'index. Pour plus d’informations, consultez [Option SORT_IN_TEMPDB pour les index](./sort-in-tempdb-option-for-indexes.md).
+
+**Facteur de remplissage**<br>
+Spécifie un pourcentage qui indique dans quelle mesure le moteur de base de données doit remplir le niveau feuille de chaque page d’index pendant la création ou la regénération d’un index. fillfactor doit être une valeur entière comprise entre 1 et 100. Si fillfactor a une valeur de 100, le moteur de base de données crée des index avec des pages de niveau feuille intégralement remplies.
+La valeur FILLFACTOR s'applique uniquement lors de la création ou de la reconstruction de l'index. Dans les pages, le moteur de base de données ne conserve pas dynamiquement le pourcentage d’espace libre défini.
+
+Pour plus d’informations, consultez [Spécifier un facteur de remplissage pour un index](./specify-fill-factor-for-an-index.md).
+
+**index de remplissage**<br>
+Spécifie le remplissage de l'index.
+
+True<br>
+Le pourcentage d’espace libre indiqué par fillfactor est appliqué aux pages de niveau intermédiaire de l’index.
+
+False ou fillfactor n’est pas spécifié<br>
+Les pages de niveau intermédiaire sont presque entièrement remplies, ce qui laisse suffisamment d'espace libre pour au moins une ligne de la taille maximale permise par l'index, en prenant en compte l'ensemble de clés sur les pages intermédiaires.
+
+
 ##  <a name="Storage"></a> Options (page Stockage)  
  Utilisez cette page pour consulter ou modifier les propriétés de groupe de fichiers ou de schéma de partition pour l'index sélectionné. Affiche uniquement les options relatives au type d'index.  
   
@@ -164,18 +233,6 @@ ms.locfileid: "67909714"
   
 > [!NOTE]  
 >  Si la colonne de table est une colonne calculée, **Type de données de la colonne** contient la mention « colonne calculée ».  
-  
- **Autoriser le traitement en ligne des instructions DML lors du déplacement de l'index**  
- Permet aux utilisateurs d'accéder à la table sous-jacente ou aux données des index cluster et à tous les index non-cluster associés pendant l'opération d'index. Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
-> [!NOTE]  
->  Cette option n'est pas disponible pour les index XML ou si l'index est un index cluster désactivé.  
-  
- **Définir le degré maximal de parallélisme**  
- Limite le nombre de processeurs à utiliser pendant l'exécution des plans parallèles. La valeur par défaut est 0, indiquant que le nombre réel de processeurs disponibles est utilisé. Spécifier la valeur 1 supprime la génération d'un plan parallèle ; spécifier une valeur supérieure à 1 limite le nombre maximal de processeurs utilisés au cours de l'exécution d'une requête simple. Cette option est disponible seulement si la boîte de dialogue est dans l'état **Reconstruire** ou **Recréer** . Pour plus d'informations, consultez [Définir l'option max degree of parallelism pour des performances optimales](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
-  
-> [!NOTE]  
->  Si une valeur supérieure au nombre d'UC disponibles est spécifiée, le nombre réel d'UC est utilisé.  
   
 ##  <a name="Spatial"></a> Options de l'index (page Spatial)  
  Utilisez la page **Spatial** pour afficher ou spécifier les valeurs des propriétés spatiales. Pour plus d’informations, consultez [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  

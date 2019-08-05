@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4b6b05436f85fa96a164f6e86733c5bc4bf95f0d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345465"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388444"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Indicateurs de trace (Transact-SQL)
 
@@ -138,7 +138,7 @@ Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponible
 |**7412**|Active l’infrastructure légère de profilage des statistiques sur l’exécution des requêtes. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/3170113).<br /><br />**Remarque :** Cet indicateur de trace s’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et aux builds ultérieures. À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cet indicateur de trace n’a aucun effet car le profilage léger est activé par défaut.<br /><br />**Étendue** : globale uniquement|
 |**7471**|Permet l’exécution de plusieurs instructions [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) pour différentes statistiques sur une seule table simultanément. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/3156157).<br /><br />**Remarque :** Cet indicateur de trace s’applique à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 et aux builds ultérieures.<br /><br />**Étendue** : globale uniquement|
 |**7745**|Force le magasin des requêtes à ne pas vider les données sur le disque lors de l’arrêt de la base de données.<br /><br />**Remarque :** L’utilisation de cette trace peut entraîner la perte en cas d’arrêt des données du magasin des requêtes qui n’ont pas été vidées auparavant sur le disque. Pour un arrêt de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la commande SHUTDOWN WITH NOWAIT peut être utilisée à la place de cet indicateur de trace pour forcer un arrêt immédiat.<br /><br />**Étendue** : globale uniquement|
-|**7752**|Permet le chargement asynchrone du magasin des requêtes.<br /><br />**Remarque :** Utilisez cet indicateur de trace si [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] rencontre un nombre élevé d’attentes QDS_LOADDB liées à la charge synchrone du magasin des requêtes (comportement par défaut lors de la récupération de base de données).<br /><br />**Étendue** : globale uniquement|
+|**7752**|Permet le chargement asynchrone du magasin des requêtes.<br /><br />**Remarque :** Utilisez cet indicateur de trace si [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] rencontre un nombre élevé d’attentes QDS_LOADDB liées à la charge synchrone du magasin des requêtes (comportement par défaut lors de la récupération de base de données).<br /><br />**Remarque :** À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], ce comportement est contrôlé par le moteur, et l’indicateur de trace 7752 n’a pas d’effet.<br /><br />**Étendue** : globale uniquement|
 |**7806**|Active une connexion administrateur dédiée (DAC) sur [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Par défaut, aucune ressource DAC n'est réservée sur [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Pour plus d’informations, consultez [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<br /><br />**Étendue** : globale uniquement|  
 |**8011**|Désactive la mémoire tampon en anneau pour le moniteur de ressource. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/920093).<br /><br />**Étendue** : globale et de session|
 |**8012**|Désactive la mémoire tampon en anneau pour les planificateurs. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/920093).<br /><br />**Étendue** : globale uniquement|

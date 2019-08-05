@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118491"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471047"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -272,7 +275,7 @@ La table suivante présente les octets de stockage d’encodage pour chaque plag
 
 > [!TIP]   
 > Il est courant de penser en [CHAR(*n*) et en VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), ou en [NCHAR(*n*) et en NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), le *n* définissant le nombre de caractères. En effet, dans l’exemple d’une colonne de type CHAR(10), 10 caractères ASCII de la plage 0-127 peuvent être stockés à l’aide d’un classement tel que Latin1_General_100_CI_AI, car chaque caractère de cette plage utilise uniquement 1 octet.    
-> Toutefois, dans [CHAR(*n*) et VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), le *n* définit la longueur de chaîne en **octets** (0-8000), tandis que dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), le *n* définit la longueur de la chaîne en **paires d’octets** (0-4000). *n* ne définit jamais des nombres de caractères pouvant être stockés.
+> Toutefois, dans [CHAR(*n*) et VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), le *n* définit la taille de la chaîne en **octets** (0-8 000), tandis que dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), le *n* définit la taille de la chaîne en **paires d’octets** (0-4 000). *n* ne définit jamais des nombres de caractères pouvant être stockés.
 
 Comme décrit ci-dessus, le choix de l’encodage Unicode et du type de données appropriés peut fournir des gains de stockage significatifs ou augmenter votre encombrement de stockage actuel, en fonction du jeu de caractères utilisé. Par exemple, lors de l’utilisation d’un classement Latin prenant en charge UTF-8, comme Latin1_General_100_CI_AI_SC_UTF8, une colonne `CHAR(10)` stocke 10 octets et peut contenir 10 caractères ASCII dans la plage 0-127, mais seulement 5 caractères dans la plage 128-2047 et seulement 3 caractères dans plage 2048-65535. En comparaison, étant donné qu’une colonne `NCHAR(10)` stocke 10 paires d’octets (20 octets), elle peut contenir 10 caractères dans la plage 0-65535.  
 
@@ -301,7 +304,9 @@ Pour d’autres considérations, consultez [Écrire des instructions Transact-SQ
 [Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - (Plus de support)   
 [Site web du consortium Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Norme Unicode](http://www.unicode.org/standard/standard.html)      
+[Norme Unicode](http://www.unicode.org/standard/standard.html)     
+[Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+Blog [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## <a name="see-also"></a>Voir aussi    
 [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)     
