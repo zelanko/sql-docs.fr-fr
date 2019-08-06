@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468091"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811072"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
   L'OLTP en mémoire introduit les tables optimisées en mémoire et les procédures stockées compilées en mode natif dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cet article présente le traitement des requêtes pour les tables mémoire optimisées et les procédures stockées compilées en mode natif.  
@@ -77,7 +77,7 @@ Plan de requête pour joindre des tables sur disque.
   
 -   Les lignes de la table Customer sont récupérées à partir de l'index cluster, qui est la structure de données principale et contient toutes les données de la table.  
   
--   Les données de la table Order sont récupérées à l'aide de l'index non cluster sur la colonne CustomerID. Cet index contient la colonne CustomerID utilisée pour la jointure, et la colonne de clé primaire OrderID qui est retournée à l'utilisateur. Le retour de colonnes supplémentaires depuis la table Order nécessiterait des recherches dans l'index cluster de la table Order.  
+-   Les données de la table Order sont récupérées à l’aide de l’index non cluster sur la colonne CustomerID. Cet index contient la colonne CustomerID utilisée pour la jointure, et la colonne de clé primaire OrderID qui est retournée à l'utilisateur. Le retour de colonnes supplémentaires depuis la table Order nécessiterait des recherches dans l'index cluster de la table Order.  
   
 -   L'opérateur logique `Inner Join` est implémenté par l'opérateur physique `Merge Join`. Les autres types de jointures physiques sont `Nested Loops` et `Hash Join`. L'opérateur `Merge Join` tire parti du fait que les deux index sont triés sur la colonne de jointure CustomerID.  
   
@@ -114,7 +114,7 @@ Pipeline de traitement des requêtes SQL Server
   
 6.  Les méthodes d'accès récupèrent les lignes de l'index et les pages de données dans le pool de mémoires tampons, et chargent les pages à partir du disque dans le pool de mémoires tampons si nécessaire.  
   
- Pour le premier exemple de requête, le moteur d'exécution demande des lignes à l'index cluster sur la table Customer, et à l'index non cluster sur la table Order, à partir des méthodes d'accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
+ Pour le premier exemple de requête, le moteur d’exécution demande des lignes dans l’index cluster sur le client et l’index non cluster sur la commande à partir des méthodes d’accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables optimisées en mémoire  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |Compilation initiale|À la création.|À la première exécution.|  
 |Recompilation automatique|À la première exécution de la procédure après le redémarrage de la base de données ou du serveur.|Au redémarrage du serveur. Ou suppression du cache du plan, généralement en fonction des modifications du schéma ou des statistiques, ou de la sollicitation de la mémoire.|  
-|Recompilation manuelle|Non pris en charge. La solution consiste à supprimer et à recréer la procédure stockée.|Utilisez plutôt `sp_recompile` Vous pouvez supprimer manuellement le plan du cache, par exemple via l'instruction DBCC FREEPROCCACHE. Vous pouvez également créer la procédure stockée WITH RECOMPILE qui sera recompilée à chaque exécution.|  
+|Recompilation manuelle|Non pris en charge. La solution consiste à supprimer et à recréer la procédure stockée.|Utilisez `sp_recompile`. Vous pouvez supprimer manuellement le plan du cache, par exemple via l'instruction DBCC FREEPROCCACHE. Vous pouvez également créer la procédure stockée WITH RECOMPILE qui sera recompilée à chaque exécution.|  
   
 ### <a name="compilation-and-query-processing"></a>Compilation et traitement des requêtes  
  Le diagramme ci-dessous illustre le processus de compilation des procédures stockées compilées en mode natif :  
@@ -222,7 +222,7 @@ Exécution de procédures stockées compilées en mode natif.
   
  L'appel d'une procédure stockée compilée en mode natif se présente comme suit :  
   
-1.  L’utilisateur émet une `EXEC` *usp_myproc* instruction.  
+1.  L’utilisateur émet une `EXEC`instruction *usp_myproc* .  
   
 2.  L'analyseur extrait le nom et les paramètres de la procédure stockée.  
   

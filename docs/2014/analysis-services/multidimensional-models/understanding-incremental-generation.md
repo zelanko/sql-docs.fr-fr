@@ -1,5 +1,5 @@
 ---
-title: Présentation de la génération incrémentielle | Microsoft Docs
+title: Fonctionnement de la génération incrémentielle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 003b56fe3dbfae3f442be6b966f3cdc3008909b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072679"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811059"
 ---
 # <a name="understanding-incremental-generation"></a>Présentation de la génération incrémentielle
   Après la génération de schéma initiale, vous pouvez modifier les définitions de cubes et de dimensions à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis exécuter à nouveau l'Assistant Génération de schéma. L'Assistant met à jour le schéma dans la base de données de la zone de sujet et dans la vue de source de données associée pour refléter les modifications, en conservant si possible les données qui existent actuellement dans les tables à régénérer. Si vous avez modifié les tables après la génération initiale, l'Assistant Génération de schéma préserve ces modifications si possible en appliquant les règles suivantes :  
@@ -62,7 +62,7 @@ ms.locfileid: "66072679"
  Ajout d'un nouvel objet, comme une dimension, un cube ou un attribut.  
  L'Assistant Génération de schéma ajoute les objets sous-jacents avec lesquels le nouvel objet est mappé.  
   
- Si l'Assistant Génération de schéma ne peut pas faire la modification nécessaire à cause de la présence d'un objet utilisateur dans la base de données de la zone de sujet (parce que le moteur de base de données retourne une erreur), l'Assistant Génération de schéma échoue et affiche l'erreur retournée par le moteur de base de données. Par exemple, si vous créez une contrainte de clé primaire ou un index non-cluster sur une table après sa génération par l'Assistant Génération de schéma, celui-ci ne supprime pas cette table parce qu'il n'a pas créé la contrainte ou l'index.  
+ Si l'Assistant Génération de schéma ne peut pas faire la modification nécessaire à cause de la présence d'un objet utilisateur dans la base de données de la zone de sujet (parce que le moteur de base de données retourne une erreur), l'Assistant Génération de schéma échoue et affiche l'erreur retournée par le moteur de base de données. Par exemple, si vous créez une contrainte de clé primaire ou un index non cluster sur une table après que l’Assistant a généré la table, l’Assistant génération de schéma ne supprime pas cette table, car elle n’a pas créé la contrainte ou l’index.  
   
 ## <a name="supporting-schema-changes"></a>Prise en charge des modifications de schéma  
  Lorsque vous modifiez les propriétés des tables ou des colonnes dans la base de données de la zone de sujet ou dans la vue de source de données associée, l'Assistant Génération de schéma traite les modifications comme le décrit le tableau suivant.  

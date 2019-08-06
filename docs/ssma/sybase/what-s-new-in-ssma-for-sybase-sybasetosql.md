@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 4da3fa07c4cdcdf2f3666c3bf85ba3669eb7e5bf
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632053"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811441"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Nouveautés de SSMA pour SAP ASE (SybaseToSQL)
 Cet article répertorie les modifications apportées à Assistant Migration SQL Server (SSMA) pour SAP ASE (anciennement SSMA pour Sybase) dans chaque version.
@@ -272,7 +272,7 @@ La version de novembre 2006 de SSMA pour Sybase contient les modifications suiva
 * Ajout d’une nouvelle option de migration qui vous permet de spécifier comment SSMA doit gérer les dates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont en dehors de la plage de dates.  
 * Ajout d’un paramètre **SQL mis en forme** sous l’onglet **SQL** , qui met en forme le code pour une meilleure lisibilité.  
 * Les correctifs de bogues, notamment:
-  * SSMA convertit maintenant la table LOCK *table dans {* Shared | Les instructions MODE EXCLUSIVE} en ajoutant un indicateur TABLOCK ou TABLOCKX à la requête SELECT suivante sur la table.  
+  * SSMA convertit maintenant la TABLE Lock table dans {Shared | Les instructions MODE EXCLUSIVE} en ajoutant un indicateur TABLOCK ou TABLOCKX à la requête SELECT suivante sur la table.  
   * Les casts nécessaires sont maintenant ajoutés lorsque les types binaires sont utilisés dans les expressions de caractères.  
   * Améliorations de la mémoire et des performances.  
   

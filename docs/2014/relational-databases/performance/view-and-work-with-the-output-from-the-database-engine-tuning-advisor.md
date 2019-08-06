@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151453"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811016"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
   Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez vous aider des résumés, des recommandations et des rapports pour déterminer si les recommandations de paramétrage doivent être implémentées ou si le paramétrage doit se poursuivre afin d'atteindre un niveau de performance des requêtes répondant aux critères définis pour votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "63151453"
   
 2.  Copiez et collez [l’Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) dans votre éditeur XML ou dans un éditeur de texte. Utilisez cet exemple pour créer un fichier d'entrée XML pour votre session de paramétrage. Pour plus d'informations sur l'exécution de cette tâche, consultez la section « Créer des fichiers d'entrée XML » dans [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
-3.  Modifiez les éléments `TuningOptions` et `Configuration` dans l'exemple de fichier d'entrée XML. Dans l'élément `TuningOptions`, spécifiez les structures de création physique PDS dont doit tenir compte l'Assistant Paramétrage du moteur de base de données au cours de la session de paramétrage. Dans l'élément `Configuration`, spécifiez les structures PDS qui correspondent à la configuration hypothétique des structures PDS de la base de données que doit analyser l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur les attributs et les éléments enfants, vous pouvez utiliser avec le `TuningOptions` et `Configuration` éléments parents, consultez [référence de fichier d’entrée XML &#40;l’Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Modifiez les éléments `TuningOptions` et `Configuration` dans l'exemple de fichier d'entrée XML. Dans l'élément `TuningOptions`, spécifiez les structures de création physique PDS dont doit tenir compte l'Assistant Paramétrage du moteur de base de données au cours de la session de paramétrage. Dans l'élément `Configuration`, spécifiez les structures PDS qui correspondent à la configuration hypothétique des structures PDS de la base de données que doit analyser l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur les attributs et les éléments enfants que vous `TuningOptions` pouvez utiliser `Configuration` avec les éléments parents et, consultez [référence &#40;du&#41;fichier d’entrée XML Assistant Paramétrage du moteur de base de données](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Enregistrez le fichier d'entrée avec l'extension **.xml** .  
   
@@ -282,7 +282,7 @@ ms.locfileid: "63151453"
  L'index ou la vue concernés par la recommandation. L'icône de cette colonne indique s'il est recommandé de supprimer ou d'ajouter la **Cible de recommandation**.  
   
  **Détails**  
- Description de la **Cible de recommandation**. Les valeurs possibles incluent index cluster, vue indexée ou une valeur vide indiquant un index non-cluster. Indique également si l'index est unique.  
+ Description de la **Cible de recommandation**. Les valeurs possibles sont les suivants: Clustered, vue indexée ou Blank indiquant un index non cluster. Indique également si l'index est unique.  
   
  **Schéma de partition**  
  Le schéma de partition est fourni dans cette colonne si le partitionnement est recommandé.  
@@ -311,7 +311,7 @@ ms.locfileid: "63151453"
  **Date**  
  Spécifiez la date à laquelle vous voulez exécuter la tâche de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour appliquer les recommandations.  
   
- **Time**  
+ **Heure**  
  Spécifiez l'heure à laquelle vous voulez exécuter le travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d'appliquer les recommandations.  
   
 ### <a name="reports-tab-options"></a>Options de l'onglet Rapports  
@@ -326,7 +326,7 @@ ms.locfileid: "63151453"
  **Time**  
  L'heure à laquelle l'Assistant Paramétrage du moteur de base de données a créé le rapport.  
   
- **Server**  
+ **Serveur**  
  Le serveur qui était la cible de la charge de travail de l'Assistant Paramétrage du moteur de base de données.  
   
  **Base(s) de données à analyser**  

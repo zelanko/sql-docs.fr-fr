@@ -12,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55e6f1788b5187d64f929070e93ab15b6fd7a8c9
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223483"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810959"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Création, modification et suppression d'index
   Dans la hiérarchie SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les index sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Index>. Les colonnes indexées sont représentées par une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> représentés par la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
@@ -25,10 +25,10 @@ ms.locfileid: "63223483"
  Vous pouvez créer un index sur une colonne XML en spécifiant la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet SMO Visual Basic dans Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Création d'un index composite non cluster en Visual Basic  
- Cet exemple de code montre comment créer un index composite, non cluster. Pour un index composite, ajoutez plusieurs colonnes à l'index. Affectez à la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> la valeur `False` pour un index non cluster.  
+ Cet exemple de code montre comment créer un index composite non cluster. Pour un index composite, ajoutez plusieurs colonnes à l'index. Affectez à la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> la valeur `False` pour un index non cluster.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -85,7 +85,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Création d'un index composite non cluster en Visual C#  
- Cet exemple de code montre comment créer un index composite, non cluster. Pour un index composite, ajoutez plusieurs colonnes à l'index. Affectez à la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> la valeur `False` pour un index non cluster.  
+ Cet exemple de code montre comment créer un index composite non cluster. Pour un index composite, ajoutez plusieurs colonnes à l'index. Affectez à la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> la valeur `False` pour un index non cluster.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -143,7 +143,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Création d'un index composite non cluster dans PowerShell  
- Cet exemple de code montre comment créer un index composite, non cluster. Pour un index composite, ajoutez plusieurs colonnes à l'index. Affectez à la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> la valeur `False` pour un index non cluster.  
+ Cet exemple de code montre comment créer un index composite non cluster. Pour un index composite, ajoutez plusieurs colonnes à l'index. Affectez à la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> la valeur `False` pour un index non cluster.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

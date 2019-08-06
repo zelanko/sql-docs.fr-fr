@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs
+title: sys. fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2a000db8f64fc5895b1f82150e8786341d0c13e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082710"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811411"
 ---
-# <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
+# <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Utilisé pour déterminer si le réplica actuel est le réplica principal par défaut.  
@@ -42,7 +42,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- «*dbname*»  
+ '*dbname*'  
  Nom de la base de données. *dbname* est de type sysname.  
   
 ## <a name="returns"></a>Valeur renvoyée  
@@ -62,19 +62,24 @@ END
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-sysfnhadrisprimaryreplica"></a>R. Utilisation de sys.fn_hadr_is_primary_replica  
+### <a name="a-using-sysfn_hadr_is_primary_replica"></a>R. Utilisation de sys.fn_hadr_is_primary_replica  
  L'exemple suivant retourne 1 si la base de données spécifiée sur l'instance locale est le réplica principal.  
   
 ```  
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
-```  
+```    
+  
+## <a name="security"></a>Sécurité  
+  
+### <a name="permissions"></a>Autorisations  
+ requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de groupes de disponibilité AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Fonctions &#40;de groupes de disponibilité AlwaysOn Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [sys. DM _hadr_database_replica_states &#40;Transact-SQL&#41; ](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [groupes de disponibilité AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Affichages catalogue des groupes de disponibilité AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [Groupes de disponibilité AlwaysOn les affichages &#40;catalogue Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
   
   

@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475957"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811029"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
   Cette rubrique explique comment réorganiser ou reconstruire un index fragmenté dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gère automatiquement des index lorsque des opérations d'insertion, de mise à jour ou de suppression sont effectuées sur les données sous-jacentes. Au fil des modifications, les informations figurant dans l'index sont éparpillées dans la base de données (fragmentée). La fragmentation intervient lorsque des index possèdent des pages dans lesquelles l'organisation logique (reposant sur la valeur de la clé) ne correspond pas à l'organisation physique dans le fichier de données. Une fragmentation importante des index peut diminuer les performances des requêtes et ralentir la vitesse de réponse de votre application.  
@@ -97,13 +97,13 @@ Des niveaux très bas de fragmentation (inférieurs à 5 %) ne doivent pas êtr
 ### <a name="index-defragmentation-considerations"></a>Considérations sur la défragmentation d’index
 Dans certaines conditions, la reconstruction d’un index cluster recrée automatiquement tout index non-cluster qui fait référence à la clé de clustering, si les identificateurs physiques ou logiques contenus dans les enregistrements d’index non cluster doivent être modifiés.
 
-Scénarios qui forcent la reconstruction automatique de tous les index non cluster sur une table:
+Scénarios qui forcent la reconstruction automatique de tous les index non-cluster sur une table:
 
 -  Création d’un index cluster sur une table
 -  Suppression d’un index cluster, provoquant le stockage de la table en tant que segment de mémoire
 -  Modification de la clé de clustering pour inclure ou exclure des colonnes
 
-Les scénarios qui ne nécessitent pas tous les index non cluster doivent être reconstruits automatiquement sur une table:
+Les scénarios qui ne nécessitent pas tous les index non-cluster doivent être reconstruits automatiquement sur une table:
 
 -  Reconstruction d’un index cluster unique
 -  Reconstruction d’un index cluster non unique

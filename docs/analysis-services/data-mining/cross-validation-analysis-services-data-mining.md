@@ -1,5 +1,5 @@
 ---
-title: La Validation croisée (Analysis Services - Exploration de données) | Microsoft Docs
+title: Validation croisée (Analysis Services-exploration de données) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf8960fb659611003325275b2cf86d9325351c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b207ce822fbe83d4a388ecf9da52b7c6cfa020a1
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68183821"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811370"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validation croisée (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68183821"
   
  L'exemple dans le diagramme illustre l'utilisation des données si trois replis sont spécifiés.  
   
- ![Comment la validation croisée segmente les données](../../analysis-services/data-mining/media/xvoverviewmain.gif "comment la validation croisée segmente les données")  
+ ![Comment les données de segments de validation croisée](../../analysis-services/data-mining/media/xvoverviewmain.gif "Comment les données de segments de validation croisée")  
   
  Dans le scénario du diagramme, la structure d'exploration de données contient un jeu de données d'exclusion utilisé pour le test, mais le jeu de données de test n'a pas été inclus pour la validation croisée. En conséquence, toutes les données dans le jeu de données d'apprentissage, 70 pour cent des données dans la structure d'exploration de données, sont utilisées pour la validation croisée. Le rapport de validation croisée affiche le nombre total de cas utilisés dans chaque partition.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "68183821"
 ### <a name="choosing-models-and-columns-to-validate"></a>Choix des modèles et colonnes à valider  
  Quand vous utilisez l’onglet **Validation croisée** dans le Concepteur d’exploration de données, vous devez en premier lieu sélectionner la colonne prédictible dans une liste. Une structure d'exploration de données peut généralement prendre en charge de nombreux modèles d'exploration de données, qui n'utilisent pas tous la même colonne prédictible. Lorsque vous exécutez la validation croisée, seuls les modèles qui utilisent la même colonne prédictible peuvent être inclus dans le rapport.  
   
- Pour choisir un attribut prédictible, cliquez sur **Attribut cible** et sélectionnez la colonne dans la liste. Si l’attribut cible est une colonne imbriquée ou une colonne dans une table imbriquée, vous devez taper le nom de la colonne imbriquée en utilisant le format \<nom de la Table imbriquée > (key).\< Imbriqués de colonne >. Si la seule colonne de la table imbriquée utilisée est la colonne clé, vous pouvez utiliser \<nom de la Table imbriquée > (key).  
+ Pour choisir un attribut prédictible, cliquez sur **Attribut cible** et sélectionnez la colonne dans la liste. Si l’attribut cible est une colonne imbriquée ou une colonne dans une table imbriquée, vous devez taper le nom de la colonne imbriquée en utilisant le format \<nom de la table imbriquée > (clé\< ). > De colonnes imbriquées. Si la seule colonne utilisée à partir de la table imbriquée est la colonne clé, vous \<pouvez utiliser le nom de la table imbriquée > (clé).  
   
  Une fois que vous avez sélectionné l'attribut prédictible, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] teste automatiquement tous les modèles qui utilisent le même attribut prédictible. Si l'attribut cible contient des valeurs discrètes, une fois que vous avez sélectionné la colonne prédictible, vous pouvez taper facultativement un état cible, si vous souhaitez prédire une valeur spécifique.  
   
- La sélection de l'état cible affecte les mesures retournées. Si vous spécifiez un attribut cible-autrement dit, un nom de colonne- et ne choisissez pas une valeur spécifique que vous souhaitez que le modèle pour prédire, par défaut, le modèle doit être évalué selon sa prédiction de l’état le plus probable.  
+ La sélection de l'état cible affecte les mesures retournées. Si vous spécifiez un attribut cible (c’est-à-dire un nom de colonne) et que vous ne choisissez pas une valeur spécifique que vous souhaitez que le modèle prédise, par défaut, le modèle sera évalué sur sa prédiction de l’état le plus probable.  
   
  Quand vous utilisez la validation croisée avec des modèles de clustering, il n’existe aucune colonne prédictible. Vous sélectionnez à la place **#Cluster** dans la liste de la zone de liste **Attribut cible** . Après avoir sélectionné cette option, d’autres options non applicables aux modèles de clustering, telles que **État cible**, sont désactivées. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testera tous les modèles de clustering associés à la structure d’exploration de données.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "68183821"
  Pour afficher un exemple de création de rapport de validation croisée à partir de l’interface utilisateur, consultez [Créer un rapport de validation croisée](../../analysis-services/data-mining/create-a-cross-validation-report.md).  
   
 ### <a name="cross-validation-stored-procedures"></a>Procédures stockées de validation croisée  
- Pour les utilisateurs expérimentés, la validation croisée est également disponible sous forme de procédures stockées système entièrement paramétrables. Vous pouvez exécuter les procédures stockées en vous connectant à une instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ou à partir d’une application de code managé.  
+ Pour les utilisateurs expérimentés, la validation croisée est également disponible sous forme de procédures stockées système entièrement paramétrables. Vous pouvez exécuter les procédures stockées en vous connectant à une [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]instance à partir de ou à partir de n’importe quelle application de code managé.  
   
  Les procédures stockées sont regroupées par type de modèle d'exploration de données. Un jeu de procédures stockées fonctionne uniquement avec les modèle de clustering. Le second jeu de procédures stockées fonctionne avec les autres modèles d'exploration de données.  
   
- Pour chaque type de modèle d'exploration de données, cluster ou non-cluster, les procédures stockées exécutent la validation croisée en deux phases distinctes.  
+ Pour chaque type de modèle d’exploration de données, cluster ou non-cluster, les procédures stockées effectuent la validation croisée en deux phases distinctes.  
   
  **Partitionner des données et générer des mesures pour des partitions**  
   

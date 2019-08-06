@@ -2,19 +2,19 @@
 title: Créer et exporter des modèles de Machine Learning Spark avec MLeap
 titleSuffix: SQL Server big data clusters
 description: Utilisez PySpark pour former et créer Machine Learning des modèles avec Spark sur SQL Server Clusters Big Data (version préliminaire). Exportez avec MLeap, puis marquez le modèle avec Java dans SQL Server.
-author: lgongmsft
-ms.author: lgong
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67727378"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811211"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Créer, exporter et noter les modèles Spark Machine Learning sur SQL Server Clusters Big Data
 

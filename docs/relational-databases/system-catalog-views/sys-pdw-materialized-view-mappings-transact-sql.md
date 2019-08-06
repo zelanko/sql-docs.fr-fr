@@ -9,28 +9,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059393"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811505"
 ---
-# <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>Sys.pdw_materialized_view_mappings (Transact-SQL) (version préliminaire)
+# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys. PDW _materialized_view_mappings (Transact-SQL) (version préliminaire)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Lie la vue matérialisée pour les noms des objets internes par object_id.
+Lie la vue matérialisée aux noms d’objets internes par OBJECT_ID.
 
-Les colonnes physical_name object_id forment la clé pour cette vue de catalogue.
+Les colonnes physical_name et object_id forment la clé de cet affichage catalogue.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|Le nom physique de la vue matérialisée.|  
-|object_id  |**Int**|L’ID d’objet pour la vue matérialisée. Consultez [sys.objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
+|physical_name |**nvarchar(36)**|Nom physique de la vue matérialisée.|  
+|object_id  |**int**|ID d’objet de la vue matérialisée. Consultez [sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Autorisations
 

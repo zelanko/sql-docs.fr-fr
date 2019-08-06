@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7be448918599918bdf638b43178030703da724a9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771373"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811388"
 ---
-# <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
+# <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crée un article et l'ajoute à une publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
@@ -211,7 +211,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x40000000000**|Activez l’écriture de scripts par l’agent d’instantané pour créer une table optimisée en mémoire sur l’abonné.|  
 |**0x80000000000**|Convertit l’index cluster en index non-cluster pour les articles à mémoire optimisée.|  
 |**0x400000000000**|Réplique tous les index ColumnStore non cluster sur la ou les tables|  
-|**0x800000000000**|Réplique tous les index ColumnStore flitered non cluster sur la ou les tables.|  
+|**0x800000000000**|Réplique tous les index ColumnStore non cluster flitered sur la ou les tables.|  
 |NULL|La réplication affecte automatiquement à *schema_option* la valeur par défaut, dont la valeur dépend d’autres propriétés de l’article. Le tableau « Options de schéma par défaut » de la section Notes montre les options de schéma par défaut en fonction du type d'article et du type de réplication.<br /><br /> La valeur par défaut pour[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les publications non-est **0x050D3**.|  
   
  Toutes les valeurs *schema_option* ne sont pas valides pour chaque type de réplication et de type d’article. Le tableau des **options de schéma valides** de la section Notes montre les options de schéma valides qui peuvent être choisies en fonction de la combinaison du type d’article et du type de réplication.  

@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918439"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811266"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Prise en charge DAC pour les objets et versions SQL Server
   Une application de la couche Données (DAC) prend en charge les objets du [!INCLUDE[ssDE](../../includes/ssde-md.md)] les plus couramment utilisés.  
@@ -40,13 +40,13 @@ ms.locfileid: "62918439"
 |-|-|  
 |DATABASE ROLE|FUNCTION : fonctions table incluse|  
 |FUNCTION : Fonction table à instructions multiples|FUNCTION : Scalaire|  
-|INDEX : Cluster|INDEX : Non cluster|  
+|INDEX : Cluster|INDEX : Non-cluster|  
 |INDEX : Spatial|INDEX : Unique|  
 |Connexion|Autorisations|  
 |Appartenances aux rôles|SCHEMA|  
 |Statistiques|STORED PROCEDURE : Transact-SQL|  
 |Synonymes|TABLE : Contrainte CHECK|  
-|TABLE : Classement|TABLE : colonne, notamment les colonnes calculées|  
+|TABLE : Collation|TABLE : colonne, notamment les colonnes calculées|  
 |TABLE : contrainte, par défaut|TABLE : contrainte, clé étrangère|  
 |TABLE : contrainte, index|TABLE : contrainte, clé primaire|  
 |TABLE : contrainte, unique|TRIGGER : DML|  
@@ -107,7 +107,7 @@ ms.locfileid: "62918439"
 ##  <a name="Considerations"></a> Considérations supplémentaires concernant les actions de déploiement  
  Notez les points suivants pour les actions de déploiement de données DAC Framework :  
   
--   **Extraction/exportation** : pour les actions qui utilisent le DAC Framework dans le but de créer un package à partir d’une base de données (par exemple, extraire un fichier .dacpac, exporter un fichier .bacpac), ces restrictions ne s’appliquent pas. Les données du package sont une représentation haute fidélité des données dans la base de données source. Si l'une de ces conditions est présente dans le package, le journal d'extraction/exportation contient un résumé des problèmes au moyen des messages indiqués ci-dessus. Permet d'avertir l'utilisateur des problèmes potentiels de déploiement de données avec le package qu'ils ont créé. L’utilisateur voit également le message de synthèse suivant dans le journal :  **Ces limitations n’affectent pas la fidélité des types et valeurs de données stockés dans le package DAC créé par le DAC Framework ; elles ne s’appliquent qu’aux types et valeurs de données résultant du déploiement d’un package DAC dans une base de données. Pour plus d’informations sur les données affectées et comment contourner cette limitation, consultez** [cette rubrique](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extraction/exportation** : pour les actions qui utilisent le DAC Framework dans le but de créer un package à partir d’une base de données (par exemple, extraire un fichier .dacpac, exporter un fichier .bacpac), ces restrictions ne s’appliquent pas. Les données du package sont une représentation haute fidélité des données dans la base de données source. Si l'une de ces conditions est présente dans le package, le journal d'extraction/exportation contient un résumé des problèmes au moyen des messages indiqués ci-dessus. Permet d'avertir l'utilisateur des problèmes potentiels de déploiement de données avec le package qu'ils ont créé. L’utilisateur voit également le message de synthèse suivant dans le journal :  **Ces limitations n’affectent pas la fidélité des types et valeurs de données stockés dans le package DAC créé par le DAC Framework ; elles ne s’appliquent qu’aux types et valeurs de données résultant du déploiement d’un package DAC dans une base de données. Pour plus d’informations sur les données affectées et la façon de contourner cette limitation,** consultez [cette rubrique](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Déploiement/publication/importation** : pour les actions qui utilisent le DAC Framework dans le but de déployer un package dans une base de données, par exemple pour déployer ou publier un fichier .dacpac et importer un fichier .bacpac, ces limitations s’appliquent. Les données qui donnent la base de données cible ne doivent pas contenir une représentation haute fidélité des données du package. Le journal de déploiement/importation contient un message, indiqué ci-dessus, pour chaque instance dans laquelle le problème est rencontré. L’opération est bloquée par les erreurs (consultez la catégorie 3 ci-dessus), mais se poursuit avec les autres avertissements.  
   

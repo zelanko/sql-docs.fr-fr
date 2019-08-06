@@ -20,14 +20,14 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937106"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809903"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Données spatiales - sys.dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Données spatiales-sys. DM _db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Répertorie les index et les contraintes qui seront désactivés suite à la modification du niveau de compatibilité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les index et les contraintes qui contiennent des colonnes calculées persistantes dont les expressions utilisent des types définis par l'utilisateur spatiaux sont désactivés après une mise à niveau ou une modification du niveau de compatibilité. Utilisez cette fonction de gestion dynamique pour déterminer l'impact d'un changement de niveau de compatibilité.  
@@ -42,16 +42,16 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="Arguments"></a> Arguments  
  *compatibility_level*  
- **int** qui identifie le niveau de compatibilité que vous souhaitez définir.  
+ **entier** qui identifie le niveau de compatibilité que vous envisagez de définir.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**int**|1 = contraintes<br /><br /> 7 = index et segments|  
+|**class**|**Int**|1 = contraintes<br /><br /> 7 = index et segments|  
 |**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
-|**major_id**|**Int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
-|**minor_id**|**int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
+|**major_id**|**int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
+|**minor_id**|**Int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
 |**dépendance**|**nvarchar(60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
@@ -66,58 +66,58 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Soundex**  
   
--   **Geography :: GeomFromGML**  
+-   **Zone géographique:: GeomFromGML**  
   
--   **Geography :: STGeomFromText**  
+-   **Zone géographique:: STGeomFromText**  
   
--   **Geography :: STLineFromText**  
+-   **Zone géographique:: STLineFromText**  
   
--   **Geography :: STPolyFromText**  
+-   **Zone géographique:: STPolyFromText**  
   
--   **Geography :: STMPointFromText**  
+-   **Zone géographique:: STMPointFromText**  
   
--   **Geography :: STMLineFromText**  
+-   **Zone géographique:: STMLineFromText**  
   
--   **Geography :: STMPolyFromText**  
+-   **Zone géographique:: STMPolyFromText**  
   
--   **Geography :: STGeomCollFromText**  
+-   **Zone géographique:: STGeomCollFromText**  
   
--   **Geography :: STGeomFromWKB**  
+-   **Zone géographique:: STGeomFromWKB**  
   
--   **Geography :: STLineFromWKB**  
+-   **Zone géographique:: STLineFromWKB**  
   
--   **Geography :: STPolyFromWKB**  
+-   **Zone géographique:: STPolyFromWKB**  
   
--   **Geography :: STMPointFromWKB**  
+-   **Zone géographique:: STMPointFromWKB**  
   
--   **Geography :: STMLineFromWKB**  
+-   **Zone géographique:: STMLineFromWKB**  
   
--   **Geography :: STMPolyFromWKB**  
+-   **Zone géographique:: STMPolyFromWKB**  
   
--   **Geography :: STUnion**  
+-   **Zone géographique:: STUnion**  
   
--   **Geography :: STIntersection**  
+-   **Zone géographique:: STIntersection**  
   
--   **Geography :: STDifference**  
+-   **Zone géographique:: STDifference**  
   
--   **Geography :: STSymDifference**  
+-   **Zone géographique:: STSymDifference**  
   
--   **Geography :: STBuffer**  
+-   **Zone géographique:: STBuffer**  
   
--   **Geography :: BufferWithTolerance**  
+-   **Zone géographique:: BufferWithTolerance**  
   
--   **Geography :: Analyser**  
+-   **Zone géographique:: Analys**  
   
--   **Geography :: réduire**  
+-   **Zone géographique:: Abaisse**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportement des objets désactivés  
  **Index**  
   
- Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.ls sur la table ou la vue ' %. \*%.ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... REBUILD**.  
+ Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante se produit: « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.ls sur la table ou la vue ' %. \*%.ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après la mise **à niveau en appelant ALTER index on... REBUILD**.  
   
- **Segments de mémoire**  
+ **Tas**  
   
- Si une table avec un segment désactivé est utilisée, l'erreur suivante est levée. Pour réactiver ces objets, reconstruisez après mise à niveau en appelant **ALTER INDEX ON tous les... REBUILD**.  
+ Si une table avec un segment désactivé est utilisée, l'erreur suivante est levée. Pour réactiver ces objets, régénérez après la **mise à niveau en appelant ALTER index All on... REBUILD**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -130,11 +130,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- Si vous essayez de reconstruire le segment de mémoire pendant une opération en ligne, une erreur est générée.  
+ Si vous essayez de reconstruire le tas pendant une opération en ligne, une erreur est générée.  
   
- **Contraintes de validation et les clés étrangères**  
+ **Contraintes de validation et clés étrangères**  
   
- Les contraintes de validation et les clés étrangères désactivées ne déclenchent pas d'erreur. Toutefois, les contraintes ne sont pas appliquées lorsque des lignes sont modifiées. Pour réactiver ces objets, vérifiez les contraintes après la mise à niveau en appelant **ALTER TABLE... CONTRAINTE DE VALIDATION**.  
+ Les contraintes de validation et les clés étrangères désactivées ne déclenchent pas d'erreur. Toutefois, les contraintes ne sont pas appliquées lorsque des lignes sont modifiées. Pour réactiver ces objets, vérifiez les contraintes après la mise à niveau **en appelant ALTER TABLE... CONTRAINTE**DE VALIDATION.  
   
  **Colonnes calculées persistantes**  
   
@@ -146,7 +146,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  Requiert l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre une requête sur **sys.dm_db_objects_disabled_on_compatibility_level_change** pour trouver les objets affectés par la modification du niveau de compatibilité à 120.  
+ L’exemple suivant illustre une requête sur **sys. DM _db_objects_disabled_on_compatibility_level_change** pour rechercher les objets affectés en modifiant le niveau de compatibilité sur 120.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

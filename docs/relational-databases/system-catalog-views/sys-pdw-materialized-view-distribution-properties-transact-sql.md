@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_materialized_view_distribution_properties (Transact-SQL) | Microsoft Docs
+title: sys. PDW _materialized_view_distribution_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2509bdbe2510c78dbb14b59499f2b345680fd3e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fadefa4f42776636c15be5789ccf50e578f73e0b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059417"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809944"
 ---
-# <a name="syspdwmaterializedviewdistributionproperties-transact-sql-preview"></a>Sys.pdw_materialized_view_distribution_properties (Transact-SQL) (version préliminaire)
+# <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>sys. PDW _materialized_view_distribution_properties (Transact-SQL) (version préliminaire)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Affiche des informations de distribution des vues matérialisées.  
+Affiche les vues matérialisées des informations de distribution.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------| 
-|object_id|**Int**|ID de la vue matérialisée pour les trois propriétés ont été spécifiées.| 
-|distribution_policy |**tinyint**|2 = HASH</br>4 = ROUND_ROBIN|  
-|distribution_policy_desc |**nvarchar(60)**|HACHAGE, ROUND_ROBIN|  
+|object_id|**Int**|ID de la vue matérialisée pour laquelle les propriétés de la propriété sont spécifiées.| 
+|distribution_policy |**tinyint**|2 = HACHAGE</br>4 = ROUND_ROBIN|  
+|distribution_policy_desc |**nvarchar(60)**|HASH, ROUND_ROBIN|  
  
 ## <a name="permissions"></a>Autorisations
 

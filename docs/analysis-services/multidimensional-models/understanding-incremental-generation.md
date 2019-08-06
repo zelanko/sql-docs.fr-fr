@@ -1,5 +1,5 @@
 ---
-title: Présentation de la génération incrémentielle | Microsoft Docs
+title: Fonctionnement de la génération incrémentielle | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802701"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811310"
 ---
 # <a name="understanding-incremental-generation"></a>Présentation de la génération incrémentielle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802701"
  Ajout d'un nouvel objet, comme une dimension, un cube ou un attribut.  
  L'Assistant Génération de schéma ajoute les objets sous-jacents avec lesquels le nouvel objet est mappé.  
   
- Si l'Assistant Génération de schéma ne peut pas faire la modification nécessaire à cause de la présence d'un objet utilisateur dans la base de données de la zone de sujet (parce que le moteur de base de données retourne une erreur), l'Assistant Génération de schéma échoue et affiche l'erreur retournée par le moteur de base de données. Par exemple, si vous créez une contrainte de clé primaire ou un index non-cluster sur une table après sa génération par l'Assistant Génération de schéma, celui-ci ne supprime pas cette table parce qu'il n'a pas créé la contrainte ou l'index.  
+ Si l'Assistant Génération de schéma ne peut pas faire la modification nécessaire à cause de la présence d'un objet utilisateur dans la base de données de la zone de sujet (parce que le moteur de base de données retourne une erreur), l'Assistant Génération de schéma échoue et affiche l'erreur retournée par le moteur de base de données. Par exemple, si vous créez une contrainte de clé primaire ou un index non cluster sur une table après que l’Assistant a généré la table, l’Assistant génération de schéma ne supprime pas cette table, car elle n’a pas créé la contrainte ou l’index.  
   
 ## <a name="supporting-schema-changes"></a>Prise en charge des modifications de schéma  
  Lorsque vous modifiez les propriétés des tables ou des colonnes dans la base de données de la zone de sujet ou dans la vue de source de données associée, l'Assistant Génération de schéma traite les modifications comme le décrit le tableau suivant.  

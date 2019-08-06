@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250883"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811231"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
   Les tables agissant comme des abonnés de réplication transactionnelle, à l'exclusion de la réplication transactionnelle d'égal à égal, peuvent être configurées en tant que tables mémoire optimisées. Les autres configurations de réplication ne sont pas compatibles avec les tables mémoire optimisées.  
@@ -23,7 +23,7 @@ ms.locfileid: "63250883"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>Configuration d'une table mémoire optimisée en tant qu'abonné  
  Pour configurer une table mémoire optimisée en tant qu'abonné, effectuez les étapes suivantes.  
   
- **Créer et activer la Publication**  
+ **Créer et activer la publication**  
   
 1.  Créer une publication  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63250883"
     GO  
     ```  
   
- **Générer un instantané et régler le schéma**  
+ **Générer un instantané et ajuster le schéma**  
   
 1.  Créez un travail instantané et générez un instantané.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "63250883"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Naviguez jusqu'au dossier d'instantané. L’emplacement par défaut est « C:\Program Files\Microsoft SQL Server\MSSQL12. \<INSTANCE > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\».  
+2.  Naviguez jusqu'au dossier d'instantané. L’emplacement par défaut est «C:\Program Files\Microsoft SQL Server\MSSQL12. INSTANCE > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\». \<  
   
-3.  Recherchez le **. SCH** pour votre table et ouvrez-le dans Management Studio. Modifiez le schéma de la table et mettez à jour la procédure stockée comme décrit ci-dessous.  
+3.  Recherchez **. Fichier SCH** pour votre table et ouvrez-le dans Management Studio. Modifiez le schéma de la table et mettez à jour la procédure stockée comme décrit ci-dessous.  
   
      Évaluez les index définis dans le fichier IDX. Modifiez `CREATE TABLE` pour spécifier les index, les contraintes, la clé primaire et la syntaxe mémoire optimisée requis. Pour les tables mémoire optimisées, les colonnes d'index doivent être NOT NULL et les colonnes d'index des types de caractères doivent être Unicode et utiliser le classement BIN2. Voir l'exemple ci-dessous :  
   
@@ -226,7 +226,7 @@ ms.locfileid: "63250883"
     go  
     ```  
   
-5.  Créer la base de données d’abonné à l’aide du **élever à l’isolement d’instantané** option et définissez le classement par défaut à Latin1_General_CS_AS_KS_WS en cas d’utilisation de types de données de caractères non Unicode.  
+5.  Créez la base de données de l’abonné à l’aide de l’option **d’isolation élever à la capture instantanée** et définissez le classement par défaut sur Latin1_General_CS_AS_KS_WS en cas d’utilisation de types de données caractères non Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -241,7 +241,7 @@ ms.locfileid: "63250883"
     GO  
     ```  
   
-6.  Appliquer le schéma à la base de données d’un abonné et enregistrez le schéma pour une utilisation ultérieure.  
+6.  Appliquez le schéma à la base de données d’un abonné et enregistrez le schéma pour une utilisation ultérieure.  
   
 7.  Chargez les données du serveur de publication (source) sur l'abonné. Les données ne doivent pas changer sur le serveur de publication jusqu'à ce que vous ajoutiez un abonnement.  Utilisez BCP comme indiqué ci-dessous :  
   
@@ -263,7 +263,7 @@ ms.locfileid: "63250883"
     GO  
     ```  
   
- **Ajouter l’abonnement sans synchronisation**  
+ **Ajouter aucun abonnement de synchronisation**  
   
  Ajoutez un abonnement nosync.  
   
@@ -297,15 +297,15 @@ GO
   
 -   Les tables répliquées en tables mémoire optimisées sur un abonné appliquent la limite de 8060 octets par ligne des tables mémoire optimisées.  
   
--   Les tables répliquées en tables mémoire optimisées sur un abonné sont limitées aux types de données autorisés dans les tables mémoire optimisées. Pour plus d’informations, consultez [pris en charge les Types de données](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
+-   Les tables répliquées en tables mémoire optimisées sur un abonné sont limitées aux types de données autorisés dans les tables mémoire optimisées. Pour plus d’informations, consultez [types de données pris en charge](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Il existe des restrictions pour la mise à jour de la clé primaire des tables répliquées en une table mémoire optimisée sur un abonné. Pour plus d’informations, consultez [réplication des modifications à une clé primaire](#PrimaryKey).  
+-   Il existe des restrictions pour la mise à jour de la clé primaire des tables répliquées en une table mémoire optimisée sur un abonné. Pour plus d’informations, consultez réplication des [modifications apportées à une clé primaire](#PrimaryKey).  
   
 -   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Pour plus d’informations, consultez [Constructions Transact-SQL non prises en charge par OLTP en mémoire](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="Schema"></a> Modification d'un fichier de schéma  
   
--   Les index cluster ne sont pas pris en charge. Modifiez tous les index cluster en index non cluster.  
+-   Les index cluster ne sont pas pris en charge. Modifiez les index cluster en index non-cluster.  
   
 -   Toutes les colonnes dans la clé d'un index doivent être spécifiées comme `NOT NULL`.  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING doit être activé.  
   
-##  <a name="PrimaryKey"></a> Réplication des modifications à une clé primaire  
+##  <a name="PrimaryKey"></a>Réplication des modifications apportées à une clé primaire  
  La clé primaire d'une table mémoire optimisée ne peut pas être mise à jour. Pour répliquer une mise à jour de clé primaire sur un abonné, modifiez la procédure stockée de mise à jour pour fournir la mise à jour en tant que paire d'opérations de suppression et insertion.  
   
 ## <a name="see-also"></a>Voir aussi  

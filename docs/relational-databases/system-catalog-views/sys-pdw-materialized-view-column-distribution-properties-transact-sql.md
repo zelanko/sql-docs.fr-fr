@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) | Microsoft Docs
+title: sys. PDW _materialized_view_column_distribution_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059453"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811427"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>Sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (version préliminaire)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys. PDW _materialized_view_column_distribution_properties (Transact-SQL) (version préliminaire)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Affiche des informations de distribution pour les colonnes dans une vue matérialisée.  
+Affiche des informations de distribution pour les colonnes d’une vue matérialisée.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|ID de l’objet auquel appartient la colonne. |  
+|object_id|**int**|ID de l’objet auquel la colonne appartient. |  
 |column_id|**Int**|ID de la colonne.|  
-|distribution_ordinal|**tinyint**|0 ne = pas d’une colonne de distribution.</br> 1 = SQL Data Warehouse pour distribuer la vue matérialisée est à l’aide de cette colonne.|
+|distribution_ordinal|**tinyint**|0 = n’est pas une colonne de distribution.</br> 1 = SQL Data Warehouse utilise cette colonne pour distribuer la vue matérialisée.|
  
 ## <a name="permissions"></a>Autorisations 
 

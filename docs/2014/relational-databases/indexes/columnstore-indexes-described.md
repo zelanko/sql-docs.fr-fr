@@ -1,5 +1,5 @@
 ---
-title: Description des index ColumnStore | Microsoft Docs
+title: Index ColumnStore décrits | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -16,28 +16,28 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63155504"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811041"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *les index columnstore en mémoire* stocke et gère les données à l’aide de stockage de données en colonnes et de traitement de requête fondée sur une colonne. Les index columnstore fonctionnent bien pour les charges de travail de stockage de données qui effectuent principalement des chargements en masse et des requêtes en lecture seule. Utilisez l'index columnstore pour atteindre des gains de **performances des requêtes** pouvant être multipliés par 10 par rapport au stockage orienté lignes traditionnel, et une **compression de données** multipliée par 7 par rapport à la taille des données non compressées.  
+  L' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *index ColumnStore en mémoire* stocke et gère des données à l’aide du stockage de données basé sur les colonnes et du traitement de requête basé sur les colonnes. Les index columnstore fonctionnent bien pour les charges de travail de stockage de données qui effectuent principalement des chargements en masse et des requêtes en lecture seule. Utilisez l'index columnstore pour atteindre des gains de **performances des requêtes** pouvant être multipliés par 10 par rapport au stockage orienté lignes traditionnel, et une **compression de données** multipliée par 7 par rapport à la taille des données non compressées.  
   
 > [!NOTE]  
 >  Nous considérons l'index columnstore cluster comme étant la norme pour le stockage de grandes tables de faits de stockage des données, et nous pensons qu'il va être utilisé dans la plupart des scénarios de stockage des données. Étant donné que l'index columnstore cluster est modifiable, votre charge de travail peut exécuter un grand nombre d'insertions, mises à jour, et suppressions.  
   
 ## <a name="contents"></a>Sommaire  
   
--   [Principes de base](#basics)  
+-   [Concepts de base](#basics)  
   
 -   [Chargement de données](#dataload)  
   
 -   [Conseils sur les performances](#performance)  
   
--   [Tâches et rubriques connexes](#related)  
+-   [Tâches et Rubriques connexes](#related)  
   
 ##  <a name="basics"></a> Principes de base  
  Un *columnstore index* est une technologie permettant de stocker, extraire et gérer les données à l'aide d'un format de données en colonnes, appelé columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les index columnstore cluster et non cluster. Les deux utilisent la même technologie columnstore en mémoire, mais sont différents en ce qui concerne leur but et les fonctionnalités qu'ils prennent en charge.  
@@ -98,7 +98,7 @@ ms.locfileid: "63155504"
   
 -   Ne stocke pas physiquement les colonnes dans un ordre de tri. Au lieu de cela, il stocke les données pour améliorer la compression et les performances. Le prétri des données avant de créer l'index columnstore n'est pas requis, mais cela peut améliorer la compression columnstore.  
   
-###  <a name="Concepts"></a> Termes et Concepts clés  
+###  <a name="Concepts"></a>Concepts et termes clés  
  Les termes et concepts clés suivants sont associés aux index columnstore.  
   
  columnstore index  
@@ -128,11 +128,11 @@ ms.locfileid: "63155504"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  index columnstore non cluster  
- Un *nonclustered columnstore index* est un index en lecture seule créé sur un index cluster existant ou une table de segments de mémoire. Il contient une copie d'un sous-ensemble de colonnes, et peut contenir toutes les colonnes de la table. La table est en lecture seule alors qu'elle contient un index columnstore non cluster.  
+ Un *nonclustered columnstore index* est un index en lecture seule créé sur un index cluster existant ou une table de segments de mémoire. Il contient une copie d'un sous-ensemble de colonnes, et peut contenir toutes les colonnes de la table. La table est en lecture seule alors qu’elle contient un index ColumnStore non cluster.  
   
  Un index columnstore non cluster permet d'avoir un index columnstore pour exécuter les requêtes d'analyse tout en exécutant des opérations en lecture seule sur la table d'origine.  
   
- ![Index non cluster columnstore](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "index non cluster columnstore")  
+ ![Index ColumnStore non cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Index ColumnStore non cluster")  
   
  index columnstore cluster  
  Un *clustered columnstore index* est le stockage physique de la totalité de la table, et est le seul index de la table. L'index cluster peut être mis à jour. Effectuez des opérations d'insertion, suppression, et mise à jour sur l'index et chargez en masse des données dans l'index.  
@@ -148,18 +148,18 @@ ms.locfileid: "63155504"
   
  Lorsque le deltastore atteint le nombre maximal de lignes, il est fermé. Un processus de déplacement de tuple vérifie les groupes de lignes fermés. Lorsqu'il trouve un rowgroup fermé, il le compresse et le stocke dans le columnstore.  
   
-##  <a name="dataload"></a> Chargement des données  
+##  <a name="dataload"></a>Chargement de données  
   
-###  <a name="dataload_nci"></a> Chargement des données dans un Index Columnstore non cluster  
- Pour charger des données dans un index non cluster, première charger des données dans une table rowstore traditionnelle stockée comme un segment de mémoire ou en cluster d’index et puis créer l’index columnstore non cluster avec [CREATE COLUMNSTORE INDEX &#40;&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+###  <a name="dataload_nci"></a>Chargement de données dans un index ColumnStore non cluster  
+ Pour charger des données dans un index ColumnStore non cluster, chargez d’abord les données dans une table rowstore traditionnelle stockée en tant que segment de mémoire ou index cluster, puis créez l’index non cluster ColumnStore avec [Create&#41; ColumnStore index &#40;Transact-SQL](/sql/t-sql/statements/create-columnstore-index-transact-sql) .  
   
- ![Chargement des données dans un index columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "le chargement des données dans un index columnstore")  
+ ![Chargement de données dans un index ColumnStore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Chargement de données dans un index ColumnStore")  
   
  Une table avec un index columnstore non cluster est en lecture seule jusqu'à ce que l'index soit désactivé ou supprimé. Pour mettre à jour la table et l'index columnstore non cluster, basculez des partitions. Vous pouvez également désactiver l'index, mettre à jour la table, puis reconstruire l'index.  
   
  Pour plus d'informations, consultez [Using Nonclustered Columnstore Indexes](indexes.md)  
   
-###  <a name="dataload_cci"></a> Chargement des données dans un Index cluster Columnstore  
+###  <a name="dataload_cci"></a>Chargement de données dans un index ColumnStore cluster  
  ![Chargement dans un index columnstore cluster](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Chargement dans un index columnstore cluster")  
   
  Comme le suggère le diagramme, pour charger des données dans un index columnstore cluster, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -184,7 +184,7 @@ ms.locfileid: "63155504"
   
  Pour plus d'informations sur les tâches et les processus deltastore, consultez [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
   
-##  <a name="performance"></a> Conseils sur les performances  
+##  <a name="performance"></a>Conseils sur les performances  
   
 ### <a name="plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>Planifiez suffisamment de mémoire pour créer des index columnstore en parallèle  
  La création d'un index columnstore par défaut est une opération parallèle tant que la mémoire est contrainte. La création de l'index en parallèle requiert plus de mémoire que la création de l'index en série. Lorsqu'il y a suffisamment de mémoire, la création d'un index columnstore prend 1,5 fois plus de temps que créer un arbre B sur les mêmes colonnes.  
@@ -193,23 +193,23 @@ ms.locfileid: "63155504"
   
  Si votre table a plus d'un million de lignes, mais SQL Server ne peut pas obtenir suffisamment d'allocation de mémoire pour créer l'index à l'aide de MAXDOP, il réduira automatiquement MAXDOP de sorte qu'il tienne dans l'allocation de mémoire disponible.  Dans certains cas, le DOP doit être réduit à un pour pouvoir créer l'index sous une mémoire contrainte.  
   
-##  <a name="related"></a> Tâches et rubriques connexes  
+##  <a name="related"></a>Tâches et Rubriques connexes  
   
 ### <a name="nonclustered-columnstore-indexes"></a>Index columnstore non cluster  
  Pour les tâches courantes, consultez [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) with REBUILD.  
+-   [ALTER index &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) avec Rebuild.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>Index columnstore cluster  
  Pour les tâches courantes, consultez [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
--   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CRÉER un INDEX &#40;COLUMNSTORE cluster Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) avec REBUILD ou REORGANIZE.  
+-   [ALTER index &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) avec Rebuild ou REORGANIZE.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   

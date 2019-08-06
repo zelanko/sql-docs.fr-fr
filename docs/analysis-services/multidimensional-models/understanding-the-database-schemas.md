@@ -1,5 +1,5 @@
 ---
-title: Présentation des schémas de base de données | Microsoft Docs
+title: Fonctionnement des schémas de base de données | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164972"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811305"
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164972"
  Relationships  
  L'Assistant génère une relation pour chaque relation de dimension régulière de la table de faits à l'attribut de granularité de la table de la dimension. Si la granularité est basée sur l'attribut clé de la table de dimension, la relation est créée dans la base de données et dans la vue de source de données. Si la granularité est basée sur un autre attribut, la relation n'est créée que dans la vue de source de données.  
   
- Si vous choisissez de générer les index dans l'Assistant, un index non-cluster est créé pour chacune de ces colonnes de relation.  
+ Si vous avez choisi de générer des index dans l’Assistant, un index non-cluster est généré pour chacune de ces colonnes de relation.  
   
  Contraintes  
  Les clés primaires ne sont pas générées sur les tables de faits.  

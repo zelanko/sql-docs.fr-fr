@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666796"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811082"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
   Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dans le contexte duquel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, ainsi que ses autorisations réseau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Pour sélectionner un compte pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez le Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour choisir l'une des options suivantes :  
@@ -74,22 +74,22 @@ ms.locfileid: "62666796"
 ## <a name="supported-service-account-types"></a>Types de comptes de service pris en charge  
  Le tableau ci-dessous répertorie les types de comptes Windows qui peuvent être utilisés pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Type de compte de service|Serveur non-cluster|Serveur en cluster|Contrôleur de domaine (non-cluster)|  
+|Type de compte de service|Serveur non-cluster|Serveur en cluster|Contrôleur de domaine (non cluster)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Compte de domaine Windows (membre du groupe Administrateurs Windows)|Pris en charge|Pris en charge|Pris en charge|  
-|Compte de domaine Windows (non administratif)|Supported<sup>1</sup>|Supported<sup>1</sup>|Supported<sup>1</sup>|  
-|Compte Service réseau (AUTORITE NT\NetworkService)|Supported<sup>1, 3, 4</sup>|Non pris en charge|Non pris en charge|  
-|Compte d'utilisateur local (non administratif)|Supported<sup>1</sup>|Non pris en charge|Non applicable|  
-|Compte système local (AUTORITE NT\System)|Supported<sup>2</sup>|Non pris en charge|Supported<sup>2</sup>|  
+|Compte de domaine Windows (non administratif)|Pris en charge<sup>1</sup>|Pris en charge<sup>1</sup>|Pris en charge<sup>1</sup>|  
+|Compte Service réseau (AUTORITE NT\NetworkService)|Pris en charge<sup>1, 3, 4</sup>|Non pris en charge|Non pris en charge|  
+|Compte d'utilisateur local (non administratif)|Pris en charge<sup>1</sup>|Non pris en charge|Non applicable|  
+|Compte système local (AUTORITE NT\System)|Pris en charge<sup>2</sup>|Non pris en charge|Pris en charge<sup>2</sup>|  
 |Compte Service local (AUTORITE NT\LocalService)|Non pris en charge|Non pris en charge|Non pris en charge|  
   
- <sup>1</sup> voir la restriction 1 ci-dessous.  
+ <sup>1</sup> Voir la limitation 1 ci-dessous.  
   
- <sup>2</sup> voir la restriction 2 ci-dessous.  
+ <sup>2</sup> consultez la limitation 2 ci-dessous.  
   
- <sup>3</sup> voir la restriction 3 ci-dessous.  
+ <sup>3</sup> consultez la limitation 3 ci-dessous.  
   
- <sup>4</sup> voir la restriction 4 ci-dessous.  
+ <sup>4</sup> consultez la limitation 4 ci-dessous.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Restriction 1 : utilisation de comptes non administratifs pour l’administration multiserveur  
  L’enregistrement de serveurs cibles auprès d’un serveur maître peut échouer en affichant le message d’erreur suivant : « L’opération d’enregistrement a échoué. »  
