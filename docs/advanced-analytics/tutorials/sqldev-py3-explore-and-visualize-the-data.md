@@ -194,7 +194,7 @@ La procédure stockée retourne un objet python `figure` sérialisé sous la for
   
 6.  Le fichier de sortie est créé dans le répertoire de travail Python. Pour afficher le tracé, localisez le répertoire de travail Python, puis ouvrez le fichier. L’illustration suivante montre un tracé enregistré sur l’ordinateur client.
   
-    ![Montant du pourboire vs montant] de la course (media/sqldev-python-sample-plot.png "Montant du pourboire vs montant") de la course 
+    ![Montant du pourboire vs montant](media/sqldev-python-sample-plot.png "Montant du pourboire vs montant") 
 
 ## <a name="next-step"></a>Étape suivante
 

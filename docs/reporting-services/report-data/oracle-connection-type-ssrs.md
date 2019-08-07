@@ -1,6 +1,6 @@
 ---
-title: Type de connexion Oracle (SSRS) | Microsoft Docs
-ms.date: 01/11/2017
+title: Type de connexion Oracle (SSRS, Power BI Report Server et Générateur de rapports) | Microsoft Docs
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,39 +8,49 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67cb43743f8153a39d28af26807ddea98955674e
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499551"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632078"
 ---
-# <a name="oracle-connection-type-ssrs"></a>Type de connexion Oracle (SSRS)
-Pour utiliser des données d'une base de données Oracle dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type Oracle. Ce type de source de données intégré utilise directement le fournisseur de données Oracle et requiert un composant logiciel client Oracle.
+# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Type de connexion Oracle (SSRS, Power BI Report Server et Générateur de rapports)
 
-Pour installer les outils clients Oracle, vous pouvez procéder comme suit :
- 
-1.  Accédez au [site de téléchargement Oracle](https://www.oracle.com/downloads/).
-2.  Téléchargez ODAC 12C Release 4 (12.1.0.2.4) pour Windows (64 bits pour le serveur, 32 bits pour les outils).
-3.  Installez le fournisseur de données pour .NET 4.
-  
+Pour utiliser des données d'une base de données Oracle dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type Oracle. Ce type de source de données intégré utilise directement le fournisseur de données Oracle et requiert un composant logiciel client Oracle. Cet article explique comment télécharger et installer des pilotes pour Reporting Services, Power BI Report Server et Générateur de rapports.
+
+## <a name="64-bit-drivers-for-the-report-servers"></a>pilotes 64 bits pour les serveurs de rapports
+
+Power BI Report Server et SQL Server Reporting Services 2016 et 2017 utilisent tous des ODP.NET gérés. Les étapes suivantes ne sont nécessaires que lors de l’utilisation des pilotes 18x les plus récents. Ils partent du principe que vous avez installé les fichiers sur c:\oracle64.
+
+1. Sur le site de téléchargement Oracle, installez [oracle 64 bits ODAC Oracle Universal installer (oui)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
+2. Inscrire le client géré ODP.NET dans le GAC: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: GAC/ProviderPath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Ajoutez des entrées de client managé ODP.NET à machine. config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/Product: ODPM/frameworkVersion: v 4.0.30319/ProductVersion: 4.122.18.3
+
+## <a name="32-bit-drivers-for-report-builder"></a>pilotes 32 bits pour Générateur de rapports
+Les étapes suivantes ne sont nécessaires que lors de l’utilisation des pilotes 18x les plus récents. Ils partent du principe que vous avez installé les fichiers sur c:\oracle32.
+
+1. Sur le site de téléchargement Oracle, installez [oracle 32 bits ODAC Oracle Universal installer (oui)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
+2. Inscrire le client géré ODP.NET dans le GAC: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: GAC/ProviderPath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Ajoutez des entrées de client managé ODP.NET à machine. config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/Product: ODPM/frameworkVersion: v 4.0.30319/ProductVersion: 4.122.18.3
+
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Chaîne de connexion  
- Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L'exemple de chaîne de connexion suivant spécifie une base de données Oracle sur le serveur nommé Oracle9 utilisant Unicode. Le nom du serveur doit correspondre à ce qui est défini dans le fichier de configuration Tnsnames.ora comme nom d'instance de serveur Oracle.  
+ Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L'exemple de chaîne de connexion suivant spécifie une base de données Oracle sur le serveur nommé « Oracle18 » utilisant Unicode. Le nom du serveur doit correspondre à ce qui est défini dans le fichier de configuration Tnsnames.ora comme nom d'instance de serveur Oracle.  
   
 ```  
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- Pour plus d’informations sur les exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports.  
   
  Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports.  
   
- Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion &#40;Générateur de rapports et SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [spécifier les informations d’identification et les informations de connexion pour les Sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Requêtes  
@@ -59,52 +69,26 @@ Data Source="Oracle"; Unicode="True"
   
  Pour plus d'informations, consultez les documents suivants :  
   
--   [Utilisation du fournisseur de données .NET Framework pour Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) sur msdn.microsoft.com  
-  
 -   [How to use Reporting Services to configure and to access an Oracle data source (en anglais)](https://support.microsoft.com/kb/834305)  
-  
 -   [Comment ajouter des autorisations pour le principal de sécurité SERVICE RÉSEAU](https://support.microsoft.com/kb/870668)  
   
-###### <a name="alternate-data-extensions"></a>Autres extensions de données  
+### <a name="alternate-data-extensions"></a>Autres extensions de données 
+ 
  Vous pouvez également récupérer des données à partir d'une base de données Oracle à l'aide d'un type de source de données OLE DB. Pour plus d’informations, consultez [Type de connexion OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
-  
-###### <a name="report-models"></a>Modèles de rapport  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+### <a name="report-models"></a>Modèles de rapport  
+
  Vous pouvez également créer des modèles basés sur une base de données Oracle.  
+::: moniker-end
+   
+### <a name="platform-and-version-information"></a>Informations sur les plateformes et les versions  
+
+ Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+
   
-###### <a name="platform-and-version-information"></a>Informations sur les plateformes et les versions  
- Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-  
-##  <a name="HowTo"></a> Rubriques de procédures  
- Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
-  
- [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
- [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
-  
- [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
-  
-##  <a name="Related"></a> Sections connexes  
- Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
-  
- [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
-  
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
- Fournit des informations sur les connexions de données et les sources de données.  
-  
- [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- Fournit des informations sur les datasets incorporés et partagés.  
-  
- [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- Fournit des informations sur la collection de champs de dataset générée par la requête.  
-  
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
-  
-  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
+
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
