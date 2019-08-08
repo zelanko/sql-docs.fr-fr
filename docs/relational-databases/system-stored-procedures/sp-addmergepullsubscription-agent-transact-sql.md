@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f8073fcb4c92861ffb09da8739c7c9f8064d9d70
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117955"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769148"
 ---
-# <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
+# <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ajoute un nouveau travail d'Agent permettant de planifier la synchronisation d'un abonnement par extraction de données (pull) à une publication de fusion. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
@@ -90,64 +90,64 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Est le nom de l’agent. *nom* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'`Nom de l’agent. *Name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Est le nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` Est le mode de sécurité à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_security_mode* est **int**, avec 1 comme valeur par défaut. Si **0**, spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si **1**, spécifie l’authentification Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la valeur est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0**, spécifie l’authentification. Si **1**, spécifie l’authentification Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` Est la connexion à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_login* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher_login = ] 'publisher_login'`Nom de connexion à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publisher_password = ] 'publisher_password'` Est le mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher_password = ] 'publisher_password'`Mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Si possible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @publisher_encrypted_password = ]publisher_encrypted_password` Paramètre *mot_de_passe_éditeur_crypté* n’est plus pris en charge. Tentez de définir cela **bits** paramètre **1** entraîne une erreur.  
+`[ @publisher_encrypted_password = ]publisher_encrypted_password`La définition de *publisher_encrypted_password* n’est plus prise en charge. Si vous tentez de définir ce paramètre de **bit** sur **1** , une erreur se produit.  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. Subscriber est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *bd_abonné* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode` Est le mode de sécurité à utiliser lors de la connexion à un abonné lors de la synchronisation. *subscriber_security_mode* est **int**, avec 1 comme valeur par défaut. Si **0**, spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si **1**, spécifie l’authentification Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Mode de sécurité à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la valeur est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0**, spécifie l’authentification. Si **1**, spécifie l’authentification Windows.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. L'Agent de fusion se connecte toujours à l'Abonné local à l'aide de l'authentification Windows. Si une valeur est spécifiée pour ce paramètre, un message d'avertissement est retourné, mais la valeur est ignorée.  
   
-`[ @subscriber_login = ] 'subscriber_login'` Est la connexion à l’abonné à utiliser lors de la connexion à un abonné lors de la synchronisation. *subscriber_login* est requise si *subscriber_security_mode* a la valeur **0**. *subscriber_login* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber_login = ] 'subscriber_login'`Connexion de l’abonné à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_login* est obligatoire si *subscriber_security_mode* est défini sur **0**. *subscriber_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. Si une valeur est spécifiée pour ce paramètre, un message d'avertissement est retourné, mais la valeur est ignorée.  
   
-`[ @subscriber_password = ] 'subscriber_password'` Le mot de passe de l’abonné pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *subscriber_password* est requise si *subscriber_security_mode* a la valeur **0**. *subscriber_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné pour l’authentification. *subscriber_password* est obligatoire si *subscriber_security_mode* est défini sur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. Si une valeur est spécifiée pour ce paramètre, un message d'avertissement est retourné, mais la valeur est ignorée.  
   
-`[ @distributor = ] 'distributor'` Est le nom du serveur de distribution. *serveur de distribution* est **sysname**, avec une valeur par défaut *publisher*; autrement dit, le serveur de publication est également le serveur de distribution.  
+`[ @distributor = ] 'distributor'`Nom du serveur de distribution. *Distributor* est de **type sysname**, avec *Publisher*comme valeur par défaut. autrement dit, le serveur de publication est également le serveur de distribution.  
   
-`[ @distributor_security_mode = ] distributor_security_mode` Est le mode de sécurité à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_security_mode* est **int**, avec 0 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** Spécifie l’authentification Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode`Mode de sécurité à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_security_mode* est de **type int**, avec 0 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** spécifie l’authentification Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` Est la connexion du serveur de distribution à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_login* est requise si *distributor_security_mode* a la valeur **0**. *distributor_login* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @distributor_login = ] 'distributor_login'`Connexion du serveur de distribution à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_login* est obligatoire si *distributor_security_mode* est défini sur **0**. *distributor_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @distributor_password = ] 'distributor_password'` Est le mot de passe du serveur de distribution. *distributor_password* est requise si *distributor_security_mode* a la valeur **0**. *distributor_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @distributor_password = ] 'distributor_password'`Est le mot de passe du serveur de distribution. *distributor_password* est obligatoire si *distributor_security_mode* est défini sur **0**. *distributor_password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Si possible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @encrypted_password = ] encrypted_password` Paramètre *encrypted_password* n’est plus pris en charge. Tentez de définir cela **bits** paramètre **1** entraîne une erreur.  
+`[ @encrypted_password = ] encrypted_password`La définition de *encrypted_password* n’est plus prise en charge. Si vous tentez de définir ce paramètre de **bit** sur **1** , une erreur se produit.  
   
-`[ @frequency_type = ] frequency_type` Est la fréquence de planification de l’Agent de fusion. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_type = ] frequency_type`Fréquence de planification de l’Agent de fusion. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -162,9 +162,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |NULL (par défaut)||  
   
 > [!NOTE]  
->  La valeur **64** , l’Agent de fusion s’exécute en mode continu. Cela correspond au paramètre la **-continue** paramètre pour l’agent. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+>  Si vous spécifiez la valeur **64** , le agent de fusion s’exécute en mode continu. Cela correspond à la définition du paramètre **-Continuous** pour l’agent. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
-`[ @frequency_interval = ] frequency_interval` L’ou les jours qui s’exécute l’Agent de fusion. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_interval = ] frequency_interval`Jour ou jours d’exécution de l’Agent de fusion. *frequency_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -180,7 +180,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Est la date de l’Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Date de la Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -191,9 +191,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**16**|Dernière|  
 |NULL (par défaut)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @frequency_subday = ] frequency_subday` Est la fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -203,68 +203,68 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**8**|Heure|  
 |NULL (par défaut)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Est l’heure de la journée à laquelle l’Agent de fusion est premier planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Heure de la journée à laquelle le Agent de fusion est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle l’Agent de fusion cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Heure de la journée à laquelle le Agent de fusion cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_start_date = ] active_start_date` Est la date à laquelle l’Agent de fusion est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_start_date = ] active_start_date`Date à laquelle le Agent de fusion est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_end_date = ] active_end_date` Date à laquelle l’Agent de fusion cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_end_date = ] active_end_date`Date à laquelle le Agent de fusion cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Est une invite de commandes facultative qui est fournie à l’Agent de fusion. *optional_command_line* est **nvarchar (255)** , avec une valeur par défaut « ». Permet de fournir des paramètres supplémentaires à l'Agent de fusion, comme dans l'exemple suivant où le délai d'expiration par défaut de la requête est augmenté jusqu'à `600` secondes :  
+`[ @optional_command_line = ] 'optional_command_line'`Est une invite de commandes facultative qui est fournie au Agent de fusion. *optional_command_line* est de type **nvarchar (255)** , avec «» comme valeur par défaut. Permet de fournir des paramètres supplémentaires à l'Agent de fusion, comme dans l'exemple suivant où le délai d'expiration par défaut de la requête est augmenté jusqu'à `600` secondes :  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` Est le paramètre de sortie pour l’ID de travail. *id_travail_de_fusion* est **Binary (16)** , avec NULL comme valeur par défaut.  
+`[ @merge_jobid = ] merge_jobid`Paramètre de sortie de l’ID de travail. *merge_jobid* est de **type Binary (16)** , avec NULL comme valeur par défaut.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Spécifie si l’abonnement peut être synchronisé par le biais du Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisée sans démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Spécifie si l’abonnement peut être synchronisé via le gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)** , avec false comme valeur par défaut. Si la **valeur**est false, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
   
-`[ @ftp_address = ] 'ftp_address'` Pour la compatibilité descendante uniquement.  
+`[ @ftp_address = ] 'ftp_address'`À des fins de compatibilité descendante uniquement.  
   
-`[ @ftp_port = ] ftp_port` Pour la compatibilité descendante uniquement.  
+`[ @ftp_port = ] ftp_port`À des fins de compatibilité descendante uniquement.  
   
-`[ @ftp_login = ] 'ftp_login'` Pour la compatibilité descendante uniquement.  
+`[ @ftp_login = ] 'ftp_login'`À des fins de compatibilité descendante uniquement.  
   
-`[ @ftp_password = ] 'ftp_password'` Pour la compatibilité descendante uniquement.  
+`[ @ftp_password = ] 'ftp_password'`À des fins de compatibilité descendante uniquement.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Spécifie l’emplacement à partir duquel récupérer les fichiers de capture instantanée. *alternate_snapshot_folder* est **nvarchar (255)** , avec NULL comme valeur par défaut. Si la valeur est NULL, les fichiers d'instantané sont extraits à partir de l'emplacement par défaut spécifié par le serveur de publication.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'`Spécifie l’emplacement à partir duquel récupérer les fichiers d’instantanés. *alternate_snapshot_folder* est de type **nvarchar (255)** , avec NULL comme valeur par défaut. Si la valeur est NULL, les fichiers d'instantané sont extraits à partir de l'emplacement par défaut spécifié par le serveur de publication.  
   
-`[ @working_directory = ] 'working_directory'` Est le nom du répertoire de travail utilisé pour stocker temporairement les fichiers de données et le schéma de la publication lorsque FTP est utilisé pour transférer des fichiers d’instantanés. *working_directory* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
+`[ @working_directory = ] 'working_directory'`Nom du répertoire de travail utilisé pour stocker temporairement les fichiers de données et de schéma de la publication lorsque le protocole FTP est utilisé pour transférer des fichiers d’instantanés. *working_directory* est de type **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
-`[ @use_ftp = ] 'use_ftp'` Spécifie l’utilisation de FTP au lieu du protocole usuel pour extraire les instantanés. *use_ftp* est **nvarchar (5)** , avec FALSE comme valeur par défaut.  
+`[ @use_ftp = ] 'use_ftp'`Spécifie l’utilisation de FTP au lieu du protocole standard pour récupérer des instantanés. *use_ftp* est de type **nvarchar (5)** , avec false comme valeur par défaut.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Utiliser le résolveur interactif pour résoudre les conflits pour tous les articles autorisant la résolution interactive. *use_interactive_resolver* est **nvarchar (5)** , avec FALSE comme valeur par défaut.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]`Utilise le programme de résolution interactif pour résoudre les conflits pour tous les articles qui autorisent la résolution interactive. *use_interactive_resolver* est de type **nvarchar (5)** , avec false comme valeur par défaut.  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
->  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_activation* à une valeur autre que **false** générera une erreur.  
+>  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. La définition de *remote_agent_activation* sur une valeur autre que false génère une erreur.  
   
 `[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
->  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_server_name* à n’importe quelle valeur non NULL générera une erreur.  
+>  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Si vous affectez à *remote_agent_server_name* une valeur non null, une erreur est générée.  
   
-`[ @job_name = ] 'job_name' ]` Est le nom d’un travail d’agent existant. *job_name* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre de la **sysadmin** rôle serveur fixe, vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *nom_travail*.  
+`[ @job_name = ] 'job_name' ]`Nom d’un travail d’agent existant. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre du rôle serveur fixe **sysadmin** , vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *nom_du_travail*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Le chemin d’accès au dossier où les fichiers d’instantanés seront lues à partir de si un instantané de données filtrées doit être utilisé. *dynamic_snapshot_location* est **nvarchar (260)** , avec NULL comme valeur par défaut. Pour plus d'informations, voir [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]`Chemin d’accès au dossier dans lequel les fichiers d’instantanés seront lus si un instantané de données filtrées doit être utilisé. *dynamic_snapshot_location* est de type **nvarchar (260)** , avec NULL comme valeur par défaut. Pour plus d'informations, voir [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-`[ @use_web_sync = ] use_web_sync` Indique que la synchronisation Web est activée. *use_web_sync* est **bits**, avec 0 comme valeur par défaut. **1** Spécifie que l’abonnement par extraction peut être synchronisé via internet à l’aide de HTTP.  
+`[ @use_web_sync = ] use_web_sync`Indique que la synchronisation Web est activée. *use_web_sync* est de valeur de **bit**, avec 0 comme valeur par défaut. **1** indique que l’abonnement par extraction peut être synchronisé via Internet à l’aide du protocole http.  
   
-`[ @internet_url = ] 'internet_url'` Est l’emplacement de l’écouteur de réplication (REPLISAPI. DLL) pour la synchronisation Web. *internet_url* est **nvarchar (260)** , avec NULL comme valeur par défaut. *internet_url* est une URL qualifiée complète, au format `http://server.domain.com/directory/replisapi.dll`. Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
+`[ @internet_url = ] 'internet_url'`Est l’emplacement de l’écouteur de réplication (REPLISAPI. DLL) pour la synchronisation Web. *internet_url* est de type **nvarchar (260)** , avec NULL comme valeur par défaut. *internet_url* est une URL complète, au format `http://server.domain.com/directory/replisapi.dll`. Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
   
-`[ @internet_login = ] 'internet_login'` La connexion de l’Agent de fusion utilise pour se connecter au serveur Web qui héberge la synchronisation Web est à l’aide de l’authentification de base HTTP. *internet_login* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @internet_login = ] 'internet_login'`Nom de connexion utilisé par le Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web à l’aide de l’authentification HTTP de base. *internet_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @internet_password = ] 'internet_password'` Le mot de passe utilisé par l’Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web est à l’aide de l’authentification de base HTTP. *internet_password* est **nvarchar (524)** , avec NULL comme valeur par défaut.  
+`[ @internet_password = ] 'internet_password'`Mot de passe utilisé par le Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web à l’aide de l’authentification HTTP de base. *internet_password* est de type **nvarchar (524)** , avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
-`[ @internet_security_mode = ] internet_security_mode` Est la méthode d’authentification utilisée par l’Agent de fusion lors de la connexion au serveur Web pendant la synchronisation Web à l’aide de HTTPS. *internet_security_mode* est **int** et peut prendre l’une des valeurs suivantes.  
+`[ @internet_security_mode = ] internet_security_mode`Méthode d’authentification utilisée par le Agent de fusion lors de la connexion au serveur Web pendant la synchronisation Web à l’aide du protocole HTTPs. *internet_security_mode* est de **type int** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -274,13 +274,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Il est recommandé d'utiliser l'authentification de base pour la synchronisation Web. Pour utiliser la synchronisation Web, vous devez établir une connexion SSL au serveur Web. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
-`[ @internet_timeout = ] internet_timeout` Est la durée, en secondes, avant l’expiration de la demande de synchronisation Web. *internet_timeout* est **int**, avec une valeur par défaut **300** secondes.  
+`[ @internet_timeout = ] internet_timeout`Durée, en secondes, avant l’expiration d’une demande de synchronisation Web. *internet_timeout* est de **type int**, avec une valeur par défaut de **300** secondes.  
   
-`[ @hostname = ] 'hostname'` Remplace la valeur de HOST_NAME() lorsque cette fonction est utilisée dans la clause WHERE d’un filtre paramétré. *nom d’hôte* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @hostname = ] 'hostname'`Remplace la valeur de HOST_NAME () lorsque cette fonction est utilisée dans la clause WHERE d’un filtre paramétré. *hostname* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions d'Agent à l'Abonné et pour les connexions au serveur de distribution et au serveur de publication lors de l'utilisation de l'authentification intégrée de Windows.  
+`[ @job_login = ] 'job_login'`Nom de connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)** , sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions d'Agent à l'Abonné et pour les connexions au serveur de distribution et au serveur de publication lors de l'utilisation de l'authentification intégrée de Windows.  
   
-`[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut.  
+`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour une sécurité optimale, les noms de connexion et les mots de passe doivent être fournis au moment de l'exécution.  
@@ -289,7 +289,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_addmergepullsubscription_agent** est utilisée dans la réplication de fusion et utilise des fonctionnalités similaires à celles [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
+ **sp_addmergepullsubscription_agent** est utilisé dans la réplication de fusion et utilise des fonctionnalités similaires à [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Pour obtenir un exemple montrant comment spécifier correctement les paramètres de sécurité lors de l’exécution **sp_addmergepullsubscription_agent**, consultez [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md).  
   
@@ -297,7 +297,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addmergepullsubscription_agent**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 220e21713935409d7d85ecd156524883dbbace08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01f076673491978739ff96d791a41d0927c4ddb6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022466"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769117"
 ---
-# <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  
   Ajoute un nouveau travail de l'Agent planifié, utilisé pour synchroniser un abonnement par extraction de données (pull) avec une publication transactionnelle. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
@@ -79,56 +79,56 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'_` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. *publisher_db* est ignoré par les serveurs de publication Oracle.  
+`[ @publisher_db = ] 'publisher_db'_`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut. *publisher_db* est ignoré par les serveurs de publication Oracle.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, avec NULL comme valeur par défaut.  
-  
-> [!NOTE]  
->  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis.  
-  
-`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *bd_abonné* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. Subscriber est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode` Est le mode de sécurité à utiliser lors de la connexion à un abonné lors de la synchronisation. *subscriber_security_mode* est **int,** avec NULL comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** Spécifie l’authentification Windows.  
+`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. L'Agent de distribution se connecte toujours à l'Abonné local à l'aide de l'authentification Windows. Si une valeur différente de NULL ou **1** est spécifié pour ce paramètre, un message d’avertissement est retourné.  
+>  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis.  
   
-`[ @subscriber_login = ] 'subscriber_login'` Est la connexion à l’abonné à utiliser lors de la connexion à un abonné lors de la synchronisation. *subscriber_login* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Mode de sécurité à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_security_mode* est de **type int,** avec NULL comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** spécifie l’authentification Windows.  
+  
+> [!NOTE]  
+>  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. L'Agent de distribution se connecte toujours à l'Abonné local à l'aide de l'authentification Windows. Si une valeur autre que NULL ou **1** est spécifiée pour ce paramètre, un message d’avertissement est retourné.  
+  
+`[ @subscriber_login = ] 'subscriber_login'`Connexion de l’abonné à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. Si une valeur est précisée pour ce paramètre, un message d'avertissement est retourné mais la valeur reste ignorée.  
   
-`[ @subscriber_password = ] 'subscriber_password'` Est le mot de passe d’abonné. *subscriber_password* est requise si *subscriber_security_mode* a la valeur **0**. *subscriber_password* est **sysname**, avec NULL comme valeur par défaut. Si un mot de passe d'abonné est utilisé, il est automatiquement chiffré.  
+`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l’abonné. *subscriber_password* est obligatoire si *subscriber_security_mode* est défini sur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut. Si un mot de passe d'abonné est utilisé, il est automatiquement chiffré.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. Si une valeur est précisée pour ce paramètre, un message d'avertissement est retourné mais la valeur reste ignorée.  
   
-`[ @distributor = ] 'distributor'` Est le nom du serveur de distribution. *serveur de distribution* est **sysname**, avec une valeur par défaut la valeur spécifiée par *publisher*.  
+`[ @distributor = ] 'distributor'`Nom du serveur de distribution. *Distributor* est de **type sysname**, avec la valeur par défaut spécifiée par le serveur de *publication*.  
   
-`[ @distribution_db = ] 'distribution_db'` Est le nom de la base de données de distribution. *distribution_db* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @distribution_db = ] 'distribution_db'`Nom de la base de données de distribution. *distribution_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @distributor_security_mode = ] distributor_security_mode` Est le mode de sécurité à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_security_mode* est **int**, avec une valeur par défaut **1**. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** Spécifie l’authentification Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode`Mode de sécurité à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_security_mode* est de **type int**, avec **1**comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** spécifie l’authentification Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` Est la connexion du serveur de distribution à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_login* est requise si *distributor_security_mode* a la valeur **0**. *distributor_login* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @distributor_login = ] 'distributor_login'`Connexion du serveur de distribution à utiliser lors de la connexion à un serveur de distribution lors de la synchronisation. *distributor_login* est obligatoire si *distributor_security_mode* est défini sur **0**. *distributor_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @distributor_password = ] 'distributor_password'` Est le mot de passe du serveur de distribution. *distributor_password* est requise si *distributor_security_mode* a la valeur **0**. *distributor_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @distributor_password = ] 'distributor_password'`Est le mot de passe du serveur de distribution. *distributor_password* est obligatoire si *distributor_security_mode* est défini sur **0**. *distributor_password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort. Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Est-ce qu’une invite de commandes facultative fournie à l’Agent de Distribution. Par exemple, **- DefinitionFile** C:\Distdef.txt ou **- CommitBatchSize** 10. *optional_command_line* est **nvarchar (4000)** , avec la chaîne vide par défaut.  
+`[ @optional_command_line = ] 'optional_command_line'`Est une invite de commandes facultative fournie au Agent de distribution. Par exemple, **-DefinitionFile** C:\Distdef.txt ou **-CommitBatchSize** 10. *optional_command_line* est de type **nvarchar (4000)** , avec une chaîne vide comme valeur par défaut.  
   
-`[ @frequency_type = ] frequency_type` Est la fréquence de planification de l’Agent de Distribution. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_type = ] frequency_type`Fréquence de planification de l’Agent de distribution. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -142,11 +142,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**128**|Périodique|  
   
 > [!NOTE]  
->  La valeur **64** , l’Agent de Distribution s’exécute en mode continu. Cela correspond au paramètre la **-continue** paramètre pour l’agent. Pour plus d'informations, consultez [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
+>  Si vous spécifiez la valeur **64** , le agent de distribution s’exécute en mode continu. Cela correspond à la définition du paramètre **-Continuous** pour l’agent. Pour plus d'informations, consultez [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-`[ @frequency_interval = ] frequency_interval` Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec 1 comme valeur par défaut.  
+`[ @frequency_interval = ] frequency_interval`Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est de **type int**, avec 1 comme valeur par défaut.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Est la date de l’Agent de Distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Date de la Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -156,9 +156,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**8**|Quatrième|  
 |**16**|Dernière|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec une valeur par défaut **1**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec **1**comme valeur par défaut.  
   
-`[ @frequency_subday = ] frequency_subday` Est la fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -167,77 +167,77 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**4**|Minute|  
 |**8**|Heure|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec une valeur par défaut **1**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec **1**comme valeur par défaut.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Est l’heure de la journée à laquelle l’Agent de Distribution est la première planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec une valeur par défaut **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Heure de la journée à laquelle le Agent de distribution est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle l’Agent de Distribution cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, avec une valeur par défaut **0**.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Heure de la journée à laquelle le Agent de distribution cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @active_start_date = ] active_start_date` Est la date à laquelle l’Agent de Distribution est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, avec une valeur par défaut **0**.  
+`[ @active_start_date = ] active_start_date`Date à laquelle le Agent de distribution est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @active_end_date = ] active_end_date` Date à laquelle l’Agent de Distribution cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec une valeur par défaut **0**.  
+`[ @active_end_date = ] active_end_date`Date à laquelle le Agent de distribution cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` Est l’ID de l’Agent de Distribution pour ce travail. *id_tâche_distribution* est **Binary (16)** , avec la valeur par défaut est NULL et il est un paramètre de sortie.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT`ID de la Agent de distribution pour ce travail. *distribution_jobid* est de **type Binary (16)** , avec NULL comme valeur par défaut. il s’agit d’un paramètre de sortie.  
   
-`[ @encrypted_distributor_password = ] encrypted_distributor_password` Paramètre *mot_de_passe_distributeur_crypté* n’est plus pris en charge. Tentez de définir cela **bits** paramètre **1** entraîne une erreur.  
+`[ @encrypted_distributor_password = ] encrypted_distributor_password`La définition de *encrypted_distributor_password* n’est plus prise en charge. Si vous tentez de définir ce paramètre de **bit** sur **1** , une erreur se produit.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Détermine si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le Gestionnaire de synchronisation. *l’argument enabled_for_syncmgr* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisée sans démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indique si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le gestionnaire de synchronisation. *enabled_for_syncmgr* est de type **nvarchar (5)** , avec false comme valeur par défaut. Si la **valeur**est false, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
   
-`[ @ftp_address = ] 'ftp_address'` Pour la compatibilité descendante uniquement.  
+`[ @ftp_address = ] 'ftp_address'`À des fins de compatibilité descendante uniquement.  
   
-`[ @ftp_port = ] ftp_port` Pour la compatibilité descendante uniquement.  
+`[ @ftp_port = ] ftp_port`À des fins de compatibilité descendante uniquement.  
   
-`[ @ftp_login = ] 'ftp_login'` Pour la compatibilité descendante uniquement.  
+`[ @ftp_login = ] 'ftp_login'`À des fins de compatibilité descendante uniquement.  
   
-`[ @ftp_password = ] 'ftp_password'` Pour la compatibilité descendante uniquement.  
+`[ @ftp_password = ] 'ftp_password'`À des fins de compatibilité descendante uniquement.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` Spécifie l’emplacement du dossier secondaire pour la capture instantanée. *alternate_snapshot_folder* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_`Spécifie l’emplacement du dossier de remplacement pour l’instantané. *alternate_snapshot_folder* est de type **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
-`[ @working_directory = ] 'working_director'` Est le nom du répertoire de travail utilisé pour stocker les fichiers de données et le schéma de la publication. *working_directory* est **nvarchar (255)** , avec NULL comme valeur par défaut. Le nom doit être indiqué au format UNC.  
+`[ @working_directory = ] 'working_director'`Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication. *working_directory* est de type **nvarchar (255)** , avec NULL comme valeur par défaut. Le nom doit être indiqué au format UNC.  
   
-`[ @use_ftp = ] 'use_ftp'` Spécifie l’utilisation de FTP au lieu du protocole usuel pour extraire les instantanés. *use_ftp* est **nvarchar (5)** , avec FALSE comme valeur par défaut.  
+`[ @use_ftp = ] 'use_ftp'`Spécifie l’utilisation de FTP au lieu du protocole normal pour récupérer des instantanés. *use_ftp* est de type **nvarchar (5)** , avec false comme valeur par défaut.  
   
-`[ @publication_type = ] publication_type` Spécifie le type de réplication de la publication. *publication_type* est un **tinyint** avec une valeur par défaut **0**. Si **0**, la publication est un type de transaction. Si **1**, publication est de type instantané. Si **2**, la publication est un type de fusion.  
+`[ @publication_type = ] publication_type`Spécifie le type de réplication de la publication. *publication_type* est de **type tinyint** , avec **0**comme valeur par défaut. Si la **valeur est 0**, la publication est un type de transaction. Si la variable est **1**, la publication est de type instantané. Si la condition est **2**, la publication est de type fusion.  
   
-`[ @dts_package_name = ] 'dts_package_name'` Spécifie le nom du package DTS. *l’argument dts_package_name* est un **sysname** avec NULL comme valeur par défaut. Par exemple, pour spécifier un package nommé `DTSPub_Package`, le paramètre est le suivant : `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Spécifie le nom du package DTS. *dts_package_name* est de **type sysname** , avec NULL comme valeur par défaut. Par exemple, pour spécifier un package nommé `DTSPub_Package`, le paramètre est le suivant : `@dts_package_name = N'DTSPub_Package'`.  
   
-`[ @dts_package_password = ] 'dts_package_password'` Spécifie le mot de passe du package, le cas échéant. *dts_package_password* est **sysname** avec NULL comme valeur par défaut, ce qui signifie que d’un mot de passe n’est pas sur le package.  
+`[ @dts_package_password = ] 'dts_package_password'`Spécifie le mot de passe du package, le cas échéant. *dts_package_password* est de **type sysname** , avec NULL comme valeur par défaut, ce qui signifie qu’aucun mot de passe n’est présent sur le package.  
   
 > [!NOTE]  
->  Vous devez spécifier un mot de passe si *l’argument dts_package_name* est spécifié.  
+>  Vous devez spécifier un mot de passe si *dts_package_name* est spécifié.  
   
-`[ @dts_package_location = ] 'dts_package_location'` Spécifie l’emplacement du package. *dts_package_location* est un **nvarchar (12)** , avec une valeur par défaut **abonné**. L’emplacement du package peut être **distributeur** ou **abonné**.  
+`[ @dts_package_location = ] 'dts_package_location'`Spécifie l’emplacement du package. *dts_package_location* est de type **nvarchar (12)** , avec l' **abonné**comme valeur par défaut. L’emplacement du package peut être **Distributor** ou Subscriber.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
->  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_activation* à une valeur autre que **false** générera une erreur.  
+>  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. La définition de *remote_agent_activation* sur une valeur autre que false génère une erreur.  
   
 `[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
->  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_server_name* à n’importe quelle valeur non NULL générera une erreur.  
+>  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Si vous affectez à *remote_agent_server_name* une valeur non null, une erreur est générée.  
   
-`[ @job_name = ] 'job_name'` Est le nom d’un travail d’agent existant. *job_name* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre de la **sysadmin** rôle serveur fixe, vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *nom_travail*.  
+`[ @job_name = ] 'job_name'`Nom d’un travail d’agent existant. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre du rôle serveur fixe **sysadmin** , vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *nom_du_travail*.  
   
-`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , sans valeur par défaut. C'est ce compte Windows qui est destiné à toujours être utilisé pour les connexions des Agents à l'Abonné.  
+`[ @job_login = ] 'job_login'`Nom de connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)** , sans valeur par défaut. C'est ce compte Windows qui est destiné à toujours être utilisé pour les connexions des Agents à l'Abonné.  
   
-`[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut.  
+`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_addpullsubscription_agent** est utilisé dans la réplication d’instantané ou transactionnelle.  
+ **sp_addpullsubscription_agent** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addpullsubscription_agent**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addpullsubscription_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md)   

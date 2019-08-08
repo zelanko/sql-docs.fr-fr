@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a61b85090dc88dddbb28c923f4acdc6e8fa07cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941807"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770965"
 ---
-# <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Ajoute un nouveau paramètre et sa valeur au profil d'un agent. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Ajoute un nouveau paramètre et sa valeur au profil d'un agent. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,9 +39,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id` Est l’ID du profil à partir de la **MSagent_profiles** table dans le **msdb** base de données. *profile_id* est **int**, sans valeur par défaut.  
+`[ @profile_id = ] profile_id`ID du profil de la table **MSagent_profiles** dans la base de données **msdb** . l’option par défaut est de **type int**, sans valeur par défaut.  
   
- Pour savoir de quel type d’agent cela *profile_id* représente, recherchez le *profile_id* dans le [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table et notez le *agent_type* valeur du champ. Les valeurs sont les suivantes :  
+ Pour déterminer le type d’agent représenté par l’élément de la table, recherchez le type d’agent dans le tableau [Transact-SQL &#40;&#41; de MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) , puis notez la valeur du champ *agent_type* . Les valeurs sont les suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Agent de fusion|  
 |**9**|Agent de lecture de la file d'attente|  
   
-`[ @parameter_name = ] 'parameter_name'` Est le nom du paramètre. *parameter_name* est **sysname**, sans valeur par défaut. Pour obtenir la liste des paramètres déjà définis dans les profils système, consultez [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). Pour obtenir la liste complète des paramètres valides pour chaque agent, consultez les rubriques suivantes :  
+`[ @parameter_name = ] 'parameter_name'`Nom du paramètre. *nom_de_paramètre* est de **type sysname**, sans valeur par défaut. Pour obtenir la liste des paramètres déjà définis dans les profils système, consultez [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). Pour obtenir la liste complète des paramètres valides pour chaque agent, consultez les rubriques suivantes :  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,16 +63,16 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Agent de lecture de la file d’attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'` Est la valeur à assigner au paramètre. *parameter_value* est **nvarchar (255)** , sans valeur par défaut.  
+`[ @parameter_value = ] 'parameter_value'`Valeur à assigner au paramètre. *parameter_value* est de type **nvarchar (255)** , sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_add_agent_parameter** est utilisé dans la réplication de capture instantanée, la réplication transactionnelle et la réplication de fusion.  
+ **sp_add_agent_parameter** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_agent_parameter**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_add_agent_parameter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des profils d’Agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

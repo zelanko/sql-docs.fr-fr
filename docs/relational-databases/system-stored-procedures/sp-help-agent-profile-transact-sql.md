@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055208"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771456"
 ---
-# <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Affiche le profil de l'Agent indiqué. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
+  Affiche le profil de l'Agent indiqué. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +38,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @agent_type = ] agent_type` Est le type d’agent. *agent_type* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
+`[ @agent_type = ] agent_type`Type d’agent. *agent_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -48,27 +48,27 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Agent de fusion|  
 |**9**|Agent de lecture de la file d'attente|  
   
-`[ @profile_id = ] profile_id` Est l’ID du profil à afficher. *profile_id* est **int**, avec une valeur par défaut **-1**, qui retourne tous les profils de le **MSagent_profiles** table.  
+`[ @profile_id = ] profile_id`ID du profil à afficher. l’option par défaut est de **type int**, avec **-1**comme valeur par défaut, qui renvoie tous les profils de la table **MSagent_profiles** .  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**Int**|ID du profil.|  
-|**nom_profil**|**sysname**|Nom unique pour le type d'Agent.|  
-|**agent_type**|**int**|**1** = Agent d’instantané<br /><br /> **2** = Agent de lecture du journal<br /><br /> **3** = Agent de distribution<br /><br /> **4** = Agent de fusion<br /><br /> **9** = Agent de lecture de file d’attente|  
+|**profile_id**|**int**|ID du profil.|  
+|**profile_name**|**sysname**|Nom unique pour le type d'Agent.|  
+|**agent_type**|**int**|**1** = agent d’instantané<br /><br /> **2** = agent de lecture du journal<br /><br /> **3** = agent de distribution<br /><br /> **4** = agent de fusion<br /><br /> **9** = agent de lecture de la file d’attente|  
 |**Type**|**int**|**0** = système<br /><br /> **1** = personnalisé|  
 |**description**|**varchar(3000)**|Description du profil.|  
 |**def_profile**|**bit**|Indique si ce profil représente le profil par défaut pour ce type d'agent.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_help_agent_profile** est utilisée dans tous les types de réplication.  
+ **sp_help_agent_profile** est utilisé dans tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou le **replmonitor** rôle de base de données fixe peuvent exécuter **sp_help_agent_profile**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **replmonitor** peuvent exécuter **sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des profils d’Agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

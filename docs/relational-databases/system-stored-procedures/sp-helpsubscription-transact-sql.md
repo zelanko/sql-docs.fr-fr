@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd33fc16d399cc6d628eb4b3e80af98efca4ecc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048352"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771572"
 ---
-# <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Affiche des informations sur les abonnements associés à une publication, un article, un Abonné ou un ensemble d'abonnements particuliers. Cette procédure stockée est exécutée sur la base de données de publication d'un serveur de publication.  
   
@@ -42,24 +42,24 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication associée. *publication* est **sysname**, avec une valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour ce serveur.  
+`[ @publication = ] 'publication'`Nom de la publication associée. *publication* est de **%** **type sysname**, avec la valeur par défaut, qui retourne toutes les informations d’abonnement pour ce serveur.  
   
-`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, avec une valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications sélectionnées et les abonnés. Si **tous les**, qu’une seule entrée est renvoyée pour l’abonnement complet sur une publication.  
+`[ @article = ] 'article'`Nom de l’article. *article* est de **%** **type sysname**, avec la valeur par défaut, qui retourne toutes les informations d’abonnement pour les publications et les abonnés sélectionnés. Si la valeur est **All**, une seule entrée est retournée pour l’abonnement complet sur une publication.  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné sur lequel obtenir les informations d’abonnement. *abonné* est **sysname**, avec une valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications et articles sélectionnés.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné sur lequel les informations d’abonnement sont obtenues. Subscriber est de **%** **type sysname**, avec la valeur par défaut, qui retourne toutes les informations d’abonnement pour les publications et les articles sélectionnés.  
   
-`[ @destination_db = ] 'destination_db'` Est le nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%** .  
+`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **%** **type sysname**, avec la valeur par défaut.  
   
-`[ @found = ] 'found'OUTPUT` Est un indicateur pour indiquer les lignes renvoyées. *trouvé*est **int** d’un paramètre OUTPUT, avec 23456 comme valeur par défaut.  
+`[ @found = ] 'found'OUTPUT`Indicateur qui signale le retour de lignes. valeur de **type int** et paramètre de sortie, avec la valeur par défaut 23456.  
   
- **1** indique la publication a été trouvée.  
+ **1** indique que la publication est trouvée.  
   
  **0** indique que la publication est introuvable.  
   
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**et la valeur par défaut est le nom du serveur actuel.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**et sa valeur par défaut est le nom du serveur actuel.  
   
 > [!NOTE]  
->  *serveur de publication* ne doit pas être spécifié, sauf si elle est un serveur de publication Oracle.  
+>  l' *éditeur* ne doit pas être spécifié, sauf s’il s’agit d’un serveur de publication Oracle.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -69,25 +69,25 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**publication**|**sysname**|Nom de la publication.|  
 |**article**|**sysname**|Nom de l'article.|  
 |**base de données de destination**|**sysname**|Nom de la base de données de destination où sont placées les données répliquées.|  
-|**état de l’abonnement**|**tinyint**|État de l'abonnement :<br /><br /> **0** = inactif<br /><br /> **1** = abonné<br /><br /> **2** = actif|  
-|**type de synchronisation**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = none|  
-|**type d’abonnement**|**Int**|Type d'abonnement :<br /><br /> **0** = push<br /><br /> **1** = par extraction<br /><br /> **2** = anonyme|  
+|**État de l’abonnement**|**tinyint**|État de l'abonnement :<br /><br /> **0** = inactif<br /><br /> **1** = abonné<br /><br /> **2** = actif|  
+|**type de synchronisation**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = aucun|  
+|**type d’abonnement**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
 |**abonnement complet**|**bit**|Indique si l'abonnement concerne tous les articles de la publication :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
 |**nom de l’abonnement**|**nvarchar(255)**|Nom de l'abonnement.|  
-|**mode de mise à jour**|**Int**|**0** = lecture seule<br /><br /> **1** = abonnement de mise à jour immédiate|  
-|**id de tâche de distribution**|**binary(16)**|ID du travail de l'Agent de distribution.|  
-|**loopback_detection**|**bit**|La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie les transactions.<br /><br /> **1** = ne pas renvoyer.<br /><br /> Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, voir [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
-|**offload_enabled**|**bit**|Indique si l'exécution du déchargement d'un Agent de réplication est configurée pour être exécuté sur l'Abonné.<br /><br /> Si **0**, l’agent est exécuté sur le serveur de publication.<br /><br /> Si **1**, l’agent est exécuté sur l’abonné.|  
-|**offload_server**|**sysname**|Nom du serveur activé pour l'activation d'Agent à distance. Si NULL, puis la valeur offload_server figurant dans [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) table est utilisée.|  
+|**mode de mise à jour**|**int**|**0** = lecture seule<br /><br /> **1** = abonnement avec mise à jour immédiate|  
+|**ID de tâche de distribution**|**binary(16)**|ID du travail de l'Agent de distribution.|  
+|**loopback_detection**|**bit**|La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie.<br /><br /> **1** = n’est pas renvoyé.<br /><br /> Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, voir [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|**offload_enabled**|**bit**|Indique si l'exécution du déchargement d'un Agent de réplication est configurée pour être exécuté sur l'Abonné.<br /><br /> Si la **valeur est 0**, l’agent est exécuté sur le serveur de publication.<br /><br /> Si la condition est **1**, l’agent est exécuté sur l’abonné.|  
+|**offload_server**|**sysname**|Nom du serveur activé pour l'activation d'Agent à distance. Si la valeur est NULL, le offload_server actuel figurant dans la table [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) est utilisé.|  
 |**dts_package_name**|**sysname**|Spécifie le nom du package DTS (Data Transformation Services).|  
-|**dts_package_location**|**int**|Emplacement du package DTS (si un lot est affecté à l'abonnement). S’il existe un package, une valeur de **0** Spécifie l’emplacement du package à le **distributeur**. La valeur **1** Spécifie le **abonné**.|  
-|**subscriber_security_mode**|**smallint**|Mode de sécurité sur l’abonné, où **1** signifie que l’authentification Windows, et **0** signifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
+|**dts_package_location**|**int**|Emplacement du package DTS (si un lot est affecté à l'abonnement). S’il existe un package, la valeur **0** spécifie l’emplacement du package sur le serveur de **distribution**. La valeur **1** spécifie l' **abonné**.|  
+|**subscriber_security_mode**|**smallint**|Est le mode de sécurité de l’abonné, où **1** correspond à l’authentification Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** à l’authentification.|  
 |**subscriber_login**|**sysname**|Nom de connexion sur l'Abonné.|  
-|**subscriber_password**||Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par un « **&#42;&#42;&#42;&#42;&#42;&#42;** » chaîne.|  
+|**subscriber_password**||Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par une chaîne « **&#42;&#42;&#42;&#42;&#42;** ».|  
 |**job_login**|**sysname**|Nom du compte Windows sous lequel l'Agent de distribution s'exécute.|  
-|**job_password**||Le mot de passe réel du travail n'est jamais renvoyé. Le résultat est masqué par un « **&#42;&#42;&#42;&#42;&#42;&#42;** » chaîne.|  
+|**job_password**||Le mot de passe réel du travail n'est jamais renvoyé. Le résultat est masqué par une chaîne « **&#42;&#42;&#42;&#42;&#42;** ».|  
 |**distrib_agent_name**|**nvarchar(100)**|Nom du travail de l'Agent qui synchronise l'abonnement.|  
-|**subscriber_type**|**tinyint**|Type d'Abonné, parmi les types suivants :<br /><br /> **0** = abonné SQL Server<br /><br /> **1** = serveur de source de données ODBC<br /><br /> **2** = base de données Microsoft JET (déconseillée)<br /><br /> **3** = fournisseur OLE DB|  
+|**subscriber_type**|**tinyint**|Type d'Abonné, parmi les types suivants :<br /><br /> **0** = abonné SQL Server<br /><br /> **1** = serveur de source de données ODBC<br /><br /> **2** = base de données Microsoft Jet (déconseillée)<br /><br /> **3** = OLE DB fournisseur|  
 |**subscriber_provider**|**sysname**|Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-SQL Server est inscrit.|  
 |**subscriber_datasource**|**nvarchar(4000)**|Nom de la source de données tel qu'il est interprété par le fournisseur OLE DB.|  
 |**subscriber_providerstring**|**nvarchar(4000)**|Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données.|  
@@ -95,13 +95,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**subscriber_catalog**|**sysname**|Catalogue à utiliser lors d’une connexion au fournisseur OLE DB.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_helpsubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  
- Les autorisations d'exécution reviennent par défaut au rôle **public** . Seules les informations des abonnements qu'ils ont créés sont renvoyées aux utilisateurs. Pour plus d’informations sur tous les abonnements sont renvoyées aux membres de la **sysadmin** rôle serveur fixe sur le serveur de publication ou les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication.  
+ Les autorisations d'exécution reviennent par défaut au rôle **public** . Seules les informations des abonnements qu'ils ont créés sont renvoyées aux utilisateurs. Les informations sur tous les abonnements sont retournées aux membres du rôle serveur fixe **sysadmin** sur le serveur de publication ou aux membres du rôle de base de données fixe **db_owner** sur la base de données de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85911e4ce5652d15b99be4d87f75a04214a7f854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075640"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762531"
 ---
-# <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Marque l'abonnement pour la réinitialisation. Cette procédure stockée est exécutée sur le serveur de publication pour les abonnements par envoi de données (push).  
   
@@ -44,40 +44,40 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut de tous.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec All comme valeur par défaut.  
   
-`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, avec une valeur par défaut de tous. Pour une publication de la mise à jour immédiate, *article* doit être **tous les**; sinon, la procédure stockée ignore la publication et signale une erreur.  
+`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec All comme valeur par défaut. Pour une publication avec mise à jour immédiate, *l’article* doit être **All**; dans le cas contraire, la procédure stockée ignore la publication et signale une erreur.  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. Subscriber est de **type sysname**, sans valeur par défaut.  
   
-`[ @destination_db = ] 'destination_db'` Est le nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut de tous.  
+`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, avec All comme valeur par défaut.  
   
-`[ @for_schema_change = ] 'for_schema_change'` Indique si la réinitialisation se produit suite à une modification de schéma dans la base de données de publication. *for_schema_change* est **bits**, avec 0 comme valeur par défaut. Si **0**, les abonnements actifs pour les publications qui autorisent la mise à jour immédiate sont réactivés tant que la totalité de la publication et pas seulement certains de ses articles, sont réinitialisés. Ceci implique que la réinitialisation est effectuée à la suite de modifications du schéma. Si **1**, les abonnements actifs ne sont pas réactivés jusqu'à ce que l’Agent d’instantané s’exécute.  
+`[ @for_schema_change = ] 'for_schema_change'`Indique si la réinitialisation se produit à la suite d’une modification de schéma au niveau de la base de données de publication. *for_schema_change* est de valeur de **bit**, avec 0 comme valeur par défaut. Si la **valeur est 0**, les abonnements actifs pour les publications qui autorisent la mise à jour immédiate sont réactivés tant que la publication entière, et pas seulement certains de ses articles, sont réinitialisées. Ceci implique que la réinitialisation est effectuée à la suite de modifications du schéma. Si la condition est **1**, les abonnements actifs ne sont pas réactivés tant que le agent d’instantané n’est pas exécuté.  
   
-`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  *serveur de publication* ne doit pas être utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.  
+>  l' *éditeur* ne doit pas être [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour les serveurs de publication.  
   
-`[ @ignore_distributor_failure = ] ignore_distributor_failure` Autorise la réinitialisation même si le serveur de distribution n’existe pas ou est hors connexion. *ignore_distributor_failure* est **bits**, avec 0 comme valeur par défaut. Si **0**, réinitialisation échoue si le serveur de distribution n’existe pas ou est hors connexion.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure`Autorise la réinitialisation même si le serveur de distribution n’existe pas ou est hors connexion. *ignore_distributor_failure* est de valeur de **bit**, avec 0 comme valeur par défaut. Si la **valeur est 0**, la réinitialisation échoue si le serveur de distribution n’existe pas ou est hors connexion.  
   
-`[ @invalidate_snapshot = ] invalidate_snapshot` Invalide l’instantané existant de la publication. *invalidate_snapshot* est **bits**, avec 0 comme valeur par défaut. Si **1**, un nouvel instantané est généré pour la publication.  
+`[ @invalidate_snapshot = ] invalidate_snapshot`Invalide l’instantané existant de la publication. *invalidate_snapshot* est de valeur de **bit**, avec 0 comme valeur par défaut. Si la variable est **1**, un nouvel instantané est généré pour la publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_reinitsubscription** est utilisé dans la réplication transactionnelle.  
   
- **sp_reinitsubscription** n’est pas pris en charge pour la réplication transactionnelle peer-to-peer.  
+ **sp_reinitsubscription** n’est pas pris en charge pour la réplication transactionnelle d’égal à égal.  
   
  Pour les abonnements dans lesquels l'instantané initial est appliqué automatiquement et où la publication n'autorise pas les abonnements pouvant être mis à jour, l'Agent d'instantané doit être exécuté après l'exécution de cette procédure stockée pour que les fichiers du schéma et du programme de copie en bloc soient préparés et que les Agents de distribution puissent ensuite resynchroniser les abonnements.  
   
- Lorsque l'instantané initial est appliqué automatiquement et que la publication autorise les abonnements pouvant être mis à jour, l'Agent de distribution resynchronise l'abonnement à partir des fichiers de schéma et de programme de copie en bloc les plus récents préalablement créés par l'Agent d'instantané. L’Agent de Distribution resynchronise l’abonnement immédiatement après l’exécution de l’utilisateur **sp_reinitsubscription**, si l’Agent de Distribution n’est pas occupé ; sinon, synchronisation peut se produire après l’intervalle de message () spécifié par le paramètre d’invite de commandes de l’Agent de Distribution : **MessageInterval**).  
+ Lorsque l'instantané initial est appliqué automatiquement et que la publication autorise les abonnements pouvant être mis à jour, l'Agent de distribution resynchronise l'abonnement à partir des fichiers de schéma et de programme de copie en bloc les plus récents préalablement créés par l'Agent d'instantané. Le Agent de distribution resynchronise l’abonnement immédiatement après que l’utilisateur a exécuté **sp_reinitsubscription**, si le agent de distribution n’est pas occupé; Sinon, la synchronisation peut avoir lieu après l’intervalle de message (spécifié par Agent de distribution paramètre d’invite de commandes: **MessageInterval**).  
   
  **sp_reinitsubscription** n’a aucun effet sur les abonnements où l’instantané initial est appliqué manuellement.  
   
- Pour resynchroniser les abonnements anonymes à une publication, transmettez **tous les** ou NULL en tant que *abonné*.  
+ Pour resynchroniser les abonnements anonymes à une publication, transmettez **All** ou null en tant qu' *abonné*.  
   
  La réplication transactionnelle prend en charge la réinitialisation d'abonnements au niveau de l'article. L'instantané de l'article est réappliqué sur l'Abonné au cours de la synchronisation suivante après que l'article a été marqué pour la réinitialisation. Toutefois, si le même Abonné a également souscrit à des articles dépendants, la réapplication de l'instantané sur l'article peut échouer sauf si les articles dépendants de la publication sont également automatiquement réinitialisés sous certaines conditions :  
   
@@ -89,7 +89,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** , les membres du rôle serveur fixe le **db_owner** rôle de base de données fixe ou le créateur de l’abonnement peut exécuter **sp_reinitsubscription** .  
+ Seuls les membres du rôle serveur fixe **sysadmin** , les membres du rôle de base de données fixe **db_owner** ou le créateur de l’abonnement peuvent exécuter **sp_reinitsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Réinitialiser un abonnement](../../relational-databases/replication/reinitialize-a-subscription.md)   

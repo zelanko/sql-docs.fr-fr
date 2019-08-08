@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 706f76f0b12ad6ce9077a36115bba4634cd94642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933846"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771450"
 ---
-# <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Supprime un abonnement à la base de données en cours de l'Abonné. Cette procédure stockée est exécutée sur la base de données d'abonnement par extraction de données (pull) de l'abonné.  
   
@@ -40,27 +40,27 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` Est le nom de serveur distant. *serveur de publication* est **sysname**, sans valeur par défaut. Si **tous les**, l’abonnement est supprimé sur tous les serveurs de publication.  
+`[ @publisher = ] 'publisher'`Nom du serveur distant. *Publisher* est de **type sysname**, sans valeur par défaut. Si la **totalité**est, l’abonnement est supprimé de tous les serveurs de publication.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut. **tous les** signifie que toutes les bases de données de serveur de publication.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, sans valeur par défaut. **All** signifie toutes les bases de données du serveur de publication.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut. Si **tous les**, l’abonnement est supprimé dans toutes les publications.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut. Si la valeur est **All**, l’abonnement est déposé dans toutes les publications.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_droppullsubscription** est utilisé dans la réplication d’instantané ou transactionnelle.  
+ la procédure pas à pas est utilisée dans la réplication d’instantané et la réplication transactionnelle.  
   
- **sp_droppullsubscription** supprime la ligne correspondante dans le [MSreplication_subscriptions &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) table et l’Agent de distribution correspondant sur l’abonné. Si aucune ligne n’est pas dans [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), elle supprime la table.  
+ la table de l’éditeur supprime la ligne correspondante dans la table [Transact-SQL &#40;&#41; MSreplication_subscriptions](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) et l’agent de distribution correspondant sur l’abonné. Si aucune ligne n’est laissée dans le champ [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), elle supprime la table.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou l’utilisateur qui a créé l’abonnement par extraction peut exécuter **sp_droppullsubscription**. Le **db_owner** rôle de base de données fixe n’est en mesure d’exécuter **sp_droppullsubscription** si l’utilisateur qui a créé l’abonnement par extraction appartient à ce rôle.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou de l’utilisateur qui a créé l’abonnement parextraction peuvent exécuter la fonction la licence. Le rôle de base de données fixe **db_owner** ne peut exécuter la valeur de la base de au cas que si l’utilisateur qui a créé l’abonnement par extraction de données appartient à ce rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)   

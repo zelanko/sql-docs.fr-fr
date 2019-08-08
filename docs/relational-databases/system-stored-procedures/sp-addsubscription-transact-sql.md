@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096222"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769028"
 ---
-# <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Ajoute un abonnement à une publication et définit l'état de l'abonné. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -76,47 +76,47 @@ sp_addsubscription [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Arguments  
  [ @publication=] '*publication*'  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+ Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
  [ @article=] '*article*'  
- Nom de l'article auquel la publication est abonnée. *article* est **sysname**, avec une valeur par défaut de tous. Si la valeur définie est all (tous), l'abonnement s'ajoute à tous les articles de la publication. Seules les valeurs all ou NULL sont prises en charge par les serveurs de publication Oracle.  
+ Nom de l'article auquel la publication est abonnée. *article* est de **type sysname**, avec All comme valeur par défaut. Si la valeur définie est all (tous), l'abonnement s'ajoute à tous les articles de la publication. Seules les valeurs all ou NULL sont prises en charge par les serveurs de publication Oracle.  
   
- [ @subscriber=] '*abonné*'  
- Nom de l'Abonné. *abonné* est **sysname**, avec NULL comme valeur par défaut.  
+ [ @subscriber=] «*abonné*»  
+ Nom de l'Abonné. Subscriber est de **type sysname**, avec NULL comme valeur par défaut.  
   
  [ @destination_db=] '*destination_db*'  
- Nom de la base de données de destination dans laquelle les données répliquées seront placées. *destination_db* est **sysname**, avec NULL comme valeur par défaut. Lorsque la valeur NULL, *destination_db* est défini sur le nom de la base de données de publication. Pour les serveurs de publication Oracle, *destination_db* doit être spécifié. Pour un abonné non SQL Server, spécifiez une valeur (destination par défaut) pour *destination_db*.  
+ Nom de la base de données de destination dans laquelle les données répliquées seront placées. *destination_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, *destination_db* est défini sur le nom de la base de données de publication. Pour les serveurs de publication Oracle, *destination_db* doit être spécifié. Pour un abonné non-SQL Server, spécifiez la valeur (destination par défaut) pour *destination_db*.  
   
  [ @sync_type=] '*sync_type*'  
- Type de synchronisation d'abonnement. *sync_type* est **nvarchar (255)** , et peut prendre l’une des valeurs suivantes :  
+ Type de synchronisation d'abonnement. *sync_type* est de type **nvarchar (255)** et peut prendre l’une des valeurs suivantes:  
   
 |Value|Description|  
 |-----------|-----------------|  
-|none|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : Cette option est déconseillée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
+|none|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : Cette option est dépréciée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
 |automatic (valeur par défaut)|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
-|replication support only|Fournit une génération automatique au niveau de l'Abonné des procédures stockées personnalisées de l'article et des déclencheurs qui prennent en charge les abonnements de mise à jour, le cas échéant. Considère que l'Abonné dispose déjà du schéma et des données initiales pour les tables publiées. Lors de la configuration d'une topologie de réplication transactionnelle d'égal à égal, veillez à ce que les données de tous les nœuds de la topologie soient identiques. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Pas de prise en charge pour les abonnements aux publications non-SQL Server.*|  
-|initialize with backup|Le schéma et les données initiales destinées aux tables publiées proviennent d'une sauvegarde de la base de données de publication. L'abonné est censé avoir accès à une sauvegarde de la base de données de publication. L’emplacement du type de sauvegarde et de support pour la sauvegarde sont spécifiés par *backupdevicename* et *backupdevicetype*. Lors de l'utilisation de cette option, il n'est pas nécessaire de suspendre la topologie de réplication transactionnelle d'égal à égal pendant la configuration.<br /><br /> *Pas de prise en charge pour les abonnements aux publications non-SQL Server.*|  
+|replication support only|Fournit une génération automatique au niveau de l'Abonné des procédures stockées personnalisées de l'article et des déclencheurs qui prennent en charge les abonnements de mise à jour, le cas échéant. Considère que l'Abonné dispose déjà du schéma et des données initiales pour les tables publiées. Lors de la configuration d'une topologie de réplication transactionnelle d'égal à égal, veillez à ce que les données de tous les nœuds de la topologie soient identiques. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Non pris en charge pour les abonnements à des publications non-SQL Server.*|  
+|initialize with backup|Le schéma et les données initiales destinées aux tables publiées proviennent d'une sauvegarde de la base de données de publication. L'abonné est censé avoir accès à une sauvegarde de la base de données de publication. L’emplacement de la sauvegarde et le type de support pour la sauvegarde sont spécifiés par *backupdevicename* et *BackupDeviceType*. Lors de l'utilisation de cette option, il n'est pas nécessaire de suspendre la topologie de réplication transactionnelle d'égal à égal pendant la configuration.<br /><br /> *Non pris en charge pour les abonnements à des publications non-SQL Server.*|  
 |initialize from lsn|Utilisé lorsque vous ajoutez un nœud à une topologie de réplication transactionnelle d'égal à égal. Utilisé avec la propriété @subscriptionlsn pour vérifier que toutes les transactions appropriées sont répliquées sur le nouveau nœud. Considère que l'Abonné dispose déjà du schéma et des données initiales pour les tables publiées. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
   
 > [!NOTE]  
 >  Les données et les tables système sont toujours transférées.  
   
- [ @status=] '*état*'  
- État de l'abonnement. *état* est **sysname**, avec NULL comme valeur par défaut. Lorsque ce paramètre n'est pas défini explicitement, la réplication lui donne automatiquement l'une des valeurs suivantes.  
+ [ @status=] '*État*'  
+ État de l'abonnement. *Status* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque ce paramètre n'est pas défini explicitement, la réplication lui donne automatiquement l'une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|active|L'abonnement est initialisé et prêt à accepter des modifications. Cette option est définie lorsque la valeur de *sync_type* est none, initialize with backup ou prise en charge de la réplication uniquement.|  
-|subscribed|L'abonnement doit être initialisé. Cette option est définie lorsque la valeur de *sync_type* est automatique.|  
+|active|L'abonnement est initialisé et prêt à accepter des modifications. Cette option est définie lorsque la valeur de *sync_type* est None, Initialize with backup ou Replication support only.|  
+|subscribed|L'abonnement doit être initialisé. Cette option est définie lorsque la valeur de *sync_type* est Automatic.|  
   
  [ @subscription_type=] '*subscription_type*'  
- Est le type d’abonnement. *subscription_type* est **nvarchar (4)** , avec push comme valeur par défaut. Peut avoir la valeur push ou pull (émission ou extraction de données). Les Agents de Distribution des abonnements envoyés et résider sur le serveur de distribution et les Agents de Distribution des abonnements par extraction sur l’abonné. *subscription_type* pull pour créer un abonnement par extraction nommé connu du serveur de publication. Pour plus d’informations, consultez [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md).  
+ Type d’abonnement. *subscription_type* est de type **nvarchar (4)** , avec Push comme valeur par défaut. Peut avoir la valeur push ou pull (émission ou extraction de données). Les agents de distribution des abonnements envoyés résident sur le serveur de distribution et les agents de distribution des abonnements par extraction résident sur l’abonné. l’opération *subscription_type* peut être extraite pour créer un abonnement par extraction nommé connu du serveur de publication. Pour plus d’informations, consultez [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Les abonnements anonymes ne doivent pas utiliser cette procédure stockée.  
   
  [ @update_mode=] '*update_mode*'  
- Est le type de mise à jour. *update_mode* est **nvarchar (30)** , et peut prendre l’une des valeurs suivantes.  
+ Type de mise à jour. *update_mode* est de type **nvarchar (30)** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -126,10 +126,10 @@ sp_addsubscription [ @publication = ] 'publication'
 |Basculement|Active l'abonnement pour la mise à jour immédiate avec mise à jour en attente sous forme de basculement. Les modifications de données peuvent être effectuées chez l'abonné, puis propagées immédiatement vers le serveur de publication. Si le serveur de publication et l'abonné ne sont pas connectés, il est possible de changer de mode de mise à jour afin que les modifications de données effectuées chez l'abonné soient stockées dans une file d'attente jusqu'à ce que l'abonné et le serveur de publication soient reconnectés. Non pris en charge pour les serveurs de publication Oracle.|  
 |queued failover|Active l'abonnement en tant qu'abonnement de mise à jour en attente, avec possibilité de passer au mode de mise à jour immédiate. Les modifications de données peuvent être effectuées chez l'abonné et stockées dans une file d'attente, jusqu'à ce qu'une connexion soit établie entre l'abonné et le serveur de publication. Lorsqu'une connexion permanente est établie, il est possible de passer au mode de mise à jour immédiate. Non pris en charge pour les serveurs de publication Oracle.|  
   
- Notez que les valeurs synctran et queued tran ne sont pas autorisés si l’objet d’un abonnement de publication autorise DTS.  
+ Notez que les valeurs synctran et Queued TRAN ne sont pas autorisées si la publication faisant l’objet d’un abonnement autorise les services DTS.  
   
- [ @loopback_detection=] '*détection_de_boucle*'  
- Indique si l'Agent de distribution envoie des transactions à un abonné qui en est l'auteur. *détection_de_boucle* est **nvarchar (5)** , et peut prendre l’une des valeurs suivantes.  
+ [ @loopback_detection=] '*loopback_detection*'  
+ Indique si l'Agent de distribution envoie des transactions à un abonné qui en est l'auteur. *loopback_detection* est de type **nvarchar (5)** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -152,10 +152,10 @@ sp_addsubscription [ @publication = ] 'publication'
 |128|Périodique|  
   
  [ @frequency_interval=] *frequency_interval*  
- Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec NULL comme valeur par défaut.  
+ Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @frequency_relative_interval=] *frequency_relative_interval*  
- Date de l'Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur 32 (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+ Date de l'Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur 32 (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -167,10 +167,10 @@ sp_addsubscription [ @publication = ] 'publication'
 |NULL (par défaut)||  
   
  [ @frequency_recurrence_factor=] *frequency_recurrence_factor*  
- Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
+ Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @frequency_subday=] *frequency_subday*  
- Indique, en minutes, la fréquence de replanification pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
+ Indique, en minutes, la fréquence de replanification pendant la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -181,61 +181,61 @@ sp_addsubscription [ @publication = ] 'publication'
 |NULL||  
   
  [ @frequency_subday_interval=] *frequency_subday_interval*  
- Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
+ Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @active_start_time_of_day=] *active_start_time_of_day*  
- Heure à laquelle l’Agent de distribution est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+ Heure à laquelle l’Agent de distribution est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @active_end_time_of_day=] *active_end_time_of_day*  
- L’heure de la journée à laquelle l’Agent de Distribution cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+ Heure de la journée à laquelle le Agent de distribution cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @active_start_date=] *active_start_date*  
- Date à laquelle l’Agent de distribution est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est **int**, avec NULL comme valeur par défaut.  
+ Date à laquelle l’Agent de distribution est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @active_end_date=] *active_end_date*  
- Date à laquelle l’Agent de distribution cesse d'être planifié, au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
+ Date à laquelle l’Agent de distribution cesse d'être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @optional_command_line=] '*optional_command_line*'  
- Invite de commandes facultative à exécuter. *optional_command_line* est **nvarchar (4000)** , avec NULL comme valeur par défaut.  
+ Invite de commandes facultative à exécuter. *optional_command_line* est de type **nvarchar (4000)** , avec NULL comme valeur par défaut.  
   
- [ @reserved=] '*réservé*'  
+ [ @reserved=] 'reserved'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Détermine si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si la valeur est false, l'abonnement n'est pas enregistré par le Gestionnaire de synchronisation Windows. Si la valeur est true, l'abonnement est enregistré par le Gestionnaire de synchronisation Windows et il peut ensuite être synchronisé, sans qu'il soit nécessaire de démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Non pris en charge pour les serveurs de publication Oracle.  
+ Indique si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)** , avec false comme valeur par défaut. Si la valeur est false, l'abonnement n'est pas enregistré par le Gestionnaire de synchronisation Windows. Si la valeur est true, l'abonnement est enregistré par le Gestionnaire de synchronisation Windows et il peut ensuite être synchronisé, sans qu'il soit nécessaire de démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Non pris en charge pour les serveurs de publication Oracle.  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
- Indique si l'Agent peut être activé à distance. *remote_agent_activation* est **bits** avec une valeur par défaut 0.  
+ Indique si l'Agent peut être activé à distance. *remote_agent_activation* est de **bits** avec 0 comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est conservé que pour la compatibilité descendante des scripts.  
   
  [ @offloadserver= ] '*remote_agent_server_name*'  
- Indique le nom réseau du serveur à utiliser pour l'activation à distance. *remote_agent_server_name*est **sysname**, avec NULL comme valeur par défaut.  
+ Indique le nom réseau du serveur à utiliser pour l'activation à distance. *remote_agent_server_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @dts_package_name=] '*l’argument dts_package_name*'  
- Spécifie le nom du package DTS (Data Transformation Services). *l’argument dts_package_name* est un **sysname** avec NULL comme valeur par défaut. Par exemple, pour spécifier un package de DTSPub_Package, le paramètre est : `@dts_package_name = N'DTSPub_Package'`. Ce paramètre est disponible avec les abonnements envoyés. Pour ajouter des informations de package DTS à un abonnement extrait, utilisez sp_addpullsubscription_agent.  
+ [ @dts_package_name=] '*dts_package_name*'  
+ Spécifie le nom du package DTS (Data Transformation Services). *dts_package_name* est de **type sysname** , avec NULL comme valeur par défaut. Par exemple, pour spécifier un package de DTSPub_Package, le paramètre est : `@dts_package_name = N'DTSPub_Package'`. Ce paramètre est disponible avec les abonnements envoyés. Pour ajouter des informations de package DTS à un abonnement extrait, utilisez sp_addpullsubscription_agent.  
   
  [ @dts_package_password= ] '*dts_package_password*'  
- Spécifie le mot de passe du package, s'il existe. *dts_package_password* est **sysname** avec NULL comme valeur par défaut.  
+ Spécifie le mot de passe du package, s'il existe. *dts_package_password* est de **type sysname** , avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Vous devez spécifier un mot de passe si *l’argument dts_package_name* est spécifié.  
+>  Vous devez spécifier un mot de passe si *dts_package_name* est spécifié.  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar (12)** , avec une valeur par défaut du serveur de distribution. L'emplacement du package peut prendre la valeur distributor ou subscriber.  
+ Spécifie l'emplacement du package. *dts_package_location* est de type **nvarchar (12)** , avec Distributor comme valeur par défaut. L'emplacement du package peut prendre la valeur distributor ou subscriber.  
   
  [ @distribution_job_name=] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher=] '*publisher*'  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ [ @publisher=] «*éditeur*»  
+ Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  *serveur de publication* ne doit pas être spécifié pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
+>  l' *éditeur* ne doit pas être spécifié [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour un serveur de publication.  
   
- [ @backupdevicetype=] '*backupdevicetype*'  
- Indique le type d'unité de sauvegarde utilisé lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicetype* est **nvarchar (20)** , et peut prendre l’une des valeurs suivantes :  
+ [ @backupdevicetype=] '*BackupDeviceType*'  
+ Indique le type d'unité de sauvegarde utilisé lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *BackupDeviceType* est de type **nvarchar (20)** et peut prendre l’une des valeurs suivantes:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -243,47 +243,47 @@ sp_addsubscription [ @publication = ] 'publication'
 |disk|L'unité de sauvegarde est un lecteur de disque.|  
 |tape|L'unité de sauvegarde est un lecteur de bande.|  
   
- *backupdevicetype* est uniquement utilisé lorsque *sync_method*a pour valeur initialize_with_backup.  
+ *BackupDeviceType* est utilisé uniquement lorsque *sync_method*a la valeur initialize_with_backup.  
   
  [ @backupdevicename=] '*backupdevicename*'  
- Indique le nom de l'unité utilisée lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicename* est **nvarchar (1000)** , avec NULL comme valeur par défaut.  
+ Indique le nom de l'unité utilisée lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicename* est de type **nvarchar (1000)** , avec NULL comme valeur par défaut.  
   
- [ @mediapassword=] '*mediapassword*'  
- Indique un mot de passe pour le support spécifié, si un mot de passe a été défini lors du formatage du support. *MEDIAPASSWORD* est **sysname**, avec NULL comme valeur par défaut.  
+ [ @mediapassword=] '*MEDIAPASSWORD*'  
+ Indique un mot de passe pour le support spécifié, si un mot de passe a été défini lors du formatage du support. *MEDIAPASSWORD* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password=] '*mot de passe*'  
- Indique un mot de passe pour la sauvegarde, si un mot de passe a été défini lors de la création de celle-ci. *mot de passe*est **sysname**, avec NULL comme valeur par défaut.  
+ [ @password=] '*mot_de_passe*'  
+ Indique un mot de passe pour la sauvegarde, si un mot de passe a été défini lors de la création de celle-ci. *Password*est de **type sysname**, avec NULL comme valeur par défaut.  
   
  [ @fileidhint= ] *fileidhint*  
- Identifie une valeur ordinale du jeu de sauvegarde à restaurer. *fileidhint* est **int**, avec NULL comme valeur par défaut.  
+ Identifie une valeur ordinale du jeu de sauvegarde à restaurer. *fileidhint –* est de **type int**, avec NULL comme valeur par défaut.  
   
  [ @unload= ] *unload*  
- Indique si une unité de sauvegarde sur bande doit être déchargée une fois l'initialisation de la sauvegarde terminée. *décharger* est **bits**, valeur par défaut est 1. 1 indique que la bande doit être déchargée. *décharger* est uniquement utilisé lorsque *backupdevicetype* est une bande.  
+ Indique si une unité de sauvegarde sur bande doit être déchargée une fois l'initialisation de la sauvegarde terminée. *Unload* est de **bits**, avec 1 comme valeur par défaut. 1 indique que la bande doit être déchargée. le déchargement est utilisé uniquement lorsque *BackupDeviceType* est une bande.  
   
- [ @subscriptionlsn=] *subscriptionlsn*  
- Spécifie le numéro séquentiel dans le journal auquel un abonnement doit commencer à remettre des modifications à un nœud dans une topologie de réplication transactionnelle d'égal à égal. Utilisé avec un @sync_type valeur Initialize from lsn pour vous assurer que toutes les transactions appropriées sont répliquées vers un nouveau nœud. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+ [ @subscriptionlsn=] *SubscriptionLSN*  
+ Spécifie le numéro séquentiel dans le journal auquel un abonnement doit commencer à remettre des modifications à un nœud dans une topologie de réplication transactionnelle d'égal à égal. Utilisé avec la @sync_type valeur Initialize from LSN pour s’assurer que toutes les transactions pertinentes sont répliquées vers un nouveau nœud. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams= ] *subscriptionstreams*  
- Nombre de connexions autorisées par l'Agent de distribution afin d'appliquer des lots de modifications en parallèle à un Abonné, tout en conservant bon nombre des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. *subscriptionstreams* est **tinyint**, avec NULL comme valeur par défaut. Une plage de valeurs allant de 1 à 64 est prise en charge. Ce paramètre n’est pas pris en charge pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal. Chaque fois que des flux d'abonnements sont utilisés, des lignes supplémentaires sont ajoutées au tableau msreplication_subscriptions (1 par flux) avec agent_id défini à NULL.  
+ Nombre de connexions autorisées par l'Agent de distribution afin d'appliquer des lots de modifications en parallèle à un Abonné, tout en conservant bon nombre des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. *SubscriptionStreams* est de **type tinyint**, avec NULL comme valeur par défaut. Une plage de valeurs allant de 1 à 64 est prise en charge. Ce paramètre n’est pas pris en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-, les serveurs de publication Oracle ou les abonnements d’égal à égal. Chaque fois que des flux d'abonnements sont utilisés, des lignes supplémentaires sont ajoutées au tableau msreplication_subscriptions (1 par flux) avec agent_id défini à NULL.  
   
 > [!NOTE]  
 >  Les flux d'abonnements ne fonctionnent pas pour les articles configurés pour fournir [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour utiliser les flux d'abonnements, configurez les articles afin qu'ils fournissent des appels de procédures stockées à la place.  
   
  [ @subscriber_type=] *subscriber_type*  
- Type d'abonné. *subscriber_type* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+ Type d'abonné. *subscriber_type* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
+|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Côté|  
 |1|Serveur de la source de données ODBC.|  
 |2|Base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Fournisseur OLE DB|  
   
  [ @memory_optimized=] *memory_optimized*  
- Indique que l’abonnement prend en charge les tables optimisées en mémoire. *memory_optimized* est **bits**, où 1 est égale à true (l’abonnement prend en charge les tables optimisées en mémoire).  
+ Indique que l’abonnement prend en charge les tables optimisées en mémoire. *memory_optimized* est de **bits**, où 1 est égal à true (l’abonnement prend en charge les tables optimisées en mémoire).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -291,21 +291,21 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  sp_addsubscription est utilisé lors des réplications d'instantané et transactionnelle.  
   
- Lorsque sp_addsubscription est exécuté par un membre du rôle serveur fixe sysadmin pour créer un abonnement envoyé, la tâche de l'Agent de distribution est implicitement créée et s'exécute sous le compte du service Agent SQL Server. Nous vous recommandons d’exécuter [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) et spécifiez les informations d’identification d’un compte Windows différent, spécifique à l’agent pour @job_login et @job_password. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Lorsque sp_addsubscription est exécuté par un membre du rôle serveur fixe sysadmin pour créer un abonnement envoyé, la tâche de l'Agent de distribution est implicitement créée et s'exécute sous le compte du service Agent SQL Server. Nous vous recommandons d’exécuter [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) et de spécifier les informations d’identification d’un autre compte Windows spécifique à l' @job_login agent @job_passwordpour et. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  sp_addsubscription empêche les abonnés ODBC et OLE DB d'accéder aux publications qui :  
   
--   Ont été créés avec le native *sync_method* dans l’appel à [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
+-   Ont été créés avec la *sync_method* native dans l’appel à [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
--   Contiennent des articles qui ont été ajoutés à la publication avec le [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) procédure stockée qui avait un *pre_creation_cmd* valeur du paramètre 3 (tronquer).  
+-   Contiennent des articles qui ont été ajoutés à la publication avec la procédure stockée [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) dont la valeur de paramètre *pre_creation_cmd* est 3 (tronquer).  
   
--   Tentative de définition *update_mode* valeur sync tran.  
+-   Tentative de définition de *update_mode* pour la synchronisation TRAN.  
   
 -   ont un article configuré pour utiliser des instructions paramétrables.  
   
- En outre, si une publication a le *allow_queued_tran* option définie sur true (ce qui permet la file d’attente des modifications sur l’abonné jusqu'à ce qu’elles peuvent être appliquées sur le serveur de publication), la colonne timestamp d’un article est effectuée en tant que **timestamp**, et les modifications sur cette colonne sont envoyées à l’abonné. L'abonné génère et met à jour la valeur de la colonne timestamp. Pour un abonné ODBC ou OLE DB, sp_addsubscription échoue si une tentative est faite pour vous abonner à une publication qui a *allow_queued_tran* définie sur true et articles possèdent des colonnes timestamp.  
+ En outre, si l’option *allow_queued_tran* d’une publication est définie sur true (ce qui permet la mise en file d’attente des modifications sur l’abonné jusqu’à ce qu’elles puissent être appliquées sur le serveur de publication), la colonne timestamp d’un article est prédéfinie comme **timestamp**et les modifications apportées à cette colonne sont envoyées à l’abonné. L'abonné génère et met à jour la valeur de la colonne timestamp. Pour un abonné ODBC ou OLE DB, sp_addsubscription échoue en cas de tentative d’abonnement à une publication pour laquelle *allow_queued_tran* a la valeur true et les Articles avec des colonnes timestamp.  
   
- Si un abonnement n’utilise pas un package DTS, il ne peut pas s’abonner à une publication qui a la valeur *allow_transformable_subscriptions*. Si la table issue de la publication doit être répliquée vers un abonnement DTS et un abonnement non-DTS, deux publications indépendantes doivent être créées : une pour chaque type d'abonnement.  
+ Si un abonnement n’utilise pas de package DTS, il ne peut pas s’abonner à une publication définie sur *allow_transformable_subscriptions*. Si la table issue de la publication doit être répliquée vers un abonnement DTS et un abonnement non-DTS, deux publications indépendantes doivent être créées : une pour chaque type d'abonnement.  
   
  Lors de la sélection des options **sync_type** , *replication support only*, *initialize with backup*ou *initialize from lsn*, l'Agent de lecture du journal doit s'exécuter après l'exécution de **sp_addsubscription**, afin que les scripts d'installation soient écrits dans la base de données de distribution. L'Agent de lecture du journal doit s'exécuter sous un compte membre du rôle serveur fixe **sysadmin** . Lorsque l'option **sync_type** a la valeur *Automatic*, aucune action particulière de l'Agent de lecture du journal n'est requise.  
   

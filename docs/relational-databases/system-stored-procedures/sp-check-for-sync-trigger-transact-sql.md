@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b7d4d26374d7b582f2ba5ddad79dd317145cecd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070428"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771281"
 ---
-# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Détermine si un déclencheur ou une procédure stockée définis par l'utilisateur sont appelés dans le contexte d'un déclencheur de réplication utilisé pour les abonnements avec mise à jour immédiate. Cette procédure stockée est exécutée sur le serveur de publication sur la base de données de publication ou sur l’abonné sur la base de données d’abonnement.  
+  Détermine si un déclencheur ou une procédure stockée définis par l'utilisateur sont appelés dans le contexte d'un déclencheur de réplication utilisé pour les abonnements avec mise à jour immédiate. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données d’abonnement de l’abonné.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,28 +39,28 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@tabid =** ] '*tabid*'  
- ID d'objet de la table dans laquelle les déclencheurs de mise à jour immédiate sont recherchés. *tabid* est **int** sans valeur par défaut.  
+ **[@tabid =** ] «n»  
+ ID d'objet de la table dans laquelle les déclencheurs de mise à jour immédiate sont recherchés. est de **type int** , sans valeur par défaut.  
   
- [ **@trigger_op =** ] '*trigger_output_parameters*' sortie  
- Spécifie si le paramètre de sortie doit renvoyer le type du déclencheur à partir duquel il est appelé. *trigger_output_parameters* est **char (10)** et peut prendre l’une des valeurs suivantes.  
+ sortie de [ **@trigger_op =** ] '*trigger_output_parameters*'  
+ Spécifie si le paramètre de sortie doit renvoyer le type du déclencheur à partir duquel il est appelé. *trigger_output_parameters* est de **type char (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Ins**|Déclencheur INSERT.|  
-|**UPD**|Déclencheur UPDATE.|  
-|**DEL**|Déclencheur DELETE.|  
+|**Ceux**|Déclencheur INSERT.|  
+|**Hebdomadaire**|Déclencheur UPDATE.|  
+|**Suppr**|Déclencheur DELETE.|  
 |NULL (par défaut)||  
   
-`[ @fonpublisher = ] fonpublisher` Spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est **bits**, valeur par défaut est 0. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
+`[ @fonpublisher = ] fonpublisher`Spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est de **bits**, avec 0 comme valeur par défaut. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’elle est appelée dans le contexte d’un déclencheur de mise à jour immédiate et le type de déclencheur retourné dans *@trigger_op* .  
+ 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’il est appelé dans le contexte d’un déclencheur de mise à jour immédiate et est le type de déclencheur retourné *@trigger_op* dans.  
   
 ## <a name="remarks"></a>Notes  
- **sp_check_for_sync_trigger** est utilisé dans la réplication d’instantané ou transactionnelle.  
+ **sp_check_for_sync_trigger** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
- **sp_check_for_sync_trigger** sert à coordonner la réplication et les déclencheurs définis par l’utilisateur. Cette procédure stockée détermine si elle est appelée dans le contexte d'un déclencheur de réplication. Par exemple, vous pouvez appeler la procédure **sp_check_for_sync_trigger** dans le corps d’un déclencheur défini par l’utilisateur. Si **sp_check_for_sync_trigger** retourne **0**, le déclencheur défini par l’utilisateur continue le traitement. Si **sp_check_for_sync_trigger** retourne **1**, le déclencheur défini par l’utilisateur se termine. Vous êtes ainsi assuré que le déclencheur défini par l'utilisateur ne s'active pas lorsque le déclencheur de réplication met à jour la table.  
+ **sp_check_for_sync_trigger** est utilisé pour coordonner la réplication et les déclencheurs définis par l’utilisateur. Cette procédure stockée détermine si elle est appelée dans le contexte d'un déclencheur de réplication. Par exemple, vous pouvez appeler la procédure **sp_check_for_sync_trigger** dans le corps d’un déclencheur défini par l’utilisateur. Si **sp_check_for_sync_trigger** retourne la **valeur 0**, le déclencheur défini par l’utilisateur continue le traitement. Si **sp_check_for_sync_trigger** retourne la valeur **1**, le déclencheur défini par l’utilisateur se termine. Vous êtes ainsi assuré que le déclencheur défini par l'utilisateur ne s'active pas lorsque le déclencheur de réplication met à jour la table.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant contient du code que vous pouvez utiliser dans un déclencheur appliqué à une table de l'Abonné.  
@@ -74,7 +74,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>Exemple  
- Le code peut également être ajouté à un déclencheur sur une table sur le serveur de publication ; le code est similaire, mais l’appel à **sp_check_for_sync_trigger** inclut un paramètre supplémentaire.  
+ Le code peut également être ajouté à un déclencheur sur une table sur le serveur de publication; le code est similaire, mais l’appel à **sp_check_for_sync_trigger** comprend un paramètre supplémentaire.  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  
@@ -86,7 +86,7 @@ RETURN
 ```  
   
 ## <a name="permissions"></a>Autorisations  
- **sp_check_for_sync_trigger** procédure stockée peut être exécutée par tout utilisateur disposant des autorisations SELECT dans le [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vue système.  
+ la procédure stockée **sp_check_for_sync_trigger** peut être exécutée par n’importe quel utilisateur disposant d’autorisations SELECT dans la vue système [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  

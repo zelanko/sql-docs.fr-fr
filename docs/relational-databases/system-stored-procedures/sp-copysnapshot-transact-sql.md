@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e857539c26f7806712c3c8e0fd4222064eac8c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30e96ad145abdb123e5bc5540f74f23251d1a69e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108704"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768889"
 ---
-# <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Copie le dossier de capture instantanée de la publication spécifiée vers le dossier indiqué dans le **@destination_folder** . Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Elle permet de copier un instantané sur un support amovible, tel qu'un CD-ROM.  
+  Copie le dossier d’instantané de la publication spécifiée dans le dossier indiqué dans **@destination_folder** le. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Elle permet de copier un instantané sur un support amovible, tel qu'un CD-ROM.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,22 +39,22 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication dont le contenu instantané doivent être copiés. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication dont le contenu de l’instantané doit être copié. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @destination_folder = ] 'destination_folder'` Est le nom du dossier dans lequel le contenu de l’instantané de publication doivent être copiés. *destination_folder*est **nvarchar (255)** , sans valeur par défaut. Le *destination_folder* peut être un autre emplacement comme sur un autre serveur, sur un lecteur réseau ou sur un support amovible (CD-ROM ou disque).  
+`[ @destination_folder = ] 'destination_folder'`Nom du dossier dans lequel le contenu de l’instantané de publication doit être copié. *destination_folder*est de type **nvarchar (255)** , sans valeur par défaut. Le *destination_folder* peut être un autre emplacement, par exemple sur un autre serveur, sur un lecteur réseau ou sur un support amovible (tel qu’un CD-ROM ou un disque amovible).  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est de type sysname, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. Subscriber est de type sysname, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *bd_abonné* est de type sysname, avec NULL comme valeur par défaut.  
+`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de type sysname, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_copysnapshot** est utilisée dans tous les types de réplication. Les abonnés exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 et antérieure ne peut pas utiliser l’emplacement d’instantanés de remplacement.  
+ **sp_copysnapshot** est utilisé dans tous les types de réplications. Les abonnés [!INCLUDE[msCoName](../../includes/msconame-md.md)] qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la version 7,0 et les versions antérieures ne peuvent pas utiliser l’autre emplacement d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_copysnapshot**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_copysnapshot**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Autres emplacements du dossier d’instantanés](../../relational-databases/replication/snapshot-options.md)   

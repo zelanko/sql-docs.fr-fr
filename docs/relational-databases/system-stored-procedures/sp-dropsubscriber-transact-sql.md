@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02d46b5df95335920dca9ef9cf80e9fa6dabb94f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124798"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768289"
 ---
-# <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Supprime la désignation de l'Abonné dans un serveur enregistré. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -42,25 +42,25 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné à supprimer. *abonné* est **sysname**, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné à supprimer. Subscriber est de **type sysname**, sans valeur par défaut.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_dropsubscriber** est utilisée dans tous les types de réplication.  
+ **sp_dropsubscriber** est utilisé dans tous les types de réplications.  
   
- Cette procédure stockée supprime le serveur **sub** option et supprime le mappage de connexion à distance de l’administrateur système pour **repl_subscriber**.  
+ Cette procédure stockée supprime la **sous** -option Server et supprime le mappage de connexion à distance de l’administrateur système à **repl_subscriber**.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_dropsubscriber**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_dropsubscriber**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Supprimer un abonnement envoyé](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [Supprimer un abonnement par envoi de notification](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
