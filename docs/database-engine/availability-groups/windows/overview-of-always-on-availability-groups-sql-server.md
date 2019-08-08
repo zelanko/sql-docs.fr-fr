@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adef2650015edadfe61d331c6358fa85c0099c99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014653"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742931"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Vue d’ensemble des groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014653"
   
 -   **Accès en lecture seule à un ou plusieurs réplicas secondaires (réplicas secondaires lisibles)**  
   
-     Tout réplica de disponibilité peut être configuré pour autoriser l'accès en lecture seule à ses bases de données locales lorsqu'il a le rôle secondaire, bien que certaines opérations ne soient pas totalement prises en charge. De plus, si vous souhaitez empêcher que les charges de travail en lecture seule s'exécutent sur le réplica principal, vous pouvez configurer les réplicas pour autoriser uniquement l'accès en lecture en cas d'exécution sous le rôle principal. Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Tout réplica de disponibilité secondaire peut être configuré pour autoriser uniquement l’accès en lecture seule à ses bases de données locales, bien que certaines opérations ne soient pas totalement prises en charge. Cela empêche les tentatives de connexion en lecture-écriture au réplica secondaire. Il est également possible d’empêcher les charges de travail en lecture seule sur le réplica _principal_ en autorisant uniquement l’accès en lecture-écriture. Cela empêche les connexions en lecture seule sur le réplica principal. Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Si un groupe de disponibilité a un écouteur de groupe de disponibilité et un ou plusieurs réplicas secondaires lisibles, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut acheminer les demandes de connexion d’intention de lecture vers l’un d’entre eux (*routage en lecture seule*). Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   

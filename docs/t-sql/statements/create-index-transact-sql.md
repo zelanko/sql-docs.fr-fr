@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae776b53016995fdcfd0ccfdb0c242b19f88addc
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048175"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661454"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -702,7 +702,7 @@ Des colonnes non clés, appelées colonnes incluses, peuvent être ajoutées au 
 - Vous ne pouvez pas définir les options en utilisant la syntaxe de compatibilité descendante et la nouvelle syntaxe dans une même instruction. Par exemple, si vous définissez WITH (**DROP_EXISTING, ONLINE = ON**), l’instruction échoue.
 - Quand vous créez un index XML, les options doivent être spécifiées en utilisant WITH ( **_option_name_= ON | OFF**).
 
-## <a name="dropexisting-clause"></a>Clause DROP_EXISTING
+## <a name="drop_existing-clause"></a>Clause DROP_EXISTING
 Vous pouvez utiliser la clause DROP_EXISTING pour régénérer l'index, ajouter ou supprimer des colonnes, modifier des options, modifier l'ordre de tri des colonnes ou modifier le schéma de partition ou le groupe de fichiers.
 
 Si l'index applique une contrainte PRIMARY KEY ou UNIQUE et que sa définition n'est pas modifiée, l'index est supprimé et recréé en conservant la contrainte existante. Toutefois, si la définition de l'index est modifiée, l'instruction échoue. Pour changer la définition d'une contrainte PRIMARY KEY ou UNIQUE, supprimez la contrainte et ajoutez une contrainte avec la nouvelle définition.
@@ -829,7 +829,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. Créer un index sur une table dans une autre base de données
-L’exemple suivant crée un index non-cluster sur la colonne `VendorID` de la table `ProductVendor` dans la base de données `Purchasing`.
+L’exemple suivant crée un index cluster sur la colonne `VendorID` de la table `ProductVendor` dans la base de données `Purchasing`.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);
@@ -873,7 +873,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
 
-### <a name="f-use-the-ignoredupkey-option"></a>F. Utiliser l’option IGNORE_DUP_KEY
+### <a name="f-use-the-ignore_dup_key-option"></a>F. Utiliser l’option IGNORE_DUP_KEY
 L'exemple suivant montre l'effet de l'option `IGNORE_DUP_KEY` en insérant plusieurs lignes dans une table temporaire avec cette option d'abord définie sur `ON`, puis sur `OFF`. Une ligne est insérée dans la table `#Test` pour créer intentionnellement une valeur dupliquée lorsque la deuxième instruction `INSERT`, qui va insérer plusieurs lignes, est exécutée. Un compteur de lignes de la table retourne le nombre de lignes insérées.
 
 ```sql
@@ -934,7 +934,7 @@ Number of rows
 
 Notez qu'aucune des lignes de la table `Production.UnitMeasure` n'a été insérée dans la table, alors qu'une seule ligne de la table a violé la contrainte `UNIQUE` de l'index.
 
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. Utilisation de DROP_EXISTING pour supprimer et recréer un index
+### <a name="g-using-drop_existing-to-drop-and-re-create-an-index"></a>G. Utilisation de DROP_EXISTING pour supprimer et recréer un index
 L'exemple suivant supprime et recrée un index existant sur la colonne `ProductID` de la table `Production.WorkOrder` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] avec l'option `DROP_EXISTING`. Les options `FILLFACTOR` et `PAD_INDEX` sont également définies.
 
 ```sql

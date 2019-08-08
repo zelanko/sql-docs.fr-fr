@@ -16,16 +16,19 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b5a52597f2d81fc3d2431d0ab9e97ac0e64f63f9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903042"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768646"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission (push)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique explique comment créer un abonnement par émission de données (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Pour plus d’informations sur la création d’un abonnement par émission de données pour un abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -90,19 +93,19 @@ ms.locfileid: "67903042"
   
     -   Si la valeur de **allow_push** est **1**, les abonnements par envoi de données sont pris en charge.  
   
-    -   Si la valeur de **allow_push** est **0**, exécutez [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant **allow_push** pour **@property** et **true** pour **@value** .  
+    -   Si la valeur de **allow_push** est **0**, exécutez [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) en spécifiant **allow_push** pour **\@property** et **true** pour **\@value**.  
   
-2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez **@publication** , de **@subscriber** et **@destination_db** . Spécifiez la valeur **push** pour **@subscription_type** . Pour plus d'informations sur la mise à jour des abonnements, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez **\@publication**, **\@subscriber** et **\@destination_db**. Spécifiez la valeur **push** pour **\@subscription_type**. Pour plus d'informations sur la mise à jour des abonnements, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez les éléments suivants :  
   
-    -   Les paramètres **@subscriber** , de **@subscriber_db** et **@publication** .  
+    -   Les paramètres **\@subscriber**, **\@subscriber_db** et **\@publication**.  
   
-    -   Les paramètres [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution est exécuté sur le serveur de distribution pour **@job_login** et **@job_password** .  
+    -   Les informations d’identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l’Agent de distribution est exécuté sur le serveur de distribution pour **\@job_login** et **\@job_password**.  
   
-        > **REMARQUE :** Les connexions effectuées à l'aide de l'authentification intégrée Windows utilisent toujours les informations d'identification Windows spécifiées par **@job_login** et **@job_password** . L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
+        > **REMARQUE :** Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les informations d’identification Windows spécifiées par **\@job_login** et **\@job_password**. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
-    -   (Facultatif) La valeur **0** pour **@subscriber_security_mode** et les informations de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@subscriber_login** et **@subscriber_password** . Spécifiez ces paramètres si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
+    -   (Facultatif) La valeur **0** pour **\@subscriber_security_mode** et les informations de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **\@subscriber_login** et **\@subscriber_password**. Spécifiez ces paramètres si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
   
     -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -114,29 +117,29 @@ ms.locfileid: "67903042"
   
     -   Si la valeur de **allow_push** est **1**, la publication prend en charge les abonnements par envoi de données.  
   
-    -   Si la valeur de **allow_push** est **1**, exécutez [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), en spécifiant **allow_push** pour **@property** et **true** pour **@value** .  
+    -   Si la valeur de **allow_push** n’est pas **1**, exécutez [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) en spécifiant **allow_push** pour **\@property** et **true** pour **\@value**.  
   
 2.  Sur la base de données de publication du serveur de publication, exécutez [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), en spécifiant les paramètres suivants :  
   
-    -   **@publication** . Il s'agit du nom de la publication.  
+    -   **\@publication**. Il s'agit du nom de la publication.  
   
-    -   **@subscriber_type** . Pour un abonnement client, spécifiez **local** , et, pour un abonnement serveur, spécifiez **global**.  
+    -   **\@subscriber_type**. Pour un abonnement client, spécifiez **local** , et, pour un abonnement serveur, spécifiez **global**.  
   
-    -   **@subscription_priority** . Pour un abonnement serveur, spécifiez la priorité de l'abonnement (de**0.00** à **99.99**).  
+    -   **\@subscription_priority**. Pour un abonnement serveur, spécifiez la priorité de l'abonnement (de**0.00** à **99.99**).  
   
          Pour plus d’informations, consultez [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  Sur la base de données de publication du serveur de publication, exécutez [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Spécifiez les éléments suivants :  
   
-    -   Les paramètres **@subscriber** , de **@subscriber_db** et **@publication** .  
+    -   Les paramètres **\@subscriber**, **\@subscriber_db** et **\@publication**.  
   
-    -   Les informations d'identification Windows sous lesquelles l'Agent de fusion est exécuté sur le serveur de distribution pour **@job_login** et **@job_password** .  
+    -   Les informations d’identification Windows sous lesquelles l’Agent de fusion est exécuté sur le serveur de distribution pour **\@job_login** et **\@job_password**.  
   
-        > **REMARQUE :**  Les connexions effectuées à l'aide de l'authentification intégrée Windows utilisent toujours les informations d'identification Windows spécifiées par **@job_login** et **@job_password** . L'Agent de fusion crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
+        > **REMARQUE :**  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les informations d’identification Windows spécifiées par **\@job_login** et **\@job_password**. L'Agent de fusion crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
-    -   (Facultatif) La valeur **0** pour **@subscriber_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@subscriber_login** et **@subscriber_password** . Spécifiez ces paramètres si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
+    -   (Facultatif) La valeur **0** pour **\@subscriber_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **\@subscriber_login** et **\@subscriber_password**. Spécifiez ces paramètres si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
   
-    -   (Facultatif) La valeur **0** pour **@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password** . Spécifiez ces valeurs si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
+    -   (Facultatif) La valeur **0** pour **\@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Spécifiez ces valeurs si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
   
     -   Une planification du travail de l'Agent de fusion pour cet abonnement. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -192,7 +195,7 @@ ms.locfileid: "67903042"
   
 8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
   
-    > **IMPORTANT!** Durant la création d’un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, notamment <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    > **IMPORTANT ! **Lors de la création d’un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, notamment <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Pour créer un abonnement par envoi de données vers une publication de fusion  
   

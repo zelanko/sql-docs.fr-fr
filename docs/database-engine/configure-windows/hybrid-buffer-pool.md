@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998057"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697554"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de mémoires tampons hybride
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Le pool de mémoires tampons hybride permet au moteur de base de données d’accéder directement aux pages de données dans les fichiers de base de données stockés sur des appareils à mémoire persistante (PMEM). Cette fonctionnalité est introduite dans [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
-Dans un système traditionnel sans mémoire persistante, SQL Server met en cache les pages de données dans le pool de mémoires tampons DRAM. Avec le pool de mémoires tampons hybride, SQL Server n’effectue pas de copie de la page dans la portion DRAM du pool de mémoires tampons. Au lieu de cela, il accède à la page directement dans le fichier de base de données qui réside sur l’appareil PMEM. L’accès aux fichiers de données sur des appareils PMEM pour le pool de mémoires tampons hybride est effectué à l’aide d’une opération E/S mappée en mémoire (MMIO), également appelée *mise en compatibilité* des fichiers de données dans SQL Server.
+Dans un système traditionnel sans mémoire persistante, SQL Server met en cache les pages de données dans le pool de mémoires tampons. Avec le pool de mémoires tampons hybride, SQL Server passe outre l’exécution d’une copie de la page dans la partie DRAM du pool de mémoires tampons ; il accède à la page directement sur le fichier de base de données qui réside sur un appareil PMEM. L’accès en lecture aux fichiers de données sur les appareils PMEM pour le pool de mémoires tampons hybride s’effectue directement en suivant un pointeur vers les pages de données de l’appareil PMEM.  
 
-Seules les pages nettoyées sont accessibles directement sur un appareil PMEM. Quand une page est marquée comme modifiée, elle est copiée dans le pool de mémoires tampons DRAM avant d’être écrite sur l’appareil PMEM et marquée comme étant nettoyée de nouveau. Ce processus se produit lors des opérations de point de contrôle régulières.
+Seules les pages nettoyées sont accessibles directement sur un appareil PMEM. Quand une page est marquée comme modifiée, elle est copiée dans le pool de mémoires tampons DRAM avant d’être écrite sur l’appareil PMEM et marquée comme étant nettoyée de nouveau. Cela se produit pendant les opérations de point de contrôle habituelles. Le mécanisme permettant de copier le fichier de l’appareil PMEM vers la mémoire DRAM est une opération d’E/S mappée en mémoire (MMIO) directe. On dit également que les fichiers de données dans SQL Server sont dans un *état d’éveil à la présence d’un environnement virtualisé*.
+
 
 La fonctionnalité de pool de mémoires tampons hybride est disponible pour Windows et Linux. L’appareil PMEM doit être formaté avec un système de fichiers qui prend en charge DAX (DirectAccess). Les systèmes de fichiers XFS, EXT4 et NTFS prennent tous en charge DAX. SQL Server détecte automatiquement si les fichiers de données résident sur un appareil PMEM correctement mis en forme, et effectue le mappage en mémoire dans l’espace utilisateur. Ce mappage est effectué lors du démarrage, quand une nouvelle base de données est attachée, restaurée ou créée, ou quand la fonctionnalité de pool de mémoires tampons hybride est activée pour une base de données.
 

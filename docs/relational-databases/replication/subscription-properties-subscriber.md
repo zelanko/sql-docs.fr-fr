@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129831"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769462"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés de l’abonnement 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>Propriétés du serveur de publication
 La boîte de dialogue **Propriétés de l'abonnement** du serveur de publication permet d'afficher et de configurer les propriétés des abonnements par envoi de données. Vous pouvez également afficher certaines propriétés des abonnements par extraction. Cependant, la boîte de dialogue **Propriétés de l'abonnement** de l'abonné affiche des propriétés supplémentaires que vous pouvez modifier.  
@@ -46,7 +46,8 @@ La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'aff
  Si une option est affichée en lecture seule, vous pouvez la configurer uniquement lorsque l'abonnement est créé. Si vous voulez configurer des options non disponibles dans l'Assistant Nouvel abonnement, créez l'abonnement avec des procédures stockées. Pour plus d'informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) et [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
 > [!NOTE]  
->  Si un Agent de distribution ou un Agent de fusion n'est pas encore créé pour l'abonnement, de nombreuses propriétés ne sont pas affichées. Pour créer un travail d’agent pour un abonnement par extraction, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication transactionnelle ou d’instantané) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication de fusion).  
+>  - Si un Agent de distribution ou un Agent de fusion n'est pas encore créé pour l'abonnement, de nombreuses propriétés ne sont pas affichées. Pour créer un travail d’agent pour un abonnement par extraction, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication transactionnelle ou d’instantané) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication de fusion).  
+> - Une instance managée Azure SQL Database peut être un serveur de publication, un serveur de distribution et un Abonné pour la réplication transactionnelle et d’instantané. Les bases de données uniques et mises en pool d’Azure SQL Database peuvent uniquement être des Abonnés de type push pour la réplication transactionnelle et d’instantané. Pour plus d’informations, consultez [Réplication transactionnelle avec Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Options du serveur de publication pour tous les abonnements  
  **Sécurité**  

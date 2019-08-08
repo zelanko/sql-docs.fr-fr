@@ -21,12 +21,12 @@ ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 86748be50f2a6315570c7b917882e765565d9380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082511"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742948"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instructions RESTORE - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -64,11 +64,13 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
+> [!NOTE] 
+> Pour spécifier l’emplacement et le nom de fichier du Stockage Blob Microsoft Azure, utilisez le format URL pris en charge à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Cu2. Bien que le stockage Microsoft Azure soit un service, son implémentation est similaire à celle d’un disque ou d’une bande afin d’offrir une expérience de restauration cohérente et fluide pour les trois appareils.
   
 ## <a name="arguments"></a>Arguments  
  Pour une description des arguments RESTORE LABELONLY, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  

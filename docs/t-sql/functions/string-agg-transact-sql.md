@@ -16,14 +16,14 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3af59410ed151e54a5cc7ea7a546f8979a318693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906877"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632125"
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
+# <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Concatène les valeurs des expressions de chaîne et place les valeurs de séparateur entre elles. Le séparateur n’est pas ajouté à la fin de la chaîne.
@@ -95,6 +95,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 Les valeurs `NULL` trouvées dans les cellules `name` ne sont pas renvoyées dans le résultat.   
+
 > [!NOTE]  
 >  Si vous utilisez l’éditeur de requête de Management Studio, l’option **Results to Grid** ne peut pas implémenter le retour chariot. Basculez vers **Results to Text** pour afficher correctement le jeu de résultats.   
 
@@ -127,16 +128,17 @@ FROM Person.Person;
 |Ken Sánchez (8 février 2003 12h00) <br />Terri Duffy (24 février 2002 12h00) <br />Roberto Tamburello (5 décembre 2001 12h00) <br />Rob Walters (29 décembre 2001 12h00) <br />... |
 
 > [!NOTE]  
->  Si vous utilisez l’éditeur de requête de Management Studio, l’option **Results to Grid** ne peut pas implémenter le retour chariot. Basculez vers **Results to Text** pour afficher correctement le jeu de résultats.   
+> Si vous utilisez l’éditeur de requête de Management Studio, l’option **Results to Grid** ne peut pas implémenter le retour chariot. Basculez vers **Results to Text** pour afficher correctement le jeu de résultats.
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. Retourner des articles d’actualité avec les balises associées 
+### <a name="d-return-news-articles-with-related-tags"></a>D. Retourner des articles d’actualité avec les balises associées
+
 Les articles et leurs balises sont séparés dans différentes tables. Le développeur souhaite renvoyer une ligne pour chaque article avec toutes les balises associées. À l’aide de la requête suivante :
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -144,9 +146,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |tags |
 |--- |--- |--- |
-|172 |Les sondages prévoient des résultats serrés aux élections |politique,sondages,conseil municipal | 
+|172 |Les sondages prévoient des résultats serrés aux élections |politique,sondages,conseil municipal |
 |176 |La nouvelle autoroute devrait réduire les embouteillages |NULL |
-|177 |Les chiens restent plus populaires que les chats |sondages,animaux| 
+|177 |Les chiens restent plus populaires que les chats |sondages,animaux|
+
+> [!NOTE]
+> La clause `GROUP BY` est obligatoire si la fonction `STRING_AGG` n’est pas le seul élément de la liste `SELECT`.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Générer une liste d’adresses e-mail par ville
 

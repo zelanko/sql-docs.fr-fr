@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043202"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661224"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted avec enclaves sécurisées
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -149,13 +149,13 @@ Les considérations de sécurité suivantes s’appliquent à Always Encrypted a
 - Le chiffrement d’une colonne à l’aide d’un chiffrement aléatoire avec une clé CEK prenant en charge les enclaves peut entraîner une fuite de l’ordre des données stockées dans la colonne, puisque ces colonnes prennent en charge des comparaisons de plages. Par exemple, si une colonne chiffrée contenant les salaires des employés a un index, un administrateur de base de données malveillant pourrait analyser l’index pour trouver la valeur de salaire chiffrée maximale et identifier une personne touchant le salaire maximal (en supposant que le nom de la personne n’est pas chiffré). 
 - Si vous utilisez Always Encrypted pour protéger des données sensibles contre un accès non autorisé des administrateurs de bases de données, ne partagez pas les clés principales des colonnes ou les clés de chiffrement des colonnes avec les administrateurs de bases de données. Un administrateur de base de données peut gérer des index sans avoir directement accès aux clés, en tirant parti du cache des clés de chiffrement de colonne au sein de l’enclave.
 
-## <a name="considerations-for-alwayson-and-database-migration"></a>Considérations relatives à AlwaysOn et à la migration des base de données
+## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considérations relatives aux groupes de disponibilité et à la migration de base de données
 
-Lorsque vous configurez un groupe de disponibilité AlwaysOn requis pour prendre en charge des requêtes à l’aide d’enclaves, vous devez vous assurer que toutes les instances de SQL Server qui hébergent les bases de données dans le groupe de disponibilité prennent en charge Always Encrypted avec des enclaves sécurisés et ont une enclave configurée. Si la base de données principale prend en charge les enclaves, mais que ce n’est pas le cas d’un réplica secondaire, toute requête qui tente d’utiliser la fonctionnalité d’Always Encrypted avec des enclaves sécurisés échoue.
+Quand vous configurez un groupe de disponibilité Always On requis pour prendre en charge des requêtes à l’aide d’enclaves, vous devez vous assurer que toutes les instances de SQL Server qui hébergent les bases de données dans le groupe de disponibilité prennent en charge Always Encrypted avec des enclaves sécurisées et ont une enclave configurée. Si la base de données principale prend en charge les enclaves, mais que ce n’est pas le cas d’un réplica secondaire, toute requête qui tente d’utiliser la fonctionnalité d’Always Encrypted avec des enclaves sécurisés échoue.
 
-Lorsque vous restaurez un fichier de sauvegarde d’une base de données qui utilise la fonctionnalité d’Always Encrypted avec des enclaves sécurisées sur une instance de SQL Server qui n’a pas d’enclave configurée, l’opération de restauration réussit et toutes les fonctionnalités qui ne reposent pas sur l’enclave sont disponibles. Toutefois, toutes les requêtes suivantes utilisant la fonctionnalité de l’enclave échouent, et les index sur des colonnes prenant en charge des enclaves à l’aide d’un chiffrement aléatoire ne sont plus valides.  La même chose est valable lorsque vous joignez une base de données utilisant Always Encrypted avec des enclaves sécurisées sur l’instance pour laquelle l’enclave n’est pas configurée.
+Lorsque vous restaurez un fichier de sauvegarde d’une base de données qui utilise la fonctionnalité d’Always Encrypted avec des enclaves sécurisées sur une instance de SQL Server qui n’a pas d’enclave configurée, l’opération de restauration réussit et toutes les fonctionnalités qui ne reposent pas sur l’enclave sont disponibles. Toutefois, toutes les requêtes suivantes utilisant la fonctionnalité de l’enclave échouent, et les index sur des colonnes prenant en charge des enclaves à l’aide d’un chiffrement aléatoire ne sont plus valides. La même chose est valable lorsque vous joignez une base de données utilisant Always Encrypted avec des enclaves sécurisées sur l’instance pour laquelle l’enclave n’est pas configurée.
 
-Si votre base de données contient des index sur des colonnes prenant en charge les enclaves utilisant un chiffrage aléatoire, veillez à activer  [Récupération de base de données accélérée (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) dans la base de données avant de créer une sauvegarde de base de données. ADR garantit que la base de données, notamment les index, est disponible immédiatement après la restauration de la base de données. Pour plus d’informations, consultez [Récupération de la base de données](#database-recovery).
+Si votre base de données contient des index sur des colonnes prenant en charge les enclaves utilisant un chiffrage aléatoire, veillez à activer [Récupération de base de données accélérée (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) dans la base de données avant de créer une sauvegarde de base de données. ADR garantit que la base de données, notamment les index, est disponible immédiatement après la restauration de la base de données. Pour plus d’informations, consultez [Récupération de la base de données](#database-recovery).
 
 Lorsque vous migrez votre base de données à l’aide d’un fichier bacpac, vous devez vous assurer que vous supprimez toutes les colonnes des index prenant en charge les enclaves à l’aide d’un chiffrement aléatoire avant de créer le fichier bacpac.
 

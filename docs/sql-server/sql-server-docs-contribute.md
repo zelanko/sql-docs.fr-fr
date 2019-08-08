@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136387"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693191"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Guide pratique pour contribuer à la documentation SQL Server
 
@@ -32,14 +32,24 @@ Toutes les contributions publiques sont examinées par l’équipe du contenu SQ
 
 ## <a id="githubui"></a> Modifier dans votre navigateur
 
-Vous pouvez apporter des modifications de base au contenu SQL Server dans votre navigateur, puis les envoyer à Microsoft. Le processus complet est décrit dans l’article, [Vue d’ensemble du guide de contributeur Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). La vidéo suivante montre le processus de bout en bout pour soumettre des changements dans votre navigateur :
+Vous pouvez apporter des modifications de base au contenu SQL Server dans votre navigateur, puis les envoyer à Microsoft. Pour plus d’informations, consultez la [vue d’ensemble du guide du contributeur Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+Les étapes suivantes montrent la procédure à suivre : 
 
-> [!TIP]
-> Notez que l’emplacement du bouton **Modifier** est légèrement différent de celui montré dans la vidéo, mais le processus est le même.
->
-> ![Bouton Modifier](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. Dans la page sur laquelle vous souhaitez laisser des commentaires, sélectionnez le lien **Edit** (Modifier) en haut à droite.
+1. Dans la page suivante, sélectionnez l’icône en forme de **crayon** en haut à droite.
+1. Dans la page suivante, dans la fenêtre de texte **Edit file** (Modifier le fichier), apportez vos modifications directement dans le texte.
+    Si vous avez besoin d’aide pour mettre en forme le texte que vous ajoutez ou celui que vous changez, consultez l’[aide-mémoire sur Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+1. Une fois que vous avez apporté vos modifications, sous **Commit changes** (Valider les changements) :
+    1. Dans la première zone de texte, entrez une brève description du changement que vous venez d’apporter.
+    1. Dans la zone **Add an optional extended description** (Ajouter une description étendue facultative), entrez une brève explication de votre changement.
+1. Sélectionnez **Propose file change** (Proposer un changement de fichier).
+1. Dans la page **Comparing changes** (Comparaison des changements), sélectionnez **Create pull request** (Créer une demande de tirage). 
+1. Dans la page **Open a pull request** (Ouvrir une demande de tirage), sélectionnez **Create pull request** (Créer une demande de tirage). 
+
+L’image GIF suivante montre le processus de bout en bout pour soumettre des changements dans votre navigateur :
+
+![Modifier les documents SQL](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> Modifier localement avec des outils
 

@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df3f1e188593e3e193faed98b7932a3dffa1adde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005365"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769658"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Les tables agissant comme des abonnés à la réplication de capture instantanée et à la réplication transactionnelle, à l’exclusion de la réplication transactionnelle d’égal à égal, peuvent être configurées en tant que tables mémoire optimisées. Les autres configurations de réplication ne sont pas compatibles avec les tables mémoire optimisées. Cette fonctionnalité est disponible à partir de la version [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68005365"
   
 -   **Configurer la base de données de l’abonné pour la prise en charge de la réplication vers les tables mémoire optimisées**  
   
-     Affectez à la propriété **@memory_optimized** la valeur **true**, en utilisant [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) ou [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
+     Affectez à la propriété **\@memory_optimized** la valeur **true** en utilisant [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) ou [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
   
 -   **Configurer l’article pour la prise en charge de la réplication vers les tables mémoire optimisées**  
   
@@ -36,9 +37,9 @@ ms.locfileid: "68005365"
   
 1.  Créez une publication transactionnelle. Pour plus d’informations, voir [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Ajoutez des articles à la publication. Pour plus d’informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+2.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [définir un Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** de la procédure stockée **sp_addarticle** sur   
+     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)], affectez au paramètre **\@schema_option** de la procédure stockée **sp_addarticle** la valeur   
     **0x40000000000**.  
   
 3.  Dans la fenêtre de propriétés d’article, définissez **Activer l’optimisation mémoire** sur **true**.  
@@ -55,16 +56,16 @@ ms.locfileid: "68005365"
   
 1.  Accédez aux propriétés d’abonnement dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et définissez **Abonnement de mémoire optimisée** sur **true**. Les modifications ne sont appliquées qu’une fois l’abonnement réinitialisé.  
   
-     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)] , définissez le nouveau paramètre **@memory_optimized** de la procédure stockée **sp_addsubscription** sur true.  
+     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)], affectez au nouveau paramètre **\@memory_optimized** de la procédure stockée **sp_addsubscription** la valeur true.  
   
 2.  Accédez aux propriétés d’article d’une publication dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , puis définissez **Activer l’optimisation mémoire** sur true.  
   
-     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** de la procédure stockée **sp_addarticle** sur   
+     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)], affectez au paramètre **\@schema_option** de la procédure stockée **sp_addarticle** la valeur   
     **0x40000000000**.  
   
 3.  Les tables mémoire optimisées ne prennent pas en charge les index cluster. Pour que la réplication gère ces types d’index en les convertissant en index non cluster sur la destination, définissez **Convertir l’index cluster en index non-cluster pour l’article optimisé en mémoire** sur true.  
   
-     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** de la procédure stockée **sp_addarticle** sur  **0x0000080000000000**.  
+     Si vous effectuez la configuration en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)], affectez au paramètre **\@schema_option** de la procédure stockée **sp_addarticle** la valeur **0x0000080000000000**.  
   
 4.  Régénérez la capture instantanée.  
   

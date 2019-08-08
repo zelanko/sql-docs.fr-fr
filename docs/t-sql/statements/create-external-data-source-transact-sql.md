@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67902720"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
@@ -73,7 +73,7 @@ WITH
 
 ## <a name="arguments"></a>Arguments
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Spécifie le nom défini par l’utilisateur de la source de données. Ce nom doit être unique dans la base de données de SQL Server.
 
@@ -110,7 +110,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 - `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
 - Pour garantir la réussite des requêtes PolyBase lors du basculement du `Namenode` Hadoop, envisagez d’utiliser une adresse IP virtuelle pour le `Namenode`du cluster Hadoop. Dans le cas contraire, exécutez une commande [ALTER EXTERNAL DATA SOURCE][alter_eds] pour pointer vers le nouvel emplacement.
 
-### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *key_value_pair*
+### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
 Spécifie des options supplémentaires lors de la connexion via `ODBC` à une source de données externe.
 
@@ -126,7 +126,7 @@ Indique si le calcul peut être transmis à la source de données externe. Cette
 
 L’activation ou la désactivation de la transmission au niveau de la requête s’effectue au moyen d’un [indicateur][hint_pb].
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Spécifie les informations d’identification limitées à la base de données servant à l’authentification auprès de la source de données externe.
 
@@ -142,19 +142,19 @@ Pour un exemple d’utilisation de `CREDENTIAL` avec `SHARED ACCESS SIGNATURE` e
 
 Pour créer des informations d’identification délimitées à la base de données, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Spécifie le type de source de données externe en cours de configuration. Ce paramètre n’est pas toujours requis.
 
 - Utilisez HADOOP lorsque la source de données externe est Cloudera, Hortonworks ou Stockage Blob Azure.
-- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] avec [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset] avec [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
 
 Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Configurez cette valeur facultative lors de la connexion à Hortonworks ou Cloudera.
 
@@ -317,7 +317,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure
 
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
+Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -406,7 +406,7 @@ WITH
 
 ## <a name="arguments"></a>Arguments
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Spécifie le nom défini par l’utilisateur de la source de données. Ce nom doit être unique dans la base de données de SQL Database (SQL DB).
 
@@ -429,7 +429,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 
 - Le moteur SQL Database ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. Pour valider, créez une table externe à l’aide d’une source de données externe.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Spécifie les informations d’identification limitées à la base de données servant à l’authentification auprès de la source de données externe.
 
@@ -446,18 +446,18 @@ Pour un exemple d’utilisation de `CREDENTIAL` avec `SHARED ACCESS SIGNATURE` e
 
 Pour créer des informations d’identification délimitées à la base de données, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---blobstorage--rdbms--shardmapmanager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
+### <a name="type---blob_storage--rdbms--shard_map_manager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
 
 Spécifie le type de source de données externe en cours de configuration. Ce paramètre n’est pas toujours requis.
 
 - Utilisez SGBDR pour les requêtes de bases de données croisées utilisant les requêtes élastiques à partir de SQL Database.  
 - Utilisez SHARD_MAP_MANAGER lors de la création d’une source de données externe lorsque vous vous connectez à une base de données SQL partitionnée.
-- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
+- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset].
 
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
 
-### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
+### <a name="database_name--database_name"></a>DATABASE_NAME = *database_name*
 
 Configurez cet argument lorsque `TYPE` a la valeur `RDBMS` ou `SHARD_MAP_MANAGER`.
 
@@ -468,7 +468,7 @@ Configurez cet argument lorsque `TYPE` a la valeur `RDBMS` ou `SHARD_MAP_MANAGER
 
 Pour un exemple montrant comment créer une source de données externe où `TYPE`=`RDBMS`, consultez [Créer une source de données externe SGBDR](#b-create-an-rdbms-external-data-source)
 
-### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = *shard_map_name*
+### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 Utilisé lorsque l’argument `TYPE` a la valeur `SHARD_MAP_MANAGER` uniquement pour définir le nom de la carte de partitions.
 
@@ -544,7 +544,7 @@ Pour un tutoriel détaillé sur le SGBDR, consultez [Prise en main des requêtes
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure
 
-Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
+Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -630,7 +630,7 @@ WITH
 
 ## <a name="arguments"></a>Arguments
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Spécifie le nom défini par l’utilisateur de la source de données. Ce nom doit être unique dans la base de données de SQL Data Warehouse (SQL DW).
 
@@ -655,7 +655,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
 - `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Spécifie les informations d’identification limitées à la base de données servant à l’authentification auprès de la source de données externe.
 
@@ -666,7 +666,7 @@ Remarques et conseils supplémentaires lors de la création d’informations d�
 
 Pour créer des informations d’identification délimitées à la base de données, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Spécifie le type de source de données externe en cours de configuration. Ce paramètre n’est pas toujours requis.
 
@@ -849,7 +849,7 @@ WITH
 
 ## <a name="arguments"></a>Arguments
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Spécifie le nom défini par l’utilisateur de la source de données. Le nom doit être unique au sein du serveur dans le système de la plateforme d’analyse (Parallel Data Warehouse ou PDW).
 
@@ -876,7 +876,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 - `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
 - Pour garantir la réussite des requêtes PolyBase lors du basculement du `Namenode` Hadoop, envisagez d’utiliser une adresse IP virtuelle pour le `Namenode`du cluster Hadoop. Dans le cas contraire, exécutez une commande [ALTER EXTERNAL DATA SOURCE][alter_eds] pour pointer vers le nouvel emplacement.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Spécifie les informations d’identification limitées à la base de données servant à l’authentification auprès de la source de données externe.
 
@@ -896,7 +896,7 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 
 Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Configurez cette valeur facultative lors de la connexion à Hortonworks ou Cloudera.
 

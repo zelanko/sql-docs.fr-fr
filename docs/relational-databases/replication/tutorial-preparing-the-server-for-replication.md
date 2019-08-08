@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895430"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742944"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutoriel : Préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ Si votre instance SQL Server Management Studio s’exécute avec des droits d’
 >[!NOTE]
 > Si l’Agent SQL semble ne pas démarrer, cliquez avec le bouton droit sur SQL Server Agent dans SSMS, puis sélectionnez **Actualiser**. S’il demeure dans l’état arrêté, démarrez-le manuellement à partir du Gestionnaire de configuration SQL Server.    
   
-### <a name="set-database-permissions-at-the-publisher"></a>Définir des autorisations de base de données sur le serveur de publication  
+## <a name="set-database-permissions"></a>Définir les autorisations de base de données  
   
 1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion** :  
 
@@ -233,6 +233,8 @@ Si votre instance SQL Server Management Studio s’exécute avec des droits d’
 5. Répétez les étapes 1 à 4 pour créer une connexion pour les autres comptes locaux (repl_distribution, repl_logreader et repl_merge). Ces connexions doivent aussi être mappées aux utilisateurs membres du rôle de base de données fixe **db_owner** des bases de données de **distribution** et **AdventureWorks**.  
 
    ![Affichage des quatre comptes dans l’Explorateur d’objets](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. Répétez les étapes 1-4 sur l’Abonné pour l’agent de distribution et l’agent de fusion, en remplaçant le nom de l’ordinateur par celui de l’Abonné. 
   
   
 Pour plus d'informations, consultez :

@@ -31,14 +31,15 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329285"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731129"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette fonction retourne le nombre (valeur entière signée) de limites datepart spécifiées, traversées entre les valeurs *startdate* et *enddate* spécifiées.
@@ -54,13 +55,13 @@ DATEDIFF ( datepart , startdate , enddate )
 ```  
   
 ## <a name="arguments"></a>Arguments  
+
 *datepart*  
-Partie de *startdate* et *enddate* qui spécifie le type de limite traversée.
+Unités dans lesquelles **DATEDIFF** signale la différence entre _startdate_ et _enddate_. Parmi les unités _datepart_ couramment utilisées, citons `month` et `second`.
 
-> [!NOTE]
-> `DATEDIFF` n’accepte pas les valeurs *datepart* de variables définies par l’utilisateur ou comme chaînes entre guillemets. 
+La valeur _datepart_ ne peut pas être spécifiée dans une variable ni comme chaîne entre guillemets (par exemple, `'month'`).
 
-Ce tableau liste l’ensemble des noms et des abréviations *datepart* valides.
+Le tableau suivant liste toutes les valeurs _datepart_ valides. **DATEDIFF** accepte le nom complet de _datepart_ ou toute abréviation listée du nom complet.
 
 |Nom *datepart*|Abréviation *datepart*|  
 |-----------|------------|
@@ -76,6 +77,7 @@ Ce tableau liste l’ensemble des noms et des abréviations *datepart* valides.
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Chaque nom *datepart* spécifique et les abréviations pour ce nom *datepart* retournent la même valeur.
@@ -99,7 +101,10 @@ Consultez *startdate*.
  **Int**  
   
 ## <a name="return-value"></a>Valeur retournée  
+
 Différence **int** entre *startdate* et *enddate*, exprimée dans le jeu de limites par *datepart*.
+  
+Par exemple, `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` retourne -2, ce qui indique que 2036 doit être une année bissextile. Dans ce cas, si nous utilisons « 2036-03-01 » comme _startdate_ et comptons -2 jours, nous obtenons « 2036-02-28 » comme _enddate_.
   
 Si une valeur de retour est hors limites pour **int** (-2 147 483 648 à +2 147 483 647), `DATEDIFF` retourne une erreur.  Pour **millisecond**, la différence maximale entre *startdate* et *enddate* est de 24 jours, 20 heures, 31 minutes et 23,647 secondes. Pour **seconde**, la différence maximale est de 68 ans, 19 jours, 3 heures, 14 minutes et 7 secondes.
   
@@ -113,8 +118,9 @@ Si seule une valeur d’heure est affectée à une variable d’un type de donn�
   
 Si *startdate* et *enddate* ont des types de données date différents et que l’un a plus de parties heure ou une meilleure précision en fractions de seconde que l’autre, `DATEDIFF` affecte aux parties manquantes de l’autre la valeur 0.
   
-## <a name="datepart-boundaries"></a>Limites de datepart  
-Les instructions suivantes ont les mêmes valeurs *startdate* et *enddate*. Ces dates sont adjacentes et ont une différence d’une centaine de nanosecondes (0,0000001 seconde). La différence entre les *startdate* et *endate* dans chaque instruction traverse une limite d’heure ou de calendrier de son *datepart*. Chaque instruction retourne 1. 
+## <a name="_datepart_-boundaries"></a>Limites de _datepart_
+
+Les instructions suivantes ont les mêmes valeurs *startdate* et *enddate*. Ces dates sont adjacentes et ont une différence d’une centaine de nanosecondes (0,0000001 seconde). La différence entre les *startdate* et *endate* dans chaque instruction traverse une limite d’heure ou de calendrier de son *datepart*. Chaque instruction retourne 1.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -130,7 +136,7 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
 
-Si *startdate* et *enddate* ont des valeurs d’année différentes, mais les mêmes valeurs de semaine de calendrier, `DATEDIFF` retourne 0 pour *datepart* **week**.
+Si *startdate* et *enddate* ont des valeurs d’année différentes, mais les mêmes valeurs de semaine de calendrier, `DATEDIFF` retourne 0 pour *datepart* **week**.
 
 ## <a name="remarks"></a>Notes  
 Utilisez `DATEDIFF` dans les clauses `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` et `ORDER BY`.
@@ -201,13 +207,18 @@ Ce exemple utilise une expression numérique, `(GETDATE() + 1)` et des fonctions
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)   
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)
     AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays  
+SELECT
+    DATEDIFF(
+            day,
+            '2007-05-07 09:53:01.0376635',
+            DATEADD(day, 1, SYSDATETIME())
+        ) AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 ```  
@@ -250,8 +261,9 @@ GO
 
 ```sql
 -- DOES NOT ACCOUNT FOR LEAP YEARS
-DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
-DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100);
+DECLARE @years INT, @months INT, @days INT,
+    @hours INT, @minutes INT, @seconds INT, @milliseconds INT;
 
 SET @date1 = '1900-01-01 00:00:00.000'
 SET @date2 = '2018-12-12 07:08:01.123'
@@ -294,9 +306,12 @@ SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
      + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
      + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
      + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
-          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
-               ELSE '' END 
-          + ' seconds','')
+     + CASE
+            WHEN @milliseconds > 0
+                THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+            ELSE ''
+       END 
+     + ' seconds','')
 
 SELECT @result
 ```

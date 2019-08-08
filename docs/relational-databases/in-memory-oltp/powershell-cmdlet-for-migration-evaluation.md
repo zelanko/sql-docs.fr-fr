@@ -1,7 +1,7 @@
 ---
 title: Applet de commande PowerShell pour l’évaluation de la migration | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 07/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +11,184 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 769948242c747abdfb1fd6e32606df6a5800a9bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054446"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68698303"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Applet de commande PowerShell pour l’évaluation de la migration
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  L’applet de commande Save-SqlMigrationReport est un outil qui évalue l’aptitude à la migration de plusieurs objets dans une base de données SQL Server. Actuellement, elle se limite à l’évaluation de cette aptitude pour la fonction OLTP en mémoire. Cette applet peut être exécutée dans des environnements Windows PowerShell avec élévation des privilèges et sqlps.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```powershell  
-Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database database [ -Object object_name ] ]  |  [ -InputObject smo_object ] -FolderPath path  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- Les paramètres sont décrits dans le tableau suivant.  
-  
-|Paramètres|Description|  
-|----------------|-----------------|  
-|MigrationType|Type de scénario de migration ciblé par l’applet de commande. Actuellement, la seule valeur correspond au système OLTP par défaut. Facultatif.|  
-|Serveur|Nom de l’instance SQL Server cible. Obligatoire dans l’environnement Windows Powershell lorsque le paramètre -InputObject n’est pas fourni. Facultatif dans SQLPS.|  
-|Base de données|Nom de la base de données SQL Server cible. Obligatoire dans l’environnement Windows Powershell lorsque le paramètre -InputObject n’est pas fourni. Facultatif dans SQLPS.|  
-|Object|Nom de l’objet de base de données cible. Il peut s’agir d’un tableau ou d’une procédure stockée.|  
-|InputObject|L’objet SMO que l’applet de commande doit cibler. Obligatoire dans l’environnement Windows Powershell lorsque les paramètres -Server et -Database ne sont pas fournis. Facultatif dans SQLPS.|  
-|FolderPath|Dossier dans lequel l’applet de commande doit déposer les rapports générés. Obligatoire.|  
-  
-## <a name="results"></a>Résultats  
- Dans le dossier spécifié dans le paramètre -FolderPath, deux noms de dossier apparaissent : Tables et Stored Procedures. Si l’objet cible est une table, son rapport se trouve dans le dossier Tables. Dans le cas contraire, il figure dans le dossier Stored Procedures.  
-  
-  
+
+L’applet de commande `Save-SqlMigrationReport` est un outil qui évalue l’aptitude à la migration de plusieurs objets dans une base de données SQL Server.
+
+Actuellement, cette applet de commande se limite à l’évaluation de cette aptitude pour l’OLTP en mémoire. Cette applet peut être exécutée dans des environnements Windows PowerShell avec élévation des privilèges et sqlps.
+
+Au lieu d’exécuter directement cette applet de commande PowerShell, vous pouvez l’exécuter de manière implicite à l’aide de SSMS (SQL Server Management Studio). Dans l’**Explorateur d’objets** de SSMS, vous pouvez cliquer avec le bouton droit sur une table, puis cliquer sur **Conseiller d’optimisation de la mémoire**.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Save-SqlMigrationReport
+    -FolderPath <output_path>
+    [ -MigrationType <migration_scenario_type> ]
+    [
+        [ -Server <server_name> -Database <database_name>
+            [ -Schema <schema_name> ] [ -Object <object_name> ]
+        ]
+       |
+        [ -InputObject <smo_object> ]
+    ]
+;
+```
+
+## <a name="parameters"></a>Paramètres
+
+Le tableau suivant décrit les paramètres.
+
+Certains aspects de la syntaxe doivent être soulignés. Si vous spécifiez le paramètre `-InputObject`, vous ne pouvez pas spécifier l’un des paramètres suivants :
+
+- `-Server`
+- `-Database`
+- `-Schema`
+- `-Object`
+
+À l’inverse, si vous _ne spécifiez pas_ `-InputObject`, vous devez spécifier `-Server` et `-Database`. Si vous spécifiez `-Server`, vous pouvez limiter l’étendue en spécifiant `-Schema` ou `-Object` ou les deux.
+
+| Nom du paramètre | Description |
+| :------------- | :---------- |
+| Base de données | Nom de la base de données SQL Server cible. Obligatoire quand `-Server` est obligatoire.<br/><br/> Facultatif dans SQLPS. |
+| FolderPath | Dossier sous lequel l’applet de commande doit stocker les rapports générés.<br/><br/> Obligatoire. |
+| InputObject | L’objet SMO que l’applet de commande doit cibler.<br/><br/> Obligatoire dans l’environnement Windows Powershell si `-Server` n’est pas fourni.<br/><br/> Facultatif dans SQLPS. |
+| MigrationType | Type de scénario de migration ciblé par l’applet de commande. Actuellement, la seule valeur correspond au système **'OLTP'** par défaut.<br/><br/> Facultatif. |
+| Object | Nom de l’objet à propos duquel créer un rapport. Il peut s’agir d’une table ou d’une procédure stockée. |
+| Mot de passe | Obligatoire quand `-Username` est requis. |
+| schéma | Nom du schéma qui possède l’objet à propos duquel créer un rapport.<br/><br/> Facultatif. |
+| Serveur | Nom de l’instance SQL Server cible. Obligatoire dans l’environnement Windows Powershell si `-InputObject` n’est pas fourni.<br/><br/> Facultatif dans SQLPS. |
+| Utilisateur | Obligatoire lors de la connexion par le biais de l’authentification SQL Server (et non l’authentification Windows). Sinon, omettez cette valeur. |
+| &nbsp; | &nbsp; |
+
+## <a name="prerequisites"></a>Conditions préalables requises
+
+Avant de pouvoir exécuter cette applet de commande, vous devez d’abord installer le module nommé **SqlServer** :
+
+- `Install-Module -Name SqlServer`
+
+> [!NOTE]
+> L’ancien module `SQLPS` n’est plus tenu à jour. Utilisez le module `SqlServer` plus récent.
+
+Pour plus d’informations, consultez [Installer le module SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md).
+
+## <a name="example-cmdlet-line"></a>Exemple de ligne d’applet de commande
+
+Voici la ligne d’applet de commande qui a été exécutée pour générer le rapport affiché plus loin dans cet article.
+
+```powershell
+Save-SqlMigrationReport `
+  -FolderPath 'C:\Test\PowerShell-ps1\Save-SqlMigrationReport\' `
+  -Server 'MyUserName123456.database.windows.net' `
+  -Database 'MyDatabaseName_31' `
+  -Schema 'dbo' `
+  -Object 'Table2' `
+  -Username 'MyUserName' `
+  -Password 'MyPassword' `
+  -MigrationType 'OLTP' `
+;
+```
+
+## <a name="example-output-report"></a>Exemple de rapport de sortie
+
+Dans le dossier spécifié pour le paramètre `-FolderPath`, les deux chemins de dossier suivants sont créés en exécutant cette applet de commande. Les deux chemins commencent par la valeur _nom\_serveur_ :
+
+- MyDatabaseName_31\Tables\
+- MyDatabaseName_31\Stored Procedures\
+
+Chaque fichier de rapport objet est stocké dans le dossier approprié.
+
+Les noms des fichiers de rapport portent l’extension **.html**. Par exemple, un nom de fichier généré est **MigrationAdvisorChecklistReport_Table2_20190728.html**.
+
+Le code HTML est principalement une table à deux colonnes avec les en-têtes suivants :
+
+- Description
+- Résultat de la validation
+
+Voici un exemple réel du rapport HTML pour une table.
+
+```html
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <title>Memory optimization checklist for [MyDatabaseName_31].[Table2]</title>
+  </head>
+  <body>
+    <p STYLE="font-family: Verdana, Arial, sans-serif; font-size: 14pt;">
+      <b>Memory optimization checklist for [MyDatabaseName_31].[Table2]</b>
+    </p>
+    <p STYLE="font-family: Verdana, Arial, sans-serif; font-size: 10pt;">
+      <b>Report Date/Time:</b>7/28/2019 2:25 PM<br /></p>
+    <table border="1" cellpadding="5" cellspacing="0" STYLE="font-family: Verdana, Arial, sans-serif; font-size: 9pt;">
+      <tr style="background-color:Silver">
+        <th colspan="2" align="center">Description</th>
+        <th align="center">Validation Result</th>
+      </tr>
+      <tr valign="top">
+        <td colspan="2">No unsupported data types are defined on this table. </td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top" style="background-color:LightYellow">
+        <td colspan="2">No sparse columns are defined for this table.</td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top">
+        <td colspan="2">No identity columns with unsupported seed and increment are defined for this table.</td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top" style="background-color:LightYellow">
+        <td colspan="2">No foreign key relationships are defined on this table.</td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top">
+        <td colspan="2">No unsupported constraints are defined on this table.</td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top" style="background-color:LightYellow">
+        <td colspan="2">No unsupported indexes are defined on this table.</td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top">
+        <td colspan="2">No unsupported triggers are defined on this table.</td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top" style="background-color:LightYellow">
+        <td colspan="2">Post migration row size does not exceed the row size limit of memory-optimized tables.</td>
+        <td>Succeeded</td>
+      </tr>
+      <tr valign="top">
+        <td colspan="2">Table is not partitioned or replicated.</td>
+        <td>Succeeded</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+Et voici une approximation de ce à quoi ressemble la table.
+
+| Description | Résultat de la validation |
+| :---------- | :---------------- |
+| Aucun type de données non pris en charge n’est défini sur cette table. | Opération réussie |
+| Aucune colonne éparse n’est définie pour cette table. | Opération réussie |
+| Aucune colonne d’identité avec des seeds et des incréments non pris en charge n’est définie pour cette table. | Opération réussie |
+| Aucune relation de clé étrangère n’est définie sur cette table. | Opération réussie |
+| Aucune contrainte non prise en charge n’est définie sur cette table. | Opération réussie |
+| Aucun index non pris en charge n’est défini sur cette table. | Opération réussie |
+| Aucun déclencheur non pris en charge n’est défini sur cette table. | Opération réussie |
+| La taille de ligne post-migration n’est pas supérieure à la taille limite de ligne des tables à mémoire optimisée. | Opération réussie |
+| La table n’est pas partitionnée ou répliquée. | Opération réussie |
+| &nbsp; | &nbsp; |
+
+## <a name="related-links"></a>Liens connexes
+
+- Documentation de référence : [Save-SqlMigrationReport](/powershell/module/sqlserver/save-sqlmigrationreport?view=sqlserver-ps)

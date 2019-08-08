@@ -14,16 +14,18 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5c8971810d7122bad77142d61d36820092e39a6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 08a4a90580a00e3ab4f2c38c7dfa3cf81b331d08
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128348"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768621"
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
+::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
+La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   
 -   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion peut avoir lieu en empruntant l'identité du compte Windows ou dans le contexte d'un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
@@ -100,5 +102,66 @@ Persist Security Info=False;Connection Pooling=True;
  [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
+::: moniker-end
+  
+::: monikerRange="azuresqldb-mi-current"
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+La boîte de dialogue **Sécurité de l’Agent de distribution** permet de spécifier le compte d’authentification SQL sous lequel l’Agent de distribution s’exécute. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction.  La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
+  
+-   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion doit être établie à l’aide d’un compte d’authentification SQL Server. 
+  
+-   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés ( **...** ) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et le guide pratique pour [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+  
+ Tous les comptes doivent être valides, le mot de passe correct étant spécifié pour chaque compte. Les comptes et les mots de passe ne sont pas validés tant qu'un agent ne s'exécute pas.  
+  
+## <a name="options"></a>Options  
+ **Process Account**  
+ Entrez un compte d’authentification SQL Server sous lequel l’Agent de distribution s’exécute :  
+  
+-   Pour les abonnements par envoi de données, le compte doit :  
+  
+    -   être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données de distribution ;  
+  
+    -   être membre de la liste d'accès à la publication (PAL) ;  
+  
+    -   avoir les autorisations de lecture sur le partage des fichiers d'instantanés.  
+  
+    -   avoir les autorisations de lecture dans le répertoire d'installation du fournisseur OLE DB de l'Abonné si l'abonnement concerne un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+-   Pour les abonnements par extraction, le compte doit être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données d'abonnement.  
+  
+    
+**Mot de passe** et **Confirmer le mot de passe**  
+Entrez le mot de passe du compte Windows.  
+  
+**Se connecter au serveur de distribution**  
+Pour les abonnements par envoi de données, les connexions au serveur de distribution ont toujours lieu en empruntant l'identité du compte spécifié dans la zone de texte **Compte de processus** .  
+  
+Pour les abonnements par extraction, choisissez si l’Agent de distribution doit établir les connexions avec le serveur de distribution en empruntant l’identité du compte spécifié dans la zone de texte **Compte de processus** ou en utilisant un compte d’authentification SQL Server. 
   
   
+ **Connexion à l'Abonné**  
+ Pour les abonnements par extraction, les connexions à l'Abonné ont toujours lieu en empruntant l'identité du compte spécifié dans la zone de texte **Compte de processus** .  
+  
+ Pour les abonnements par envoi de données, les options sont différentes pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :
+
+  
+-   Pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , spécifiez la connexion avec la base de données qui doit être utilisée lorsque l'Agent de distribution se connecte à l'Abonné. La connexion doit avoir les autorisations suffisantes pour créer des objets dans la base de données d'abonnement. Pour plus d’informations sur la configuration d’abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+  
+ **Options de connexion supplémentaires**  
+ Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement. Spécifiez les options de connexion de l'Abonné sous forme d'une chaîne de connexion (Oracle n'exige pas d'option supplémentaire). Chaque option doit être délimitée par un point-virgule. Trouvez ci-dessous un exemple d'une chaîne de connexion IBM DB2 (les sauts de lignes facilitent la lecture) :  
+  
+```  
+Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  
+PC Code Page=1252;Network Address=MY_SUBSCRIBER;Network Port=50000;Package Collection=MY_PKGCOL;  
+Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBMS Platform=DB2/NT;  
+Persist Security Info=False;Connection Pooling=True;  
+```  
+  
+ La plupart des options de cette chaîne sont spécifiques du serveur DB2 que vous configurez, mais vous devez attribuer à l'option **Traiter les données binaires comme des caractères** la valeur **False**. Une valeur est exigée de façon que l'option **Catalogue initial** identifie la base de données d'abonnement. Pour plus d’informations, voir [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Réplication transactionnelle avec Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Configurer la réplication pour une instance managée](/azure/sql-database/replication-with-sql-database-managed-instance)
+::: moniker-end
+
+

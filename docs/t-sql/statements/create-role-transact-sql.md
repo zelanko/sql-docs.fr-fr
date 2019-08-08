@@ -27,12 +27,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3eb9e5c5b451854876cf31ae05641f12e8bc722
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49741cf920c85ac55288b7cd881b1c52335d3d07
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006517"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661426"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  Nom du rôle à créer.  
   
  AUTHORIZATION *owner_name*  
- Utilisateur ou rôle de base de données qui doit posséder le nouveau rôle. Si aucun utilisateur n'est spécifié, le rôle appartient à l'utilisateur qui exécute CREATE ROLE.  
+ Utilisateur ou rôle de base de données qui doit posséder le nouveau rôle. Si aucun utilisateur n'est spécifié, le rôle appartient à l'utilisateur qui exécute CREATE ROLE. Le propriétaire du rôle, ou n’importe quel membre d’un rôle propriétaire, peut ajouter des membres au rôle ou les supprimer.
   
 ## <a name="remarks"></a>Notes  
  Les rôles sont des éléments sécurisables au niveau base de données. Lorsque vous avez créé un rôle, configurez les autorisations au niveau base de données à l'aide des instructions GRANT, DENY et REVOKE. Pour ajouter des membres à un rôle de base de données, utilisez [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Pour plus d’informations, consultez [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md).  

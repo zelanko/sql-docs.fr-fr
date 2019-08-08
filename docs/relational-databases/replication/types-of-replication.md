@@ -12,30 +12,34 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5ac8f243b559efcbee8f27b201469d7bf562b076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aa6cc0eb253c0f21a1b66870f9dac2607f65e2e3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895309"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769299"
 ---
 # <a name="types-of-replication"></a>Types de réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les types de réplication suivants à utiliser dans des applications distribuées :  
+
+| **Type** | **Description** |
+|:-------- | :-------------- |
+| [Réplication transactionnelle](transactional/transactional-replication.md)| Les changements apportés au serveur de publication sont remis à l’Abonné au fur et à mesure qu’ils se produisent (en quasi temps réel). Les changements de données sont appliqués à l’Abonné dans le même ordre et selon les mêmes limites de transaction que sur le serveur de publication. | 
+| [Réplication de fusion](merge/merge-replication.md) | Les données peuvent être modifiées sur le serveur de publication et sur l’Abonné, et sont suivies avec des déclencheurs. L'abonné est synchronisé avec l'éditeur lorsqu'il est connecté au réseau et il échange toutes les lignes qui ont changé entre l'éditeur et l'abonné depuis la dernière synchronisation. | 
+| [Réplication d’instantané](snapshot-replication.md) | Applique un instantané du serveur de publication à l’Abonné, qui distribue les données telles qu’elles apparaissent à un moment précis, sans superviser les mises à jour des données. Lors de la synchronisation, l'intégralité de l'instantané est générée et envoyée aux abonnés.| 
+| [Égal à égal](transactional/peer-to-peer-transactional-replication.md) | Conçue sur la base de la réplication transactionnelle, la réplication d’égal à égal propage les modifications en quasi temps réel de manière transactionnelle entre plusieurs instances de serveur. | 
+| [Bidirectionnelle](transactional/bidirectional-transactional-replication.md)| Une réplication transactionnelle bidirectionnelle est une topologie de réplication transactionnelle spécifique qui permet à deux serveurs d'échanger des modifications : chaque serveur publie des données puis s'abonne à une publication contenant les mêmes données provenant de l'autre serveur. | 
+| [Abonnements pouvant être mis à jour](transactional/updatable-subscriptions-for-transactional-replication.md) | Ce type repose sur la réplication transactionnelle. Quand des données sont mises à jour sur un Abonné pour un abonnement pouvant être mis à jour, elles sont d’abord propagées au serveur de publication, puis aux autres Abonnés. | 
   
--   Réplication transactionnelle. Pour plus d’informations, consultez [Réplication transactionnelle](../../relational-databases/replication/transactional/transactional-replication.md).  
+ 
+Le type de réplication que vous choisissez pour une application dépend de nombreux facteurs, dont l'environnement physique de la réplication, le type et la quantité de données à répliquer et si les données sont ou non mises à jour sur l'Abonné. L'environnement physique comprend le nombre et l'emplacement des ordinateurs impliqués dans la réplication et le fait que ces ordinateurs sont des clients (stations de travail, ordinateurs portables ou ordinateurs de poche) ou des serveurs.  
   
--   Réplication de fusion. Pour plus d’informations, consultez [Réplication de fusion](../../relational-databases/replication/merge/merge-replication.md).  
+Chaque type de réplication commence par une synchronisation initiale des objets publiés entre le serveur de publication et les Abonnés. Cette synchronisation peut être effectuée par réplication avec un *instantané*, qui est une copie de tous les objets et de toutes les données spécifiées par une publication. Quand l'instantané est créé, il est remis aux Abonnés. Pour certaines applications, la réplication d'instantané est tout ce qui est requis. Pour d'autres types d'applications, il est important que les modifications de données suivantes soient transmises à l'Abonné de façon incrémentielle au fil du temps. Certaines applications requièrent aussi que les modifications transitent en sens inverse, de l'Abonné vers le serveur de publication. La réplication transactionnelle et la réplication de fusion comportent des options pour ces types d'applications.  
   
--   Réplication d'instantané. Pour plus d’informations, consultez [Réplication d’instantané](../../relational-databases/replication/snapshot-replication.md).  
-  
- Le type de réplication que vous choisissez pour une application dépend de nombreux facteurs, dont l'environnement physique de la réplication, le type et la quantité de données à répliquer et si les données sont ou non mises à jour sur l'Abonné. L'environnement physique comprend le nombre et l'emplacement des ordinateurs impliqués dans la réplication et le fait que ces ordinateurs sont des clients (stations de travail, ordinateurs portables ou ordinateurs de poche) ou des serveurs.  
-  
- Chaque type de réplication commence par une synchronisation initiale des objets publiés entre le serveur de publication et les Abonnés. Cette synchronisation peut être effectuée par réplication avec un *instantané*, qui est une copie de tous les objets et de toutes les données spécifiées par une publication. Quand l'instantané est créé, il est remis aux Abonnés. Pour certaines applications, la réplication d'instantané est tout ce qui est requis. Pour d'autres types d'applications, il est important que les modifications de données suivantes soient transmises à l'Abonné de façon incrémentielle au fil du temps. Certaines applications requièrent aussi que les modifications transitent en sens inverse, de l'Abonné vers le serveur de publication. La réplication transactionnelle et la réplication de fusion comportent des options pour ces types d'applications.  
-  
- Les modifications des données ne font pas l'objet d'un suivi dans la réplication d'instantané : chaque fois qu'un instantané est appliqué, il remplace complètement les données existantes. La réplication transactionnelle fait le suivi des modifications via le journal des transactions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; la réplication de fusion fait le suivi des modifications via des déclencheurs et des tables de métadonnées.  
-  
+ 
 ## <a name="see-also"></a>Voir aussi  
- [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)
   
   

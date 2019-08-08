@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7fadeded7c979631cabc763d1be8d037b5913d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968305"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702743"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ La figure suivante montre un exemple de sortie du deuxième cluster WSFC qui par
 
 ![Exemple de sortie de la requête précédente](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>Vue de gestion dynamique pour afficher l’intégrité du groupe de disponibilité distribué
+### <a name="dmv-to-list-distributed-ag-health"></a>Vue de gestion dynamique pour afficher l’intégrité du groupe de disponibilité distribué
 
 Dans SQL Server Management Studio, tout état indiqué dans le Tableau de bord et d’autres zones concerne uniquement la synchronisation locale dans ce groupe de disponibilité. Pour afficher l’intégrité d’un groupe de disponibilité distribué, interrogez les vues de gestion dynamique. L’exemple de requête suivante étend et affine la requête précédente :
 

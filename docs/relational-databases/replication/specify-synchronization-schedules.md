@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 970e982ccc5e2d7f7af7643f08e90b2dc791f7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 43b5d4f59ae68f52968fc4aaa10a400e0d8f8ff3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907582"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769539"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Cette rubrique explique comment spécifier des planifications de synchronisation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Lorsque vous créez un abonnement, vous pouvez définir une planification de synchronisation qui contrôle à quel moment l'agent de réplication de l'abonnement s'exécute. Si aucun paramètre de planification n'est spécifié, l'abonnement utilise la planification par défaut.  
   
  Les abonnements sont synchronisés par l'Agent de distribution (pour la réplication transactionnelle et d'instantané) ou l'Agent de fusion (pour la réplication de fusion). Les agents peuvent s'exécuter en continu, à la demande ou selon une planification.  
@@ -146,49 +147,49 @@ ms.locfileid: "67907582"
   
  Une planification est définie par les paramètres de planification suivants dont le comportement est hérité de [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) :  
   
--   **@frequency_type** - le type de fréquence utilisé lors de la planification de l'agent.  
+-   **\@frequency_type** : type de fréquence utilisé lors de la planification de l’agent.  
   
--   **@frequency_interval** - le jour de la semaine où l'agent est exécuté.  
+-   **\@frequency_interval** : jour de la semaine où l’agent est exécuté.  
   
--   **@frequency_relative_interval** – semaine d'un mois donné lorsque l'agent est planifié pour s'exécuter chaque mois ;  
+-   **\@frequency_relative_interval** : semaine d’un mois donné quand l’agent est planifié pour s’exécuter mensuellement.  
   
--   **@frequency_recurrence_factor** – nombre d'unités de type de fréquence entre deux synchronisations ;  
+-   **\@frequency_recurrence_factor** : nombre d’unités de type de fréquence qui séparent chaque synchronisation.  
   
--   **@frequency_subday** – unité de fréquence lorsque l'agent s'exécute plusieurs fois par jour ;  
+-   **\@frequency_subday** : unité de fréquence quand l’agent s’exécute plus d’une fois par jour.  
   
--   **@frequency_subday_interval** – nombre d'unités de fréquence entre deux exécutions lorsque l'agent s'exécute plusieurs fois par jour ;  
+-   **\@frequency_subday_interval** : nombre d’unités de fréquence qui séparent chaque exécution quand l’agent s’exécute plus d’une fois par jour.  
   
--   **@active_start_time_of_day** - la première heure d'un jour donné à laquelle l'exécution d'un agent débutera.  
+-   **\@active_start_time_of_day** : première heure d’un jour donné à laquelle l’exécution d’un agent débutera.  
   
--   **@active_end_time_of_day** - la dernière heure d'un jour donné à laquelle l'exécution d'un agent débutera.  
+-   **\@active_end_time_of_day** : dernière heure d’un jour donné à laquelle l’exécution d’un agent débutera.  
   
--   **@active_start_date** - le premier jour où la planification de l'agent sera appliquée.  
+-   **\@active_start_date** : premier jour où la planification de l’agent sera appliquée.  
   
--   **@active_end_date** - le dernier jour où la planification de l'agent sera appliquée.  
+-   **\@active_end_date** : dernier jour où la planification de l’agent sera appliquée.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>Pour définir la planification de synchronisation pour un abonnement par extraction à une publication transactionnelle  
   
 1.  Créez un abonnement par extraction à une publication transactionnelle. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  Sur l’Abonné, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **@publisher** , de **@publisher_db** , de **@publication** et les informations d'identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_name** et **@password** . Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de distribution qui synchronise l'abonnement.  
+2.  Sur l’Abonné, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **\@publisher**, **\@publisher_db**, **\@publication** et les informations d’identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l’Agent de distribution s’exécute sur l’Abonné pour **\@job_name** et **\@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de distribution qui synchronise l'abonnement.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>Pour définir la planification de synchronisation pour un abonnement par émission de données à une publication transactionnelle  
   
 1.  Créez un abonnement par émission de données à une publication transactionnelle. Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  Sur l’Abonné, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez **@subscriber** , de **@subscriber_db** , de **@publication** et les informations d'identification Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_name** et **@password** . Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de distribution qui synchronise l'abonnement.  
+2.  Sur l’Abonné, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez **\@subscriber**, **\@subscriber_db**, **\@publication** et les informations d’identification Windows sous lesquelles l’Agent de distribution s’exécute sur l’Abonné pour **\@job_name** et **\@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de distribution qui synchronise l'abonnement.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>Pour définir la planification de synchronisation pour un abonnement par extraction à une publication de fusion  
   
 1.  Créez un abonnement par extraction à une publication de fusion Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  Sur l'Abonné, exécutez [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **@publisher** , de **@publisher_db** , de **@publication** et les informations d'identification Windows sous lesquelles l'Agent de fusion s'exécute sur l'Abonné pour **@job_name** et **@password** . Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de fusion qui synchronise l'abonnement.  
+2.  Sur l'Abonné, exécutez [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **\@publisher**, **\@publisher_db**, **\@publication** et les informations d’identification Windows sous lesquelles l’Agent de fusion s’exécute sur l’Abonné pour **\@job_name** et **\@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de fusion qui synchronise l'abonnement.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>Pour définir la planification de synchronisation pour un abonnement par émission de données à une publication de fusion  
   
 1.  Créez un abonnement par émission de données à une publication de fusion. Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  Sur l'Abonné, exécutez [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Spécifiez **@subscriber** , de **@subscriber_db** , de **@publication** et les informations d'identification Windows sous lesquelles l'Agent de fusion s'exécute sur l'Abonné pour **@job_name** et **@password** . Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de fusion qui synchronise l'abonnement.  
+2.  Sur l'Abonné, exécutez [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Spécifiez **\@subscriber**, **\@subscriber_db**, **\@publication** et les informations d’identification Windows sous lesquelles l’Agent de fusion s’exécute sur l’Abonné pour **\@job_name** et **\@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de fusion qui synchronise l'abonnement.  
   
 ##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  La réplication utilise l'Agent SQL Server pour planifier des travaux pour les activités qui se produisent périodiquement, telles que la génération d'instantanés et la synchronisation d'abonnements. Vous pouvez utiliser les Replication Management Objects par programme pour spécifier des planifications pour les travaux des agents de réplication.  

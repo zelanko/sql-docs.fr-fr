@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046583"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768466"
 ---
 # <a name="replication-agent-security-model"></a>Modèle de sécurité de l'Agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le modèle de sécurité de l’agent de réplication permet un contrôle fin des comptes sous lesquels les agents de réplication s’exécutent et établissent des connexions : un compte distinct peut être spécifié pour chaque agent. Pour plus d’informations sur la manière de spécifier des comptes, consultez [Identité et contrôle d’accès pour la réplication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+
+Le modèle de sécurité de l’agent de réplication est un peu différent pour les instances managées Azure SQL Database, car il n’y a aucun compte Windows sous lequel les agents s’exécuteront. Au lieu de cela, tout doit être effectué par le biais de l’authentification SQL Server. 
   
 > [!IMPORTANT]  
 >  Lorsqu'un membre du rôle serveur fixe **sysadmin** configure la réplication, les agents de réplication peuvent être configurés pour emprunter l'identité du compte de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il suffit de ne pas spécifier de nom de connexion et de mot de passe pour un Agent de réplication ; toutefois, cette méthode n'est pas recommandée. Pour des raisons de sécurité, il est plutôt recommandé de spécifier un compte pour chaque agent, disposant des autorisations minimales décrites dans la section « Autorisations requises par les agents » plus loin dans cette rubrique.  
