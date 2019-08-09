@@ -1,7 +1,7 @@
 ---
 title: Configurer Kubernetes avec kubeadm
 titleSuffix: SQL Server big data clusters
-description: Découvrez comment configurer Kubernetes sur plusieurs ordinateurs Ubuntu 16,04 ou 18,04 (physique ou virtuel) pour les déploiements SQL Server 2019 Big Data cluster (version préliminaire).
+description: Découvrez comment configurer Kubernetes sur plusieurs machines (physiques ou virtuelles) Ubuntu 16.04 ou 18.04 pour les déploiements sur un cluster Big Data SQL Server 2019 (préversion).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,58 +9,59 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea79503869e7d403e4d3f4f960de9c95760eda0f
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419448"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661364"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs ordinateurs pour SQL Server les déploiements de cluster Big Data
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs machines pour les déploiements de cluster Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article fournit un exemple d’utilisation de **kubeadm** pour configurer Kubernetes sur plusieurs ordinateurs pour les déploiements de cluster SQL Server 2019 Big Data (version préliminaire). Dans cet exemple, plusieurs machines Ubuntu 16,04 ou 18,04 LTS (physique ou virtuel) sont la cible. Si vous effectuez un déploiement sur une autre plateforme Linux, vous devez modifier certaines des commandes pour qu’elles correspondent à votre système.  
+Cet article fournit un exemple d’utilisation de **kubeadm** permettant de configurer Kubernetes sur plusieurs machines pour les déploiements de cluster Big Data SQL Server 2019 (préversion). Dans cet exemple, plusieurs machines Ubuntu 16.04 ou 18.04 LTS (physiques ou virtuelles) représentent la cible. Si vous effectuez le déploiement sur une autre plateforme Linux, vous devez changer certaines commandes pour qu’elles correspondent à votre système.  
 
 > [!TIP] 
-> Pour obtenir des exemples de scripts qui configurent Kubernetes, consultez [créer un cluster Kubernetes à l’aide de Kubeadm sur Ubuntu 16,04 LTS ou 18,04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
+> Pour obtenir des exemples de scripts de configuration de Kubernetes, consultez [Créer un cluster Kubernetes à l’aide de Kubeadm sur Ubuntu 16.04 LTS ou 18.04 LTS.](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)
+Consultez également [cette](deployment-script-single-node-kubeadm.md) rubrique pour obtenir un exemple de script qui automatise le déploiement d’un seul nœud kubeadm sur une machine virtuelle, puis déploie une configuration par défaut du cluster Big Data par-dessus.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Au minimum 3 machines physiques Linux ou machines virtuelles
-- Configuration recommandée par ordinateur:
-   - 8 UC
-   - 64 Go de mémoire
-   - 100 Go de stockage
+- Au minimum, 3 machines physiques ou machines virtuelles Linux
+- Configuration recommandée par machine :
+   - 8 CPU
+   - 64 Go de mémoire
+   - 100 Go de stockage
 
 ## <a name="prepare-the-machines"></a>Préparer les machines
 
-Sur chaque ordinateur, plusieurs conditions préalables sont requises. Dans un terminal bash, exécutez les commandes suivantes sur chaque ordinateur:
+Sur chaque machine, plusieurs prérequis doivent être remplis. Dans un terminal Bash, exécutez les commandes suivantes sur chaque machine :
 
-1. Ajoutez l’ordinateur actuel au `/etc/hosts` fichier:
+1. Ajoutez la machine actuelle au fichier `/etc/hosts` :
 
    ```bash
    echo $(hostname -i) $(hostname) | sudo tee -a /etc/hosts
    ```
 
-1. Désactivez l’échange sur tous les appareils.
+1. Désactivez l’échange de mémoire sur tous les appareils.
 
    ```bash
    sudo sed -i "/ swap / s/^/#/" /etc/fstab
    sudo swapoff -a
    ```
 
-1. Importez les clés et enregistrez le référentiel pour Kubernetes.
+1. Importez les clés et inscrivez le dépôt pour Kubernetes.
 
    ```bash
    sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
    echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
    ```
 
-1. Configurez les conditions préalables de dockr et Kubernetes sur l’ordinateur.
+1. Configurez les prérequis de Docker et Kubernetes sur la machine.
 
    ```bash
-   KUBE_DPKG_VERSION=1.11.3-00
+   KUBE_DPKG_VERSION=1.15.0-00
    sudo apt-get update && /
    sudo apt-get install -y ebtables ethtool && /
    sudo apt-get install -y docker.io && /
@@ -69,7 +70,7 @@ Sur chaque ordinateur, plusieurs conditions préalables sont requises. Dans un t
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
    ```
  
-1. Définissez `net.bridge.bridge-nf-call-iptables=1`. Sur Ubuntu 18,04, les commandes suivantes activent `br_netfilter`d’abord.
+1. Définissez `net.bridge.bridge-nf-call-iptables=1`. Sur Ubuntu 18.04, les commandes suivantes activent d’abord `br_netfilter`.
 
    ```bash
    . /etc/os-release
@@ -79,9 +80,9 @@ Sur chaque ordinateur, plusieurs conditions préalables sont requises. Dans un t
 
 ## <a name="configure-the-kubernetes-master"></a>Configurer le maître Kubernetes
 
-Après avoir exécuté les commandes précédentes sur chaque ordinateur, choisissez l’une des machines à utiliser comme maître Kubernetes. Exécutez ensuite les commandes suivantes sur cet ordinateur.
+Après avoir exécuté les commandes précédentes sur chaque machine, choisissez l’une des machines à utiliser comme maître Kubernetes. Exécutez ensuite les commandes suivantes sur cette machine.
 
-1. Tout d’abord, créez un fichier RBAC. YAML dans votre répertoire actuel à l’aide de la commande suivante. 
+1. Commencez par créer un fichier rbac.yaml dans votre répertoire actif à l’aide de la commande suivante. 
 
    ```bash
    cat <<EOF > rbac.yaml
@@ -100,18 +101,18 @@ Après avoir exécuté les commandes précédentes sur chaque ordinateur, choisi
    EOF
    ```
 
-1. Initialisez le maître Kubernetes sur cet ordinateur. Vous devez voir une sortie indiquant que le maître Kubernetes a été initialisé avec succès.
+1. Initialisez le maître Kubernetes sur cette machine. Vous devez voir une sortie indiquant que le maître Kubernetes a été initialisé correctement.
 
    ```bash
    KUBE_VERSION=1.11.3
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
 
-1. Notez la `kubeadm join` commande que vous devez utiliser sur les autres serveurs pour rejoindre le cluster Kubernetes. Copiez ceci pour une utilisation ultérieure.
+1. Notez la commande `kubeadm join` à utiliser sur les autres serveurs pour rejoindre le cluster Kubernetes. Copiez ceci pour l’utiliser plus tard.
 
-   ![kubeadm Join](./media/deploy-with-kubeadm/kubeadm-join.png)
+   ![kubeadm join](./media/deploy-with-kubeadm/kubeadm-join.png)
 
-1. Configurez un fichier de configuration Kubernetes dans votre répertoire de départ.
+1. Créez un fichier config Kubernetes dans votre répertoire de base.
 
    ```bash
    mkdir -p $HOME/.kube
@@ -131,15 +132,15 @@ Après avoir exécuté les commandes précédentes sur chaque ordinateur, choisi
 
 ## <a name="configure-the-kubernetes-agents"></a>Configurer les agents Kubernetes
 
-Les autres machines agiront en tant qu’agents Kubernetes dans le cluster. 
+Les autres machines servent d’agents Kubernetes dans le cluster. 
 
-Sur chaque autre machine, exécutez la `kubeadm join` commande que vous avez copiée dans la section précédente.
+Sur chacune des autres machines, exécutez la commande `kubeadm join` que vous avez copiée à la section précédente.
 
-![agents de jointure kubeadm](./media/deploy-with-kubeadm/kubeadm-join-agents.png)
+![kubeadm join sur les agents](./media/deploy-with-kubeadm/kubeadm-join-agents.png)
 
-## <a name="view-the-cluster-status"></a>Afficher l’état du cluster
+## <a name="view-the-cluster-status"></a>Voir l’état du cluster
 
-Pour vérifier la connexion à votre cluster, utilisez la commande [kubectl obtenir](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) pour retourner une liste des nœuds de cluster.
+Pour vérifier la connexion à votre cluster, utilisez la commande [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) pour retourner une liste des nœuds de cluster.
 
 ```bash
 kubectl get nodes
@@ -147,6 +148,6 @@ kubectl get nodes
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les étapes décrites dans cet article configurent un cluster Kubernetes sur plusieurs ordinateurs Ubuntu. L’étape suivante consiste à déployer le cluster SQL Server 2019 Big Data. Pour obtenir des instructions, consultez l’article suivant:
+Les étapes décrites dans cet article ont permis de configurer un cluster Kubernetes sur plusieurs machines Ubuntu. L’étape suivante consiste à déployer le cluster Big Data SQL Server 2019. Pour obtenir des instructions, consultez l’article suivant :
 
 [Déployer SQL Server sur Kubernetes](deployment-guidance.md#deploy)
