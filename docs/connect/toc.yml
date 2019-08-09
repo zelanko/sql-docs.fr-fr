@@ -2373,12 +2373,16 @@
       items:
         - name: Télécharger Microsoft JDBC Driver pour SQL Server
           href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: Analyse des résultats
+          href: ../connect/jdbc/parsing-the-results.md
         - name: Notes de publication pour le pilote JDBC
           href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
         - name: Configuration requise pour le pilote JDBC
           href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
         - name: Utilisation du pilote JDBC
           href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: Utilisation d’useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
         - name: Fonctionnement de la prise en charge Java EE
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: Déploiement du pilote JDBC
@@ -2538,6 +2542,8 @@
               href: ../connect/jdbc/understanding-data-type-differences.md
             - name: Utilisation de plusieurs jeux de résultats
               href: ../connect/jdbc/using-multiple-result-sets.md
+            - name: Utilisation de l’authentification NTLM
+              href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
             - name: Utilisation de la fonctionnalité de mise en attente
               href: ../connect/jdbc/using-holdability.md
             - name: Connexion avec l’authentification Azure Active Directory
