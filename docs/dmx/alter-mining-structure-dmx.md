@@ -1,5 +1,5 @@
 ---
-title: MODIFIER LA STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Microsoft Docs
+title: ALTER MINING STRUCTURE (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913841"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889865"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crée un modèle d'exploration de données sur la base d'une structure d'exploration de données existante.  Lorsque vous utilisez le **ALTER MINING STRUCTURE** instruction pour créer un nouveau modèle d’exploration de données, la structure doit déjà exister. En revanche, lorsque vous utilisez l’instruction, [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), vous créez un modèle et générer automatiquement sa structure d’exploration de données sous-jacente en même temps.  
+  Crée un modèle d'exploration de données sur la base d'une structure d'exploration de données existante.  Lorsque vous utilisez l’instruction **ALTER Mining structure** pour créer un nouveau modèle d’exploration de données, la structure doit déjà exister. En revanche, lorsque vous utilisez l’instruction [Create Mining Model &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), vous créez un modèle et générez automatiquement sa structure d’exploration de données sous-jacente en même temps.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +42,20 @@ USING <algorithm> [(<parameter list>)]
  *model*  
  Nom unique du modèle d'exploration de données.  
   
- *liste des définitions de colonne*  
+ *liste de définitions de colonnes*  
  Liste des définitions de colonnes séparées par des virgules.  
   
- *liste des définitions de colonne imbriquée*  
+ *liste de définitions de colonnes imbriquées*  
  Liste séparée par des virgules de colonnes d'une table imbriquée (le cas échéant).  
   
- *critères de filtre imbriquée*  
+ *critères de filtre imbriqués*  
  Expression de filtre appliquée aux colonnes dans une table imbriquée.  
   
  *algorithm*  
  Nom d'un algorithme d'exploration de données, tel que défini par le fournisseur.  
   
 > [!NOTE]  
->  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [de lignes DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consultez [propriétés d’exploration de données](../analysis-services/server-properties/data-mining-properties.md).  
+>  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de l' [ensemble de lignes DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Pour afficher les algorithmes pris en charge dans l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]actuelle de, consultez [propriétés d’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *liste de paramètres*  
  facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
@@ -68,13 +68,13 @@ USING <algorithm> [(<parameter list>)]
   
  Si le modèle ne requiert pas de colonne prédictible, par exemple les modèles qui sont générés à l'aide de l'algorithme de gestion de clusters [!INCLUDE[msCoName](../includes/msconame-md.md)] et de l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering), il n'est pas nécessaire d'inclure une définition de colonne dans l'instruction. Tous les attributs figurant dans le modèle obtenu seront considérés comme des entrées.  
   
- Dans le **WITH** clause qui s’applique à la table de cas, vous pouvez spécifier des options de filtrage et de l’extraction :  
+ Dans la clause **with** qui s’applique à la table de cas, vous pouvez spécifier des options pour le filtrage et l’extraction:  
   
--   Ajouter le **filtre** mot clé et une condition de filtre. Le filtre s'applique aux cas dans le modèle d'exploration de données.  
+-   Ajoutez le mot clé **Filter** et une condition de filtre. Le filtre s'applique aux cas dans le modèle d'exploration de données.  
   
--   Ajouter le **extraction** mot clé pour permettre aux utilisateurs du modèle d’exploration de données d’Explorer les résultats de modèle pour les données de cas. Dans les extensions DMX (Data Mining Extensions), l'extraction ne peut être activée que lors de la création du modèle.  
+-   Ajoutez le mot clé **Drillthrough** pour permettre aux utilisateurs du modèle d’exploration de données d’accéder aux données de cas à partir des résultats du modèle. Dans les extensions DMX (Data Mining Extensions), l'extraction ne peut être activée que lors de la création du modèle.  
   
- Pour utiliser les cas de filtrage et l’extraction, vous combinez les mots clés dans un seul **WITH** clause à l’aide de la syntaxe indiquée dans l’exemple suivant :  
+ Pour utiliser à la fois le filtrage et l’extraction de cas, vous associez les mots clés dans une clause **with** unique à l’aide de la syntaxe indiquée dans l’exemple suivant:  
   
  `WITH DRILLTHROUGH, FILTER(Gender = 'Male')`  
   
@@ -87,7 +87,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   Indicateurs de modélisation  
   
--   Requête de prédiction, qui indique à l’algorithme si la colonne contient une valeur prévisible, indiquée par le **PREDICT** ou **PREDICT_ONLY** clause  
+-   Demande de prédiction, qui indique à l’algorithme si la colonne contient une valeur prévisible, indiquée par la clause **Predict** ou **PREDICT_ONLY**  
   
  Utilisez la syntaxe suivante pour la liste de définitions de colonnes pour définir une seule colonne :  
   
@@ -96,9 +96,9 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>Nom de colonne et alias  
- Le nom de colonne que vous utilisez dans la liste de définitions de colonnes doit être identique à celui utilisé dans la structure d'exploration de données. Toutefois, vous pouvez éventuellement définir un alias pour représenter la colonne de structure dans le modèle d'exploration de données. Vous pouvez également créer plusieurs définitions de colonne pour la même colonne de structure et attribuer un alias et une utilisation de prédiction différents à chaque copie de la colonne. Par défaut, le nom de la colonne de structure est utilisé si vous ne définissez pas d'alias. Pour plus d’informations, consultez [créer un Alias pour une colonne de modèle](../analysis-services/data-mining/create-an-alias-for-a-model-column.md).  
+ Le nom de colonne que vous utilisez dans la liste de définitions de colonnes doit être identique à celui utilisé dans la structure d'exploration de données. Toutefois, vous pouvez éventuellement définir un alias pour représenter la colonne de structure dans le modèle d'exploration de données. Vous pouvez également créer plusieurs définitions de colonne pour la même colonne de structure et attribuer un alias et une utilisation de prédiction différents à chaque copie de la colonne. Par défaut, le nom de la colonne de structure est utilisé si vous ne définissez pas d'alias. Pour plus d’informations, consultez [créer un alias pour une colonne de modèle](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column).  
   
- Pour les colonnes de table imbriquée, vous spécifiez le nom de la table imbriquée, spécifiez le type de données **TABLE**, puis indiquez la liste des colonnes imbriquées à inclure dans le modèle, placé entre parenthèses.  
+ Pour les colonnes de table imbriquée, vous spécifiez le nom de la table imbriquée, vous spécifiez le type de données **table**, puis vous fournissez la liste des colonnes imbriquées à inclure dans le modèle, placées entre parenthèses.  
   
  Vous pouvez définir une expression de filtre appliquée à la table imbriquée en apposant une expression de critères de filtre après la définition de la colonne de table imbriquée.  
   
@@ -114,7 +114,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|Indique que l'algorithme peut utiliser la colonne spécifiée dans la formule de régression des algorithmes de régression.|  
 |**MODEL_EXISTENCE_ONLY**|Indique que les valeurs de la colonne d'attribut sont moins importantes que la présence de l'attribut.|  
   
- Vous pouvez définir plusieurs indicateurs de modélisation pour une colonne. Pour plus d’informations sur l’utilisation des indicateurs de modélisation, consultez [indicateurs de modélisation &#40;DMX&#41;](../dmx/modeling-flags-dmx.md).  
+ Vous pouvez définir plusieurs indicateurs de modélisation pour une colonne. Pour plus d’informations sur l’utilisation des indicateurs de modélisation, consultez [ &#40;indicateurs&#41;de modélisation DMX](../dmx/modeling-flags-dmx.md).  
   
 ### <a name="prediction-clause"></a>Clause de prédiction  
  La clause de prédiction décrit de quelle manière la colonne de prédiction est utilisée. Le tableau suivant répertorie les clauses possibles.  
@@ -127,17 +127,17 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>Expressions de critères de filtre  
  Vous pouvez définir un filtre qui restreint les cas utilisés dans le modèle d'exploration de données. Le filtre peut être appliqué aux colonnes dans la table de cas ou aux lignes dans la table imbriquée, ou bien aux deux à la fois.  
   
- Les expressions de critères de filtre sont des prédicats DMX simplifiées, semblables à une clause WHERE. Les expressions de filtre se limitent à des formules qui utilisent des opérateurs mathématiques de base, des scalaires et des noms de colonne. L'opérateur EXISTS fait figure d'exception, car il prend la valeur True si au moins une ligne est retournée pour la sous-requête. Les prédicats peuvent être combinées à l’aide des opérateurs logiques courantes : AND, OR et pas.  
+ Les expressions de critères de filtre sont des prédicats DMX simplifiées, semblables à une clause WHERE. Les expressions de filtre se limitent à des formules qui utilisent des opérateurs mathématiques de base, des scalaires et des noms de colonne. L'opérateur EXISTS fait figure d'exception, car il prend la valeur True si au moins une ligne est retournée pour la sous-requête. Les prédicats peuvent être combinés à l’aide des opérateurs logiques communs: AND, OR et NOT.  
   
- Pour plus d’informations sur les filtres utilisés avec les modèles d’exploration de données, consultez [filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Pour plus d’informations sur les filtres utilisés avec les modèles d’exploration de [données &#40;, consultez filtres pour&#41;les modèles d’exploration de données Analysis Services-exploration de données](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  Les colonnes dans un filtre doivent être des colonnes de structure d'exploration de données. Vous ne pouvez pas créer de filtre sur une colonne de modèle ou une colonne en tant qu'alias.  
   
- Pour plus d’informations sur la syntaxe et les opérateurs DMX, consultez [colonnes du modèle d’exploration de données](../analysis-services/data-mining/mining-model-columns.md).  
+ Pour plus d’informations sur les opérateurs DMX et la syntaxe, consultez [colonnes du modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Liste des définitions des paramètres  
- Vous pouvez ajuster les performances et la fonctionnalité d'un modèle en ajoutant des paramètres d'algorithme à la liste des paramètres. Les paramètres que vous pouvez utiliser dépendent de l'algorithme que vous spécifiez dans la clause USING. Pour obtenir la liste de paramètres qui sont associés à chaque algorithme, consultez [algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Vous pouvez ajuster les performances et la fonctionnalité d'un modèle en ajoutant des paramètres d'algorithme à la liste des paramètres. Les paramètres que vous pouvez utiliser dépendent de l'algorithme que vous spécifiez dans la clause USING. Pour obtenir la liste des paramètres associés à chaque algorithme, consultez [algorithmes d’exploration &#40;de données Analysis Services-&#41;exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  La syntaxe de la liste des paramètres est la suivante :  
   
@@ -145,8 +145,8 @@ USING <algorithm> [(<parameter list>)]
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>Exemple 1 : Ajouter un modèle à une Structure  
- L’exemple suivant ajoute un modèle d’exploration de données Naive Bayes à la **New Mailing** structure d’exploration et les limites du nombre maximal d’attribut États à 50.  
+## <a name="example-1-add-a-model-to-a-structure"></a>Exemple 1 : Ajouter un modèle à une structure  
+ L’exemple suivant ajoute un modèle d’exploration de données Naive Bayes à la nouvelle structure d’exploration de données de **publipostage** et limite le nombre maximal d’États d’attribut à 50.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -160,8 +160,8 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Exemple 2 : Ajouter un modèle filtré à une Structure  
- L’exemple suivant ajoute un modèle d’exploration de données, `Naive Bayes Women`, à la **New Mailing** structure d’exploration de données. Le nouveau modèle a la même structure de base que le modèle d'exploration de données ajouté dans l'exemple 1, à la différence près que ce modèle restreint les cas de la structure d'exploration de données aux clients qui sont des femmes de plus de 50 ans.  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Exemple 2 : Ajouter un modèle filtré à une structure  
+ L’exemple suivant ajoute un modèle d’exploration `Naive Bayes Women`de données,, à la nouvelle structure d’exploration de données de **publipostage** . Le nouveau modèle a la même structure de base que le modèle d'exploration de données ajouté dans l'exemple 1, à la différence près que ce modèle restreint les cas de la structure d'exploration de données aux clients qui sont des femmes de plus de 50 ans.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -176,8 +176,8 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemple 3 : Ajouter un modèle filtré à une Structure avec une Table imbriquée  
- L'exemple suivant ajoute un modèle d'exploration de données à une version modifiée de la structure d'exploration de données du panier d'achat. La structure d’exploration de données utilisée dans l’exemple a été modifiée pour ajouter un **région** colonne qui contient les attributs pour la région du client, et un **Income Group** colonne, qui classe le revenu du client à l’aide de les valeurs **haute**, **modéré**, ou **faible**.  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemple 3: Ajouter un modèle filtré à une structure avec une table imbriquée  
+ L'exemple suivant ajoute un modèle d'exploration de données à une version modifiée de la structure d'exploration de données du panier d'achat. La structure d’exploration de données utilisée dans l’exemple a été modifiée pour ajouter une colonne **Region** , qui contient les attributs de la région Customer et une colonne **Group revenu** , qui classe les revenus des clients en utilisant les valeurs **High**, **modéré** ou **faible**.  
   
  La structure d'exploration de données inclut également une table imbriquée qui répertorie les articles que le client a achetés.  
   
@@ -201,8 +201,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Instructions de définition &#40;de&#41; données DMX dans Data Mining Extensions](../dmx/dmx-statements-data-definition.md)   
+ [Instructions de manipulation &#40;de&#41; données DMX des extensions d’exploration de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047159"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892947"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -33,20 +33,20 @@ Set_Expression1 * Set_Expression2 [* ...n]
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression1*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Set_Expression2*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Le **Crossjoin** fonction retourne le produit croisé de deux ou plusieurs jeux spécifiés. L'ordre des tuples dans le jeu résultant dépend de l'ordre des jeux à joindre et de l'ordre de leurs membres. Par exemple, si le premier jeu est composé de {x1, x2,..., x*n*}, et le deuxième jeu est composé de {y1, y2,..., y*n*}, le produit croisé de ces jeux est :  
+ La fonction **CrossJoin** retourne le produit croisé de deux ou plusieurs jeux spécifiés. L'ordre des tuples dans le jeu résultant dépend de l'ordre des jeux à joindre et de l'ordre de leurs membres. Par exemple, lorsque le premier jeu est composé de {x1, x2,..., x*n*} et que le deuxième jeu est {Y1, Y2,..., y*n*}, le produit croisé de ces jeux est le suivant:  
   
- {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1, Y1), (x1, Y2),..., (x1, y*n*), (x2, Y1), (x2, y2),...,  
   
- (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
+ (x2, y*n*),..., (x*n*, Y1), (x*n*, Y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  Si les jeux dans la jointure croisée se composent de tuples issus de différentes hiérarchies d'attribut au sein de la même dimension, cette fonction retourne uniquement les tuples réellement existants. Pour plus d’informations, consultez [Concepts clés dans MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+>  Si les jeux dans la jointure croisée se composent de tuples issus de différentes hiérarchies d'attribut au sein de la même dimension, cette fonction retourne uniquement les tuples réellement existants. Pour plus d’informations, consultez [concepts clés dans &#40;MDX&#41;Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## <a name="examples"></a>Exemples  
  La requête suivante affiche des exemples simples de l'utilisation de la fonction Crossjoin sur les axes de colonnes et de lignes d'une requête :  

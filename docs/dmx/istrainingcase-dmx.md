@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4a2dad29a3a1b0ca5fdae12b11b190fd7e59380f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23f36181d0ee4902f56aa4acb8163f7f43af8b31
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937685"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889023"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ IsTrainingCase()
 ```  
   
 ## <a name="result-type"></a>Type de résultat  
- Retourne **true** si le cas fait partie du jeu de données d’apprentissage ; sinon **false**.  
+ Retourne la **valeur true** si le cas fait partie du jeu de données d’apprentissage; sinon, false.  
   
 ## <a name="remarks"></a>Notes  
  Si vous utilisez l'Assistant Exploration de données pour créer une structure d'exploration de données et un modèle d'exploration de données connexe, 30 % des cas sont, par défaut, réservés pour une utilisation en tant que jeu de données de test. Les cas restants de la source de données que vous spécifiez sont utilisés pour l'apprentissage du modèle. Toutefois, si vous utilisez DMX (Data Mining Extensions) pour créer le modèle d'exploration de données, toutes les données sont, par défaut, utilisées pour l'apprentissage du modèle, et aucun jeu de test n'est créé. Pour permettre la création d'un jeu de données de test, vous devez définir les paramètres de la clause WITH HOLDOUT.  
@@ -36,12 +36,12 @@ IsTrainingCase()
  Vous pouvez déterminer si les données d'une structure d'exploration de données particulière ont été partitionnées en jeux de test et d'apprentissage en consultant la valeur des propriétés <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> et <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
   
 > [!NOTE]  
->  Extraction doit être activée sur le modèle si vous souhaitez utiliser les fonctions IsTrainingCase ou IsTestCase pour retourner des détails sur les cas dans le modèle. Pour plus d’informations, consultez [Activer l’extraction pour un modèle d’exploration de données](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
+>  L’extraction doit être activée sur le modèle si vous souhaitez utiliser les fonctions IsTrainingCase ou IsTestCase pour retourner des détails sur les cas dans le modèle. Pour plus d’informations, consultez [Activer l’extraction pour un modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
- Pour retourner les cas qui font partie du jeu de données de test, utilisez la fonction [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
+ Pour retourner les cas qui font partie du jeu de données de test, utilisez [la &#40;fonction&#41;IsTestCase DMX](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise le modèle d’exploration de données clustering à partir d’un scénario de publipostage ciblé dans le [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne uniquement les cas qui sont utilisés pour l'apprentissage du modèle d'exploration de données. De plus, les cas d'apprentissage sont limités aux clients âgés de moins de 40 ans.  
+ L’exemple suivant utilise le modèle d’exploration de données de clustering du scénario de publipostage ciblé dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne uniquement les cas qui sont utilisés pour l'apprentissage du modèle d'exploration de données. De plus, les cas d'apprentissage sont limités aux clients âgés de moins de 40 ans.  
   
 ```  
 SELECT *  
@@ -50,11 +50,11 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- Pour obtenir des exemples d’interrogation des cas utilisés dans l’exploration de données, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) et [SELECT FROM &#60;structure&#62;. CAS](../dmx/select-from-structure-cases.md).  
+ Pour obtenir d’autres exemples d’interrogation des cas utilisés dans l’exploration de données, consultez [Select from &#60;Model&#62;. Les &#40;cas&#41; DMX](../dmx/select-from-model-cases-dmx.md) et sélectionnent la [ &#60;structure&#62;. CAS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Apprentissage et jeux de données de test](../analysis-services/data-mining/training-and-testing-data-sets.md)   
+ [Jeux de données d’apprentissage et de test](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
  [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Requêtes d’exploration de données](../analysis-services/data-mining/data-mining-queries.md)  
+ [Requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
   
   

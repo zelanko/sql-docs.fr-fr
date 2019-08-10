@@ -1,5 +1,5 @@
 ---
-title: Installer Analysis Services multidimensionnel et en Mode d’exploration de données | Microsoft Docs
+title: Installer Analysis Services en mode multidimensionnel et d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 8843131bfefd3d11e1f3b5509c2375235f8bf2f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094620"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890373"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installer Analysis Services en mode multidimensionnel et exploration de données
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : fournit des fonctionnalités OLAP et d'exploration de données pour les applications de décisionnel. Dans cette version, la prise en charge pour les bases de données OLAP et des modèles d’exploration de données est disponible lorsque vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans *mode multidimensionnel*. Le mode multidimensionnel est l'un des trois modes serveur dans lequel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute. Il s'agit du mode par défaut. Si vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec les valeurs par défaut, vous obtiendrez une instance qui exécute des bases de données multidimensionnelles et des modèles d'exploration de données multidimensionnelles.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : fournit des fonctionnalités OLAP et d'exploration de données pour les applications de décisionnel. Dans cette version, la prise en charge des bases de données OLAP et des modèles d’exploration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de données est disponible lorsque vous installez en *mode multidimensionnel*. Le mode multidimensionnel est l'un des trois modes serveur dans lequel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute. Il s'agit du mode par défaut. Si vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec les valeurs par défaut, vous obtiendrez une instance qui exécute des bases de données multidimensionnelles et des modèles d'exploration de données multidimensionnelles.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est un composant multi-instance, ce qui signifie que vous pouvez installer plusieurs instances d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur un même ordinateur ou exécuter une nouvelle instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] côte à côte avec une version antérieure. Le mode serveur est spécifique à une instance. L'utilisation d'autres modes requiert l'installation d'instances supplémentaires du serveur.  
   
- Vous pouvez installer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tout seul ou avec d'autres composants. Si vous installez simplement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les fonctionnalités suivantes sont installées lorsque vous sélectionnez **Analysis Services** dans la page Sélection des fonctionnalités de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation :  
+ Vous pouvez installer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tout seul ou avec d'autres composants. Si vous installez uniquement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les fonctionnalités suivantes sont installées lorsque vous sélectionnez **Analysis Services** sur la page sélection de fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’Assistant Installation de:  
   
 -   Serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour l'exécution des bases de données et modèles d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66094620"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilisé pour créer et visionner des structures de données Analysis Services et des modèles d’exploration de données.  
   
--   Composants connectivité des outils client utilisé pour la communication entre les clients et serveurs, notamment les bibliothèques réseau pour DB-Library, ODBC et OLE DB.  
+-   Composants de connectivité des outils clients, utilisés pour la communication entre les clients et les serveurs, y compris les bibliothèques réseau pour DB-Library, ODBC et OLE DB.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],  un ensemble d'objets graphiques et programmables permettant de déplacer, copier et transformer des données.  
   
@@ -52,19 +52,19 @@ ms.locfileid: "66094620"
   
 |Liens|Tâches|  
 |-----------|-----------|  
-|[Matérielle et logicielle requise pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) et [configurer les comptes de Service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Avant d'exécuter le programme d'installation, vérifier la configuration requise pour l'installation d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et déterminer le compte à utiliser pour configurer le serveur.|  
-|[Installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Exécuter le programme d'installation de SQL Server pour installer le logiciel.|  
-|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Une fois l'installation terminée, vous devez configurer les paramètres de pare-feu de façon à autoriser les connexions à distance au serveur.|  
-|[Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|Les utilisateurs qui accèdent aux bases de données Analysis Services doivent avoir l'autorisation de lecture d'au moins une base de données sur le serveur.|  
+|[Configurations matérielle et logicielle requises pour installer SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) et [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Avant d'exécuter le programme d'installation, vérifier la configuration requise pour l'installation d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et déterminer le compte à utiliser pour configurer le serveur.|  
+|[Installez SQL Server 2014 à partir de l' &#40;installation&#41;de l’Assistant Installation](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Exécuter le programme d'installation de SQL Server pour installer le logiciel.|  
+|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Une fois l'installation terminée, vous devez configurer les paramètres de pare-feu de façon à autoriser les connexions à distance au serveur.|  
+|[Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services)|Les utilisateurs qui accèdent aux bases de données Analysis Services doivent avoir l'autorisation de lecture d'au moins une base de données sur le serveur.|  
   
 ## <a name="related-content"></a>Contenu associé  
  Vous trouverez des informations supplémentaire sur l'installation dans les rubriques suivantes :  
   
- [Installer Analysis Services en mode tabulaire](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+ [Installer Analysis Services en mode tabulaire](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
  [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
- [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
  [Compléments d’exploration de données SQL Server](https://go.microsoft.com/fwlink/?LinkId=197091)  
   

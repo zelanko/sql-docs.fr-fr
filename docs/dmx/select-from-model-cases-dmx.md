@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modèle&gt;. CAS (DMX) | Microsoft Docs
+title: Sélectionnez à &lt;partir&gt;du modèle. CAS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2fc4a61868114f86a198878f5f54a59f3e96a5b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928430"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892844"
 ---
-# <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modèle&gt;. CAS (DMX)
+# <a name="select-from-ltmodelgtcases-dmx"></a>Sélectionnez à &lt;partir&gt;du modèle. CAS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Prend en charge l'extraction et retourne les cas qui ont été utilisés pour l'apprentissage du modèle. Vous pouvez également retourner des colonnes de structure qui ne sont pas incluses dans le modèle si l'extraction a été activée sur la structure d'exploration de données et sur le modèle d'exploration de données et que vous disposez des autorisations appropriées.  
@@ -25,7 +25,7 @@ ms.locfileid: "67928430"
 > [!NOTE]  
 >  En DMX (Data Mining Extensions), vous ne pouvez activer l'extraction que lors de la création du modèle. Vous pouvez ajouter l'extraction à un modèle existant à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], mais le modèle doit être retraité avant que vous ne puissiez afficher ou interroger les cas.  
   
- Pour plus d’informations sur la façon d’activer l’extraction, consultez [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), et [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Pour plus d’informations sur l’activation de l’extraction, consultez [créer &#40;un&#41;modèle d’exploration de données DMX](../dmx/create-mining-model-dmx.md), [Sélectionner dans &#40;&#41;DMX](../dmx/select-into-dmx.md)et [ALTER Mining structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,16 +54,16 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- Si l'extraction est activée à la fois sur le modèle d'exploration de données et la structure d'exploration de données, les utilisateurs membres d'un rôle qui a des autorisations d'extraction sur le modèle et la structure peuvent accéder aux colonnes de la structure d'exploration de données qui ne sont pas incluses dans le modèle d'exploration de données. Par conséquent, pour protéger les données sensibles ou personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder **AllowDrillthrough** autorisation sur une structure d’exploration de données uniquement lorsque cela est nécessaire.  
+ Si l'extraction est activée à la fois sur le modèle d'exploration de données et la structure d'exploration de données, les utilisateurs membres d'un rôle qui a des autorisations d'extraction sur le modèle et la structure peuvent accéder aux colonnes de la structure d'exploration de données qui ne sont pas incluses dans le modèle d'exploration de données. Par conséquent, pour protéger des données sensibles ou des informations personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder l’autorisation **AllowDrillThrough** sur une structure d’exploration de données uniquement lorsque cela est nécessaire.  
   
- Le [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) fonction peut être utilisée avec des modèles de série chronologique à retourner ou filtrer sur le délai entre chaque cas et la durée initiale.  
+ La [fonction &#40;DMX&#41; lag](../dmx/lag-dmx.md) peut être utilisée avec les modèles de série chronologique pour retourner ou filtrer sur le décalage horaire entre chaque cas et l’heure initiale.  
   
- À l’aide de la [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) fonctionner dans le **où** clause retourne uniquement les cas qui sont associées au nœud qui est spécifié par la colonne NODE_UNIQUE_NAME de l’ensemble de lignes de schéma.  
+ L’utilisation de la fonction [ &#40;&#41; DMX IsInNode](../dmx/isinnode-dmx.md) dans la clause **Where** renvoie uniquement les cas associés au nœud spécifié par la colonne NODE_UNIQUE_NAME de l’ensemble de lignes de schéma.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants sont basés sur la structure d’exploration de données Targeted Mailing, qui est basé sur le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]base de données et ses modèles d’exploration de données associée. Pour plus d’informations, consultez [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Les exemples suivants sont basés sur le publipostage ciblé de la structure d’exploration de données, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]qui est basé sur la base de données et ses modèles d’exploration de données associés. Pour plus d’informations, consultez le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
-### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemple 1 : Extraction des colonnes de Structure et les scénarios de modèle  
+### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemple 1 : Extraction vers les cas de modèle et les colonnes de structure  
  L'exemple suivant retourne les colonnes de tous les cas qui ont été utilisés pour tester le modèle Targeted Mailing. Si la structure d'exploration de données sur laquelle le modèle est construit ne possède pas de jeu de données du test d'exclusion, cette requête retourne 0 cas. Vous pouvez utiliser la liste d'expressions pour retourner uniquement les colonnes dont vous avez besoin.  
   
 ```  
@@ -71,7 +71,7 @@ SELECT * FROM [TM Decision Tree].Cases
 WHERE IsTestCase();  
 ```  
   
-### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Exemple 2 : Extraction des cas d’apprentissage dans un nœud spécifique  
+### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Exemple 2 : Extraction dans les cas d’apprentissage d’un nœud spécifique  
  L'exemple suivant retourne uniquement les cas utilisés pour l'apprentissage de Cluster 2. Le nœud pour Cluster 2 a la valeur '002' pour la colonne NODE_UNIQUE_NAME. L'exemple retourne également une colonne de structure, [Customer Key], qui ne faisait pas partie du modèle d'exploration de données, et fournit l'alias `CustomerID` pour la colonne. Notez que le nom de la colonne de structure est passé en tant que valeur de chaîne ; par conséquent, il doit être entre guillemets, et non entre crochets.  
   
 ```  
@@ -84,12 +84,12 @@ AND IsInNode('002')
  Pour retourner une colonne de structure, les autorisations d'extraction doivent être activées à la fois sur le modèle d'exploration de données et sur la structure d'exploration de données.  
   
 > [!NOTE]  
->  La prise en charge de l'extraction varie selon le type de modèle d'exploration de données. Pour plus d’informations sur les modèles qui prennent en charge l’extraction, consultez [requêtes d’extraction &#40;d’exploration de données&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  La prise en charge de l'extraction varie selon le type de modèle d'exploration de données. Pour plus d’informations sur les modèles qui prennent en charge l’extraction, consultez [exploration &#40;&#41;de données de requêtes d’extraction](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Instructions de définition &#40;de&#41; données DMX dans Data Mining Extensions](../dmx/dmx-statements-data-definition.md)   
+ [Instructions de manipulation &#40;de&#41; données DMX des extensions d’exploration de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

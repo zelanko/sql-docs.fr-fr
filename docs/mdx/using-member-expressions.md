@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’Expressions de membre | Microsoft Docs
+title: Utilisation d’expressions de membre | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097112"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893513"
 ---
 # <a name="using-member-expressions"></a>Utilisation d'expressions de membre
 
@@ -56,10 +56,10 @@ Dimension_Name
   
 ```  
   
- De nombreuses fonctions MDX retournent des membres. Pour obtenir la liste complète, consultez [référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ De nombreuses fonctions MDX retournent des membres. Pour obtenir une liste complète, consultez MDX [Function &#40;Reference&#41; MDX](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Pour plus d’informations sur les noms de membre et les clés de membre, consultez [utilisation de membres, Tuples et jeux &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  Pour plus d’informations sur les noms de membres et les clés de membre, consultez [utilisation de membres, &#40;de&#41;tuples et de paramètres MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

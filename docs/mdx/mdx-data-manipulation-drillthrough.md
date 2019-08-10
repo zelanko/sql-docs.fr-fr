@@ -1,5 +1,5 @@
 ---
-title: L’instruction DRILLTHROUGH (MDX) | Microsoft Docs
+title: Instruction DRILLTHROUGH (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006268"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891205"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulation de données MDX - DRILLTHROUGH
 
@@ -35,23 +35,23 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Unsigned_Integer*  
  Valeur d'entier positif.  
   
- *Instruction MDX SELECT*  
+ *Instruction SELECT MDX*  
  N'importe quelle instruction SELECT MDX (Multidimensional Expressions) valide.  
   
  *Set_of_Attributes_and_Measures*  
  Liste séparée par des virgules d'attributs de dimension et de mesures.  
   
 ## <a name="remarks"></a>Notes  
- L'extraction est une opération au cours de laquelle un utilisateur final sélectionne une cellule unique dans un cube et extrait un ensemble de résultats des données source de cette cellule pour se procurer des informations plus détaillées. Par défaut, un ensemble de résultats obtenus par extraction provient des lignes de la table qui ont été évaluées afin de calculer la valeur de la cellule sélectionnée dans le cube. Pour être en mesure de procéder à une extraction, les utilisateurs finaux doivent disposer de cette fonctionnalité sur leurs applications clientes. Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les résultats sont récupérés directement à partir de stockage MOLAP, sauf si les partitions ROLAP ou dimensions sont interrogées.  
+ L'extraction est une opération au cours de laquelle un utilisateur final sélectionne une cellule unique dans un cube et extrait un ensemble de résultats des données source de cette cellule pour se procurer des informations plus détaillées. Par défaut, un ensemble de résultats obtenus par extraction provient des lignes de la table qui ont été évaluées afin de calculer la valeur de la cellule sélectionnée dans le cube. Pour être en mesure de procéder à une extraction, les utilisateurs finaux doivent disposer de cette fonctionnalité sur leurs applications clientes. Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les résultats sont récupérés directement à partir du stockage MOLAP, à moins que les partitions ou les dimensions ROLAP soient interrogées.  
   
 > [!IMPORTANT]  
 >  La sécurité de l'extraction est basée sur les options de sécurité générales définies dans le cube. Si un utilisateur ne parvient pas à se procurer des données via MDX, l'extraction limite aussi l'utilisateur exactement de la même manière.  
   
- Une instruction MDX spécifie la cellule concernée. La valeur spécifiée par le **MAXROWS** argument indique le nombre maximal de lignes qui doivent être retournées par l’ensemble de lignes obtenu.  
+ Une instruction MDX spécifie la cellule concernée. La valeur spécifiée par l’argument **MaxRows** indique le nombre maximal de lignes qui doivent être retournées par l’ensemble de lignes obtenu.  
   
- Par défaut, le nombre maximal de lignes qui sont retournées est de 10 000 lignes. Cela signifie que si vous laissez **MAXROWS** n’est pas spécifié, vous obtiendrez 10 000 lignes ou moins. Si cette valeur est trop faible pour votre scénario, vous pouvez définir **MAXROWS** sur un nombre plus élevé, tel que `MAXROWS 20000`. Si elle est trop faible globale, vous pouvez augmenter la valeur par défaut en modifiant le **OLAP\Query\DefaultDrillthroughMaxRows** propriété de serveur. Pour plus d’informations sur la modification de cette propriété, consultez [Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Par défaut, le nombre maximal de lignes qui sont retournées est de 10 000 lignes. Cela signifie que si vous ne spécifiez pas **MaxRows** , vous obtiendrez 10 000 lignes ou moins. Si cette valeur est trop faible pour votre scénario, vous pouvez définir **MaxRows** sur un nombre plus élevé, tel `MAXROWS 20000`que. Si elle est trop faible, vous pouvez augmenter la valeur par défaut en modifiant la propriété du serveur **OLAP\Query\DefaultDrillthroughMaxRows** . Pour plus d’informations sur la modification de cette propriété, consultez [Propriétés du serveur dans Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
- Sauf indication contraire, les colonnes retournées incluent tous les attributs de granularité de toutes les dimensions (autres que les dimensions de type plusieurs à plusieurs) associées au groupe de mesures. Les dimensions du cube sont précédées du signe $ afin de distinguer les dimensions et les groupes de mesures. Le **retourner** clause est utilisée pour spécifier les colonnes retournées par la requête d’extraction. Les fonctions suivantes peuvent être appliquées à un seul attribut ou mesure par le **retourner** clause.  
+ Sauf indication contraire, les colonnes retournées incluent tous les attributs de granularité de toutes les dimensions (autres que les dimensions de type plusieurs à plusieurs) associées au groupe de mesures. Les dimensions du cube sont précédées du signe $ afin de distinguer les dimensions et les groupes de mesures. La clause Return est utilisée pour spécifier les colonnes retournées par la requête d’extraction. Les fonctions suivantes peuvent être appliquées à un seul attribut ou mesure par la clause Return.  
   
  Name(attribute_name)  
  Retourne le nom du membre d'attribut spécifié.  
@@ -97,6 +97,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Instructions &#40;MDX de manipulation de données MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

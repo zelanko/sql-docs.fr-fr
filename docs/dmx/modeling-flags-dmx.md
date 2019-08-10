@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 01be0e2d0ead01a3b6c630e0ddd0f53e55620104
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008321"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893928"
 ---
 # <a name="modeling-flags-dmx"></a>Indicateurs de modélisation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68008321"
  **MODEL_EXISTENCE_ONLY**  
  Les valeurs de la colonne d'attribut sont moins importantes que la présence de l'attribut. Cet indicateur est défini sur une colonne de modèle d'exploration de données.  
   
- Des algorithmes tiers peuvent prendre en charge des indicateurs de modélisation supplémentaires. Pour déterminer les indicateurs de modélisation un algorithme prend en charge, utilisez le **SUPPORTED_MODELING_FLAGS** ensemble de lignes de schéma. Vous pouvez également interroger les services d'exploration de données sur le serveur afin de déterminer les indicateurs de modélisation pris en charge pour un algorithme spécifique. Par exemple, la requête suivante retourne les indicateurs de modélisation pris en charge pour l'algorithme MLR (Microsoft Linear Regression) sur le serveur actuel :  
+ Des algorithmes tiers peuvent prendre en charge des indicateurs de modélisation supplémentaires. Pour déterminer les indicateurs de modélisation pris en charge par un algorithme, utilisez l’ensemble de lignes de schéma **SUPPORTED_MODELING_FLAGS** . Vous pouvez également interroger les services d'exploration de données sur le serveur afin de déterminer les indicateurs de modélisation pris en charge pour un algorithme spécifique. Par exemple, la requête suivante retourne les indicateurs de modélisation pris en charge pour l'algorithme MLR (Microsoft Linear Regression) sur le serveur actuel :  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -44,21 +44,21 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>Spécification d'indicateurs de modélisation sur un modèle d'exploration de données  
- Pour obtenir des exemples de la syntaxe qui [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge pour la spécification d’un indicateur sur une colonne de structure d’exploration de données, consultez [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
+ Pour obtenir des exemples de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] syntaxe prise en charge pour la spécification d’un indicateur sur une colonne de structure d’exploration de données, consultez [Create Mining structure &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- Pour obtenir un exemple de la syntaxe de spécification d’un indicateur de modélisation sur une colonne de modèle d’exploration de données, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Pour obtenir un exemple de la syntaxe permettant de spécifier un indicateur de modélisation sur une colonne de modèle d’exploration de données, consultez [ALTER Mining structure &#40;&#41;DMX](../dmx/alter-mining-structure-dmx.md).  
   
- Pour plus d’informations sur l’utilisation des colonnes du modèle d’exploration de données, consultez [colonnes du modèle d’exploration de données](../analysis-services/data-mining/mining-model-columns.md).  
+ Pour plus d’informations sur l’utilisation des colonnes du modèle d’exploration de données, consultez [colonnes du modèle d’exploration](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Éléments de syntaxe &#40;DMX&#41; des extensions d’exploration de données](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Référence des fonctions &#40;DMX&#41; des extensions d’exploration de données](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Référence des opérateurs &#40;DMX&#41; Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Référence des instructions &#40;DMX&#41; Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Conventions de la &#40;syntaxe&#41; DMX des extensions d’exploration de données](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Fonctions &#40;de prédiction générales DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

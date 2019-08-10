@@ -12,15 +12,15 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5c79d078e8a9e2a8928c98c9d7ca56e220e86051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9c9719f3e73326c2b86117b3a78a8ede927198d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66099988"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888941"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environnement avec les fonctions améliorées conçues spécifiquement pour les solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est inclus dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]est un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environnement doté d’améliorations spécifiques aux solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est inclus dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Utilisez [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pour la création et la gestion de solutions et de projets pour des rapports et des éléments de rapports de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] offre l'environnement de création du Concepteur de rapports. Dans le Concepteur de rapports, vous pouvez ouvrir, modifier, afficher un aperçu, enregistrer, et déployer des définitions de rapport, des sources de données partagées, des datasets partagés et des parties de rapports.  
   
@@ -37,14 +37,14 @@ ms.locfileid: "66099988"
 ##  <a name="bkmk_ReportServerProjects"></a> Projets Report Server  
  Lorsque vous installez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les modèles de projet suivants sont disponibles dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] et disponible dans la boîte de dialogue **Nouveaux projets** . Pour plus d’information, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Les propriétés du projet Report Server s’appliquent à tous les rapports et à toutes les sources de données partagées au sein d’un projet [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ouvrir cette boîte de dialogue, dans le **projet** menu, cliquez sur  _\<nom_projet >_ **propriétés**.  
+-   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] et disponible dans la boîte de dialogue **Nouveaux projets** . Pour plus d’information, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Les propriétés du projet Report Server s’appliquent à tous les rapports et à toutes les sources de données partagées au sein d’un projet [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ouvrir cette boîte de dialogue, dans le menu **projet** , cliquez sur  _\<nom du projet >_ **Propriétés**.  
   
 -   **Assistant Projet Report Server.** Lorsque vous sélectionnez l'Assistant Projet Report Server, un projet de serveur de rapports est automatiquement créé et l'Assistant Rapport s'ouvre. Dans l'Assistant, pour créer un rapport, suivez les instructions de chaque page pour créer une chaîne de connexion dans une source de données, définir les informations d'identification de la source de données, créer une requête, ajouter une région de données de table ou de matrice, spécifier des données de rapport et des groupes, choisir une police et un style de couleur, publier le rapport sur un serveur de rapports et afficher un aperçu local du rapport. Après avoir créé un rapport au moyen de l'Assistant, vous pouvez modifier les données du rapport et le Concepteur de rapports à l'aide de l'outil Concepteur de rapports dans le projet Report Server.  
   
- ![Modèles Nouveau projet dans SSDT](../../analysis-services/media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
+ ![Modèles Nouveau projet dans SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
 
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
- Le Concepteur de rapports prend en charge deux vues : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** en affiche le rendu. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
+ Concepteur de rapports prend en charge deux vues: le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** en affiche le rendu. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Données du rapport, volet  
  Le volet des données de rapport affiche des champs intégrés, des sources de données, des datasets, des collections de champs, des paramètres de rapport et des images.  
@@ -63,7 +63,7 @@ ms.locfileid: "66099988"
   
 -   **Images** La liste des images disponibles à inclure comme élément de rapport image dans un rapport.  
   
- Les sources de données et datasets dans le volet des données du rapport représentent les éléments dans la définition de rapport. Le volet des données du rapport est une fonctionnalité prise en charge par plusieurs environnements de création de rapports. Dans le Générateur de rapports, il s'agit du seul volet disponible pour gérer des sources de données et datasets. Dans le Concepteur de rapports, le volet des données du rapport s'exécute avec l'explorateur de solutions, qui répertorie les sources de données partagées et des datasets partagés en tant que fichiers. Les sources de données partagées et des datasets partagés dans le volet des données du rapport doivent indiquer leurs sources de données partagées et les datasets partagés correspondants dans l'explorateur de solutions. Les éléments du volet des données du rapport contiennent ensuite une référence aux fichiers de données dans l'explorateur de solutions. Les propriétés du projet déterminent si les sources de données partagées et des datasets partagés sont déployés sur le serveur de rapports ou site SharePoint. Pour plus d’informations, consultez [convertir une Source de données incorporée partagé &#40;Générateur de rapports et SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ Les sources de données et datasets dans le volet des données du rapport représentent les éléments dans la définition de rapport. Le volet des données du rapport est une fonctionnalité prise en charge par plusieurs environnements de création de rapports. Dans le Générateur de rapports, il s'agit du seul volet disponible pour gérer des sources de données et datasets. Dans le Concepteur de rapports, le volet des données du rapport s'exécute avec l'explorateur de solutions, qui répertorie les sources de données partagées et des datasets partagés en tant que fichiers. Les sources de données partagées et des datasets partagés dans le volet des données du rapport doivent indiquer leurs sources de données partagées et les datasets partagés correspondants dans l'explorateur de solutions. Les éléments du volet des données du rapport contiennent ensuite une référence aux fichiers de données dans l'explorateur de solutions. Les propriétés du projet déterminent si les sources de données partagées et des datasets partagés sont déployés sur le serveur de rapports ou site SharePoint. Pour plus d’informations, consultez [conversion d’une source de données incorporée en générateur de rapports partagée &#40;et SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Si le volet des données de rapport n'est pas visible, cliquez sur **Données du rapport** dans le menu **Affichage**. Si le volet des données de rapport est flottant, vous pouvez l'ancrer. Pour plus d’informations, consultez [Ancrer le volet des données de rapport dans le Concepteur de rapports &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
@@ -232,12 +232,12 @@ ms.locfileid: "66099988"
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modèles de rapports personnalisés  
- Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans \<lecteur > : \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
+ Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve \<dans le lecteur >: \Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
   
  Vous pouvez également ajouter des styles personnalisés à l'Assistant de rapport.  
 
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Prise en charge de la ligne de commandes pour les outils de données SQL Server  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est basé sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 et sur l’application devenv.exe sous-jacente. Pour pouvoir utiliser ces options, vous devez définir des valeurs valides pour les deux éléments suivants :  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]est basé sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10,0 et l’application devenv. exe sous-jacente. Pour pouvoir utiliser ces options, vous devez définir des valeurs valides pour les deux éléments suivants :  
   
 -   Propriétés de projet pour OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder et TargetServerURL.  
   

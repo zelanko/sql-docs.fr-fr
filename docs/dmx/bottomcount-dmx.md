@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a7874168f5f3e6ebededd2ce75f5f762f7fbd1e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022569"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889849"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,18 +28,18 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Une expression qui retourne une table, comme un \<référence de colonne de table >, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’une référence \<de colonne de table >, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
  \<expression de table >  
   
 ## <a name="remarks"></a>Notes  
- La valeur est fournie par le \<rank expression > argument détermine l’ordre croissant du classement pour les lignes qui sont fournis dans le \<expression de table > argument et le nombre de lignes les plus basses qui est spécifié dans le \<nombre > argument est retourné.  
+ La valeur fournie par l' \<expression de classement > argument détermine l’ordre croissant de classement pour les lignes fournies dans l' \<expression de table > argument et le nombre de lignes les plus basses spécifiées dans l’expression de table. \<l’argument Count > est retourné.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une requête de prédiction sur le modèle d’Association que vous générez à l’aide de la [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Pour comprendre le fonctionne de BottomCount, il peut être utile pour tout d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
+ Pour comprendre le fonctionnement de BottomCount, il peut être utile d’exécuter d’abord une requête de prédiction qui retourne uniquement la table imbriquée.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -50,7 +50,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  Dans cet exemple, la valeur fournie en tant qu'entrée contient un guillemet simple et doit donc être placée dans une séquence d'échappement en la préfaçant avec un autre guillemet simple. Si vous n'êtes pas certain de la syntaxe permettant d'insérer un caractère d'échappement, vous pouvez utiliser le Générateur de requêtes de prédiction pour créer la requête. Lorsque vous sélectionnez la valeur dans la liste déroulante, le caractère d'échappement requis est inséré pour vous. Pour plus d’informations, consultez [créer une requête Singleton dans le Concepteur d’exploration de données](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  Dans cet exemple, la valeur fournie en tant qu'entrée contient un guillemet simple et doit donc être placée dans une séquence d'échappement en la préfaçant avec un autre guillemet simple. Si vous n'êtes pas certain de la syntaxe permettant d'insérer un caractère d'échappement, vous pouvez utiliser le Générateur de requêtes de prédiction pour créer la requête. Lorsque vous sélectionnez la valeur dans la liste déroulante, le caractère d'échappement requis est inséré pour vous. Pour plus d’informations, consultez [créer une requête singleton dans le concepteur d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Résultats de l'exemple :  
   
@@ -67,7 +67,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- La fonction BottomCount prend les résultats de cette requête et retourne les lignes à valeur plus petite que somme au pourcentage spécifié.  
+ La fonction BottomCount prend les résultats de cette requête et retourne les lignes dont la valeur la plus petite somme au pourcentage spécifié.  
   
 ```  
 SELECT   
@@ -82,11 +82,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Le premier argument à la fonction BottomCount est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction Predict et à l’aide de l’argument INCLUDE_STATISTICS.  
+ Le premier argument de la fonction BottomCount est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction Predict et en utilisant l’argument INCLUDE_STATISTICS.  
   
- Le deuxième argument à la fonction BottomCount est la colonne dans la table imbriquée qui vous permet de classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $SUPPORT car les valeurs de support ne sont pas fractionnaires et sont donc plus faciles à vérifier.  
+ Le deuxième argument de la fonction BottomCount est la colonne de la table imbriquée que vous utilisez pour classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $SUPPORT car les valeurs de support ne sont pas fractionnaires et sont donc plus faciles à vérifier.  
   
- Le troisième argument de la fonction BottomCount Spécifie le nombre de lignes. Pour obtenir les trois lignes dont le niveau de classement est le plus bas, tel que classé par $SUPPORT, tapez 3.  
+ Le troisième argument de la fonction BottomCount spécifie le nombre de lignes. Pour obtenir les trois lignes dont le niveau de classement est le plus bas, tel que classé par $SUPPORT, tapez 3.  
   
  Résultats de l'exemple :  
   
@@ -96,13 +96,13 @@ NATURAL PREDICTION JOIN
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Fender Set - Mountain|1415|0.095100477|0.090718432|  
   
- **Remarque** cet exemple est fourni uniquement pour illustrer l’utilisation de BottomCount. L'exécution de cette requête peut prendre beaucoup de temps, en fonction de la taille de votre jeu de données.  
+ **Remarque** Cet exemple est fourni uniquement pour illustrer l’utilisation de BottomCount. L'exécution de cette requête peut prendre beaucoup de temps, en fonction de la taille de votre jeu de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Fonctions &#40;de prédiction générales DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
  [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
- [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
+ [DMX de &#40;la TopCount&#41;](../dmx/topcount-dmx.md)  
   
   

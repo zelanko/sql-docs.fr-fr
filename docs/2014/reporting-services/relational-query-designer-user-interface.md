@@ -1,5 +1,5 @@
 ---
-title: Interface utilisateur du Concepteur de requêtes relationnelles | Microsoft Docs
+title: Interface utilisateur du concepteur de requêtes relationnelles | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107993"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891134"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes relationnelles
   Le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fournit un Concepteur de requêtes graphique et un Concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer à partir de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -36,11 +36,11 @@ ms.locfileid: "66107993"
   
  La figure suivante illustre le Concepteur de requêtes graphique lorsqu'il est utilisé avec des tables ou des vues.  
   
- ![Concepteur graphique pour les requêtes](../analysis-services/media/rsqd-relational-graphical.gif "Concepteur graphique pour les requêtes")  
+ ![Concepteur graphique pour les requêtes](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Concepteur graphique pour les requêtes")  
   
  La figure suivante illustre le concepteur de requêtes graphique lorsqu'il est utilisé avec des procédures stockées ou des fonctions table.  
   
- ![Procédure stockée dans le concepteur de requêtes graphique](../analysis-services/media/rs-relational-graphical-sp.gif "Procédure stockée dans le concepteur de requêtes graphique")  
+ ![Procédure stockée dans le concepteur de requêtes graphique](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Procédure stockée dans le concepteur de requêtes graphique")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66107993"
   
      Utilisez le volet des données de rapport pour afficher la collection de champs d'un dataset de rapport. Ces champs représentent les données que vous pouvez afficher dans les tables, graphiques et autres éléments de rapport lorsque vous examinez un rapport.  
   
--   **Groupe et agrégat** Active/désactive l'utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)**, indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
+-   **Groupe et agrégat** Active/désactive l'utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)** , indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
   
 -   **Supprimer le champ** Supprime le champ sélectionné.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107993"
   
  Les agrégats fournissent des synthèses de données, lesquelles sont regroupées pour prendre en charge l'agrégat qui remet les données de synthèse. Lorsque vous utilisez un agrégat dans la requête, les autres champs retournés par la requête sont regroupés automatiquement ; par ailleurs, la requête inclut la clause SQL GROUP BY. Vous pouvez synthétiser les données sans ajouter d'agrégat en utilisant uniquement l'option **Regroupement par** de la liste **Groupe et agrégat** . De nombreux agrégats incluent une version qui utilise le mot clé DISTINCT. L'inclusion de DISTINCT élimine les valeurs dupliquées.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilise [!INCLUDE[tsql](../includes/tsql-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilise [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]utilise [!INCLUDE[tsql](../includes/tsql-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] utilise.[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
   
  Pour plus d’informations sur [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66107993"
 |Bouton|Description|  
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule vers le Concepteur de requêtes textuel pour afficher la requête automatiquement générée ou pour modifier la requête.|  
-|**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Les types de fichiers .sql et .rdl sont pris en charge.|  
+|**Importationation**|Importe une requête existante à partir d'un fichier ou d'un rapport. Les types de fichiers .sql et .rdl sont pris en charge.|  
 |**Exécuter la requête**|Exécute la requête. Le volet Résultats de la requête affiche le jeu de résultats.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Présentation des requêtes générées automatiquement  

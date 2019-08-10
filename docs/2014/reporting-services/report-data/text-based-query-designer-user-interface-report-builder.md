@@ -14,12 +14,12 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdd12cf49c86cb9a622c1ac546fd755056b5e357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106980"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891880"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes textuel (Générateur de rapports)
   Utilisez le Concepteur de requêtes textuel pour spécifier une requête à l'aide du langage de requête pris en charge par la source de données, exécuter la requête et afficher les résultats au moment de la conception. Vous pouvez spécifier plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , une syntaxe de requête ou de commande pour les extensions pour le traitement des données personnalisées et des requêtes spécifiées en tant qu'expressions. Comme le Concepteur de requêtes textuel n'effectue pas de prétraitement de la requête et peut accepter tout type de syntaxe de requête, il s'agit de l'outil du Concepteur de requêtes par défaut pour de nombreux types de sources de données.  
@@ -40,23 +40,23 @@ ms.locfileid: "66106980"
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. Les types de sources de données ne prennent pas tous en charge les concepteurs de requêtes graphiques.|  
 |**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers sql et rdl sont pris en charge.|  
-|![Exécuter la requête](../../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|  
+|![Exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|  
 |**Type de commande**|Sélectionnez **Text**, **StoredProcedure**ou **TableDirect**. Si une procédure stockée comporte des paramètres, la boîte de dialogue **Définir les paramètres de la requête** s'affiche lorsque vous cliquez sur **Exécuter** dans la barre d'outils, et vous pouvez spécifier les valeurs souhaitées.<br /><br /> Remarque : Si une procédure stockée retourne plusieurs jeux de résultats, seul le premier jeu est utilisé pour remplir le dataset.|  
   
 ### <a name="command-type-text"></a>Texte de type de commande  
  Lorsque vous créez un dataset [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Concepteur de requêtes relationnelles s'ouvre par défaut. Pour basculer vers le concepteur de requêtes textuel, cliquez sur le bouton bascule **Modifier en tant que texte** dans la barre d’outils. Le concepteur de requêtes textuel présente deux volets : Requête et Résultats. L'illustration suivante présente chaque volet.  
   
- ![Concepteur de requêtes générique pour les requêtes de données relationnelles](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Concepteur de requêtes générique pour les requêtes de données relationnelles")  
+ ![Concepteur de requêtes générique pour les requêtes de données relationnelles](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Concepteur de requêtes générique pour les requêtes de données relationnelles")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Requête|Affiche le texte de la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] .|  
+|Interroger|Affiche le texte de la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] .|  
 |Résultat|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
- La requête suivante retourne la liste des noms depuis le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de données `ContactType` de table pour le `Person` schéma.  
+ La requête suivante renvoie la liste des [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]noms de la table de base de données `ContactType` 2008 pour le `Person` schéma.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -69,17 +69,17 @@ SELECT Name FROM Person.ContactType
   
  La figure suivante illustre les volets Résultats et Requête lorsque vous exécutez une procédure stockée. Dans ce cas, les paramètres d'entrée sont des constantes.  
   
- ![Procédure stockée dans le concepteur de requêtes textuel](../../analysis-services/media/rs-relational-text-sp.gif "Procédure stockée dans le concepteur de requêtes textuel")  
+ ![Procédure stockée dans le concepteur de requêtes textuel](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Procédure stockée dans le concepteur de requêtes textuel")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Requête|Affiche le nom de la procédure stockée et tout paramètres d'entrée.|  
+|Interroger|Affiche le nom de la procédure stockée et tout paramètres d'entrée.|  
 |Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
- La requête suivante appelle le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** procédure stockée `uspGetWhereUsedProductID`. Vous devez entrer une valeur pour le paramètre du numéro d'identification de produit lorsque vous exécutez la requête.  
+ La requête suivante appelle la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]procédure `uspGetWhereUsedProductID`stockée **2008** . Vous devez entrer une valeur pour le paramètre du numéro d'identification de produit lorsque vous exécutez la requête.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -98,7 +98,7 @@ uspGetWhereUsedProductID
  Quand vous sélectionnez le **Type de commande TableDirect**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Lorsque vous entrez une table et cliquez sur le bouton **Exécuter** , toutes les colonnes pour cette table sont retournées.  
   
 #### <a name="example"></a>Exemple  
- Pour un type de source de données OLE DB, la requête de dataset suivante retourne un jeu de résultats pour des types de tous les contacts dans le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de données.  
+ Pour un type de source de données OLE DB, la requête de DataSet suivante retourne un jeu de résultats pour tous [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]les types de contacts dans la base de données **2008** .  
   
  `Person.ContactType`  
   

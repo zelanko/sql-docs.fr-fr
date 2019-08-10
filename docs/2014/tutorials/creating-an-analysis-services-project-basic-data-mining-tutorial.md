@@ -1,5 +1,5 @@
 ---
-title: Création d’une analyse de projet (didacticiel d’exploration de données de base) Services | Microsoft Docs
+title: Création d’un projet de Analysis Services (didacticiel sur l’exploration de données de base) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855193"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893346"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Création d'un projet Analysis Services (Didacticiel sur l'exploration de données de base)
   Chaque projet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] définit les objets présents dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unique. Une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient plusieurs types d'objets.  
@@ -32,7 +32,7 @@ ms.locfileid: "62855193"
   
  Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise l'instance **localhost** pour les nouveaux projets. Si vous utilisez une instance nommée ou un serveur différent, vous devez d'abord créer et ouvrir le projet, puis modifier le nom de l'instance.  
   
- Pour plus d'informations sur les projets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Pour plus d'informations sur les projets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [Creating an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Pour créer un projet Analysis Services  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62855193"
   
 4.  Dans le volet **Modèles** , sélectionnez **Projet multidimensionnel et d'exploration de données Analysis Services**.  
   
-5.  Dans le **nom** boîte, nommez le nouveau projet `BasicDataMining`.  
+5.  Dans la zone **nom** , nommez le nouveau `BasicDataMining`projet.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -57,10 +57,10 @@ ms.locfileid: "62855193"
 3.  Dans la partie droite du volet **Pages de propriétés** , sous **Cible**, vérifiez que le nom du **Serveur** est **localhost**. Si vous utilisez une instance différente, tapez le nom de l'instance. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’une Source de données &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Didacticiel de création d' &#40;une source de données d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générer des projets Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Créer un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Générer des projets Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Créer un projet Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

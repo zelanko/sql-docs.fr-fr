@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 126a419f52ee88349d1d64fcfe756fcb3681c03a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069182"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893315"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68069182"
   
  Pour plus d'informations sur Kerberos, consultez les articles suivants :  
   
--   [Supplément technique Kerberos pour Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Supplément technique Kerberos pour Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -79,11 +79,11 @@ ms.locfileid: "68069182"
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Aspects liés à la gestion des noms principaux de service spécifiés par les applications  
  Au moment de choisir s'il faut spécifier des noms principaux de service dans une application (via les chaînes de connexion) ou par programme via les propriétés de connexion (au lieu de recourir aux noms principaux de service par défaut générés par le fournisseur), prenez en considération les facteurs suivants :  
   
--   Sécurité : Le nom SPN spécifié divulgue des informations protégées ?  
+-   Sécurité : Le SPN spécifié divulgue-t-il des informations protégées?  
   
--   Fiabilité : Pour activer l’utilisation de noms principaux de service par défaut, le compte de service dans lequel le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’exécute d’instance doit disposer des privilèges suffisants pour mettre à jour d’Active Directory sur le contrôleur de domaine Kerberos.  
+-   Beaucoup Pour activer l’utilisation des noms principaux de service par défaut, le compte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de service dans lequel l’instance s’exécute doit disposer des privilèges suffisants pour mettre à jour les Active Directory sur le KDC.  
   
--   Transparence de commodité et l’emplacement : Comment les SPN d’une application affectés si sa base de données est déplacée vers un autre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance ? Cela s'applique à la fois au serveur principal et à son partenaire de basculement, si vous utilisez la mise en miroir de bases de données. Si une modification du serveur signifie une modification des noms principaux de service, comment cela affecte-t-il les applications ? Est-ce que les modifications sont gérées ?  
+-   Transparence de l’emplacement et de la commodité: Comment les noms principaux de service d’une application sont-ils affectés si la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données est déplacée vers une autre instance? Cela s'applique à la fois au serveur principal et à son partenaire de basculement, si vous utilisez la mise en miroir de bases de données. Si une modification du serveur signifie une modification des noms principaux de service, comment cela affecte-t-il les applications ? Est-ce que les modifications sont gérées ?  
   
 ## <a name="specifying-the-spn"></a>Spécification du nom principal de service  
  Vous pouvez spécifier un nom principal de service dans les boîtes de dialogue et dans le code. Cette section explique comment vous pouvez spécifier un nom principal de service.  
@@ -105,7 +105,7 @@ ms.locfileid: "68069182"
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Syntaxe ODBC et OLE DB prenant en charge les noms principaux de service  
  Pour plus d'informations spécifiques à la syntaxe, consultez les rubriques suivantes :  
   
--   [Noms de principal du service &#40;SPN&#41; dans les connexions clientes &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Noms &#40;principaux de service&#41; SPN dans les &#40;connexions clientes ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
 -   [Noms de principal du service &#40;SPN&#41; dans les connexions clientes &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   

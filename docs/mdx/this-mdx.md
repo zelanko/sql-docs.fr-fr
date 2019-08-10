@@ -1,5 +1,5 @@
 ---
-title: Cette requête (MDX) | Microsoft Docs
+title: This (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2486f23170ec19f16dca31672696c09815a2e83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036639"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893559"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -28,7 +28,7 @@ This
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le **cela** fonction peut être utilisée à la place de n’importe quelle expression de sous-cube pour fournir le sous-cube actuel au sein de la portée actuelle dans le script de calcul MDX. Le **cela** fonction doit être utilisée sur le côté gauche d’une assignation.  
+ **Cette** fonction peut être utilisée à la place d’une expression de sous-cube pour fournir le sous-cube actuel au sein de l’étendue actuelle au sein du script de calcul MDX. **Cette** fonction doit être utilisée sur le côté gauche d’une assignation.  
   
 ## <a name="examples"></a>Exemples  
  Le fragment de script MDX suivant illustre l'utilisation du mot clé THIS avec les instructions SCOPE pour effectuer des affectations aux sous-cubes :  
@@ -75,6 +75,6 @@ This
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Calculs](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Calculs](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   
   

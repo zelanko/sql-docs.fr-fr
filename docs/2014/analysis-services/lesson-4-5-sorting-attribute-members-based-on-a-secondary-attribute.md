@@ -1,5 +1,5 @@
 ---
-title: Tri des membres d’attribut basé sur un attribut secondaire | Microsoft Docs
+title: Tri des membres d’attribut en fonction d’un attribut secondaire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078700"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888308"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Tri des membres d'attribut sur la base d'un attribut secondaire
-  Au cours de la leçon 3, vous avez appris à trier les membres d'attribut en fonction de leur nom ou de la valeur de leur clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  
+  Au cours de la leçon 3, vous avez appris à trier les membres d'attribut en fonction de leur nom ou de la valeur de leur clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  
   
  Les relations d'attributs définissent les relations ou les dépendances entre les attributs. Dans une dimension qui est basée sur une seule table relationnelle, tous les attributs sont généralement liés les uns aux autres via l'attribut clé. Cela est dû au fait que tous les attributs d'une dimension fournissent des informations sur les membres liés par l'attribut clé de la dimension aux faits de la table de faits pour chaque groupe de mesures associé. Dans une dimension basée sur plusieurs tables, les attributs sont généralement liés par une clé de jointure entre les tables. Si les données sous-jacentes le prennent en charge, les attributs associés peuvent être utilisés pour spécifier un ordre de tri. Par exemple, vous pouvez créer un nouvel attribut qui fournit la logique de tri pour un attribut associé.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078700"
   
      Notez que les mois sont bien triés par ordre chronologique, comme montré dans l'illustration suivante.  
   
-     ![Modification de la hiérarchie utilisateur dans l’ordre chronologique](../../2014/tutorials/media/l4-memberproperties-3.gif "modifié la hiérarchie de l’utilisateur dans l’ordre chronologique")  
+     ![Hiérarchie d’utilisateurs modifiée par ordre chronologique](../../2014/tutorials/media/l4-memberproperties-3.gif "Hiérarchie d’utilisateurs modifiée par ordre chronologique")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Définition des relations d'attributs et d'un ordre de tri dans la dimension Customer  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078700"
   
      L’illustration suivante montre les membres de la hiérarchie d’attribut **Commute Distance** , triés en fonction des valeurs ASCII de la clé de membre.  
   
-     ![Domicile-travail de la hiérarchie d’attribut Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "hiérarchie d’attribut Commute Distance")  
+     ![Hiérarchie d’attribut commute distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Hiérarchie d’attribut commute distance")  
   
 2.  Affichez l’onglet **Structure de dimension** dans le Concepteur de dimensions pour la dimension Customer, cliquez avec le bouton droit sur **CommuteDistanceSort** dans la table **Customer** du volet **Vue de source de données** et choisissez **Nouvel attribut de colonne**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66078700"
   
      Notez que les membres de la hiérarchie d'attribut sont maintenant triés par ordre croissant, comme montré dans l'illustration suivante.  
   
-     ![Retrier hiérarchie d’attribut Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "hiérarchie d’attribut Re-sorted Commute Distance")  
+     ![Hiérarchie des attributs Permuted distance] rétriée (../../2014/tutorials/media/l4-memberproperties-5.gif "Hiérarchie des attributs Permuted distance") rétriée  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

@@ -1,5 +1,5 @@
 ---
-title: Dépanner un PowerPivot pour SharePoint | Microsoft Docs
+title: Résoudre les problèmes d’une installation PowerPivot pour SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091781"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892441"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Dépanner une installation PowerPivot pour SharePoint
   Si vous obtenez des erreurs au lieu des pages et fonctionnalités attendues, procédez comme indiqué ci-dessous.  
@@ -31,7 +31,7 @@ ms.locfileid: "66091781"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Les images miniatures de la Galerie PowerPivot s'affichent sous la forme d'une croix (X) rouge  
  L'une des causes possibles est que la **Fonctionnalité d'intégration PowerPivot pour les collections de sites** n'est pas active. Procédez comme suit :  
   
-1.  Dans la bibliothèque galerie PowerPivot, cliquez sur **paramètres du Site** à partir de l’icône d’engrenage ![paramètres SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint") ou **accueil** liste.  
+1.  Dans la bibliothèque Galerie PowerPivot, cliquez sur **paramètres du site** à partir de ![](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "") l’icône d’engrenage paramètres SharePoint paramètres SharePoint ou de la liste d' **hébergement** .  
   
 2.  Dans la section **Administration de la collection de sites** , cliquez sur **Fonctionnalités de la collection de sites**.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66091781"
   
 4.  Vérifiez que **Fonctionnalité d'intégration PowerPivot pour les collections de sites** est **Activée**.  
   
- Pour d’autres causes de ce problème, consultez [galerie PowerPivot affiche des croix (x) rouge pour les icônes](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
+ Pour obtenir d’autres causes de ce problème, consultez [Galerie PowerPivot affiche des X rouges pour les icônes](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
   
   

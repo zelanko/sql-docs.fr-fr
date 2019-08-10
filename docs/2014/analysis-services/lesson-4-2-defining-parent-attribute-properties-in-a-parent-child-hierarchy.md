@@ -1,5 +1,5 @@
 ---
-title: Définition des propriétés d’attribut Parent dans une hiérarchie Parent-enfant | Microsoft Docs
+title: Définition des propriétés d’attribut parent dans une hiérarchie parent-enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078669"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888386"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant
   Une hiérarchie parent-enfant est une hiérarchie dans une dimension fondée sur deux colonnes de table. Ensemble, ces colonnes définissent les relations hiérarchiques entre les membres de la dimension. La première colonne, appelée *colonne des clés de membre*, identifie chaque membre de dimension. L’autre colonne, appelée *colonne parente*, identifie le parent de chaque membre de dimension. La propriété **NamingTemplate** d’un attribut parent détermine le nom de chaque niveau de la hiérarchie parent-enfant et la propriété **MembersWithData** détermine si les données des membres parents doivent être affichées ou non.  
   
- Pour plus d’informations, consultez [hiérarchie Parent-enfant](multidimensional-models/parent-child-dimension.md), [attributs dans les hiérarchies Parent-enfant](multidimensional-models/parent-child-dimension-attributes.md)  
+ Pour plus d’informations, consultez [hiérarchie parent-enfant](multidimensional-models/parent-child-dimension.md), [attributs dans les hiérarchies parent-enfant](multidimensional-models/parent-child-dimension-attributes.md) .  
   
 > [!NOTE]  
 >  Lorsque vous utilisez l'Assistant Dimension pour créer une dimension, l'Assistant reconnaît les tables qui contiennent des relations parent-enfant et définit automatiquement la hiérarchie parent-enfant.  
@@ -57,7 +57,7 @@ ms.locfileid: "66078669"
   
      L'illustration suivante montre la hiérarchie Employees développée.  
   
-10. ![Tableau croisé dynamique affichant la hiérarchie Employees](../../2014/tutorials/media/l4-employee-1.gif "tableau croisé dynamique affichant la hiérarchie Employees")  
+10. ![Tableau croisé dynamique présentant la hiérarchie Employees](../../2014/tutorials/media/l4-employee-1.gif "Tableau croisé dynamique présentant la hiérarchie Employees")  
   
      Remarquez que les ventes faites par chaque responsable dans le niveau 03 sont également affichées dans le niveau 04. C'est parce que chaque responsable est également employé d'un autre responsable. Au cours de la tâche suivante, vous allez masquer les montants de ces ventes.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078669"
   
      L’illustration suivante montre les éléments qui ont changé dans la boîte de dialogue **Modèle de nom de niveau** .  
   
-     ![Boîte de dialogue modèle de nom au niveau](../../2014/tutorials/media/l4-namingtemplate.gif "boîte de dialogue modèle de nom de niveau")  
+     ![Boîte de dialogue modèle de nom de niveau](../../2014/tutorials/media/l4-namingtemplate.gif "Boîte de dialogue modèle de nom de niveau")  
   
 5.  Cliquez sur **OK**.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "66078669"
   
      L'illustration suivante montre les modifications apportées à la hiérarchie Employees. Notez que Stephen Y. Jiang n’apparaît plus comme employé de lui-même.  
   
-     ![Modification de la hiérarchie Employees](../../2014/tutorials/media/l4-employee-2.png "hiérarchie Employees modifiée")  
+     ![Hiérarchie des employés modifiés](../../2014/tutorials/media/l4-employee-2.png "Hiérarchie des employés modifiés")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Regroupement automatique des membres d'attribut](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
+ [Regroupement automatique des membres d'attribut](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchie parent-enfant](multidimensional-models/parent-child-dimension.md)   

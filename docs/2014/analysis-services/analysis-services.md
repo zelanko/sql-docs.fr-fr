@@ -1,7 +1,7 @@
 ---
-title: Analysis Services | Microsoft Docs
+title: SQL Server 2014 Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 06/14/2017
+ms.date: 06/07/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,23 +18,37 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 241bb57ffd0ce05f1daa289cc7ae78c365a27cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5117ec8fd1eae9438569289b05f465fe7616d96
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062338"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887458"
 ---
-# <a name="analysis-services"></a>Analysis Services
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est un moteur de données analytiques en ligne utilisé dans des solutions de décisionnel (BI) et d'aide à la décision. Il fournit des données analytiques utilisées dans des rapports et des applications clientes tels qu'Excel, les rapports Reporting Services et d'autres outils BI tiers. Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], un flux de travail typique comprend la création d'un modèle de données OLAP ou tabulaires, le déploiement de ce modèle en tant que base de données vers une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le traitement de la base de données en vue de son chargement et des données qu'elle contient, puis l'attribution d'autorisations d'accès aux données. Quand il est prêt, le modèle de données polyvalent est accessible depuis n'importe quelle application cliente prenant en charge [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en tant que source données.  
+# <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
+
+  SQL Server 2014 Analysis Services est un moteur de données analytiques utilisé dans les solutions d’aide à la décision et d’analyse décisionnelle (BI), fournissant des données analytiques pour les rapports d’entreprise et les applications clientes telles qu’Excel, les rapports d’Reporting Services et d’autres outils DÉCISIONNELs tiers. 
+
+## <a name="about-sql-server-analysis-services-documentation"></a>À propos de la documentation SQL Server Analysis Services
+
+La documentation est séparée par la version. Vous êtes actuellement dans la documentation SQL Server 2014 Analysis Services.
+
+- Pour en savoir plus sur SQL Server 2012 et versions antérieures, consultez [SQL Server la documentation sur les versions précédentes](https://docs.microsoft.com/previous-versions/sql/).
+- Pour en savoir plus sur SQL Server 2014, consultez la [documentation en ligne de SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
+- Pour en savoir plus sur SQL Server 2016 et versions ultérieures, consultez [la documentation de Microsoft SQL](https://docs.microsoft.com/sql/).
+- Pour en savoir plus sur Azure Analysis Services, consultez [Azure Analysis Services documentation](https://docs.microsoft.com/en-us/azure/analysis-services/).
+
+## <a name="analysis-services-workflow"></a>Flux de travail Analysis Services
+
+Un flux de travail classique comprend la génération d’un modèle de données OLAP ou tabulaire, le déploiement du modèle en tant que base de données sur une instance de serveur, le traitement de la base de données pour son chargement avec les données, puis l’attribution d’autorisations pour permettre l’accès aux données. Quand il est prêt, le modèle de données polyvalent est accessible depuis n'importe quelle application cliente prenant en charge [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en tant que source données.  
   
- Pour créer un modèle, utilisez SQL Server Data Tools (consultez [outils et applications utilisés dans Analysis Services](tools-and-applications-used-in-analysis-services.md)), en choisissant un modèle de projet tabulaire ou multidimensionnel et exploration de données. Le modèle de projet contient les dossiers de tous les objets nécessaires dans un modèle. Vous pouvez utiliser des Assistants pour créer tous les éléments de base, tels que des sources de données, des vues de source de données, des dimensions, des cubes et des rôles.  
+ Pour créer un modèle, utilisez SQL Server Data Tools (consultez [Outils et applications utilisés dans Analysis Services](tools-and-applications-used-in-analysis-services.md)), en choisissant un modèle de projet tabulaire ou multidimensionnel et d’exploration de données. Le modèle de projet contient les dossiers de tous les objets nécessaires dans un modèle. Vous pouvez utiliser des Assistants pour créer tous les éléments de base, tels que des sources de données, des vues de source de données, des dimensions, des cubes et des rôles.  
   
  Les modèles sont remplis avec des données provenant de systèmes de données externes, généralement des entrepôts de données hébergés sur un moteur de base de données relationnelle SQL Server ou Oracle (les modèles tabulaires prennent en charge d'autres types de source de données). Les modèles spécifient les objets de requête, tels que les cubes, mais aussi les dimensions qui peuvent être utilisées dans plusieurs cubes, les calculs et les indicateurs de performance clés qui encapsulent la logique métier, ainsi que les interactions telles que les comportements de navigation et d'extraction.  
   
- Pour utiliser un modèle, celui-ci doit être déployé sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui exécute des bases de données dans un mode serveur particulier, ce qui permet de mettre les données à la disposition des utilisateurs autorisés qui se connectent via Excel ou d'autres applications.  
+ Pour utiliser un modèle, il est déployé sur une instance de serveur qui exécute des bases de données dans un mode serveur particulier, ce qui rend les données accessibles aux utilisateurs autorisés qui se connectent par le biais d’Excel ou d’autres applications.  
   
- Vous pouvez installer une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans l'un des trois modes serveur :  
+ Vous pouvez installer une instance dans l’un des trois modes serveur suivants:  
   
 -   En tant qu'instance tabulaire, avec exécution de modèles tabulaires.  
   
@@ -47,25 +61,25 @@ ms.locfileid: "66062338"
  La documentation fondamentale pour Analysis Services s'articule autour de sections qui correspondent au type de projet que vous créez. Choisissez parmi les liens suivants pour en savoir plus sur chaque mode ou fonctionnalité.  
   
  **Parcourir le contenu par domaine**  
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [comparaison des Solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Comparaison des solutions &#40;tabulaires et multidimensionnelles SSAS&#41; ](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [gestion d’Instance Analysis Services](instances/analysis-services-instance-management.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Gestion des instances de Analysis Services](instances/analysis-services-instance-management.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [modélisation tabulaire &#40;SSAS tabulaire&#41;](tabular-models/tabular-models-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Modélisation &#40;tabulaire de SSAS&#41; tabulaire](tabular-models/tabular-models-ssas.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [modélisation multidimensionnelle &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [ &#40;SSAS&#41; de modélisation](multidimensional-models/multidimensional-models-ssas.md) multidimensionnelle  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [exploration de données &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [SSAS&#41; d' &#40;exploration de données](data-mining/data-mining-ssas.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [PowerPivot pour SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [PowerPivot pour SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
 >  Les fonctionnalités [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] varient en fonction de l’édition. Les modèles d'exploration de données et multidimensionnels sont disponibles dans l'édition standard, mais avec moins de fonctionnalités que les éditions supérieures. Les modèles tabulaires et PowerPivot pour SharePoint sont des fonctionnalités Premium et ne sont pas disponibles avec une licence d'édition standard. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiels sur Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
- [Installation de SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
- [Guide du développeur &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [Didacticiels &#40;de Analysis Services SSAS&#41;](analysis-services-tutorials-ssas.md)   
+ [Installation pour SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
+ [Guide &#40;du développeur Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   

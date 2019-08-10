@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une données vue de Source pour les données de centre d’appels (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Ajout d’une vue de source de données pour les données de centre d’appels (didacticiel sur l’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62823299"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888687"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données pour les données de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Au cours de cette tâche, vous allez ajouter une vue de source de données qui sera utilisée pour accéder aux données d'un centre d'appels. Les mêmes données seront utilisées pour générer aussi bien le modèle de réseau neuronal initial destiné à l'exploration que le modèle de régression logistique que vous utiliserez pour faire des recommandations.  
@@ -26,68 +26,68 @@ ms.locfileid: "62823299"
   
 #### <a name="to-add-a-data-source-view"></a>Pour ajouter une vue de source de données  
   
-1.  Dans **l’Explorateur de solutions**, avec le bouton droit **les vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
+1.  Dans **Explorateur de solutions**, cliquez avec le bouton droit sur **vues de source de données**, puis sélectionnez **nouvelle vue de source de données**.  
   
      L'Assistant Vue de source de données s'ouvre.  
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] source de données. Si vous n’avez pas de cette source de données, consultez [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Cliquer sur **Suivant**.  
+3.  Dans la page **Sélectionner une source de données** , sous **sources de données relationnelles**, [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] sélectionnez la source de données. Si vous ne disposez pas de cette source de données, consultez le didacticiel sur l' [exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md). Cliquez sur **Suivant**.  
   
-4.  Sur le **sélectionner des Tables et vues** page, sélectionnez le tableau suivant et puis cliquez sur la flèche droite pour l’ajouter à la vue de source de données :  
+4.  Dans la page **Sélectionner des tables et des vues** , sélectionnez le tableau suivant, puis cliquez sur la flèche droite pour l’ajouter à la vue de source de données:  
   
     -   **FactCallCenter (dbo)**  
   
     -   **DimDate**  
   
-5.  Cliquer sur **Suivant**.  
+5.  Cliquez sur **Suivant**.  
   
-6.  Sur le **fin de l’Assistant** page, la vue de source de données est nommée par défaut [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Remplacez le nom par **CallCenter**, puis cliquez sur **Terminer**.  
+6.  Dans la page **fin de l’Assistant** , la vue de source de données est [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]nommée par défaut. Remplacez le nom par **callcenter**, puis cliquez sur **Terminer**.  
   
-     Concepteur de vue de Source de données s’ouvre et affiche le **CallCenter** vue de source de données.  
+     Le concepteur de vue de source de données s’ouvre pour afficher la vue de source de données **callcenter** .  
   
-7.  Avec le bouton droit dans le volet de vue de Source de données, puis sélectionnez **ajouter/supprimer des Tables**. Sélectionnez la table, **DimDate** et cliquez sur **OK**.  
+7.  Cliquez avec le bouton droit dans le volet vue de source de données, puis sélectionnez **Ajouter/supprimer des tables**. Sélectionnez la table **DimDate** , puis cliquez sur **OK**.  
   
-     Une relation doit être ajoutée automatiquement entre le `DateKey` colonnes dans chaque table. Vous utiliserez cette relation pour obtenir la colonne **EnglishDayNameOfWeek**, à partir de la **DimDate** de table et l’utiliser dans votre modèle.  
+     Une relation doit être automatiquement ajoutée entre les `DateKey` colonnes de chaque table. Vous allez utiliser cette relation pour récupérer la colonne **EnglishDayNameOfWeek**de la table **DimDate** et l’utiliser dans votre modèle.  
   
-8.  Dans le Concepteur de vue de Source de données, cliquez sur la table, **FactCallCenter**, puis sélectionnez **nouveau calcul nommé**.  
+8.  Dans le concepteur de vue de source de données, cliquez avec le bouton droit sur la table **FactCallCenter**, puis sélectionnez **nouveau calcul nommé**.  
   
-     Dans le **créer un calcul nommé** boîte de dialogue, tapez les valeurs suivantes :  
+     Dans la boîte de dialogue **créer un calcul nommé** , tapez les valeurs suivantes:  
   
     |||  
     |-|-|  
-    |**Nom de colonne**|DayOfWeek|  
+    |**Nom de la colonne**|DayOfWeek|  
     |**Description**|Obtenir le jour de la semaine depuis la table DimDate|  
     |**Expression**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
-     Pour vérifier que l’expression crée les données, vous avez besoin, cliquez sur la table **FactCallCenter**, puis sélectionnez **Explorer les données**.  
+     Pour vérifier que l’expression crée les données dont vous avez besoin, cliquez avec le bouton droit sur la table **FactCallCenter**, puis sélectionnez **Explorer les données**.  
   
 9. Prenez une minute pour examiner les données disponibles afin de pouvoir comprendre comment elles sont utilisées dans l'exploration de données :  
   
-|Nom de colonne|Contient|  
+|Nom de la colonne|Contient|  
 |-----------------|--------------|  
 |FactCallCenterID|Clé arbitraire créée lorsque les données ont été importées vers l'entrepôt de données.<br /><br /> Cette colonne identifie les enregistrements uniques et doit être utilisée comme clé de cas du modèle d'exploration de données.|  
 |DateKey|Date de fonctionnement du centre d'appels, sous la forme d'un entier. Les clés de date entières sont souvent utilisées dans les entrepôts de données, mais vous souhaitez peut-être obtenir la date au format date/heure si vous vouliez fonctionner par groupements de valeurs de date.<br /><br /> Notez que les dates ne sont pas uniques car le fournisseur fournit un rapport distinct pour chaque équipe et pour chaque jour de fonctionnement.|  
-|WageType|Indique si le jour était un jour de semaine, de week-end ou un jour férié.<br /><br /> Il est possible que les week-ends et jours de la semaine ne soit une différence de qualité de service client pour utiliser cette colonne en tant qu’entrée.|  
-|Shift|Indique l'équipe pour laquelle les appels sont enregistrés. Ce centre d’appels divise la journée de travail en quatre équipes : AM, PM1, PM2 et Midnight.<br /><br /> Il est possible que les horaires des équipes influencent la qualité du service client. Vous utiliserez donc cela comme entrée.|  
-|LevelOneOperators|Indique le nombre d’opérateurs de niveau 1 sur droit.<br /><br /> Les employés de centre d'appels débutent au niveau 1. Ces employés ont donc moins d'expérience.|  
-|LevelTwoOperators|Indique le nombre d'opérateurs de niveau 2 qui sont en service.<br /><br /> Un employé doit enregistrer un certain nombre d’heures de service pour être considérée comme un opérateur de niveau 2.|  
+|WageType|Indique si le jour était un jour de semaine, de week-end ou un jour férié.<br /><br /> Il est possible qu’il existe une différence de qualité du service client sur les week-ends et les jours de la semaine. vous utiliserez donc cette colonne comme entrée.|  
+|Shift|Indique l'équipe pour laquelle les appels sont enregistrés. Ce centre d’appels divise le jour de travail en quatre équipes: AM, PM1, PM2 et minuit.<br /><br /> Il est possible que les horaires des équipes influencent la qualité du service client. Vous utiliserez donc cela comme entrée.|  
+|LevelOneOperators|Indique le nombre d’opérateurs de niveau 1 sur le droit.<br /><br /> Les employés de centre d'appels débutent au niveau 1. Ces employés ont donc moins d'expérience.|  
+|LevelTwoOperators|Indique le nombre d'opérateurs de niveau 2 qui sont en service.<br /><br /> Un employé doit consigner un certain nombre d’heures de service pour qualifier comme opérateur de niveau 2.|  
 |TotalOperators|Nombre total d'opérateurs présents pendant le temps de travail de l'équipe.|  
 |Calls|Nombre d'appels reçus pendant la période de travail de l'équipe.|  
 |AutomaticResponses|Nombre d'appels qui ont été totalement gérés par traitement automatisé des appels (réponse vocale interactive).|  
 |Orders|Nombre de commandes qui ont fait suite à des appels.|  
 |IssuesRaised|Nombre de problèmes, générés par des appels, qui requièrent un suivi.|  
 |AverageTimePerIssue|Durée moyenne requise pour répondre à un appel entrant.|  
-|ServiceGrade|Une mesure qui indique la qualité générale du service, mesuré en tant que le *le taux d’abandon* de l’équipe entière. Plus le taux d'abandon est élevé, plus la probabilité que les clients soient mécontents et que des commandes potentielles soient perdues est forte.|  
+|ServiceGrade|Métrique qui indique la qualité de service générale, mesurée comme le *taux d’abandon* pour l’ensemble de l’équipe. Plus le taux d'abandon est élevé, plus la probabilité que les clients soient mécontents et que des commandes potentielles soient perdues est forte.|  
   
- Notez que les données comprennent quatre colonnes différentes qui sont basées sur une seule colonne de date : `WageType`, **DayOfWeek**, `Shift`, et `DateKey`. D'ordinaire, dans l'exploration de données il n'est pas judicieux d'utiliser plusieurs colonnes dérivées des mêmes données, car les valeurs se mettent trop lourdement en corrélation entre elles et peuvent masquer d'autres modèles.  
+ Notez que les données incluent quatre colonnes différentes qui sont basées sur une colonne de date unique `WageType`:, DayOfWeek `Shift`, et `DateKey`. D'ordinaire, dans l'exploration de données il n'est pas judicieux d'utiliser plusieurs colonnes dérivées des mêmes données, car les valeurs se mettent trop lourdement en corrélation entre elles et peuvent masquer d'autres modèles.  
   
- Toutefois, nous n’allons pas utiliser `DateKey` dans le modèle, car il contient trop de valeurs uniques. Il n’existe aucune relation directe entre `Shift` et **DayOfWeek**, et `WageType` et **DayOfWeek** sont uniquement liées en partie. Si vous vous inquiétiez de la collinéarité, vous pouvez créer la structure à l'aide de toutes les colonnes disponibles, puis ignorer d'autres colonnes dans chaque modèle et tester l'effet.  
+ Toutefois, nous n’utiliserons `DateKey` pas dans le modèle, car il contient trop de valeurs uniques. Il n’existe aucune relation directe `Shift` entreet `WageType` DayOfWeek, et la **DayOfWeek** ne sont que partiellement liées. Si vous vous inquiétiez de la collinéarité, vous pouvez créer la structure à l'aide de toutes les colonnes disponibles, puis ignorer d'autres colonnes dans chaque modèle et tester l'effet.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’une Structure de réseau neuronal et un modèle &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Création d’une structure de réseau neuronal &#40;et d’un modèle de didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de sources de données dans les modèles multidimensionnels](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Vues de sources de données dans les modèles multidimensionnels](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

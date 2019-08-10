@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 12eddedce5d00c1bbc9e71995c2c9ceab34386d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074726"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893927"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,13 +35,13 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  La valeur de retour contient la probabilité brute du cas, qui est le produit des probabilités des attributs de cas.  
   
 ## <a name="applies-to"></a>S'applique à  
- Modèles qui sont générés à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering et [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes Sequence Clustering.  
+ Modèles générés à l’aide des [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes de [!INCLUDE[msCoName](../includes/msconame-md.md)] clustering et Sequence Clustering.  
   
 ## <a name="return-type"></a>Type de retour  
  Nombre à virgule flottante double précision compris entre 0 et 1. Un nombre plus proche de 1 indique que le cas a une probabilité plus élevée de se produire dans ce modèle. Un nombre plus proche de 0 indique qu'il est moins probable que le cas se produise dans ce modèle.  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, le résultat de la **PredictCaseLikelihood** (fonction) est normalisée. Les valeurs normalisées sont généralement plus utiles lorsque le nombre d'attributs d'un cas augmente et que les différences entre les probabilités brutes de deux cas deviennent beaucoup moins importantes.  
+ Par défaut, le résultat de la fonction **PredictCaseLikelihood** est normalisé. Les valeurs normalisées sont généralement plus utiles lorsque le nombre d'attributs d'un cas augmente et que les différences entre les probabilités brutes de deux cas deviennent beaucoup moins importantes.  
   
  L'équation suivante est utilisée pour calculer les valeurs normalisées pour des valeurs x et y données :  
   
@@ -49,9 +49,9 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = probabilité de cas marginale, calculée comme le logarithme du rapport de vraisemblance du cas en fonction des cas d'apprentissage  
   
--   Z = Exp (LOG10 (x) - Log(Y))  
+-   Z = exp (log (x)-log (Y))  
   
- Normalisé = (z / (1 + z))  
+ Normalized = (z/(1 + z))  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne la probabilité que le cas spécifié se produira dans le modèle de clustering, qui est basé sur la base de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW.  
@@ -77,12 +77,12 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6.30672792729321E-08|6.30672792729321E-08|9.5824454056846E-48|  
   
- La différence entre ces résultats montre l'effet de la normalisation. La valeur brute pour **CaseLikelihood** suggère que la probabilité du cas est d’environ 20 pour cent ; Cependant, quand vous normalisez les résultats, il devient évident que la probabilité du cas est très faible.  
+ La différence entre ces résultats montre l'effet de la normalisation. La valeur brute pour **CaseLikelihood** suggère que la probabilité de la casse est d’environ 20 pour cent; Toutefois, lorsque vous normalisez les résultats, il devient évident que la probabilité de la casse est très faible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Référence des fonctions &#40;DMX&#41; des extensions d’exploration de données](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Fonctions &#40;de prédiction générales DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

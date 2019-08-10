@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b662b537913847ee2858f933a54f37739d1c5c34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078619"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888361"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Masquage et désactivation des hiérarchies d'attributs
   Par défaut, une hiérarchie d'attribut est créée pour chaque attribut dans une dimension, et chaque hiérarchie est disponible pour dimensionner les données de faits. Cette hiérarchie se compose d'un niveau « All » et d'un niveau de détail contenant tous les membres de la hiérarchie. Comme vous l'avez déjà appris, vous pouvez organiser les attributs en hiérarchies définies par l'utilisateur pour fournir les chemins de navigation dans un cube. Dans certaines circonstances, vous pouvez être amené à choisir de désactiver ou de masquer certains attributs et leurs hiérarchies. Par exemple, certains attributs, tels que les numéros de sécurité sociale ou les numéros de carte d'identité, les taux de rémunération, les dates de naissance et les informations de connexion ne sont pas des attributs par lesquels les utilisateurs pourront dimensionner les informations d'un cube. Ces informations sont au contraire généralement affichées uniquement comme détails d'un membre d'attribut spécifique. Vous pouvez choisir de masquer ces hiérarchies d'attributs, ce qui permet de laisser les attributs affichés uniquement en tant que propriétés de membre d'un attribut spécifique. Vous pouvez également choisir d'afficher les membres d'autres attributs, tels que les noms de clients ou les codes postaux, uniquement lorsqu'ils sont visualisés via une hiérarchie utilisateur et non indépendamment via une hiérarchie d'attributs. L'une des raisons qui amène à procéder ainsi est le nombre même de membres distincts dans la hiérarchie d'attributs. Enfin, pour améliorer les performances de traitement, vous devez désactiver les hiérarchies d'attributs auxquelles les utilisateurs ne feront pas appel pour l'exploration.  
@@ -77,7 +77,7 @@ ms.locfileid: "66078619"
   
      L'illustration suivante montre la propriété **AttributeHierarchyEnabled** avec la valeur False pour les attributs sélectionnés.  
   
-     ![Propriété AttributeHierarchyEnabled est définie sur False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "propriété AttributeHierarchyEnabled est définie sur False")  
+     ![Propriété AttributeHierarchyEnabled définie sur false](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Propriété AttributeHierarchyEnabled définie sur false")  
   
 5.  Dans le menu **Générer** , cliquez sur **Déployer Analysis Services Tutorial**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66078619"
   
      L'illustration suivante montre la propriété **AttributeHierarchyVisible** avec la valeur False.  
   
-     ![Propriété AttributeHierarchyVisible est définie sur False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "propriété AttributeHierarchyVisible est définie sur False")  
+     ![Propriété AttributeHierarchyVisible définie sur false](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Propriété AttributeHierarchyVisible définie sur false")  
   
 5.  Faites glisser l'attribut **Postal Code** du volet **Attributs** vers la hiérarchie utilisateur **Customer Geography** du volet **Hiérarchies et niveaux** , immédiatement sous le niveau **City** .  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66078619"
      Notez que les niveaux masqués, **Postal Code** et **Full Name**, sont visibles dans la hiérarchie définie par l’utilisateur.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Tri des membres d’attribut sur la base d’un attribut secondaire](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [Tri des membres d’attribut sur la base d’un attribut secondaire](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
   
   

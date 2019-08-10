@@ -12,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072521"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889322"
 ---
 # <a name="ragged-hierarchies"></a>Hiérarchies déséquilibrées
   Une hiérarchie déséquilibrée est une hiérarchie définie par l'utilisateur qui a un nombre de niveaux impair. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., la Cité du Vatican ou New Dehli.  
@@ -41,9 +41,9 @@ ms.locfileid: "66072521"
   
 -   Utilisez une hiérarchie régulière, mais définissez la propriété `HideMemberIf` sur chaque niveau afin de spécifier si un niveau manquant est visualisé par l'utilisateur. Lorsque vous définissez `HideMemberIf`, vous devez également définir `MDXCompatibility` dans la chaîne de connexion pour remplacer les comportements de navigation par défaut. Les instructions de définition de ces propriétés sont fournies dans cette rubrique.  
   
--   Créez une hiérarchie parent-enfant qui gère explicitement les membres de niveau. Pour une présentation de la technique, consultez [Hiérarchie déséquilibrée dans SSAS (billet de blog)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Pour plus d’informations dans la documentation en ligne, consultez [hiérarchie Parent-enfant](parent-child-dimension.md). Les inconvénients liés à la création d'une hiérarchie parent-enfant résident dans le fait que vous ne pouvez en avoir qu'une seule par dimension, ce qui entraîne généralement une baisse des performances lors du calcul des agrégations pour les membres intermédiaires.  
+-   Créez une hiérarchie parent-enfant qui gère explicitement les membres de niveau. Pour une présentation de la technique, consultez [Hiérarchie déséquilibrée dans SSAS (billet de blog)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Pour plus d’informations dans la documentation en ligne de, consultez [hiérarchie parent-enfant](parent-child-dimension.md). Les inconvénients liés à la création d'une hiérarchie parent-enfant résident dans le fait que vous ne pouvez en avoir qu'une seule par dimension, ce qui entraîne généralement une baisse des performances lors du calcul des agrégations pour les membres intermédiaires.  
   
- Si votre dimension contient plusieurs hiérarchies déséquilibrées, vous devez utiliser la première approche, en définissant `HideMemberIf`. Les développeurs BI qui ont une expérience pratique des hiérarchies déséquilibrées vont plus loin et recommandent d'apporter des modifications supplémentaires aux tables de données physiques, en créant des tables distinctes pour chaque niveau. Consultez [les hiérarchies déséquilibrées-1 a de SSAS financiers Cube-partie (blog) de Martin Mason le](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) pour plus d’informations sur cette technique.  
+ Si votre dimension contient plusieurs hiérarchies déséquilibrées, vous devez utiliser la première approche, en définissant `HideMemberIf`. Les développeurs BI qui ont une expérience pratique des hiérarchies déséquilibrées vont plus loin et recommandent d'apporter des modifications supplémentaires aux tables de données physiques, en créant des tables distinctes pour chaque niveau. Pour plus d’informations sur cette technique, consultez [le cube financier SSAS de Martin Mason-part 1a-divisible Hierarchies (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) .  
   
 ##  <a name="bkmk_Hide"></a> Définition de HideMemberIf pour masquer les membres dans une hiérarchie normale  
  Dans la table d'une dimension déséquilibrée, les membres manquants peuvent être représentés de différentes manières. Les espaces réservés des cellules de table peuvent être des valeurs NULL ou des chaînes vides, ou bien la même valeur que leurs parents. La représentation des espaces réservés est déterminée par l'état d'espace réservé de membres enfants, conformément à la propriété `HideMemberIf`, et par la propriété de chaîne de connexion `MDX Compatibility` pour l'application cliente.  
@@ -74,6 +74,6 @@ ms.locfileid: "66072521"
  [Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)   
  [Hiérarchies utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Hiérarchie parent-enfant](parent-child-dimension.md)   
- [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

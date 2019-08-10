@@ -1,5 +1,5 @@
 ---
-title: Création d’une Solution et la Source de données (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Création d’une solution et d’une source de données (Didacticiel intermédiaire sur l’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,19 +10,19 @@ ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855343"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891437"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Création d'une solution et d'une source de données (Didacticiel sur l'exploration de données intermédiaire)
   Pour utiliser l'exploration de données, vous devez d'abord créer un projet dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide du modèle **Projet multidimensionnel et d'exploration de données Analysis Services**. Lorsque vous ouvrez le modèle, il charge dans le concepteur tous les schémas dont vous pourriez avoir besoin pour l'exploration de données : sources de données, structures et modèles d'exploration de données, et même cubes si votre structure d'exploration de données utilise des données multidimensionnelles.  
   
  Lorsque vous créez le projet, votre solution est stockée sous forme de fichier local jusqu'à ce que la solution soit déployée. Lorsque vous déployez la solution, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] spécifié dans les propriétés du projet, et crée une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avec le même nom que le projet. Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise l'instance **localhost** pour les nouveaux projets. Si vous utilisez une instance nommée ou spécifiez un autre nom pour l'instance par défaut, vous devez déplacer la propriété de la base de données de déploiement du projet vers l'emplacement auquel vous souhaitez créer vos objets d'exploration de données.  
   
- Pour plus d’informations sur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projets, consultez [créer un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+ Pour plus d’informations [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur les projets, consultez [créer un &#40;projet&#41;Analysis Services SSDT](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt).  
   
 ### <a name="to-create-a-new-analysis-services-project-for-this-tutorial"></a>Pour créer un projet Analysis Services pour ce didacticiel  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62855343"
   
 #### <a name="to-create-a-data-source"></a>Pour créer une source de données  
   
--   [Création d’une Source de données &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+-   [Didacticiel de création d' &#40;une source de données d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
  Une source de données unique peut prendre en charge plusieurs vues de sources de données, lesquelles peuvent comporter plusieurs tables. Toutefois, étant donné que la source de données et la vue de source de données sont déployées dans votre base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avec les modèles d'exploration de données que vous créez, il est conseillé d'inclure, dans chaque vue de source de données, uniquement les tables requises pour chaque modèle d'exploration de données ou groupe de modèles.  
   
@@ -69,16 +69,16 @@ ms.locfileid: "62855343"
   
 |Scénario|Données incluses dans la vue de source de données|  
 |--------------|-------------------------------------------|  
-|[Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|États des ventes mensuels pour les versions de vélos dans les différentes régions, collectés comme une seule vue.|  
-|[Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Une table contenant la liste des commandes clients, et une table imbriquée affichant les achats individuels pour chaque client.|  
-|[Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Les mêmes données que celles utilisées pour l'analyse du panier d'achat, avec en plus un identificateur qui affiche l'ordre dans lequel les éléments ont été achetés.|  
-|[Leçon 5 : Création de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Une seule table contenant des données de suivi des performances préliminaires provenant d'un centre d'appels.|  
+|[Leçon 2 : Développement d’un scénario &#40;de prévision didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|États des ventes mensuels pour les versions de vélos dans les différentes régions, collectés comme une seule vue.|  
+|[Leçon 3 : Didacticiel de création d’un &#40;scénario de panier d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Une table contenant la liste des commandes clients, et une table imbriquée affichant les achats individuels pour chaque client.|  
+|[Leçon 4 : Développement d’un scénario &#40;Sequence Clustering didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Les mêmes données que celles utilisées pour l'analyse du panier d'achat, avec en plus un identificateur qui affiche l'ordre dans lequel les éléments ont été achetés.|  
+|[Leçon 5 : Développement de modèles &#40;de réseau neuronal et de régression logistique-didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Une seule table contenant des données de suivi des performances préliminaires provenant d'un centre d'appels.|  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 2 : Développement d’un scénario &#40;de prévision didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Projets d’exploration de données](../../2014/analysis-services/data-mining/data-mining-projects.md)   
- [Vues de sources de données dans les modèles multidimensionnels](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Vues de sources de données dans les modèles multidimensionnels](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

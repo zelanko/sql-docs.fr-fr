@@ -10,23 +10,23 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 9ce4f0a9735c14aed6289527b47f76995e1c10d2
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285018"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893600"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implémentation de la sécurité dynamique à l'aide des filtres de lignes
-  Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qui implémente la sécurité dynamique. La sécurité dynamique permet de définir la sécurité de niveau ligne en fonction du nom d'utilisateur ou de l'ID de connexion de l'utilisateur actuellement connecté. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
+  Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qui implémente la sécurité dynamique. La sécurité dynamique permet de définir la sécurité de niveau ligne en fonction du nom d'utilisateur ou de l'ID de connexion de l'utilisateur actuellement connecté. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular).  
   
  Pour implémenter la sécurité dynamique, vous devez ajouter une table à votre modèle qui contient les noms des utilisateurs Windows qui peuvent créer une connexion au modèle comme source de données et parcourir les objets de modèle et les données. Le modèle que vous allez créer à l'aide de ce didacticiel est dans le contexte d'Adventure Works Corp. Toutefois, pour pouvoir effectuer cette leçon, vous devez ajouter une table qui contient les utilisateurs de votre propre domaine. Vous n'aurez pas besoin de mots de passe pour les noms d'utilisateurs qui seront ajoutés. Pour créer une table Employee Security contenant un petit groupe d'utilisateurs de votre propre domaine, vous allez utiliser la fonctionnalité Coller pour coller les données à propos des employés à partir d'une feuille de calcul Excel. Dans la réalité, la table contenant les noms d'utilisateurs à ajouter à un modèle utiliserait une table provenant d'une base de données actuelle comme source de données (une table dimEmployee réelle, par exemple).  
   
- Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX : [Fonction USERNAME &#40;DAX&#41; ](/dax/username-function-dax) et [fonction LOOKUPVALUE &#40;DAX&#41;](/dax/lookupvalue-function-dax). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. Si vous utilisez la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table Employee Security et la transmet ensuite à la fonction USERNAME, qui spécifie le nom d'utilisateur de l'utilisateur connecté à qui appartient ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
+ Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX: [Fonction de &#40;nom&#41; d’utilisateur Dax](/dax/username-function-dax) et [ValRech, &#40;fonction DAX&#41;](/dax/lookupvalue-function-dax). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. Si vous utilisez la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table Employee Security et la transmet ensuite à la fonction USERNAME, qui spécifie le nom d'utilisateur de l'utilisateur connecté à qui appartient ce rôle. L’utilisateur peut ensuite parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
   
  Pour pouvoir effectuer cette leçon supplémentaire, vous allez accomplir une succession de tâches. Les tâches qui sont propres à ce scénario de modèle tabulaire Adventure Works, et qui ne s'appliqueraient pas forcément à un scénario réel, sont identifiées en conséquence. Chaque tâche inclut des informations supplémentaires qui en décrivent l'objectif.  
   
- Durée estimée pour effectuer cette leçon : **30 minutes**  
+ Durée estimée pour effectuer cette leçon: **30 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
  Cette leçon supplémentaire fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
@@ -40,7 +40,7 @@ ms.locfileid: "67285018"
   
 2.  Dans la boîte de dialogue **Connexions existantes** , vérifiez que la connexion à la source de données **Adventure Works DB from SQL** est sélectionnée, puis cliquez sur **Ouvrir**.  
   
-     Si la boîte de dialogue informations d’identification d’emprunt d’identité s’affiche, tapez les informations d’identification d’emprunt d’identité que vous avez utilisé dans la leçon 2 : Ajouter des données.  
+     Si la boîte de dialogue informations d’identification d’emprunt d’identité s’affiche, tapez les informations d’identification d’emprunt d’identité que vous avez utilisées dans la leçon 2: Ajouter des données.  
   
 3.  Dans la page **Choisir comment importer les données** , laissez **Sélectionner les données à importer dans une liste de tables et de vues** sélectionné, puis cliquez sur **Suivant**.  
   
@@ -85,14 +85,14 @@ ms.locfileid: "67285018"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
-    |1|3|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
-    |2|4|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
-    |3|5|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
+    |1|2|\<prénom de l’utilisateur >|\<nom de l’utilisateur >|\<> domaine\nom_utilisateur|  
+    |1|3|\<prénom de l’utilisateur >|\<nom de l’utilisateur >|\<> domaine\nom_utilisateur|  
+    |2|4|\<prénom de l’utilisateur >|\<nom de l’utilisateur >|\<> domaine\nom_utilisateur|  
+    |3|5\.|\<prénom de l’utilisateur >|\<nom de l’utilisateur >|\<> domaine\nom_utilisateur|  
   
 3.  Dans la nouvelle feuille de calcul, remplacez le prénom, le nom, et le domaine\nom d'utilisateur par les noms et les ID de connexion des trois utilisateurs de votre organisation. Pour l'ID d'employé 1, indiquez le même utilisateur sur les deux premières lignes. Cela signifie que cet utilisateur appartient à plusieurs secteurs de vente. Laissez les champs Employee Id et Sales Territory Id tels quels.  
   
-4.  Enregistrez la feuille de calcul en tant que `Sample Employee`.  
+4.  Enregistrez la feuille de `Sample Employee`calcul sous.  
   
 5.  Dans la feuille de calcul, sélectionnez toutes les cellules avec des données sur les employés, avec les en-têtes, puis cliquez avec le bouton droit sur les données sélectionnées, et cliquez ensuite sur **Copier**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67285018"
   
      Si l’option Coller est grisée, cliquez sur n’importe quelle colonne dans une table de la fenêtre du Générateur de modèles, cliquez ensuite sur le menu **Modifier** , puis sur **Coller**.  
   
-7.  Dans le **Aperçu avant collage** boîte de dialogue **nom de la Table**, type `Employee Security`.  
+7.  Dans la boîte de dialogue **aperçu de collage** , dans nom de `Employee Security`la **table**, tapez.  
   
 8.  Dans **Données à coller**, vérifiez que les données contiennent toutes les données et en-têtes d’utilisateur de la feuille de calcul Sample Employee.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67285018"
      Notez que la propriété Active pour cette relation est False, ce qui signifie qu'elle est inactive. Cela est dû au fait que la table Internet Sales a déjà une autre relation active qui est utilisée dans les mesures.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>Masquer la table Employee Security des applications clientes  
- Dans cette tâche, vous allez masquer la table Employee Security, empêchant de s’afficher dans la liste de champs d’une application cliente. Gardez bien à l'esprit que le fait de masquer une table ne la sécurise pas. Les utilisateurs peuvent toujours interroger les données de la table Employee Security s'ils savent comment faire. Afin de sécuriser les données de la table Employee Security, pour empêcher les utilisateurs d'interroger n'importe laquelle de ses données, vous devez appliquer un filtre dans une tâche ultérieure.  
+ Dans cette tâche, vous allez masquer la table Employee Security, afin qu’elle apparaisse dans la liste des champs d’une application cliente. Gardez bien à l'esprit que le fait de masquer une table ne la sécurise pas. Les utilisateurs peuvent toujours interroger les données de la table Employee Security s'ils savent comment faire. Afin de sécuriser les données de la table Employee Security, pour empêcher les utilisateurs d'interroger n'importe laquelle de ses données, vous devez appliquer un filtre dans une tâche ultérieure.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>Pour masquer la table Employee Security des applications clientes  
   
@@ -130,7 +130,7 @@ ms.locfileid: "67285018"
  Dans cette tâche, vous allez créer un rôle d'utilisateur. Ce rôle inclut une définition de filtre de lignes dont les lignes de la table Sales Territory sont visibles aux utilisateurs. Le filtre est ensuite appliqué dans la direction de la relation un-à-plusieurs à toutes les autres tables associées à la table Sales Territory. Vous allez également appliquer un filtre simple qui empêche la table Employee Security d'être interrogée par tout utilisateur membre du rôle.  
   
 > [!NOTE]  
->  Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur en tant que membre pour les employés des ventes par rôle Territory qui existe également comme un membre d’un rôle créé dans [leçon 12 : Créer des rôles](../analysis-services/lesson-11-create-roles.md), vous obtiendrez une combinaison d’autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l'utilisateur aura plus d'autorisations déterminées par la combinaison des rôles.  
+>  Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur en tant que membre au rôle Sales employees by secteur qui existe également comme membre d’un rôle créé dans [la leçon 12: Créer des](https://docs.microsoft.com/analysis-services/lesson-11-create-roles)rôles, vous obtiendrez une combinaison d’autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l'utilisateur aura plus d'autorisations déterminées par la combinaison des rôles.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Pour créer un rôle d'utilisateur Sales Employees by Territory  
   
@@ -140,7 +140,7 @@ ms.locfileid: "67285018"
   
      Un nouveau rôle sans aucune autorisation est ajouté à la liste.  
   
-3.  Cliquez sur le nouveau rôle, puis dans le **nom** colonne, renommez le rôle en `Sales Employees by Territory`.  
+3.  Cliquez sur le nouveau rôle, puis dans la colonne **nom** , renommez le rôle `Sales Employees by Territory`.  
   
 4.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture** .  
   
@@ -152,7 +152,7 @@ ms.locfileid: "67285018"
   
 7.  Cliquez sur l’onglet **Filtres de lignes** .  
   
-8.  Pour le `Employee Security` de table, dans le **filtre DAX** colonne, tapez la formule suivante.  
+8.  Pour la `Employee Security` table, dans la colonne **filtre Dax** , tapez la formule suivante.  
   
      `=FALSE()`  
   
@@ -198,8 +198,8 @@ ms.locfileid: "67285018"
      Cet utilisateur ne peut pas parcourir ou interroger les données des ventes Internet pour les secteurs autres que celui auquel il appartient, car le filtre de lignes défini pour la table Sales Territory dans le rôle d'utilisateur Sales Employees by Territory sécurise efficacement toutes les données associées à d'autres secteurs de vente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction USERNAME &#40;DAX&#41;](/dax/username-function-dax)   
- [La fonction LOOKUPVALUE &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
- [Fonction CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
+ [NOM de &#40;fonction DAX&#41;](/dax/username-function-dax)   
+ [VALRECH, &#40;fonction DAX&#41;](/dax/lookupvalue-function-dax)   
+ [Fonction DAX &#40;de la fonction CUSTOMDATA&#41;](/dax/customdata-function-dax)  
   
   

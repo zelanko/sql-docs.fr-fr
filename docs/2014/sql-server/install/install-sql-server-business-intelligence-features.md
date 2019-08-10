@@ -9,12 +9,12 @@ ms.author: maghan
 manager: kfile
 ms.date: 10/24/2018
 ms.technology: install
-ms.openlocfilehash: 44805d6fd7512a5180a2b62e2c8808b890901705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c120949b03ac1b6832316b9aa2d06875c5559f3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151655"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890081"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>Installer les fonctionnalités BI de SQL Server 2014
 
@@ -22,7 +22,7 @@ ms.locfileid: "63151655"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés comme serveurs autonomes, dans les configurations avec montée en puissance parallèle, ou comme applications de service partagé dans une batterie de serveurs SharePoint. L’installation des services dans une batterie permet d’activer les fonctionnalités BI disponibles seulement dans SharePoint, notamment [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], le concepteur de rapports interactifs ad hoc [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui s’exécute sur des bases de données du modèle tabulaire [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Si vous êtes déjà familiarisé avec les étapes d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou PowerPivot pour SharePoint, passez aux listes de vérification pour obtenir de l'aide sur la manière d'activer des scénarios spécifiques. Pour plus d’informations, consultez [listes de contrôle pour l’installation des fonctionnalités de BI avec SharePoint](checklists-for-installing-bi-features-with-sharepoint.md).  
+ Si vous êtes déjà familiarisé avec les étapes d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou PowerPivot pour SharePoint, passez aux listes de vérification pour obtenir de l'aide sur la manière d'activer des scénarios spécifiques. Pour plus d’informations, consultez [listes de vérification pour l’installation des fonctionnalités décisionnelles avec SharePoint](checklists-for-installing-bi-features-with-sharepoint.md).  
   
 ## <a name="contents"></a>Sommaire
 
@@ -31,9 +31,9 @@ Dans cette section :
 |Lien|Tâche|  
 |----------|----------|  
 |[Listes de vérification pour installer des fonctionnalités BI avec SharePoint](checklists-for-installing-bi-features-with-sharepoint.md)|Si vous savez déjà ce que vous souhaitez installer et les étapes d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint vous sont familières, utilisez les listes de vérification de cette section pour obtenir de l'aide sur l'ordre d'installation, la configuration requise pour les autorisations et les comptes, ainsi que les étapes de déploiement des topologies avancées, y compris les déploiements multiserveurs et multifonctionnalité.|  
-|[Installer des fonctionnalités SQL Server BI avec SharePoint &#40;PowerPivot et Reporting Services&#41;](install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)|Cette section explique comment installer les fonctionnalités de SQL Server dans un environnement SharePoint. Elle identifie les fonctionnalités SQL Server disponibles en fonction d'une version et d'une édition spécifiques de SharePoint. Elle inclut également des procédures d'installation de PowerPivot pour SharePoint et Reporting Services en mode SharePoint.|  
-|[Installer Analysis Services en mode multidimensionnel et exploration de données](install-analysis-services-in-multidimensional-and-data-mining-mode.md)<br /><br /> [Installer Analysis Services en mode tabulaire](../../analysis-services/instances/install-windows/install-analysis-services.md)<br /><br /> [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)<br /><br /> [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md)<br /><br /> [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)<br /><br /> [Installer le serveur de rapports Reporting Services en mode natif](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)|Cette section fournit des instructions d'installation pour Analysis Services, Integration Services, Master Data Services et Reporting Services, pour les installations d'Analysis Services et de Reporting Services sans SharePoint. Cela est parfois appelé *en mode natif*, et il est le scénario d’installation le plus courant pour Reporting Services et Analysis Services. Dans cette section, vous découvrirez les options d'installation qui déterminent directement le contexte opérationnel de votre serveur. Pour Reporting Services, cela peut être un serveur qui est préconfiguré ou un qui requiert plusieurs étapes de configuration pour pouvoir l'utiliser. Pour Analysis Services, les options d'installation que vous sélectionnez déterminent le type de projet que vous pouvez déployer sur le serveur.|  
-|[Vérifier ou corriger les problèmes d’Installation de SQL Server BI fonctionnalité](../../../2014/sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md)|Cette section présente les étapes pour vérifier une installation. Elle fournit également des liens vers des informations de dépannage sur le Web.|  
+|[Installer des fonctionnalités de SQL Server BI &#40;avec SharePoint PowerPivot et Reporting Services&#41;](install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)|Cette section explique comment installer les fonctionnalités de SQL Server dans un environnement SharePoint. Elle identifie les fonctionnalités SQL Server disponibles en fonction d'une version et d'une édition spécifiques de SharePoint. Elle inclut également des procédures d'installation de PowerPivot pour SharePoint et Reporting Services en mode SharePoint.|  
+|[Installer Analysis Services en mode multidimensionnel et exploration de données](install-analysis-services-in-multidimensional-and-data-mining-mode.md)<br /><br /> [Installer Analysis Services en mode tabulaire](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)<br /><br /> [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)<br /><br /> [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md)<br /><br /> [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)<br /><br /> [Installer le serveur de rapports Reporting Services en mode natif](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)|Cette section fournit des instructions d'installation pour Analysis Services, Integration Services, Master Data Services et Reporting Services, pour les installations d'Analysis Services et de Reporting Services sans SharePoint. Cette opération est parfois appelée *mode natif*et c’est le scénario d’installation le plus courant pour les Reporting Services et les Analysis Services. Dans cette section, vous découvrirez les options d'installation qui déterminent directement le contexte opérationnel de votre serveur. Pour Reporting Services, cela peut être un serveur qui est préconfiguré ou un qui requiert plusieurs étapes de configuration pour pouvoir l'utiliser. Pour Analysis Services, les options d'installation que vous sélectionnez déterminent le type de projet que vous pouvez déployer sur le serveur.|  
+|[Vérifier ou résoudre les problèmes d’installation des fonctionnalités SQL Server BI](../../../2014/sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md)|Cette section présente les étapes pour vérifier une installation. Elle fournit également des liens vers des informations de dépannage sur le Web.|  
   
 ## <a name="related-content"></a>Contenu connexe  
   
@@ -44,9 +44,9 @@ Dans cette section :
   
 ## <a name="see-also"></a>Voir aussi
 
-* [Quelles sont les nouveautés &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
+* [Nouveautés &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
 
-* [Quelles sont les nouveautés dans Analysis Services et Business Intelligence](../../analysis-services/what-s-new-in-analysis-services.md)
+* [Nouveautés de Analysis Services et Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
 
 * [Installer SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)
 

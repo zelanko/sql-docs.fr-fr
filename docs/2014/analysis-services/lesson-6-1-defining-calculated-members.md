@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078399"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888183"
 ---
 # <a name="defining-calculated-members"></a>Définition des membres calculés
   Les membres calculés sont les membres d'une dimension ou d'un groupe de mesures qui sont définis à l'aide d'une combinaison de données de cube, d'opérateurs arithmétiques, de nombres et de fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  
@@ -32,7 +32,7 @@ ms.locfileid: "66078399"
   
      L'image suivante montre l'onglet **Calculs** du Concepteur de cube.  
   
-     ![Onglet calculs du Concepteur de Cube](../../2014/tutorials/media/l6-calculatedmembers-1.gif "onglet calculs du Concepteur de Cube")  
+     ![Onglet calculs du concepteur de cube](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Onglet calculs du concepteur de cube")  
   
 2.  Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Nouveau membre calculé**.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66078399"
   
      L'image suivante montre le formulaire qui apparaît dans le volet **Expressions de calcul** lorsque vous cliquez sur **Nouveau membre calculé**.  
   
-     ![Écran de volet des Expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-02.gif "formulaire du volet des Expressions de calcul")  
+     ![Formulaire du volet des expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Formulaire du volet des expressions de calcul")  
   
-3.  Dans le **nom** , changez le nom de la mesure calculée en `[Total Sales Amount]`.  
+3.  Dans la zone **nom** , remplacez le nom de la mesure calculée par `[Total Sales Amount]`.  
   
      Si le nom d'un membre calculé contient un espace, le nom du membre calculé doit être placé entre crochets.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66078399"
   
 5.  Faites glisser **Internet Sales-Sales Amount** depuis l’onglet **Métadonnées** du volet **Outils de calcul** jusqu’à la zone **Expression** dans le volet **Expressions de calcul** .  
   
-6.  Dans le **Expression** , tapez un signe plus (`+`) après **[Measures]. [ Internet Sales-Sales Amount]** .  
+6.  Dans la zone **expression** , tapez un signe plus (`+`) après **[Measures]. [ Ventes sur Internet-chiffre d’affaires]** .  
   
 7.  Sous l’onglet **Métadonnées** dans le volet **Outils de calcul** , développez **Reseller Sales**, puis faites glisser **Reseller Sales-Sales Amount** dans la zone **Expression** du volet **Expressions de calcul** après le signe plus (+).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078399"
   
      L'image suivante montre le volet **Expressions de calcul** rempli à l'aide des paramètres que vous avez spécifiés dans les étapes précédentes.  
   
-     ![Volet des Expressions de calcul Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "volet des Expressions de calcul rempli")  
+     ![Volet des expressions de calcul remplies](../../2014/tutorials/media/l6-calculatedmembers-03.gif "Volet des expressions de calcul remplies")  
   
 10. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode Script**, puis examinez le script de calcul dans le volet **Expressions de calcul** .  
   
@@ -83,11 +83,11 @@ ms.locfileid: "66078399"
   
      L'image suivante montre les scripts de calcul tels qu'ils doivent apparaître dans le volet **Expressions de calcul** à ce stade dans le didacticiel.  
   
-     ![Les scripts dans le volet des Expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Scripts dans le volet des Expressions de calcul")  
+     ![Scripts dans le volet des expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Scripts dans le volet des expressions de calcul")  
   
-12. Dans la barre d’outils de la **calculs** , cliquez sur **mode formulaire**, vérifiez que `[Total Sales Amount]` est sélectionné dans le **organisateur de Script** volet, puis cliquez sur  **Nouveau membre calculé**.  
+12. Dans la barre d’outils de l’onglet **calculs** , cliquez sur **mode formulaire**, vérifiez que `[Total Sales Amount]` est sélectionné dans le volet **organisateur de script** , puis cliquez sur **nouveau membre calculé**.  
   
-13. Modifier le nom de ce nouveau membre calculé en `[Total Product Cost]`, puis créez l’expression suivante dans le **Expression** zone :  
+13. Changez le nom de ce nouveau membre calculé en `[Total Product Cost]`, puis créez l’expression suivante dans la zone **expression** :  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -101,9 +101,9 @@ ms.locfileid: "66078399"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>Définition de calculs de marge brute  
   
-1.  Vérifiez que `[Total Product Cost]` est sélectionné dans le **organisateur de Script** volet, puis cliquez sur **nouveau membre calculé** sur la barre d’outils de la **calculs** onglet.  
+1.  Vérifiez que `[Total Product Cost]` est sélectionné dans le volet **organisateur de script** , puis cliquez sur **nouveau membre calculé** dans la barre d’outils de l’onglet **calculs** .  
   
-2.  Dans le **nom** , changez le nom de cette nouvelle mesure calculée en `[Internet GPM]`.  
+2.  Dans la zone **nom** , remplacez le nom de cette nouvelle mesure calculée par `[Internet GPM]`.  
   
 3.  Dans la zone **Expression** , créez l'expression MDX suivante :  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66078399"
   
 6.  Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Nouveau membre calculé**.  
   
-7.  Dans le **nom** , changez le nom de cette nouvelle mesure calculée en `[Reseller GPM]`.  
+7.  Dans la zone **nom** , remplacez le nom de cette nouvelle mesure calculée par `[Reseller GPM]`.  
   
 8.  Dans la zone **Expression** , créez l'expression MDX suivante :  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66078399"
   
 11. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Nouveau membre calculé**.  
   
-12. Dans le **nom** , changez le nom de cette mesure calculée en `[Total GPM]`.  
+12. Dans la zone **nom** , remplacez le nom de cette mesure calculée par `[Total GPM]`.  
   
 13. Dans la zone **Expression** , créez l'expression MDX suivante :  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66078399"
   
 16. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode Script** et examinez les trois calculs que vous avez ajoutés au script de calcul.  
   
-17. Ajoutez une nouvelle ligne dans le script de calcul immédiatement avant la `[Internet GPM]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne :  
+17. Ajoutez une nouvelle ligne au script de calcul immédiatement avant le `[Internet GPM]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne:  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -161,17 +161,17 @@ ms.locfileid: "66078399"
   
      L'image suivante montre le volet **Expressions** avec les trois nouveaux calculs.  
   
-     ![Nouveaux calculs dans le volet des Expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-05.gif "nouveaux calculs dans le volet des Expressions de calcul")  
+     ![Nouveaux calculs dans le volet des expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-05.gif "Nouveaux calculs dans le volet des expressions de calcul")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>Définition des calculs de pourcentage du total  
   
 1.  Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode formulaire**.  
   
-2.  Dans le **organisateur de Script** volet, sélectionnez `[Total GPM]`, puis cliquez sur **nouveau membre calculé** sur la barre d’outils de la **calculs** onglet.  
+2.  Dans le volet **organisateur de script** , `[Total GPM]`sélectionnez, puis cliquez sur **nouveau membre calculé** dans la barre d’outils de l’onglet **calculs** .  
   
      Le fait de cliquer sur le membre calculé final dans le volet **Organisateur de script** avant de cliquer sur **Nouveau membre calculé** garantit que le nouveau membre calculé sera entré à la fin du script. Les scripts s'exécutent dans l'ordre où ils apparaissent dans le volet **Organisateur de script** .  
   
-3.  Modifier le nom de ce nouveau membre calculé en `[Internet Sales Ratio to All Products]`.  
+3.  Remplacez le nom de ce nouveau membre calculé par `[Internet Sales Ratio to All Products]`.  
   
 4.  Tapez l'expression suivante dans la zone **Expression** :  
   
@@ -194,7 +194,7 @@ ms.locfileid: "66078399"
   
 7.  Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Nouveau membre calculé**.  
   
-8.  Modifier le nom de ce membre calculé en `[Reseller Sales Ratio to All Products]`.  
+8.  Remplacez le nom de ce membre calculé par `[Reseller Sales Ratio to All Products]`.  
   
 9. Tapez l'expression suivante dans la zone **Expression** :  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66078399"
   
 12. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Nouveau membre calculé**.  
   
-13. Modifier le nom de ce membre calculé en `[Total Sales Ratio to All Products]`.  
+13. Remplacez le nom de ce membre calculé par `[Total Sales Ratio to All Products]`.  
   
 14. Tapez l'expression suivante dans la zone **Expression** :  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66078399"
   
 17. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode Script**et examinez les trois calculs que vous avez ajoutés au script de calcul.  
   
-18. Ajoutez une nouvelle ligne dans le script de calcul immédiatement avant la `[Internet Sales Ratio to All Products]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne :  
+18. Ajoutez une nouvelle ligne au script de calcul immédiatement avant le `[Internet Sales Ratio to All Products]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne:  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -272,7 +272,7 @@ ms.locfileid: "66078399"
   
      Observez que la marge brute pour les ventes de revendeurs est nettement plus faible que pour les ventes par Internet, comme l'illustre l'image suivante.  
   
-     ![Volet de données affichant les ventes du revendeur](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "volet de données affichant les ventes du revendeur")  
+     ![Volet données avec les ventes] des revendeurs (../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Volet données avec les ventes") des revendeurs  
   
 9. Ajoutez les mesures **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**et **Reseller Sales Ratio to All Products** à la zone Valeurs.  
   
@@ -287,10 +287,10 @@ ms.locfileid: "66078399"
      Observez que la vente d'accessoires augmente dans le temps, mais qu'elle ne représente qu'une petite partie des ventes totales. Notez également que la marge brute des accessoires est supérieure à celle des vélos.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition de jeux nommés](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Définition de jeux nommés](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Touchant](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Calculs dans les modèles multidimensionnels](multidimensional-models/calculations-in-multidimensional-models.md)   
  [Créer des membres calculés](multidimensional-models/create-calculated-members.md)  
   

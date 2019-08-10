@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105415"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891221"
 ---
 # <a name="identifiers-mdx"></a>Identificateurs (MDX)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68105415"
  Selon le nom que vous attribuez à l'objet, son identificateur sera un identificateur régulier ou délimité.  
   
 > [!NOTE]  
->  Les identificateurs réguliers ou délimités doivent contenir entre 1 et 100 caractères.  
+>  Les identificateurs standard et délimités doivent contenir de 1 à 100 caractères.  
   
 ## <a name="using-regular-identifiers"></a>Utilisation d'identificateurs réguliers  
  Un identificateur régulier est un nom d'objet conforme aux règles de mise en forme suivantes. Il peut être utilisé avec ou sans délimiteurs.  
@@ -32,19 +32,19 @@ ms.locfileid: "68105415"
   
 1.  Le premier caractère doit être l'un des suivants :  
   
-    -   Une lettre comme défini par la convention Unicode Standard 2.0. Outre les caractères alphabétiques d'autres langues, elles incluent les caractères latins a-z et A-Z.  
+    -   Une lettre définie par la norme Unicode 2,0. Outre les caractères alphabétiques d'autres langues, elles incluent les caractères latins a-z et A-Z.  
   
     -   Le trait de soulignement (_).  
   
 2.  Les caractères suivants peuvent être :  
   
-    -   Lettres définies dans la convention Unicode Standard 2.0.  
+    -   Les lettres définies dans la norme Unicode 2,0.  
   
     -   Des nombres décimaux de Basic Latin ou d'autres scripts nationaux.  
   
     -   Le trait de soulignement (_).  
   
-3.  L'identificateur ne doit pas être un mot réservé MDX. En effet, ils ne respectent pas la casse dans la syntaxe MDX. Pour plus d’informations, consultez [mots clés réservés &#40;syntaxe MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  L'identificateur ne doit pas être un mot réservé MDX. En effet, ils ne respectent pas la casse dans la syntaxe MDX. Pour plus d’informations, consultez [syntaxe &#40;&#41;MDX des mots clés réservés](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Les espaces incorporés ou les caractères spéciaux ne sont pas autorisés.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "68105415"
   
 -   Lorsque le nom d'un objet ou une partie du nom utilise des mots réservés.  
   
-     Il est conseillé de ne pas utiliser les mots clés réservés comme noms d'objets. Bases de données mis à niveau à partir de versions antérieures de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent contenir des identificateurs qui incluent des mots ne réservés pas dans la version antérieure, mais sont maintenant réservés. Aussi longtemps que vous ne modifiez pas l'identificateur de l'objet, vous pouvez faire référence à l'objet à l'aide d'un identificateur délimité.  
+     Il est conseillé de ne pas utiliser les mots clés réservés comme noms d'objets. Les bases de données mises à niveau à partir [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de versions antérieures de peuvent contenir des identificateurs qui incluent des mots non réservés dans la version antérieure, mais qui sont maintenant réservés. Aussi longtemps que vous ne modifiez pas l'identificateur de l'objet, vous pouvez faire référence à l'objet à l'aide d'un identificateur délimité.  
   
 -   Lorsque le nom d'un objet utilise des caractères non répertoriés comme identificateurs qualifiés.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet à un identificateur délimité à utiliser n’importe quel caractère dans la page de codes actuelle. Un manque de discernement dans l'utilisation de caractères spéciaux dans un nom d'objet peut rendre difficiles la lecture et la maintenance des instructions et scripts MDX.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]permet à un identificateur délimité d’utiliser n’importe quel caractère de la page de codes actuelle. Un manque de discernement dans l'utilisation de caractères spéciaux dans un nom d'objet peut rendre difficiles la lecture et la maintenance des instructions et scripts MDX.  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>Règles de mise en forme des identificateurs délimités  
  Le corps d'un identificateur délimité peut contenir n'importe quelle combinaison de caractères dans la page de codes actuelle, notamment les caractères de délimitation proprement dits. Si le corps de l'identificateur délimité contient des caractères de délimitation, un traitement particulier est nécessaire :  
@@ -112,7 +112,7 @@ ms.locfileid: "68105415"
  Remarquez qu'il n'a pas été nécessaire de modifier le crochet gauche situé avant `Domestic` pour créer l'identificateur délimité. Cependant le crochet droit qui suit `Domestic` a dû être remplacé par deux crochets droits.  
   
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>Identificateurs de délimitation en plusieurs parties  
- Lorsque vous utilisez des noms d’objet qualifié, vous devrez délimiter plusieurs des identificateurs qui le composent le nom d’objet. Par exemple, l'identificateur Front Brakes du code suivant doit être délimité.  
+ Lorsque vous utilisez des noms d’objets qualifiés, vous devrez peut-être délimiter plusieurs des identificateurs qui composent le nom de l’objet. Par exemple, l'identificateur Front Brakes du code suivant doit être délimité.  
   
  SELECT [Measures].MEMBERS ON COLUMNS,  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68105415"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Éléments de syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX, éléments &#40;de syntaxe MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

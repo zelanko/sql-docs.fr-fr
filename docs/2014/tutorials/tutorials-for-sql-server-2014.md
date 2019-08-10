@@ -10,12 +10,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21c94cbc7b5adc1e65cb21aa14d4ab2cec9122ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956297"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892937"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Didacticiels pour SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduit de nombreuses nouvelles technologies et fonctionnalités.  
@@ -29,7 +29,7 @@ ms.locfileid: "62956297"
 -   Pour télécharger un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Fichiers image pour l'exemple de modèle HelloWorldPicnic dans PowerPivot et Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] est une fonctionnalité de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complément pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]est une fonctionnalité du [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complément [!INCLUDE[msCoName](../includes/msconame-md.md)] pour[!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   Pour télécharger les versions [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , accédez à [Exemples de bases de données AdventureWorks 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) sur CodePlex.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62956297"
   
 |Technologie|Description|  
 |----------------|-----------------|  
-|[Didacticiels pour Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
+|[Didacticiels pour Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
 |[Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Découvrez comment créer des rapports de base et des abonnements.|  
 |[Didacticiels sur Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md)|Apprenez à vous connecter à une instance du moteur de base de données, puis à créer et à exécuter des instructions Transact-SQL.|  

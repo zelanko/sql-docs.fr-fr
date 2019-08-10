@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’Expressions de jeu | Microsoft Docs
+title: Utilisation d’expressions Set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038013"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893505"
 ---
 # <a name="using-set-expressions"></a>Utilisation d'expressions de jeu
 
@@ -22,7 +22,7 @@ ms.locfileid: "68038013"
   
  L'expression complète d'un jeu est constituée de zéro ou de davantage de tuples spécifiés de manière explicite entre accolades :  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
+ {[{ *Tuple_expression* | *Expression_membre* } [, { *Tuple_expression* | *Expression_membre* }]...]}  
   
  Les expressions de membre spécifiées dans une expression de jeu sont converties en expressions de tuple à un membre.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "68038013"
   
  se compose de deux membres de la dimension de mesures. Sur l'axe des lignes, le jeu  
   
- {([Product]. [Product Categories]. [Category]. & [4], [Date]. [Calendar]. [Calendar Year]. & [2004]),  
+ {([Produit]. [Product Categories]. [Category]. & [4], [date]. [Calendar]. [Année civile]. & [2004]),  
   
- ([Product]. [Product Categories]. [Category]. & [1], [Date]. [Calendar]. [Calendar Year]. & [2003]),  
+ ([Produit]. [Product Categories]. [Category]. & [1], [date]. [Calendar]. [Année civile]. & [2003]),  
   
- ([Product]. [Product Categories]. [Category]. & [3], [Date]. [Calendar]. [Calendar Year]. & [2004])}  
+ ([Produit]. [Product Categories]. [Category]. & [3], [date]. [Calendar]. [Année civile]. & [2004])}  
   
  se compose de trois tuples, chacun contient deux références explicites aux membres sur la hiérarchie Product Categories de la dimension Product et la hiérarchie de calendrier de la dimension Date.  
   
- Pour obtenir des exemples de fonctions qui retournent des jeux, consultez [utilisation de membres, Tuples et jeux &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ Pour obtenir des exemples de fonctions qui retournent des jeux, consultez [utilisation de membres, &#40;de&#41;tuples et de paramètres MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

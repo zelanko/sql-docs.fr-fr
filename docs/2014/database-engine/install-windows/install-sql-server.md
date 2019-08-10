@@ -13,26 +13,26 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62775352"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889249"
 ---
 # <a name="install-sql-server-2014"></a>Installer SQL Server 2014
-## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Télécharger SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Nous vous remercions d’avoir à [Scott Hanselman](http://www.hanselman.com/) pour la collecte de tous les liens de package de programme d’installation au même endroit !**
+## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Télécharger SQL Server Express 2014](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **Nous vous remercions de [Scott Hanselman](http://www.hanselman.com/) pour la collecte de tous les liens du package d’installation en un seul endroit.**
   
- Cette rubrique fournit une vue d'ensemble des différentes options d'installation disponibles pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur les différents [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants qui peuvent être installés et le processus d’installation, consultez [Installation pour SQL Server 2014](installation-for-sql-server.md).  
-> **Remarque :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est disponible dans les éditions 32 bits et 64 bits. Les éditions 64 bits et 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées via l'Assistant Installation ou à l'invite de commandes. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Cette rubrique fournit une vue d'ensemble des différentes options d'installation disponibles pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] différents composants qui peuvent être installés et le processus d’installation, consultez [installation de SQL Server 2014](installation-for-sql-server.md).  
+> **Remarque:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est disponible en éditions 32 bits et 64 bits. Les éditions 64 bits et 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées via l'Assistant Installation ou à l'invite de commandes. Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les composants, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer des exemples de bases de données et de code pour les éditions non-Express de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le [site Web CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Pour plus d'informations sur la prise en charge des exemples de base de données et de code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], consultez [Vue d'ensemble des bases de données et des exemples](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
  Avant d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], prenez connaissance des conditions requises pour l'installation, des contrôles de configuration du système et des considérations sur la sécurité. Pour en savoir plus, voir [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Examinez les rubriques de la section suivante pour plus d'informations sur différents scénarios d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
   
-## <a name="install-includesscurrentincludessscurrent-mdmd-components"></a>Installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] composants  
+## <a name="install-includesscurrentincludessscurrent-mdmd-components"></a>Installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] les composants  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "62775352"
 |[Installer les outils d’administration SQL Server](../../sql-server/install/install-sql-server-management-tools.md)|Décrit comment installer et configurer les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Installer SQL Server PowerShell](install-sql-server-powershell.md)|Décrit les considérations relatives à l'installation des composants PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Comment installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Procédure d’installation[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |Titre|Description|  
 |-----------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "62775352"
 |-----------|-----------------|  
 |[Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et décrit comment configurer le Pare-feu Windows.|  
 |[Configurer un ordinateur multirésident pour l’accès à SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.|  
-|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Vous pouvez suivre les étapes fournies dans cette rubrique pour configurer les paramètres de port et de pare-feu afin d'autoriser l'accès à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à PowerPivot pour SharePoint.|  
+|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Vous pouvez suivre les étapes fournies dans cette rubrique pour configurer les paramètres de port et de pare-feu afin d'autoriser l'accès à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à PowerPivot pour SharePoint.|  
   
 ## <a name="related-sections"></a>Sections connexes  
  [Installer les fonctionnalités BI de SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 03583c9af74bd21511dfe871b229d03370a7b436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047109"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892920"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -32,13 +32,13 @@ Hierarchy_Expression.CurrentMember
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
   
 ## <a name="remarks"></a>Notes  
- Au cours d'une itération effectuée dans un jeu de membres de hiérarchie, le membre manipulé à chaque étape de l'itération est le membre actuel. Le **CurrentMember** fonction retourne ce membre.  
+ Au cours d'une itération effectuée dans un jeu de membres de hiérarchie, le membre manipulé à chaque étape de l'itération est le membre actuel. La fonction **CurrentMember** retourne ce membre.  
   
 > [!IMPORTANT]  
 >  Lorsqu'une dimension contient uniquement une hiérarchie visible unique, cette hiérarchie peut être désignée soit par le nom de dimension, soit par le nom de la hiérarchie, puisque le nom de dimension est résolu à son unique hiérarchie visible. Par exemple, `Measures.CurrentMember` est une expression MDX valide parce qu'elle est résolue à la seule hiérarchie de la dimension de mesures.  
   
 ## <a name="examples"></a>Exemples  
- La requête suivante illustre comment **Currentmember** peut être utilisé pour rechercher le membre actuel à partir de hiérarchies sur des colonnes, lignes et axe de secteur :  
+ La requête suivante montre comment utiliser **CurrentMember** pour rechercher le membre actuel dans des hiérarchies sur les colonnes, les lignes et l’axe des secteurs:  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -74,7 +74,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Le membre actuel change sur une hiérarchie utilisée sur un axe dans une requête. Par conséquent, le membre actuel sur les autres hiérarchies sur la même dimension qui ne sont pas utilisés sur un axe peut également modifier ; Ce comportement est appelé 'auto-existe', et vous trouverez plus de détails dans [Concepts clés dans MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Par exemple, la requête suivante illustre comment le membre actuel sur la hiérarchie Année civile de la dimension Date change avec le membre actuel sur la hiérarchie Calendrier, lorsque celle-ci est affichée sur l'axe des lignes :  
+ Le membre actuel change sur une hiérarchie utilisée sur un axe dans une requête. Par conséquent, le membre actuel sur d’autres hiérarchies de la même dimension qui ne sont pas utilisées sur un axe peut également changer; ce comportement est appelé «auto-exist». vous trouverez plus de détails dans les [concepts clés de &#40;la&#41;Analysis Services MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Par exemple, la requête suivante illustre comment le membre actuel sur la hiérarchie Année civile de la dimension Date change avec le membre actuel sur la hiérarchie Calendrier, lorsque celle-ci est affichée sur l'axe des lignes :  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -92,7 +92,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember** est très important pour effectuer des calculs prenant en compte le contexte de la requête, ils sont utilisés dans. L’exemple suivant retourne la quantité commandée de chaque produit et le pourcentage des quantités commandées par catégorie et modèle, à partir de la **Adventure Works** cube. Le **CurrentMember** fonction identifie le produit dont la quantité de commande doit être utilisée lors du calcul.  
+ **CurrentMember** est très important pour faire en sorte que les calculs prennent en compte le contexte de la requête dans laquelle ils sont utilisés. L’exemple suivant retourne la quantité commandée de chaque produit et le pourcentage des quantités commandées par catégorie et par modèle, à partir du cube **Adventure Works** . La fonction **CurrentMember** identifie le produit dont la quantité commandée doit être utilisée pendant le calcul.  
   
 ```  
 WITH   

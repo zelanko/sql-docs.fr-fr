@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d3a1a2c3c5f1f4bce9a3662e1bc7c7bc49f2836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6daa8c4fd9b46fc4dcfec08876d36c1cf0187a94
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470340"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887577"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Référence du développeur pour SQL Server 2014
 
@@ -25,47 +25,47 @@ ms.locfileid: "62470340"
   
 ## <a name="programming-reference-sections"></a>Sections du Guide de référence de programmation  
 
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Common Language Runtime &#40;CLR&#41; Concepts de programmation d’intégration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Concepts de programmation &#40;de&#41; l’intégration CLR du Common Language Runtime](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [XML natifs](https://technet.microsoft.com/library/ms191274.aspx)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [XML natif](https://technet.microsoft.com/library/ms191274.aspx)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [programmation de SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Programmation SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [SQLXML 4.0 Concepts de programmation](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Concepts de programmation SQLXML 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [fournisseur WMI pour les Concepts de gestion de Configuration](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Fournisseur WMI pour les concepts de gestion de configuration](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [fournisseur WMI pour les Concepts des événements de serveur](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Fournisseur WMI pour les concepts des événements de serveur](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [erreurs et événements du fournisseur WMI](../relational-databases/native-client-ole-db-errors/errors.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Événements et erreurs du fournisseur WMI](../relational-databases/native-client-ole-db-errors/errors.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [SQL Server Management Objects &#40;SMO&#41; Guide de programmation](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Guide &#40;de&#41; programmation SQL Server Management Objects Smo](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [étendue de moteur de base de données de programmation de procédure stockée](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Moteur de base de données la programmation de procédures stockées étendues](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [programmation du collecteur de données](../database-engine/dev-guide/data-collector-programming.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Programmation](../database-engine/dev-guide/data-collector-programming.md) du collecteur de données  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Message d’Exception programmation de boîte](../database-engine/dev-guide/exception-message-box-programming.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Programmation de la boîte de message d’exception](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [développement avec ADOMD.NET](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec ADOMD.net](https://docs.microsoft.com/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [développement avec Analysis Management Objects &#40;AMO&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec AMO (Analysis Management Objects) &#40;AMO&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [développement avec Analysis Services Scripting Language &#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec Analysis Services langage &#40;de script ASSL&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [OLE DB pour l’exploration de données](../analysis-services/dev-guide/ole-db-for-data-mining.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [OLE DB pour l’exploration de données](https://docs.microsoft.com/analysis-services/dev-guide/ole-db-for-data-mining)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Integration Services Guide du développeur](../integration-services/integration-services-developer-documentation.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Guide du développeur Integration Services](../integration-services/integration-services-developer-documentation.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Guide du développeur de réplication](../relational-databases/replication/concepts/replication-developer-documentation.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Guide du développeur de réplication](../relational-databases/replication/concepts/replication-developer-documentation.md)  
   
- ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Guide du développeur de Reporting Services](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Guide du développeur Reporting Services](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>Autres ressources de programmation  
 
  Le développement d'une application d'accès aux données peut nécessiter l'utilisation d'une ou de plusieurs des technologies suivantes :  
   
- [L’accès aux données dans Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
+ [Accès aux données dans Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
  [Pilote SQL Server pour PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   

@@ -1,5 +1,5 @@
 ---
-title: À l’aide de Cube et les Expressions de sous-cube | Microsoft Docs
+title: Utilisation d’expressions de cube et de sous-cube | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b3e6cd4a38d45f2b63fa5333526832ba31e1ce9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097190"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893529"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Utilisation d'expressions de cube et de sous-cube
 
@@ -23,7 +23,7 @@ ms.locfileid: "68097190"
 ## <a name="cube-expressions"></a>Expressions de cube  
  Une expression de cube contient soit un identificateur de cube, soit le mot clé CURRENTCUBE, et ne sont par conséquent que des expressions simples. De nombreuses instructions MDX utilisent le mot clé CURRENTCUBE pour identifier le contexte du cube en cours plutôt que d'exiger un identificateur de cube.  
   
- Un identificateur de cube apparaît comme *Cube_Name* dans les descriptions de notation BNF des instructions MDX.  
+ Un identificateur de cube apparaît en tant que *CUBE_NAME* dans les descriptions de notation BNF des instructions MDX.  
   
  Des expressions de cube peuvent apparaître dans plusieurs emplacements. Dans une instruction MDX SELECT, elles spécifient le cube à partir duquel les données doivent être extraites. Dans l'exemple de requête suivant, l'expression [Adventure Works] fait référence au cube de ce nom :  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68097190"
   
  `CREATE MEMBER CURRENTCUBE.[Measures].[Test] AS 1;`  
   
- Cela rend plus facile copier et coller des définitions de membre calculé à partir d’un cube à l’autre dans la mesure où le nom du cube est n’est plus codé en dur.  
+ Cela facilite la copie et le collage des définitions de membre calculé d’un cube à un autre, car le nom du cube n’est plus codé en dur.  
   
 ## <a name="subcube-expressions"></a>Expressions de sous-cube  
  Une expression de sous-cube peut contenir un identificateur de sous-cube ou une instruction MDX qui retourne un sous-cube. Si l'expression de sous-cube contient un identificateur de sous-cube, il s'agira d'une expression simple. Si elle contient une instruction MDX qui retourne un sous-cube, il s'agit d'une instruction complexe. L'instruction MDX SELECT, par exemple, retourne un sous-cube et peut être utilisée partout où les expressions de sous-cube sont autorisées, comme indiqué dans l'exemple suivant :  
@@ -66,12 +66,12 @@ ms.locfileid: "68097190"
   
  `END SCOPE;`  
   
- Un identificateur de sous-cube apparaît comme *Subcube_Name*. dans les descriptions de notation BNF des instructions MDX.  
+ Un identificateur de sous-cube apparaît en tant que *Subcube_Name*. dans les descriptions de notation BNF des instructions MDX.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requête MDX de base &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [Création de sous-cubes dans MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [Instruction CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [Requête MDX de base &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Création de sous-cubes &#40;dans MDX MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [Instruction &#40;CREATE SUBCUBE MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [Instruction SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   

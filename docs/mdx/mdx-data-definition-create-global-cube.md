@@ -1,5 +1,5 @@
 ---
-title: Instruction CREATE GLOBAL CUBE (MDX) | Microsoft Docs
+title: Instruction CREATe GLOBAL CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 57ee0867373f67bfd0684734685ab39791bafc39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098412"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892151"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Définition de données MDX - CREATE GLOBAL CUBE
 
 
-  Crée et remplit un cube persistant localement, en fonction d'un sous-cube issu d'un cube sur le serveur. Aucune connexion au serveur n'est nécessaire pour se connecter au cube conservé localement. Pour plus d’informations sur les cubes locaux, consultez [Cubes locaux &#40;Analysis Services - données multidimensionnelles&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Crée et remplit un cube persistant localement, en fonction d'un sous-cube issu d'un cube sur le serveur. Aucune connexion au serveur n'est nécessaire pour se connecter au cube conservé localement. Pour plus d’informations sur les cubes locaux, consultez [cubes locaux &#40;Analysis Services&#41;-données](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)multidimensionnelles.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -104,7 +104,7 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Nom de la dimension dans le cube local.  
   
- À partir de \<dim à partir de la clause >  
+ À \<partir de la clause Dim from >  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
  NOT_RELATED_TO_FACTS  
@@ -114,9 +114,9 @@ FROM source_cube_name (<param list>)
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
 ## <a name="remarks"></a>Notes  
- Un cube local est termes definedin des mesures et des définitions qui le caractérisent. Il existe deux types de dimensions.  
+ Un cube local est défini en termes de mesures et de définitions qui le définissent. Il existe deux types de dimensions.  
   
--   Dimensions sources : il s’agit des dimensions qui faisaient partie d’un ou plusieurs cubes sources  
+-   Dimensions sources: il s’agit de dimensions qui faisaient partie d’un ou plusieurs cubes sources  
   
 -   Dimensions dérivées : dimensions offrant de nouvelles fonctionnalités d'analyse. Une dimension dérivée peut être une dimension régulière définie d'après une dimension source découpée verticalement ou horizontalement ou contenant un regroupement personnalisé de membres de dimension. Il peut s'agir également d'une dimension d'exploration de données fondée sur un modèle d'exploration de données.  
   
@@ -125,15 +125,15 @@ FROM source_cube_name (<param list>)
   
  Vous pouvez effectuer les tâches suivantes au sein d'un cube local :  
   
--   Éliminer des dimensions qui existent dans le cube source  
+-   Éliminer les dimensions qui existent dans le cube source  
   
 -   Ajouter ou éliminer des hiérarchies dans une dimension.  
   
--   Supprimer les groupes de mesures ou des mesures spécifiques  
+-   Éliminer les groupes de mesures ou des mesures spécifiques  
   
  L'instruction CREATE GLOBAL CUBE respecte les règles suivantes :  
   
--   L'instruction CREATE GLOBAL CUBE copie automatiquement toutes les commandes, telles que les actions ou mesures calculées, dans le cube local. Si une commande contient une expression MDX (Multidimensional Expression) qui fait référence au cube parent de manière explicite, le cube local ne peut pas exécuter cette commande. Pour éviter ce problème, utilisez le **CURRENTCUBE** mot clé lors de la définition des expressions MDX pour les commandes. Le **CURRENTCUBE** mot clé utilise le contexte de cube actuel lors du référencement d’un cube dans une expression MDX.  
+-   L'instruction CREATE GLOBAL CUBE copie automatiquement toutes les commandes, telles que les actions ou mesures calculées, dans le cube local. Si une commande contient une expression MDX (Multidimensional Expression) qui fait référence au cube parent de manière explicite, le cube local ne peut pas exécuter cette commande. Pour éviter ce problème, utilisez le mot clé **CURRENTCUBE** lors de la définition d’expressions MDX pour les commandes. Le mot clé **CURRENTCUBE** utilise le contexte de cube actuel lors du référencement d’un cube dans une expression MDX.  
   
 -   Un cube global créé à partir d'un cube global existant dans un fichier de cube local ne peut pas être enregistré dans le même fichier de cube local. Par exemple, vous créez un cube global nommé SalesLocal1 et vous l'enregistrez dans le fichier C:\SalesLocal.cub. Vous vous connectez ensuite au fichier C:\SalesLocal.cub et vous créez un deuxième cube global nommé SalesLocal2. Si vous tentez maintenant d'enregistrer le cube global SalesLocal2 dans le fichier C:\SalesLocal.cub, vous recevez une erreur. Toutefois, vous pouvez enregistrer le cube global SalesLocal2 dans un fichier de cube local différent.  
   
@@ -197,7 +197,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instruction CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [Instructions &#40;MDX de définition de données MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instruction &#40;Create session cube MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

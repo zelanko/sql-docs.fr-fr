@@ -1,5 +1,5 @@
 ---
-title: Création d’un Data Source View (didacticiel d’exploration de données de base) | Microsoft Docs
+title: Création d’une vue de source de données (didacticiel sur l’exploration de données de base) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,46 +10,46 @@ ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273400"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888651"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Création d'une vue de source de données (Didacticiel sur l'exploration de données de base)
-  Une vue de source de données est créée à partir d'une source de données et définit un sous-ensemble des données, que vous pouvez ensuite utiliser dans vos structures d'exploration de données. Vous pouvez également utiliser la vue de source de données pour ajouter des colonnes, créer des colonnes calculées et des agrégats, et ajouter des vues nommées. En utilisant des vues de source de données, vous pouvez sélectionner les données qui se rapportent à un projet en particulier, établir des relations entre les tables et modifier la structure des données, sans modifier la source de données d'origine. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+  Une vue de source de données est créée à partir d'une source de données et définit un sous-ensemble des données, que vous pouvez ensuite utiliser dans vos structures d'exploration de données. Vous pouvez également utiliser la vue de source de données pour ajouter des colonnes, créer des colonnes calculées et des agrégats, et ajouter des vues nommées. En utilisant des vues de source de données, vous pouvez sélectionner les données qui se rapportent à un projet en particulier, établir des relations entre les tables et modifier la structure des données, sans modifier la source de données d'origine. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models).  
   
 ### <a name="to-create-a-data-source-view"></a>Pour créer une vue de source de données  
   
-1.  Dans **l’Explorateur de solutions**, avec le bouton droit **les vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
+1.  Dans **Explorateur de solutions**, cliquez avec le bouton droit sur **vues de source de données**, puis sélectionnez **nouvelle vue de source de données**.  
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez la source de données Adventure Works DW 2012 que vous avez créé dans la dernière tâche. Cliquer sur **Suivant**.  
+3.  Dans la page **Sélectionner une source de données** , sous **sources de données relationnelles**, sélectionnez la source de données Adventure Works DW 2012 que vous avez créée dans la dernière tâche. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
-    >  Si vous souhaitez créer une source de données, cliquez sur **des Sources de données** puis cliquez sur **nouvelle Source de données** pour démarrer l’Assistant Source de données.  
+    >  Si vous souhaitez créer une source de données, cliquez avec le bouton droit sur **sources de données** , puis cliquez sur **nouvelle source de données** pour démarrer l’Assistant source de données.  
   
-4.  Sur le **sélectionner des Tables et vues** page, sélectionnez les objets suivants, puis cliquez sur la flèche droite pour les inclure dans la nouvelle vue de source de données :  
+4.  Sur la page **Sélectionner des tables et des vues** , sélectionnez les objets suivants, puis cliquez sur la flèche droite pour les inclure dans la nouvelle vue de source de données:  
   
-    -   **ProspectiveBuyer (dbo)** -table des futurs acheteurs de vélos  
+    -   **ProspectiveBuyer (DBO)** -table des acheteurs de bicyclettes potentiels  
   
-    -   **vTargetMail (dbo)** -vue des données historiques des cours acheteurs de vélo  
+    -   **vTargetMail (DBO)** : vue des données historiques sur les derniers acheteurs de bicyclettes  
   
-5.  Cliquer sur **Suivant**.  
+5.  Cliquez sur **Suivant**.  
   
-6.  Sur le **fin de l’Assistant** page, Adventure Works DW 2012 est nommée par défaut à la vue de source de données. Remplacez le nom par `Targeted Mailing`, puis cliquez sur **Terminer**.  
+6.  Dans la page **fin de l’Assistant** , par défaut, la vue de source de données est nommée Adventure Works DW 2012. Remplacez le nom par `Targeted Mailing`, puis cliquez sur **Terminer**.  
   
-     La nouvelle vue de source de données s’ouvre dans le **Targeted Mailing.dsv [conception]** onglet.  
+     La nouvelle vue de source de données s’ouvre dans l’onglet **Publipostage ciblé. DSV [conception]** .  
   
 ## <a name="previous-task-in-lesson"></a>Tâche précédente de la leçon  
- [Création d’une Source de données &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Didacticiel de création d' &#40;une source de données d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Création d’une Structure de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Leçon 2 : Didacticiel sur l’exploration de &#40;données de base d’une structure de publipostage ciblé&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définition d’une vue de source de données &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [Définition d’une vue de source de données &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

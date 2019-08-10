@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791877"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889226"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
   Un groupe de disponibilité AlwaysOn est une collection prédéfinie de bases de données relationnelles SQL Server qui basculent ensemble lorsque les conditions déclenchent un basculement dans l'une des bases de données, redirigeant les requêtes vers une base de données mise en miroir sur une autre instance dans le même groupe de disponibilité. Si vous utilisez des groupes de disponibilité pour votre solution haute disponibilité, vous pouvez utiliser une base de données de ce groupe comme source de données dans une solution Analysis Services tabulaire ou multidimensionnelle. Toutes les opérations d'Analysis Services s'exécutent comme prévu lorsque vous utilisez une base de données de disponibilité : le traitement ou l'importation des données, l'interrogation directe des données relationnelles (à l'aide du stockage ROLAP ou du mode DirectQuery) et l'écriture différée.  
@@ -38,7 +38,7 @@ ms.locfileid: "62791877"
 > [!NOTE]  
 >  Les étapes suivantes présument l'existance d'un groupe de disponibilité et de bases de données AlwaysOn. Si vous configurez un nouveau groupe, utilisez l'Assistant Nouveau groupe de disponibilité pour créer le groupe et pour joindre les bases de données. L'Assistant vérifie les composants requis, fournit de l'aide pour chaque étape et exécute la synchronisation initiale. Pour plus d’informations, consultez [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>Étape 1 : Configurer l’accès sur un réplica de disponibilité  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Étape 1 : Configurer l’accès sur un réplica de disponibilité  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62791877"
   
          Cette propriété est également exigée pour le basculement planifié. Si vous souhaitez effectuer un basculement planifié manuel à des fins de test, définissez le **Mode de disponibilité** sur **Validation synchrone** à la fois pour le réplica primaire et le réplica secondaire.  
   
-#### <a name="step-2-configure-read-only-routing"></a>Étape 2 : Configurer le routage en lecture seule  
+#### <a name="step-2-configure-read-only-routing"></a>Étape 2 : Configurer le routage en lecture seule  
   
 1.  Connectez-vous au réplica principal.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62791877"
   
      Créez ensuite une source de données dans un modèle Analysis Services qui utilise une base de données à partir du groupe que vous venez de configurer.  
   
-##  <a name="bkmk_ssasAODB"></a> Créer une source de données Analysis Services à l’aide d’une base de données de disponibilité AlwaysOn  
+##  <a name="bkmk_ssasAODB"></a>Créer une source de données Analysis Services à l’aide d’une base de données de disponibilité AlwaysOn  
  Cette section explique comment créer une source de données Analysis Services qui se connecte à une base de données dans un groupe de disponibilité. Vous pouvez utiliser cette instruction pour configurer une connexion à un réplica principal (valeur par défaut) ou un réplica secondaire lisible, configurés en suivant les étapes de l'une des sections précédentes. Les paramètres de configuration AlwaysOn, plus les propriétés de connexion définies dans le client, déterminent si un réplica primaire ou secondaire est utilisé.  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], dans un projet de modèle d’exploration de données et multidimensionnel Analysis Services, cliquez avec le bouton droit sur **Sources de données** et sélectionnez **Nouvelle source de données**. Cliquez sur **Nouvelle** pour créer une nouvelle source de données.  
@@ -130,7 +130,7 @@ ms.locfileid: "62791877"
   
      Pour déterminer le nom de l'écouteur du groupe de disponibilité, vous pouvez demander à un administrateur de base de données ou bien vous connecter à une instance du groupe de disponibilité et afficher sa configuration de disponibilité AlwaysOn. Dans la capture d’écran ci-dessous, l’écouteur de groupe de disponibilité est **AdventureWorks2**.  
   
-     ![Dossier de disponibilité AlwaysOn dans Management Studio](../../media/ssas-alwaysoninfoinssms.png "dossier de disponibilité AlwaysOn dans Management Studio")  
+     ![Dossier de disponibilité AlwaysOn dans Management Studio](../../media/ssas-alwaysoninfoinssms.png "Dossier de disponibilité AlwaysOn dans Management Studio")  
   
 4.  Toujours dans le Gestionnaire de connexions, cliquez sur **Tout** dans le volet de navigation gauche pour afficher la grille des propriétés du fournisseur de données.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62791877"
 ##  <a name="bkmk_test"></a> Tester la configuration  
  Après avoir configuré le réplica secondaire et créez une connexion à la source de données dans Analysis Services, vous pouvez vérifier que le traitement et les commandes de requête sont redirigées vers le réplica secondaire. Vous pouvez également effectuer un basculement manuel planifié afin de vérifier votre plan de récupération pour ce scénario.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Étape 1 : Vérifier que la connexion à la source de données est redirigée vers le réplica secondaire  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Étape 1 : Vérifier que la connexion à la source de données est redirigée vers le réplica secondaire  
   
 1.  Démarrez le Générateur de profils SQL Server et connectez-vous à l'instance SQL Server qui héberge le réplica secondaire.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "62791877"
   
      Dans la fenêtre de trace, vous devez voir les événements de l'application **Microsoft SQL Server Analysis Services**. Vous devez voir les instructions `SELECT` qui extraient les données d'une base de données sur l'instance de serveur qui héberge le réplica secondaire, ce qui prouve que la connexion a été établie via l'écouteur du réplica secondaire.  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Étape 2 : Effectuer un basculement planifié pour tester la configuration  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Étape 2 : Effectuer un basculement planifié pour tester la configuration  
   
 1.  Dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] , vérifiez les réplicas primaire et secondaire pour vous assurer qu'ils sont tous deux configurés pour le mode de validation synchrone et qu'ils sont actuellement synchronisés.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "62791877"
   
  Les erreurs persistantes sont généralement dues à un problème de configuration. Vous pouvez essayer de réexécuter le script T-SQL pour résoudre les problèmes liés à la liste de routage, aux URL de routage en lecture seule et à l'intention de lecture sur le réplica secondaire. Vous devez également vérifier que le réplica principal autorise toutes les connexions.  
   
-##  <a name="bkmk_writeback"></a> Écriture différée lors de l’utilisation d’une base de données de disponibilité AlwaysOn  
+##  <a name="bkmk_writeback"></a>Écriture différée avec une base de données de disponibilité AlwaysOn  
  L'écriture différée est une fonctionnalité Analysis Services qui prend en charge l'analyse Scénario dans Excel. Elle est généralement utilisée pour budgéter et prévoir des tâches dans des applications personnalisées.  
   
  La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez une réécriture sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. » « Impossible de récupérer les données de la source de données externe. »  
@@ -218,9 +218,9 @@ ms.locfileid: "62791877"
   
 ## <a name="see-also"></a>Voir aussi  
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Secondaires actifs : Réplicas secondaires lisibles &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Les stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Activer l’écriture différée de la dimension](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Secondaires actifs : Réplicas secondaires &#40;accessibles en lecture groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Stratégies AlwaysOn pour les problèmes &#40;opérationnels avec groupes de disponibilité AlwaysOn SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Créer une source de données &#40;SSAS Multidimensionnel&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Activer l’écriture différée de la dimension](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

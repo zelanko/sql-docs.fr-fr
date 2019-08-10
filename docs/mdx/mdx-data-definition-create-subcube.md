@@ -1,5 +1,5 @@
 ---
-title: Instruction CREATE SUBCUBE (MDX) | Microsoft Docs
+title: Instruction CREATe SUBCUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038275"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887434"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Définition de données MDX - CREATE SUBCUBE
 
@@ -35,7 +35,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Expression MDX (Multidimensional Expressions) SELECT valide qui ne contient pas de clauses WITH, NON EMPTY ou HAVING et ne nécessite pas de propriétés de dimension ou de cellule.  
   
- Consultez [instruction SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) pour une explication de la syntaxe détaillée sur les instructions Select et la **NON VISUAL** clause.  
+ Consultez l' [instruction &#40;Select&#41; MDX](../mdx/mdx-data-manipulation-select.md) pour obtenir une explication détaillée de la syntaxe sur les instructions SELECT et la clause **non visuelle** .  
   
 ## <a name="remarks"></a>Notes  
  Lorsque les membres par défaut sont exclus de la définition d'un sous-cube, les coordonnées changent de façon correspondante. Pour les attributs qui peuvent être agrégés, le membre par défaut est déplacé vers le membre [All]. Pour les attributs qui ne peuvent pas être agrégés, le membre par défaut est déplacé vers un membre existant dans le sous-cube. Le tableau ci-dessous donne des exemples de combinaisons de sous-cubes et de membres par défaut.  
@@ -43,19 +43,19 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |Membre par défaut d'origine|Peut être agrégé|Sous-sélection|Membre par défaut révisé|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|Oui|{Time.Year.2003}|Aucune modification|  
-|Time.Year. [1997]|Oui|{Time.Year.2003}|Time.Year.All|  
-|Time.Year. [1997]|Non|{Time.Year.2003}|Time.Year. [2003]|  
-|Time.Year. [1997]|Oui|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year. [1997]|Non|{Time.Year.2003, Time.Year.2004}|Soit Time.Year.[2003] soit<br /><br /> Time.Year.[2004]|  
+|Heure. année. [1997]|Oui|{Time.Year.2003}|Time.Year.All|  
+|Heure. année. [1997]|Non|{Time.Year.2003}|Heure. année. [2003]|  
+|Heure. année. [1997]|Oui|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Heure. année. [1997]|Non|{Time.Year.2003, Time.Year.2004}|Soit Time.Year.[2003] soit<br /><br /> Time.Year.[2004]|  
   
  Les membres [All] existeront toujours dans un sous-cube.  
   
  Les objets de session créés dans le contexte d'un sous-cube sont supprimés lorsque le sous-cube est supprimé.  
   
- Pour plus d’informations sur les sous-cubes, consultez [création de sous-cubes dans MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Pour plus d’informations sur les sous-cubes, consultez [création de sous &#40;-&#41;cubes dans MDX MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Exemple  
- L'exemple ci-dessous crée un sous-cube qui limite l'espace apparent du cube aux membres existants pour le Canada. Il utilise ensuite le **membres** fonction pour retourner tous les membres du pays au niveau de la hiérarchie Geography définie par l’utilisateur - retourner uniquement le pays du Canada.  
+ L'exemple ci-dessous crée un sous-cube qui limite l'espace apparent du cube aux membres existants pour le Canada. Il utilise ensuite la fonction Members pour retourner tous les membres du niveau Country de la hiérarchie définie par l’utilisateur Geography, en retournant uniquement le pays du Canada.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -128,9 +128,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  Les parties [All Products] et [All Resellers], colonne et ligne respectivement, contiennent des totaux pour tous les membres et pas seulement pour ceux qui sont visibles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instructions de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Instruction de sous-cube DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Concepts clés de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX (instructions &#40;de script MDX)&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP (instruction &#40;de sous-cube MDX)&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [Instruction SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

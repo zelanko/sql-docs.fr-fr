@@ -1,5 +1,5 @@
 ---
-title: Interface utilisateur du Concepteur de requêtes textuel | Microsoft Docs
+title: Interface utilisateur du concepteur de requêtes textuel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dfd6d077d80093821346be030ee0dd9c2af0fc9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66100599"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891331"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes textuel
   Utilisez le Concepteur de requêtes textuel pour spécifier une requête à l'aide du langage de requête pris en charge par la source de données, exécuter la requête et afficher les résultats au moment de la conception. Vous pouvez spécifier plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , une syntaxe de requête ou de commande pour les extensions pour le traitement des données personnalisées et des requêtes spécifiées en tant qu'expressions. Comme le Concepteur de requêtes textuel n'effectue pas de prétraitement de la requête et peut accepter tout type de syntaxe de requête, il s'agit de l'outil du Concepteur de requêtes par défaut pour de nombreux types de sources de données.  
   
  Le Concepteur de requêtes textuel affiche une barre d'outils et les deux volets suivants :  
   
--   **Requête** affiche le texte de la requête, le nom de table ou le nom de la procédure stockée.  
+-   **Requête** Affiche le texte de la requête, le nom de la table ou le nom de la procédure stockée.  
   
 -   **Résultats** Affiche les résultats de l'exécution de la requête au moment de la conception.  
   
@@ -39,19 +39,19 @@ ms.locfileid: "66100599"
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. Les types de sources de données ne prennent pas tous en charge les concepteurs de requêtes graphiques.|  
 |**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers sql et rdl sont pris en charge. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Exécuter la requête](../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|  
+|![Exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|  
 |**Type de commande**|Sélectionnez **Text**, **StoredProcedure**ou **TableDirect**. Si une procédure stockée comporte des paramètres, la boîte de dialogue **Définir les paramètres de la requête** s'affiche lorsque vous cliquez sur **Exécuter** dans la barre d'outils, et vous pouvez spécifier les valeurs souhaitées. Notez que si une procédure stockée retourne plusieurs jeux de résultats, seul le premier jeu de résultats est utilisé pour remplir le jeu de données.<br /><br /> La prise en charge du type de commande varie en fonction du type de source de données. Par exemple, seuls OLE DB et ODBC prennent en charge **TableDirect**.|  
   
 ### <a name="command-type-text"></a>Texte de type de commande  
  Lorsque vous créez un dataset [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le Concepteur de rapports affiche par défaut le concepteur de requêtes graphique. Pour basculer vers le concepteur de requêtes textuel, cliquez sur le bouton bascule **Modifier en tant que texte** dans la barre d’outils. Le concepteur de requêtes textuel présente deux volets : Requête et Résultats. L'illustration suivante présente chaque volet.  
   
- ![Concepteur de requêtes générique pour les requêtes de données relationnelles](../analysis-services/media/rsqd-dsaw-sql-generic.gif "Concepteur de requêtes générique pour les requêtes de données relationnelles")  
+ ![Concepteur de requêtes générique pour les requêtes de données relationnelles](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Concepteur de requêtes générique pour les requêtes de données relationnelles")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Requête|Affiche le texte de la requête [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
+|Interroger|Affiche le texte de la requête [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
 |Résultat|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
@@ -61,7 +61,7 @@ ms.locfileid: "66100599"
 SELECT LastName FROM Person.Person;  
 ```  
   
- Vous pouvez utiliser toute instruction [!INCLUDE[tsql](../includes/tsql-md.md)] pour le texte de type de commande, y compris des instructions `EXEC`. La requête suivante appelle le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] procédure stockée `uspGetEmployeeManagers` et retourne la chaîne de commande pour l’employé dont le numéro d’identification 1.  
+ Vous pouvez utiliser toute instruction [!INCLUDE[tsql](../includes/tsql-md.md)] pour le texte de type de commande, y compris des instructions `EXEC`. La requête suivante appelle la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] procédure `uspGetEmployeeManagers` stockée et retourne la chaîne de commande de l’employé portant le numéro d’identification 1.  
   
 ```  
 EXEC uspGetEmployeeManagers 1;  
@@ -87,14 +87,14 @@ uspGetEmployeeManagers;
   
  `Sales.Customer`  
   
- Lorsque vous entrez le nom de la table Sales.Customer, il est l’équivalent de la création du [!INCLUDE[tsql](../includes/tsql-md.md)] instruction `SELECT * FROM Sales.Customer;`.  
+ Lorsque vous entrez le nom de la table Sales. Customer, cela revient à créer [!INCLUDE[tsql](../includes/tsql-md.md)] l' `SELECT * FROM Sales.Customer;`instruction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interroger des outils de conception dans le rapport concepteur SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Outils de conception de requête dans &#40;concepteur de rapports SQL Server Data Tools SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Type de connexion SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Type de connexion OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Type de connexion ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Type &#40;de connexion ODBC SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Fichier de configuration RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
   

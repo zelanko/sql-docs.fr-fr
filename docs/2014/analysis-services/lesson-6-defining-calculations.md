@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Définition de calculs | Microsoft Docs'
+title: 'Leçon 6 : Définition des calculs | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078390"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888048"
 ---
 # <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition des calculs
   Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions ou des scripts MDX (Multidimensional Expressions). Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
@@ -45,19 +45,19 @@ ms.locfileid: "66078390"
   
  Cette leçon contient les tâches suivantes :  
   
- [Définition des membres calculés](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [Définition des membres calculés](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
  Dans cette tâche, vous apprenez à définir des membres calculés.  
   
- [Définition de jeux nommés](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Définition de jeux nommés](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
  Dans cette tâche, vous apprenez à définir des jeux nommés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Leçon 7 : Définition des indicateurs de &#40;performance clés KPI&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Création de jeux nommés](multidimensional-models/create-named-sets.md)   
+ [Scénario du didacticiel Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Didacticiel sur la modélisation &#40;multidimensionnelle Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Créer des jeux nommés](multidimensional-models/create-named-sets.md)   
  [Créer des membres calculés](multidimensional-models/create-calculated-members.md)  
   
   

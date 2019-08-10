@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189143"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893133"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
   Une étape du travail est une action exécutée par le travail sur une base de données ou un serveur. Chaque travail doit posséder au moins une étape de travail. Les étapes de travail peuvent être :  
@@ -50,7 +50,7 @@ ms.locfileid: "68189143"
   
  Chaque étape de travail s'exécute dans un contexte de sécurité spécifique. Si l'étape de travail spécifie un proxy, elle s'exécute dans le contexte des informations d'identification du proxy. Dans le cas inverse, l'étape de travail s'exécute dans le contexte du compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Seuls les membres du rôle de serveur fixe sysadmin sont autorisés à créer des travaux qui ne spécifient pas explicitement de proxy.  
   
- Les étapes de travail étant exécutées dans le contexte d’un utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows spécifique, cet utilisateur doit disposer des autorisations et de la configuration nécessaires à l’exécution de l’étape de travail. Par exemple, si vous créez un travail qui requiert une lettre de lecteur ou un chemin d'accès UNC (Universal Naming Convention), les étapes du travail peuvent être exécutées sous votre compte d'utilisateur Windows pendant que les tâches sont testées. Toutefois, l'utilisateur Windows associé à l'étape de travail doit par ailleurs disposer des autorisations nécessaires, des configurations de lettres de lecteurs appropriées ou des droits d'accès au lecteur requis. Sinon, l'étape de travail échoue. Pour éviter ce problème, vérifiez que le proxy associé à chaque étape de travail dispose des autorisations nécessaires pour la tâche correspondant à l'étape de travail. Pour plus d’informations, consultez [centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+ Les étapes de travail étant exécutées dans le contexte d’un utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows spécifique, cet utilisateur doit disposer des autorisations et de la configuration nécessaires à l’exécution de l’étape de travail. Par exemple, si vous créez un travail qui requiert une lettre de lecteur ou un chemin d'accès UNC (Universal Naming Convention), les étapes du travail peuvent être exécutées sous votre compte d'utilisateur Windows pendant que les tâches sont testées. Toutefois, l'utilisateur Windows associé à l'étape de travail doit par ailleurs disposer des autorisations nécessaires, des configurations de lettres de lecteurs appropriées ou des droits d'accès au lecteur requis. Sinon, l'étape de travail échoue. Pour éviter ce problème, vérifiez que le proxy associé à chaque étape de travail dispose des autorisations nécessaires pour la tâche correspondant à l'étape de travail. Pour plus d’informations, consultez [Security Center pour SQL Server moteur de base de données et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## <a name="job-step-logs"></a>Journaux d'étapes de travail  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut écrire le résultat de certaines étapes de travail dans un fichier du système d’exploitation ou dans la table sysjobstepslogs de la base de données msdb. Les types d'étapes de travail suivants peuvent écrire les résultats sur les deux destinations :  
@@ -89,7 +89,7 @@ ms.locfileid: "68189143"
   
  Vous pouvez éventuellement ouvrir un fichier [!INCLUDE[tsql](../../includes/tsql-md.md)] existant en tant que commande pour l'étape de travail.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Les étapes de travail n’utilisent pas les proxies de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Au lieu de cela, l'étape de travail s'exécute au nom de son propriétaire ou sous le compte du service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si le propriétaire de l'étape de travail est membre du rôle de serveur sysadmin. Les membres du rôle serveur fixe sysadmin peuvent également préciser que les étapes de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] s’exécutent sous le contexte d’un autre utilisateur par le biais du paramètre *database_user_name* de la procédure stockée sp_add_jobstep. Pour plus d’informations, consultez [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Les étapes de travail n’utilisent pas les proxies de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Au lieu de cela, l'étape de travail s'exécute au nom de son propriétaire ou sous le compte du service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si le propriétaire de l'étape de travail est membre du rôle de serveur sysadmin. Les membres du rôle serveur fixe sysadmin peuvent également préciser que les étapes de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] s’exécutent sous le contexte d’un autre utilisateur par le biais du paramètre *database_user_name* de la procédure stockée sp_add_jobstep. Pour plus d’informations, [consultez &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
 >  Une même étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] peut contenir plusieurs lots. [!INCLUDE[tsql](../../includes/tsql-md.md)] Les étapes de travail peuvent intégrer des commandes GO incorporées.  
@@ -166,7 +166,7 @@ Set oServer = nothing
   
 -   taper l'instruction à exécuter. L'instruction doit être une requête MDX (Multidimensional Expressions).  
   
- Pour plus d’informations sur MDX, consultez [principes de base de requête MDX &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
+ Pour plus d’informations sur MDX, consultez [principes de base &#40;des&#41;requêtes MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ## <a name="integration-services-packages"></a>Packages Integration Services  
  Lorsque vous créez une étape de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez effectuer les étapes suivantes :  
@@ -211,7 +211,7 @@ Set oServer = nothing
 |Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d'étapes de travail](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo. sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Créer des travaux](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

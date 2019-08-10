@@ -1,5 +1,5 @@
 ---
-title: Ajouter des Types de contenu de serveur de rapports à une bibliothèque (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
+title: Ajouter des types de contenu de serveur de rapports à une bibliothèque (Reporting Services en mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110006"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891631"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Ajouter des types de contenu de serveur de rapports à une bibliothèque (Reporting Services en mode intégré SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis SharePoint qui sont utilisés pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définitions de rapports (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.  
@@ -31,7 +31,7 @@ ms.locfileid: "66110006"
 > [!TIP]  
 >  Si vous **n'avez pas** configuré au préalable les types de contenus d'une bibliothèque, commencez par activer la gestion des types de contenu, puis activez les types de contenu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Reportez-vous aux procédures d'activation de la gestion de type de contenu dans une seule bibliothèque de documents.  
   
- **Courte vidéo :** [(SSRS) L’activation de Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Brève vidéo:** [(SSRS) activation des types de contenu dans SharePoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **Dans cette rubrique :**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110006"
   
 2.  Allez à **Paramètres du site**.  
   
-    -   Dans SharePoint 2013, cliquez sur l'icône **Paramètres** . ![Paramètres SharePoint](../analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint")  
+    -   Dans SharePoint 2013, cliquez sur l'icône **Paramètres** . ![Paramètres SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint")  
   
     -   Dans SharePoint 2010, cliquez sur **Actions du site**, puis sur **Paramètre du site**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66110006"
 9. > [!NOTE]  
     >  Si le groupe de types de contenu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Types de contenu SQL Server Reporting Services** n’est pas visible dans la page **Ajouter des types de contenu** , l’une des conditions suivantes est remplie :  
   
-    -   Le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint n'est pas installé. Pour plus d’informations, consultez [installer ou désinstaller le logiciel complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Cette rubrique contient des informations sur l'installation du complément et les étapes de l'installation uniquement des fichiers du complément afin de contourner les problèmes.  
+    -   Le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint n'est pas installé. Pour plus d’informations, consultez [installer ou désinstaller le complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Cette rubrique contient des informations sur l'installation du complément et les étapes de l'installation uniquement des fichiers du complément afin de contourner les problèmes.  
   
     -   Le complément est installé, mais la fonctionnalité de collection de sites **Fonctionnalité d’intégration du serveur de rapports** n’est pas active. Vérifiez la fonctionnalité de collection de sites dans **Paramètres du site**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66110006"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Pour activer la gestion des types de contenu pour une bibliothèque de documents (SharePoint 2010)  
   
-1.  Ouvrez la bibliothèque pour laquelle activer plusieurs types de contenu. Dans la barre de menus de bibliothèque, vous devez voir les menus suivants : **Nouvelle**, **télécharger**, **Actions**, et **paramètres**. Si le menu **Paramètres**n'est pas visible, vous n'êtes pas autorisé à ajouter un type de contenu.  
+1.  Ouvrez la bibliothèque pour laquelle activer plusieurs types de contenu. Dans la barre de menus de la bibliothèque, vous devez voir les menus suivants: **Nouveau**, **charger**, **actions**et **paramètres**. Si le menu **Paramètres**n'est pas visible, vous n'êtes pas autorisé à ajouter un type de contenu.  
   
 2.  Dans le ruban **Outils de bibliothèque** , cliquez sur **Bibliothèque**.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66110006"
   
 ## <a name="see-also"></a>Voir aussi  
  [Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Démarrer le Générateur de &#40;Générateur de rapports&#41;](report-builder/start-report-builder.md)  
+ [Démarrer Générateur de rapports &#40;générateur de rapports&#41;](report-builder/start-report-builder.md)  
   
   

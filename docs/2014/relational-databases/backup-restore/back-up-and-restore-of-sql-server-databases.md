@@ -22,12 +22,12 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922935"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890818"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
   Cette rubrique décrit les avantages de la sauvegarde des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les termes de sauvegarde et de restauration de base, et présente les stratégies de sauvegarde et de restauration pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que les questions de sécurité pour la sauvegarde et la restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +101,7 @@ ms.locfileid: "62922935"
   
 
   
-##  <a name="BnrStrategies"></a> Introduction aux stratégies de sauvegarde et restauration  
+##  <a name="BnrStrategies"></a>Présentation des stratégies de sauvegarde et de restauration  
  Les sauvegardes et restaurations de données doivent être adaptées à un environnement particulier et doivent pouvoir utiliser les ressources disponibles. Pour qu'elles soient efficaces, les sauvegardes et restaurations aux fins de récupération doivent par conséquent faire l'objet d'une stratégie. Une stratégie de sauvegarde et de restauration bien conçue doit maximiser la disponibilité des données et minimiser la perte de données, en prenant en compte les besoins spécifiques de votre entreprise.  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "62922935"
   
  Une stratégie de sauvegarde et de restauration s'articule autour de deux pôles : la sauvegarde et la restauration. Le pôle sauvegarde définit le type et la fréquence des sauvegardes, la nature et la vitesse du matériel employé, la manière dont les sauvegardes seront testées, ainsi que les modalités et l'emplacement de stockage des supports de sauvegarde (sans oublier les considérations relatives à la sécurité). Le pôle restauration détermine le responsable des restaurations et leurs modalités d'exécution pour atteindre les objectifs de l'entreprise en termes de disponibilité de la base de données et de limitation des pertes de données. Nous vous recommandons de documenter vos procédures de sauvegarde et de restauration, sans oublier de conserver une copie de la documentation dans votre dossier d'exploitation.  
   
- La conception d'une stratégie de sauvegarde et de restauration efficace nécessite une planification, une mise en œuvre et des tests rigoureux. Il est nécessaire d'effectuer des tests. Vous ne disposez d'aucune stratégie de sauvegarde tant que vous n'avez pas restauré comme il se doit les sauvegardes dans toutes les combinaisons incluses dans votre stratégie de restauration. Vous devez prendre en compte différents facteurs. Ces options en question sont les suivantes :  
+ La conception d'une stratégie de sauvegarde et de restauration efficace nécessite une planification, une mise en œuvre et des tests rigoureux. Il est nécessaire d'effectuer des tests. Vous ne disposez d'aucune stratégie de sauvegarde tant que vous n'avez pas restauré comme il se doit les sauvegardes dans toutes les combinaisons incluses dans votre stratégie de restauration. Vous devez prendre en compte différents facteurs. Notamment :  
   
 -   les objectifs de production de votre entreprise en ce qui concerne les bases de données, en particulier les besoins de disponibilité et de protection des données contre les pertes ;  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62922935"
   
      Pour plus d'informations, consultez [Estimer la taille d'une sauvegarde complète de base de données](#EstimateDbBuSize)plus loin dans cette section.  
   
-####  <a name="EstimateDbBuSize"></a> Estimer la taille d’une sauvegarde de base de données complète  
+####  <a name="EstimateDbBuSize"></a>Estimer la taille d’une sauvegarde complète de base de données  
  Avant de mettre en place une stratégie de sauvegarde et de restauration, vous devez estimer la quantité d'espace disque qu'utilisera une sauvegarde complète de base de données. L'opération de sauvegarde copie les données de la base de données dans un fichier de sauvegarde. La sauvegarde contient uniquement les données réelles de la base de données et aucun espace inutilisé. Ainsi, la sauvegarde est généralement moins volumineuse que la base de données elle-même. Vous pouvez estimer la taille d’une sauvegarde complète de base de données en utilisant la procédure stockée système **sp_spaceused**. Pour plus d’informations, consultez [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Planifier des sauvegardes  
@@ -211,7 +211,7 @@ ms.locfileid: "62922935"
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
@@ -226,7 +226,7 @@ ms.locfileid: "62922935"
 ### <a name="restoring-data-backups"></a>Restauration de sauvegardes de données  
  **Utilisation de SQL Server Management Studio**  
   
--   [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurer une sauvegarde &#40;de base de données SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurer une base de données à un nouvel emplacement &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -234,7 +234,7 @@ ms.locfileid: "62922935"
   
 -   [Restaurer des fichiers et des groupes de fichiers &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Restaurer une sauvegarde de base de données en mode de récupération simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -257,14 +257,14 @@ ms.locfileid: "62922935"
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>Tâches de restauration supplémentaires  
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Redémarrer une opération de restauration interrompue &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
@@ -277,7 +277,7 @@ ms.locfileid: "62922935"
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Sauvegarde et restauration de bases de données Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [Sauvegarde et restauration de bases de données Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

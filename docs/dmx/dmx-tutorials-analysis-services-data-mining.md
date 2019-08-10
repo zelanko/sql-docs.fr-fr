@@ -1,5 +1,5 @@
 ---
-title: Didacticiels DMX (Analysis Services - Exploration de données) | Microsoft Docs
+title: Didacticiels DMX (Analysis Services-exploration de données) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061734"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892784"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Didacticiels DMX (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "68061734"
  Dans ce didacticiel, vous allez apprendre à créer un modèle d'exploration de données qui prédit les produits susceptibles d'être achetés simultanément. Ce didacticiel présente également l'utilisation de tables imbriquées dans l'exploration de données.  
   
 ## <a name="reference"></a>Référence  
- [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [Éléments de syntaxe &#40;DMX&#41; des extensions d’exploration de données](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Instructions de définition de données DMX &#40;Data Mining Extensions&#41;](../dmx/dmx-statements-data-definition.md)  
   
- [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)  
+ [Instructions de manipulation &#40;de&#41; données DMX des extensions d’exploration de données](../dmx/dmx-statements-data-manipulation.md)  
   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Sections connexes  
- [Accès aux données de modèle multidimensionnel &#40;Analysis Services - données multidimensionnelles&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Analysis Services d’accès aux &#40;données de modèle multidimensionnel-données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

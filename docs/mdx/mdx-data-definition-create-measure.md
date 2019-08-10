@@ -1,5 +1,5 @@
 ---
-title: L’instruction CREATE MEASURE (MDX) | Microsoft Docs
+title: Instruction CREATe MEASURe (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e9eb05d633dcbe660c34793fa39c10d788574700
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02c6d29bbebcc794e72f4ca960e3d9259de7205b
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098383"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892147"
 ---
 # <a name="mdx-data-definition---create-measure"></a>Définition de données MDX - CREATE MEASURE
 
@@ -30,7 +30,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Table_Name*  
+ *Nom_de_table*  
  Littéral de chaîne valide qui fournit le nom de la table dans laquelle la mesure sera créée.  
   
  *Measure_Name*  
@@ -40,13 +40,13 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  Expression DAX valide qui retourne une seule valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- Le *Measure_Name* doit être placé entre crochets.  
+ Le *Measure_Name* doit être placé entre parenthèses carrées.  
   
- L’instruction CREATE MEASURE peut uniquement être utilisée à l’intérieur d’une définition de script MDX ; consultez [MdxScript élément &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl).  
+ L’instruction CREATe MEASURe ne peut être utilisée qu’à l’intérieur d’une définition de script MDX. consultez [MdxScript, &#40;élément&#41;ASSL](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl).  
   
- Vous pouvez également définir un membre calculé qui ne doit être utilisé que par une requête unique. Pour définir un membre calculé limité à une seule requête, utilisez la clause WITH de l'instruction SELECT. Pour plus d’informations, consultez [génération de mesures dans MDX](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md).  
+ Vous pouvez également définir un membre calculé qui ne doit être utilisé que par une requête unique. Pour définir un membre calculé limité à une seule requête, utilisez la clause WITH de l'instruction SELECT. Pour plus d’informations, consultez [génération de mesures dans MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions &#40;MDX de définition de données MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

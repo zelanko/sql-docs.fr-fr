@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740597"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893715"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
   Pour installer ou mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez exécuter le programme d'installation sur chaque nœud du cluster de basculement. Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'exécutez pas le programme d'installation sur le nœud actif pour gérer les autres nœuds.  
@@ -35,7 +35,7 @@ ms.locfileid: "62740597"
   
  Les options suivantes sont disponibles pour l'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Option 1 : Installation Integration avec ajout de nœud**  
+ **Option 1 : Installation Intégration avec ajout de nœud**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation intégrée de cluster de basculement comprend les étapes suivantes :  
   
@@ -45,11 +45,11 @@ ms.locfileid: "62740597"
   
     -   Si le nœud que vous ajoutez a des sous-réseaux supplémentaires ou différents, le programme d'installation vous permet de spécifier des adresses IP supplémentaires. Si le nœud que vous ajoutez se trouve sur un sous-réseau différent, vous devez également confirmer la modification de dépendance de ressource d'adresse IP sur OR. Pour plus d’informations sur les différents scénarios possibles pendant les opérations d’ajout de nœuds, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Option 2 : Installation avancée/entreprise**  
+ **Option 2 : Installation avancée/entreprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise de cluster de basculement comprend les étapes suivantes :  
   
--   Sur chaque nœud potentiellement propriétaire du nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous créez, suivez les étapes de préparation de l’installation du cluster de basculement dans la [section Préparer](#prepare). Après avoir effectué la préparation du cluster de basculement sur un nœud, le programme d'installation crée le fichier Configuration.ini qui répertorie tous les paramètres que vous spécifiez. Sur les autres nœuds à préparer, au lieu de suivre ces étapes, vous pouvez fournir le fichier Configuration.ini généré automatiquement à partir du premier nœud comme entrée pour la ligne de commande du programme d'installation. Pour plus d’informations, consultez [installer SQL Server 2014 avec un fichier de Configuration](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md). Cette étape prépare les nœuds pour le clustering ; toutefois, aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'est opérationnelle à la fin de cette étape.  
+-   Sur chaque nœud potentiellement propriétaire du nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous créez, suivez les étapes de préparation de l’installation du cluster de basculement dans la [section Préparer](#prepare). Après avoir effectué la préparation du cluster de basculement sur un nœud, le programme d'installation crée le fichier Configuration.ini qui répertorie tous les paramètres que vous spécifiez. Sur les autres nœuds à préparer, au lieu de suivre ces étapes, vous pouvez fournir le fichier Configuration.ini généré automatiquement à partir du premier nœud comme entrée pour la ligne de commande du programme d'installation. Pour plus d’informations, consultez [installer SQL Server 2014 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md). Cette étape prépare les nœuds pour le clustering ; toutefois, aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'est opérationnelle à la fin de cette étape.  
   
 -   Une fois les nœuds préparés pour le clustering, exécutez l'installation sur l'un de ces nœuds. Cette étape permet de configurer et de finaliser l'instance de cluster de basculement. À la fin de cette étape, vous disposerez d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opérationnelle et tous les nœuds préparés précédemment pour cette instance seront des propriétaires potentiels du nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] créé.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62740597"
   
 8.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Cliquez sur **Suivant** pour continuer. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
   
-9. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
@@ -228,13 +228,13 @@ ms.locfileid: "62740597"
 30. Pour ajouter des nœuds au cluster de basculement à un seul nœud que vous venez de créer, exécutez le programme d'installation sur chacun des nœuds supplémentaires et suivez les étapes pour l'opération AddNode. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
     > [!NOTE]  
-    >  Si vous ajoutez plusieurs nœuds, vous pouvez utiliser le fichier de configuration pour déployer les installations. Pour plus d’informations, consultez [installer SQL Server 2014 avec un fichier de Configuration](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
+    >  Si vous ajoutez plusieurs nœuds, vous pouvez utiliser le fichier de configuration pour déployer les installations. Pour plus d’informations, consultez [installer SQL Server 2014 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
     >   
     >  L'édition [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous installez doit être la même sur tous les nœuds d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Lorsque vous ajoutez un nouveau nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez spécifier que l'édition est identique à celle du cluster de basculement existant.  
   
 ##  <a name="prepare"></a> Préparation  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Installation avancée/entreprise Cluster de basculement étape 1 : Préparation  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Étape 1 de l’installation avancée/entreprise sur un cluster de basculement : Préparation  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](before-installing-failover-clustering.md). Il se peut que vous deviez installer les composants requis si ceux-ci ne sont pas déjà présents sur l'ordinateur.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "62740597"
   
 9. Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Cliquez sur **Suivant** pour continuer. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
   
-10. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
@@ -324,11 +324,11 @@ ms.locfileid: "62740597"
   
 23. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations sur les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-24. Répétez les étapes précédentes pour préparer les autres nœuds pour le cluster de basculement. Vous pouvez également utiliser le fichier de configuration généré automatiquement pour exécuter la préparation sur les autres nœuds. Pour plus d’informations, consultez [installer SQL Server 2014 avec un fichier de Configuration](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
+24. Répétez les étapes précédentes pour préparer les autres nœuds pour le cluster de basculement. Vous pouvez également utiliser le fichier de configuration généré automatiquement pour exécuter la préparation sur les autres nœuds. Pour plus d’informations, consultez [installer SQL Server 2014 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
 ## <a name="complete"></a>Terminé  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Installation avancée/entreprise Cluster de basculement étape 2 : Terminé  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Étape 2 de l’installation avancée/entreprise sur un cluster de basculement : Terminé  
   
 1.  Une fois tous les nœuds préparés de la façon décrite dans [l’étape de préparation](#prepare), lancez le programme d’installation sur l’un des nœuds préparés, de préférence sur le nœud propriétaire du disque partagé. Dans la page **Avancé** du Centre d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Création de cluster avancée**.  
   

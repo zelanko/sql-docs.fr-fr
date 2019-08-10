@@ -1,5 +1,5 @@
 ---
-title: Définition et utilisation d’une Action d’extraction | Microsoft Docs
+title: Définition et utilisation d’une action d’extraction | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078266"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888105"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Définition et utilisation d'une action d'extraction
   Le dimensionnement des données de fait par une dimension de fait sans filtrage correct des données retournées par la requête peut ralentir les performances des requêtes. Pour éviter ceci, vous pouvez définir une action d'extraction qui restreint le nombre total de lignes retournées. Cela améliorera considérablement les performances des requêtes.  
@@ -30,15 +30,15 @@ ms.locfileid: "66078266"
   
      L’image suivante montre l’onglet **Actions** du Concepteur de cube.  
   
-     ![Onglet Actions du Concepteur de Cube](../../2014/tutorials/media/l8-action1.gif "onglet Actions du Concepteur de Cube")  
+     ![Onglet actions du concepteur de cube](../../2014/tutorials/media/l8-action1.gif "Onglet actions du concepteur de cube")  
   
 2.  Dans la barre d’outils de l’onglet **Actions** , cliquez sur le bouton **Nouvelle action d’extraction** .  
   
      Un modèle d'action vide apparaît dans le volet de visualisation.  
   
-     ![Modèle d’Action vide dans le volet Affichage](../../2014/tutorials/media/l8-action2.gif "modèle d’Action vide dans le volet d’informations")  
+     ![Modèle d’action vide dans le volet d’affichage](../../2014/tutorials/media/l8-action2.gif "Modèle d’action vide dans le volet d’affichage")  
   
-3.  Dans le **nom** , changez le nom de cette action pour `Internet Sales Details Drillthrough Action`.  
+3.  Dans la zone **nom** , remplacez le nom de cette action par `Internet Sales Details Drillthrough Action`.  
   
 4.  Dans la liste **Membres de groupe de mesures** , sélectionnez **Internet Sales**.  
   
@@ -46,19 +46,19 @@ ms.locfileid: "66078266"
   
 6.  Dans la liste **Colonnes de retour** , cochez les cases **Item Description** et **Order Number** , puis cliquez sur **OK**. L'image suivante montre le modèle d'action tel qu'il doit se présenter à ce stade de la procédure.  
   
-     ![Zone de colonnes d’extraction](../../2014/tutorials/media/l8-action3.gif "zone colonnes d’extraction")  
+     ![Zone colonnes d’extraction](../../2014/tutorials/media/l8-action3.gif "Zone colonnes d’extraction")  
   
 7.  Développez la zone **Propriétés supplémentaires** , comme le montre l’image suivante.  
   
-     ![Zone propriétés supplémentaires](../../2014/tutorials/media/l8-action4.gif "zone de propriétés supplémentaires")  
+     ![Zone de propriétés supplémentaires](../../2014/tutorials/media/l8-action4.gif "Zone de propriétés supplémentaires")  
   
-8.  Dans le **nombre maximal de lignes** , tapez `10`.  
+8.  Dans la zone **nombre maximal** de lignes `10`, tapez.  
   
-9. Dans le **légende** , tapez `Drillthrough to Order Details...`.  
+9. Dans la zone **légende** , tapez `Drillthrough to Order Details...`.  
   
      Ces paramètres limitent le nombre de lignes retournées et spécifient la légende qui apparaît dans le menu de l'application cliente. L’image suivante montre ces paramètres dans la zone **Propriétés supplémentaires** .  
   
-     ![Zone propriétés supplémentaires](../../2014/tutorials/media/l8-action5.gif "zone de propriétés supplémentaires")  
+     ![Zone de propriétés supplémentaires](../../2014/tutorials/media/l8-action5.gif "Zone de propriétés supplémentaires")  
   
 ## <a name="using-the-drillthrough-action"></a>Utilisation de l'action d'extraction  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66078266"
   
      Les détails des commandes qui ont été expédiées à Adam Powell sont affichés dans la **Visionneuse des données d’exemple**, comme le montre l’image suivante. Cependant, certains détails supplémentaires pourraient être utiles, par exemple la date de la commande, la date de livraison prévue et la date d'expédition. Dans la procédure suivante, vous allez ajouter ces détails supplémentaires.  
   
-     ![Les commandes expédiées à Adam Powell](../../2014/tutorials/media/l8-action6.gif "commandes expédiées à Adam Powell")  
+     ![Commandes expédiées à Adam Powell](../../2014/tutorials/media/l8-action6.gif "Commandes expédiées à Adam Powell")  
   
 8.  Fermez Excel.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66078266"
   
     -   ShipDateKey  
   
-6.  Modifier le **nom** propriété pour le **Order Date Key** attribut `Order Date` puis, cliquez sur le bouton Parcourir pour le **colonne nom** propriété et dans le **Colonne nom** boîte de dialogue, sélectionnez **Date** comme table source et SimpleDate comme colonne de la source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Affectez à la propriété **nom** de l’attribut **Order Date Key** la valeur `Order Date` , cliquez sur le bouton Parcourir pour la propriété **colonne de nom** et dans la boîte de dialogue colonne de **nom** , sélectionnez **Date** comme table source, puis sélectionnez SimpleDate comme colonne source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modifier le **nom** propriété pour le **Due Date Key** attribut `Due Date`, puis, en utilisant la même méthode que le **Order Date Key** d’attribut, de modifier le  **Nom de colonne** propriété de cet attribut par **Date.SimpleDate (WChar)** .  
+7.  Modifiez la propriété de **nom** de l’attribut de clé de `Due Date` **Date d’échéance** sur, puis, en utilisant la même méthode que l’attribut **Order Date Key** , remplacez la valeur de la propriété de **colonne Name** de cet attribut par **date. SimpleDate (WCHAR)** .  
   
-8.  Modifier le **nom** propriété pour le **Ship Date Key** attribut `Ship Date`, puis modifiez le **colonne nom** propriété de cet attribut par  **Date.SimpleDate (WChar)** .  
+8.  Remplacez la **propriété Name** de l’attribut `Ship Date`Ship Date Key par, puis remplacez la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)** .  
   
 9. Sélectionnez l’onglet **Actions** du Concepteur de cube pour le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66078266"
   
      L'image suivante montre ces colonnes sélectionnées.  
   
-     ![Zone de colonnes d’extraction](../../2014/tutorials/media/l8-action7.gif "zone colonnes d’extraction")  
+     ![Zone colonnes d’extraction](../../2014/tutorials/media/l8-action7.gif "Zone colonnes d’extraction")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Vérification de l'action d'extraction modifiée  
   
@@ -140,16 +140,16 @@ ms.locfileid: "66078266"
   
      Les détails des commandes expédiées à Adam Powell sont affichés dans la feuille de calcul temporaire. Cela inclut une description de l'article, le numéro de commande, la date de commande, la date d'échéance et la date de livraison, comme illustré dans l'image suivante.  
   
-     ![Les commandes expédiées à Adam Powell](../../2014/tutorials/media/l8-action8.gif "commandes expédiées à Adam Powell")  
+     ![Commandes expédiées à Adam Powell](../../2014/tutorials/media/l8-action8.gif "Commandes expédiées à Adam Powell")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 9 : Définition de Perspectives et traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Leçon 9: Définition de perspectives et de traductions](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Actions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Actions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Actions dans les modèles multidimensionnels](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Définition d’une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [Définition d’une relation de faits](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
  [Définir une relation de fait et des propriétés de relation de fait](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche requête de données d’exploration de données (onglet de modèle d’exploration de données) | Microsoft Docs
+title: Éditeur de tâche de requête d’exploration de données (onglet modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7019fd6fd3d7f2bc763098d30abca9aee670e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059927"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890776"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Modèle d'exploration de données)
   Utilisez l’onglet **Modèle d’exploration de données** de la boîte de dialogue **Tâche de requête d’exploration de données** pour spécifier la structure et le modèle d’exploration de données à utiliser.  
   
- Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../analysis-services/data-mining/data-mining-solutions.md).  
+ Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Options générales  
  **Nom**  
@@ -57,6 +57,6 @@ ms.locfileid: "66059927"
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de requête d’exploration de données &#40;onglet Requête&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Éditeur de tâche de requête d’exploration de données &#40;onglet Sortie&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Concepteur d'exploration de données](../analysis-services/data-mining/data-mining-designer.md)  
+ [Concepteur d'exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

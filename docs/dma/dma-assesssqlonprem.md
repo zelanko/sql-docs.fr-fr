@@ -1,8 +1,8 @@
 ---
-title: Effectuer une évaluation de migration de SQL Server (Assistant Migration de données) | Microsoft Docs
-description: Découvrez comment utiliser l’Assistant de Migration de données pour évaluer un serveur local SQL Server avant de migrer vers un autre serveur SQL ou à la base de données SQL Azure
+title: Effectuer une évaluation de la migration de SQL Server (Assistant Migration de données) | Microsoft Docs
+description: Découvrez comment utiliser Assistant Migration de données pour évaluer un SQL Server local avant de migrer vers un autre SQL Server ou Azure SQL Database
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,94 +14,142 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 463ada293202007eb92b6d3dfedc3c96c7d2f9f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060951"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892697"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de migration de SQL Server avec Data Migration Assistant
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de la migration SQL Server avec Assistant Migration de données
 
-La procédure détaillée ci-dessous vous aider à effectuer votre évaluation premier pour la migration vers local SQL Server, SQL Server s’exécutant sur une machine virtuelle Azure, ou la base de données SQL Azure, à l’aide de Data Migration Assistant.
+Les instructions pas à pas suivantes vous aident à effectuer la première évaluation de la migration vers des SQL Server locaux, SQL Server s’exécutant sur une machine virtuelle Azure, ou Azure SQL Database à l’aide de Assistant Migration de données.
 
 ## <a name="create-an-assessment"></a>Créer une évaluation
 
-1.  Sélectionnez le **New** (+) icône, puis sélectionnez le **évaluation** type de projet.
+1. Sélectionnez l’icône **nouveau** (+), puis sélectionnez le type de projet **évaluation** .
 
-2.  Définissez le type de serveur source et cible.
+2. Définissez le type de serveur source et cible.
 
-    Si vous mettez à niveau votre instance de SQL Server locale vers une instance de SQL Server modernes en local ou à SQL Server hébergée sur une machine virtuelle Azure, définissez le type de serveur source et cible sur **SQL Server**. Si vous effectuez une migration vers Azure SQL Database, à la place la valeur est le type de serveur cible **Azure SQL Database**.
+    Si vous effectuez la mise à niveau de votre instance locale de SQL Server vers une instance SQL Server locale moderne ou SQL Server hébergée sur une machine virtuelle Azure, définissez le type de serveur source et cible sur **SQL Server**. Si vous effectuez une migration vers Azure SQL Database, définissez plutôt le type de serveur cible sur **Azure SQL Database**.
 
-3.  Cliquez sur **Créer**.
+3. Cliquez sur **Créer**.
 
-    ![Créer une évaluation](../dma/media/NewAssessment.png)
+   ![Créer une évaluation](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
-## <a name="choose-assessment-options"></a>Choisissez les options d’évaluation
+## <a name="choose-assessment-options"></a>Choisir les options d’évaluation
 
-1. Sélectionnez la version de SQL Server cible que vous projetez de migrer vers.
+1. Sélectionnez la version de SQL Server cible vers laquelle vous envisagez de migrer.
 
 2. Sélectionnez le type de rapport.
 
-   Lorsque que vous évaluez votre instance de SQL Server source pour la migration vers local SQL Server ou SQL Server hébergées sur les cibles de la machine virtuelle Azure, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
+   Lorsque vous évaluez votre instance de SQL Server source pour la migration vers un SQL Server local ou vers SQL Server hébergée sur des cibles de machines virtuelles Azure, vous pouvez choisir l’un des types de rapport d’évaluation suivants, ou les deux:
 
-    -   **Problèmes de compatibilité**
-    -   **Recommandation de nouvelles fonctionnalités**
+    - **Problèmes de compatibilité**
+    - **Recommandations relatives aux nouvelles fonctionnalités**
 
-    ![Sélectionnez un type de rapport d’évaluation pour SQL Server cible](../dma/media/AssessmentTypes.png)
+   ![Sélectionner un type de rapport d’évaluation pour SQL Server cible](../dma/media/dma-assesssqlonprem/assessment-types.png)
 
-   Lors de l’évaluation de votre instance de SQL Server source pour la migration vers Azure SQL Database, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
+   Lors de l’évaluation de votre instance de SQL Server source pour la migration vers Azure SQL Database, vous pouvez choisir l’un des types de rapport d’évaluation suivants, ou les deux:
 
-    -   **Vérifier la compatibilité de base de données**
-    -   **Vérifier la parité de fonctionnalité**
+    - **Vérifier la compatibilité de la base de données**
+    - **Vérifier la parité des fonctionnalités**
 
-    ![Sélectionnez le type de rapport d’évaluation pour la cible de la base de données SQL](../dma/media/AssessmentTypes_Azure.png)
+    ![Sélectionner le type de rapport d’évaluation pour SQL Database cible](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
-## <a name="add-databases-to-assess"></a>Ajouter des bases de données à évaluer
+## <a name="add-databases-and-extended-events-trace-to-assess"></a>Ajouter des bases de données et une trace des événements étendus pour évaluer
 
-1.  Sélectionnez **ajouter des Sources de** pour ouvrir le menu volant de connexion.
+1. Sélectionnez **Ajouter des sources** pour ouvrir le menu contextuel connexion.
 
-2.  Entrez le nom d’instance SQL server, choisissez le type d’authentification, définissez les propriétés de connexion correctes, puis sélectionnez **Connect**.
+2. Entrez le nom de l’instance SQL Server, choisissez le type d’authentification, définissez les propriétés de connexion appropriées, puis sélectionnez **se connecter**.
 
-3.  Sélectionnez les bases de données à évaluer, puis sélectionnez **ajouter**.
+3. Sélectionnez les bases de données à évaluer, puis sélectionnez **Ajouter**.
 
-    > [!NOTE] 
-    > Vous pouvez supprimer plusieurs bases de données en les sélectionnant tout en maintenant enfoncée la touche MAJ ou Ctrl, puis en cliquant sur **Sources supprimer**. Vous pouvez également ajouter des bases de données à partir de plusieurs instances de SQL Server à l’aide de la **ajouter des Sources de** bouton.
+    > [!NOTE]
+    > Vous pouvez supprimer plusieurs bases de données en les sélectionnant tout en maintenant la touche Maj ou CTRL enfoncée, puis en cliquant sur **Supprimer les sources**. Vous pouvez également ajouter des bases de données à partir de plusieurs instances de SQL Server en sélectionnant **Ajouter des sources**.
 
-4.  Cliquez sur **suivant** pour démarrer l’évaluation.
+4. Si vous avez des requêtes SQL ad hoc ou dynamiques ou des instructions DML initiées via la couche de données d’application, entrez le chemin d’accès au dossier dans lequel vous avez placé tous les fichiers de session d’événements étendus que vous avez collectés pour capturer la charge de travail sur la source SQL Server .
 
-    ![Ajouter des sources et de démarrer l’évaluation](../dma/media/SelectDatabase.png)
+     L’exemple suivant montre comment créer une session d’événements étendus sur votre SQL Server source pour capturer la charge de travail de la couche de données de l’application.  Capturez la charge de travail pour la durée qui représente votre charge de travail de pointe.
+
+    ```
+    DROP EVENT SESSION [DatalayerSession] ON SERVER
+    go
+    CREATE EVENT SESSION [DatalayerSession] ON SERVER  
+    ADD EVENT sqlserver.sql_statement_completed( 
+        ACTION (sqlserver.sql_text,sqlserver.client_app_name,sqlserver.client_hostname,sqlserver.database_id))
+    ADD TARGET package0.asynchronous_file_target(SET filename=N'C:\temp\Demos\DataLayerAppassess\DatalayerSession.xel')  
+    WITH (MAX_MEMORY=2048 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=3 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+    go
+    ---Start the session
+    ALTER EVENT SESSION [DatalayerSession]
+          ON SERVER
+        STATE = START;
+    ---Wait for few minutes
+    
+    ---Query events
+        
+        SELECT 
+        object_name,
+        CAST(event_data as xml) as event_data,
+        file_name, 
+        file_offset
+    FROM sys.fn_xe_file_target_read_file('C:\temp\Demos\DataLayerAppassess\DatalayerSession*xel', 
+                'C:\\temp\\Demos\\DataLayerAppassess\\DatalayerSession*xem', 
+                null,
+                null)
+    ---Stop the session after capturing the peak load.
+    ALTER EVENT SESSION [DatalayerSession]
+          ON SERVER
+        STATE = STOP;
+        
+        go
+    ```
+
+5. Cliquez sur **suivant** pour démarrer l’évaluation.
+
+    ![Ajouter des sources et démarrer l’évaluation](../dma/media/dma-assesssqlonprem/select-database1.png)
 
 ## <a name="view-results"></a>Afficher les résultats
 
-La durée de l’évaluation varie selon le nombre de bases de données ajoutées et la taille du schéma de chaque base de données. Résultats sont affichés pour chaque base de données dès qu’elles sont disponibles.
+La durée de l’évaluation dépend du nombre de bases de données ajoutées et de la taille de schéma de chaque base de données. Les résultats s’affichent pour chaque base de données dès qu’ils sont disponibles.
 
-1.  Sélectionnez la base de données qui a effectué l’évaluation et ensuite basculer entre les **les problèmes de compatibilité** et **recommandation de nouvelles fonctionnalités** en utilisant le sélecteur.
+1. Sélectionnez la base de données qui a terminé l’évaluation, puis basculez entre les **problèmes de compatibilité** et les **recommandations relatives aux fonctionnalités** à l’aide du sélecteur.
 
-2.  Passez en revue les problèmes de compatibilité sur tous les niveaux de compatibilité pris en charge par la version de SQL Server cible que vous avez sélectionné sur la **Options** page.
+2. Examinez les problèmes de compatibilité entre tous les niveaux de compatibilité pris en charge par la version de SQL Server cible que vous avez sélectionnée dans la page **options** .
 
-Vous pouvez examiner les problèmes de compatibilité en analysant l’objet affecté, ses détails et potentiellement un correctif pour chaque problème identifié sous **modifications avec rupture**, **changements de comportement**, et  **Fonctionnalités déconseillées**.
+Vous pouvez examiner les problèmes de compatibilité en analysant l’objet affecté, ses détails et éventuellement un correctif pour chaque problème identifié sous **modifications avec rupture**, **changements de comportement**et fonctionnalités dépréciées.
 
-![Afficher les résultats évaluation](../dma/media/ReviewResults.png)
+![Afficher les résultats de l’évaluation](../dma/media/dma-assesssqlonprem/review-results.png)
 
-De même, vous pouvez examiner la recommandation de fonctionnalité entre **performances**, **stockage**, et **sécurité** zones.
+De même, vous pouvez passer en revue les recommandations relatives aux fonctionnalités dans les domaines des **performances**, du **stockage**et de la **sécurité** .
 
-Recommandations de fonctionnalités couvrent une variété de fonctionnalités comme OLTP en mémoire, Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking et Transparent Data Encryption.
+Les recommandations relatives aux fonctionnalités couvrent différents types de fonctionnalités, comme OLTP en mémoire, ColumnStore, Stretch Database, Always Encrypted, Dynamic Data Masking et Transparent Data Encryption.
 
-![Afficher les recommandations de fonctionnalité](../dma/media/FeatureRecommendations.png)
+![Afficher les recommandations relatives aux fonctionnalités](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Pour la base de données SQL Azure, l’évaluation des problèmes bloquants de migration et les problèmes de parité de fonctionnalité. Passez en revue les résultats pour ces deux catégories en sélectionnant les options spécifiques.
+Par Azure SQL Database, les évaluations fournissent des problèmes de blocage de la migration et des problèmes de parité de fonctionnalité. Passez en revue les résultats des deux catégories en sélectionnant les options spécifiques.
 
-- Le **parité des fonctionnalités de SQL Server** catégorie fournit un ensemble complet de recommandations, d’approches alternatives disponibles dans Azure et les procédures d’atténuation. Il vous permet de planifier cet effort dans vos projets de migration.
+- La catégorie de **parité de fonctionnalité de SQL Server** fournit un ensemble complet de recommandations, d’approches alternatives disponibles dans Azure et d’atténuation des étapes. Il vous aide à planifier cet effort dans vos projets de migration.
 
-  ![Afficher les informations de parité des fonctionnalités de SQL Server](../dma/media/SQLFeatureParity.png)
+  ![Afficher des informations sur SQL Server parité des fonctionnalités](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- Le **les problèmes de compatibilité** catégorie fournit les fonctionnalités partiellement prises en charge ou non pris en charge qui bloquent la migration bases de données de SQL Server sur site aux bases de données SQL Azure. Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
+- La catégorie de **problèmes de compatibilité** fournit des fonctionnalités partiellement prises en charge ou non prises en charge qui bloquent la migration de bases de données SQL Serveres locales vers des bases de données SQL Azure. Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
 
-  ![Afficher les problèmes de compatibilité](../dma/media/CompatibilityIssues.png)
+  ![Afficher les problèmes de compatibilité](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
+
+## <a name="assess-a-data-estate-for-target-readiness"></a>Évaluer un patrimoine de données pour la préparation cible
+
+Si vous souhaitez étendre davantage ces évaluations à l’ensemble de l’espace de données et rechercher la disponibilité relative de SQL Server instances et de bases de données pour la migration vers Azure SQL Database, téléchargez les résultats dans le Hub Azure Migrate en sélectionnant **Télécharger vers Azure Migrate** .
+
+Cela vous permet d’afficher les résultats consolidés sur le projet Azure Migrate Hub.
+
+Des instructions pas à pas détaillées sur les évaluations de la disponibilité cible sont disponibles [ici](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
+
+   ![Charger les résultats dans Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 
 ## <a name="export-results"></a>Exporter les résultats
 
-Toutes les bases de données après l’évaluation, sélectionnez **exporter le rapport** pour exporter les résultats dans un fichier JSON ou un fichier CSV. Vous pouvez ensuite analyser les données à votre convenance.
+Une fois que toutes les bases de données ont terminé l’évaluation, sélectionnez **Exporter le rapport** pour exporter les résultats vers un fichier JSON ou un fichier CSV. Vous pouvez ensuite analyser les données à votre convenance.
 
-Vous pouvez exécuter plusieurs évaluations simultanément et afficher l’état des évaluations en ouvrant le **toutes les évaluations** page.
+Vous pouvez exécuter plusieurs évaluations simultanément et afficher l’état des évaluations en ouvrant la page **toutes les évaluations** .

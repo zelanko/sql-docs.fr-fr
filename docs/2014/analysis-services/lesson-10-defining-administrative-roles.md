@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 10 : Définition de rôles administratifs | Microsoft Docs'
+title: 'Leçon 10 : Définition des rôles d’administration | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28697c46e2e72ae4bfff95155f6646d1a5d076c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079155"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888460"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Leçon 10 : Définition des rôles administratifs
   Dans cette leçon, vous allez apprendre à définir des rôles de sécurité pour les tâches d'administration.  
@@ -25,11 +25,11 @@ ms.locfileid: "66079155"
   
  Cette leçon contient la tâche suivante :  
   
- [Attribution de l'autorisation de traiter la base de données](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+ [Attribution de l'autorisation de traiter la base de données](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
  Dans cette tâche, vous définissez un rôle de sécurité qui a les autorisations nécessaires pour traiter la base de données de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis vous testez ce rôle de sécurité.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   
+ [Scénario du didacticiel Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
  [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

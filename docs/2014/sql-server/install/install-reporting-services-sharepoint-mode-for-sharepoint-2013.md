@@ -1,5 +1,5 @@
 ---
-title: Installer Reporting Services SharePoint Mode for SharePoint 2013 | Microsoft Docs
+title: Installer Reporting Services mode SharePoint pour SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,19 +10,19 @@ ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f50e2d4a1cee7bfb36d03f69a8ee4a41772939b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f829c49c47565fb7ed2dc4540216a4de4d3243d2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094610"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890277"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installer le mode SharePoint de Reporting Services pour SharePoint 2013
   Les procédures de cette rubrique constituent un guide d'installation sur un serveur unique de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint. La rubrique peut également être utilisée pour des procédures individuelles dans le cadre de la mise à jour d'une installation existante, par exemple, pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Remarque :** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint est **pas** prennent en charge une architecture mutualisée de SharePoint Server.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Remarque sur &#124; SharePoint 2013 **:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Le mode SharePoint ne prend **pas** en charge l’architecture mutualisée de SharePoint Server.|  
   
  Pour plus d'informations sur l'ajout de serveurs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supplémentaires à une batterie de serveurs existante, consultez les rubriques suivantes :  
   
@@ -34,19 +34,19 @@ ms.locfileid: "66094610"
   
  **Dans cette rubrique :**  
   
--   [Exemple de déploiement de serveur unique](#bkmk_singleserver)  
+-   [Exemple de déploiement sur un serveur unique](#bkmk_singleserver)  
   
 -   [Comptes d’installation](#bkmk_setupaccounts)  
   
--   [Étape 1 : Installer le serveur de rapports Reporting Services en mode SharePoint](#bkmk_install_SSRS)  
+-   [Étape 1 : Installer Reporting Services serveur de rapports en mode SharePoint](#bkmk_install_SSRS)  
   
--   [Étape 2 : Inscrire et démarrer le Service SharePoint de Reporting Services](#bkmk_install_SSRS_sharedservice)  
+-   [Étape 2 : Inscrire et démarrer le service Reporting Services SharePoint](#bkmk_install_SSRS_sharedservice)  
   
--   [Étape 3 : Créer une Application de Service Reporting Services](#bkmk_create_serrviceapplication)  
+-   [Étape 3 : Créer une application de service Reporting Services](#bkmk_create_serrviceapplication)  
   
--   [Étape 4 : Activer la fonctionnalité de Collection de sites Power View.](#bkmk_powerview)  
+-   [Étape 4 : Activez la fonctionnalité de collection de sites Power View.](#bkmk_powerview)  
   
--   [Script de Windows PowerShell pour les étapes 1 à 4](#bkmk_full_script)  
+-   [Script Windows PowerShell pour les étapes 1-4](#bkmk_full_script)  
   
 -   [Additional Configuration](#bkmk_additional_config) , dont la configuration d'abonnements et d'alertes, les types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et d'Excel Services pour utiliser un serveur Analysis Services.  
   
@@ -74,15 +74,15 @@ ms.locfileid: "66094610"
   
  **Installation et inscription du service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :**  
   
--   Le compte actif lors de l’installation (appelé le compte « setup ») de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint doit disposer des droits d’administration sur l’ordinateur local. Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] une fois que SharePoint est installé et que le compte « setup » est également un membre du groupe Administrateurs de batterie de serveurs SharePoint, le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation inscrira le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service pour vous. Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avant SharePoint est installé ou le compte « setup » n’est pas un membre du groupe Administrateurs de batterie de serveurs, vous devez inscrire manuellement le service. Consultez la section [étape 2 : Inscrire et démarrer le Service SharePoint de Reporting Services](#bkmk_install_SSRS_sharedservice).  
+-   Le compte actif lors de l’installation (appelé «compte d’installation») de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint doit disposer des droits d’administration sur l’ordinateur local. Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] après avoir installé SharePoint et que le compte d’installation est également membre du groupe administrateurs de batterie de serveurs SharePoint, l' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation inscrira le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service pour vous. Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avant l’installation de SharePoint ou si le compte d’installation n’est pas membre du groupe administrateurs de batterie, vous inscrivez le service manuellement. Consultez la section [étape 2: Inscrivez-vous et démarrez le service](#bkmk_install_SSRS_sharedservice)Reporting Services SharePoint.  
   
  **Création d'applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  
   
--   Après avoir installé et inscrit le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , créez une ou plusieurs applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le « compte de service de la batterie de serveurs SharePoint » doit être temporairement membre du groupe des administrateurs locaux pour permettre la création de l’application de service Reporting Services. Pour plus d’informations sur les autorisations de compte SharePoint 2013, consultez [autorisations de compte et paramètres de sécurité dans SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx).  
+-   Après avoir installé et inscrit le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , créez une ou plusieurs applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le « compte de service de la batterie de serveurs SharePoint » doit être temporairement membre du groupe des administrateurs locaux pour permettre la création de l’application de service Reporting Services. Pour plus d’informations sur les autorisations de compte SharePoint 2013, consultez [autorisations de compte et paramètres de sécurité dans sharepoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx).  
   
      Pour des raisons de sécurité, il est recommandé que les comptes d'administrateur de la batterie de serveurs SharePoint ne soient pas également des comptes d'administrateurs locaux du système d'exploitation. Si vous ajoutez un compte d'administrateur de batterie de serveurs au groupe des administrateurs locaux dans le cadre du processus d'installation, nous vous recommandons de supprimer le compte du groupe des administrateurs locaux une fois l'installation terminée.  
   
-##  <a name="bkmk_install_SSRS"></a> Étape 1 : Installer le serveur de rapports Reporting Services en mode SharePoint  
+##  <a name="bkmk_install_SSRS"></a> Étape 1 : Installer Reporting Services serveur de rapports en mode SharePoint  
  Cette étape installe un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. En fonction des éléments déjà installés sur votre ordinateur, il est possible que certaines pages d'installation décrites dans les étapes suivantes ne s'affichent pas.  
   
 1.  Exécutez l'Assistant Installation de SQL Server (Setup.exe).  
@@ -103,11 +103,11 @@ ms.locfileid: "66094610"
   
 7.  Si la page **Clé de produit** s’affiche, tapez votre clé ou acceptez la valeur par défaut de l’édition d’évaluation « Enterprise Evaluation ».  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 8.  Si la page Termes du contrat de licence s'affiche, lisez et acceptez les termes du contrat de licence. Microsoft vous remercie d'accepter d'envoyer des données d'utilisation des fonctionnalités dans le but d'améliorer ces fonctionnalités et la prise en charge.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 9. Si la page **Rôle d'installation** s'affiche, sélectionnez **Installation de fonctionnalités SQL Server**.  
   
@@ -121,13 +121,13 @@ ms.locfileid: "66094610"
   
     -   **Complément Reporting Services pour les produits SharePoint**  
   
-         ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png "Remarque") l’option de l’Assistant installation pour installer le complément est une nouveauté avec le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mise en production.  
+         ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png "Remarque") L’option de l’Assistant Installation pour installer le complément est une nouveauté de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] la version.  
   
     -   Si vous n'avez pas encore d'instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)]SQL Server, vous pouvez également sélectionner les **Services de moteur de base de données** et les **Outils de gestion - Complet** pour un environnement complet.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
-     ![Sélection des fonctionnalités SSRS pour le mode SharePoint](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "sélection des fonctionnalités SSRS pour le mode SharePoint")  
+     ![Sélection de fonctionnalités SSRS pour le mode SharePoint](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "Sélection de fonctionnalités SSRS pour le mode SharePoint")  
   
 11. Si la page **Règles d'installation** s'affiche. Examinez tout avertissement ou problème bloquant. Ensuite, cliquez sur **Suivant**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66094610"
   
 14. Si la page **Configuration du serveur** s'affiche, entrez les informations d'identification appropriées. Si vous souhaitez utiliser les fonctionnalités de données d'alerte ou d'abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez modifier le **Type de démarrage** de SQL Server Agent en **automatique**. En fonction des éléments déjà installés sur votre ordinateur, la page **Configuration du serveur** peut ne pas s'afficher.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 15. Si vous avez sélectionné les services de moteur de base de données, la page **Configuration du moteur de base de données** s'affiche où vous pouvez ajouter les comptes appropriés à la liste des administrateurs SQL puis cliquer sur **Suivant**.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "66094610"
     > [!NOTE]  
     >  Lorsque l'installation de SQL Server est terminée, suivez les sections suivantes de cette rubrique pour configurer l'environnement SharePoint. Cela inclut l'installation du service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et la création des applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-     ![Assistant installation SQL Server - Page de Configuration de SSRS](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "Assistant installation SQL Server - Page de Configuration de SSRS")  
+     ![Assistant Installation de SQL Server-page Configuration de SSRS](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "Assistant Installation de SQL Server-page Configuration de SSRS")  
   
 17. Aidez Microsoft à améliorer les fonctionnalités et services de SQL Server en activant la case à cocher pour envoyer les rapports d'erreurs dans la page **Rapport d'erreurs** .  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 18. Examinez tout avertissement, puis cliquez sur **Suivant** dans la page **Règles de configuration de l'installation** .  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66094610"
   
 20. L'installation prend plusieurs minutes. Vous verrez la page **Terminé** avec les fonctionnalités répertoriées et l'état de chaque fonctionnalité. Une boîte de dialogue d'informations peut s'afficher indiquant que l'ordinateur doit être redémarré.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Étape 2 : Inscrire et démarrer le Service SharePoint de Reporting Services  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> Étape 2 : Inscrire et démarrer le service Reporting Services SharePoint  
  ![Contenu relatif à PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
 > [!NOTE]  
@@ -191,7 +191,7 @@ ms.locfileid: "66094610"
     > [!IMPORTANT]  
     >  Si un message d'erreur semblable au suivant s'affiche :  
     >   
-    >  Install-SPRSService : Le terme 'Install-SPRSService' **n’est pas reconnu** comme le  
+    >  Install-SPRSService: Le terme «install-SPRSService» **n’est pas reconnu** en tant que  
     > nom d'applet de commande, fonction, fichier de script ou programme exécutable. Vérifiez  
     > l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est  
     > correct et réessayez.  
@@ -221,7 +221,7 @@ ms.locfileid: "66094610"
     > [!NOTE]  
     >  Si le service Reporting Services reste à l’état **Démarrage** et ne passe pas à **Démarré**, vérifiez que le service « Administration SharePoint 2013 » est démarré dans le Gestionnaire de serveur Windows.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Étape 3 : Créer une Application de Service Reporting Services  
+##  <a name="bkmk_create_serrviceapplication"></a> Étape 3 : Créer une application de service Reporting Services  
  Cette section fournit les étapes pour créer une application de service et une description des propriétés, si vous consultez une application de service existante.  
   
 1.  Dans l'Administration centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service**.  
@@ -251,13 +251,13 @@ ms.locfileid: "66094610"
   
 11. Le processus de création d'une application de service peut durer plusieurs minutes. Lorsqu'il est terminé, vous voyez s'afficher un message de confirmation et un lien vers la page **Configurer les abonnements et les alertes** . Terminez l'étape de configuration si vous souhaitez utiliser les fonctionnalités d'abonnement et d'alerte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou la fonctionnalité d'alertes de données. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Contenu relatif à PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "contenu relatif à PowerShell") pour plus d’informations sur l’utilisation de PowerShell pour créer un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application de service, consultez :  
+ ![Contenu relatif à PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Pour plus d’informations sur l’utilisation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell pour créer une application de service, consultez:  
   
 -   Consultez la section suivante [Script Windows PowerShell pour les étapes 1 à 4](#bkmk_full_script).  
   
 -   Rubrique [Pour créer une application de service Reporting Services à l’aide de PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
-##  <a name="bkmk_powerview"></a> Étape 4 : Activer la fonctionnalité de Collection de sites Power View.  
+##  <a name="bkmk_powerview"></a> Étape 4 : Activez la fonctionnalité de collection de sites Power View.  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une fonctionnalité du complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint qui permet la collection de sites. Elle est activée automatiquement pour les collections de sites racine et celles créés après l'installation de la macro complémentaire [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si vous envisagez d'utiliser [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous devez vérifier que la fonctionnalité est activée.  
   
  Si vous installez le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint après l'installation du produit SharePoint Server, la fonctionnalité d'intégration du serveur de rapports et la fonctionnalité d'intégration Power View sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, activez manuellement les fonctionnalités.  
@@ -268,7 +268,7 @@ ms.locfileid: "66094610"
   
      Ouvrez votre navigateur sur le site SharePoint souhaité. Par exemple, http://\<nom_serveur>/sites/bi  
   
-2.  Cliquez sur **paramètres**![paramètres SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint").  
+2.  Cliquez sur **paramètres**paramètres![SharePoint]paramètres(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint").  
   
 3.  Cliquez sur **Paramètres du site**.  
   
@@ -280,14 +280,14 @@ ms.locfileid: "66094610"
   
  Cette procédure doit être exécutée par collection de sites. Pour plus d'informations, consultez [Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
   
-##  <a name="bkmk_full_script"></a> Script de Windows PowerShell pour les étapes 1 à 4  
+##  <a name="bkmk_full_script"></a>Script Windows PowerShell pour les étapes 1-4  
  Le script PowerShell de cette section correspond à l'exécution des étapes 1 à 4 des sections précédentes. Le script effectue les tâches suivantes :  
   
 -   Installe le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et le proxy de service, puis démarre le service.  
   
 -   Crée un proxy de service nommé « Reporting Services ».  
   
--   Crée un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application nommée « Application de Reporting Services » de service.  
+-   Crée une [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application de service nommée «Reporting Services application».  
   
 -   Active les fonctionnalités [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] pour une collection de sites.  
   
@@ -382,10 +382,10 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ##  <a name="bkmk_additional_config"></a> Configuration supplémentaire  
  Cette section décrit les étapes de configuration supplémentaires qui sont importantes dans la plupart des déploiements de SharePoint.  
   
-###  <a name="bkmk_configure_ECS"></a> Configurer Excel Services et PowerPivot  
- Si vous souhaitez afficher des rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View dans un classeur Excel 2013 dans SharePoint, une application Excel Services de la batterie de serveurs doit être configurée pour utiliser un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint. De plus, le compte de sécurité du pool d'applications utilisé par l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doit être administrateur sur le serveur Analysis Services. Pour plus d'informations, consultez les documents suivants :  
+###  <a name="bkmk_configure_ECS"></a>Configurer Excel Services et PowerPivot  
+ Si vous souhaitez afficher des rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View dans un classeur Excel 2013 dans SharePoint, une application Excel Services de la batterie de serveurs doit être configurée pour utiliser un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint. De plus, le compte de sécurité du pool d'applications utilisé par l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doit être administrateur sur le serveur Analysis Services. Pour plus d’informations, consultez les rubriques suivantes :  
   
--   La section « Configurer Excel Services pour l’intégration d’Analysis Services » dans [Installation PowerPivot pour SharePoint 2013](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   La section «configurer Excel Services pour l’intégration de Analysis Services» dans [PowerPivot pour SharePoint installation de 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
 -   [Gérer les paramètres de modèle de données Excel Services (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
   
@@ -396,7 +396,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  La fonctionnalité d'alertes de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] envoie des alertes via des messages électroniques. Pour envoyer du courrier électronique, vous devrez peut-être configurer votre application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et modifier l'extension de remise par messagerie pour l'application de service. Si vous prévoyez d'utiliser l'extension de remise par messagerie pour la fonctionnalité d'abonnement d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les paramètres de courrier électronique sont nécessaires. Pour plus d’informations, consultez [Configurer la messagerie électronique pour une application de service Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).  
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Ajouter les types de contenu Reporting Services aux bibliothèques de contenu  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définition de rapport (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type. Pour plus d’informations, consultez [ajouter Types serveur de rapports contenus dans une bibliothèque &#40;Reporting Services en Mode intégré SharePoint&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définition de rapport (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type. Pour plus d’informations, consultez [Ajouter des types de contenu de serveur &#40;de rapports à une bibliothèque&#41;Reporting Services en mode intégré SharePoint](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Activer la fonctionnalité de synchronisation des fichiers de serveur de rapports  
  Si vos utilisateurs téléchargent fréquemment des éléments de rapport publiés directement vers des bibliothèques de documents SharePoint, la fonctionnalité de niveau de site **Synchronisation de fichiers de serveur de rapports** est très utile. La fonctionnalité de synchronisation de fichiers synchronise le catalogue du serveur de rapports avec les éléments des bibliothèques de documents à des intervalles plus fréquents. Pour plus d'informations, consultez [Activer la fonctionnalité Synchronisation de fichiers de serveur de rapports dans l'Administration centrale de SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
@@ -413,7 +413,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ## <a name="see-also"></a>Voir aussi  
  [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Plan du contenu : Installer et configurer SharePoint Server et SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
+ [Feuille de route du contenu: Installer et configurer SharePoint Server et SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Services Reporting Services SharePoint et applications de service](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   

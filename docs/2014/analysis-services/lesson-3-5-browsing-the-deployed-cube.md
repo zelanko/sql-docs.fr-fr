@@ -1,5 +1,5 @@
 ---
-title: Exploration du Cube déployé | Microsoft Docs
+title: Exploration du cube déployé | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c4b80f65b894ebe81ab440e4e7a8f2a7080d2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078907"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888471"
 ---
 # <a name="browsing-the-deployed-cube"></a>Exploration du cube déployé
   Dans la tâche suivante, vous parcourez le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Étant donné que notre analyse compare la mesure entre plusieurs dimensions, utilisez un tableau croisé dynamique Excel pour parcourir vos données. Un tableau croisé dynamique permet de placer le client, la date et les informations produit sur différents axes afin que vous pouvoir voir les disparités des ventes sur Internet en fonction des points dans le temps, des caractéristiques démographiques de la clientèle et des gammes de produits.  
@@ -42,9 +42,9 @@ ms.locfileid: "66078907"
   
      Les ventes Internet par région et ligne de produits pour le mois de février 2006 s'affichent comme illustré ci-dessous.  
   
-     ![Ventes sur Internet par région et ligne de produits](../../2014/tutorials/media/l3-cube-browser-finish.gif "ventes Internet par région et ligne de produits")  
+     ![Ventes sur Internet par région et ligne de produits](../../2014/tutorials/media/l3-cube-browser-finish.gif "Ventes sur Internet par région et ligne de produits")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Définition des attributs avancés et des propriétés de Dimension](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Leçon 4 : Définition des attributs avancés et des propriétés de dimension](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
   
   

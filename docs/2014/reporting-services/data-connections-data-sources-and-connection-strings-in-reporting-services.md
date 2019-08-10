@@ -1,5 +1,5 @@
 ---
-title: Connexions de données, Sources de données et chaînes de connexion dans Reporting Services | Microsoft Docs
+title: Connexions de données, sources de données et chaînes de connexion dans Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -19,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c5a73be18977d78be89a45200f7f5ebe621bbf94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8147471dc662b651ac9c99cc9290a383cc235ee8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66109500"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891565"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Connexions de données, sources de données et chaînes de connexion dans Reporting Services
   Pour inclure les données dans un rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vous devez tout d'abord créer des *sources de données* et des *datasets*. Cette rubrique explique le type des sources de données, comment créer les sources de données et les informations importantes liées aux informations d'identification de source de données. Une source de données inclut le type de source de données, les informations de connexion et le type d'informations d'identification à utiliser. Il existe deux types de sources de données : incorporée et partagée. Une source de données incorporée est définie dans le rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie indépendamment d'un rapport et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) et [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -76,11 +76,11 @@ ms.locfileid: "66109500"
   
 -   ODBC  
   
--   Modèle sémantique Microsoft BI pour Power View : Sur un site SharePoint qui a été configuré pour une galerie PowerPivot et [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], ce type de source de données est disponible. Ce type de source de données est utilisé uniquement pour les présentations [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Pour plus d'informations, consultez [Création de modèles tabulaires sémantiques BI pour Power View parfaits](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modèle sémantique Microsoft BI pour Power View: Sur un site SharePoint configuré pour une Galerie PowerPivot et [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], ce type de source de données est disponible. Ce type de source de données est utilisé uniquement pour les présentations [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Pour plus d'informations, consultez [Création de modèles tabulaires sémantiques BI pour Power View parfaits](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Pour obtenir la liste complète des sources de données et des versions prises en charge par [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-##  <a name="bkmk_create_data_source"></a> Créer une source de données  
+##  <a name="bkmk_create_data_source"></a>Créer une source de données  
  Pour créer une source de données, vous devez indiquer les informations suivantes :  
   
 -   **Type de source de données** Type spécifique de source de données ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Choisissez cette valeur dans la liste déroulante des types de connexion.  
@@ -97,7 +97,7 @@ ms.locfileid: "66109500"
   
  Le volet des données de rapport affiche les sources de données incorporées et les références aux sources de données partagées qui ont été ajoutées au rapport. Dans le Générateur de rapports, une référence à une source de données partagée pointe vers une source de données partagée sur un serveur de rapports ou un site SharePoint. Dans le Concepteur de rapports, une référence de source de données partagée pointe vers une source de données partagée dans l'Explorateur de solutions dans le dossier de source de données partagée.  
   
-##  <a name="bkmk_credentials"></a> Informations d’identification pour sources de données  
+##  <a name="bkmk_credentials"></a>Informations d’identification pour les sources de données  
  Par défaut, les informations d'identification peuvent être enregistrées et gérées indépendamment des informations de connexion. Les informations d'identification sont utilisées pour créer une source de données, exécuter une requête de dataset et afficher un aperçu d'un rapport.  
   
 > [!NOTE]  
@@ -107,11 +107,11 @@ ms.locfileid: "66109500"
   
  Lorsque vous déployez un rapport sur le serveur de rapports ou sur le site SharePoint, ses sources de données incorporées et partagées sont gérées de manière indépendante. Les informations d'identification nécessaires à la source de données pour accéder aux données de votre ordinateur peuvent être différentes de celles dont le serveur de rapports a besoin pour accéder aux données.  
   
- ![Remarque](media/rs-fyinote.png "Remarque")une bonne pratique consiste à vérifier que les connexions de source de données continuent à fonctionner une fois que vous publiez un rapport. Si vous devez modifier les informations d'identification, vous pouvez les modifier directement sur le serveur de rapports.  
+ ![Remarque](media/rs-fyinote.png "Remarque") Une bonne pratique consiste à vérifier que les connexions à la source de données continuent à se connecter après la publication d’un rapport. Si vous devez modifier les informations d'identification, vous pouvez les modifier directement sur le serveur de rapports.  
   
- Pour modifier les sources de données qui utilise un rapport, vous pouvez modifier les propriétés du rapport en mode natif le Gestionnaire de rapports ou à partir de bibliothèques de documents en mode SharePoint. Pour plus d'informations, consultez les documents suivants :  
+ Pour modifier les sources de données utilisées par un rapport, vous pouvez modifier les propriétés du rapport en mode natif Gestionnaire de rapports ou dans les bibliothèques de documents en mode SharePoint. Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [Store les informations d’identification dans une Source de données Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store les informations d’identification dans une Source de données Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Stocker les informations d’identification dans une source de données Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [Stocker les informations d’identification dans une source de données Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66109500"
   
 -   [Spécifier des informations d’identification dans le Générateur de rapports](../../2014/reporting-services/specify-credentials-in-report-builder.md)  
   
--   [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+-   [Ajouter et vérifier une connexion de données ou une &#40;source de données générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
 ##  <a name="bkmk_connection_examples"></a> Exemples de chaîne de connexion courante  
  Les chaînes de connexion constituent la représentation textuelle des propriétés de connexion pour un fournisseur de données. Le tableau suivant présente des exemples de chaînes de connexion pour différents types de connexion de données.  
@@ -130,10 +130,10 @@ ms.locfileid: "66109500"
 |Base de données SQL Server sur le serveur local|`data source="(local)";initial catalog=AdventureWorks`|Définissez `Microsoft SQL Server` comme type de source de données.|  
 |Instance SQL Server<br /><br /> base de données|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Définissez `Microsoft SQL Server` comme type de source de données.|  
 |Base de données SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Définissez `Microsoft SQL Server` comme type de source de données.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)] dans le cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Définissez `Windows Azure SQL Database` comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)]dans le Cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Définissez `Windows Azure SQL Database` comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Définissez `Microsoft SQL Server Parallel Data Warehouse` comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Server Parallel Data Warehouse &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de données Analysis Services sur le serveur local|`data source=localhost;initial catalog=Adventure Works DW`|Définissez `Microsoft SQL Server Analysis Services` comme type de source de données. Pour plus d’informations, consultez [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Base de données de modèles tabulaires Analysis Services avec une perspective Ventes|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Définissez `Microsoft SQL Server Analysis Services` comme type de source de données. Spécifiez le nom de la perspective dans le paramètre cube=. Pour plus d’informations, consultez [Perspectives &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Base de données de modèles tabulaires Analysis Services avec une perspective Ventes|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Définissez `Microsoft SQL Server Analysis Services` comme type de source de données. Spécifiez le nom de la perspective dans le paramètre cube=. Pour plus d’informations, consultez [Perspectives &#40;SSAS Tabulaire&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
 |Source de données de modèle de rapport sur un serveur de rapports configuré en mode natif|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Spécifiez l'URL du serveur de rapports ou de la bibliothèque de documents, ainsi que le chemin d'accès au modèle publié dans l'espace de noms du dossier du serveur de rapports ou du dossier de la bibliothèque de documents.
 |Source de données de modèle de rapport sur un serveur de rapports configuré en mode intégré SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Spécifiez l'URL du serveur de rapports ou de la bibliothèque de documents, ainsi que le chemin d'accès au modèle publié dans l'espace de noms du dossier du serveur de rapports ou du dossier de la bibliothèque de documents.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Serveur SQL Server 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Définissez `OLE DB Provider for OLAP Services 8.0` comme type de source de données.<br /><br /> Vous pouvez obtenir une connexion plus rapide aux sources de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en affectant à la propriété `ConnectTo` la valeur `8.0`. Pour définir cette propriété, utilisez l'onglet **Propriétés avancées** de la boîte de dialogue **Propriétés de connexion** .|  
@@ -176,9 +176,9 @@ Si vous ne réussissez pas à vous connecter à un serveur de rapports en utilis
 ## <a name="see-also"></a>Voir aussi  
  [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Gérer des sources de données de rapports](report-data/manage-report-data-sources.md)   
- [Boîte de dialogue Propriétés données Source, informations d’identification](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
- [Boîte de dialogue Propriétés des données partagées Source, informations d’identification](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
+ [Boîte de dialogue Propriétés de la source de données, informations d’identification](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
+ [Boîte de dialogue Propriétés de la source de données partagée, informations d’identification](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Définir des propriétés de déploiement &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou une &#40;source de données générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  

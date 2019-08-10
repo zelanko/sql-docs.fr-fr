@@ -1,5 +1,5 @@
 ---
-title: Instruction DROP SET (MDX) | Microsoft Docs
+title: DROP SET, instruction (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201072b1b0e371e1f22ee9e32b009ebcea47b2b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4e31a687597e454b9afe38d6c6dd1c15af486d0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038167"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893727"
 ---
 # <a name="mdx-data-definition---drop-set"></a>Définition de données MDX - DROP SET
 
@@ -40,9 +40,9 @@ DROP [SESSION] SET
  Expression de chaîne valide qui précise le nom du jeu nommé à supprimer.  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur les jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
+ Pour plus d’informations sur les jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions &#40;MDX de définition de données MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

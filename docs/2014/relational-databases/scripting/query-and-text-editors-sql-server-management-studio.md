@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063877"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891757"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
   Vous pouvez utiliser l'un des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour modifier et tester de manière interactive un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou pour modifier un fichier texte brut ou XML. Chaque éditeur est pris en charge par un service propre à un langage qui met en couleurs les mots clés et qui vérifie la syntaxe et les erreurs d'utilisation. L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprend un débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez utiliser pour résoudre les problèmes présents dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -108,8 +108,8 @@ ms.locfileid: "66063877"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX.|[Éditeur de requête MDX &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX.|[Éditeur de requête DMX &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX.|[Éditeur de requête MDX &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX.|[Éditeur de requête DMX &#40;Analysis Services – Exploration de données&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur XML/A.|[Éditeur XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |Décrit comment configurer les options des différents éditeurs, tels que la numérotation des lignes et les options IntelliSense.|[Configurer des éditeurs &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |Décrit les différentes façons d'ouvrir les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Ouvrir un éditeur &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  

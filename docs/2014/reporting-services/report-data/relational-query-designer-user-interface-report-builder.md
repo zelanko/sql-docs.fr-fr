@@ -16,15 +16,15 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c273e453d4eec6d754f38d6be03385957ad50fec
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107139"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890947"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
-  Générateur de rapports fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête qui spécifie les données à récupérer à partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de données relationnelles et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
+  Générateur de rapports fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour vous aider à créer une requête qui spécifie les données à récupérer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] partir des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] relationnelles et et [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] pour un DataSet de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
 > [!NOTE]  
 >  Dans le Générateur de rapports, vous devez utiliser le Concepteur de requêtes textuel pour spécifier une requête pour les types de source de données Oracle, OLE DB, ODBC et Teradata. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](text-based-query-designer-user-interface-report-builder.md).  
@@ -42,11 +42,11 @@ ms.locfileid: "66107139"
   
  La figure suivante illustre le Concepteur de requêtes graphique lorsqu'il est utilisé avec des tables ou des vues.  
   
- ![Concepteur graphique pour les requêtes](../../analysis-services/media/rsqd-relational-graphical.gif "Concepteur graphique pour les requêtes")  
+ ![Concepteur graphique pour les requêtes](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Concepteur graphique pour les requêtes")  
   
  La figure suivante illustre le concepteur de requêtes graphique lorsqu'il est utilisé avec des procédures stockées ou des fonctions table.  
   
- ![Procédure stockée dans le concepteur de requêtes graphique](../../analysis-services/media/rs-relational-graphical-sp.gif "Procédure stockée dans le concepteur de requêtes graphique")  
+ ![Procédure stockée dans le concepteur de requêtes graphique](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Procédure stockée dans le concepteur de requêtes graphique")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "66107139"
 |Bouton|Description|  
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule vers le Concepteur de requêtes textuel pour afficher la requête automatiquement générée ou pour modifier la requête.|  
-|**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Les types de fichiers .sql et .rdl sont pris en charge.|  
+|**Importationation**|Importe une requête existante à partir d'un fichier ou d'un rapport. Les types de fichiers .sql et .rdl sont pris en charge.|  
 |**Exécuter la requête**|Exécute la requête. Le volet Résultats de la requête affiche le jeu de résultats.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Présentation des requêtes générées automatiquement  

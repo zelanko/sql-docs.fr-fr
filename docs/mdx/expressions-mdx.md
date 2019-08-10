@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8ed2484bb3eb31b1bb73000f848dffd27e85e9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118873"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893597"
 ---
 # <a name="expressions-mdx"></a>Expressions (MDX)
 
 
-  Une expression est une combinaison d’identificateurs, les valeurs et les opérateurs qui peut être évaluée pour obtenir un résultat. Les données peuvent être utilisées à différents endroits lors de l'accès ou la modification des données. Vous pouvez, par exemple, utiliser une expression en tant qu'élément des données à récupérer dans une requête ou en tant que condition de recherche de données répondant à un jeu de critères.  
+  Une expression est une combinaison d’identificateurs, de valeurs et d’opérateurs qui peut être évaluée pour obtenir un résultat. Les données peuvent être utilisées à différents endroits lors de l'accès ou la modification des données. Vous pouvez, par exemple, utiliser une expression en tant qu'élément des données à récupérer dans une requête ou en tant que condition de recherche de données répondant à un jeu de critères.  
   
 ## <a name="simple-and-complex-expressions"></a>Expressions simples et complexes  
  Dans la syntaxe MDX, une expression peut être simple ou complexe :  
@@ -85,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a209fe7fbd62082d467077a147b52a3f142b8214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003535"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891148"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulation de données MDX - SELECT
 
@@ -86,7 +86,7 @@ FROM
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Integer*  
  Entier entre 0 et 127.  
@@ -116,7 +116,7 @@ FROM
   
  L'option NON VISUAL de l'instruction de sous-sélection vous permet de filtrer les membres tout en conservant les totaux réels au lieu des totaux filtrés. Cela vous permet de lancer une requête pour les dix meilleures ventes (personnes/produits/régions) et d'obtenir le total réel des ventes pour tous les membres faisant l'objet de la requête, au lieu de la valeur totale des ventes pour les dix meilleures ventes renvoyées. Pour plus d'informations, consultez les exemples ci-après.  
   
- Les membres calculés peuvent être inclus dans \<clause d’axe de requête SELECT > chaque fois que la connexion a été ouverte à l’aide du paramètre de chaîne de connexion *sous-requêtes = 1*; consultez [propriétés XMLA prises en charge &#40; XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres. Voici un exemple concernant les membres calculés dans les sous-sélections.  
+ Les membres calculés peuvent être \<inclus dans la clause de l’axe des requêtes SELECT > chaque fois que la connexion a été ouverte à l’aide du paramètre de chaîne de connexion sous- *requêtes = 1*; consultez [ &#40;propriétés XMLA prises en charge XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>pour l’utilisation des paramètres. Voici un exemple concernant les membres calculés dans les sous-sélections.  
   
 ## <a name="autoexists"></a>Autoexists  
  Lorsque deux attributs, ou plus, de la dimension sont utilisés dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs. Supposons, par exemple, que vous utilisez des attributs de la dimension de Geography. Si vous avez une expression qui retourne tous les membres de l'attribut City et une autre expression qui limite les membres de l'attribut Country à tous les pays d'Europe, il en résultera une limitation des membres de City aux seules villes qui appartiennent à des pays d'Europe. Cette caractéristique d'Analysis Services, appelée Autoexists, s'applique uniquement à des attributs dans la même dimension. En effet, elle tente d'empêcher que des enregistrements de la dimension exclus d'une expression d'attribut soient exclus par les autres expressions d'attributs. La fonctionnalité Autoexists peut également être interprétée comme l'intersection obtenue entre les différentes expressions d'attributs sur les enregistrements de dimension. Observez les exemples ci-dessous :  
@@ -227,7 +227,7 @@ FROM
   
  Dans les exemples précédents, nous avons créé deux jeux : l'un sous forme d'expression calculée et l'autre sous forme d'expression constante. Ces exemples illustrent les différentes versions de la fonctionnalité Autoexists.  
   
- Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. La valeur par défaut est Deep. L'exemple suivant illustre le concept de la fonctionnalité Deep Autoexists. Dans l'exemple, nous filtrons Top10SellingProducts sur l'attribut [Product].[Product Line] pour les membres du groupe [Mountain]. Notez que les deux attributs (slicer et axis) appartiennent à la même dimension, [Product].  
+ Les inexistantes peuvent être appliquées de manière profonde ou superficielle aux expressions. La valeur par défaut est Deep. L'exemple suivant illustre le concept de la fonctionnalité Deep Autoexists. Dans l'exemple, nous filtrons Top10SellingProducts sur l'attribut [Product].[Product Line] pour les membres du groupe [Mountain]. Notez que les deux attributs (slicer et axis) appartiennent à la même dimension, [Product].  
   
  `with member [Measures].[PCT Discount] AS '[Measures].[Discount Amount]/[Measures].[Reseller Sales Amount]', FORMAT_STRING = 'Percent'`  
   
@@ -339,10 +339,10 @@ FROM
 |**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
 |**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
   
- Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | 3] le paramètre dans la chaîne de connexion ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
+ Le comportement d’Autoexists peut être modifié à l’aide du paramètre Autoexists = [1 | 2 | 3] dans la chaîne de connexion; consultez [propriétés &#40;XMLA prises en&#41; charge XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> utilisation des paramètres.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui figurent dans le `Date` dimension, à partir de la **Adventure Works** cube.  
+ L’exemple suivant retourne la somme du `Measures.[Order Quantity]` membre, agrégée sur les huit premiers mois de l’année civile 2003 qui sont contenus dans la `Date` dimension, à partir du cube **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -361,7 +361,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- Pour comprendre **NON VISUAL** l’exemple suivant est une requête sur [Adventure Works] pour obtenir les chiffres [Reseller Sales Amount] dans une table où les catégories de produits sont les colonnes et les types d’entreprise de revendeurs sont les lignes. Notez que les totaux sont fournis pour les produits et pour les revendeurs.  
+ Pour comprendre le **non visuel,** l’exemple suivant est une requête sur [Adventure Works] pour obtenir les chiffres [Reseller Sales Amount] dans une table où les catégories de produits sont les colonnes et les types de secteur d’activité des revendeurs sont les lignes. Notez que les totaux sont fournis pour les produits et pour les revendeurs.  
   
  L'instruction SELECT suivante :  
   
@@ -435,7 +435,7 @@ WHERE
   
  Lorsque l'on effectue une comparaison avec les résultats précédents, on observe que la ligne [All Resellers] est additionnée avec les valeurs affichées pour [Value Added Reseller] et [Warehouse] mais que la colonne [All Products] affiche la valeur totale pour tous les produits, y compris ceux qui ne sont pas affichés.  
   
- L'exemple suivant montre comment utiliser des membres calculés comme élément de filtrage dans des instructions de sous-sélection. Pour être en mesure de reproduire cet exemple, la connexion doit être établie à l’aide du paramètre de chaîne de connexion *sous-requêtes = 1*.  
+ L'exemple suivant montre comment utiliser des membres calculés comme élément de filtrage dans des instructions de sous-sélection. Pour être en mesure de reproduire cet exemple, la connexion doit être établie à l’aide du paramètre de chaîne de connexion sous- *requêtes = 1*.  
   
  `select Measures.allmembers on 0`  
   
@@ -463,9 +463,9 @@ WHERE
 |80 450 596,98 $|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restriction de la requête avec les Axes de requête et segment &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Concepts clés de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Instructions &#40;MDX de manipulation de données MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Restriction de la requête avec des axes &#40;de requête et de découpage MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

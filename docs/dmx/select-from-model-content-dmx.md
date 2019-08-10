@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modèle&gt;. CONTENU (DMX) | Microsoft Docs
+title: Sélectionnez à &lt;partir&gt;du modèle. CONTENU (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906733"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892829"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modèle&gt;. CONTENU (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Sélectionnez à &lt;partir&gt;du modèle. CONTENU (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne l'ensemble de lignes du schéma de modèle d'exploration de données pour le modèle d'exploration de données spécifié.  
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste de colonnes séparées par des virgules, dérivées de l'ensemble de lignes du schéma Content.  
@@ -40,23 +40,23 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Identificateur du modèle  
   
  *expression de condition*  
- Facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- Le **SELECT FROM**  _\<modèle >_ **. CONTENU** instruction retourne le contenu qui est spécifique à chaque algorithme. Imaginons par exemple que vous souhaitez utiliser les descriptions de toutes les règles d'un modèle de règles d'association dans une application personnalisée. Vous pouvez utiliser un **SELECT FROM \<modèle >. CONTENU** instruction pour retourner des valeurs dans la colonne NODE_RULE du modèle.  
+ > **De modèle Select from**  _\<Model_ **.** L’instruction content retourne le contenu qui est spécifique à chaque algorithme. Imaginons par exemple que vous souhaitez utiliser les descriptions de toutes les règles d'un modèle de règles d'association dans une application personnalisée. Vous pouvez utiliser une **> de \<modèle Select from Model. Instruction CONTENT** pour retourner des valeurs dans la colonne NODE_RULE du modèle.  
   
  Le tableau suivant répertorie les colonnes incluses dans le contenu du modèle d'exploration de données.  
   
 > [!NOTE]  
->  Les algorithmes peuvent interpréter les colonnes différemment afin de représenter le contenu de manière appropriée. Pour obtenir une description du modèle d’exploration de données contenu pour chaque algorithme et des conseils sur la façon d’interpréter et d’interroger le modèle d’exploration de données contenu pour chaque type de modèle, consultez [contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Les algorithmes peuvent interpréter les colonnes différemment afin de représenter le contenu de manière appropriée. Pour obtenir une description du contenu du modèle d’exploration de données pour chaque algorithme et des conseils sur l’interprétation et l’interrogation du contenu du modèle d’exploration de données pour chaque type de modèle, consultez [Mining Model content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Colonne de l'ensemble de lignes CONTENT|Description|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Nom de catalogue. Valeur NULL si le fournisseur ne prend pas en charge les catalogues.|  
-|MODEL_SCHEMA|Un nom de schéma non qualifié. Valeur NULL si le fournisseur ne prend pas en charge les schémas.|  
+|MODEL_SCHEMA|Nom de schéma non qualifié. Valeur NULL si le fournisseur ne prend pas en charge les schémas.|  
 |MODEL_NAME|Nom de modèle. Cette colonne ne peut pas contenir de valeur NULL.|  
 |ATTRIBUTE_NAME|Nom de l'attribut qui correspond au nœud.|  
 |NODE_NAME|Nom du nœud.|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- La requête suivante utilise le **IsDescendant** fonction pour retourner les enfants immédiats du nœud qui a été retournée dans la requête précédente.  
+ La requête suivante utilise la fonction **IsDescendant** pour retourner les enfants immédiats du nœud qui a été retourné dans la requête précédente.  
   
 > [!NOTE]  
->  La valeur de NODE_NAME étant une chaîne, vous ne pouvez pas utiliser une instruction Sub-SELECT pour retourner la valeur NODE_ID comme argument à la **IsDescendant** (fonction).  
+>  Étant donné que la valeur de NODE_NAME est une chaîne, vous ne pouvez pas utiliser une instruction Sub-SELECT pour retourner le NODE_ID en tant qu’argument à la fonction **IsDescendant** .  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  Résultats attendus :  
   
- S'agissant d'un modèle d'arbre de décision, les descendants du nœud parent du modèle incluent un nœud de statistiques marginales unique, un nœud qui représente l'attribut prédictible et plusieurs nœuds qui contiennent des attributs d'entrée et des valeurs. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ S'agissant d'un modèle d'arbre de décision, les descendants du nœud parent du modèle incluent un nœud de statistiques marginales unique, un nœud qui représente l'attribut prédictible et plusieurs nœuds qui contiennent des attributs d'entrée et des valeurs. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Utilisation du mot clé FLATTENED  
  Le contenu du modèle d'exploration de données contient fréquemment des informations intéressantes sur le modèle dans les colonnes de table imbriquée. Le mot clé FLATTENED vous permet de récupérer les données d'une colonne de table imbriquée sans utiliser de fournisseur qui prend en charge les ensembles de lignes hiérarchiques.  
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Instructions de manipulation &#40;de&#41; données DMX des extensions d’exploration de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

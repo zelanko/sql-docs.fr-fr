@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 235320a65bf04e8b0ce1d7c23da588a4d541a0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915862"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892459"
 ---
 # <a name="concatenation-operators"></a>Opérateurs de concaténation
 
@@ -32,10 +32,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="language-considerations"></a>Observations relatives au langage  
- Lorsque les chaînes utilisées dans une concaténation possèdent toutes deux le même classement, la chaîne concaténée obtenue possède un classement identique aux entrées. Lorsque les chaînes utilisées dans une concaténation possèdent des classements différents, les règles de priorité de classement déterminent celui de la chaîne concaténée obtenue. Pour plus d’informations, consultez [Langues et classements &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ Lorsque les chaînes utilisées dans une concaténation possèdent toutes deux le même classement, la chaîne concaténée obtenue possède un classement identique aux entrées. Lorsque les chaînes utilisées dans une concaténation possèdent des classements différents, les règles de priorité de classement déterminent celui de la chaîne concaténée obtenue. Pour plus d’informations, consultez [Langues et classements &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Opérateurs &#40;syntaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [MDX de référence &#40;des opérateurs MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Syntaxe &#40;MDX des opérateurs&#41;](../mdx/operators-mdx-syntax.md)  
   
   

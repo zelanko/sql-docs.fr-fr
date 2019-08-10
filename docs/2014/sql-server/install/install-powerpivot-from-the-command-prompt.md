@@ -10,12 +10,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6da1b23bd23634e3edb8d92093cab6ce71a2783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094559"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890181"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installer PowerPivot à partir de l'invite de commandes
   Vous pouvez exécuter le programme d'installation depuis la ligne de commande pour installer SQL Server PowerPivot pour SharePoint. Vous devez inclure le paramètre de `/ROLE` dans votre commande et exclure le paramètre `/FEATURES`.  
@@ -27,8 +27,8 @@ ms.locfileid: "66094559"
   
  L'ordinateur doit être joint au même domaine que la batterie de serveurs SharePoint.  
   
-##  <a name="Commands"></a> / Options d’installation en fonction du rôle  
- Dans les déploiements PowerPivot pour SharePoint, le paramètre `/ROLE` est utilisé à la place du paramètre `/FEATURES`. Les valeurs valides sont les suivantes :  
+##  <a name="Commands"></a>Options d’installation basées sur/ROLE  
+ Dans les déploiements PowerPivot pour SharePoint, le paramètre `/ROLE` est utilisé à la place du paramètre `/FEATURES`. Les valeurs valides incluent :  
   
 -   `SPI_AS_ExistingFarm`  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66094559"
   
  Ces deux rôles installent les fichiers d'application, de configuration et de déploiement qui permettent à un PowerPivot pour SharePoint de s'exécuter dans une batterie de serveurs SharePoint. La spécification de l'un ou l'autre rôle forcera le programme d'installation à vérifier les configurations matérielle et logicielle requises pour l'intégration SharePoint.  
   
- L'option batterie de serveurs existante suppose qu'une batterie de serveurs SharePoint est déjà en place. La nouvelle option de batterie de serveurs suppose que vous allez créer une nouvelle batterie de serveurs ; Il prend en charge l’ajout d’une instance du moteur de base de données dans la syntaxe de ligne de commande afin que vous pouvez utiliser l’instance du moteur de base de données en tant que serveur de base de données de la batterie de serveurs.  
+ L'option batterie de serveurs existante suppose qu'une batterie de serveurs SharePoint est déjà en place. L’option nouvelle batterie de serveurs part du principe que vous allez créer une batterie de serveurs; Il prend en charge l’ajout d’une instance de Moteur de base de données dans la syntaxe de la ligne de commande afin que vous puissiez utiliser l’instance Moteur de base de données en tant que serveur de base de données de la batterie de serveurs.  
   
- Contrairement aux versions précédentes, toutes les tâches de configuration du serveur sont effectuées comme après l'installation. Si vous automatisez les étapes d'installation et de configuration, vous pouvez utiliser PowerShell pour configurer le serveur. Pour plus d’informations, consultez [Configuration de PowerPivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+ Contrairement aux versions précédentes, toutes les tâches de configuration du serveur sont effectuées comme après l'installation. Si vous automatisez les étapes d'installation et de configuration, vous pouvez utiliser PowerShell pour configurer le serveur. Pour plus d’informations, consultez [configuration de PowerPivot à l’aide de Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Exemple de commandes  
  Les exemples suivants illustrent l'utilisation de chaque option. Le premier exemple montre `SPI_AS_ExistingFarm`.  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a> Modification de la syntaxe de commande  
+##  <a name="Join"></a>Modification de la syntaxe de la commande  
  Utilisez la procédure suivante pour modifier la syntaxe de commande de l'exemple.  
   
 1.  Copiez la commande suivante dans le Bloc-notes :  
@@ -82,17 +82,17 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Remplacez les espaces réservés pour \<domaine\nom d’utilisateur > et \<StrongPassword > avec les comptes d’utilisateurs valides et les mots de passe.  
+3.  Remplacez les espaces réservés pour \<domaine\nom_utilisateur > et \<StrongPassword > par des comptes d’utilisateur et des mots de passe valides.  
   
-     Le `/assvaccount` et **/assvcpassword** paramètres sont utilisés pour configurer le [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance sur le serveur d’applications. Remplacez ces espaces réservés par des informations de compte valides.  
+     Les `/assvaccount` paramètres et **/ASSVCPASSWORD** sont utilisés pour configurer l' [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance sur le serveur d’applications. Remplacez ces espaces réservés par des informations de compte valides.  
   
-     Le **/assysadminaccounts** paramètre doit être défini à l’identité de l’utilisateur qui exécute le programme d’installation de SQL Server. Vous devez spécifier au moins un administrateur système. Notez que le programme d'installation de SQL Server n'accorde plus d'autorisations sysadmin automatiques aux membres du groupe intégré Administrateurs.  
+     Le paramètre **/ASSYSADMINACCOUNTS** doit être défini sur l’identité de l’utilisateur qui exécute SQL Server installation. Vous devez spécifier au moins un administrateur système. Notez que le programme d'installation de SQL Server n'accorde plus d'autorisations sysadmin automatiques aux membres du groupe intégré Administrateurs.  
   
 4.  Supprimez les sauts de ligne.  
   
-5.  Sélectionnez la commande entière, puis cliquez **copie** dans le menu Edition.  
+5.  Sélectionnez l’intégralité de la commande, puis cliquez sur **copier** dans le menu Edition.  
   
-6.  Ouvrez une invite de commandes d'administrateur. Pour ce faire, cliquez sur **Démarrer**, avec le bouton droit de l’invite de commandes, puis sélectionnez **exécuter en tant qu’administrateur**.  
+6.  Ouvrez une invite de commandes d'administrateur. Pour ce faire, cliquez sur **Démarrer**, cliquez avec le bouton droit sur l’invite de commandes, puis sélectionnez **exécuter en tant qu’administrateur**.  
   
 7.  Accédez au lecteur ou au dossier partagé qui contient le support d'installation de SQL Server.  
   
@@ -102,10 +102,10 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 10. Pour vérifier l'installation, vérifiez le fichier summary.txt dans \Program Files\SQL Server\120\Setup Bootstrap\Log. Le résultat final doit indiquer « Réussite » si le serveur a été installé sans erreurs.  
   
-11. Configurez le serveur. Vous devez au minimum déployer des solution, créer une application de service et activer la fonction pour chaque collection de sites. Pour plus d’informations, consultez [configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de Configuration PowerPivot&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) ou [d’Administration de serveur PowerPivot et de Configuration dans l’Administration centrale ](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+11. Configurez le serveur. Vous devez au minimum déployer des solution, créer une application de service et activer la fonction pour chaque collection de sites. Pour plus d’informations, consultez [configurer ou réparer l' &#40;&#41; outil de configuration de PowerPivot PowerPivot pour SharePoint 2010](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) ou [l’administration et la configuration du serveur PowerPivot dans l’administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les comptes de Service PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
+ [Configurer des comptes de service PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

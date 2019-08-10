@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078647"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888416"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Regroupement automatique des membres d'attribut
   Lorsque vous explorez un cube, vous dimensionnez généralement les membres d'une hiérarchie d'attributs en vous basant sur les membres d'une autre hiérarchie d'attributs. Par exemple, vous pouvez souhaiter regrouper les ventes par ville, par produit acheté ou par genre. Toutefois, avec certains types d'attributs, il est utile de demander à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer automatiquement des regroupements de membres d'attribut basés sur la distribution des membres au sein d'une hiérarchie d'attributs. Par exemple, vous pouvez demander à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer des groupes de revenus annuels pour les clients. Lorsque vous faites cela, les utilisateurs qui parcourent la hiérarchie d'attributs voient les noms et les valeurs des groupes au lieu de voir les membres eux-mêmes. Cela limite le nombre de niveaux présentés aux utilisateurs, ce qui est plus pratique pour l'analyse.  
@@ -44,11 +44,11 @@ ms.locfileid: "66078647"
   
 4.  Dans le volet **Attributs** , sélectionnez **Yearly Income**.  
   
-5.  Dans la fenêtre Propriétés, modifiez la valeur pour le **DiscretizationMethod** propriété **automatique** et modifiez la valeur pour le **DiscretizationBucketCount** propriété à `5`.  
+5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **Automatic** et remplacez la valeur de la propriété `5`DiscretizationBucketCount par.  
   
      L'illustration suivante montre les propriétés modifiées pour l'attribut **Yearly Income**.  
   
-     ![Propriétés modifiées pour Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "propriétés modifiées pour Yearly Income")  
+     ![Propriétés modifiées pour le revenu annuel](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propriétés modifiées pour le revenu annuel")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Regroupement des membres de hiérarchies d'attributs dans la dimension Employee  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66078647"
   
 4.  Dans le volet **Attributs** , sélectionnez **Sick Leave Hours**.  
   
-5.  Dans la fenêtre Propriétés, modifiez la valeur pour le **DiscretizationMethod** propriété **Clusters** et modifiez la valeur pour le **DiscretizationBucketCount** propriété `5`.  
+5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **clusters** et remplacez la valeur de la propriété `5`DiscretizationBucketCount par.  
   
 6.  Dans le volet **Attributs** , sélectionnez **Vacation Hours**.  
   
-7.  Dans la fenêtre Propriétés, modifiez la valeur pour le **DiscretizationMethod** propriété **Equal_areas** et modifiez la valeur pour le **DiscretizationBucketCount** propriété à `5`.  
+7.  Dans la Fenêtre Propriétés, modifiez la valeur de la propriété **DiscretizationMethod** en **zones égales** et remplacez la valeur de la propriété `5`DiscretizationBucketCount par.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Exploration des hiérarchies d'attributs modifiées  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66078647"
   
      L'illustration suivante montre les ventes dimensionnées sur la base des heures de congé maladie par employé.  
   
-     ![Heures de congé de ventes dimensionnées par maladie d’employé](../../2014/tutorials/media/l4-discretizationmethod-2.gif "heures de congé de ventes dimensionnées par maladie d’employé")  
+     ![Ventes dimensionnées par heure de congé maladie des employés](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Ventes dimensionnées par heure de congé maladie des employés")  
   
 10. Supprimez la hiérarchie d'attributs **Sick Leave Hours** de la zone de colonnes du volet **Données** .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66078647"
      Notez que trois groupes de membres de l'attribut **Vacation Hours** contiennent maintenant des valeurs correspondant à la vente de produits. (Les 7 autres groupes contiennent des membres sans données de vente.)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Masquage et désactivation des hiérarchies d'attributs](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Masquage et désactivation des hiérarchies d'attributs](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
