@@ -1,5 +1,7 @@
 - name: Bienvenue dans SQL Server
   href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+- name: Système de gestion des versions dans la documentation SQL
+  href: toc/versioning-system-monikers-ui-sql-server.md
 - name: Versions précédentes 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
