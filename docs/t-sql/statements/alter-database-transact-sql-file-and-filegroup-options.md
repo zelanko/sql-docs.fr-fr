@@ -42,12 +42,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cf78133d4efa7f055694306f7b7ab22f7937b73b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a4e5ed82200e0bc647981f730765ced973962ba
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065761"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809788"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_ ** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -532,7 +532,7 @@ L'exemple suivant déplace `tempdb` de son emplacement actuel vers un autre empl
 2. Modifiez l'emplacement de chaque fichier à l'aide de `ALTER DATABASE`.
 
     ```sql
-    USE maser;
+    USE master;
     GO
     ALTER DATABASE tempdb
     MODIFY FILE (NAME = tempdev, FILENAME = 'E:\SQLData\tempdb.mdf');
