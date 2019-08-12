@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343877"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893286"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server
 
@@ -24,9 +24,9 @@ Cette rubrique explique les fonctionnalités SQL Server Reporting Services (SSRS
 
  ## <a name="try-sql-server-2017"></a>Essayer SQL Server 2017
 
-> [![Télécharger SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Télécharger SQL Server 2017 à partir du Centre d’évaluation](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Télécharger SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Télécharger SQL Server 2017 à partir du Centre d’évaluation](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Petite machine virtuelle Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Étendez une machine virtuelle sur laquelle SQL Server 2017 est déjà installé](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Petite machine virtuelle Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Étendez une machine virtuelle sur laquelle SQL Server 2017 est déjà installé](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Pour connaître les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez la colonne SQL Server Enterprise dans le tableau suivant.
 

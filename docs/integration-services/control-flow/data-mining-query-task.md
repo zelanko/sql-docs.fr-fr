@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: bf7fc37921ae37996b5d93b1ed1e913232a28b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a981ec4f29cd1fe5dd9629498799dd488f03e3f8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101571"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893236"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -43,9 +43,9 @@ ms.locfileid: "68101571"
 ## <a name="prediction-queries"></a>Requêtes de prédiction  
  La requête est une instruction DMX (Data Mining Extensions). Le langage DMX est une extension du langage SQL qui prend en charge l'utilisation de modèles d'exploration de données. Pour plus d’informations sur l’utilisation du langage DMX, consultez [Guide de référence du langage DMX & #40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
- La tâche peut interroger plusieurs modèles d'exploration de données basés sur la même structure d'exploration de données. Un modèle d'exploration de données est construit à partir de l'un des algorithmes d'exploration de données fournis par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La structure d'exploration de données référencée par la tâche de requête d'exploration de données peut comprendre plusieurs modèles d'exploration de données, construits à partir de différents algorithmes. Pour plus d’informations, consultez [Structures d’exploration de données &#40;Analysis Services - exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) et [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ La tâche peut interroger plusieurs modèles d'exploration de données basés sur la même structure d'exploration de données. Un modèle d'exploration de données est construit à partir de l'un des algorithmes d'exploration de données fournis par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La structure d'exploration de données référencée par la tâche de requête d'exploration de données peut comprendre plusieurs modèles d'exploration de données, construits à partir de différents algorithmes. Pour plus d’informations, consultez [Structures d’exploration de données &#40;Analysis Services - exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) et [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
- La requête de prédiction exécutée par la tâche de requête d'exploration de données renvoie un résultat qui se présente sous la forme d'une seule ligne ou d'un ensemble de données. Une requête qui ne retourne qu'une ligne est appelée « requête singleton » : par exemple, la requête qui prédit le nombre de voiliers susceptibles d'être vendus pendant les mois d'été retourne un nombre. Pour plus d’informations sur les requêtes de prédiction qui renvoient une seule ligne, consultez [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md).  
+ La requête de prédiction exécutée par la tâche de requête d'exploration de données renvoie un résultat qui se présente sous la forme d'une seule ligne ou d'un ensemble de données. Une requête qui ne retourne qu'une ligne est appelée « requête singleton » : par exemple, la requête qui prédit le nombre de voiliers susceptibles d'être vendus pendant les mois d'été retourne un nombre. Pour plus d’informations sur les requêtes de prédiction qui renvoient une seule ligne, consultez [Outils de requête d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
   
  Les résultats des requêtes sont enregistrés dans des tables. Si une table portant le nom spécifié par la tâche de requête d'exploration de données existe déjà, la tâche peut créer une nouvelle table à partir du même nom, auquel elle ajoute un nombre, ou bien remplacer le contenu de la table.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68101571"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Modèle d'exploration de données)
   Utilisez l’onglet **Modèle d’exploration de données** de la boîte de dialogue **Tâche de requête d’exploration de données** pour spécifier la structure et le modèle d’exploration de données à utiliser.  
   
- Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
+ Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Options générales  
  **Name**  
@@ -103,7 +103,7 @@ ms.locfileid: "68101571"
 ## <a name="data-mining-query-task-editor-query-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Requête)
   Utilisez l’onglet **Requête** de la boîte de dialogue **Tâche de requête d’exploration de données** pour créer des requêtes de prédiction basées sur un modèle d’exploration de données. Dans cette boîte de dialogue, vous pouvez également lier des paramètres et des ensembles de résultats à des variables.  
   
- Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
+ Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Options générales  
  **Name**  
@@ -159,7 +159,7 @@ ms.locfileid: "68101571"
 ## <a name="data-mining-query-task-editor-output-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Sortie)
   Utilisez l'onglet **Sortie** de la boîte de dialogue **Éditeur de tâche de requête d'exploration de données** pour définir la destination de la requête de prédiction.  
   
- Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
+ Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Options générales  
  **Name**  

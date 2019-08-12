@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126199"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892292"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversi
  Les utilisateurs ayant une bonne connaissance de la gestion du **Pare-feu Windows** et sachant quels paramètres de pare-feu ils veulent configurer peuvent passer directement aux articles plus avancés :  
   
 -   [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> Informations de base sur le pare-feu  
@@ -159,7 +159,7 @@ Par défaut, les ports standard utilisés par SQL Server Analysis Services et le
   
  Si des utilisateurs accèdent à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] via IIS et Internet, vous devez ouvrir le port sur lequel IIS écoute et spécifier ce port dans la chaîne de connexion cliente. Dans ce cas, aucun port ne doit être ouvert pour l'accès direct à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le port par défaut 2389 et le port 2382, ainsi que tous les ports qui ne sont pas nécessaires, doivent être soumis à des restrictions.  
   
- Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).  
   
 ###  <a name="BKMK_ssrs"></a> Ports utilisés par Reporting Services  
 

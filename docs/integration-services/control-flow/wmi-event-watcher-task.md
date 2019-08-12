@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 87be157406b169a0978fd282c9ee40e4808c2599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d519d0c298e3a92506902bc42d3fdb4e8b1d2cc7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057842"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893750"
 ---
 # <a name="wmi-event-watcher-task"></a>Tâche Observateur d'événement WMI
 
@@ -111,7 +111,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-general-page"></a>Éditeur de tâche Observateur d'événement WMI (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche Observateur d'événement WMI** pour nommer et décrire la tâche Observateur d'événement WMI.  
   
- Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](https://go.microsoft.com/fwlink/?LinkId=79045)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
+ Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](/windows/win32/wmisdk/querying-with-wql)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
   
 ### <a name="options"></a>Options  
  **Name**  
@@ -126,7 +126,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Éditeur de tâche Observateur d'événement WMI (page Options WMI)
   Utilisez la page **Options WMI** de la boîte de dialogue **Éditeur de tâche Observateur d'événement WMI** pour définir la source de la requête WQL (Windows Management Instrumentation Query Language) et le mode de réponse de la tâche Observateur d'événement WMI aux événements WMI (Microsoft Windows Instrumentation).  
   
- Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](https://go.microsoft.com/fwlink/?LinkId=79045)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
+ Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](/windows/win32/wmisdk/querying-with-wql)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
   
 ### <a name="static-options"></a>Options statiques  
  **WMIConnectionName**  

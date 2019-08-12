@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 05/29/2019
-ms.openlocfilehash: aba53145a679503fde2a965b818949885edaa92a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8632bd86a19bdce57114e36247f0b805da6804e7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680745"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893260"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Qu’est-ce que SQL Server Management Studio (SSMS) ? 
 
@@ -56,7 +56,7 @@ Pour accéder, configurer, gérer et administrer [!INCLUDE[ssASnoversion](../inc
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fournit un projet Script [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] dans lequel vous pouvez développer et enregistrer des scripts écrits dans une syntaxe MDX (Multidimensional Expressions) et XMLA (XML for Analysis). Ces projets Script [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] servent à effectuer les tâches de gestion ou recréer des objets, tels que les bases de données et les cubes, sur des instances [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . Par exemple, vous pouvez développer un script XMLA dans un projet de Script [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] qui crée directement des objets sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] existante. Les projets de Script [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] peuvent être enregistrés au sein d'une solution et intégrés avec un système de contrôle de code source.
   
-Pour plus d’informations sur la façon d’utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], consultez [Développement et implémentation à l’aide de SQL Server Management Studio](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md).
+Pour plus d’informations sur la façon d’utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], consultez [Développement et implémentation à l’aide de SQL Server Management Studio](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>Gestion des solutions Integration Services à l'aide de SQL Server Management Studio
 
@@ -97,7 +97,7 @@ Pour plus d’informations sur les différents paramètres régionaux avec les v
 - [Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais](install-other-languages.md)
 - [Tutoriel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Tutoriel : Écriture d’instructions Transact-SQL](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
-- [Développement et implémentation à l’aide de SQL Server Data Tools](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)
+- [Développement et implémentation à l’aide de SQL Server Data Tools](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)
 - [Reporting Services dans les outils de données SQL Server](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
 - [Tutoriel : SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
 

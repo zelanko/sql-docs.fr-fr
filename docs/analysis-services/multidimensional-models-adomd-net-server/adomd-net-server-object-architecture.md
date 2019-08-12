@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f5ad515251a783705e3f8e04c73674a8e978348
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63059432"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889987"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Architecture des objets serveur ADOMD.NET
-  Les objets serveur ADOMD.NET sont des objets d’assistance qui peuvent être utilisées pour créer des fonctions définies par l’utilisateur (UDF) ou des procédures stockées de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Les objets serveur ADOMD.NET sont des objets d’assistance qui peuvent être utilisés pour créer des fonctions définies par l’utilisateur (UDF) [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou des procédures stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Pour utiliser le **Microsoft.AnalysisServices.AdomdServer** espace de noms (et ces objets), une référence à msmgdsrv.dll doit être ajoutée au projet UDF ou procédure stockée.  
+>  Pour utiliser l’espace de noms **Microsoft. AnalysisServices. AdomdServer** (et ces objets), une référence à msmgdsrv. dll doit être ajoutée au projet UDF ou à la procédure stockée.  
   
- ![Affiche les relations d’objet de serveur ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "montre les relations d’objet dans le serveur ADOMD.NET")  
+ ![Affiche les relations d’objets dans le serveur ADOMD.net](https://docs.microsoft.com/analysis-services/analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "Affiche les relations d’objets dans le serveur ADOMD.net")  
 Modèle objet ADOMD.NET  
   
  L'interaction avec la hiérarchie d'objets ADOMD.NET débute généralement avec un ou plusieurs objets de la couche de niveau supérieur, comme indiqué dans le tableau suivant.  

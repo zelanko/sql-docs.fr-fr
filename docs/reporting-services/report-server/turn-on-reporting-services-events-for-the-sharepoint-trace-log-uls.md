@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580947"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893241"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
 
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |Service partagé|Entrées témoin :<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Accès de MediumGranting aux bases de données de contenu.<br /><br /> Instances de MediumProvisioning pour ReportingWebServiceApplication<br /><br /> Modification du compte de service MediumProcessing pour ReportingWebServiceApplication<br /><br /> Autorisations de base de données de MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Afficher un journal avec PowerShell  
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Vous pouvez utiliser PowerShell pour retourner la liste d’événements connexes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir d’un fichier journal ULS. Tapez la commande suivante à partir de SharePoint 2010 Management Shell pour obtenir la liste filtrée des lignes du fichier journal ULS nommé UESQL11SPOINT-20110606-1530.log, qui contient « **sql server reporting services** » :  
+ ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Vous pouvez utiliser PowerShell pour retourner la liste d’événements connexes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir d’un fichier journal ULS. Tapez la commande suivante à partir de SharePoint 2010 Management Shell pour obtenir la liste filtrée des lignes du fichier journal ULS nommé UESQL11SPOINT-20110606-1530.log, qui contient « **sql server reporting services** » :  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

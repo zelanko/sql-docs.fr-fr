@@ -16,12 +16,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d5d9c379aaa2b8b0b92e064ed6dc21a4eb968b95
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412595"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893455"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Compteurs de performances - Service web MSRS 2011, objets de performance
   Cette rubrique décrit les compteurs de performance pour les objets de performance **MSRS 2011 Web Service** et **MSRS 2011 Windows Service** . Ces objets font partie d'un déploiement de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en mode natif.  
@@ -111,7 +111,7 @@ ms.locfileid: "67412595"
 |**Total des mises à jour d’instantanés**|Nombre total de mises à jour d'instantanés d'exécution de rapport.|  
   
 ##  <a name="bkmk_powershell"></a> Utiliser des applets de commande PowerShell pour retourner des listes  
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Le script Windows PowerShell suivant retourne les ensembles de compteurs dans lesquels CounterSetName commence par « msr » :  
+ ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Le script Windows PowerShell suivant retourne les ensembles de compteurs dans lesquels CounterSetName commence par « msr » :  
   
 ```  
 get-counter -listset msr*  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500031"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892002"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Épingler des éléments de rapport paginé Reporting Services à des tableaux de bord dans Power BI
 
@@ -68,7 +68,7 @@ Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion
   
 4. Sélectionnez l’élément de rapport que vous voulez épingler à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Vous ne pouvez épingler qu’un seul élément à la fois.  La visionneuse de rapports présente un affichage ombré de votre rapport. Les éléments que vous pouvez épingler apparaissent en surbrillance, tandis que ceux que vous ne pouvez pas épingler sont ombrés en foncé.  
   
-    **(1)** Sélectionnez le groupe qui contient le tableau de bord sur lequel vous souhaitez épingler l’élément, **(2)** sélectionnez le tableau de bord sur lequel vous souhaitez épingler l’élément et **(3)** sélectionnez la fréquence à laquelle vous voulez que la vignette soit mise à jour sur le tableau de bord.   ![remarque](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque") L’actualisation est gérée par les abonnements [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et, une fois l’élément épinglé, vous pouvez modifier l’abonnement et configurer une autre planification de l’actualisation.  
+    **(1)** Sélectionnez le groupe qui contient le tableau de bord sur lequel vous souhaitez épingler l’élément, **(2)** sélectionnez le tableau de bord sur lequel vous souhaitez épingler l’élément et **(3)** sélectionnez la fréquence à laquelle vous voulez que la vignette soit mise à jour sur le tableau de bord.   ![remarque](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque") L’actualisation est gérée par les abonnements [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et, une fois l’élément épinglé, vous pouvez modifier l’abonnement et configurer une autre planification de l’actualisation.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   

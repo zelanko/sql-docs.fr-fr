@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd0f8310fa0b11b8816f15194da19c856230991b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301532"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892814"
 ---
 # <a name="technical-reference-ssrs"></a>Références techniques (SSRS)
 
   Recherchez les outils et la documentation de référence de PowerShell pour l’utilisation ou l’administration de SQL Server Reporting Services.  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Erreurs et événements**  
+ ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Erreurs et événements**  
  [Cause et résolution des erreurs Reporting Services](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctionnalités**  
+ ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctionnalités**  
  [Aide sur le concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  
   
  [Aide F1 du Gestionnaire de rapports](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
@@ -41,14 +41,14 @@ ms.locfileid: "63301532"
   
  [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Utilitaires d’invite de commandes du serveur de rapports**  
+ ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Utilitaires d’invite de commandes du serveur de rapports**  
  [Utilitaire RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [Utilitaire rsconfig &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [Utilitaire rskeymgmt &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Bibliothèque de classes Fournisseur WMI de Reporting Services**  
+ ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Bibliothèque de classes Fournisseur WMI de Reporting Services**  
  [Référence de bibliothèque du fournisseur WMI de Reporting Services &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

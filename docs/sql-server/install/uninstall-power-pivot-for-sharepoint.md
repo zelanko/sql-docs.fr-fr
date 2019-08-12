@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a5d31f60aac72ce342e16ea251adbe59cb8a8227
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58dd67bdc23728460faa7f56b214a22907491086
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126019"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892201"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Désinstaller Power Pivot pour SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "68126019"
   
 1.  Supprimez tous les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , documents et bibliothèques associés à une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ni les bibliothèques ni les documents ne fonctionneront une fois le logiciel désinstallé.  
   
-    -   [Supprimer la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
+    -   [Supprimer la galerie PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
-    -   [Supprimer une bibliothèque de flux de données PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
+    -   [Supprimer une bibliothèque de flux de données PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
 2.  Supprimez les classeurs Excel ou les rapports Reporting Services dans les autres bibliothèques contenant ou référençant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -114,7 +114,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  Pour rechercher et supprimer un travail de déploiement ou de rétraction figurant déjà dans la file d'attente, procédez comme suit :  
   
-1.  Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, consultez [Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;Power Pivot pour SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+1.  Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, consultez [Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;Power Pivot pour SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
 2.  Démarrez SharePoint Management Shell en tant qu'administrateur, puis exécutez la commande suivante pour afficher les travaux dans la file d'attente :  
   
@@ -132,7 +132,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  Réexécutez la tâche dans l'outil de configuration en cliquant sur **Valider** suivi d' **Exécuter**.  
   
- Ou bien, vous pouvez utiliser PowerShell pour supprimer des fonctionnalités et des solutions de la batterie. Pour plus d’informations, consultez [Référence PowerShell pour Power Pivot pour SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).  
+ Ou bien, vous pouvez utiliser PowerShell pour supprimer des fonctionnalités et des solutions de la batterie. Pour plus d’informations, consultez [Référence PowerShell pour Power Pivot pour SharePoint](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
 ##  <a name="bkmk_uninstall"></a> Étape 3 : Exécuter le programme d’installation de SQL Server pour supprimer des programmes de l’ordinateur local  
  La suppression des fichiers programme nécessite l'exécution du programme d'installation de SQL Server pour désinstaller le logiciel. La désinstallation supprime les fichiers et les entrées de Registre créés par le programme d'installation. Vous pouvez utiliser la page Programmes et fonctionnalités pour désinstaller le logiciel. Une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] fait partie d'une installation de SQL Server.  
@@ -148,7 +148,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Dans le programme d’installation, vous pouvez sélectionner l’instance de **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , puis sélectionner **Analysis Services** et **Intégration SharePoint pour Analysis Services** pour supprimer uniquement cette fonctionnalité et laisser tout le reste en place.  
   
 ##  <a name="bkmk_addin"></a> Étape 4 : Désinstaller le complément Power Pivot pour SharePoint  
- Si votre déploiement [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] comporte plusieurs serveurs et que vous avez installé le complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , désinstallez ce complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de chaque serveur où il est installé pour désinstaller complètement tous les fichiers [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Pour plus d’informations, consultez [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+ Si votre déploiement [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] comporte plusieurs serveurs et que vous avez installé le complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , désinstallez ce complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de chaque serveur où il est installé pour désinstaller complètement tous les fichiers [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Pour plus d’informations, consultez [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 ##  <a name="verify"></a> Étape 5 : Vérifier la désinstallation  
   
@@ -175,9 +175,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 2.  Supprimez tous les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , documents et bibliothèques si vous ne l’avez pas déjà fait.  
   
-    -   [Supprimer la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
+    -   [Supprimer la galerie PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
-    -   [Supprimer une bibliothèque de flux de données PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
+    -   [Supprimer une bibliothèque de flux de données PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
 3.  Dans le Service Banque d’informations sécurisé, supprimez toutes les applications cibles qui contiennent des informations d’identification stockées utilisées par [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Quelques entrées (mais pas toutes) du service Banque d’informations sécurisé sont supprimées lorsque vous désinstallez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Les applications cibles créées pour le compte d’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance plus toutes les applications cibles que vous avez créées pour l’actualisation des données existent encore et doivent être supprimées manuellement.  
   
@@ -190,7 +190,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Ne désinstallez pas le fournisseur OLE DB Analysis Services. SharePoint installe le fournisseur OLE DB comme composant requis pour les classeurs Excel qui se connectent aux bases de données Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe une version plus récente, mais cette version offre une compatibilité descendante. Vous devez donc la conserver sur le système pour éviter les problèmes de connexion de données ultérieurement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [Outils de configuration de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
+ [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [Outils de configuration de Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
   

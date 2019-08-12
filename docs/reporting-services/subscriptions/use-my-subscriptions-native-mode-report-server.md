@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2fc2566e643c247c5fb1ea79c5ef5f03ac032d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4066d5ea8e44fca9b63a24d25e4f18a4f0ccb78
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578027"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892322"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Utiliser mes abonnements (serveur de rapports en mode natif)
 Le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une page **Mes abonnements** qui centralise tous les abonnements. Vous pouvez utiliser la page *Mes abonnements* pour afficher, modifier, activer, désactiver et supprimer des abonnements existants. En revanche, vous ne pouvez pas l'utiliser pour créer des abonnements.  La page Mes abonnements contient uniquement les abonnements que vous créez. Elle ne répertorie ni les abonnements pilotés par les données ni les abonnements appartenant à d'autres utilisateurs, même si vous figurez parmi les abonnés.
@@ -35,7 +35,7 @@ Le champ de recherche filtre dynamiquement la liste des abonnements. Vous ne pou
 Pour plus d’informations, consultez [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>Utiliser Windows PowerShell pour répertorier les abonnements MySubscriptions  
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
+ ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
  Le script PowerShell suivant renvoie la liste des abonnements et des propriétés d'abonnement pour l'utilisateur actuel. Pour plus d'informations, consultez [Méthode ReportingService2010.ListMySubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   

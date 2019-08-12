@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a59fb73e4abc987a258405a5b3ee8f5e9ec62c64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1a0c969bf5e1964446ac9ffd3d9abe12bb90b89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571679"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893404"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Scripts et PowerShell avec Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge un large éventail de scénarios de développement et de gestion via script, notamment l'utilitaire de ligne de commande rs.exe, les applets de commande PowerShell pour les serveurs de rapports en mode SharePoint et l'exploitation du modèle d'objet [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de PowerShell pour le mode natif et le mode SharePoint.  
@@ -29,7 +29,7 @@ ms.locfileid: "65571679"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge le script .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] comme langage de script pouvant être traité par l'utilitaire RS.exe, un hôte de script qui s'exécute sur le serveur de rapports.  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Exemples et applets de commande PowerShell du mode SharePoint de Reporting Services  
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
+ ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode SharePoint inclut des applets de commande [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour l'administration des serveurs de rapports.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65571679"
     -   Extensions de données Liste  
   
 ## <a name="reporting-services-object-model-and-powershell-samples"></a>Exemples du modèle d'objet Reporting Services et de Powershell  
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
+ ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
  Appel du modèle d'objet principal par PowerShell, valide en grande partie pour les modes natif et SharePoint, comme les tâches de migration et d'abonnement, et d'autres exemples associés de tâches d'abonnement dans SQL15.  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b921ed801297659b02a8f8cb2d22dcf1b498502e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024887"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892410"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Aide sur l'Assistant Gestion de partition via la touche F1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "68024887"
  **Gérer les données partitionnées dans un scénario de fenêtre glissante**  
  Ajoute à la table existante une partition vide qui peut être utilisée pour l'insertion de données. L'Assistant prend actuellement en charge l'insertion dans la dernière partition et l'extraction de la première partition.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ##  <a name="SwitchIn"></a> Page Sélectionner les options d'insertion de partition  
  Utilisez la page **Sélectionner les options d’insertion de partition** pour sélectionner la table de mise en lots que vous insérez dans la table partitionnée.  
@@ -104,7 +104,7 @@ ms.locfileid: "68024887"
  **Table d'insertion**  
  Sélectionnez la table intermédiaire qui contient la partition que vous souhaitez ajouter à votre table partitionnée. Vous devez créer cette table de mise en lots avec l’ **Assistant Gestion de partition**avant d’insérer des partitions.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ##  <a name="SwitchOut"></a> Page Sélectionner les options d'extraction de partition  
  Utilisez la page **Sélectionner les options d’extraction de partition** pour sélectionner la partition et la table de mise en lots destinées à maintenir les données partitionnées que vous extrayez de la table partitionnée.  
@@ -122,7 +122,7 @@ ms.locfileid: "68024887"
  **Existant**  
  Sélectionnez la table intermédiaire à utiliser pour la partition à extraire de la table source actuelle. Si la table existante contient des données, ces données seront remplacées par celles que vous extrayez.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Page Sélectionner les options de table de mise en lots  
  Utilisez la page **Sélectionner les options de table de mise en lots** pour créer la table de mise en lots à utiliser pour basculer vos données partitionnées.  
@@ -144,7 +144,7 @@ ms.locfileid: "68024887"
  **Groupe de fichiers**  
  Sélectionnez un groupe de fichiers pour la nouvelle table.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ##  <a name="OutputOption"></a> Page Sélectionner une option de sortie  
  Utilisez la page **Sélectionner une option de sortie** pour spécifier de quelle manière vous souhaitez apporter les modifications à vos partitions.  
@@ -171,7 +171,7 @@ ms.locfileid: "68024887"
  **Modifier la planification**  
  Ouvre la boîte de dialogue **Nouvelle planification du travail** , dans laquelle vous pouvez sélectionner, modifier ou consulter les propriétés du travail planifié.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ##  <a name="NewJob"></a> Page Nouvelle planification du travail  
  Utilisez la page **Nouvelle planification du travail** pour afficher et modifier les propriétés de la planification.  
@@ -254,7 +254,7 @@ ms.locfileid: "68024887"
  **Time**  
  Sélectionnez l'heure d'exécution du travail.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ##  <a name="Summary"></a> Page Résumé  
  Utilisez la page **Résumé** pour examiner les options que vous avez sélectionnées sur les pages précédentes.  
@@ -263,7 +263,7 @@ ms.locfileid: "68024887"
  **Vérifier vos sélections**  
  Affiche les choix que vous avez effectués pour chaque page de l'Assistant. Cliquez sur un nœud pour développer et afficher les options que vous avez sélectionnées précédemment.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ##  <a name="Progress"></a> Page Progression  
  Utilisez la page **Progression** pour surveiller les informations d’état sur les actions de l’ **Assistant Gestion de partition**. Selon les options sélectionnées dans l’Assistant, la page **Progression** peut contenir une ou plusieurs actions. La zone supérieure affiche l'état global de l'Assistant et le nombre des messages d'état, d'erreur et d'avertissement qu'il a reçus.  
@@ -301,7 +301,7 @@ ms.locfileid: "68024887"
  **Fermer**  
  Ferme l'Assistant.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  

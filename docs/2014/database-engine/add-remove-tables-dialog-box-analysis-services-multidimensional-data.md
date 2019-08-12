@@ -1,5 +1,5 @@
 ---
-title: Ajouter ou supprimer des Tables, boîte de dialogue (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue Ajouter-supprimer des tables (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ea017c7b463a0287e6b6f4437549db667bd251
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065240"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889214"
 ---
-# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter ou supprimer les Tables (Analysis Services - données multidimensionnelles)
+# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter-supprimer des tables (Analysis Services-données multidimensionnelles)
   Utilisez la boîte de dialogue **Ajouter/Supprimer des tables** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour ajouter des tables dans une source de données d’une vue de source de données, ou en supprimer. Pour afficher la boîte de dialogue **Ajouter/Supprimer des tables**, vous pouvez procéder de deux manières :  
   
 -   Cliquez sur **Ajouter/supprimer des objets** dans le volet **Barre d’outils** du **Concepteur de vue de source de données**.  
@@ -37,7 +37,7 @@ ms.locfileid: "66065240"
   
  Cliquez sur **>>** pour transférer tous les objets répertoriés dans **Objets disponibles** vers **Objets inclus**, ou sélectionnez un ou plusieurs objets, puis cliquez sur **>** pour transférer les objets sélectionnés vers **Objets inclus**.  
   
- **Filter**  
+ **Filtrer**  
  Entrez le filtre à utiliser pour limiter la liste des objets affichés dans **Objets disponibles**, puis cliquez sur le bouton pour filtrer les objets de la liste.  
   
  **Afficher les objets système**  
@@ -48,11 +48,11 @@ ms.locfileid: "66065240"
   
  Cliquez sur **<<** pour transférer tous les objets répertoriés dans **Objets inclus** vers **Objets disponibles**, ou sélectionnez un ou plusieurs objets, puis cliquez sur **<** pour transférer les objets sélectionnés vers **Objets disponibles**.  
   
- **Ajouter des tables connexes**  
+ **Ajouter des tables associées**  
  Cliquez sur ce bouton pour ajouter toutes les tables associées aux tables sélectionnées dans **Objets inclus**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et &#40;boîtes de dialogue données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
   
   

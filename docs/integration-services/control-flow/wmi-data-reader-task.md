@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9ef5288ea0ffef804aeb9c11aff51b0db6ef4093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b7a527770e41870729c194bd9c7651b77cffd2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057874"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890850"
 ---
 # <a name="wmi-data-reader-task"></a>Tâche Lecteur de données WMI
 
@@ -104,7 +104,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-general-page"></a>Éditeur de tâche Lecteur de données WMI (page Général)
   La page **Général** de la boîte de dialogue **Éditeur de tâche Lecteur de données WMI** permet de nommer et décrire la tâche Lecteur de données WMI.  
   
-  Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](https://go.microsoft.com/fwlink/?LinkId=79045)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
+  Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](/windows/win32/wmisdk/querying-with-wql)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
   
 ### <a name="options"></a>Options  
  **Name**  
@@ -119,7 +119,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Éditeur de tâche Lecteur de données WMI (page Options WMI)
   Utilisez la page **Options WMI** de la boîte de dialogue **Éditeur de tâche Lecteur de données WMI** pour définir la source de la requête WQL (Windows Management Instrumentation Query Language) et la destination du résultat de la requête.  
   
- Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](https://go.microsoft.com/fwlink/?LinkId=79045)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
+ Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](/windows/win32/wmisdk/querying-with-wql)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
   
 ### <a name="static-options"></a>Options statiques  
  **WMIConnectionName**  

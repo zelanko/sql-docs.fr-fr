@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 617676bf00f5f91652719ca93ef614152523367a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bc0ae0b7a64f7f3d75d9ff67da0142682093da0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947935"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893057"
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
 
@@ -123,7 +123,7 @@ ms.locfileid: "67947935"
 |--------------|-----------------|  
 |**Nom de l'objet**|Affiche la liste des noms d'objets définis.|  
 |**Type**|Affiche la liste des types des objets définis.|  
-|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes :** [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes :** [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Paramètres**|Affiche la liste des paramètres de traitement des objets définis.|  
   
  **Ajouter**  

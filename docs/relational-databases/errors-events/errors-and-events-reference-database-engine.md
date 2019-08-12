@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7fc505731f0d0434ea4d8478b3569781b5173ce8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4835e110d0feace4abaec408351351d863da7588
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068344"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893148"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Références relatives aux erreurs et aux événements (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68068344"
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Communauté SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Ce site contient des liens vers des groupes de discussion et des forums contrôlés par la communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . S'y trouvent également des sources d'information de la communauté, telles que les blogs et les sites Web. La communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente une aide précieuse grâce aux réponses qu'elle fournit aux questions posées, mais l'obtention d'une réponse ne peut pas être garantie.|  
-|[SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Ce site est centré sur les groupes de discussion, les forums et d'autres ressources de communautés qui sont utiles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[SQL Server Developer Center Community](/sql/sql-server/sql-server-technical-documentation)|Ce site est centré sur les groupes de discussion, les forums et d'autres ressources de communautés qui sont utiles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Aide et support Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Vous pouvez utiliser ce site Web pour présenter un cas à un professionnel du support [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063971"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893185"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063971"
   
 8.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Cliquez sur **Suivant** pour continuer. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
   
-9. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68063971"
   
 9. Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Cliquez sur **Suivant** pour continuer. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
   
-10. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher, mais seuls le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode tabulaire et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode multidimensionnel prennent en charge le clustering de basculement. Les autres composants sélectionnés s'exécuteront sous la forme d'une fonctionnalité autonome sans basculement sur le nœud actuel sur lequel vous exécutez le programme d'installation. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consultez [Déterminer le mode serveur d’une instance Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   

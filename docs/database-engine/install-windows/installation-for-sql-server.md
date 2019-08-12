@@ -16,12 +16,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 372bdfd2bdb749a624f5b68ff69380825d86b3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a05419d31d7b3c8579afc824b9bb27f15aa9481d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990919"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892702"
 ---
 # <a name="sql-server-installation"></a>Installation de SQL Server
 
@@ -77,7 +77,7 @@ Décrit comment préparer l'ordinateur pour [!INCLUDE[ssNoVersion](../../include
 [Installer des fonctionnalités SQL Server BI avec SharePoint &#40;PowerPivot et Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  Cette section explique comment installer les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement SharePoint. Elle identifie les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles en fonction d'une version et d'une édition spécifiques de SharePoint. Elle inclut aussi des procédures d’installation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et Reporting Services en mode SharePoint.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Installez la nouvelle base de données exemple, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Installez la nouvelle base de données exemple, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
 [Exemples SQL Server et exemples de bases de données supplémentaires](https://sqlserversamples.codeplex.com/)  
  Explique comment installer et configurer les exemples et les exemples de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

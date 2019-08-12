@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d055e847c297cfadca6b14220d45244b6d6e6c4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256967"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892897"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
 
@@ -222,7 +222,7 @@ ms.locfileid: "68256967"
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Stratégies Always On pour les problèmes opérationnels avec les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Activer l’écriture différée de la dimension](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Créer une source de données &#40;SSAS Multidimensionnel&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Activer l’écriture différée de la dimension](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

@@ -6,12 +6,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 1a0bd129fc535b53d8d19ad76f99f3a86ba10c11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65135235"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888590"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Utilisation des SID de service pour accorder des autorisations aux services dans SQL Server
 
@@ -24,9 +24,9 @@ Voici quelques exemples de services où un ID de sécurité de service peut êtr
 - Service de contrôle d’intégrité d’Operations Manager (NT SERVICE\HealthService)
 - Service de clustering de basculement Windows Server (WSFC) (NT SERVICE\ClusSvc)
 
-Certains services n’ont pas d’ID de sécurité de service par défaut. L’ID de sécurité de service doit être créé à l’aide de [SC.exe](https://docs.microsoft.com/windows/desktop/services/configuring-a-service-using-sc). [Cette méthode](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) a été adoptée par les administrateurs de Microsoft Operations Manager afin d’accorder l’autorisation à HealthService au sein de SQL server.
+Certains services n’ont pas d’ID de sécurité de service par défaut. L’ID de sécurité de service doit être créé à l’aide de [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [Cette méthode](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) a été adoptée par les administrateurs de Microsoft Operations Manager afin d’accorder l’autorisation à HealthService au sein de SQL server.
 
-Une fois l’ID créé et confirmé, il doit être autorisé dans SQL Server. Cela se fait en créant une connexion Windows à l’aide de [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou d’une requête. Une fois que la connexion est créée, les autorisations peuvent être octroyées, ajoutées aux rôles et mappées aux bases de données comme toute autre connexion.
+Une fois l’ID créé et confirmé, il doit être autorisé dans SQL Server. Cela se fait en créant une connexion Windows à l’aide de [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) ou d’une requête. Une fois que la connexion est créée, les autorisations peuvent être octroyées, ajoutées aux rôles et mappées aux bases de données comme toute autre connexion.
 
 > [!TIP]
 > Si l’erreur `Login failed for user 'NT AUTHORITY\SYSTEM'` se produit, vérifiez si l’ID de sécurité de service existe pour le service souhaité, la connexion ID de sécurité de service a été créée dans SQL Server, et les autorisations appropriées ont été accordées pour l’ID de sécurité de service dans SQL Server.
@@ -39,7 +39,7 @@ En règle générale, les comptes de service sont utilisés pour permettre aux s
 
 ### <a name="granular-permissions-to-system-accounts"></a>Autorisations granulaires aux comptes système
 
-Les comptes système disposent historiquement d’autorisations en créant une connexion pour les comptes [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM en en-us](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) ou [NetworkService](https://docs.microsoft.com/windows/desktop/Services/networkservice-account) ([ NT AUTHORITY\NETWORK SERVICE en en-us](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) et en octroyant des autorisations à ces connexions. Cette méthode autorise l’accès à n’importe quel processus ou service dans SQL, qui s’exécute comme un compte système.
+Les comptes système disposent historiquement d’autorisations en créant une connexion pour les comptes [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM en en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) ou [NetworkService](/windows/desktop/Services/networkservice-account) ([ NT AUTHORITY\NETWORK SERVICE en en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) et en octroyant des autorisations à ces connexions. Cette méthode autorise l’accès à n’importe quel processus ou service dans SQL, qui s’exécute comme un compte système.
 
 L’utilisation d’un Id de sécurité de service permet d’octroyer des autorisations à un service spécifique. Le service a uniquement accès aux ressources pour lesquelles des autorisations ont été accordées lorsqu’il s’exécute. Par exemple, si `HealthService` est en cours d’exécution en tant que `LocalSystem` et bénéficie de `View Server State`, le compte `LocalSystem` aura uniquement l’autorisation `View Server State` lorsqu’il est en cours d’exécution dans le contexte de `HealthService`. Si un autre processus tente d’accéder à l’état du serveur SQL en tant que `LocalSystem`, il n’aura pas accès.
 
@@ -102,10 +102,10 @@ GO
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la structure du sid de service, consultez [structure de SERVICE_SID_INFO](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info).
+Pour plus d’informations sur la structure du sid de service, consultez [structure de SERVICE_SID_INFO](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
 
-Découvrez les options supplémentaires disponibles lors de la [création d’une connexion](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql).
+Découvrez les options supplémentaires disponibles lors de la [création d’une connexion](/sql/t-sql/statements/create-login-transact-sql).
 
-Pour utiliser la sécurité basée sur les rôles avec les SID de service, consultez la [création de rôles](https://docs.microsoft.com/sql/t-sql/statements/create-role-transact-sql) dans SQL Server.
+Pour utiliser la sécurité basée sur les rôles avec les SID de service, consultez la [création de rôles](/sql/t-sql/statements/create-role-transact-sql) dans SQL Server.
 
-Découvrez les différentes façons d’[accorder des autorisations](https://docs.microsoft.com/sql/t-sql/statements/grant-transact-sql) aux SID de service dans SQL Server.
+Découvrez les différentes façons d’[accorder des autorisations](/sql/t-sql/statements/grant-transact-sql) aux SID de service dans SQL Server.

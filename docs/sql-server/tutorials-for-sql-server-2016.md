@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091817"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893082"
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091817"
   
 |Technologie|Description|  
 |--------------|---------------|  
-|[Didacticiels pour Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
+|[Didacticiels pour Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
 |[Didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md)|Apprenez à vous connecter à une instance du moteur de base de données, puis à créer et à exécuter des instructions Transact-SQL.|  
 |[Didacticiels sur la Gestion des informations d'entreprise](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Apprenez comment gérer les informations dans une entreprise à l'aide des technologies Microsoft EIM.|  
 |[Didacticiels sur Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502668"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889696"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
 
@@ -74,7 +74,7 @@ ms.locfileid: "65502668"
   
  **Solution de contournement :** utilisez l'Administration centrale SharePoint pour configurer un serveur de rapports en mode SharePoint. Pour plus d’informations, consultez [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> Vous ne voyez pas le service SQL Server Reporting Services dans l’Administration centrale de SharePoint après avoir installé SQL Server 2016 SSRS en mode SharePoint  
  **Description :** si après avoir correctement installé SQL Server 2016 Reporting Services en mode SharePoint et le complément SQL Server 2016 Reporting Services pour SharePoint 2013/2016, vous ne voyez pas « SQL Server Reporting Services » dans les deux menus suivants, le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’a pas été enregistré :  
@@ -103,7 +103,7 @@ ms.locfileid: "65502668"
   
 2.  Vérifiez que le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] indique l’état **Démarré** dans la page : Administration centrale de SharePoint 2013/2016 -> **Gestion des applications** -> **Gérer les services sur le serveur**.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Les applets de commande PowerShell de Reporting Services ne sont pas disponibles et les commandes ne sont pas identifiées  
  **Description :** lorsque vous essayez d’exécuter une applet de commande PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous voyez un message d’erreur semblable à celui-ci :  
@@ -124,7 +124,7 @@ ms.locfileid: "65502668"
   
 -   [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Vous voyez s'afficher un message d'erreur indiquant que l'URL n'est pas configurée  
  **Description :** un message d’erreur s’affiche, semblable à celui-ci :  
@@ -147,7 +147,7 @@ ms.locfileid: "65502668"
   
 -   Gestion d'une application de service.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> L'installation échoue sur un ordinateur sur lequel SharePoint est installé sans être configuré  
  **Description :** si vous choisissez d'installer le mode SharePoint de Reporting Services sur un ordinateur sur lequel SharePoint est installé mais non configuré, un message semblable au suivant s'affiche et l'installation est interrompue :  
@@ -158,7 +158,7 @@ ms.locfileid: "65502668"
   
  **Plus d'informations :** En installant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une installation existante de SharePoint, le programme d'installation tente d'installer et de démarrzer le service SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si SharePoint n'est pas configuré, le programme d'installation de service échoue, ce qui entraîne l'échec de l'installation.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> La page Administration centrale de SharePoint est vide  
  **Description :** vous avez correctement installé SharePoint 2013/2016, sans erreur. Toutefois, lorsque vous accédez à l'Administration centrale, vous voyez uniquement une page vide :  
@@ -171,7 +171,7 @@ ms.locfileid: "65502668"
   
 -   Le compte de service que vous utilisez pour les services SharePoint tels que le service Administration centrale de SharePoint 2013/2016 doit être doté des privilèges d’administrateur du système d’exploitation local.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> Vous voyez s'afficher un message d'erreur lorsque vous essayez de créer un nouveau rapport du Générateur de rapports  
  **Description :** Un message d'erreur semblable au suivant s'affiche lorsque vous essayez de créer un rapport du Générateur de rapports dans une bibliothèque de documents :  
@@ -180,7 +180,7 @@ ms.locfileid: "65502668"
   
  **Solution de contournement :** vérifiez que vous disposez d'une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et qu'elle est configurée correctement. Pour plus d’informations, consultez [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Un message d'erreur indiquant que RS_SHP n'est pas pris en charge avec PREPAREIMAGE s'affiche  
  **Description :** lorsque vous essayez d’exécuter PREPAREIMAGE pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un message d’erreur semblable à celui-ci s’affiche :  
@@ -189,7 +189,7 @@ ms.locfileid: "65502668"
   
  **Solution de contournement :** il n'existe aucune solution de contournement. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prends pas en charge SYSPREP.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   

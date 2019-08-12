@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775969"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893376"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "64775969"
 ##  <a name="bkmk_3ways_to_install"></a> Vue d'ensemble des méthodes d'installation  
  Le complément SQL Server 2016 Reporting Services pour les produits SharePoint peut être installé en utilisant l’une des deux méthodes suivantes :  
   
--   **Assistant Installation :** ![remarque](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque")Dans SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
+-   **Assistant Installation :** ![remarque](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque")Dans SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
   
 -   **rsSharepoint.msi :** le complément peut être installé directement à partir du support d’installation ou téléchargé et installé. Le fichier rsSharepoint.msi prend en charge à la fois une interface utilisateur graphique et une installation à partir de la ligne de commande. Vous devez exécuter le fichier .msi avec les privilèges d'administrateur ; pour ce faire, commencez par ouvrir une fenêtre d'invite de commandes avec des autorisations élevées, puis exécutez rsSharepoint.msi à partir de la ligne de commande. Pour plus d’informations sur le téléchargement du complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   

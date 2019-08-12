@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: 0c34f6c2cf7916b525a432d4481f991388ea93ca
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267520"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893435"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell
 
@@ -22,7 +22,7 @@ ms.locfileid: "68267520"
 
 À compter de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez transférer par programmation la propriété d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] d’un utilisateur à un autre. Cette rubrique fournit plusieurs scripts Windows PowerShell que vous pouvez utiliser pour modifier ou simplement dresser la liste des appartenances aux abonnements. Chaque exemple comprend un exemple de syntaxe pour le mode Natif et le mode SharePoint. Une fois que vous avez modifié le propriétaire d'un abonnement, celui-ci s'exécute dans le contexte de sécurité du nouveau propriétaire et le champ User!UserID du rapport affiche la valeur du nouveau propriétaire. Pour plus d’informations sur le modèle objet appelé par les exemples PowerShell, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")
+![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")
 
 ##  <a name="bkmk_top"></a> Dans cette rubrique :
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581346"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889840"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65581346"
   
 -   **Assistant Projet Report Server.** Lorsque vous sélectionnez l'Assistant Projet Report Server, un projet de serveur de rapports est automatiquement créé et l'Assistant Rapport s'ouvre. Dans l'Assistant, pour créer un rapport, suivez les instructions de chaque page pour créer une chaîne de connexion dans une source de données, définir les informations d'identification de la source de données, créer une requête, ajouter une région de données de table ou de matrice, spécifier des données de rapport et des groupes, choisir une police et un style de couleur, publier le rapport sur un serveur de rapports et afficher un aperçu local du rapport. Après avoir créé un rapport au moyen de l'Assistant, vous pouvez modifier les données du rapport et le Concepteur de rapports à l'aide de l'outil Concepteur de rapports dans le projet Report Server.  
   
- ![Modèles Nouveau projet dans SSDT](../../analysis-services/media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
+ ![Modèles Nouveau projet dans SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  

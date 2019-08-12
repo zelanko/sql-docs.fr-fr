@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 998e0e4b400815767135ee81442c4e210aa3ba47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580616"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892402"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
 
@@ -290,7 +290,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Liste de vérification : utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Liste de vérification : utiliser PowerShell pour vérifier Power Pivot pour SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

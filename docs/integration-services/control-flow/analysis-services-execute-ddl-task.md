@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 760a15ce22421ac1e98c6b14ea661de28bf299a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdee1ff2ec3ddb825dd4030c3ff1c29d78570254
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904177"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893384"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services
 
@@ -44,9 +44,9 @@ ms.locfileid: "67904177"
 ## <a name="ddl-statements"></a>Instructions DDL  
  Les instructions DDL sont représentées en tant qu'instructions en langage ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) et insérées dans une commande XMLA (XML for Analysis).  
   
--   Le langage ASSL permet de définir et de décrire une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ainsi que les bases de données et les objets de base de données qu’elle contient. Pour plus d’informations, consultez [Référence Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+-   Le langage ASSL permet de définir et de décrire une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ainsi que les bases de données et les objets de base de données qu’elle contient. Pour plus d’informations, consultez [Référence Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla).  
   
--   XMLA est un langage de commande qui permet d'envoyer des commandes d'action, telles que Create, Alter ou Process, à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Référence XML for Analysis &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
+-   XMLA est un langage de commande qui permet d'envoyer des commandes d'action, telles que Create, Alter ou Process, à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Référence XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference).  
   
  Si le code DDL est stocké dans un fichier distinct, la tâche DDL d’exécution de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un gestionnaire de connexions de fichiers pour spécifier le chemin du fichier. Pour plus d’informations, consultez [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
