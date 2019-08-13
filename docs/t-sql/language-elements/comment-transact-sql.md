@@ -1,7 +1,7 @@
 ---
 title: -- (Comment) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26bf88d13dd69ea6ac113713175d3ccfea5e1351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950234"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495483"
 ---
 # <a name="---comment-transact-sql"></a>'-- (Comment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67950234"
  Chaîne de caractères contenant le texte du commentaire.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez deux tirets (--) pour un commentaire d'une seule ligne ou imbriqué. Les commentaires insérés à l'aide de -- se terminent par le caractère de saut de ligne. Il n'y a pas de longueur maximale pour les commentaires. Le tableau suivant répertorie les raccourcis clavier que vous pouvez utiliser pour commenter du texte ou annuler les marques de commentaire de ce dernier.  
+Utilisez deux tirets ( **--** ) pour un commentaire d’une seule ligne ou imbriqué. Les commentaires insérés avec **--** se terminent par une nouvelle ligne, qui est spécifiée par un caractère de retour chariot (U+000A), un caractère de saut de ligne (U+000D) ou une combinaison des deux. Il n'y a pas de longueur maximale pour les commentaires. Le tableau suivant répertorie les raccourcis clavier que vous pouvez utiliser pour commenter du texte ou annuler les marques de commentaire de ce dernier.
   
 |Action|Standard|  
 |------------|--------------|  

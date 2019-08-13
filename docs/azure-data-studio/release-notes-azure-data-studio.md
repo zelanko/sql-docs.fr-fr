@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959388"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731063"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
@@ -137,8 +137,8 @@ ms.locfileid: "67959388"
 **Solution de contournement :** Sera résolu dans la prochaine version. 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458) : L’extraction de dacpac fait planter SqlToolsService si une version non valide est utilisée <br/>
 **Solution de contournement :** Redémarrez Azure Data Studio et assurez-vous que la version correcte est utilisée.
-- Les icônes du nouveau notebook et du notebook ouvert sont perdues <br/> 
-**Solution de contournement :** Le type de connexion hérité est déconseillé. Nous vous recommandons de vous connecter au point de terminaison SQL Server et vous aurez toutes les actions (nouveau notebook, travail Spark) comme prévu. 
+- Les icônes du nouveau notebook et du notebook ouvert sont perdues <br/>
+**Solution de contournement :** Le type de connexion hérité est déconseillé. Nous vous recommandons de vous connecter au point de terminaison SQL Server et vous aurez toutes les actions (nouveau notebook, travail Spark) comme prévu. 
 
 ## <a name="february-2019"></a>Février 2019
 

@@ -1,7 +1,7 @@
 ---
 title: Groupes de disponibilité Always On pour les conteneurs exécutant Linux
 titleSuffix: SQL Server
-description: Cet article présente les groupes de disponibilité sur les conteneurs de SQL Server
+description: Cet article présente les groupes de disponibilité sur les conteneurs SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,42 +11,42 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3910c74be803b7fc63c8bf560fc637387e06ee15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910470"
 ---
-# <a name="always-on-availability-groups-for-sql-server-containers"></a>Groupes de disponibilité Always On pour les conteneurs de SQL Server
+# <a name="always-on-availability-groups-for-sql-server-containers"></a>Groupes de disponibilité Always On pour les conteneurs SQL Server
 
-SQL Server 2019 prend en charge les groupes de disponibilité sur des conteneurs dans un cluster Kubernetes. Pour les groupes de disponibilité, déployez le serveur SQL Server [Kubernetes opérateur](https://coreos.com/blog/introducing-operators.html) à votre cluster Kubernetes. L’opérateur facilite l’empaquetage, déployer et gérer le groupe de disponibilité dans un cluster.
+SQL Server 2019 prend en charge les groupes de disponibilité sur les conteneurs dans un cluster Kubernetes. Pour les groupes de disponibilité, déployez l'[opérateur Kubernetes](https://coreos.com/blog/introducing-operators.html) SQL Server sur votre cluster Kubernetes. L'opérateur aide à regrouper, déployer et gérer le groupe de disponibilité dans un cluster.
 
-![Groupe de disponibilité dans le conteneur de Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
+![Groupe de disponibilité dans un conteneur Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
-Dans l’image ci-dessus, un cluster de quatre nœuds kubernetes héberge un groupe de disponibilité avec trois réplicas. La solution inclut les composants suivants :
+Dans l'image ci-dessus, un cluster Kubernetes à quatre nœuds héberge un groupe de disponibilité avec trois réplicas. La solution inclut les composants suivants :
 
-* Un Kubernetes [ *déploiement*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Le déploiement inclut l’opérateur et une carte de configuration. Ils fournissent l’image de conteneur, les logiciels et les instructions nécessaires pour déployer des instances de SQL Server pour le groupe de disponibilité.
+* Un [*déploiement*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) Kubernetes. Le déploiement comprend l'opérateur et une table de configuration. Ces éléments fournissent l'image du conteneur, le logiciel et les instructions nécessaires au déploiement des instances SQL Server pour le groupe de disponibilité.
 
-* Trois nœuds, chacune hébergeant un [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). La ressource StatefulSet contient un [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Chaque pod contient :
-  * Un conteneur de SQL Server qui exécute une instance de SQL Server.
+* Trois nœuds, chacun hébergeant une ressource [*StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). La ressource StatefulSet contient un [*pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Chaque pod contient :
+  * Un conteneur SQL Server exécutant une instance SQL Server.
   * Un agent de groupe de disponibilité. 
 
-* Deux [ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) associées au groupe de disponibilité. Les ConfigMaps fournissent des informations sur :
-  * Le déploiement de l’opérateur.
+* Deux ressources [*ConfigMaps*](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) liées au groupe de disponibilité. Les ressources ConfigMaps fournissent des informations concernant :
+  * Le déploiement pour l’opérateur.
   * Groupe de disponibilité.
 
- * [*Volumes persistants* ](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) sont des éléments de stockage. Un *revendication de volume persistant* (PVC) est une demande de stockage par un utilisateur. Chaque conteneur est affilié à un PVC pour le stockage de données et de journaux. Dans Azure Kubernetes Service (ACS), vous [créer une revendication de volume persistant](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) pour attribuer automatiquement le stockage basé sur une classe de stockage.
+ * [*Les volumes persistants*](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) sont des éléments de stockage. Une *revendication de volume persistante* (PVC) est une requête de stockage effectuée par un utilisateur. Chaque conteneur est associé à une PVC pour le stockage des données et des journaux. Dans Azure Kubernetes Service (AKS), vous [créez une revendication de volume persistant](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) pour provisionner automatiquement le stockage basé sur une classe de stockage.
 
 
-En outre, le cluster stocke [ *secrets* ](https://kubernetes.io/docs/concepts/configuration/secret/) pour les mots de passe, les certificats, les clés et les autres informations sensibles.
+En outre, le cluster stocke des [*secrets*](https://kubernetes.io/docs/concepts/configuration/secret/) pour les mots de passe, certificats, clés et autres informations sensibles.
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>Déployer le groupe de disponibilité dans Kubernetes
 
 Pour déployer un groupe de disponibilité dans Kubernetes :
 
-1. Création du cluster Kubernetes
+1. Créer le cluster Kubernetes
 
-   Pour un groupe de disponibilité, créez au moins trois nœuds SQL Server plus un nœud pour le masque.
+   Pour un groupe de disponibilités, créez au moins trois nœuds pour SQL Server plus un nœud pour le maître.
 
 1. Déployer l’opérateur
 
@@ -54,65 +54,65 @@ Pour déployer un groupe de disponibilité dans Kubernetes :
 
 1. Déployer la ressource StatefulSet
 
-   L’opérateur est à l’écoute pour obtenir des instructions déployer la ressource StatefulSet. Automatiquement, il crée les instances de SQL Server sur trois nœuds distincts et configure le groupe de disponibilité avec un gestionnaire de cluster externe.
+   L'opérateur écoute les instructions pour déployer la ressource StatefulSet. Il crée automatiquement les instances SQL Server sur trois nœuds séparés et configure le groupe de disponibilité avec un gestionnaire de cluster externe.
 
 1. Créer les bases de données et les joindre au groupe de disponibilité
 
-Pour des instructions détaillées, consultez [groupes de disponibilité Always On pour les conteneurs de SQL Server](sql-server-ag-kubernetes.md).
+Pour obtenir des étapes détaillées, consultez [Groupes de disponibilité Always On pour conteneurs SQL Server](sql-server-ag-kubernetes.md).
 
-## <a name="sql-server-kubernetes-operator"></a>Opérateur de SQL Server Kubernetes
+## <a name="sql-server-kubernetes-operator"></a>Opérateur Kubernetes SQL Server
 
-Après avoir déployé l’opérateur, il enregistre une ressource personnalisée de SQL Server. Utiliser l’opérateur pour déployer cette ressource.  Chaque ressource correspond à une instance de SQL Server et inclut des propriétés spécifiques comme `sapassword` et `monitoring policy`. L’opérateur d’analyse de la ressource et déploie un Kubernetes StatefulSet.
+Une fois déployé, l'opérateur enregistre une ressource SQL Server personnalisée. Utilisez l'opérateur pour déployer cette ressource.  Chaque ressource correspond à une instance SQL Server et inclut des propriétés spécifiques comme `sapassword` et `monitoring policy`. L'opérateur analyse la ressource et déploie une ressource StatefulSet Kubernetes.
 
-Le StatfulSet contient :
+La ressource StatfulSet contient les éléments suivants :
 
-* conteneur MSSQL-server
+* un conteneur mssql-server
 
-* conteneur de MSSQL-ha-superviseur
+* un conteneur mssql-ha-supervisor
 
-Le code de l’opérateur, superviseur de haute disponibilité et SQL Server est empaqueté dans une image Docker appelée `mcr.microsoft.com/mssql/ha`. Cette image contient les fichiers binaires suivants :
+Le code pour l’opérateur, le superviseur HA et SQL Server est empaqueté dans une image Docker appelée `mcr.microsoft.com/mssql/ha`. Cette image contient les binaires suivants :
 
 * `mssql-operator`
 
-    Ce processus est déployé comme un déploiement Kubernetes séparé. Il enregistre le [ressource personnalisée Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) appelé `SqlServer` (sqlservers.mssql.microsoft.com). Puis il écoute pour ces ressources est créé ou mis à jour dans le cluster Kubernetes. Pour chaque événement de ce type, il crée ou met à jour les ressources Kubernetes pour l’instance correspondante (par exemple la ressource StatefulSet, ou `mssql-server-k8s-init-sql` travail).
+    Ce processus est déployé comme un déploiement Kubernetes distinct. Il enregistre la [ressource Kubernetes personnalisée](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) appelée `SqlServer` (sqlservers.mssql.microsoft.com). Ensuite, il écoute les ressources créées ou mises à jour dans le cluster Kubernetes. Pour chaque événement de ce type, il crée ou met à jour les ressources Kubernetes pour l'instance correspondante (par exemple la ressource StatefulSet, ou le travail `mssql-server-k8s-init-sql`).
 
 * `mssql-server-k8s-health-agent`
 
-    Ce serveur web sert Kubernetes [sondes de l’activité](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) pour déterminer l’intégrité d’une instance de SQL Server. Analyse l’intégrité de l’instance de SQL Server locale en appelant `sp_server_diagnostics` et en comparant les résultats avec votre stratégie d’analyse.
+    Ce serveur web permet aux [sondes d’activité](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) Kubernetes de déterminer l'intégrité d'une instance SQL Server. Surveille l’intégrité de l'instance SQL Server locale en appelant `sp_server_diagnostics` et en comparant les résultats avec votre stratégie de surveillance.
 
 * `mssql-ha-supervisor`
 
-   Conserve le certificat de groupe de disponibilité et d’un point de terminaison. 
+   Maintient le certificat du groupe de disponibilité et le point de terminaison. 
 
 * `mssql-server-k8s-ag-agent`
   
-    Ce processus analyse l’intégrité d’un réplica de groupe de disponibilité sur une seule instance de SQL Server et effectue des basculements.
+    Ce processus surveille l’intégrité d’un réplica de groupe de disponibilité sur une seule instance SQL Server et effectue des basculements.
 
-    Il gère également l’élection du responsable.
+    Il maintient également l'élection du leader.
 
 * `mssql-server-k8s-init-sql`
   
-    Cette Kubernetes [travail](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) s’applique une configuration d’état souhaité pour une instance de SQL Server. Le travail est créé par l’opérateur chaque fois qu’une ressource SQL Server est créée ou mis à jour. Elle garantit que l’instance de SQL Server cible correspondant à la ressource personnalisée a la configuration souhaitée décrite dans la ressource.
+    Ce [travail](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) Kubernetes applique une configuration d'état souhaitée à une instance SQL Server. Le travail est créé par l'opérateur chaque fois qu'une ressource SqlServer est créée ou mise à jour. Il s'assure que l'instance SQL Server cible correspondant à la ressource personnalisée possède la configuration souhaitée décrite dans la ressource.
 
-    Par exemple, si les paramètres suivants sont requis, il effectue les :
-  * Mettre à jour le mot de passe SA
+    Par exemple, si l'un des paramètres suivants est requis, il le complète :
+  * Mettre à jour le mot de passe AS
   * Crée la connexion SQL pour les agents
   * Crée le point de terminaison DBM
 
 * `mssql-server-k8s-rotate-creds`
   
-    Ce travail Kubernetes implémente la tâche d’informations d’identification de rotation. Créez cette tâche pour demander des mises à jour le mot de passe SA, du mot de passe de connexion de l’agent SQL, de l’entrepôt DBM cert, etc. Le mot de passe SA est spécifié en tant que les paramètres du travail. Les autres sont générés automatiquement.
+    Ce travail Kubernetes implémente la tâche de rotation des informations d'identification. Créez ce travail pour demander des mises à jour du mot de passe AS, du mot de passe de connexion de l’agent SQL, du certificat DBM, etc. Le mot de passe AS est spécifié comme paramètres du travail. Les autres paramètres sont automatiquement générés.
 
 * `mssql-server-k8s-failover`
 
-   Un travail de Kubernetes qui implémente le flux de travail de basculement manuel.
+   Un travail Kubernetes qui implémente le workflow de basculement manuel.
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>Remarques
 
-Quelle que soit la configuration du groupe de disponibilité, l’opérateur déploiera le superviseur de haute disponibilité. Si la ressource SQL Server ne répertorie pas n’importe quel groupe de disponibilité, l’opérateur déploiera toujours ce conteneur.
+Quelle que soit la configuration du groupe de disponibilité, l'opérateur déploie toujours le superviseur HA. Si la ressource SqlServer ne contient aucun groupe de disponibilité, l'opérateur déploie quand même ce conteneur.
 
-La version de l’image de l’opérateur est identique à la version de l’image de SQL Server.
+La version pour l'image de l'opérateur est identique à la version pour l'image SQL Server.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-> [Conteneur de SQL Server dans Kubernetes](tutorial-sql-server-containers-kubernetes.md)
+> [Conteneur SQL Server dans Kubernetes](tutorial-sql-server-containers-kubernetes.md)

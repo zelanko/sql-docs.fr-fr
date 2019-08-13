@@ -1,7 +1,7 @@
 ---
-title: Prise en main de SQL Server sur Ubuntu
+title: Mise en route avec SQL Server sur Ubuntu
 titleSuffix: SQL Server
-description: Ce démarrage rapide montre comment installer SQL Server 2017 ou SQL Server 2019 sur Ubuntu et ensuite créer et interroger une base de données avec sqlcmd.
+description: Ce démarrage rapide montre comment installer SQL Server 2017 ou SQL Server 2019 sur Ubuntu, puis comment créer et interroger une base de données avec sqlcmd.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/28/2019
@@ -11,64 +11,64 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910463"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et la création d’une base de données sous Ubuntu
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Dans ce démarrage rapide, vous installez SQL Server 2017 ou version préliminaire de SQL Server 2019 sur Ubuntu 16.04. Vous vous connectez ensuite avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Dans ce démarrage rapide, vous installez SQL Server 2017 ou la préversion de SQL Server 2019 sur Ubuntu 16.04. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Dans ce démarrage rapide, vous installez SQL Server 2019 aperçu sur Ubuntu 16.04. Vous vous connectez ensuite avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Dans ce démarrage rapide, vous installez la préversion de SQL Server 2019 sur Ubuntu 16.04. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 ::: moniker-end
 
 > [!TIP]
-> Ce didacticiel nécessite une saisie de la part de l’utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d’installation sans assistance ou en mode hors connexion, consultez [consignes d’Installation pour SQL Server sur Linux](sql-server-linux-setup.md).
+> Ce tutoriel nécessite l'intervention de l'utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation sans assistance ou hors ligne, voir [Conseils d’installation pour SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Vous devez disposer d’un ordinateur Ubuntu 16.04 avec **au moins 2 Go** de mémoire.
+Vous devez disposer d’une machine Ubuntu 16.04 avec **au moins 2 Go** de mémoire.
 
-Pour installer Ubuntu 16.04 sur votre propre machine, accédez à [ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/). Vous pouvez également créer des machines virtuelles Ubuntu dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Pour installer Ubuntu 16.04 sur votre propre machine, allez à [http://releases.ubuntu.com/xenial/](http://releases.ubuntu.com/xenial/). Vous pouvez également créer des machines virtuelles Ubuntu dans Azure. Voir [Créer et gérer des machines virtuelles Linux avec l’interface Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> À ce stade, le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) pour Windows 10 n’est pas pris en charge comme cible d’installation.
+> Pour le moment, le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) pour Windows 10 n'est pas pris en charge comme cible d'installation.
 
-Pour les autres exigences système, consultez [configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
+Pour les autres configurations système requises, voir [Configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="install"></a>Installer SQL Server
 
-Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un terminal pour installer le package **mssql-serveur**.
+Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un terminal afin d’installer le package **mssql-server**.
 
-1. Importez les clés GPG de référentiel public :
+1. Importez les clés GPG de dépôt public :
 
    ```bash
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Inscrivez le référentiel Microsoft SQL Server Ubuntu :
+2. Enregistrez le référentiel Microsoft SQL Server Ubuntu :
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!TIP]
-   > Si vous souhaitez essayer SQL Server 2019, vous devez inscrire à la place la **aperçu (2019)** référentiel. Pour les installations de SQL Server 2019, utilisez la commande suivante :
+   > Si vous voulez tester SQL Server 2019, vous devez plutôt enregistrer le référentiel de la **préversion (2019)** . Utilisez la commande suivante pour les installations SQL Server 2019 :
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
@@ -81,27 +81,27 @@ Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un
    sudo apt-get install -y mssql-server
    ```
 
-4. Après la fin de l’installation du package, exécutez le programme d’installation **mssql-conf** et suivez les invites pour définir le mot de passe SA et choisir votre édition.
+4. Une fois l'installation du package terminée, lancez **mssql-conf setup** et suivez les invites pour définir le mot de passe AS et choisir votre édition.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > Les éditions suivantes de SQL Server 2017 sont librement concédée sous licence : Evaluation, Developer et Express.
+   > Les éditions suivantes de SQL Server 2017 sont sous licence libre : Evaluation, Developer et Express.
 
    > [!NOTE]
-   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (longueur minimale de 8 caractères, incluant des majuscules et des minuscules, des chiffres et/ou des caractères spéciaux).
+   > Assurez-vous de spécifier un mot de passe fort pour le compte AS (longueur minimale de 8 caractères, lettres majuscules et minuscules comprises, chiffres de la base 10 et/ou symboles non alphanumériques).
 
-5. Une fois la configuration terminée, vérifiez que le service est en cours d’exécution :
+5. Une fois la configuration terminée, vérifiez que le service est en cours d'exécution :
 
    ```bash
    systemctl status mssql-server --no-pager
    ```
 
-6. Si vous envisagez de vous connecter à distance, vous devrez peut-être également ouvrir le port TCP du serveur SQL (1433 par défaut) sur votre pare-feu.
+6. Si vous prévoyez de vous connecter à distance, vous devrez peut-être aussi ouvrir le port TCP de SQL Server (par défaut 1433) sur votre pare-feu.
 
-À ce stade, SQL Server est en cours d’exécution sur votre ordinateur Ubuntu et est prêt à être utilisé !
+À ce stade, SQL Server fonctionne sur votre machine Ubuntu et est prêt à l'emploi !
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -109,15 +109,15 @@ Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un
 
 ## <a id="install"></a>Installer SQL Server
 
-Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un terminal pour installer le package **mssql-serveur**.
+Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un terminal afin d’installer le package **mssql-server**.
 
-1. Importez les clés GPG de référentiel public :
+1. Importez les clés GPG de dépôt public :
 
    ```bash
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Inscrivez le référentiel Ubuntu de Microsoft SQL Server pour SQL Server 2019 preview :
+2. Enregistrez le référentiel Microsoft SQL Server Ubuntu pour la préversion de SQL Server 2019 :
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
@@ -130,46 +130,46 @@ Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un
    sudo apt-get install -y mssql-server
    ```
 
-4. Après la fin de l’installation du package, exécutez le programme d’installation **mssql-conf** et suivez les invites pour définir le mot de passe SA et choisir votre édition.
+4. Une fois l'installation du package terminée, lancez **mssql-conf setup** et suivez les invites pour définir le mot de passe AS et choisir votre édition.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!NOTE]
-   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (longueur minimale de 8 caractères, incluant des majuscules et des minuscules, des chiffres et/ou des caractères spéciaux).
+   > Assurez-vous de spécifier un mot de passe fort pour le compte AS (longueur minimale de 8 caractères, lettres majuscules et minuscules comprises, chiffres de la base 10 et/ou symboles non alphanumériques).
 
-5. Une fois la configuration terminée, vérifiez que le service est en cours d’exécution :
+5. Une fois la configuration terminée, vérifiez que le service est en cours d'exécution :
 
    ```bash
    systemctl status mssql-server --no-pager
    ```
 
-6. Si vous envisagez de vous connecter à distance, vous devrez peut-être également ouvrir le port TCP du serveur SQL (1433 par défaut) sur votre pare-feu.
+6. Si vous prévoyez de vous connecter à distance, vous devrez peut-être aussi ouvrir le port TCP de SQL Server (par défaut 1433) sur votre pare-feu.
 
-À ce stade, la version préliminaire de SQL Server 2019 est en cours d’exécution sur votre ordinateur Ubuntu et est prêt à utiliser !
+À ce stade, la préversion de SQL Server 2019 fonctionne sur votre machine Ubuntu et est prête à l'emploi !
 
 ::: moniker-end
 
-## <a id="tools"></a>Installer les outils de ligne de commande SQL Server
+## <a id="tools"></a>Installer les outils en ligne de commande SQL Server
 
-Pour créer une base de données, vous devez vous connecter avec un outil qui peut exécuter des instructions Transact-SQL sur le serveur SQL Server. Les étapes suivantes permettent d'installer les outils de ligne de commande de SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
+Pour créer une base de données, vous devez vous connecter à un outil capable d’exécuter des instructions Transact-SQL sur SQL Server. Les étapes suivantes installent les outils en ligne de commande SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
 
-Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubuntu. 
+Suivez les étapes suivantes pour installer **mssql-tools** sur Ubuntu. 
 
-1. Importez les clés publiques GPG de référentiel.
+1. Importez les clés GPG de dépôt public.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Inscrire le référentiel Microsoft Ubuntu.
+1. Enregistrez le référentiel Microsoft Ubuntu.
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Mettre à jour la liste de sources et exécutez la commande d’installation avec le package de développeur unixODBC.
+1. Mettez à jour la liste des sources et exécutez la commande d'installation avec le package pour développeur unixODBC.
 
    ```bash
    sudo apt-get update 
@@ -177,21 +177,21 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubu
    ```
 
    > [!Note] 
-   > Pour mettre à jour vers la dernière version de **mssql-tools** exécutez les commandes suivantes :
+   > Pour mettre à jour vers la dernière version de **mssql-tools**, exécutez les commandes suivantes :
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facultatif** : Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif** : Ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement **PATH** dans un interpréteur de commandes Bash.
 
-   Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
+   Afin de rendre **sqlcmd/bcp** accessible depuis l’interpréteur de commandes Bash pour les sessions de connexion, modifiez votre variable **PATH** dans le fichier **~/.bash_profile** à l’aide de la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
+   Afin de rendre **sqlcmd/bcp** accessible depuis l’interpréteur de commandes Bash pour les sessions interactives/sans connexion, modifiez votre variable **PATH** dans le fichier **~/.bashrc** à l’aide de la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

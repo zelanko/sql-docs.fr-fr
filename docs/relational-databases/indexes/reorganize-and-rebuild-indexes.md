@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909578"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476259"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
 
@@ -71,11 +71,28 @@ Une fois le degré de fragmentation connu, utilisez le tableau suivant pour dét
 
 <sup>1</sup> La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne.
 
-Ces valeurs fournissent des directives approximatives pour déterminer le point auquel vous devez basculer entre `ALTER INDEX REORGANIZE` et `ALTER INDEX REBUILD`. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement.
+> [!TIP]
+> Ces valeurs fournissent des directives approximatives pour déterminer le point auquel vous devez basculer entre `ALTER INDEX REORGANIZE` et `ALTER INDEX REBUILD`. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement. Par exemple, si un index donné est principalement utilisé pour les opérations d’analyse, la suppression de la fragmentation peut améliorer les performances de ces opérations. L’avantage en matière de performances est moins perceptible pour les index utilisés principalement pour les opérations de recherche. De même, la suppression de la fragmentation dans un segment de mémoire (une table sans index cluster) est particulièrement utile pour les opérations d’analyse d’index non cluster, mais n’a que peu d’effet dans les opérations de recherche.
+
 Des niveaux très bas de fragmentation (inférieurs à 5 %) ne doivent pas être pris en compte par ces commandes, car l’avantage de la suppression d’un volume de fragmentation aussi réduit est quasiment toujours largement contrebalancé par le coût de la réorganisation ou de la reconstruction de l’index. Pour plus d’informations sur `ALTER INDEX REORGANIZE` et `ALTER INDEX REBUILD`, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).
 
 > [!NOTE]
 > Bien souvent, la reconstruction ou la réorganisation de petits index ne réduit pas la fragmentation. Les pages de petits index sont parfois stockées sur des extensions mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après sa réorganisation ou sa reconstruction.
+
+### <a name="index-defragmentation-considerations"></a>Considérations sur la défragmentation d’index
+Dans certaines conditions, la recréation d’un index cluster recrée automatiquement tout index non-cluster qui fait référence à la clé de clustering, si les identificateurs physiques ou logiques contenus dans les enregistrements d’index non cluster doivent être modifiés.
+
+Scénarios qui forcent la recréation automatique de tous les index non-cluster sur une table :
+
+-  Création d’un index cluster sur une table
+-  Suppression d’un index cluster, provoquant le stockage de la table en tant que segment de mémoire
+-  Modification de la clé de clustering pour inclure ou exclure des colonnes
+
+Scénarios qui ne nécessitent pas la recréation automatique de tous les index non-cluster sur une table :
+
+-  Recréation d’un index cluster unique
+-  Recréation d’un index cluster non unique
+-  Modification du schéma d’index, telle que l’application d’un schéma de partitionnement à un index cluster ou le déplacement de l’index cluster vers un autre groupe de fichiers
 
 ### <a name="Restrictions"></a> Limitations et restrictions
 
@@ -96,7 +113,7 @@ Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers 
 
 #### <a name="Permissions"></a> Autorisations
 
-Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre d’au moins l’un des rôles suivants :
+Nécessite l’autorisation `ALTER` sur la table ou la vue. L’utilisateur doit être membre d’au moins l’un des rôles suivants :
 
 - Rôle de base de données **db_ddladmin** <sup>1</sup>
 - Rôle de base de données **db_owner**

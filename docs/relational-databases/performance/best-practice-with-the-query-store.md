@@ -1,7 +1,7 @@
 ---
 title: Bonnes pratiques relatives au magasin de requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4528b916e70ed838ab8f3665de9293646d94ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985029"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495388"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ Les paramètres par défaut sont assez bons pour démarrer, mais vous devez surv
   
  Pendant que le magasin de requêtes collecte requêtes, plans d’exécution et autres statistiques, sa taille dans la base de données croît jusqu’à ce que cette limite soit atteinte. Quand cela se produit, le magasin de requêtes change automatiquement de mode d’opération pour passer en lecture seule et cesse de collecter les nouvelles données, ce qui signifie que l’analyse de vos performances n’est plus précise.  
   
- La valeur par défaut (100 Mo) peut ne pas suffire si votre charge de travail génère un grand nombre de requêtes et de plans différents ou si vous souhaitez conserver l’historique de requêtes sur une plus longue période. Suivez l’utilisation d’espace actuelle et augmentez la taille maximale (Mo) pour empêcher le magasin de requêtes de passer en mode lecture seule. Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou exécutez le script suivant pour obtenir les dernières informations concernant la taille du magasin de requêtes :  
+ La valeur par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] est de 100 Mo. Elle peut ne pas suffire si votre charge de travail génère un grand nombre de requêtes et de plans différents ou si vous souhaitez conserver l’historique de requêtes sur une plus longue période. À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la valeur par défaut est de 1 Go. Suivez l’utilisation d’espace actuelle et augmentez la taille maximale (Mo) pour empêcher le magasin de requêtes de passer en mode lecture seule. Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou exécutez le script suivant pour obtenir les dernières informations concernant la taille du magasin de requêtes :  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -109,11 +109,13 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Mode de capture du magasin des requêtes :** spécifie la stratégie de capture des requêtes du magasin des requêtes.  
   
--   **Tout** : capture toutes les requêtes. Il s'agit de l'option par défaut.  
+-   **Tout** : capture toutes les requêtes. Il s’agit de l’option par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].  
   
--   **Auto** : les requêtes peu fréquentes et les requêtes dont la durée de compilation et d’exécution n’est pas significative sont ignorées. Les seuils concernant le nombre d’exécutions et la durée de compilation et d’exécution sont déterminés en interne.  
+-   **Auto** : les requêtes peu fréquentes et les requêtes dont la durée de compilation et d’exécution n’est pas significative sont ignorées. Les seuils concernant le nombre d’exécutions et la durée de compilation et d’exécution sont déterminés en interne. À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il s’agit de l’option par défaut.  
   
 -   **Aucune** : le Magasin des requêtes cesse de capturer les nouvelles requêtes.  
+
+-   **Personnalisé** : permet un contrôle supplémentaire et ajuste la stratégie de collecte des données. Les nouveaux paramètres personnalisés définissent ce qui se passe pendant le seuil de temps de la stratégie de capture interne : une limite de temps pendant laquelle les conditions configurables sont évaluées et, si elles ont la valeur true, la requête peut être capturée par le Magasin des requêtes.
   
  Le script suivant permet de définir le mode de capture de requête sur Auto :  
   
@@ -121,7 +123,64 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
+
+### <a name="examples"></a>Exemples
+L’exemple suivant définit le mode de capture de requête sur Auto et définit d’autres options recommandées dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] :  
   
+```sql  
+ALTER DATABASE [QueryStoreDB]   
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```  
+
+L’exemple suivant définit le mode de capture de requête sur Auto et définit d’autres options recommandées dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]pour inclure des statistiques d’attente :  
+
+```sql
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+L’exemple suivant définit le mode de capture de requête sur Auto et définit d’autres options recommandées dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], et définit éventuellement la stratégie de capture personnalisée avec ses valeurs par défaut :  
+
+```sql
+ALTER DATABASE [QueryStoreDB]  
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
 ## <a name="how-to-start-with-query-performance-troubleshooting"></a>Comment appréhender la résolution des problèmes de performances des requêtes  
  La résolution des problèmes liés au magasin de requêtes est un flux de travail simple, comme l’illustre le diagramme suivant :  
   
@@ -132,8 +191,8 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
-  
- Le magasin de requêtes a besoin d’un certain temps avant de collecter le jeu de données qui représente avec précision votre charge de travail. En générale, un jour suffit, même pour les charges de travail très complexes. Néanmoins, vous pouvez commencer à explorer les données et à identifier les requêtes qui demandent votre attention de suite après avoir activé la fonctionnalité.   
+
+Le magasin de requêtes a besoin d’un certain temps avant de collecter le jeu de données qui représente avec précision votre charge de travail. En générale, un jour suffit, même pour les charges de travail très complexes. Néanmoins, vous pouvez commencer à explorer les données et à identifier les requêtes qui demandent votre attention de suite après avoir activé la fonctionnalité.   
 Accédez au sous-dossier Magasin de requêtes sous le nœud Bases de données de l’Explorateur d’objets de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour ouvrir les vues de résolution de problèmes de scénarios spécifiques.   
 Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fonctionnent avec l’ensemble de métriques d’exécution, chacune exprimée comme étant l’une des fonctions statistiques suivantes :  
   
@@ -246,7 +305,7 @@ FROM sys.database_query_store_options;
   
  Si le problème persiste, cela signifie que les données du magasin des requêtes sont endommagées sur le disque.
  
- Pour SQL 2017 et version ultérieure, le Magasin de données des requêtes a pu être récupéré via l’exécution de la procédure stockée **sp_query_store_consistency_check** dans la base de données affectée. Pour 2016, vous devez effacer les données du Magasin de données des requêtes, comme indiqué ci-dessous.
+ Depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], le Magasin des requêtes peut être récupéré via l’exécution de la procédure stockée **sp_query_store_consistency_check** dans la base de données affectée. Pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous devez effacer les données du Magasin des requêtes, comme indiqué ci-dessous.
  
  Si cela n’a pas résolu le problème, vous pouvez essayer d’effacer le magasin des requêtes avant de demander le mode lecture/écriture.  
   
@@ -271,10 +330,14 @@ FROM sys.database_query_store_options;
   
 |Mode de capture de requête|Scénario|  
 |------------------------|--------------|  
-|All|Analysez minutieusement votre charge de travail, c’est-à-dire toutes les formes de requêtes, leur fréquence d’exécution et les autres statistiques.<br /><br /> Identifiez les nouvelles requêtes dans votre charge de travail.<br /><br /> Déterminez si des requêtes ad hoc sont utilisées pour identifier les possibilités de paramétrage utilisateur ou automatique.|  
-|Auto|Concentrez-vous sur les requêtes pertinentes et exploitables, c’est-à-dire les requêtes qui s’exécutent régulièrement ou qui consomment beaucoup de ressources.|  
+|All|Analysez minutieusement votre charge de travail, c’est-à-dire toutes les formes de requêtes, leur fréquence d’exécution et les autres statistiques.<br /><br /> Identifiez les nouvelles requêtes dans votre charge de travail.<br /><br /> Déterminez si des requêtes ad hoc sont utilisées pour identifier les possibilités de paramétrage utilisateur ou automatique.<br /><br />**Remarque :** Il s’agit du mode de capture par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
+|Auto|Concentrez-vous sur les requêtes pertinentes et exploitables, c’est-à-dire les requêtes qui s’exécutent régulièrement ou qui consomment beaucoup de ressources.<br /><br />**Remarque :** À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il s’agit du mode de capture par défaut.|  
 |None|Vous avez déjà capturé le jeu de requêtes que vous vouliez surveiller dans le runtime et souhaitez éliminer les confusions que pourraient provoquer les autres requêtes.<br /><br /> L’option Aucun(e) est adaptée aux environnements de test et d’évaluation.<br /><br /> Elle est aussi appropriée pour les éditeurs de logiciels qui proposent le magasin de requêtes avec une configuration destinée à surveiller la charge de travail de leur application.<br /><br /> Cette option doit être utilisée avec précaution, car vous risquez de ne pas pouvoir suivre et optimiser les nouvelles requêtes importantes. Évitez d’utiliser l’option Aucun(e) sauf si l’un de vos scénarios l’exige.|  
-  
+|Custom|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit un mode de capture personnalisée sous la commande `ALTER DATABASE SET QUERY_STORE`. Quand cette fonctionnalité est activée, vous pouvez affiner la collecte de données dans un serveur spécifique au moyen de configurations supplémentaires du Magasin des requêtes disponibles sous un nouveau paramètre de stratégie de capture pour le Magasin des requêtes.<br /><br />Les nouveaux paramètres personnalisés définissent ce qui se passe pendant le seuil de temps de la stratégie de capture interne : une limite de temps pendant laquelle les conditions configurables sont évaluées et, si elles ont la valeur true, la requête peut être capturée par le Magasin des requêtes. Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+
+> [!NOTE]
+> Les curseurs, les requêtes dans les procédures stockées et les requêtes compilées en mode natif sont toujours capturés lorsque le mode de capture de requête est défini sur All (Tous), Auto ou Custom (Personnalisé).
+
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Conserver les données les plus pertinentes dans le magasin des requêtes  
  Configurez le magasin de requêtes de sorte qu’il ne contienne que les données pertinentes. Ainsi, il s’exécutera toujours en offrant une excellente expérience de résolution des problèmes tout en ayant un impact minime sur votre charge de travail normale.  
 Le tableau suivant décrit les bonnes pratiques :  
@@ -310,7 +373,6 @@ Envisagez les possibilités suivantes :
 Le magasin de requêtes associe une entrée de requête à un objet conteneur (procédure stockée, fonction et déclencheur).  Quand vous recréez un objet conteneur, une nouvelle entrée de requête est générée pour le même texte de requête. Cela vous empêche de suivre les statistiques de performances de cette requête dans le temps et d’utiliser le mécanisme de forçage de plan. Pour éviter cela, utilisez le processus `ALTER <object>` pour modifier la définition d’un objet conteneur quand cela est possible.  
   
 ##  <a name="CheckForced"></a> Vérifier régulièrement l’état des plans forcés  
-
 Le forçage de plan est un mécanisme pratique qui permet de corriger les problèmes de performances des requêtes importantes et de les rendre plus prévisibles. Or, comme pour les indicateurs de plan et les repères de plan, forcer un plan n’est pas la garantie qu’il sera utilisé dans les exécutions futures. En règle générale, quand le schéma de base de données change au point que les objets référencés par le plan d’exécution sont modifiés ou supprimés, le forçage de plan échoue. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a recours à la recompilation des requêtes et la raison réelle de l’échec du forçage apparaît dans [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La requête suivante retourne des informations sur les plans forcés :  
   
 ```sql  
@@ -340,11 +402,15 @@ Les indicateurs de trace globaux 7745 et 7752 peuvent être utilisés pour amél
   
 -  L’indicateur de trace 7752 permet le chargement asynchrone du Magasin des requêtes. Cela permet de mettre en ligne une base de données et d’exécuter des requêtes avant la récupération complète du Magasin des requêtes. Le comportement par défaut consiste à charger de façon synchrone le Magasin de données des requêtes. Le comportement par défaut empêche l’exécution des requêtes avant la récupération complète du Magasin des requêtes, mais il évite également qu’une requête soit oubliée lors de la collection des données.
 
+   > [!NOTE]
+   > À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], ce comportement est contrôlé par le moteur, et l’indicateur de trace 7752 n’a pas d’effet.
+
 > [!IMPORTANT]
 > Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](https://support.microsoft.com/help/4340759) dès que possible. 
 
 ## <a name="see-also"></a>Voir aussi  
-[Vues de catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
+[Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
+[Affichages catalogue du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [Utilisation du Magasin des requêtes avec l’OLTP en mémoire](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     
 [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)      

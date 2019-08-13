@@ -1,7 +1,7 @@
 ---
-title: Paramètres des utilisateurs et espace de travail
+title: Paramètres de l’utilisateur et de l’espace de travail
 titleSuffix: Azure Data Studio
-description: Comment personnaliser un Studio de données Azure en modifiant les paramètres des utilisateurs et espace de travail.
+description: Comment personnaliser Azure Data Studio en modifiant les paramètres de l’utilisateur et de l’espace de travail.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,56 +11,56 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959273"
 ---
-# <a name="modify-user-and-workspace-settings"></a>Modifier les paramètres des utilisateurs et espace de travail
+# <a name="modify-user-and-workspace-settings"></a>Modifier les paramètres de l’utilisateur et de l’espace de travail
 
-Il est facile de configurer [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre guise via les paramètres. Presque toutes les parties de [!INCLUDE[name-sos](../includes/name-sos-short.md)]d’éditeur, l’interface utilisateur et comportement fonctionnel comporte des options que vous pouvez modifier.
+Il est facile de configurer [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre convenance par le biais de paramètres. Presque toutes les parties de l’éditeur de [!INCLUDE[name-sos](../includes/name-sos-short.md)], de l’interface utilisateur et du comportement fonctionnel disposent d’options que vous pouvez modifier.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit deux portées différentes pour les paramètres :
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit deux étendues différentes pour les paramètres :
 
-* **Utilisateur** ces paramètres s’appliquent globalement à n’importe quelle instance de [!INCLUDE[name-sos](../includes/name-sos-short.md)] vous ouvrir.
-* **Espace de travail** paramètres de l’espace de travail sont des paramètres spécifiques à un dossier sur votre ordinateur et sont disponibles uniquement lorsque le dossier est ouvert dans la barre latérale de l’Explorateur. Paramètres définis dans cette étendue de remplacent l’étendue de l’utilisateur.
+* **Utilisateur** Ces paramètres s’appliquent globalement à toute instance de [!INCLUDE[name-sos](../includes/name-sos-short.md)] que vous ouvrez.
+* **Espace de travail** Les paramètres de l’espace de travail sont des paramètres spécifiques à un dossier sur votre ordinateur et sont disponibles uniquement lorsque le dossier est ouvert dans la barre latérale de l’Explorateur. Les paramètres définis sur cette étendue remplacent l’étendue Utilisateur.
 
-## <a name="creating-user-and-workspace-settings"></a>Création d’utilisateur et les paramètres de l’espace de travail
+## <a name="creating-user-and-workspace-settings"></a>Création des paramètres de l’utilisateur et de l’espace de travail
 
-La commande de menu **fichier** > **préférences** > **paramètres** (**Code**  >  **Préférences** > **paramètres** sur Mac) fournit le point d’entrée pour configurer les paramètres utilisateur et l’espace de travail. Vous sont fournis avec une liste de paramètres par défaut. Copier les paramètres que vous souhaitez modifier appropriés `settings.json` fichier. Les onglets à droite vous permettent de basculer rapidement entre les fichiers de paramètres utilisateur et l’espace de travail.
+La commande de menu **Fichier** > **Préférences** > **Paramètres** (**Code** > **Préférences** > **Paramètres** sur Mac) fournit le point d’entrée pour configurer les paramètres de l’utilisateur et de l’espace de travail. Une liste de paramètres par défaut vous est fournie. Copiez les paramètres que vous souhaitez modifier dans le fichier `settings.json` approprié. Les onglets à droite vous permettent de basculer rapidement entre les fichiers de paramètres de l’utilisateur et de l’espace de travail.
 
-Vous pouvez également ouvrir les paramètres utilisateur et l’espace de travail à partir de la **Palette de commandes** (**Ctrl + Maj + P**) avec **préférences : Ouvrez les paramètres utilisateur** et **préférences : Ouvrir les paramètres de l’espace de travail** ou utilisez le raccourci clavier (**Ctrl +,** ).
+Vous pouvez également ouvrir les paramètres de l’utilisateur et de l’espace de travail à partir de la **palette de commandes** (**Ctrl+Maj+P**) avec **Préférences : Ouvrir les paramètres utilisateur** et **Préférences : Ouvrir les paramètres d’espace de travail** ou utiliser le raccourci clavier (**Ctrl +,** ).
 
-L’exemple suivant désactive les numéros de ligne dans l’éditeur et configure les lignes de code pour être mises en retrait automatiquement.
+L’exemple suivant désactive les numéros de ligne dans l’éditeur et configure les lignes de code pour qu’elles soient indentées automatiquement.
 
 ![Exemples de paramètres](media/settings/sample-settings.png)
 
-Modifications apportées aux paramètres sont rechargées par [!INCLUDE[name-sos](../includes/name-sos-short.md)] après avoir modifié `settings.json` est enregistré.
+Les modifications apportées aux paramètres sont rechargées par [!INCLUDE[name-sos](../includes/name-sos-short.md)] après l’enregistrement du fichier `settings.json` modifié.
 
->**Remarque :** Paramètres de l’espace de travail sont utiles pour le partage des paramètres spécifiques au projet dans une équipe.
+>**Remarque :** Les paramètres d’espace de travail sont utiles pour partager des paramètres spécifiques au projet dans une équipe.
 
 ## <a name="settings-file-locations"></a>Emplacements des fichiers de paramètres
 
-Selon votre plateforme, le fichier de paramètres utilisateur se trouve ici :
+En fonction de votre plateforme, le fichier de paramètres utilisateur se trouve ici :
 
 * **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-Le fichier de paramètre d’espace de travail se trouve sous le `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` dossier dans votre projet.
+Le fichier de paramètres de l’espace de travail se trouve sous le dossier `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` dans votre projet.
 
 ## <a name="hot-exit"></a>Sortie à chaud
 
-Azure Data Studio mémorise les changements apportés aux fichiers lorsque vous quittez par défaut. Cela est identique à la fonctionnalité de sortie actif dans Visual Studio Code.
+Azure Data Studio mémorise les modifications non enregistrées apportées aux fichiers lorsque vous quittez par défaut. Il s’agit de la même fonctionnalité de sortie à chaud que dans Visual Studio Code.
 
-Par défaut, la sortie à chaud est désactivée. Activer la sortie à chaud en modifiant le `files.hotExit` paramètre. Pour plus d’informations, consultez [à chaud de sortie (dans la documentation de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+Par défaut, la sortie à chaud est désactivée. Activez la sortie à chaud en modifiant le paramètre `files.hotExit`. Pour plus d’informations, consultez [Sortie à chaud (dans la documentation de Visual Studio code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 
-## <a name="tab-color"></a>Couleur d’onglet
+## <a name="tab-color"></a>Couleur de l’onglet
 
-Pour simplifier l’identifiant les connexions que vous travaillez avec, les onglets ouverts dans l’éditeur peuvent avoir leurs couleurs redéfinis pour correspondre à la couleur du groupe de serveurs auquel appartient la connexion. Par défaut, les couleurs d’onglet sont désactivées par défaut. Activer les couleurs d’onglet en modifiant le `sql.tabColorMode` paramètre.
+Pour simplifier l’identification des connexions que vous utilisez, ouvrez des onglets dans l’éditeur. Leurs couleurs peuvent être définies pour correspondre à la couleur du groupe de serveurs auquel la connexion appartient. Par défaut, les couleurs d’onglet sont désactivées. Activez les couleurs d’onglet en modifiant le paramètre `sql.tabColorMode`.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Étant donné que [!INCLUDE[name-sos](../includes/name-sos-short.md)] hérite ses paramètres utilisateur et l’espace de travail à partir de Visual Studio Code, des informations détaillées sur les paramètres de la fonctionnalité est dans le [paramètres pour Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) article.
+Étant donné que [!INCLUDE[name-sos](../includes/name-sos-short.md)] hérite de la fonctionnalité des paramètres de l’utilisateur et de l’espace de travail de Visual Studio Code, des informations détaillées sur les paramètres se trouvent dans l’article [Paramètres de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).

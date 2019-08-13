@@ -1,5 +1,5 @@
 ---
-title: Configurer la réplication SQL Server sur Linux
+title: Configurer la réplication SQL Server sur Linux
 description: Cet article décrit comment configurer la réplication SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -11,40 +11,40 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67895936"
 ---
-# <a name="configure-sql-server-replication-on-linux"></a>Configurer la réplication SQL Server sur Linux
+# <a name="configure-sql-server-replication-on-linux"></a>Configurer la réplication SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit la réplication SQL Server pour les instances de SQL Server sur Linux.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit la réplication SQL Server pour les instances SQL Server sur Linux.
 
-Pour plus d’informations sur la réplication, consultez [documentation de réplication SQL Server](../relational-databases/replication/sql-server-replication.md).
+Pour des informations détaillées sur la réplication, consultez la [documentation sur la réplication SQL Server](../relational-databases/replication/sql-server-replication.md).
 
-Configurer la réplication sur Linux avec SQL Server Management Studio (SSMS) ou des procédures stockées Transact-SQL.
+Configurez la réplication sur Linux avec SQL Server Management Studio (SSMS) ou les procédures stockées Transact-SQL.
 
-* Pour utiliser SSMS, suivez les instructions de cet article.
+* Pour utiliser le SSMS, suivez les instructions de cet article.
 
-  Utiliser SSMS sur un système d’exploitation de Windows pour se connecter aux instances de SQL Server. Pour l’arrière-plan et des instructions, consultez [utiliser SSMS pour gérer SQL Server sur Linux](./sql-server-linux-manage-ssms.md).
+  Utilisez SSMS sur un système d'exploitation Windows pour vous connecter aux instances SQL Server. Pour obtenir plus de contexte et des instructions, voir [Utiliser SSMS pour gérer SQL Server sur Linux](./sql-server-linux-manage-ssms.md).
   
-* Pour obtenir un exemple avec des procédures stockées, suivez le [réplication configurer SQL Server sur Linux](sql-server-linux-replication-tutorial-tsql.md) didacticiel.
+* Pour un exemple avec des procédures stockées, suivez le tutoriel [Configurer la réplication SQL Server sur Linux](sql-server-linux-replication-tutorial-tsql.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Avant de configurer des éditeurs, distributeurs et abonnés, vous devez effectuer quelques étapes de configuration pour l’instance de SQL Server.
+Avant de configurer des éditeurs, distributeurs et abonnés, vous devez effectuer quelques étapes de configuration pour l'instance SQL Server.
 
-1. Activer l’Agent SQL Server à utiliser des agents de réplication. Sur tous les serveurs Linux, exécutez les commandes suivantes dans le terminal.
+1. Activez SQL Server Agent pour utiliser les agents de réplication. Sur tous les serveurs Linux, exécutez les commandes suivantes dans le terminal.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
   sudo systemctl restart mssql-server
   ```
 
-1. Configurez l’instance de SQL Server pour la réplication. Pour configurer l’instance de SQL Server pour la réplication, exécutez `sys.sp_MSrepl_createdatatypemappings` sur toutes les instances participant à la réplication.
+1. Configurez l'instance SQL Server pour la réplication. Afin de configurer l'instance SQL Server pour la réplication, exécutez `sys.sp_MSrepl_createdatatypemappings` sur toutes les instances participant à la réplication.
 
   ```sql
   USE msdb
@@ -53,9 +53,9 @@ Avant de configurer des éditeurs, distributeurs et abonnés, vous devez effectu
   GO
   ```
 
-1. Créer un dossier d’instantanés. Les agents SQL Server nécessitent un dossier d’instantanés en lecture/écriture à. Créer le dossier d’instantanés sur le serveur de distribution.
+1. Créez un dossier d’instantanés. Les agents SQL Server nécessitent un dossier d'instantanés pour la lecture et l’écriture. Créez le dossier d’instantanés sur le distributeur.
 
-  Pour créer le dossier d’instantanés et accorder l’accès à `mssql` utilisateur, exécutez la commande suivante :
+  Pour créer le dossier d’instantanés et accorder l'accès à l’utilisateur `mssql`, exécutez la commande suivante :
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -63,35 +63,35 @@ Avant de configurer des éditeurs, distributeurs et abonnés, vous devez effectu
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>Configurer et surveiller la réplication SQL Server Management Studio (SSMS)
+## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>Configurer et surveiller la réplication avec SQL Server Management Studio (SSMS)
 
 ### <a name="configure-the-distributor"></a>Configurer le serveur de distribution
   
-Pour configurer le serveur de distribution : 
+Pour configurer le distributeur : 
 
-1. Dans SSMS, connectez-vous à votre instance de SQL Server dans l’Explorateur d’objets.
+1. Sur SSMS, connectez-vous à votre instance SQL Server dans l’Explorateur d'objets.
 
-1. Avec le bouton droit **réplication**, puis cliquez sur **configurer la Distribution...** .
+1. Cliquez avec le bouton droit sur **Réplication**, puis sélectionnez **Configurer la distribution**.
 
-1. Suivez les instructions la **Assistant Configuration de Distribution**.
+1. Suivez les instructions de l'**Assistant Configuration de la distribution**.
 
-### <a name="create-publication-and-articles"></a>Créer des publications et articles
+### <a name="create-publication-and-articles"></a>Créer une publication et des articles
 
-Pour créer une publication et les articles :
+Pour créer une publication et des articles :
 
-1. Dans l’Explorateur d’objets, cliquez sur **réplication** > **Publications locales**> **nouvelle Publication...** .
+1. Dans l'Explorateur d'objets, cliquez sur **Réplication** > **Publications locales**> **Nouvelle publication...** .
 
-1. Suivez les instructions la **Assistant Nouvelle Publication** pour configurer le type de réplication et les articles qui appartiennent à la publication.
+1. Suivez les instructions de l’**Assistant Nouvelle publication** pour configurer le type de réplication et les articles qui appartiennent à la publication.
 
-### <a name="configure-the-subscription"></a>Configurer l’abonnement
+### <a name="configure-the-subscription"></a>Configurer l'abonnement
 
-Pour configurer l’abonnement dans l’Explorateur d’objets, cliquez sur **réplication** > **abonnements locaux**> **nouveaux abonnements...** .
+Pour configurer l'abonnement dans l'Explorateur d'objets, cliquez sur **Réplication** > **Abonnements locaux**> **Nouveaux abonnements...** .
 
 ### <a name="monitor-replication-jobs"></a>Surveiller les travaux de réplication
 
-Moniteur de réplication permet de surveiller les travaux de réplication.
+Utilisez le moniteur de réplication pour surveiller les travaux de réplication.
 
-Dans l’Explorateur d’objets, cliquez sur **réplication**, puis cliquez sur **lancer le moniteur de réplication**.
+Dans l’Explorateur d'objets, cliquez avec le bouton droit sur **Réplication**, puis sélectionnez **Lancer le moniteur de réplication**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

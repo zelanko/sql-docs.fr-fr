@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065719"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495463"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL)
 
@@ -769,7 +769,10 @@ Le nettoyage basé sur la taille n’est pas activé automatiquement.
 SIZE_BASED_CLEANUP_MODE est de type **nvarchar**.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-Désigne le mode de capture de requête actif actuellement.
+Désigne le mode de capture de requête actif actuellement. Chaque mode définit des stratégies de capture de requête spécifiques.
+
+> [!NOTE]
+> Les curseurs, les requêtes dans les procédures stockées et les requêtes compilées en mode natif sont toujours capturés lorsque le mode de capture de requête est défini sur All (Tous), Auto ou Custom (Personnalisé).
 
 ALL         
 Capture toutes les requêtes. ALL est la valeur de configuration par défaut. Il s’agit de la valeur de configuration par défaut à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
@@ -1232,7 +1235,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>B. Paramétrage de la base de données avec READ_ONLY
+### <a name="b-setting-the-database-to-read_only"></a>B. Paramétrage de la base de données avec READ_ONLY
 
 Pour modifier l'état d'une base de données ou d'un groupe de fichiers en spécifiant READ_ONLY ou READ_WRITE, vous avez besoin d'un accès exclusif à la base de données. L'exemple ci-dessous illustre le basculement de la base de données en mode `SINGLE_USER` pour obtenir l'accès exclusif. L'exemple affecte ensuite à la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] l'état `READ_ONLY` et rend à tous les utilisateurs l'accès à la base de données.
 
@@ -2083,7 +2086,7 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Paramétrage de la base de données avec READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Paramétrage de la base de données avec READ_ONLY
 Pour modifier l'état d'une base de données ou d'un groupe de fichiers en spécifiant READ_ONLY ou READ_WRITE, vous avez besoin d'un accès exclusif à la base de données. L’exemple suivant illustre le basculement de la base de données en mode `RESTRICTED_USER` pour limiter l’accès. L'exemple affecte ensuite à la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] l'état `READ_ONLY` et rend à tous les utilisateurs l'accès à la base de données.
 
 ```sql
@@ -2789,7 +2792,7 @@ Vous pouvez modifier les valeurs par défaut de l’une des options de base de d
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Paramétrage de la base de données avec READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Paramétrage de la base de données avec READ_ONLY
 Pour modifier l'état d'une base de données ou d'un groupe de fichiers en spécifiant READ_ONLY ou READ_WRITE, vous avez besoin d'un accès exclusif à la base de données. L’exemple suivant illustre le basculement de la base de données en mode `RESTRICTED_USER` pour d’accès restreint. L'exemple affecte ensuite à la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] l'état `READ_ONLY` et rend à tous les utilisateurs l'accès à la base de données.
 
 ```sql

@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble de XEvents - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,29 +10,33 @@ ms.topic: overview
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
+- XEvents
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abdb5eae1bb24bcedd2095a607895ffa671b7d53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021845"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941138"
 ---
 # <a name="extended-events-overview"></a>Vue d’ensemble des événements étendus
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Les événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bénéficient d'une architecture extrêmement évolutive et configurable qui permet aux utilisateurs de recueillir le maximum ou le minimum d'informations nécessaires pour le dépannage ou l'identification d'un problème de performance.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’architecture des événements étendus permet aux utilisateurs de collecter autant de données que nécessaire pour dépanner ou identifier un problème de performances. Les événements étendus sont configurables et se mettent à l’échelle facilement.
 
 Pour plus d’informations sur les événements étendus, consultez [Démarrage rapide : Événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Avantages des événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Les événements étendus sont un système léger d'analyse des performances qui utilise très peu de ressources de performances. Les événements étendus fournissent deux interfaces utilisateur graphiques (**Assistant Nouvelle session** et **Nouvelle session**) permettant de créer, modifier, afficher et analyser vos données de session.  
-  
+
+Les événements étendus sont un système léger d’analyse des performances qui utilise très peu de ressources de performances. Les événements étendus fournissent deux interfaces utilisateur graphiques permettant de créer, de modifier, d’afficher et d’analyser vos données de session. Ces interfaces sont nommées comme suit :
+
+- Assistant Nouvelle session
+- Nouvelle session
+
 ## <a name="extended-events-concepts"></a>Concepts liés aux événements étendus  
  Les événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’appuient sur des concepts existants, tels qu’un événement ou un consommateur d’événements, utilisent les concepts provenant du suivi d’événements pour Windows et introduisent de nouveaux concepts.  
   
@@ -40,16 +44,18 @@ Pour plus d’informations sur les événements étendus, consultez [Démarrage 
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Packages d’événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Décrit les packages des Événements étendus qui contiennent les objets utilisés pour obtenir et traiter les données au cours d'une session Événements étendus.|  
-|[Cibles des événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Décrit les consommateurs d'événements qui peuvent recevoir des données au cours d'une session d'événements.|  
+|[Packages d’événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Décrit les packages Événements étendus qui contiennent des objets. Ces objets sont utilisés pour obtenir et traiter les données lorsqu’une session d’événements étendus est en cours d’exécution.|  
+|[Cibles des Événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Décrit les consommateurs d'événements qui peuvent recevoir des données au cours d'une session d'événements.|  
 |[Moteur des événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Décrit le moteur qui implémente et gère une session Événements étendus.|  
 |[Sessions d’événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Décrit la session d'événements étendus.|  
+| &nbsp; | &nbsp; |
   
 ## <a name="extended-events-architecture"></a>Architecture des événements étendus  
- Les événements étendus représentent un système de gestion d'événements général pour les systèmes serveur. L'infrastructure des événements étendus prend en charge la corrélation de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et, sous certaines conditions, la corrélation de données provenant du système d'exploitation et d'applications de base de données. Dans ce dernier cas, la sortie des Événements étendus doit être dirigée vers le Suivi d'événements pour Windows (ETW) afin de mettre en corrélation les données d'événement avec les données d'événement du système d'exploitation ou des applications.  
-  
- Toutes les applications ont des points d'exécution qui sont utiles aussi bien à l'intérieur qu'à l'extérieur d'une application. Au sein de l'application, le traitement asynchrone peut être mis en attente à l'aide d'informations collectées au cours de l'exécution initiale d'une tâche. En dehors de l'application, les points d'exécution fournissent des utilitaires d'analyse avec des informations sur les caractéristiques comportementales et de performances de l'application analysée.  
-  
+
+Les événements étendus représentent un système de gestion d’événements général pour les systèmes serveur. L'infrastructure des événements étendus prend en charge la corrélation de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et, sous certaines conditions, la corrélation de données provenant du système d'exploitation et d'applications de base de données. Dans le cas de données provenant du système d’exploitation, la sortie des Événements étendus doit être dirigée vers le Suivi d’événements pour Windows (ETW), afin de mettre en corrélation les données d’événement avec les données d’événement du système d’exploitation ou des applications.  
+
+Toutes les applications ont des points d'exécution qui sont utiles aussi bien à l'intérieur qu'à l'extérieur d'une application. Au sein de l'application, le traitement asynchrone peut être mis en attente à l'aide d'informations collectées au cours de l'exécution initiale d'une tâche. En dehors de l’application, les points d’exécution fournissent des utilitaires d’analyse avec des informations sur les caractéristiques comportementales et de performances de l’application analysée.  
+
  Les événements étendus prennent en charge l'utilisation de données d'événement à l'extérieur d'un processus. Ces données sont utilisées en général par :  
   
 -   des outils de suivi, tels que Trace SQL et le Moniteur système ;  
@@ -60,13 +66,13 @@ Pour plus d’informations sur les événements étendus, consultez [Démarrage 
   
  Les événements étendus présentent les aspects de conception clés suivants :  
   
--   Le moteur d'événements étendus est agnostique en termes d'événements, ce qui permet au moteur de lier tout événement à toute cible, car le moteur n'est pas contraint par le contenu des événements. Pour plus d'informations sur le moteur d'événements étendus, consultez [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
+-   Le moteur d'événements étendus est agnostique en termes d'événements, Cela permet au moteur de lier tout événement à toute cible, car le moteur n’est pas contraint par le contenu des événements. Pour plus d'informations sur le moteur d'événements étendus, consultez [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
 -   Les événements sont séparés des consommateurs d'événements, appelés *cibles* dans les événements étendus. Cela signifie que toute cible peut recevoir tout événement. De plus, tout événement déclenché peut être automatiquement consommé par la cible, qui peut enregistrer dans le journal ou fournir un contexte d'événement supplémentaire. Pour plus d'informations, consultez [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 -   Les événements sont distincts de l'action à entreprendre lorsqu'un événement se produit. Par conséquent, toute action peut être associée à tout événement.  
   
--   Les prédicats peuvent filtrer dynamiquement lorsque les données d'événement doivent être capturées. Cela s'ajoute à la flexibilité de l'infrastructure des événements étendus. Pour plus d'informations, consultez [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
+-   Les prédicats peuvent filtrer dynamiquement lorsque les données d'événement doivent être capturées. Le filtrage dynamique s’ajoute à la flexibilité de l’infrastructure Événements étendus. Pour plus d'informations, consultez [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
  Les événements étendus peuvent générer de façon synchrone des données d'événement (et traiter de façon asynchrone ces données), ce qui fournit une solution flexible de gestion des événements. De plus, les événements étendus fournissent les fonctionnalités suivantes :  
   
@@ -100,18 +106,23 @@ En utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCL
 |Explique comment déterminer quelles requêtes détiennent le verrou, le plan de la requête et la pile [!INCLUDE[tsql](../../includes/tsql-md.md)] au moment où le verrou a été mis.|[Déterminer quelles requêtes détiennent des verrous](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Explique comment identifier la source des verrous qui gênent les performances de la base de données.|[Trouver les objets comportant le plus de verrous](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Explique comment utiliser les événements étendus avec le suivi d'événements pour Windows pour surveiller l'activité système.|[Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-| Utilisation des affichages catalogue et des vues de gestion dynamique pour les événements étendus | [Utilisation de SELECT et JOIN dans les vues système pour les événements étendus dans SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+|Utilisation des affichages catalogue et des vues de gestion dynamique pour les événements étendus | [Utilisation de SELECT et JOIN dans les vues système pour les événements étendus dans SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+| &nbsp; | &nbsp; |
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Les exemples de code peuvent être différents pour Azure SQL Database
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="see-also"></a>Voir aussi  
- [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Prise en charge DAC pour les objets et versions SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
- [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [Analyser les applications de la couche Données](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
- [Vues de gestion dynamique des Événements étendus](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Affichages catalogue des événements étendus &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite : bibliothèque multiplateforme pour lire des événements XEvent à partir de fichiers XEL ou de flux SQL dynamiques](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), publiée en mai 2019.   
- [Applet de commande PowerShell Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), publiée en juin 2019.
+## <a name="see-also"></a>Voir aussi
+
+[Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+[Prise en charge DAC pour les objets et versions SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+[Analyser les applications de la couche Données](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
+&nbsp;  
+[Vues de gestion dynamique des Événements étendus](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
+[Affichages catalogue des événements étendus (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+&nbsp;  
+[XELite : bibliothèque multiplateforme pour lire des événements XEvent à partir de fichiers XEL ou de flux SQL dynamiques](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), publiée en mai 2019.  
+[Applet de commande PowerShell Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), publiée en juin 2019.  
+[Les mystères du SQL : Suivi de causalité et séquence d’événements pour les sessions XEvent (article de blog publié le 1er avril 2019)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)  

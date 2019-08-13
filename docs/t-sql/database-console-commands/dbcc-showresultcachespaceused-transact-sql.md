@@ -9,15 +9,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 59946e45bbb14fb68e2fc28bcc81c2cf2d534758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930644"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476305"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -33,7 +33,6 @@ Affiche la mise en cache du jeu de résultats utilisée par l’espace de stocka
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-
 ## <a name="remarks"></a>Notes
 
 La commande `DBCC SHOWRESULTCACHESPACEUSED` n’accepte aucun paramètre et retourne l’espace utilisé par la base de données à l’endroit où la commande est exécutée.
@@ -49,6 +48,16 @@ Les utilisateurs peuvent vider manuellement le cache du jeu de résultats pour u
 
 Requiert l'autorisation VIEW SERVER STATE.
   
+## <a name="result-sets"></a>Jeux de résultats  
+  
+|colonne|Type de données|Description|  
+|------------|---------------|-----------------|  
+|reserved_space|BIGINT|Espace total utilisé pour la base de données, en Ko. Ce nombre est modifié à mesure que le jeu de résultats mis en cache augmente.|  
+|data_space|BIGINT|Espace utilisé pour les données, en Ko.|  
+|index_space|BIGINT|Espace utilisé pour les index, en Ko.|  
+|unused_space|BIGINT|Espace qui fait partie de l’espace réservé et non utilisé, en Ko.|  
+
+
 ## <a name="see-also"></a>Voir aussi
 
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
