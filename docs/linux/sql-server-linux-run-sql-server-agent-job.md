@@ -1,6 +1,6 @@
 ---
-title: Créer et exécuter des travaux pour SQL Server sur Linux
-description: Ce didacticiel montre comment exécuter un travail de l’Agent SQL Server sur Linux.
+title: Créer et exécuter des tâches pour SQL Server sur Linux
+description: Ce didacticiel indique comment exécuter une tâche SQL Server Agent sur Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -9,43 +9,43 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065151"
 ---
-# <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Créer et exécuter des travaux de SQL Server Agent sur Linux
+# <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Créer et exécuter des tâches SQL Server Agent sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Les travaux de SQL Server sont utilisés pour exécuter régulièrement la même séquence de commandes dans votre base de données SQL Server. Ce didacticiel fournit un exemple montrant comment créer un travail de l’Agent SQL Server sur Linux à l’aide de Transact-SQL et SQL Server Management Studio (SSMS).
+Les tâches SQL Server sont utilisées pour effectuer régulièrement la même séquence de commandes dans votre base de données SQL Server. Ce didacticiel fournit un exemple de création d’une tâche SQL Server Agent sur Linux à l’aide de Transact-SQL et SQL Server Management Studio (SSMS).
 
 > [!div class="checklist"]
-> * Installer l’Agent SQL Server sur Linux
-> * Créer une tâche pour effectuer des sauvegardes de base de données quotidienne
+> * Installer SQL Server Agent sur Linux
+> * Créer une nouvelle tâche pour effectuer des sauvegardes de données quotidiennes
 > * Planifier et exécuter la tâche
-> * Procéder de même dans SSMS (facultatif)
+> * Effectuer les mêmes étapes dans SSMS (facultatif)
 
-Pour les problèmes connus avec l’Agent SQL Server sur Linux, consultez le [Notes de publication](sql-server-linux-release-notes.md).
+Pour les problèmes connus avec SQL Server Agent sur Linux, consultez les [Notes de publication](sql-server-linux-release-notes.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Les conditions préalables suivantes sont nécessaires pour suivre ce didacticiel :
+Pour exécuter ce didacticiel, vous devez réunir les conditions préalables suivantes :
 
-* Ordinateur Linux avec les conditions préalables suivantes :
-  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), ou [Ubuntu](quickstart-install-connect-ubuntu.md)) avec les outils de ligne de commande.
+* Machine Linux avec les conditions préalables suivantes :
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md) ou [Ubuntu](quickstart-install-connect-ubuntu.md)) avec les outils de ligne de commande.
 
-Les conditions préalables suivantes sont facultatives :
+Les conditions préalables suivantes sont facultatives :
 
 * Machine Windows avec SSMS :
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) pour les étapes facultatives de SSMS.
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) pour les étapes SSMS facultatives.
 
-## <a name="enable-sql-server-agent"></a>Activer l’Agent SQL Server
+## <a name="enable-sql-server-agent"></a>Activer SQL Server Agent
 
-Pour utiliser l’Agent SQL Server sur Linux, vous devez d’abord activer l’Agent SQL Server sur un ordinateur équipé de SQL Server est installé.
+Pour utiliser SQL Server Agent sur Linux, vous devez avant tout activer SQL Server Agent sur une machine avec SQL Server déjà installé.
 
-1. Pour activer l’Agent SQL Server, procédez comme suit.
+1. Pour activer SQL Server Agent, procédez comme suit.
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   ```
@@ -56,34 +56,34 @@ Pour utiliser l’Agent SQL Server sur Linux, vous devez d’abord activer l’A
   ```
 
 > [!NOTE]
-> À compter de SQL Server 2017 CU4, l’Agent SQL Server est inclus avec le **mssql-server** empaqueter et est désactivée par défaut. Pour l’Agent configurée avant la visite de CU4, [installer l’Agent SQL Server sur Linux](sql-server-linux-setup-sql-agent.md).
+> En commençant par SQL Server 2017 CU4, SQL Server Agent est inclus avec le package **mssql-server** et est désactivé par défaut. Pour la configuration de l’Agent avant CU4, visitez [Installer SQL Server Agent sur Linux](sql-server-linux-setup-sql-agent.md).
 
 ## <a name="create-a-sample-database"></a>Créer un exemple de base de données
 
-Procédez comme suit pour créer une base de données exemple nommée **SampleDB**. Cette base de données est utilisée pour le travail de sauvegarde quotidienne.
+Suivez les étapes suivantes pour créer un exemple de base de données nommé **SampleDB**. Cette base de données est utilisée pour la tâche de sauvegarde quotidienne.
 
-1. Sur votre ordinateur Linux, ouvrez une session de terminal bash.
+1. Sur votre machine Linux, ouvrez une session du terminal Bash.
 
-1. Utilisez **sqlcmd** pour exécuter un Transact-SQL **CREATE DATABASE** commande.
+1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL **CREATE DATABASE**.
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'CREATE DATABASE SampleDB'
    ```
 
-1. Vérifiez que la base de données est créé en répertoriant les bases de données sur votre serveur.
+1. Vérifiez la création de la base de données en répertoriant les bases de données sur votre serveur.
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'SELECT Name FROM sys.Databases'
    ```
 
-## <a name="create-a-job-with-transact-sql"></a>Créer un travail avec Transact-SQL
+## <a name="create-a-job-with-transact-sql"></a>Créer une tâche avec Transact-SQL
 
-Les étapes suivantes créent un travail SQL Server Agent sur Linux avec les commandes Transact-SQL. Le travail s’exécute une sauvegarde quotidienne de la base de données exemple **SampleDB**.
+Les tâches suivantes permettent de créer une tâche SQL Server Agent sur Linux avec les commandes Transact-SQL. La tâche exécute une sauvegarde quotidienne de l’exemple de base de données **SampleDB**.
 
 > [!TIP]
-> Vous pouvez utiliser n’importe quel client T-SQL pour exécuter ces commandes. Par exemple, sur Linux, vous pouvez utiliser [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](sql-server-linux-develop-use-vscode.md). À partir d’un serveur à distance de Windows, vous pouvez également exécuter des requêtes dans SQL Server Management Studio (SSMS) ou utiliser l’interface utilisateur pour la gestion des travaux, qui est décrit dans la section suivante.
+> Vous pouvez utiliser tout client T-SQL pour exécuter ces commandes. Par exemple, sur Linux, vous pouvez utiliser [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](sql-server-linux-develop-use-vscode.md). À partir de Windows Server distant, vous pouvez également exécuter des requêtes dans SQL Server Management Studio (SSMS) ou utiliser l’interface IU pour la gestion des tâches, décrite dans la section suivante.
 
-1. Utilisez [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) pour créer un travail nommé `Daily SampleDB Backup`.
+1. Utilisez [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) pour créer une tâche nommée `Daily SampleDB Backup`.
 
    ```sql
    -- Adds a new job executed by the SQLServerAgent service
@@ -95,7 +95,7 @@ Les étapes suivantes créent un travail SQL Server Agent sur Linux avec les com
    GO
    ```
 
-1. Appelez [sp_add_jobstep](../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) pour créer une étape de travail qui crée une sauvegarde de la base de données `SampleDB`.
+1. Appelez [sp_add_jobstep](../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) pour créer une étape de tâche qui crée une sauvegarde de la base de données`SampleDB`.
 
    ```sql
    -- Adds a step (operation) to the job
@@ -111,7 +111,7 @@ Les étapes suivantes créent un travail SQL Server Agent sur Linux avec les com
    GO
    ```
 
-1. Puis créez une planification quotidienne pour votre projet avec [sp_add_schedule](../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md).
+1. Créez ensuite une planification quotidienne pour votre tâche avec [sp_add_schedule](../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md).
 
    ```sql
    -- Creates a schedule called 'Daily'
@@ -124,7 +124,7 @@ Les étapes suivantes créent un travail SQL Server Agent sur Linux avec les com
    GO
    ```
 
-1. Attacher la planification du travail au travail avec [sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
+1. Joignez la planification des tâches à la tâche avec [sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
 
    ```sql
    -- Sets the 'Daily' schedule to the 'Daily SampleDB Backup' Job
@@ -134,7 +134,7 @@ Les étapes suivantes créent un travail SQL Server Agent sur Linux avec les com
    GO
    ```
 
-1. Utilisez [sp_add_jobserver](../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) pour affecter le travail à un serveur cible. Dans cet exemple, la cible est le serveur local.
+1. Utilisez [sp_add_jobserver](../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) pour attribuer la tâche à un serveur cible. Dans cet exemple, la cible est le serveur local.
 
    ```sql
    EXEC dbo.sp_add_jobserver
@@ -142,62 +142,62 @@ Les étapes suivantes créent un travail SQL Server Agent sur Linux avec les com
       @server_name = N'(LOCAL)';
    GO
    ```
-1. Démarrez le travail avec [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).
+1. Démarrez la tâche par [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).
 
    ```sql
    EXEC dbo.sp_start_job N' Daily SampleDB Backup' ;
    GO
    ```
 
-## <a name="create-a-job-with-ssms"></a>Créer un travail avec SSMS
+## <a name="create-a-job-with-ssms"></a>Créer une tâche avec SSMS
 
-Vous pouvez également créer et gérer des travaux à distance à l’aide de SQL Server Management Studio (SSMS) sur Windows.
+Vous pouvez également créer et gérer des tâches à distance à l’aide de SQL Server Management Studio (SSMS) sur Windows.
 
-1. Démarrez SSMS sur Windows et connectez-vous à votre instance Linux SQL Server. Pour plus d’informations, consultez [gérer SQL Server sur Linux avec SSMS](sql-server-linux-manage-ssms.md).
+1. Démarrez SSMS sur Windows et connectez-vous à votre instance Linux. Pour plus d’informations, consultez [Gérer SQL Server sur Linux avec SSMS](sql-server-linux-manage-ssms.md).
 
-1. Vérifiez que vous avez créé une base de données exemple nommé **SampleDB**.
+1. Vérifiez que vous avez bien créé un exemple de base de données nommé **SampleDB**.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
-1. Vérifiez que l’Agent SQL a été [installé](sql-server-linux-setup-sql-agent.md) et correctement configuré. Recherchez le signe plus en regard de l’Agent SQL Server dans l’Explorateur d’objets. Si l’Agent SQL Server n’est pas activée, essayez de redémarrer le **mssql-server** service sur Linux.
+1. Vérifiez que l'Agent SQL est [installé](sql-server-linux-setup-sql-agent.md) et configuré correctement. Recherchez le signe plus à côté de SQL Server Agent dans l’Explorateur d'objets. Si SQL Server Agent n’est pas activé, essayez de redémarrer le service **mssql-server** sur Linux.
 
-   ![Vérifiez que SQL Server Agent a été installé.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png)
+   ![Vérifier que SQL Server Agent est installé](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png)
 
-1. Créer un nouveau travail.
+1. Créez une nouvelle tâche.
 
    ![Créer une nouvelle tâche](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-2.png)
 
-1. Donnez un nom à votre travail et créer votre étape de travail.
+1. Donnez un nom à votre tâche et créez l’étape de votre tâche.
 
-   ![Créer une étape de travail](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-3.png)
+   ![Créer une étape de la tâche](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-3.png)
 
-1. Spécifiez le sous-système dans lequel vous souhaitez utiliser et l’action que doit effectuer l’étape de travail.
+1. Spécifiez quel sous-système et quelle étape de la tâche utiliser.
 
-   ![Sous-système de travail](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-4.png)
+   ![Sous-système de la tâche](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-4.png)
 
-   ![Action d’étape de travail](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-5.png)
+   ![Action de l’étape de la tâche](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-5.png)
 
-1. Créer une nouvelle planification du travail.
+1. Créez une nouvelle planification de tâches.
 
    ![Planification du travail](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
    ![Planification du travail](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
-1. Démarrez votre travail.
+1. Démarrez votre tâche.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Next Steps
 
-Dans ce didacticiel, vous avez appris à :
+Dans ce didacticiel, vous avez appris à :
 
 > [!div class="checklist"]
-> * Installer l’Agent SQL Server sur Linux
-> * Utilisation de Transact-SQL et de procédures stockées système pour créer des tâches
-> * Créer une tâche qui effectue des sauvegardes de base de données quotidiennes
-> * Utiliser l'interface SSMS pour créer et gérer des tâches
+> * installer SQL Server Agent sur Linux
+> * utiliser Transact-SQL et les procédures stockées système pour créer des tâches
+> * créer une tâche qui exécute des sauvegardes de données quotidiennes
+> * utiliser l’IU SSMS pour créer et gérer des tâches
 
-Ensuite, explorez les autres fonctionnalités pour créer et gérer des travaux :
+Par la suite, explorez d’autres fonctionnalités pour créer et gérer des tâches :
 
 > [!div class="nextstepaction"]
->[Documentation de SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[Documentation SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)

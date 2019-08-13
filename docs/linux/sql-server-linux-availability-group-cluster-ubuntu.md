@@ -1,5 +1,5 @@
 ---
-title: Configurer le Cluster Ubuntu pour le groupe de disponibilité de SQL Server
+title: Configurer un cluster Ubuntu pour le groupe de disponibilité SQL Server
 titleSuffix: SQL Server
 description: En savoir plus sur la création de clusters de groupe de disponibilité pour Ubuntu
 author: MikeRayMSFT
@@ -11,45 +11,45 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027313"
 ---
-# <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer le Cluster d’Ubuntu et les ressources du groupe de disponibilité
+# <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer un cluster Ubuntu et la ressource du groupe de disponibilité
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce document explique comment créer un cluster à trois nœuds sur Ubuntu et ajouter un groupe de disponibilité créé précédemment en tant que ressource dans le cluster. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md).
+Ce document explique comment créer un cluster à trois nœuds sur Ubuntu et ajouter un groupe de disponibilité précédemment créé en tant que ressource dans le cluster. Pour une haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, consultez [Haute disponibilité et protection des données pour les configurations de groupes de disponibilité](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> À ce stade, l’intégration de SQL Server avec Pacemaker sur Linux n’est pas aussi couplée comme avec WSFC sous Windows. Dans SQL, il n’est aucune connaissance de la présence du cluster, tous les l’orchestration est en dehors de, et le service est contrôlé en tant qu’une instance autonome par Pacemaker. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même façon dans Pacemaker. Toujours sur des vues de gestion dynamique qui interrogent des informations de cluster retournent des lignes vides. Vous pouvez toujours créer un écouteur pour l’utiliser pour une reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource d’adresse IP virtuelle (comme expliqué dans les sections suivantes).
+> À ce stade, l’intégration de SQL Server avec Pacemaker sur Linux n’est pas aussi couplée qu’avec WSFC sur Windows. À partir de SQL, il n’y a aucune connaissance de la présence du cluster, l’ensemble de l’orchestration est en extérieur-intérieur et le service est contrôlé comme une instance autonome par Pacemaker. En outre, le nom du réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent dans le cas de Pacemaker. Les vues de gestion dynamique Always On qui interrogent les informations du cluster renvoient des lignes vides. Vous pouvez toujours créer un écouteur et l’utiliser pour une reconnexion transparente après le basculement, mais vous devrez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué dans les sections suivantes).
 
-Les sections suivantes guident à travers les étapes pour configurer une solution de cluster de basculement. 
+Les sections suivantes décrivent les étapes de configuration d’une solution de cluster de basculement. 
 
 ## <a name="roadmap"></a>Feuille de route
 
-Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour la haute disponibilité sont différentes de la procédure sur un cluster de basculement Windows Server. La liste suivante décrit les étapes principales : 
+Les étapes de création d’un groupe de disponibilité sur des serveurs Linux pour la haute disponibilité diffèrent de celles d’un cluster de basculement Windows Server. La liste suivante décrit les différentes étapes de haut niveau : 
 
-1. [Configurer SQL Server sur les nœuds de cluster](sql-server-linux-setup.md).
+1. [Configurez SQL Server sur les nœuds du cluster](sql-server-linux-setup.md).
 
-2. [Créer le groupe de disponibilité](sql-server-linux-availability-group-configure-ha.md). 
+2. [Créez le groupe de disponibilité](sql-server-linux-availability-group-configure-ha.md). 
 
-3. Configurer un gestionnaire de ressources de cluster, tels que Pacemaker. Ces instructions sont fournies dans ce document.
+3. Configurez un gestionnaire de ressources de cluster, comme Pacemaker. Ces instructions se trouvent dans ce document.
    
-   La façon de configurer un gestionnaire de ressources de cluster dépend de la distribution de Linux spécifique. 
+   La façon de configurer un gestionnaire de ressources de cluster dépend de la distribution Linux spécifique. 
 
    >[!IMPORTANT]
-   >Les environnements de production nécessitent un agent de délimitation, tels que STONITH pour la haute disponibilité. Démonstrations de cette documentation n’utilisent pas les agents de délimitation. Les démonstrations sont pour le test et validation uniquement. 
+   >Les environnements de production nécessitent un agent d’isolation, comme STONITH pour la haute disponibilité. Les démonstrations de cette documentation n’utilisent pas les agents d’isolation. Elles sont destinées uniquement à des fins de test et de validation. 
    
-   >Un cluster Linux utilise délimitation pour retourner le cluster à un état connu. La façon de configurer la délimitation dépend de la distribution et l’environnement. À ce stade, la délimitation n’est pas disponible dans certains environnements de cloud. Consultez [des stratégies de prise en charge pour RHEL haute disponibilité des Clusters - plateformes de virtualisation](https://access.redhat.com/articles/29440) pour plus d’informations.
+   >Un cluster Linux utilise l’isolation pour ramener le cluster à un état connu. La façon de configurer l’isolation dépend de la distribution et de l’environnement. À ce stade, l’isolation n’est pas disponible dans certains environnements cloud. Pour plus d’informations, consultez [Stratégies de support pour les clusters à haute disponibilité RHEL - Plateformes de virtualisation](https://access.redhat.com/articles/29440).
 
-5.  [Ajouter le groupe de disponibilité en tant que ressource dans le cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
+5.  [Ajoutez le groupe de disponibilité en tant que ressource dans le cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installer et configurer Pacemaker sur chaque nœud de cluster
 
-1. Sur tous les nœuds, ouvrez les ports du pare-feu. Ouvrez le port pour le service à haute disponibilité Pacemaker, instance de SQL Server et le point de terminaison de groupe de disponibilité. Le port TCP par défaut pour le serveur exécutant SQL Server est 1433.  
+1. Sur tous les nœuds, ouvrez les ports du pare-feu. Ouvrez le port pour le service de haute disponibilité de Pacemaker, l’instance et le point de terminaison du groupe de disponibilité. Le port TCP par défaut pour le serveur exécutant SQL Server est 1433.  
 
    ```bash
    sudo ufw allow 2224/tcp
@@ -63,13 +63,13 @@ Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour 
    sudo ufw reload
    ```
    
-   Vous pouvez également désactiver le pare-feu :
+   Vous pouvez également désactiver simplement le pare-feu :
         
    ```bash
    sudo ufw disable
    ```
 
-1. Installez les packages Pacemaker. Sur tous les nœuds, exécutez les commandes suivantes :
+1. Installez les packages Pacemaker. Exécutez les commandes suivantes sur tous les nœuds :
 
    ```bash
    sudo apt-get install pacemaker pcs fence-agents resource-agents
@@ -81,9 +81,9 @@ Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour 
    sudo passwd hacluster
    ```
 
-## <a name="enable-and-start-pcsd-service-and-pacemaker"></a>Activer et démarrer le service de pcsd et Pacemaker
+## <a name="enable-and-start-pcsd-service-and-pacemaker"></a>Activer et démarrer le service pcsd et Pacemaker
 
-La commande suivante active et démarre pacemaker et pcsd service. Exécuter tous les nœuds. Ainsi, les nœuds de rejoindre le cluster après le redémarrage. 
+La commande suivante active et démarre le service pcsd et Pacemaker. Exécutez sur tous les nœuds. Cela permet aux nœuds de rejoindre le cluster après le redémarrage. 
 
 ```bash
 sudo systemctl enable pcsd
@@ -91,35 +91,35 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->Commande d’activation du pacemaker peut se terminer avec l’erreur « pacemaker de démarrage par défaut ne contient aucun runlevels, abandon ». Il s’agit sans incidence, configuration de cluster puisse continuer. 
+>L’activation de la commande Pacemaker peut se terminer avec l’erreur « le démarrage par défaut Pacemaker ne contient aucun niveaux d’exécution, abandon. » Cela est sans conséquence, la configuration du cluster peut continuer. 
 
-## <a name="create-the-cluster"></a>Créer le Cluster
+## <a name="create-the-cluster"></a>Créer le cluster
 
-1. Supprimer toute configuration de cluster existant à partir de tous les nœuds. 
+1. Supprimez toutes les configurations de cluster existantes de tous les nœuds. 
 
-   En cours d’exécution « sudo apt-get install PC » installe des PC, corosync et pacemaker en même temps et commence à s’exécuter toutes les 3 des services.  Démarrage de corosync génère un modèle de ' / etc/cluster/corosync.conf' fichier.  Pour que les étapes suivantes à réussir ce fichier ne doit pas exister - la solution de contournement consiste donc à arrêter pacemaker / corosync et supprimer ' / etc/cluster/corosync.conf', et ensuite les étapes suivantes terminer avec succès. « pcs cluster destroy » fait la même chose, et vous pouvez l’utiliser comme une étape d’installation initiale du cluster.
+   L’exécution « sudo apt-get install pcs » installe Pacemaker, Corosync et les PC en même temps et commence à exécuter les 3 services.  Le démarrage de Corosync génère un fichier de modèle « /etc/cluster/corosync.conf ».  Pour que les étapes suivantes aboutissent, ce fichier ne doit pas exister. Par conséquent, la solution de contournement consiste à arrêter Pacemaker/Corosync et à supprimer « /etc/cluster/corosync.conf », puis les étapes suivantes se terminent avec succès. « pcs cluster destroy » fait la même chose et vous pouvez l’utiliser en tant qu’étape de configuration initiale du cluster en une fois.
    
-   La commande suivante supprime les fichiers de configuration de cluster existants et arrête tous les services de cluster. Cela détruit définitivement le cluster. Exécutez-le en tant que première étape dans un environnement de préproduction. Notez que « pcs cluster destroy » désactivé le service pacemaker et doit être réactivé. Exécutez la commande suivante sur tous les nœuds.
+   La commande suivante supprime tous les fichiers de configuration de cluster existants et arrête tous les services de cluster. Cela détruit définitivement le cluster. Exécutez-la en tant que première étape dans un environnement de pré-production. Notez que « pcs cluster destroy » a désactivé le service Pacemaker et doit être réactivé. Exécutez la commande suivante sur tous les nœuds.
    
    >[!WARNING]
-   >La commande détruit les ressources de cluster existant.
+   >La commande détruit toutes les ressources de cluster existantes.
 
    ```bash
    sudo pcs cluster destroy 
    sudo systemctl enable pacemaker
    ```
 
-1. Créer le cluster. 
+1. Créez le cluster. 
 
    >[!WARNING]
-   >En raison d’un problème connu que le fournisseur de clustering est examen, en commençant le cluster (« pcs cluster start') échoue avec l’erreur suivante. Il s’agit, car le fichier journal configuré dans /etc/corosync/corosync.conf qui est créé lorsque la commande d’installation de cluster est exécutée, est incorrect. Pour contourner ce problème, modifiez le fichier journal pour : /var/log/corosync/corosync.log. Sinon, vous pouvez créer le fichier /var/log/cluster/corosync.log.
+   >En raison d’un problème connu que le fournisseur de clusters examine, le démarrage du cluster (« pcs cluster destroy ») échoue avec l’erreur suivante. Cela est dû au fait que le fichier journal configuré dans /etc/corosync/corosync.conf, qui est créé lors de l’exécution de la commande de configuration du cluster, est incorrect. Pour contourner ce problème, remplacez le fichier journal par : /var/log/corosync/corosync.log. Vous pouvez également créer le fichier /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le script, remplacez les valeurs entre `< ... >`. Exécutez la commande suivante sur le nœud principal. 
+La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le script, remplacez les valeurs entre `< ... >`. Exécutez la commande suivante sur le réplica principal. 
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
@@ -132,45 +132,45 @@ La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le sc
    >Si vous avez configuré un cluster sur les mêmes nœuds, vous devez utiliser l’option « --force » pendant l’exécution de « pcs cluster setup ». Notez que cela revient à exécuter « pcs cluster destroy » et que le service Pacemaker doit être réactivé à l’aide de « sudo systemctl enable pacemaker ».
 
 
-## <a name="configure-fencing-stonith"></a>Configurer la délimitation (STONITH)
+## <a name="configure-fencing-stonith"></a>Configurer l’isolation (STONITH)
 
-Fournisseurs de cluster pacemaker nécessitent STONITH doit être activé et un appareil de délimitation configuré pour une configuration de cluster pris en charge. Lorsque le Gestionnaire de ressources de cluster ne peut pas déterminer l’état d’un nœud ou d’une ressource sur un nœud, la délimitation est utilisée pour mettre le cluster à un état connu à nouveau. Délimitation de niveau ressource garantit principalement qu’il n’existe aucune altération des données en cas de panne en configurant une ressource. Vous pouvez utiliser la délimitation au niveau de la ressource, par exemple, avec DRBD (Distributed répliquées bloc appareil) pour marquer le disque sur un nœud comme obsolètes lorsque la liaison de communication tombe en panne. Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas toutes les ressources. Cela est effectué en réinitialisant le nœud et l’implémentation de Pacemaker de celui-ci est appelée STONITH (ce qui signifie « dépanner l’autre nœud dans la tête »). Pacemaker prend en charge une grande variété d’appareils de délimitation, par exemple, une alimentation de secours ou la gestion cartes d’interface pour les serveurs. Pour plus d’informations, consultez [Clusters Pacemaker à partir de zéro](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) et [délimitation et Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
+Les fournisseurs de cluster Pacemaker nécessitent l’activation de STONITH et d’un appareil d’isolation configuré pour une configuration de cluster prise en charge. Lorsque le gestionnaire des ressources de cluster ne peut pas déterminer l’état d’un nœud ou d’une ressource sur un nœud, l’isolation est utilisée pour ramener le cluster à un état connu. L’isolation au niveau des ressources garantit principalement qu’il n’y a pas d’altération des données pendant une interruption en configurant une ressource. Vous pouvez utiliser l’isolation au niveau des ressources, par exemple, avec DRBD (périphérique de bloc répliqué distribué) pour marquer le disque d’un nœud comme obsolète lorsque la liaison de communication tombe en panne. L’isolation au niveau du nœud garantit qu’un nœud n’exécute aucune ressource. Pour ce faire, réinitialisez le nœud et l’implémentation de son Pacemaker est appelée STONITH (qui signifie « prendre l’autre nœud dans la tête »). Pacemaker prend en charge un grand nombre de périphériques d’isolation, tels qu’une alimentation sans coupure ou des cartes d’interface de gestion pour des serveurs. Pour plus d’informations, consultez [Clusters Pacemaker à partir de zéro](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Isolation et stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
-Étant donné que le niveau de nœud clôtures configuration dépend largement de votre environnement, nous la désactivons pour ce didacticiel (il peut être configuré ultérieurement). Exécutez le script suivant sur le nœud principal : 
+Étant donné que la configuration d’isolation au niveau du nœud dépend fortement de votre environnement, nous la désactivons pour ce didacticiel (vous pouvez la configurer ultérieurement). Exécutez le script suivant sur le réplica principal : 
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->La désactivation de STONITH est uniquement pour des fins de test. Si vous envisagez d’utiliser Pacemaker dans un environnement de production, vous devez planifier une implémentation de STONITH en fonction de votre environnement et laissez cette option activée. Notez qu’à ce stade il n’existe aucun agent de délimitation pour les environnements de cloud (y compris Azure) ou l’Hyper-V. Par conséquent, le fournisseur de cluster n’offre pas de prise en charge pour les clusters de production en cours d’exécution dans ces environnements. 
+>La désactivation de STONITH est uniquement à des fins de test. Si vous envisagez d’utiliser Pacemaker dans un environnement de production, vous devez planifier une implémentation de STONITH en fonction de votre environnement et la garder activée. Notez qu’à ce stade, il n’existe aucun agent d’isolation pour les environnements cloud (y compris Azure) ou Hyper-V. En fait, le fournisseur de cluster n’offre pas de prise en charge pour l’exécution de clusters de production dans ces environnements. 
 
-## <a name="set-cluster-property-cluster-recheck-interval"></a>Définir la propriété cluster cluster-revérification-intervalle
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Définir l’intervalle de revérification du cluster de la propriété du cluster
 
-`cluster-recheck-interval` Indique l’intervalle d’interrogation à laquelle le cluster vérifie les modifications dans les paramètres de ressource, de contraintes ou d’autres options de cluster. Si un réplica tombe en panne, le cluster tente de redémarrer le réplica à un intervalle qui est lié par le `failure-timeout` valeur et le `cluster-recheck-interval` valeur. Par exemple, si `failure-timeout` est définie sur 60 secondes et `cluster-recheck-interval` est définie sur 120 secondes, le redémarrage est tenté à un intervalle est supérieur à 60 secondes et inférieure à 120 secondes. Nous vous recommandons de définir d’expiration de l’échec à 60 s et revérifie-cluster-intervalle à une valeur qui est supérieure à 60 secondes. Définissant l’intervalle de revérification de cluster sur une valeur faible n’est pas recommandée.
+`cluster-recheck-interval` indique l’intervalle d’interrogation selon lequel le cluster vérifie les modifications dans les paramètres de ressource, les contraintes ou d’autres options de cluster. Si un réplica tombe en panne, le cluster tente de redémarrer le réplica à un intervalle qui est lié par la valeur `failure-timeout` et la valeur `cluster-recheck-interval`. Par exemple, si `failure-timeout` a la valeur de 60 secondes et `cluster-recheck-interval` est défini sur 120 secondes, le redémarrage est tenté à un intervalle supérieur à 60 secondes, mais inférieur à 120 secondes. Nous vous recommandons de définir le délai d’expiration des défaillances sur 60s et l’intervalle de revérification du cluster sur une valeur supérieure à 60 secondes. Il n’est pas recommandé de définir l’option d’intervalle de revérification du cluster sur une valeur faible.
 
-Pour mettre à jour la valeur de propriété à `2 minutes` exécuter :
+Pour mettre à jour la valeur de la propriété sur une exécution de `2 minutes` :
 
 ```bash
 sudo pcs property set cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Si vous disposez déjà d’une ressource de groupe de disponibilité gérée par un cluster Pacemaker, notez que toutes les distributions qui utilisent le dernier package 1.1.18-11.el7 Pacemaker disponible introduisent un changement de comportement pour le cluster start-échec-est-irrécupérable paramètre lorsque son la valeur est false. Cette modification affecte le flux de travail de basculement. Si un réplica principal connaît une panne, le cluster est prévu pour basculer vers un des réplicas secondaires disponibles. Au lieu de cela, les utilisateurs constatent que le cluster continue d’essayer de démarrer le réplica principal a échoué. Si ce principal est jamais en ligne (en raison d’une panne permanente), le cluster bascule jamais vers un autre réplica secondaire disponible. Grâce à cette modification, une configuration précédemment recommandée pour définir le début-échec-est-irrécupérable n’est plus valide et que le paramètre doit être rétablie à sa valeur par défaut de `true`. En outre, la ressource de groupe de disponibilité doit être mis à jour pour inclure le `failover-timeout` propriété. 
+> Si vous disposez déjà d’une ressource de groupe de disponibilité gérée par un cluster Pacemaker, notez que toutes les distributions qui utilisent le dernier package Pacemaker 1.1.18-11.el7 introduisent une modification de comportement pour le paramètre du cluster défaillance du démarrage fatale lorsque sa valeur est false. Cette modification affecte le workflow de basculement. Si un réplica principal subit une interruption, le cluster est censé basculer vers l’un des réplicas secondaires disponibles. Au lieu de cela, les utilisateurs remarqueront que le cluster continue d’essayer de démarrer le réplica principal qui a échoué. Si ce principal ne passe jamais en ligne (en raison d’une interruption permanente), le cluster ne bascule jamais vers un autre réplica secondaire disponible. En raison de cette modification, une configuration précédemment recommandée pour définir Défaillance de démarrage fatale n’est plus valide et le paramètre doit être rétabli à sa valeur par défaut de `true`. En outre, la ressource du groupe de disponibilité doit être mise à jour pour inclure la propriété `failover-timeout`. 
 >
->Pour mettre à jour la valeur de propriété à `true` exécuter :
+>Pour mettre à jour la valeur de la propriété sur une exécution de `true` :
 >
 >```bash
 >sudo pcs property set start-failure-is-fatal=true
 >```
 >
->Mettre à jour de votre propriété de ressource de groupe de disponibilité existante `failure-timeout` à `60s` exécuter (remplacez `ag1` par le nom de votre ressource de groupe de disponibilité) :
+>Mettez à jour la propriété de ressource de votre groupe de disponibilité existant `failure-timeout` pour une exécution de `60s` (remplacez `ag1` par le nom de votre ressource de groupe de disponibilité) :
 >
 >```bash
 >pcs resource update ag1 meta failure-timeout=60s
 >```
 
-## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installer l’agent de ressources de SQL Server pour l’intégration à Pacemaker
+## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installer l’agent de ressource SQL Server pour l’intégration avec Pacemaker
 
 Exécutez les commandes suivantes sur tous les nœuds. 
 
@@ -184,7 +184,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>Créer une ressource de groupe de disponibilité
 
-Pour créer la ressource de groupe de disponibilité, utilisez `pcs resource create` commande et définissez les propriétés de ressource. Commande ci-dessous crée un `ocf:mssql:ag` maître/esclave des ressources de type pour le groupe de disponibilité avec le nom `ag1`. 
+Pour créer la ressource de groupe de disponibilité, utilisez la commande `pcs resource create` et définissez les propriétés de la ressource. La commande ci-dessous crée une ressource de type Master/esclave `ocf:mssql:ag` pour le groupe de disponibilité portant le nom `ag1`. 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
@@ -193,19 +193,19 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
-## <a name="create-virtual-ip-resource"></a>Créer la ressource d’adresse IP virtuelle
+## <a name="create-virtual-ip-resource"></a>Créer une ressource d’adresse IP virtuelle
 
-Pour créer la ressource d’adresse IP virtuelle, exécutez la commande suivante sur un nœud. Utiliser une adresse IP statique disponible à partir du réseau. Avant d’exécuter le script, remplacez les valeurs comprises entre `< ... >` avec une adresse IP valide.
+Pour créer la ressource d’adresse IP virtuelle, exécutez la commande suivante sur un nœud. Utilisez une adresse IP statique disponible à partir du réseau. Avant d’exécuter le script, remplacez les valeurs entre `< ... >` par une adresse IP virtuelle.
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
-Il n’existe aucun nom de serveur virtuel équivalent dans Pacemaker. Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, inscrire l’adresse de la ressource d’adresse IP et le nom du serveur virtuel souhaité dans DNS. Pour les configurations de récupération d’urgence, inscrivez le nom du serveur virtuel souhaité et l’adresse IP avec les serveurs DNS principal et le site de récupération d’urgence.
+Il n’y a aucun nom de serveur virtuel équivalent dans Pacemaker. Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et ne pas utiliser l’adresse IP, enregistrez l’adresse de ressource IP et le nom de serveur virtuel souhaité dans DNS. Pour les configurations de récupération d’urgence, enregistrez le nom de serveur virtuel et l’adresse IP souhaités auprès des serveurs DNS sur le site principal et le site de récupération d’urgence.
 
 ## <a name="add-colocation-constraint"></a>Ajouter une contrainte de colocalisation
 
-Presque chaque décision dans un cluster Pacemaker, comme choisir où une ressource doit s’exécuter, est effectuée en comparant les scores. Scores sont calculés par ressource, et le Gestionnaire de ressources de cluster choisit le nœud avec le score le plus élevé pour une ressource particulière. (Si un nœud a un score négatif pour une ressource, la ressource ne peut pas s’exécuter sur ce nœud.) Utilisez des contraintes pour configurer les décisions du cluster. Les contraintes ont un score. Si une contrainte a un score inférieur à l’infini, il est uniquement une recommandation. Un score d’infini signifie qu’il est obligatoire. Pour vous assurer que le réplica principal et la ressource d’adresse ip virtuelle sont sur le même hôte, définir une contrainte de colocalisation avec un score d’infini. Pour ajouter la contrainte de colocalisation, exécutez la commande suivante sur un nœud. 
+Presque toutes les décisions d’un cluster Pacemaker, comme le choix de l’emplacement dans lequel une ressource doit s’exécuter, s’effectuent en comparant les scores. Les scores sont calculés par ressource et le gestionnaire de ressources de cluster choisit le nœud avec le score le plus élevé pour une ressource particulière. (Si un nœud a un score négatif pour une ressource, la ressource ne peut pas être exécutée sur ce nœud.) Utilisez des contraintes pour configurer les décisions du cluster. Les contraintes ont un score. Si une contrainte a un score inférieur à INFINITY, il ne s’agit que d’une suggestion. Un score INFINITY signifie qu’il s’agit d’une obligation. Pour vous assurer que le réplica principal et la ressource d’adresse IP virtuelle sont exécutés sur le même hôte, définissez une contrainte de colocalisation avec un score INFINITY. Pour ajouter une contrainte de colocalisation, exécutez la commande suivante sur un nœud. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
@@ -213,19 +213,19 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 ## <a name="add-ordering-constraint"></a>Ajouter une contrainte de classement
 
-La contrainte de colocalisation a une contrainte de classement implicite. Il déplace la ressource d’adresse IP virtuelle avant de poursuivre la ressource de groupe de disponibilité. Par défaut, la séquence d’événements est :
+La contrainte de colocalisation a une contrainte de classement implicite. Elle déplace la ressource IP virtuelle avant de déplacer la ressource de groupe de disponibilité. La séquence des événements par défaut est la suivante :
 
-1. Problèmes des utilisateurs `pcs resource move` au groupe de disponibilité principal de Nœud1 vers Nœud2.
-1. La ressource d’adresse IP virtuelle s’arrête sur node1.
-1. La ressource d’adresse IP virtuelle démarre sur node2.
+1. L’utilisateur émet `pcs resource move` sur le groupe de disponibilité principal, de nœud1 à nœud2.
+1. La ressource d’adresse IP virtuelle s’arrête sur le nœud1.
+1. La ressource d’adresse IP virtuelle démarre sur le nœud2.
 
    >[!NOTE]
-   >À ce stade, l’adresse IP temporairement pointe vers node2 si node2 est toujours un basculement antérieur secondaire. 
+   >À ce stade, l’adresse IP pointe temporairement vers le nœud2, tandis que le nœud2 est toujours un secondaire de pré-basculement. 
    
-1. Le groupe de disponibilité principal sur node1 est rétrogradé vers le site secondaire.
-1. Le groupe de disponibilité secondaire sur node2 est promu vers le site principal. 
+1. Le groupe de disponibilité principal sur nœud1 est rétrogradé en secondaire.
+1. Le groupe de disponibilité secondaire sur nœud2 est promu en principal. 
 
-Pour empêcher l’adresse IP de temporairement pointant vers le nœud avec la base de données secondaire pre-basculement, ajoutez une contrainte de classement. 
+Pour empêcher l’adresse IP de pointer temporairement vers le nœud avec le secondaire antérieur au basculement, ajoutez une contrainte de classement. 
 
 Pour ajouter une contrainte de classement, exécutez la commande suivante sur un nœud :
 
@@ -234,11 +234,11 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
 
 >[!IMPORTANT]
->Après avoir configuré le cluster et ajouter le groupe de disponibilité en tant que ressource de cluster, vous ne pouvez pas utiliser Transact-SQL pour basculer les ressources de groupe de disponibilité. Ressources de cluster de SQL Server sur Linux sont couplés pas aussi étroitement avec le système d’exploitation tels qu’ils sont sur un Cluster de basculement du serveur Windows (WSFC). Service SQL Server n’est pas informé de la présence du cluster. Tous les orchestration s’effectue via les outils de gestion de cluster. Dans RHEL ou Ubuntu utiliser `pcs`. 
+>Après avoir configuré le cluster et ajouté le groupe de disponibilité en tant que ressource de cluster, vous ne pouvez pas utiliser Transact-SQL pour basculer les ressources du groupe de disponibilité. Les ressources de cluster SQL Server sur Linux ne sont pas couplées aussi étroitement au système d’exploitation, car elles se trouvent sur un cluster de basculement Windows Server (WSFC). Le service SQL Server n’est pas informé de la présence du cluster. Toutes les orchestrations sont effectuées via les outils d’administration de cluster. Dans RHEL ou Ubuntu, utilisez `pcs`. 
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Utiliser le groupe de disponibilité de haute disponibilité](sql-server-linux-availability-group-failover-ha.md)
+[Opérer le groupe de disponibilité de haute disponibilité](sql-server-linux-availability-group-failover-ha.md)
 

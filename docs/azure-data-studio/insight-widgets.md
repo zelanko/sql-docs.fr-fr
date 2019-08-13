@@ -1,7 +1,7 @@
 ---
-title: Utiliser des widgets d’analyse dans Studio de données Azure pour surveiller les serveurs et bases de données
+title: Utiliser les widgets d’insight dans Azure Data Studio pour surveiller les serveurs et les bases de données
 titleSuffix: Azure Data Studio
-description: En savoir plus sur les widgets d’analyse dans Azure Data Studio
+description: En savoir plus sur les widgets d’insight dans Azure Data Studio
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,48 +11,48 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959526"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gérer les serveurs et bases de données avec des widgets d’analyse dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gérer les serveurs et les bases de données avec les widgets d’insight dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Widgets d’analyse prennent les requêtes Transact-SQL (T-SQL) vous permet de surveiller les serveurs et bases de données et les transforme en visualisations pertinentes.
+Les widgets d’insight prennent les requêtes Transact-SQL (T-SQL) que vous utilisez pour analyser les serveurs et les bases de données et les transformer en visualisations informatives.
 
-Insights sont personnalisables des graphiques que vous ajoutez au serveur et base de données des tableaux de bord de surveillance. Afficher une vue d’ensemble de vos serveurs et les bases de données, puis d’Explorer plus en détail et de lancer des actions de gestion que vous définissez.
+Les insights sont des graphiques personnalisables que vous ajoutez aux tableaux de bord de surveillance des serveurs et des bases de données. Affichez un aperçu de vos serveurs et bases de données, puis explorez les détails et lancez les actions de gestion que vous définissez.
 
-Vous pouvez générer awesome serveur et base de données de gestion des tableaux de bord similaire à l’exemple suivant :
+Vous pouvez créer des tableaux de bord de gestion des serveurs et des bases de données, comme dans l’exemple suivant :
 
-![tableau de bord de base de données](media/insight-widgets/database-dashboard.png)
+![Tableau de bord de base de données](media/insight-widgets/database-dashboard.png)
 
 
-Pour lancer et commencer à créer différents types de widgets d’analyse, consultez les didacticiels suivants :
+Pour vous lancer et commencer à créer différents types d’aperçus, consultez les didacticiels suivants :
 
-- [Générer un widget d’analyse personnalisée](tutorial-build-custom-insight-sql-server.md)
-- *Activer les widgets d’analyse intégrées*
-  - [Activer la surveillance d’un aperçu des performances](tutorial-qds-sql-server.md)
-  - [Activer l’analyse de l’utilisation d’espace de table](tutorial-table-space-sql-server.md)
+- [Créer un widget insight personnalisé](tutorial-build-custom-insight-sql-server.md)
+- *Activer les widgets d’insight intégrés*
+  - [Activer l’analyse des performances](tutorial-qds-sql-server.md)
+  - [Activer l’analyse de l’utilisation de l’espace de table](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>Requêtes SQL
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] tente d’éviter d’introduire encore un autre utilisateur de langage ou lourde interface afin d’essayer d’utiliser autant que possible le T-SQL avec une configuration minimale JSON. Configuration des widgets d’analyse avec T-SQL s’appuie sur le nombre un nombre illimité de sources existantes de requêtes T-SQL utiles qui peuvent être activés dans les widgets pertinents.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] tente d’éviter d’introduire un autre langage ou une interface utilisateur lourde et tente donc d’utiliser le langage T-SQL le plus possible avec une configuration JSON minimale. La configuration des widgets d’insight avec T-SQL s’appuie sur les nombreuses sources existantes de requêtes T-SQL utiles qui peuvent être transformées en widgets d’insight.
 
-Widgets d’analyse sont composés d’un ou deux requêtes T-SQL :
-* *Requête de widget Insight* est obligatoire et est la requête qui retourne les données qui apparaissent dans le widget.
-* *Requête de détails Insight* est nécessaire uniquement si vous créez une page de détails de l’analyse.
+Les widgets d’insight sont composés d’une ou deux requêtes T-SQL :
+* *La requête du widget d’insight* est obligatoire et est la requête qui retourne les données qui s’affichent dans le widget.
+* *La requête de détails d’insight* est requise uniquement si vous créez une page de détails d’insight.
 
-Une requête de widget insight définit un jeu de données qui restitue un nombre, un graphique ou un graphique. Requête de détails Insight est utilisé pour répertorier les informations de détail d’insight pertinent dans un format tabulaire dans le volet de détails d’un aperçu. 
+Une requête de widget d’insight définit un jeu de données qui restitue un nombre ou un graphique. La requête de détails d’insight est utilisée pour répertorier les informations d’insight détaillées pertinentes dans un format tabulaire dans le panneau de détails de l’insight. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] exécute des requêtes de widget insight et mappe le jeu de résultats de requête au jeu de données d’un graphique, puis effectue le rendu. Quand les utilisateurs ouvrent les détails d’une information, il exécute la requête de détails insight et imprime le résultat dans une vue de grille dans la boîte de dialogue.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] exécute des requêtes de widget d’insight et mappe le jeu de résultats de la requête au jeu de données d’un graphique, puis le restitue. Quand les utilisateurs ouvrent les détails d’un aperçu, il exécute la requête de détails d’insight et affiche le résultat dans une vue de grille dans la boîte de dialogue.
 
-Le principe fondamental consiste à écrire une requête T-SQL de manière afin qu’il peut être utilisé comme un jeu de données d’un nombre, le graphique et le widget de graphique. 
+L’idée de base est d’écrire une requête T-SQL de manière à ce qu’elle puisse être utilisée en tant que jeu de données d’un widget de nombres ou de graphiques. 
 
 ## <a name="summary"></a>Résumé
 
-La requête T-SQL et son jeu de résultats déterminent le comportement de widget insight. Écriture d’une requête pour un type de graphique ou le mappage d’un type de graphique pour la requête existante est la principale considération pour générer un widget d’insight efficace.
+La requête T-SQL et son jeu de résultats déterminent le comportement du widget d’insight. L’écriture d’une requête pour un type de graphique ou le mappage d’un type de graphique approprié pour une requête existante est le point essentiel pour créer un widget d’insight efficace.
 
 
 

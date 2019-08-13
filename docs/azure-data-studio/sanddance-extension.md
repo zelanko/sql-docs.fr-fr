@@ -11,35 +11,35 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a96bde6a66642bf02cc076c3d4d4f3ac44e02a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959331"
 ---
-# <a name="sanddance-for-azure-data-studio-preview"></a>SandDance pour Azure Data Studio (version préliminaire)
-Azure Data Studio offre désormais un moyen de créer des visualisations rapides pour les fichiers .csv, .tsv que vous utilisez. Cela inclut les fichiers locaux ou des fichiers sur HDFS dans votre Cluster SQL Server 2019 Big Data. Cette extension est utile lorsque vous essayez d’avoir un rapide aperçu des données et de comprendre ce qui se passe. Nous utilisons une technologie appelée SandDance de Microsoft Research, ce qui peut générer des visualisations sur place des données.
+# <a name="sanddance-for-azure-data-studio-preview"></a>SandDance pour Azure Data Studio (préversion)
+Azure Data Studio offre désormais un moyen de créer des visualisations rapides pour les fichiers. csv et. tsv sur lesquels vous travaillez. Cela comprend les fichiers locaux ou les fichiers sur HDFS dans votre cluster Big Data SQL Server 2019. Cette extension est utile lorsque vous essayez d’examiner rapidement des données et de comprendre ce qui se passe. Nous utilisons une technologie appelée SandDance de Microsoft Research, qui peut générer des visualisations sur place des données.
 
-![animation de sanddance](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
+![sanddance-animation](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
 
-À l’aide de vues faciles à comprendre, vous permet de SandDance rechercher insights sur vos données, qui, dans l’aide de tour parler est pris en charge par les données, générer des cas basées sur la preuve, tester des hypothèses, aller plus loin dans l’aire de conception explications, prennent en charge des décisions d’achats, ou lier des données dans un contexte plus large, dans la réalité.
+Grâce à des vues faciles à comprendre, SandDance vous aide à trouver des informations sur vos données, qui à leur tour vous aideront à faire parler vos données, à créer des cas basés sur des preuves, à tester des idées, à approfondir les explications de surface, à prendre des décisions d’achat ou à lier les données dans un contexte de monde réel plus vaste.
 
-SandDance utilise des visualisations d’unité, qui s’appliquent un mappage entre les lignes dans votre base de données et les marques sur l’écran.
-Transitions animées sans heurts entre les vues vous aident à maintenir le contexte lorsque vous interagissez avec vos données.
+SandDance utilise des visualisations d’unité, qui appliquent un mappage un-à-un entre les lignes de votre base de données et les marques sur l’écran.
+Les transitions fluides animées entre les vues vous aident à maintenir le contexte lorsque vous interagissez avec vos données.
 
 ## <a name="usage"></a>Utilisation
 
-À partir du menu fichier, permet d’ouvrir le dossier ou [Ctrl + K, Ctrl + O] pour ouvrir le répertoire contenant le. Fichier CSV.  Ensuite, à partir de dans le volet Explorateur, avec le bouton droit sur le fichier .csv ou .tsv, choisissez *vue dans SandDance*.
+À partir du menu Fichier, utilisez Ouvrir dossier ou [Ctrl+K Ctrl+O] pour ouvrir le répertoire contenant le fichier .CSV.  Ensuite, à partir du volet de l’explorateur, cliquez avec le bouton droit sur le fichier .csv ou .tsv, puis choisissez *Afficher dans SandDance*.
 
-Avec le bouton droit sur un fichier .csv ou .tsv dans HDFS si vous êtes connecté à SQL Server 2019 Big Data Cluster et choisissez *vue dans SandDance*.
+Cliquez avec le bouton droit sur un fichier. csv ou .tsv dans HDFS si vous êtes connecté à un cluster Big Data SQL Server 2019, puis choisissez *Afficher dans SandDance*.
 
 ## <a name="known-issues"></a>Problèmes connus
 
-Actuellement, vos données doivent avoir la première colonne comme identificateur unique.
+Actuellement, vos données doivent avoir un identificateur unique dans la première colonne.
 
-Actuellement, nous ne pas limiter le nombre de lignes est affiché. Toutefois, la consommation de mémoire augmente proportionnellement au nombre de lignes, nous recommandons que le jeu de données ou la vue est limitée à environ 100 lignes de k.
+Actuellement, nous ne limitons pas le nombre de lignes visualisées. Toutefois, la consommation de mémoire augmente proportionnellement au nombre de lignes ; nous vous recommandons donc de limiter le jeu de données ou la vue à environ 100 000 lignes.
 
-Consultez [problèmes connus](https://microsoft.github.io/SandDance/#known-issues)
+Consulter les [problèmes connus](https://microsoft.github.io/SandDance/#known-issues)
 
 ## <a name="release-notes"></a>Notes de publication
 
@@ -47,5 +47,5 @@ Consultez [problèmes connus](https://microsoft.github.io/SandDance/#known-issue
 
 Version initiale d’azdata-sanddance
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Next Steps
 Pour en savoir plus, [visitez le référentiel GitHub.](https://github.com/Microsoft/SandDance)

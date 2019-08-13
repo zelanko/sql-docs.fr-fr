@@ -11,58 +11,58 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959704"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Créer et utiliser des extraits de code pour créer rapidement des scripts Transact-SQL (T-SQL) dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Extraits de code dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] sont des modèles qui facilitent le travail à créent des bases de données et des objets de base de données. 
+Les extraits de code dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] sont des modèles qui facilitent la création de bases de données et d’objets de base de données. 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit plusieurs extraits de code T-SQL pour vous aider à générer rapidement la syntaxe appropriée. 
 
-Extraits de code défini par l’utilisateur peuvent également être créés.
+Des extraits de code définis par l’utilisateur peuvent également être créés.
 
-## <a name="using-built-in-t-sql-code-snippets"></a>À l’aide d’extraits de code T-SQL intégrés
+## <a name="using-built-in-t-sql-code-snippets"></a>Utilisation d’extraits de code T-SQL intégrés
 
-1. Pour accéder aux extraits de code disponibles, tapez *sql* dans l’éditeur de requête pour ouvrir la liste :
+1. Pour accéder aux extraits de code disponibles, saisissez *sql* dans l’éditeur de requête pour ouvrir la liste :
 
    ![extraits de code](media/code-snippets/sql-snippets.png)
 
-1. Sélectionnez l’extrait de code que vous souhaitez utiliser, puis il génère le script T-SQL. Par exemple, sélectionnez *sqlCreateTable*:
+1. Sélectionnez l’extrait de code que vous souhaitez utiliser, et il génère le script T-SQL. Par exemple, sélectionnez *sqlCreateTable* :
 
-   ![créer des extraits de la table](media/code-snippets/create-table.png)
+   ![extraits de code de création de tables](media/code-snippets/create-table.png)
 
-1. Mettre à jour les champs en surbrillance par vos propres valeurs. Par exemple, remplacez *TableName* et *schéma* avec les valeurs pour votre base de données :
+1. Mettez à jour les champs mis en surbrillance avec vos valeurs spécifiques. Par exemple, remplacez *TableName* et *Schema* par les valeurs de votre base de données :
 
-   ![Remplacez le champ de modèle](media/code-snippets/table-from-snippet.png)
+   ![remplacer le champ de modèle](media/code-snippets/table-from-snippet.png)
 
-   Si le champ que vous souhaitez modifier n’est plus balisée (cela se produit lorsque vous déplacez le curseur autour de l’éditeur), cliquez sur le mot que vous souhaitez modifier, puis sélectionnez **modifier toutes les occurrences**:
+   Si le champ que vous souhaitez modifier n’est plus mis en surbrillance (cela se produit lors du déplacement du curseur dans l’éditeur), cliquez avec le bouton droit sur le mot à modifier, puis sélectionnez **Modifier toutes les occurrences** :
 
-   ![Remplacez le champ de modèle](media/code-snippets/change-all.png)
+   ![remplacer le champ de modèle](media/code-snippets/change-all.png)
 
-1. Mettre à jour ou ajouter n’importe quel T-SQL supplémentaire vous avez besoin pour l’extrait de code sélectionné. Par exemple, mettre à jour *Column1*, *Column2*et ajouter d’autres colonnes.
+1. Mettez à jour ou ajoutez tout T-SQL supplémentaire dont vous avez besoin pour l’extrait de code sélectionné. Par exemple, mettez à jour *Column1*, *Column2* et ajoutez des colonnes supplémentaires.
 
 
  
 ## <a name="creating-sql-code-snippets"></a>Création d’extraits de code SQL 
 
-Vous pouvez définir vos propres extraits de code. Pour ouvrir le fichier d’extrait de code SQL pour la modification :
+Vous pouvez définir vos propres extraits de code. Pour ouvrir le fichier d’extrait de code SQL en vue de le modifier :
 
-1. Ouvrir le *Palette de commandes* (**Ctrl + Maj + P**) et le type *capture*, puis sélectionnez **préférences : Ouvrir des extraits de code utilisateur**:
+1. Ouvrez la *Palette de commandes* (**Ctrl+Maj+P**) et saisissez *snip*, puis sélectionnez **Préférences : Ouvrir les extraits de code utilisateur** :
 
-   ![Remplacez le champ de modèle](media/code-snippets/user-snippets.png)
+   ![remplacer le champ de modèle](media/code-snippets/user-snippets.png)
 
-1. Sélectionnez **SQL**:
+1. Sélectionnez **SQL** :
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] Cet article aborde l’utilisation d’extraits SQL hérite sa fonctionnalité d’extrait de code à partir de Visual Studio Code. Pour plus d’informations, consultez [créer vos propres extraits](https://code.visualstudio.com/docs/editor/userdefinedsnippets) dans la documentation de Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] hérite de sa fonctionnalité d’extrait de code de Visual Studio Code, aussi cet article explique spécifiquement comment utiliser des extraits de code SQL. Pour plus d’informations, consultez [Création de vos propres extraits de code](https://code.visualstudio.com/docs/editor/userdefinedsnippets) dans la documentation de Visual Studio Code. 
 
-   ![Remplacez le champ de modèle](media/code-snippets/select-sql.png)
+   ![remplacer le champ de modèle](media/code-snippets/select-sql.png)
 
-1. Collez le code suivant dans *sql.json*:
+1. Collez le code suivant dans *sql.json* :
 
    ```sql
    {
@@ -95,12 +95,12 @@ Vous pouvez définir vos propres extraits de code. Pour ouvrir le fichier d’ex
    ```
 
 1. Enregistrez le fichier sql.json.
-1. Ouvrez une nouvelle fenêtre d’éditeur de requête en cliquant sur **Ctrl + N**.
-2. Type **sql**, et vous voyez les extraits de code deux utilisateur que vous venez d’ajouter ; *sqlCreateTable2* et *sqlSelectTop5*.
+1. Ouvrez une nouvelle fenêtre de l’éditeur de requête avec **Ctrl+N**.
+2. Saisissez **sql** et vous verrez les deux extraits de code utilisateur que vous venez d’ajouter, *sqlCreateTable2* et *sqlSelectTop5*.
 
-Sélectionnez un des nouveaux extraits de code et lui donner une série de tests !
+Sélectionnez un des nouveaux extraits et essayez-le !
 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Pour plus d’informations sur l’éditeur SQL, consultez [didacticiel de l’éditeur de Code](tutorial-sql-editor.md).
+Pour plus d’informations sur l’éditeur SQL, consultez le [Didacticiel sur l’éditeur de code](tutorial-sql-editor.md).

@@ -1,6 +1,6 @@
 ---
 title: Configurer un cluster de disque partagé SLES pour SQL Server
-description: Implémenter la haute disponibilité en configurant le cluster de disque partagé de SUSE Linux Enterprise Server (SLES) pour SQL Server.
+description: Implémentez la haute disponibilité en configurant le cluster de disques partagés SUSE Linux Enterprise Server (SLES) pour SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,33 +10,33 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032225"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurer un cluster de disque partagé SLES pour SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce guide fournit des instructions pour créer un cluster de disque partagé de deux nœuds pour SQL Server sur SUSE Linux Enterprise Server (SLES). La couche de clustering est basée sur SUSE [haute disponibilité Extension (HAÉ)](https://www.suse.com/products/highavailability) , construit sur [Pacemaker](https://clusterlabs.org/). 
+Ce guide fournit des instructions pour créer un cluster à deux nœuds pour SQL Server sur SUSE Linux Enterprise Server (SLES). La couche de clustering est basée sur l’[Extension haute disponibilité (HAE)](https://www.suse.com/products/highavailability) de SUSE placée au-dessus de [Pacemaker](https://clusterlabs.org/). 
 
-Pour plus d’informations sur la configuration du cluster, les options de l’agent de ressource, la gestion, meilleures pratiques et recommandations, consultez [SUSE Linux Enterprise haute disponibilité Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Pour plus d’informations sur la configuration du cluster, les options de l’agent de ressources, la gestion, les meilleures pratiques et les suggestions, consultez [Extension haute disponibilité SUSE Linux Enterprise 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le partage NFS. Les étapes ci-dessous décrivent la configuration de ces serveurs.
+Pour effectuer le scénario de bout en bout suivant, vous avez besoin de deux machines pour déployer le cluster à deux nœuds et d’un autre serveur pour configurer le partage NFS. Les étapes ci-dessous décrivent comment ces serveurs seront configurés.
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installer et configurer le système d’exploitation sur chaque nœud de cluster
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installer et configurer le système d’exploitation sur chaque nœud du cluster
 
-La première étape consiste à configurer le système d’exploitation sur les nœuds de cluster. Pour cette procédure pas à pas, utilisez SLES avec un abonnement valide pour le module complémentaire de haute disponibilité.
+La première étape consiste à configurer le système d'exploitation sur les nœuds de cluster. Pour ce guide, utilisez SLES avec un abonnement valide pour le module complémentaire de haute disponibilité.
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installer et configurer SQL Server sur chaque nœud de cluster
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installer et configurer SQL Server sur chaque nœud du cluster
 
-1. Installer et configurer SQL Server sur les deux nœuds. Pour obtenir des instructions détaillées, consultez [installer SQL Server sur Linux](sql-server-linux-setup.md).
-2. Désignez un seul nœud en tant que principal et l’autre comme secondaire, à des fins de configuration. Utiliser ces termes pour ce qui suit ce guide. 
-3. Sur le nœud secondaire, arrêter et désactiver SQL Server. L’exemple suivant arrête et désactive les SQL Server :
+1. Installez et configurez SQL Server sur les deux nœuds. Pour obtenir des instructions détaillées, consultez [Installer SQL Server sur Linux](sql-server-linux-setup.md).
+2. Désignez un nœud comme principal et l’autre comme secondaire, à des fins de configuration. Utilisez ces termes pour le présent guide. 
+3. Sur le nœud secondaire, arrêtez et désactivez SQL Server. L’exemple suivant arrête et désactive SQL Server :
 
     ```bash
     sudo systemctl stop mssql-server
@@ -44,13 +44,13 @@ La première étape consiste à configurer le système d’exploitation sur les 
     ```
 
     > [!NOTE]
-    > Au moment de l’installation, une clé principale du serveur est générée pour l’instance de SQL Server et placé à `/var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local appelé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal sur chaque nœud secondaire afin que chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur.
-4. Sur le nœud principal, créez une connexion SQL server pour Pacemaker et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. Pacemaker utilise ce compte pour vérifier le nœud sur lequel s’exécute SQL Server.
+    > Au moment de la configuration, une clé principale de serveur est générée pour l’instance et placée à l’adresse `/var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours en tant que compte local appelé mssql. Étant donné qu’il s’agit d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement du nœud principal sur chaque nœud secondaire afin que chaque compte mssql local puisse y accéder pour déchiffrer la clé principale du serveur.
+4. Sur le nœud principal, créez une connexion SQL Server pour Pacemaker et octroyez l’autorisation de connexion pour exécuter `sp_server_diagnostics`. Pacemaker utilise ce compte pour vérifier le nœud en cours d’exécution SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
     ```
-    Connectez-vous à la base de données master de SQL Server avec le compte 'sa' et exécutez la commande suivante :
+    Connectez-vous à la base de données SQL Server avec le compte « sa » et exécutez la commande suivante :
 
     ```sql
     USE [master]
@@ -59,17 +59,17 @@ La première étape consiste à configurer le système d’exploitation sur les 
     GRANT VIEW SERVER STATE TO <loginName>
     ```
 5. Sur le nœud principal, arrêtez et désactivez SQL Server.
-6. Suivez les instructions [dans la documentation de SUSE](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) pour configurer et mettre à jour le fichier hosts pour chaque nœud du cluster. Le fichier « hosts » doit inclure l’adresse IP et le nom de chaque nœud de cluster.
+6. Suivez les instructions [de la documentation SUSE](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) pour configurer et mettre à jour le fichier hôtes pour chaque nœud de cluster. Le fichier « hôtes » doit inclure l’adresse IP et le nom de chaque nœud de cluster.
 
-    Pour vérifier l’adresse IP du nœud actuel exécuter :
+    Pour vérifier l’adresse IP de l’exécution du nœud actuel :
 
     ```bash
     sudo ip addr show
     ```
 
-    Définissez le nom de l’ordinateur sur chaque nœud. Donnez à chaque nœud un nom unique de 15 caractères au maximum. Définir le nom d’ordinateur en l’ajoutant à `/etc/hostname` à l’aide de [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) ou [manuellement](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
+    Définissez le nom de l’ordinateur sur chaque nœud. Donnez à chaque nœud un nom unique de 15 caractères ou moins. Définissez le nom de l’ordinateur en l'ajoutant à `/etc/hostname` à l’aide de [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) ou [manuellement](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
 
-    L’exemple suivant montre `/etc/hosts` avec les ajouts de deux nœuds nommés `SLES1` et `SLES2`.
+    L’exemple suivant présente `/etc/hosts` avec des ajouts pour deux nœuds nommés `SLES1` et `SLES2`.
 
     ```
     127.0.0.1   localhost
@@ -78,22 +78,22 @@ La première étape consiste à configurer le système d’exploitation sur les 
     ```
 
     > [!NOTE]
-    > Tous les nœuds de cluster doivent être en mesure des uns aux autres via SSH. Certains outils, comme hb_report ou crm_report (pour le dépannage) et l’Explorateur d’historique de Hawk, exigent un accès SSH sans mot de passe entre les nœuds, sinon ils ne peuvent collecter que les données du nœud actif. Au cas où vous utilisez un port SSH non standard, utilisez l’option-X ([consultez la page de manuel](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). Par exemple, si votre port SSH est le 3479, appelez un crm_report avec :
+    > Tous les nœuds de cluster doivent pouvoir accéder aux uns et aux autres via SSH. Certains outils, comme hb_report ou crm_report (pour le dépannage) et l’Explorateur d’historique de Hawk, exigent un accès SSH sans mot de passe entre les nœuds, sinon ils ne peuvent collecter que les données du nœud actif. Si vous utilisez un port SSH non standard, utilisez l’option -X ([consultez la page man](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). Par exemple, si votre port SSH est le 3479, appelez un crm_report avec :
     >
     >```bash
     >crm_report -X "-p 3479" [...]
     >```
-    >Pour plus d’informations, consultez [Guide d’Administration]. (https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
+    >Pour plus d’informations, consultez [le guide d’administration]. (https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
 
-Dans la section suivante vous configurerez un stockage partagé et déplacer vos fichiers de base de données vers ce stockage.  
+Dans la section suivante, vous allez configurer le stockage partagé et déplacer vos fichiers de base de données vers ce stockage.  
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Configurer le stockage partagé et déplacer des fichiers de base de données
 
-Il existe un large éventail de solutions pour fournir un stockage partagé. Cette procédure pas à pas illustre la configuration du stockage partagé avec NFS. Nous vous recommandons de suivre les meilleures pratiques et d’utiliser Kerberos pour sécuriser NFS : 
+Il existe diverses solutions pour fournir un stockage partagé. Cette procédure pas à pas illustre la configuration du stockage partagé avec NFS. Nous vous recommandons de suivre les meilleures pratiques et d’utiliser Kerberos pour sécuriser NFS : 
 
-- [Partage des systèmes de fichiers avec NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
+- [Partage de systèmes de fichiers avec NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
 
-Si vous ne suivez pas ces instructions, toute personne peut accéder à votre réseau et usurper l’identité de l’adresse IP d’un nœud SQL sera en mesure d’accéder à vos fichiers de données. Comme toujours, assurez-vous que votre système de modèle de menaces avant de l’utiliser en production. 
+Si vous ne suivez pas ce guide, toute personne pouvant accéder à votre réseau et usurper l’adresse IP d’un nœud SQL pourra accéder à vos fichiers de données. Comme toujours, veillez à modéliser votre système de menaces avant de l’utiliser en production. 
 
 Une autre option de stockage consiste à utiliser le partage de fichiers SMB :
 
@@ -101,13 +101,13 @@ Une autre option de stockage consiste à utiliser le partage de fichiers SMB :
 
 ### <a name="configure-an-nfs-server"></a>Configurer un serveur NFS
 
-Pour configurer un serveur NFS, consultez les étapes suivantes dans la documentation de SUSE : [Configuration de serveur NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Pour configurer un serveur NFS, consultez les étapes suivantes dans la documentation SUSE : [Configuration du serveur NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
-### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configurer tous les nœuds de cluster pour vous connecter au stockage NFS partagé
+### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configurer tous les nœuds de cluster pour la connexion au stockage partagé NFS
 
-Avant de configurer le client NFS pour monter le chemin d’accès des fichiers de base de données SQL Server pour pointer vers l’emplacement de stockage partagé, veillez à qu'enregistrer les fichiers de base de données dans un emplacement temporaire pour être en mesure de les copier ultérieurement sur le partage :
+Avant de configurer le client NFS pour monter le chemin d’accès aux fichiers de base de données SQL Server pour qu’il pointe vers l’emplacement de stockage partagé, veillez à enregistrer les fichiers de base de données dans un emplacement temporaire afin de pouvoir les copier ultérieurement sur le partage :
 
-1. **Sur le nœud principal uniquement**, enregistrer les fichiers de base de données dans un emplacement temporaire. Le script suivant crée un répertoire temporaire, copie les fichiers de base de données sur le nouveau répertoire et supprime les anciens fichiers de base de données. Lorsque SQL Server s’exécute en tant qu’utilisateur local mssql, vous devez vous assurer qu’une fois le transfert de données pour le partage monté, utilisateur local a accès en lecture-écriture au partage. 
+1. **Sur le nœud principal uniquement**, enregistrez les fichiers de base de données dans un emplacement temporaire. Le script suivant crée un nouveau répertoire temporaire, copie les fichiers de base de données dans le nouveau répertoire et supprime les anciens fichiers de base de données. Comme SQL Server s’exécute en tant qu’utilisateur local mssql, vous devez vous assurer qu’après le transfert des données vers le partage monté, l’utilisateur local dispose d’un accès en lecture-écriture au partage. 
 
     ```bash
     su mssql
@@ -117,14 +117,14 @@ Avant de configurer le client NFS pour monter le chemin d’accès des fichiers 
     exit
     ```
 
-    Configurer le client NFS sur tous les nœuds de cluster :
+    Configurez le client NFS sur tous les nœuds de cluster :
 
-    - [Configuration des Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
+    - [Configuration des clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > Il est recommandé de suivre les meilleures pratiques et les recommandations en matière de stockage hautement disponible NFS de SUSE : [Stockage NFS hautement disponible avec DRBD et Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > Il est recommandé de suivre les meilleures pratiques et les suggestions de SUSE concernant le stockage NFS à haute disponibilité : [Stockage NFS à haute disponibilité avec DRBD et Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
-2. Vérifiez que SQL Server démarre correctement avec le nouveau chemin de fichier. Pour cela sur chaque nœud. À ce stade qu’un seul nœud doit exécuter SQL Server à la fois. Ils ne peuvent pas tous deux exécuter en même temps, car ils essaiera à la fois d’accéder aux fichiers de données simultanément (pour éviter le démarrage accidentellement de SQL Server sur les deux nœuds, une ressource de cluster de système de fichiers pour vous assurer que le partage n’est pas monté à deux reprises par les différents nœuds). Les commandes suivantes démarrer SQL Server, vérifiez l’état, puis arrêtez SQL Server.
+2. Vérifiez que SQL Server démarre correctement avec le nouveau chemin d’accès au fichier. Procédez de la sorte sur chaque nœud. À ce stade, un seul nœud doit exécuter SQL Server à la fois. Ils ne peuvent pas être exécutés en même temps, car ils essaient d’accéder simultanément aux fichiers de données (pour éviter de démarrer accidentellement SQL Server sur les deux nœuds, utilisez une ressource de cluster de système de fichiers pour vous assurer que le partage n’est pas monté deux fois par les différents nœuds). Les commandes suivantes démarrent SQL Server, vérifient l’état, puis, arrêtent SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
@@ -132,7 +132,7 @@ Avant de configurer le client NFS pour monter le chemin d’accès des fichiers 
     sudo systemctl stop mssql-server
     ```
 
-À ce stade, les deux instances de SQL Server sont configurés pour s’exécuter avec les fichiers de base de données sur le stockage partagé. L’étape suivante consiste à configurer SQL Server pour Pacemaker. 
+À ce stade, les deux instances de SQL Server sont configurées pour s’exécuter avec les fichiers de base de données sur le stockage partagé. L’étape suivante consiste à configurer SQL Server pour Pacemaker. 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installer et configurer Pacemaker sur chaque nœud de cluster
 
@@ -193,12 +193,12 @@ Avant de configurer le client NFS pour monter le chemin d’accès des fichiers 
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurer les ressources de cluster pour SQL Server
 
-Les étapes suivantes expliquent comment configurer la ressource de cluster pour SQL Server. Il existe deux paramètres que vous souhaitez personnaliser.
+Les étapes suivantes expliquent comment configurer la ressource de cluster pour SQL Server. Vous devez personnaliser deux paramètres.
 
-- **Nom de la ressource SQL Server**: Un nom pour la ressource SQL Server en cluster. 
-- **Valeur de délai d’attente**: La valeur de délai d’attente est la durée pendant laquelle le cluster attend pendant une ressource est mise en ligne. Pour SQL Server, il s’agit de l’heure que vous attendez de SQL Server à suivre pour mettre le `master` en ligne de base de données. 
+- **Nom de ressources SQL Server** : Un nom de la ressource de SQL Server en cluster. 
+- **Valeur de délai d’attente** : La valeur de délai d’attente correspond à la durée d’attente du cluster tandis qu’une ressources est mise en ligne. Pour SQL Server, il s’agit de la durée prévue pour que SQL Server mette la base de données `master` en ligne. 
 
-Mettre à jour les valeurs à partir du script suivant pour votre environnement. Exécuter sur un nœud pour configurer et démarrer le service en cluster.
+Mettez à jour les valeurs du script suivant pour votre environnement. Exécutez sur un nœud pour configurer et démarrer le service en cluster.
 
 ```bash
 sudo crm configure
@@ -209,7 +209,7 @@ commit
 exit
 ```
 
-Par exemple, le script suivant crée une ressource de cluster SQL Server nommée mssqlha. 
+Par exemple, le script suivant crée une ressource SQL Server en cluster nommée mssqlha. 
 
 ```bash
 sudo crm configure
@@ -220,19 +220,19 @@ commit
 exit
 ```
 
-Une fois validée, la configuration de SQL Server démarre sur le même nœud en tant que la ressource d’adresse IP virtuelle. 
+Une fois la configuration validée, SQL Server démarre sur le même nœud que la ressource d’adresse IP virtuelle. 
 
-Pour plus d’informations, consultez [configuration et gestion des ressources de Cluster (ligne de commande)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config). 
+Pour plus d’informations, consultez [Configuration et gestion des Ressources de cluster (ligne de commande)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config). 
 
-### <a name="verify-that-sql-server-is-started"></a>Vérifiez que SQL Server est démarré. 
+### <a name="verify-that-sql-server-is-started"></a>Vérifiez que SQL Server a démarré. 
 
-Pour vérifier que SQL Server est démarré, exécutez le **crm état** commande :
+Pour vérifier que SQL Server a démarré, exécutez la commande **état crm** :
 
 ```bash
 crm status
 ```
 
-Les exemples suivants montre les résultats quand Pacemaker a démarré avec succès en tant que ressource en cluster. 
+Les exemples suivants affichent les résultats lorsque Pacemaker a démarré avec succès en tant que ressource de cluster. 
 ```
 2 nodes configured
 2 resources configured
@@ -245,15 +245,15 @@ Full list of resources:
  mssqlha        (ocf::mssql:fci):       Started SLES1
 ```
 
-## <a name="managing-cluster-resources"></a>La gestion des ressources de cluster
+## <a name="managing-cluster-resources"></a>Gestion des ressources de cluster
 
-Pour gérer vos ressources de cluster, consultez la rubrique SUSE suivante : [La gestion des ressources de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Pour gérer vos ressources de cluster, consultez la rubrique SUSE suivante : [Gestion des ressources de cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>basculement manuel
 
-Bien que les ressources sont configurées pour effectuer un basculement automatique (ou migrer) vers d’autres nœuds du cluster en cas de défaillance matérielle ou logicielle, vous pouvez déplacer manuellement une ressource vers un autre nœud du cluster à l’aide de l’interface utilisateur graphique de Pacemaker ou la ligne de commande . 
+Bien que les ressources soient configurées pour basculer (ou migrer) automatiquement vers d’autres nœuds du cluster, en cas de défaillance matérielle ou logicielle, vous pouvez également déplacer manuellement une ressource vers un autre nœud dans le cluster à l’aide de l’interface graphique utilisateur Pacemaker ou de la ligne de commande. 
 
-Pour cette tâche, utilisez la commande migrate. Par exemple, pour migrer la ressource SQL à un nom de nœud de cluster SLES2 exécuter : 
+Utilisez la commande Migrer pour cette tâche. Par exemple, pour migrer la ressource SQL vers des noms d’un nœud de cluster, SLES2 exécute : 
 
 ```bash
 crm resource
@@ -262,4 +262,4 @@ migrate mssqlha SLES2
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Extension de haute disponibilité SUSE Linux Enterprise - Guide d’Administration](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 
+[Extension de haute disponibilité SUSE Linux Enterprise - guide d’administration](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 

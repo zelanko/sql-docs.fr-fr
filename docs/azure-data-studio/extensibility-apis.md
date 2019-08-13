@@ -11,15 +11,15 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959628"
 ---
-# <a name="azure-data-studio-extensibility-apis"></a>API d’extensibilité Data Studio Azure
+# <a name="azure-data-studio-extensibility-apis"></a>API d’extensibilité d’Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] Fournit une API extensions peuvent utiliser pour interagir avec d’autres parties de Studio de données Azure, telles que l’Explorateur d’objets. Ces API sont disponibles à partir de la [ `src/sql/sqlops.d.ts` ](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) de fichiers et sont décrits ci-dessous.
+[!INCLUDE[name-sos](../includes/name-sos.md)] fournit une API que les extensions peuvent utiliser pour interagir avec d’autres parties d’Azure Data Studio, telles que l’Explorateur d’objets. Ces API sont disponibles à partir du fichier [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) et sont décrites ci-dessous.
 
 ## <a name="connection-management"></a>Gestion des connexions
 `sqlops.connection`
@@ -28,14 +28,14 @@ ms.locfileid: "67959628"
 
 - `getCurrentConnection(): Thenable<sqlops.connection.Connection>` Obtient la connexion actuelle en fonction de l’éditeur actif ou de la sélection de l’Explorateur d’objets.
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` Obtient une liste de connexions de tous les l’utilisateur qui sont actifs. Retourne une liste vide si aucune connexion de ce type.
+- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` Obtient une liste de toutes les connexions de l’utilisateur qui sont actives. Retourne une liste vide s’il n’existe aucune connexion de ce type.
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Obtient un dictionnaire qui contient les informations d’identification associées à une connexion. Ils devaient être renvoyées en tant que partie du dictionnaire options sous un `sqlops.connection.Connection` objet mais obtenir sont supprimés de l’objet. 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Obtient un dictionnaire contenant les informations d’identification associées à une connexion. Elles seraient sinon renvoyées dans le dictionnaire d’options sous un objet `sqlops.connection.Connection`, mais supprimées de cet objet. 
 
 ### `Connection`
-- `options: { [name: string]: string }` Le dictionnaire des options de connexion
-- `providerName: string` Le nom du fournisseur de connexion (par exemple) « MSSQL »)
-- `connectionId: string` L’identificateur unique pour la connexion
+- `options: { [name: string]: string }` Dictionnaire des options de connexion
+- `providerName: string` Nom du fournisseur de connexion (par exemple « mssql »)
+- `connectionId: string` Identificateur unique pour la connexion
 
 ### <a name="example-code"></a>Exemple de code
 ```
@@ -64,16 +64,16 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>Fonctions de niveau supérieur
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir un nœud de l’Explorateur d’objets correspondant à la connexion donnée et le chemin d’accès. Si aucun chemin d’accès n’est fourni, il retourne le nœud de niveau supérieur pour la connexion donnée. Si cela signifie qu’il n’y a aucun nœud à l’emplacement donné, elle retourne `undefined`. Remarque : Le `nodePath` pour un objet est généré par le serveur principal de Service des outils SQL et qu’il est difficile à construire manuellement. Futures améliorations d’API vous permettra d’obtenir les nœuds en fonction des métadonnées que vous fournissez relatives au nœud, telles que le nom, type et le schéma.
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtient un nœud de l’Explorateur d’objets correspondant à la connexion et au chemin d’accès donnés. Si aucun chemin d’accès n’est fourni, retourne le nœud de niveau supérieur pour la connexion donnée. S’il n’y a aucun nœud dans le chemin d’accès donné, il retourne `undefined`. Remarque : Le `nodePath` pour un objet est généré par le backend du service Outils SQL et est difficile à construire manuellement. Les futures améliorations de l’API vous permettront d’obtenir des nœuds basés sur les métadonnées que vous fournissez sur le nœud, telles que le nom, le type et le schéma.
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir tous les nœuds de connexion de l’Explorateur d’objets actifs.
+- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtient tous les nœuds de connexion actifs de l’Explorateur d’objets.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Rechercher tous les nœuds de l’Explorateur d’objets qui correspondent aux métadonnées donnée. Le `schema`, `database`, et `parentObjectNames` arguments doivent être `undefined` lorsqu’ils ne sont pas applicables. `parentObjectNames` est une liste d’objets de base de données non parent, du plus élevé au niveau le plus bas dans l’Explorateur d’objets, qui est de l’objet souhaité sous. Par exemple, lors de la recherche pour une colonne « column1 » qui appartient à une table « schema1.table1 » et la base de données « database1 » avec l’ID de connexion `connectionId`, appelez `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Consultez également le [liste des types pris en charge par Azure Data Studio par défaut](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) pour cet appel d’API.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Recherche tous les nœuds de l’Explorateur d’objets qui correspondent aux métadonnées fournies. Les arguments `schema`, `database` et `parentObjectNames` doivent être `undefined` lorsqu’ils ne sont pas applicables. `parentObjectNames` est une liste d’objets parents qui ne sont pas des bases de données, du plus haut au plus bas niveau de l’Explorateur d’objets, sous lesquels se trouve l’objet souhaité. Par exemple, lors de la recherche d’une colonne « Column1 » qui appartient à une table « schema1.table1» et à la base de données « Database1 » avec l’ID de connexion `connectionId`, appelez `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Consultez également la [liste des types qu’Azure Data Studio prend en charge par défaut](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) pour cet appel d’API.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
-- `connectionId: string` L’id de la connexion que le nœud existe sous
+- `connectionId: string` ID de la connexion dans laquelle le nœud existe
 
-- `nodePath: string` Le chemin d’accès du nœud, tel qu’utilisé pour un appel à la `getNode` (fonction).
+- `nodePath: string` Chemin d’accès du nœud, tel qu’il est utilisé pour un appel à la fonction `getNode`.
 
 - `nodeType: string` Chaîne représentant le type du nœud
 
@@ -81,9 +81,9 @@ credentials: {
 
 - `nodeStatus: string` Chaîne représentant l’état du nœud
 
-- `label: string` L’étiquette du nœud tel qu’il apparaît dans l’Explorateur d’objets
+- `label: string` L’étiquette du nœud tel qu’elle apparaît dans l’Explorateur d’objets
 
-- `isLeaf: boolean` Indique si le nœud est un nœud terminal et a donc pas d’enfants
+- `isLeaf: boolean` Si le nœud est un nœud terminal et n’a donc pas d’enfants
 
 - `metadata: sqlops.ObjectMetadata` Métadonnées décrivant l’objet représenté par ce nœud
 
@@ -91,13 +91,13 @@ credentials: {
 
 - `isExpanded(): Thenable<boolean>` Si le nœud est actuellement développé dans l’Explorateur d’objets
 
-- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` Définir si le nœud est développé ou réduit. Si l’état est défini sur None, le nœud ne sera pas modifié.
+- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` Définit si le nœud est développé ou réduit. Si l’état est défini sur None, le nœud ne sera pas modifié.
 
-- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Définir une valeur indiquant si le nœud est sélectionné. Si `clearOtherSelections` est true, désactivez toutes les autres sélections lors de l’établissement de la nouvelle sélection. Si elle est false, laissez les sélections existantes. `clearOtherSelections` valeur par défaut est true lorsque `selected` est true et false lorsque `selected` a la valeur false.
+- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Définit si le nœud est sélectionné. Si `clearOtherSelections` a la valeur true, effacez toutes les autres sélections lors de la création de la nouvelle sélection. Si la valeur est false, laissez les sélections existantes. `clearOtherSelections` prend la valeur true par défaut quand `selected` est true, et false lorsque `selected` a la valeur false.
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Obtenir tous les enfants de nœuds de ce nœud. Retourne une liste vide si aucun enfant n’y.
+- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Obtient tous les nœuds enfants de ce nœud. Retourne une liste vide s’il n’y a pas d’enfants.
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtient le nœud parent de ce nœud. Retourne un indéfini s’il n’existe aucun parent.
+- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtient le nœud parent de ce nœud. Retourne undefined s’il n’y a aucun parent.
 
 ### <a name="example-code"></a>Exemple de code
 
@@ -159,6 +159,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>API proposées
 
-Nous avons ajouté les API proposées pour autoriser les extensions afficher l’interface utilisateur personnalisée dans les boîtes de dialogue, des Assistants et des onglets de document, entre autres fonctionnalités. Consultez le [fichier de types proposées API](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts) pour plus d’informations, mais sachez que ces API est susceptibles d’être modifiées à tout moment. Vous trouverez des exemples montrant comment utiliser certains de ces API dans le [« le service SQL » exemple d’extension](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Nous avons ajouté des API proposées pour permettre aux extensions d’afficher une interface utilisateur personnalisée dans des boîtes de dialogue, des assistants et des onglets de document, entre autres fonctionnalités. Pour plus d’informations, consultez le [fichier des types d’API proposées](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts), mais gardez à l’esprit que ces API sont susceptibles d’être modifiées à tout moment. Vous trouverez des exemples d’utilisation de certaines de ces API dans [l’exemple d’extension « sqlservices »](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
 
 

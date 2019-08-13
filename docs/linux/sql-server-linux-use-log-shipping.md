@@ -1,6 +1,6 @@
 ---
-title: Configurer les journaux de transaction pour SQL Server sur Linux
-description: Ce didacticiel montre un exemple de base de la réplication d’une instance de SQL Server sur Linux pour une instance secondaire à l’aide de l’envoi de journaux.
+title: Configurer la copie des journaux de transaction pour SQL Server sur Linux
+description: Ce didacticiel présente un exemple de base de la procédure de réplication d’une instance sur Linux sur une instance secondaire à l’aide de la copie des journaux de transaction.
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/19/2017
@@ -8,34 +8,34 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032199"
 ---
-# <a name="get-started-with-log-shipping-on-linux"></a>Bien démarrer avec l’envoi de journaux sur Linux
+# <a name="get-started-with-log-shipping-on-linux"></a>Prise en main de la copie des journaux de transaction sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Envoi de journaux du serveur SQL est une configuration de haute disponibilité où une base de données à partir d’un serveur principal est répliquée sur un ou plusieurs serveurs secondaires. En bref, une sauvegarde de la base de données source est restaurée sur le serveur secondaire. Puis le serveur principal crée des sauvegardes du journal des transactions régulièrement, et les serveurs secondaires de les restaurent, la mise à jour de la copie secondaire de la base de données. 
+La copie des journaux de transaction SQL Server est une configuration à haute disponibilité où une base de données d’un serveur principal est répliquée sur un ou plusieurs serveurs secondaires. En résumé, une sauvegarde de la base de données source est restaurée sur le serveur secondaire. Ensuite, le serveur principal crée régulièrement des sauvegardes du journal des transactions et les serveurs secondaires les restaurent, en mettant à jour la copie secondaire de la base de données. 
 
-  ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
+  ![Copie des journaux de transaction](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Comme décrit dans cette image, une session de copie des journaux implique les étapes suivantes :
+Comme décrit dans cette image, une session de copie des journaux de transaction implique les étapes suivantes :
 
-- Sauvegarder le fichier journal des transactions sur l’instance principale de SQL Server
-- Copie le fichier de sauvegarde du journal des transactions sur le réseau à une ou plusieurs instances de SQL Server secondaire
-- Restaurer le fichier de sauvegarde du journal de transactions sur les instances de SQL Server secondaire
+- Sauvegarde du fichier des journaux des transactions au niveau de l'instance principale
+- Copie du fichier de sauvegarde du journal des transactions sur le réseau vers une ou plusieurs instances secondaires
+- Restauration du fichier de sauvegarde du journal des transactions sur les instances secondaires
 
-## <a name="prerequisites"></a>Prérequis
-- [Installer l’Agent SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+## <a name="prerequisites"></a>Conditions préalables requises
+- [Installer SQL Server Agent sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
-## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurez un partage réseau pour l’envoi de journaux à l’aide de CIFS 
+## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurer un partage réseau pour la copie des journaux de transaction à l’aide de CIFS 
 
 > [!NOTE] 
-> Ce didacticiel utilise CIFS + Samba pour configurer le partage réseau. Si vous souhaitez utiliser NFS, laissez un commentaire et nous allons l’ajouter à la documentation.       
+> Ce didacticiel utilise CIFS + Samba pour configurer le partage réseau. Si vous souhaitez utiliser NFS, laissez un commentaire et nous l’ajouterons au document.       
 
 ### <a name="configure-primary-server"></a>Configurer le serveur principal
 -   Exécutez la commande suivante pour installer Samba
@@ -44,7 +44,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   Créez un répertoire pour stocker les journaux pour l’envoi de journaux et de donner des autorisations requises de mssql
+-   Créez un répertoire pour stocker les journaux de la copie des journaux de transaction et accordez à mssql les autorisations requises
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -52,7 +52,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   Modifiez le fichier /etc/samba/smb.conf (vous avez besoin des autorisations de racine pour que) et ajoutez la section suivante :
+-   Modifiez le fichier /etc/samba/smb.conf (vous avez besoin d’autorisations racine pour cela) et ajoutez la section suivante :
 
     ```bash
     [tlogs]
@@ -64,26 +64,26 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     writable=no
     ```
 
--   Créer un utilisateur de mssql pour Samba
+-   Créer un utilisateur mssql pour Samba
 
     ```bash
     sudo smbpasswd -a mssql
     ```
 
--   Redémarrez les services Samba
+-   Redémarrer les services Samba
     ```bash
     sudo systemctl restart smbd.service nmbd.service
     ```
  
 ### <a name="configure-secondary-server"></a>Configurer le serveur secondaire
 
--   Exécutez la commande suivante pour installer le client CIFS
+-   Exécuter la commande suivante pour installer le client CIFS
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   Créer un fichier pour stocker vos informations d’identification. Utilisez le mot de passe que vous définissez récemment pour votre compte de Samba mssql 
+-   Créez un fichier pour stocker vos informations d’identification. Utilisez le mot de passe que vous avez récemment défini pour votre compte mssql Samba 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -91,7 +91,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
         domain=<domain>
         password=<password>
 
--   Exécutez les commandes suivantes pour créer un répertoire vide pour le montage et définir des autorisations et la propriété correctement
+-   Exécutez les commandes suivantes pour créer un répertoire vide pour le montage et définir l’autorisation et de la propriété correctement
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -100,7 +100,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   Ajoutez la ligne à etc/fstab pour conserver le partage 
+-   Ajouter la ligne à etc/fstab pour conserver le partage 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
@@ -109,9 +109,9 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     sudo mount -a
     ```
        
-## <a name="setup-log-shipping-via-t-sql"></a>Configurer des journaux de transaction par le biais de T-SQL
+## <a name="setup-log-shipping-via-t-sql"></a>Configurer la copie des journaux de transaction via T-SQL
 
-- Exécutez ce script à partir de votre serveur principal
+- Exécuter ce script à partir de votre serveur principal
 
     ```sql
     BACKUP DATABASE SampleDB
@@ -177,7 +177,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     ```
 
 
-- Exécutez ce script à partir de votre serveur secondaire
+- Exécuter ce script à partir de votre serveur secondaire
 
     ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
@@ -283,9 +283,9 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>Vérifier le fonctionnement de l’envoi de journaux
+## <a name="verify-log-shipping-works"></a>Vérifier le bon fonctionnement de la copie des journaux de transaction
 
-- Vérifiez que l’envoi de journaux fonctionne en démarrant le travail suivant sur le serveur principal
+- Vérifier que la copie des journaux de transaction fonctionne en démarrant la tâche suivante sur le serveur principal
 
     ```sql
     USE msdb ;  
@@ -295,7 +295,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     GO  
     ```
 
-- Vérifiez que l’envoi de journaux fonctionne en démarrant le travail suivant sur le serveur secondaire
+- Vérifier que la copie des journaux de transaction fonctionne en démarrant la tâche suivante sur le serveur secondaire
  
     ```sql
     USE msdb ;  

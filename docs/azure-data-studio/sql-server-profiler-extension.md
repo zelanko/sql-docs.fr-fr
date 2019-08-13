@@ -1,7 +1,7 @@
 ---
-title: Extension de SQL Server Profiler
+title: Extension SQL Server Profiler
 titleSuffix: Azure Data Studio
-description: Installer et utiliser l’extension de SQL Server Profiler (version préliminaire) pour Azure Data Studio
+description: Installer et utiliser l’extension SQL Server Profiler (préversion) pour Azure Data Studio
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
@@ -11,46 +11,46 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959115"
 ---
-# <a name="sql-server-profiler-extension-preview"></a>Extension de SQL Server Profiler (version préliminaire)
+# <a name="sql-server-profiler-extension-preview"></a>Extension SQL Server Profiler (préversion)
 
-L’extension de SQL Server Profiler (version préliminaire) fournit une solution de suivi SQL Server simple similaire à Profiler de SQL Server Management Studio (SSMS), à l’exception générée à l’aide d’événements étendus. SQL Server Profiler est très facile à utiliser et a des valeurs par défaut adéquates pour les configurations de suivi les plus courantes. L’expérience utilisateur est optimisé pour la navigation via des événements et l’affichage du texte Transact-SQL (T-SQL) associé. Le Profiler de serveur SQL pour Azure Data Studio suppose également les valeurs par défaut adéquates pour la collecte des activités de l’exécution de T-SQL avec un UX facile à utiliser. Cette extension est actuellement en version préliminaire.
+L’extension SQL Server Profiler (préversion) fournit une solution de suivi de SQL Server simple semblable à SQL Server Management Studio (SSMS) Profiler, à l’exception de l’utilisation de XEvents. SQL Server Profiler est très facile à utiliser et possède de bonnes valeurs par défaut pour les configurations de suivi les plus courantes. L’expérience utilisateur est optimisée pour parcourir les événements et afficher le texte Transact-SQL (T-SQL) associé. SQL Server Profiler pour Azure Data Studio suppose également de bonnes valeurs par défaut pour la collecte d’activités d’exécution de T-SQL avec une expérience utilisateur simple d’utilisation. Cette extension est actuellement en préversion.
 
-**SQL Profiler-cas d’utilisation courants :**
+**Cas d’utilisation courants de SQL Server Profiler :**
 
 - Exécuter pas à pas des requêtes posant problème afin d'en déterminer la cause.
 - Détecter les requêtes s'exécutant lentement et diagnostiquer la cause du problème.
-- Capturer la série d’instructions Transact-SQL qui mènent à un problème.
-- Analyse des performances de SQL Server pour paramétrer les charges de travail.
+- Capturer la série d'instructions Transact-SQL conduisant à un problème.
+- Surveiller les performances de SQL Server en vue de paramétrer les charges de travail.
 - Mise en corrélation des compteurs de performances pour diagnostiquer des problèmes.
 
 
-## <a name="install-the-sql-server-profiler-extension"></a>Installer l’extension de SQL Server Profiler
+## <a name="install-the-sql-server-profiler-extension"></a>Installer l’extension SQL Server Profiler
 
-1. Pour ouvrir le Gestionnaire d’extensions et accéder aux extensions disponibles, sélectionnez l’icône des extensions ou **Extensions** dans le **vue** menu.
-2. Sélectionner une extension disponible pour afficher ses détails.
+1. Pour ouvrir le gestionnaire d’extensions et accéder aux extensions disponibles, sélectionnez l’icône d’extensions ou sélectionnez **Extensions** dans le menu **Affichage**.
+2. Sélectionnez une extension disponible pour afficher ses détails.
 
    ![Gestionnaire d’extensions du profileur](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
-1. Sélectionnez l’extension souhaitée et **installer** il.
-2. Sélectionnez **recharger** pour activer l’extension (uniquement obligatoire la première fois que vous installez une extension).
+1. Sélectionnez l’extension de votre choix et **installez-la**.
+2. Sélectionnez **Recharger** pour activer l’extension (nécessaire uniquement la première fois que vous installez une extension).
 
-## <a name="start-profiler"></a>Démarrez Profiler
+## <a name="start-profiler"></a>Démarrer le profileur
 
-1. Pour commencer à Profiler, vous devez tout d’abord établir une connexion à un serveur dans l’onglet serveurs.
-2. Après avoir établi une connexion, tapez **Alt + P** pour lancer Profiler.
-3. Pour commencer à Profiler, tapez **Alt + S.** Vous pouvez maintenant commencer à voir les événements étendus.
+1. Pour démarrer le profileur, commencez par établir une connexion à un serveur sous l’onglet Serveurs.
+2. Une fois que vous avez créé une connexion, appuyez sur **Alt + P** pour lancer le profileur.
+3. Pour démarrer le profileur, appuyez sur **Alt + S**. Vous pouvez maintenant commencer à voir les événements étendus.
     ![Gestionnaire d’extensions du profileur](media/extensions/sql-server-profiler-extension/view-profiler.png)    
-1. Pour arrêter de Profiler, tapez **Alt + S.** Ce raccourci clavier est un bouton bascule.
+1. Pour arrêter le profileur, appuyez sur **Alt + S**. Cette touche de raccourci est un bouton bascule.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur Profiler et les événements étendus, consultez [événements étendus](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
+Pour en savoir plus sur le profileur et les événements étendus, consultez [Événements étendus](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 
 
 

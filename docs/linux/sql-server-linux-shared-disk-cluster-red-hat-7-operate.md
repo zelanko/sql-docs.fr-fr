@@ -1,6 +1,6 @@
 ---
-title: Fonctionnement de cluster partagé Red Hat Enterprise Linux pour SQL Server
-description: Implémenter la haute disponibilité en configurant le cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server.
+title: Opérer le cluster partagé Red Hat Enterprise Linux pour SQL Server
+description: Implémentez la haute disponibilité en configurant le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,51 +10,51 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032246"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement du cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
+# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Opérer le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce document décrit comment effectuer les tâches suivantes pour SQL Server sur un cluster de basculement de disque partagé avec Red Hat Enterprise Linux.
+Ce document explique comment effectuer les tâches suivantes pour SQL Server sur un cluster de basculement de disques partagés avec Red Hat Enterprise Linux.
 
-- Basculez manuellement le cluster
-- Surveiller un cluster de basculement service SQL Server
+- Basculer manuellement le cluster
+- Surveiller un service SQL Server de cluster de basculement
 - Ajouter un nœud de cluster
 - Supprimer un nœud de cluster
-- Modifier la fréquence de la surveillance de la ressource SQL Server
+- Modifier la fréquence d’analyse des ressources SQL Server
 
 ## <a name="architecture-description"></a>Description de l’architecture
 
-La couche de clustering est basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) , construit sur [Pacemaker](https://clusterlabs.org/). Corosync et Pacemaker coordonnent les communications de cluster et la gestion des ressources. L’instance de SQL Server est active sur un nœud ou l’autre.
+La couche de clustering est basée sur le [module complémentaire haute disponibilité](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) Red Hat Enterprise Linux (RHEL) basé sur [Pacemaker](https://clusterlabs.org/). Corosync et Pacemaker coordonnent les communications et la gestion des ressources du cluster. L’instance est active sur un nœud ou sur l’autre.
 
-Le diagramme suivant illustre les composants dans un cluster Linux avec SQL Server. 
+Le diagramme suivant illustre les composants d’un cluster Linux avec SQL Server. 
 
-![Red Hat Enterprise Linux 7 partagé de Cluster de disque SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Cluster SQL de 7 disques partagés Red Hat Enterprise Linux](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Pour plus d’informations sur la configuration du cluster, options d’agents de ressources et la gestion, visitez [documentation de référence RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Pour plus d’informations sur la configuration du cluster, les options des agents de ressources et la gestion, consultez la [documentation de référence de RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a>Cluster de basculement manuellement
+## <a name = "failManual"></a>Cluster de basculement manuel
 
-Le `resource move` commande crée une contrainte de forcer la ressource à démarrer sur le nœud cible.  Après avoir exécuté le `move` commande, exécute une ressource `clear` supprimera la contrainte, il est donc possible de déplacer la ressource à nouveau ou que la ressource d’effectuer un basculement automatique. 
+La commande `resource move` crée une contrainte forçant la ressource à démarrer sur le nœud cible.  Après l’exécution de la commande `move`, l’exécution de la ressource `clear` supprime la contrainte, de sorte qu’il est possible de déplacer à nouveau la ressource ou d’effectuer le basculement automatique de la ressource. 
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
-L’exemple suivant déplace le **mssqlha** ressource à un nœud nommé **sqlfcivm2**, puis supprime la contrainte afin que la ressource peut déplacer ultérieurement vers un autre nœud.  
+L’exemple suivant déplace la ressource **mssqlha** vers un nœud nommé **sqlfcivm2**, puis supprime la contrainte afin que la ressource puisse se déplacer ultérieurement vers un autre nœud.  
 
 ```bash
 sudo pcs resource move mssqlha sqlfcivm2 
 sudo pcs resource clear mssqlha 
 ```
 
-## <a name="monitor-a-failover-cluster-sql-server-service"></a>Surveiller un cluster de basculement service SQL Server
+## <a name="monitor-a-failover-cluster-sql-server-service"></a>Surveiller un service SQL Server de cluster de basculement
 
 Afficher l’état actuel du cluster :
 
@@ -62,29 +62,29 @@ Afficher l’état actuel du cluster :
 sudo pcs status  
 ```
 
-Afficher l’état en direct de cluster et de ressources :
+Afficher l’état actif du cluster et des ressources :
 
 ```bash
 sudo crm_mon 
 ```
 
-Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.log`
+Afficher les journaux de l’agent de ressources sur `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Ajouter un nœud à un cluster
 
-1. Vérifiez l’adresse IP pour chaque nœud. Le script suivant montre l’adresse IP de votre nœud actuel. 
+1. Vérifiez l’adresse IP de chaque nœud. Le script suivant affiche l’adresse IP de votre nœud actuel. 
 
    ```bash
    ip addr show
    ```
 
-3. Le nouveau nœud doit avoir un nom unique qui est de 15 caractères ou moins. Par défaut dans Red Hat Linux est le nom d’ordinateur `localhost.localdomain`. Ce nom par défaut ne peut pas être unique et est trop long. Définissez le nom d’ordinateur du nouveau nœud. Définir le nom d’ordinateur en l’ajoutant à `/etc/hosts`. Le script suivant vous permet de modifier `/etc/hosts` avec `vi`. 
+3. Le nouveau nœud doit recevoir un nom unique de 15 caractères ou moins. Par défaut, dans Red Hat Linux, le nom de l’ordinateur est `localhost.localdomain`. Ce nom par défaut ne peut pas être unique et est trop long. Définissez le nom de l’ordinateur comme étant le nouveau nœud. Définissez le nom de l’ordinateur en l'ajoutant à `/etc/hosts`. Le script suivant vous permet de modifier `/etc/hosts` avec `vi`. 
 
    ```bash
    sudo vi /etc/hosts
    ```
 
-   L’exemple suivant `/etc/hosts` avec des ajouts pour trois nœuds nommés `sqlfcivm1`, `sqlfcivm2`, et`sqlfcivm3`.
+   L’exemple suivant présente `/etc/hosts` avec des ajouts pour trois nœuds nommés `sqlfcivm1`, `sqlfcivm2` et `sqlfcivm3`.
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -94,19 +94,19 @@ Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.lo
    10.128.14.26 fcivm3
     ```
     
-   Le fichier doit être identique sur chaque nœud. 
+   Le fichier doit être le même sur chaque nœud. 
 
-1. Arrêter le service SQL Server sur le nouveau nœud.
+1. Arrêtez le service SQL Server sur le nouveau nœud.
 
-1. Suivez les instructions pour monter le répertoire du fichier de base de données à l’emplacement partagé :
+1. Suivez les instructions pour monter le répertoire du fichier de base de données dans l’emplacement partagé :
 
-   À partir du serveur NFS, installer `nfs-utils`
+   À partir du serveur NFS, installez `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
    ``` 
 
-   Ouvrez le pare-feu sur les clients et serveur NFS 
+   Ouvrir le pare-feu sur les clients et le serveur NFS 
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -115,15 +115,15 @@ Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.lo
    sudo firewall-cmd --reload
    ```
 
-   Modifiez le fichier/etc/fstab pour inclure la commande de montage : 
+   Modifiez le fichier/etc/fstab pour inclure la commande Monter : 
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr
    ```
 
-   Exécutez `mount -a` pour que les modifications entrent en vigueur.
+   Exécutez `mount -a` pour que les modifications soient prises en compte.
    
-1. Sur le nouveau nœud, créez un fichier pour stocker le nom d’utilisateur SQL Server et le mot de passe pour le compte de connexion Pacemaker. La commande suivante a pour effet de créer et remplir ce fichier :
+1. Sur le nouveau nœud, créez un fichier pour stocker le nom d’utilisateur et le mot de passe SQL Server pour la connexion à Pacemaker. La commande suivante a pour effet de créer et remplir ce fichier :
 
    ```bash
    sudo touch /var/opt/mssql/passwd
@@ -133,7 +133,7 @@ Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.lo
    sudo chmod 600 /var/opt/mssql/passwd
    ```
 
-3. Sur le nouveau nœud, ouvrez les ports de pare-feu Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
+3. Sur le nouveau nœud, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -141,7 +141,7 @@ Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.lo
    ```
 
    > [!NOTE]
-   > Si vous utilisez un autre pare-feu qui n’a pas une configuration de haute disponibilité intégrée, les ports suivants doivent être ouverts pour permettre à être en mesure de communiquer avec d’autres nœuds du cluster Pacemaker
+   > Si vous utilisez un autre pare-feu qui n’intègre pas de configuration à haute disponibilité intégrée, les ports suivants doivent être ouverts pour permettre à Pacemaker de communiquer avec les autres nœuds du cluster
    >
    > * TCP : Ports 2224, 3121, 21064
    > * UDP : Port 5405
@@ -152,13 +152,13 @@ Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.lo
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. Définissez le mot de passe pour l’utilisateur par défaut qui est créé pendant l’installation des packages Pacemaker et Corosync. Utilisez le même mot de passe en tant que les nœuds existants. 
+2. Définissez le mot de passe pour l’utilisateur par défaut qui est créé pendant l’installation des packages Pacemaker et Corosync. Utilisez le même mot de passe que les nœuds existants. 
 
    ```bash
    sudo passwd hacluster
    ```
  
-3. Activez et démarrez le service `pcsd` et Pacemaker. Ainsi, le nouveau nœud à rejoindre le cluster après le redémarrage. Exécutez la commande suivante sur le nouveau nœud.
+3. Activez et démarrez le service `pcsd` et Pacemaker. Cela permettra au nouveau nœud de rejoindre le cluster après le redémarrage. Exécutez la commande suivante sur le nouveau nœud.
 
    ```bash
    sudo systemctl enable pcsd
@@ -172,7 +172,7 @@ Afficher les journaux de l’agent de ressource à `/var/log/cluster/corosync.lo
    sudo yum install mssql-server-ha
    ```
 
-1. Sur un nœud existant à partir du cluster, authentifier le nouveau nœud et l’ajouter au cluster :
+1. Sur un nœud existant à partir du cluster, authentifiez le nouveau nœud et ajoutez-le au cluster:
 
     ```bash
     sudo pcs    cluster auth <nodeName3> -u hacluster 
@@ -194,34 +194,34 @@ Pour supprimer un nœud d’un cluster, exécutez la commande suivante :
 sudo pcs    cluster node remove <nodeName>  
 ```
 
-## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Modifier la fréquence de l’intervalle d’analyse de la ressource sqlservr
+## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Modifier la fréquence de l’intervalle d’analyse des ressources sqlservr
 
 ```bash
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
 ```
 
-L’exemple suivant définit l’intervalle de surveillance à 2 secondes pour la ressource de mssql :
+L’exemple suivant définit l’intervalle d’analyse à 2 secondes pour la ressource mssql :
 
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
-## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Résoudre les problèmes de cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
+## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Détecter un problème sur le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server
 
-Dans le cluster de résolution des problèmes, il peut vous aider à comprendre comment les trois processus fonctionnent ensemble pour gérer les ressources de cluster. 
+Lors de la résolution des problèmes du cluster, il peut être utile de comprendre comment les trois démons fonctionnent ensemble pour gérer les ressources de cluster. 
 
 | Daemon | Description 
 | ----- | -----
-| Corosync | Fournit l’appartenance au quorum et messagerie entre les nœuds de cluster.
-| Pacemaker | Se trouve en haut de Corosync et fournit des machines d’état pour les ressources. 
-| PCSD | Gère Pacemaker et Corosync via la `pcs` outils
+| Corosync | Fournit l’appartenance au quorum et la messagerie entre les nœuds du cluster.
+| Pacemaker | Se trouve au-dessus de Corosync et fournit des machines d’état pour les ressources. 
+| PCSD | Gère à la fois Pacemaker et Corosync via les outils `pcs`
 
-PCSD doit être en cours d’exécution pour pouvoir utiliser `pcs` outils. 
+PCSD doit être en cours d’exécution pour pouvoir utiliser les outils `pcs`. 
 
-### <a name="current-cluster-status"></a>État actuel de cluster 
+### <a name="current-cluster-status"></a>État actuel du cluster 
 
-`sudo pcs status` Retourne des informations de base sur l’état du cluster, quorum, nœuds, ressources et démon pour chaque nœud. 
+`sudo pcs status` renvoie des informations de base sur le cluster, le quorum, les nœuds, les ressources et l’état du démon pour chaque nœud. 
 
-Un exemple d’une sortie de quorum sain pacemaker serait :
+Voici un exemple de sortie de quorum Pacemaker sain :
 
 ```
 Cluster name: MyAppSQL 
@@ -246,33 +246,33 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-Dans l’exemple, `partition with quorum` signifie qu’un quorum majoritaire de nœuds est en ligne. Si le cluster perd un quorum majoritaire de nœuds, `pcs status` retournera `partition WITHOUT quorum` et toutes les ressources va être arrêtés. 
+Dans l’exemple, `partition with quorum` signifie qu’un quorum majoritaire de nœuds est en ligne. Si le cluster perd un quorum de nœuds majoritaire, `pcs status` retourne `partition WITHOUT quorum` et toutes les ressources sont arrêtées. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Retourne le nom de tous les nœuds actuellement inclus dans le cluster. Si tous les nœuds ne font pas partie, `pcs status` retourne `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` retourne le nom de tous les nœuds participant actuellement au cluster. Si des nœuds ne sont pas participants, `pcs status` retourne `OFFLINE: [<nodename>]`.
 
-`PCSD Status` Affiche l’état du cluster pour chaque nœud.
+`PCSD Status` affiche l’état du cluster pour chaque nœud.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Raisons pour lesquelles un nœud peut être hors connexion
 
-Vérifiez les éléments suivants quand un nœud est hors connexion.
+Vérifiez les éléments suivants lorsqu’un nœud est hors connexion.
 
 - **Pare-feu**
 
-    Les ports suivants doivent être ouverts sur tous les nœuds pour Pacemaker être en mesure de communiquer.
+    Les ports suivants doivent être ouverts sur tous les nœuds pour que Pacemaker puisse communiquer.
     
-    - ** TCP : 2224, 3121, 21064
+    - **TCP : 2224, 3121, 21064
 
 - **Pacemaker ou services Corosync en cours d’exécution**
 
-- **Communication de nœud**
+- **Communication entre nœuds**
 
-- **Mappages des noms de nœud**
+- **Mappages de noms de nœuds**
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-* [Cluster à partir de zéro](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide à partir de Pacemaker
+* Guide de Pacemaker [Cluster à partir de zéro](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer un cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+[Configurer le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

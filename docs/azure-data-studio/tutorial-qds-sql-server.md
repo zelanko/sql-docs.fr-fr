@@ -1,7 +1,7 @@
 ---
-title: 'Tutoriel : Activer le widget cinq exemples de requêtes les plus lentes'
+title: 'Tutoriel : Activer le widget d’exemple qui affiche les cinq requêtes les plus lentes'
 titleSuffix: Azure Data Studio
-description: Ce didacticiel montre comment activer le widget d’exemple requêtes les plus lentes cinq sur le tableau de bord de base de données.
+description: Ce didacticiel montre comment activer le widget qui affiche les cinq requêtes les plus lentes dans le tableau de bord de la base de données.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,60 +11,60 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 5c94d2cf8b80ad7724cc1f710dc67d3f4a13c59e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959064"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutoriel : Ajouter le *cinq requêtes les plus lentes* widget exemple au tableau de bord de base de données
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutoriel : Ajouter le widget d’exemple *cinq requêtes les plus lentes* au tableau de bord de la base de données
 
-Ce didacticiel illustre le processus d’ajout d’un des [!INCLUDE[name-sos](../includes/name-sos-short.md)]de widgets exemples intégrés pour le *tableau de bord de base de données* pour afficher rapidement les requêtes les plus lentes cinq une base de données. Vous allez également apprendre à afficher les détails des requêtes lentes et plans de requête à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]de fonctionnalités. Au cours de ce didacticiel, vous découvrez comment :
+Ce didacticiel montre le processus d’ajout d’un widget d’exemple intégré de [!INCLUDE[name-sos](../includes/name-sos-short.md)] au *tableau de bord de la base de données* pour afficher rapidement les cinq requêtes les plus lentes d’une base de données. Vous allez également apprendre à afficher les détails des requêtes lentes et les plans de requête à l’aide des fonctionnalités de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Dans ce didacticiel, vous apprendrez à :
 
 > [!div class="checklist"]
-> * Activer le Store de requête sur une base de données
-> * Ajouter un widget insight prédéfinis au tableau de bord de base de données
-> * Afficher les détails sur les requêtes les plus lentes de la base de données
-> * Afficher les plans d’exécution pour les requêtes lentes
+> * Activer le Magasin des requêtes sur une base de données
+> * Ajouter un widget d’insight prédéfini au tableau de bord de la base de données
+> * Afficher des détails sur les requêtes les plus lentes de la base de données
+> * Afficher les plans d’exécution de requête pour les requêtes lentes
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut plusieurs insight widgets out-of-the-box. Ce didacticiel montre comment ajouter la *query-data-store-db-insight* widget, mais les étapes sont essentiellement les mêmes pour l’ajout d’un widget.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] comprend plusieurs widgets d’insight prêts à l’emploi. Ce didacticiel montre comment ajouter le widget *query-data-store-db-insight*, mais les étapes sont fondamentalement les mêmes pour l’ajout de n’importe quel widget.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Ce didacticiel requiert SQL Server ou la base de données SQL Azure *TutorialDB*. Pour créer le *TutorialDB* de base de données, effectuez l’une des Démarrages rapides suivants :
+Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azure SQL Database. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 
-- [Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Se connecter et interroger à l’aide de la base de données SQL Azure [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Se connecter à et interroger Azure SQL Database avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 
-## <a name="turn-on-query-store-for-your-database"></a>Activer le Store de la requête pour votre base de données
+## <a name="turn-on-query-store-for-your-database"></a>Activez le Magasin des requêtes pour votre base de données
 
-Le widget dans cet exemple nécessite *requête Store* doit être activé.
+Dans cet exemple, le widget requiert l’activation du *Magasin des requêtes*.
 
-1. Bouton droit sur le **TutorialDB** base de données (dans le **serveurs** encadré) et sélectionnez **nouvelle requête**.
-2. Collez l’instruction Transact-SQL (T-SQL) suivante dans l’éditeur de requête, puis cliquez sur **exécuter**:
+1. Cliquez avec le bouton droit sur la base de données **TutorialDB** (dans la barre latérale **SERVEURS**) et sélectionnez **Nouvelle requête**.
+2. Collez l’instruction Transact-SQL suivante dans l’éditeur de requête et cliquez sur **Exécuter** :
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
    ```
 
-## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>Ajouter le widget de requêtes lentes à votre tableau de bord de base de données
+## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>Ajouter le widget de requêtes lentes au tableau de bord de votre base de données
 
-Pour ajouter le *ralentir le widget de requêtes* à votre tableau de bord, vous devez modifier le *dashboard.database.widgets* définissant dans votre *paramètres utilisateur* fichier.
+Pour ajouter le *widget de requêtes lentes* à votre tableau de bord, modifiez le paramètre *dashboard.database.widgets* dans votre fichier de *Paramètres utilisateur*.
 
-1. Ouvrez *paramètres utilisateur* en appuyant sur **Ctrl + Maj + P** pour ouvrir le *Palette de commandes*.
-2. Type *paramètres* dans la zone de recherche, puis sélectionnez **préférences : Ouvrez les paramètres utilisateur**.
+1. Ouvrez les *Paramètres utilisateur* en appuyant sur **Ctrl+Maj+P** pour ouvrir la *Palette de commandes*.
+2. Saisissez *préférences* dans la zone de recherche et sélectionnez **Préférences : Ouvrir les paramètres utilisateur**.
 
-   ![Commande de paramètres utilisateur ouvertes](./media/tutorial-qds-sql-server/open-user-settings.png)
+   ![Commande d’ouverture des paramètres utilisateur](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-2. Type *tableau de bord* dans la recherche de paramètres et recherchez **dashboard.database.widgets**.
+2. Saisissez *dashboard* dans la zone de recherche de paramètres et recherchez **dashboard.database.widgets**.
 
-   ![Paramètres de recherche](./media/tutorial-qds-sql-server/search-settings.png)
+   ![Rechercher des paramètres](./media/tutorial-qds-sql-server/search-settings.png)
 
-3. Pour personnaliser le **dashboard.database.widgets** paramètres, vous devez modifier le **dashboard.database.widgets** entrée dans le **paramètres utilisateur** section (la colonne dans le côté droit). S’il existe aucune **dashboard.database.widgets** dans le **paramètres utilisateur** section, placez le curseur sur le **dashboard.database.widgets** texte dans la colonne de paramètres par défaut et cliquez sur l’icône de crayon qui apparaît à gauche du texte et cliquez sur **copie aux paramètres**. Si la fenêtre contextuelle indique **remplacer dans les paramètres**, ne cliquez pas dessus ! Accédez à la **paramètres utilisateur** colonne vers la droite et recherchez le **dashboard.database.widgets** section et passez à l’étape suivante.
+3. Pour personnaliser les paramètres **dashboard.database.widgets**, vous devez modifier l'entrée **dashboard.database.widgets** dans la section **PARAMÈTRES UTILISATEUR** (la colonne du côté droit). S’il n’existe pas de **dashboard.database.widgets** dans la section **PARAMÈTRES UTILISATEUR**, placez le curseur sur le texte **dashboard.database.widgets** dans la colonne PARAMÈTRES PAR DÉFAUT et cliquez sur l’icône de crayon qui apparaît à gauche du texte et cliquez sur **Copier vers les paramètres**. Si la fenêtre contextuelle indique **Remplacer dans les paramètres**, ne cliquez pas dessus ! Accédez à la colonne **PARAMÈTRES UTILISATEUR** à droite et recherchez la section **dashboard.database.widgets** et passez à l’étape suivante.
 
-4. Dans le **dashboard.database.widgets** section, ajoutez le code suivant :
+4. Dans la section **dashboard.database.widgets**, ajoutez ce qui suit :
 
    ```json
         {
@@ -79,7 +79,7 @@ Pour ajouter le *ralentir le widget de requêtes* à votre tableau de bord, vous
         },
     ```
 
-1. Si c’est la première fois, ajout d’un nouveau widget, le **dashboard.database.widgets** section doit ressembler à ceci :
+1. S’il s’agit de la première fois que vous ajoutez un nouveau widget, la section **dashboard.database.widgets** doit ressembler à ceci :
 
    ```json
    "dashboard.database.widgets": [
@@ -115,71 +115,71 @@ Pour ajouter le *ralentir le widget de requêtes* à votre tableau de bord, vous
    ]
    ```
 
-1. Appuyez sur **Ctrl + S** pour enregistrer la modification **paramètres utilisateur**.
+1. Appuyez sur **Ctrl+S** pour enregistrer les **Paramètres utilisateur**.
 
-6. Ouvrez le *tableau de bord de base de données* en accédant à **TutorialDB** dans le **serveurs** encadré, avec le bouton droit et sélectionnez **gérer**.
+6. Ouvrez le *Tableau de bord de la base de données* en accédant à **TutorialDB** dans la barre latérale **SERVEURS**, cliquez avec le bouton droit, puis sélectionnez **Gérer**.
 
-   ![Tableau de bord ouvert](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
+   ![Ouvrir le tableau de bord](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
-7. Le widget insight s’affiche sur le tableau de bord : 
+7. Le widget d’insight apparaît sur le tableau de bord : 
 
    ![Widget QDS](./media/tutorial-qds-sql-server/insight-qds-result.png)
 
 
-## <a name="view-insight-details-for-more-information"></a>Afficher les détails d’un aperçu pour plus d’informations
+## <a name="view-insight-details-for-more-information"></a>Afficher les détails de l’insight pour plus d'informations
 
-1. Pour afficher des informations supplémentaires pour un widget d’un aperçu, cliquez sur le bouton de sélection ( **...** ) dans le coin supérieur droit et sélectionnez **afficher les détails**.
-2. Pour afficher plus de détails sur un élément, sélectionnez un élément de **données du graphique** liste.
+1. Pour afficher des informations supplémentaires sur un widget d’insight, cliquez sur les points de suspension ( **...** ) dans le coin supérieur droit, puis sélectionnez **Afficher les détails**.
+2. Pour afficher plus de détails sur un élément, sélectionnez n’importe quel élément dans la liste **Données du graphique**.
 
-   ![Boîte de dialogue Détail Insight](./media/tutorial-qds-sql-server/insight-details-dialog.png)
+   ![Boîte de dialogue de détails d’insight](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Avec le bouton droit de la cellule située à droite de **query_sql_txt** dans **détails de l’élément** et cliquez sur **copier la cellule**.
+3. Cliquez avec le bouton droit sur la cellule située à droite de **query_sql_txt** dans les **Détails de l'élément**, puis cliquez sur **Copier la cellule**.
 
-4. Fermer le **Insights** volet.
+4. Fermez le volet **Insights**.
 
 ## <a name="view-the-query-plan"></a>Afficher le plan de requête 
 
 1. Ouvrez un nouvel éditeur de requête en appuyant sur **Ctrl + N**.
 
-2. Collez le texte de requête de l’étape précédente dans l’éditeur.
+2. Collez le texte de la requête des étapes précédentes dans l’éditeur.
 
-3. Cliquez sur **expliquent**.
+3. Cliquez sur **Expliquer**.
 
-   ![Expliquez Insight QDS](./media/tutorial-qds-sql-server/insight-qds-explain.png)
+   ![Expliquer insight QDS](./media/tutorial-qds-sql-server/insight-qds-explain.png)
 
-4. Afficher le plan d’exécution de la requête :
+4. Affichez le plan d’exécution de la requête :
 
    ![plan d'exécution de requêtes](./media/tutorial-qds-sql-server/showplan.png)
 
 ## <a name="save-and-open-a-query-plan"></a>Enregistrer et ouvrir un plan de requête 
 
-1. Ouvrez la boîte de dialogue Détail insight.
+1. Ouvrez la boîte de dialogue détails de l’insight.
 2. Sélectionnez un des éléments de la requête.
-2. Avec le bouton droit **query_plan** valeur et sélectionnez **copier la cellule**
+2. Cliquez avec le bouton droit sur la valeur **query_plan** et sélectionnez **Copier la cellule**
 
-   ![Insights QDS plan](./media/tutorial-qds-sql-server/insight-qds-plan.png)
+   ![Plan d’insights QDS](./media/tutorial-qds-sql-server/insight-qds-plan.png)
 
-3. Appuyez sur **Ctrl + N** pour ouvrir un nouvel éditeur.
+3. Appuyez sur **Ctrl+N** pour ouvrir un nouvel éditeur.
 
 4. Collez le plan copié dans l’éditeur.
 
-5. Appuyez sur **Ctrl + S** pour enregistrer le fichier et remplacez l’extension de fichier par *.sqlplan*. *.sqlplan* ne pas apparaître dans la liste déroulante extension de fichier, donc, tapez-la dans. Pour ce didacticiel, nommez le fichier *slowquery.sqlplan*.
+5. Appuyez sur **Ctrl+S** pour enregistrer le fichier et remplacez l’extension de fichier par *.sqlplan*. *.sqlplan* n’apparaît pas dans la liste déroulante d’extensions de fichier, vous devez donc saisir l’extension directement. Pour ce didacticiel, nommez le fichier *slowquery.sqlplan*.
 
-6. Le plan de requête s’ouvre dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]de visionneuse de plan de requête :
+6. Le plan de requête s'ouvre dans la visionneuse du plan de requête de [!INCLUDE[name-sos](../includes/name-sos-short.md)] :
 
-   ![Insights QDS plan](./media/tutorial-qds-sql-server/sqlplan.png)
+   ![Plan d’insights QDS](./media/tutorial-qds-sql-server/sqlplan.png)
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Dans ce didacticiel, vous avez appris à :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
-> * Activer le Store de requête sur une base de données
-> * Ajouter un widget d’insight au tableau de bord de base de données
-> * Afficher les détails sur les requêtes les plus lentes de la base de données
-> * Afficher les plans d’exécution pour les requêtes lentes
+> * Activer le Magasin des requêtes sur une base de données
+> * Ajouter un widget d’insight au tableau de bord de la base de données
+> * Afficher des détails sur les requêtes les plus lentes de la base de données
+> * Afficher les plans d’exécution de requête pour les requêtes lentes
 
 
-Pour savoir comment activer la **utilisation de l’espace de table** exemple d’analyse, de suivre le didacticiel suivant :
+Pour savoir comment activer l’exemple d’insight **d’utilisation de l’espace de table**, effectuez le didacticiel suivant :
 
 > [!div class="nextstepaction"]
-> [Activer le widget de tableau espace exemple insight](tutorial-table-space-sql-server.md)
+> [Activer le widget d’exemple d’aperçu d’espace de table](tutorial-table-space-sql-server.md)

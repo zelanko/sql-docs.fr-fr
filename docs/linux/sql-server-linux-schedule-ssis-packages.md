@@ -1,6 +1,6 @@
 ---
 title: Planifier des packages SSIS sur Linux avec cron
-description: Cet article décrit comment planifier des packages SQL Server Integration Services (SSIS) sur Linux avec le service cron.
+description: Cet article explique comment planifier des packages SQL Server Integration Services (SSIS) sur Linux avec le service cron.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,35 +9,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065163"
 ---
-# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>L’exécution sur Linux avec cron du package de planification SQL Server Integration Services
+# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Planifier l’exécution du package SQL Server Integration Services sur Linux avec cron
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Quand vous exécutez SSIS (SQL Server Integration Services) et SQL Server sur Windows, vous pouvez automatiser l’exécution de packages SSIS à l’aide de SQL Server Agent. Toutefois, quand vous exécutez SQL Server et SSIS sur Linux, l’utilitaire SQL Server Agent n’est pas disponible pour planifier ces travaux. Au lieu de cela, vous utilisez le service cron, qui est largement utilisé sur les plateformes Linux pour automatiser l’exécution de packages.
+Lorsque vous exécutez SQL Server Integration Services (SSIS) et SQL Server sous Windows, vous pouvez automatiser l’exécution des packages SSIS à l’aide de SQL Server Agent. Toutefois, lorsque vous exécutez SQL Server et SSIS sur Linux, l’utilitaire SQL Server Agent n’est pas disponible pour planifier des tâches sur Linux. Au lieu de cela, vous utilisez le service cron, qui est largement utilisé sur les plateformes Linux pour automatiser l’exécution des packages.
 
-Cet article fournit des exemples qui montrent comment automatiser l’exécution des packages SSIS. Les exemples sont écrits pour s’exécuter sur Red Hat Enterprise. Le code est similaire pour les autres distributions Linux, telle qu’Ubuntu.
+Cet article fournit des exemples qui expliquent comment automatiser l’exécution de packages SSIS. Les exemples sont écrits pour s’exécuter sur Red Hat Enterprise. Le code est similaire pour les autres distributions Linux, telles qu’Ubuntu.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Avant d’utiliser le service cron pour exécuter des travaux, vérifiez s'il est en cours d'exécution sur votre ordinateur.
+Avant d’utiliser le service cron pour exécuter des tâches, vérifiez s’il s’exécute sur votre ordinateur.
 
 Pour vérifier l’état du service cron, utilisez la commande suivante : `systemctl status crond.service`.
 
-Si le service n’est pas actif (autrement dit, il ne fonctionne pas), consultez votre administrateur pour installer et configurer le service cron correctement.
+Si le service n’est pas actif (autrement dit, s’il n’est pas en cours d’exécution), contactez votre administrateur pour installer et configurer le service cron correctement.
 
-## <a name="create-jobs"></a>Créer des travaux
+## <a name="create-jobs"></a>Créer des tâches
 
-Un travail cron est une tâche que vous pouvez configurer pour exécuter régulièrement selon un intervalle spécifié. Le travail peut être aussi simple qu’une commande que vous souhaitez normalement taper directement dans la console ou exécuter en tant qu’un script d’interpréteur de commandes.
+Une tâche cron est une tâche que vous pouvez configurer pour qu’elle s’exécute régulièrement à un intervalle spécifié. La tâche peut être aussi simple qu’une commande que vous devez normalement saisir directement dans la console ou exécuter en tant que script d’interpréteur de commandes.
 
-Pour faciliter la gestion et à des fins de maintenance, nous vous recommandons de placer vos commandes de l’exécution du package dans un script qui contient un nom descriptif.
+Pour faciliter la gestion et la maintenance, nous vous recommandons de placer les commandes d’exécution des packages dans un script qui contient un nom descriptif.
 
-Voici un exemple d’un script shell simple pour l’exécution d’un package. Il contient une commande unique, mais vous pouvez ajouter davantage de commandes en fonction des besoins.
+Voici un exemple de script d’interpréteur de commandes simple pour l’exécution d’un package. Il ne contient qu’une seule commande, mais vous pouvez en ajouter d’autres en fonction des besoins.
 
 ```bash
 # A simple shell script that contains a simple package execution command
@@ -46,13 +46,13 @@ Voici un exemple d’un script shell simple pour l’exécution d’un package. 
 /opt/ssis/bin/dtexec /F yourSSISpackageName.dtsx >> $HOME/tmp/out 2>&1
 ```
 
-## <a name="schedule-jobs-with-the-cron-service"></a>Planification des travaux avec le service cron
+## <a name="schedule-jobs-with-the-cron-service"></a>Planifier des tâches avec le service cron
 
-Après avoir défini vos tâches, vous pouvez planifier celles-ci pour qu'elles s’exécutent automatiquement à l’aide du service cron.
+Une fois que vous avez défini vos tâches, vous pouvez les planifier pour qu’elles s’exécutent automatiquement à l’aide du service cron.
 
-Pour ajouter un travail à cron pour qu’il l’exécute, ajoutez-le dans le fichier crontab. Pour ouvrir le fichier crontab dans un éditeur, où vous pouvez ajouter ou mettre à jour les travaux, utilisez la commande suivante : `crontab -e`.
+Pour ajouter votre tâche pour que cron s’exécute, ajoutez la dans le fichier crontab. Pour ouvrir le fichier crontab dans un éditeur où vous pouvez ajouter ou mettre à jour la tâche, utilisez la commande suivante : `crontab -e`.
 
-Pour planifier le travail décrit précédemment pour exécuter tous les jours à 2 h 10, ajoutez la ligne suivante au fichier crontab :
+Pour planifier l’exécution de la tâche décrite précédemment tous les jours à 2h10, ajoutez la ligne suivante au fichier crontab :
 
 ```
 # run <SSIS package name> at 2:10 AM every day
@@ -61,21 +61,21 @@ Pour planifier le travail décrit précédemment pour exécuter tous les jours �
 
 Enregistrez le fichier crontab, puis quittez l’éditeur.
 
-Pour comprendre le format de l’exemple de commande, passez en revue les informations contenues dans la section suivante.
+Pour comprendre le format de l’exemple de commande, consultez les informations contenues dans la section suivante.
  
 ## <a name="format-of-a-crontab-file"></a>Format d’un fichier crontab
 
-L’illustration suivante montre la description du format de la ligne de tâche qui est ajoutée au fichier crontab.
+L’image suivante décrit le format de la ligne de tâche ajoutée au fichier crontab.
 
-![Description de format pour l’entrée dans le fichier crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
+![Description du format pour l’entrée dans le fichier crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
 Pour obtenir une description plus détaillée du format de fichier crontab, utilisez la commande suivante : `man 5 crontab`.
 
-Voici un exemple partiel de la sortie qui permet de comprendre l’exemple contenu dans cet article :
+Voici un exemple partiel de la sortie qui permet d’expliquer l’exemple de cet article :
 
-![Description partielle détaillée du format de crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+![Description partielle détaillée du format crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
-## <a name="related-content-about-ssis-on-linux"></a>Contenu associé sur SSIS sur Linux
+## <a name="related-content-about-ssis-on-linux"></a>Contenu connexe relatif à SSIS sur Linux
 -   [Extraire, transformer et charger des données sur Linux avec SSIS](sql-server-linux-migrate-ssis.md)
 -   [Installer SQL Server Integration Services (SSIS) sur Linux](sql-server-linux-setup-ssis.md)
 -   [Configurer SQL Server Integration Services sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md)

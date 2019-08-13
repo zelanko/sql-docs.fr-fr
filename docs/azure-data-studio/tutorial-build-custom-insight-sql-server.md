@@ -1,7 +1,7 @@
 ---
-title: 'Tutoriel : Générer un widget d’analyse personnalisée'
+title: 'Tutoriel : Créer un widget insight personnalisé'
 titleSuffix: Azure Data Studio
-description: Ce didacticiel montre comment créer des widgets d’analyse personnalisées et ajoutez-les à la base de données et serveur des tableaux de bord dans Azure Data Studio.
+description: Ce didacticiel montre comment créer des widgets d’insight personnalisés et les ajouter aux tableaux de bord de base de données et de serveur dans Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,39 +11,39 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959096"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Tutoriel : Générer un widget d’analyse personnalisée
+# <a name="tutorial-build-a-custom-insight-widget"></a>Tutoriel : Créer un widget insight personnalisé
 
-Ce didacticiel montre comment utiliser vos propres requêtes insight pour créer des widgets d’analyse personnalisés.
+Ce didacticiel montre comment utiliser vos propres requêtes d’insight pour créer des widgets d’insight personnalisés.
 
-Au cours de ce didacticiel, vous découvrez comment :
+Dans ce didacticiel, vous apprendrez à :
 > [!div class="checklist"]
 > * Exécuter votre propre requête et l’afficher dans un graphique
-> * Générer un widget d’analyse personnalisée à partir du graphique
-> * Ajouter le graphique à un tableau de bord de serveur ou de base de données
-> * Ajouter des détails à votre widget analyse personnalisée
+> * Créer un widget d’insight personnalisé à partir du graphique
+> * Ajouter le graphique à un serveur ou un tableau de bord de base de données
+> * Ajouter des détails à votre widget d’insight personnalisé
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Ce didacticiel requiert SQL Server ou la base de données SQL Azure *TutorialDB*. Pour créer le *TutorialDB* de base de données, effectuez l’une des Démarrages rapides suivants :
+Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azure SQL Database. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 
-- [Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Se connecter et interroger à l’aide de la base de données SQL Azure [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Se connecter à et interroger Azure SQL Database avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Exécuter votre propre requête et afficher le résultat dans une vue graphique
-Dans cette étape, exécutez un script sql pour interroger les sessions actives en cours.
+## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Exécuter votre propre requête et afficher le résultat dans une vue de graphique
+À cette étape, exécutez un script SQL pour interroger les sessions actives actuelles.
 
-1. Pour ouvrir un nouvel éditeur, appuyez sur **Ctrl + N**. 
+1. Pour ouvrir un nouvel éditeur, appuyez sur **Ctrl+N**. 
 
-2. Modifier le contexte de connexion au **TutorialDB**.
+2. Remplacez le contexte de connexion par **TutorialDB**.
 
-3. Collez la requête suivante dans l’éditeur de requête :
+3. Collez la requête ci-après dans l’éditeur de requête :
 
    ```sql
    SELECT count(session_id) as [Active Sessions]
@@ -51,31 +51,31 @@ Dans cette étape, exécutez un script sql pour interroger les sessions actives 
    WHERE status = 'running'
    ```
 
-4. Enregistrer la requête dans l’éditeur pour un \*fichier .sql. Pour ce didacticiel, enregistrez le script sous *activeSession.sql*.
+4. Enregistrez la requête dans l’éditeur dans un fichier \*.sql. Pour ce didacticiel, enregistrez le script sous le nom *activeSession.sql*.
 
 5. Pour exécuter la requête, appuyez sur **F5**.
 
-6. Une fois les résultats de requête sont affichés, cliquez sur **vue en tant que graphique**, puis cliquez sur le **visionneuse de graphique** onglet.
+6. Une fois les résultats de la requête affichés, cliquez sur **Afficher en tant que graphique**, puis sur l’onglet **Visionneuse de graphique**.
 
-7. Modification **Type de graphique** à **nombre**. Ces paramètres restituent un graphique de nombre.
+7. Modifiez le **Type de graphique** en **nombre**. Ces paramètres affichent un graphique de nombres.
 
-## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Ajouter l’analyse personnalisée au tableau de bord de base de données
+## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Ajouter l’insight personnalisé au tableau de bord de la base de données
 
-1. Pour ouvrir la configuration du widget insight, cliquez sur **Insight créer** sur *visionneuse de graphique*:
+1. Pour ouvrir la configuration du widget d’insight, cliquez sur **Créer un aperçu** sur la *Visionneuse de graphique* :
 
    ![configuration](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
-2. Copier la configuration de l’analyse (les données JSON). 
+2. Copiez la configuration d’insight (les données JSON). 
 
-3. Appuyez sur **Ctrl + virgule** pour ouvrir *paramètres utilisateur*.
+3. Appuyez sur **Ctrl+ virgule** pour ouvrir les *Paramètres utilisateur*.
 
-4. Type *tableau de bord* dans *les paramètres de recherche*.
+4. Saisissez *tableau de bord* dans *Rechercher des paramètres*.
 
-5. Cliquez sur **modifier** pour *dashboard.database.widgets*.
+5. Cliquez sur **Modifier** pour *dashboard.database.widgets*.
 
-   ![paramètres de tableau de bord](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
+   ![paramètres du tableau de bord](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
-6. Collez la configuration d’analyse JSON dans *dashboard.database.widgets*. Base de données du tableau de bord paramètres ressemble à ceci :
+6. Collez le code JSON de la configuration Insight dans *dashboard.database.widgets*. Les paramètres du tableau de bord de base de données se présentent comme suit :
 
    ```json
     "dashboard.database.widgets": [
@@ -103,17 +103,17 @@ Dans cette étape, exécutez un script sql pour interroger les sessions actives 
     ]
    ```
 
-7. Enregistrer le *paramètres utilisateur* de fichiers et ouvrir le *TutorialDB* tableau de bord de base de données pour voir le widget de sessions actives :
+7. Enregistrez le fichier *Paramètres utilisateur* et ouvrez le tableau de bord de la base de données *TutorialDB* pour afficher le widget de sessions actives:
 
-   ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![Insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
-## <a name="add-details-to-custom-insight"></a>Ajouter les détails d’analyse personnalisée
+## <a name="add-details-to-custom-insight"></a>Ajouter des détails à un insight personnalisé
 
-1. Pour ouvrir un nouvel éditeur, appuyez sur **Ctrl + N**.
+1. Pour ouvrir un nouvel éditeur, appuyez sur **Ctrl+N**.
 
-2. Modifier le contexte de connexion au **TutorialDB**.
+2. Remplacez le contexte de connexion par **TutorialDB**.
 
-3. Collez la requête suivante dans l’éditeur de requête :
+3. Collez la requête ci-après dans l’éditeur de requête :
 
    ```sql
     SELECT session_id AS [SID], login_time AS [Login Time], host_name AS [Host Name], program_name AS [Program Name], login_name AS [Login Name]
@@ -121,11 +121,11 @@ Dans cette étape, exécutez un script sql pour interroger les sessions actives 
     WHERE status = 'running'
    ```
 
-4. Enregistrer la requête dans l’éditeur pour un \*fichier .sql. Pour ce didacticiel, enregistrez le script sous *activeSessionDetail.sql*.
+4. Enregistrez la requête dans l’éditeur dans un fichier \*.sql. Pour ce didacticiel, enregistrez le script sous le nom *activeSessionDetail.sql*.
 
-5. Appuyez sur **Ctrl + virgule** pour ouvrir *paramètres utilisateur*.
+5. Appuyez sur **Ctrl+ virgule** pour ouvrir les *Paramètres utilisateur*.
 
-6. Modifier existants *dashboard.database.widgets* nœud dans votre fichier de paramètres :
+6. Modifiez le nœud *dashboard.database.widgets* existant dans votre fichier de paramètres :
 
    ```json
     "dashboard.database.widgets": [
@@ -158,19 +158,19 @@ Dans cette étape, exécutez un script sql pour interroger les sessions actives 
     ]
    ```
 
-7. Enregistrer le *paramètres utilisateur* de fichiers et ouvrir le *TutorialDB* tableau de bord de base de données. Cliquez sur le bouton de sélection (...) en regard *mes Widget* pour afficher les détails :
+7. Enregistrez le fichier *Paramètres utilisateur* et ouvrez le tableau de bord de la base de données *TutorialDB*. Cliquez sur le bouton de sélection (...) à côté de *My-Widget* pour afficher les détails :
 
-    ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![Insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
-Dans ce didacticiel, vous avez appris à :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
 > * Exécuter votre propre requête et l’afficher dans un graphique
-> * Générer un widget d’analyse personnalisée à partir du graphique
-> * Ajouter le graphique à un tableau de bord de serveur ou de base de données
-> * Ajouter des détails à votre widget analyse personnalisée
+> * Créer un widget d’insight personnalisé à partir du graphique
+> * Ajouter le graphique à un serveur ou un tableau de bord de base de données
+> * Ajouter des détails à votre widget d’insight personnalisé
 
-Pour savoir comment sauvegarder et restaurer des bases de données, suivre le didacticiel suivant :
+Pour savoir comment sauvegarder et restaurer des bases de données, suivez le didacticiel suivant :
 
 > [!div class="nextstepaction"]
-> [Sauvegarde et restauration des bases de données](tutorial-backup-restore-sql-server.md).
+> [Sauvegarder et restaurer des bases de données](tutorial-backup-restore-sql-server.md).

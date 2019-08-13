@@ -1,7 +1,7 @@
 ---
-title: 'Tutoriel : Activer le widget de tableau espace utilisation exemple insight'
+title: 'Tutoriel : Activer le widget d’exemple d’insight d’utilisation d’espace de table'
 titleSuffix: Azure Data Studio
-description: Ce didacticiel montre comment activer le widget d’insight exemple de table espace l’utilisation du tableau de bord de base de données Azure Data Studio.
+description: Ce didacticiel montre comment activer le widget d’insight d’utilisation de l’espace de table sur le tableau de bord d’une base de données Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,39 +11,39 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 6ec653eac10da8c28f727277fc130722c3badef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958987"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutoriel : Activer la table espace utilisation exemple insight widget à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutoriel : Activer le widget d’exemple d’insight d’utilisation d’espace de table avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Ce didacticiel montre comment activer un widget d’un aperçu du tableau de bord de base de données, en fournissant une vue d’un coup de œil sur l’utilisation de l’espace pour toutes les tables dans une base de données. Au cours de ce didacticiel, vous découvrez comment :
+Ce didacticiel montre comment activer un widget d’insight sur le tableau de bord d’une base de données, en fournissant une vue d’ensemble de l’utilisation de l’espace pour toutes les tables d’une base de données. Dans ce didacticiel, vous apprendrez à :
 
 > [!div class="checklist"]
-> * Activez rapidement un widget d’insight à l’aide d’un exemple de widget insight intégrés
-> * Afficher les détails d’utilisation d’espace de table
-> * Filtrer les données et afficher les détails de l’étiquette sur un graphique insight
+> * Activer rapidement un widget d’insight à l’aide d’un exemple de widget d’insight intégré
+> * Afficher les détails de l’utilisation de l’espace de table
+> * Filtrer les données et afficher les détails des étiquettes sur un graphique d’insight
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Ce didacticiel requiert SQL Server ou la base de données SQL Azure *TutorialDB*. Pour créer le *TutorialDB* de base de données, effectuez l’une des Démarrages rapides suivants :
+Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azure SQL Database. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 
-- [Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Se connecter et interroger à l’aide de la base de données SQL Azure [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Se connecter à et interroger Azure SQL Database avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Activer un insight de gestion sur [!INCLUDE[name-sos](../includes/name-sos-short.md)]du tableau de bord de base de données
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] comporte un widget exemples intégrés pour surveiller l’espace utilisé par les tables dans une base de données.
+## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Activer un insight de gestion sur le tableau de bord d’une base de données [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] dispose d’un exemple de widget intégré pour surveiller l’espace utilisé par les tables dans une base de données.
 
-1. Ouvrez *paramètres utilisateur* en appuyant sur **Ctrl + Maj + P** pour ouvrir le *Palette de commandes*.
-2. Type *paramètres* dans la zone de recherche, puis sélectionnez **préférences : Ouvrez les paramètres utilisateur**.
-2. Type *tableau de bord* zone de recherche des paramètres d’entrée et recherchez **dashboard.database.widgets**.
+1. Ouvrez les *Paramètres utilisateur* en appuyant sur **Ctrl+Maj+P** pour ouvrir la *Palette de commandes*.
+2. Saisissez *préférences* dans la zone de recherche et sélectionnez **Préférences : Ouvrir les paramètres utilisateur**.
+2. Saisissez *tableau de bord* dans la zone Rechercher paramètres et trouvez **dashboard.database.widgets**.
 
-3. Pour personnaliser le **dashboard.database.widgets** paramètres, vous devez modifier le **dashboard.database.widgets** entrée dans le **paramètres utilisateur** section (la colonne dans le côté droit). S’il existe aucune **dashboard.database.widgets** dans le **paramètres utilisateur** section, placez le curseur sur le **dashboard.database.widgets** texte dans la colonne de paramètres par défaut et cliquez sur l’icône de crayon qui apparaît à gauche du texte et cliquez sur **copie aux paramètres**. Si la fenêtre contextuelle indique **remplacer dans les paramètres**, ne cliquez pas dessus ! Accédez à la **paramètres utilisateur** colonne vers la droite et recherchez le **dashboard.database.widgets** section et passez à l’étape suivante.
+3. Pour personnaliser les paramètres **dashboard.database.widgets**, vous devez modifier l'entrée **dashboard.database.widgets** dans la section **PARAMÈTRES UTILISATEUR** (la colonne du côté droit). S’il n’existe pas de **dashboard.database.widgets** dans la section **PARAMÈTRES UTILISATEUR**, placez le curseur sur le texte **dashboard.database.widgets** dans la colonne PARAMÈTRES PAR DÉFAUT et cliquez sur l’icône de crayon qui apparaît à gauche du texte et cliquez sur **Copier vers les paramètres**. Si la fenêtre contextuelle indique **Remplacer dans les paramètres**, ne cliquez pas dessus ! Accédez à la colonne **PARAMÈTRES UTILISATEUR** à droite et recherchez la section **dashboard.database.widgets** et passez à l’étape suivante.
 
-4. Dans le **dashboard.database.widgets** section, ajoutez le code suivant :
+4. Dans la section **dashboard.database.widgets**, ajoutez ce qui suit :
 
    ```json
         {
@@ -57,38 +57,38 @@ Ce didacticiel requiert SQL Server ou la base de données SQL Azure *TutorialDB*
             }
         },
     ```
-Le **dashboard.database.widgets** section doit ressembler à l’image suivante :
+La section **dashboard.database.widgets** doit ressembler à l’image suivante :
 
-   ![Paramètres de recherche](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   ![Rechercher des paramètres](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-5. Appuyez sur **Ctrl + S** pour enregistrer les paramètres.
+5. Appuyez sur **Ctrl+S** pour enregistrer les paramètres.
 
-6. Tableau de bord de base de données ouvert en double-cliquant sur **TutorialDB** et cliquez sur **gérer**.
+6. Ouvrez le tableau de bord de la base de données en cliquant avec le bouton droit sur **TutorialDB**, puis cliquez sur **Gérer**.
 
-7. Afficher le *espace de table* widget insight comme indiqué dans l’image suivante : 
+7. Affichez le widget d’insight *espace de table* comme indiqué dans l’image suivante : 
 
    ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
 
-## <a name="working-with-the-insight-chart"></a>Travailler avec le graphique insight
+## <a name="working-with-the-insight-chart"></a>Utilisation du graphique d’insight
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]du graphique d’analyse fournit des informations de filtrage et de pointage de souris. Pour essayer les étapes suivantes :
+Le graphique d’insight de [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit des options de filtrage et d’affichage de détails lors du pointage de la souris. Pour essayer cela :
 
-1. Cliquez sur et activer/désactiver le *row_count* légende sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] affiche et masque la série de données que vous basculez une légende ou désactiver.
+1. Cliquez et basculez la légende *row_count* sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] affiche et masque les séries de données lorsque vous activez ou désactivez une légende.
     
-2. Placez le pointeur de la souris sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] affiche plus d’informations sur l’étiquette de série de données et sa valeur comme indiqué dans la capture d’écran suivante.
+2. Placez le pointeur de la souris sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] affiche plus d’informations sur l’étiquette de la série de données et sa valeur, comme indiqué dans la capture d’écran suivante.
 
-   ![Activer/désactiver graphique et la légende](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
+   ![Bouton bascule et légende du graphique](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Dans ce didacticiel, vous avez appris à :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
-> * Activez rapidement un widget d’insight à l’aide d’un exemple de widget insight intégrés.
-> * Afficher les détails d’utilisation d’espace de table.
-> * Filtrer les données et afficher les détails de l’étiquette sur un graphique insight
+> * Activer rapidement un widget d’insight à l’aide d’un exemple de widget intégré.
+> * Afficher les détails de l’utilisation de l’espace de table.
+> * Filtrer les données et afficher les détails des étiquettes sur un graphique d’insight
 
-Pour savoir comment générer un widget personnalisé insight, suivre le didacticiel suivant :
+Pour savoir comment créer un widget d’insight personnalisé, effectuez le didacticiel suivant :
 
 > [!div class="nextstepaction"]
-> [Générer un widget personnalisé insight](tutorial-build-custom-insight-sql-server.md).
+> [Créer un widget insight personnalisé](tutorial-build-custom-insight-sql-server.md).

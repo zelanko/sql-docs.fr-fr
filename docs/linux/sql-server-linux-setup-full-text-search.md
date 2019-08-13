@@ -9,20 +9,20 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065091"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Les étapes suivantes installent la [recherche en texte intégral de SQL Server](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) sur Linux. La recherche en texte intégral vous permet d’exécuter des requêtes de texte intégral sur des données caractères dans des tables SQL Server. Pour les problèmes connus pour cette version, consultez les [notes de publication](sql-server-linux-release-notes.md).
+Les étapes suivantes installent la [recherche en texte intégral SQL Server](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) sur Linux. La recherche en texte intégral vous permet d'exécuter des requêtes en texte intégral sur des données de caractères dans des tables SQL Server. Pour les problèmes connus de cette version, consultez les [Notes de publication](sql-server-linux-release-notes.md).
 
 > [!NOTE]
-> Avant d’installer la recherche en texte intégral de SQL Server, tout d'abord [installer SQL Server](sql-server-linux-setup.md#platforms). Cela configure les clés et les référentiels que vous utiliserez pour installer le package **mssql-server-fts**.
+> Avant d’installer la recherche en texte intégral SQL Server, commencez par [installer SQL Server](sql-server-linux-setup.md#platforms). Cela permet de configurer les clés et les référentiels que vous utilisez pour installer le package **mssql-server-fts**.
 
 Installer la recherche en texte intégral SQL Server pour votre plateforme :
 
@@ -32,59 +32,59 @@ Installer la recherche en texte intégral SQL Server pour votre plateforme :
 
 ## <a name="RHEL">Installer sur RHEL</a>
 
-Utilisez les commandes suivantes pour installer le package **mssql-server-fts** sur Red Hat Enterprise Linux. 
+Utilisez les commandes suivantes pour installer **mssql-server-fts** sur Red Hat Enterprise Linux. 
 
 ```bash
 sudo yum install -y mssql-server-fts
 ```
 
-Si vous avez déjà **mssql-server-fts** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si vous avez déjà installé **mssql-server-fts**, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [Notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Installer sur Ubuntu</a>
 
-Utilisez les commandes suivantes pour installer le package **mssql-server-fts** sur Ubuntu. 
+Utilisez les commandes suivantes pour installer **mssql-server-fts** sur Ubuntu. 
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts
 ```
 
-Si vous avez déjà **mssql-server-fts** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si vous avez déjà installé **mssql-server-fts**, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [Notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Installer sur SLES</a>
 
-Utilisez les commandes suivantes pour installer le package **mssql-server-fts** sur SUSE Linux Enterprise Server. 
+Utilisez les commandes suivantes pour installer **mssql-server-fts** sur SUSE Linux Enterprise Server. 
 
 ```bash
 sudo zypper install mssql-server-fts
 ```
 
-Si vous avez déjà **mssql-server-fts** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si vous avez déjà installé **mssql-server-fts**, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [Notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Langues prises en charge
 
-La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier les mots individuels en fonction de la langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant la vue d'affichage catalogue **sys.fulltext_languages**. Des analyseurs lexicaux pour les langues suivantes sont installés avec SQL Server :
+La recherche en texte intégral utilise des [séparateurs de mots](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier des mots individuels en fonction de la langue. Vous pouvez obtenir la liste des séparateurs de mots inscrits en interrogeant l'affichage du catalogue **sys.fulltext_languages**. Les séparateurs de mots pour les langues suivantes sont installés avec SQL Server :
 
 | Langue | ID de langue |
 |---|---|
@@ -92,7 +92,7 @@ La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-
 | Arabe | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
-| Portugais (Brésil) | 1046 |
+| Brésilien | 1046 |
 | British English | 2057 |
 | Bulgare | 1026 |
 | Catalan | 1027 |
@@ -106,8 +106,8 @@ La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-
 | Anglais | 1033 |
 | Français | 1036 |
 | German | 1031 |
-| Grec | 1032 |
-| Gujarati | 1095 |
+| Greek | 1032 |
+| Goudjrati | 1095 |
 | Hébreu | 1037 |
 | Hindi | 1081 |
 | Islandais | 1039 |
@@ -144,41 +144,41 @@ La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-
 
 ## <a id="filters"></a> Filtres
 
-La recherche en texte intégral fonctionne également avec le texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est nécessaire pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [configurer et gérer des filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
+La recherche en texte intégral fonctionne également avec du texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est requis pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [Configurer et gérer les filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Vous pouvez afficher une liste des filtres installés en exécutant la procédure **sp_help_fulltext_system_components 'filter'** . Pour SQL Server, les filtres suivants sont installés :
+Vous pouvez consulter une liste des filtres installés en appelant **sp_help_fulltext_system_components ’Filter'** . Pour SQL Server, les filtres suivants sont installés :
 
-| Nom du composant | ID de classe | Version |
+| Nom du composant | ID de classe | Options de version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ASC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.asc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|dumps .asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.ASP | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.asp | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.asx | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.bas | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.bat | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|*.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.cls | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.csa | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.CSS | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.css | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.csv | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dbs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|. dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dos | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.FAQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.faq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.hhc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
@@ -192,14 +192,14 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 |.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.i | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ibq | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.ICS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.ics | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.idl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.inf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.ini | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.INX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.jav | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -230,16 +230,16 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 |.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.snippet | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.sol | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.SOR | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.sor | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.TAB | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tab | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.trg | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.txt | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.UDF | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.udf | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.udt | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.url | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -256,11 +256,11 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Recherche sémantique
-[La recherche sémantique](../relational-databases/search/semantic-search-sql-server.md) s’appuie sur la fonctionnalité de recherche en texte intégral pour extraire et indexer les *expressions clés* statistiquement pertinentes. Cela vous permet d’interroger la signification à l'intérieur des documents stockés dans votre base de données. Cela permet également d’identifier les documents similaires.
+La [Recherche sémantique](../relational-databases/search/semantic-search-sql-server.md) s’appuie sur la fonctionnalité de recherche en texte intégral pour extraire et indexer des *phrases clés* statistiquement pertinentes. Cela vous permet d’interroger la signification dans des documents de votre base de données. Il permet également d’identifier les documents qui sont similaires.
 
-Pour pouvoir utiliser la recherche sémantique, vous devez tout d’abord restaurer la base de données de statistiques linguistiques de sémantique sur votre ordinateur.
+Pour pouvoir utiliser la Recherche sémantique, vous devez d’abord restaurer la base de données Base de langages statistiques pour la recherche sémantique sur votre machine.
 
-1. Utilisez un outil, tel que [sqlcmd](sql-server-linux-setup-tools.md)pour exécuter la commande Transact-SQL suivante sur votre instance de SQL Server de Linux. Cette commande restaure la base de données de statistiques linguistiques.
+1. Utilisez un outil, tel que [sqlcmd](sql-server-linux-setup-tools.md), pour exécuter la commande Transact-SQL suivante sur votre instance Linux. Cette commande restaure la base de données de statistiques linguistiques.
 
    ```sql
    RESTORE DATABASE [semanticsdb] FROM
@@ -271,9 +271,9 @@ Pour pouvoir utiliser la recherche sémantique, vous devez tout d’abord restau
    ```
 
    > [!NOTE]
-   > Si nécessaire, mettez à jour les chemins d’accès dans la commande de restauration précédente pour s’ajuster à votre configuration.
+   > Si nécessaire, mettez à jour les chemins d’accès dans la commande RESTORE précédente pour les adapter à votre configuration.
 
-1. Exécutez la commande Transact-SQL suivante pour inscrire la base de données de statistiques linguistiques de sémantique.
+1. Exécutez la commande Transact-SQL suivante pour inscrire la base de données de statistiques linguistiques sémantique.
 
     ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
@@ -282,4 +282,4 @@ Pour pouvoir utiliser la recherche sémantique, vous devez tout d’abord restau
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la recherche en texte intégral, consultez [recherche en texte intégral SQL Server](../relational-databases/search/full-text-search.md). 
+Pour plus d'informations sur la recherche en texte intégral, consultez [Recherche en texte intégral SQL Server](../relational-databases/search/full-text-search.md). 

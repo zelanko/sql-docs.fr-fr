@@ -1,5 +1,5 @@
 ---
-title: Configurer le stockage instance cluster de basculement SMB - SQL Server sur Linux
+title: Configurer le SMB de stockage d’instances de cluster de basculement - SQL Server sur Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,86 +9,86 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032326"
 ---
-# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - SMB - SQL Server sur Linux
+# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - SMB - SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article explique comment configurer le stockage SMB pour une instance de cluster de basculement (FCI) sur Linux. 
  
-Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB s’effectue ainsi : \\NOM_SERVEUR\NOM_PARTAGE. Pour les installations de SQL Server basées sur Linux, le partage SMB doit être monté en tant que dossier.
+Dans le monde non Windows, SMB est souvent appelé partage CIFS (Common Internet File System) et implémenté via Samba. Dans le monde de Windows, l’accès à un partage SMB est effectué de la façon suivante : \\SERVERNAME\SHARENAME. Pour les installations SQL Server basées sur Linux, le partage SMB doit être monté en tant que dossier.
 
 ## <a name="important-source-and-server-information"></a>Informations importantes sur la source et le serveur
 
-Voici quelques conseils et les notes relatives à l’aide de SMB :
-- Le partage SMB peut se trouver sur Windows, Linux, ou même sur une appliance s'il propose SMB 3.0 ou version ultérieure. Pour plus d’informations sur Samba et SMB 3.0, consultez [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) pour voir si votre implémentation Samba est compatible avec SMB 3.0.
+Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
+- Le partage SMB peut être sur Windows, Linux ou même à partir d’une appliance, à condition qu’il utilise SMB 3.0 ou une version ultérieure. Pour plus d’informations sur Samba et SMB 3.0, consultez [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) pour voir si votre implémentation Samba est conforme à SMB 3.0.
 - Le partage SMB doit être hautement disponible.
-- La sécurité doit être définie correctement sur le partage SMB. Voici un exemple de /etc/samba/smb.conf, où SQLData1 est le nom du partage.
+- La sécurité doit être correctement définie sur le partage SMB. Voici un exemple de /etc/samba/smb.conf, où SQLData1 est le nom du partage.
 
 ![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
-1. Choisissez un des serveurs (peu importe lequel) qui participera à la configuration de l'instance de cluster de basculement. Peu importe lequel.
+1. Choisissez un des serveurs qui fera partie de la configuration de l’instance de cluster de basculement. Vous pouvez choisir n’importe lequel.
    
-1. Obtenir des informations sur l’utilisateur mssql.
+1. Obtenez des informations sur l'utilisateur mssql.
    
    ```bash
     sudo id mssql
    ```
    
-   Notez l’uid, le gid et les groupes. 
+   Notez les UID, GID et groupes. 
    
 1. Exécutez `sudo smbclient -L //NameOrIP/ShareName -U User`.
    
-   \<NameOrIP > est le nom DNS ou l’adresse IP du serveur qui héberge le partage SMB.
+   \<NameOrIP> est le nom DNS ou l’adresse IP du serveur hébergeant le partage SMB.
    
-   \<Nom de partage > est le nom du partage SMB. 
+   \<ShareName> est le nom du partage SMB. 
    
-1. Pour le système de bases de données ou tout élément stocké dans l’emplacement de données par défaut, procédez comme suit. Sinon, passez à l’étape 5. 
+1. Pour les bases de données système ou tout ce qui est stocké dans l’emplacement des données par défaut, procédez comme suit. Sinon, ignorez l’étape 5. 
    
-   1. Vérifiez que SQL Server est arrêté sur le serveur que vous utilisez.
+   1. Assurez-vous que SQL Server est arrêté sur le serveur sur lequel vous travaillez.
       ```bash
       sudo systemctl stop mssql-server
       sudo systemctl status mssql-server
       ```
       
-   1. Basculez entièrement en super utilisateur. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   1. Basculez entièrement pour être le superutilisateur. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
       ```bash
       sudo -i
       ```
       
-   1. Basculez vers l’utilisateur mssql. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   1. Basculez pour être l’utilisateur mssql. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
       ```bash
       su mssql
       ```
       
-   1. Créez un répertoire temporaire pour stocker les données de SQL Server et les fichiers journaux. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   1. Créez un répertoire temporaire pour stocker les données et les fichiers journaux de SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
       ```bash
       mkdir <TempDir>
       ```
       
-      \<TempDir > est le nom du dossier. L’exemple suivant crée un dossier nommé /var/opt/mssql/tmp.
+      \<TempDir> est le nom du dossier. L’exemple suivant crée un dossier nommé /var/opt/mssql/tmp.
       
       ```bash
       mkdir /var/opt/mssql/tmp
       ```
       
-   1. Copiez les fichiers journaux et de données de SQL Server dans le répertoire temporaire. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   1. Copiez les données et les fichiers journaux de SQL Server dans le répertoire temporaire. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
       ```bash
       cp /var/opt/mssql/data/* <TempDir>
       ```
       
-      \<TempDir > est le nom du dossier à partir de l’étape précédente.
+      \<TempDir> est le nom du dossier de l’étape précédente.
       
    1. Vérifiez que les fichiers se trouvent dans le répertoire.
       
@@ -96,9 +96,9 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
       ls <TempDir>
       ```
       
-      \<TempDir > est le nom du dossier à partir de l’étape d.
+      \<TempDir> est le nom du dossier de l’étape d.
       
-   1. Supprimez les fichiers à partir du répertoire de données SQL Server existant. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   1. Supprimez les fichiers du répertoire de données SQL Server existant. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
       ```bash
       rm - f /var/opt/mssql/data/*
@@ -110,29 +110,29 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
       ls /var/opt/mssql/data
       ```
       
-   1. Tapez exit pour revenir à l’utilisateur "root".
+   1. Tapez quitter pour revenir à l’utilisateur racine.
       
-   1. Montez le partage SMB dans le dossier de données SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite. Cet exemple montre la syntaxe pour la connexion à un partage basée sur Windows Server SMB 3.0.
+   1. Montez le partage SMB dans le dossier de données de SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite. Cet exemple illustre la syntaxe de connexion à un partage SMB 3.0 basé sur Windows Server.
       
       ```bash
       Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName > est le nom du serveur avec le partage SMB
+      \<ServerName> est le nom du serveur avec le partage SMB
       
-      \<Nom de partage > est le nom du partage
+      \<ShareName> est le nom du partage
       
-      \<Nom d’utilisateur > est le nom de l’utilisateur pour accéder au partage
+      \<UserName> est le nom de l’utilisateur pour accéder au partage
       
-      \<Mot de passe > est le mot de passe pour l’utilisateur
+      \<Password> est le mot de passe de l’utilisateur
       
-      \<domaine > est le nom d’Active Directory
+      \<domain> est le nom d’Active Directory
       
-      \<mssqlUID > est l’UID de l’utilisateur mssql 
+      \<mssqlUID> est l’UID de l’utilisateur mssql 
       
-      \<mssqlGID > est le GID de l’utilisateur mssql
+      \<mssqlGID> est le GID de l’utilisateur mssql
       
-   1. Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
+   1. Vérifiez que le montage a réussi en émettant un montage sans commutateurs.
       
       ```bash
       mount
@@ -150,49 +150,49 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
       cp /var/opt/mssql/tmp/* /var/opt/mssql/data
       ```
       
-   1. Vérifiez les fichiers.
+   1. Vérifiez que les fichiers sont présents.
       
       ```bash
       ls /var/opt/mssql/data
       ```
       
-   1. Entrez exit pour ne plus être mssql 
+   1. Entrez quitter pour ne pas être mssql 
       
-   1. Entrez exit pour ne plus être root
+   1. Entrez quitter pour ne pas être la racine
    
-   1. Démarrez SQL Server. Si tout a été correctement copié et la sécurité appliquée, SQL Server doit s'afficher comme démarré.
+   1. Démarrez SQL Server. Si tout a été copié correctement et que la sécurité est appliquée correctement, SQL Server doit s’afficher comme étant démarré.
       
       ```bash
       sudo systemctl start mssql-server
       sudo systemctl status mssql-server
       ```
       
-   1. Pour poursuivre le test, créez une base de données pour vérifier que les autorisations sont correctes. L’exemple suivant utilise Transact-SQL ; Vous pouvez utiliser SSMS.
+   1. Pour effectuer des tests supplémentaires, créez une base de données pour vous assurer que les autorisations sont correctes. L’exemple suivant utilise Transact-SQL ; vous pouvez utiliser SSMS.
       
       ![10_testcreatedb][2] 
       
-   1. Arrêtez SQL Server et vérifiez qu’il est bien arrêté. Si vous vous apprêtez à ajouter ou à tester d’autres disques, n’arrêtez pas SQL Server tant que ceux-ci n'ont pas été ajoutés et testés.
+   1. Arrêtez SQL Server et vérifiez qu’il est arrêté. Si vous envisagez d’ajouter ou de tester d’autres disques, n’arrêtez pas SQL Server tant que ceux-ci n’ont pas été ajoutés ni testés.
       
       ```bash
       sudo systemctl stop mssql-server
       sudo systemctl status mssql-server
       ```
       
-   1. Uniquement si vous avez terminé, démontez le partage. Si ce n’est pas le cas, démontez après avoir terminé le test/Ajout de tous les disques supplémentaires.
+   1. Démontez le partage uniquement si vous avez terminé. Si ce n’est pas le cas, démontez-le après avoir terminé de tester ou d’ajouter des disques supplémentaires.
       
       ```bash
       sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
       ```
       
-      \<IPAddressOrServerName > est l’adresse IP ou le nom de l’hôte SMB
+      \<IPAddressOrServerName> est l’adresse IP ou le nom de l’hôte SMB
       
-      \<Nom de partage > est le nom du partage
+      \<ShareName> est le nom du partage
       
-      \<FolderMountedIn > est le nom du dossier où SMB est monté
+      \<FolderMountedIn> est le nom du dossier dans lequel SMB est monté
       
-5. Pour les éléments autres que les bases de données système, tels que les bases de données utilisateur ou les sauvegardes, suivez ces étapes. Si vous utilisez uniquement l’emplacement par défaut, passez à l’étape 14.
+5. Pour des éléments autres que les bases de données système, tels que les bases de données utilisateur ou les sauvegardes, procédez comme suit. Si vous utilisez uniquement l’emplacement par défaut, passez à l’étape 14.
    
-   1. Passez en mode superutilisateur. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   1. Basculez pour être le superutilisateur. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
       ```bash
       sudo -i
@@ -204,37 +204,37 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
       mkdir <FolderName>
       ```
       
-      \<Nom_dossier > est le nom du dossier. Chemin d’accès complet du dossier doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+      \<FolderName> est le nom du dossier. Le chemin d’accès complet du dossier doit être spécifié s’il n’est pas à l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
       
       ```bash
       mkdir /var/opt/mssql/userdata
       ```
       
-   1. Montez le partage SMB dans le dossier de données SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite. Cet exemple montre la syntaxe pour la connexion à un partage en fonction du Samba SMB 3.0.
+   1. Montez le partage SMB dans le dossier de données de SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite. Cet exemple illustre la syntaxe de connexion à un partage SMB 3.0 basé sur Samba.
       
       ```bash
       Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName > est le nom du serveur avec le partage SMB
+      \<ServerName> est le nom du serveur avec le partage SMB
       
-      \<Nom de partage > est le nom du partage
+      \<ShareName> est le nom du partage
       
-      \<Nom_dossier > est le nom du dossier créé à l’étape précédente  
+      \<FolderName> est le nom du dossier créé à la dernière étape  
       
-      \<Nom d’utilisateur > est le nom de l’utilisateur pour accéder au partage
+      \<UserName> est le nom de l’utilisateur pour accéder au partage
       
-      \<Mot de passe > est le mot de passe pour l’utilisateur
+      \<Password> est le mot de passe de l’utilisateur
       
-      \<mssqlUID > est l’UID de l’utilisateur mssql
+      \<mssqlUID> est l’UID de l’utilisateur mssql
       
-      \<mssqlGID > est le GID de l’utilisateur mssql.
+      \<mssqlGID> est le GID de l’utilisateur mssql.
       
-   1. Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
+   1. Vérifiez que le montage a réussi en émettant un montage sans commutateurs.
    
-   1. Tapez exit pour ne plus plus être super utilisateur.
+   1. Tapez quitter pour ne plus être le superutilisateur.
    
-   1. Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, changer le contexte vers cette base, et vérifier que les fichiers existent bien au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez aussi utiliser SSMS.
+   1. Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, en changer le contexte, vérifier que les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
    
    1. Démonter le partage 
       
@@ -242,15 +242,15 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
       sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
       ```
       
-      \<IPAddressOrServerName > est l’adresse IP ou le nom de l’hôte SMB
+      \<IPAddressOrServerName> est l’adresse IP ou le nom de l’hôte SMB
       
-      \<Nom de partage > est le nom du partage
+      \<ShareName> est le nom du partage
       
-      \<FolderMountedIn > est le nom du dossier où SMB est monté.
+      \<FolderMountedIn> est le nom du dossier dans lequel SMB est monté.
    
-1. Répétez les étapes sur les autres nœuds.
+1. Répétez les étapes pour l'autre ou les autres nœuds.
 
-Vous êtes maintenant prêt à configurer l’instance FCI.
+Vous êtes maintenant prêt à configurer l’instance de cluster de basculement (FCI).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

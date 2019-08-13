@@ -1,7 +1,7 @@
 ---
-title: Configurer un groupe de disponibilité SQL Server pour une échelle lecture sur Linux
+title: Configurer un groupe de disponibilité SQL Server pour l’échelle lecture sur Linux
 titleSuffix: SQL Server
-description: En savoir plus sur la configuration d’un SQL Server toujours sur groupe de disponibilité (AG) pour les charges de travail avec échelle lecture sur Linux.
+description: Découvrez comment configurer un groupe de disponibilité Always On SQL Server pour les charges de travail avec échelle lecture sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027258"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurer un groupe de disponibilité SQL Server pour une échelle lecture sur Linux
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurer un groupe de disponibilité SQL Server pour l’échelle lecture sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Vous pouvez configurer un SQL Server toujours sur groupe de disponibilité (AG) pour les charges de travail avec échelle lecture sur Linux. L’architecture des groupes de disponibilité se présente sous deux formes. Une architecture pour la haute disponibilité utilise un gestionnaire de cluster pour assurer la continuité améliorée. Cette architecture peut également inclure les réplicas en lecture à l’échelle. Pour créer l’architecture de haute disponibilité, consultez [configurer SQL Server groupe de disponibilité AlwaysOn pour la haute disponibilité sur Linux](sql-server-linux-availability-group-configure-ha.md). L’autre architecture prend uniquement en charge les charges de travail avec échelle lecture. Cet article explique comment créer un groupe de disponibilité sans gestionnaire de cluster pour les charges de travail avec échelle lecture. Cette architecture fournit uniquement une échelle lecture. Elle n’assure pas la haute disponibilité.
+Vous pouvez configurer un groupe de disponibilité Always On SQL Server pour les charges de travail avec échelle lecture sur Linux. L’architecture des groupes de disponibilité se présente sous deux formes. Une architecture visant la haute disponibilité utilise un gestionnaire de clusters pour améliorer la continuité d’activité. Cette architecture peut également inclure des réplicas de mise à l’échelle en lecture. Pour créer l’architecture à haute disponibilité, consultez [Configurer le groupe de disponibilité Always On SQL Server pour la haute disponibilité sur Linux](sql-server-linux-availability-group-configure-ha.md). L’autre architecture prend uniquement en charge les charges de travail avec échelle lecture. Cet article explique comment créer un groupe de disponibilité sans gestionnaire de cluster pour les charges de travail avec échelle lecture. Cette architecture fournit uniquement une échelle lecture. Elle n’assure pas la haute disponibilité.
 
 > [!NOTE]
 > Un groupe de disponibilité avec `CLUSTER_TYPE = NONE` peut inclure des réplicas hébergés sur des plateformes de système d’exploitation différentes. Il ne peut pas prendre en charge la haute disponibilité. 
@@ -67,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-Ce groupe de disponibilité n’est pas une configuration à haute disponibilité. Si vous avez besoin d’une haute disponibilité, suivez les instructions de [configurer un groupe de disponibilité AlwaysOn pour SQL Server sur Linux](sql-server-linux-availability-group-configure-ha.md). Plus précisément, créez le groupe de disponibilité avec `CLUSTER_TYPE=WSFC` (dans Windows) ou `CLUSTER_TYPE=EXTERNAL` (dans Linux). Puis vous intégrer à un gestionnaire de cluster à l’aide soit Windows Server clustering de basculement sur Windows ou Pacemaker sur Linux.
+Ce groupe de disponibilité n’est pas une configuration à haute disponibilité. Si vous avez besoin de la haute disponibilité, suivez les instructions dans [Configurer un groupe de disponibilité Always On pour SQL Server sur Linux](sql-server-linux-availability-group-configure-ha.md). En particulier, créez le groupe de disponibilité avec `CLUSTER_TYPE=WSFC` (dans Windows) ou `CLUSTER_TYPE=EXTERNAL` (dans Linux). Puis, intégrez-le à un gestionnaire de clusters en utilisant un clustering de basculement Windows Server sur Windows ou Pacemaker sur Linux.
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>Se connecter à des réplicas secondaires en lecture seule
 
