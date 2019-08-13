@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265395"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893911"
 ---
 # <a name="sql-data-developer"></a>Développeur de données SQL
 Utilisez la plateforme de données SQL de Microsoft pour créer des solutions orientées données sur les appareils mobiles et les ordinateurs de bureau pour les serveurs Web, les serveurs d’entreprise et le Cloud.  
@@ -24,7 +24,7 @@ Utilisez la plateforme de données SQL de Microsoft pour créer des solutions or
 * [SQL Server moteur de base de données](../database-engine/configure-windows/sql-server-database-engine.md): utilisez le moteur de base de données SQL Server pour créer des bases de données relationnelles pour le traitement des transactions en ligne ou les données de traitement analytique en ligne. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): utiliser SQL Azure pour déplacer votre base de données vers le Cloud 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact pour créer des applications autonomes et occasionnellement connectées pour des appareils mobiles, des ordinateurs de bureau et des clients Web.
-* Base de données [locale: utilisez](../database-engine/configure-windows/sql-server-2016-express-localdb.md)la base de données locale pendant le développement pour écrire et tester du code Transact-SQL sans avoir à gérer une instance de serveur complète de SQL Server.
+* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)Base de données locale: utilisez la base de données locale pendant le développement pour écrire et tester du code Transact-SQL sans avoir à gérer une instance de serveur complète de SQL Server.
 
 ## <a name="sql-data-tools"></a>Outils de données SQL
 * [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : utilisez SSDT pour créer des bases de données relationnelles, des bases de données SQL Azure, des packages Integration Services, des modèles de données Analysis Services et des rapports Reporting Services.
@@ -40,7 +40,7 @@ Utilisez la plateforme de données SQL de Microsoft pour créer des solutions or
 * [Sqlxml 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): utilisez SQLXML 4,0 pour exporter des données relationnelles au format XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Collecte, traitement et visualisation des données
-* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
