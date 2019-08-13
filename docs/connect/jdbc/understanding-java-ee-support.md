@@ -1,7 +1,7 @@
 ---
 title: Fonctionnement de la prise en charge Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f8c723be34119ed244e69247887ef34d8bb5a7cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916636"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892309"
 ---
 # <a name="understanding-java-ee-support"></a>Fonctionnement de la prise en charge Java EE
 
@@ -36,8 +36,10 @@ Pour le pilote JDBC 6.4, le pilote est contenu dans **mssql-jdbc-6.4.0.jre7.jar*
 Pour le pilote JDBC 7.0, le pilote est contenu dans **mssql-jdbc-7.0.0.jre8.jar** ou dans **mssql-jdbc-7.0.0.jre10.jar**.
 
 Pour le pilote JDBC 7.2, le pilote est contenu dans **mssql-jdbc-7.2.2.jre8.jar** ou dans **mssql-jdbc-7.2.2.jre11.jar**.
+
+Pour le pilote JDBC 7.4, le pilote est contenu dans **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** ou **mssql-jdbc-7.4.1.jre12.jar**.
   
-Le nom de la classe est utilisé chaque fois que le pilote est chargé avec la classe DriverManager JDBC. Il sert également chaque fois que le nom de la classe du pilote doit être spécifié, quelle que soit la configuration du pilote. Par exemple, la configuration d'une source de données dans un serveur d'applications Java EE peut imposer d’entrer le nom de la classe du pilote.  
+Le nom de la classe est utilisé chaque fois que vous chargez le pilote avec la classe JDBC par, et chaque fois que vous spécifiez le nom de classe du pilote dans n’importe quelle configuration de pilote. Par exemple, la configuration d'une source de données dans un serveur d'applications Java EE peut imposer d’entrer le nom de la classe du pilote.  
   
 ## <a name="data-sources"></a>Sources de données
 

@@ -1,7 +1,7 @@
 ---
 title: Questions fréquentes (FAQ) sur le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956576"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892371"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Questions fréquentes (FAQ) sur le pilote JDBC
 
@@ -23,7 +23,7 @@ ms.locfileid: "67956576"
 
 Cette page fournit des réponses aux questions fréquemment posées sur le pilote Microsoft JDBC Driver pour SQL Server.
 
-## <a name="frequently-asked-questions"></a>Forum Aux Questions (FAQ)
+## <a name="frequently-asked-questions"></a>Forum aux questions
 
 **Comment puis-je améliorer le pilote JDBC ?**  
 Le pilote JDBC est open source. Vous trouverez le code source sur [GitHub](https://github.com/microsoft/mssql-jdbc). Vous pouvez aider à l’améliorer en soumettant des problèmes et en contribuant au codebase.
@@ -35,7 +35,15 @@ Pour obtenir des détails, consultez la page [Matrice de prise en charge de Micr
 Les fichiers de pilotes JDBC disponibles sur le référentiel GitHub pour Microsoft JDBC Driver sont au cœur du pilote JDBC et sous la licence open source indiquée dans le référentiel. Les packages de pilotes du Centre de téléchargement Microsoft incluent des bibliothèques supplémentaires pour l’authentification Windows intégrée et les transactions XA avec le pilote JDBC, sous la licence incluse avec le package téléchargeable.
 
 **Que faut-il savoir avant la mise à niveau du pilote ?**
-Microsoft JDBC Driver 7.2 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
+Microsoft JDBC Driver 7.4 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les trois bibliothèques de classes JAR suivantes :
+
+| JAR                        | Spécification JDBC            | Version JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| MSSQL-JDBC-7.4.1. jre12. jar | JDBC 4.3 (partiellement) et 4.2 | JDK 12.0    |
+| MSSQL-JDBC-7.4.1. jre11. jar | JDBC 4.3 (partiellement) et 4.2 | JDK 11.0    |
+| MSSQL-JDBC-7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+
+ Microsoft JDBC Driver 7.2 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
 
 | JAR                        | Spécification JDBC            | Version JDK |
 | -------------------------- | ----------------------------- | ----------- |

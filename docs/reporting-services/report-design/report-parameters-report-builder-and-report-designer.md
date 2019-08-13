@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463608"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941139"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
 
@@ -75,13 +75,13 @@ Quand vous visualisez un rapport qui comporte des paramètres, la barre d’outi
   
 1. **Volet Paramètres** : la barre d’outils de la visionneuse de rapports affiche une invite et une valeur par défaut pour chaque paramètre. Vous pouvez personnaliser la disposition des paramètres dans le volet Paramètres. Pour plus d’informations, consultez [Personnaliser le volet Paramètres dans un rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
-2. **Paramètre @SalesDate** : le paramètre @SalesDate correspond au type de données **DateTime**. L’invite de sélection de date s’affiche en regard de la zone de texte. Pour modifier la date, tapez une nouvelle date dans la zone de texte ou utilisez le contrôle calendrier.  
+2. **\@Paramètre SalesDate** Le paramètre @SalesDate correspond au type de données **DateTime**. L’invite de sélection de date s’affiche en regard de la zone de texte. Pour modifier la date, tapez une nouvelle date dans la zone de texte ou utilisez le contrôle calendrier.  
   
-3. **Paramètre @ShowAll** : le type de données du paramètre @ShowAll est **DateTime**. Utilisez les cases d'option pour spécifier **True** ou **False**.  
+3. **\@Paramètre ShowAll** Le paramètre @ShowAll correspond au type de données **Boolean**. Utilisez les cases d'option pour spécifier **True** ou **False**.  
   
 4. **Poignée Afficher ou masquer la zone de paramètres** : dans la barre d’outils de la visionneuse de rapports, cliquez sur cette flèche pour afficher ou masquer le volet Paramètres.  
   
-5. **Paramètre @CategoryQuota** : le type de données du paramètre @CategoryQuota est **Float** ; il prend donc une valeur numérique.  @CategoryQuota est défini pour autoriser les valeurs multiples.  
+5. **\@Paramètre CategoryQuota** Le type de données du paramètre @CategoryQuota est **Float** ; il prend donc une valeur numérique.  @CategoryQuota est défini pour autoriser les valeurs multiples.  
   
 6. **Afficher le rapport**  : après avoir entré les valeurs des paramètres, cliquez sur **Afficher le rapport** pour exécuter le rapport. Si tous les paramètres possèdent des valeurs par défaut, le rapport s'exécute automatiquement au premier affichage.  
   

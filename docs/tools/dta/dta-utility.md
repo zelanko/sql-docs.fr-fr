@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132767"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809712"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ dta -d AdventureWorks2012 ...
  Spécifie que les index filtrés soient considérés pour de nouvelles recommandations. Pour plus d'informations, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Spécifie que les index columnstore doivent être considérés pour les nouvelles recommandations. DTA prend en compte les index ColumnStore cluster et non cluster. Pour plus d'informations, consultez    
+ Spécifie que les index columnstore doivent être considérés pour les nouvelles recommandations. DTA va considérer à la fois les index columnstore cluster et non cluster. Pour plus d'informations, consultez    
 [Recommandations relatives aux index columnstore dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  

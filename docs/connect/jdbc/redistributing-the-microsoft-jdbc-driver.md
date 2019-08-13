@@ -1,7 +1,7 @@
 ---
 title: Redistribution du pilote Microsoft JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 22b425dacd92ccd6cb7ad4f61e61a53f9ffec3bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7efb9c5626df657d0ecefb05242644d84beb353e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956055"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888907"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Redistribution du pilote Microsoft JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-70-and-72-driver"></a>Redistribuer le pilote Microsoft JDBC 4,1, 4,2, 6,0, 6,2, 6,4, 7,0 et 7,2
-Les pilotes JDBC 4,1, 4,2, 6,0, 6,2, 6,4, 7,0 et 7,2 peuvent être redistribués. Consultez la clause «code distribuable» dans les contrats de licence pour les versions 4,1, 4,2, 6,0, 6,2, 6,4, 7,0 et 7,2 du pilote.
+## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-70-72-and-74-driver"></a>Redistribuer le pilote Microsoft JDBC 4,1, 4,2, 6,0, 6,2, 6,4, 7,0, 7,2 et 7,4
+Les pilotes JDBC 4,1, 4,2, 6,0, 6,2, 6,4, 7,0, 7,2 et 7,4 peuvent être redistribués. Consultez la clause «code distribuable» dans les contrats de licence pour les versions 4,1, 4,2, 6,0, 6,2, 6,4, 7,0, 7,2 et 7,4 du pilote.
     
-## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>S’inscrire pour redistribuer le pilote Microsoft JDBC 4.0.  
+## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>S’inscrire pour redistribuer le pilote Microsoft JDBC 4.0  
  Le pilote Microsoft JDBC 4,0 requiert une inscription avant de le redistribuer. Cliquez sur le lien suivant pour passer en revue le contrat de licence pour la version 4.0 du pilote.  Si vous le souhaitez, vous pouvez imprimer et conserver une copie du contrat de licence pour vos archives.  
   
  Si vous choisissez d’accepter le contrat de licence, vous allez être redirigé vers la page d’inscription, puis vers la page de téléchargement.  

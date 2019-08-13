@@ -1,7 +1,7 @@
 ---
 title: Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 464ecdb79ee3a143deccec703438e35217503e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.openlocfilehash: 04d7fe419c8639d9f14c3c3795a1007d947c3998
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956338"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893252"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice de support de Microsoft JDBC Driver pour SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,6 +32,7 @@ ms.locfileid: "67956338"
   
 |Nom du pilote|Version de package du pilote|Fichier(s) JAR applicable(s)|Fin du support standard|
 |-|-|-|-|  
+|Microsoft JDBC Driver 7.4 pour SQL Server|7.4|MSSQL-JDBC-7.4.1. jre12. jar<br> MSSQL-JDBC-7.4.1. jre11. jar<br> MSSQL-JDBC-7.4.1. jre8. jar|2 août 2024|
 |Microsoft JDBC Driver 7.2 pour SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 avril 2024|
 |Microsoft JDBC Driver 7.0 pour SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 juillet 2023|  
 |Microsoft JDBC Driver 6.4 pour SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 février 2023|    
@@ -53,11 +55,12 @@ ms.locfileid: "67956338"
   
 ## <a name="sql-version-compatibility"></a>Compatibilité des versions de SQL  
   
-|Version du pilote|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance (préversion privée étendue)|  
-|-|-|-|-|-|-|-|-|-|-|
-|7.2|N|O|O|O|O|O|O|O|O|  
-|7.0|N|O|O|O|O|O|O|O|O|  
-|6.4|N|O|O|O|O|O|O|O|O|  
+|Version du pilote|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|-|-|-|-|-|-|-|-|-|-|-|
+|7.4|N|N|O|O|O|O|O|O|O|
+|7.2|N|O|O|O|O|O|O|O|N| 
+|7.0|N|O|O|O|O|O|O|O|N| 
+|6.4|N|O|O|O|O|O|O|O|N| 
 |6.2|O|O|O|O|O|O|O|O|N|
 |6.1|O|O|O|O|O|O|O|N|N|
 |6.0|O|O|O|O|O|O|O|N|N|
@@ -85,6 +88,7 @@ ms.locfileid: "67956338"
   
 |Version du pilote JDBC|Versions de JRE|Version de l’API JDBC| 
 |-|-|-|  
+|7.4|1.8, 11, 12|4.2, 4.3 (partiellement)|
 |7.2|1.8, 11|4.2, 4.3 (partiellement)|
 |7.0|1.8, 10|4.2, 4.3 (partiellement)|
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (partiellement)|  
@@ -99,14 +103,14 @@ ms.locfileid: "67956338"
 |1.2|1.4, 1.5, 1.6|3|  
 |1.1|1.4|3|  
 |1.0|1.4|3|  
-|2000|1.4|3.0|  
+|2000|1.4|3|  
   
-## <a name="supported-operating-systems"></a>Systèmes d'exploitation pris en charge  
+## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge  
  Le pilote Microsoft JDBC est conçu pour fonctionner sur tout système d’exploitation prenant en charge l’utilisation d’une machine virtuelle Java (JVM). Les plateformes couramment utilisées sont notamment Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX et MacOS.  
   
  L’équipe du produit JDBC teste notre pilote sur Windows, Sun Solaris, SUSE Linux et RedHat Linux.  Le support technique est disponible pour les clients sur toutes les plateformes, mais nous sommes susceptibles de vous demander de reproduire le problème sur une plateforme comme Windows.  
   
 ## <a name="application-server-support"></a>Prise en charge des serveurs d’applications  
- Le pilote Microsoft JDBC pour SQL Server est testé avec différents serveurs d’applications.  Pour plus d’informations sur la version du pilote compatible avec leur produit, consultez le fournisseur de votre serveur d’applications.  
-  
-  
+ Le pilote Microsoft JDBC pour SQL Server est testé avec différents serveurs d’applications.  Pour plus d’informations sur la version du pilote compatible avec leur produit, consultez le fournisseur de votre serveur d’applications.
+ 
+ 
