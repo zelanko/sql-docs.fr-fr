@@ -1,7 +1,7 @@
 ---
 title: Extension PowerShell
 titleSuffix: Azure Data Studio
-description: Installer et utiliser la commande PowerShell pour Azure Data Studio
+description: Installer et utiliser PowerShell pour Azure Data Studio
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu; sstein
@@ -12,80 +12,80 @@ author: SQLvariant
 ms.author: aanelson
 manager: matthend
 ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "65105945"
 ---
-# <a name="powershell-editor-support-for-azure-data-studio"></a>Prise en charge de l’éditeur PowerShell pour Azure Data Studio
+# <a name="powershell-editor-support-for-azure-data-studio"></a>Prise en charge de l'éditeur PowerShell pour Azure Data Studio
 
-Cette extension offre un support de l’éditeur PowerShell enrichi dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
-Vous pouvez maintenant écrire et déboguer des scripts PowerShell à l’aide de l’interface IDE de type excellent fournies par Azure Data Studio.
+Cette extension fournit une prise en charge complète de l'éditeur PowerShell dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
+Vous pouvez maintenant écrire et déboguer des scripts PowerShell en utilisant l'excellente interface de type IDE fournie par Azure Data Studio.
 
 ![Extension PowerShell](media/powershell-extension/powershell-extension.png)
 
 
 ## <a name="features"></a>Fonctionnalités
 
-- La coloration syntaxique
+- Mise en surbrillance de la syntaxe
 - Extraits de code
-- IntelliSense pour les applets de commande et bien plus encore
-- Analyse basée sur les règles fournie par [Analyseur de Script PowerShell](http://github.com/PowerShell/PSScriptAnalyzer)
-- Atteindre la définition des variables et des applets de commande
-- Rechercher des références des applets de commande et des variables
-- Découverte de symbole de document et l’espace de travail
-- Exécuter la sélection sélectionnée de l’utilisation de code PowerShell <kbd>F8</kbd>
-- Lancer l’aide en ligne pour le symbole sous le curseur à l’aide <kbd>Ctrl</kbd>+<kbd>F1</kbd>
-- Prise en charge de la console interactive Visual Basic !
+- IntelliSense pour cmdlets et plus encore
+- Analyse basée sur des règles fournie par [PowerShell Script Analyzer](http://github.com/PowerShell/PSScriptAnalyzer)
+- Accéder aux définitions des cmdlets et des variables
+- Trouver des références de cmdlets et de variables
+- Découverte des documents et des symboles de l'espace de travail
+- Exécuter la sélection du code PowerShell en utilisant <kbd>F8</kbd>
+- Lancer l'aide en ligne pour le symbole sous le curseur à l’aide de <kbd>Ctrl</kbd>+<kbd>F1</kbd>
+- Prise en charge de base de la console interactive !
 
 
-## <a name="installing-the-extension"></a>Installation de l’Extension
+## <a name="installing-the-extension"></a>Installation de l’extension
 
-Vous pouvez installer la version officielle de l’extension PowerShell en suivant les étapes décrites dans le [documentation d’Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-Dans le volet Extensions, recherche d’extension de « PowerShell » et y installer.  Vous êtes informé automatiquement sur les mises à jour de l’extension future !
+Vous pouvez installer la version officielle de l'extension PowerShell en suivant les étapes de la documentation [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Dans le volet Extensions, recherchez l'extension « PowerShell » et installez-la.  Vous recevrez automatiquement une notification à chaque mise à jour de l'extension !
 
-Vous pouvez également installer un package VSIX à partir de notre [page des publications](https://github.com/PowerShell/vscode-powershell/releases) et l’installer via la ligne de commande :
+Vous pouvez également installer un package VSIX depuis notre [page des versions](https://github.com/PowerShell/vscode-powershell/releases) et l'installer via la ligne de commande :
 
 ```powershell
 azuredatastudio --install-extension PowerShell-<version>.vsix
 ```
 
-## <a name="platform-support"></a>Prise en charge de la plateforme
+## <a name="platform-support"></a>Plateforme prise en charge
 
-- **Windows des 7 à 10** avec Windows PowerShell v3 et versions ultérieures et PowerShell Core
-- **Linux** avec PowerShell Core (toutes les distributions prises en charge de PowerShell)
+- **Windows 7 à 10** avec Windows PowerShell 3 et versions ultérieures, et PowerShell Core
+- **Linux** avec PowerShell Core (toutes les distributions PowerShell prises en charge)
 - **macOS** avec PowerShell Core
 
-Lire le [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) pour obtenir des réponses aux questions courantes.
+Consultez le [Forum Aux Questions](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) pour lire les réponses aux questions courantes.
 
 ## <a name="installing-powershell-core"></a>Installation de PowerShell Core
 
-Si vous exécutez Azure Data Studio sur Mac OS ou Linux, vous serez peut-être amené à installer PowerShell Core.
+Si vous utilisez Azure Data Studio sur macOS ou Linux, vous devrez peut-être aussi installer PowerShell Core.
 
 PowerShell Core est un projet Open Source sur [GitHub](https://github.com/powershell/powershell).
-Pour plus d’informations sur l’installation de PowerShell Core sur des plateformes Mac OS ou Linux, consultez les articles suivants :
+Pour plus d'informations sur l'installation de PowerShell Core sur les plateformes macOS ou Linux, consultez les articles suivants :
 
 - [Installation de PowerShell Core sur Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [Installation de PowerShell Core sur macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
-## <a name="example-scripts"></a>Exemples de Scripts
+## <a name="example-scripts"></a>Exemples de scripts
 
-Il existe quelques exemples des scripts dans l’extension `examples` dossier que vous pouvez utiliser pour découvrir PowerShell Édition et fonctionnalités de débogage.  Découvrez les éléments inclus [README.md](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md) fichier pour en savoir plus sur comment les utiliser.
+Le dossier `examples` de l'extension contient quelques exemples de scripts que vous pouvez utiliser pour découvrir les fonctionnalités d'édition et de débogage PowerShell.  Consultez le fichier [README.md](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md) inclus pour en savoir plus sur leur utilisation.
 
-Vous trouverez ce dossier à l’emplacement suivant :
+Ce dossier se trouve à l’emplacement suivant :
 
 ```powershell
 $HOME/.azuredatastudio/extensions/ms-vscode.PowerShell-<version>/examples
 ```
 
-ou si vous utilisez la version préliminaire de l’extension
+ou si vous utilisez la préversion de l'extension
 
  ```powershell
 $HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
 ```
 
-Pour ouvrir/afficher les exemples de l’extension dans Azure Data Studio, exécutez le code suivant à partir de l’invite de commandes PowerShell :
+Pour ouvrir/afficher les exemples de l'extension dans Azure Data Studio, exécutez le code suivant depuis votre invite de commande PowerShell :
 
 ```powershell
 azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
@@ -93,53 +93,53 @@ azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.Power
 
 ### <a name="creating-and-opening-files"></a>Création et ouverture de fichiers
 
-Pour créer et ouvrir un nouveau fichier à l’intérieur de l’éditeur, utilisez New-EditorFile à partir de dans le Terminal intégré de PowerShell.
+Pour créer et ouvrir un nouveau fichier dans l'éditeur, utilisez la commande New-EditorFile depuis le terminal intégré PowerShell.
 
 ```powershell
 PS C:\temp> New-EditorFile ExportData.ps1
 ```
 
-Cette commande fonctionne pour n’importe quel type de fichier, pas seulement les fichiers PowerShell.
+Cette commande fonctionne pour n'importe quel type de fichier, pas seulement pour les fichiers PowerShell.
 
 ```powershell
 PS C:\temp> New-EditorFile ImportData.py
 ```
 
-Pour ouvrir un ou plusieurs fichiers dans Azure Data Studio, utilisez le `Open-EditorFile` commande.
+Pour ouvrir un ou plusieurs fichiers dans Azure Data Studio, utilisez la commande `Open-EditorFile`.
 
 ```powershell
 Open-EditorFile ExportData.ps1, ImportData.py
 ```
 
-### <a name="no-focus-on-console-when-executing"></a>Sans le focus sur la console lors de l’exécution
+### <a name="no-focus-on-console-when-executing"></a>Aucun focus sur la console lors de l'exécution
 
-Pour les utilisateurs qui sont utilisés pour l’utilisation de SSMS, vous êtes habitué à la possibilité d’exécuter une requête et en étant capable d’exécuter de nouveau à nouveau sans avoir à basculer vers le volet de requête.  Dans ce cas, le comportement par défaut de l’éditeur de code peut paraître étrange pour vous.  Pour conserver le focus dans l’éditeur lorsque vous exécutez avec <kbd>F8</kbd> modifier le paramètre suivant :
+Les utilisateurs habitués à travailler avec SSMS savent qu’ils peuvent exécuter une requête, puis la réexécuter sans avoir à revenir dans le volet de la requête.  Dans ce cas, le comportement par défaut de l'éditeur de code peut vous sembler étrange.  Pour garder le focus dans l'éditeur lorsque vous exécutez une commande avec <kbd>F8</kbd>, modifiez le paramètre suivant :
 
 ```json
 "powershell.integratedConsole.focusConsoleOnExecute": false
 ```
 
-La valeur par défaut est `true` à des fins d’accessibilité.
+La valeur par défaut est `true` pour des raisons d'accessibilité.
 
-N’oubliez pas ce paramètre empêche le focus de modification à la console, même lorsque vous utilisez une commande explicitement les appels pour l’entrée, telles que `Get-Credential`.
+Sachez que ce paramètre empêchera le focus vers la console, même lorsque vous utilisez une commande qui appelle explicitement l'entrée, par exemple `Get-Credential`.
 
-## <a name="sql-powershell-examples"></a>Exemples de PowerShell SQL
-Pour pouvoir utiliser ces exemples (ci-dessous), vous devez installer le module SQL Server à partir de la [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
+## <a name="sql-powershell-examples"></a>Exemples SQL PowerShell
+Pour utiliser ces exemples (ci-dessous), vous devez installer le module SqlServer à partir de la [galerie PowerShell](https://www.powershellgallery.com/packages/SqlServer).
 
 ```powershell
 Install-Module -Name SqlServer
 ```
 
 > [!NOTE]
-> Avec la version `21.1.18102` et, le `SqlServer` module prend en charge [PowerShell Core](https://github.com/PowerShell/PowerShell) 6.2 et, en plus de Windows PowerShell.
+> Avec `21.1.18102` et versions ultérieures, le module `SqlServer` prend en charge [PowerShell Core](https://github.com/PowerShell/PowerShell) 6.2 et versions ultérieures, en plus de Windows PowerShell.
 
-Dans cet exemple, nous utilisons le `Get-SqlInstance` pour obtenir les objets serveur SMO pour ServerA et ServerB.  La valeur par défaut de sortie de cette commande inclut le nom d’Instance, version, Service Pack & niveau de mise à jour CU des instances.
+Dans cet exemple, nous utilisons la cmdlet `Get-SqlInstance` pour obtenir les objets SMO du serveur pour ServerA & ServerB.  La sortie par défaut de cette commande inclura le nom de l'instance, la version, le Service Pack et le niveau de mise à jour CU des instances.
 
 ```powershell
 Get-SqlInstance -ServerInstance ServerA, ServerB
 ```
 
-Voici un exemple de ce que la sortie se présente comme :
+Voici un exemple de ce à quoi ressemblera ce résultat :
 
 ```
 Instance Name             Version    ProductLevel UpdateLevel  HostPlatform HostDistribution
@@ -147,21 +147,21 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-Le `SqlServer` module contient un fournisseur appelé `SQLRegistration` qui permet d’accéder par programmation les types de suivant de connexions de SQL Server enregistrées :
+Le module `SqlServer` contient un fournisseur appelé `SQLRegistration` qui vous permet d'accéder par programmation aux types suivants de connexions SQL Server enregistrées :
 
-+ Serveur de moteur de base de données (serveurs inscrits)
-+ Serveur d’administration centrale (CMS)
++ Serveur de moteur de base de données (serveurs enregistrés)
++ Serveur de gestion centralisée (CMS)
 + Analysis Services
 + Integration Services
 + Reporting Services
 
- Dans l’exemple suivant, nous ferons un `dir` (alias pour `Get-ChildItem`) pour obtenir la liste de toutes les instances de SQL Server apparaît dans votre fichier de serveurs inscrits.
+ Dans l'exemple suivant, nous allons effectuer une opération `dir` (alias pour `Get-ChildItem`) pour obtenir la liste de toutes les instances SQL Server répertoriées dans votre fichier Serveurs enregistrés.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
 ```
 
-Voici un exemple de ce que la sortie pourrait ressembler à :
+Voici un exemple de ce à quoi ce résultat pourrait ressembler :
 
 ```powershell
 Mode Name
@@ -173,9 +173,9 @@ Mode Name
 -    localhost\SQL2017
 ```
 
-Pour de nombreuses opérations qui impliquent une base de données ou d’objets au sein d’une base de données, le `Get-SqlDatabase` applet de commande peut être utilisé.  Si vous fournissez des valeurs à la fois pour le `-ServerInstance` et `-Database` paramètres, que cet objet d’une base de données seront récupérées.  Toutefois, si vous spécifiez uniquement le `-ServerInstance` paramètre, une liste complète de toutes les bases de données sur cette instance sera retournée.
+Vous pouvez utiliser la cmdlet `Get-SqlDatabase` dans de nombreuses opérations impliquant une base de données ou des objets d’une base de données.  Si vous fournissez des valeurs pour les paramètres `-ServerInstance` et `-Database`, un seul objet de base de données sera récupéré.  Cependant, si vous spécifiez uniquement le paramètre `-ServerInstance`, une liste complète de toutes les bases de données de cette instance sera retournée.
 
-Voici un exemple de ce que la sortie se présente comme :
+Voici un exemple de ce à quoi ressemblera ce résultat :
 
 ```
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -192,7 +192,7 @@ tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 ```
 
-L’exemple suivant utilise le `Get-SqlDatabase` applet de commande pour récupérer une liste de toutes les bases de données sur l’instance de serveur b, puis présente une grille (à l’aide de la `Out-GridView` applet de commande) pour sélectionner les bases de données doivent être sauvegardées.  Une fois que l’utilisateur clique sur le bouton « OK », uniquement les bases de données en surbrillance seront sauvegardées.
+L’exemple suivant utilise la cmdlet `Get-SqlDatabase` pour récupérer une liste de toutes les bases de données sur l'instance ServerB, puis présente une grille/table (à l'aide de la cmdlet `Out-GridView`) pour sélectionner les bases de données à sauvegarder.  Lorsque l'utilisateur clique sur le bouton « OK », seules les bases de données sélectionnées seront sauvegardées.
 
 ```powershell
 Get-SqlDatabase -ServerInstance ServerB |
@@ -200,7 +200,7 @@ Out-GridView -PassThru |
 Backup-SqlDatabase -CompressionOption On
 ```
 
-Cet exemple, là encore, obtenir une liste de toutes les instances de SQL Server répertoriées dans votre fichier de serveurs inscrits, puis appelle le `Get-SqlAgentJobHistory` qui signale chaque travail de l’Agent SQL ayant échoué depuis minuit, pour chaque instance de SQL Server répertorié.
+Cet exemple, encore une fois, obtient la liste de toutes les instances SQL Server répertoriées dans votre fichier Serveurs enregistrés, puis appelle `Get-SqlAgentJobHistory`, qui rapporte chaque tâche SQL Agent qui a échoué depuis minuit, pour chaque instance SQL Server mentionnée.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
@@ -210,7 +210,7 @@ FOREACH {
 }
 ```
 
-Dans cet exemple, nous ferons un `dir` (alias pour `Get-ChildItem`) pour obtenir la liste de toutes les instances de SQL Server apparaît dans votre fichier de serveurs inscrits, puis utiliser le `Get-SqlDatabase` pour obtenir une liste des bases de données pour chacun de ces instances.
+Dans cet exemple, nous allons effectuer une opération `dir` (alias pour `Get-ChildItem`) pour obtenir la liste de toutes les instances SQL Server répertoriées dans votre fichier Serveurs enregistrés, puis utilisez la cmdlet `Get-SqlDatabase` afin d’obtenir une liste des bases de données pour chacune de ces instances.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
@@ -220,7 +220,7 @@ FOREACH {
 }
 ```
 
-Voici un exemple de ce que la sortie se présente comme :
+Voici un exemple de ce à quoi ressemblera ce résultat :
 
 ```
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -239,17 +239,17 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 
 ## <a name="reporting-problems"></a>Signalement des problèmes
 
-Si vous rencontrez des problèmes avec le PowerShell Extension, consultez [la documentation de dépannage](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md) pour plus d’informations sur le diagnostic et de signaler des problèmes.
+Si vous rencontrez des problèmes avec l'extension PowerShell, consultez [la documentation de dépannage](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md) pour plus d'informations sur le diagnostic et le signalement des problèmes.
 
 #### <a name="security-note"></a>Remarque relative à la sécurité
 
-Pour tout problème de sécurité, consultez [ici](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
+Pour tout problème relatif à la sécurité, cliquez [ici](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
 
-## <a name="contributing-to-the-code"></a>Contribution au Code
+## <a name="contributing-to-the-code"></a>Contribution au code
 
-Découvrez le [documentation de développement](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md) pour plus d’informations sur la façon de contribuer à cette extension !
+Consultez la [documentation de développement](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md) pour plus de détails sur la façon de contribuer à cette extension.
 
-## <a name="maintainers"></a>Les chargés de maintenance
+## <a name="maintainers"></a>Chargés de maintenance
 
 - [Keith Hill](https://github.com/rkeithhill) - [@r_keith_hill](http://twitter.com/r_keith_hill)
 - [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
@@ -257,12 +257,12 @@ Découvrez le [documentation de développement](https://github.com/PowerShell/vs
 
 ## <a name="license"></a>Licence
 
-Cette extension est [concédé sous licence MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Pour plus d’informations sur les fichiers binaires tiers qui nous incluons avec les versions de ce projet, consultez le [mentions tierces](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) fichier.
+Cette extension est [accordée sous licence MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Pour plus de détails sur les binaires tiers que nous incluons avec les versions de ce projet, consultez le fichier [Mentions tierces](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
 ## <a name="code-of-conductconduct-md"></a>[Code de conduite][conduct-md]
 
-Ce projet a adopté le [Microsoft Source Code de conduite Open][conduct-code].
-Pour plus d’informations, consultez le [Code de conduite Forum aux questions] [ conduct-FAQ] ou contactez [ opencode@microsoft.com ] [ conduct-email] avec des questions ou commentaires supplémentaires.
+Ce projet a adopté le [Code de conduite Open Source de Microsoft][conduct-code].
+Pour plus d'informations, voir la [FAQ sur le Code de conduite ][conduct-FAQ] ou contacter [opencode@microsoft.com][conduct-email] pour toute question ou commentaire supplémentaire.
 
 [conduct-code]: http://opensource.microsoft.com/codeofconduct/
 [conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
