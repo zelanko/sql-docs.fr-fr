@@ -9,18 +9,18 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958703"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822691"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Qu’est-ce que l’instance principale dans un cluster Big Data SQL Server ?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit le rôle de l’*instance principale SQL Server* dans un cluster Big Data SQL Server 2019. L’instance principale est une instance SQL Server s’exécutant dans un [plan de contrôle](big-data-cluster-overview.md#controlplane) d’un cluster Big Data SQL Server.
+Cet article décrit le rôle de l' *instance maître SQL Server* dans un cluster Big Data pour SQL Server 2019. L’instance principale est une instance SQL Server s’exécutant dans un cluster Big Data pour gérer la connectivité, les requêtes avec montée en puissance parallèle, les métadonnées et les bases de données utilisateur et les services de Machine Learning.
 
 L’instance principale SQL Server fournit les fonctionnalités suivantes :
 
@@ -67,7 +67,7 @@ Avec les clusters Big Data SQL Server 2019, vous pouvez en faire plus avec vos l
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data SQL Server, consultez les ressources suivantes :
+Pour en savoir plus sur les clusters Big Data SQL Server, consultez les ressources suivantes :
 
 - [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md)
 - [Atelier : Architecture des clusters Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

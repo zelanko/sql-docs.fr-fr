@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |Avant le début|1|  
-|*CurrRowsetStart* LastResultRow-RowsetSize [1]  \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* LastResultRow-RowsetSize [1] \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
 |CurrRowsetStart > *LastResultRow-RowsetSize*[1]|Après la fin|  
 |Après la fin|Après la fin|  
   
@@ -201,7 +201,7 @@ SQLRETURN SQLFetch(
  Le contenu de la mémoire tampon extraite de lignes n’est pas défini si **SQLFetch** ou **SQLFetchScroll** ne retourne pas SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO, sauf si SQL_NO_DATA est retourné, auquel cas la valeur de la mémoire tampon de lignes extraites est définie sur 0.  
   
 ### <a name="error-handling"></a>Gestion des erreurs  
- Les erreurs et les avertissements peuvent s’appliquer à des lignes individuelles ou à la fonction entière. Pour plus d’informations sur les enregistrements de [](../../../odbc/reference/develop-app/diagnostics.md) diagnostic, consultez Diagnostics et [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
+ Les erreurs et les avertissements peuvent s’appliquer à des lignes individuelles ou à la fonction entière. Pour plus d’informations sur les enregistrements de [diagnostic](../../../odbc/reference/develop-app/diagnostics.md), consultez Diagnostics et [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   
 #### <a name="errors-and-warnings-on-the-entire-function"></a>Erreurs et avertissements sur la totalité de la fonction  
  Si une erreur s’applique à la fonction entière, telle que SQLSTATE HYT00 (timeout expiré) ou SQLSTATE 24000 (état de curseur non valide), **SQLFetch** retourne SQL_ERROR et le SQLSTATE applicable. Le contenu des mémoires tampons d’ensemble de lignes n’est pas défini et la position du curseur est inchangée.  

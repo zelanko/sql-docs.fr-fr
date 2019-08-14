@@ -1,5 +1,5 @@
 ---
-title: Superviser et dépanner
+title: Surveiller et résoudre des problèmes
 titleSuffix: SQL Server big data clusters
 description: Cet article fournit des commandes utiles pour la supervision et la résolution des problèmes d’un cluster Big Data SQL Server 2019 (préversion).
 author: mihaelablendea
@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419477"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841562"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Supervision et résolution des problèmes des clusters Big Data SQL Server.
 
@@ -92,7 +92,7 @@ Si des erreurs se sont produites, vous pouvez parfois voir l’erreur dans les �
 Vous pouvez récupérer les journaux pour les conteneurs qui s’exécutent dans un pod. La commande suivante récupère les journaux pour tous les conteneurs s’exécutant dans le pod nommé `master-0` et les place dans un fichier nommé `master-0-pod-logs.txt` :
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Obtenir l’état des services
@@ -111,7 +111,7 @@ kubectl get svc -n mssql-cluster
 
 Les services suivants prennent en charge les connexions externes au cluster Big Data :
 
-| Service | Description |
+| de diffusion en continu | Description |
 |---|---|
 | **master-svc-external** | Fournit l’accès à l’instance principale.<br/>(**EXTERNAL-IP,31433** et l’utilisateur **SA**) |
 | **controller-svc-external** | Prend en charge les outils et les clients qui gèrent le cluster. |
@@ -133,36 +133,6 @@ L’exemple suivant récupère les détails du service **master-svc-external** 
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>Exécuter des commandes dans un conteneur
-
-Si des outils existants ou l’infrastructure ne vous permettent pas d’effectuer une certaine tâche sans être réellement dans le contexte du conteneur, vous pouvez vous connecter au conteneur avec la commande `kubectl exec`. Par exemple, vous devrez peut-être vérifier si un fichier spécifique existe ou redémarrer des services dans le conteneur. 
-
-Pour vous servir de la commande `kubectl exec`, utilisez la syntaxe suivante :
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-Les deux sections suivantes fournissent deux exemples d’exécution d’une commande dans un conteneur spécifique.
-
-### <a id="restartsql"></a> Se connecter à un conteneur spécifique et redémarrer le processus SQL Server
-
-L’exemple suivant montre comment redémarrer le processus SQL Server dans le conteneur `mssql-server` dans le pod `master-0` :
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> Se connecter à un conteneur spécifique et redémarrer des services dans un conteneur
- 
-L’exemple suivant montre comment redémarrer tous les services gérés par **supervisor** : 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> Copier des fichiers

@@ -1,5 +1,5 @@
 ---
-title: Restaurer une base de données
+title: Restauration d’une base de données
 titleSuffix: SQL Server big data clusters
 description: Cet article explique comment restaurer une base de données dans l’instance principale d’un cluster Big Data SQL Server 2019 (préversion).
 author: MikeRayMSFT
@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958626"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969484"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurer une base de données dans l’instance principale du cluster Big Data SQL Server
 
@@ -36,28 +36,28 @@ Cet article explique comment restaurer la base de données AdventureWorks, mais 
 Copiez le fichier de sauvegarde vers le conteneur SQL Server dans le pod de l’instance principale du cluster Kubernetes.
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
-Exemple :
+Exemple :
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
 ```
 
 Ensuite, vérifiez que le fichier de sauvegarde a été copié dans le conteneur du pod.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit
 ```
 
-Exemple :
+Exemple :
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
 ls /tmp
 exit
 ```
@@ -70,7 +70,7 @@ Ensuite, restaurez la sauvegarde de la base de données sur l’instance princip
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 ```
 
-Exemple :
+Exemple :
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
