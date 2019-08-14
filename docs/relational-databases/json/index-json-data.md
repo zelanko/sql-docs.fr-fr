@@ -13,12 +13,12 @@ ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a31be55598d3a3df42a9d5a5fd39832fdbc08754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909285"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809977"
 ---
 # <a name="index-json-data"></a>Indexer des données JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Voici le plan d’exécution de la requête utilisée dans cet exemple.
   
 ![Plan d’exécution](../../relational-databases/json/media/jsonindexblog1.png "Plan d’exécution")  
   
-Au lieu d’une analyse de table complète, SQL Server utilise une recherche d’index dans l’index non cluster et recherche les lignes qui répondent aux conditions spécifiées. Il utilise ensuite une recherche de clé dans la table `SalesOrderHeader` pour extraire les autres colonnes référencées dans la requête. Dans cet exemple, il s’agit de `SalesOrderNumber` et `OrderDate`.  
+Au lieu d’une analyse de table complète, SQL Server effectue une recherche dans l’index non-cluster et recherche les lignes qui répondent aux conditions spécifiées. Il utilise ensuite une recherche de clé dans la table `SalesOrderHeader` pour extraire les autres colonnes référencées dans la requête. Dans cet exemple, il s’agit de `SalesOrderNumber` et `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Optimiser davantage l’index avec les colonnes incluses
 Si vous ajoutez les colonnes nécessaires dans l’index, vous pouvez éviter cette recherche supplémentaire dans la table. Vous pouvez ajouter ces colonnes en tant que colonnes incluses standard, comme indiqué dans l’exemple suivant, ce qui étend l’exemple `CREATE INDEX` précédent.  
@@ -82,7 +82,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-Dans ce cas, SQL Server n’a pas à lire les données supplémentaires de la table `SalesOrderHeader`, car tout ce dont il a besoin est inclus dans l’index JSON non cluster. Ce type d’index est un bon moyen de combiner des données JSON et des données de colonne dans les requêtes, et de créer des index optimaux pour votre charge de travail.  
+Dans ce cas, SQL Server n’a pas à lire d’autres données de la table `SalesOrderHeader`, car tout ce dont il a besoin est inclus dans l’index JSON non-cluster. Ce type d’index est un bon moyen de combiner des données JSON et des données de colonne dans les requêtes, et de créer des index optimaux pour votre charge de travail.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Les index JSON prennent en charge le classement  
 Les index des données JSON présentent une caractéristique importante : ils prennent en charge le classement. Le résultat de la fonction `JSON_VALUE` que vous utilisez quand vous créez la colonne calculée est une valeur texte qui hérite son classement de l’expression d’entrée. Ainsi, les valeurs de l’index sont triées à l’aide des règles de classement définies dans les colonnes sources.  
@@ -135,11 +135,11 @@ FROM JsonCollection
 ORDER BY JSON_VALUE(json,'$.name')
 ```  
   
- Si vous examinez le plan d’exécution, vous pouvez constater qu’il utilise les valeurs triées de l’index non cluster.  
+ Si vous examinez le plan d’exécution, vous pouvez constater qu’il utilise les valeurs triées de l’index non-cluster.  
   
  ![Plan d’exécution](../../relational-databases/json/media/jsonindexblog2.png "Plan d’exécution")  
   
- Bien que la requête comporte une clause `ORDER BY`, le plan d’exécution n’utilise pas d’opérateur de tri. L’index JSON est déjà trié selon les règles cyrilliques serbes. Par conséquent, SQL Server peut utiliser l’index non cluster dans lequel les résultats sont déjà triés.  
+ Bien que la requête comporte une clause `ORDER BY`, le plan d’exécution n’utilise pas d’opérateur de tri. L’index JSON est déjà trié selon les règles cyrilliques serbes. Par conséquent, SQL Server peut utiliser l’index non-cluster dans lequel les résultats sont déjà triés.  
   
  Toutefois, si vous changez le classement de l’expression `ORDER BY`, par exemple en ajoutant `COLLATE French_100_CI_AS_SC` après la fonction `JSON_VALUE`, vous obtenez un autre plan d’exécution de requête.  
   

@@ -1,7 +1,7 @@
 ---
 title: Afficher l’état du cluster
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment afficher l’état d’un cluster Big Data à l’aide de Azure Data Studio, de blocs-notes et de commandes azdata.
+description: Cet article explique comment afficher l’état d’un cluster Big Data à l’aide d’Azure Data Studio, de notebooks et de commandes azdata.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
@@ -10,29 +10,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68419289"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Comment afficher l’état d’un cluster Big Data
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Guide pratique pour afficher l’état d’un cluster Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment accéder aux points de terminaison de service et afficher l’état d’un cluster SQL Server Big Data (version préliminaire). Vous pouvez utiliser à la fois Azure Data Studio et **azdata**, et cet article aborde ces deux techniques.
+Cet article explique comment accéder aux points de terminaison de service et afficher l’état d’un cluster Big Data SQL Server (préversion). Il présente les deux techniques disponibles : Azure Data Studio et **azdata**.
 
-## <a id="datastudio"></a>Utiliser Azure Data Studio
+## <a id="datastudio"></a> Utiliser Azure Data Studio
 
-Après avoir téléchargé la **Build** Insiders la plus récente de [Azure Data Studio](https://aka.ms/azdata-insiders), vous pouvez afficher les points de terminaison de service et l’état d’un cluster Big Data avec le tableau de bord du cluster SQL Server Big Data. Notez que certaines des fonctionnalités ci-dessous ne sont disponibles que dans la version Insiders de Azure Data Studio.
+Après avoir téléchargé la dernière **build Insiders** d’[Azure Data Studio](https://aka.ms/azdata-insiders), vous pouvez accéder au tableau de bord Cluster Big Data SQL Server pour afficher les points de terminaison de service et l’état d’un cluster Big Data. Notez que certaines des fonctionnalités présentées ci-dessous ne sont disponibles que dans la build Insiders d’Azure Data Studio.
 
-1. Tout d’abord, créez une connexion à votre cluster Big Data dans Azure Data Studio. Pour plus d’informations, consultez [se connecter à un cluster SQL Server Big Data avec Azure Data Studio](connect-to-big-data-cluster.md).
+1. Commencez par créer une connexion à votre cluster Big Data dans Azure Data Studio. Pour plus d’informations, consultez [Se connecter à un cluster Big Data SQL Server avec Azure Data Studio](connect-to-big-data-cluster.md).
 
-1. Cliquez avec le bouton droit sur le point de terminaison du cluster Big Data, puis cliquez sur **gérer**.
+1. Cliquez avec le bouton droit sur le point de terminaison du cluster Big Data, puis cliquez sur **Manage** (Gérer).
 
-   ![Cliquez avec le bouton droit sur gérer](media/view-cluster-status/right-click-manage.png)
+   ![Clic droit, puis Manage](media/view-cluster-status/right-click-manage.png)
 
-1. Sélectionnez l’onglet **SQL Server Big Data cluster** pour accéder au tableau de bord du cluster Big Data.
+1. Sélectionnez l’onglet **Cluster Big Data SQL Server** pour accéder au tableau de bord du cluster Big Data.
 
    ![Tableau de bord du cluster Big Data](media/view-cluster-status/bdc-dashboard.png)
 
@@ -40,84 +40,84 @@ Après avoir téléchargé la **Build** Insiders la plus récente de [Azure Data
 
 Il est important de pouvoir accéder facilement aux différents services au sein d’un cluster Big Data. Le tableau de bord du cluster Big Data fournit une table de points de terminaison de service qui vous permet de voir et de copier les points de terminaison de service.
 
-![Points de terminaison de service](media/view-cluster-status/service-endpoints.png)
+![points de terminaison de service](media/view-cluster-status/service-endpoints.png)
 
-Les premières lignes exposent les services suivants:
+Les premières lignes exposent les services suivants :
 
-- Proxy d’application
-- Service de gestion de cluster
-- HDFS et Spark
-- Proxy de gestion
+- Application Proxy (Proxy d’application)
+- Cluster Management Service (Service de gestion de cluster)
+- HDFS and Spark (HDFS et Spark)
+- Management Proxy (Proxy de gestion)
 
-Ces services répertorient les points de terminaison qui peuvent être copiés et collés lorsque vous avez besoin du point de terminaison pour la connexion à ces services. Par exemple, vous pouvez cliquer sur l’icône de copie à droite du point de terminaison, puis la coller dans une fenêtre de texte demandant ce point de terminaison. Le point de terminaison du service de gestion de cluster est nécessaire pour exécuter le [Notebook État du cluster](#notebook).
+Ces services listent les points de terminaison qui peuvent être copiés et collés quand vous avez besoin du point de terminaison pour vous connecter à ces services. Par exemple, vous pouvez cliquer sur l’icône de copie à droite du point de terminaison, puis la coller dans une fenêtre de texte demandant ce point de terminaison. Le point de terminaison Service de gestion de cluster est nécessaire pour exécuter le [notebook cluster status](#notebook).
 
 ### <a name="dashboards"></a>Tableaux de bord
 
-Le tableau des points de terminaison de service expose également plusieurs tableaux de bord pour la surveillance:
+La table des points de terminaison de service expose également plusieurs tableaux de bord de supervision :
 
-- Mesures (Grafana)
-- Journaux (Kibana)
-- Surveillance des travaux Spark
-- Gestion des ressources Spark
+- Metrics (Métriques) (Grafana)
+- Logs (Journaux) (Kibana)
+- Spark Job Monitoring (Supervision des travaux Spark)
+- Spark Resource Management (Gestion des ressources Spark)
 
-Vous pouvez cliquer sur ces liens directement. Deux fois, vous êtes invité à fournir votre nom d’utilisateur et votre mot de passe avant de vous connecter au service.
+Vous pouvez cliquer directement sur ces liens. Avant d’être connecté au service, vous devez fournir votre nom d’utilisateur et votre mot de passe à deux reprises.
 
-### <a id="notebook"></a>Bloc-notes d’État du cluster
+### <a id="notebook"></a> Notebook Cluster Status
 
-1. Vous pouvez également afficher l’état du cluster Big Data en lançant le bloc-notes État du cluster. Pour lancer le bloc-notes, cliquez sur la tâche **État du cluster** .
+1. Vous pouvez également voir l’état du cluster Big Data en lançant le notebook Cluster Status (État du cluster). Pour lancer le notebook, cliquez sur la tâche **Cluster Status**.
 
-    ![Lancer](media/view-cluster-status/cluster-status-launch.png)
+    ![lancer](media/view-cluster-status/cluster-status-launch.png)
 
-2. Avant de commencer, vous aurez besoin des éléments suivants:
+2. Avant de commencer, vous avez besoin des éléments suivants :
 
     - Nom du cluster Big Data
     - Nom d’utilisateur du contrôleur
     - Mot de passe du contrôleur
-    - Points de terminaison de contrôleur
+    - Points de terminaison du contrôleur
 
-    Le nom du cluster Big Data par défaut est **MSSQL-cluster** , sauf si vous l’avez personnalisé au cours de votre déploiement. Vous pouvez trouver le point de terminaison du contrôleur à partir du tableau de bord Big Data du cluster dans le tableau des points de terminaison de service. Le point de terminaison est listé en tant que **service de gestion de cluster**. Si vous ne connaissez pas les informations d’identification, demandez à l’administrateur qui a déployé votre cluster.
+    Le nom du cluster Big Data par défaut est **mssql-cluster**, sauf si vous l’avez personnalisé durant votre déploiement. Vous trouverez le point de terminaison du contrôleur dans la table des points de terminaison de service du tableau de bord du cluster Big Data. Le point de terminaison est listé comme **Cluster Management Service**. Si vous ne connaissez pas les informations d’identification, demandez-les à l’administrateur ayant déployé votre cluster.
 
-3. Dans la barre d’outils supérieure, cliquez sur **exécuter les cellules** .
+3. Cliquez sur **Exécuter les cellules** dans la barre d’outils supérieure.
 
-4. Suivez l’invite de commandes pour vos informations d’identification. Appuyez sur entrée après avoir tapé chaque information d’identification pour le nom du cluster Big Data, le nom d’utilisateur du contrôleur et le mot de passe du contrôleur.
+4. À l’invite, entrez vos informations d’identification. Appuyez sur Entrée après chaque information d’identification : nom du cluster Big Data, nom d’utilisateur du contrôleur et mot de passe du contrôleur.
 
     > [!Note]
-    > Si vous n’avez pas configuré de fichier de configuration avec votre Big Data, vous êtes invité à indiquer le point de terminaison du contrôleur. Tapez ou collez-le, puis appuyez sur entrée pour continuer.
+    > Si vous ne disposez pas d’un fichier de configuration avec votre cluster Big Data, vous êtes invité à indiquer le point de terminaison du contrôleur. Tapez-le ou collez-le, puis appuyez sur Entrée pour continuer.
 
-5. Si vous avez réussi à vous connecter, le reste du bloc-notes affiche la sortie de chaque composant du cluster Big Data. Lorsque vous souhaitez réexécuter une certaine cellule de code, pointez sur la cellule de code, puis cliquez sur l’icône **exécuter** .
+5. Si vous avez réussi à vous connecter, le reste du notebook montre la sortie de chaque composant du cluster Big Data. Quand vous souhaitez réexécuter une certaine cellule de code, pointez sur celle-ci, puis cliquez sur l’icône **Run**.
 
 ## <a name="use-azdata"></a>Utiliser azdata
 
-Vous pouvez également utiliser les commandes [azdata](deploy-install-azdata.md) pour afficher les deux points de terminaison et l’état du cluster.
+Vous pouvez également utiliser les commandes [azdata](deploy-install-azdata.md) pour afficher les points de terminaison et l’état du cluster.
 
 ### <a name="service-endpoints"></a>Points de terminaison de service
 
-Vous pouvez obtenir les adresses IP des points de terminaison externes pour le cluster Big Data à l’aide des étapes suivantes.
+Vous pouvez obtenir les adresses IP des points de terminaison externes du cluster Big Data en effectuant les étapes suivantes.
 
-1. Recherchez l’adresse IP du point de terminaison du contrôleur en regardant la sortie externe-IP de la commande **kubectl** suivante:
+1. Recherchez l’adresse IP du point de terminaison du contrôleur. Pour cela, examinez la sortie EXTERNAL-IP de la commande **kubectl** suivante :
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Si vous n’avez pas modifié le nom par défaut lors du `-n mssql-cluster` déploiement, utilisez dans la commande précédente. **MSSQL-cluster** est le nom par défaut du cluster Big Data.
+   > Si vous n’avez pas changé le nom par défaut durant le déploiement, utilisez `-n mssql-cluster` dans la commande précédente. **mssql-cluster** est le nom par défaut du cluster Big Data.
 
-1. Connectez-vous au cluster Big Data avec la [connexion azdata](reference-azdata.md). Définissez le paramètre **--Endpoint-point de terminaison** sur l’adresse IP externe du point de terminaison du contrôleur.
+1. Connectez-vous au cluster Big Data avec [azdata login](reference-azdata.md). Affectez au paramètre **--controller-endpoint** l’adresse IP externe du point de terminaison du contrôleur.
 
    ```bash
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Spécifiez le nom d’utilisateur et le mot de passe que vous avez configurés pour le contrôleur (CONTROLLER_USERNAME et CONTROLLER_PASSWORD) au cours du déploiement.
+   Spécifiez le nom d’utilisateur et le mot de passe que vous avez configurés pour le contrôleur (CONTROLLER_USERNAME et CONTROLLER_PASSWORD) durant le déploiement.
 
-1. Exécutez la [liste de points de terminaison azdata BDC](reference-azdata-bdc-endpoint.md) pour obtenir une liste avec une description de chaque point de terminaison, ainsi que les valeurs d’adresse IP et de port correspondantes. 
+1. Exécutez [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) pour obtenir une liste comprenant la description de chaque point de terminaison ainsi que les adresses IP et ports correspondants. 
 
    ```bash
    azdata bdc endpoint list -o table
    ```
 
-   La liste suivante affiche un exemple de sortie de cette commande:
+   La liste suivante montre un exemple de sortie de cette commande :
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -137,16 +137,16 @@ Vous pouvez obtenir les adresses IP des points de terminaison externes pour le c
 
 ### <a name="view-cluster-status"></a>Afficher l’état du cluster
 
-Vous pouvez afficher l’état du cluster à l’aide de la commande [azdata BDC Status Show](reference-azdata-bdc-status.md) .
+Vous pouvez afficher l’état du cluster à l’aide de la commande [azdata bdc status show](reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show -o table
 ```
 
 > [!TIP]
-> Pour exécuter les commandes d’État, vous devez d’abord vous connecter à l’aide de la commande **azdata login** , qui était affichée dans la section points de terminaison précédents.
+> Pour exécuter les commandes d’état, vous devez d’abord vous connecter à l’aide de la commande **azdata login** (présentée dans la section précédente sur les points de terminaison).
 
-Le code suivant montre un exemple de sortie de cette commande:
+Voici un exemple de sortie de cette commande :
 
 ```output
 Kind     Name           State
@@ -161,21 +161,21 @@ Storage  default        Ready
 
 ### <a name="view-pool-status"></a>Afficher l’état du pool
 
-Vous pouvez afficher l’état des pools au sein du cluster à l’aide de la commande azdata de l' [État du pool BDC](reference-azdata-bdc-pool-status.md) . Pour utiliser cette commande, spécifiez le type de pool avec `--kind` le paramètre. Les types de pool sont les suivants:
+Vous pouvez afficher l’état des pools au sein du cluster à l’aide de la commande [azdata bdc pool status show](reference-azdata-bdc-pool-status.md). Pour utiliser cette commande, spécifiez le type de pool avec le paramètre `--kind`. Les types de pools sont les suivants :
 
-- Calcul
-- data
+- compute
+- données
 - master
-- Mousse
+- spark
 - storage
 
-Par exemple, la commande suivante affiche l’état du pool de stockage:
+Par exemple, la commande suivante affiche l’état du pool de stockage :
 
 ```bash
 azdata bdc pool status show --kind storage
 ```
 
-Vous devez voir un texte similaire à la sortie suivante:
+Vous devez obtenir un texte similaire à la sortie suivante :
 
 ```output
 [
@@ -198,11 +198,11 @@ Vous devez voir un texte similaire à la sortie suivante:
 ]
 ```
 
-La `logsUrl` valeur est liée à un tableau de bord kibana avec les informations de journal:
+La valeur `logsUrl` est liée à un tableau de bord kibana avec des informations de journal :
 
-![Tableau de bord Kibana](./media/view-cluster-status/kibana-dashboard.png)
+![Tableau de bord kibana](./media/view-cluster-status/kibana-dashboard.png)
 
-Les `nodeMetricsUrl` valeurs `sqlMetricsUrl` et sont liées à un tableau de bord grafana pour surveiller l’intégrité des nœuds et les métriques SQL:
+Les valeurs `nodeMetricsUrl` et `sqlMetricsUrl` sont liées à un tableau de bord grafana qui permet de superviser l’intégrité des nœuds et les métriques SQL :
 
 ![Tableau de bord Grafana](./media/view-cluster-status/grafana-dashboard.png)
 
@@ -210,8 +210,8 @@ Les `nodeMetricsUrl` valeurs `sqlMetricsUrl` et sont liées à un tableau de bor
 
 ### <a name="view-controller-status"></a>Afficher l’état du contrôleur
 
-Vous pouvez afficher l’état du contrôleur avec la commande [azdata BDC Control Status Show](reference-azdata-bdc-control-status.md) . Il fournit des liens similaires vers les tableaux de bord de surveillance liés aux nœuds de contrôleur du cluster Big Data.
+Vous pouvez voir l’état du contrôleur à l’aide de la commande [azdata bdc control status show](reference-azdata-bdc-control-status.md). Celle-ci fournit des liens similaires vers les tableaux de bord de supervision liés aux nœuds de contrôleur du cluster Big Data.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [que sont les SQL Server Big Data les clusters](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters Big Data, consultez [Présentation des clusters Big Data SQL Server](big-data-cluster-overview.md).

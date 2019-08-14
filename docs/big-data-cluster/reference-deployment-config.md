@@ -1,7 +1,7 @@
 ---
-title: Référence de fichier de configuration de déploiement
+title: Informations de référence sur les fichiers de configuration de déploiement
 titleSuffix: SQL Server big data clusters
-description: Référence pour un fichier de configuration de déploiement de cluster big data.
+description: Informations de référence sur les fichiers de configuration de déploiement des clusters Big Data.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958246"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Référence de fichier de configuration de déploiement pour les clusters de données volumineuses
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Informations de référence sur les fichiers de configuration de déploiement des clusters Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article fournit un fichier JSON qui décrit la structure d’un fichier de configuration de déploiement de cluster SQL Server 2019 big data.
+Cet article fournit un fichier JSON qui explique la structure d’un fichier de configuration de déploiement d’un cluster Big Data SQL Server 2019.
 
 > [!TIP]
-> N’utilisez pas ce que votre fichier de configuration de déploiement réel. Au lieu de cela, suivez les instructions de la [déploiement](deployment-guidance.md#configfile) pour savoir comment travailler avec des fichiers de configuration.
+> N’utilisez pas ce fichier de configuration pour un déploiement réel. Pour savoir comment utiliser les fichiers de configuration, suivez les instructions fournies dans le [guide de déploiement](deployment-guidance.md#configfile).
 
 ## <a name="deployment-configuration-file"></a>Fichier config du déploiement
 
-Utiliser le fichier JSON suivant comme référence pour la structure et les paramètres dans un fichier de configuration de déploiement de cluster big data.
+Référez-vous au fichier JSON suivant pour connaître la structure et les paramètres d’un fichier de configuration de déploiement d’un cluster Big Data.
 
 ```json
 {
@@ -453,4 +453,4 @@ Utiliser le fichier JSON suivant comme référence pour la structure et les para
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’utilisation et de personnaliser les fichiers de configuration de déploiement, consultez [comment déployer des données volumineuses de SQL Server clusters sur Kubernetes](deployment-guidance.md#configfile).
+Pour plus d’informations sur l’utilisation et la personnalisation des fichiers de configuration de déploiement, consultez [Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md#configfile).

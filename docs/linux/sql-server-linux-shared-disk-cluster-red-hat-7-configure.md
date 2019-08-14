@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032278"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810978"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -116,7 +116,7 @@ Il existe diverses solutions pour fournir un stockage partagé. Cette procédure
 ### <a name="configure-shared-storage-with-nfs"></a>Configurer le stockage partagé avec NFS
 
 > [!IMPORTANT] 
-> L’hébergement de fichiers de base de données sur un serveur NFS avec la version <4 n’est pas pris en charge dans cette mise en production. Cela comprend l’utilisation de NFS pour le clustering de basculement de disques partagés et les bases de données sur des instances non cluster. Nous travaillons sur l’activation d’autres versions de serveur NFS dans les mpises en production à venir. 
+> L’hébergement de fichiers de base de données sur un serveur NFS avec la version <4 n’est pas pris en charge dans cette mise en production. Cela comprend l’utilisation de NFS pour le clustering de basculement de disques partagés et pour les bases de données sur des instances non-cluster. Nous travaillons sur l’activation d’autres versions de serveur NFS dans les mpises en production à venir. 
 
 Sur le serveur NFS, procédez comme suit :
 

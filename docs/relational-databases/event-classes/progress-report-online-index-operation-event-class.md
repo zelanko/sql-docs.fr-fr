@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940641"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811141"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Rapport de progression : Classe d'événements Online Index Operation Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67940641"
 |EndTime|**datetime**|Heure à laquelle l'opération d'index en ligne s'est achevée.|15|Oui|  
 |EventClass|**Int**|Type d’événement = 190.|27|Non|  
 |EventSequence|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
-|EventSubClass|**Int**|Type de sous-classe d'événements.<br /><br /> 1=Début<br /><br /> 2=Début d'exécution Étape 1<br /><br /> 3=Fin d'exécution Étape 1<br /><br /> 4=Début d'exécution Étape 2<br /><br /> 5=Fin d'exécution Étape 2<br /><br /> 6=Nombre de lignes insérées<br /><br /> 7=Fin<br /><br /> L'étape 1 fait référence à l'objet de base (index cluster ou segment de mémoire), ou indique si l'opération d'index implique un index non cluster uniquement. L'étape 2 est utilisée lorsqu'une opération de création d'index implique la reconstruction d'origine et des index non cluster supplémentaires.  Par exemple, si un objet a un index cluster et plusieurs index non cluster, l'option Régénérer tout permet de reconstruire tous les index. L'objet de base (index cluster) est reconstruit à l'étape 1, puis tous les index non cluster sont reconstruits à l'étape 2.|21|Oui|  
+|EventSubClass|**Int**|Type de sous-classe d'événements.<br /><br /> 1=Début<br /><br /> 2=Début d'exécution Étape 1<br /><br /> 3=Fin d'exécution Étape 1<br /><br /> 4=Début d'exécution Étape 2<br /><br /> 5=Fin d'exécution Étape 2<br /><br /> 6=Nombre de lignes insérées<br /><br /> 7=Fin<br /><br /> L’étape 1 référence l’objet de base (index cluster ou segment de mémoire), ou indique si l’opération d’index implique un index non-cluster uniquement. L’étape 2 est utilisée lorsqu’une opération de création d’index implique la reconstruction d’origine et des index non-cluster supplémentaires.  Par exemple, si un objet a un index cluster et plusieurs index non-cluster, l’option Regénérer tout permet de reconstruire tous les index. L’objet de base (index cluster) est reconstruit à l’étape 1, puis tous les index non-cluster sont reconstruits à l’étape 2.|21|Oui|  
 |GroupID|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IndexID|**Int**|ID de l'index de l'objet affecté par l'événement.|24|Oui|  

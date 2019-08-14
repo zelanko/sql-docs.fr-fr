@@ -1,7 +1,7 @@
 ---
-title: Quel est l’instance principale ?
+title: Qu’est-ce que l’instance principale ?
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit l’instance principale de SQL Server dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
+description: Cet article décrit l’instance principale SQL Server dans un cluster Big Data SQL Server 2019 (préversion).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,64 +10,64 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958703"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Qu’est l’instance principale dans un cluster de données volumineux de SQL Server ?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Qu’est-ce que l’instance principale dans un cluster Big Data SQL Server ?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit le rôle de la *instance principale de SQL Server* dans un cluster de données volumineux de SQL Server 2019. L’instance principale est une instance de SQL Server en cours d’exécution dans un cluster de données volumineux de SQL Server [plan de contrôle](big-data-cluster-overview.md#controlplane).
+Cet article décrit le rôle de l’*instance principale SQL Server* dans un cluster Big Data SQL Server 2019. L’instance principale est une instance SQL Server s’exécutant dans un [plan de contrôle](big-data-cluster-overview.md#controlplane) d’un cluster Big Data SQL Server.
 
-L’instance principale de SQL Server offre les fonctionnalités suivantes :
+L’instance principale SQL Server fournit les fonctionnalités suivantes :
 
 ## <a name="connectivity"></a>Connectivité
 
-L’instance principale de SQL Server fournit un point de terminaison TDS accessible en externe pour le cluster. Vous pouvez connecter des applications ou outils de SQL Server comme Azure Data Studio ou SQL Server Management Studio pour ce point de terminaison comme vous serait une autre instance de SQL Server.
+L’instance principale SQL Server fournit un point de terminaison TDS accessible depuis l’extérieur pour le cluster. Vous pouvez connecter des applications ou des outils SQL Server comme Azure Data Studio ou SQL Server Management Studio à ce point de terminaison, comme vous le feriez pour n’importe quelle autre instance SQL Server.
 
-## <a name="scale-out-query-management"></a>Gestion des requêtes de montée en puissance
+## <a name="scale-out-query-management"></a>Scale-out de la gestion des requêtes
 
-L’instance principale de SQL Server contient le moteur de requête de montée en puissance est utilisé pour distribuer les requêtes sur des instances de SQL Server sur les nœuds dans le [pool de calcul](concept-compute-pool.md). Le moteur de requête de montée en puissance permet également d’accéder via Transact-SQL pour toutes les tables Hive dans le cluster sans aucune configuration supplémentaire.
+L’instance principale SQL Server contient le moteur de requête avec scale-out qui est utilisé pour distribuer les requêtes entre les instances SQL Server sur les nœuds du [pool de calcul](concept-compute-pool.md). Le moteur de requête avec scale-out fournit également un accès via Transact-SQL à toutes les tables Hive dans le cluster, sans aucune configuration supplémentaire.
 
-## <a name="metadata-and-user-databases"></a>Les bases de données utilisateur et de métadonnées
+## <a name="metadata-and-user-databases"></a>Base de données de métadonnées et bases de données utilisateur
 
-Outre les bases de données de système SQL Server standards, l’instance principale de SQL contient également les éléments suivants :
+En plus des bases de données système SQL Server standard, l’instance principale SQL contient également les éléments suivants :
 
-- Une base de données de métadonnées qui contient les métadonnées de la table de HDFS
-- Une carte de partitions de plan de données
-- Détails des tables externes qui fournissent l’accès au plan de données de cluster.
-- Sources de données externes PolyBase et des tables externes définies dans les bases de données utilisateur.
+- Une base de données de métadonnées qui contient les métadonnées des tables HDFS
+- Un mappage des partitions du plan de données
+- Des détails sur les tables externes qui fournissent l’accès au plan de données du cluster.
+- Des sources de données externes PolyBase et des tables externes définies dans les bases de données utilisateur.
 
-Vous pouvez également choisir d’ajouter vos propres bases de données utilisateur à l’instance principale de SQL Server.
+Vous pouvez également choisir d’ajouter vos propres bases de données utilisateur à l’instance principale SQL Server.
 
-## <a name="machine-learning-services"></a>Services machine learning
+## <a name="machine-learning-services"></a>Services Machine Learning
 
-SQL Server services machine learning est une fonctionnalité complémentaire du moteur de base de données, utilisé pour exécuter le code Java, R et Python dans SQL Server. Cette fonctionnalité est basée sur l’infrastructure d’extensibilité de SQL Server, qui isole les processus externes à partir de processus de moteur de base, mais s’intègre entièrement avec les données relationnelles comme des procédures stockées, en tant que script T-SQL qui contient des instructions de R ou Python ou Java, R ou Code Python contenant T-SQL.
+Les services Machine Learning SQL Server sont une fonctionnalité complémentaire du moteur de base de données, utilisée pour l’exécution de code Java, R et Python dans SQL Server. Cette fonctionnalité est basée sur l’infrastructure d’extensibilité SQL Server, qui isole les processus externes des processus principaux du moteur, mais qui s’intègre totalement aux données relationnelles sous forme de procédures stockées, de script T-SQL contenant des instructions R ou Python, ou de code Java, R ou Python contenant du T-SQL.
 
-En tant que partie d’un cluster de données volumineuses de SQL Server, les services machine learning seront disponibles sur l’instance principale de SQL Server par défaut. Cela signifie qu’une fois que l’exécution du script externe est activée sur l’instance principale de SQL Server, il sera possible d’exécuter des scripts R et Python à l’aide de sp_execute_external_script Java.
+Dans le cadre d’un cluster Big Data SQL Server, les services Machine Learning sont disponibles sur l’instance principale SQL Server par défaut. Cela signifie qu’une fois que l’exécution de scripts externes est activée sur l’instance principale SQL Server, il sera possible d’exécuter des scripts Java, R et Python avec sp_execute_external_script.
 
-### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Avantages de machine learning services dans un cluster de données volumineux
+### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Avantages des services Machine Learning dans un cluster Big Data
 
-SQL Server 2019 rend plus facile pour le big data d’être joints à des données dimensionnelles généralement stockées dans la base de données d’entreprise. La valeur de données volumineuses augmente considérablement lorsqu’il n’est pas seulement dans les mains des parties d’une organisation, mais il est également inclus dans les rapports, des tableaux de bord et des applications. En même temps, les scientifiques des données peuvent continuer à utiliser les outils de l’écosystème Spark/HDFS et accéder facilement, en temps réel aux données dans l’instance principale de SQL Server et dans les sources de données externes accessibles _via_ le maître de SQL Server instance.
+SQL Server 2019 permet de joindre facilement des données Big Data aux données dimensionnelles généralement stockées dans la base de données des entreprises. La valeur des données Big Data augmente considérablement quand elles ne sont pas seulement dans les mains de certaines parties d’une organisation, mais sont également incluses dans les rapports, les tableaux de bord et les applications. En même temps, les scientifiques des données peuvent continuer à utiliser les outils de l’écosystème Spark/HDFS, et disposer d’un accès facile et en temps réel aux données de l’instance principale SQL Server et dans des sources de données externes accessibles _via_ l’instance principale SQL Server.
 
-Avec SQL Server 2019 des clusters de données volumineuses, vous pouvez en faire plus avec votre lacs de données d’entreprise. Les analystes et développeurs SQL Server peuvent :
+Avec les clusters Big Data SQL Server 2019, vous pouvez en faire plus avec vos lacs de données d’entreprise. Les développeurs et les analystes SQL Server peuvent :
 
-* Créez des applications consommant des données à partir des lacs de données d’entreprise.
-* Raison sur toutes les données des requêtes Transact-SQL.
-* Utiliser l’écosystème existant d’applications et des outils SQL Server pour accéder et analyser les données d’entreprise.
-* Réduire la nécessité pour le déplacement des données via la virtualisation des données et mini-data warehouses.
-* Continuer à utiliser Spark pour les scénarios big data.
-* Générer des applications d’entreprise intelligentes à l’aide de Spark ou SQL Server pour l’apprentissage des modèles sur des lacs de données.
-* Configurer les modèles dans les bases de données de production pour de meilleures performances.
-* Données de Stream directement dans enterprise data warehouses pour l’analytique en temps réel.
-* Explorer les données visuellement à l’aide d’une analyse interactive et outils décisionnels.
+* Créer des applications qui utilisent des données provenant de lacs de données d’entreprise.
+* Travailler sur l’ensemble des données avec des requêtes Transact-SQL.
+* Utiliser l’écosystème existant d’outils et d’applications SQL Server pour accéder aux données d’entreprise et les analyser.
+* Réduire le besoin de déplacement de données via la virtualisation des données et les mini-Data Warehouses.
+* Continuer à utiliser Spark pour les scénarios Big Data.
+* Créer des applications d’entreprise intelligentes avec Spark ou SQL Server pour entraîner des modèles sur des lacs de données.
+* Exploiter des modèles dans les bases de données de production pour obtenir de meilleures performances.
+* Diffuser des données directement dans des mini-Data Warehouses de l’entreprise pour une analytique en temps réel.
+* Explorer les données visuellement avec des outils d’analyse interactive et décisionnels.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
+Pour plus d’informations sur les clusters Big Data SQL Server, consultez les ressources suivantes :
 
-- [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
-- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md)
+- [Atelier : Architecture des clusters Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

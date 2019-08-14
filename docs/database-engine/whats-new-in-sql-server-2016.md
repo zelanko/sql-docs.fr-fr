@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 440855051e0927bf4d660224fdbeba64bace1a4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d2ade42e25593911ea25b2a16ad53372ced0438
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059041"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941118"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Pour découvrir les nouveautés des autres composants SQL Server, consultez [Nou
 
 #### <a name="try-it-out"></a>À votre tour d’essayer
 
-- Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![télécharger](../analysis-services/media/download.png "télécharger").
+- Pour télécharger [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016).
 
 - Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 

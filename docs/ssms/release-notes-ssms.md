@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: c30179ae89bc69e84005a95a4d370acf4b692bd2
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731138"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809867"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -382,7 +382,7 @@ SSMS 18.1 est la dernière version en disponibilité générale (GA) de SSMS. S
 |Scripts d’objets|Correction d’un problème qui entraînait l’échec de la génération de scripts d’objets de base de données lors de la connexion à une base de données Azure SQL Database à l’aide d’AAD avec l’authentification multifacteur (MFA).|
 |Scripts d’objets|Correction d’un problème entraînant une erreur à la suite d’une tentative de génération d’un script pour un index spatial avec GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID sur une base de données Azure SQL.|
 |Scripts d’objets|Correction d’un problème à l’origine du ciblage permanent d’une instance SQL Server locale par les scripts de base de données (d’une base de données Azure SQL), même si les paramètres de script de l’Explorateur d’objets sont définis pour correspondre à la source.|
-|Scripts d’objets|Correction du problème lié à la tentative d’exécuter un script dans une table de base de données SQL DW impliquant des index cluster et non-cluster qui générait des instructions T-SQL incorrectes.|
+|Scripts d’objets|Correction du problème lié à la tentative d’exécuter un script dans une table de base de données SQL DW impliquant des index cluster et non-cluster, qui générait des instructions T-SQL incorrectes.|
 |Scripts d’objets|Correction d’un problème lié à la tentative d’exécuter un script dans une table de base de données SQL DW avec des « index columnstore cluster » et des « index cluster », qui générait des instructions T-SQL incorrectes (instructions en double).|
 |Scripts d’objets|Correction des scripts de table partitionnée sans valeurs de plage (bases de données SQL DW).|
 |Scripts d’objets|Correction d’un problème où l’utilisateur ne pouvait pas générer de script d’audit/de spécification d’audit SERVER_PERMISSION_CHANGE_GROUP.|

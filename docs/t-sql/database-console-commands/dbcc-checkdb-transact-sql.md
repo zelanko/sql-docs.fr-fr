@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102110"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809891"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ REPAIR_FAST
  Conserve la syntaxe pour une compatibilité descendante uniquement. Aucune réparation n'est effectuée.  
     
 REPAIR_REBUILD  
- Effectue des réparations qui ne présentent aucun risque de perte de données. Cela peut inclure des réparations rapides, telles que la réparation de lignes manquantes dans des index non-cluster, ainsi que des réparations nécessitant plus de temps, telles que la reconstruction d'un index.  
+ Effectue des réparations qui ne présentent aucun risque de perte de données. Cela peut inclure des réparations rapides, telles que la réparation de lignes manquantes dans des index non-cluster, ainsi que des réparations nécessitant plus de temps, telles que la reconstruction d’un index.  
  Cet argument ne répare pas les erreurs impliquant des données FILESTREAM.  
     
 > [!IMPORTANT] 
@@ -258,7 +258,7 @@ Si la base de données est placée en mode urgence et que DBCC CHECKDB est exéc
 Si la commande DBCC CHECKDB réussit, la base de données est physiquement cohérente et son état prend la valeur ONLINE. Toutefois, la base de données peut contenir une ou plusieurs incohérences transactionnelles. Nous vous recommandons d’exécuter [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) pour identifier tout défaut de logique métier et de sauvegarder immédiatement la base de données.
 Si la commande DBCC CHECKDB échoue, la base de données ne peut pas être réparée.
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>Exécution de DBCC CHECKDB avec REPAIR_ALLOW_DATA_LOSS dans des bases de données répliquées    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>Exécution de DBCC CHECKDB avec REPAIR_ALLOW_DATA_LOSS dans des bases de données répliquées    
 L'exécution de la commande DBCC CHECKDB avec l'option REPAIR_ALLOW_DATA_LOSS peut avoir des conséquences sur les bases de données utilisateur (bases de données de publication et d'abonnement) ainsi que sur la base de données de distribution utilisée par la réplication. Les bases de données de publication et d'abonnement incluent des tables publiées et des tables de métadonnées de réplication. Sachez que les problèmes suivants peuvent se poser dans ces bases de données :
 -   Tables publiées. Il est possible que les actions effectuées par le processus CHECKDB pour réparer les données utilisateur corrompues ne soient pas répliquées :    
 -   La réplication de fusion utilise des déclencheurs pour assurer le suivi des modifications apportées aux tables publiées. Si des lignes sont insérées, mises à jour ou supprimées par le processus CHECKDB, les déclencheurs ne sont pas activés : la modification n'est donc pas répliquée.

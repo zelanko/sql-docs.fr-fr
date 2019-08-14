@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a62e627e372a7c280e0187a33accc9563da91c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a0bc3d50808c25999f1791a752e069bc02bed0d
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136508"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811561"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Le tableau suivant récapitule les principales améliorations fournies dans SQL 
 
 |Fonctionnalité|Description|Informations complémentaires|
 |---|---|---|
-|Insertion en bloc dans des segments de mémoire avec un TABLOCK automatique sous TF 715| L’indicateur de trace 715 active le verrou de table pour les opérations de chargement en masse dans un segment de mémoire sans index non cluster.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|Insertion en bloc dans des segments de mémoire avec un TABLOCK automatique sous TF 715| L’indicateur de trace 715 active le verrou de table pour les opérations de chargement en masse dans un segment de mémoire sans index non-cluster.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE ou ALTER|Déployer des objets tels que des procédures stockées, des déclencheurs, des fonctions définies par l’utilisateur et des vues.|[Blog relatif au moteur de base de données SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |Prise en charge de DROP TABLE pour la réplication|Prise en charge de la DLL TABLE DROP pour la réplication afin de permettre la suppression d’articles de réplication.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Signature du pilote Filestream RsFx|Le pilote Filestream RsFx est signé et certifié à l’aide du portail du tableau de bord du centre de développement du matériel Windows (portail de développement), ce qui permet d’installer le pilote Filestream RsFx SQL Server 2016 SP1 sur Windows Server 2016 et Windows 10 sans aucun problème.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|

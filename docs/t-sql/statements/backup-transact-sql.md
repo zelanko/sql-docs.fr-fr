@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141220"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809734"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>Arguments
@@ -305,8 +305,10 @@ ENCRYPTION Utilisé pour spécifier le chiffrement d’une sauvegarde. Vous pouv
 
 Si vous choisissez de chiffrer, vous devez également spécifier le chiffreur à l'aide des options de chiffreur :
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+`SERVER CERTIFICATE` et `SERVER ASYMMETRIC KEY` correspondent à un certificat et à une clé asymétrique créés dans une base de données `master`. Pour plus d’informations, consultez [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) et [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md).
 
 > [!WARNING]
 > Lorsque le chiffrement est utilisé conjointement à l’argument `FILE_SNAPSHOT`, le fichier de métadonnées est chiffré à l’aide de l’algorithme de chiffrement spécifié, et le système vérifie qu’un [chiffrement TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) a été effectué pour la base de données. Aucun autre chiffrement n’est effectué pour les données. La sauvegarde échoue si la base de données n’a pas été chiffrée ou si le chiffrement n’a pas été exécuté avant l’émission de l’instruction BACKUP.
@@ -1008,8 +1010,8 @@ ENCRYPTION Utilisé pour spécifier le chiffrement d’une sauvegarde. Vous pouv
 
 Si vous choisissez de chiffrer, vous devez également spécifier le chiffreur à l'aide des options de chiffreur :
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Options du jeu de sauvegarde**
 

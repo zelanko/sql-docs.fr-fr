@@ -1,7 +1,7 @@
 ---
-title: Exécuter des travaux Spark avec Spark & les outils Hive pour VS Code sur SQL Server Cluster Big Data
+title: Exécuter des travaux Spark avec l’extension Spark & Hive Tools for VS Code sur un cluster Big Data SQL Server
 titleSuffix: SQL Server big data clusters
-description: Soumettez un travail Spark avec les outils de la & Hive Spark pour Visual Studio Code sur SQL Server Cluster Big Data.
+description: Envoyez un travail Spark avec l’extension Spark & Hive Tools for Visual Studio Code sur un cluster Big Data SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,40 +10,40 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4458666792d7f4629b4e1820e98e2dbb9901c2b6
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68425979"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envoyer des travaux Spark sur SQL Server Cluster Big Data dans Visual Studio Code
+# <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envoyer des travaux Spark sur un cluster Big Data SQL Server dans Visual Studio Code
 
-Découvrez comment utiliser Spark & les outils Hive pour Visual Studio Code pour créer et envoyer des scripts PySpark pour Apache Spark. nous allons tout d’abord décrire comment installer les outils de la ruche Spark & dans Visual Studio Code. ensuite, nous allons vous montrer comment envoyer des travaux à Spark.  
+Découvrez comment utiliser l’extension Spark & Hive Tools for Visual Studio Code afin de créer et d’envoyer des scripts PySpark pour Apache Spark. Nous allons tout d’abord expliquer comment installer l’extension Spark & Hive Tools dans Visual Studio Code, puis nous montrerons comment envoyer des travaux à Spark.  
 
-Spark & les outils Hive peuvent être installés sur les plateformes prises en charge par Visual Studio Code, notamment Windows, Linux et macOS. Les prérequis pour les différentes plateformes sont détaillés ci-dessous.
+L’extension Spark & Hive Tools peut être installée sur les plateformes prises en charge par Visual Studio Code, notamment Windows, Linux et macOS. Vous trouverez ci-dessous les prérequis pour les différentes plateformes.
 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Avant de poursuivre cet article, vérifiez que vous avez les éléments nécessaires suivants :
+Les éléments suivants sont requis pour effectuer les étapes décrites dans cet article :
 
-- Un cluster SQL Server Big Data. Consultez [SQL Server des clusters Big Data](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+- Cluster Big Data SQL Server. Consultez [Clusters Big Data SQL Server](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
 - [Visual Studio Code](https://code.visualstudio.com/).
-- [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono est nécessaire uniquement pour les plateformes Linux et MacOS.
-- [Définir l’environnement interactif de PySpark pour Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
-- Un répertoire local nommé **HDexample**.  Cet article utilise **C:\HD\HDexample**.
+- [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono est uniquement requis pour Linux et macOS.
+- [Configurez l’environnement interactif PySpark pour Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
+- Répertoire local nommé **HDexample**.  Cet article utilise **C:\HD\HDexample**.
 
-## <a name="install-spark--hive-tools"></a>Installer Spark & les outils Hive
+## <a name="install-spark--hive-tools"></a>Installer l’extension Spark & Hive Tools
 
-Une fois que vous avez rempli les conditions préalables, vous pouvez installer Spark & les outils Hive pour Visual Studio Code.  Procédez comme suit pour installer Spark & les outils Hive:
+Une fois que vous satisfaites aux prérequis, vous pouvez installer l’extension Spark & Hive Tools for Visual Studio Code.  Effectuez les étapes suivantes pour installer l’extension Spark & Hive Tools :
 
-1. Ouvrez Visual Studio Code.
+1. Ouvrez Visual Studio Code.
 
-2. À partir de la barre de menus, accédez à **Afficher** > **Extensions**.
+2. Dans la barre de menus, accédez à **Afficher** > **Extensions**.
 
 3. Dans la zone de recherche, entrez **Spark & Hive**.
 
-4. Sélectionnez **Spark & les outils Hive** dans les résultats de la recherche, puis sélectionnez **installer**.  
+4. Sélectionnez **Spark & Hive Tools** dans les résultats de la recherche, puis sélectionnez **Installer**.  
 
    ![Installer l’extension](./media/spark-hive-tools-vscode/extension.png)
 
@@ -51,16 +51,16 @@ Une fois que vous avez rempli les conditions préalables, vous pouvez installer 
 
 ## <a name="open-work-folder"></a>Ouvrir le dossier de travail
 
-Procédez comme suit pour ouvrir un dossier de travail et créer un fichier dans Visual Studio Code :
+Pour ouvrir un dossier de travail et créer un fichier dans Visual Studio Code, effectuez les étapes suivantes :
 
-1. À partir de la barre de menus, accédez à **Fichier** > **Ouvrir le dossier...**  > **C:\HD\HDexample**, puis sélectionnez le bouton **Sélectionner le dossier**. Le dossier s’affiche dans la vue **Explorer** sur la gauche.
+1. Dans la barre de menus, accédez à **Fichier** > **Ouvrir le dossier...**  > **C:\HD\HDexample**, puis sélectionnez le bouton **Sélectionner un dossier**. Le dossier s’affiche dans l’affichage **Explorateur** sur la gauche.
 
-2. À partir de la vue **Explorer**, sélectionnez le dossier, **HDexample**, puis l’icône **Nouveau fichier** en regard du dossier de travail.
+2. Dans l’affichage **Explorateur**, sélectionnez le dossier, **HDexample**, puis l’icône **Nouveau fichier** en regard du dossier de travail.
 
    ![Nouveau fichier](./media/spark-hive-tools-vscode/new-file.png)
 
-3. Nommez le nouveau fichier avec `.py` l’extension de fichier (script Spark).  Cet exemple utilise **HelloWorld.py**.
-4. Copiez et collez le code suivant dans le fichier de script :
+3. Nommez le nouveau fichier avec l’extension de fichier `.py` (script Spark).  Cet exemple utilise **HelloWorld.py**.
+4. Copiez le code suivant et collez-le dans le fichier de script :
    ```python
     import sys
     from operator import add
@@ -86,173 +86,173 @@ Procédez comme suit pour ouvrir un dossier de travail et créer un fichier dans
         print("%s: %i" % (word, count))
    ```
 
-## <a name="link-a-sql-server-big-data-cluster"></a>Lier un cluster SQL Server Big Data
+## <a name="link-a-sql-server-big-data-cluster"></a>Lier un cluster Big Data SQL Server
 
-Avant de pouvoir envoyer des scripts à vos clusters à partir de Visual Studio Code, vous devez lier un SQL Server Big Data cluster.
+Avant de pouvoir envoyer des scripts à vos clusters à partir de Visual Studio Code, vous devez lier un cluster Big Data SQL Server.
 
-1. Dans la barre de menus, accédez à **Afficher** > la**palette de commandes...** , puis entrez **Spark/Hive: Lier un cluster**.
+1. Dans la barre de menus, accédez à **Afficher** > **Palette de commandes...** , puis entrez **Spark / Hive: Link a Cluster** (Spark / Hive : lier un cluster).
 
-   ![commande de lien du cluster](./media/spark-hive-tools-vscode/link-cluster-command.png)
+   ![Commande de liaison de cluster](./media/spark-hive-tools-vscode/link-cluster-command.png)
 
-2. Sélectionnez type de cluster lié **SQL Server Big Data**.
+2. Sélectionnez le type de cluster lié **SQL Server Big Data** (Big Data SQL Server).
 
-3. Entrez SQL Server point de terminaison Big Data.
+3. Entrez le point de terminaison Big Data SQL Server.
 
-4. Entrez SQL Server nom d’utilisateur du cluster Big Data.
+4. Entrez le nom d’utilisateur du cluster Big Data SQL Server.
 
-5. Entrez le mot de passe pour l’administrateur de l’utilisateur.
+5. Entrez le mot de passe de l’administrateur d’utilisateurs.
 
 6. Définissez le nom d’affichage du cluster (facultatif).
 
-7. Répertorier les clusters, consulter la vue **sortie** pour vérification.
+7. Listez les clusters, puis examinez l’affichage **OUTPUT** (SORTIE).
 
-## <a name="list-clusters"></a>Énumérer les clusters
+## <a name="list-clusters"></a>Lister les clusters
 
-1. Dans la barre de menus, accédez à **Afficher** > la**palette de commandes...** , puis entrez **Spark/Hive: Répertorier un cluster**.
+1. Dans la barre de menus, accédez à **Afficher** > **Palette de commandes...** , puis entrez **Spark / Hive: List Cluster**.
 
-2. Passez en revue la vue **OUTPUT**.  La vue affiche vos clusters liés.
+2. Examinez l’affichage **OUTPUT** (SORTIE).  L’affichage montre vos clusters liés.
 
-    ![Définir la configuration du cluster par défaut](./media/spark-hive-tools-vscode/list-cluster-result.png)
+    ![Définir une configuration de cluster par défaut](./media/spark-hive-tools-vscode/list-cluster-result.png)
 
 ## <a name="set-default-cluster"></a>Définir le cluster par défaut
 
-1. Ouvrez à nouveau le dossier **HDexample** créé [précédemment](#open-work-folder) si vous l’aviez fermé.  
+1. Rouvrez le dossier **HDexample** créé [précédemment](#open-work-folder) s’il est fermé.  
 
-2. Sélectionnez le fichier **HelloWorld.py** créé [précédemment](#open-work-folder) et il s’ouvrira dans l’éditeur de script.
+2. Sélectionnez le fichier **HelloWorld.py** créé [précédemment](#open-work-folder) ; il s’ouvre alors dans l’éditeur de script.
 
-3. Liez un cluster si vous ne l’avez pas encore fait.
+3. Si ce n’est déjà fait, liez un cluster.
 
-4. Cliquez avec le bouton droit sur l’éditeur de **script, puis sélectionnez Spark/Hive: Définir le cluster par défaut**.   
+4. Cliquez avec le bouton droit sur l’éditeur de script, puis sélectionnez **Spark / Hive: Set Default Cluster** (Spark / Hive : définir le cluster par défaut).   
 
-5. Sélectionnez un cluster à utiliser comme cluster par défaut pour le fichier de script actuel. Les outils mettent automatiquement à jour le fichier de configuration **.VSCode\settings.json**. 
+5. Sélectionnez un cluster comme cluster par défaut pour le fichier de script actuel. Les outils mettent à jour automatiquement le fichier de configuration **.VSCode\settings.json**. 
 
-   ![Définir la configuration du cluster par défaut](./media/spark-hive-tools-vscode/set-default-cluster-configuration.png)
+   ![Définir une configuration de cluster par défaut](./media/spark-hive-tools-vscode/set-default-cluster-configuration.png)
 
 ## <a name="submit-interactive-pyspark-queries"></a>Envoyer des requêtes PySpark interactives
 
-Vous pouvez envoyer des requêtes PySpark interactives en suivant les étapes ci-dessous:
+Vous pouvez envoyer des requêtes PySpark interactives en suivant les étapes ci-dessous :
 
-1. Ouvrez à nouveau le dossier **HDexample** créé [précédemment](#open-work-folder) si vous l’aviez fermé.  
+1. Rouvrez le dossier **HDexample** créé [précédemment](#open-work-folder) s’il est fermé.  
 
-2. Sélectionnez le fichier **HelloWorld.py** créé [précédemment](#open-work-folder) et il s’ouvrira dans l’éditeur de script.
+2. Sélectionnez le fichier **HelloWorld.py** créé [précédemment](#open-work-folder) ; il s’ouvre alors dans l’éditeur de script.
 
-3. Liez un cluster si vous ne l’avez pas encore fait.
+3. Si ce n’est déjà fait, liez un cluster.
 
-4. Choisissez tout le code, cliquez avec le bouton droit sur l’éditeur **de script, sélectionnez Spark: PySpark Interactive** pour envoyer la requête, ou utilisez le raccourci **Ctrl+Alt+I**.
+4. Choisissez tout le code, cliquez avec le bouton droit sur l’éditeur de script, sélectionnez **Spark: PySpark Interactive** pour envoyer la requête, ou utilisez le raccourci **Ctrl + Alt +I**.
 
-   ![menu contextuel interactif pyspark](./media/spark-hive-tools-vscode/pyspark-interactive-right-click.png)
+   ![Menu contextuel pyspark interactive](./media/spark-hive-tools-vscode/pyspark-interactive-right-click.png)
 
-5. Sélectionnez un cluster autre que le cluster par défaut. Après quelques instants, les résultats de **python interactive** s’affichent dans un nouvel onglet. HDInsight Tools vous permet également d’envoyer un bloc de code au lieu du fichier de script entier à partir du menu contextuel. 
+5. Sélectionnez le cluster si vous n’avez pas spécifié de cluster par défaut. Après quelques instants, les résultats **Python Interactive** s’affichent sous un nouvel onglet. Les outils vous permettent également d’envoyer un bloc de code à la place de l’intégralité du fichier de script à l’aide du menu contextuel. 
 
-   ![fenêtre interactive Python interactive pyspark](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
+   ![fenêtre pyspark interactive python interactive](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. Entrez **«%% info»** , puis appuyez sur **MAJ + entrée** pour afficher les informations relatives à la tâche. (facultatif)
+6. Entrez **« %%info »** , puis appuyez sur **Maj + Entrée** pour afficher les informations relatives au travail. (Facultatif)
 
-   ![afficher les informations sur le travail](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
+   ![Afficher les informations sur le travail](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
    > [!NOTE] 
    >
-   > Lorsque l’option **extension Python activée** est décochée dans les paramètres (le paramètre par défaut est activé), les résultats de l’interaction pyspark envoyés utilisent l’ancienne fenêtre.
+   > Quand l’option **Python Extension Enabled** (Extension Python activée) est décochée dans les paramètres (le paramètre par défaut est activé), les résultats de l’interaction pyspark envoyée utilisent l’ancienne fenêtre.
    >
-   > ![extension Python interactive pyspark désactivée](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
+   > ![extension pyspark interactive python désactivée](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
 
 
-## <a name="submit-pyspark-batch-job"></a>Envoi de la tâche de traitement par lots PySpark
+## <a name="submit-pyspark-batch-job"></a>Envoyer le travail de traitement par lots PySpark
 
-1. Ouvrez à nouveau le dossier **HDexample** créé [précédemment](#open-work-folder) si vous l’aviez fermé.  
+1. Rouvrez le dossier **HDexample** créé [précédemment](#open-work-folder) s’il est fermé.  
 
-2. Sélectionnez le fichier **HelloWorld.py** créé [précédemment](#open-work-folder) et il s’ouvrira dans l’éditeur de script.
+2. Sélectionnez le fichier **HelloWorld.py** créé [précédemment](#open-work-folder) ; il s’ouvre alors dans l’éditeur de script.
 
-3. Liez un cluster si vous ne l’avez pas encore fait.
+3. Si ce n’est déjà fait, liez un cluster.
 
-4. Cliquez avec le bouton droit sur l’éditeur de script **, puis sélectionnez Spark: PySpark Batch**, ou utilisez le raccourci **Ctrl+Alt+H**. 
+4. Cliquez avec le bouton droit sur l’éditeur de script, puis sélectionnez **Spark: PySpark Batch** (Spark : traitement par lots PySpark) ou utilisez le raccourci **Ctrl + Alt + H**. 
 
-5. Sélectionnez un cluster autre que le cluster par défaut. Une fois que vous avez envoyé un travail Python, les journaux d’activité d’envoi apparaissent dans la fenêtre **OUTPUT** (Sortie) dans Visual Studio Code. **L’URL de l’interface utilisateur Spark** et **l’URL de l’interface utilisateur Yarn** s’affichent également. Vous pouvez ouvrir l’URL dans un navigateur web pour suivre l’état du travail.
+5. Sélectionnez le cluster si vous n’avez pas spécifié de cluster par défaut. Une fois que vous avez envoyé un travail Python, les journaux d’envoi s’affichent dans la fenêtre **OUTPUT** (SORTIE) de Visual Studio Code. L’**URL de l’interface utilisateur Spark** et l’**URL de l’interface utilisateur Yarn** sont également affichées. Vous pouvez ouvrir l’URL dans un navigateur web pour suivre l’état du travail.
 
-   ![Résultat de l’envoi du travail Python](./media/spark-hive-tools-vscode/submit-pythonjob-result.png) 
+   ![Envoyer le résultat du travail Python](./media/spark-hive-tools-vscode/submit-pythonjob-result.png) 
 
 ## <a name="apache-livy-configuration"></a>Configuration d’Apache Livy
 
-La configuration [d’Apache Livy](https://livy.incubator.apache.org/) est prise en charge et peut être définie à l’emplacement **.VSCode\settings.json** dans le dossier de l’espace de travail. Actuellement, la configuration livy prend uniquement en charge le script Python. Pour plus d’informations, consultez [Lisez-moi Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
+La configuration d’[Apache Livy](https://livy.incubator.apache.org/) est prise en charge. Elle peut être définie dans le fichier **.VSCode\settings.json** dans le dossier de l’espace de travail. La configuration de Livy prend uniquement en charge le script Python. Pour plus d’informations, consultez le fichier [Lisez-moi de Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
 
-### <a id="triggerlivyconf"></a>**Comment déclencher la configuration livy**
+### <a id="triggerlivyconf"></a>**Comment déclencher la configuration de Livy**
 
 #### <a name="method-1"></a>Méthode 1
 
-1. À partir de la barre de menus, accédez à **Fichier** > **Préférences** > **Paramètres**.  
-2. Dans la zone de texte **Paramètres de recherche**, entrez **Envoi de travail HDInsight : Livy Conf**.  
-3. Sélectionnez **Modifier dans settings.json** pour le résultat de recherche pertinent.
+1. Dans la barre de menus, accédez à **Fichier** > **Préférences** > **Paramètres**.  
+2. Dans la zone de texte **Paramètres de recherche**, entrez **HDInsight Job Sumission: Livy Conf** (Envoi de travail HDInsight : configuration de Livy).  
+3. Sélectionnez **Modifier dans settings.json** pour le résultat de recherche approprié.
 
 #### <a name="method-2"></a>Méthode 2
 
-Envoyer un fichier, Notez que `.vscode` le dossier est ajouté automatiquement au dossier de travail. Vous pouvez trouver la configuration livy en cliquant `.vscode\settings.json`sur.
+Envoyez un fichier ; notez que le dossier `.vscode` est ajouté automatiquement au dossier de travail. Vous pouvez trouver la configuration de Livy en cliquant sur `.vscode\settings.json`.
 
-+ Paramètres du projet :
++ Paramètres du projet :
 
     ![Configuration de Livy](./media/spark-hive-tools-vscode/hdi-livyconfig.png)
 
 >[!NOTE]
->Pour les paramètres **driverMomory** et **executorMomry**, définissez la valeur en spécifiant l’unité, par exemple 1 g ou 1 024 m. 
+>Pour les paramètres **driverMomory** et **executorMomry**, définissez la valeur avec l’unité, par exemple 1g ou 1024m. 
 
-### <a name="supported-livy-configurations"></a>Configurations livy prises en charge
+### <a name="supported-livy-configurations"></a>Configurations de Livy prises en charge
 
-#### <a name="post-batches"></a>POSTER/Batches
+#### <a name="post-batches"></a>POST /batches
 
 **Corps de la demande**
 
-| name | description | Type |
+| NAME | description | Type |
 | :- | :- | :- |
-| file | Fichier contenant l’application à exécuter | chemin (obligatoire) |
-| proxyUser | Utilisateur auquel emprunter l’identité lors de l’exécution de la tâche | string |
-| className | Classe principale Java/Spark de l’application | string |
-| args | Arguments de ligne de commande pour l’application | liste de valeurs string |
-| jars | Fichiers JAR à utiliser dans cette session | Liste de chaînes |
+| fichier | Fichier contenant l’application à exécuter | Chemin (obligatoire) |
+| proxyUser | Utilisateur dont l’identité doit être empruntée lors de l’exécution du travail | chaîne |
+| ClassName | Classe principale Java/Spark de l’application | chaîne |
+| args | Arguments de ligne de commande pour l’application | Liste de chaînes |
+| jars | Fichiers jar à utiliser dans cette session | Liste de chaînes |
 | pyFiles | Fichiers Python à utiliser dans cette session | Liste de chaînes |
-| fichiers d'entrée | Fichiers à utiliser dans cette session | Liste de chaînes |
-| driverMemory | Quantité de mémoire à utiliser pour le processus de pilote | string |
-| driverCores | Nombre de cœurs à utiliser pour le processus de pilote | int |
-| executorMemory | Quantité de mémoire à utiliser par processus de l’exécuteur | string |
-| executorCores | Nombre de cœurs à utiliser pour chaque exécuteur | int |
-| numExecutors | Nombre d’exécuteurs à lancer pour cette session | int |
+| files | Fichiers à utiliser dans cette session | Liste de chaînes |
+| driverMemory | Quantité de mémoire à utiliser pour le processus du pilote | chaîne |
+| driverCores | Nombre de cœurs à utiliser pour le processus du pilote | INT |
+| executorMemory | Quantité de mémoire à utiliser par processus d’exécuteur | chaîne |
+| executorCores | Nombre de cœurs à utiliser pour chaque exécuteur | INT |
+| numExecutors | Nombre d’exécuteurs à lancer pour cette session | INT |
 | archives | Archives à utiliser dans cette session | Liste de chaînes |
-| queue | Nom de la file d’attente YARN vers laquelle effectuer l’envoi | string |
-| name | Nom de cette session | string |
-| conf | Propriétés de configuration Spark. | Map of key=val |
+| queue | Nom de la file d’attente YARN destinataire de l’envoi | chaîne |
+| NAME | Nom de cette session | chaîne |
+| conf | Propriétés de configuration de Spark | Mappage clé=valeur |
 
-#### <a name="response-body"></a>Corps de réponse
+#### <a name="response-body"></a>Corps de la réponse
 
-Objet de lot créé.
+Objet de traitement par lots créé.
 
-| name | description | Type |
+| NAME | description | Type |
 | :- | :- | :- |
-| id | ID de la session | int |
-| appId | ID d’application de cette session | Chaîne |
-| appInfo | Informations détaillées sur l’application | Map of key=val |
-| log | Lignes du journal | liste de valeurs string |
-| state | État du lot | chaîne |
+| id | ID de session | INT |
+| appId | ID d’application de cette session | String |
+| appInfo | Informations détaillées sur l’application | Mappage clé=valeur |
+| log | Lignes de journal | Liste de chaînes |
+| state | État du traitement par lots | chaîne |
 
 >[!NOTE]
->La configuration livy assignée s’affiche dans le volet de sortie lors de l’envoi du script.
+>La configuration de Livy assignée s’affiche dans le volet de sortie lors de l’envoi du script.
 
 ## <a name="additional-features"></a>Fonctionnalités supplémentaires
 
-La ruche Spark & pour Visual Studio Code prend en charge les fonctionnalités suivantes:
+L’extension Spark & Hive Tools for Visual Studio Code prend en charge les fonctionnalités suivantes :
 
-- **Saisie semi-automatique IntelliSense**. Fenêtre contextuelle de suggestions de mots-clés, de méthodes, de variables, etc. Des icônes différentes représentent des types d’objets différents.
+- **Saisie semi-automatique IntelliSense**. Des suggestions s’affichent pour les mots clés, les méthodes, les variables, etc. Différentes icônes représentent différents types d’objets.
 
-    ![Outils de la ruche Spark & pour les types d’objets IntelliSense Visual Studio Code](./media/spark-hive-tools-vscode/hdinsight-for-vscode-auto-complete-objects.png)
-- **Marqueur d’erreurs IntelliSense**. Le service de langage souligne les erreurs de saisie dans le script Hive.     
-- **Coloration syntaxique**. Le service de langage utilise plusieurs couleurs pour différencier les variables, les mots-clés, le type des données, les fonctions, etc. 
+    ![Types d’objets IntelliSense dans l’extension Spark & Hive Tools for Visual Studio Code](./media/spark-hive-tools-vscode/hdinsight-for-vscode-auto-complete-objects.png)
+- **Marqueur d’erreur IntelliSense**. Le service de langage souligne les erreurs de modification du script Hive.     
+- **Coloration syntaxique**. Le service de langage utilise des couleurs différentes pour différencier les variables, les mots clés, les types de données, les fonctions, etc. 
 
-    ![Spark & les outils Hive pour les points de Visual Studio Code syntaxique](./media/spark-hive-tools-vscode/hdinsight-for-vscode-syntax-highlights.png)
+    ![Coloration syntaxique dans l’extension Spark & Hive Tools for Visual Studio Code](./media/spark-hive-tools-vscode/hdinsight-for-vscode-syntax-highlights.png)
 
-## <a name="unlink-cluster"></a>Supprimer le lien du cluster
+## <a name="unlink-cluster"></a>Dissocier le cluster
 
-1. Dans la barre de menus, accédez à **Afficher** > la**palette de commandes...** , puis entrez **Spark/Hive: Supprimer le lien du cluster**.  
+1. Dans la barre de menus, accédez à **Afficher** > **Palette de commandes...** , puis entrez **Spark / Hive: Unlink a Cluster** (Dissocier un cluster).  
 
-2. Sélectionnez le cluster pour lequel supprimer le lien.  
+2. Sélectionnez le cluster à dissocier.  
 
-3. Passez en revue la vue **OUTPUT** à des fins de vérification.  
+3. Examinez l’affichage **OUTPUT** (SORTIE).  
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations sur SQL Server Cluster Big Data et les scénarios connexes, consultez [SQL Server clusters Big Data](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+Pour plus d’informations sur les clusters Big Data SQL Server et les scénarios associés, consultez [Clusters Big Data SQL Server](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).

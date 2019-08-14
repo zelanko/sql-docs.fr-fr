@@ -1,7 +1,7 @@
 ---
-title: Générer du code pour les tâches de retraitement des données
+title: Générer du code pour les tâches de data wrangling
 titleSuffix: Azure Data Studio
-description: Cet article décrit comment utiliser l’accélérateur de Code PROSE dans Azure Data Studio pour générer automatiquement le code pour les tâches courantes de retraitement des données.
+description: Cet article explique comment utiliser l’accélérateur de code PROSE dans Azure Data Studio pour générer automatiquement du code pour les tâches de data wrangling courantes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,40 +10,40 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957684"
 ---
-# <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling de données à l’aide de la PROSE Code accélérateur
+# <a name="data-wrangling-using-prose-code-accelerator"></a>Data wrangling avec l’accélérateur de code PROSE
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-PROSE Code accélérateur génère le code Python lisible pour vos tâches de retraitement des données. Vous pouvez combiner le code généré avec votre code écrit manuellement de manière transparente tout en travaillant dans un bloc-notes dans Azure Data Studio. Cet article fournit une vue d’ensemble de la façon dont vous pouvez utiliser l’accélérateur de Code.
+L’accélérateur de code PROSE génère du code Python lisible pour vos tâches de data wrangling. Vous pouvez mélanger le code généré avec votre code écrit manuellement de manière fluide lors de l’utilisation d’un notebook dans Azure Data Studio. Cet article fournit une vue d’ensemble de la façon dont vous pouvez utiliser l’accélérateur de code.
 
  > [!NOTE]
- > Programme Synthesis using Examples, également appelé PROSE, est une technologie Microsoft qui génère du code explicite à l’aide d’intelligence artificielle. Il le fait en analyse d’un utilisateur intention ainsi que sur données, générant plusieurs programmes de candidat et choisir le meilleur programme à l’aide d’algorithmes de classement. Pour en savoir plus sur la technologie PROSE, visitez le [page d’accueil de la PROSE](https://microsoft.github.io/prose/).
+ > Program Synthesis using Examples, ou PROSE, est une technologie Microsoft qui génère du code explicite à l’aide de l’intelligence artificielle. Pour ce faire, il analyse l’intention d’un utilisateur, ainsi que les données, génère plusieurs programmes candidats et choisit le meilleur programme à l’aide d’algorithmes de classement. Pour en savoir plus sur la technologie PROSE, visitez la [page d’accueil de PROSE](https://microsoft.github.io/prose/).
 
-L’accélérateur de Code est préinstallé avec Azure Data Studio. Vous pouvez l’importer comme tout autre package de Python dans le bloc-notes. Par convention, nous l’importer en tant que cx pour faire plus court.
+L’accélérateur de code est préinstallé avec Azure Data Studio. Vous pouvez l’importer comme tout autre package Python dans le notebook. Par convention, nous l’importons sous le diminutif cx.
 
 ```python
 import prose.codeaccelerator as cx
 ```
 
-Dans la version actuelle, l’accélérateur de Code peut générer de manière intelligente code Python pour les tâches suivantes :
+Dans la version actuelle, l’accélérateur de code peut générer intelligemment du code Python pour les tâches suivantes :
 
-- Lecture des fichiers de données à un Pandas ou trame de données Pyspark.
-- Résolution des types de données dans une trame de données.
+- Lecture des fichiers de données dans un dataframe Pandas ou Pyspark.
+- Correction des types de données dans un dataframe.
 - Recherche d’expressions régulières représentant des modèles dans une liste de chaînes.
 
-Pour obtenir une vue d’ensemble des méthodes de l’accélérateur de Code, consultez le [documentation](https://aka.ms/prose-codeaccelerator-overview).
+Pour obtenir une vue d’ensemble générale des méthodes de l’accélérateur de code, consultez la [documentation](https://aka.ms/prose-codeaccelerator-overview).
 
-## <a name="reading-data-from-a-file-to-a-dataframe"></a>Lecture des données à partir d’un fichier à une trame de données
+## <a name="reading-data-from-a-file-to-a-dataframe"></a>Lecture de données à partir d’un fichier dans un dataframe
 
-Lecture des fichiers à une trame de données implique souvent consulter le contenu du fichier et de déterminer les paramètres corrects à passer à une bibliothèque de chargement de données. Selon la complexité du fichier, l’identification des paramètres corrects peut nécessiter plusieurs itérations.
+Souvent, la lecture de fichiers dans un dataframe implique de consulter le contenu du fichier et d’identifier les paramètres corrects à transmettre à une bibliothèque de chargement de données. Selon la complexité du fichier, l’identification des paramètres corrects peut nécessiter plusieurs itérations.
 
-Accélérateur de Code PROSE résout ce problème en analysant la structure du fichier de données et en générant automatiquement du code pour charger le fichier. Dans la plupart des cas, le code généré analyse les données correctement. Dans certains cas, vous devrez peut-être modifier le code pour répondre à vos besoins.
+L’accélérateur de code PROSE résout ce problème en analysant la structure du fichier de données et en générant automatiquement du code pour charger le fichier. Dans la plupart des cas, le code généré analyse correctement les données. Dans certains cas, vous devrez peut-être modifier le code pour répondre à vos besoins.
 
 Prenons l'exemple suivant :
 
@@ -60,7 +60,7 @@ builder = cx.ReadCsvBuilder(r'C:/911.txt')
 builder.learn().code()
  ```
 
-Le bloc de code précédent imprime le code python suivant pour lire un fichier délimité. Notez comment PROSE détermine automatiquement le nombre de lignes à ignorer, en-têtes, quotechars, séparateurs, etc.
+Le bloc de code précédent imprime le code Python suivant pour lire un fichier délimité. Notez la façon dont PROSE détermine automatiquement le nombre de lignes à ignorer, les en-têtes, les éléments QuoteChar, les délimiteurs, etc.
 
  ```python
 import pandas as pd
@@ -86,13 +86,13 @@ def read_file(file):
     return df
  ```
 
-Accélérateur de code peut générer du code à charge délimités, JSON et les fichiers de largeur fixe à une trame de données. Pour la lecture des fichiers à largeur fixe, le `ReadFwfBuilder` prend éventuellement un fichier de schéma explicite qu’il peut analyser pour obtenir les positions de la colonne. Pour plus d’informations, consultez le [documentation](https://aka.ms/prose-codeaccelerator-docs).
+L’accélérateur de code peut générer du code pour charger des fichiers délimités, JSON et de largeur fixe sur un dataframe. Pour la lecture de fichiers de largeur fixe, le `ReadFwfBuilder` utilise éventuellement un fichier de schéma explicite qu’il peut analyser pour obtenir les positions de colonne. Pour plus d’informations, consultez la [documentation](https://aka.ms/prose-codeaccelerator-docs).
 
-## <a name="fixing-data-types-in-a-dataframe"></a>Résolution des types de données dans une trame de données
+## <a name="fixing-data-types-in-a-dataframe"></a>Correction des types de données dans un dataframe
 
-Il est courant d’avoir un pandas ou pyspark trame de données avec les types de données est incorrect. Souvent, cela se produit en raison de la non conformes quelques valeurs dans une colonne. Par conséquent, entiers sont lus comme Float ou des chaînes et Dates sont lues en tant que chaînes. L’effort requis pour corriger manuellement les types de données est proportionnelle au nombre de colonnes.
+Il est courant d’avoir un dataframe Pandas ou Pyspark avec des types de données incorrects. Cela se produit souvent en raison de quelques valeurs non conformes dans une colonne. Par conséquent, les entiers sont lus en tant que valeurs Float ou chaînes, et les dates sont lues en tant que chaînes. L’effort requis pour corriger manuellement les types de données est proportionnel au nombre de colonnes.
 
-Vous pouvez utiliser le `DetectTypesBuilder` dans ces situations. Cet outil analyse les données, et plutôt que de résoudre les types de données de manière boîte noire, il génère du code pour résoudre les types de données. Le code sert de point de départ. Vous pouvez examiner, utiliser ou modifiez-le si nécessaire.
+Dans ces situations, vous pouvez utiliser le `DetectTypesBuilder`. Il analyse les données et, plutôt que de corriger les types de données de façon « boîte noire », il génère du code pour la résolution des types de données. Le code sert de point de départ. Vous pouvez l’examiner, l’utiliser ou le modifier en fonction des besoins.
 
 ```python
 import prose.codeaccelerator as cx
@@ -106,22 +106,22 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-Pour plus d’informations, consultez le [documentation](https://aka.ms/prose-codeaccelerator-fixtypes).
+Pour plus d’informations, consultez la [documentation](https://aka.ms/prose-codeaccelerator-fixtypes).
 
-## <a name="identifying-patterns-in-strings"></a>Identification des modèles dans des chaînes
+## <a name="identifying-patterns-in-strings"></a>Identification des modèles dans les chaînes
 
-Un autre scénario courant consiste à détecter les modèles dans une colonne de chaîne à des fins de nettoyage ou de regroupement. Par exemple, peut avoir une colonne de date avec des dates dans plusieurs formats différents. Afin de normaliser les valeurs, vous souhaiterez peut-être écrire des instructions conditionnelles à l’aide d’expressions régulières.
+Un autre scénario courant consiste à détecter les modèles dans une colonne de chaîne à des fins de nettoyage ou de regroupement. Par exemple, vous pouvez avoir une colonne de date avec des dates dans plusieurs formats différents. Pour normaliser les valeurs, vous souhaiterez peut-être écrire des instructions conditionnelles à l’aide d’expressions régulières.
 
 
-|   |Nom                      |BirthDate      |
+|   |Créer une vue d’abonnement                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
-| 1 |Naiara Moravcikova        |Inconnu        |
+| 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
-| 3 |Viachaslau Gordan Hilario |22-avril-67      |
-| 4 |Maya de Villiers          |19-Mar-60      |
+| 3 |Viachaslau Gordan Hilario |22-avr-67      |
+| 4 |Maya de Villiers          |19-mar-60      |
 
-Selon le volume et la diversité des données, l’écriture d’expressions régulières pour différents modèles dans la colonne peut être une tâche beaucoup de temps. Le `FindPatternsBuilder` est un outil d’accélération de code puissant qui permet de résoudre le problème ci-dessus en générant des expressions régulières pour obtenir la liste de chaînes.
+En fonction du volume et de la diversité des données, l’écriture d’expressions régulières pour différents modèles dans la colonne peut être une tâche très longue. Le `FindPatternsBuilder` est un puissant outil d’accélération du code qui résout le problème ci-dessus en générant des expressions régulières pour une liste de chaînes.
 
 ```python
 import prose.codeaccelerator as cx
@@ -143,4 +143,4 @@ Voici les expressions régulières générées par le `FindPatternsBuilder` pour
 ^Unknown$
 ```
 
-En dehors de la génération d’Expressions régulières, `FindPatternsBuilder` peut également générer du code pour les valeurs Regex généré en fonction de clustering. Il peut également déclarer que toutes les valeurs dans une colonne sont conformes aux expressions régulières générées. Pour en savoir plus et découvrir les autres scénarios utiles, consultez le [documentation](https://aka.ms/prose-codeaccelerator-findpatterns).
+En plus de la génération d’expressions régulières, le `FindPatternsBuilder` peut également générer du code pour le clustering des valeurs en fonction des regex générés. Il peut également déclarer que toutes les valeurs d’une colonne sont conformes aux expressions régulières générées. Pour en savoir plus et pour découvrir d’autres scénarios utiles, consultez la [documentation](https://aka.ms/prose-codeaccelerator-findpatterns).

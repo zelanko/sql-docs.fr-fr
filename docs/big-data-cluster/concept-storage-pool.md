@@ -1,7 +1,7 @@
 ---
-title: Qu’est le pool de stockage ?
+title: Qu’est-ce que le pool de stockage ?
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit le pool de stockage dans un cluster de données volumineux de SQL Server 2019.
+description: Cet article décrit le pool de stockage dans un cluster Big Data SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,35 +10,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958659"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>Qu’est le pool de stockage (données volumineuses des clusters SQL Server) ?
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>Qu’est-ce que le pool de stockage (clusters Big Data SQL Server) ?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit le rôle de la *pool de stockage de SQL Server* dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de stockage SQL.
+Cet article décrit le rôle du *pool de stockage SQL Server* dans un cluster Big Data SQL Server 2019 (préversion). Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de stockage SQL.
 
 ## <a name="storage-pool-architecture"></a>Architecture du pool de stockage
 
-Le pool de stockage se compose de stockage composés de nœuds de SQL Server sur Linux, Spark et HDFS. Tous les nœuds de stockage dans un cluster de données SQL sont membres d’un cluster HDFS.
+Le pool de stockage est constitué de nœuds de stockage constitués de SQL Server sur Linux, Spark et HDFS. Tous les nœuds de stockage d’un cluster Big Data SQL sont membres d’un cluster HDFS.
 
 ![Architecture du pool de stockage](media/concept-storage-pool/scale-big-data-on-demand.png)
 
 ## <a name="responsibilities"></a>Responsabilités
 
-Nœuds de stockage sont responsables :
+Les nœuds de stockage sont responsables des opérations suivantes :
 
-- Ingestion des données via Spark.
-- Stockage des données dans HDFS (format Parquet). HDFS fournit également une persistance de données, comme les données HDFS sont réparties sur tous les nœuds de stockage dans le cluster de données SQL.
-- Accès de données via les points de terminaison HDFS et SQL Server.
+- Ingestion des données par le biais de Spark.
+- Stockage des données dans HDFS (format Parquet). HDFS assure également la persistance des données, car les données HDFS sont réparties sur tous les nœuds de stockage du cluster Big Data SQL.
+- Accès aux données par le biais des points de terminaison HDFS et SQL Server.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
+Pour en savoir plus sur les clusters Big Data SQL Server, consultez les ressources suivantes :
 
-- [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
-- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md)
+- [Atelier : Architecture des clusters Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

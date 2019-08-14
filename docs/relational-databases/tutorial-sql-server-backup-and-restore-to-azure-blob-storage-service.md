@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837c720e115a41f9b41dfb0e0e1117966988040f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138368"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893630"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Démarrage rapide : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +34,22 @@ Pour suivre ce guide de démarrage rapide, vous devez connaître les concepts de
 ## <a name="create-azure-blob-container"></a>Créer un conteneur d’objets blob Azure
 Un conteneur regroupe un ensemble d’objets blob. Tous les objets blob doivent figurer dans un conteneur. Un compte peut contenir un nombre illimité de conteneurs, mais doit comporter au moins un conteneur. Un conteneur peut stocker un nombre illimité d'objets blob. 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Pour créer un conteneur, suivez ces étapes :
 
 1. Ouvrez le portail Azure. 
 1. Accédez à votre compte de stockage. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. Sélectionnez le compte de stockage et faites défiler l’affichage jusqu'à **Services d’objets Blob**.
-   1. Sélectionnez **Objets blob**, puis sélectionnez +**Conteneur** pour ajouter un nouveau conteneur. 
-   1. Entrez le nom du conteneur et notez le nom de conteneur que vous avez spécifié. Ces informations sont utilisées dans l’URL (chemin du fichier de sauvegarde) dans les instructions T-SQL, plus loin dans ce guide de démarrage rapide. 
-   1. Sélectionnez **OK**. 
+1. Sélectionnez le compte de stockage et faites défiler l’affichage jusqu'à **Services d’objets Blob**.
+1. Sélectionnez **Objets blob**, puis sélectionnez +**Conteneur** pour ajouter un nouveau conteneur. 
+1. Entrez le nom du conteneur et notez le nom de conteneur que vous avez spécifié. Ces informations sont utilisées dans l’URL (chemin du fichier de sauvegarde) dans les instructions T-SQL, plus loin dans ce guide de démarrage rapide. 
+1. Sélectionnez **OK**. 
     
     ![Nouveau conteneur](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >L'authentification auprès du compte de stockage est requise pour la sauvegarde et la restauration SQL Server même si vous choisissez de créer un conteneur public. Vous pouvez également créer un conteneur par programmation à l'aide des API REST. Pour plus d'informations, consultez [Créer un conteneur](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
+  > [!NOTE]
+  > L'authentification auprès du compte de stockage est requise pour la sauvegarde et la restauration SQL Server même si vous choisissez de créer un conteneur public. Vous pouvez également créer un conteneur par programmation à l'aide des API REST. Pour plus d'informations, consultez [Créer un conteneur](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
 
 ## <a name="create-a-test-database"></a>Créer une base de données de test 
 
@@ -93,14 +92,14 @@ GO
 ## <a name="create-a-sql-server-credential"></a>Créer des informations d'identification SQL Server
 Les informations d'identification SQL Server sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server. Ici, les processus de sauvegarde et de restauration SQL Server utilisent des informations d'identification pour s’authentifier auprès du service de stockage d'objets Blob de Microsoft Azure. Les informations d'identification contiennent le nom du compte de stockage et ses valeurs de **clé d'accès** . Une fois les informations d'identification créées, vous devez les spécifier dans l'option WITH CREDENTIAL lorsque vous publiez des instructions BACKUP/RESTORE. Pour plus d’informations sur les informations d’identification, consultez [Informations d’identification](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
-  >[!IMPORTANT]
-  >La configuration requise pour créer des informations d'identification SQL Server décrite ci-dessous est spécifique aux processus de sauvegarde SQL Server ([Sauvegarde SQL Server vers une URL](backup-restore/sql-server-backup-to-url.md) et [Sauvegarde managée SQL Server sur Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, lorsqu'il accède au stockage Azure pour écrire ou lire des sauvegardes, utilise le nom du compte de stockage et les informations de clé d'accès.
+  > [!IMPORTANT]
+  > La configuration requise pour créer des informations d'identification SQL Server décrite ci-dessous est spécifique aux processus de sauvegarde SQL Server ([Sauvegarde SQL Server vers une URL](backup-restore/sql-server-backup-to-url.md) et [Sauvegarde managée SQL Server sur Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, lorsqu'il accède au stockage Azure pour écrire ou lire des sauvegardes, utilise le nom du compte de stockage et les informations de clé d'accès.
 
 ### <a name="access-keys"></a>Clés d'accès
-Étant donné que le portail Azure est encore ouvert, enregistrez les clés d’accès nécessaires pour créer les informations d’identification. 
+Vous aurez besoin des clés d’accès du compte de stockage pour créer les informations d’identification. 
 
 1. Accédez au **compte de stockage** dans le portail Azure. 
-1. Faites défiler l’affichage jusqu'à **Paramètres** et sélectionnez **Clés d’accès**. 
+1. Sélectionnez **Clés d’accès** sous **Paramètres**. 
 1. Enregistrez la clé et la chaîne de connexion à utiliser ultérieurement dans ce guide de démarrage rapide. 
 
    ![Clés d'accès](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

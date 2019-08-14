@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1ce0df5d3ebf4b4adde9e35be63c3c105df1d152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986637"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811359"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -285,7 +285,7 @@ ms.locfileid: "67986637"
  L'index ou la vue concernés par la recommandation. L'icône de cette colonne indique s'il est recommandé de supprimer ou d'ajouter la **Cible de recommandation**.  
   
  **Détails**  
- Description de la **Cible de recommandation**. Les valeurs possibles incluent index cluster, vue indexée ou une valeur vide indiquant un index non-cluster. Indique également si l'index est unique.  
+ Description de la **Cible de recommandation**. Les valeurs possibles sont un index cluster, une vue indexée ou une valeur vide indiquant un index non-cluster. Indique également si l'index est unique.  
   
  **Schéma de partition**  
  Le schéma de partition est fourni dans cette colonne si le partitionnement est recommandé.  

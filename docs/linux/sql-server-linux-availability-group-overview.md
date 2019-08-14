@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967514"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794993"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Groupes de disponibilité Always On sur Linux
 
@@ -24,8 +24,8 @@ Cet article décrit les caractéristiques des groupes de disponibilité Always O
 
 D’un point de vue général, les groupes de disponibilité [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux sont les mêmes que sur les implémentations basées sur WSFC. Cela signifie que toutes les limitations et fonctionnalités sont les mêmes, à quelques exceptions près. Les principales différences sont les suivantes :
 
--   Microsoft Distributed Transaction Coordinator (DTC) n’est pas pris en charge sous Linux dans [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Si vos applications requièrent l’utilisation de transactions distribuées et ont besoin d'un groupe de disponibilité, déployez [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Windows.
--   Les déploiements basés sur Linux utilisent Pacemaker plutôt que WSFC.
+-   Microsoft Distributed Transaction Coordinator (DTC) est pris en charge par Linux à partir de SQL Server 2017 CU16. Toutefois, DTC n’est pas encore pris en charge par les groupes de disponibilité sur Linux. Si vos applications requièrent l’utilisation de transactions distribuées et ont besoin d'un groupe de disponibilité, déployez [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Windows.
+-   Les déploiements Linux qui nécessitent une haute disponibilité utilisent Pacemaker au lieu de WSFC pour le clustering.
 -   Contrairement à la plupart des configurations pour les groupes sur Windows, à l’exception du scénario de cluster de groupe de travail, Pacemaker ne requiert jamais Active Directory Domain Services (AD DS).
 -   La façon de faire basculer un groupe de disponibilité d’un nœud à un autre est différente entre Linux et Windows.
 -   Certains paramètres tels que `required_synchronized_secondaries_to_commit` peuvent uniquement être modifiés par le biais de Pacemaker sur Linux, alors qu’une installation basée sur WSFC utilise Transact-SQL.

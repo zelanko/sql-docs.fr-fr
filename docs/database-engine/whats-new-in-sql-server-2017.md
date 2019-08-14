@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059033"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811285"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Nouveautés du moteur de base de données - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Cette rubrique décrit les améliorations apportées à [!INCLUDE[ssdenoversion-
 - Les groupes de disponibilité peuvent désormais fonctionner sur Windows-Linux pour activer les migrations entre systèmes d’exploitation et les tests.
 - Ajout de la prise en charge de la stratégie de rétention des tables temporelles
 - Nouvel élément DMV SYS.DM_DB_STATS_HISTOGRAM.
-- Ajout de la prise en charge de la génération et de la regénération d’index columnstore non cluster en ligne
+- Ajout de la prise en charge de la génération et de la regénération d’index columnstore non-cluster en ligne
 - Le paramètre[Sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) est ajouté pour l’examen des statistiques.
 - L’Assistant Paramétrage de base de données (DTA) fourni avec SQL Server Management Studio version 16.4 lors de l’analyse de SQL Server 2016 et ultérieur, possède des options supplémentaires.    
    - Performances améliorées. Pour plus d’informations, consultez l’article [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations (Recommandations relatives à l’amélioration des performances à l’aide de l’Assistant Paramétrage de base de données [DTA])](../relational-databases/performance/performance-improvements-using-dta-recommendations.md).

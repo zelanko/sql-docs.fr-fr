@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba4f9d9eaff0571e3581468b19371a2f7716545e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986576"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809952"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
 
@@ -171,7 +171,7 @@ Il est possible de provoquer des fuites d'informations via l'utilisation de requ
   
 - **Recherche en texte intégral :** un gain de performances est attendu pour des requêtes utilisant les fonctions de recherche en texte intégral et de recherche sémantique ci-après, en raison d’une jointure supplémentaire introduite pour appliquer la sécurité au niveau des lignes et éviter la fuite des clés primaires de lignes qui devraient être filtrées : **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
-- **Index columnstore :** la sécurité au niveau des lignes est compatible avec les index columnstore tant cluster que non cluster. Toutefois, étant donné que la sécurité au niveau des lignes s’applique à une fonction, l’optimiseur peut modifier le plan de requête de façon à ne pas utiliser le mode batch.  
+- **Index columnstore :** la sécurité au niveau des lignes est compatible aussi bien avec les index columnstore cluster que non-cluster. Toutefois, étant donné que la sécurité au niveau des lignes s’applique à une fonction, l’optimiseur peut modifier le plan de requête de façon à ne pas utiliser le mode batch.  
   
 - **Vues partitionnées :** les prédicats BLOCK ne peuvent pas être définis sur des vues partitionnées, et celles-ci ne peuvent pas être créées sur des tables qui utilisent des prédicats BLOCK. Les prédicats de filtre sont compatibles avec les vues partitionnées.  
   

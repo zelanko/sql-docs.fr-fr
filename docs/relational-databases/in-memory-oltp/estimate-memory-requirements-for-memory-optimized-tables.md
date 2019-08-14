@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050399"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811174"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,22 +143,22 @@ Ainsi, dans notre exemple, la mémoire nécessaire pour chaque tableau de hachag
   
 Comme il y a trois index de hachage, la mémoire nécessaire pour les index de hachage est de 3 * 64 Mo = 192 Mo.  
   
-#### <a name="memory-for-non-clustered-indexes"></a>Mémoire pour les index non cluster  
+#### <a name="memory-for-nonclustered-indexes"></a>Mémoire pour les index non-cluster  
   
-Les index non cluster sont implémentés en tant que BTrees avec nœuds internes contenant la valeur d'index et les pointeurs vers les nœuds suivants.  Les nœuds terminaux contiennent la valeur d'index et un pointeur vers la ligne de table en mémoire.  
+Les index non-cluster sont implémentés en tant que BTrees avec des nœuds internes contenant la valeur des index et les pointeurs vers les nœuds suivants.  Les nœuds terminaux contiennent la valeur d'index et un pointeur vers la ligne de table en mémoire.  
   
-Contrairement aux index de hachage, les index non cluster n'ont pas une taille fixe de compartiment. L'index augmente et se réduit de façon dynamique avec les données.  
+Contrairement aux index de hachage, les index non-cluster n’ont pas une taille fixe de compartiment. L'index augmente et se réduit de façon dynamique avec les données.  
   
-La mémoire nécessaire pour les index non cluster peut être calculée comme suit :  
+La mémoire nécessaire pour les index non-cluster peut être calculée de la façon suivante :  
   
 - **Mémoire allouée aux nœuds non terminaux**   
     Pour une configuration spécifique, la mémoire allouée aux nœuds non terminaux représente un tout petit pourcentage de la mémoire globale utilisée par l'index. Il est si petit qu'il peut être ignoré sans risque.  
   
 - **Mémoire allouée aux nœuds terminaux**   
-    Les nœuds terminaux ont une ligne pour chaque clé unique dans la table et elle pointe vers les lignes de données avec cette clé unique.  Si vous avez plusieurs lignes ayant la même clé (c'est-à-dire que vous avez un index non cluster non unique), il n'y a qu'une seule ligne dans le nœud terminal d'index qui pointe vers une des lignes avec les autres lignes liées entre elles.  Ainsi, la mémoire totale requise peut être estimée par :
+    Les nœuds terminaux ont une ligne pour chaque clé unique dans la table et elle pointe vers les lignes de données avec cette clé unique.  Si vous avez plusieurs lignes comportant la même clé (c’est-à-dire que vous avez un index non-cluster non unique), il n’y a qu’une seule ligne dans le nœud terminal d’index qui pointe vers l’une des lignes, et les autres lignes sont liées entre elles.  Ainsi, la mémoire totale requise peut être estimée par :
   - memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Les index non en cluster sont préférables lorsqu'ils sont utilisés pour les recherches de plage, comme l'illustre la requête suivante :  
+ Les index non-cluster sont préférables lorsqu’ils sont utilisés pour les recherches de plage, comme l’illustre la requête suivante :  
   
 ```sql  
 SELECT * FRON t_hk  

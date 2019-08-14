@@ -1,7 +1,7 @@
 ---
-title: Quelles sont les pools de calcul ?
+title: Présentation des pools de calcul
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit le pool de calcul dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
+description: Cet article explique le rôle d’un pool de calcul dans un cluster Big Data SQL Server 2019 (préversion).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,29 +10,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d9ae112369ddad91bec125ec19713040a5aae915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958807"
 ---
-# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Quelles sont les pools de calcul dans un cluster de données volumineux de SQL Server ?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Présentation des pools de calcul dans un cluster Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit le rôle de *pools de calcul de SQL Server* dans un cluster de données volumineuses preview SQL Server 2019. Les pools de calcul fournissent la montée en puissance des ressources de calcul pour un cluster de données volumineux. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de calcul.
+Cet article décrit le rôle des *pools de calcul SQL Server* dans un cluster Big Data SQL Server 2019 (préversion). Les pools de calcul fournissent des ressources de calcul de scale-out pour les clusters Big Data. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de calcul.
 
-## <a name="compute-pool-architecture"></a>Architecture de pool de calcul
+## <a name="compute-pool-architecture"></a>Architecture d’un pool de calcul
 
-Un pool de calcul est constitué d’un ou plusieurs pods en cours d’exécution dans Kubernetes de calcul. La création automatique et la gestion de ces blocs est coordonnée par le [instance principale de SQL Server](concept-master-instance.md). Chaque pod contient un ensemble de services de base et une instance du moteur de base de données SQL Server.
+Un pool de calcul est constitué d’un ou de plusieurs pods de calcul exécutés dans Kubernetes. La création et la gestion automatisées de ces pods sont coordonnées par l’[instance maître de SQL Server](concept-master-instance.md). Chaque pod contient un ensemble de services de base, ainsi qu’une instance du moteur de base de données SQL Server.
 
 ## <a name="scale-out-groups"></a>Groupes de scale-out
 
-Un pool de calcul peut agir comme un groupe de scale-out PolyBase pour les requêtes distribuées sur différentes sources de données--comme HDFS, Oracle, MongoDB ou Terradata. À l’aide de calcul des pods dans Kubernetes, les clusters de données volumineuses peuvent automatiser la création et configuration pods de calcul pour les groupes de scale-out PolyBase.
+Un pool de calcul peut servir de groupe de scale-out PolyBase pour les requêtes distribuées sur différentes sources de données, telles que HDFS, Oracle, MongoDB ou Terradata. En utilisant des pods de calcul dans Kubernetes, les clusters Big Data peuvent automatiser la création et la configuration de pods de calcul pour les groupes de scale-out PolyBase.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
+Pour en savoir plus sur les clusters Big Data SQL Server, consultez les ressources suivantes :
 
-- [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
-- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md)
+- [Atelier : Architecture des clusters Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

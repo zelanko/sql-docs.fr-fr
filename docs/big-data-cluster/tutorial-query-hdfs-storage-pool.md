@@ -1,7 +1,7 @@
 ---
-title: Interroger des données HDFS dans le pool de stockage
+title: Interroger les données HDFS dans le pool de stockage
 titleSuffix: SQL Server big data clusters
-description: Ce didacticiel montre comment interroger des données HDFS dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Vous créez une table externe sur les données dans le pool de stockage et puis exécutez une requête.
+description: Ce tutoriel montre comment interroger les données HDFS dans un cluster Big Data SQL Server 2019 (préversion). Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,53 +10,53 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957707"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutoriel : Requête HDFS dans un cluster de données volumineux de SQL Server
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ce didacticiel montre comment interroger des données HDFS dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
+Ce tutoriel montre comment interroger les données HDFS dans un cluster Big Data SQL Server 2019 (préversion).
 
-Ce tutoriel vous montre comment effectuer les opérations suivantes :
+Dans ce tutoriel, vous allez apprendre à :
 
 > [!div class="checklist"]
-> * Créer une table externe pointant vers les données HDFS dans un cluster de données volumineux.
-> * Joindre ces données avec les données de valeur élevée dans l’instance principale.
+> * Créer une table externe pointant vers des données HDFS dans un cluster Big Data.
+> * Associer ces données à des données à valeur élevée dans l’instance maître.
 
 > [!TIP]
-> Si vous préférez, vous pouvez télécharger et exécuter un script pour les commandes de ce didacticiel. Pour obtenir des instructions, consultez le [échantillons de virtualisation des données](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) sur GitHub.
+> Si vous préférez, vous pouvez télécharger et exécuter un script pour les commandes de ce tutoriel. Pour obtenir des instructions, consultez les [exemples de virtualisation de données](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) sur GitHub.
 
-## <a id="prereqs"></a> Conditions préalables
+## <a id="prereqs"></a> Prérequis
 
-- [Outils de données volumineuses](deploy-big-data-tools.md)
+- [Outils Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extension de SQL Server 2019**
-- [Charger des exemples de données dans votre cluster de données volumineux](tutorial-load-sample-data.md)
+   - **Extension SQL Server 2019**
+- [Charger des exemples de données dans votre cluster Big Data](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-to-hdfs"></a>Créer une table externe à HDFS
+## <a name="create-an-external-table-to-hdfs"></a>Créer une table externe pour HDFS
 
-Le pool de stockage contient des données de parcours web dans un fichier CSV stockée dans HDFS. Utilisez les étapes suivantes pour définir une table externe qui peut accéder aux données dans ce fichier.
+Le pool de stockage contient des données de parcours web dans un fichier CSV stocké dans HDFS. Procédez comme suit pour définir une table externe qui peut accéder aux données dans ce fichier.
 
-1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](connect-to-big-data-cluster.md#master).
+1. Dans Azure Data Studio, connectez-vous à l’instance maître SQL Server de votre cluster Big Data. Pour plus d’informations, consultez [Se connecter à l’instance maître SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Double-cliquez sur la connexion dans le **serveurs** fenêtre pour afficher le tableau de bord du serveur pour l’instance principale de SQL Server. Sélectionnez **nouvelle requête**.
+1. Double-cliquez sur la connexion dans la fenêtre **Serveurs** pour afficher le tableau de bord de serveur de l’instance maître SQL Server. Sélectionnez **Nouvelle requête**.
 
-   ![Requête d’instance principale de SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
+   ![Requête d’instance maître SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-1. Exécutez la commande Transact-SQL suivante pour modifier le contexte pour le **Sales** base de données dans l’instance principale.
+1. Exécutez la commande Transact-SQL suivante pour remplacer le contexte par celui de la base de données **Sales** dans l’instance maître.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Définissez le format du fichier CSV pour lire à partir de HDFS. Appuyez sur F5 pour exécuter l’instruction.
+1. Définissez le format du fichier CSV à lire à partir de HDFS. Appuyez sur la touche F5 pour exécuter l’instruction.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -70,7 +70,7 @@ Le pool de stockage contient des données de parcours web dans un fichier CSV st
    );
    ```
 
-1. Créer une source de données externe au pool de stockage si elle n’existe pas déjà.
+1. Créez une source de données externe pour le pool de stockage, si elle n’existe pas déjà.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -80,7 +80,7 @@ Le pool de stockage contient des données de parcours web dans un fichier CSV st
    END
    ```
 
-1. Créer une table externe qui peut lire le `/clickstream_data` du pool de stockage. Le **SqlStoragePool** est accessible à partir de l’instance principale d’un cluster de données volumineuses.
+1. Créez une table externe capable de lire les `/clickstream_data` à partir du pool de stockage. **SqlStoragePool** est accessible à partir de l’instance maître d’un cluster Big Data.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -96,7 +96,7 @@ Le pool de stockage contient des données de parcours web dans un fichier CSV st
 
 ## <a name="query-the-data"></a>Interroger les données
 
-Exécutez la requête suivante pour joindre les données HDFS le `web_clickstream_hdfs` table externe avec les données relationnelles dans local `Sales` base de données.
+Exécutez la requête suivante pour associer les données HDFS de la table externe `web_clickstream_hdfs` aux données relationnelles de la base de données `Sales` locale.
 
 ```sql
 SELECT  
@@ -120,7 +120,7 @@ GO
 
 ## <a name="clean-up"></a>Nettoyer
 
-Utilisez la commande suivante pour supprimer la table externe utilisée dans ce didacticiel.
+Utilisez la commande suivante pour supprimer la table externe utilisée dans ce tutoriel.
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
@@ -129,6 +129,6 @@ GO
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Passez à l’article suivant pour apprendre à interroger Oracle à partir d’un cluster de données volumineux.
+Passez à l’article suivant pour découvrir comment interroger Oracle à partir d’un cluster Big Data.
 > [!div class="nextstepaction"]
 > [Interroger des données externes dans Oracle](tutorial-query-oracle.md)

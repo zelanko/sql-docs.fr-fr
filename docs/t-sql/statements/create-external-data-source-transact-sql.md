@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 68060248693b33cead474f051f93d69208ce512f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67902720"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893577"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -642,7 +642,7 @@ Fournit le protocole de connectivité et le chemin d’accès à la source de do
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Stockage Blob Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gén. 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gén. 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gén. 2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 Chemin d’emplacement :
 
@@ -651,6 +651,7 @@ Chemin d’emplacement :
 
 Remarques et conseils supplémentaires lors de la définition de l’emplacement :
 
+- L’option par défaut consiste à activer les connexions SSL sécurisées lors du provisionnement d’Azure Data Lake Storage Gen 2. Si cette option est activée, vous devez utiliser `abfss` lorsqu’une connexion SSL sécurisée est sélectionnée. Notez que `abfss` fonctionne également pour les connexions SSL non sécurisées. 
 - Le moteur SQL Data Warehouse ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. Pour valider, créez une table externe à l’aide d’une source de données externe.
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
 - `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
@@ -725,9 +726,9 @@ WITH
 ;
 ```
 
-### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1"></a>B. Créer une source de données externe pour faire référence à Azure Data Lake Store Gén. 1
+### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. Créer une source de données externe pour référencer Azure Data Lake Store Gen 1 ou 2 à l’aide d’un principal de service
 
-La connectivité Azure Data Lake Store est basée sur votre URI ADLS et le principal de service de votre application Azure Active Directory. Vous trouverez la documentation sur la création de cette application dans [Authentification auprès de Data Lake Store à l’aide d’Azure Active Directory][azure_ad[].
+La connectivité Azure Data Lake Store est basée sur votre URI ADLS et sur le principal de service de votre application Azure Active Directory. La documentation sur la création de cette application est disponible ici : [Authentification auprès de Data Lake Store à l’aide d’Azure Active Directory][azure_ad[].
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -742,6 +743,11 @@ WITH
 --,  SECRET     = '<KEY>'
 ,    SECRET     = 'BjdIlmtKp4Fpyh9hIvr8HJlUida/seM5kQ3EpLAmeDI='
 ;
+
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
 (    LOCATION       = 'adl://newyorktaxidataset.azuredatalakestore.net'
@@ -749,11 +755,21 @@ WITH
 ,    TYPE           = HADOOP
 )
 ;
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+(    LOCATION       = 'abfss://newyorktaxidataset.azuredatalakestore.net' -- Please note the abfss endpoint when your account has secure transfer enabled
+,    CREDENTIAL     = ADLS_credential
+,    TYPE           = HADOOP
+)
+;
 ```
 
-### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2"></a>C. Créer une source de données externe pour faire référence à Azure Data Lake Store (ADLS) Gén. 2
-
-La connexion à ADLS Gén. 2 requiert la clé de compte de stockage en tant que secret pour les informations d’identification de niveau base de données. La prise en charge OAuth 2.0 n’est pas disponible pour l’instant.
+### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-the-storage-account-key"></a>C. Créer une source de données externe pour référencer Azure Data Lake Store Gen 1 ou 2 à l’aide d’une clé de compte de stockage
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -769,6 +785,7 @@ WITH
 ,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
+-- Note this example uses a Gen 2 endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
@@ -917,7 +934,7 @@ Si le port n’est pas spécifié, la valeur par défaut est déterminée d’ap
 | 7                   | 8050                          |
 
 Pour obtenir la liste complète des versions de Hadoop prises en charge, consultez [Configuration de la connectivité PolyBase (Transact-SQL)][connectivity_pb].
-  
+
 > [!IMPORTANT]  
 > La valeur RESOURCE_MANAGER_LOCATION n’est pas validée lorsque vous créez la source de données externe. La saisie d’une valeur incorrecte peut entraîner l’échec de la requête au moment de l’exécution chaque fois qu’une transmission est tentée, étant donné que la valeur fournie ne serait pas en mesure d’être résolue.
 
@@ -947,7 +964,7 @@ Actuellement un jeton SAP avec le type `HADOOP` n’est pas pris en charge. Il e
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Créer une source de données externe pour faire référence à Hadoop
 
 Pour créer une source de données externe pour faire référence à votre cluster Hortonworks ou Cloudera Hadoop, spécifiez le nom de l’ordinateur ou l’adresse IP du port et du `Namenode` Hadoop. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -960,7 +977,7 @@ WITH
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>B. Créer une source de données externe pour faire référence à Hadoop avec transmission activée
 
 Spécifiez l’option `RESOURCE_MANAGER_LOCATION` pour activer le calcul transmis à Hadoop pour des requêtes PolyBase. Une fois activé, PolyBase prend une décision basée sur les coûts pour déterminer si le calcul de la requête doit être poussé vers Hadoop.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -974,7 +991,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>C. Créer une source de données externe pour faire référence à Hadoop sécurisé par Kerberos
 
 Pour vérifier si le cluster Hadoop est sécurisé par Kerberos, regardez la valeur de la propriété hadoop.security.authentication dans Hadoop core-site.xml. Pour faire référence à un cluster Hadoop sécurisé par Kerberos, vous devez spécifier des informations d’identification limitées à la base de données qui contiennent votre nom d’utilisateur et votre mot de passe Kerberos. La clé principale de la base de données est utilisée pour chiffrer le secret des informations d’identification limitées à la base de données.
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'

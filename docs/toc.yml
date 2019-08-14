@@ -1,7 +1,7 @@
 - name: Bienvenue dans SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
-- name: Système de gestion des versions dans la documentation SQL
-  href: toc/versioning-system-monikers-ui-sql-server.md
+  href: sql-server/sql-server-technical-documentation.md
+- name: Conseils de navigation dans la documentation SQL
+  href: sql-server/sql-docs-navigation-guide.md
 - name: Versions précédentes 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
@@ -10459,8 +10459,8 @@
       items:
         - name: Obtenir de l’aide
           href: sql-server/sql-server-get-help.md
-        - name: Conseils de navigation dans SQL Docs
-          href: sql-server/sql-docs-navigation-guide.md
+        - name: Gestion de version dans la documentation SQL
+          href: sql-server/versioning-system-monikers-ui-sql-server.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >

@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495429"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823122"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS est gratuit !
 
 **[![Télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2 est la dernière version en disponibilité générale (GA) de SSMS. Si une version antérieure est déjà installée, l’installation de SSMS 18.2 effectue une mise à niveau vers la version 18.2. Si vous disposez d’une *préversion* antérieure à SSMS 18.x, vous devez la désinstaller avant d’installer SSMS 18.2.
+SSMS 18.2 est la dernière version en disponibilité générale (GA) de SSMS. Si une version précédente de SSMS 18 en disponibilité générale est déjà installée, l’installation de SSMS 18.2 entraîne une mise à niveau. Si vous disposez d’une *préversion* antérieure à SSMS 18.x, vous devez la désinstaller avant d’installer SSMS 18.2.
 
 **Informations sur la version**
 
@@ -81,8 +81,7 @@ SQL Server Management Studio 18.2 :
 | Exécution ou résultats des requêtes | Ajout d’un délai d’achèvement dans les messages à suivre lorsque l’exécution d’une requête donnée est terminée. |
 | Exécution ou résultats des requêtes  | Permet d’afficher plus de données (Résultats dans du texte) et d’en stocker davantage dans des cellules (Résultats dans des grilles). SSMS autorise désormais jusqu’à 2 millions de caractères pour ces deux options (auparavant, les limites étaient fixées à 256 000 caractères pour l’affichage et à 64 000 caractères pour le stockage dans des grilles). Cela règle également le problème des utilisateurs qui ne parvenaient pas à extraire plus de 43 680 caractères des cellules d’une grille. |
 | ShowPlan | Ajout d’un nouvel attribut dans QueryPlan quand la fonctionnalité UDF scalaire Inline est activée (ContainsInlineScalarTsqlUdfs). |
-| SMO | Ajout de la prise en charge des « restrictions de fonctionnalités ». Pour plus d’informations sur cette fonctionnalité, consultez [Restrictions de fonctionnalités](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
-| SMO  | Extensions d’évaluation. Voir <we need a link to something> |
+| SMO | Ajout de la prise en charge des « restrictions de fonctionnalités ». Pour plus d’informations sur cette fonctionnalité, consultez [Restrictions de fonctionnalités](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). Pour plus d’informations sur les extensions d’évaluation, consultez [Présentation de l’API SQL Assessment](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Integration Services (SSIS) | Optimisation des performances pour le planificateur de packages SSIS dans Azure. |
 |  |  |
 

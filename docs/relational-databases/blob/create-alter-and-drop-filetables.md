@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fcccb69515398890b79c0a8f780a861b497ab78a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03fa6e342eab136bbeb90e06d6a6ef4d5325b1d5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085404"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811177"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,9 +164,9 @@ GO
 |||  
 |-|-|  
 |**Columns**|**Type d'index**|  
-|[path_locator] ASC|Clé primaire, non cluster|  
-|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non cluster|  
-|[stream_id] ASC|Unique, non cluster|  
+|[path_locator] ASC|Clé primaire, non-cluster|  
+|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non-cluster|  
+|[stream_id] ASC|Unique, non-cluster|  
   
  **Contraintes créées lorsque vous créez un FileTable**  
  Lorsque vous créez un FileTable, les contraintes définies par le système suivantes sont également créées :  

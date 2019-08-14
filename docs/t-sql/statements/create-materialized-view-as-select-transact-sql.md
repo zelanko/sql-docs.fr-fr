@@ -34,15 +34,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b58102644c596fde248861bb504bf06b932d6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912624"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893777"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (préversion)
 
@@ -120,11 +120,10 @@ ALTER TABLE SWITCH n’est pas pris en charge sur les tables référencées dans
 
 |Scénario|Nouvelles colonnes à ajouter à l’affichage matérialisé|Commentaire|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | est manquant dans la liste SELECT d’une définition de l’affichage matérialisé |COUNT_BIG (*) |Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
+|COUNT_BIG() est manquant dans la liste SELECT d’une définition de l’affichage matérialisé| COUNT_BIG (*) |Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
 |SUM(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de l’affichage matérialisé ET « a » est une expression Nullable |COUNT_BIG (a) |Les utilisateurs ont besoin d’ajouter l’expression « a » manuellement dans la définition de l’affichage matérialisé.|
 |AVG(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de l’affichage matérialisé où « a » est une expression.|SUM(a), COUNT_BIG(a)|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
-|STDEV(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de l’affichage matérialisé où « a » est une expression.|SUM(a),  
-COUNT_BIG(a) SUM(square(a))|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise. |
+|STDEV(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de l’affichage matérialisé où « a » est une expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise. |
 | | | |
 
 Après la création, des affichages matérialisés sont visibles dans SQL Server Management Studio sous le dossier des affichages de l’instance Azure SQL Data Warehouse.

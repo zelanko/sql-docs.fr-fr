@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7d326e03c684a17d976d13c27a37aa97ae16792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091407"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811147"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Plan de requête pour joindre des tables sur disque.
   
 -   Les lignes de la table Customer sont récupérées à partir de l'index cluster, qui est la structure de données principale et contient toutes les données de la table.  
   
--   Les données de la table Order sont récupérées à l'aide de l'index non cluster sur la colonne CustomerID. Cet index contient la colonne CustomerID utilisée pour la jointure, et la colonne de clé primaire OrderID qui est retournée à l'utilisateur. Le retour de colonnes supplémentaires depuis la table Order nécessiterait des recherches dans l'index cluster de la table Order.  
+-   Les données de la table Order sont récupérées à l’aide de l’index non-cluster dans la colonne CustomerID. Cet index contient la colonne CustomerID utilisée pour la jointure, et la colonne de clé primaire OrderID qui est retournée à l'utilisateur. Le retour de colonnes supplémentaires depuis la table Order nécessiterait des recherches dans l'index cluster de la table Order.  
   
 -   L’opérateur logique **Jointure interne** est implémenté par l’opérateur physique **Jointure de fusion**. Les autres types de jointures physiques sont **Boucles imbriquées** et **Jointure hachée**. L’opérateur **Jointure de fusion** tire parti du fait que les deux index sont triés sur la colonne de jointure CustomerID.  
   
@@ -119,7 +119,7 @@ Pipeline de traitement des requêtes SQL Server
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- Pour le premier exemple de requête, le moteur d'exécution demande des lignes à l'index cluster sur la table Customer, et à l'index non cluster sur la table Order, à partir des méthodes d'accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
+ Pour le premier exemple de requête, le moteur d’exécution demande des lignes à l’index cluster sur la table Customer, et à l’index non-cluster sur la table Order, à partir des méthodes d’accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  

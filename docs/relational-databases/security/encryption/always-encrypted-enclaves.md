@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661224"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841569"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted avec enclaves sécurisées
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ Les enclaves sécurisés améliorent la fonctionnalité d’Always Encrypted. Le
     > [!NOTE]
     > Les opérations ci-dessus sont prises en charge pour les colonnes de chaînes de caractères qui utilisent des classements avec un ordre de tri binary2 (classements BIN2). Les colonnes de chaînes de caractères utilisant des classements autres que BIN2 peuvent être chiffrées avec un chiffrement aléatoire et des clés de chiffrement de colonne prenant en charge les enclaves. Toutefois, la seule fonctionnalité nouvelle activée pour ces colonnes est le chiffrement sur place.
 - Création d’index non cluster sur les colonnes à l’aide d’un chiffrement aléatoire.
-- Colonnes calculées à l’aide d’expressions qui contenant le prédicat LIKE et des opérateurs de comparaison sur des colonnes à l’aide d’un chiffrement aléatoire.
 
 Tous les autres limitations (non résolues par les améliorations ci-dessus) qui sont répertoriées pour Always Encrypted (sans enclaves sécurisées) sous [Informations sur les fonctionnalités](always-encrypted-database-engine.md#feature-details) s’appliquent également à Always Encrypted avec enclaves sécurisés.
 
@@ -182,6 +181,7 @@ Les limitations suivantes sont spécifiques à Always Encrypted avec enclaves s�
     - char[n], varchar[n], binary[n], varbinary[n] si n est supérieur à 7935.
 - Les opérations de chiffrement sur place ne peuvent pas être combinées avec d’autres modifications des métadonnées de la colonne, à l’exception des modifications d’un classement au sein de la même page de codes et possibilité de valeur null. Par exemple, vous ne pouvez pas chiffrer, chiffrer à nouveau ou déchiffrer une colonne ET modifier un type de données de la colonne dans une instruction Transact-SQL ALTER TABLE ou ALTER COLUMN unique. Utilisez deux instructions distinctes.
 - L’utilisation de clés prenant en charge les enclaves pour les colonnes dans des tables en mémoire n’est pas prise en charge.
+- Les expressions qui définissent des colonnes calculées ne peuvent pas effectuer de calculs sur des colonnes avec enclave à l’aide d’un chiffrement aléatoire (même si les calculs sont basés sur des comparaisons Like ou Range).
 - Les seuls magasins de clés pris en charge pour le stockage des clés principales de colonne prenant en charge l’enclave sont le Magasin de certificats Windows et Azure Key Vault.
 
 Les limitations suivantes s’appliquent à[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], mais il est prévu de les résoudre :
