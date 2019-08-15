@@ -10012,12 +10012,12 @@
           items:
             - name: Politique de support de SSMS
               href: ssms/support-policy.md
-            - name: Commentaires et aide
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: Assistance utilisateur dans SSMS
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: Données d’utilisation anonymes
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: Commentaires >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: Installer sqlpackage

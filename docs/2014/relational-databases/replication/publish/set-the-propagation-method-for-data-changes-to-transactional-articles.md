@@ -118,7 +118,7 @@ ms.locfileid: "68941082"
   
     -   ins_cmd: spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où **_article_name_** est la valeur spécifiée pour  **\@article**.  **\@**  
   
-    -   **\@del_cmd** : spécifiez la valeur <strong>CALL sp_MSdel_*nom_article ** ou ** XCALL sp_MSdel_</strong>nom_article***,où <strong>nom_article*est la valeur spécifiée pour*</strong>article **.  
+    -   \@**ticle_nameouXCALLsp_Msdel_article_name,oùarticle_nameestlavaleurspécifiéepour_*\@** article * *.  
   
     -   upd_cmd: spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_MSupd__article_name *</strong>ou <strong>MCALL sp_Msupd_* article_name *</strong>, où  **\@** _**article_name**_ est la valeur spécifiée pour  **\@l’article**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68941082"
   
     -   **\@del_cmd** : spécifiez la valeur <strong>CALL sp_MSdel_*nom_article ** ou ** XCALL sp_MSdel_</strong>nom_article***,où <strong>nom_article*est la valeur spécifiée pour*</strong>article _.  
   
-    -   **\@upd_cmd** : spécifiez la valeur *<strong>SCALL sp_MSupd_*nom_article***, ** CALL sp_MSupd_</strong>nom_article***, *<strong>XCALL sp_MSupd_*nom_article***, ** MCALL sp_MSupd_</strong>nom_article***, où <strong>nom_article*est la valeur spécifiée pour*</strong>article<strong>.  
+    -   upd_cmd: spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong> , <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_Msupd_ *article_name*</strong>, MCALL sp_Msupd_ article_name **\@** , où _**article_name**_ est la valeur spécifiée pour **\@l’article**.  
   
     > [!NOTE]  
     >  Pour chacun des paramètres de commande ci-dessus, vous pouvez spécifier votre propre nom pour les procédures stockées que la réplication génère.  
