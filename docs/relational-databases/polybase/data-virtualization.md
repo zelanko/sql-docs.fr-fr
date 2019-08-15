@@ -4,17 +4,17 @@ description: Cette page détaille les étapes d’utilisation de l’Assistant C
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041115"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418765"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données relationnelles
 
@@ -22,7 +22,7 @@ Un des principaux scénarios pour SQL Server 2019 CTP 2.0 est la possibilité de
 
 ## <a name="start-the-external-table-wizard"></a>Démarrer l’Assistant Table externe
 
-Connectez-vous à l’instance principale en utilisant l’adresse IP/numéro de port du point de terminaison **sql-server-master** obtenu à l’aide de la commande [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Développez votre nœud **Bases de données** dans l’Explorateur d’objets. Sélectionnez ensuite l’une des bases de données où vous voulez virtualiser les données à partir d’une instance de SQL Server existante. Cliquez avec le bouton droit sur la base de données, puis sélectionnez **Créer une table externe** pour démarrer l’Assistant Virtualisation de données. Vous pouvez également démarrer l’Assistant Virtualisation de données à partir de la palette de commandes. Utilisez Ctrl+Maj+P dans Windows ou Cmd+Maj+P avec un Mac.
+Connectez-vous à l’instance principale en utilisant l’adresse IP/numéro de port du point de terminaison **sql-server-master** obtenu à l’aide de la commande [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Développez votre nœud **Bases de données** dans l’Explorateur d’objets. Sélectionnez ensuite l’une des bases de données où vous voulez virtualiser les données à partir d’une instance de SQL Server existante. Cliquez avec le bouton droit sur la base de données, puis sélectionnez **Créer une table externe** pour démarrer l’Assistant Virtualisation de données. Vous pouvez également démarrer l’Assistant Virtualisation de données à partir de la palette de commandes. Utilisez Ctrl+Maj+P dans Windows ou Cmd+Maj+P avec un Mac.
 
 ![Assistant Virtualisation de données](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Sélectionner une source de données

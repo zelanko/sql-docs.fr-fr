@@ -2,7 +2,7 @@
 title: Traitement de requêtes intelligent dans les bases de données Microsoft SQL | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes intelligent pour améliorer les performances des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354623"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388368"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-La famille des fonctionnalités de traitement de requêtes intelligent inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation à entreprendre. 
+La famille de fonctionnalités de traitement de requêtes intelligent inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation à entreprendre. 
 
 ![Traitement de requêtes intelligent](./media/iqp-feature-family.png)
 
-Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes intelligent en activant le niveau de compatibilité applicable pour la base de données. Vous pouvez définir cette option à l’aide de Transact-SQL. Par exemple :  
+Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes intelligent en activant le niveau de compatibilité applicable pour la base de données. Vous pouvez définir cette option à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ Le tableau suivant détaille toutes les fonctionnalités du traitement de requê
 
 | **Fonctionnalité IQP** | **Pris en charge dans Azure SQL Database** | **Pris en charge dans SQL Server** |**Description** |
 | --- | --- | --- |--- |
-| [Jointures adaptatives (mode batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Les jointures adaptatives sélectionnent dynamiquement un type de jointure lors de l’exécution en fonction des lignes d’entrée réelles.|
-| [Nombre approximatif distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Oui, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0, préversion publique|Fournit un comptage distinct (COUNT DISTINCT) approximatif pour les scénarios Big Data avec les avantages de performances élevées et d’une faible empreinte mémoire. |
-| [Mode Batch sur Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Fournit un mode batch pour les charges de travail DW relationnelles utilisant le processeur de manière intensive sans nécessiter d’index columnstore.  | 
-| [Exécution entrelacée](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Utilise la cardinalité réelle de la fonction table à instructions multiples rencontrée à la première compilation, au lieu d’une estimation fixe.|
-| [Retour d’allocation de mémoire (mode batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Si une requête en mode batch a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
-| [Retour d’allocation de mémoire (mode ligne)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Si une requête en mode ligne a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
-| [Incorporation (inlining) des fonctions UDF scalaires](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Non | Oui, à partir de SQL Server 2019 CTP 2.1 sous le niveau de compatibilité 150, préversion publique|Les fonctions UDF scalaires sont transformées en expressions relationnelles équivalentes qui sont incluses dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
-| [Compilation différée de variable de table](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Utilise la cardinalité réelle de la variable de table rencontrée à la première compilation, au lieu d’une estimation fixe.|
+| [Jointures adaptatives (mode batch)](#batch-mode-adaptive-joins) | Oui, avec le niveau de compatibilité 140| Oui, à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sous le niveau de compatibilité 140|Les jointures adaptatives sélectionnent dynamiquement un type de jointure lors de l’exécution en fonction des lignes d’entrée réelles.|
+| [Nombre approximatif distinct](#approximate-query-processing) | Oui, préversion publique| Oui, à partir de la version [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Fournit un comptage distinct (COUNT DISTINCT) approximatif pour les scénarios Big Data avec les avantages de performances élevées et d’une faible empreinte mémoire. |
+| [Mode Batch sur Rowstore](#batch-mode-on-rowstore) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 sous un niveau de compatibilité de 150, préversion publique|Fournit un mode batch pour les charges de travail DW relationnelles utilisant le processeur de manière intensive sans nécessiter d’index columnstore.  | 
+| [Exécution entrelacée](#interleaved-execution-for-mstvfs) | Oui, avec le niveau de compatibilité 140| Oui, à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sous le niveau de compatibilité 140|Utilise la cardinalité réelle de la fonction table à instructions multiples rencontrée à la première compilation, au lieu d’une estimation fixe.|
+| [Retour d’allocation de mémoire (mode batch)](#batch-mode-memory-grant-feedback) | Oui, avec le niveau de compatibilité 140| Oui, à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sous le niveau de compatibilité 140|Si une requête en mode batch a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
+| [Retour d’allocation de mémoire (mode ligne)](#row-mode-memory-grant-feedback) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 sous un niveau de compatibilité de 150, préversion publique|Si une requête en mode ligne a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
+| [Incorporation (inlining) des fonctions UDF scalaires](#scalar-udf-inlining) | Non | Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 sous un niveau de compatibilité de 150, préversion publique|Les fonctions UDF scalaires sont transformées en expressions relationnelles équivalentes qui sont incluses dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
+| [Compilation différée de variable de table](#table-variable-deferred-compilation) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 sous un niveau de compatibilité de 150, préversion publique|Utilise la cardinalité réelle de la variable de table rencontrée à la première compilation, au lieu d’une estimation fixe.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
+La fonctionnalité des jointures adaptatives en mode batch, permet de choisir de différer une méthode [Jointure hachée ou jointure de boucles imbriquées](../../relational-databases/performance/joins.md) tant **que** la première entrée n’a pas été analysée, à l’aide d’un plan de mise en cache unique. L’opérateur de jointure adaptative définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Votre plan peut, par conséquent, passer dynamiquement à une meilleure stratégie de jointure pendant l’exécution.
 
-Cette fonctionnalité permet à votre plan de basculer dynamiquement sur une meilleure stratégie de jointure pendant l’exécution à l’aide d’un seul plan mis en cache.
-
-La fonctionnalité des jointures adaptatives en mode batch permet de choisir de différer une méthode de [jointure hachée ou de jointure de boucles imbriquées](../../relational-databases/performance/joins.md) **tant que** la première entrée n’a pas été analysée. L’opérateur de jointure adaptative définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Votre plan peut, par conséquent, passer dynamiquement à une meilleure stratégie de jointure pendant l’exécution.
-Fonctionnement de l’opération :
--  Si le nombre de lignes de l’entrée de jointure de génération est suffisamment petit pour qu’une jointure de boucles imbriquées soit plus optimale qu’une jointure hachée, votre plan bascule vers un algorithme de boucles imbriquées.
--  Si l’entrée de jointure de génération dépasse un seuil spécifique de nombre de lignes, aucun basculement ne se produit et votre plan se poursuit avec une jointure hachée.
-
-La requête suivante est utilisée pour illustrer un exemple de jointure adaptative :
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-Cette requête retourne 336 lignes. En activant les [statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md), nous observons le plan suivant :
-
-![Résultat de la requête : 336 lignes](./media/4_AQPStats336Rows.png)
-
-Dans le plan, nous voyons les éléments suivants :
-1. Nous avons une analyse d’index columnstore utilisée pour fournir des lignes pendant la phase de génération de la jointure hachée.
-1. Nous avons le nouvel opérateur de jointure adaptative. Cet opérateur définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Dans notre exemple, le seuil est de 78 lignes. Tout plan avec &gt;= 78 lignes utilise une jointure hachée. Si le nombre de lignes est inférieur au seuil, une jointure de boucles imbriquées est utilisée.
-1. Comme dans notre exemple nous obtenons 336 lignes, nous dépassons le seuil et la deuxième branche représente donc la phase de sondage d’une opération de jointure hachée standard. Notez que les statistiques des requêtes actives affichent les lignes qui sont traitées par les opérateurs (dans notre exemple, « 672 sur 672 »).
-1. La dernière branche est notre recherche d’index cluster que doit utiliser la jointure de boucles imbriquées, pour laquelle le seuil n’a pas été dépassé. Notez que nous voyons « 0 sur 336 » lignes affichées (la branche n’est pas utilisée).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Maintenant, nous allons comparer le plan avec la même requête, mais cette fois pour une valeur *Quantité* comprenant une seule ligne dans la table :
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-La requête retourne une ligne. En activant les statistiques des requêtes actives, nous observons le plan suivant :
-
-![Résultat de la requête : une ligne](./media/5_AQPStatsOneRow.png)
-
-Dans le plan, nous voyons les éléments suivants :
-- Avec une ligne retournée, le flux des lignes est maintenant inclus dans la recherche d’index cluster.
-- De plus, comme la phase de génération de jointure hachée n’a pas continué, aucun flux de lignes n’est inclus dans la deuxième branche.
-
-### <a name="adaptive-join-benefits"></a>Avantages de la jointure adaptative
-Ce sont les charges de travail avec des variations fréquentes entre les grandes et les petites analyses d’entrée de jointure qui bénéficient le plus de cette fonctionnalité.
-
-### <a name="adaptive-join-overhead"></a>Surcharge de jointure adaptative
-Les jointures adaptatives nécessitent davantage de mémoire que les jointures de boucles imbriquées d’index en cas de plan équivalent. La mémoire supplémentaire est demandée comme si les boucles imbriquées étaient une jointure hachée. Une opération discontinue engendre également une surcharge pendant la phase de génération contrairement à la diffusion d’une boucle imbriquée, en cas de jointure équivalente. Ce coût supplémentaire apporte une certaine flexibilité dans les scénarios où le nombre de lignes peut fluctuer dans l’entrée de génération.
-
-### <a name="adaptive-join-caching-and-re-use"></a>Mise en cache et réutilisation des jointures adaptatives
-Les jointures adaptatives en mode batch fonctionnent pour l’exécution initiale d’une instruction et, une fois compilées, les exécutions consécutives restent adaptatives en fonction du seuil des jointures adaptatives compilées et du flux des lignes de runtime dans la phase de génération de l’entrée externe.
-
-### <a name="tracking-adaptive-join-activity"></a>Suivi de l’activité des jointures adaptatives
-L’opérateur de jointure adaptative a les attributs d’opérateur de plan suivants :
-
-| Attribut de plan | Description |
-|--- |--- |
-| AdaptiveThresholdRows | Montre l’utilisation du seuil pour passer d’une jointure hachée à une jointure de boucles imbriquées. |
-| EstimatedJoinType | Type de jointure probable. |
-| ActualJoinType | Dans un plan réel, indique l’algorithme de jointure qui a finalement été choisi en fonction du seuil. |
-
-Le plan estimé montre la forme du plan de jointure adaptative, ainsi que le seuil de jointure adaptative défini et un type de jointure estimé.
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>Interopérabilité des jointures adaptatives et du Magasin des requêtes
-Le Magasin des requêtes capture un plan de jointure adaptative en mode batch et est capable de forcer son application.
-
-### <a name="adaptive-join-eligible-statements"></a>Instructions éligibles pour la jointure adaptative
-Une jointure logique doit respecter certaines conditions pour être assimilée à une jointure adaptative en mode batch :
-- Le niveau de compatibilité de la base de données est 140.
-- La requête est une instruction SELECT (les instructions de modification des données ne sont actuellement pas éligibles).
-- La jointure est éligible pour être exécutée à la fois par une jointure de boucles imbriquées indexées ou par un algorithme physique de jointure hachée.
-- La jointure hachée utilise le mode batch quand un index columnstore est présent dans la requête globale ou quand la jointure référence directement la table d’index columnstore.
-- Les solutions alternatives générées de la jointure de boucles imbriquées et de la jointure hachée doivent avoir le même premier enfant (référence externe).
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Efficacité des jointures adaptatives et des boucles imbriquées
-Si une jointure adaptative bascule sur une opération de boucles imbriquées, elle utilise les lignes déjà lues dans la génération de jointure hachée. L’opérateur ne relit **pas** les lignes de référence externe.
-
-### <a name="adaptive-threshold-rows"></a>Lignes du seuil adaptatif
-Le graphique suivant montre un exemple d’intersection entre le coût d’une jointure hachée et le coût d’une jointure de boucles imbriquées alternative. À ce point d’intersection, le seuil est déterminé, qui détermine à son tour l’algorithme réel utilisé pour l’opération de jointure.
-
-![Seuil de jointure](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Désactivation des jointures adaptatives sans modifier le niveau de compatibilité
-
-Les jointures adaptatives peuvent être désactivées dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de base de données 140 et au-delà.  
-Pour désactiver les jointures adaptatives pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
-Pour réactiver les jointures adaptatives pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-Vous pouvez aussi désactiver les jointures adaptatives pour une requête spécifique en désignant `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` en tant qu’indicateur de requête [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-Un indicateur de requête USE HINT est prioritaire par rapport à une configuration incluse dans l’étendue d’une base de données ou à un paramètre d’indicateur de trace.
+Pour plus d'informations, consultez [Compréhension des jointures adaptatives](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Retour d’allocation de mémoire en mode batch
 Le plan post-exécution d’une requête dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut la quantité minimale de mémoire nécessaire pour l’exécution et la taille d’allocation de mémoire idéale pour que toutes les lignes tiennent dans la mémoire. Les performances sont réduites quand les tailles d’allocation de mémoire ne sont pas dimensionnées correctement. Si l’allocation de mémoire est excessive, une certaine quantité de mémoire est inutilisée et l’accès concurrentiel est réduit. Si l’allocation de mémoire est insuffisante, il en résulte des dépassements de capacité coûteux sur le disque. En apportant une solution à la répétition des charges de travail, le retour d’allocation de mémoire en mode batch recalcule la quantité de mémoire réelle nécessaire pour une requête et met à jour la valeur d’allocation pour le plan mis en cache. Quand une instruction de requête identique est exécutée, la requête utilise la taille d’allocation de mémoire révisée, ce qui permet de réduire les allocations de mémoire excessives qui impactent l’accès concurrentiel et de corriger les allocations de mémoire sous-estimées qui provoquent des dépassements de capacité coûteux sur le disque.
@@ -193,7 +73,7 @@ Si le retour d’allocation de mémoire est activé, pour la deuxième exécutio
 
 ### <a name="memory-grant-feedback-sizing"></a>Dimensionnement du retour d’allocation de mémoire
 Dans le cas d’une allocation de mémoire excessive, si la mémoire allouée est plus de deux fois supérieure à la taille de la mémoire réelle utilisée, le retour d’allocation de mémoire recalcule l’allocation de mémoire et met à jour le plan mis en cache. Les plans dont les allocations de mémoire sont inférieures à 1 Mo ne sont pas recalculés par rapport à d’éventuels dépassements.
-Dans le cas d’une allocation de mémoire dont la taille est insuffisante et qui entraîne un dépassement de capacité sur le disque pour les opérateurs en mode batch, le retour d’allocation de mémoire déclenche un nouveau calcul de l’allocation de mémoire. Les événements de dépassement de capacité sont signalés au retour d’allocation de mémoire et peuvent être exposés via l’événement xEvent *spilling_report_to_memory_grant_feedback*. Cet événement retourne l’ID de nœud du plan et la taille de données objet du dépassement de capacité de ce nœud.
+Dans le cas d’une allocation de mémoire dont la taille est insuffisante et qui entraîne un dépassement de capacité sur le disque pour les opérateurs en mode batch, le retour d’allocation de mémoire déclenche un nouveau calcul de l’allocation de mémoire. Les événements de dépassement de capacité sont signalés au retour d’allocation de mémoire et peuvent être exposés via l’événement xEvent *spilling_report_to_memory_grant_feedback*. Cet événement retourne l’ID de nœud du plan et la taille du dépassement de données de ce nœud.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Retour d’allocation de mémoire et scénarios sensibles aux paramètres
 Différentes valeurs de paramètre peuvent également nécessiter différents plans de requête pour maintenir une situation optimale. Ce type de requête est défini comme « sensible aux paramètres ». Pour les plans sensibles aux paramètres, le retour d’allocation de mémoire se désactive sur une requête si la mémoire requise est instable. Le plan est désactivé après plusieurs exécutions répétées de la requête et ce comportement peut être observé en surveillant l’événement xEvent *memory_grant_feedback_loop_disabled* XEvent. Pour plus d’informations sur la détection et la sensibilité des paramètres, reportez-vous au [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -212,7 +92,11 @@ La mémoire réelle allouée respecte la limite de mémoire de requête détermi
 La rétroaction d’allocation de mémoire peut être désactivée dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de base de données 140 et au-delà. Pour désactiver la rétroaction d’allocation de mémoire en mode batch pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
@@ -220,7 +104,11 @@ Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.dat
 Pour réactiver la rétroaction d’allocation de mémoire en mode batch pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode batch pour une requête spécifique en désignant `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :
@@ -354,14 +242,22 @@ L’utilisation des plans qui utilisent l’exécution entrelacée peut être fo
 L’exécution entrelacée peut être désactivée dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de base de données 140 et au-delà.  Pour désactiver l’exécution entrelacée pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Pour réactiver l’exécution entrelacée pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 Vous pouvez aussi désactiver l’exécution entrelacée pour une requête spécifique en désignant `DISABLE_INTERLEAVED_EXECUTION_TVF` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :

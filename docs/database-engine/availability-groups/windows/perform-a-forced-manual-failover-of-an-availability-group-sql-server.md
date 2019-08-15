@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014609"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388362"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Effectuer un basculement manuel forcé d’un groupe de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68014609"
   
 -   Une perte de données est possible pendant le basculement forcé d'un groupe de disponibilité. En outre, si le réplica principal s'exécute lorsque vous démarrez un basculement forcé, les clients risquent de toujours être connectés aux bases de données primaires précédentes. Par conséquent, nous vous recommandons vivement de forcer le basculement uniquement si le réplica principal n'est plus exécuté et si vous êtes prêt à prendre le risque de perdre des données afin de restaurer l'accès aux bases de données dans le groupe de disponibilité.  
   
--   Lorsqu'une base de données secondaire se trouve dans l'état REVERTING ou INITIALIZING, forcer le basculement entraîne l'impossibilité pour la base de données de démarrer en tant que base de données primaire. Si la base de données se trouvait dans un état INTIAILIZING, vous devez appliquer les enregistrements de journal manquants d'une sauvegarde de base de données ou restaurer entièrement la base de données. Si la base de données se trouvait dans un état REVERTING, vous devez restaurer entièrement la base de données à partir de sauvegardes.  
+-   Lorsqu'une base de données secondaire se trouve dans l'état REVERTING ou INITIALIZING, forcer le basculement entraîne l'impossibilité pour la base de données de démarrer en tant que base de données primaire. Si la base de données se trouve dans un état INTIAILIZING, appliquez les enregistrements de journal manquants d'une sauvegarde de base de données ou restaurez entièrement la base de données. Si la base de données se trouvait dans un état REVERTING, vous devez restaurer entièrement la base de données à partir de sauvegardes.  
   
 -   Une commande de basculement est retournée dès que la cible de basculement a accepté la commande. Toutefois, la récupération de la base de données est asynchrone après que le basculement du groupe de disponibilité est terminé.  
   

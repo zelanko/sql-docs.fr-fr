@@ -1,7 +1,7 @@
 ---
-title: Référence de l’application azdata
+title: azdata app reference
 titleSuffix: SQL Server big data clusters
-description: Article de référence pour les commandes de l’application azdata.
+description: Article de référence sur les commandes de l’application azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,31 +10,31 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 793edde26ebebf9e55c5751adbedf662142280de
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426279"
 ---
-# <a name="azdata-app"></a>application azdata
+# <a name="azdata-app"></a>azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L’article suivant fournit des informations de référence sur les commandes de l' **application** dans l’outil **azdata** . Pour plus d’informations sur les autres commandes **azdata** , consultez [référence azdata](reference-azdata.md).
+L’article suivant fournit des références sur les commandes **application** dans l’outil **azdata**. Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[modèle d’application azdata](reference-azdata-app-template.md) | Ceux.
-[initialisation d’application azdata](#azdata-app-init) | Kickstart nouveau squelette d’application.
-[création de l’application azdata](#azdata-app-create) | Créer une application.
-[mise à jour d’application azdata](#azdata-app-update) | Mettre à jour l’application.
-[Liste des applications azdata](#azdata-app-list) | Répertorier les applications.
-[suppression de l’application azdata](#azdata-app-delete) | Supprimer l’application.
-[exécution de l’application azdata](#azdata-app-run) | Exécutez l’application.
-[Description de l’application azdata](#azdata-app-describe) | Décrire l’application.
-## <a name="azdata-app-init"></a>initialisation d’application azdata
-Vous aide à Kickstart de nouveaux fichiers de squelette et/ou de spécifications d’application basés sur les environnements d’exécution.
+[azdata app template](reference-azdata-app-template.md) | Modèles.
+[azdata app init](#azdata-app-init) | Lancez un nouveau squelette d’applications.
+[azdata app create](#azdata-app-create) | Créez une application.
+[azdata app update](#azdata-app-update) | Mettez à jour une application.
+[azdata app list](#azdata-app-list) | Répertoriez une ou des applications.
+[azdata app delete](#azdata-app-delete) | Supprimez une application.
+[azdata app run](#azdata-app-run) | Exécutez une application.
+[azdata app describe](#azdata-app-describe) | Décrivez une application.
+## <a name="azdata-app-init"></a>azdata app init
+Vous aide à lancer un nouveau squelette et/ou des fichiers de spécification d’applications basés sur des environnements runtime.
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
@@ -44,54 +44,54 @@ azdata app init [--spec -s]
                 [--url -u]
 ```
 ### <a name="examples"></a>Exemples
-Structurer une nouvelle `spec.yaml` application uniquement.
+Générer un modèle automatique d’une nouvelle `spec.yaml` d’applications uniquement.
 ```bash
 azdata app init --spec
 ```
-Structurez une nouvelle structure d’application R basée `r` sur le modèle.
+Générer un modèle automatique d’un nouveau squelette d’applications R basé sur le modèle `r`.
 ```bash
 azdata app init --name reduce --template r
 ```
-Structurez une nouvelle structure d’application python basée `python` sur le modèle.
+Générer un modèle automatique d’un nouveau squelette d’applications Python basé sur le modèle `python`.
 ```bash
 azdata app init --name reduce --template python
 ```
-Structurez un nouveau squelette d’application SSIS basé `ssis` sur le modèle.
+Générer un modèle automatique d’un nouveau squelette d’applications SSIS basé sur le modèle `ssis`.
 ```bash
 azdata app init --name reduce --template ssis            
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--spec -s`
-Générez simplement une application spec. YAML.
+Générez simplement une application spec.yaml.
 #### `--name -n`
 Nom de l'application.
 #### `--version -v`
-Version de l’application.
+Version de l'application.
 #### `--template -t`
-Nom du modèle. Pour obtenir la liste complète des noms de modèles pris en charge, exécutez`azdata app template list`
+Nom du modèle. Pour obtenir la liste complète des noms de modèles pris en charge, exécuter `azdata app template list`
 #### `--destination -d`
-Où placer le squelette de l’application. Valeur par défaut: répertoire de travail actuel.
+Où placer le squelette d’applications. Par défaut : répertoire de travail actuel.
 #### `--url -u`
-Spécifiez un autre emplacement de dépôt de modèles. Valeurs https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Spécifiez un autre emplacement du référentiel de modèles. Valeur par défaut : https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-app-create"></a>création de l’application azdata
-Créer une application.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-app-create"></a>azdata app create
+Créez une application.
 ```bash
 azdata app create --spec -s 
                   
 ```
 ### <a name="examples"></a>Exemples
-Créez une application à partir d’un répertoire contenant une spécification de déploiement spec. YAML valide.
+Créez une nouvelle application à partir d’un répertoire contenant une spécification de déploiement spec.yaml valide.
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
 ```
@@ -100,23 +100,23 @@ azdata app create --spec /path/to/dir/with/spec/yaml
 Chemin d’accès à un répertoire contenant un fichier de spécification YAML décrivant l’application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-app-update"></a>mise à jour d’application azdata
-Mettre à jour une application.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-app-update"></a>azdata app update
+Mettez à jour une application.
 ```bash
 azdata app update [--spec -s] 
                   [--yes -y]
 ```
 ### <a name="examples"></a>Exemples
-Mettre à jour une application existante à partir d’un répertoire contenant une spécification de déploiement spec. YAML valide.
+Mettez à jour une application existante à partir d’un répertoire contenant une spécification de déploiement spec.yaml valide.
 ```bash
 azdata app update --spec /path/to/dir/with/spec/yaml    
 ```
@@ -124,34 +124,34 @@ azdata app update --spec /path/to/dir/with/spec/yaml
 #### `--spec -s`
 Chemin d’accès à un répertoire contenant un fichier de spécification YAML décrivant l’application.
 #### `--yes -y`
-Ne pas demander de confirmation lors de la mise à jour d’une application à partir du fichier spec. YAML de CWD.
+Ne demandez pas de confirmation lors de la mise à jour d’une application à partir du fichier spec.yalm de CWD.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-app-list"></a>Liste des applications azdata
-Répertorie une ou plusieurs applications.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-app-list"></a>azdata app list
+Répertoriez une ou des applications.
 ```bash
 azdata app list [--name -n] 
                 [--version -v]
 ```
 ### <a name="examples"></a>Exemples
-Répertorie les applications par nom et version.
+Répertoriez les applications par nom et par version.
 ```bash
 azdata app list --name reduce  --version v1
 ```
-Répertorie toutes les versions d’application par nom.
+Répertoriez toutes les versions d’applications par nom.
 ```bash
 azdata app list --name reduce
 ```
-Répertorie toutes les versions d’application par nom.
+Répertoriez toutes les versions d’applications par nom.
 ```bash
 azdata app list
 ```
@@ -159,26 +159,26 @@ azdata app list
 #### `--name -n`
 Nom de l'application.
 #### `--version -v`
-Version de l’application.
+Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-app-delete"></a>suppression de l’application azdata
-Supprimer une application.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-app-delete"></a>azdata app delete
+Supprimez une application.
 ```bash
 azdata app delete --name -n 
                   --version -v
 ```
 ### <a name="examples"></a>Exemples
-Supprimer l’application par nom et par version.
+Supprimez les applications par nom et par version.
 ```bash
 azdata app delete --name reduce --version v1    
 ```
@@ -186,20 +186,20 @@ azdata app delete --name reduce --version v1
 #### `--name -n`
 Nom de l'application.
 #### `--version -v`
-Version de l’application.
+Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-app-run"></a>exécution de l’application azdata
-Exécuter une application.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-app-run"></a>azdata app run
+Exécutez une application.
 ```bash
 azdata app run --name -n 
                --version -v  
@@ -222,23 +222,23 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 #### `--name -n`
 Nom de l'application.
 #### `--version -v`
-Version de l’application.
+Version de l'application.
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--inputs`
-Paramètres d’entrée de l’application `name=value` au format CSV.
+Paramètres d’entrée de l’application au format CSV `name=value`.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-app-describe"></a>Description de l’application azdata
-Décrire une application.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-app-describe"></a>azdata app describe
+Décrivez une application.
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
@@ -255,19 +255,19 @@ Chemin d’accès à un répertoire contenant un fichier de spécification YAML 
 #### `--name -n`
 Nom de l'application.
 #### `--version -v`
-Version de l’application.
+Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata** , consultez [référence azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour gérer les clusters SQL Server 2019 Big Data](deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

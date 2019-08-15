@@ -1,7 +1,7 @@
 ---
-title: Référence de session azdata BDC Spark
+title: azdata bdc spark session reference
 titleSuffix: SQL Server big data clusters
-description: Article de référence pour les commandes de session azdata BDC Spark.
+description: Article de référence sur les commandes de la session azdata bdc spark.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,29 +10,29 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 20b7ac3dcf72482e80278ce0f0df922026232a6d
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426099"
 ---
-# <a name="azdata-bdc-spark-session"></a>session azdata BDC Spark
+# <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-L’article suivant fournit des informations de référence sur les commandes de la **session Spark BDC** dans l’outil **azdata** . Pour plus d’informations sur les autres commandes **azdata** , consultez la [référence azdata](reference-azdata.md)
+L’article suivant fournit des références sur les commandes **session bdc spark** dans l’outil **azdata**. Pour plus d’informations sur les commandes **azdata**, consultez [azdata reference](reference-azdata.md)
 
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[création de la session azdata BDC Spark](#azdata-bdc-spark-session-create) | Créez une nouvelle session Spark.
-[liste de sessions azdata BDC Spark](#azdata-bdc-spark-session-list) | Répertorie toutes les sessions actives dans Spark.
-[informations de session azdata BDC Spark](#azdata-bdc-spark-session-info) | Obtenir des informations sur une session Spark active.
-[Journal de session azdata BDC Spark](#azdata-bdc-spark-session-log) | Obtenir des journaux d’exécution pour une session Spark active.
-[État de session azdata BDC Spark](#azdata-bdc-spark-session-state) | Obtenir l’état d’exécution d’une session Spark active.
-[suppression de la session azdata BDC Spark](#azdata-bdc-spark-session-delete) | Supprimer une session Spark.
-## <a name="azdata-bdc-spark-session-create"></a>création de la session azdata BDC Spark
-Cela crée une nouvelle session Spark interactive. L’appelant doit spécifier le type de session Spark. Cette session se situe au-delà de la durée de vie d’une exécution azdata et doit être supprimée avec’Spark session Delete'
+[azdata bdc spark session create](#azdata-bdc-spark-session-create) | Créez une nouvelle session Spark.
+[azdata bdc spark session list](#azdata-bdc-spark-session-list) | Répertoriez toutes les sessions actives dans Spark.
+[azdata bdc spark session info](#azdata-bdc-spark-session-info) | Obtenir des informations sur une session Spark active.
+[azdata bdc spark session log](#azdata-bdc-spark-session-log) | Obtenir des journaux d’exécution pour une session Spark active.
+[azdata bdc spark session state](#azdata-bdc-spark-session-state) | Obtenir un état d’exécution pour une session Spark active.
+[azdata bdc spark session delete](#azdata-bdc-spark-session-delete) | Supprimer une session Spark.
+## <a name="azdata-bdc-spark-session-create"></a>azdata bdc spark session create
+Cela crée une nouvelle session Spark interactive. L’appelant doit spécifier le type de session Spark. Cette session se situe au-delà de la durée de vie d’une exécution azdata et doit être supprimée avec « supprimer session spark »
 ```bash
 azdata bdc spark session create [--session-kind -k] 
                                 [--jar-files -j]  
@@ -50,73 +50,73 @@ azdata bdc spark session create [--session-kind -k]
                                 [--timeout-seconds -t]
 ```
 ### <a name="examples"></a>Exemples
-Créez une session.
+Créer une session.
 ```bash
 azdata spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--session-kind -k`
-Nom du type de session à créer.  L’une des Spark, pyspark, sparkr ou SQL.
+Nom du type de session à créer.  L’une des spark, pyspark, sparkr ou sql.
 #### `--jar-files -j`
-Liste des chemins d’accès aux fichiers jar.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès aux fichiers jar.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--py-files -p`
-Liste des chemins d’accès de fichier Python.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès de fichier Python.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--files -f`
-Liste des chemins d’accès aux fichiers.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès de fichier.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--driver-memory`
-Quantité de mémoire à allouer au pilote.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512M ou 2G.
+Quantité de mémoire à allouer au pilote.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512 M ou 2 G.
 #### `--driver-cores`
-Quantité de cœurs de processeur à allouer au pilote.
+Quantité de cœurs UC à allouer au pilote.
 #### `--executor-memory`
-Quantité de mémoire à allouer à l’exécuteur.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512M ou 2G.
+Quantité de mémoire à allouer à l’exécuteur.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512 M ou 2 G.
 #### `--executor-cores`
-Quantité de cœurs de processeur à allouer à l’exécuteur.
+Quantité de cœurs UC à allouer à l’exécuteur.
 #### `--executor-count`
-Nombre d’instances de l’exécuteur à exécuter.
+Nombre d'instances de l’exécuteur à exécuter.
 #### `--archives -a`
-Liste des chemins d’archives.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès à l’archive.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--queue -q`
 Nom de la file d’attente Spark dans laquelle exécuter la session.
 #### `--name -n`
 Nom de la session Spark.
 #### `--config -c`
-Liste de paires nom/valeur contenant des valeurs de configuration Spark.  Encodé en tant que dictionnaire JSON.  Exemple: «{» Name»: «value», «nom2»: «value2»}».
+Liste de paires nom/valeur contenant des valeurs de configuration Spark.  Encodé en tant que dictionnaire JSON.  Exemple : « {"name":"value", "name2":"value2"} ».
 #### `--timeout-seconds -t`
 Délai d’inactivité de la session en secondes.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-session-list"></a>liste de sessions azdata BDC Spark
-Répertorie toutes les sessions actives dans Spark.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
+Répertoriez toutes les sessions actives dans Spark.
 ```bash
 azdata bdc spark session list 
 ```
 ### <a name="examples"></a>Exemples
-Répertorie toutes les sessions actives.
+Répertoriez toutes les sessions actives.
 ```bash
 azdata spark session list
 ```
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-session-info"></a>informations de session azdata BDC Spark
-Cela obtient les informations de session pour une session Spark active avec l’ID donné.  L’ID de session est retourné à partir de «Spark session Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
+Cela permet d’obtenir les informations de session pour une session Spark active avec l’ID donné.  L’ID de session est retourné à partir de « création de session spark ».
 ```bash
 azdata bdc spark session info --session-id -i 
                               
@@ -131,23 +131,23 @@ azdata spark session info --session-id 0
 Numéro d’ID de session Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-session-log"></a>Journal de session azdata BDC Spark
-Cela obtient les entrées de journal de session pour une session Spark active avec l’ID donné.  L’ID de session est retourné à partir de «Spark session Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
+Cela permet d’obtenir les entrées de journal de sessions pour une session Spark active avec l’ID donné.  L’ID de session est retourné à partir de « création de session spark ».
 ```bash
 azdata bdc spark session log --session-id -i 
                              
 ```
 ### <a name="examples"></a>Exemples
-Obtient le journal de session pour la session avec l’ID 0.
+Obtenir le journal de sessions pour la session avec l’ID 0.
 ```bash
 azdata spark session log --session-id 0
 ```
@@ -156,17 +156,17 @@ azdata spark session log --session-id 0
 Numéro d’ID de session Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-session-state"></a>État de session azdata BDC Spark
-Cela obtient l’état de session pour une session Spark active avec l’ID donné.  L’ID de session est retourné à partir de «Spark session Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
+Cela permet d’obtenir l’état de session pour une session Spark active avec l’ID donné.  L’ID de session est retourné à partir de « création de session spark ».
 ```bash
 azdata bdc spark session state --session-id -i 
                                
@@ -181,17 +181,17 @@ azdata spark session state --session-id 0
 Numéro d’ID de session Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-session-delete"></a>suppression de la session azdata BDC Spark
-Cela supprime une session Spark interactive. L’ID de session est retourné à partir de «Spark session Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
+Cela supprime une session Spark interactive. L’ID de session est retourné à partir de « création de session spark ».
 ```bash
 azdata bdc spark session delete --session-id -i 
                                 
@@ -206,16 +206,16 @@ azdata spark session delete --session-id 0
 Numéro d’ID de session Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata** , consultez [référence azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour gérer les clusters SQL Server 2019 Big Data](deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

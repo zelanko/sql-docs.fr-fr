@@ -1,7 +1,7 @@
 ---
-title: Référence du lot azdata BDC Spark
+title: azdata bdc spark batch reference
 titleSuffix: SQL Server big data clusters
-description: Article de référence pour les commandes de traitement par lots azdata BDC Spark.
+description: Article de référence sur les commandes azdata bdc spark batch.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,30 +9,30 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6e242b26f439b49dbf0b3cf5ab50ea46c273f45f
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 14703def008b681f9e9c93dc2feaa9b8fd316f17
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68426159"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810991"
 ---
-# <a name="azdata-bdc-spark-batch"></a>lot azdata BDC Spark
+# <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L’article suivant fournit des informations de référence sur les commandes de **traitement par lots de BDC** dans l’outil **azdata** . Pour plus d’informations sur les autres commandes **azdata** , consultez la [référence azdata](reference-azdata.md)
+L’article suivant fournit des références sur les commandes **bdc spark batch** dans l’outil **azdata**. Pour plus d’informations sur les commandes **azdata**, consultez [azdata reference](reference-azdata.md)
 
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[création d’un lot azdata BDC Spark](#azdata-bdc-spark-batch-create) | Créez un lot Spark.
-[Liste des lots azdata BDC Spark](#azdata-bdc-spark-batch-list) | Répertorie tous les lots dans Spark.
-[informations sur le lot azdata BDC Spark](#azdata-bdc-spark-batch-info) | Obtenir des informations sur un lot Spark actif.
-[Journal des lots azdata BDC Spark](#azdata-bdc-spark-batch-log) | Obtenir des journaux d’exécution pour un lot Spark.
-[État du lot azdata BDC Spark](#azdata-bdc-spark-batch-state) | Obtenir l’état d’exécution d’un lot Spark.
-[suppression d’un lot azdata BDC Spark](#azdata-bdc-spark-batch-delete) | Suppression d’un lot Spark.
-## <a name="azdata-bdc-spark-batch-create"></a>création d’un lot azdata BDC Spark
-Cela crée un nouveau travail Spark batch qui exécute le code fourni.
+[azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Créez un nouveau lot Spark.
+[azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | Répertoriez tous les lots dans Spark.
+[azdata bdc spark batch info](#azdata-bdc-spark-batch-info) | Obtenez des informations sur un lot Spark actif.
+[azdata bdc spark batch log](#azdata-bdc-spark-batch-log) | Obtenez des journaux d’exécution pour un lot Spark.
+[azdata bdc spark batch state](#azdata-bdc-spark-batch-state) | Obtenez un état d’exécution pour un lot Spark.
+[azdata bdc spark batch delete](#azdata-bdc-spark-batch-delete) | Supprimez un lot Spark.
+## <a name="azdata-bdc-spark-batch-create"></a>azdata bdc spark batch create
+Cela crée un nouveau lot de tâches Spark qui exécute le code fourni.
 ```bash
 azdata bdc spark batch create --file -f 
                               [--class-name -c]  
@@ -51,175 +51,175 @@ azdata bdc spark batch create --file -f
                               [--config]
 ```
 ### <a name="examples"></a>Exemples
-Créez un lot Spark.
+Créez un nouveau lot Spark.
 ```bash
-azdata spark batch create --code "2+2"
+azdata bdc spark batch create --code "2+2"
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--file -f`
-Chemin d’accès du fichier à exécuter.
+Chemin d’accès au fichier à exécuter.
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--class-name -c`
 Nom de la classe à exécuter lors du passage d’un ou de plusieurs fichiers jar.
 #### `--arguments -a`
-Liste d’arguments.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste d'arguments.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--jar-files -j`
-Liste des chemins d’accès aux fichiers jar.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès aux fichiers jar.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--py-files -p`
-Liste des chemins d’accès de fichier Python.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès de fichier Python.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--files`
-Liste des chemins d’accès aux fichiers.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès de fichier.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--driver-memory`
-Quantité de mémoire à allouer au pilote.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512M ou 2G.
+Quantité de mémoire à allouer au pilote.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512 M ou 2 G.
 #### `--driver-cores`
-Quantité de cœurs de processeur à allouer au pilote.
+Quantité de cœurs UC à allouer au pilote.
 #### `--executor-memory`
-Quantité de mémoire à allouer à l’exécuteur.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512M ou 2G.
+Quantité de mémoire à allouer à l’exécuteur.  Spécifiez les unités dans le cadre de la valeur.  Exemple 512 M ou 2 G.
 #### `--executor-cores`
-Quantité de cœurs de processeur à allouer à l’exécuteur.
+Quantité de cœurs UC à allouer à l’exécuteur.
 #### `--executor-count`
-Nombre d’instances de l’exécuteur à exécuter.
+Nombre d'instances de l’exécuteur à exécuter.
 #### `--archives`
-Liste des chemins d’archives.  Pour transmettre une liste JSON, encodez les valeurs.  Exemple: «["entry1», «Entry2»]».
+Liste des chemins d’accès à l’archive.  Pour transmettre dans une liste JSON, encodez les valeurs.  Exemple : « [« entry1 », « entry2 »] ».
 #### `--queue -q`
 Nom de la file d’attente Spark dans laquelle exécuter la session.
 #### `--name -n`
 Nom de la session Spark.
 #### `--config`
-Liste de paires nom/valeur contenant des valeurs de configuration Spark.  Encodé en tant que dictionnaire JSON.  Exemple: «{» Name»: «value», «nom2»: «value2»}».
+Liste de paires nom/valeur contenant des valeurs de configuration Spark.  Encodé en tant que dictionnaire JSON.  Exemple : « {"name":"value", "name2":"value2"} ».
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-batch-list"></a>Liste des lots azdata BDC Spark
-Répertorie tous les lots dans Spark.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-batch-list"></a>azdata bdc spark batch list
+Répertoriez tous les lots dans Spark.
 ```bash
 azdata bdc spark batch list 
 ```
 ### <a name="examples"></a>Exemples
-Répertorie tous les lots actifs.
+Répertoriez tous les lots actifs.
 ```bash
-azdata spark batch list
+azdata bdc spark batch list
 ```
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-batch-info"></a>informations sur le lot azdata BDC Spark
-Cela obtient les informations pour un lot Spark avec l’ID donné.  L’ID de lot est retourné à partir de «Spark batch Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-batch-info"></a>azdata bdc spark batch info
+Permet d’obtenir les informations pour un lot Spark avec l’ID donné.  L’ID de lot est retourné à partir de « spark batch create ».
 ```bash
 azdata bdc spark batch info --batch-id -i 
                             
 ```
 ### <a name="examples"></a>Exemples
-Obtenir les informations de lot pour le lot avec l’ID 0.
+Obtenez les informations du lot avec l’ID 0.
 ```bash
-azdata spark batch info --batch-id 0
+azdata bdc spark batch info --batch-id 0
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--batch-id -i`
-Numéro d’identification du lot Spark.
+Numéro d’ID du lot Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-batch-log"></a>Journal des lots azdata BDC Spark
-Cela obtient les entrées de journal batch pour un lot Spark avec l’ID donné.  L’ID de lot est retourné à partir de «Spark batch Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-batch-log"></a>azdata bdc spark batch log
+Permet d’obtenir les entrées du journal de lots pour un lot Spark avec l’ID donné.  L’ID de lot est retourné à partir de « spark batch create ».
 ```bash
 azdata bdc spark batch log --batch-id -i 
                            
 ```
 ### <a name="examples"></a>Exemples
-Obtient le journal des lots pour le lot avec l’ID 0.
+Obtenez le journal de lots pour le lot avec l’ID 0.
 ```bash
-azdata spark batch log --batch-id 0
+azdata bdc spark batch log --batch-id 0
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--batch-id -i`
-Numéro d’identification du lot Spark.
+Numéro d’ID du lot Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-batch-state"></a>État du lot azdata BDC Spark
-Cela obtient l’état du lot pour un lot Spark avec l’ID donné.  L’ID de lot est retourné à partir de «Spark batch Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-batch-state"></a>azdata bdc spark batch state
+Permet d’obtenir l’état du lot pour un lot Spark avec l’ID donné.  L’ID de lot est retourné à partir de « spark batch create ».
 ```bash
 azdata bdc spark batch state --batch-id -i 
                              
 ```
 ### <a name="examples"></a>Exemples
-Obtient l’état du lot pour le lot avec l’ID 0.
+Obtenez l’état du lot avec l’ID 0.
 ```bash
-azdata spark batch state --batch-id 0
+azdata bdc spark batch state --batch-id 0
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--batch-id -i`
-Numéro d’identification du lot Spark.
+Numéro d’ID du lot Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="azdata-bdc-spark-batch-delete"></a>suppression d’un lot azdata BDC Spark
-Cela supprime un lot Spark. L’ID de lot est retourné à partir de «Spark batch Create».
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+## <a name="azdata-bdc-spark-batch-delete"></a>azdata bdc spark batch delete
+Cela supprime un lot Spark. L’ID de lot est retourné à partir de « spark batch create ».
 ```bash
 azdata bdc spark batch delete --batch-id -i 
                               
 ```
 ### <a name="examples"></a>Exemples
-Supprimer un lot.
+Supprimez un lot.
 ```bash
-azdata spark batch delete --batch-id 0
+azdata bdc spark batch delete --batch-id 0
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--batch-id -i`
-Numéro d’identification du lot Spark.
+Numéro d’ID du lot Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Affiche ce message d’aide et quitte.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
-Format de sortie.  Valeurs autorisées: JSON, jsonc, table, TSV.  Valeur par défaut: JSON.
+Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour [http://jmespath.org/](http://jmespath.org/]) plus d’informations et d’exemples, consultez.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata** , consultez [référence azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour gérer les clusters SQL Server 2019 Big Data](deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

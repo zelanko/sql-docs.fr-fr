@@ -11,19 +11,19 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065195"
 ---
 # <a name="sql-server-replication-on-linux"></a>Réplication SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit la réplication SQL Server pour les instances de SQL Server sur Linux.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit la réplication SQL Server pour les instances SQL Server sur Linux.
 
-Configurer la réplication sur Linux avec SQL Server Management Studio (SSMS) [procédures stockées de réplication](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+Configurez la réplication sur Linux avec les [procédures stockées de réplication](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md) de SQL Server Management Studio (SSMS).
 
 Une instance de SQL Server peut participer à n’importe quel rôle de réplication :
 
@@ -31,38 +31,38 @@ Une instance de SQL Server peut participer à n’importe quel rôle de réplica
 * Serveur de distribution
 * Abonné
 
-Un schéma de réplication pouvez combiner des plateformes de système d’exploitation. Par exemple, un schéma de réplication peut inclure une instance de SQL Server sur Linux pour le serveur de publication et serveur de distribution et les abonnés incluant des instances de SQL Server sur Windows, ainsi que Linux.
+Un schéma de réplication peut combiner et faire correspondre des plateformes de systèmes d’exploitation. Par exemple, un schéma de réplication peut inclure une instance de SQL Server sur Linux pour le serveur de publication et le serveur de distribution, et les abonnés incluent des instances de SQL Server sur Windows et Linux.
 
 Les instances de SQL Server sur Linux peuvent participer à n’importe quel type de réplication.
 
 * Transactionnelle
 * Fusion
-* Instantané
+* Snapshot
 
-Pour plus d’informations sur la réplication, consultez [documentation de réplication SQL Server](../relational-databases/replication/sql-server-replication.md).
+Pour plus d’informations sur la réplication, consultez la [documentation sur la réplication SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="supported-features"></a>Fonctionnalités prises en charge
 
-Pour [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] les fonctionnalités de réplication suivantes sont prises en charge :
+Pour [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], les fonctionnalités de réplication suivantes sont prises en charge :
 
 * Réplication d'instantané
 * Réplication transactionnelle
 * Réplication de fusion
 * Réplication d’égal à égal
-* Réplication avec des ports non-par défaut <!--Add link to explanation-->
-* Réplication avec l’authentification AD
-* Configurations de réplication entre Windows et Linux
+* Réplication avec des ports autres que les ports par défaut <!--Add link to explanation-->
+* Réplication avec authentification AD
+* Configurations de réplication sur Windows et Linux
 * Mises à jour immédiates pour la réplication transactionnelle
 
-## <a name="limitations"></a>Limites
+## <a name="limitations"></a>Limitations
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] ne prend pas en charge les fonctionnalités suivantes :
 
-* Abonnés de mise à jour immédiate
+* Mise à jour immédiate des abonnés
 * Publication Oracle
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer la réplication de SQL Server sur Linux](sql-server-linux-replication-tutorial-tsql.md)
+[Configurer la réplication SQL Server sur Linux](sql-server-linux-replication-tutorial-tsql.md)
 
-[Exemple : Configurer la réplication de SQL Server sur Linux](sql-server-linux-replication-configure.md)
+[Exemple : Configurer la réplication SQL Server sur Linux](sql-server-linux-replication-configure.md)
