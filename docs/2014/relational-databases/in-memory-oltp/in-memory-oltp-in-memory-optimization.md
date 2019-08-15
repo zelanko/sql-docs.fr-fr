@@ -13,12 +13,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bcd8c20039b048cf717c24981124ffd61cf51f4
-ms.sourcegitcommit: 6f8f975f7f97cd12fa008b05dc8d52cd1e94577f
+ms.openlocfilehash: bc65a8a9c17c7e6a7c37e6f08675f89d1b113c8d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251003"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028651"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67251003"
   
 |||  
 |-|-|  
-|![Machine virtuelle](../../master-data-services/media/azure-virtual-machine.png "Machine virtuelle Azure")|Voulez-vous essayer SQL Server 2016 ? Inscrivez-vous à Microsoft Azure, puis cliquez **[ici](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour mettre en place une machine virtuelle sur laquelle SQL Server 2016 est déjà installé. Vous pouvez supprimer la Machine virtuelle lorsque vous avez terminé.|  
+|![Machine virtuelle Azure](../../master-data-services/media/azure-virtual-machine.png "Machine virtuelle Azure")|Voulez-vous essayer SQL Server 2016 ? Inscrivez-vous à Microsoft Azure, puis cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour mettre en place une machine virtuelle sur laquelle SQL Server 2016 est déjà installé. Vous pouvez supprimer la machine virtuelle une fois que vous avez terminé.|  
   
  Pour utiliser l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], vous définissez une table très sollicitée comme étant optimisée en mémoire. Les tables optimisées en mémoire sont transactionnelles, durables et accessibles via [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la même manière que les tables sur disque. Une requête peut faire référence à des tables optimisées en mémoire et des tables sur disque. Une transaction peut mettre à jour des données dans des tables optimisées en mémoire et des tables sur disque. Les procédures stockées qui font référence uniquement aux tables optimisées en mémoire peuvent être compilées de façon native en code machine pour améliorer les performances. Le moteur de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] est conçu pour prendre en charge des accès concurrentiels très nombreux de transactions de type OLTP qui sont gérés par une couche intermédiaire mise à l'échelle. Pour cela, il utilise des structures de données sans verrou et un contrôle d'accès concurrentiel optimiste et multiversion. Le résultat est une latence prévisible inférieure à une milliseconde et un débit élevé avec une mise à l'échelle linéaire pour les transactions de base de données. Le gain réel au niveau des performances dépend de plusieurs facteurs, mais une amélioration des performances de 5 à 20 fois est souvent obtenue.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67251003"
 |Faible latence.|Transactions d'entreprise à faible latence, ce que les solutions de base de données traditionnelles ne proposent pas.|Supprimer la contention.<br /><br /> Réduire le temps d'exécution du code.<br /><br /> Exécution du code à faible latence.<br /><br /> Récupération efficace des données.|  
 |Gestion de l'état de session.|Insertion, mise à jour et recherches de point fréquentes.<br /><br /> Charge élevée de nombreux serveurs web sans état.|Supprimer la contention.<br /><br /> Récupération efficace des données.<br /><br /> Réduction ou suppression des E/S facultative, lors de l'utilisation de tables non durables|  
   
- Pour plus d’informations sur les scénarios où [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] donnera les meilleurs gains de performances, consultez [In-Memory OLTP - modèles de charge de travail courants et considérations sur la Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Pour plus d’informations sur les [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] scénarios dans lesquels entraînent des gains de performances optimaux, consultez [OLTP en mémoire-modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  L'[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] améliorera davantage les performances dans l'OLTP avec des transactions à exécution courte.  
   
@@ -56,14 +56,14 @@ ms.locfileid: "67251003"
   
 -   Contrôle d'accès concurrentiel optimiste qui élimine les verrous logiques.  
   
--   Des objets sans verrou qui suppriment tous les verrous physiques (internes et externes). Les threads qui exécutent le travail transactionnel n’utilisent pas verrou ou loquet pour le contrôle d’accès concurrentiel.  
+-   Des objets sans verrou qui suppriment tous les verrous physiques (internes et externes). Les threads qui effectuent un travail transactionnel n’utilisent pas de verrous ni de verrous internes pour le contrôle d’accès concurrentiel.  
   
 -   Les procédures stockées compilées nativement, qui ont des performances supérieures aux procédures stockées interprétées, lors de l'accès à une table optimisée en mémoire.  
   
 > [!IMPORTANT]  
 >  Certaines modifications de la syntaxe des tables et des procédures stockées sont nécessaires pour utiliser l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]. Pour plus d’informations, consultez [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md). Avant de migrer une table sur disque vers une table mémoire optimisée, consultez [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour voir les tables et les procédures stockées qui tireront parti d’[!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
   
-## <a name="in-this-section"></a>Contenu de cette section  
+## <a name="in-this-section"></a>Dans cette section  
  Cette section fournit des informations sur les concepts suivants :  
   
 |Rubrique|Description|  
@@ -85,13 +85,13 @@ ms.locfileid: "67251003"
   
  Des informations supplémentaires sur l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] sont disponibles dans :  
   
--   [Microsoft ?? SQL Server ?? Guide du produit 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft? SQL Server?? Guide produit 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
 -   [Blog OLTP en mémoire](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 -   [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Vue d’ensemble SQL Server In-Memory OLTP Internals](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+-   [Présentation des éléments internes de l’OLTP en mémoire SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
     <!--
          (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
          (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)

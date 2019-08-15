@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9444842081456563f411ad618f32b8dbd59f7513
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426439"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028562"
 ---
 # <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>Installer azdata pour gérer les clusters Big Data SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426439"
 
 Cet article explique comment installer l’outil **azdata** pour CTP 3.2 sur Windows ou Linux.
 
-## <a id="prerequisites"></a> Prérequis
+## <a id="prerequisites"></a> Conditions préalables
 
 **azdata** est un utilitaire de ligne de commande écrit en Python qui permet aux administrateurs de clusters de démarrer et de gérer les clusters Big Data via des API REST. Vous devez utiliser au minimum Python version 3.5. Vous devez également disposer de `pip`, qui permet de télécharger et d’installer l’outil **azdata**. Les instructions ci-dessous fournissent des exemples pour Windows et Ubuntu. Pour installer Python sur d’autres plateformes, consultez la [documentation Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 En outre, vous devez également installer et mettre à jour la dernière version du package Python *requests* :
@@ -71,8 +71,8 @@ Sur Linux, vous devez installer Python 3.5, puis mettre à niveau pip. L’exe
 1. Installez les packages Python nécessaires :
 
    ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
+   sudo apt-get update && \
+   sudo apt-get install -y python3 && \
    sudo apt-get install -y python3-pip
    ```
 

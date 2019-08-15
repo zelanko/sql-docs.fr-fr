@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ab0624abf7a0479ac12f1ab51efd00c7e45a82a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893815"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028951"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’instance de l’abonné ou nom de l’écouteur GA si la base de données de l’abonné est un groupe de disponibilité. Subscriber est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’instance de l’abonné ou nom de l’écouteur GA si la base de données de l’abonné se trouve dans un groupe de disponibilité. Subscriber est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis.  

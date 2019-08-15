@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470993"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028592"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster Big Data SQL Server sur Kubernetes
 
@@ -60,7 +60,7 @@ La section [Configuration du stockage](#config-samples) fournit d’autres exemp
 AKS est fourni avec [deux classes de stockage intégrées](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv), **default** et **managed-premium**, et avec un provisionneur dynamique pour celles-ci. Vous pouvez spécifier l’une ou l’autre de ces classes, ou créer votre propre classe de stockage, pour déployer un cluster Big Data avec le stockage persistant activé. Par défaut, le fichier de configuration de cluster intégré pour AKS, *aks-dev-test*, est fourni avec des configurations de stockage persistantes qui utilisent la classe de stockage **default**.
 
 > [!WARNING]
-> Les volumes persistants créés avec les classes de stockage intégrées **default** et **managed-premium** ont une stratégie de récupération *Delete* (Supprimer). Ainsi, au moment où vous supprimez le cluster Big Data SQL Server, les revendications de volumes persistants sont supprimées, puis les volumes persistants le sont à leur tour. Vous pouvez créer des classes de stockage personnalisées en utilisant le provisionneur **azure-disk** avec une stratégie de récupération *Retain* (Conserver), comme expliqué dans [cet](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) article.
+> Les volumes persistants créés avec les classes de stockage intégrées **default** et **managed-premium** ont une stratégie de récupération *Delete* (Supprimer). Ainsi, au moment où vous supprimez le cluster Big Data SQL Server, les revendications de volumes persistants sont supprimées, puis les volumes persistants le sont à leur tour. Vous pouvez créer des classes de stockage personnalisées en utilisant le provisionneur **azure-disk** avec une stratégie de récupération *Retain* (Conserver), comme expliqué dans [cet](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) article.
 
 
 ## <a name="minikube-storage-class"></a>Classe de stockage Minikube

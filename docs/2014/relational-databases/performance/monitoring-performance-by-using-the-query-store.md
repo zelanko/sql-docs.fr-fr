@@ -10,22 +10,22 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150778"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028605"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Analyse des performances à l'aide du magasin de requêtes
   La fonctionnalité de magasin de requêtes fournit aux administrateurs de bases de données des informations sur le choix de plan de requête et les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requêtes peut être configuré à l'aide de l'option [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
   
 ||  
 |-|  
-|**S’applique à** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**S’applique à** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([Téléchargez-le](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Il s'agit actuellement d'une fonctionnalité d'aperçu. Pour utiliser le magasin de requêtes, vous devez reconnaître et accepter que l'implémentation du magasin de requêtes est soumise aux termes de la version d'évaluation dans votre contrat de licence (par exemple, Contrat Entreprise, Contrat Microsoft Azure ou Contrat d'abonnement à Microsoft Online), ainsi qu'à toutes les [Conditions d'Utilisation Supplémentaires relatives aux Évaluations Microsoft Azure](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).  
+>  Il s'agit actuellement d'une fonctionnalité d'aperçu. Pour utiliser le magasin de requêtes, vous devez reconnaître et accepter que l'implémentation du magasin de requêtes est soumise aux termes de la version d'évaluation dans votre contrat de licence (par exemple, Contrat Entreprise, Contrat Microsoft Azure ou Contrat d'abonnement à Microsoft Online), ainsi qu'à toutes les [Conditions d'Utilisation Supplémentaires relatives aux Évaluations Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
   
 ##  <a name="Enabling"></a> Activation du magasin de requêtes  
  Le magasin de requêtes n'est pas actif par défaut pour les nouvelles bases de données.  
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Notez que les valeurs arbitraires ne sont pas autorisés, vous devez utiliser une des opérations suivantes : 1, 5, 10, 15, 30 et 60.  
+ Notez que les valeurs arbitraires ne sont pas autorisées. vous devez utiliser l’un des éléments suivants: 1, 5, 10, 15, 30 et 60.  
   
  La nouvelle valeur de l'intervalle est exposée via l'affichage `sys.database_query_store_options`.  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  L'exemple ci-dessus utilise la procédure stockée étendue `sp_query_store_remove_query` pour supprimer les données inutiles. Vous pouvez également utiliser deux autres procédures.  
   
--   `sp_query_store_reset_exec_stats` -Effacer les statistiques d’exécution pour un plan donné.  
+-   `sp_query_store_reset_exec_stats`-effacer les statistiques d’exécution pour un plan donné.  
   
--   `sp_query_store_remove_plan` -Supprime un plan unique.  
+-   `sp_query_store_remove_plan`-supprime un seul plan.  
   
 
   
 ###  <a name="Peformance"></a> Audit et résolution des problèmes de performances  
  Étant donné que le magasin de requêtes conserve l'historique de compilation et les mesures d'exécution de l'ensemble des exécutions de requête, il permet de répondre facilement aux nombreuses questions que vous pouvez vous poser concernant votre charge de travail.  
   
- **Dernière *n* requêtes exécutées sur la base de données.**  
+ ***N* dernières requêtes exécutées sur la base de données.**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -301,7 +301,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **Nombre d’exécutions de chaque requête.**  
+ **Nombre d’exécutions pour chaque requête.**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **Le nombre de requêtes avec la durée moyenne d’exécution au sein de la dernière heure.**  
+ **Nombre de requêtes avec la durée moyenne d’exécution la plus longue au cours de la dernière heure.**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **Le nombre de requêtes ayant le plus gros e/s physiques moyenne lit dans les dernières 24 heures, avec le correspondantes nombre moyen de lignes et le nombre d’exécutions.**  
+ **Nombre de requêtes ayant la plus grande moyenne de lectures d’e/s physiques au cours des dernières 24 heures, avec le nombre moyen de lignes et le nombre d’exécutions correspondants.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Requêtes ayant récemment régressé en termes de performances (en comparant autre point dans le temps).** L'exemple de requête suivant retourne toutes les requêtes dont le temps d'exécution a doublé au cours des dernières 48 heures suite à un changement de plan. La requête compare tous les intervalles de statistiques d'exécution côte à côte.  
+ **Requêtes ayant récemment régressé les performances (en comparant un point dans le temps différent).** L'exemple de requête suivant retourne toutes les requêtes dont le temps d'exécution a doublé au cours des dernières 48 heures suite à un changement de plan. La requête compare tous les intervalles de statistiques d'exécution côte à côte.  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Si vous souhaitez voir toutes les régressions de performances (pas uniquement celles liées au changement de plan), supprimez simplement la condition `AND p1.plan_id <> p2.plan_id` de la requête précédente.  
   
- **Requêtes ayant récemment régressé en termes de performances (en comparant les exécutions d’historique récentes et).** La requête suivante compare l'exécution des requête en fonction des périodes d'exécution. Dans cet exemple particulier, la requête compare l'exécution lors d'une période récente (1 heure) et l'exécution lors d'une période historique (la veille), puis identifie celles qui ont introduit une charge de travail supplémentaire. Cette mesure est calculée comme suit : différence entre la moyenne des exécutions récentes et la moyenne des exécutions historiques, multipliée par le nombre d'exécutions récentes. Elle représente en fait la durée supplémentaire introduite dans les exécutions récentes en comparaison avec les exécutions historiques :  
+ **Les requêtes qui ont récemment régressé les performances (en comparant les exécutions récentes et historiques).** La requête suivante compare l'exécution des requête en fonction des périodes d'exécution. Dans cet exemple particulier, la requête compare l'exécution lors d'une période récente (1 heure) et l'exécution lors d'une période historique (la veille), puis identifie celles qui ont introduit une charge de travail supplémentaire. Cette mesure est calculée comme suit : différence entre la moyenne des exécutions récentes et la moyenne des exécutions historiques, multipliée par le nombre d'exécutions récentes. Elle représente en fait la durée supplémentaire introduite dans les exécutions récentes en comparaison avec les exécutions historiques :  
   
 ```  
 --- "Recent" workload - last 1 hour  

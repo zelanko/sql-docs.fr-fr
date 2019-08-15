@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: bb0c5b9f0b7c23e71c111fb6c0870e1c1d227f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12b27004c7b2f3fc3e635205bcc629ff33661d1b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215958"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69029786"
 ---
-Serveur de publication et serveur de distribution des bases de données sur la base de données SQL Azure nécessitent [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) pour plus d’informations, consultez [réplication avec Azure SQL Database](http://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database).
+Les bases de données de serveur de publication et de serveur de distribution sur Azure SQL Database requièrent [Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) pour plus d’informations, consultez [réplication avec Azure SQL Database](https://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database).

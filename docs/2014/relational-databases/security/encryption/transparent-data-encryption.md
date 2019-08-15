@@ -18,14 +18,14 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4581d91b9f57b48f22e66dc15ff03e6f7320d7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188041"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028542"
 ---
-# <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
+# <a name="transparent-data-encryption-tde"></a>Chiffrement transparent des données (TDE)
   Le*chiffrement transparent des données* (TDE) chiffre les fichiers de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (processus appelé chiffrement des données au repos). Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, dans un scénario où le support physique (tel que des lecteurs ou des bandes de sauvegarde) est dérobé, une personne malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
   
  Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données MASTER du serveur ou une clé asymétrique protégée par un module EKM. Le chiffrement transparent des données protège les données « au repos », autrement dit les fichiers de données et les fichiers journaux. Il permet de se conformer à de nombreuses lois, règles et instructions établies dans différents secteurs professionnels. Cela permet aux développeurs de logiciels de chiffrer des données à l'aide des algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
@@ -44,9 +44,9 @@ ms.locfileid: "63188041"
   
  **Informations applicables à [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Quand vous utilisez le chiffrement transparent des données avec [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([version préliminaire dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) le certificat de niveau serveur stocké dans la base de données master est automatiquement créé pour vous par la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Pour déplacer une base de données avec chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] vous devez déchiffrer la base de données, la déplacer, puis réactiver le chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]de destination. Pour obtenir des instructions pas à pas pour le chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consultez [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
+ Quand vous utilisez le chiffrement transparent des données avec [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([version préliminaire dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) le certificat de niveau serveur stocké dans la base de données master est automatiquement créé pour vous par la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Pour déplacer une base de données avec chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] vous devez déchiffrer la base de données, la déplacer, puis réactiver le chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]de destination. Pour obtenir des instructions pas à pas pour le chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consultez [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
   
- L'aperçu de l'état du chiffrement transparent des données s'applique même au sous-ensemble des régions géographiques où la famille de versions V12 de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] est annoncée comme ayant l'état de disponibilité générale. Le chiffrement transparent des données (TDE) pour [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] n'est pas destiné à être utilisé dans les bases de données de production tant que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n'annonce pas qu'il est promu de l'aperçu à l'état de disponibilité générale. Pour plus d'informations sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, consultez [Nouveautés de la base de données SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ L'aperçu de l'état du chiffrement transparent des données s'applique même au sous-ensemble des régions géographiques où la famille de versions V12 de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] est annoncée comme ayant l'état de disponibilité générale. Le chiffrement transparent des données (TDE) pour [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] n'est pas destiné à être utilisé dans les bases de données de production tant que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n'annonce pas qu'il est promu de l'aperçu à l'état de disponibilité générale. Pour plus d'informations sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, consultez [Nouveautés de la base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
  **Informations applicables à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -230,9 +230,9 @@ GO
  Le chiffrement transparent des données (TDE) peut être activé sur une base de données contenant des objets de l'OLTP en mémoire. Les enregistrements de journal de l'OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé. Les données dans un groupe de fichiers MEMORY_OPTIMIZED_DATA ne sont pas chiffrées si le TDE est activé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déplacer qu'une chiffrement transparent des données protégées vers un autre serveur SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
- [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible](enable-tde-on-sql-server-using-ekm.md)   
- [Chiffrement transparent des données avec la base de données SQL Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [Déplacer une base de données protégée par TDE vers une autre SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Activer TDE à l’aide de EKM](enable-tde-on-sql-server-using-ekm.md)   
+ [Transparent Data Encryption avec Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [Chiffrement SQL Server](sql-server-encryption.md)   
  [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
