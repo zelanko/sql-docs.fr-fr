@@ -1,19 +1,19 @@
 ---
 ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215628"
 ---
-3. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
+3. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
    sudo firewall-cmd --reload
    ```
 
-   > Si le pare-feu n’a pas une configuration de haute disponibilité intégrée, ouvrez les ports suivants pour Pacemaker.
+   > Si le pare-feu n’a pas de configuration de haute disponibilité intégrée, ouvrez les ports suivants pour Pacemaker.
    >
    > * TCP : Ports 2224, 3121, 21064
    > * UDP : Port 5405

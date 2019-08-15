@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215635"
 ---
 ## <a name="connect-locally"></a>Se connecter localement
@@ -52,7 +52,7 @@ La procédure suivante crée une base de données nommée `TestDB`.
    ```
 
 > [!TIP]
-> Pour en savoir plus sur l’écriture d’instructions Transact-SQL et les requêtes, consultez [didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Pour en savoir plus sur l’écriture de requêtes et d’instructions Transact-SQL, consultez [Didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Insérer des données
 
@@ -106,20 +106,20 @@ Pour mettre fin à votre session **sqlcmd**, tapez `QUIT` :
 QUIT
 ```
 
-## <a name="performance-best-practices"></a>Meilleures pratiques de performances
+## <a name="performance-best-practices"></a>Meilleures pratiques relatives aux performances
 
-Après avoir installé SQL Server sur Linux, passez en revue les meilleures pratiques pour la configuration Linux et SQL Server pour améliorer les performances pour les scénarios de production. Pour plus d’informations, consultez les [Bonnes pratiques en matière de performances et instructions de configuration de SQL Server sur Linux](../linux/sql-server-linux-performance-best-practices.md).
+Après avoir installé SQL Server sur Linux, consultez les meilleures pratiques pour la configuration de Linux et SQL Server pour améliorer les performances des scénarios de production. Pour plus d'informations, consultez [Meilleures pratiques relatives aux performances et lignes directrices de configuration pour SQL Server sur Linux](../linux/sql-server-linux-performance-best-practices.md).
 
-## <a name="cross-platform-data-tools"></a>Outils de données entre les plates-formes
+## <a name="cross-platform-data-tools"></a>Outils de données multiplateforme
 
 En plus de **sqlcmd**, vous pouvez utiliser les outils multiplateformes suivants pour gérer SQL Server :
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | Un utilitaire de gestion de base de données de l’interface graphique utilisateur inter-plateformes. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un éditeur de code de l’interface graphique utilisateur interplateforme qui exécutent des instructions Transact-SQL avec l’extension mssql. |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Un outil automation et la configuration multiplateforme basé sur les applets de commande. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Une interface de ligne de commande interplateforme pour l’exécution des commandes Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Un utilitaire de gestion de base de données GUI multiplateforme. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Éditeur de code GUI multiplateforme qui exécute des instructions Transact-SQL avec l’extension mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Outil d’automatisation et de configuration multiplateforme basé sur de cmdlets. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Une interface de ligne de commande multiplateforme pour l’exécution de commandes Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Connexion à partir de Windows
 
@@ -131,7 +131,7 @@ Pour d’autres outils qui s’exécutent sur Windows, mais se connectent à SQL
 
 - [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
-- [Outils SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
+- [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
 ## <a name="other-deployment-scenarios"></a>Autres scénarios de déploiement
 
@@ -145,7 +145,7 @@ Pour connaître les autres scénarios d’installation, consultez les ressources
 | [Installation hors connexion](../linux/sql-server-linux-setup.md#offline) | Apprenez à télécharger manuellement les packages d’installation hors connexion |
 
 > [!TIP]
-> Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](../linux/sql-server-linux-faq.md).
+> Pour obtenir des réponses aux questions fréquemment posées, consultez la [FAQ de SQL Server sur Linux](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

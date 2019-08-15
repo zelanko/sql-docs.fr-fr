@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116999"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419613"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -167,18 +167,7 @@ Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de ta
 
 L’index columnstore en cluster est la valeur par défaut pour la création de tables dans Azure SQL Data Warehouse.  La spécification ORDER se transforme par défaut en clés COMPOUND.  Le tri sera toujours être en ordre croissant. Si aucune clause ORDER n’est spécifiée, columnstore n’est pas trié. En raison de la procédure d’ordonnancement, une table avec index columnstore en cluster ordonnée peut présenter des durées de chargement des données plus longues que les index columnstore en cluster non ordonnés. Si vous avez besoin de davantage d’espace tempdb lors du chargement des données, vous pouvez réduire la quantité de données par insertion.
 
-Durant la version préliminaire, vous pouvez exécuter cette requête pour vérifier la ou les colonnes avec ORDER activée.
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+Les utilisateurs peuvent interroger la colonne column_store_order_ordinal dans sys. index_columns pour la ou les colonnes dans lesquelles une table est ordonnée et la séquence dans le classement.  
 
 ### <a name="DataTypes"></a> Type de données
 

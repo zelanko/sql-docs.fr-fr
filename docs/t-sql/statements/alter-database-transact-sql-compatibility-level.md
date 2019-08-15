@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bfc0e6a64c9895b4b118ec5c6c27a66657b0829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065805"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471159"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 
@@ -76,7 +76,7 @@ Voici les comportements auxquels vous pouvez vous attendre avec [!INCLUDE[ssSQL1
 
 - Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau.
 - Si le niveau de compatibilité d’une base de données utilisateur était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- Les niveaux de compatibilité des bases de données tempdb, model, msdb et Resource databases sont définis sur le niveau de compatibilité actuel après la mise à niveau.
+- Les niveaux de compatibilité des bases de données tempdb, model, msdb et Resource sont définis sur le niveau de compatibilité par défaut d’une version [!INCLUDE[ssDE](../../includes/ssde-md.md)] donnée. 
 - La base de données système master conserve le niveau de compatibilité qu’elle avait avant la mise à niveau.
 
 Utilisez `ALTER DATABASE` pour modifier le niveau de compatibilité de la base de données. Le nouveau paramètre de compatibilité d’une base de données prend effet à partir du moment où une commande `USE <database>` est émise ou qu’un nouveau compte de connexion est traité avec cette base de données définie comme contexte de base de données par défaut.
