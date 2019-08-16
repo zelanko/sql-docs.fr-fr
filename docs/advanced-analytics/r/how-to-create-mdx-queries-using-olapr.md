@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: db9afc06a02825b8db449492d8cec6ee6d67801d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0b98e2bafd53eaabd606d09b3e0b51dd3d53aceb
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715124"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494062"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Comment créer des requêtes MDX dans R à l’aide d’olapr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Le package [olapr](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) prend en charge les requêtes MDX sur les cubes hébergés dans SQL Server Analysis Services. Vous pouvez créer une requête sur un cube existant, explorer des dimensions et d’autres objets de cube, et coller des requêtes MDX existantes pour récupérer des données.
+Le [package](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) olapr prend en charge les requêtes MDX sur les cubes hébergés dans SQL Server Analysis Services. Vous pouvez créer une requête sur un cube existant, explorer des dimensions et d’autres objets de cube, et coller des requêtes MDX existantes pour récupérer des données.
 
 Cet article décrit les deux utilisations principales du package **olapr** :
 
@@ -74,9 +74,9 @@ Les opérations suivantes ne sont pas prises en charge:
 
 Les exemples suivants sont basés sur le mini-Data Warehouse et le projet de cube AdventureWorks, car ce projet est largement disponible, dans plusieurs versions, y compris les fichiers de sauvegarde qui peuvent être facilement restaurés sur Analysis Services. Si vous ne disposez pas d’un cube existant, récupérez un exemple de cube à l’aide de l’une des options suivantes:
 
-+ Créez le cube utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu’à la leçon 4: [Création d’un cube OLAP](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
++ Créez le cube utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu’à la leçon 4: [Création d’un cube OLAP](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ Téléchargez un cube existant en tant que sauvegarde, puis restaurez-le dans une instance de Analysis Services. Par exemple, ce site fournit un cube entièrement traité au format zippé: [Modèle multidimensionnel Adventure Works SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier, puis restaurez-le dans votre instance SSAS. Pour plus d’informations, consultez [Backup and Restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), ou l’applet de commande Restore [-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
++ Téléchargez un cube existant en tant que sauvegarde, puis restaurez-le dans une instance de Analysis Services. Par exemple, ce site fournit un cube entièrement traité au format zippé: [Modèle multidimensionnel Adventure Works SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier, puis restaurez-le dans votre instance SSAS. Pour plus d’informations, consultez [Backup and Restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases), ou l’applet de commande Restore [-ASDatabase](/powershell/module/sqlserver/restore-asdatabase).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. MDX de base avec segment
 
