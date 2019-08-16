@@ -138,7 +138,7 @@ ms.locfileid: "68941082"
   
     -   ins_cmd: spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où _**article_name**_ est la valeur spécifiée pour  **\@article**.  **\@**  
   
-    -   **\@del_cmd** : spécifiez la valeur <strong>CALL sp_MSdel_*nom_article ** ou ** XCALL sp_MSdel_</strong>nom_article***,où <strong>nom_article*est la valeur spécifiée pour*</strong>article _.  
+    -   **\@**  **del_cmd:spécifiezlavaleurCallsp_Msdel_article_nameouXCALLsp_Msdel_article_name,oùarticle_nameestlavaleur\@** spécifiée pour article.  
   
     -   upd_cmd: spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong> , <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_Msupd_ *article_name*</strong>, MCALL sp_Msupd_ article_name **\@** , où _**article_name**_ est la valeur spécifiée pour **\@l’article**.  
   
