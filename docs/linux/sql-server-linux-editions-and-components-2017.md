@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 5955406abee1c7557a920d45d1280c7ab23199d1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077298"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811186"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017 sur Linux
 
@@ -49,10 +49,10 @@ Pour obtenir la liste des fonctionnalités de SQL Server qui ne sont pas disponi
     
 [Télécharger SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  Le tableau ci-dessous décrit les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
-|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Définition|  
+|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Définition|  
 |---------------------------------------|----------------|  
 |Enterprise|Offre Premium, l’édition [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise fournit des fonctionnalités de centre de données haut de gamme complètes, avec des performances ultrarapides qui autorisent des niveaux de service élevés pour les charges de travail critiques.|  
 |Standard|L’édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard permet la gestion des données de base destinée aux services des grandes entreprises comme aux PME, leur permettant d’exécuter les applications et prenant en charge des outils de développement communs locaux et dans le cloud, pour une gestion efficace des bases de données avec des ressources informatiques minimales.|  
