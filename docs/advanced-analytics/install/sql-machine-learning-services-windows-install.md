@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715227"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531052"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installer SQL Server Machine Learning Services sur Windows
 
@@ -244,6 +244,10 @@ Au niveau de l’instance, une configuration supplémentaire peut inclure:
 * [Créer une connexion pour SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [Gérer les quotas de disque](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) pour éviter les scripts externes exécutant des tâches qui épuisent l’espace disque
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Dans SQL Server 2019 sur Windows, le mécanisme d’isolation a changé. Cela affecte les **SQLRUserGroup**, les règles de pare-feu, l’autorisation de fichier et l’authentification implicite. Pour plus d’informations, consultez [modifications de l’isolation pour machine learning services](sql-server-machine-learning-services-2019.md).
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ Sur la base de données, vous pouvez avoir besoin des mises à jour de configura
 
 Maintenant que tout fonctionne, vous souhaiterez peut-être également optimiser le serveur pour prendre en charge Machine Learning ou installer des modèles préformés.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>Ajouter d’autres comptes de travail
 
 Si vous prévoyez que de nombreux utilisateurs exécutent des scripts simultanément, vous pouvez augmenter le nombre de comptes de travail affectés au service launchpad. Pour plus d’informations, consultez [modifier le pool de comptes d’utilisateurs pour SQL Server machine learning services](../administration/modify-user-account-pool.md).
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>Optimiser le serveur pour l’exécution du script
 
@@ -286,14 +292,14 @@ Pour installer et gérer des packages R, vous pouvez configurer des groupes d’
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les développeurs r peuvent commencer par des exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants:
+Les développeurs peuvent démarrer avec quelques exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants :
 
 + [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutoriel : Analyse en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Analytique dans la base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Les développeurs python peuvent apprendre à utiliser Python avec SQL Server en suivant les didacticiels suivants:
+Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en effectuant les didacticiels suivants :
 
-+ [Tutoriel : Exécuter python dans T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutoriel : Analytique en base de données pour les développeurs python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutoriel : Exécuter Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Analytique dans la base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Pour consulter des exemples de Machine Learning basés sur des scénarios réels, consultez didacticiels [machine learning](../tutorials/machine-learning-services-tutorials.md).
+Pour consulter des exemples d’apprentissage automatique basés sur des scénarios réels, consultez les [Didacticiels d’apprentissage automatique](../tutorials/machine-learning-services-tutorials.md).

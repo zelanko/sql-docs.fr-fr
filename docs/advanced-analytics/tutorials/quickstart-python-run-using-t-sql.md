@@ -1,24 +1,24 @@
 ---
-title: Démarrage rapide pour une exécution de code «Hello World» de base python dans T-SQL
-description: Démarrage rapide pour le script Python dans SQL Server. Découvrez les principes fondamentaux de l’appel de script Python à l’aide de la procédure stockée système sp_execute_external_script dans un exercice Hello World.
+title: 'Démarrage rapide : Python «Hello World»'
+description: Dans ce guide de démarrage rapide, vous allez apprendre les concepts clés en exécutant un script Python «Hello World» sur SQL Server Machine Learning Services. Vous allez utiliser la procédure stockée système T-SQL sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714822"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530968"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Démarrage rapide : Script Python «Hello World» dans SQL Server 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>Démarrage rapide : Exécutez un script Python «Hello World» sur SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce guide de démarrage rapide, vous allez apprendre les concepts clés en exécutant un «Hello World» de script Python inT-SQL, avec une introduction à la procédure stockée système **sp_execute_external_script** . 
+Dans ce guide de démarrage rapide, vous allez apprendre les concepts clés en exécutant un script Python «Hello World» sur SQL Server Machine Learning Services. Vous allez utiliser la procédure stockée système T-SQL **sp_execute_external_script** .
 
 ## <a name="prerequisites"></a>Prérequis
 

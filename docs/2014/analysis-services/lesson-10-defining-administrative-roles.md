@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493965"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530873"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Leçon 10 : Définition des rôles administratifs
   Dans cette leçon, vous allez apprendre à définir des rôles de sécurité pour les tâches d'administration.  
@@ -29,7 +29,7 @@ ms.locfileid: "69493965"
  Dans cette tâche, vous définissez un rôle de sécurité qui a les autorisations nécessaires pour traiter la base de données de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis vous testez ce rôle de sécurité.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénario du didacticiel Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   
  [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

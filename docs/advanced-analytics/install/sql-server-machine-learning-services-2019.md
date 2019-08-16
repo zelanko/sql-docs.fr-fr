@@ -1,22 +1,28 @@
 ---
-title: Différences dans SQL Server 2019
-description: Découvrez les nouveautés de R et Python SQL Server les extensions Machine Learning dans la version préliminaire SQL Server 2019.
+title: Modifications de l’isolation pour Windows
+description: Cet article décrit les modifications apportées au mécanisme d’isolation dans Machine Learning Services dans SQL Server 2019 sur Windows. Ces modifications affectent les SQLRUserGroup, les règles de pare-feu, l’autorisation de fichier et l’authentification implicite.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 218ae9bd0685370f38942592fd32da75272fbcac
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470311"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531038"
 ---
-# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Différences dans SQL Server installation Machine Learning Services dans SQL Server 2019  
+# <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>SQL Server 2019 sur Windows: Modifications de l’isolation pour Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Cet article décrit les modifications apportées au mécanisme d’isolation dans Machine Learning Services dans SQL Server 2019 sur Windows. Ces modifications affectent les **SQLRUserGroup**, les règles de pare-feu, l’autorisation de fichier et l’authentification implicite.
+
+Pour plus d’informations, consultez Comment installer [SQL Server machine learning services sur Windows](sql-machine-learning-services-windows-install.md).
+
+## <a name="changes-to-isolation-mechanism"></a>Modifications apportées au mécanisme d’isolation
 
 Sur Windows, le programme d’installation de SQL Server 2019 modifie le mécanisme d’isolation pour les processus externes. Cette modification remplace les comptes de travail locaux par [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), une technologie d’isolation pour les applications clientes s’exécutant sur Windows. 
 
@@ -63,5 +69,4 @@ Un lien symbolique est créé vers le **R_SERVICES** et le **PYTHON_SERVICES** p
 ## <a name="see-also"></a>Voir aussi
 
 + [Installer SQL Server Machine Learning Services sur Windows](sql-machine-learning-services-windows-install.md)
-
-+ [Installer SQL Server 2019 Machine Learning Services sur Linux](../../linux/sql-server-linux-setup-machine-learning.md)
++ [Installer SQL Server Machine Learning Services sur Linux](../../linux/sql-server-linux-setup-machine-learning.md)

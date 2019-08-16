@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072818"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530940"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
   Le traitement est une opération selon laquelle Analysis Services interroge les données provenant d'une source de données relationnelle et remplit des objets Analysis Services à l'aide de ces données.  
@@ -46,7 +46,7 @@ ms.locfileid: "66072818"
  Le traitement est une opération hautement configurable, contrôlée par un ensemble d'options de traitement qui déterminent si un traitement complet ou incrémentiel se produit au niveau de l'objet. Pour plus d’informations sur les options de traitement et sur le traitement des objets, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) et [Traitement des objets Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  Cette rubrique décrit les outils et approches pour traiter des modèles multidimensionnels. Pour plus d’informations sur le traitement des modèles tabulaires, consultez [processus de base de données, la Table ou Partition](../tabular-models/process-database-table-or-partition-analysis-services.md) et [traiter les données &#40;tabulaire SSAS&#41;](../process-data-ssas-tabular.md).  
+>  Cette rubrique décrit les outils et approches pour traiter des modèles multidimensionnels. Pour plus d’informations sur le traitement des modèles tabulaires, consultez [traiter la base de données, table ou partition](../tabular-models/process-database-table-or-partition-analysis-services.md) et [traiter les données &#40;sous forme tabulaire&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Objets de traitement dans SQL Server Management Studio  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072818"
   
 1.  À partir de cette version de SQL Server, vous pouvez utiliser les applets de commande Analysis Services PowerShell pour traiter les objets. Les applets de commande suivants peuvent être exécutées de façon interactive ou dans un script :  
   
-    -   [Invoke-ProcessCube, applet de commande](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube, applet de commande](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension, applet de commande](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension, applet de commande](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition, applet de commande](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition, applet de commande](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Applet de commande Invoke-ASCmd](/sql/analysis-services/powershell/invoke-ascmd-cmdlet), qui peut être utilisée pour exécuter un script XMLA, MDX ou DMX qui inclut les commandes de traitement.  
+    -   [Applet de commande Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), qui peut être utilisée pour exécuter un script XMLA, MDX ou DMX qui inclut les commandes de traitement.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Surveillance du traitement des objets à l'aide de SQL Server Profiler  
   
@@ -157,6 +157,6 @@ ms.locfileid: "66072818"
 3.  Modifiez la tâche pour spécifier une connexion à la base de données, les objets à traiter et l'option de traitement. Pour plus d'informations sur la manière d'implémenter cette tâche, consultez [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)  
+ [Traitement d’objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)  
   
   

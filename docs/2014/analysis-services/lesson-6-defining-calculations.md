@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493844"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530837"
 ---
 # <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition des calculs
   Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions ou des scripts MDX (Multidimensional Expressions). Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
@@ -55,8 +55,8 @@ ms.locfileid: "69493844"
  [Leçon 7 : Définition des indicateurs de &#40;performance clés KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénario du didacticiel Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [Didacticiel sur la modélisation &#40;multidimensionnelle Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   
+ [Didacticiel sur la modélisation &#40;multidimensionnelle Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Créer des jeux nommés](multidimensional-models/create-named-sets.md)   
  [Créer des membres calculés](multidimensional-models/create-calculated-members.md)  
   
