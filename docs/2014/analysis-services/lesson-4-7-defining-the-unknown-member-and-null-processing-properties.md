@@ -10,12 +10,12 @@ ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57a5e09329a992f54287c22cb50a5c9f162c89db
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888341"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493921"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Définition du membre inconnu et des propriétés de traitement Null
   Lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] traite une dimension, toutes les valeurs distinctes des colonnes sous-jacentes dans les tables ou les vues de la vue de source de données remplissent les attributs de la dimension. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur Null au cours du traitement, par défaut, elle convertit celle-ci en zéro pour des colonnes numériques ou en une chaîne vide pour des colonnes de type chaîne. Vous pouvez modifier les paramètres par défaut ou convertir les valeurs Null dans votre processus d’extraction, de transformation et de chargement (le cas échéant) de l’entrepôt de données relationnelles sous-jacent. Par ailleurs, vous pouvez faire en sorte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convertisse la valeur Null en une valeur désignée en configurant trois propriétés : les propriétés **UnknownMember** et **UnknownMemberName** pour la dimension, et la propriété **NullProcessing** pour l’attribut de clé de la dimension.  
@@ -178,6 +178,6 @@ ms.locfileid: "68888341"
      ![Niveau de nom de produit avec les composants] d’assembly (../../2014/tutorials/media/l4-assemblycomponents-1.gif "Niveau de nom de produit avec les composants") d’assembly  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](https://docs.microsoft.com/analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups)  
+ [Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

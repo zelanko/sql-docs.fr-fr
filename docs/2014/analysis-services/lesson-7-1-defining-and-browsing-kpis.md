@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888087"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493791"
 ---
 # <a name="defining-and-browsing-kpis"></a>Définition et exploration d'indicateurs de performance clés
   Pour définir un indicateur de performance clé (PKI, Key Performance Indicator), vous définissez d'abord son nom et le groupe de mesures auquel il est associé. Un indicateur de performance clé peut être associé à tous les groupes de mesures ou à un seul groupe de mesures. Vous définissez ensuite les éléments suivants de l'indicateur de performance clé :  
@@ -268,6 +268,6 @@ ms.locfileid: "68888087"
      La marge brute de la vente de vélos par les revendeurs en Amérique du Nord pour le troisième trimestre de l'année fiscale 2007 s'affiche.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 8 : Définition des actions](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [Leçon 8 : Définition des actions](lesson-8-defining-actions.md)  
   
   

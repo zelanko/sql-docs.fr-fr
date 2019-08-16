@@ -10,12 +10,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d6e375c2f2931890228d0accc45b167cda609e53
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888162"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493876"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Définition d’une relation plusieurs-à-plusieurs
   Lorsque vous définissez une dimension, chaque fait est joint généralement à un et un seul membre de dimension, tandis qu'un même membre de dimension peut être associé à plusieurs faits différents. Par exemple, chaque client peut avoir plusieurs commandes mais chaque commande se rapporte à un seul client. Dans la terminologie des bases de données relationnelles, on parle de *relation un-à-plusieurs*. Cependant, un seul fait peut parfois être joint à plusieurs membres de dimension. Dans la terminologie des bases de données relationnelles, on parle de *relation plusieurs-à-plusieurs*. Par exemple, l'achat d'un client peut être motivé par plusieurs raisons et un même motif d'achat peut être associé à plusieurs achats. Une table de jointure sert à définir les motifs de vente relatifs à chaque achat. Une dimension Sales Reason créée à partir de relations de ce type aura par conséquent plusieurs membres associés à une seule transaction de vente. Les dimensions plusieurs-à-plusieurs étendent le modèle dimensionnel au-delà du schéma en étoile classique et prend en charge les analyses complexes lorsque les dimensions ne sont pas reliées directement à une table de faits.  
@@ -170,7 +170,7 @@ ms.locfileid: "68888162"
      ![Volets filtre et données du concepteur de cube](../../2014/tutorials/media/l5-many-to-many-5.gif "Volets filtre et données du concepteur de cube")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition de la granularité des dimensions dans un groupe de mesures](https://docs.microsoft.com/analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group)  
+ [Définition de la granularité des dimensions dans un groupe de mesures](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   

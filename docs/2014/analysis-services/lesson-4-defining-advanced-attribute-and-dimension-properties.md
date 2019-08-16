@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888257"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493994"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Leçon 4 : Définition des propriétés d’attribut et de dimension avancées
   Au cours de cette leçon, vous allez apprendre à utiliser certaines propriétés avancées des attributs, hiérarchies d'attributs et propriétés de dimensions.  
@@ -34,7 +34,7 @@ ms.locfileid: "68888257"
  [Regroupement automatique des membres d’attribut](lesson-4-3-automatically-grouping-attribute-members.md)  
  Au cours de cette tâche, vous allez créer automatiquement des groupements de membres d'attributs en fonction de la distribution des membres dans la hiérarchie d'attributs. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Masquage et désactivation des hiérarchies d’attributs](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [Masquage et désactivation des hiérarchies d’attributs](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  Au cours de cette tâche, vous allez apprendre à désactiver ou à masquer les hiérarchies d'attributs et à quel moment le faire.  
   
  [Tri des membres d'attribut sur la base d'un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

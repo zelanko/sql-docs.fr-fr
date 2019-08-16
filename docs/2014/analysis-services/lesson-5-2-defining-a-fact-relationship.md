@@ -10,12 +10,12 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888235"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493866"
 ---
 # <a name="defining-a-fact-relationship"></a>Définition d'une relation de faits
   Les utilisateurs souhaitent parfois pouvoir dimensionner des mesures par élément de données se trouvant dans la table de faits ou exécuter des requêtes sur la table de faits pour obtenir des informations spécifiques connexes supplémentaires, telles que des numéros de factures ou de bons de commande associés à des ventes spécifiques. Quand vous définissez une dimension basée sur un élément de table de faits de ce type, la dimension est appelée *dimension de fait*. Les dimensions de fait sont aussi appelées dimensions dégénérées. Les dimensions de fait servent à regrouper des lignes connexes de la table de faits, par exemple toutes les lignes concernant un numéro de facture particulier. Bien qu'il soit possible de stocker cette information dans une table de dimensions distincte dans la base de données relationnelles, la création d'une table de dimensions distincte pour cette information n'offre aucun avantage, car la table de dimensions augmente à la même vitesse que la table de faits et le seul résultat obtenu est la duplication des données et une plus grande complexité, ce qui est inutile.  
@@ -118,7 +118,7 @@ ms.locfileid: "68888235"
      ![Dimension des ventes sur Internet-montant des ventes](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimension des ventes sur Internet-montant des ventes")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d’une relation plusieurs-à-plusieurs](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
+ [Définition d’une relation plusieurs-à-plusieurs](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

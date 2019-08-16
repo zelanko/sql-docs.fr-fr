@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888068"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493775"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Définition et exploration de perspectives
   Une perspective peut simplifier l'affichage d'un cube à des fins spécifiques. Par défaut, les utilisateurs peuvent voir tous les éléments d'un cube auquel ils sont autorisés à accéder. Ce que les utilisateurs voient lorsqu'ils affichent l'intégralité d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est la perspective par défaut du cube. Il peut s'avérer très difficile de naviguer à travers une vue du cube tout entier, surtout pour les utilisateurs auxquels il suffit d'interagir avec une petite partie du cube pour satisfaire leurs besoins en matière de décisionnel et de rapports.  
@@ -191,7 +191,7 @@ ms.locfileid: "68888068"
      Mesures relatives aux ventes sur ![Internet et] aux revendeurs Mesures relatives aux ventes sur (../../2014/tutorials/media/l9-perspectives-4.gif "Internet et") aux revendeurs  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition et exploration de traductions](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Définition et exploration de traductions](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Différente](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

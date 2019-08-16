@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888105"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493827"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Définition et utilisation d'une action d'extraction
   Le dimensionnement des données de fait par une dimension de fait sans filtrage correct des données retournées par la requête peut ralentir les performances des requêtes. Pour éviter ceci, vous pouvez définir une action d'extraction qui restreint le nombre total de lignes retournées. Cela améliorera considérablement les performances des requêtes.  
@@ -143,13 +143,13 @@ ms.locfileid: "68888105"
      ![Commandes expédiées à Adam Powell](../../2014/tutorials/media/l8-action8.gif "Commandes expédiées à Adam Powell")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 9: Définition de perspectives et de traductions](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [Leçon 9: Définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Actions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Actions dans les modèles multidimensionnels](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Définition d’une relation de faits](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [Définition d’une relation de faits](lesson-5-2-defining-a-fact-relationship.md)   
  [Définir une relation de fait et des propriétés de relation de fait](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

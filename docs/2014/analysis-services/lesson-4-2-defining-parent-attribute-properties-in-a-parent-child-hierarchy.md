@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888386"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494013"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant
   Une hiérarchie parent-enfant est une hiérarchie dans une dimension fondée sur deux colonnes de table. Ensemble, ces colonnes définissent les relations hiérarchiques entre les membres de la dimension. La première colonne, appelée *colonne des clés de membre*, identifie chaque membre de dimension. L’autre colonne, appelée *colonne parente*, identifie le parent de chaque membre de dimension. La propriété **NamingTemplate** d’un attribut parent détermine le nom de chaque niveau de la hiérarchie parent-enfant et la propriété **MembersWithData** détermine si les données des membres parents doivent être affichées ou non.  
@@ -104,7 +104,7 @@ ms.locfileid: "68888386"
      ![Hiérarchie des employés modifiés](../../2014/tutorials/media/l4-employee-2.png "Hiérarchie des employés modifiés")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Regroupement automatique des membres d'attribut](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [Regroupement automatique des membres d'attribut](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchie parent-enfant](multidimensional-models/parent-child-dimension.md)   

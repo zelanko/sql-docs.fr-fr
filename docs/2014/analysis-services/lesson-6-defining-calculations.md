@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888048"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493844"
 ---
 # <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition des calculs
   Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions ou des scripts MDX (Multidimensional Expressions). Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
@@ -45,14 +45,14 @@ ms.locfileid: "68888048"
   
  Cette leçon contient les tâches suivantes :  
   
- [Définition des membres calculés](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [Définition des membres calculés](lesson-6-1-defining-calculated-members.md)  
  Dans cette tâche, vous apprenez à définir des membres calculés.  
   
- [Définition de jeux nommés](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Définition de jeux nommés](lesson-6-2-defining-named-sets.md)  
  Dans cette tâche, vous apprenez à définir des jeux nommés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 7 : Définition des indicateurs de &#40;performance clés KPI&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Leçon 7 : Définition des indicateurs de &#40;performance clés KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   

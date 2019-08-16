@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 90db0be2372c3af9d3d079a187e4b3cbd8147566
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892135"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494072"
 ---
 # <a name="mdx-data-definition---create-member"></a>Définition de données MDX - CREATE MEMBER
 
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Ordre dans lequel le membre calculé sera résolu si un membre calculé fait référence à un autre membre calculé (c'est-à-dire à l'intersection des membres calculés).|  
 |FORMAT_STRING|Chaîne de format de style Office que l’application cliente peut utiliser lors de l’affichage des valeurs de cellule.|  
 |VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Les membres calculés visibles peuvent être ajoutés à un ensemble à l’aide de la fonction [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *visible*.<br /><br /> Les membres calculés qui ne sont pas visibles (possédant la valeur zéro) sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
-|NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.<br /><br /> **Avertissement cettepropriété\* est déconseillée. \* \* \*** Évitez de l'utiliser. Pour plus d’informations, consultez [Fonctionnalités Analysis Services déconseillées dans SQL Server 2016](https://docs.microsoft.com/analysis-services/deprecated-analysis-services-features-in-sql-server-2016) .|  
+|NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.<br /><br /> **Avertissement cettepropriété\* est déconseillée. \* \* \*** Évitez de l'utiliser. Pour plus d’informations, consultez [fonctionnalités de Analysis Services dépréciées dans SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) .|  
 |CAPTION|Chaîne que l'application cliente utilise à titre de légende du membre.|  
 |DISPLAY_FOLDER|Chaîne qui identifie le chemin d'accès du dossier d'affichage que l'application cliente utilise pour afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique\\inverse () est le séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
 |ASSOCIATED_MEASURE_GROUP|Nom du groupe de mesures auquel ce membre est associé.|  

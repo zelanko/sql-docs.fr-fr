@@ -10,12 +10,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42116af318d6549b5b70b190aaf5f24b551c2069
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888393"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493941"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilisation d'une version modifiée du projet du didacticiel Analysis Services
   Les sept dernières leçons de ce didacticiel sont basées sur une version évoluée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
@@ -117,6 +117,6 @@ ms.locfileid: "68888393"
  [Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement d’un projet Analysis Services](https://docs.microsoft.com/analysis-services/lesson-2-5-deploying-an-analysis-services-project)  
+ [Déploiement d’un projet Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

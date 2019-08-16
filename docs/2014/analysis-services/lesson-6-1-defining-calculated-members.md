@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888183"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493883"
 ---
 # <a name="defining-calculated-members"></a>Définition des membres calculés
   Les membres calculés sont les membres d'une dimension ou d'un groupe de mesures qui sont définis à l'aide d'une combinaison de données de cube, d'opérateurs arithmétiques, de nombres et de fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  
@@ -287,7 +287,7 @@ ms.locfileid: "68888183"
      Observez que la vente d'accessoires augmente dans le temps, mais qu'elle ne représente qu'une petite partie des ventes totales. Notez également que la marge brute des accessoires est supérieure à celle des vélos.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition de jeux nommés](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Définition de jeux nommés](lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touchant](multidimensional-models-olap-logical-cube-objects/calculations.md)   

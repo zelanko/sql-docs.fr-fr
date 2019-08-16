@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6daa8c4fd9b46fc4dcfec08876d36c1cf0187a94
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887577"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493813"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Référence du développeur pour SQL Server 2014
 
@@ -47,13 +47,13 @@ ms.locfileid: "68887577"
   
  ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Programmation de la boîte de message d’exception](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec ADOMD.net](https://docs.microsoft.com/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec ADOMD.net](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec AMO (Analysis Management Objects) &#40;AMO&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec AMO (Analysis Management Objects) &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Développement avec Analysis Services langage &#40;de script ASSL&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [OLE DB pour l’exploration de données](https://docs.microsoft.com/analysis-services/dev-guide/ole-db-for-data-mining)  
+ ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [OLE DB pour l’exploration de données](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
  ![Petite icône de dossier de fichiers](../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Guide du développeur Integration Services](../integration-services/integration-services-developer-documentation.md)  
   

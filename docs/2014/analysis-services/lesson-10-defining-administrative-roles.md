@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888460"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493965"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Leçon 10 : Définition des rôles administratifs
   Dans cette leçon, vous allez apprendre à définir des rôles de sécurité pour les tâches d'administration.  
@@ -25,7 +25,7 @@ ms.locfileid: "68888460"
   
  Cette leçon contient la tâche suivante :  
   
- [Attribution de l'autorisation de traiter la base de données](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
+ [Attribution de l'autorisation de traiter la base de données](lesson-10-granting-process-database-permissions.md)  
  Dans cette tâche, vous définissez un rôle de sécurité qui a les autorisations nécessaires pour traiter la base de données de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis vous testez ce rôle de sécurité.  
   
 ## <a name="see-also"></a>Voir aussi  

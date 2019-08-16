@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888138"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493893"
 ---
 # <a name="defining-named-sets"></a>Définition de jeux nommés
   Un jeu nommé est une expression MDX (Multidimensional Expressions) qui retourne un ensemble de membres de dimension. Vous pouvez définir des jeux nommés et les enregistrer en tant que partie de la définition du cube ; vous pouvez aussi créer des jeux nommés dans des applications clientes. Vous créez des jeux nommés en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Les jeux nommés peuvent être employés par les utilisateurs dans des requêtes MDX dans des applications clientes. Ils peuvent aussi être utilisés pour définir des jeux dans des sous-cubes. Un sous-cube est une collection de jeux joints entre eux qui limite l'espace du cube au sous-espace défini pour les instructions suivantes. Définir un espace de cube limité est un des concepts fondamentaux des scripts MDX.  
@@ -132,7 +132,7 @@ ms.locfileid: "68888138"
      ![Volet de filtre contenant deux jeux nommés](../../2014/tutorials/media/l6-named-set-05.gif "Volet de filtre contenant deux jeux nommés")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Leçon 7 : Définition des indicateurs de &#40;performance clés KPI&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Leçon 7 : Définition des indicateurs de &#40;performance clés KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touchant](multidimensional-models-olap-logical-cube-objects/calculations.md)   

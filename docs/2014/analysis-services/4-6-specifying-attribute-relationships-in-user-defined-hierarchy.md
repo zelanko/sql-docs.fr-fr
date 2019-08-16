@@ -10,12 +10,12 @@ ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe6b022300a873ab7e7e747265c96a3abf43ea59
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887472"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493850"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur
   Comme vous l'avez déjà appris au cours de ce didacticiel, vous pouvez organiser les hiérarchies d'attributs en niveaux au sein des hiérarchies utilisateur pour mettre à disposition des utilisateurs d'un cube des chemins de navigation. Une hiérarchie utilisateur peut représenter une hiérarchie naturelle, telle que ville, état et pays, ou simplement un chemin de navigation tel que nom d'employé, titre et nom de division. Du point de vue de l'utilisateur qui navigue au sein d'une hiérarchie, ces deux types de hiérarchies utilisateur sont identiques.  
@@ -181,7 +181,7 @@ ms.locfileid: "68887472"
 14. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez sur **Déployer Analysis Services Tutorial**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition du membre inconnu et des propriétés de traitement Null](https://docs.microsoft.com/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties)  
+ [Définition du membre inconnu et des propriétés de traitement Null](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md)   
