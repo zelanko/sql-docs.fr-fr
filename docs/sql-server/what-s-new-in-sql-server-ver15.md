@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893990"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028912"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -83,7 +83,6 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Restrictions liées aux fonctionnalités| Empêcher que certaines formes d’injection SQL ne provoquent la fuite d’informations concernant la base de données, même si l’injection SQL réussit. Voir [Restrictions liées aux fonctionnalités](../relational-databases/security/feature-restrictions.md)|
 |Indexer les colonnes chiffrées|Créer des index sur des colonnes chiffrées à l’aide d’un chiffrement aléatoire et des clés activées par enclave, afin d’améliorer les performances des requêtes riches (à l’aide de `LIKE` et d’opérateurs de comparaison). Consultez [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Suspendre et reprendre l’analyse initiale du chiffrement transparent des données (TDE)|Voir [Analyse TDE (Transparent Data Encryption) - Suspension et reprise](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Gestion des certificats dans le Gestionnaire de configuration SQL Server|Voir [Gestion des certificats (Gestionnaire de configuration SQL Server)](../database-engine/configure-windows/manage-certificates.md)

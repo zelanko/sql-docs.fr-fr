@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 311e4819751fe9a398643e2005bd8480c781ee9f
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 0f4fdc5f81ff01b77f0bb27e5782db6ecd41b004
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941155"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969456"
 ---
 # <a name="sql-server-documentation"></a>Documentation SQL Server
 
@@ -155,7 +155,7 @@ SQL Server 2014 et versions antérieures, y compris SQL Server 2005, ont la docu
 
 Dans la page web :::no-loc text="Docs":::, la _gestion des versions_ se trouve au-dessus de la table des matières. Pour plus d’informations sur la façon dont vous pouvez utiliser la gestion des versions et sur ce qu’elle permet de faire, consultez :
 
-- [Système de gestion des versions dans la documentation SQL](../toc/versioning-system-monikers-ui-sql-server.md)
+- [Système de gestion des versions dans la documentation SQL](versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

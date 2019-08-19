@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952627"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028732"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Déployer un groupe de disponibilité Always On SQL Server sur un cluster Kubernetes
 
@@ -36,7 +36,7 @@ Sur Kubernetes, le déploiement comprend un opérateur SQL Server, les conteneur
 > [!NOTE]
 > Vous pouvez utiliser n’importe quel type de cluster Kubernetes. Pour créer un cluster Kubernetes sur Azure Kubernetes Service (AKS), consultez [Créer un cluster AKS](https://docs.microsoft.com/azure/aks/create-cluster).
 >
-> Utilisez la dernière version de Kubernetes. La version spécifique dépend de votre abonnement et de votre région. Voir [Versions de Kubernetes prises en charge dans AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions).  
+> Utilisez la dernière version de Kubernetes. La version spécifique dépend de votre abonnement et de votre région. Voir [Versions de Kubernetes prises en charge dans AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions).  
 >
 > Le script suivant crée un cluster Kubernetes à quatre nœuds dans Azure. Avant d’exécuter le script, remplacez `<latest version>` par la dernière version disponible. Par exemple, `1.12.5`.
 >
@@ -159,7 +159,7 @@ Une fois que Kubernetes a créé les conteneurs SQL Server, procédez comme suit
       CREATE DATABASE [demodb]
       ```
 
-1. Effectuez une sauvegarde complète de la base de données pour démarrer la séquence de journaux.
+1. À partir d’une sauvegarde complète de la base de données, démarrez la séquence de journaux de transactions consécutifs.
 
       ```sql
       USE MASTER

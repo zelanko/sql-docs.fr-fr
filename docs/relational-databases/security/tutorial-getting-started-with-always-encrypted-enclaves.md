@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888882"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028815"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ Pour bien démarrer avec Always Encrypted avec enclaves sécurisées, vous avez 
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] ou version ultérieure.
 - Windows 10 Entreprise version 1809 ou Windows Server 2019 Datacenter.
-- Si votre ordinateur SQL Server est une machine physique, il doit respecter la [Configuration matérielle Hyper-V requise](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) :
+- Si votre ordinateur SQL Server est une machine physique, il doit respecter la [Configuration matérielle Hyper-V requise](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) :
    - Processeur 64 bits avec traduction d’adresses de deuxième niveau (SLAT)
    - Prise en charge du processeur pour l’extension Mode moniteur de machine virtuelle (VT-c sur processeurs Intel)
    - Prise en charge de la virtualisation activée (Intel VT-x ou AMD-V)
 - Si votre ordinateur SQL Server est une machine virtuelle, celle-ci doit être configurée de façon à prendre en charge la sécurité basée sur la virtualisation.
-   - Dans Hyper-V 2016 ou version ultérieure, utilisez une machine virtuelle de génération 1 et [activez les extensions de virtualisation imbriquée](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) sur le processeur de la machine virtuelle. Sinon, utilisez une machine virtuelle de génération 2. Pour plus d’informations sur les générations des machines virtuelles, consultez [Dois-je créer une machine virtuelle de génération 1 ou 2 dans Hyper-V ?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
+   - Dans Hyper-V 2016 ou version ultérieure, utilisez une machine virtuelle de génération 1 et [activez les extensions de virtualisation imbriquée](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) sur le processeur de la machine virtuelle. Sinon, utilisez une machine virtuelle de génération 2. Pour plus d’informations sur les générations des machines virtuelles, consultez [Dois-je créer une machine virtuelle de génération 1 ou 2 dans Hyper-V ?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
    - Dans Azure, choisissez une taille de machine virtuelle qui prend en charge l’une des options suivantes :
-      - La virtualisation imbriquée, par exemple les machines virtuelles Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-      - Les machines virtuelles de génération 2, par exemple, les machines virtuelles Dsv3 ou Esv3. Consultez [Prise en charge des machines virtuelles de génération 2 dans Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2).
+      - La virtualisation imbriquée, par exemple les machines virtuelles Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+      - Les machines virtuelles de génération 2, par exemple, les machines virtuelles Dsv3 ou Esv3. Consultez [Prise en charge des machines virtuelles de génération 2 dans Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
    - Sur VMware vSphere 6.7 et les versions ultérieures, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
    - D’autres hyperviseurs et clouds publics peuvent prendre en charge la virtualisation à l’aide d’Always Encrypted avec des enclaves sécurisées dans une machine virtuelle tant que les extensions de virtualisation (parfois appelées virtualisation imbriquée) sont exposées à la machine virtuelle. Consultez les instructions relatives à la compatibilité et à la configuration de la documentation de votre solution de virtualisation.
 - [SQL Server Management Studio (SSMS) version 18.0 ou ultérieure](../../ssms/download-sql-server-management-studio-ssms.md).

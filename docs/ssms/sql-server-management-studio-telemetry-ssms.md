@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79a2c3da9ee7f877c3d13bf17ca7912117df883
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264704"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028818"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Audit local pour l’utilisation de SSMS et collecte des données d’utilisation et de diagnostic
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,4 +64,4 @@ Pour accepter ou refuser la collecte des données d’utilisation pour SSMS :
 ## <a name="see-also"></a>Voir aussi
 
 - [Configurer les données d’utilisation et de diagnostic pour SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic](http://msdn.microsoft.com/library/mt743085.aspx)
+- [Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic](https://msdn.microsoft.com/library/mt743085.aspx)

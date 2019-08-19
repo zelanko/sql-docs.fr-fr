@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 191c5f2e603821a5bb9d85aa89a630c71800e660
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68424420"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028869"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>Précédentes annonces des versions CTP de SQL Server 2019
 
@@ -384,7 +384,7 @@ Les [clusters Big Data](../big-data-cluster/big-data-cluster-overview.md) [!INCL
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit ou améliore les nouvelles fonctionnalités suivantes pour le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
-#### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>Nouvel événement étendu query_post_execution_plan_profile (CTP 2.4)
+#### <a name="new-query_post_execution_plan_profile-extended-event-ctp-24"></a>Nouvel événement étendu query_post_execution_plan_profile (CTP 2.4)
 
 Le nouvel événement étendu `query_post_execution_plan_profile` collecte l’équivalent d’un plan d’exécution réel basé sur le profilage léger, contrairement à `query_post_execution_showplan` qui utilise le profilage standard. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../relational-databases/performance/query-profiling-infrastructure.md).
 
@@ -416,7 +416,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-#### <a name="new-dmf-sysdmexecqueryplanstats-ctp-24"></a>Nouvelle fonction de gestion dynamique (DMF) sys.dm_exec_query_plan_stats (CTP 2.4) 
+#### <a name="new-dmf-sysdm_exec_query_plan_stats-ctp-24"></a>Nouvelle fonction de gestion dynamique (DMF) sys.dm_exec_query_plan_stats (CTP 2.4) 
 
 La nouvelle fonction de gestion dynamique (DMF) `sys.dm_exec_query_plan_stats` retourne l’équivalent du dernier plan d’exécution réel connu pour la plupart des requêtes, basé sur le profilage léger. Pour plus d’informations, consultez [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) et [Infrastructure du profilage de requête](../relational-databases/performance/query-profiling-infrastructure.md). En guise d’exemple, consultez le script suivant :
 
@@ -556,7 +556,7 @@ La création d’index en ligne pouvant être reprise prend en charge les scéna
 
 Sans cette fonctionnalité, si une opération de création d’index en ligne échoue, elle doit être réexécutée et redémarrée.
 
-Avec cette version, nous étendons les fonctionnalités pouvant être reprises en ajoutant cette fonctionnalité à la [reconstruction d’index en ligne pouvant être reprise](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+Avec cette version, nous étendons les fonctionnalités pouvant être reprises en ajoutant cette fonctionnalité à la [reconstruction d’index en ligne pouvant être reprise](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 En outre, vous pouvez définir cette fonctionnalité comme fonctionnalité par défaut pour une base de données spécifique à l’aide du [paramétrage par défaut au niveau de la base de données pour les opérations DDL en ligne et pouvant être reprises](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -688,7 +688,7 @@ Tout fichier [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] placé sur u
 
 `DBCC CLONEDATABASE` crée une copie de schéma uniquement d’une base de données qui inclut tous les éléments nécessaires pour résoudre les problèmes de performances de requête sans copier les données. Dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la commande ne copiait pas les statistiques permettant de résoudre avec précision les problèmes des requêtes d’index columnstore, ce qui obligeait l’utilisateur à effectuer des étapes manuelles pour capturer ces informations. Maintenant, dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` capture automatiquement les objets blob de statistiques pour les index columnstore ; aucune étape manuelle n’est donc requise.
 
-#### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Ajout d’options à sp_estimate_data_compression_savings (CTP 2.0)
+#### <a name="new-options-added-to-sp_estimate_data_compression_savings-ctp-20"></a>Ajout d’options à sp_estimate_data_compression_savings (CTP 2.0)
 
 `sp_estimate_data_compression_savings` retourne la taille actuelle de l’objet demandé et estime la taille de l’objet pour l’état de compression demandé. Cette procédure prend en charge trois options : `NONE`, `ROW` et `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit deux nouvelles options : `COLUMNSTORE` et `COLUMNSTORE_ARCHIVE`. Ces nouvelles options vous permettent d’estimer les économies d’espace si un index columnstore est créé sur la table à l’aide de la compression de columnstore standard ou d’archive.
 
@@ -712,7 +712,7 @@ Avec **CTP 2.3**, une nouvelle configuration étendue à la base de données `L
 
 - **Nouveaux connecteurs pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata et MongoDB** : [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit de nouveaux connecteurs aux données externes pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata et MongoDB.
 
-#### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>Nouvelle fonction système sys.dm_db_page_info retournant des informations sur une page (CTP 2.0)
+#### <a name="new-sysdm_db_page_info-system-function-returns-page-information-ctp-20"></a>Nouvelle fonction système sys.dm_db_page_info retournant des informations sur une page (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` retourne des informations sur une page dans une base de données. La fonction retourne une ligne qui contient les informations d’en-tête de la page, notamment les `object_id`, `index_id` et `partition_id`. Cette fonction rend superflue l’utilisation de `DBCC PAGE` dans la plupart des cas. 
 

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064563"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028750"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -73,7 +73,7 @@ Mettez à jour le fichier de configuration du service Scale Out Master (`\<drive
 
 La journalisation dans SSISDB est effectuée par la connexion **##MS_SSISLogDBWorkerAgentLogin##** . Le mot de passe est généré automatiquement pour cette connexion. Pour effectuer la journalisation de tous les réplicas de SSISDB, effectuez les opérations suivantes
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Changer le mot de passe de **##MS_SSISLogDBWorkerAgentLogin##** sur l’instance SQL Server principale
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Changer le mot de passe de **##MS_SSISLogDBWorkerAgentLogin##** sur l’instance SQL Server principale
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 Ajouter la connexion au nœud SQL Server secondaire
 
@@ -98,7 +98,7 @@ Appelez la procédure stockée `[catalog].[update_logdb_info]` avec les valeurs 
 
 Sur les machines virtuelles Azure, cette opération de configuration nécessite des étapes supplémentaires. L’explication complète de ces concepts et de ces étapes dépasse le cadre de cet article.
 
-1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
+1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 2. Vous devez configurer un équilibreur de charge Azure. Cette opération est obligatoire pour l’écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Tutoriel : équilibrer la charge du trafic interne vers les machines virtuelles avec un équilibreur de charge de base à l’aide du portail Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
