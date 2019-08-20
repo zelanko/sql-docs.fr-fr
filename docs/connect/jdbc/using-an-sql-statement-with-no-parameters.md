@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’une instruction SQL sans paramètres | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6161f70455e5f1c947841d0381ba1a1de3a778a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da4342b8640e89a0183a3f80889dd27ecfb1a76e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006015"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026540"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>Utilisation d'une instruction SQL sans paramètres
 
@@ -31,4 +31,4 @@ Pour plus d’informations sur l’utilisation des jeux de résultats, consultez
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation d’instructions avec SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Utilisation d'instructions avec SQL](../../connect/jdbc/using-statements-with-sql.md)

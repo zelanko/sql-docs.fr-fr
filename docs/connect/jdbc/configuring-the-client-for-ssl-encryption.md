@@ -1,7 +1,7 @@
 ---
 title: Configuration du client pour le chiffrement SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956897"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028203"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>Configuration du client pour le chiffrement SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "67956897"
   
  Cette rubrique décrit tout d'abord comment fournir les informations d'approbation dans l'ordinateur client. Ensuite, la rubrique décrit comment importer un certificat de serveur vers le magasin d'approbations de l'ordinateur client lorsque l'instance du certificat SSL (Secure Sockets Layer) de l'ordinateur SQL Server est publiée par une autorité de certification privée.  
   
- Pour plus d’informations sur la validation du certificat de serveur, consultez la section Valider le certificat de serveur SSL dans [Comprendre la prise en charge SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ Pour plus d'informations sur la validation du certificat de serveur, consultez la section Valider le certificat de serveur SSL dans [Présentation de la prise en charge de SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="configuring-the-client-trust-store"></a>Configuration du magasin d'approbations du client  
+## <a name="configuring-the-client-trust-store"></a>Configuration du magasin d'approbations du client 
  Pour valider le certificat de serveur, il faut que les informations d’approbation soient fournies au moment de la connexion en utilisant explicitement les propriétés de connexion **trustStore** et **trustStorePassword** ou en utilisant implicitement le magasin d’approbations par défaut de la Machine virtuelle Java (JVM) sous-jacente. Pour plus d’informations sur la définition des propriétés **trustStore** et **trustStorePassword** dans une chaîne de connexion, voir [Se connecter avec le chiffrement SSL](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  Si la propriété **trustStore** n’est pas spécifiée ou a la valeur Null, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se fiera au fournisseur de sécurité de la Machine virtuelle Java sous-jacente, SunJSSE (Java Secure Socket Extension). Le fournisseur SunJSSE fournit un TrustManager par défaut, qui permet de valider les certificats X.509 retournés par SQL Server par rapport aux informations d’approbation fournies dans un magasin d’approbations.  
@@ -85,6 +85,6 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)   
- [Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [Sécurisation des applications du pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

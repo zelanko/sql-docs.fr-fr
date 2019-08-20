@@ -1,7 +1,7 @@
 ---
 title: Utilisation de plusieurs jeux de résultats | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005964"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026272"
 ---
 # <a name="using-multiple-result-sets"></a>Utilisation de plusieurs jeux de résultats
 
@@ -34,11 +34,11 @@ Dans l’exemple suivant, une connexion ouverte à l’exemple de base de donné
 
 [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
 
-Dans ce cas, le nombre de jeux de résultats retourné est deux. Cependant, le code est écrit de telle façon que si un nombre inconnu de jeux de résultats est retourné, comme lors de l'appel d'une procédure stockée, tous les jeux de résultats sont traités. Pour découvrir un exemple d’appel de procédure stockée qui retourne plusieurs jeux de résultats avec des valeurs de mise à jour, consultez [Gestion des instructions complexes](../../connect/jdbc/handling-complex-statements.md).
+Dans ce cas, le nombre de jeux de résultats retourné est deux. Cependant, le code est écrit de telle façon que si un nombre inconnu de jeux de résultats est retourné, comme lors de l'appel d'une procédure stockée, tous les jeux de résultats sont traités. Pour accéder à un exemple d'appel de procédure stockée qui renvoie plusieurs jeux de résultats avec des valeurs de mise à jour, consultez [Gestion d'instructions complexes](../../connect/jdbc/handling-complex-statements.md).
 
 > [!NOTE]  
 > Quand vous effectuez l’appel à la méthode getMoreResults de la classe SQLServerStatement, le jeu de résultats précédemment retourné est implicitement fermé.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation d’instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
+[Utilisation d'instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

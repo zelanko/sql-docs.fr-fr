@@ -1,7 +1,7 @@
 ---
 title: Déploiement du pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3e7898f66631fd9ca9d75573d5025bb732db8208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956725"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028108"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Déploiement du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67956725"
 > [!NOTE]  
 >  Quand vous utilisez l’option `/auto`, il ne s’agit pas réellement d’une installation en mode silencieux, car une boîte de dialogue WinZip s’affiche néanmoins sur l’écran de l’utilisateur. Cependant, vous devez l'ignorer ; cette boîte de dialogue se fermera dès que l'opération de décompression sera terminée.  
   
-## <a name="deploying-the-driver-on-unix-systems"></a>Déploiement du pilote sur les systèmes UNIX  
+## <a name="deploying-the-driver-on-unix-systems"></a>Déploiement du pilote sur les systèmes UNIX 
  Quand vous déployez le pilote JDBC sur des systèmes d’exploitation UNIX, vous devez utiliser la version du fichier gzip du package d’installation, qui est généralement appelée `sqljdbc_<version>_<language>.tar.gz`.  
   
  Avant d'installer le pilote JDBC, assurez-vous que les utilitaires gzip et tar sont installés sur le système de l'utilisateur et que les dossiers contenant les exécutables des deux utilitaires sont ajoutés à la variable d'environnement PATH.  
@@ -53,6 +53,6 @@ ms.locfileid: "67956725"
  `tar -xf sqljdbc_<version>_<language>.tar`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

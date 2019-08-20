@@ -1,7 +1,7 @@
 ---
 title: Exemple de données de la mise en cache du jeu de résultats | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: af44648f8012a2d9bb8e4531f880a68751326e27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59c7010875824b65d6b7d12129056f02537e908
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957365"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028421"
 ---
-# <a name="caching-result-set-data-sample"></a>Mise en cache de l'exemple de données du jeu de résultats
+# <a name="caching-result-set-data-sample"></a>Exemple de mise en cache des données d'un jeu de résultats
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

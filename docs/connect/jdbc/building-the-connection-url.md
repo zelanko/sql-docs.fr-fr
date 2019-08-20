@@ -1,7 +1,7 @@
 ---
 title: Génération de l’URL de connexion | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957374"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028453"
 ---
 # <a name="building-the-connection-url"></a>Création de l'URL de connexion
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67957374"
     > [!NOTE]  
     >  Pour des performances de connexion optimales, vous devez définir la valeur de portNumber lors de la connexion à une instance nommée. Cela permet d'éviter une boucle avec le serveur pour déterminer le numéro du port. Si un portNumber et un instanceName sont utilisés, le portNumber aura la priorité et l'instanceName sera ignoré.  
   
--   **property** (facultatif) correspond à une ou plusieurs propriétés de connexion. Pour plus d’informations, consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md). Vous pouvez spécifier n'importe quelle propriété de la liste. Les propriétés peuvent séparées seulement des points-virgules (« ; ») et ne peuvent pas figurer en doublon.  
+-   **property** (facultatif) correspond à une ou plusieurs propriétés de connexion. Pour plus d'informations, consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md). Vous pouvez spécifier n'importe quelle propriété de la liste. Les propriétés peuvent séparées seulement des points-virgules (« ; ») et ne peuvent pas figurer en doublon.  
   
 > [!CAUTION]  
 >  Pour des raisons de sécurité, il convient d'éviter de créer les URL de connexion en se basant sur des entrées utilisateur. Il est préférable de spécifier uniquement le nom du serveur et le pilote dans l'URL. Pour les valeurs de nom d'utilisateur et de mot de passe, utilisez des collections de propriétés de connexion. Pour plus d’informations sur la sécurité dans vos applications JDBC, consultez Sécurisation des [applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Un espace vide entre les accolades est un littéral qui n'est pas supprimé.  
   
-##  <a name="Connectingintegrated"></a> Connexion avec une authentification intégrée sur Windows  
+##  <a name="Connectingintegrated"></a> Connexion avec une authentification intégrée sous Windows  
  Le pilote JDBC prend en charge l'utilisation d'une authentification intégrée de type 2 sur les systèmes d'exploitation Windows via la propriété de chaîne de connexion integratedSecurity. Pour utiliser l'authentification intégrée, copiez le fichier sqljdbc_auth.dll dans un répertoire sur le chemin du système Windows de l'ordinateur sur lequel le pilote JDBC est installé.  
   
  Les fichiers sqljdbc_auth.dll sont installés à l'emplacement suivant :  

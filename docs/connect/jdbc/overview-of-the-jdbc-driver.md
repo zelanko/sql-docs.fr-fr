@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble du pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/18/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8b9fcab3a49f8cac08d35320cbad0f339cd42b2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956236"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027934"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Présentation du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67956236"
   
  Les rubriques de cette section présentent de manière générale le pilote JDBC, notamment la configuration requise, son utilisation et les sources d'informations complémentaires disponibles.  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "67956236"
 |[Présentation de la prise en charge de Java EE](../../connect/jdbc/understanding-java-ee-support.md)|Explique comment utiliser le pilote Microsoft JDBC dans un environnement Java EE (Java Platform, Enterprise Edition).|  
 |[Déploiement du pilote JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md)|Décrit le déploiement du pilote Microsoft JDBC sur les systèmes d’exploitation Windows et Unix.|  
 |[Redistribution du pilote Microsoft JDBC](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Décrit comment s’inscrire pour redistribuer le pilote Microsoft JDBC.|  
-|[Recherche d’informations supplémentaires sur le pilote JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Indique où trouver des ressources supplémentaires sur le pilote Microsoft JDBC, en fournissant notamment des liens vers des ressources externes.|  
+|[Recherche d'informations supplémentaires sur le pilote JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Indique où trouver des ressources supplémentaires sur le pilote Microsoft JDBC, en fournissant notamment des liens vers des ressources externes.|  
 |[Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matrice de support et politique de support pour Microsoft JDBC Driver pour SQL Server.|  
 |[FAQ&#41; sur les &#40;questions fréquemment posées sur le pilote JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Forum aux questions sur le pilote Microsoft JDBC.|  
 |[Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server.|
