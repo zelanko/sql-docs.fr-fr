@@ -1,7 +1,7 @@
 ---
-title: Fonctionnement de la prise en charge Java EE | Microsoft Docs
+title: Présentation de la prise en charge de Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892309"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027261"
 ---
-# <a name="understanding-java-ee-support"></a>Fonctionnement de la prise en charge Java EE
+# <a name="understanding-java-ee-support"></a>Présentation de la prise en charge de Java EE
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -45,7 +45,7 @@ Le nom de la classe est utilisé chaque fois que vous chargez le pilote avec la 
 
 Le pilote JDBC assure la prise en charge des sources de données Java EE / JDBC 3.0. La classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) du pilote JDBC est implémentée par `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
-### <a name="datasource-names"></a>Noms de sources de données
+### <a name="datasource-names"></a>Noms des sources de données
 
 Vous pouvez établir des connexions de base de données à l'aide de sources de données. Les sources de données disponibles avec le pilote JDBC sont décrites dans le tableau suivant :  
   
@@ -74,8 +74,8 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Pour plus d’informations sur les propriétés de source de données, consultez [Définition des propriétés de la source de données](../../connect/jdbc/setting-the-data-source-properties.md).  
+Pour plus d'informations sur les propriétés de la source de données, consultez [Définition des propriétés de la source de données](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

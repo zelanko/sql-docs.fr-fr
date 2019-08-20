@@ -1,7 +1,7 @@
 ---
 title: Utilisation des instructions et des jeux de résultats | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003790"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025360"
 ---
-# <a name="working-with-statements-and-result-sets"></a>Travail sur des instructions et des jeux de résultats
+# <a name="working-with-statements-and-result-sets"></a>Utilisation des instructions et des jeux de résultats
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -43,7 +43,7 @@ Utilisez la méthode [setMaxRows](../../connect/jdbc/reference/setmaxrows-method
 
 Pour les curseurs côté serveur en lecture seule, il est nécessaire de choisir entre de nombreux allers-retours vers le serveur ou l'utilisation d'une grande quantité de mémoire dans le pilote. Pour les curseurs de serveurs pouvant être mis à jour, la taille d'extraction influence également la sensibilité des modifications au jeu de résultats et à l'accès simultané du serveur. Les mises à jour des lignes dans le tampon d’extraction actuel ne sont pas visibles tant qu’une méthode explicite [refreshRow](../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md) n’a pas été lancée ou que le curseur n’a pas quitté le tampon d’extraction. Les performances des tampons d'extraction importants seront meilleures (moins de boucles de connexion avec le serveur) ; néanmoins, les tampons sont moins sensibles aux modifications et réduisent l'accès simultané au serveur si CONCUR_SS_SCROLL_LOCKS (1009) est utilisé. Pour une sensibilité maximale aux modifications, utilisez une taille d'extraction de 1. Cependant, notez que cela provoquera une boucle avec le serveur pour chaque ligne extraite.
 
-## <a name="use-streams-for-large-in-parameters"></a>Utilisez des flux pour des paramètres IN importants
+## <a name="use-streams-for-large-in-parameters"></a>Utilisez des flux pour les paramètres IN importants
 
 Utilisez des flux ou des BLOB et des CLOB matérialisés de manière incrémentielle pour traiter la mise à jour d'importantes valeurs de colonne ou l'envoi d'importants paramètres IN. Le pilote JDBC envoie ces éléments au serveur par plusieurs boucles de connexion, ce qui vous permet de définir et de mettre à jour des valeurs plus importantes que ce que la mémoire peut contenir.
 

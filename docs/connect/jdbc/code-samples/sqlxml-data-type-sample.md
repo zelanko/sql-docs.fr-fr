@@ -1,7 +1,7 @@
 ---
 title: Exemple de type de données SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8775c93afaa84570c5f4da51672bbec6379a927f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df376535f8f6c6a7d98e1744a2d2b70e813d400a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957055"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028281"
 ---
 # <a name="sqlxml-data-type-sample"></a>Exemple de type de données SQLXML
 
@@ -38,7 +38,7 @@ Le fichier de code de cet exemple, SqlXmlDataType.java, se trouve à l’emplace
 
 ## <a name="requirements"></a>Spécifications
 
-Pour exécuter cet exemple d'application, vous devez définir l'instruction classpath de façon à inclure le fichier sqljdbc4.jar. Si l'instruction classpath n'a pas d'entrée pour sqljdbc4.jar, l'exemple d'application lève l'exception « Classe introuvable ». Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+Pour exécuter cet exemple d'application, vous devez définir l'instruction classpath de façon à inclure le fichier sqljdbc4.jar. Si l'instruction classpath n'a pas d'entrée pour sqljdbc4.jar, l'exemple d'application lève l'exception « Classe introuvable ». Pour plus d'informations sur la définition de l'instruction classpath, consultez [Utilisation du pilote JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 L’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] est par ailleurs nécessaire pour pouvoir exécuter cet exemple d’application.
 
@@ -62,4 +62,4 @@ La méthode showTransformer montre comment obtenir des données XML à partir d'
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utiliser des types de données &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)
+[Utilisation de types de données &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)

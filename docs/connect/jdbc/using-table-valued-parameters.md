@@ -1,7 +1,7 @@
 ---
 title: Utilisation des paramètres table | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd5f00d551c189f583af4232fe31716b51594df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98863afb5a47eddfd311563bd03a1c7c7120b161
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003928"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025707"
 ---
-# <a name="using-table-valued-parameters"></a>Utilisation de paramètres table
+# <a name="using-table-valued-parameters"></a>Utilisation des paramètres table
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -100,7 +100,7 @@ Les paramètres table présentent plusieurs limitations:
 
 - Vous pouvez diffuser en continu des objets volumineux dans un paramètre table.  
   
-## <a name="configuring-a-table-valued-parameter"></a>Configuration d’un paramètre table
+## <a name="configuring-a-table-valued-parameter"></a>Configuration d'un paramètre table
 
 À compter de Microsoft JDBC Driver 6,0 pour SQL Server, les paramètres table sont pris en charge avec une instruction paramétrable ou une procédure stockée paramétrable. Les paramètres table peuvent être remplis à partir d’un SQLServerDataTable, d’un ResultSet ou d’une implémentation fournie par l’utilisateur de l’interface ISQLServerDataRecord. Lors de la définition d’un paramètre table pour une requête préparée, vous devez spécifier un nom de type qui doit correspondre au nom d’un type compatible précédemment créé sur le serveur.  
   
@@ -314,4 +314,4 @@ Les méthodes suivantes ont été ajoutées à cette classe pour prendre en char
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

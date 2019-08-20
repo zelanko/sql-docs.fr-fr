@@ -1,7 +1,7 @@
 ---
-title: Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server | Microsoft Docs
+title: Utilisation de l'authentification intégrée Kerberos pour se connecter à SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916234"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026195"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l'authentification intégrée Kerberos pour se connecter à SQL Server
 
@@ -37,7 +37,7 @@ Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] permet de défi
 
 ## <a name="remarks"></a>Notes
 
-Antérieures à [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications pouvaient spécifier l’authentification intégrée (à l’aide de Kerberos ou NTLM, selon ce qui est disponible) à l’aide de la **integratedSecurity** propriété de connexion et en référençant  **sqljdbc_auth.dll**, comme décrit dans [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
+Avant [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications pouvaient spécifier l'authentification intégrée (à l'aide de Kerberos ou de NTLM, selon les disponibilités) en utilisant la propriété de connexion **integratedSecurity** et en référençant **sqljdbc_auth.dll**, comme décrit dans [Création de l'URL de connexion](../../connect/jdbc/building-the-connection-url.md).
 
 À compter de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications peuvent utiliser la propriété de connexion **authenticationScheme** pour indiquer qu’elles souhaitent se connecter à une base de données à l’aide de l’authentification intégrée Kerberos et de l’implémentation pure Kerberos Java :
 
@@ -49,7 +49,7 @@ Antérieures à [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications 
 
 Quand vous utilisez une source de données pour créer des connexions, vous pouvez définir par programmation le schéma d’authentification à l’aide de **setAuthenticationScheme** et (éventuellement) définir le SPN pour les connexions Kerberos à l’aide de **setServerSpn**.
 
-Un nouvel enregistreur d'événements a été ajouté pour la prise en charge de l'authentification Kerberos : com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Pour plus d’informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md).
+Un nouvel enregistreur d'événements a été ajouté pour la prise en charge de l'authentification Kerberos : com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Pour plus d'informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md).
 
 Les consignes suivantes vous aideront à configurer Kerberos :
 
@@ -80,7 +80,7 @@ Pour plus d'informations sur les noms des principaux du service (SPN), consultez
 >
 > Depuis la version 6,2, le pilote est en mesure de générer le **serverSpn** par défaut, même si vous utilisez le protocole Kerberos inter-domaines. Bien qu’il soit possible d’utiliser **serverSpn** de manière explicite.
 
-## <a name="creating-a-login-module-configuration-file"></a>Création d'un fichier de configuration d'un module de connexion
+## <a name="creating-a-login-module-configuration-file"></a>Création du fichier de configuration d'un module de connexion
 
 Vous pouvez, si vous le désirez, créer un fichier de configuration Kerberos. Si vous ne spécifiez pas de fichier de configuration, les paramètres suivants seront appliqués :
 
@@ -148,7 +148,7 @@ forwardable = yes
 
 ```
 
-## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>Activation du fichier de configuration de domaine et du fichier de configuration du module de connexion
+## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>Activation du fichier de configuration du domaine et du fichier de configuration du module de connexion
 
 Le fichier de configuration de domaine peut être activé à l'aide de -Djava.security.krb5.conf. Vous pouvez activer un fichier de configuration de module de connexion avec **-Djava. Security. auth. Login. config**.
 

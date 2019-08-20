@@ -1,7 +1,7 @@
 ---
 title: Configuration requise pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893971"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027670"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68893971"
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([Télécharger](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
 
-## <a name="java-runtime-environment-requirements"></a>Configuration requise pour l'environnement d'exécution Java  
+## <a name="java-runtime-environment-requirements"></a>Configuration requise pour Java Runtime Environment  
 
  À compter de Microsoft JDBC Driver 7.4 pour SQL Server, le Kit JDK (Java Development Kit) version 12.0 et l’environnement JRE (Java Runtime Environment) version 12.0 sont pris en charge.
 
@@ -41,7 +41,7 @@ ms.locfileid: "68893971"
   
  À partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la prise en charge de l’API Spec JDBC (Java Database Connectivity) par le pilote JDBC a été étendue pour inclure l’API JDBC 4.0. L’API JDBC 4.0 a été introduite dans le cadre du kit JDK (Java Development Kit) version 6.0 et de l’environnement JRE (Java Runtime Environment) version 6.0. JDBC 4.0 est un surensemble de l'API JDBC 3.0.
   
- Quand vous déployez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sur les systèmes d’exploitation Windows et UNIX, vous devez utiliser les packages d’installation, respectivement *sqljdbc_\<version>_enu.exe*, et *sqljdbc_\<version>_enu.tar.gz*. Pour plus d’informations sur le déploiement du pilote JDBC, voir la rubrique [Déployer le pilote JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+ Quand vous déployez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sur les systèmes d’exploitation Windows et UNIX, vous devez utiliser les packages d’installation, respectivement *sqljdbc_\<version>_enu.exe*, et *sqljdbc_\<version>_enu.tar.gz*. Pour plus d'informations sur le déploiement du pilote JDBC, consultez la rubrique [Déployer le pilote JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
 
 **Microsoft JDBC Driver 7.4 pour SQL Server :**  
 
@@ -192,18 +192,18 @@ JDBC Driver 6.4 est également disponible sur le référentiel central Maven ; p
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
-## <a name="sql-server-requirements"></a>Configuration SQL Server requise  
+## <a name="sql-server-requirements"></a>impératifs SQL Server  
  Le pilote JDBC prend en charge les connexions à Azure SQL Database et à SQL Server. Pour les pilotes Microsoft JDBC 4.2 et 4.1 pour SQL Server, la prise en charge commence avec SQL Server 2008.
   
 ## <a name="operating-system-requirements"></a>Système d'exploitation requis  
  Le pilote JDBC est conçu pour fonctionner sur tout système d'exploitation prenant en charge l'utilisation d'une machine virtuelle Java (JVM). Toutefois, seuls les systèmes d'exploitation Sun Solaris, SUSE Linux et Windows ont été testés officiellement.  
   
 ## <a name="supported-languages"></a>Langues prises en charge  
- Le pilote JDBC prend en charge tous les classements de colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les classements pris en charge par le pilote JDBC, voir [Fonctionnalités internationales du pilote JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ Le pilote JDBC prend en charge tous les classements de colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations sur les classements pris en charge par le pilote JDBC, consultez [Fonctionnalités internationales du pilote JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
  Pour plus d’informations sur les classements, consultez la rubrique « Utilisation des classements » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

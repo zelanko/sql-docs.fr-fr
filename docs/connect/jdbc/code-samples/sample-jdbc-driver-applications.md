@@ -1,7 +1,7 @@
 ---
 title: Exemples d’applications de pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e99e122f1e18c320c6ea6e5b18409ca39780d03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef5c2d71d398be52ebed2b69020e87d54818176
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957079"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028316"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Exemples d'applications du pilote JDBC
 
@@ -31,7 +31,7 @@ Tous les exemples d'applications sont contenus dans les fichiers de code *.java 
 
  Les rubriques de cette section décrivent la configuration et l'exécution des exemples d'applications et incluent une présentation de ce que montrent les exemples d'applications.  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
   
 | Rubrique                                                                                                                  | Description                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,4 +43,4 @@ Tous les exemples d'applications sont contenus dans les fichiers de code *.java 
   
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble du pilote JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Présentation du pilote JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

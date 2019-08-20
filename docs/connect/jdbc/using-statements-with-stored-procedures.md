@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’instructions avec des procédures stockées | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003940"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025865"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Utilisation d'instructions avec des procédures stockées
 
@@ -46,16 +46,16 @@ Quand vous utilisez le pilote JDBC pour appeler une procédure stockée avec des
   
 Les rubriques composant cette section décrivent comment appeler des procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du pilote JDBC et de la séquence d’échappement SQL `call`.  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Utilisation d’une procédure stockée sans paramètres](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées ne contenant pas de paramètres d'entrée ou de sortie.|  
-|[Utilisation d’une procédure stockée avec des paramètres d’entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres d'entrée.|  
-|[Utilisation d’une procédure stockée avec des paramètres de sortie](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres de sortie.|  
-|[Utilisation d’une procédure stockée avec retour d’état](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des valeurs de retour d'état.|  
-|[Utilisation d’une procédure stockée avec un compteur des mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées qui retournent des nombres de mises à jour.|  
+|[Utilisation d'une procédure stockée sans paramètres](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées ne contenant pas de paramètres d'entrée ou de sortie.|  
+|[Utilisation d'une procédure stockée avec des paramètres d'entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres d'entrée.|  
+|[Utilisation d'une procédure stockée avec des paramètres de sortie](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres de sortie.|  
+|[Utilisation d'une procédure stockée avec retour d'état](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des valeurs de retour d'état.|  
+|[Utilisation d'une procédure stockée avec un nombre de mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées qui retournent des nombres de mises à jour.|  
   
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation d’instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Utilisation d'instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

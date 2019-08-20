@@ -1,7 +1,7 @@
 ---
 title: Notes de publication pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891287"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027787"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notes de publication pour le pilote JDBC Microsoft
 
@@ -158,11 +158,11 @@ Le pilote JDBC 7.0 Microsoft pour SQL Server prend désormais en charge les type
 
 Le pilote JDBC 7.0 Microsoft pour SQL Server implémente maintenant les API `beginRequest()` et `endRequest()` à partir de la classe `java.sql.Connection`. Ces API ont été introduites avec les spécifications JDBC 4.3 et JDK 9. Pour plus d’informations sur l’implémentation du pilote de ces API, consultez [Conformité de JDBC 4.3 pour le pilote JDBC](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
-### <a name="support-for-sql-data-discovery-and-classification"></a>Prise en charge de la découverte et de la classification des données SQL
+### <a name="support-for-sql-data-discovery-and-classification"></a>Prise en charge de la détection et de la classification des données SQL
 
-Le pilote JDBC 7.0 Microsoft pour SQL Server fournit un support pour la détection et la classification de données SQL avec une base de données cible prenant en charge cette fonctionnalité. Le pilote expose désormais des API `SQLServerResultSet.getSensitivityClassification()` pour extraire ces informations à partir de `ResultSet` récupéré.
+Le pilote JDBC 7.0 Microsoft pour SQL Server fournit un support pour la détection et la classification des données SQL avec une base de données cible prenant en charge cette fonctionnalité. Le pilote expose désormais des API `SQLServerResultSet.getSensitivityClassification()` pour extraire ces informations à partir de `ResultSet` récupéré.
 
-Pour plus d’informations sur la façon d’utiliser cette fonctionnalité avec le pilote JDBC, consultez l’exemple dans [Détection et classification de données SQL](../../connect/jdbc/data-discovery-classification-sample.md).
+Pour plus d'informations sur l'utilisation de cette fonctionnalité avec le pilote JDBC, consultez l'exemple fourni dans [Détection et classification de données SQL](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Ajout d’une propriété de connexion : useBulkCopyForBatchInsert
 

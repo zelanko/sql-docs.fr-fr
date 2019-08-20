@@ -1,7 +1,7 @@
 ---
 title: Sécurisation des chaînes de connexion | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05782c2691b3409339554e2154b385b93c17b4d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1483beed275649156ab84c370facc716818fb974
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945783"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027743"
 ---
-# <a name="securing-connection-strings"></a>Sécurisation de chaînes de connexion
+# <a name="securing-connection-strings"></a>Sécurisation des chaînes de connexion
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -31,4 +31,4 @@ Si vous utilisez des informations de chaîne de connexion d'une source externe, 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)
+[Sécurisation des applications du pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

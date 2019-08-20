@@ -1,7 +1,7 @@
 ---
 title: Utilisation des types de données de base | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916358"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026512"
 ---
 # <a name="using-basic-data-types"></a>Utilisation des types de données de base
 
@@ -23,7 +23,7 @@ ms.locfileid: "67916358"
 
 Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] utilise les types de données de base JDBC pour convertir les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un format compréhensible par le langage de programmation Java et inversement. Le pilote JDBC prend en charge l’API JDBC 4,0, qui inclut le type de données **SQLXML** et les types de données nationaux (Unicode), tels que **nchar**, **nvarchar**, **LONGNVARCHAR**et **NCLOB**.  
   
-## <a name="data-type-mappings"></a>Mappages de type de données
+## <a name="data-type-mappings"></a>Mappages de types de données
 
 Le tableau suivant répertorie les mappages par défaut entre les types de données de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC et du langage de programmation Java :  
   
@@ -72,7 +72,7 @@ Le tableau suivant répertorie les mappages par défaut entre les types de donn�
   
 Les sections suivantes proposent des exemples d'utilisation du pilote JDBC et des types de données de base. Pour obtenir un exemple plus détaillé sur l’utilisation des types de données de base dans une application Java, consultez [Exemple de types de données de base](../../connect/jdbc/basic-data-types-sample.md).  
   
-## <a name="retrieving-data-as-a-string"></a>Extraction de données en tant que chaîne
+## <a name="retrieving-data-as-a-string"></a>Extraction de données sous la forme d'une chaîne
 
 Si vous devez récupérer des données d’une source de données qui correspond à l’un des types de données de base JDBC pour les afficher en tant que chaîne, ou si des données fortement typées ne sont pas nécessaires, vous pouvez appliquer la méthode [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), comme suit :  
   
@@ -115,7 +115,7 @@ Si vous devez transmettre des paramètres typés dans une procédure stockée, v
 
 Pour plus d’informations sur l’utilisation du pilote JDBC avec les procédures stockées et les paramètres d’entrée, consultez [utilisation d’une procédure stockée avec des paramètres d’entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
-## <a name="retrieving-parameters-from-a-stored-procedure"></a>Extraction de paramètres d'une procédure stockée
+## <a name="retrieving-parameters-from-a-stored-procedure"></a>Extraction de paramètres à partir d'une procédure stockée
 
 Si vous devez récupérer des paramètres d’une procédure stockée, vous devez tout d’abord inscrire un paramètre out par nom ou index à l’aide de la méthode [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la classe SQLServerCallableStatement, puis attribuer le paramètre out retourné à une variable appropriée après l’exécution de l’appel de la procédure stockée. Dans l’exemple suivant, la méthode prepareCall est utilisée pour configurer l’appel de la procédure stockée, la méthode registerOutParameter est utilisée pour configurer le paramètre out, puis la méthode [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) est utilisée pour définir le paramètre pour l’appel avant l’appel de la méthode executeQuery. La valeur retournée par le paramètre out de la procédure stockée est récupérée à l’aide de la méthode [getShort](../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités internationales du pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956475"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028002"
 ---
-# <a name="international-features-of-the-jdbc-driver"></a>Caractéristiques internationales du pilote JDBC
+# <a name="international-features-of-the-jdbc-driver"></a>Fonctionnalités internationales du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Les fonctionnalités d’internationalisation du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluent ce qui suit :  
@@ -30,7 +30,7 @@ ms.locfileid: "67956475"
   
 -   Prise en charge des noms de domaine internationaux (à compter du pilote Microsoft JDBC 6.0 pour SQL Server)  
   
-## <a name="handling-of-character-data"></a>Gestion des données de type caractères  
+## <a name="handling-of-character-data"></a>Gestion des données caractères  
  Les données de type caractère dans Java sont traitées par défaut en tant qu’Unicode ; l’objet Java **String**représente des données de type caractère Unicode. Dans le pilote JDBC, les méthodes getter et setter du flux de données ASCII constituent la seule exception à cette règle ; il s'agit de cas à part, car ces méthodes utilisent des flux d'octets en se basant sur l'hypothèse implicite de pages de codes uniques et bien connues (ASCII).  
   
  En outre, le pilote JDBC fournit la propriété de chaîne de connexion **sendStringParametersAsUnicode** . Cette propriété peut être utilisée pour spécifier que les paramètres préparés pour les données caractères sont envoyés en tant que caractères ASCII ou en tant que jeu de caractères multioctets (MBCS), et non en tant que caractères Unicode. Pour plus d’informations sur la propriété de chaîne de connexion **sendStringParametersAsUnicode** , consultez [définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
@@ -63,6 +63,6 @@ ms.locfileid: "67956475"
 >  La plupart des logiciels de résolution écrits pour les plateformes autres que Windows sont basés sur les normes DSN Internet. Il est donc plus probable qu’ils utilisent le format Punycode pour les noms de domaines internationaux, alors qu’un serveur DNS Windows sur un réseau privé peut être configuré pour autoriser l’utilisation des caractères UTF-8 en fonction du serveur.  Pour plus d’informations, consultez [Prise en charge des caractères Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

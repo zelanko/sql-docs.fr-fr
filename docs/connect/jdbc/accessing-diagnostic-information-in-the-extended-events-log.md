@@ -1,7 +1,7 @@
 ---
 title: Accès aux informations de diagnostic dans le journal des événements étendus | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f4dfb22027ca448848d7027232e41359ff1664d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957486"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028493"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "67957486"
   
  Vous pouvez récupérer l’ID de connexion du client par programme à l’aide de l' [interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID de connexion sera également présent dans toutes les exceptions liées à la connexion.  
   
- En cas d’erreur de connexion, l’ID de connexion client dans les informations de trace des diagnostics intégrés du serveur et dans la mémoire tampon en anneau de connectivité peut aider à corréler les connexions clientes aux connexions sur le serveur. Pour plus d’informations sur les traces des diagnostics intégrés, consultez [Traçage de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Notez que cet article contient également des informations sur la trace des accès aux données, qui ne s’appliquent pas à [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ; consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md) pour plus d’informations sur la création d’une trace d’accès aux données avec [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+ En cas d’erreur de connexion, l’ID de connexion client dans les informations de trace des diagnostics intégrés du serveur et dans la mémoire tampon en anneau de connectivité peut aider à corréler les connexions clientes aux connexions sur le serveur. Pour plus d’informations sur les traces des diagnostics intégrés, consultez [Traçage de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Notez que cet article contient également des informations sur la trace des accès aux données, qui ne s'applique pas à [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ; consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md) pour plus d'informations sur la création d'une trace d'accès aux données avec [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  Le pilote JDBC envoie également un ID d'activité spécifique au thread. L'ID d'activité est capturé dans les sessions d'événements étendus si les sessions sont démarrées alors que l'option TRACK_CAUSAILITY est activée. En cas de problèmes de performance avec une connexion active, vous pouvez obtenir l'ID d'activité de la trace du client (champ ActivityID), puis le localiser dans la sortie d'événements étendus. L’ID d’activité dans les événements étendus est un GUID sur 16 octets (différent du GUID de l’ID de connexion cliente) suivi d’un numéro séquentiel sur 4 octets. Le numéro séquentiel représente l'ordre d'une demande dans un thread. L'ActivityId est envoyé pour les instructions de lot SQL et les requêtes RPC. Pour activer l'envoi d'ActivityId au serveur, vous devez d'abord spécifier la paire de valeur/clé suivante dans le fichier Logging.Properties :  
   
@@ -37,7 +37,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  Toute valeur autre que `on` (valeur respectant la casse) désactive l’envoi de l’ActivityId.  
   
- Pour plus d’informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md). L'indicateur de trace est utilisé avec les enregistreurs d'objets JDBC correspondants pour décider s'il faut tracer et envoyer l'ActivityId dans le pilote JDBC. En plus de la mise à jour du fichier Logging.Properties, l'enregistreur com.microsoft.sqlserver.jdbc doit être activé avec le niveau FINER ou plus élevé. Si vous voulez envoyer ActivityId au serveur pour des requêtes effectuées par une classe donnée, l’enregistreur de classe correspondant doit être activé avec le niveau FINER ou FINEST. Par exemple, si la classe est SQLServerStatement, activez l'enregistreur com.microsoft.sqlserver.jdbc.SQLServerStatement.  
+ Pour plus d'informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md). L'indicateur de trace est utilisé avec les enregistreurs d'objets JDBC correspondants pour décider s'il faut tracer et envoyer l'ActivityId dans le pilote JDBC. En plus de la mise à jour du fichier Logging.Properties, l'enregistreur com.microsoft.sqlserver.jdbc doit être activé avec le niveau FINER ou plus élevé. Si vous voulez envoyer ActivityId au serveur pour des requêtes effectuées par une classe donnée, l’enregistreur de classe correspondant doit être activé avec le niveau FINER ou FINEST. Par exemple, si la classe est SQLServerStatement, activez l'enregistreur com.microsoft.sqlserver.jdbc.SQLServerStatement.  
   
  L’exemple suivant utilise [!INCLUDE[tsql](../../includes/tsql-md.md)] pour démarrer une session d’événements étendus qui est stockée dans une mémoire tampon en anneau et enregistre l’ID d’activité envoyé par un client lors des opérations par lot et RPC :  
   
@@ -52,6 +52,6 @@ add target ring_buffer with (track_causality=on)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Diagnostic des problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+ [Diagnostic de problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

@@ -1,6 +1,6 @@
 - name: Programmation pour interagir avec SQL Server
   href: ../connect/homepage-sql-connection-programming.md
-- name: Bienvenue dans SQL Server >>
+- name: Bienvenue dans SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Pilotes SQL Server
   href: ../connect/sql-connection-libraries.md

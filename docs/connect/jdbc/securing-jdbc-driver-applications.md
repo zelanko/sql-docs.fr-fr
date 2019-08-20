@@ -1,7 +1,7 @@
 ---
 title: Sécurisation des applications de pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945744"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027753"
 ---
-# <a name="securing-jdbc-driver-applications"></a>Sécurisation des applications de pilote JDBC
+# <a name="securing-jdbc-driver-applications"></a>Sécurisation des applications du pilote JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -25,7 +25,7 @@ L’amélioration de la sécurité d’une application [!INCLUDE[jdbcNoVersion](
   
 Les rubriques de cette section décrivent certains problèmes de sécurité courants, liés entre autres aux chaînes de connexion, à la validation de l'entrée d'utilisateur et à la sécurité générale des applications.  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
   
 | Rubrique                                                                            | Description                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,4 +37,4 @@ Les rubriques de cette section décrivent certains problèmes de sécurité cour
   
 ## <a name="see-also"></a>Voir aussi  
 
- [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

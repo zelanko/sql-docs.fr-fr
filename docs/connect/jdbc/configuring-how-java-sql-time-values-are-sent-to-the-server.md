@@ -1,7 +1,7 @@
 ---
-title: Configuration du mode d’envoi des valeurs java.sql.Time au serveur | Microsoft Docs
+title: Configuration du mode d'envoi des valeurs java.sql.Time au serveur | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f22382db2ab6cd9c6f055b8143500e2062721df1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956937"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028234"
 ---
-# <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuration du mode d'envoi des valeurs java.sql.Time au serveur
+# <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuration du mode d’envoi des valeurs java.sql.Time au serveur
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Si vous utilisez un objet java.sql.Time ou le type JDBC java.sql.Types.TIME pour définir un paramètre, vous pouvez configurer la façon dont la valeur java.sql.Time est envoyée au serveur : en tant que type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time** ou **datetime**.  
@@ -61,7 +61,7 @@ SendTimeAsDatetime doit avoir la valeur false pour les colonnes chiffrées, car 
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
  [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

@@ -1,6 +1,6 @@
 - name: SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
-- name: Bienvenue dans SQL Server >>
+- name: Bienvenue dans SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Vue d’ensemble
   items:
@@ -1801,11 +1801,11 @@
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: Ressources
   items:
-    - name: Obtenir de l’aide sur le forum SSIS >
+    - name: Forum SSIS >>
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
-    - name: Obtenir de l’aide sur Stack Overflow >
+    - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
-    - name: Suivre le blog de l’équipe SSIS >
+    - name: Blog SSIS >>
       href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: Signaler des problèmes et demander des fonctionnalités >
+    - name: Commentaires sur le produit >>
       href: 'https://feedback.azure.com/forums/908035-sql-server'

@@ -1,7 +1,7 @@
 ---
 title: Utilisation de l’API de copie en bloc pour l’opération d’insertion de lot pour le pilote MSSQL JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004136"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027106"
 ---
-# <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l’API de copie en bloc pour l’opération d’insertion par lot
+# <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l'API de copie en bloc pour l'opération d'insertion par lot
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -25,7 +25,7 @@ Le pilote Microsoft JDBC 7,0 pour SQL Server prend en charge l’utilisation de 
 
 Cette fonctionnalité s’applique uniquement aux API de PreparedStatement et `executeBatch()` de  &  `executeLargeBatch()` CallableStatement.
 
-## <a name="pre-requisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Il existe deux conditions préalables à l’activation de l’API de copie en bloc pour l’insertion de lot.
 

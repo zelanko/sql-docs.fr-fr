@@ -1,7 +1,7 @@
 ---
 title: Comprendre les différences entre les types de données | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0cec994768fb5c3a49257da0fb310937c79c25b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 906a4abf0768fcad2e5ac31a0ee93345dcc8b30c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004165"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027382"
 ---
-# <a name="understanding-data-type-differences"></a>Différences entre les types de données
+# <a name="understanding-data-type-differences"></a>Présentation des différences entre les types de données
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -73,7 +73,7 @@ Le type d' **horodatage** JDBC est mappé [!INCLUDE[ssNoVersion](../../includes/
 > [!NOTE]  
 > Le type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** est un type de chaîne binaire de longueur fixe. Elle ne correspond à aucun des types d’heure JDBC: **Date**, **Time**ou **timestamp**.  
   
-## <a name="custom-type-mapping"></a>Mappage de type personnalisé
+## <a name="custom-type-mapping"></a>Mappage de types personnalisés
 
 La fonction de mappage de type personnalisé de JDBC qui utilise les interfaces SQLData pour les types avancés JDBC (UDT, Struct, et ainsi de suite). n'est pas implémentée dans le pilote JDBC.  
   

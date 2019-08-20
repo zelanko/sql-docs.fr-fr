@@ -1,7 +1,7 @@
 ---
 title: 'Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004284"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027507"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java
   
 Cet exemple doit être considéré comme une preuve de concept uniquement. L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
   
-## <a name="step-1--connect"></a>Étape 1: se connecter  
+## <a name="step-1-connect"></a>Étape 1: se connecter  
   
 Utilisez la classe Connection pour vous connecter à SQL Database.   
   
@@ -149,4 +149,4 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="additional-samples"></a>Exemples supplémentaires  
-[Exemples d’applications JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)
+[Exemples d'applications du pilote JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)

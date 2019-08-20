@@ -1,7 +1,7 @@
 ---
-title: Utilisation d’une procédure stockée avec des paramètres de sortie | Microsoft Docs
+title: Utilisation d'une procédure stockée avec des paramètres de sortie | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916492"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026834"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Utilisation d'une procédure stockée avec des paramètres de sortie
 
@@ -88,4 +88,4 @@ Les procédures stockées peuvent retourner des nombres de mises à jour et des 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Utilisation d'instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)

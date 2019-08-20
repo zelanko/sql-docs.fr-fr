@@ -1,7 +1,7 @@
 ---
 title: Fonctionnement des types de données du pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916602"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027273"
 ---
-# <a name="understanding-the-jdbc-driver-data-types"></a>Présentation des types de données de pilote JDBC
+# <a name="understanding-the-jdbc-driver-data-types"></a>Présentation des types de données du pilote JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,12 +27,12 @@ Le système de type JDBC modère la conversion entre les types de données [!INC
   
 Les rubriques de cette section décrivent comment utiliser les types de données de base et avancés et comment les types de données peuvent être convertis en d'autres types de données.  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
   
 | Rubrique                                                                                                                                            | Description                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Utilisation des types de données de base](../../connect/jdbc/using-basic-data-types.md)                                                                           | Décrit les types de données de base JDBC. Inclut des exemples illustrant comment travailler avec les types de données en utilisant des jeux de résultats, des requêtes paramétrables et des procédures stockées.                                                                                                        |
-| [Configuration du mode d’envoi des valeurs java.sql.Time au serveur](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | Décrit la manière dont le pilote JDBC génère les dates.                                                                                                                                                                                                                       |
+| [Configuration du mode d'envoi des valeurs java.sql.Time au serveur](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | Décrit la manière dont le pilote JDBC génère les dates.                                                                                                                                                                                                                       |
 | [Utilisation des types de données avancés](../../connect/jdbc/using-advanced-data-types.md)                                                                     | Décrit les types de données avancés JDBC.                                                                                                                                                                                                                              |
 | [Présentation des différences entre les types de données](../../connect/jdbc/understanding-data-type-differences.md)                                                 | Décrit les différences entre les différents types de données de pilote JDBC.                                                                                                                                                                                                    |
 | [Présentation des conversions de types de données](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | Explique comment est gérée la conversion de type de données lors de l'utilisation de méthodes getter et setter.                                                                                                                                                                                  |
@@ -42,4 +42,4 @@ Les rubriques de cette section décrivent comment utiliser les types de données
   
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

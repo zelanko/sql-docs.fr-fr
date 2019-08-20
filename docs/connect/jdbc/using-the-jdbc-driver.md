@@ -1,7 +1,7 @@
 ---
-title: Utiliser le pilote JDBC | Microsoft Docs
+title: Utilisation du pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893667"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025773"
 ---
 # <a name="using-the-jdbc-driver"></a>Utilisation du pilote JDBC
 
@@ -41,7 +41,7 @@ Microsoft JDBC Driver 6.0 et 4.2 pour SQL Server fournissent les fichiers biblio
   
 Microsoft JDBC Driver 4.1 pour SQL Server fournit le fichier bibliothèque de classes **sqljdbc41.jar**.
 
-Votre choix détermine également les fonctionnalités disponibles. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+Votre choix détermine également les fonctionnalités disponibles. Pour plus d'informations sur le fichier JAR à choisir, consultez [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Définition de Classpath
 
@@ -229,8 +229,8 @@ Lorsque la méthode getConnection de la classe DriverManager est appelée, un pi
 > [!NOTE]  
 > Vous ne pouvez pas utiliser les bibliothèques de classe sqljdbc4.jar, sqljdbc41.jar et sqljdbc42.jar avec les anciennes versions de Java Runtime Environment (JRE). Pour obtenir la liste des versions de JRE prises en charge par [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
 
-Pour savoir comment se connecter avec des sources de données et utiliser une URL de connexion, voir [Créer l’URL de connexion](../../connect/jdbc/building-the-connection-url.md) et [Définir les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
+Pour savoir comment se connecter avec des sources de données et utiliser une URL de connexion, voir [Créer l'URL de connexion](../../connect/jdbc/building-the-connection-url.md) et [Définir les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

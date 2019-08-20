@@ -1,7 +1,7 @@
 ---
 title: Fonctionnement des transactions XA | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004156"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027225"
 ---
 # <a name="understanding-xa-transactions"></a>Présentation des transactions XA
 
@@ -52,7 +52,7 @@ Les recommandations supplémentaires suivantes s'appliquent aux transactions for
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
-## <a name="configuration-instructions"></a>Instructions relatives à la configuration
+## <a name="configuration-instructions"></a>Instructions de configuration
 
 Les étapes suivantes sont requises si vous souhaitez utiliser des sources de données XA avec Microsoft Distributed Transaction Coordinator (MS DTC) pour manipuler des transactions distribuées.  
 
@@ -152,7 +152,7 @@ Une valeur de délai d'expiration est définie au démarrage de chaque transacti
   
      Signifie que toutes les transactions auront un délai d'attente de 30 secondes (valeur maximale) si le client n'en spécifie aucun. Si le client spécifie un délai d’attente, ce dernier sera utilisé s’il est inférieur à 30 secondes (valeur maximale).  
   
-### <a name="upgrading-sqljdbcxadll"></a>Mise à niveau du fichier sqljdbc_xa.dll
+### <a name="upgrading-sqljdbc_xadll"></a>Mise à niveau du fichier sqljdbc_xa.dll
 
 Lorsque vous installez une nouvelle version du pilote JDBC, vous devez utiliser le fichier sqljdbc_xa.dll de la nouvelle version pour mettre à niveau le fichier sqljdbc_xa.dll sur le serveur.  
   

@@ -1,7 +1,7 @@
 ---
-title: Connexion avec l’authentification Azure Active Directory | Microsoft Docs
+title: Connexion avec l'authentification Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956823"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028122"
 ---
-# <a name="connecting-using-azure-active-directory-authentication"></a>Connexion avec l’authentification Azure Active Directory
+# <a name="connecting-using-azure-active-directory-authentication"></a>Connexion avec l'authentification Azure Active Directory
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -175,7 +175,7 @@ JDK est fourni `kinit`avec, que vous pouvez utiliser pour obtenir un ticket TGT 
 #### <a name="linux-and-mac"></a>Linux et Mac
 
 ##### <a name="requirements"></a>Spécifications
-Accès à un ordinateur Windows joint à un domaine pour interroger votre contrôleur de domaine Kerberos.
+Accédez à un ordinateur Windows joint à un domaine pour interroger votre contrôleur de domaine Kerberos.
 
 ##### <a name="step-1-find-kerberos-kdc"></a>Étape 1: Rechercher Kerberos KDC
 - **Exécuter sur**: ligne de commande Windows
@@ -201,12 +201,12 @@ Accès à un ordinateur Windows joint à un domaine pour interroger votre contr�
      kdc = co1-red-dc-28.domain.company.com
   }
   ```
-  Enregistrez ensuite le fichier krb5. conf et quittez
+  Enregistrez ensuite le fichier krb5.conf et quittez
 
 > [!NOTE]
->  Le domaine doit être en MAJUSCULEs.
+>  Le domaine doit être en MAJUSCULES.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Étape 3: test de la récupération du ticket d’accord de ticket
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Étape 3 : tester la récupération du ticket d'attribution de ticket
 - **Exécuter sur**: Linux/Mac
 - **Action** :
   - Utilisez la commande `kinit username@DOMAIN.COMPANY.COM` pour obtenir un ticket TGT du KDC, puis vous serez invité à entrer votre mot de passe de domaine.

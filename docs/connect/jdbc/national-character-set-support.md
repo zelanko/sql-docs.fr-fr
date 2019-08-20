@@ -1,7 +1,7 @@
 ---
 title: Prise en charge des jeux de caractères nationaux | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff8d7435e3a896c05281748568eacc2e92d32f6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956281"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027873"
 ---
-# <a name="national-character-set-support"></a>Prise en charge du jeu de caractères nationaux
+# <a name="national-character-set-support"></a>Prise en charge des jeux de caractères nationaux
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Le pilote JDBC prend en charge l'API JDBC 4.0, qui comprend désormais de nouvelles méthodes d'API de conversion de jeu de caractères nationaux. Cette prise en charge comprend de nouvelles méthodes setter, getter et Updater pour les types JDBC **nchar**, **nvarchar**, **LONGNVARCHAR**et **NCLOB** .  

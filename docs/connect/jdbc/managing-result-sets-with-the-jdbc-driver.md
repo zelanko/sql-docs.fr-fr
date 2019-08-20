@@ -1,7 +1,7 @@
 ---
 title: Gestion des jeux de résultats avec le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f6b7dac1be8309ff5ece21dbb863b410edbf61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956348"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027911"
 ---
-# <a name="managing-result-sets-with-the-jdbc-driver"></a>Gestion de jeux de résultats avec le pilote JDBC
+# <a name="managing-result-sets-with-the-jdbc-driver"></a>Gestion des jeux de résultats avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Le jeu de résultats est un objet représentant un ensemble de données retourné par une source de données, généralement à la suite d'une requête. Le jeu de résultats contient des lignes et des colonnes destinées à contenir des éléments de données requis et dans lesquelles il est possible de naviguer à l'aide d'un curseur. Un jeu de résultats peut être mis à jour, ce qui signifie qu'il est possible de le modifier et de faire en sorte que ces modifications soient répercutées dans la source de données originale. Un jeu de résultats peut également présenter plusieurs niveaux de sensibilité aux modifications apportées à la source de données sous-jacente.  
@@ -30,15 +30,15 @@ ms.locfileid: "67956348"
   
  Les rubriques de cette section décrivent divers aspects liés à l'utilisation du jeu de résultats, notamment les types de curseur, les accès simultanés et le verrouillage de ligne.  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Présentation des types de curseurs](../../connect/jdbc/understanding-cursor-types.md)|Décrit les différents types de curseurs pris en charge par [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
-|[Présentation du contrôle d’accès concurrentiel](../../connect/jdbc/understanding-concurrency-control.md)|Décrit la manière dont le pilote JDBC prend en charge le contrôle de concurrence.|  
-|[Présentation du verrouillage des lignes](../../connect/jdbc/understanding-row-locking.md)|Décrit la manière dont le pilote JDBC prend en charge le verrouillage de ligne.|  
+|[Présentation du contrôle d'accès concurrentiel](../../connect/jdbc/understanding-concurrency-control.md)|Décrit la manière dont le pilote JDBC prend en charge le contrôle de concurrence.|  
+|[Présentation du verrouillage de ligne](../../connect/jdbc/understanding-row-locking.md)|Décrit la manière dont le pilote JDBC prend en charge le verrouillage de ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Utilisation des jeux de résultats | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956963"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028245"
 ---
-# <a name="working-with-result-sets"></a>Travail sur des jeux de résultats
+# <a name="working-with-result-sets"></a>Utilisation des jeux de résultats
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -30,15 +30,15 @@ En outre, l’objet SQLServerResultSet fournit des méthodes de navigation dans 
   
 Les rubriques de cette section décrivent différentes façons d’utiliser un jeu de résultats pour manipuler les données contenues dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
   
 | Rubrique                                                                                           | Description                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Exemple de récupération de données du jeu de résultats](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Décrit l’utilisation d’un jeu de résultats pour extraire des données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les afficher.                                                         |
-| [Exemple de modification des données du jeu de résultats](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Décrit l’utilisation d’un jeu de résultats pour insérer, extraire et modifier des données dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
-| [Exemple de mise en cache de données du jeu de résultats](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Décrit l’utilisation d’un jeu de résultats pour extraire de grandes quantités de données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et pour contrôler la manière dont ces données sont mises en cache sur le client. |
+| [Exemple de récupération des données d'un jeu de résultats](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Décrit l’utilisation d’un jeu de résultats pour extraire des données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les afficher.                                                         |
+| [Exemple de modification des données d'un jeu de résultats](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Décrit l’utilisation d’un jeu de résultats pour insérer, extraire et modifier des données dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
+| [Exemple de mise en cache des données d'un jeu de résultats](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Décrit l’utilisation d’un jeu de résultats pour extraire de grandes quantités de données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et pour contrôler la manière dont ces données sont mises en cache sur le client. |
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Exemples d’applications JDBC Driver](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[Exemples d'applications du pilote JDBC](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

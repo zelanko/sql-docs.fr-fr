@@ -1,7 +1,7 @@
 ---
 title: Utilisation des types de données avancés | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004064"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027007"
 ---
 # <a name="using-advanced-data-types"></a>Utilisation des types de données avancés
 
@@ -55,7 +55,7 @@ Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnovers
 
 Les principaux scénarios de travail sur des types de données de grande valeur impliquent l'extraction d'une base de données ou l'ajout à une base de données. Les sections suivantes décrivent les différentes approches de réalisation de ces tâches.  
 
-### <a name="retrieving-large-value-types-from-a-database"></a>Extraction de types de données de grande valeur d'une base de données
+### <a name="retrieving-large-value-types-from-a-database"></a>Récupération de types de données de grande valeur à partir d'une base de données
 
 Pour récupérer un type de données à valeur élevée non binaire, par exemple **varchar(max)** , dans une base de données, une approche consiste à lire ces données sous forme de flux de caractères. L'exemple suivant utilise la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour extraire des données de la base de données et les retourner dans un jeu de résultats. Ensuite, la méthode [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) est appelée pour lire les données de grande valeur dans le jeu de résultats.  
 
@@ -148,7 +148,7 @@ Pour plus d'informations sur les types de données de grande valeur, consultez �
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un type de données **xml** qui vous permet de stocker des documents et des fragments XML dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le type de données **xml** est intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et s’apparente à certains égards à d’autres types intégrés, comme **int** et **varchar**. Tout comme d’autres types intégrés, il est possible d’utiliser le type de données **xml** comme type de colonne pour créer une table ; comme type de variable, type de paramètre ou type de retour de fonction ; ou dans les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST et CONVERT.  
   
-Dans le pilote JDBC, le type de données **xml** peut être mappé en tant que chaîne, tableau d’octets, flux, objet CLOB, objet BLOB ou objet SQLXML. Chaîne est la valeur par défaut. À partir de la version 2.0 du pilote JDBC, l'API JDBC 4.0 est prise en charge, ce qui permet l'introduction de l'interface SQLXML. L’interface SQLXML définit des méthodes d’interaction et de manipulation des données XML. Le type de données **SQLXML** est mappé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]au type de données **XML** . Pour savoir comment lire et écrire des données XML dans la base de données relationnelle avec le type de données Java **SQLXML**, voir [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md).  
+Dans le pilote JDBC, le type de données **xml** peut être mappé en tant que chaîne, tableau d’octets, flux, objet CLOB, objet BLOB ou objet SQLXML. Chaîne est la valeur par défaut. À partir de la version 2.0 du pilote JDBC, l'API JDBC 4.0 est prise en charge, ce qui permet l'introduction de l'interface SQLXML. L’interface SQLXML définit des méthodes d’interaction et de manipulation des données XML. Le type de données **SQLXML** est mappé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]au type de données **XML** . Pour savoir comment lire et écrire des données XML dans la base de données relationnelle avec le type de données Java **SQLXML**, consultez [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md).  
   
 L’implémentation du type de données **xml** dans le pilote JDBC permet la prise en charge des éléments suivants :  
   
@@ -170,7 +170,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un type UDT peut
   
 Pour plus d’informations sur les types de données définis par l’utilisateur, voir « Utiliser et modifier des instances de types définis par l’utilisateur » dans la Documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
+## <a name="sql_variant-data-type"></a>Type de données Sql_variant
 
 Pour plus d’informations sur le type de données sql_variant, consultez [utilisation du type de données sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 

@@ -1,7 +1,7 @@
 ---
 title: Fonctionnement du pilote de suivi | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916685"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027591"
 ---
 # <a name="tracing-driver-operation"></a>Suivi du fonctionnement du pilote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "67916685"
 |SQLServerDriver|Journalise les messages dans la classe [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerNClob|Journalise les messages dans la classe [SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
   
-## <a name="enabling-tracing-programmatically"></a>Activation du suivi par programme  
+## <a name="enabling-tracing-programmatically"></a>Activation du suivi par programmation  
  Vous pouvez activer le suivi par programmation en créant un objet Logger et en indiquant la catégorie à journaliser. Par exemple, le code suivant montre comment activer la journalisation pour les instructions SQL :  
   
 ```java
@@ -131,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Activation du suivi à l'aide du fichier Logging.Properties  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Activation du suivi à l'aide du fichier logging.properties  
  Vous pouvez également activer le suivi à l’aide du fichier `logging.properties` qui se trouve dans le répertoire `lib` d’installation de Java Runtime Environment (JRE). Ce fichier permet de définir les valeurs par défaut des fonctionnalités de journalisation et de gestion utilisées lorsque le suivi est activé.  
   
  L’exemple suivant présente les paramètres pouvant être définis dans les fichiers `logging.properties` :  
@@ -159,6 +159,6 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 >  Vous pouvez définir les propriétés dans le fichier `logging.properties` à l’aide de l’objet LogManager figurant dans java.util.logging.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Diagnostic des problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+ [Diagnostic de problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

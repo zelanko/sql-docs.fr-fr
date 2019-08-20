@@ -1,7 +1,7 @@
 ---
 title: Fonctionnement de la prise en charge SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916612"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027302"
 ---
-# <a name="understanding-ssl-support"></a>Fonctionnement de la prise en charge SSL
+# <a name="understanding-ssl-support"></a>Présentation de la prise en charge de SSL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -66,7 +66,7 @@ Si la propriété de chiffrement a la valeur **true**, le [!INCLUDE[jdbcNoVersio
   
 - Utiliser une autre machine virtuelle Java  
   
-## <a name="validating-server-ssl-certificate"></a>Validation du certificat SSL de serveur  
+## <a name="validating-server-ssl-certificate"></a>Validation du certificat SSL du serveur  
 
 Pendant la négociation SSL, le serveur envoie son certificat de clé publique au client. Le client ou pilote JDBC doit confirmer que le certificat de serveur est publié par une autorité de certification approuvée par le client. Le pilote requiert que le certificat de serveur réponde aux conditions suivantes :  
   
@@ -84,4 +84,4 @@ Pendant la négociation SSL, le serveur envoie son certificat de clé publique a
 
 [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)
 
-[Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Sécurisation des applications du pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

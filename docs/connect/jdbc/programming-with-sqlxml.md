@@ -1,7 +1,7 @@
 ---
 title: Programmation avec SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956175"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027770"
 ---
 # <a name="programming-with-sqlxml"></a>Programmation à l'aide de SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67956175"
   
 -   Pour stocker un objet SQLXML dans une colonne de table de base de données de type **xml**, utilisez les méthodes setSQLXML de la classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) ou de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- L’exemple de code de [Exemple de type de données SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) montre comment effectuer ces tâches d’API courantes.  
+ L'exemple de code de [Exemple de type de données SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) montre comment effectuer ces tâches d'API courantes.  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>Objets SQLXML accessibles en lecture et en écriture  
  Le tableau suivant répertorie les types d'objets SQLXML pris en charge par les méthodes setter, getter et updater fournies par l'API JDBC. Les colonnes du tableau font référence aux éléments suivants :  

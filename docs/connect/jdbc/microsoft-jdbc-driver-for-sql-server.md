@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956321"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027884"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Pilote Microsoft JDBC pour SQL Server
 
@@ -25,7 +25,7 @@ Dans une volonté d’interopérabilité constante, Microsoft fournit un pilote 
 
 Le pilote Microsoft JDBC pour SQL Server a été testé avec les principaux serveurs d’applications, comme IBM WebSphere et SAP NetWeaver.
   
-## <a name="getting-started"></a>Mise en route  
+## <a name="getting-started"></a>Prise en main  
 
 * [Étape 1 : Configurer l’environnement de développement pour le développement Java](step-1-configure-development-environment-for-java-development.md)  
 * [Étape 2 : Créer une base de données SQL pour le développement Java](step-2-create-a-sql-database-for-java-development.md)  
@@ -52,9 +52,9 @@ Le pilote Microsoft JDBC pour SQL Server a été testé avec les principaux serv
   
 ## <a name="samples"></a>Exemples  
 
-* [Exemples d’applications JDBC Driver](sample-jdbc-driver-applications.md)  
-* [Prise en main avec Java sur Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Prise en main avec Java sur macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Prise en main avec Java sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Prise en main avec Java sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Prise en main avec Java sur SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Exemples d'applications du pilote JDBC](sample-jdbc-driver-applications.md)  
+* [Prise en main de Java sur Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Prise en main de Java sur macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Prise en main de Java sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Prise en main de Java sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Prise en main de Java sur SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

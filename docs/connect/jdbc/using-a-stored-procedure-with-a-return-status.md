@@ -1,7 +1,7 @@
 ---
-title: Utilisation d’une procédure stockée avec retour d’état | Microsoft Docs
+title: Utilisation d'une procédure stockée avec retour d'état | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916511"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027113"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Utilisation d'une procédure stockée avec retour d'état
 
@@ -61,4 +61,4 @@ Dans l’exemple suivant, une connexion ouverte à l’exemple de base de donné
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Utilisation d'instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)
