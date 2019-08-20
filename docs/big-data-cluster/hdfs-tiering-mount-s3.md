@@ -9,12 +9,12 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702876"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611419"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Guide pratique pour monter S3 pour la hiérarchisation HDFS dans un cluster Big Data
 
@@ -61,26 +61,26 @@ Une fois que vous avez préparé un fichier d’informations d’identification 
    
 1. Définissez la variable d’environnement MOUNT_CREDENTIALS en suivant les instructions ci-dessus
 
-1. Montez le stockage HDFS distant dans Azure à l’aide de **azdata bdc storage-pool mount create**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
+1. Montez le stockage HDFS distant dans S3 à l’aide de la **création d’un pool de stockage azdata BDC Create**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
-   > La commande mount create est asynchrone. À ce stade, aucun message n’indique si le montage a réussi. Consultez la section relative à l’[état](#status) pour vérifier l’état de vos montages.
+   > La commande créer un montage est asynchrone. À ce stade, aucun message n’indique si le montage a réussi. Consultez la section [état](#status) pour vérifier l’état de vos montages.
 
-Si le montage a été correctement effectué, vous devez pouvoir interroger les données HDFS et exécuter des travaux Spark sur ces dernières. Il apparaît dans le stockage HDFS de votre cluster Big Data à l’emplacement spécifié par `--mount-path`.
+Si le montage a été correctement effectué, vous devez pouvoir interroger les données HDFS et exécuter des tâches Spark sur ces dernières. Il apparaît dans le stockage HDFS de votre cluster Big Data à l’emplacement spécifié par `--mount-path`.
 
 ## <a id="status"></a> Obtenir l’état des montages
 
-Pour lister l’état de tous les montages de votre cluster Big Data, utilisez la commande suivante :
+Pour répertorier l’état de tous les montages de votre cluster Big Data, utilisez la commande suivante :
 
 ```bash
 azdata bdc hdfs mount status
 ```
 
-Pour lister l’état d’un montage situé sur un chemin spécifique dans HDFS, utilisez la commande suivante :
+Pour répertorier l’état d’un montage situé sur un chemin spécifique dans HDFS, utilisez la commande suivante :
 
 ```bash
 azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Supprimer le montage
 
-Pour supprimer le montage, utilisez la commande **azdata bdc storage-pool mount delete**, puis indiquez le chemin du montage dans HDFS :
+Pour supprimer le montage, utilisez la commande **azdata bdc storage-pool mount delete**, puis indiquez le chemin d’accès au montage dans HDFS :
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>

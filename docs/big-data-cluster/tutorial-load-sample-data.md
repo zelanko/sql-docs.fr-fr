@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419276"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621665"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutoriel : Charger un exemple de données dans votre cluster Big Data
 
@@ -33,7 +33,7 @@ Ce tutoriel explique comment utiliser un script pour charger un exemple de donn�
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> Charger un exemple de données
 
 Les étapes suivantes utilisent un script d’amorçage pour télécharger une sauvegarde de base de données SQL Server et charger les données dans votre cluster Big Data. Pour faciliter les choses, ces étapes sont réparties en deux sections : [Windows](#windows) et [Linux](#linux).
@@ -120,14 +120,14 @@ Après l’exécution du script d’amorçage., votre cluster Big Data contient 
 
 Virtualisation de données :
 
-- [Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server](tutorial-query-hdfs-storage-pool.md)
-- [Tutoriel : Interroger Oracle à partir d’un cluster Big Data SQL Server](tutorial-query-oracle.md)
+- [Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Tutoriel : Interroger Oracle à partir d’un cluster Big Data SQL Server](tutorial-query-oracle.md)
 
 Ingestion des données :
 
-- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
-- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
+- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
 
 Notebooks :
 
-- [Tutoriel : Exécuter un exemple de notebook sur un cluster Big Data SQL Server 2019](tutorial-notebook-spark.md)
+- [Tutoriel : Exécuter un exemple de notebook sur un cluster Big Data SQL Server 2019](tutorial-notebook-spark.md)
