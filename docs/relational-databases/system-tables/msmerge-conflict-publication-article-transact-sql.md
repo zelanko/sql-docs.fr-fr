@@ -27,11 +27,11 @@ ms.locfileid: "68893586"
 # <a name="msmerge_conflict_ltpublicationgt_ltarticlegt-transact-sql"></a>Article\_&lt;\_surla&gt;publicationde&lt;conflitsMSmerge (Transact-SQL)\_&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La **table\_d'\_ _ depublication\_de conflit MSmerge** contient des informations sur les lignes qui sont en conflit ou pour les modifications de ligne qui ont été annulées pour la convergence des données. Il existe une table de conflits pour chaque table répliquée dans une publication, où le nom de la table de conflits est ajouté au nom de la publication et à celui de l'article. Ces tables de conflits spécifiques aux articles existent dans la base de données utilisée pour la journalisation des conflits ; il s'agit généralement de la base de données de publication, mais il peut s'agir de la base de données d'abonnement si la journalisation des conflits est décentralisée.  
+  La **table\_d'\__Articles_ depublication\_de conflit MSmerge** contient des informations sur les lignes qui sont en conflit ou pour les modifications de ligne qui ont été annulées pour la convergence des données. Il existe une table de conflits pour chaque table répliquée dans une publication, où le nom de la table de conflits est ajouté au nom de la publication et à celui de l'article. Ces tables de conflits spécifiques aux articles existent dans la base de données utilisée pour la journalisation des conflits ; il s'agit généralement de la base de données de publication, mais il peut s'agir de la base de données d'abonnement si la journalisation des conflits est décentralisée.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|** _**|**variable**|Représente une colonne d'une table répliquée. Cette table système contient une colonne pour chaque colonne de l'article de la table.|  
+|**_nom\_de\_colonne de l’article_**|**variable**|Représente une colonne d'une table répliquée. Cette table système contient une colonne pour chaque colonne de l'article de la table.|  
 |**rowguid**|**uniqueidentifier**|Identificateur de ligne de la ligne en conflit.|  
 |**ModifiedDate**|**datetime**|Heure d'occurrence du conflit.|  
 |**ID\_de\_source de source d’origine**|**uniqueidentifier**|Abonnement pour lequel la modification de ligne a été annulée ou qui a perdu le conflit.|  
