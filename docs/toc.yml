@@ -9670,9 +9670,9 @@
                   href: ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md
                 - name: Boîte de dialogue Index XML
                   href: ssms/visual-db-tools/xml-indexes-dialog-box-visual-database-tools.md
-                - name: Utiliser des tables dans les schémas de base de données
+                - name: Utiliser des tables dans les diagrammes de base de données
                   href: ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md
-                - name: Rapprocher un schéma de base de données et une base de données modifiée
+                - name: Rapprocher un diagramme de base de données et une base de données modifiée
                   href: ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md
                 - name: Redimensionner automatiquement les tables sélectionnées dans les schémas
                   href: ssms/visual-db-tools/autosize-selected-tables-in-diagrams-visual-database-tools.md
@@ -9714,7 +9714,7 @@
                   href: ssms/visual-db-tools/development-test-and-production-databases-visual-database-tools.md
                 - name: Résumer les résultats de requête
                   href: ssms/visual-db-tools/summarize-query-results-visual-database-tools.md
-                - name: Mettre à niveau des schémas de base de données d’éditions antérieures
+                - name: Mettre à niveau des diagrammes de base de données d’éditions antérieures
                   href: ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md
                 - name: Concevoir des tables
                   href: ssms/visual-db-tools/design-tables-visual-database-tools.md
@@ -9772,9 +9772,9 @@
                   href: ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md
                 - name: Joindre manuellement des tables
                   href: ssms/visual-db-tools/join-tables-manually-visual-database-tools.md
-                - name: Ouvrir le Concepteur de schémas de base de données
+                - name: Ouvrir le Concepteur de diagrammes de base de données
                   href: ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md
-                - name: Configurer le Concepteur de schémas de base de données
+                - name: Configurer le Concepteur de diagrammes de base de données
                   href: ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md
                 - name: Boîte de dialogue Modifications détectées dans la base de données
                   href: ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md
@@ -9802,11 +9802,11 @@
                   href: ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md
                 - name: Boîte de dialogue Colonnes d’index
                   href: ssms/visual-db-tools/index-columns-dialog-box-visual-database-tools.md
-                - name: Créer un schéma de base de données
+                - name: Créer un diagramme de base de données
                   href: ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md
                 - name: Ajouter des colonnes à des requêtes
                   href: ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md
-                - name: Copier une image d’un schéma de base de données dans le Presse-papiers
+                - name: Copier une image d’un diagramme de base de données dans le Presse-papiers
                   href: ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
                 - name: 'Enregistrer (non autorisé), boîte de dialogue'
                   href: ssms/visual-db-tools/save-not-permitted-dialog-box.md
@@ -9822,7 +9822,7 @@
                   href: ssms/visual-db-tools/types-of-queries-visual-database-tools.md
                 - name: Réorganiser les colonnes de sortie
                   href: ssms/visual-db-tools/reorder-output-columns-visual-database-tools.md
-                - name: Enregistrer les schémas de base de données
+                - name: Enregistrer les diagrammes de base de données
                   href: ssms/visual-db-tools/save-database-diagrams-visual-database-tools.md
                 - name: Réduire les groupes de lignes
                   href: ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md
@@ -9834,7 +9834,7 @@
                   href: ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md
                 - name: Ouvrir des requêtes
                   href: ssms/visual-db-tools/open-queries-visual-database-tools.md
-                - name: Concevoir des schémas de base de données
+                - name: Concevoir des diagrammes de base de données
                   href: ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md
                 - name: Exécuter des requêtes
                   href: ssms/visual-db-tools/run-queries-visual-database-tools.md
@@ -9872,7 +9872,7 @@
                   href: ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md
                 - name: Boîte de dialogue Choisir la table cible pour Insert Results
                   href: ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
-                - name: Naviguer dans le Concepteur de schémas de base de données
+                - name: Naviguer dans le Concepteur de diagrammes de base de données
                   href: ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md
                 - name: Utiliser des données du volet de résultats
                   href: ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md
@@ -9884,7 +9884,7 @@
                   href: ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools.md
                 - name: Afficher les propriétés de requête
                   href: ssms/visual-db-tools/show-query-properties-visual-database-tools.md
-                - name: Présentation de la propriété du schéma de base de données
+                - name: Présentation de la propriété du diagramme de base de données
                   href: ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md
                 - name: Créer des alias de table
                   href: ssms/visual-db-tools/create-table-aliases-visual-database-tools.md
@@ -9918,11 +9918,11 @@
                   href: ssms/visual-db-tools/query-parameters-dialog-box-visual-database-tools.md
                 - name: Personnaliser la quantité d’informations affichées dans les schémas
                   href: ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
-                - name: Supprimer un schéma de base de données
+                - name: Supprimer un diagramme de base de données
                   href: ssms/visual-db-tools/delete-a-database-diagram-visual-database-tools.md
                 - name: Requête avec des paramètres
                   href: ssms/visual-db-tools/query-with-parameters-visual-database-tools.md
-                - name: Utiliser des schémas de base de données
+                - name: Utiliser des diagrammes de base de données
                   href: ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md
                 - name: Boîte de dialogue Enregistrer
                   href: ssms/visual-db-tools/save-dialog-box-visual-database-tools.md
@@ -9934,7 +9934,7 @@
                   href: ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md
                 - name: Créer des relations entre des tables sur un schéma
                   href: ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md
-                - name: Renommer un schéma de base de données
+                - name: Renommer un diagramme de base de données
                   href: ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md
                 - name: Spécifier des conditions pour des groupes
                   href: ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md
@@ -9942,7 +9942,7 @@
                   href: ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md
                 - name: Réorganiser des tables dans des schémas
                   href: ssms/visual-db-tools/arrange-tables-in-diagrams-visual-database-tools.md
-                - name: Ajouter et modifier un schéma de base de données
+                - name: Ajouter et modifier un diagramme de base de données
                   href: ssms/visual-db-tools/walkthrough-adding-and-changing-a-database-diagram.md
                 - name: Propriétés des objets table (colonne)
                   href: ssms/visual-db-tools/table-valued-object-column-properties-visual-database-tools.md
@@ -9976,7 +9976,7 @@
                   href: ssms/visual-db-tools/create-update-queries-visual-database-tools.md
                 - name: Boîte de dialogue Mettre à jour une table
                   href: ssms/visual-db-tools/update-table-dialog-box-visual-database-tools.md
-                - name: Copier des tables d’un schéma de base de données vers un autre
+                - name: Copier des tables d’un diagramme de base de données vers un autre
                   href: ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
                 - name: 'Changer la couleur de police, la taille et le style dans les schémas'
                   href: ssms/visual-db-tools/change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md
@@ -9984,7 +9984,7 @@
                   href: ssms/visual-db-tools/verify-queries-visual-database-tools.md
                 - name: Outils du Concepteur de vues et de requêtes
                   href: ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md
-                - name: Supprimer des tables de schémas de base de données
+                - name: Supprimer des tables de diagrammes de base de données
                   href: ssms/visual-db-tools/remove-tables-from-database-diagrams-visual-database-tools.md
                 - name: Ajouter des annotations de texte à des schémas
                   href: ssms/visual-db-tools/add-text-annotations-to-diagrams-visual-database-tools.md
@@ -9996,7 +9996,7 @@
                   href: ssms/visual-db-tools/delete-queries-visual-database-tools.md
                 - name: Propriétés de la requête
                   href: ssms/visual-db-tools/query-properties-visual-database-tools.md
-                - name: Ouvrir des schémas de base de données
+                - name: Ouvrir des diagrammes de base de données
                   href: ssms/visual-db-tools/open-database-diagrams-visual-database-tools.md
                 - name: Spécifier plusieurs conditions de recherche pour plusieurs colonnes
                   href: ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
@@ -10376,17 +10376,8 @@
             - name: Haute disponibilité pour les conteneurs
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: Groupes de disponibilité AlwaysOn pour les conteneurs SQL Server
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: Déployer
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: Gérer
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: Se connecter
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: Créer des scripts de déploiement
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: Configurer un conteneur dans Kubernetes
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Sécurité
           href: linux/sql-server-linux-security-overview.md
           items:
@@ -10524,9 +10515,9 @@
                   href: samples/wide-world-importers-oltp-database-catalog.md
                 - name: Installer et configurer
                   href: samples/wide-world-importers-oltp-install-configure.md
-                - name: Fonctionnalités SQL Server
+                - name: fonctionnalités SQL Server
                   href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-            - name: Entrepôt de données
+            - name: entrepôt de données
               items:
                 - name: Catalogue de base de données
                   href: samples/wide-world-importers-dw-database-catalog.md
