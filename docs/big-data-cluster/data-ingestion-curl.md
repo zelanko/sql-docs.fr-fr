@@ -1,26 +1,26 @@
 ---
 title: Utilisez curl pour charger des données dans HDFS | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: Utilisez curl pour charger des données dans HDFS sur des clusters Big Data SQL Server 2019.
+description: Utilisez la fonction de boucle pour charger des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]données dans HDFS sur.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 729c3af97f98bafced482f7ead8ce85f93b55af3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958633"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652214"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Utiliser curl pour charger des données dans HDFS sur des clusters Big Data SQL Server
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Utilisez l’boucle pour charger des données dans HDFS sur[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment utiliser **curl** pour charger des données dans HDFS sur des clusters Big Data SQL Server 2019 (préversion).
+Cet article explique comment utiliser l' **boucle** pour charger des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] données dans HDFS (version préliminaire).
 
 ## <a name="obtain-the-service-external-ip"></a>Obtenir l’adresse IP externe du service
 
@@ -39,7 +39,7 @@ Vous pouvez maintenant construire l’URL pour accéder à WebHDFS de la façon 
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-Par exemple :
+Exemple :
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 

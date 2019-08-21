@@ -1,22 +1,22 @@
 ---
 title: Effectuer une mise à niveau vers une nouvelle version
 titleSuffix: SQL Server big data clusters
-description: Découvrez comment mettre à niveau des clusters Big Data SQL Server 2019 (préversion) vers une nouvelle version.
+description: Découvrez comment mettre à [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] niveau (version préliminaire) vers une nouvelle version.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731088"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652333"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Guide pratique pour mettre à niveau des clusters Big Data SQL Server
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Procédure de mise à niveau[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -72,8 +72,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>Installer la nouvelle version
 
-Après avoir supprimé le cluster Big Data précédent et installé la dernière version d’**azdata**, déployez le nouveau cluster Big Data à l’aide des instructions de déploiement actuelles. Pour plus d’informations, consultez [Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md). Ensuite, restaurez les bases de données ou les fichiers requis.
+Après avoir supprimé le cluster Big Data précédent et installé la dernière version d’**azdata**, déployez le nouveau cluster Big Data à l’aide des instructions de déploiement actuelles. Pour plus d’informations, consultez [procédure de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] déploiement sur Kubernetes](deployment-guidance.md). Ensuite, restaurez les bases de données ou les fichiers requis.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [Présentation des clusters Big Data SQL Server](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters Big Data, consultez [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]que sont les ](big-data-cluster-overview.md).

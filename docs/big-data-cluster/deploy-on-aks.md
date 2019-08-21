@@ -1,26 +1,26 @@
 ---
 title: Configurer Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: Découvrez comment configurer Azure Kubernetes Service (AKS) pour les déploiements de clusters Big Data SQL Server 2019 (préversion).
+description: Découvrez comment configurer Azure Kubernetes service (AKS) pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] déploiements.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470814"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652383"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment configurer Azure Kubernetes Service (AKS) pour les déploiements de clusters Big Data SQL Server 2019 (préversion).
+Cet article explique comment configurer Azure Kubernetes service (AKS) pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] déploiements.
 
 AKS simplifie la création, la configuration et la gestion d’un cluster de machines virtuelles préconfigurées avec un cluster Kubernetes pour exécuter des applications conteneurisées. Ceci vous permet d’utiliser vos compétences existantes ou de tirer parti d’une grande expertise croissante de la communauté, pour déployer et gérer des applications basées sur des conteneurs sur Microsoft Azure.
 
@@ -165,4 +165,4 @@ Si vous rencontrez des problèmes lors de la création d’un service Azure Kube
 
 Les étapes décrites dans cet article ont permis de configurer un cluster Kubernetes dans AKS. L’étape suivante consiste à déployer un cluster Big Data SQL Server 2019 sur le cluster Kubernetes AKS. Pour plus d’informations sur le déploiement de clusters Big Data, consultez l’article suivant :
 
-[Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md)
+[Procédure de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md)

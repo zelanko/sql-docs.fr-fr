@@ -5,25 +5,25 @@ description: Ce tutoriel montre comment charger un exemple de données dans un c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621665"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653285"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutoriel : Charger un exemple de données dans votre cluster Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ce tutoriel explique comment utiliser un script pour charger un exemple de données dans un cluster Big Data SQL Server 2019 (préversion). La plupart des autres tutoriels de la documentation utilisent cet exemple de données.
+Ce didacticiel explique comment utiliser un script pour charger des exemples de données dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. La plupart des autres tutoriels de la documentation utilisent cet exemple de données.
 
 > [!TIP]
-> Vous trouverez d’autres exemples pour un cluster Big Data SQL Server 2019 (préversion) dans le dépôt GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Le chemin de ce dépôt est le suivant : **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Vous trouverez des exemples supplémentaires pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] dans le référentiel GitHub [SQL-Server-Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Le chemin de ce dépôt est le suivant : **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
 ## <a name="prerequisites"></a>Prérequis
 

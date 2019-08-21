@@ -1,20 +1,20 @@
 ---
 title: Qu’est-ce que l’instance principale ?
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit l’instance principale SQL Server dans un cluster Big Data SQL Server 2019 (préversion).
+description: Cet article décrit l’instance SQL Server Master dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822691"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652275"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Qu’est-ce que l’instance principale dans un cluster Big Data SQL Server ?
 
@@ -53,7 +53,7 @@ Dans le cadre d’un cluster Big Data SQL Server, les services Machine Learning 
 
 SQL Server 2019 permet de joindre facilement des données Big Data aux données dimensionnelles généralement stockées dans la base de données des entreprises. La valeur des données Big Data augmente considérablement quand elles ne sont pas seulement dans les mains de certaines parties d’une organisation, mais sont également incluses dans les rapports, les tableaux de bord et les applications. En même temps, les scientifiques des données peuvent continuer à utiliser les outils de l’écosystème Spark/HDFS, et disposer d’un accès facile et en temps réel aux données de l’instance principale SQL Server et dans des sources de données externes accessibles _via_ l’instance principale SQL Server.
 
-Avec les clusters Big Data SQL Server 2019, vous pouvez en faire plus avec vos lacs de données d’entreprise. Les développeurs et les analystes SQL Server peuvent :
+Avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vous pouvez faire plus avec vos lacs de données d’entreprise. Les développeurs et les analystes SQL Server peuvent :
 
 * Créer des applications qui utilisent des données provenant de lacs de données d’entreprise.
 * Travailler sur l’ensemble des données avec des requêtes Transact-SQL.
@@ -67,7 +67,7 @@ Avec les clusters Big Data SQL Server 2019, vous pouvez en faire plus avec vos l
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters Big Data SQL Server, consultez les ressources suivantes :
+Pour en savoir plus sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]le, consultez les ressources suivantes:
 
-- [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md)
-- [Atelier : Architecture des clusters Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Atelier : Architecture [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

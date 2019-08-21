@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715183"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634539"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurer un client de science des données pour le développement Python sur SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Anaconda comprend des blocs-notes Jupyter. À l’étape suivante, créez un blo
 
 3. Entrez `import revoscalepy` et exécutez la commande pour charger l’une des bibliothèques spécifiques à Microsoft.
 
-4. Entrez et exécutez `print(revoscalepy.__version__)` pour retourner les informations sur la version. Vous devez voir 9.2.1 ou 9.3.0. Vous pouvez utiliser l’une de ces versions avec [revoscalepy sur le serveur](../package-management/installed-package-information.md). 
+4. Entrez et exécutez `print(revoscalepy.__version__)` pour retourner les informations sur la version. Vous devez voir 9.2.1 ou 9.3.0. Vous pouvez utiliser l’une de ces versions avec [revoscalepy sur le serveur](../package-management/r-package-information.md).
 
 4. Entrez une série plus complexe d’instructions. Cet exemple génère des statistiques de synthèse à l’aide de [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) sur un jeu de données local. D’autres fonctions récupèrent l’emplacement des exemples de données et créent un objet de source de données pour un fichier. XDF local.
 

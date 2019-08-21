@@ -5,16 +5,16 @@ description: Cet article explique comment afficher l’état d’un cluster Big 
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 028864712658e35913fa04fb1a85e4ca960ad573
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419289"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653271"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Guide pratique pour afficher l’état d’un cluster Big Data
 
@@ -164,7 +164,7 @@ Storage  default        Ready
 Vous pouvez afficher l’état des pools au sein du cluster à l’aide de la commande [azdata bdc pool status show](reference-azdata-bdc-pool-status.md). Pour utiliser cette commande, spécifiez le type de pool avec le paramètre `--kind`. Les types de pools sont les suivants :
 
 - compute
-- données
+- data
 - master
 - spark
 - storage
@@ -214,4 +214,4 @@ Vous pouvez voir l’état du contrôleur à l’aide de la commande [azdata bdc
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [Présentation des clusters Big Data SQL Server](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters Big Data, consultez [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]que sont les ](big-data-cluster-overview.md).

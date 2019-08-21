@@ -1,29 +1,29 @@
 ---
 title: Déployer avec un script Python
 titleSuffix: SQL Server big data clusters
-description: Découvrez comment utiliser un script de déploiement pour déployer des clusters Big Data SQL Server 2019 (préversion) sur Azure Kubernetes Service (AKS).
+description: Découvrez comment utiliser un script de déploiement pour déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (version préliminaire) sur Azure Kubernetes service (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee1c8669e6496553c367b4d1078d1e6a7f26497
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470717"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653238"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Utiliser un script Python pour déployer un cluster Big Data SQL Server sur Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dans ce tutoriel, vous utilisez un exemple script de déploiement Python pour déployer un cluster Big Data SQL Server 2019 (préversion) sur Azure Kubernetes Service (AKS).
+Dans ce didacticiel, vous allez utiliser un exemple de script de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Python à déployer sur Azure Kubernetes service (AKS).
 
 > [!TIP]
-> AKS n’est qu’une option pour héberger Kubernetes pour votre cluster Big Data. Pour plus d’informations sur les autres options de déploiement et sur la personnalisation des options de déploiement, consultez [Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md).
+> AKS n’est qu’une option pour héberger Kubernetes pour votre cluster Big Data. Pour en savoir plus sur les autres options de déploiement et sur la personnalisation des options de déploiement, consultez [comment déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md).
 
 Le déploiement de cluster Big Data par défaut utilisé ici se compose d’une instance principale SQL, d’une instance de pool de calcul, de deux instances de pool de données et de deux instances de pool de stockage. Les données sont conservées avec des volumes persistants Kubernetes qui utilisent les classes de stockage par défaut d’AKS. La configuration par défaut utilisée dans ce tutoriel est adaptée aux environnements de développement et de test.
 
@@ -72,7 +72,7 @@ Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce scri
 
 1. Quand vous y êtes invité, entrez les informations suivantes :
 
-   | Valeur | Description |
+   | Value | Description |
    |---|---|
    | **ID d’abonnement Azure** | ID d’abonnement Azure à utiliser pour AKS. Vous pouvez lister tous vos abonnements et leur ID en exécutant `az account list` à partir d’une autre ligne de commande. |
    | **Groupe de ressources Azure** | Nom du groupe de ressources Azure à créer pour le cluster AKS. |
@@ -113,7 +113,7 @@ Après 10 à 20 minutes, vous devez être informé que le pod du contrôleur es
 ```
 
 > [!IMPORTANT]
-> L’ensemble du processus de déploiement peut durer longtemps en raison du temps nécessaire au téléchargement des images de conteneur pour les composants du cluster Big Data. Il ne devrait cependant pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez [Supervision et résolution des problèmes des clusters Big Data SQL Server](cluster-troubleshooting-commands.md).
+> L’ensemble du processus de déploiement peut durer longtemps en raison du temps nécessaire au téléchargement des images de conteneur pour les composants du cluster Big Data. Il ne devrait cependant pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez [surveillance et résolution [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)des problèmes.
 
 ## <a name="inspect-the-cluster"></a>Inspecter le cluster
 
@@ -151,9 +151,9 @@ Ouvrez une nouvelle fenêtre de commande pour utiliser **kubectl** pendant le pr
    ```
 
 > [!TIP]
-> Pour plus d’informations sur la supervision et la résolution des problèmes d’un déploiement, consultez [Supervision et résolution des problèmes des clusters Big Data SQL Server](cluster-troubleshooting-commands.md).
+> Pour plus d’informations sur la surveillance et la résolution des problèmes d’un déploiement, consultez [surveillance et résolution des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]problèmes ](cluster-troubleshooting-commands.md).
 
-## <a name="connect-to-the-cluster"></a>Se connecter au cluster
+## <a name="connect-to-the-cluster"></a>Connexion au cluster
 
 Une fois le script déploiement terminé, la sortie vous indique la réussite :
 
@@ -166,7 +166,7 @@ Le cluster Big Data SQL Server est maintenant déployé sur AKS. Vous pouvez mai
 
 ## <a name="clean-up"></a>Nettoyer
 
-Si vous testez des clusters Big Data SQL Server dans Azure, vous devez supprimer le cluster AKS quand vous avez terminé pour éviter des frais inattendus. Ne supprimez pas le cluster si vous envisagez de continuer à l’utiliser.
+Si vous effectuez des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] tests dans Azure, vous devez supprimer le cluster AKS lorsque vous avez terminé pour éviter des frais inattendus. Ne supprimez pas le cluster si vous envisagez de continuer à l’utiliser.
 
 > [!WARNING]
 > Les étapes suivantes détruisent le cluster AKS, ce qui supprime également le cluster Big Data SQL Server. Si vous voulez conserver des bases de données ou des données HDFS, sauvegardez-les avant de supprimer le cluster.
@@ -179,9 +179,9 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Le script de déploiement a configuré Azure Kubernetes Service et a également déployé un cluster Big Data SQL Server 2019. Vous pouvez également choisir de personnaliser des déploiements futurs via des installations manuelles. Pour plus d’informations sur le déploiement des clusters Big Data et sur la personnalisation des déploiements, consultez [Comment déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md).
+Le script de déploiement a configuré Azure Kubernetes Service et a également déployé un cluster Big Data SQL Server 2019. Vous pouvez également choisir de personnaliser des déploiements futurs via des installations manuelles. Pour en savoir plus sur la façon dont Big Data les clusters sont déployés, ainsi que sur la personnalisation des déploiements, consultez [comment déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md).
 
 Maintenant que le cluster Big Data SQL Server est déployé, vous pouvez charger des exemples de données et explorer les tutoriels :
 
 > [!div class="nextstepaction"]
-> [Tutoriel : Charger un exemple de données dans un cluster Big Data SQL Server 2019](tutorial-load-sample-data.md)
+> [Tutoriel : Charger un exemple de données dans un cluster Big Data SQL Server 2019](tutorial-load-sample-data.md)

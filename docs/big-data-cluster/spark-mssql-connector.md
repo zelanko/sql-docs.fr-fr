@@ -5,16 +5,16 @@ description: Découvrez comment utiliser le connecteur Spark MSSQL dans Spark po
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957832"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653303"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL
 
@@ -39,7 +39,7 @@ La préversion de SQL Server 2019 fournit le **connecteur Spark MSSQL** pour le
 
 Le tableau suivant décrit les nouveaux paramètres d’interface et ceux qui ont été modifiés :
 
-| Nom de la propriété | Ce paramètre est facultatif | Description |
+| Nom de la propriété | Facultatif | Description |
 |---|---|---|
 | **isolationLevel** | Oui | Décrit le niveau d’isolation de la connexion. La valeur par défaut pour le connecteur MSSQLSpark est **READ_COMMITTED** |
 
@@ -90,4 +90,4 @@ Pour illustrer l’utilisation du connecteur Spark MSSQL avec ces données, vous
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md).
+Pour plus d’informations sur les clusters Big Data, consultez [comment [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] déployer sur Kubernetes](deployment-guidance.md)

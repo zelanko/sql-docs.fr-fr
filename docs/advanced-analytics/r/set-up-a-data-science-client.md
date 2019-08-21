@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715603"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633637"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ Pointez votre IDE vers les bibliothèques R locales: base R, RevoScaleR, et ains
 
 Lorsque vous utilisez [RStudio](https://www.rstudio.com/), vous pouvez configurer l’environnement pour utiliser les bibliothèques R et les exécutables qui correspondent à ceux d’une SQL Server distante.
 
-1. Vérifiez que les versions de package R sont installées sur SQL Server. Pour plus d’informations, consultez [obtenir des informations sur les packages R](../package-management/installed-package-information.md).
+1. Vérifiez que les versions de package R sont installées sur SQL Server. Pour plus d’informations, consultez [obtenir des informations sur les packages R](../package-management/r-package-information.md).
 
 1. Installez Microsoft R Client ou l’une des options de serveur autonomes pour ajouter RevoScaleR et d’autres packages R, y compris la distribution R de base utilisée par votre instance de SQL Server. Choisissez une version au même niveau ou moins (les packages sont à compatibilité descendante) qui fournissent les mêmes versions de package que sur le serveur. Pour plus d’informations sur la version, consultez la carte des versions dans cet article: [Mettez à niveau les composants R et Python](../install/upgrade-r-and-python.md).
 

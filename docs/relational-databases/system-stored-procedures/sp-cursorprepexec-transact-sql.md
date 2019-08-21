@@ -1,7 +1,7 @@
 ---
 title: sp_cursorprepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c344948b5eab2de6c7987494a29fe1131c47f35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108412"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652437"
 ---
-# <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Compile un plan pour le lot ou l'instruction de curseur envoyé, puis crée et remplit le curseur. sp_cursorprepexec combine les fonctions de sp_cursorprepare et sp_cursorexecute. Cette procédure est appelée en spécifiant ID = 5 dans un paquet TDS (Tabular Data Stream).  
+  Compile un plan pour le lot ou l'instruction de curseur envoyé, puis crée et remplit le curseur. sp_cursorprepexec combine les fonctions de sp_cursorprepare et sp_cursorexecute. Cette procédure est appelée en spécifiant ID = 5 dans un paquet tabular data stream (TDS).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,36 +37,37 @@ ms.locfileid: "68108412"
   
 sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , options  
     [ , scrollopt [ , ccopt [ , rowcount ] ] ]  
+    [, '@parameter_name[,...n ]']
 ```  
   
 ## <a name="arguments"></a>Arguments  
  *handle préparé*  
- Est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] généré préparé *gérer* identificateur. *handle préparé* est obligatoire et retourne **int**.  
+ Identificateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *handle* préparé généré. un *handle préparé* est requis et retourne **int**.  
   
  *cursor*  
- Identificateur de curseur généré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *curseur* est un paramètre obligatoire qui doit être fourni pour toutes les procédures suivantes qui agissent sur ce curseur, par exemple sp_cursorfetch.  
+ Identificateur de curseur généré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Cursor* est un paramètre obligatoire qui doit être fourni pour toutes les procédures suivantes qui agissent sur ce curseur, par exemple sp_cursorfetch.  
   
  *params*  
- Identifie des instructions paramétrables. Le *params* définition de variables est substituée aux marqueurs de paramètre dans l’instruction. *params* est un paramètre obligatoire qui demande un **ntext**, **nchar**, ou **nvarchar** valeur d’entrée.  
+ Identifie des instructions paramétrables. La définition *params* des variables est substituée aux marqueurs de paramètres dans l’instruction. *params* est un paramètre obligatoire qui requiert une valeur d’entrée **ntext**, **nchar**ou **nvarchar** .  
   
 > [!NOTE]  
->  Utilisez un **ntext** chaîne comme entrée valeur lorsque *stmt* est paramétré et le *scrollopt* parameterized_stmt est ON.  
+>  Utilisez une chaîne **ntext** comme valeur d’entrée lorsque *stmt* est paramétré et que la valeur *scrollopt* PARAMETERIZED_STMT est on.  
   
  *instruction*  
- Définit le jeu de résultats de curseur. Le *instruction* paramètre est obligatoire et demande pour un **ntext**, **nchar** ou **nvarchar** valeur d’entrée.  
+ Définit le jeu de résultats de curseur. Le paramètre d' *instruction* est obligatoire et appelle une valeur d’entrée **ntext**, **nchar**ou **nvarchar** .  
   
 > [!NOTE]  
->  Les règles de spécification de la valeur stmt sont les mêmes que celles pour sp_cursoropen, sauf que le *stmt* type de données de chaîne doit être **ntext**.  
+>  Les règles de spécification de la valeur stmt sont les mêmes que celles pour sp_cursoropen, à l’exception près que le type de données chaîne *stmt* doit être **ntext**.  
   
  *options*  
- Paramètre optionnel qui retourne une description des colonnes du jeu de résultats du curseur. *options* requiert ce qui suit **int** valeur d’entrée.  
+ Paramètre optionnel qui retourne une description des colonnes du jeu de résultats du curseur. \* les options requièrent la valeur d’entrée **int** suivante.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
- Option de défilement. *scrollopt* est un paramètre optionnel qui requiert l’une des opérations suivantes **int** valeurs d’entrée.  
+ Option de défilement. *scrollopt* est un paramètre facultatif qui requiert l’une des valeurs d’entrée **int** suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -85,16 +86,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- En raison de la possibilité que l’option demandée n’est pas appropriée pour le curseur défini par  *\<stmt >* , ce paramètre sert à la fois d’entrée et de sortie. Dans de tels cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte un type approprié et modifie cette valeur.  
+ En raison de la possibilité que l’option demandée ne soit pas appropriée pour le curseur défini par  *\<stmt >* , ce paramètre sert à la fois d’entrée et de sortie. Dans de tels cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte un type approprié et modifie cette valeur.  
   
  *ccopt*  
- Option de contrôle en matière d'accès concurrentiel. *ccopt* est un paramètre optionnel qui requiert l’une des opérations suivantes **int** valeurs d’entrée.  
+ Option de contrôle en matière d'accès concurrentiel. *ccopt* est un paramètre facultatif qui requiert l’une des valeurs d’entrée **int** suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (précédemment appelé LOCKCC)|  
-|0x0004|**OPTIMISTE** (anciennement optcc)|  
+|0x0004|**Optimiste** (anciennement OPTCC)|  
 |0x0008|OPTIMISTIC (précédemment appelé OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -107,14 +108,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  Comme avec *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut affecter une valeur différente de celle demandée.  
   
  *rowcount*  
- Paramètre optionnel qui indique le nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsqu’assigné comme une valeur d’entrée ou une valeur de retour.  
+ Paramètre optionnel qui indique le nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est 20 lignes. le *compteur de lignes* se comporte différemment lorsqu’il est assigné comme valeur d’entrée ou valeur de retour.  
   
 |Comme une valeur d'entrée|Comme une valeur de retour|  
 |--------------------|---------------------|  
-|Lorsqu’AUTO_FETCH est spécifié avec les curseurs FAST_FORWARD *rowcount* représente le nombre de lignes à placer dans le tampon d’extraction.|Représente le nombre de lignes dans le jeu de résultats. Lorsque le *scrollopt* AUTO_FETCH est spécifiée, *rowcount* retourne le nombre de lignes qui ont été extraites dans le tampon d’extraction.|  
+|Lorsque AUTO_FETCH est spécifié avec les curseurs FAST_FORWARD, *RowCount* représente le nombre de lignes à placer dans le tampon d’extraction.|Représente le nombre de lignes dans le jeu de résultats. Lorsque la valeur *scrollopt* AUTO_FETCH est spécifiée, *RowCount* retourne le nombre de lignes extraites dans le tampon d’extraction.|  
+
+*nom_de_paramètre* Désignez un ou plusieurs noms de paramètres comme défini dans l’argument params.  Un paramètre doit être fourni pour chaque paramètre inclus dans les paramètres. Cet argument n’est pas obligatoire quand aucun paramètre n’est défini pour l’instruction ou le lot Transact-SQL dans params.
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Si *params* retourne une valeur NULL, puis l’instruction n’est pas paramétrable.  
+ Si params retourne une valeur NULL, l’instruction n’est pas paramétrable.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
@@ -122,5 +125,3 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

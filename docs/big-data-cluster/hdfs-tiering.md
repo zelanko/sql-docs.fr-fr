@@ -1,26 +1,26 @@
 ---
 title: Configurer la hiérarchisation HDFS
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers Azure Data Lake Storage externe dans HDFS sur un cluster Big Data SQL Server 2019 (préversion).
+description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers Azure Data Lake Storage externe dans HDFS sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419376"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652325"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurer la hiérarchisation HDFS sur des clusters Big Data SQL Server
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configurer la hiérarchisation HDFS sur[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-La hiérarchisation HDFS offre la possibilité de monter un système de fichiers externe et compatible HDFS dans HDFS. Cet article explique comment configurer la hiérarchisation HDFS pour les clusters Big Data SQL Server 2019 (préversion). À ce stade, nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et à Amazon S3. 
+La hiérarchisation HDFS offre la possibilité de monter un système de fichiers externe et compatible HDFS dans HDFS. Cet article explique comment configurer la hiérarchisation HDFS pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (version préliminaire). À ce stade, nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et à Amazon S3. 
 
 ## <a name="hdfs-tiering-overview"></a>Vue d’ensemble de la hiérarchisation HDFS
 
@@ -38,7 +38,7 @@ Les sections suivantes fournissent un exemple de configuration de la hiérarchis
 
 La hiérarchisation HDFS prend en charge l’actualisation. Actualisez un montage existant pour la dernière capture instantanée des données distantes.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data déployé](deployment-guidance.md)
 - [Outils Big Data](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ Nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et à Amazon
 
 ## <a id="issues"></a> Problèmes connus et limitations
 
-La liste suivante répertorie les problèmes connus et les limitations actuelles liés à l’utilisation de la hiérarchisation HDFS dans les clusters Big Data SQL Server :
+La liste suivante répertorie les problèmes connus et les limitations actuelles lors de l' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]utilisation de la hiérarchisation HDFS dans:
 
 - Si le montage est bloqué dans un état `CREATING` pendant une longue période, il a probablement échoué. Dans ce cas, annulez la commande et supprimez le montage, si nécessaire. Vérifiez que vos paramètres et informations d’identification sont corrects avant de réessayer.
 
@@ -76,4 +76,4 @@ La liste suivante répertorie les problèmes connus et les limitations actuelles
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data SQL Server 2019, consultez [Que sont les clusters Big Data SQL Server 2019 ?](big-data-cluster-overview.md).
+Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont?](big-data-cluster-overview.md).

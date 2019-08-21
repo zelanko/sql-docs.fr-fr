@@ -5,22 +5,22 @@ description: Connectez-vous au cluster Big Data à l’aide de sparklyr à parti
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 04/08/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67728378"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653321"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Utiliser sparklyr dans SQL Server Cluster Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr fournit une interface R pour Apache Spark. Sparklyr est un moyen populaire pour les développeurs de R d’utiliser Spark. Cet article explique comment utiliser sparklyr dans un cluster SQL Server 2019 Big Data (version préliminaire) à l’aide de RStudio.
+Sparklyr fournit une interface R pour Apache Spark. Sparklyr est un moyen populaire pour les développeurs de R d’utiliser Spark. Cet article explique comment utiliser sparklyr dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] à l’aide de RStudio.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [que sont les clusters SQL Server 2019 Big Data](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters Big Data, consultez [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]que sont les ](big-data-cluster-overview.md).

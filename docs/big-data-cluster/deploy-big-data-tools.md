@@ -1,26 +1,26 @@
 ---
 title: Installer des outils de Big Data
 titleSuffix: SQL Server big data clusters
-description: Découvrez comment installer les outils utilisés avec les clusters Big Data SQL Server 2019 (préversion).
+description: Découvrez comment installer les outils utilisés avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (version préliminaire).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 757209ff89fd40dcc737b65d3b19f2a7d4ef247b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f30b3b2e3c8503d2ac74ede8c1a45114a6b1d555
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419454"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653407"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de Big Data SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit les outils clients qui doivent être installés pour la création, la gestion et l’utilisation des clusters Big Data SQL Server 2019 (préversion). La section suivante fournit une liste d’outils et de liens vers les instructions d’installation. Avant de déployer un cluster Big Data, configurez les outils marqués comme requis sur Windows ou Linux.
+Cet article décrit les outils clients qui doivent être installés pour la création, la gestion et [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] l’utilisation de (version préliminaire). La section suivante fournit une liste d’outils et de liens vers les instructions d’installation. Avant de déployer un cluster Big Data, configurez les outils marqués comme requis sur Windows ou Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -28,7 +28,7 @@ Cet article décrit les outils clients qui doivent être installés pour la cré
 
 Le tableau suivant liste les outils de cluster Big Data courants et explique comment les installer :
 
-| Outil | Requis | Description | Installation |
+| Tool | Obligatoire | Description | Installation |
 |---|---|---|---|
 | **python** | Oui | Python est un langage de programmation de haut niveau, orienté objet, interprété et doté d’une sémantique dynamique. De nombreuses parties des clusters Big Data pour SQL Server utilisent Python. | [Installer python](#python)|
 | **azdata** | Oui | Outil en ligne de commande pour l’installation et la gestion d’un cluster Big Data. | [Installer](deploy-install-azdata.md) |
@@ -36,7 +36,7 @@ Le tableau suivant liste les outils de cluster Big Data courants et explique com
 | **Azure Data Studio (Insiders)** | Oui | Outil graphique multiplateforme permettant d’interroger SQL Server ([plus d’informations](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installer](https://aka.ms/azdata-insiders) |
 | **Extension SQL Server 2019** | Oui | Extension pour Azure Data Studio qui prend en charge la connexion au cluster Big Data. Fournit également un assistant Virtualisation de données. | [Installer](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | Pour AKS | Interface de ligne de commande moderne pour la gestion des services Azure. Utilisée avec les déploiements de cluster Big Data AKS ([plus d’informations](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installer](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
-| **mssql-cli** | Ce paramètre est facultatif | Interface de ligne de commande moderne permettant d’interroger SQL Server ([plus d’informations](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **mssql-cli** | Facultatif | Interface de ligne de commande moderne permettant d’interroger SQL Server ([plus d’informations](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Pour certains scripts | Outil en ligne de commande hérité permettant d’interroger SQL Server ([plus d’informations](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | Pour certains scripts | Outil en ligne de commande pour transférer des données avec des URL. | [Windows](https://curl.haxx.se/windows/) \| Linux : installer le package d’installation |
 
@@ -87,6 +87,6 @@ Les autres outils sont requis uniquement dans certains scénarios. **Azure CLI**
 Après avoir configuré les outils, déployez un cluster Big Data SQL Server 2019 sur Kubernetes dans le cloud ou localement. Pour plus d’informations, consultez les articles suivants consacrés au déploiement :
 
 - [Démarrage rapide : déployer un cluster Big Data SQL Server sur AKS (Azure Kubernetes Service)](quickstart-big-data-cluster-deploy.md)
-- [Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md)
+- [Procédure de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md)
 
-Pour plus d’informations sur les clusters Big Data, consultez [Que sont les clusters Big Data SQL Server 2019 ?](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters Big Data, consultez [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]que sont?](big-data-cluster-overview.md).

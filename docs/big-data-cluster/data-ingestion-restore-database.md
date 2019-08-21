@@ -1,26 +1,26 @@
 ---
 title: Restauration d’une base de données
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment restaurer une base de données dans l’instance principale d’un cluster Big Data SQL Server 2019 (préversion).
+description: Cet article explique comment restaurer une base de données dans l’instance principale d' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969484"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652239"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurer une base de données dans l’instance principale du cluster Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment restaurer une base de données existante dans l’instance principale d’un cluster Big Data SQL Server 2019 (préversion). La méthode recommandée consiste à utiliser une approche de sauvegarde, de copie et de restauration.
+Cet article explique comment restaurer une base de données existante dans l’instance principale d' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. La méthode recommandée consiste à utiliser une approche de sauvegarde, de copie et de restauration.
 
 ## <a name="backup-your-existing-database"></a>Sauvegarder votre base de données existante
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data SQL Server, consultez la vue d’ensemble suivante :
+Pour en savoir plus sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]l', consultez la vue d’ensemble suivante:
 
-- [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md)
+- [Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

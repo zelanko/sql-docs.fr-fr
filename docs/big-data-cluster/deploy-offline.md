@@ -5,24 +5,24 @@ description: Découvrez comment déployer un cluster Big Data SQL Server hors co
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419367"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652367"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Effectuer un déploiement hors connexion d’un cluster Big Data SQL Server
 
-Cet article explique comment déployer hors connexion un cluster Big Data SQL Server 2019 (préversion). Les clusters Big Data doivent avoir accès à un référentiel Docker à partir duquel tirer (pull) des images conteneur. Lors d’une installation hors connexion, les images nécessaires sont placées dans un référentiel Docker privé. Ce référentiel privé est ensuite utilisé comme source des images d’un nouveau déploiement.
+Cet article explique comment effectuer un déploiement hors connexion d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Les clusters Big Data doivent avoir accès à un référentiel Docker à partir duquel tirer (pull) des images conteneur. Lors d’une installation hors connexion, les images nécessaires sont placées dans un référentiel Docker privé. Ce référentiel privé est ensuite utilisé comme source des images d’un nouveau déploiement.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Docker Engine 1.8+ sur n’importe quelle distribution Linux prise en charge ou Docker pour Mac/Windows. Pour plus d’informations, consultez [Installer Docker](https://docs.docker.com/engine/installation/).
+- Moteur de docker 1.8 + sur n’importe quelle distribution de Linux prise en charge ou Docker pour Mac et Windows. Pour plus d’informations, consultez [Installer Docker](https://docs.docker.com/engine/installation/).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -171,4 +171,4 @@ Le déploiement vous invite à entrer le nom d’utilisateur et le mot de passe 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur le déploiement des clusters Big Data, consultez [Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md).
+Pour plus d’informations sur les déploiements de cluster Big Data, voir [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).

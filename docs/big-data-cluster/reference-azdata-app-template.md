@@ -5,16 +5,16 @@ description: Article de référence sur les commandes azdata app template.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3b257a2bacc56a7907ab0d25f492ed0ebd605543
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 265f8be659594ee549bf0aa2c5ffcf19263a2294
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426329"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653207"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
@@ -47,15 +47,15 @@ azdata app template list --url https://github.com/diffrent/templates.git
 Spécifier un autre référentiel de modèles. Valeur par défaut : https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmenter le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
 ## <a name="azdata-app-template-pull"></a>azdata app template pull
 Télécharge les modèles pris en charge dans le dépôt GitHub spécifié [URL].
 ```bash
@@ -86,16 +86,16 @@ Où placer le modèle du squelette d’application.
 `./templates`
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmenter le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata**, consultez les [informations de référence sur azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).

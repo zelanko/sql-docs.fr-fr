@@ -1,28 +1,28 @@
 ---
 title: Interroger les données HDFS dans le pool de stockage
 titleSuffix: SQL Server big data clusters
-description: Ce tutoriel montre comment interroger les données HDFS dans un cluster Big Data SQL Server 2019 (préversion). Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
+description: Ce didacticiel montre comment interroger des données HDFS dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957707"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652446"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ce tutoriel montre comment interroger les données HDFS dans un cluster Big Data SQL Server 2019 (préversion).
+Ce didacticiel montre comment interroger des données HDFS dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
 
-Dans ce tutoriel, vous allez apprendre à :
+Ce tutoriel vous montre comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]
 > * Créer une table externe pointant vers des données HDFS dans un cluster Big Data.
@@ -31,7 +31,7 @@ Dans ce tutoriel, vous allez apprendre à :
 > [!TIP]
 > Si vous préférez, vous pouvez télécharger et exécuter un script pour les commandes de ce tutoriel. Pour obtenir des instructions, consultez les [exemples de virtualisation de données](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) sur GitHub.
 
-## <a id="prereqs"></a> Prérequis
+## <a id="prereqs"></a> Conditions préalables
 
 - [Outils Big Data](deploy-big-data-tools.md)
    - **kubectl**

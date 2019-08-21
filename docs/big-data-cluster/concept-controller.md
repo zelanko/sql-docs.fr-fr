@@ -1,20 +1,20 @@
 ---
 title: Qu’est-ce que le contrôleur ?
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit le contrôleur d’un cluster Big Data SQL Server 2019 (préversion).
+description: Cet article décrit le contrôleur d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 643cb2b4e252e1818940bda2be54917c23cefe06
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419539"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652285"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Qu’est-ce que le contrôleur sur un cluster Big Data SQL Server ?
 
@@ -36,13 +36,13 @@ Le service de contrôleur fournit les fonctionnalités de base suivantes :
 
 ## <a name="deploying-the-controller-service"></a>Déploiement du service de contrôleur
 
-Le contrôleur est déployé et hébergé dans le même espace de noms Kubernetes où le client souhaite créer un cluster Big Data. Ce service est installé par un administrateur Kubernetes durant l’amorçage du cluster à l’aide de l’utilitaire de ligne de commande **azdata**. Pour plus d’informations, consultez [Bien démarrer avec les clusters Big Data SQL Server](deploy-get-started.md).
+Le contrôleur est déployé et hébergé dans le même espace de noms Kubernetes où le client souhaite créer un cluster Big Data. Ce service est installé par un administrateur Kubernetes durant l’amorçage du cluster à l’aide de l’utilitaire de ligne de commande **azdata**. Pour plus d’informations, consultez [prise en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]main de ](deploy-get-started.md).
 
 Le workflow de création place sur Kubernetes un cluster Big Data SQL Server entièrement fonctionnel qui regroupe tous les composants décrits dans l’article [Vue d’ensemble](big-data-cluster-overview.md). Le workflow d’amorçage crée d’abord le service de contrôleur. Une fois déployé, il coordonne l’installation et la configuration du reste des services dans les pools (maître, calcul, données et stockage).
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>Gestion du cluster par le biais du service de contrôleur
 
-Vous pouvez gérer le cluster par le biais du service de contrôleur à l’aide des commandes **azdata**. Si vous déployez d’autres objets Kubernetes comme des pods dans le même espace de noms, ils ne sont ni gérés ni supervisés par le service de contrôleur. Vous pouvez également utiliser des commandes **kubectl** pour gérer le cluster au niveau Kubernetes. Pour plus d’informations, consultez [Supervision des clusters Big Data SQL Server et résolution des problèmes](cluster-troubleshooting-commands.md).
+Vous pouvez gérer le cluster par le biais du service de contrôleur à l’aide des commandes **azdata**. Si vous déployez d’autres objets Kubernetes comme des pods dans le même espace de noms, ils ne sont ni gérés ni supervisés par le service de contrôleur. Vous pouvez également utiliser des commandes **kubectl** pour gérer le cluster au niveau Kubernetes. Pour plus d’informations, consultez [surveillance et [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]résolution des problèmes ](cluster-troubleshooting-commands.md).
 
 Le contrôleur et les objets Kubernetes (ensembles avec état, pods, secrets, etc.) créés pour un cluster Big Data résident dans un espace de noms Kubernetes dédié. Le service de contrôleur est autorisé par l’administrateur de cluster Kubernetes à gérer toutes les ressources au sein de cet espace de noms.  La stratégie RBAC pour ce scénario est configurée automatiquement dans le cadre du déploiement initial du cluster avec **azdata**.
 
@@ -61,7 +61,7 @@ L’authentification auprès du point de terminaison du service de contrôleur e
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters Big Data SQL Server, consultez les ressources suivantes :
+Pour en savoir plus sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]le, consultez les ressources suivantes:
 
-- [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md)
-- [Atelier : Architecture des clusters Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Atelier : Architecture [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

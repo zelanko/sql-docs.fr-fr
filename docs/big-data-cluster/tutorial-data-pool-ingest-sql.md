@@ -1,28 +1,28 @@
 ---
 title: Ingérer des données dans un pool de données SQL Server
 titleSuffix: SQL Server big data clusters
-description: Ce tutoriel montre comment ingérer des données dans le pool de données d’un cluster Big Data SQL Server 2019 (préversion).
+description: Ce didacticiel montre comment recevoir des données dans le pool de données d' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670524"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653310"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutoriel : Ingérer des données dans un pool de données SQL Server avec Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ce tutoriel montre comment utiliser Transact-SQL pour charger des données dans le [pool de données](concept-data-pool.md) d’un cluster Big Data SQL Server 2019 (préversion). Avec les clusters Big Data SQL Server, vous pouvez ingérer et distribuer les données de diverses sources parmi des instances de pool de données.
+Ce didacticiel montre comment utiliser Transact-SQL pour charger des données dans le [pool de données](concept-data-pool.md) d' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. Avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], les données de diverses sources peuvent être ingérées et réparties entre les instances de pool de données.
 
-Dans ce tutoriel, vous allez apprendre à :
+Ce tutoriel vous montre comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]
 > * Créer une table externe dans le pool de données

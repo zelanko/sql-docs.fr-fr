@@ -5,16 +5,16 @@ description: Article de référence sur les commandes azdata bdc spark statement
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6f29c473bdd4b665389e97bc2e0dbff572dc7288
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 57044b75219f4c2827c322c100a5d25d5f0b274a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969397"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653195"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -42,18 +42,18 @@ azdata bdc spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--session-id -i`
-ID de session Spark.
+Numéro d’ID de session Spark.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Augmenter le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
 Crée et exécute une nouvelle instruction dans une session donnée.  Si l’instruction EXECUTE est rapide, le résultat contient la sortie de l’exécution.  Sinon, le résultat peut être récupéré à l’aide de « spark session info » une fois l’instruction terminée.
 ```bash
@@ -72,15 +72,15 @@ ID de session Spark.
 Chaîne contenant le code à exécuter dans le cadre de l’instruction.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmenter le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
 Permet d’obtenir l’état de l’exécution et le résultat de l’exécution si l’instruction est terminée. L’ID d’instruction est retourné à partir de « spark statement create ».
 ```bash
@@ -99,15 +99,15 @@ ID de session Spark.
 ID de l’instruction Spark dans l’ID de session donné.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmenter le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
 Annule une instruction dans une session Spark donnée. L’ID d’instruction est retourné à partir de « spark statement create ».
 ```bash
@@ -126,16 +126,16 @@ ID de session Spark.
 ID de l’instruction Spark dans l’ID de session donné.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmenter le niveau de détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata**, consultez les [informations de référence sur azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).

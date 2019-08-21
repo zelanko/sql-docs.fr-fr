@@ -5,16 +5,16 @@ description: Découvrez comment personnaliser un déploiement de cluster Big Dat
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 02e922ca909cd863d496f9c49a60dd986df8bedb
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969492"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652394"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Configurer les paramètres de déploiement de clusters Big Data
 
@@ -420,4 +420,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’utilisation de fichiers de configuration dans le déploiement de clusters Big Data, consultez [Guide pratique pour déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md#configfile).
+Pour plus d’informations sur l’utilisation des fichiers de configuration dans Big Data les déploiements de cluster, voir [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

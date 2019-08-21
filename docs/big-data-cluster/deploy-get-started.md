@@ -1,32 +1,35 @@
 ---
-title: Bien démarrer
+title: Prise en main
 titleSuffix: SQL Server big data clusters
-description: Découvrez les étapes et les ressources nécessaires au déploiement des clusters Big Data SQL Server 2019 (préversion).
+description: Découvrez les étapes et les ressources pour le [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] déploiement (version préliminaire).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d6d1765809092184697d0d2d67b532c31606820
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 323394f9590551528ce9e9dfdf1fb97c7d1c2225
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470909"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653390"
 ---
-# <a name="get-started-with-sql-server-big-data-clusters"></a>Bien démarrer avec les clusters Big Data SQL Server
+# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Prise en main de[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique le processus de déploiement d’un [cluster Big Data SQL Server 2019 (préversion)](big-data-cluster-overview.md). Il explique les différents concepts qui sont liés à un tel déploiement et fournit un cadre permettant de comprendre les autres articles de déploiement de cette section. Les étapes de déploiement varient selon la plateforme choisie pour le client et le serveur.
+Cet article fournit une vue d’ensemble de la [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)procédure de déploiement de. Il explique les différents concepts qui sont liés à un tel déploiement et fournit un cadre permettant de comprendre les autres articles de déploiement de cette section. Les étapes de déploiement varient selon la plateforme choisie pour le client et le serveur.
+
+> [!TIP]
+> Pour obtenir rapidement un environnement avec Kubernetes et Big Data cluster déployé pour vous aider à améliorer ses capacités, utilisez l’un des exemples de scripts pointés dans [la section scripts](#scripts). Après le déploiement, pour gérer le cluster, utilisez les [outils clients](#tools) de la section suivante.
 
 ## <a id="tools"></a> Outils clients
 
 Les clusters Big Data nécessitent un ensemble spécifique d’outils clients. Avant de déployer un cluster Big Data sur Kubernetes, vous devez installer les outils suivants :
 
-| Outil | Description |
+| Tool | Description |
 |---|---|
 | **azdata** | Déploie et gère des clusters Big Data. |
 | **kubectl** | Crée et gère le cluster Kubernetes sous-jacent. |
@@ -39,9 +42,9 @@ D’autres outils sont nécessaires pour divers scénarios. Chaque article doit 
 
 Les clusters Big Data sont déployés sous la forme d’une série de conteneurs interdépendants qui sont gérés dans [Kubernetes](https://kubernetes.io/docs/home). Vous pouvez héberger Kubernetes de différentes façons. Même si vous disposez déjà d’un environnement Kubernetes, vous devez passer en revue les conditions requises relatives aux clusters Big Data.
 
-- **Azure Kubernetes Service (AKS)**  : AKS vous permet de déployer un cluster Kubernetes géré dans Azure. Vous gérez uniquement les nœuds de l’agent. Avec AKS, vous n’avez pas besoin de provisionner votre matériel pour le cluster. Il est aussi facile d’utiliser un [script Python](quickstart-big-data-cluster-deploy.md) ou un [notebook de déploiement](deploy-notebooks.md) pour créer le cluster AKS et déployer le cluster Big Data en une seule étape. Pour plus d’informations sur la configuration d’AKS en vue d’un déploiement de cluster Big Data, consultez [Configurer Azure Kubernetes Service pour le déploiement de clusters Big Data SQL Server 2019 (préversion)](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)**  : AKS vous permet de déployer un cluster Kubernetes géré dans Azure. Vous gérez uniquement les nœuds de l’agent. Avec AKS, vous n’avez pas besoin de provisionner votre matériel pour le cluster. Il est aussi facile d’utiliser un [script Python](quickstart-big-data-cluster-deploy.md) ou un [notebook de déploiement](deploy-notebooks.md) pour créer le cluster AKS et déployer le cluster Big Data en une seule étape. Pour plus d’informations sur la configuration de AKS pour un déploiement de cluster Big Data, consultez [configurer le [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] service Azure Kubernetes pour les déploiements](deploy-on-aks.md).
 
-- **Plusieurs machines** : Vous pouvez également déployer Kubernetes sur plusieurs machines Linux, qui peuvent être des serveurs physiques ou des machines virtuelles. L’outil [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) peut être utilisé pour créer le cluster Kubernetes. Vous pouvez utiliser un [script bash](deployment-script-single-node-kubeadm.md) pour automatiser ce type de déploiement. Cette méthode fonctionne bien si vous disposez déjà d’une infrastructure existante que vous souhaitez utiliser pour votre cluster Big Data. Pour plus d’informations sur les déploiements **kubeadm** avec des clusters Big Data, consultez [Configurer Kubernetes sur plusieurs machines pour le déploiement de clusters Big Data SQL Server 2019 (préversion)](deploy-with-kubeadm.md).
+- **Plusieurs machines** : Vous pouvez également déployer Kubernetes sur plusieurs machines Linux, qui peuvent être des serveurs physiques ou des machines virtuelles. L’outil [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) peut être utilisé pour créer le cluster Kubernetes. Vous pouvez utiliser un [script bash](deployment-script-single-node-kubeadm.md) pour automatiser ce type de déploiement. Cette méthode fonctionne bien si vous disposez déjà d’une infrastructure existante que vous souhaitez utiliser pour votre cluster Big Data. Pour plus d’informations sur l’utilisation de déploiements **kubeadm** avec des clusters Big Data, consultez [configurer Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] sur plusieurs machines pour les déploiements](deploy-with-kubeadm.md).
 
 - **Minikube** : Minikube vous permet d’exécuter Kubernetes localement sur un seul serveur. Cette option convient si vous souhaitez tester les clusters Big Data, ou si vous devez l’utiliser dans un scénario de test ou de développement. Pour plus d’informations sur l’utilisation de Minikube, consultez la [documentation Minikube](https://kubernetes.io/docs/setup/minikube/). Pour connaître la configuration nécessaire à l’utilisation de Minikube avec des clusters Big Data, consultez [Configurer Minikube pour les déploiements de clusters Big Data SQL Server 2019](deploy-on-minikube.md).
 
@@ -55,7 +58,8 @@ Après avoir configuré Kubernetes, vous devez déployer un cluster Big Data à 
 
 - Pour une installation totalement sans assistance, vous pouvez passer tous les autres paramètres dans des variables d’environnement. Pour plus d’informations, consultez [Déploiements sans assistance](deployment-guidance.md#unattended).
 
-## <a name="deployment-scripts"></a>Scripts de déploiement
+
+## <a id="scripts"></a>Scripts de déploiement
 
 Les scripts de déploiement vous permettent de déployer les clusters Kubernetes et Big Data en une seule étape. Ils fournissent également souvent des valeurs par défaut pour les paramètres des clusters Big Data. Vous pouvez personnaliser n’importe quel script de déploiement de cluster Big Data.
 

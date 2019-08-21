@@ -1,28 +1,31 @@
 ---
 title: Notes de publication
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit les dernières mises à jour et les problèmes connus relatifs aux clusters Big Data SQL Server 2019 (préversion).
+description: Cet article décrit les dernières mises à jour et les problèmes connus [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] pour (version préliminaire).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476253"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653437"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters Big Data sur SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article répertorie les mises à jour et les problèmes connus pour les versions les plus récentes des clusters Big Data SQL Server.
+Cet article répertorie les mises à jour et les problèmes connus pour les versions les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]plus récentes de.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a> CTP 3.2 (juillet)
 
@@ -32,7 +35,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Préversion publique |Avant la version CTP 3.2, les clusters Big Data SQL Server n’étaient disponibles que pour les utilisateurs précoces inscrits. Cette version permet désormais à tout le monde d’utiliser les fonctionnalités des clusters Big Data SQL Server. <br/><br/> Consultez [Bien démarrer avec les clusters Big Data SQL Server](deploy-get-started.md).|
+|Préversion publique |Avant la version CTP 3.2, les clusters Big Data SQL Server n’étaient disponibles que pour les utilisateurs précoces inscrits. Cette version permet désormais à tout le monde d’utiliser les fonctionnalités des clusters Big Data SQL Server. <br/><br/> Consultez [prise en main [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de ](deploy-get-started.md).|
 |`azdata` |CTP 3.2 comprend `azdata`, un nouvel utilitaire de ligne de commande écrit en Python qui permet aux administrateurs de clusters de démarrer et de gérer les clusters Big Data via des API REST. `azdata` remplace `mssqlctl`. Voir [Installer `azdata`](deploy-install-azdata.md). |
 |PolyBase |Les noms des colonnes de table externe sont désormais utilisés pour interroger les sources de données SQL Server, Oracle, Teradata, MongoDB et ODBC. Dans les versions CTP précédentes, les colonnes de la source de données externe étaient liées en fonction de la position ordinale uniquement et les noms spécifiés dans la définition EXTERNAL TABLE n’étaient pas utilisés. |
 |Actualisation de la hiérarchisation HDFS |Nous avons ajouté une fonctionnalité d’actualisation pour la hiérarchisation HDFS afin qu’un montage existant puisse être actualisé en fonction de la dernière capture instantanée des données distantes. Voir [Hiérarchisation HDFS](hdfs-tiering.md). |
@@ -163,7 +166,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-| Mises à jour de **mssqlctl** | Plusieurs [mises à jour de commande et de paramètre](reference-azdata.md) **mssqlctl**. Ces dernières incluent une mise à jour de la commande **mssqlctl login**, qui cible désormais le nom d’utilisateur et le point de terminaison du contrôleur. |
+| **mssqlctl** updates | Plusieurs [mises à jour de commande et de paramètre](reference-azdata.md) **mssqlctl**. Ces dernières incluent une mise à jour de la commande **mssqlctl login**, qui cible désormais le nom d’utilisateur et le point de terminaison du contrôleur. |
 | Améliorations du stockage | Prise en charge de différentes configurations de stockage pour les journaux et les données. En outre, le nombre de revendications de volume persistant pour un cluster Big Data a été réduit. |
 | Plusieurs instances de pool de calcul | Prise en charge de plusieurs instances de pool de calcul. |
 | Nouveaux comportement et fonctionnalités pour les pools | Le pool de calcul est maintenant utilisé par défaut pour les opérations de pool de données et de pool de stockage dans une distribution **ROUND_ROBIN** uniquement. Le pool de données peut désormais utiliser un nouveau type de distribution **REPLICATED**, ce qui signifie que les mêmes données sont présentes sur toutes les instances de pool de données. |
@@ -481,9 +484,9 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 | :---------- | :------ |
-| Envoyer des travaux Spark sur des clusters Big Data dans IntelliJ. | [Envoie des travaux Spark sur des clusters Big Data SQL Server dans IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| CLI courantes pour la gestion des clusters et le déploiement des applications. | [Comment déployer une application sur un cluster Big Data de SQL Server 2019 (préversion)](big-data-cluster-create-apps.md) |
-| Extension de VS Code pour déployer des applications sur un cluster de Big Data. | [Comment utiliser VS Code pour déployer des applications sur les clusters Big Data de SQL Server](app-deployment-extension.md) |
+| Envoyer des travaux Spark sur des clusters Big Data dans IntelliJ. | [Envoyer des travaux Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur dans IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| CLI courantes pour la gestion des clusters et le déploiement des applications. | [Comment déployer une application sur[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| Extension de VS Code pour déployer des applications sur un cluster de Big Data. | [Comment utiliser VS Code pour déployer des applications sur[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Modifications apportées à l’utilisation des commandes de l’outil **azdata**. | Pour plus d’informations, consultez les [problèmes connus pour azdata](#azdatactp23). |
 | Utiliser Sparklyr dans les clusters Big Data | [Utiliser Sparklyr dans des clusters Big Data SQL Server 2019](sparklyr-from-RStudio.md) |
 | Monter un stockage compatible HDFS externe dans le cluster Big Data avec une **hiérarchisation HDFS**. | Consultez [Hiérarchisation HDFS](hdfs-tiering.md). |
@@ -676,7 +679,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 ### <a name="known-issues"></a>Problèmes connus
 
-Les sections suivantes indiquent les problèmes connus pour les clusters Big Data SQL Server dans la version CTP 2.1.
+Les sections suivantes fournissent des problèmes connus [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] pour dans la version CTP 2,1.
 
 #### <a name="deployment"></a>Déploiement
 
@@ -751,7 +754,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 ### <a name="known-issues"></a>Problèmes connus
 
-Les sections suivantes indiquent les problèmes connus pour les clusters Big Data SQL Server dans la version CTP 2.0.
+Les sections suivantes fournissent des problèmes connus [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] pour dans la version CTP 2,0.
 
 #### <a name="deployment"></a>Déploiement
 
@@ -801,4 +804,4 @@ Les sections suivantes indiquent les problèmes connus pour les clusters Big Dat
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data SQL Server, consultez [Présentation des clusters Big Data SQL Server 2019](big-data-cluster-overview.md).
+Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont?](big-data-cluster-overview.md).

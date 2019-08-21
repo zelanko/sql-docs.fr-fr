@@ -1,20 +1,20 @@
 ---
 title: Monter S3 pour la hiérarchisation HDFS
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers S3 externe dans HDFS sur un cluster Big Data SQL Server 2019 (préversion).
+description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers S3 externe dans HDFS sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611419"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652307"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Guide pratique pour monter S3 pour la hiérarchisation HDFS dans un cluster Big Data
 
@@ -61,10 +61,10 @@ Une fois que vous avez préparé un fichier d’informations d’identification 
    
 1. Définissez la variable d’environnement MOUNT_CREDENTIALS en suivant les instructions ci-dessus
 
-1. Montez le stockage HDFS distant dans S3 à l’aide de la **création d’un pool de stockage azdata BDC Create**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
+1. Montez le stockage HDFS distant dans Azure à l’aide de **azdata BDC HDFS Mount Create**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Supprimer le montage
 
-Pour supprimer le montage, utilisez la commande **azdata bdc storage-pool mount delete**, puis indiquez le chemin d’accès au montage dans HDFS :
+Pour supprimer le montage, utilisez la commande **azdata BDC HDFS Mount Delete** et spécifiez le chemin de montage dans HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data SQL Server 2019, consultez [Que sont les clusters Big Data SQL Server 2019 ?](big-data-cluster-overview.md).
+Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont?](big-data-cluster-overview.md).
