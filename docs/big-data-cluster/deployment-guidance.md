@@ -1,22 +1,22 @@
 ---
 title: Conseils pour le déploiement
 titleSuffix: SQL Server big data clusters
-description: Découvrez comment déployer des clusters Big Data SQL Server 2019 (préversion) sur Kubernetes.
+description: Découvrez comment déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (version préliminaire) sur Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995833"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652359"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters Big Data SQL Server sur Kubernetes
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procédure de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ Avant de déployer un cluster Big Data SQL Server 2019, commencez par [installe
 
 ## <a id="prereqs"></a> Kubernetes - Prérequis
 
-Les clusters Big Data SQL Server nécessitent au minimum Kubernetes version 1.10 sur le serveur et le client (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]exiger une version minimale de Kubernetes d’au moins v 1.10 pour le serveur et le client (kubectl).
 
 > [!NOTE]
 > Notez que la différence entre les versions mineures de Kubernetes sur le client et le serveur ne doit pas dépasser +1 ou -1. Pour plus d’informations, consultez [les notes de publication de Kubernetes et la stratégie en matière de différence de version pour les références SKU](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -67,7 +67,7 @@ Exécutez la commande **kubectl** pour afficher la configuration du cluster. Vé
 kubectl config view
 ```
 
-Après avoir configuré votre cluster Kubernetes, vous pouvez passer au déploiement d’un nouveau cluster Big Data SQL Server. Si vous effectuez une mise à niveau à partir d’une version précédente, consultez [Guide pratique pour mettre à niveau des clusters Big Data SQL Server](deployment-upgrade.md).
+Après avoir configuré votre cluster Kubernetes, vous pouvez passer au déploiement d’un nouveau cluster Big Data SQL Server. Si vous effectuez une mise à niveau à partir d’une version précédente, consultez [Comment effectuer la mise [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]à niveau ](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Vue d’ensemble du déploiement
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> L’ensemble du processus de déploiement peut durer longtemps en raison du temps nécessaire au téléchargement des images conteneur pour les composants du cluster Big Data. Il ne devrait cependant pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez [Supervision des clusters Big Data SQL Server et résolution des problèmes](cluster-troubleshooting-commands.md).
+> L’ensemble du processus de déploiement peut durer longtemps en raison du temps nécessaire au téléchargement des images conteneur pour les composants du cluster Big Data. Il ne devrait cependant pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez [surveillance et résolution [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)des problèmes.
 
 Une fois le déploiement terminé, vous êtes notifié dans la sortie :
 
@@ -314,4 +314,4 @@ Pour en savoir plus sur le déploiement d’un cluster Big Data, consultez les r
 
 - [Configurer les paramètres de déploiement de clusters Big Data](deployment-custom-configuration.md).
 - [Effectuer un déploiement hors connexion d’un cluster Big Data SQL Server](deploy-offline.md)
-- [Atelier : Architecture des clusters Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Atelier : Architecture [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
