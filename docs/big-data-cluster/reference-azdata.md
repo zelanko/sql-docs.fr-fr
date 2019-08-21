@@ -5,22 +5,22 @@ description: Article de référence sur les commandes azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 24a72683c423661a2981e5a16941bcbc180ac6d1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894002"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653096"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L’article suivant fournit des informations de référence sur l’outil **azdata** pour les [clusters Big Data SQL Server 2019 (préversion)](big-data-cluster-overview.md). Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).
+L’article suivant fournit des informations de référence sur l’outil **azdata** pour [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (version préliminaire)](big-data-cluster-overview.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).
 
 ## <a name="commands"></a>Commandes
 |     |     |
@@ -62,9 +62,9 @@ Point de terminaison du contrôleur du cluster « https://host:port  ». Si vo
 Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». 
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
@@ -83,9 +83,9 @@ azdata logout
 ```
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmenter le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
+Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
 #### `--help -h`
-Afficher ce message d’aide et quitter.
+Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
@@ -95,4 +95,4 @@ Augmente le détail de la journalisation. Utilisez --debug pour les journaux d�
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).
+Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).
