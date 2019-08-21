@@ -1,7 +1,7 @@
 ---
-title: Informations de référence sur l’API Always Encrypted pour le pilote JDBC | Microsoft Docs
+title: Informations de référence sur l'API Always Encrypted pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a17dc46e2ee60832b51d606c2c7caaf497dfc7c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf8ce1b951621d58105d18b847306ff620d114
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957473"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028486"
 ---
-# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Informations de référence sur l’API Always Encrypted pour le pilote JDBC
+# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Informations de référence sur l'API Always Encrypted pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Le Chiffrement intégral permet aux clients de chiffrer des données sensibles dans des applications clientes et de ne jamais révéler les clés de chiffrement à SQL Server. À cette fin, un pilote Always Encrypted installé sur l’ordinateur client chiffre et déchiffre automatiquement les données sensibles dans l’application cliente SQL Server. Le pilote chiffre les données dans les colonnes sensibles avant de les transmettre à SQL Server et il réécrit automatiquement les requêtes pour que la sémantique de l’application soit conservée. De même, il déchiffre de façon transparente les données stockées dans les colonnes de base de données chiffrées qui figurent dans les résultats des requêtes. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [utilisation de Always Encrypted avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
@@ -25,11 +25,11 @@ ms.locfileid: "67957473"
 > [!NOTE]  
 >  Always Encrypted est pris en charge uniquement par le pilote Microsoft JDBC 6.0 ou ultérieur pour SQL Server avec SQL Server 2016.  
   
- ## <a name="always-encrypted-api-references"></a>Informations de référence sur l’API Always Encrypted
+ ## <a name="always-encrypted-api-references"></a>Informations de référence sur l'API Always Encrypted
  
  Plusieurs ajouts et modifications ont été apportés à l’API du pilote JDBC pour une utilisation dans les applications clientes qui utilisent Always Encrypted.  
   
- **SQLServerConnection, classe**  
+ **Classe SQLServerConnection**  
   
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "67957473"
 |`public final boolean getSendTimeAsDatetime()`|Retourne le paramètre de la propriété de connexion sendTimeAsDatetime.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifie le paramètre de la propriété de connexion sendTimeAsDatetime.|
 
- **SQLServerConnectionPoolProxy Class**
+ **Classe SQLServerConnectionPoolProxy**
  
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "67957473"
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)` | Modifie le paramètre de la propriété de connexion sendTimeAsDatetime.|
      
   
- **SQLServerDataSource, classe**  
+ **Classe SQLServerDataSource**  
   
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
@@ -109,7 +109,7 @@ ms.locfileid: "67957473"
 |----------|-----------------|  
 |`public String getAccessToken(String authority, String resource, String scope);`|La méthode doit être substituée. La méthode est utilisée pour récupérer le jeton d’accès à Azure Key Vault.|  
   
- **SQLServerColumnEncryptionKeyStoreProvider Class**  
+ **Classe SQLServerColumnEncryptionKeyStoreProvider**  
   
  Étendez cette classe pour implémenter un fournisseur de magasins de clés personnalisé.  
   
@@ -155,7 +155,7 @@ Nouveaux types dans la classe **Microsoft. Sql. types**
 
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
-|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Utilisez ces types comme les types SQL cibles lors de l’envoi de valeurs de paramètre à des colonnes DateTime, smalldatetime, Money, smallmoney `setObject()/updateObject()` et uniqueidentifier **chiffrées** à l’aide de méthodes API.|  
+|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Utilisez ces types comme les types SQL cibles lors de l’envoi de **valeurs de** paramètre à des colonnes DateTime, smalldatetime, Money, smallmoney `setObject()/updateObject()` et uniqueidentifier chiffrées à l’aide de méthodes API.|  
   
   
  **Énumération SQLServerStatementColumnEncryptionSetting**  
@@ -194,6 +194,6 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >  Si Always Encrypted est désactivé pour une requête et que la requête retourne des résultats à partir de colonnes chiffrées, la requête retourne des valeurs chiffrées. Les valeurs chiffrées auront le type de données varbinary.  
   
  ## <a name="see-also"></a>Voir aussi  
- [Utilisation du chiffrement intégral avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+ [Utilisation d'Always Encrypted avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

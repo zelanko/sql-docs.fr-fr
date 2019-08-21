@@ -1,7 +1,7 @@
 ---
 title: Utilisation de l’authentification NTLM pour la connexion à SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 11fe35e1dc90e32cac460b61fe8a6078c817b0ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894101"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026103"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Utilisation de l’authentification NTLM pour se connecter à SQL Server
 
@@ -85,7 +85,7 @@ Pour plus d'informations sur les noms des principaux du service (SPN), consultez
 
 > Avant la version 6,2 du pilote JDBC, vous devez définir explicitement **serverSpn**. Depuis la version 6,2, le pilote est en mesure de générer le **serverSpn** par défaut, bien qu’il soit possible d’utiliser **serverSpn** explicitement.
 
-## <a name="security-risks"></a>Risques de sécurité
+## <a name="security-risks"></a>Risques liés à la sécurité
 
 Le protocole NTLM est un ancien protocole d’authentification avec différentes vulnérabilités, qui présentent un risque pour la sécurité. Elle est basée sur un modèle de chiffrement relativement faible et est vulnérable aux diverses attaques. Elle est remplacée par Kerberos, qui est beaucoup plus sécurisée et recommandée. L’authentification NTLM ne doit être utilisée que dans un environnement approuvé sécurisé, ou lorsque Kerberos ne peut pas être utilisé.
 
@@ -100,7 +100,7 @@ Pour plus d’informations sur la connexion avec le chiffrement SSL, consultez:
 - [Connexion avec chiffrement SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
-> Pour la version 7,4, l' **** activation de la protection étendue et du chiffrement n’est pas prise en charge.
+> Pour la version 7,4, l' **activation** de la protection étendue et du chiffrement n’est pas prise en charge.
 
 ## <a name="see-also"></a>Voir aussi
 

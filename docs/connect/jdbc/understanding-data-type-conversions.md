@@ -1,7 +1,7 @@
 ---
 title: Fonctionnement des conversions de types de données | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7029faf333c00fc18e4f35743706a012b76c1e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ed91f1b38f68715cd174a96cb2f0364fc060482
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004175"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027483"
 ---
-# <a name="understanding-data-type-conversions"></a>Conversions de types de données
+# <a name="understanding-data-type-conversions"></a>Présentation des conversions de types de données
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Pour faciliter la conversion des types de données du langage de programmation Java en types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] assure les conversions des types de données requises par la spécification JDBC. Pour une flexibilité accrue, tous les types sont convertibles vers et à partir des types de données **Object**, **String**et **Byte []** .
 
-## <a name="getter-method-conversions"></a>Conversions de méthode d'accesseur Get
+## <a name="getter-method-conversions"></a>Conversions de méthodes Getter
 
 Le tableau suivant, basé sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], présente le mappage des conversions du pilote JDBC pour les méthodes get\<Type>() de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), ainsi que les conversions prises en charge pour les méthodes get\<Type> de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
@@ -33,7 +33,7 @@ Trois catégories de conversions sont prises en charge par les méthodes d'acces
 
 - **Sans perte (x)** : conversions pour le cas où le type getter est inférieur ou égal au type serveur sous-jacent. Par exemple, lors de l’appel de getBigDecimal sur une colonne décimale de serveur sous-jacente, aucune conversion n’est nécessaire.
 
-- **Convertie (y)** : conversions de types serveur numériques en types du langage Java, où la conversion est standard et suit les règles de conversion du langage Java. Pour ces conversions, la précision est toujours tronquée (jamais arrondie) et les dépassements sont gérés comme un opérateur modulo du type de destination, qui est plus petit. Par exemple, l’appel de getInt sur  une colonne **décimale** sous-jacente qui contient «1,9999» retourne «1», ou si la valeur **décimale** sous-jacente est «3 milliards», la valeur **int** déborde sur «-1294967296».
+- **Convertie (y)** : conversions de types serveur numériques en types du langage Java, où la conversion est standard et suit les règles de conversion du langage Java. Pour ces conversions, la précision est toujours tronquée (jamais arrondie) et les dépassements sont gérés comme un opérateur modulo du type de destination, qui est plus petit. Par exemple, l’appel de getInt sur **une** colonne décimale sous-jacente qui contient «1,9999» retourne «1», **ou** si la valeur décimale sous- **jacente** est «3 milliards», alors l’entier la valeur dépasse «-1294967296».
 
 - **Dépendante des données (z)** : les conversions de types de caractère sous-jacents en types numériques nécessitent que les types caractère contiennent des valeurs pouvant être converties dans ce type. Aucune autre conversion n'a lieu. Si la valeur est trop élevée pour le type getter, elle n’est pas valide. Par exemple, si getInt est appelée sur une colonne varchar(50) contenant « 53 », la valeur est retournée en tant que **int** ; en revanche, si la valeur sous-jacente est « xyz » ou « 3000000000 », une erreur est générée.
 
@@ -63,7 +63,7 @@ Quand le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 Notez qu'une marque d'ordre d'octet (BOM, Byte-Order Mark) est obligatoire si les caractères XML correspondent à des encodages de caractères spécifiques.
 
-## <a name="setter-method-conversions"></a>Conversions de méthodes setter
+## <a name="setter-method-conversions"></a>Conversions de méthodes Setter
 
 Pour les données typées Java passées aux méthodes set\<Type>() de la classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), les conversions suivantes s’appliquent.
 

@@ -1,7 +1,7 @@
 ---
-title: Mise en cache des métadonnées d’instruction préparée pour le pilote JDBC | Microsoft Docs
+title: Préparation de la mise en cache des métadonnées d'instruction pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956204"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027843"
 ---
-# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Mise en cache des métadonnées d’instruction préparée pour le pilote JDBC
+# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Préparation de la mise en cache des métadonnées d'instruction pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Cet article fournit des informations sur les deux modifications implémentées pour améliorer les performances du pilote.
@@ -57,7 +57,7 @@ Une autre modification introduite à partir de 6.1.6-Preview est que, avant cela
 
 ## <a name="prepared-statement-metatada-caching"></a>Mise en cache de l’instruction préparée métadonnées
 Depuis la version 6.3.0-Preview, le pilote JDBC Microsoft pour SQL Server prend en charge la mise en cache des instructions préparées. Avant v 6.3.0-Preview, si l’une d’elles exécute une requête qui a déjà été préparée et stockée dans le cache, l’appel de la même requête n’entraînera pas sa préparation. À présent, le pilote recherche la requête dans le cache et recherche le descripteur et l’exécute avec sp_execute.
-La mise en cache des métadonnées des instructions préparées est **désactivée** par défaut. Pour l’activer, vous devez appeler la méthode suivante sur l’objet de connexion:
+La mise en cache des **métadonnées des instructions préparées est désactivée** par défaut. Pour l’activer, vous devez appeler la méthode suivante sur l’objet de connexion:
 
 `setStatementPoolingCacheSize(int value)   //value is the desired cache size (any value bigger than 0)`
 `setDisableStatementPooling(boolean value) //false allows the caching to take place`

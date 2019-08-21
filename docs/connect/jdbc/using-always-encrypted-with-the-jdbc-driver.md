@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’Always Encrypted avec le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916449"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026642"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation d’Always Encrypted avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Pour obtenir un exemple d’inclusion de ces dépendances dans un projet Maven, consultez [Télécharger des dépendances ADAL4J et AKV avec Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Avec le fournisseur du magasin de certificats Windows
-SQLServerColumnEncryptionCertificateStoreProvider peut être utilisé pour stocker les clés principales de colonne dans le magasin de certificats Windows. Utilisez l’Assistant Always Encrypted SQL Server Management Studio (SSMS) ou d’autres outils pris en charge pour créer les définitions de clé principale de colonne et de clé de chiffrement de colonne dans la base de données. Le même Assistant peut être utilisé pour générer un certificat auto-signé dans le magasin de certificats Windows, qui peut être utilisé comme clé principale de colonne pour les données Always Encrypted. Pour plus d’informations sur la syntaxe T-SQL de clé principale de colonne et de clé de chiffrement de colonne, consultez [créer une clé principale de colonne](../../t-sql/statements/create-column-master-key-transact-sql.md) et créer une clé de chiffrement de [colonne](../../t-sql/statements/create-column-encryption-key-transact-sql.md) , respectivement.
+SQLServerColumnEncryptionCertificateStoreProvider peut être utilisé pour stocker les clés principales de colonne dans le magasin de certificats Windows. Utilisez l’Assistant Always Encrypted SQL Server Management Studio (SSMS) ou d’autres outils pris en charge pour créer les définitions de clé principale de colonne et de clé de chiffrement de colonne dans la base de données. Le même Assistant peut être utilisé pour générer un certificat auto-signé dans le magasin de certificats Windows, qui peut être utilisé comme clé principale de colonne pour les données de Always Encrypted. Pour plus d’informations sur la syntaxe T-SQL de clé principale de colonne et de clé de chiffrement de colonne, consultez [créer une clé principale de colonne](../../t-sql/statements/create-column-master-key-transact-sql.md) et créer une clé de chiffrement de [colonne](../../t-sql/statements/create-column-encryption-key-transact-sql.md) , respectivement.
 
 Le nom du SQLServerColumnEncryptionCertificateStoreProvider est MSSQL_CERTIFICATE_STORE et peut être interrogé par l’API getName () de l’objet fournisseur. Il est automatiquement inscrit par le pilote et peut être utilisé de façon transparente sans modification de l’application.
 
@@ -153,7 +153,7 @@ Vous pouvez également récupérer ou définir ces paramètres à l’aide de l�
 Le pilote JDBC instancie automatiquement le SQLServerColumnEncryptionJavaKeyStoreProvider lorsque ces informations d’identification sont présentes dans les propriétés de connexion.
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Création d’une clé principale de colonne pour le magasin de clés Java
-Le SQLServerColumnEncryptionJavaKeyStoreProvider peut être utilisé avec les types de magasin de clés JKS ou PKCS12. Pour créer ou importer une clé à utiliser avec ce fournisseur, utilisez l'  utilitaire Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html). La clé doit avoir le même mot de passe que le magasin de clés lui-même. Voici un exemple de création d’une clé publique et de sa clé privée associée à l’aide de l’utilitaire keytool:
+Le SQLServerColumnEncryptionJavaKeyStoreProvider peut être utilisé avec les types de magasin de clés JKS ou PKCS12. Pour créer ou importer une clé à utiliser avec ce fournisseur, utilisez l' utilitaire Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html). La clé doit avoir le même mot de passe que le magasin de clés lui-même. Voici un exemple de création d’une clé publique et de sa clé privée associée à l’aide de l’utilitaire keytool:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
@@ -543,7 +543,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 
 Pour éviter ces erreurs, procédez comme suit :
 
-- Activez Always Encrypted pour les requêtes d’application ciblant des colonnes chiffrées (pour la chaîne de connexion ou pour une requête spécifique).
+- Activez Always Encrypted pour les requêtes d'application ciblant des colonnes chiffrées (pour la chaîne de connexion ou pour une requête spécifique).
 - vous utilisez des instructions et des paramètres préparés pour envoyer des données ciblant des colonnes chiffrées. L’exemple suivant illustre une requête qui filtre incorrectement une colonne chiffrée (SSN) à l’aide d’un littéral ou d’une constante, au lieu de passer le littéral à l’intérieur d’un paramètre. Cette requête échouera:
 
 ```java
