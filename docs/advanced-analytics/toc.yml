@@ -183,6 +183,8 @@
   items:
     - name: Se connecter
       items:
+        - name: Connexion de bouclage
+          href: ../advanced-analytics/connect/loopback-connection.md
         - name: Se connecter à OLAP à partir de R
           items:
             - name: Utilisation de données de cubes OLAP dans R
@@ -225,34 +227,22 @@
           href: ../advanced-analytics/sql-native-scoring.md
     - name: Gestion des packages
       items:
-        - name: Packages par défaut
-          href: ../advanced-analytics/package-management/default-packages.md
-        - name: Obtenir les informations sur le package
-          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: Installer de nouveaux packages Python
+          items:
+            - name: Obtenir des informations sur les packages Python
+              href: ../advanced-analytics/package-management/python-package-information.md
+            - name: Installer des packages Python
+              href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
         - name: Installer de nouveaux packages R
           items:
-            - name: Installer le package R
-              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-            - name: Utiliser T-SQL
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: Utiliser des gestionnaires de package
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: Utiliser RevoScaleR
-              items:
-                - name: Installer à l’aide de RevoScaleR
-                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-                - name: Activer la gestion de packages R à distance
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: Synchroniser des packages R
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+            - name: "Obtenir des informations sur les packages\_R"
+              href: ../advanced-analytics/package-management/r-package-information.md
+            - name: "Installer des packages\_R"
+              href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: Créer un dépôt miniCRAN
               href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
             - name: Conseils pour l’utilisation de packages R
               href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: Installer de nouveaux packages Python
-          items:
-            - name: Utiliser des gestionnaires de package
-              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: Administration
       items:
         - name: Gérer l’intégration
