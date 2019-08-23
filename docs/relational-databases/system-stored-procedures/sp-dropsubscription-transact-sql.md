@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 21d90c94c73eb6e49fcfedf997fffe2881146a22
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771385"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903627"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 `[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est **All**, les abonnements à tous les articles pour chaque publication et abonné spécifiés sont supprimés. Utilisez **All pour les** publications qui autorisent la mise à jour immédiate.  
   
-`[ @subscriber = ] 'subscribe_r'`Nom de l’abonné dont les abonnements seront supprimés. Subscriber est de **type sysname**, sans valeur par défaut. Si la **totalité**est, tous les abonnements de tous les abonnés sont supprimés.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné dont les abonnements seront supprimés. Subscriber est de **type sysname**, sans valeur par défaut. Si la **totalité**est, tous les abonnements de tous les abonnés sont supprimés.  
   
 `[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, tous les abonnements de cet Abonné seront supprimés.  
   
