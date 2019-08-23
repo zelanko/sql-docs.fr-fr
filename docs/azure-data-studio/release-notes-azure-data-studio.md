@@ -9,17 +9,33 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/11/2019
-ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.date: 08/15/2019
+ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731063"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553104"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="august-2019"></a>Août 2019
+
+15 août 2019 &nbsp; / &nbsp; version : 1.10.0 
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Publication de l’extension SandDance 1.3.1 | &bull; &nbsp; Détection intelligente des graphiques <br/>&bull; &nbsp; Visualisations 3D <br/> &bull; &nbsp; Filtrage des données |
+| Améliorations des notebooks | &bull; &nbsp; Ajouter du code ou une cellule de texte inline <br/>&bull; &nbsp; Ajout de la possibilité de cliquer avec le bouton droit sur la grille de résultats SQL pour enregistrer les résultats au format CSV, JSON, etc. <br/> &bull; &nbsp; Amélioration des performances de chargement des Notebooks afin d’accélérer le chargement JSON <br/> &bull; &nbsp; Consultez la liste complète des améliorations [ici](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
+| Prise en charge de SQL Server 2019 |  Cette version inclut la prise en charge d’autres fonctionnalités de cluster Big Data SQL Server 2019, notamment : <br/> &bull; &nbsp; Réduction du temps nécessaire pour charger les informations de table et de colonne dans la page de mappage d’objets. <br/> &bull; &nbsp; Correction d’un bogue lors du chargement des informations d’identification incluses dans l’étendue de la base de données dans la page de détails de la connexion. <br/> &bull; &nbsp; Augmentation de la taille de l’échantillon par défaut utilisée pour l’analyse PROSE. | 
+| L’extension dacpac prend désormais en charge AAD | 
+| Visual Studio Code version de mai fusionnée 1.37 | Vous trouverez les dernières améliorations [ici](https://code.visualstudio.com/updates/v1_37). |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1) |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2019"></a>Juillet 2019
 

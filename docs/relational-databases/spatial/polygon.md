@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081665"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026142"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -49,9 +49,9 @@ Comme indiqué par l'illustration :
  Les instances **Polygon** acceptées sont des instances qui peuvent être stockées dans une variable **geometry** ou **geography** sans lever d’exception. Les instances **Polygon** suivantes sont acceptées :  
   
 -   Instance **Polygon** vide  
--   Instance **Polygon** qui a un anneau extérieur acceptable et zéro ou plusieurs anneaux intérieurs acceptables  
+-   Instance **Polygon** qui a un anneau extérieur acceptable (**LineString**) et zéro, un ou plusieurs anneaux intérieurs acceptables (**LineString**s)  
   
-Les critères suivants sont nécessaires pour qu'un anneau soit acceptable.  
+Les critères suivants sont nécessaires pour qu’un anneau (**LineString**) soit acceptable.  
   
 -   L’instance **LineString** doit être acceptée.  
 -   L’instance **LineString** doit avoir au moins quatre points.  

@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 65395c9ab5b97d27f38497b64bbab9c7b6a072a3
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388368"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553292"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
@@ -406,10 +406,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
 ## <a name="see-also"></a>Voir aussi
-
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)    
 [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Jointures](../../relational-databases/performance/joins.md)    
-[Illustration du traitement de requêtes adaptatif](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Illustration du traitement de requêtes (QP) intelligent](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[Illustration du traitement de requêtes adaptatif](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[Illustration du traitement de requêtes intelligent](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

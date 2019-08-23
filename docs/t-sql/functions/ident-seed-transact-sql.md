@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5c5e2ca321deb2b7e82774db1e91c0b0149deb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f68dd33d2a6d7a91aad0ceb4b606efaaa39429
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024372"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969448"
 ---
-# <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
+# <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la valeur de départ d’origine (sous la forme **numeric**( **@@** MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d’une colonne d’identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
+  Retourne la valeur de départ d’origine spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d’une colonne d’identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
   
  ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
@@ -45,7 +44,7 @@ IDENT_SEED ( 'table_or_view' )
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui spécifie la table ou la vue dans laquelle rechercher une valeur de départ d’identité. *table_or_view* peut être une constante de type chaîne de caractères entre guillemets, une variable, une fonction ou un nom de colonne. *table_or_view* est de type **char**, **nchar**, **varchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Types de retour  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne NULL en cas d’erreur ou si un appelant n’est pas autorisé à voir l’objet.  
@@ -57,7 +56,7 @@ IDENT_SEED ( 'table_or_view' )
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. Renvoi de la valeur de départ d'une table spécifiée  
  L'exemple suivant renvoie la valeur initiale pour la table `Person.Address` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. Renvoi de la valeur initiale de plusieurs tables  
  L’exemple suivant retourne les tables de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] qui contiennent une colonne d’identité avec une valeur de départ.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

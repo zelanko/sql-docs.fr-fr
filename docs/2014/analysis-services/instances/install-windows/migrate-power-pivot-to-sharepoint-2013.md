@@ -129,7 +129,7 @@ ms.locfileid: "68888519"
   
 -   **Migrer les planifications option1: Administrateur de batterie de serveurs SharePoint**  
   
-    1.  Dans la gestion de SharePoint 2013, `Set-PowerPivotServiceApplication` exécutez l’applet `-StartMigratingRefreshSchedules` de commande avec le commutateur pour activer la migration de la planification automatique à la demande contenu relatif à(../../../reporting-services/media/rs-powershellicon.jpg "PowerShell") ![contenu]relatif à PowerShell. Le script Windows PowerShell suivant suppose qu'il existe une seule application de service PowerPivot.  
+    1.  Dans la gestion de SharePoint 2013, `Set-PowerPivotServiceApplication` exécutez l’applet `-StartMigratingRefreshSchedules` de commande avec le commutateur pour activer la migration de la planification automatique à la demande contenu ![relatif à PowerShell](../../../reporting-services/media/rs-powershellicon.jpg " contenu relatif à PowerShell"). Le script Windows PowerShell suivant suppose qu'il existe une seule application de service PowerPivot.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  

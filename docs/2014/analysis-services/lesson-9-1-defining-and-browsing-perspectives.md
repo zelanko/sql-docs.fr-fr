@@ -188,7 +188,7 @@ ms.locfileid: "69493775"
   
      Observez que dans chacun de ces groupes de mesures, une seule mesure apparaît, comme le montre l'image suivante.  
   
-     Mesures relatives aux ventes sur ![Internet et] aux revendeurs Mesures relatives aux ventes sur (../../2014/tutorials/media/l9-perspectives-4.gif "Internet et") aux revendeurs  
+     Mesures relatives aux ventes sur ![Internet et](../../2014/tutorials/media/l9-perspectives-4.gif " aux revendeurs Mesures relatives aux ventes sur Internet et") aux revendeurs  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Définition et exploration de traductions](lesson-9-2-defining-and-browsing-translations.md)  

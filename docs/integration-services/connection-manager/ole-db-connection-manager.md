@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 70e439dd6ed176fbb9c2d2fe666b314bd48f2f9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3b1526d55321e5f32a243a48f64bde2f579caa6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904271"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028793"
 ---
 # <a name="ole-db-connection-manager"></a>Gestionnaire de connexions OLE DB
 
@@ -93,6 +93,9 @@ ms.locfileid: "67904271"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Identités managées pour l’authentification des ressources Azure
 Lors de l’exécution de packages SSIS sur le [runtime d’intégration Azure-SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), vous pouvez utiliser l’[identité managée](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associée à votre fabrique de données pour l’authentification Azure SQL Database (ou Managed Instance). La fabrique en question peut accéder à votre base de données et copier des données depuis ou vers celle-ci à l’aide de cette identité.
 
+> [!NOTE]
+>  Quand vous utilisez l’authentification Azure AD (notamment l’authentification d’identité managée) pour vous connecter à Azure SQL Database (ou à Managed Instance), des problèmes connus peuvent entraîner l’échec de l’exécution du package ou une modification de comportement inattendue. Pour plus d’informations, consultez [Fonctionnalités et limitations d’Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+
 Pour utiliser l’authentification d’identité managée pour Azure SQL Database, suivez ces étapes afin de configurer votre base de données :
 
 1. **Créez un groupe dans Azure AD.** Faites de l’identité managée un membre du groupe.
@@ -113,7 +116,7 @@ Pour utiliser l’authentification d’identité managée pour Azure SQL Databas
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Accordez au groupe Azure AD les autorisations requises** comme vous le feriez, entre autres, pour des utilisateurs SQL. Par exemple, exécutez le code suivant :
+1. **Accordez au groupe Azure AD les autorisations requises** comme vous le feriez, entre autres, pour des utilisateurs SQL. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles).  Par exemple, exécutez le code suivant :
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -138,11 +141,11 @@ Pour utiliser l’authentification par identité managée pour Azure SQL Databas
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Octroyez à l’identité managée de la fabrique de données les autorisations requises**. Exécutez la commande T-SQL suivante sur la base de données depuis ou vers laquelle vous souhaitez copier des données :
+1. **Octroyez à l’identité managée de la fabrique de données les autorisations requises**. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Exécutez la commande T-SQL suivante sur la base de données depuis ou vers laquelle vous souhaitez copier des données :
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 Ensuite, **configurez le fournisseur OLE DB** pour le gestionnaire de connexions OLE DB. Pour ce faire, vous disposez de deux options.
@@ -167,7 +170,7 @@ Enfin, **configurez l’authentification d’identité managée** pour le gestio
     >  Dans le runtime d’intégration Azure-SSIS, toutes les autres méthodes d’authentification (par exemple, sécurité intégrée, mot de passe) préconfigurées sur le gestionnaire de connexions OLE DB sont **remplacées** quand l’authentification d’identité managée est utilisée pour établir la connexion de base de données.
 
 > [!NOTE]
->  Pour configurer l’authentification d’identité managée sur les packages existants, regénérez votre projet SSIS avec le [dernier concepteur SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) au moins une fois et redéployez ce projet SSIS sur votre runtime d’intégration Azure-SSIS afin que la nouvelle propriété de gestionnaire de connexions **ConnectUsingManagedIdentity** soit automatiquement ajoutée à tous les gestionnaires de connexions OLE DB dans votre projet SSIS.
+>  Pour configurer l’authentification d’identité managée sur des packages existants, il est préférable de regénérer le projet SSIS avec le [dernier concepteur SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) au moins une fois, et de redéployer ce projet SSIS sur votre runtime d’intégration Azure-SSIS afin que la nouvelle propriété de gestionnaire de connexions **ConnectUsingManagedIdentity** soit automatiquement ajoutée à tous les gestionnaires de connexions OLE DB dans votre projet SSIS. L’autre méthode consiste à utiliser directement la substitution de propriété avec le chemin de propriété **\Package.Connections[{nom de votre gestionnaire de connexions}].Properties[ConnectUsingManagedIdentity]** au moment de l’exécution.
 
 ## <a name="see-also"></a>Voir aussi    
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)     

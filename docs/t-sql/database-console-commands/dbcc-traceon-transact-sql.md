@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040605"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553258"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Active les indicateurs de trace spécifiés.
   
@@ -48,7 +48,7 @@ Numéro de l'indicateur de trace à activer.
 Espace réservé précisant qu'il est possible de spécifier plusieurs indicateurs de trace.  
   
 -1  
-Active globalement les indicateurs de trace spécifiés.  
+Active globalement les indicateurs de trace spécifiés. Cet argument est obligatoire dans Azure SQL Managed Instance. 
   
 WITH NO_INFOMSGS  
 Supprime tous les messages d'information.  
@@ -61,7 +61,9 @@ Sur un serveur de production, pour éviter un comportement imprévisible, il est
 Les indicateurs de trace permettent de personnaliser certaines caractéristiques en contrôlant le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les indicateurs de trace, une fois activés, le restent sur le serveur jusqu'à ce qu'ils soient désactivés lors de l'exécution de l'instruction DBCC TRACEOFF. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe deux types d'indicateurs de trace : les indicateurs de trace de session et les indicateurs de trace globaux. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement pour celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci. Pour déterminer l'état des indicateurs de trace, utilisez l'instruction DBCC TRACESTATUS. Pour désactiver certains indicateurs de trace, exécutez DBCC TRACEOFF.
   
 Après avoir activé un indicateur de trace qui affecte les plans de requête, exécutez `DBCC FREEPROCCACHE;` afin que les plans mis en cache soient recompilés à l’aide du nouveau comportement affectant le plan.
-  
+
+Azure SQL Database Managed Instance prend en charge les indicateurs de trace globaux suivants : 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 et 11024
+
 ## <a name="result-sets"></a>Jeux de résultats  
  DBCC TRACEON retourne le jeu de résultats suivant (message) :  
   

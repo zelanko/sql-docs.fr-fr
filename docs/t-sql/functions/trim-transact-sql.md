@@ -18,12 +18,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a25a41600aca4d350c7434662de4c25dd51888c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77b8244efda0a1f06e16821d817339feebc9384f
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098793"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561147"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -55,7 +55,7 @@ Renvoie une expression de caractères avec un type d’argument de chaîne dans 
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, la fonction `TRIM` supprime le caractère espace `char(32)` des deux côtés. Ce comportement est équivalent à `LTRIM(RTRIM(@string))`. Le comportement de la fonction `TRIM` avec des caractères spécifiés est identique au comportement de la fonction `REPLACE` quand les caractères de début ou de fin sont remplacés par des chaînes vides.
+Par défaut, la fonction `TRIM` supprime le caractère d’espacement aux deux extrémités de la chaîne. Ce comportement est équivalent à `LTRIM(RTRIM(@string))`.
 
 ## <a name="examples"></a>Exemples
 
@@ -69,18 +69,22 @@ SELECT TRIM( '     test    ') AS Result;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-`test`
+```
+test
+```
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Supprimer les caractères spécifiés des deux côtés de la chaîne
 
-L’exemple suivant supprime un point final et les espaces à droite.
+L’exemple suivant supprime les espaces et le point avant `#` et après le mot `test`.
 
 ```sql
-SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
+SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-`#     test`
+```
+#     test
+```
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -79,7 +79,7 @@ ms.locfileid: "69493902"
   
      L’illustration suivante montre les membres de la hiérarchie d’attribut **Commute Distance** , triés en fonction des valeurs ASCII de la clé de membre.  
   
-     ![Hiérarchie d’attribut commute distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Hiérarchie d’attribut commute distance")  
+     ![Hiérarchie d’attribut commute distance](../../2014/tutorials/media/l4-memberproperties-4.gif " Hiérarchie d’attribut commute distance")  
   
 2.  Affichez l’onglet **Structure de dimension** dans le Concepteur de dimensions pour la dimension Customer, cliquez avec le bouton droit sur **CommuteDistanceSort** dans la table **Customer** du volet **Vue de source de données** et choisissez **Nouvel attribut de colonne**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493902"
   
      Notez que les membres de la hiérarchie d'attribut sont maintenant triés par ordre croissant, comme montré dans l'illustration suivante.  
   
-     ![Hiérarchie des attributs Permuted distance] rétriée (../../2014/tutorials/media/l4-memberproperties-5.gif "Hiérarchie des attributs Permuted distance") rétriée  
+     ![Hiérarchie des attributs Permuted distance](../../2014/tutorials/media/l4-memberproperties-5.gif " rétriée Hiérarchie des attributs Permuted distance") rétriée  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

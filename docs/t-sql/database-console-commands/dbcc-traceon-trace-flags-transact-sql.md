@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809833"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553296"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Indicateurs de trace (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 Les indicateurs de trace sont utilisés pour définir des caractéristiques de serveur spécifiques ou pour modifier un comportement particulier. Par exemple, l’indicateur de trace 3226 est un indicateur de trace de démarrage couramment utilisé qui supprime les messages de réussite de la sauvegarde dans le journal des erreurs. Les indicateurs de trace sont fréquemment utilisés pour diagnostiquer les problèmes de performances, ou pour déboguer des procédures stockées ou des systèmes informatiques complexes, mais ils peuvent être également recommandés par le Support Microsoft pour modifier un comportement qui a un impact négatif sur une charge de travail spécifique.  Tous les indicateurs de trace documentés et ceux qui sont recommandés par le Support Microsoft sont entièrement pris en charge dans un environnement de production quand ils sont utilisés comme indiqué.  Notez que les indicateurs de trace de cette liste peuvent faire l’objet de considérations supplémentaires relatives à leur utilisation particulière : il est donc conseillé d’examiner attentivement toutes les recommandations données ici et/ou par votre ingénieur du support technique. En outre, à l’instar de toute modification de configuration dans SQL Server, il est toujours préférable de tester minutieusement l’indicateur dans un environnement hors production avant de le déployer.
 
@@ -51,8 +51,10 @@ Utilisez la commande `DBCC TRACESTATUS` afin de déterminer quels indicateurs de
 
 ## <a name="trace-flags"></a>Indicateurs de trace
 
-  
-Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+> [!NOTE]
+> Azure SQL Database Managed Instance prend en charge les indicateurs de trace globaux suivants : 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389,1 0316 et 11024. Les indicateurs de trace de session ne sont pas encore pris en charge dans Managed Instance.
  
 > [!NOTE]
 > Certains indicateurs de trace ont été introduits dans des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiques. Pour plus d’informations sur la version applicable, consultez l’article du support technique Microsoft associé à un indicateur de trace spécifique.

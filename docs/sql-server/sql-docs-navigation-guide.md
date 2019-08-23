@@ -1,6 +1,6 @@
 ---
-title: Guide de navigation dans la documentation de SQL Server
-description: Ce guide de navigation dans la documentation technique de SQL Server aborde des éléments tels que la page hub, la table des matières et l’en-tête. Il explique également comment utiliser la barre de navigation et le filtre de version.
+title: Conseils de navigation dans la documentation de SQL Server
+description: Conseils et astuces pour la navigation dans la documentation technique de SQL Server. Aborde des éléments tels que la page hub, la table des matières et l’en-tête, et explique comment utiliser la barre de navigation et le filtre de version.
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941168"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028836"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guide de navigation dans la documentation de SQL Server 
 
@@ -61,11 +60,11 @@ Sur docs.microsoft.com, vous pouvez rechercher du contenu dans la table des mati
 ## <a name="version-filter"></a>Filtre de version
 La documentation technique de SQL Server propose du contenu pour plusieurs versions de SQL Server. Les fonctionnalités pouvant varier d’une version à l’autre de SQL Server, le contenu varie également. 
 
-Utilisez le filtre de version pour vérifier que le contenu que vous voyez correspond bien à la version de SQL Server qui vous intéresse : 
+Utilisez le [filtre de version](versioning-system-monikers-ui-sql-server.md) pour vérifier que le contenu que vous voyez correspond bien à la version de SQL Server qui vous intéresse : 
 
 ![Filtre de version dans Documentation SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Sélectionnez **All SQL** > **Hide nothing** (Tout SQL > Ne rien masquer) pour afficher tout le contenu et ne rien masquer derrière le filtre de version. 
+Sélectionnez **All SQL** \> **Hide nothing** (Tout SQL > Ne rien masquer) pour afficher tout le contenu et que rien ne soit masqué par le filtre de version. L’option [**Hide nothing** n’est pas recommandée pour une utilisation courante](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
 
 ## <a name="breadcrumbs"></a>Barre de navigation
 

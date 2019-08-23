@@ -272,7 +272,7 @@ ms.locfileid: "69493883"
   
      Observez que la marge brute pour les ventes de revendeurs est nettement plus faible que pour les ventes par Internet, comme l'illustre l'image suivante.  
   
-     ![Volet données avec les ventes] des revendeurs (../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Volet données avec les ventes") des revendeurs  
+     ![Volet données avec les ventes](../../2014/tutorials/media/l6-calculatedmembers-7b.gif " des revendeurs Volet données avec les ventes") des revendeurs  
   
 9. Ajoutez les mesures **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**et **Reseller Sales Ratio to All Products** à la zone Valeurs.  
   

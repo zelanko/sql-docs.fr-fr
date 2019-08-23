@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059567"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957448"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Stocker des documents JSON dans SQL Server ou SQL Database
-SQL Server et Azure SQL Database ont des fonctions JSON natives qui vous permettent d’analyser des documents JSON à l’aide du langage SQL standard. Vous pouvez désormais stocker des documents JSON dans SQL Server ou SQL Database et interroger les données JSON comme dans une base de données NoSQL. Cet article explique comment stocker des documents JSON dans SQL Server ou SQL Database.
+SQL Server et Azure SQL Database ont des fonctions JSON natives qui vous permettent d’analyser des documents JSON à l’aide du langage SQL standard. Vous pouvez stocker des documents JSON dans SQL Server ou SQL Database et interroger les données JSON comme dans une base de données NoSQL. Cet article explique comment stocker des documents JSON dans SQL Server ou SQL Database.
+
+## <a name="json-storage-format"></a>Format de stockage JSON
+
+La première décision de conception du stockage concerne la manière de stocker des documents JSON dans les tables. Deux options sont disponibles :
+- **Stockage LOB** - Les documents JSON peuvent être stockés tels quels dans des colonnes `NVARCHAR`. Il s’agit de la meilleure façon de charger et d’ingérer rapidement les données, car la vitesse de chargement correspond au chargement des colonnes de chaînes. Cette approche peut entraîner une dégradation supplémentaire des performances au moment de la requête/analyse si l’indexation des valeurs JSON n’est pas effectuée, car les documents JSON bruts doivent être analysés pendant l’exécution des requêtes. 
+- **Stockage relationnel** - Les documents JSON peuvent être analysés pendant qu’ils sont insérés dans la table à l’aide de fonctions `OPENJSON`, `JSON_VALUE` ou `JSON_QUERY`. Les fragments des documents JSON d’entrée peuvent être stockés dans les colonnes de type de données SQL ou dans des colonnes NVARCHAR contenant des sous-éléments JSON. Cette approche augmente le temps de chargement, car l’analyse JSON est effectuée pendant le chargement. Toutefois, les performances des requêtes sont identiques à celles des requêtes classiques sur les données relationnelles.
 
 ## <a name="classic-tables"></a>Tables classiques
 

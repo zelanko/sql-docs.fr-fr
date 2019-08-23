@@ -3,19 +3,19 @@ title: Extension SQL Server 2019 (préversion)
 titleSuffix: Azure Data Studio
 description: Extension SQL Server 2019 en préversion pour Azure Data Studio
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 08/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959217"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494040"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extension SQL Server 2019 (préversion)
 
@@ -29,9 +29,9 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
 
    |Plateforme|Télécharger|Date de publication|Options de version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|25 juin 2019 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|25 juin 2019 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|25 juin 2019 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 août 2019 |0.15.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 août 2019 |0.15.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 août 2019 |0.15.0
 
 1. Dans Azure Data Studio choisissez **Installer l’extension à partir du package VSIX** dans le menu **Fichier**, puis sélectionnez le fichier. vsix téléchargé.
 
@@ -42,6 +42,13 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
 1. Après le rechargement, l’extension installe les dépendances. Vous pouvez voir la progression dans la fenêtre de sortie, ce qui peut prendre plusieurs minutes.
 
 1. Une fois l’installation des dépendances terminée, fermez et rouvrez Azure Data Studio. Le type de connexion **Cluster Big Data SQL Server** n’est pas disponible tant que vous n’avez pas redémarré Azure Data Studio.
+
+## <a name="changes-in-release-015"></a>Modifications dans la version 0.15
+* Assistant Créer une table externe :
+  * Réduction du temps nécessaire pour charger les informations de table et de colonne dans la page de mappage d’objets.
+  * Correction d’un bogue lors du chargement des informations d’identification incluses dans l’étendue de la base de données dans la page de détails de la connexion.
+* Assistant Création d’une table externe à partir de fichiers CSV :
+  * Augmentation de la taille de l’échantillon par défaut utilisée pour l’analyse PROSE.
 
 ## <a name="changes-in-release-0141"></a>Modifications dans la version 0.14.1
 * Prise en charge de la prise en charge de la source de données CTP 3.1
