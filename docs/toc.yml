@@ -4064,7 +4064,7 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Notes de publication
       items:
-        - name: "compatibilité descendante\_;"
+        - name: Compatibilité descendante
           href: database-engine/sql-server-database-engine-backward-compatibility.md
         - name: "Déprécié dans SQL Server\_2017"
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
@@ -16443,7 +16443,7 @@
                       href: t-sql/language-elements/like-transact-sql.md
                     - name: NOT
                       href: t-sql/language-elements/not-transact-sql.md
-                    - name: '- ou -'
+                    - name: OR
                       href: t-sql/language-elements/or-transact-sql.md
                     - name: SOME | ANY
                       href: t-sql/language-elements/some-any-transact-sql.md

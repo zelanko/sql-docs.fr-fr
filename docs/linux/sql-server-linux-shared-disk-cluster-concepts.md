@@ -34,7 +34,7 @@ Pour créer une instance de cluster de basculement SQL Server sur Linux, consult
 
     Pour plus d’informations sur la configuration du cluster, les options de l’agent de ressources, la gestion, les meilleures pratiques et les suggestions, consultez [Extension haute disponibilité SUSE Linux Enterprise 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-Le module complémentaire RHEL HA et SUSE HAE s’appuient sur [Pacemaker](https://clusterlabs.org/).
+Les modules complémentaires RHEL HA et SUSE HAE s’appuient sur [Pacemaker](https://clusterlabs.org/).
 
 Comme le montre le diagramme suivant, le stockage est présenté à deux serveurs. Les composants de clustering, Corosync et Pacemaker, coordonnent les communications et la gestion des ressources. L’un des serveurs a la connexion active aux ressources de stockage et au SQL Server. Lorsque Pacemaker détecte une défaillance, les composants de clustering gèrent le déplacement des ressources vers l’autre nœud.  
 
@@ -68,7 +68,7 @@ Toutes les instances de cluster de basculement, qu’elles se trouvent sur Linux
 Dans une configuration qui s’étend sur plusieurs emplacements, ce qui est stocké dans un centre de données doit être synchronisé avec l’autre. En cas de basculement, l’instance de cluster de basculement peut être mis en ligne et le stockage est considéré comme identique. Pour cela, vous devez disposer d’une méthode externe pour la réplication du stockage, qu’elle soit effectuée via le matériel de stockage sous-jacent ou un utilitaire basé sur un logiciel. 
 
 >[!NOTE]
->Pour SQL Server, les déploiements basés sur Linux à l’aide de disques présentés directement à un serveur doivent être formatés avec XFS ou EXT4. D’autres systèmes de fichier ne sont actuellement pas pris en charge. Toutes les modifications seront reflétées ici.
+>Pour SQL Server, les déploiements basés sur Linux à l’aide de disques présentés directement à un serveur doivent être formatés avec XFS ou EXT4. D’autres systèmes de fichiers ne sont actuellement pas pris en charge. Toutes les modifications seront reflétées ici.
 
 Le processus de présentation du stockage partagé est le même pour les différentes méthodes prises en charge :
 
