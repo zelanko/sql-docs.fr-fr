@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652248"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009331"
 ---
 # <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Qu’est-ce que le[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]pool de stockage ()?
 
@@ -33,7 +33,7 @@ Le pool de stockage est constitué de nœuds de stockage constitués de SQL Serv
 Les nœuds de stockage sont responsables des opérations suivantes :
 
 - Ingestion des données par le biais de Spark.
-- Stockage des données dans HDFS (format Parquet). HDFS assure également la persistance des données, car les données HDFS sont réparties sur tous les nœuds de stockage du cluster Big Data SQL.
+- Stockage des données dans HDFS (format texte parquet et délimité). HDFS assure également la persistance des données, car les données HDFS sont réparties sur tous les nœuds de stockage du cluster Big Data SQL.
 - Accès aux données par le biais des points de terminaison HDFS et SQL Server.
 
 ## <a name="next-steps"></a>Étapes suivantes

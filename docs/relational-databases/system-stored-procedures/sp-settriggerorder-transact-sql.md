@@ -18,14 +18,14 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 910e615cc5257eb5be65fe88b1694e0a3bc218c5
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032931"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000812"
 ---
-# <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
+# <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Spécifie les déclencheurs AFTER activés en premier ou en dernier. L'ordre d'exécution des déclencheurs AFTER activés entre les premier et dernier déclencheurs est indéfini.  
@@ -43,12 +43,12 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` Est le nom du déclencheur et le schéma auquel il appartient, le cas échéant, dont l’ordre doit être défini ou modifié. [_triggerschema_ **.** ] *triggername* est **sysname**. Si le nom ne correspond pas à un déclencheur ou si le nom correspond à un déclencheur INSTEAD OF, la procédure retourne une erreur. *triggerschema* ne peut pas être spécifié pour les déclencheurs DDL ou d’ouverture de session.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'`Nom du déclencheur et du schéma auquel il appartient, le cas échéant, dont l’ordre doit être défini ou modifié. [_triggerschema_ **.** ] *triggername* est de **type sysname**. Si le nom ne correspond pas à un déclencheur ou si le nom correspond à un déclencheur INSTEAD OF, la procédure retourne une erreur. *triggerschema* ne peut pas être spécifié pour les déclencheurs DDL ou Logon.  
   
-`[ @order = ] 'value'` Est le paramètre pour le nouvel ordre du déclencheur. *valeur* est **varchar (10)** et il peut prendre l’une des valeurs suivantes.  
+`[ @order = ] 'value'`Paramètre de la nouvelle commande du déclencheur. la *valeur* est de type **varchar (10)** et peut prendre l’une des valeurs suivantes.  
   
 > [!IMPORTANT]  
->  Le **première** et **dernière** déclencheurs doivent être deux déclencheurs différents.  
+>  Le **premier** et le **dernier** déclencheur doivent être deux déclencheurs différents.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -56,12 +56,12 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**Dernière**|Le déclencheur est activé en dernier.|  
 |**Aucun**|L'ordre d'activation du déclencheur n'est pas défini.|  
   
-`[ @stmttype = ] 'statement_type'` Spécifie l’instruction SQL qui active le déclencheur. *l’argument statement_type* est **varchar (50)** et peut être INSERT, UPDATE, DELETE, ouverture de session ou un [!INCLUDE[tsql](../../includes/tsql-md.md)] événement d’instruction répertorié dans [événements DDL](../../relational-databases/triggers/ddl-events.md). Les groupes d'événements ne peuvent pas être spécifiés.  
+`[ @stmttype = ] 'statement_type'`Spécifie l’instruction SQL qui déclenche le déclencheur. *statement_type* est de type **varchar (50)** et peut être d’insertion, de mise à jour, [!INCLUDE[tsql](../../includes/tsql-md.md)] de suppression, d’ouverture de session ou d’un événement d’instruction listé dans des [événements DDL](../../relational-databases/triggers/ddl-events.md). Les groupes d'événements ne peuvent pas être spécifiés.  
   
- Un déclencheur peut être désigné comme la **première** ou **dernière** déclencheur pour un type d’instruction uniquement après que le déclencheur a été défini en tant que déclencheur pour ce type d’instruction. Par exemple, déclencher **TR1** peut être désignée **première** pour INSERT sur la table **T1** si **TR1** est défini comme un déclencheur INSERT. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne une erreur si **TR1**, ce qui a été défini uniquement comme un déclencheur INSERT, est défini comme un **première**, ou **dernière**, déclencheur pour une instruction de mise à jour. Pour plus d'informations, consultez la section Notes.  
+ Un déclencheur peut être désigné comme **premier** ou **dernier** déclencheur pour un type d’instruction uniquement après que ce déclencheur a été défini en tant que déclencheur pour ce type d’instruction. Par exemple, le déclencheur **TR1** peut être désigné en **premier** pour l’insertion sur la table **T1** si **TR1** est défini en tant que déclencheur INSERT. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne une erreur si **TR1**, qui a été défini uniquement comme déclencheur d’insertion, est défini en tant que déclencheur **First**ou **Last**pour une instruction Update. Pour plus d'informations, consultez la section Notes.  
   
- **@namespace=** { **'DATABASE'**  |  **« SERVER »** | NULL}  
- Lorsque *triggername* est un déclencheur DDL, **@namespace** Spécifie si *triggername* a été créé avec étendue de base de données ou de serveur. Si *triggername* est un déclencheur d’ouverture de session, SERVER doit être spécifié. Pour plus d’informations sur l’étendue du déclencheur DDL, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md). Si non spécifié, ou si la valeur NULL est spécifiée, *triggername* est un déclencheur DML.  
+ espace de noms =  | {'base de données' 'serveur' |  **\@** NUL  
+ Quand *triggername* est un déclencheur DDL  **\@** , l’espace de noms spécifie si *triggername* a été créé avec une étendue de base de données ou de serveur. Si *triggername* est un déclencheur LOGON, le serveur doit être spécifié. Pour plus d’informations sur la portée du déclencheur DDL, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md). S’il n’est pas spécifié, ou si NULL est spécifié, *triggername* est un déclencheur DML.  
   
 ||  
 |-|  
@@ -73,31 +73,31 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="remarks"></a>Notes  
   
 ## <a name="dml-triggers"></a>Déclencheurs DML  
- Il peut y avoir qu’un seul **première** et un **dernière** déclencheur pour chaque instruction sur une seule table.  
+ Il ne peut y avoir qu’un seul **premier** et **dernier** déclencheur pour chaque instruction sur une table unique.  
   
- Si un **première** déclencheur est déjà défini sur la table, la base de données ou le serveur, vous ne pouvez pas désigner un nouveau déclencheur en tant que **première** pour la table de même, la base de données ou le serveur pour le même *l’argument statement_type* . Cette restriction s’applique également **dernière** déclencheurs.  
+ Si un **premier** déclencheur est déjà défini sur la table, la base de données ou le serveur, vous ne pouvez pas désigner un nouveau déclencheur comme **tout d’abord** pour la même table, base de données ou serveur pour le même *statement_type*. Cette restriction applique également les **derniers** déclencheurs.  
   
- La réplication génère automatiquement un premier déclencheur pour toute table qui est incluse dans un abonnement avec mise à jour immédiate ou en attente. Elle nécessite un déclencheur qui soit le premier. Elle génère une erreur si vous essayez d'inclure une table détenant un premier déclencheur dans un abonnement mis à jour immédiatement ou en attente. Si vous tentez de définir un déclencheur comme premier déclencheur après qu’une table a été incluse dans un abonnement, **sp_settriggerorder** retourne une erreur. Si vous utilisez ALTER TRIGGER sur le déclencheur de réplication, ou **sp_settriggerorder** pour modifier le déclencheur de réplication à un **dernière** ou **aucun** déclencheur, l’abonnement est pas fonctionner correctement.  
+ La réplication génère automatiquement un premier déclencheur pour toute table qui est incluse dans un abonnement avec mise à jour immédiate ou en attente. Elle nécessite un déclencheur qui soit le premier. Elle génère une erreur si vous essayez d'inclure une table détenant un premier déclencheur dans un abonnement mis à jour immédiatement ou en attente. Si vous tentez de définir un déclencheur comme premier déclencheur après qu’une table a été incluse dans un abonnement, **sp_settriggerorder** retourne une erreur. Si vous utilisez l’instruction ALTER TRIGGER sur le déclencheur de réplication ou si vous utilisez **sp_settriggerorder** pour remplacer le déclencheur de réplication par un déclencheur **Last** ou **None** , l’abonnement ne fonctionne pas correctement.  
   
 ## <a name="ddl-triggers"></a>Déclencheurs DDL  
- Si un déclencheur DDL avec étendue de base de données et un déclencheur DDL avec étendue de serveur existent sur le même événement, vous pouvez spécifier que les deux déclencheurs sont une **première** déclencheur ou une **dernière** déclencheur. Toutefois, les déclencheurs avec étendue de serveur se déclenchent toujours en premier. En général, l'ordre d'exécution des déclencheurs DDL qui existent sur le même événement est le suivant :  
+ Si un déclencheur DDL avec une étendue de base de données et un déclencheur DDL avec une étendue de serveur existent sur le même événement, vous pouvez spécifier que les deux déclencheurs sont un **premier** déclencheur ou un **dernier** déclencheur. Toutefois, les déclencheurs avec étendue de serveur se déclenchent toujours en premier. En général, l'ordre d'exécution des déclencheurs DDL qui existent sur le même événement est le suivant :  
   
-1.  Le déclencheur de niveau serveur marqué **premier**.  
+1.  Le déclencheur de niveau serveur est marqué en **premier**.  
   
 2.  Autres déclencheurs de niveau serveur.  
   
-3.  Le déclencheur de niveau serveur marqué **dernière**.  
+3.  Déclencheur de niveau serveur marqué en **dernier**.  
   
-4.  Le déclencheur de niveau de base de données marqué **premier**.  
+4.  Le déclencheur de niveau base de données est marqué en **premier**.  
   
 5.  Autres déclencheurs de niveau base de données.  
   
-6.  Le déclencheur de niveau de base de données marqué **dernière**.  
+6.  Déclencheur de niveau base de données marqué en **dernier**.  
   
 ## <a name="general-trigger-considerations"></a>Considérations générales sur les déclencheurs  
- Si une instruction ALTER TRIGGER modifie un premier ou dernier déclencheur, le **première** ou **dernière** attribut défini à l’origine sur le déclencheur est supprimé, et la valeur est remplacée par **aucun**. La valeur d’ordre doit être réinitialisée à l’aide de **sp_settriggerorder**.  
+ Si une instruction ALTER TRIGGER modifie un premier ou un dernier déclencheur, le **premier** ou le **dernier** attribut défini à l’origine sur le déclencheur est supprimé et la valeur est remplacée par **None**. La valeur de l’ordre doit être réinitialisée à l’aide de **sp_settriggerorder**.  
   
- Si le même déclencheur doit être désigné comme premier ou dernier ordre pour plus d’un type d’instruction, **sp_settriggerorder** doit être exécutée pour chaque type d’instruction. En outre, le déclencheur doit d’abord être défini pour un type d’instruction avant qu’il peut être désignée comme la **première** ou **dernière** déclencheur à activer pour ce type d’instruction.  
+ Si le même déclencheur doit être désigné en tant que premier ou dernier ordre pour plusieurs types d’instructions, **sp_settriggerorder** doit être exécuté pour chaque type d’instruction. En outre, le déclencheur doit d’abord être défini pour un type d’instruction avant de pouvoir être désigné comme **premier** ou **dernier** déclencheur à déclencher pour ce type d’instruction.  
   
 ## <a name="permissions"></a>Autorisations  
  Pour définir l'ordre d'un déclencheur DDL avec étendue de serveur (à l'aide de la clause ON ALL SERVER) ou d'un déclencheur de connexion, requiert l'autorisation CONTROL SERVER sur le serveur.  
@@ -128,7 +128,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procédures &#40;stockées moteur de base de données Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

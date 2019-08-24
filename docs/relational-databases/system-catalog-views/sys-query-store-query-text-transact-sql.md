@@ -21,14 +21,14 @@ ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c07ebb861d5dd9c118b48e4a80b5771fbd52c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b90f6641724ed526a9f7b496b792bb6cf786105f
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067984"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000795"
 ---
-# <a name="sysquerystorequerytext-transact-sql"></a>Sys.query_store_query_text (Transact-SQL)
+# <a name="sysquery_store_query_text-transact-sql"></a>sys. query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient le [!INCLUDE[tsql](../../includes/tsql-md.md)] texte et le handle SQL de la requête.  
@@ -36,13 +36,13 @@ ms.locfileid: "68067984"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Clé primaire.|  
-|**query_sql_text**|**nvarchar(max)**|Texte SQL de la requête, tel que fourni par l’utilisateur. Inclut des espaces blancs, des indicateurs et des commentaires.|  
-|**statement_sql_handle**|**vabinary(64)**|Handle SQL de la requête individuelle.|  
-|**is_part_of_encrypted_module**|**bit**|Texte de la requête fait partie d’un module de cryptée.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
-|**has_restricted_text**|**bit**|Texte de la requête contient un mot de passe ou d’autres mots unmentionable.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
+|**query_sql_text**|**nvarchar(max)**|Texte SQL de la requête, tel que fourni par l’utilisateur. Comprend des espaces, des indicateurs et des commentaires. Les commentaires et les espaces avant et après le texte de requête sont ignorés. Les commentaires et les espaces au milieu du texte ne sont pas ignorés.|  
+|**statement_sql_handle**|**vabinary(64)**|Descripteur SQL de la requête individuelle.|  
+|**is_part_of_encrypted_module**|**bit**|Le texte de la requête fait partie d’un module chiffré.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
+|**has_restricted_text**|**bit**|Le texte de la requête contient un mot de passe ou d’autres mots imcités.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite le **VIEW DATABASE STATE** autorisation.  
+ Nécessite l’autorisation **View Database State** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
