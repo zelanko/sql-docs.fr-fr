@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 2ae299553c700de7f22976917fa8556f93dbe61b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032054"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653708"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "68032054"
 
 Découvrez comment configurer une instance sur Kubernetes dans Azure Kubernetes Service (AKS), avec un stockage persistant pour la haute disponibilité (HA). La solution offre une résilience. En cas d’échec de l’instance, Kubernetes la recrée automatiquement dans un nouveau pod. Kubernetes fournit également une résilience contre les défaillances de nœud.
 
-Ce didacticiel explique comment configurer une instance à haut niveau de disponibilité dans un conteneur sur AKS. Vous pouvez également créer des [groupes de disponibilité Always On pour des conteneurs SQL Server](sql-server-ag-kubernetes.md). Pour comparer les deux solutions Kubernetes différentes, consultez [Haute disponibilité pour les conteneurs SQL Server](sql-server-linux-container-ha-overview.md).
+Ce didacticiel explique comment configurer une instance à haut niveau de disponibilité dans un conteneur sur AKS.
 
 > [!div class="checklist"]
 > * Créer un mot de passe AS

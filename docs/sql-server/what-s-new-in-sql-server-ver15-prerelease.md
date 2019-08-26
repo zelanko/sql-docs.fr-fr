@@ -1,6 +1,6 @@
 ---
 title: Précédentes annonces des versions CTP de SQL Server 2019 | Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 8c34126f84987f0255d815b972e87118f184d070
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028869"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653788"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>Précédentes annonces des versions CTP de SQL Server 2019
 
@@ -25,6 +25,39 @@ Cet article regroupe les précédentes annonces de fonctionnalités des versions
 Cet article sera supprimé après la mise en production de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 Pour plus d’informations, consultez [Nouveautés de SQL Server 2019](what-s-new-in-sql-server-ver15.md).
+
+## <a name="ctp-32-july-2019"></a>CTP 3.2 - Juillet 2019
+
+### <a name="new-in-big-data-clusters"></a>Nouveautés concernant les clusters Big Data
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Préversion publique |Avant la version CTP 3.2, les clusters Big Data SQL Server n’étaient disponibles que pour les utilisateurs précoces inscrits. Cette version permet désormais à tout le monde d’utiliser les fonctionnalités des clusters Big Data SQL Server. <br/><br/> Consultez [Bien démarrer avec les clusters Big Data SQL Server](../big-data-cluster/deploy-get-started.md).|
+|`azdata` |CTP 3.2 comprend `azdata`, un nouvel utilitaire de ligne de commande écrit en Python qui permet aux administrateurs de clusters de démarrer et de gérer les clusters Big Data via des API REST. `azdata` remplace `mssqlctl`. Voir [Installer `azdata`](../big-data-cluster/deploy-install-azdata.md). |
+|PolyBase |Les noms des colonnes de table externe sont désormais utilisés pour interroger les sources de données SQL Server, Oracle, Teradata, MongoDB et ODBC. Dans les précédentes versions CTP, les colonnes étaient uniquement associées à leur numéro dans la destination, et les noms de colonnes des définitions de table externe n’étaient pas utilisés.|
+|Actualisation de la hiérarchisation HDFS |Nous avons ajouté une fonctionnalité d’actualisation pour la hiérarchisation HDFS afin qu’un montage existant puisse être actualisé en fonction de la dernière capture instantanée des données distantes. Voir [Hiérarchisation HDFS](../big-data-cluster/hdfs-tiering.md). |
+|Résolution des problèmes liés aux notebooks |La version CTP 3.2 comprend des notebooks Jupyter qui facilitent le [déploiement](../big-data-cluster/deploy-notebooks.md), ainsi que la [découverte, le diagnostic et la résolution des problèmes](../big-data-cluster/manage-notebooks.md) au niveau des composants des clusters Big Data SQL Server. |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-analysis-services"></a>Nouveautés d’Analysis Services
+
+| Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---| 
+| Paramètre de gouvernance pour les actualisations du cache Power BI.  | Le service Power BI met en cache les données de vignettes du tableau de bord et les données de rapport dans le cadre d’un premier chargement du rapport Live Connect, ce qui provoque l’envoi d’un trop grand nombre de requêtes de cache vers SSAS et, dans les cas extrêmes, la surcharge du serveur. Cette version comprend la propriété **ClientCacheRefreshPolicy**. Cette propriété vous permet de substituer ce comportement au niveau du serveur. Pour plus d’informations, consultez [Propriétés générales](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
+| Attachement en ligne  | Cette fonctionnalité offre la possibilité d’attacher un modèle tabulaire dans le cadre d’une opération en ligne. L’attachement en ligne peut être utilisé pour la synchronisation des réplicas en lecture seule dans les environnements locaux de scale-out des requêtes. Pour plus d’informations, consultez [Attachement en ligne](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-language-extensions"></a>Nouveautés concernant les extensions de langage
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+| Nouveau runtime Java par défaut  | SQL Server prend désormais en charge Zulu Embedded for Java d’Azul Embedded. Pour plus d’informations, consultez [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+
+### <a name="new-in-sql-server-on-linux"></a>Nouveautés concernant SQL Server sur Linux
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+| Prise en charge de la capture des changements de données (CDC) | La capture des changements de données (CDC) est désormais prise en charge sur Linux pour SQL Server 2019. |
 
 ## <a name="ctp-31-june-2019"></a>CTP 3.1 juin 2019
 
