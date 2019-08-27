@@ -1,7 +1,7 @@
 ---
 title: dbo.sysjobservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/26/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,29 +19,34 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 590fa6eff10c11af303b7bb9d4750ef98852cc44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004808"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026204"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Stocke les associations ou les relations existant entre un travail particulier et un ou plusieurs serveurs cibles. Cette table est stockée dans la base de données msdb.  
+Stocke les associations ou les relations existant entre un travail particulier et un ou plusieurs serveurs cibles. Cette table est stockée dans la base de données msdb.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|Numéro d’identification du travail.|  
-|server_id|**int**|Numéro d’identification du serveur.|  
-|last_run_outcome|**tinyint**|Issue de la dernière exécution du travail :<br /><br /> **0** = Échec<br /><br /> **1** = réussite<br /><br /> **3** = annulation|  
-|message de last_outcome_|**nvarchar(1024)**|Message associé, le cas échéant, à la colonne last_run_outcome.|  
-|last_run_date|**int**|Date de la dernière exécution du travail.|  
-|last_run_time|**Int**|Heure de la dernière exécution du travail.|  
-|last_run_duration|**int**|Durée d'exécution du travail, en heures, minutes et secondes. Calculé à l’aide de la formule : (*heures*\*10000) + (*minutes*\*100) + *secondes*.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Tables de l’Agent SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
-  
-  
+|server_id|**Int**|Numéro d’identification du serveur.|  
+|last_run_outcome|**tinyint**|Issue de la dernière exécution du travail :<br /><br /> **0** = échec<br /><br /> **1** = opération réussie<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annuler<br /><br /> **4** = en cours<br /><br /> **5** = Unknown (voir la section Notes suivante) |  
+|message last_outcome_|**nvarchar(1024)**|Message associé, le cas échéant, à la colonne last_run_outcome.|  
+|last_run_date|**Int**|Date de la dernière exécution du travail.|  
+|last_run_time|**int**|Heure de la dernière exécution du travail.|  
+|last_run_duration|**Int**|Durée d'exécution du travail, en heures, minutes et secondes. Calculé à l’aide de la formule suivante: (*heures*\*10000) + (*minutes*\*100) + *secondes*.|  
+
+
+## <a name="remarks"></a>Notes
+
+Une valeur supérieure à *4* signifie que l’agent SQL ne connaît pas l’état de ce travail. Le *last_run_outcome* est initialement défini sur *5* lorsqu’un travail est créé.
+
+
+## <a name="see-also"></a>Voir aussi
+
+[Tables &#40;SQL Server Agent Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
