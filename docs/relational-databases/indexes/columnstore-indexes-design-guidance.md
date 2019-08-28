@@ -11,12 +11,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd114b329a479745fb8e0b1ce0967d025c10565
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912110"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009432"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Index columnstore - Guide de conception
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ Pour plus d’informations, consultez [Index columnstore - Entreposage des donn�
 
 À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer des index d’arbre B (B-tree) non-cluster comme index secondaires sur un index columnstore cluster. L’index d’arbre B (B-tree) non-cluster est mis à jour à mesure que l’index columnstore est modifié. Il s’agit d’une fonctionnalité puissante que vous pouvez utiliser à votre avantage. 
 
-L’index d’arbre B (B-tree) secondaire vous permet de rechercher efficacement des lignes spécifiques sans avoir à analyser toutes les lignes.  D’autres options sont également disponibles. Par exemple, vous pouvez appliquer une contrainte de clé primaire ou étrangère à l’aide d’une contrainte UNIQUE sur l’index d’arbre B (B-tree). Étant donné qu’une valeur non unique ne peut pas être insérée dans l’index d’arbre B, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas insérer la valeur dans le columnstore. 
+L’index d’arbre B (B-tree) secondaire vous permet de rechercher efficacement des lignes spécifiques sans avoir à analyser toutes les lignes.  D’autres options sont également disponibles. Par exemple, vous pouvez appliquer une contrainte de clé primaire ou étrangère à l’aide d’une contrainte UNIQUE sur l’index d’arbre B (B-tree). Étant donné qu’une valeur non unique ne peut pas être insérée dans l’index d’arbre B (B-tree), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas insérer la valeur dans le columnstore. 
 
 Utilisez un index d’arbre B (B-tree) sur un index columnstore pour :
 * Exécuter des requêtes qui recherchent des valeurs particulières ou de petites plages de valeurs.
@@ -127,7 +127,7 @@ Grâce aux partitions, vous pouvez limiter vos requêtes pour analyser uniquemen
 
 Exemple :
 * Chargez 1 000 000 lignes dans une partition ou une table non partitionnée. Vous obtenez un rowgroup compressé avec 1 000 000 lignes. C’est parfait pour bénéficier d’une compression des données et de performances de requête élevées.
-* Chargez 1 000 000 lignes uniformément dans 10 partitions. Chaque partition reçoit 100 000 lignes, ce qui est inférieur au seuil minimal pour la compression columnstore. Ainsi, l’index columnstore peut avoir 10 rowgroups delta avec 100 000 lignes dans chaque. Il existe des moyens de forcer les rowgroups delta dans le columnstore. Toutefois, s’il s’agit des seules lignes de l’index columnstore, les rowgroups compressés seront trop petits pour bénéficier des meilleures performances de compression et de requête.
+* Chargez 1 000 000 lignes uniformément dans 10 partitions. Chaque partition reçoit 100 000 lignes, ce qui est inférieur au seuil minimal pour la compression columnstore. Ainsi, l’index columnstore peut avoir 10 rowgroups delta avec 100 000 lignes dans chaque. Il existe des moyens de forcer les rowgroups delta dans le columnstore. Toutefois, s’il s’agit des seules lignes de l’index columnstore, les rowgroups compressés seront trop petits pour bénéficier d’un meilleur niveau de performance de compression et de requête.
 
 Pour plus d’informations sur le partitionnement, voir le blog de Sunil Agarwal intitulé [Dois-je partitionner mon index columnstore ?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/).
 
@@ -181,10 +181,9 @@ Il s’agit de tâches pour créer et tenir à jour des index columnstore.
 |Abandonner un index columnstore|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|L’abandon d’un index columnstore utilise la syntaxe DROP INDEX standard utilisée par les index B-tree. L’abandon d’un index cluster columnstore convertit la table columnstore en segment de mémoire.|  
 |Supprimer une ligne d’un index columnstore|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Utilisez [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) pour supprimer une ligne.<br /><br /> Ligne**columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque la ligne comme étant supprimée logiquement, mais ne récupère pas le stockage physique pour la ligne tant que l’index n’est pas reconstruit.<br /><br /> Ligne**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime la ligne logiquement et physiquement.|  
 |Mettre à jour une ligne dans l’index columnstore|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Utilisez [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) pour mettre à jour une ligne.<br /><br /> Ligne**columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque la ligne comme étant supprimée logiquement, puis insère la ligne mise à jour dans le deltastore.<br /><br /> Ligne**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à jour la ligne dans le deltastore.|  
-|Obliger toutes les lignes du deltastore à aller dans le columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Index columnstore - défragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX avec l’option REBUILD oblige toutes les lignes à aller dans le columnstore.|  
+|Obliger toutes les lignes du deltastore à aller dans le columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|ALTER INDEX avec l’option REBUILD oblige toutes les lignes à aller dans le columnstore.|  
 |Défragmenter un index columnstore|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE défragmente les index columnstore en ligne.|  
 |Fusionner des tables avec les index columnstore|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour créer un index columnstore vide pour :

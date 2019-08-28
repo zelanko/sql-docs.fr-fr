@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8162c14620143aa70ea2e87f582ec99e613f234c
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354611"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "69653661"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char et varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ Les types de données de caractères qui sont soit de taille fixe, **char**, soi
 ## <a name="arguments"></a>Arguments  
 **char** [ ( *n* ) ] Données de type chaîne de taille fixe. *n* définit la taille de chaîne en octets et doit être une valeur comprise entre 1 et 8 000. Pour l’encodage de jeux de caractères sur un octet, par exemple *Latin*, la taille de stockage est *n* octets et le nombre de caractères pouvant être stockés est également *n*. Pour les jeux de caractères codés sur plusieurs octets, la taille de stockage est toujours *n* octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*. Le synonyme ISO de **char** est **character**. Pour plus d’informations sur les jeux de caractères, consultez [Jeux de caractères codés sur un octet et multioctets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
-**varchar** [ ( *n* | **max** ) ] Données de type chaîne de taille variable. *n* définit la taille de chaîne en octets et peut être une valeur comprise entre 1 et 8 000. **max** indique que la taille de stockage maximale est de 2^31-1 octets (2 Go). Pour l’encodage de jeux de caractères sur un octet, par exemple *Latin*, la taille de stockage est *n* octets + 2 octets et le nombre de caractères pouvant être stockés est également *n*. Pour les jeux de caractères codés sur plusieurs octets, la taille de stockage est toujours *n* octets + 2 octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*. Les synonymes ISO de **varchar** sont **charvarying** ou **charactervarying**. Pour plus d’informations sur les jeux de caractères, consultez [Jeux de caractères codés sur un octet et multioctets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+**varchar** [ ( *n* | **max** ) ] Données de type chaîne de taille variable. Utilisez *n* pour définir la taille de chaîne en octets et peut être une valeur comprise entre 1 et 8 000 ou utilisez **max** pour indiquer une taille de contrainte de colonne maximale de 2^31-1 octets (2 Go). Pour l’encodage de jeux de caractères sur un octet, par exemple *Latin*, la taille de stockage est *n* octets + 2 octets et le nombre de caractères pouvant être stockés est également *n*. Pour les jeux de caractères codés sur plusieurs octets, la taille de stockage est toujours *n* octets + 2 octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*. Les synonymes ISO de **varchar** sont **charvarying** ou **charactervarying**. Pour plus d’informations sur les jeux de caractères, consultez [Jeux de caractères codés sur un octet et multioctets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Notes  
 Contrairement à l’idée fausse qui circule sur [CHAR(*n*) et VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), *n* ne définit pas le nombre de caractères. Dans [CHAR(*n*) et VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), *n* définit la longueur de chaîne en **octets** (0-8 000). *n* ne définit jamais le nombre de caractères pouvant être stockés. Cette définition est similaire à celle de [NCHAR(*n*) et de NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md).    

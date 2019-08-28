@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028836"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621714"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guide de navigation dans la documentation de SQL Server 
 
@@ -39,16 +39,15 @@ Si vous souhaitez créer un fichier PDF, cliquez sur le lien **Télécharger le
 
 ## <a name="toc-navigation-hints"></a>Indicateurs de navigation dans la table des matières
 
-Si vous choisissez une entrée de la table des matières se terminant par `>`, vous sortez du site docs.microsoft.com. 
+Les entrées de la table des matières se terminant par `>`, vous dirigent vers une documentation technique comprenant une table des matières différente. 
 
 ![Symboles > dans la table des matières](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Si vous choisissez une entrée de la table des matières se terminant par `>>`, vous êtes dirigé vers une documentation technique comprenant une table des matières différente. 
+Les entrées de la table des matières se terminant par `>>`, vous font quitter le site docs.microsoft.com. 
 
 ![Marqueurs de navigation dans la table des matières](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-Si vous accédez à l’une de ces pages, vous pouvez revenir à la page principale de SQL Server, et à la table des matières, en sélectionnant l’entrée « Bienvenue dans SQL Server >> » située en haut de chaque table des matières. 
+Si vous accédez à l’une de ces pages, vous pouvez revenir à la page technique principale de SQL Server et à la table des matières, en sélectionnant l’entrée « Bienvenue dans SQL Server > » située en haut de chaque table des matières. 
 
 ![Revenir à la table des matières SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ Utilisez le [filtre de version](versioning-system-monikers-ui-sql-server.md) pou
 
 ![Filtre de version dans Documentation SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Sélectionnez **All SQL** \> **Hide nothing** (Tout SQL > Ne rien masquer) pour afficher tout le contenu et que rien ne soit masqué par le filtre de version. L’option [**Hide nothing** n’est pas recommandée pour une utilisation courante](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
+Sélectionnez **All SQL** \> **Hide nothing** (Tout SQL > Ne rien masquer) pour afficher tout le contenu et que rien ne soit masqué par le filtre de version. L’option **Hide nothing** peut révéler le contenu qui s’applique à plusieurs versions différentes de SQL Server au sein du même article, ce qui peut être contradictoire, non clair ou confus. Par conséquent, l’option [**Hide nothing** n’est pas recommandée pour une utilisation courante](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Barre de navigation
 

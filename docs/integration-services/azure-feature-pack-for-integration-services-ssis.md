@@ -1,7 +1,7 @@
 ---
 title: Feature Pack SQL Server Integration Services (SSIS) pour Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 08/17/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9241725a9f1da67ef93701b62c5cc4e8d9093a7a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: abe8c731a066ed764c2fc55da42bd630e46f3ae8
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892729"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69610764"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Le Feature Pack SQL Server Integration Services (SSIS) pour Azure
 
@@ -99,7 +99,7 @@ Pour utiliser TLS 1.2, ajoutez une valeur `REG_DWORD` nommée `SchUseStrongCrypt
 
 ## <a name="dependency-on-java"></a>Dépendance envers Java
 
-Java est requis pour utiliser certaines fonctionnalités.
+Java est requis pour utiliser des formats de fichier ORC/Parquet avec des connecteurs de fichiers plats/Azure Data Lake Store.  
 L’architecture (32/64 bits) de la build Java doit correspondre à celle du runtime SSIS à utiliser.
 Les builds Java suivantes ont été testées.
 

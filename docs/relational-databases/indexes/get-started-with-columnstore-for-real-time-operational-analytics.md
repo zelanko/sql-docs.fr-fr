@@ -1,5 +1,5 @@
 ---
-title: Bien commencer avec Columnstore pour l’analytique opérationnelle en temps réel | Microsoft Docs
+title: Bien commencer avec columnstore pour l’analytique opérationnelle en temps réel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f3ce558bb9e5856e0cd5828f8facce28dc2c729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107083"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009489"
 ---
-# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Prise en main de Columnstore pour l’analytique opérationnelle en temps réel
+# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Bien commencer avec columnstore pour l’analytique opérationnelle en temps réel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduit l’analytique opérationnelle en temps réel, la possibilité d’exécuter à la fois des charges de travail analytiques et OLTP sur les mêmes tables de base de données en même temps. Outre l’exécution de l’analytique en temps réel, vous pouvez également éliminer le besoin d’opérations d’extraction, de transformation et de chargement (ETL) et d’un entrepôt de données.  
+  SQL Server 2016 introduit l’analytique opérationnelle en temps réel, la possibilité d’exécuter à la fois des charges de travail analytiques et OLTP sur les mêmes tables de base de données en même temps. Outre l’exécution de l’analytique en temps réel, vous pouvez également éliminer le besoin d’opérations d’extraction, de transformation et de chargement ainsi que le besoin d’un entrepôt de données.  
   
 ## <a name="real-time-operational-analytics-explained"></a>Description de l’analytique opérationnelle en temps réel  
  En règle générale, les entreprises ont des systèmes séparés pour les charges de travail opérationnelles (autrement dit, OLTP) et analytiques. Pour ces systèmes, les tâches d’extraction, de transformation et de chargement (ETL) déplacent régulièrement les données du magasin opérationnel vers un magasin d’analytiques. Les données analytiques sont généralement stockées dans un entrepôt de données ou un mini-Data Warehouse dédié à l’exécution de requêtes analytiques. Même si cette solution constitue la norme, elle présente les trois principaux inconvénients suivants :  
@@ -105,18 +105,16 @@ ms.locfileid: "68107083"
   
 -   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [Real time operational analytics with memory-optimized tables](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
-  
--   [Minimize index fragmentation in a columnstore index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
+-   [Analytique opérationnelle en temps réel à l’aide de tables à mémoire optimisée](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
 -   [Columnstore index and the merge policy for rowgroups](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Conseil relatif aux performances 1 : Utiliser des index filtrés pour améliorer les performances des requêtes  
- L’exécution de l’analytique opérationnelle en temps réel peut avoir un impact sur les performances de la charge de travail OLTP.  Cet impact doit être minime. L’exemple ci-dessous montre comment utiliser des index filtrés pour réduire l’impact des index non cluster columnstore sur la charge de travail transactionnelle tout en offrant l’analytique en temps réel.  
+ L’exécution de l’analytique opérationnelle en temps réel peut avoir un impact sur les performances de la charge de travail OLTP.  Cet impact doit être minime. L’exemple ci-dessous montre comment utiliser des index filtrés pour réduire l’impact des index columnstore non cluster sur la charge de travail transactionnelle tout en offrant l’analytique en temps réel.  
   
  Pour réduire les frais de gestion d’un index non cluster columnstore sur une charge de travail opérationnelle, vous pouvez utiliser une condition filtrée pour créer un index non cluster columnstore uniquement sur les données *tièdes* ou à évolution lente. Par exemple, dans une application de gestion de commandes, vous pouvez créer un index non cluster columnstore sur les commandes qui ont déjà été expédiées. Une fois que la commande a été expédiée, elle est rarement modifiée et peut par conséquent être considérée comme des données tièdes. Avec un index filtré, les données dans un index non cluster columnstore nécessitent moins de mises à jour, ce qui réduit l’impact sur la charge de travail transactionnelle.  
   
- Les requêtes analytiques accèdent en toute transparence aux données tièdes et chaudes selon les besoins pour fournir l’analytique en temps réel. Si une partie importante de la charge de travail opérationnelle affecte les données « chaudes », ces opérations ne nécessitent pas de maintenance supplémentaire de l’index columnstore. Il est recommandé d’avoir un index cluster rowstore sur les colonnes utilisées dans la définition de l’index filtré.   SQL Server utilise l’index cluster pour analyser rapidement les lignes qui n’ont pas respecté la condition filtrée. Sans cet index cluster, une analyse complète de la table rowstore est nécessaire pour trouver les lignes qui peuvent avoir un impact négatif considérable sur les performances de la requête analytique. En l’absence d’index cluster, vous pouvez créer un index BTree non cluster filtré complémentaire pour identifier ces lignes, mais cela n’est pas recommandé, car l’accès à une grande plage de lignes via les index BTree non cluster est coûteux.  
+ Les requêtes analytiques accèdent en toute transparence aux données tièdes et chaudes selon les besoins pour fournir l’analytique en temps réel. Si une partie importante de la charge de travail opérationnelle affecte les données « chaudes », ces opérations ne nécessitent pas de maintenance supplémentaire de l’index columnstore. Il est recommandé d’avoir un index cluster rowstore sur les colonnes utilisées dans la définition de l’index filtré.   SQL Server utilise l’index cluster pour analyser rapidement les lignes qui n’ont pas respecté la condition filtrée. Sans cet index cluster, une analyse complète de la table du rowstore est nécessaire pour trouver les lignes qui peuvent avoir un impact négatif considérable sur les performances de la requête analytique. En l’absence d’index cluster, vous pouvez créer un index BTree non cluster filtré complémentaire pour identifier ces lignes, mais cela n’est pas recommandé, car l’accès à une grande plage de lignes via les index BTree non cluster est coûteux.  
   
 > [!NOTE]  
 >  Un index non cluster columnstore filtré n’est pris en charge que sur les tables sur disque. Il n’est pas pris en charge sur les tables optimisées en mémoire.  
@@ -204,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Charge de travail d’insertion/d’interrogation :** si votre charge de travail insère et interroge principalement des données, l’option COMPRESSION_DELAY avec la valeur par défaut 0 est l’option recommandée. Les lignes nouvellement insérées sont compressées quand 1 million de lignes ont été insérées dans un rowgroup delta unique.  
     Parmi les exemples de cette charge de travail figurent (a) une charge de travail DW classique (b) une analyse des parcours de visite quand vous devez analyser le modèle de clic dans une application web.  
   
--   **Charge de travail OLTP :** si la charge de travail est de type DML lourd (autrement dit, de nombreuses mises à jour, suppressions et insertions associées), une fragmentation de l’index columnstore peut apparaître dans le système de vue de gestion de données. dm_db_column_store_row_group_physical_stats. Si vous voyez que plus de 10 % des lignes sont marquées comme supprimées dans des rowgroups récemment compressés, vous pouvez utiliser l’option COMPRESSION_DELAY pour ajouter un délai quand les lignes sont éligibles pour la compression. Si les données récemment insérées pour votre charge de travail restent « chaudes » (autrement dit, si elles sont mises à jour plusieurs fois) pendant, par exemple, 60 minutes, vous devez choisir la valeur 60 pour COMPRESSION_DELAY.  
+-   **Charge de travail OLTP :** Si la charge de travail est en DML lourd (autrement dit, de nombreuses mises à jour, suppressions et insertions associées), une fragmentation de l’index columnstore peut apparaître lors de l’examen du système de vue de gestion dynamique. dm_db_column_store_row_group_physical_stats. Si vous voyez que plus de 10 % des lignes sont marquées comme supprimées dans des rowgroups récemment compressés, vous pouvez utiliser l’option COMPRESSION_DELAY pour ajouter un délai quand les lignes sont éligibles pour la compression. Si les données récemment insérées pour votre charge de travail restent « chaudes » (autrement dit, si elles sont mises à jour plusieurs fois) pendant, par exemple, 60 minutes, vous devez choisir la valeur 60 pour COMPRESSION_DELAY.  
   
  A priori, la plupart des clients n’auront rien à faire. La valeur par défaut de l’option COMPRESSION_DELAY doit leur convenir.  
 Aux utilisateurs expérimentés, nous recommandons d’exécuter la requête ci-dessous et de collecter un pourcentage de lignes supprimées dans les 7 derniers jours.  
@@ -226,6 +224,5 @@ ORDER BY created_time DESC
  [Chargement de données d’index columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Index columnstore pour l’entreposage des données](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Défragmentation des index columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

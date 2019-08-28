@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915288"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634565"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuration du stockage des tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vous devez configurer des opérations d'entrée/sortie par seconde (IOPS) et la capacité de stockage.  
   
 ## <a name="storage-capacity"></a>Capacité de stockage  
- Utilisez les informations contenues dans [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) pour estimer la taille en mémoire des tables durables optimisées en mémoire de la base de données. Les index n'étant pas conservés pour les tables mémoire optimisées, n'incluez pas la taille des index. Une fois que vous avez déterminé la taille, vous devez fournir l'espace disque correspondant à quatre fois la taille des tables durables en mémoire.  
+
+Utilisez les informations contenues dans [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) pour estimer la taille en mémoire des tables durables optimisées en mémoire de la base de données. Les index n’étant pas conservés pour les tables à mémoire optimisée, n’incluez pas la taille des index. 
+ 
+Une fois que vous avez déterminé la taille, vous devez fournir un espace disque suffisant pour contenir les fichiers de point de contrôle, qui sont utilisés pour stocker les données récemment modifiées. Les données stockées comprennent non seulement le contenu des nouvelles lignes qui sont ajoutées aux tables en mémoire, mais également les nouvelles versions des lignes existantes. Ce stockage augmente lorsque les lignes sont insérées ou mises à jour. Les versions de ligne sont fusionnées et le stockage est récupéré lorsque la troncation du journal se produit. Si la troncation du journal est retardée pour une raison quelconque, le magasin de l’OLTP en mémoire augmente.
+
+Un bon point de départ pour le dimensionnement du stockage pour cette zone consiste à réserver quatre fois la taille des tables en mémoire durables. Surveillez l’utilisation de l’espace et préparez-vous à développer le stockage qui y est disponible si nécessaire.
   
 ## <a name="storage-iops"></a>E/S par seconde dédiées au stockage  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] peut augmenter considérablement le débit de la charge de travail. Par conséquent, il est important de s'assurer que les E/S ne forment pas un goulet d'étranglement.  

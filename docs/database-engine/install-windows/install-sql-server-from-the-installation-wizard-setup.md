@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742916"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009384"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -54,8 +54,7 @@ Avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], c
 
 Microsoft a identifié un problème qui affecte les fichiers binaires du runtime Microsoft Visual C++ 2013 installés en tant que composants requis par SQL Server 2016 et 2017. Une mise à jour est disponible pour résoudre ce problème. Si cette mise à jour des fichiers binaires du runtime Visual C++ n’est pas installée, SQL Server risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server, suivez les instructions données dans les [notes de publication SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) pour voir si votre ordinateur nécessite un correctif pour les fichiers binaires du runtime Visual C++. 
 
-Cela ne s’applique pas à SQL Server 2019.  
-  
+Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>Pour installer SQL Server 2016 et 2017  
 
@@ -280,9 +279,9 @@ Cela ne s’applique pas à SQL Server 2019.
   
      Le workflow du reste de l’installation dépend des fonctionnalités que vous avez spécifiées pour votre installation. En fonction de vos sélections, il est possible que les pages ne soient pas toutes visibles. 
 
-1. À compter de SQL Server 2019, Polybase ne requiert plus qu’Oracle JRE 7 Update 51 (au moins) soit préinstallé sur l’ordinateur avant l’installation de la fonctionnalité. Si vous choisissez d’installer la fonctionnalité Polybase, la page **Emplacement d’installation Java** est ajoutée à la configuration de SQL Server affichée après la page **Configuration de l’instance**. Sur la page Emplacement d’installation Java, vous pouvez choisir d’installer Azul Zulu Open JRE fourni avec l’installation SQL Server 2019 ou de fournir l’emplacement d’un autre JRE ou JDK qui a déjà été installé sur l’ordinateur.
+1. À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], Polybase ne requiert plus qu’Oracle JRE 7 Update 51 (au moins) soit préinstallé sur l’ordinateur avant l’installation de la fonctionnalité. Si vous choisissez d’installer la fonctionnalité Polybase, la page **Emplacement d’installation Java** est ajoutée à la configuration de SQL Server affichée après la page **Configuration de l’instance**. Sur la page d’emplacement de l’installation Java, vous pouvez choisir d’installer Azul Zulu Open JRE fourni avec l’installation de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ou de fournir l’emplacement d’un autre JRE ou JDK qui a déjà été installé sur l’ordinateur.
 
-1. À compter de SQL Server 2019, Java a été ajouté avec les extensions de langage. Si vous choisissez d’installer la fonctionnalité Java, la page **Emplacement d’installation de Java** est ajoutée à la fenêtre de dialogue de configuration de SQL Server, affichée après la page **Configuration de l’instance**. Sur la page **Emplacement d’installation Java**, vous pouvez choisir d’installer Zulu Open JRE fourni avec l’installation SQL Server 2019 ou de fournir l’emplacement d’un autre JRE ou JDK qui a déjà été installé sur l’ordinateur.
+1. À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], Java a été ajouté avec des extensions de langage. Si vous choisissez d’installer la fonctionnalité Java, la page **Emplacement d’installation de Java** est ajoutée à la fenêtre de dialogue de configuration de SQL Server, affichée après la page **Configuration de l’instance**. Sur la page d’**emplacement de l’installation Java**, vous pouvez choisir d’installer Zulu Open JRE fourni avec l’installation de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ou de fournir l’emplacement d’un autre JRE ou JDK qui a déjà été installé sur l’ordinateur.
 
 1. Utilisez la page **Configuration du serveur - Comptes de service** pour spécifier les comptes de connexion des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer. Pour plus d’informations sur les paramètres de configuration, consultez [Aide de l’assistant Installation](../../sql-server/install/instance-configuration.md#serverconfig).
   
@@ -314,13 +313,29 @@ Cela ne s’applique pas à SQL Server 2019.
      Pour plus d’informations, consultez la [page Configuration du moteur de base de données – Répertoires de données](../../sql-server/install/instance-configuration.md#datadir).
 
      Utilisez la page **Configuration du moteur de base de données - TempDB** pour configurer la taille des fichiers, le nombre de fichiers, les répertoires d’installation autres que par défaut et les paramètres de croissance des fichiers pour **tempDB**. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - TempDB](../../sql-server/install/instance-configuration.md#tempdb).
-
+<<<<<<< HEAD
   
-     Utilisez l’onglet **Configuration du [!INCLUDE[ssDE](../../includes/ssde-md.md)] - MaxDOP** pour spécifier votre degré maximal de parallélisme. Ce paramètre détermine le nombre de processeurs une seule instruction peut utiliser pendant l’exécution. La valeur recommandée est calculée automatiquement lors de l’installation. Pour plus d’informations, consultez les [lignes directrices sur le degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). Cette option est disponible à partir de SQL Server 2019. 
+     Utilisez la page de **configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)] - MaxDOP** pour spécifier votre degré maximal de parallélisme. Ce paramètre détermine le nombre de processeurs une seule instruction peut utiliser pendant l’exécution. La valeur recommandée est calculée automatiquement lors de l’installation. Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
 
-     Utilisez l’onglet **Configuration du moteur de base de données - Mémoire** pour spécifier les valeurs de mémoire MIN et MAX utilisées par cette instance de SQL Server après le démarrage. Vous pouvez utiliser les valeurs par défaut, les valeurs recommandées calculées ou spécifiez manuellement vos propres valeurs une fois que vous avez choisi l’option **Recommandé**. Cette capacité est disponible uniquement dans l’installation commençant par SQL Server 2019. 
+     Utilisez la page de **configuration du moteur de base de données - Mémoire** pour spécifier les valeurs **min server memory** and **max server memory** utilisées par cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après le démarrage. Vous pouvez utiliser les valeurs par défaut, les valeurs recommandées calculées ou spécifiez manuellement vos propres valeurs une fois que vous avez choisi l’option **Recommandé**. Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+=======
 
-     Utilisez la page **Configuration du moteur de base de données - FILESTREAM** pour activer FILESTREAM pour votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     Utilisez la page de **configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)] - MaxDOP** pour spécifier votre degré maximal de parallélisme. Ce paramètre détermine le nombre de processeurs une seule instruction peut utiliser pendant l’exécution. La valeur recommandée est calculée automatiquement lors de l’installation. 
+     
+    > [!NOTE]  
+    > Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
+    
+    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+
+     Utilisez la page de **configuration du moteur de base de données - Mémoire** pour spécifier les valeurs **min server memory** and **max server memory** utilisées par cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après le démarrage. Vous pouvez utiliser les valeurs par défaut, les valeurs recommandées calculées ou spécifiez manuellement vos propres valeurs une fois que vous avez choisi l’option **Recommandé**.
+     
+    > [!NOTE]  
+    > Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
+    
+    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
+
+     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. Utilisez la page **Configuration de Analysis Services - Approvisionnement du compte** pour spécifier le mode serveur et les utilisateurs ou comptes qui ont les autorisations d’administrateur pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le mode serveur détermine quel sous-systèmes de mémoire et de stockage sont utilisés sur le serveur. Différents types de solution s'exécutent dans différents modes serveur. Si vous envisagez d'exécuter les bases de données multidimensionnelles de cube sur le serveur, choisissez l'option par défaut du mode serveur **Exploration multidimensionnelle et de données**.
 

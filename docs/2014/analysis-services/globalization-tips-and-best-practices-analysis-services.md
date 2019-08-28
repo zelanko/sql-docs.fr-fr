@@ -60,7 +60,7 @@ ms.locfileid: "66080863"
   
 -   Latin1_General_100_AS est souvent utilisé pour les applications qui utilisent les 26 caractères de [l’alphabet latin de base ISO](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet).  
   
--   Les langues d'Europe du Nord qui comptent des lettres scandinaves (par exemple, ø) peuvent utiliser Finnish_Swedish_100.  
+-   Les langues d'Europe Nord qui comptent des lettres scandinaves (par exemple, ø) peuvent utiliser Finnish_Swedish_100.  
   
 -   Les langues d'Europe orientale, comme le russe, utilisent souvent Cyrillic_General_100.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66080863"
   
 |Script de langue|Respect de la casse|  
 |---------------------|----------------------|  
-|**Alphabet latin de base**|Les identificateurs d'objets exprimés dans le script Latin (les 26 lettres majuscules ou minuscules françaises) sont traités comme ne respectant pas la casse, quel que soit le classement. Par exemple, l’ID d’objet suivants sont considérés comme identiques : 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. En interne, Analysis Services traite les caractères de la chaîne comme s'ils étaient tous en majuscule, puis il effectue une comparaison d'octets simple qui est indépendante de la langue.<br /><br /> Notez que seuls les 26 caractères sont affectés. S'il s'agit d'une langue d'Europe de l'Ouest qui utilise des caractères scandinaves, le caractère supplémentaire n'est pas mis en majuscule.|  
+|**Alphabet latin de base**|Les identificateurs d'objets exprimés dans le script Latin (les 26 lettres majuscules ou minuscules françaises) sont traités comme ne respectant pas la casse, quel que soit le classement. Par exemple, l’ID d’objet suivants sont considérés comme identiques : 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. En interne, Analysis Services traite les caractères de la chaîne comme s'ils étaient tous en majuscule, puis il effectue une comparaison d'octets simple qui est indépendante de la langue.<br /><br /> Notez que seuls les 26 caractères sont affectés. S'il s'agit d'une langue d'Europe Ouest qui utilise des caractères scandinaves, le caractère supplémentaire n'est pas mis en majuscule.|  
 |**Cyrillique, grec, copte, arménien**|Les identificateurs d'objets en script bicaméral non latin, tel que le cyrillique, respectent toujours la casse. Par exemple, Измерение et измерение sont considérés comme deux valeurs distinctes, même si la seule différence est la casse de la première lettre.|  
   
  **Impact du respect de la casse pour les identificateurs d'objets**  

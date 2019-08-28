@@ -10,35 +10,32 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111532"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903624"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Cet article décrit les conditions d’utilisation du chiffrement transparent des données (TDE) avec des clés managées par le client dans Azure Key Vault et comment identifier et résoudre les erreurs courantes.
+Cet article explique comment identifier et résoudre les problèmes d’accès à la clé Azure Key Vault ayant configuré une base de données pour utiliser [Transparent Data Encryption (TDE) avec les clés managées par le client dans Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) pour devenir inaccessible.
 
-## <a name="requirements"></a>Spécifications
+## <a name="introduction"></a>Introduction
+Lorsque TDE est configuré pour utiliser une clé managée par le client dans Azure Key Vault, l’accès en continu à ce protecteur TDE est requis pour que la base de données reste en ligne.  Si le serveur SQL logique perd l’accès au protecteur TDE managé par le client dans Azure Key Vault, une base de données rejette toutes les connexions et ne s’affiche pas dans le Portail Azure.
 
-Pour résoudre les problèmes TDE avec un protecteur TDE managé par le client dans Key Vault, vous devez respecter ces exigences :
+Pour les 48 premières heures, si le problème d’accès à la clé Azure Key Vault sous-jacent est résolu, la base de données est automatiquement corrigée et mise en ligne.  Cela signifie que pour tous les scénarios de panne réseau intermittente et temporaire, aucune action de l’utilisateur n’est requise et la base de données est automatiquement mise en ligne.  Dans la plupart des cas, l’action de l’utilisateur est nécessaire pour résoudre le problème d’accès à la clé du coffre de clés sous-jacent. 
 
-- L’instance SQL Server logique et le coffre de clés doivent se trouver dans la même région.
-- L’identité de l’instance SQL Server logique fournie par Azure Active Directory (Azure AD), AppId dans Azure Key Vault, doit être un locataire dans l’abonnement d’origine. Si le serveur a été déplacé vers un autre abonnement que celui où il a été créé, l’identité du serveur (AppId) doit être recréée.
-- Le coffre de clés doit être en cours d’exécution. Pour savoir comment vérifier l’état du coffre de clés, consultez [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview). Pour vous inscrire aux notifications, lisez les informations sur les [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
-- Dans un scénario de géo-reprise d’activité, les deux coffres de clés doivent contenir les mêmes éléments de clé pour un basculement réussi.
-- Le serveur logique doit avoir une identité Azure AD (AppId) pour s’authentifier auprès du coffre de clés.
-- L’AppId doit avoir accès au coffre de clés et les autorisations Get, Wrap et Unwrap pour les clés sélectionnées en tant que protecteurs TDE.
+Si une base de données inaccessible n’est plus nécessaire, elle peut être supprimée immédiatement pour arrêter les coûts.  Toutes les autres actions sur la base de données ne sont pas autorisées tant que l’accès à la clé Azure Key Vault n’a pas été restauré et que la base de données est de nouveau en ligne.   La modification de l’option TDE à partir des clés managées par le client sur le serveur n’est pas non plus prise en charge lorsqu’une base de données chiffrée avec des clés managées par le client est inaccessible. Cela est nécessaire pour protéger les données contre tout accès non autorisé, tandis que les autorisations sur le protecteur TDE ont été révoquées. 
 
-Pour plus d’informations, consultez [Instructions de configuration de TDE avec Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+Une fois qu’une base de données est inaccessible depuis plus de 48 heures, elle n’est plus automatiquement corrigée.  Si l’accès requis pour la clé Azure Key Vault a été restauré, vous devez revalider l’accès manuellement pour remettre la base de données en ligne.  Remettre la base de données en ligne après une période d’inaccessibilité de 48 heures peut prendre beaucoup de temps en fonction de la taille de la base de données et nécessite actuellement un ticket de support. Une fois la base de données de nouveau en ligne, des paramètres précédemment configurés tels que le géolien si la récupération d’urgence géographique a été configurée, l’historique de récupération jusqu’à une date et heure et les étiquettes seront perdus.  Par conséquent, nous vous recommandons d’implémenter un système de notification à l’aide de [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) qui permettent de traiter les problèmes de coffre de clés sous-jacents dans un délai de 48 heures. 
 
-## <a name="common-misconfigurations"></a>Erreurs de configuration courantes
+
+## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erreurs courantes provoquant l’inaccessibilité des bases de données
 
 La plupart des problèmes qui se produisent lorsque vous utilisez TDE avec Key Vault sont provoquées par l’une des erreurs de configuration suivantes :
 
@@ -46,10 +43,11 @@ La plupart des problèmes qui se produisent lorsque vous utilisez TDE avec Key V
 
 - Le coffre de clés a été supprimé accidentellement.
 - Le pare-feu a été configuré pour Azure Key Vault mais n’autorise pas l’accès aux services Microsoft.
+- Une erreur réseau intermittente entraîne l’indisponibilité du coffre de clés.
 
 ### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>Aucune autorisation d’accéder au coffre de clés ou la clé n’existe pas
 
-- La clé a été supprimée accidentellement.
+- La clé a été accidentellement supprimée, désactivée ou a expiré.
 - L’AppId de l’instance SQL Server logique a été supprimé accidentellement.
 - L’instance SQL Server logique a été déplacée vers un autre abonnement. Un nouvel AppId doit être créé si le serveur logique est déplacé vers un autre abonnement.
 - Les autorisations accordées à l’AppId pour les clés ne sont pas suffisantes (Get, Wrap et Unwrap ne sont pas inclus).
@@ -89,7 +87,7 @@ Dans le portail Azure, accédez au coffre de clés, puis à **Stratégies d’ac
 Pour en savoir plus, consultez [Affecter une identité Azure AD à votre serveur](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> Si l’instance SQL Server logique a été transférée vers un nouvel abonnement après la configuration initiale de TDE avec Key Vault, répétez l’étape pour configurer l’identité Azure AD pour créer le nouvel AppId. Ensuite, ajoutez l’AppId dans le coffre de clés et attribuez les autorisations appropriées à la clé. 
+> Si l’instance SQL Server logique a été transférée vers un nouvel abonné après la configuration initiale de TDE avec Azure Key Vault, répétez l’étape pour configurer l’identité Azure Active Directory pour créer un nouvel ID d’application. Ensuite, ajoutez l’AppId dans le coffre de clés et attribuez les autorisations appropriées à la clé. 
 >
 
 ### <a name="missing-key-vault"></a>Coffre de clés manquant
@@ -164,8 +162,82 @@ Vérifiez que l’instance SQL Server logique dispose des autorisations d’acc�
 - Si l’AppId est présent, vérifiez qu’il dispose des autorisations de clé suivantes : Get, Wrap et Unwrap.
 - Si l’AppId n’est pas présent, ajoutez-le à l’aide du bouton **Ajouter**. 
 
+## <a name="getting-tde-status-from-the-activity-log"></a>Obtention de l’état TDE depuis le journal d’activité
+
+Pour permettre l’analyse de l’état de la base de données en raison de problèmes d’accès à la clé Azure Key Vault, les événements suivants sont enregistrés dans le [journal d’activité](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) pour l’ID de la ressource en fonction de l’URL et de Subscription+Resourcegroup+ServerName+DatabseName Azure Resource Manager : 
+
+**Événement lorsque le service perd l’accès à la clé Azure Key Vault**
+
+EventName : MakeDatabaseInaccessible 
+
+État : Démarré 
+
+Description : La base de données a perdu l’accès à la clé du coffre de clés Azure et est désormais inaccessible : <error message>   
+
+ 
+
+**Événement lorsque le délai d’attente de 48 heures pour la correction automatique commence** 
+
+EventName : MakeDatabaseInaccessible 
+
+État : InProgress 
+
+Description : La base de données attend que l’accès à la clé du coffre de clés Azure soit rétabli par l’utilisateur dans un délai de 48 heures.   
+
+ 
+
+**Événement lorsque la base de données est automatiquement remise en ligne**
+
+EventName : MakeDatabaseAccessible 
+
+État : Opération réussie 
+
+Description : L’accès de la base de données à la clé du coffre de clés Azure a été rétabli et la base de données est maintenant en ligne. 
+
+ 
+
+**Événement lorsque le problème n’a pas été résolu dans le délai de 48 heures et que l’accès à la clé Azure Key Vault doit être validé manuellement** 
+
+EventName : MakeDatabaseInaccessible 
+
+État : Opération réussie 
+
+Description : La base de données est inaccessible et nécessite que l’utilisateur résolve les erreurs du coffre de clés Azure et rétablisse l’accès à la clé du coffre de clés Azure à l’aide de la revalidation de la clé. 
+
+ 
+
+**Événement lorsque la base de données est en ligne après la revalidation manuelle de la clé**
+
+EventName : MakeDatabaseAccessible 
+
+État : Opération réussie 
+
+Description : L’accès de la base de données à la clé du coffre de clés Azure a été rétabli et la base de données est maintenant en ligne. 
+
+ 
+
+**Événement lorsque la revalidation de l’accès à la clé Azure Key Vault a réussi et que la base de données est de nouveau en ligne**
+
+EventName : MakeDatabaseAccessible 
+
+État : Démarré 
+
+Description : La restauration de l’accès de la base de données à la clé du coffre de clés Azure a démarré. 
+
+ 
+
+**Événement lors de l’échec de la revalidation de l’accès à la clé Azure Key Vault**
+
+EventName : MakeDatabaseAccessible 
+
+État : Échec 
+
+Description : La restauration de l’accès de la base de données à la clé du coffre de clés Azure a échoué. 
+
+
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Consultez les [Instructions de configuration de TDE avec Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
 - En savoir plus sur [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Actualisez vos connaissances sur la façon [d’affecter une identité Azure AD à votre serveur](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+- Configurez des [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) pour recevoir des notifications et des alertes en fonction de vos préférences, par exemple e-mail/SMS/transmission de type push/vocale, application logique, Webhook, gestion des services informatiques ou Runbook Automation. 
+
+

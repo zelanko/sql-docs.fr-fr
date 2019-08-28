@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025625"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609631"
 ---
 # <a name="server-configuration-options-sql-server"></a>Options de configuration du serveur (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Les options qui nécessitent un redémarrage de [!INCLUDE[ssNoVersion](../../inc
   
 Certaines options nécessitent l'arrêt du serveur afin que la nouvelle valeur soit prise en considération. Si vous définissez la nouvelle valeur et exécutez sp_configure avant de redémarrer le serveur, la nouvelle valeur apparaîtra dans la colonne **value** des options de configuration, mais elle ne figurera pas dans la colonne **value_in_use** . Après le redémarrage du serveur, la nouvelle valeur apparaît dans la colonne **value_in_use** .  
   
-Les options à configuration automatique correspondent aux options que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] règle en fonction des besoins du système. Dans la plupart des cas, il est inutile de définir les valeurs manuellement. À titre d’exemple, nous pouvons citer les options **min server memory** et **max server memory** , ainsi que l’option user connections.  
+Les options à configuration automatique correspondent aux options que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] règle en fonction des besoins du système. Dans la plupart des cas, il est inutile de définir les valeurs manuellement. Les exemples incluent l’option **threads de travail maximum** et l’option user connections.  
   
 ## <a name="configuration-options-table"></a>Tableau des options de configuration  
  Le tableau ci-après dresse la liste des options de configuration disponibles et indique leurs plages de paramétrage possible ainsi que leurs valeurs par défaut. Les options de configuration sont signalées par des codes sous forme de lettres, comme suit :  

@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3299d13c2ff371f0194c501f34d5615486decc84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006101"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621779"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "68006101"
   
 -   Si une base de données est détachée puis attachée au même serveur ou à un autre serveur, la capture de données modifiées reste activée.  
   
--   Si une base de données est attachée ou restaurée avec l’option **KEEP_CDC** à toute édition autre qu’Enterprise, l’opération est bloquée parce que la capture de données modifiées requiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Le message d'erreur 932 est affiché :  
+-   Si une base de données est attachée ou restaurée avec l’option **KEEP_CDC** à toute édition autre que Standard ou Enterprise, l’opération est bloquée, car la capture des changements de données requiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditions Standard et Enterprise. Le message d'erreur 932 est affiché :  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006526"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000828"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +356,7 @@ Consultez [Exemples](#Examples) à la fin de cette rubrique pour obtenir beaucou
 ## <a name="best-practices"></a>Bonnes pratiques  
  Les suggestions fournies dans cette section peuvent vous aider à améliorer les performances des procédures, même si cette liste n'est pas exhaustive.  
   
--   Utilisez l'instruction SET NOCOUNT ON comme première instruction dans le corps de la procédure. Autrement dit, placez-la juste après le mot clé AS. Cela permet de désactiver les messages renvoyés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au client une fois les instructions SELECT, INSERT, UPDATE, MERGE et DELETE exécutées. Les performances globales de la base de données et de l'application peuvent être améliorées en éliminant toute surcharge réseau inutile. Pour plus d’informations, consultez [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Utilisez l'instruction SET NOCOUNT ON comme première instruction dans le corps de la procédure. Autrement dit, placez-la juste après le mot clé AS. Cela permet de désactiver les messages renvoyés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au client une fois les instructions SELECT, INSERT, UPDATE, MERGE et DELETE exécutées. Cela permet de conserver la sortie générée à un minimum pour plus de clarté. Toutefois, il n’existe pas d’avantages mesurables en matière de niveaux de performance sur le matériel actuel. Pour plus d’informations, consultez [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   Utilisez des noms de schémas lorsque vous créez ou référencez des objets de base de données dans la procédure. Il faut moins de temps au [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour résoudre les noms d’objets s’il n’a pas à effectuer des recherches dans plusieurs schémas. Ceci évite également les problèmes d’autorisation et d’accès causés par le schéma par défaut d’un utilisateur qui est affecté lors de la création d’objets sans spécification du schéma.  
   
