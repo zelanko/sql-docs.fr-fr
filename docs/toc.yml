@@ -4153,6 +4153,8 @@
     - name: Mettre à niveau SQL Server
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: Certification de compatibilité
+          href: database-engine/install-windows/compatibility-certification.md
         - name: "Mises à niveau des versions et des éditions prises en charge pour SQL Server\_2017"
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: "Mises à niveau des versions et des éditions prises en charge pour SQL Server\_2016"
@@ -4190,6 +4192,8 @@
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
             - name: Changer le niveau de compatibilité de la base de données et utiliser le Magasin des requêtes
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: Changer le niveau de compatibilité de la base de données avec l’Assistant Paramétrage de requêtes
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Configuration
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5700,7 +5704,7 @@
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
             - name: Vidéos >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
-    - name: Assistant Expérimentation de base de données
+    - name: Assistant Expérimentation de base de données (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
         - name: Bien démarrer
@@ -6868,7 +6872,7 @@
               href: relational-databases/sql-trace/limit-trace-file-and-table-sizes.md
             - name: Planifier les traces
               href: relational-databases/sql-trace/schedule-traces.md
-        - name: Magasin de requêtes
+        - name: Magasin des requêtes
           href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
           items:
             - name: OLTP en mémoire
@@ -6925,7 +6929,7 @@
                       href: relational-databases/performance-monitor/sql-server-xtp-databases.md
                     - name: Garbage collection
                       href: relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-                    - name: IO Governor
+                    - name: Gouverneur d’E/S
                       href: relational-databases/performance-monitor/sql-server-xtp-io-governor.md
                     - name: Processeur fantôme
                       href: relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
@@ -7293,6 +7297,8 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: Valider des repères de plan après la mise à niveau
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: Assistant Paramétrage de requêtes
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: Gouverneur de ressources
           href: relational-databases/resource-governor/resource-governor.md
           items:
