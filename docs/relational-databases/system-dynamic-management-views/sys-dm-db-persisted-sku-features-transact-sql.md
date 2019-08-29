@@ -14,19 +14,19 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- editions [SQL Server], feature restrictions
+- editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cd8c4d6fb71e98a13cab1b01f34b7c5dc7e99331
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b1e9f56c4321ca0289f6e6a456586f418c1e4dbb
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345070"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123076"
 ---
-# <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
+# <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Certaines fonctionnalités du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] modifient la façon dont [!INCLUDE[ssDE](../../includes/ssde-md.md)] les informations sont stockées dans les fichiers de la base de données. Ces fonctionnalités sont limitées à des éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une base de données qui contient ces fonctionnalités ne peut pas être déplacée vers une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne les prend pas en charge. Utilisez la vue de gestion dynamique sys. DM _db_persisted_sku_features pour répertorier les fonctionnalités spécifiques à l’édition de qui sont activées dans la base de données actuelle.
