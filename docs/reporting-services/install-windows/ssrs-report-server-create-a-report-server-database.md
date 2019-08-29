@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/15/2018
-ms.openlocfilehash: a05ef92709974b314ea5865362946c1f053c5343
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 08/28/2019
+ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262796"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123015"
 ---
 # <a name="create-a-report-server-database"></a>Créer une base de données du serveur de rapports 
 
@@ -24,10 +24,9 @@ Le mode natif SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
 
 Les bases de données sont créées ensemble et liées par le nom. Avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut, les bases de données ont pour nom respectif **reportserver** et **reportservertempdb**. Les deux bases de données sont collectivement appelées **base de données de serveur de rapports** ou **catalogue du serveur de rapports**.
 
-Le **mode SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut une troisième base de données utilisée pour les métadonnées d’alerte des données. Les trois bases de données sont créées pour chaque application de service SSRS. Les noms de base de données par défaut incluent un identificateur global unique (GUID) qui représente l’application de service. 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-> [!NOTE]
-> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+Le **mode SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut une troisième base de données utilisée pour les métadonnées d’alerte des données. Les trois bases de données sont créées pour chaque application de service SSRS. Les noms de base de données par défaut incluent un identificateur global unique (GUID) qui représente l’application de service. 
 
 Voici des exemples de noms des trois bases de données en mode SharePoint :
 
@@ -36,6 +35,8 @@ Voici des exemples de noms des trois bases de données en mode SharePoint :
 - ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
   
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
+
+::: moniker-end
   
 > [!IMPORTANT]  
 > N'écrivez pas d'applications qui exécutent des requêtes sur la base de données du serveur de rapports. La base de données du serveur de rapports n'est pas un schéma public. La structure des tables peut changer d'une version à la suivante. Si vous écrivez une application qui nécessite un accès à la base de données du serveur de rapports, utilisez toujours les API SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour accéder à la base de données du serveur de rapports.  
@@ -65,7 +66,18 @@ La page des **options d’installation du serveur de rapports** n’offre que l�
 ## <a name="database-server-version-requirements"></a>Conditions requises pour une version du serveur de bases de données
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé pour héberger les bases de données du serveur de rapports. L'instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] peut être locale ou distante. Voici les versions prises en charge du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] permettant d'héberger les bases de données du serveur de rapports :  
-  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+- Azure SQL Managed Instance
+
+- SQL Server 2019
+
+::: moniker-end
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+- SQL Server 2017  
+::: moniker-end
+
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -73,9 +85,7 @@ La page des **options d’installation du serveur de rapports** n’offre que l�
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
-- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+
 Si vous créez la base de données du serveur de rapports sur un ordinateur distant, configurez la connexion de manière à employer un compte d'utilisateur de domaine ou un compte de service pouvant accéder au réseau. Si vous utilisez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante, réfléchissez aux informations d'identification que le serveur de rapports devra utiliser pour se connecter à l'instance. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
