@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809867"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122993"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -62,7 +62,6 @@ SSMS 18.2 est la dernière version en disponibilité générale de SSMS. Si vou
 | Exécution ou résultats des requêtes | Ajout d’un *délai d’achèvement* dans les messages à suivre lorsque l’exécution d’une requête donnée est terminée. |
 | Exécution ou résultats des requêtes | Permet d’afficher plus de données (Résultats dans du texte) et d’en stocker davantage dans des cellules (Résultats dans des grilles). SSMS autorise désormais jusqu’à 2 millions de caractères pour ces deux options (auparavant, les limites étaient fixées à 256 000 caractères pour l’affichage et à 64 000 caractères pour le stockage dans des grilles). Cela règle également le problème des utilisateurs qui ne parvenaient pas à extraire plus de 43 680 caractères des cellules d’une grille. |
 | ShowPlan | Ajout d’un nouvel attribut dans QueryPlan quand la [fonctionnalité UDF scalaire Inline](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) est activée (ContainsInlineScalarTsqludfs). |
-| SMO | Ajout de la prise en charge des *restrictions de fonctionnalités*. Pour plus d’informations sur cette fonctionnalité, consultez [Restrictions de fonctionnalités](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
 | SMO | Ajout de la prise en charge de l’*API SQL Assessment*. Pour plus d’informations, consultez [API SQL Assessment](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 |  |  |
 
@@ -239,7 +238,6 @@ SSMS 18.1 est la dernière version en disponibilité générale (GA) de SSMS. S
 |Always Encrypted| La case à cocher Activer Always Encrypted sous le nouvel onglet Always Encrypted de la boîte de dialogue Se connecter au serveur offre désormais un moyen simple d’activer/de désactiver Always Encrypted pour une connexion de base de données.|
 |Always Encrypted avec enclaves sécurisées| Plusieurs améliorations ont été apportées pour prendre en charge Always Encrypted avec enclaves sécurisées dans la préversion de SQL Server 2019 :  Champ de texte permettant de spécifier l’URL d’attestation d’enclave dans la boîte de dialogue Se connecter au serveur (sous le nouvel onglet Always Encrypted).  Nouvelle case à cocher dans la boîte de dialogue Nouvelle clé principale de colonne permettant d’indiquer si une nouvelle clé principale de colonne doit autoriser les calculs d’enclave.  D’autres boîtes de dialogue de gestion de clés Always Encrypted exposent désormais des informations indiquant sur quelles clés principales de colonne les calculs d’enclave sont autorisés.|
 |Fichiers d’audit|Abandon de la méthode d’authentification basée sur la clé du compte de stockage au profit de l’authentification basée sur Azure AD.|
-|Fichiers d’audit|Mise à jour de la liste des actions d’audit connues pour inclure FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.|
 |Classification des données| Réorganisation du menu des tâches de classification des données : ajout d’un sous-menu au menu des tâches de base de données et ajout d’une option pour ouvrir le rapport à partir du menu sans ouvrir au préalable la fenêtre de classification des données.|
 |Classification des données|Ajout d’une nouvelle fonctionnalité de « classification des données » à SMO. L’objet Column expose de nouvelles propriétés : SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId et IsClassified (en lecture seule). Pour plus d’informations, consultez [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |Classification des données|Ajout d’un nouvel élément de menu « Rapport de classification » au menu volant « Classification des données ».|

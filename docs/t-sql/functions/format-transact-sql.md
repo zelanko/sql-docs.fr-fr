@@ -18,16 +18,16 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 33f7c840b69e8101c3452d33884015b52a031212
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 9b7ce2b7a9374579255974ae110f4d9167fc8fa8
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969427"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123201"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Retourne une valeur mise en forme avec la culture facultative et le format spécifiés. Utilisez la fonction FORMAT pour la mise en forme comme chaînes de valeurs de date/heure et de valeurs numériques compatibles avec les paramètres régionaux. Pour les conversions de type de données général, continuez à utiliser CAST ou CONVERT.  
   
