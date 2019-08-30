@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 05/08/2019
-ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.date: 08/27/2019
+ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000289"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123115"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Nouveautés de SQL Server Reporting Services (SSRS)
 
@@ -32,9 +32,21 @@ Pour télécharger SQL Server 2017 Reporting Services, accédez au **[Centre de 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-preview-reporting-services"></a>Préversion de SQL Server 2019 Reporting Services
+## <a name="sql-server-2019-reporting-services-preview"></a>Préversion de SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]la préversion Reporting Services est disponible et peut être téléchargée à partir du **[Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=100122)** .
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services version préliminaire peut être téléchargée à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=100122).
+
+### <a name="azure-sql-managed-instance-support"></a>Prise en charge d’Azure SQL Managed Instance
+
+Vous pouvez maintenant héberger un catalogue de bases de données utilisé pour SQL Server Reporting Services (SSRS) dans un Managed Instance Azure SQL (MI) hébergé dans une machine virtuelle ou dans votre centre de données. La prise en charge est limitée à l’utilisation des informations d’identification de base de données pour la connexion à SQL MI.
+
+### <a name="power-bi-premium-dataset-support"></a>Prise en charge des jeux de données Power BI Premium
+
+Vous pouvez vous connecter à des jeux de données Power BI à l’aide de Microsoft Générateur de rapports ou SQL Server Data Tools (SSDT). Vous pouvez ensuite publier ces rapports dans SSRS 2019 à l’aide de la connectivité SQL Server Analysis Services. Les utilisateurs doivent utiliser un nom d’utilisateur et un mot de passe Windows stockés pour activer le scénario.
+
+### <a name="alttext-alternative-text-support-for-report-elements"></a>Prise en charge des éléments de rapport par AltText (texte de remplacement)
+
+Lors de la création de rapports, vous pouvez utiliser des info-bulles pour spécifier du texte pour chaque élément du rapport. La technologie des lecteurs d’écran identifie ces info-bulles correctement.
 
 ::: moniker-end
 
@@ -67,7 +79,8 @@ Des informations supplémentaires sont disponibles dans le [blog de Reporting Se
 * Téléchargez le [Générateur de rapports SQL Server](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Téléchargez [SSDT (SQL Server Data Tools) - Version Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Remarque** : Vous pouvez utiliser le Concepteur de requêtes pour DAX uniquement avec des sources de données tabulaires SSAS générés dans SQL Server 2016+.
+> [!NOTE]
+> Vous pouvez utiliser le Concepteur de requêtes pour DAX uniquement avec des sources de données tabulaires SSAS créées dans SQL Server 2016+.
 ::: moniker-end
 
 ## <a name="ssrs-2016"></a>SSRS 2016
