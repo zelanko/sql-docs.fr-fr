@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918181"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154640"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
   Importez un fichier d’application de couche Données (DAC), fichier portant l’extension .bacpac, pour créer une copie de la base de données d’origine, avec ses données, sur une nouvelle instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou vers [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC ou une base de données entre différentes instances, ou pour créer une sauvegarde logique, telles qu'une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -101,9 +101,9 @@ ms.locfileid: "62918181"
   
 -   **Importer à partir du disque local** : cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou entrez le chemin d’accès dans la zone réservée à cet effet. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
--   **Importer à partir de Windows Azure** -importe un fichier BACPAC à partir d’un conteneur Windows Azure. Vous devez vous connecter à un conteneur Windows Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Le fichier temporaire est créé à l'emplacement spécifié et reste à cet endroit une fois l'opération terminée.  
+-   **Importation à partir d’Azure** -importe un fichier baBACPAC à partir d’un conteneur Azure. Vous devez vous connecter à un conteneur Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Le fichier temporaire est créé à l'emplacement spécifié et reste à cet endroit une fois l'opération terminée.  
   
-     Lorsque vous parcourez Windows Azure, vous pouvez basculer entre les conteneurs au sein d'un seul compte. Vous devez spécifier un seul fichier .bacpac pour continuer l'opération d'importation. Notez que vous pouvez trier les colonnes par **Nom**, **Taille**ou **Date de modification**.  
+     Lorsque vous parcourez Azure, vous pouvez basculer entre les conteneurs au sein d’un seul compte. Vous devez spécifier un seul fichier .bacpac pour continuer l'opération d'importation. Notez que vous pouvez trier les colonnes par **Nom**, **Taille**ou **Date de modification**.  
   
      Pour continuer, spécifiez le fichier .bacpac à importer, puis cliquez sur **Ouvrir**.  
   
@@ -120,13 +120,13 @@ ms.locfileid: "62918181"
   
  Pour continuer, cliquez sur **Suivant**.  
   
- **Pour une base de données SQL :**  
+ **Pour une SQL Database:**  
   
 -   **Nouveau nom de la base de données** : fournissez un nom pour la base de données importée.  
   
--   **Édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -spécifier [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Pour plus d'informations sur les éditions de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez le site Web [Base de données SQL](http://www.windowsazure.com/home/tour/database/) .  
+-   **Édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -spécifiez [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou Web. Pour plus d'informations sur les éditions de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez le site Web [Base de données SQL](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Taille maximale de la base de données (Go)** -utilisez le menu de liste déroulante pour spécifier la taille maximale de votre base de données.  
+-   **Taille maximale de la base de données (Go)** : utilisez le menu déroulant pour spécifier la taille maximale de votre base de données.  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "62918181"
 ###  <a name="Results"></a> Page Résultats  
  Cette page signale la réussite ou l'échec de l'importation et crée des opérations de base de données, affichant le succès ou l'échec de chacune. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
   
- Pour fermer l'Assistant, cliquez sur **Fermer** .  
+ Cliquez sur **Fermer** pour fermer l’assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](data-tier-applications.md)   

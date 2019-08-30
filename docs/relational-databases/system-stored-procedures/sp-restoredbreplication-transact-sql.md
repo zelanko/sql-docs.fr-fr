@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0aeb3d94bf1b67674b59f756f330e1d460f0cde7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771121"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160715"
 ---
-# <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
+# <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Supprime les paramètres de réplication si une base de données est restaurée vers un serveur, une base de données ou un système non source, normalement incapables d'exécuter des processus de réplication. Lorsque vous restaurez une base de données répliquée vers un serveur ou une base de données autres que ceux à partir desquels la sauvegarde a été créée, les paramètres de réplication ne peuvent pas être préservés. Lors de la restauration, le serveur appelle **sp_restoredbreplication** directement pour supprimer automatiquement les métadonnées de réplication de la base de données restaurée.  
@@ -40,13 +40,17 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @srv_orig = ] 'original_server_name'`Nom du serveur sur lequel la sauvegarde a été créée. *original_server_name* est de **type sysname**, sans valeur par défaut.  
+`[ @srv_orig = ] 'original_server_name'`  
+ Nom du serveur sur lequel la sauvegarde a été créée. *original_server_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @db_orig = ] 'original_database_name'`Nom de la base de données qui a été sauvegardée. *original_database_name* est de **type sysname**, sans valeur par défaut.  
+`[ @db_orig = ] 'original_database_name'`  
+ Le nom de la base de données qui a été sauvegardée. *original_database_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  

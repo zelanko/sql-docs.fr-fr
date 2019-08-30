@@ -19,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8147471dc662b651ac9c99cc9290a383cc235ee8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fc918b390cedbca9016e4d14f72dea8c9ce8d148
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891565"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154593"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Connexions de données, sources de données et chaînes de connexion dans Reporting Services
   Pour inclure les données dans un rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vous devez tout d'abord créer des *sources de données* et des *datasets*. Cette rubrique explique le type des sources de données, comment créer les sources de données et les informations importantes liées aux informations d'identification de source de données. Une source de données inclut le type de source de données, les informations de connexion et le type d'informations d'identification à utiliser. Il existe deux types de sources de données : incorporée et partagée. Une source de données incorporée est définie dans le rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie indépendamment d'un rapport et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) et [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -130,7 +130,7 @@ ms.locfileid: "68891565"
 |Base de données SQL Server sur le serveur local|`data source="(local)";initial catalog=AdventureWorks`|Définissez `Microsoft SQL Server` comme type de source de données.|  
 |Instance SQL Server<br /><br /> base de données|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Définissez `Microsoft SQL Server` comme type de source de données.|  
 |Base de données SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Définissez `Microsoft SQL Server` comme type de source de données.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)]dans le Cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Définissez `Windows Azure SQL Database` comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)]dans le Cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Définissez `Azure SQL Database` comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Définissez `Microsoft SQL Server Parallel Data Warehouse` comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Server Parallel Data Warehouse &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de données Analysis Services sur le serveur local|`data source=localhost;initial catalog=Adventure Works DW`|Définissez `Microsoft SQL Server Analysis Services` comme type de source de données. Pour plus d’informations, consultez [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Base de données de modèles tabulaires Analysis Services avec une perspective Ventes|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Définissez `Microsoft SQL Server Analysis Services` comme type de source de données. Spécifiez le nom de la perspective dans le paramètre cube=. Pour plus d’informations, consultez [Perspectives &#40;SSAS Tabulaire&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  

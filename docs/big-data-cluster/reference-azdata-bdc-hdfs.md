@@ -5,26 +5,27 @@ description: Article de référence sur les commandes azdata bdc hdfs.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fab1f3e831f660a01ea2f03967a1144725baabde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: d63d0cbd9d3d36d2d76d5b1fa01337d17084306d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653461"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155231"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L’article suivant fournit des références sur les commandes **bdc hdfs** dans l’outil **azdata**. Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md).
+Cet article est un article de référence pour **azdata**. 
 
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
+[État du HDFS BDC azdata](reference-azdata-bdc-hdfs-status.md) | Commandes d’État du service HDFS.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | L’interpréteur de commandes HDFS est un interpréteur de commandes interactif simple pour le système de fichiers HDFS.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | Répertoriez l’état du fichier ou du répertoire donné.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Déterminez si un fichier ou un répertoire existe.  Retourne True s’il existe, sinon False.
@@ -327,4 +328,6 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).
+- Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). 
+
+- Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

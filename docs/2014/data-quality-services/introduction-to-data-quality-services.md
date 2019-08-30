@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5898910a5280e797080c99fde978bb3da1c3c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19ef3eacc2fc1dbe6408ea1b51c5135ba37740e5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484212"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154470"
 ---
 # <a name="introduction-to-data-quality-services"></a>Présentation de Data Quality Services
   La solution de qualité des données fournie par [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permet aux gestionnaires de données et aux professionnels de l'informatique de préserver la qualité de leurs données et de s'assurer que ces dernières sont adaptées à leur utilisation professionnelle. DQS est une solution reposant sur des connaissances qui offre des méthodes interactives et assistées par ordinateur pour gérer l'intégrité et la qualité de vos sources de données. DQS vous permet de découvrir, de générer et de gérer les connaissances relatives à vos données. Vous pouvez ensuite utiliser ces connaissances pour procéder au nettoyage, à la mise en correspondance et au profilage des données. Vous pouvez également tirer parti des services en nuage de fournisseurs de données de référence dans un projet de qualité des données DQS.  
@@ -29,7 +29,7 @@ ms.locfileid: "65484212"
   
  DQS permet à un utilisateur professionnel, un travailleur de l’information ou un professionnel de l’informatique non spécialiste des bases de données ou de la programmation, de créer, gérer et exécuter les opérations de qualité des données de son organisation avec un minimum de configuration et de préparation.  
   
-##  <a name="Answer"></a> Répondre au besoin avec DQS  
+##  <a name="Answer"></a>Répondre au besoin avec DQS  
  La qualité des données n'est pas définie en termes absolus. Elle dépend de la pertinence des données vis-à-vis de l'objectif qu'elle doit atteindre. DQS identifie les données potentiellement incorrectes et vous fournit une estimation de la probabilité d'inexactitude des données. DQS vous fournit une présentation sémantique des données afin de vous permettre de déterminer leur pertinence. DQS vous permet de résoudre les problèmes résultant de la non-exhaustivité, de l'absence de conformité, de l'incohérence, de l'inexactitude, de la non-validité et de la duplication des données.  
   
  DQS offre les fonctionnalités suivantes pour résoudre les problèmes de qualité des données.  
@@ -38,7 +38,7 @@ ms.locfileid: "65484212"
   
 -   **Correspondance :** identification des doublons sémantiques lors d'un processus basé sur les règles vous permettant de déterminer ce qui constitue une correspondance et de procéder à la déduplication. Pour plus d’informations, consultez [Data Matching](../../2014/data-quality-services/data-matching.md).  
   
--   **Reference Data Services :** vérification de la qualité des données à l'aide des services d'un fournisseur de données de référence. Vous pouvez utiliser les services de données de référence de Windows Azure Marketplace DataMarket pour nettoyer, valider, mettre en correspondance et enrichir facilement vos données. Pour plus d’informations, consultez [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+-   **Reference Data Services :** vérification de la qualité des données à l'aide des services d'un fournisseur de données de référence. Vous pouvez utiliser les services de données de référence de la place de marché Azure DataMarket pour nettoyer, valider, faire correspondre et enrichir facilement les données. Pour plus d’informations, consultez [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Profilage :** analyse d'une source de données pour offrir un aperçu de la qualité des données à chaque étape des processus de découverte des connaissances, de gestion des domaines, de mise en correspondance et de nettoyage des données. Le profilage est un outil puissant de la solution de qualité des données DQS. Vous pouvez créer une solution de qualité des données dans laquelle le profilage est tout aussi important que la gestion des connaissances, la mise en correspondance ou le nettoyage des données. Pour plus d’informations, consultez [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

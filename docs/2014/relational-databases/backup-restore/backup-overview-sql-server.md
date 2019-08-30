@@ -22,19 +22,19 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922120"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155013"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Dans cette rubrique :**  
   
--   [Composants et Concepts](#TermsAndDefinitions)  
+-   [Composants et concepts](#TermsAndDefinitions)  
   
 -   [Compression de sauvegarde](#BackupCompression)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62922120"
   
  **Types de sauvegardes**  
   
- [copy-only backup](copy-only-backups-sql-server.md)  
+ [sauvegarde de copie uniquement](copy-only-backups-sql-server.md)  
  Sauvegarde d'utilisation particulière qui est indépendante de la séquence normale des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  sauvegarde de données  
@@ -83,10 +83,10 @@ ms.locfileid: "62922120"
  [sauvegarde partielle](partial-backups-sql-server.md)  
  Contient des données provenant uniquement de certains des groupes de fichiers dans une base de données, y compris les données du groupe de fichiers primaire, de chaque groupe de fichiers en lecture-écriture, ainsi que, éventuellement, de tout fichier spécifié en lecture seule.  
   
- **Définitions et les termes du contrat de support de sauvegarde**  
+ **Termes et définitions des supports de sauvegarde**  
   
- [Unité de sauvegarde](backup-devices-sql-server.md)  
- Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent être écrites dans un service de stockage d'objets blob Windows Azure, et le format d' **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d'informations, voir [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ [unité de sauvegarde](backup-devices-sql-server.md)  
+ Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service de stockage d’objets BLOB Azure, et le format d' **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [support de sauvegarde](media-sets-media-families-and-backup-sets-sql-server.md)  
  Une ou plusieurs bandes ou un ou plusieurs fichiers disque sur lesquels une ou plusieurs sauvegardes ont été écrites.  
@@ -100,13 +100,13 @@ ms.locfileid: "62922120"
  [jeu de supports](media-sets-media-families-and-backup-sets-sql-server.md)  
  Ensemble ordonné de supports de sauvegarde (bandes ou fichiers disque) sur lequel une ou plusieurs opérations de sauvegarde ont été écrites en utilisant un type et un nombre fixes d'unités de sauvegarde.  
   
- [support de sauvegarde miroir](mirrored-backup-media-sets-sql-server.md)  
+ [jeu de supports mis en miroir](mirrored-backup-media-sets-sql-server.md)  
  Plusieurs copies (miroirs) d'un jeu de supports.  
   
-##  <a name="BackupCompression"></a> Compression de sauvegarde  
+##  <a name="BackupCompression"></a>Compression de la sauvegarde  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et les versions ultérieures prennent en charge la compression des sauvegardes. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures peuvent restaurer une sauvegarde compressée. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a> Restrictions sur les opérations de sauvegarde dans SQL Server  
+##  <a name="Restrictions"></a>Restrictions sur les opérations de sauvegarde dans SQL Server  
  La sauvegarde peut être effectuée si la base de données est en ligne et en cours d'utilisation. Cependant, les restrictions suivantes existent.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>Il n'est pas possible de sauvegarder les données hors connexion  
@@ -136,7 +136,7 @@ ms.locfileid: "62922120"
  Si une opération de sauvegarde chevauche une opération de compactage ou de gestion des fichiers, un conflit se produit. Quelle que soit l'opération effectuée la première, la seconde opération attend que le verrou défini par la première opération expire. (Le délai d'expiration est contrôlé par un paramètre d'expiration de la session). Si le verrou est libéré au cours du délai d'expiration, la seconde opération se poursuit. Si le verrou expire, la seconde opération échoue.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour travailler avec des unités de sauvegarde et de support de sauvegarde**  
+ **Pour travailler avec des unités de sauvegarde et des supports de sauvegarde**  
   
 -   [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62922120"
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : SQL Server la sauvegarde et la restauration dans le service de stockage d’objets BLOB Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Pour créer une sauvegarde**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "62922120"
   
 -   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : SQL Server la sauvegarde et la restauration dans le service de stockage d’objets BLOB Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   

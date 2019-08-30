@@ -23,12 +23,13 @@ helpviewer_keywords:
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e2f093083277d23bad91ea268da0026d6c4dc1a
-ms.sourcegitcommit: f517f1e2e7cac983fdb41229e60ca7ad019ecd48
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions|| = azure-sqldw-latest
+ms.openlocfilehash: 9b3e389b97cee8a8a6d548eb93ad70b94d09ba40
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70064041"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160737"
 ---
 # <a name="sysuser_token-transact-sql"></a>sys.user_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "70064041"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**principal_id**|**Int**|ID du principal. Sa valeur est unique dans une base de données.|  
+|**principal_id**|**int**|ID du principal. Sa valeur est unique dans une base de données.|  
 |**sid**|**varbinary(85)**|Identificateur de sécurité du principal, si le principal est défini comme externe à la base de données. Par exemple, ce peut être une information de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows, Windows Group, ou une information de connexion mappée sur un certificat ; sinon, cette valeur est NULL.|  
 |**name**|**nvarchar (128)**|Nom du principal. Sa valeur est unique dans une base de données.|  
 |**type**|**nvarchar (128)**|Description du type de principal. Tous les types sont mappés à **sid**. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  

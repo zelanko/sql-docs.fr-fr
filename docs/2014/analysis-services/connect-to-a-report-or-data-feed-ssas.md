@@ -1,5 +1,5 @@
 ---
-title: Se connecter à un rapport ou d’un flux de données (SSAS) | Microsoft Docs
+title: Connexion à un rapport ou à un flux de données (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bc15a005371b719f880f9b64a11a7b33e81ff51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087173"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151827"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connexion à un flux de rapport ou de données (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de vous connecter à un flux de données. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
   
 ## <a name="from-a-report"></a>À partir d'un rapport  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom convivial pour la connexion au flux de données.  
   
  **Chemin d'accès au rapport**  
@@ -41,7 +41,7 @@ ms.locfileid: "66087173"
  Essayez d'établir une connexion à la source de données à l'aide des paramètres actuels. Un message est affiché pour indiquer si la connexion a abouti.  
   
 ## <a name="from-an-azure-datamarket-dataset"></a>À partir d'un dataset Azure DataMarket  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom convivial pour la connexion au flux de données.  
   
  **URL du flux de données**  
@@ -53,9 +53,9 @@ ms.locfileid: "66087173"
  Cliquez sur **Afficher les datasets Azure DataMarket disponibles** pour afficher les datasets disponibles.  
   
  **Clé de compte**  
- Spécifiez la clé de compte utilisée pour accéder à vos abonnements de dataset Windows Azure Marketplace.  
+ Spécifiez la clé de compte utilisée pour accéder à vos abonnements au jeu de données de la place de marché Azure.  
   
- **Find**  
+ **Trouver**  
  Recherchez une clé de compte associée à un compte Windows Live.  
   
  **Enregistrer ma clé de compte**  
@@ -68,7 +68,7 @@ ms.locfileid: "66087173"
  Essayez d'établir une connexion à la source de données à l'aide des paramètres actuels. Un message est affiché pour indiquer si la connexion a abouti.  
   
 ## <a name="from-other-feeds"></a>À partir d'autres flux  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom convivial pour la connexion au flux de données.  
   
  **URL du flux de données**  

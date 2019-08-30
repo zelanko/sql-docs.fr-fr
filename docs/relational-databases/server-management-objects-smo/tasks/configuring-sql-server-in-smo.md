@@ -11,20 +11,20 @@ helpviewer_keywords:
 - SQL Server, configuring
 - configuration options [SMO]
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 239a8e5f4e6d1030e2b80ca748ce985bc22527b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06983754193d8857701d9ad90a2bd522fe3e4b2d
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092805"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148533"
 ---
 # <a name="configuring-sql-server-in-smo"></a>Configuration de SQL Server dans SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Information> objet, le <xref:Microsoft.SqlServer.Management.Smo.Settings> objet, le <xref:Microsoft.SqlServer.Management.Smo.UserOptions> objet et le <xref:Microsoft.SqlServer.Management.Smo.Configuration> contiennent les paramètres et les informations de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Dans SMO, l' <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> objet, l’objet, l' <xref:Microsoft.SqlServer.Management.Smo.UserOptions> objet et l' <xref:Microsoft.SqlServer.Management.Smo.Configuration> objet contiennent des paramètres et des informations pour l’instance [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possède de nombreuses propriétés qui décrivent le comportement de l'instance installée. Les propriétés décrivent les options de démarrage, les valeurs par défaut du serveur, les fichiers et répertoires, les informations sur le processeur et le système, le produit et les versions, les informations sur la connexion, les options de mémoire, les sélections de langue et de classement et le mode d'authentification.  
   
@@ -35,14 +35,14 @@ ms.locfileid: "68092805"
   
  Les propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.UserOptions> contiennent des informations sur le comportement des connexions actuelles en ce qui concerne l'arithmétique, les normes ANSI et les transactions.  
   
- Il existe également un jeu d'options de configuration représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Il contient un jeu de propriétés qui représentent les options qui peuvent être modifiées par la procédure stockée **sp_configure** . Options telles que **Priority Boost**, **Recovery Interval** et **Network Packet Size**déterminent les performances de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nombre de ces options peuvent être modifiées de manière dynamique, mais dans certains cas, la valeur est d'abord configurée, puis modifiée lorsque l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est redémarrée.  
+ Il existe également un jeu d'options de configuration représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Il contient un jeu de propriétés qui représentent les options qui peuvent être modifiées par la procédure stockée **sp_configure** . Les options telles que **renforcement de priorité**, intervalle de **récupération** et **taille du paquet réseau**contrôlent les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]performances de l’instance de. Nombre de ces options peuvent être modifiées de manière dynamique, mais dans certains cas, la valeur est d'abord configurée, puis modifiée lorsque l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est redémarrée.  
   
- Il existe une propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Configuration> pour chaque option de configuration. Vous pouvez modifier le paramètre de configuration global en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. De nombreuses propriétés disposent de valeurs minimum et maximum qui sont également stockées sous la forme de propriétés <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. Ces propriétés requièrent la <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> méthode pour valider la modification à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Il existe une propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Configuration> pour chaque option de configuration. Vous pouvez modifier le paramètre de configuration global en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. De nombreuses propriétés disposent de valeurs minimum et maximum qui sont également stockées sous la forme de propriétés <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. Ces propriétés requièrent <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> la méthode pour valider la modification apportée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]à l’instance de.  
   
  Toutes les options de configuration de l'objet <xref:Microsoft.SqlServer.Management.Smo.Configuration> doivent être modifiées par l'administrateur système.  
   
 ## <a name="examples"></a>Exemples  
- Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>Modification des options de configuration de SQL Server en Visual Basic  
  L'exemple de code montre comment mettre à jour une option de configuration en Visual Basic .NET. Il récupère et affiche également des informations relatives aux valeurs minimale et maximale de l'option de configuration spécifiée. Enfin, le programme indique à l'utilisateur si la modification a été apportée dynamiquement ou si elle est stockée jusqu'au redémarrage de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -75,7 +75,7 @@ End If
 ``` 
   
 ## <a name="modifying-sql-server-settings-in-visual-basic"></a>Modification des paramètres de SQL Server en Visual Basic  
- L’exemple de code affiche des informations sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans <xref:Microsoft.SqlServer.Management.Smo.Information> et <xref:Microsoft.SqlServer.Management.Smo.Settings>et modifie les paramètres dans <xref:Microsoft.SqlServer.Management.Smo.Settings> et <xref:Microsoft.SqlServer.Management.Smo.UserOptions>propriétés de l’objet.  
+ L’exemple de code affiche des informations sur l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance <xref:Microsoft.SqlServer.Management.Smo.Information> de <xref:Microsoft.SqlServer.Management.Smo.Settings>dans et, et modifie les <xref:Microsoft.SqlServer.Management.Smo.Settings> paramètres <xref:Microsoft.SqlServer.Management.Smo.UserOptions>dans et les propriétés de l’objet.  
   
  Dans l'exemple, l'objet <xref:Microsoft.SqlServer.Management.Smo.UserOptions> et l'objet <xref:Microsoft.SqlServer.Management.Smo.Settings> disposent tous deux d'une méthode <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>. Vous pouvez exécuter ces méthodes <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> individuellement.  
   
@@ -98,7 +98,7 @@ srv.Alter()
 ```
   
 ## <a name="modifying-sql-server-settings-in-visual-c"></a>Modification des paramètres de SQL Server en Visual C#  
- L’exemple de code affiche des informations sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans <xref:Microsoft.SqlServer.Management.Smo.Information> et <xref:Microsoft.SqlServer.Management.Smo.Settings>et modifie les paramètres dans <xref:Microsoft.SqlServer.Management.Smo.Settings> et <xref:Microsoft.SqlServer.Management.Smo.UserOptions>propriétés de l’objet.  
+ L’exemple de code affiche des informations sur l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance <xref:Microsoft.SqlServer.Management.Smo.Information> de <xref:Microsoft.SqlServer.Management.Smo.Settings>dans et, et modifie les <xref:Microsoft.SqlServer.Management.Smo.Settings> paramètres <xref:Microsoft.SqlServer.Management.Smo.UserOptions>dans et les propriétés de l’objet.  
   
  Dans l'exemple, l'objet <xref:Microsoft.SqlServer.Management.Smo.UserOptions> et l'objet <xref:Microsoft.SqlServer.Management.Smo.Settings> disposent tous deux d'une méthode <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>. Vous pouvez exécuter ces méthodes <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> individuellement.  
   
@@ -136,7 +136,7 @@ srv.Alter()
 ```  
   
 ## <a name="modifying-sql-server-settings-in-powershell"></a>Modification des paramètres de SQL Server dans PowerShell  
- L’exemple de code affiche des informations sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans <xref:Microsoft.SqlServer.Management.Smo.Information> et <xref:Microsoft.SqlServer.Management.Smo.Settings>et modifie les paramètres dans <xref:Microsoft.SqlServer.Management.Smo.Settings> et <xref:Microsoft.SqlServer.Management.Smo.UserOptions>propriétés de l’objet.  
+ L’exemple de code affiche des informations sur l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance <xref:Microsoft.SqlServer.Management.Smo.Information> de <xref:Microsoft.SqlServer.Management.Smo.Settings>dans et, et modifie les <xref:Microsoft.SqlServer.Management.Smo.Settings> paramètres <xref:Microsoft.SqlServer.Management.Smo.UserOptions>dans et les propriétés de l’objet.  
   
  Dans l'exemple, l'objet <xref:Microsoft.SqlServer.Management.Smo.UserOptions> et l'objet <xref:Microsoft.SqlServer.Management.Smo.Settings> disposent tous deux d'une méthode <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>. Vous pouvez exécuter ces méthodes <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> individuellement.  
   

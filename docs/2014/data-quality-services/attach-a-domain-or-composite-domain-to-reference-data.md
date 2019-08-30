@@ -1,5 +1,5 @@
 ---
-title: Joindre un domaine ou un domaine Composite aux données de référence | Microsoft Docs
+title: Attacher un domaine ou un domaine composite à des données de référence | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 153f4e25372a7cbb5e58f7fdc4d5a9134b60ed61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481113"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154510"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
-  Cette rubrique explique comment attacher des domaines/domaines composites dans une base de connaissances à un service de données de référence dans Windows Azure Marketplace pour générer des connaissances sur les données de référence de haute qualité. Chaque service de données de référence contient un schéma (colonnes de données). Après avoir attaché un domaine ou un domaine composite à un service de données de référence, vous devez mapper le domaine joint, ou chaque domaine au sein du domaine composite joint, aux colonnes appropriées du schéma de service des données de référence. L'attachement d'un domaine composite à un service de données de référence vous permet d'attacher un seul domaine à un service de données de référence, puis de mapper les différents domaines du domaine composite aux colonnes appropriées du schéma de service des données de référence.  
+  Cette rubrique explique comment attacher des domaines/domaines composites dans une base de connaissances de qualité des données à un service de données de référence dans la place de marché Azure pour créer des connaissances sur les données de référence de haute qualité. Chaque service de données de référence contient un schéma (colonnes de données). Après avoir attaché un domaine ou un domaine composite à un service de données de référence, vous devez mapper le domaine joint, ou chaque domaine au sein du domaine composite joint, aux colonnes appropriées du schéma de service des données de référence. L'attachement d'un domaine composite à un service de données de référence vous permet d'attacher un seul domaine à un service de données de référence, puis de mapper les différents domaines du domaine composite aux colonnes appropriées du schéma de service des données de référence.  
   
 > [!WARNING]  
 >  Le domaine composite associé à un service de données de référence est disponible dans la liste déroulante des domaines lors du mappage des domaines aux colonnes du schéma de service de données de référence. Ne mappez pas le domaine composite à une colonne dans le schéma de service de données de référence ; vous devez uniquement mapper les domaines individuels au sein d'un domaine composite aux colonnes appropriées dans le schéma de service de données de référence. Sinon, cela génère une erreur.  
@@ -67,7 +67,7 @@ ms.locfileid: "65481113"
          ![Boîte de dialogue Catalogue des fournisseurs de données de référence en ligne](../../2014/data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Boîte de dialogue Catalogue des fournisseurs de données de référence en ligne")  
   
         > [!NOTE]  
-        >  -   Dans la boîte de dialogue **Catalogue des fournisseurs de données de référence en ligne** , le nœud **DataMarket Data Quality Services** affiche tous les fournisseurs de services de données de référence auxquels vous vous êtes abonné dans Windows Azure Marketplace. Si vous avez configuré des fournisseurs tiers directs en ligne de services de données de référence dans DQS, ils apparaîtront sous un autre nœud appelé **Fournisseurs tiers directs en ligne** (non disponible à présent car aucun tiers fournisseur tiers direct en ligne n'est configuré dans DQS).  
+        >  -   Dans la boîte de dialogue **catalogue des fournisseurs de données de référence en ligne** , le nœud **DataMarket Data Quality Services** affiche tous les fournisseurs de services de données de référence auxquels vous vous êtes abonné dans la place de marché Azure. Si vous avez configuré des fournisseurs tiers directs en ligne de services de données de référence dans DQS, ils apparaîtront sous un autre nœud appelé **Fournisseurs tiers directs en ligne** (non disponible à présent car aucun tiers fournisseur tiers direct en ligne n'est configuré dans DQS).  
   
 9. Retournez à l'onglet **Données de référence** . Dans la zone **Paramètres des fournisseurs**, modifiez les valeurs dans les zones suivantes, si nécessaire :  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65481113"
   
 10. Cliquez sur **Terminer** pour publier la base de connaissances. Un message de confirmation s'affiche après que la base de connaissances a été publiée avec succès.  
   
- Vous pouvez maintenant utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données afin de normaliser et nettoyer les adresses américaines de vos données sources selon les connaissances fournies par Melissa Data via Windows Azure Marketplace.  
+ Vous pouvez maintenant utiliser cette base de connaissances pour l’activité de nettoyage dans un projet de qualité des données afin de normaliser et nettoyer les adresses américaines de vos données sources en fonction des connaissances fournies par Melissa Data via la place de marché Azure.  
   
 ##  <a name="FollowUp"></a> Suivi : Après le mappage d’un domaine aux données de référence  
  Créez un projet de qualité des données et exécutez l'activité de nettoyage sur vos données sources contenant les adresses américaines en les comparant à la base de connaissances créée dans cette rubrique. Consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

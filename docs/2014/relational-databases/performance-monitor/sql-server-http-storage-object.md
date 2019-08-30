@@ -10,15 +10,15 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250541"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152680"
 ---
-# <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
-  L’objet de performance **SQLServer:HTTP_STORAGE_OBJECT** est constitué de compteurs de performances qui surveillent le compte Microsoft Azure Storage. À l’aide de [fichiers de données SQL Server dans Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) fonctionnalité, vous pouvez stocker des fichiers de base de données dans des objets BLOB de stockage Windows Azure. Cet objet de performance traite chaque compte de stockage Windows Azure en tant que lecteur différent.  
+# <a name="sql-server-http_storage_object"></a>SQL Server, HTTP_STORAGE_OBJECT
+  L’objet de performance **SqlServer: HTTP_STORAGE_OBJECT** est constitué de compteurs de performances qui surveillent le compte de stockage Azure. À l’aide [des fichiers de données SQL Server dans Azure](../databases/sql-server-data-files-in-microsoft-azure.md) , vous pouvez stocker des fichiers de base de données dans des objets BLOB de stockage Azure. Cet objet de performance traite chaque compte de stockage Azure comme un lecteur différent.  
   
 |Nom du compteur|Description|  
 |------------------|-----------------|  

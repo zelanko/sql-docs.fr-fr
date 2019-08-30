@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_health_status (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_get_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b921846b0fc27e59ff0874cdbf0827095bfc7db4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140661"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155804"
 ---
-# <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retourne une table de 0, d'une ou plusieurs lignes de nombre agrégé des erreurs signalées par des Événements étendus pour une période donnée.  
   
- La fonction est utilisée pour signaler l’état d’intégrité des services sous Smart Admin.  Actuellement [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est pris en charge sous l’égide de Smart Admin. Ainsi, les erreurs retournées sont liées à la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ La fonction est utilisée pour signaler l’état d’intégrité des services sous Smart admin.  Actuellement [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pris en charge dans le cadre de Smart admin. Ainsi, les erreurs retournées sont liées à la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,16 +45,16 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ##  <a name="Arguments"></a> Arguments  
  [@begin_time]  
- Début de la période à partir de laquelle le nombre agrégé des erreurs est calculé.  Le @begin_time paramètre est de type DATETIME. La valeur par défaut est NULL. Lorsque la valeur est NULL, la fonction traite les événements signalés 30 minutes avant l'heure actuelle.  
+ Début de la période à partir de laquelle le nombre agrégé des erreurs est calculé.  Le @begin_time paramètre est DateTime. La valeur par défaut est NULL. Lorsque la valeur est NULL, la fonction traite les événements signalés 30 minutes avant l'heure actuelle.  
   
  [ @end_time]  
- Fin de la période à partir de laquelle le nombre agrégé des erreurs est calculé. Le @end_time paramètre est de type DATETIME avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la fonction traite les événements étendus jusqu'à l'heure actuelle.  
+ Fin de la période à partir de laquelle le nombre agrégé des erreurs est calculé. Le @end_time paramètre est DateTime avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la fonction traite les événements étendus jusqu'à l'heure actuelle.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Nombre d'erreurs de connexion lorsque le programme se connecte au compte de stockage Windows Azure.|  
+|number_of_storage_connectivity_errors|int|Nombre d’erreurs de connexion lorsque le programme se connecte au compte de stockage Azure.|  
 |number_of_sql_errors|int|Nombre d'erreurs retourné lorsque le programme se connecte au moteur SQL Server.|  
 |number_of_invalid_credential_errors|int|Nombre d'erreurs retourné lorsque le programme tente de s'authentifier en utilisant les informations d'identification SQL.|  
 |number_of_other_errors|int|Nombre d'erreurs dans des catégories autres que la connectivité, SQL ou les informations d'identification.|  
@@ -63,12 +63,12 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_retention_loops|int|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
- Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes contenant des erreurs peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiées pour en savoir plus de tous les problèmes. Vous pouvez également utiliser la procédure stockée **managed_backup.sp_get_backup_diagnostics** pour obtenir une liste des événements étendus et consulter les détails de l’erreur.  
+ Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes d’erreur non null peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiés pour en savoir plus sur les problèmes éventuels. Vous pouvez également utiliser la procédure stockée **managed_backup. sp_get_backup_diagnostics** pour obtenir la liste des événements étendus afin de trouver les détails de l’erreur.  
   
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Requiert **sélectionnez** autorisations sur la fonction.  
+ Requiert des autorisations **Select** sur la fonction.  
   
 ## <a name="examples"></a>Exemples  
   

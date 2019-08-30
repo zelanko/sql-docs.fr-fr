@@ -12,12 +12,12 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480744"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154483"
 ---
 # <a name="data-quality-client-home-screen"></a>Écran d'accueil de Data Quality Client
   Utilisez cet écran pour accéder aux interfaces utilisateur de chacun des trois groupes de tâches principaux de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) : gestion des bases de connaissances, projets de qualité des données et administration.  
@@ -57,7 +57,7 @@ ms.locfileid: "65480744"
  Affiche une vue de l'état de toutes les activités (à la fois actuelles et historiques) en rapport avec le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connecté. Les types d'activités analysées incluent la gestion des connaissances, le projet de qualité des données et la correction des données SSIS.  
   
  **Configuration**  
- Affichez les propriétés de configuration des comptes de service de données de référence (par le biais de Windows Azure Marketplace et directement dans les services de données de référence), les paramètres généraux (nettoyage interactif, mise en correspondance et profilage) et les paramètres de gravité du journal.  
+ Affichez les propriétés de configuration des comptes de service de données de référence (via la place de marché Azure et directement vers les services de données de référence), les paramètres généraux (nettoyage interactif, correspondance et profilage) et les paramètres de gravité du journal.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Bases de connaissances et domaines DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

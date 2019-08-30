@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030231"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148396"
 ---
 # <a name="programming-specific-tasks"></a>Programmation de tâches spécifiques
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030231"
 |[Implémentation de la recherche en texte intégral](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Explique comment implémenter les catalogues et index de recherche en texte intégral dans SMO.|  
 |[Implémentation de points de terminaison](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Explique comment créer des points de terminaison afin de gérer les charges utiles pour la mise en miroir de bases de données, les requêtes SOAP et Service Broker.|  
 |[Création et mise à jour des statistiques](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Explique comment installer et analyser des statistiques dans une base de données, dans SMO.|  
-|[Traçage et relecture d’événements](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Décrit comment utiliser le **Trace** et **relire** objets dans SMO pour les événements de trace et de relecture.|  
+|[Traçage et relecture d’événements](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Décrit comment utiliser les objets **trace** et **Replay** dans SMO pour suivre et relire des événements.|  
   
   

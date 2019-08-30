@@ -34,12 +34,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806401"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153821"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utiliser l'Assistant Plan de maintenance
   Cette rubrique explique comment créer un plan de maintenance pour un ou plusieurs serveurs à l'aide de l'Assistant Plan de maintenance dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'Assistant Plan de maintenance crée un plan de maintenance que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut exécuter régulièrement. Vous pouvez ainsi réaliser, en fonction d'intervalles spécifiés, diverses tâches d'administration de base de données, notamment des sauvegardes, l'exécution de contrôles d'intégrité de la base de données ou les mises à jour des statistiques de la base de données.  
@@ -52,7 +52,7 @@ ms.locfileid: "62806401"
   
      [Sécurité](#Security)  
   
--   [Création d’un plan de maintenance à l’aide de l’Assistant Plan de Maintenance dans SQL Server Management Studio](#SSMSProcedure)  
+-   [Création d’un plan de maintenance à l’aide de l’Assistant Plan de maintenance dans SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62806401"
 ####  <a name="Permissions"></a> Autorisations  
  Pour créer ou gérer des plans de maintenance, vous devez être membre du rôle serveur fixe **sysadmin** . L'Explorateur d'objets affiche uniquement le nœud **Plans de maintenance** pour les utilisateurs membres du rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Assistant Plan de Maintenance  
+##  <a name="SSMSProcedure"></a>Utilisation de l’Assistant Plan de maintenance  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>Pour démarrer l'Assistant Plan de maintenance  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62806401"
   
         7.  Cliquez sur **OK**.  
   
-    6.  Cliquer sur **Suivant**.  
+    6.  Cliquez sur **Suivant**.  
   
 6.  Sur la page **Sélectionner des serveurs cibles** , sélectionnez les serveurs sur lesquels vous souhaitez exécuter le plan de maintenance. Cette page est uniquement visible sur des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont configurées comme serveurs maîtres.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "62806401"
      Utilise l'option `SORT_IN_TEMPDB` , qui détermine l'emplacement où les résultats de tri intermédiaires, générés lors de la création de l'index, sont temporairement stockés. Si aucune opération de tri n'est requise ou si le tri peut être effectué dans la mémoire, l'option `SORT_IN_TEMPDB` est ignorée.  
   
      Case à cocher**Conserver l'index en ligne lors de la réindexation**  
-     Utilise l'option `ONLINE` qui permet aux utilisateurs d'accéder à la table sous-jacente ou aux données d'index cluster, ainsi qu'à tous les index non cluster associés au cours des opérations d'index. Cette option active les options supplémentaires pour reconstruire les index qui n’autorisent pas les reconstructions en ligne : **Ne pas reconstruire les index** et **reconstruire les index hors connexion**.  
+     Utilise l'option `ONLINE` qui permet aux utilisateurs d'accéder à la table sous-jacente ou aux données d'index cluster, ainsi qu'à tous les index non cluster associés au cours des opérations d'index. La sélection de cette option active les options supplémentaires pour reconstruire les index qui n’autorisent pas les reconstructions en ligne : **Ne pas reconstruire les index** et **Reconstruire des index en mode hors connexion**.  
   
     > [!NOTE]  
     >  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -364,13 +364,13 @@ ms.locfileid: "62806401"
      Spécifiez le dossier dans lequel seront placés les fichiers de base de données créés automatiquement. Cette option est désactivée si URL est sélectionné en tant que destination de sauvegarde.  
   
      **Informations d'identification SQL**  
-     Sélectionnez les informations d'identification SQL utilisées pour l'authentification au stockage Windows Azure. Si vous n'avez pas d'informations d'identification SQL, cliquez sur le bouton **Créer** pour créer de nouvelles informations d'identification SQL.  
+     Sélectionnez les informations d’identification SQL utilisées pour l’authentification auprès du stockage Azure. Si vous n'avez pas d'informations d'identification SQL, cliquez sur le bouton **Créer** pour créer de nouvelles informations d'identification SQL.  
   
     > [!IMPORTANT]  
-    >  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans le [pour créer des informations d’identification](../security/authentication-access/create-a-credential.md#Credential) rubrique pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
+    >  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code de la rubrique [pour créer des informations d’identification](../security/authentication-access/create-a-credential.md#Credential) pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
   
      **Conteneur de stockage Windows Azure**  
-     Spécifiez le nom du conteneur de stockage Windows Azure.  
+     Spécifiez le nom du conteneur de stockage Azure  
   
      **Préfixe d'URL**  
      Est généré automatiquement à partir des informations du compte de stockage contenues dans les informations d'identification SQL, et du nom du conteneur de stockage Windows Azure que vous avez spécifié. Nous vous recommandons de ne pas modifier les informations de ce champ, sauf si vous utilisez un domaine qui utilise un format autre que **\<compte_de_stockage>.blob.core.windows.net**.  

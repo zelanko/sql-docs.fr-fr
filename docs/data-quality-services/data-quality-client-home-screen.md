@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2ee3474d5fedd467170c601a7807117c23e37096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935408"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152580"
 ---
 # <a name="data-quality-client-home-screen"></a>Écran d'accueil de Data Quality Client
 
@@ -60,7 +60,7 @@ ms.locfileid: "67935408"
  Affiche une vue de l'état de toutes les activités (à la fois actuelles et historiques) en rapport avec le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connecté. Les types d'activités analysées incluent la gestion des connaissances, le projet de qualité des données et la correction des données SSIS.  
   
  **Configuration**  
- Affichez les propriétés de configuration des comptes de service de données de référence (par le biais de Windows Azure Marketplace et directement dans les services de données de référence), les paramètres généraux (nettoyage interactif, mise en correspondance et profilage) et les paramètres de gravité du journal.  
+ Affichez les propriétés de configuration des comptes de service de données de référence (via la place de marché Azure et directement vers les services de données de référence), les paramètres généraux (nettoyage interactif, correspondance et profilage) et les paramètres de gravité du journal.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   

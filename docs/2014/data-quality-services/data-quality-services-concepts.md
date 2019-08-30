@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad52c1f1d431e1ded8f63728bf17c951196c406d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480712"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154455"
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
   Cette rubrique fournit un bref résumé des concepts [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) relatifs à la gestion des connaissances, aux projets de qualité des données et à l'administration de la qualité des données.  
@@ -37,7 +37,7 @@ ms.locfileid: "65480712"
   
  **Reference Data Services**  
   
- Vous pouvez utiliser des données de référence pour valider, corriger et enrichir vos données, en exploitant les services de sociétés qui garantissent la qualité de leurs données de référence. Vous pouvez utiliser les services de la Place de marché Microsoft Azure pour vous connecter à des fournisseurs de données de référence, ou vous pouvez prendre directement contact avec un fournisseur. Pour plus d’informations, consultez [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ Vous pouvez utiliser des données de référence pour valider, corriger et enrichir vos données, en exploitant les services de sociétés qui garantissent la qualité de leurs données de référence. Vous pouvez utiliser les services de la place de marché Azure pour vous connecter à des fournisseurs de données de référence, ou vous pouvez utiliser une connexion directe à un fournisseur. Pour plus d’informations, consultez [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  Pour plus d'informations sur la gestion des connaissances dans DQS, consultez [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   

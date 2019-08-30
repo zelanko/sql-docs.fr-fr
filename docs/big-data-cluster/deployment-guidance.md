@@ -5,16 +5,16 @@ description: Découvrez comment déployer [!INCLUDE[big-data-clusters-2019](../i
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652359"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153456"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procédure de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -39,7 +39,7 @@ Avant de déployer un cluster Big Data SQL Server 2019, commencez par [installe
 
 ## <a id="prereqs"></a> Kubernetes - Prérequis
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]exiger une version minimale de Kubernetes d’au moins v 1.10 pour le serveur et le client (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]exiger une version minimale de Kubernetes d’au moins v 1.13 pour le serveur et le client (kubectl).
 
 > [!NOTE]
 > Notez que la différence entre les versions mineures de Kubernetes sur le client et le serveur ne doit pas dépasser +1 ou -1. Pour plus d’informations, consultez [les notes de publication de Kubernetes et la stratégie en matière de différence de version pour les références SKU](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -77,7 +77,7 @@ Les sections suivantes fournissent plus d’informations sur la façon de config
 
 ## <a id="configfile"></a> Configurations par défaut
 
-Les options de déploiement d’un cluster Big Data sont définies dans les fichiers de configuration JSON. Il existe trois profils de déploiement standard avec des paramètres par défaut pour les environnements de développement et de test :
+Les options de déploiement d’un cluster Big Data sont définies dans les fichiers de configuration JSON. Vous pouvez démarrer votre personnalisation du déploiement de cluster à partir des profils de déploiement intégrés avec les paramètres par défaut pour les environnements de développement/test:
 
 | Profil de déploiement | Environnement Kubernetes |
 |---|---|
@@ -115,7 +115,7 @@ Vous pouvez également personnaliser votre propre profil de configuration de dé
    ```
 
    azdata
-   > `--target` spécifie un répertoire qui contient les fichiers de configuration **cluster.json** and **control.json**, en fonction du paramètre`--source`.
+   > Spécifie un répertoire qui contient les fichiers de configuration, **BDC. JSON** et **Control. JSON**, en fonction `--source` du paramètre. `--target`
 
 1. Pour personnaliser les paramètres dans votre profil de configuration de déploiement, vous pouvez modifier le fichier de configuration de déploiement dans un outil adapté à la modification des fichiers JSON, par exemple VS Code. Pour une automatisation par script, vous pouvez également modifier le profil de déploiement personnalisé à l’aide de la commande **azdata bdc config**. Par exemple, la commande suivante modifie un profil de déploiement personnalisé en remplaçant le nom par défaut du cluster déployé (**mssql-cluster**) par **test-cluster** :  
 
@@ -123,8 +123,8 @@ Vous pouvez également personnaliser votre propre profil de configuration de dé
    azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
    
-> [!TIP]
-> Vous pouvez également passer le nom du cluster au moment du déploiement à l’aide du paramètre *--name* pour la commande *azdata create bdc*. Les paramètres dans la commande ont priorité sur les valeurs dans les fichiers de configuration.
+   > [!TIP]
+   > Vous pouvez également passer le nom du cluster au moment du déploiement à l’aide du paramètre *--name* pour la commande *azdata create bdc*. Les paramètres dans la commande ont priorité sur les valeurs dans les fichiers de configuration.
 
    > [JSONPath Online Evaluator](https://jsonpath.com/) est un outil utile pour rechercher des chemins JSON.
 
@@ -276,7 +276,7 @@ minikube ip
 Après le déploiement, vous pouvez vérifier l’état du cluster à l’aide de la commande [azdata bdc status show](reference-azdata-bdc-status.md).
 
 ```bash
-azdata bdc status show -o table
+azdata bdc status show
 ```
 
 > [!TIP]
@@ -285,22 +285,119 @@ azdata bdc status show -o table
 Voici un exemple de sortie de cette commande :
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
+
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ spark          ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
+
+
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-Dans cet état résumé, vous pouvez également obtenir un état plus détaillé avec les commandes suivantes :
+Vous pouvez également obtenir un État plus détaillé avec les commandes suivantes:
 
-- [azdata bdc control status](reference-azdata-bdc-control-status.md)
-- [azdata bdc pool status](reference-azdata-bdc-pool-status.md)
+- l’affichage de l' [État du contrôle azdata BDC](reference-azdata-bdc-control-status.md) retourne l’état d’intégrité de tous les composants associés au service de gestion des contrôles
+```
+azdata bdc control status show
+```
+Exemple de sortie:
+```output
+Control: ready                                                                                                                                                                                                      Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
 
-La sortie de ces commandes contient des URL aux tableaux de bord Kibana et Grafana pour une analyse plus détaillée.
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+```
+
+- **azdata BDC SQL Status Show** renvoie l’état d’intégrité de toutes les ressources qui ont un service SQL Server
+```
+azdata bdc sql status show
+```
+Exemple de sortie:
+```output
+Sql: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+```
+
+> [!IMPORTANT]
+> Lors de l’utilisation de **--All,** la sortie de ces commandes contient des URL pour les tableaux de bord Kibana et Grafana pour une analyse plus détaillée.
 
 Outre **azdata**, vous pouvez utiliser Azure Data Studio pour trouver les points de terminaison et des informations sur l’état. Pour plus d’informations sur l’affichage de l’état d’un cluster avec **azdata** et Azure Data Studio, consultez [Guide pratique pour afficher l’état d’un cluster Big Data](view-cluster-status.md).
 

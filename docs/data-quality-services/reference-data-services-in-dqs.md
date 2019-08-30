@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 48a878473a356677fb3d322fc63bb2d346f9346c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97003159192ce36c685323028b7112fdc4d00573
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935030"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152367"
 ---
 # <a name="reference-data-services-in-dqs"></a>Services de données de référence dans DQS
 
@@ -31,10 +31,10 @@ ms.locfileid: "67935030"
   
 -   Le processus de données de référence est incorporé dans la création d'une base de connaissances DQS et un projet de qualité des données, ce qui vous permet d'instituer un processus de qualité des données complet.  
   
--   Elle prend en charge l'utilisation de données de référence provenant de Windows Azure Marketplace, ainsi que de données de référence provenant directement de fournisseurs de données de référence tiers.  
+-   Prend en charge l’utilisation de données de référence provenant de la place de marché Azure et directement de fournisseurs de données de référence tiers.  
   
-##  <a name="Marketplace"></a> Utilisation de données de référence provenant de Windows Azure Marketplace  
- DQS prend en charge l'utilisation de données de référence provenant de Windows Azure Marketplace afin de permettre aux fournisseurs de contenu de fournir des services de données de référence via Marketplace. Marketplace est un service Microsoft qui fournit un canal de remise et de marché unique permettant d'obtenir des données et des applications de haute qualité sous la forme de services en nuage. Pour plus d’informations sur la place de marché, consultez [en savoir plus sur Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
+##  <a name="Marketplace"></a>Utilisation de données de référence à partir de la place de marché Azure  
+ DQS prend en charge l’utilisation de données de référence de la place de marché Azure pour permettre aux fournisseurs de contenu de fournir des services de données de référence via Marketplace. Marketplace est un service Microsoft qui fournit un canal de remise et de marché unique permettant d'obtenir des données et des applications de haute qualité sous la forme de services en nuage. Pour plus d’informations sur Marketplace, consultez [en savoir plus sur les place de marché Microsoft Azure](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
   
  L'intégration transparente entre la Place de marché et DQS simplifie les étapes associées à la découverte, l'exploration et l'acquisition d'informations pour des projets de qualité des données à partir de DQS. Les données sont utilisées à partir de DQS, et permettent aux utilisateurs de DQS d'atteindre une haute qualité de données en rassemblant de façon innovante DQS, Marketplace et des fournisseurs de services de données de référence.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67935030"
   
 1.  **Configuration des détails sur le fournisseur de données de référence dans DQS** : avant de pouvoir utiliser des données de référence dans DQS, vous devez configurer les détails du service de données de référence dans DQS.  
   
-    1.  Si vous utilisez à la place de marché, fournissez une clé de compte Marketplace valide, accédez à la [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) catégorie de données dans la place de marché et vous abonner aux fournisseurs requis.  
+    1.  Si vous utilisez Marketplace, fournissez une clé de compte Marketplace valide, accédez à la catégorie de données [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) dans Marketplace, puis Abonnez-vous aux fournisseurs requis.  
   
     2.  Si vous utilisez un fournisseur de données de référence en ligne direct, vous devez ajouter les détails du fournisseur de données de référence direct dans DQS avant de pouvoir l'utiliser.  
   

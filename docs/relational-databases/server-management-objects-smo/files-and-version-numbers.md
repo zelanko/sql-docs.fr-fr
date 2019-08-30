@@ -1,5 +1,5 @@
 ---
-title: Fichiers et numéros de Version | Microsoft Docs
+title: Fichiers et numéros de version | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SMO [SQL Server], versions
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7936eaf327f9df3cb0f3d8545d7bf557ef1471ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098037"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148668"
 ---
 # <a name="files-and-version-numbers"></a>Fichiers et numéros de version
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Requis tous les composants de SQL Server Management Object (SMO) sont inclus dans le package NuGet de Microsoft.SqlServer.SqlManagementObjects. SMO est implémenté dans plusieurs assemblys managés. Vous pouvez développer des applications SMO sur un client ou sur un serveur.  
+  Tous les composants SMO (SQL Server Management Objects) requis sont inclus dans le package NuGet Microsoft. SqlServer. SqlManagementObjects. SMO est implémenté dans plusieurs assemblys managés. Vous pouvez développer des applications SMO sur un client ou sur un serveur.  
 
 > > [!Important]
-> > La version de fichier des assemblys SMO est affichée comme majeures. **0**. Build.Revision. Mais la version d’assembly incorporé est majeure. **100**. Build.Revision. Pour cela, vous permettant de séparer la version de SMO utilisée dans chaque application afin de mises à jour à un n’affecte pas les autres.
+> > La version de fichier des assemblys SMO est affichée comme majeure. **0**. Build. révision. Mais la version de l’assembly incorporé est majeure. **100**. Build. révision. Cette opération permet de conserver la version de SMO utilisée dans chaque application, de sorte que les mises à jour apportées à l’une d’elles n’affectent pas les autres.
 > > 
-> > Pour cette raison, vous devez **pas** installer ces versions des assemblys au Global Assembly Cache (GAC). Cela peut entraîner des autres applications, telles que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, pour arrêter l’exécution. 
+> > Pour cette raison, vous **ne devez pas** installer ces versions des assemblys dans le global assembly cache (GAC). Cela peut entraîner l’arrêt d’autres applications, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] telles que Management Studio. 
   
 |Fichier|Description|  
 |-----------|-----------------|  

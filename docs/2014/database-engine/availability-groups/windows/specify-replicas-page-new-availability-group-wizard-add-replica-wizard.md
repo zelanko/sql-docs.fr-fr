@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 806c8ad1023c10c0176d1608841138a7380a8def
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788340"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154463"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
   Cette rubrique décrit les options de la page **Spécifier les réplicas** . Cette page s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] et à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la page **Spécifier les réplicas** pour spécifier et configurer un ou plusieurs réplicas de disponibilité afin d'ajouter le groupe de disponibilité. Cette page contient quatre onglets, qui sont présentés dans le tableau suivant. Cliquez sur le nom d'un onglet du tableau pour atteindre la section correspondante, plus loin dans cette rubrique.  
@@ -35,26 +35,26 @@ ms.locfileid: "62788340"
  **Instance de serveur**  
  Affiche le nom de l'instance du serveur qui hébergera le réplica de disponibilité.  
   
- Si une instance de serveur que vous utilisez pour héberger un réplica secondaire n'est pas répertoriée par la grille **Réplicas de disponibilité** , cliquez sur le bouton **Ajouter un réplica** . Si vous configurez un groupe de disponibilité dans un environnement hybride (consultez [Haute disponibilité et récupération d’urgence pour SQL Server dans des machines virtuelles Microsoft Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), cliquez sur le bouton **Ajouter un réplica Azure** pour créer des machines virtuelles avec des réplicas secondaires dans Microsoft Azure.  
+ Si une instance de serveur que vous utilisez pour héberger un réplica secondaire n'est pas répertoriée par la grille **Réplicas de disponibilité** , cliquez sur le bouton **Ajouter un réplica** . Si vous configurez un groupe de disponibilité dans un environnement informatique hybride (voir [haute disponibilité et récupération d’urgence pour SQL Server dans les machines virtuelles Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), vous pouvez cliquer sur le bouton **Ajouter un réplica Azure** pour créer des machines virtuelles avec l’option secondaire. réplicas dans Azure.  
   
  **Rôle initial**  
  Indique le rôle que le nouveau réplica jouera initialement : **Principal** ou **Secondaire**.  
   
- **Basculement automatique (jusqu'à 2)**  
+ **Basculement automatique (jusqu’à 2)**  
  Activez cette case à cocher uniquement si vous souhaitez que ce réplica de disponibilité soit un partenaire de basculement automatique. Pour configurer le basculement automatique, vous devez choisir cette option pour le réplica principal initial et pour un réplica secondaire. Les deux réplicas utilisent le mode de disponibilité avec validation synchrone. Seuls deux réplicas peuvent prendre en charge le basculement automatique.  
   
- Pour plus d’informations sur le mode de disponibilité avec validation synchrone, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement automatique, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Pour plus d’informations sur le mode de disponibilité avec validation synchrone, consultez [modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement automatique, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Validation synchrone (jusqu'à 3)**  
  Si vous avez sélectionné **Basculement automatique (jusqu'à 2)** pour le réplica, l'option **Validation asynchrone (jusqu'à 3)** est également sélectionnée. Si la case à cocher est vide, sélectionnez-la uniquement si vous souhaitez que ce réplica utilise le mode de validation synchrone avec le basculement manuel planifié uniquement. Seuls trois réplicas peuvent utiliser le mode de validation synchrone.  
   
- Si vous souhaitez que ce réplica utilise le mode de disponibilité avec validation asynchrone, n'activez pas cette case à cocher. Le réplica ne prendra en charge que le basculement manuel forcé (avec possible perte de données). Pour plus d’informations sur le mode de disponibilité avec validation asynchrone, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement manuel planifié et le basculement manuel forcé, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Si vous souhaitez que ce réplica utilise le mode de disponibilité avec validation asynchrone, n'activez pas cette case à cocher. Le réplica ne prendra en charge que le basculement manuel forcé (avec possible perte de données). Pour plus d’informations sur le mode de disponibilité avec validation asynchrone, consultez [modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement manuel planifié et le basculement manuel forcé, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Rôle secondaire accessible en lecture**  
  Sélectionnez une valeur dans la liste déroulante **Rôle secondaire accessible en lecture** , comme suit :  
   
  **Non**  
- Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s'agit du paramètre par défaut.  
+ Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s’agit du paramètre par défaut.  
   
  **Intention de lecture uniquement**  
  Seules les connexions en lecture seule directes sont autorisées aux bases de données secondaires de ce réplica. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
@@ -66,7 +66,7 @@ ms.locfileid: "62788340"
  Cliquez pour ajouter un réplica secondaire au groupe de disponibilité.  
   
  **Ajouter un réplica Azure**  
- Cliquez pour créer une machine virtuelle Windows Azure qui exécute un réplica secondaire dans le groupe de disponibilité. Cette option s'applique uniquement pour un groupe de disponibilité dans un environnement hybride qui contient des réplicas locaux. Pour plus d'informations, consultez [Haute disponibilité et récupération d'urgence pour SQL Server dans des machines virtuelles Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Cliquez pour créer une machine virtuelle Azure qui exécute un réplica secondaire dans le groupe de disponibilité. Cette option s'applique uniquement pour un groupe de disponibilité dans un environnement hybride qui contient des réplicas locaux. Pour plus d’informations, consultez [haute disponibilité et récupération d’urgence pour SQL Server dans machines virtuelles Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Supprimer le réplica**  
  Cliquez pour supprimer le réplica secondaire sélectionné du groupe de disponibilité.  
@@ -122,7 +122,7 @@ ms.locfileid: "62788340"
  Spécifie que vous préférez que les travaux de sauvegarde ignorent le rôle des réplicas de disponibilité lorsque vous choisissez le réplica pour effectuer les sauvegardes. Notez que les travaux de sauvegarde peuvent évaluer d'autres facteurs tels que la priorité de sauvegarde de chaque réplica de disponibilité en association avec son état opérationnel et son état connecté.  
   
 > [!IMPORTANT]  
->  Il n'y a aucune contrainte du paramètre de préférence de sauvegarde. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Il n'y a aucune contrainte du paramètre de préférence de sauvegarde. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires (](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)groupes de disponibilité AlwaysOn).  
   
 ### <a name="replica-backup-priorities-grid"></a>Grille des priorités de sauvegarde de réplica  
  Utilisez la grille **Priorités de sauvegarde de réplica** pour spécifier les priorités de sauvegarde pour chacun des réplicas du groupe de disponibilité. Cette grille comporte les colonnes suivantes :  
@@ -206,11 +206,11 @@ ms.locfileid: "62788340"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Créer une base de données mise en miroir de point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer un point de terminaison de mise en &#40;miroir de bases de données pour groupes de disponibilité AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble &#40;de groupes de disponibilité AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
- [Conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -5,22 +5,25 @@ description: Cet article fournit des commandes utiles pour la surveillance et [!
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653020"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153632"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Surveillance et résolution des problèmes[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article décrit plusieurs commandes Kubernetes utiles que vous pouvez utiliser pour analyser et dépanner un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Il montre comment visualiser les informations détaillées d’un pod ou d’autres artefacts Kubernetes situés dans le cluster Big Data. Cet article traite également de tâches courantes, comme la copie de fichiers vers ou depuis un conteneur exécutant un des services du cluster Big Data SQL Server.
+
+> [!TIP]
+> Pour l’analyse de l’état des composants Big Data clusters, vous pouvez utiliser les commandes d' [**État azdata BDC**](deployment-guidance.md#status) ou les [blocs-notes de résolution des problèmes](manage-notebooks.md) intégrés fournis avec Azure Data Studio.
 
 > [!TIP]
 > Exécutez les commandes **kubectl** suivantes sur une machine cliente Windows (cmd ou PS) ou Linux (bash). Elles nécessitent une authentification antérieure dans le cluster et un contexte de cluster pour s’exécuter. Par exemple, pour un cluster AKS créé précédemment, vous pouvez exécuter `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` pour télécharger le fichier de configuration de cluster Kubernetes et définir le contexte de cluster.

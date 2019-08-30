@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -30,12 +30,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a82d94e1a2dbf3f2155a93c8a3e8c46383dbde
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872169"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154552"
 ---
 # <a name="database-lifecycle-management"></a>Gestion du cycle de vie de base de données
   La gestion du cycle de vie des bases de données (Database lifecycle management ou DLM) est une approche stratégique de la gestion des bases de données et ressources de données. DLM n'est pas un produit, mais une approche complète de la gestion du schéma, des données et des métadonnées d'une application de base de données. Grâce à l'approche réfléchie et proactive de DLM, une entreprise peut gérer ses ressources de données en fonction des niveaux de performance, de protection, de disponibilité et de coût requis.  
@@ -45,10 +45,10 @@ ms.locfileid: "62872169"
  Pour lire l’intégralité de la rubrique, consultez [Gestion du cycle de vie de la base de données (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page d'accueil de Microsoft Azure](http://www.windowsazure.com/)   
- [Centre de développement Microsoft Azure](http://www.windowsazure.com/develop/overview/)   
- [Centre de gestion Microsoft Azure](http://www.windowsazure.com/manage/overview/)   
- [Blog de l'équipe Windows Azure](http://www.windowsazure.com/community/blog/)   
- [Options de support Microsoft Azure](http://www.windowsazure.com/support/contact/)  
+ [Page d’hébergement Azure](http://www.windowsazure.com/)   
+ [Centre de développement Azure](http://www.windowsazure.com/develop/overview/)   
+ [Centre de gestion Azure](http://www.windowsazure.com/manage/overview/)   
+ [Blog de l’équipe Azure](http://www.windowsazure.com/community/blog/)   
+ [Options de support Azure](http://www.windowsazure.com/support/contact/)  
   
   

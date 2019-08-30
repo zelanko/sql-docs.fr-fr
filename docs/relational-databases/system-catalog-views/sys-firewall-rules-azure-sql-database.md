@@ -1,5 +1,5 @@
 ---
-title: Sys.firewall_rules (Azure SQL Database) | Microsoft Docs
+title: sys. firewall_rules (Azure SQL Database) | Microsoft Docs
 ms.date: 03/26/2019
 ms.prod: sql
 ms.technology: system-objects
@@ -18,17 +18,17 @@ ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2be0d498da026f386c3a89002cca621b19a2a15d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91c3a4101f19afe4a986514fea8dab207c6d9b48
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133985"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155550"
 ---
-# <a name="sysfirewallrules-azure-sql-database"></a>sys_firewall_rules (Azure SQL Database)
+# <a name="sysfirewall_rules-azure-sql-database"></a>sys_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les paramètres de pare-feu au niveau du serveur associé à votre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+  Retourne des informations sur les paramètres de pare-feu au niveau [!INCLUDE[msCoName](../../includes/msconame-md.md)] du serveur associés à votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  La vue `sys.firewall_rules` contient les colonnes suivantes :  
   
@@ -36,26 +36,26 @@ ms.locfileid: "68133985"
 |-----------------|---------------|-----------------|  
 |id|**INT**|Identificateur du paramètre de pare-feu au niveau serveur.|  
 |name|**NVARCHAR(128)**|Le nom que vous avez choisi pour décrire et distinguer le paramètre de pare-feu au niveau serveur.|  
-|start_ip_address|**VARCHAR(45)**|Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`.|  
-|end_ip_address|**VARCHAR(45)**|Adresse IP la plus élevée dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`.<br /><br /> Remarque : Tentatives de connexion de Windows Azure sont autorisées lorsque ce champ et le **start_ip_address** champ equals `0.0.0.0`.|  
-|create_date|**DATE/HEURE**|Date et heure UTC auxquelles le paramètre de pare-feu au niveau serveur a été créé.<br /><br /> Remarque : UTC est l’acronyme de temps universel coordonné.|  
+|start_ip_address|**VARCHAR (45)**|Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`.|  
+|end_ip_address|**VARCHAR (45)**|Adresse IP la plus élevée dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`.<br /><br /> Remarque : Les tentatives de connexion Azure sont autorisées lorsque ce champ et le champ **start_ip_address** sont `0.0.0.0`égaux.|  
+|create_date|**DATE/HEURE**|Date et heure UTC auxquelles le paramètre de pare-feu au niveau serveur a été créé.<br /><br /> Remarque : L’heure UTC est un acronyme de temps universel coordonné.|  
 |modify_date|**DATE/HEURE**|Date et heure UTC auxquelles le paramètre de pare-feu au niveau serveur a été modifié la dernière fois.|  
   
 ## <a name="remarks"></a>Notes
 
- À retourne des informations sur les paramètres de pare-feu au niveau de la base de données associés à votre Microsoft Azure SQL Database, utilisez [sys.database_firewall_rules &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
+ Pour renvoyer des informations sur les paramètres de pare-feu au niveau de la base de données associés à votre Microsoft Azure SQL Database, utilisez [sys. database_firewall_rules &#40;&#41;Azure SQL Database](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   
 ## <a name="permissions"></a>Autorisations
 
- Accès en lecture seule à cette vue est disponible pour tous les utilisateurs autorisés à se connecter à la **master** base de données.  
+ L’accès en lecture seule à cette vue est disponible pour tous les utilisateurs autorisés à se connecter à la base de données **Master** .  
   
 ## <a name="see-also"></a>Voir aussi
 
 [sp_set_firewall_rule &#40;Base de données Azure SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
-[sp_delete_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
+[sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
 [sp_set_database_firewall_rule &#40;Base de données Azure SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
-[sp_delete_database_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
-[Sys.database_firewall_rules &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
-[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     
+[sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
+[sys. database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+[Configurer un pare-feu Windows pour l’accès Moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     
 [Configurer un pare-feu pour l’accès FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
 [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 

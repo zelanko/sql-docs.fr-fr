@@ -10,12 +10,12 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d7ab8fee8dfb9aabd32922d297f61ae493a5bd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d96dd4d1daadd829c89e142738008b93f4ec9b3b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480916"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154500"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
   Cette rubrique décrit comment nettoyer les données à l'aide de la connaissance des fournisseurs de données de référence. Toutes les étapes d’exécution du nettoyage restent les mêmes pour nettoyer vos données à l’aide de la connaissance des fournisseurs de données de référence, comme expliqué dans [Nettoyer des données à l’aide de la base de connaissance DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Cette rubrique fournit des informations spécifiques sur le nettoyage des données à l’aide du service des données de référence dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -33,7 +33,7 @@ ms.locfileid: "65480916"
 -   Selon les valeurs **Seuil de correction automatique** et **Confiance minimale** spécifiées pendant le mappage des domaines avec le service de données de référence, les valeurs du domaine sont automatiquement corrigées or suggérées en fonction du niveau de confiance.  
   
     > [!NOTE]  
-    >  Les valeurs de seuil que vous spécifiez pendant le mappage d'un domaine à un service de données de référence sont appliquées tout en nettoyant les données à l'aide de la connaissance du service des données de référence, et non celles spécifiées dans l'onglet **Paramètres généraux** de la section **Configuration** . Pour plus d’informations sur la spécification des valeurs de seuil pour le nettoyage des données de référence, consultez l’étape 9 dans [joindre un domaine ou un domaine Composite aux données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+    >  Les valeurs de seuil que vous spécifiez pendant le mappage d'un domaine à un service de données de référence sont appliquées tout en nettoyant les données à l'aide de la connaissance du service des données de référence, et non celles spécifiées dans l'onglet **Paramètres généraux** de la section **Configuration** . Pour plus d’informations sur la spécification des valeurs de seuil pour le nettoyage des données de référence, consultez l’étape 9 dans [attacher un domaine ou un domaine composite à des données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 -   Les valeurs de domaine sont classées dans les catégories suivantes : **Suggérés**, **Nouveau**, **Non valide**, **Corrigés** et **Correct**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65480916"
 ## <a name="before-you-begin"></a>Avant de commencer  
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
- Vous devez avoir mappé les domaines obligatoires d'une base de connaissances DQS au service de données de référence approprié. En outre, la base de connaissances doit contenir la connaissance sur le type de données que vous souhaitez nettoyer. Par exemple, si vous souhaitez nettoyer les données sources qui contiennent des adresses américaines, vous devez mapper les domaines à un fournisseur de services de données de référence qui propose des données de haute qualité pour les adresses américaines. Pour plus d’informations, consultez [joindre un domaine ou un domaine Composite aux données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Vous devez avoir mappé les domaines obligatoires d'une base de connaissances DQS au service de données de référence approprié. En outre, la base de connaissances doit contenir la connaissance sur le type de données que vous souhaitez nettoyer. Par exemple, si vous souhaitez nettoyer les données sources qui contiennent des adresses américaines, vous devez mapper les domaines à un fournisseur de services de données de référence qui propose des données de haute qualité pour les adresses américaines. Pour plus d’informations, consultez [attacher un domaine ou un domaine composite à des données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -50,11 +50,11 @@ ms.locfileid: "65480916"
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour effectuer le nettoyage des données.  
   
 ##  <a name="Cleanse"></a> Nettoyer les données à l'aide de la connaissance des données de référence  
- Nous poursuivrons avec le même exemple d’utilisation des domaines mappés dans la rubrique précédente, [joindre un domaine ou un domaine Composite aux données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), avec le service de Melissa Data dans Windows Azure Marketplace. Maintenant, nous utiliserons les mêmes domaines pour nettoyer certains exemples d'adresses américaines. Les étapes du nettoyage des données sont les mêmes que celles décrites dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Toutefois, nous attirerons votre attention chaque fois que nécessaire pendant le processus.  
+ Nous allons continuer avec le même exemple d’utilisation des domaines que nous avons mappés dans la rubrique précédente, [attacher un domaine ou un domaine composite à des données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), avec le service de données Melissa dans la place de marché Azure. Maintenant, nous utiliserons les mêmes domaines pour nettoyer certains exemples d'adresses américaines. Les étapes du nettoyage des données sont les mêmes que celles décrites dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Toutefois, nous attirerons votre attention chaque fois que nécessaire pendant le processus.  
   
 1.  Créez un projet de qualité des données, puis sélectionnez l'activité **Nettoyage** . Consultez [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).  
   
-2.  Dans la page **Mapper**, mappez les 4 domaines suivants avec les colonnes appropriées de vos données sources : **Ligne d’adresse**, **Ville**, **État** et **Code postal**. Cliquer sur **Suivant**.  
+2.  Dans la page **Mapper**, mappez les 4 domaines suivants avec les colonnes appropriées de vos données sources : **Ligne d’adresse**, **Ville**, **État** et **Code postal**. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
     >  Lorsque vous avez mappé les 4 domaines du domaine composite de **Contrôle d'adresse** , le nettoyage des données sera effectué au niveau du domaine composite, et non au niveau du domaine individuel.  
@@ -71,13 +71,13 @@ ms.locfileid: "65480916"
   
      **Valeur d’origine :**  
   
-    |Adresse|Ville|État|Code postal|  
+    |Adresse|City|État|Code postal|  
     |------------------|----------|-----------|---------|  
     |1 MSFT way|Redmond||98052|  
   
      **Valeurs suggérées :**  
   
-    |Adresse|Ville|État|Code postal|  
+    |Adresse|City|État|Code postal|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO Box 1|Redmond|WA|98073|  

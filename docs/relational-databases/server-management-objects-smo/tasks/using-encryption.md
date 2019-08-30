@@ -1,5 +1,5 @@
 ---
-title: À l’aide du chiffrement | Microsoft Docs
+title: Utilisation du chiffrement | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - certificates [SMO]
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9c08c7eaeb6d29a9c9fe5c3fc7ea42fd55025f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030061"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148316"
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68030061"
  Dans SMO, les certificats sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate>. L'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate> a des propriétés qui spécifient la clé publique, le nom du sujet, la période de validité et les informations sur l'émetteur. L'autorisation d'accès au certificat est contrôlée en utilisant les méthodes **Grant**, **Revoke** et **Deny** .  
   
 ## <a name="example"></a>Exemple  
- Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Ajout d'un certificat en Visual C#  
  L'exemple de code crée un certificat simple avec un mot de passe de chiffrement. Contrairement à d'autres objets, la méthode <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> a plusieurs surcharges. La surcharge utilisée dans l'exemple crée un certificat avec un mot de passe de chiffrement.  
@@ -94,6 +94,6 @@ $c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide de clés de chiffrement](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
+ [Utilisation des clés de chiffrement](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

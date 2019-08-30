@@ -5,27 +5,39 @@ description: Cet article décrit les dernières mises à jour et les problèmes 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653437"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160695"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters Big Data sur SQL Server
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>Notes de publication pour les clusters Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article répertorie les mises à jour et les problèmes connus pour les versions les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]plus récentes de.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>Version Release Candidate (août)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+Les sections suivantes décrivent les nouvelles fonctionnalités et les problèmes connus pour les clusters Big Data dans SQL Server version Release candidate 2019.
+
+### <a name="whats-new"></a>What's New
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|SQL Server Always On groupe de disponibilité |Lorsque vous déployez un cluster SQL Server Big Data, vous pouvez configurer le déploiement pour créer un groupe de disponibilité à fournir:<br/><br/>-Haute disponibilité <br/><br/>-Lecture-montée en puissance parallèle <br/><br/>-Insertion de données avec montée en puissance parallèle dans le pool de données<br/><br>Consultez [déployer avec une haute disponibilité](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Installation simplifiée de l’outil avec le [Gestionnaire d’installation](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`commande](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`commande](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Téléchargez la version Release candidate de Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Ajout de bloc-notes pour la résolution des problèmes via 2019 SQL Server livre Jupyter guide.<br/><br/>Expérience de connexion du contrôleur ajoutée.<br/><br/>Ajout d’un tableau de bord de contrôleur pour afficher les points de terminaison de service, afficher l’état d’intégrité du cluster et accéder aux blocs-notes de dépannage.<br/><br/>Amélioration des performances de sortie/modification des cellules du bloc-notes.|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problèmes connus
+
+Le numéro de build de l’actualisation des clusters de Big `15.0.1900.47`Data SQL Server 2019 est.
 
 ## <a id="ctp32"></a> CTP 3.2 (juillet)
 
@@ -48,13 +60,13 @@ Les sections suivantes décrivent les problèmes connus et les limitations de ce
 
 #### <a name="polybase"></a>PolyBase
 
-- Un push vers le bas de la clause TOP lorsque le nombre est supérieur à 1 000 n’est pas pris en charge dans cette version. Dans ce cas, toutes les lignes sont lues à partir de la source de données distante.
+- Un push vers le bas de la clause TOP lorsque le nombre est supérieur à 1 000 n’est pas pris en charge dans cette version. Dans ce cas, toutes les lignes sont lues à partir de la source de données distante. (Résolu dans la version Release Candidate)
 
 - Un push vers le bas de jointures colocalisées vers des sources de données externes n’est pas pris en charge dans cette version. Par exemple, le push vers le bas de deux tables de pool de données de type de distribution ROUND_ROBIN permet d’envoyer les données à une instance SQL Master ou à une instance de pool de calcul pour effectuer l’opération de jointure.
 
 #### <a name="compute-pool"></a>Pool de calcul
 
-- Le déploiement de cluster Big Data ne prend en charge que le pool de calcul avec une seule instance.
+- Le déploiement de cluster Big Data ne prend en charge que le pool de calcul avec une seule instance. (Résolu dans la version Release Candidate)
 
 #### <a name="storage-pool"></a>Pool de stockage
 

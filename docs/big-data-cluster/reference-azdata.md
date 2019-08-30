@@ -5,33 +5,33 @@ description: Article de référence sur les commandes azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653096"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155128"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
-L’article suivant fournit des informations de référence sur l’outil **azdata** pour [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (version préliminaire)](big-data-cluster-overview.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | Commandes permettant d’afficher, d’exécuter et de gérer des notebooks à partir d’un terminal. |
+|[azdata sql](reference-azdata-sql.md) | L’interface CLI SQL DB permet à l’utilisateur d’interagir avec SQL Server via T-SQL. |
 |[azdata app](reference-azdata-app.md) | Créer, supprimer, exécuter et gérer des applications. |
 |[azdata bdc](reference-azdata-bdc.md) | Sélectionner, gérer et utiliser des clusters Big Data SQL Server. |
-|[azdata login](#azdata-login) | Se connecter au point de terminaison du contrôleur du cluster.
-|[azdata logout](#azdata-logout) | Se déconnecter du cluster.
-
+|[contrôle azdata](reference-azdata-control.md) | Créer, supprimer et gérer des plans de contrôle. |
+[azdata login](#azdata-login) | Se connecter au point de terminaison du contrôleur du cluster.
+[azdata logout](#azdata-logout) | Se déconnecter du cluster.
 ## <a name="azdata-login"></a>azdata login
-Lorsque votre cluster est déployé, il répertorie le point de terminaison de contrôleur lors du déploiement, que vous devez utiliser pour vous connecter.  Si vous ne connaissez pas le point de terminaison du contrôleur, vous pouvez vous connecter en faisant en sorte que la configuration Kube de votre cluster se <user home>trouve à l’emplacement par défaut/.Kube/config ou utiliser la variable KUBECONFIG env, à savoir Export KUBECONFIG = Path/to/. Kube/config.
+Quand votre cluster est déployé, il indique le point de terminaison du contrôleur lors du déploiement, que vous devez utiliser pour vous connecter.  Si vous ne connaissez pas le point de terminaison du contrôleur, vous pouvez vous connecter en faisant en sorte que la configuration Kube de votre cluster se trouve sur votre système dans l’emplacement par défaut <user home>/.kube/config ou en utilisant la variable d’environnement KUBECONFIG, par exemple exportez KUBECONFIG=path/to/.kube/configg.
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -43,7 +43,7 @@ Se connecter de façon interactive. Le nom du cluster est toujours demandé s’
 ```bash
 azdata login
 ```
-Se connecter (de façon non interactive). Connectez-vous avec le nom du cluster, le nom d’utilisateur du contrôleur, le point de terminaison du contrôleur et l’acceptation du CLUF définis comme arguments. La variable d’environnement CONTROLLER_PASSWORD doit être définie.  Si vous ne souhaitez pas spécifier le point de <user home>terminaison du contrôleur, faites de la configuration Kube sur votre ordinateur à l’emplacement par défaut/.Kube/config ou utilisez la variable KUBECONFIG env, c’est-à-dire Export KUBECONFIG = Path/to/. Kube/config.
+Se connecter (de façon non interactive). Connectez-vous avec le nom du cluster, le nom d’utilisateur du contrôleur, le point de terminaison du contrôleur et l’acceptation du CLUF définis comme arguments. La variable d’environnement CONTROLLER_PASSWORD doit être définie.  Si vous ne voulez pas spécifier le point de terminaison du contrôleur, placez la configuration Kube sur votre machine dans l’emplacement par défaut <user home>/.kube/config ou utilisez la variable d’environnement KUBECONFIG, par exemple exportez KUBECONFIG=path/to/.kube/configg.
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -57,9 +57,9 @@ Nom du cluster.
 #### `--controller-username -u`
 Utilisateur du compte. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement CONTROLLER_USERNAME.
 #### `--controller-endpoint -e`
-Point de terminaison du contrôleur du cluster « https://host:port  ». Si vous ne voulez pas utiliser cet argument, vous pouvez utiliser la configuration Kube sur votre machine. Vérifiez que la configuration se trouve à l’emplacement par <user home>défaut de/.Kube/config ou utilisez la variable KUBECONFIG env var.
+Point de terminaison du contrôleur du cluster « https://host:port  ». Si vous ne voulez pas utiliser cet argument, vous pouvez utiliser la configuration Kube sur votre machine. Vérifiez que la configuration se trouve à l’emplacement par défaut <user home>/.kube/config ou utilisez la variable d’environnement KUBECONFIG.
 #### `--accept-eula -a`
-Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». 
+Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://aka.ms/azdata-eula.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -68,9 +68,9 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour plus d’informations, [http://jmespath.org/](http://jmespath.org/]) consultez pour plus d’informations et d’exemples.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-logout"></a>azdata logout
 Se déconnecter du cluster.
 ```bash
@@ -89,10 +89,10 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requête JMESPath. Pour plus d’informations, [http://jmespath.org/](http://jmespath.org/]) consultez pour plus d’informations et d’exemples.
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).
+- Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

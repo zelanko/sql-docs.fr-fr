@@ -13,12 +13,12 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4ca791a1a0ce46929f4d409d234f8dbc7efdec3
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794864"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155383"
 ---
 # <a name="host-database-on-managed-instance"></a>Base de données hôte sur une instance gérée
 
@@ -108,7 +108,7 @@ Cette opération installe [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
 
 **Configuration de la base de données et du site Web**
 
-1. Connectez le réseau virtuel Windows Azure pour vous assurer que vous pouvez vous connecter à l’instance gérée.
+1. Connectez le réseau virtuel Azure pour vous assurer que vous pouvez vous connecter à l’instance gérée.
 
     ![MDS-SQLServer2019-config-mi-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")  
 

@@ -12,23 +12,23 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245499"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153751"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
   Utilisez cet onglet pour afficher ou spécifier les options de connexion à une dansstance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou d’dansscription du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** ne s’affichent dans cette boîte de dialogue que quand vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="options"></a>Options  
  **Se connecter à la base de données**  
- Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<par défaut >** , vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<parcourir le serveur >** , vous pouvez parcourir le serveur pour la base de données à laquelle se connecter.  
+ Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<> par défaut**, vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<parcourir le > serveur**, vous pouvez rechercher dans le serveur la base de données à laquelle se connecter.  
   
  Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
- Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous ne verrez que la base de données et ses objets dans l'Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez consulter toutes les bases de données. Pour plus d’informations, consultez [Présentation de la base de données SQL Azure Windows](/azure/sql-database/sql-database-technical-overview).  
+ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous ne verrez que la base de données et ses objets dans l'Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez consulter toutes les bases de données. Pour plus d’informations, consultez la [vue d’ensemble de Azure SQL Database](/azure/sql-database/sql-database-technical-overview).  
   
  **Protocole réseau**  
  Sélectionnez un protocole dans la liste. Les protocoles client disponibles sont ceux que vous avez configurés à l'aide de la configuration du réseau client dans Gestion de l'ordinateur.  

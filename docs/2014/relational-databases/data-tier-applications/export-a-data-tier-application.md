@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4db43d34960de38343db3552cd83ea1147ffdf2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918038"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154633"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
   L'exportation d'une application de la couche Données (DAC) déployée ou d'une base de données crée un fichier d'exportation qui inclut les définitions des objets de la base de données et toutes les données contenues dans les tables. Le fichier d'exportation peut ensuite être importé dans une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC entre différentes instances, pour créer une sauvegarde logique ou pour créer une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -93,7 +93,7 @@ ms.locfileid: "62918038"
   
 -   **Enregistrer sur le disque local** - Crée un fichier de BACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
--   **Enregistrer dans Windows Azure** - Crée un fichier BACPAC dans un conteneur Windows Azure. Vous devez vous connecter à un conteneur Windows Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
+-   **Enregistrer dans Azure** -crée un fichier baBACPAC dans un conteneur Azure. Vous devez vous connecter à un conteneur Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
   
  Pour spécifier un sous-ensemble de tables à exporter, utilisez l'option **Avancé** .  
   

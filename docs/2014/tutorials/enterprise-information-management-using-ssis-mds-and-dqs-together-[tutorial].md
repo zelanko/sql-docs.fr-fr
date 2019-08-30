@@ -1,5 +1,5 @@
 ---
-title: Enterprise Information Management à l’aide de SSIS, MDS et DQS conjointement [didacticiel] | Microsoft Docs
+title: Gestion des informations d’entreprise à l’aide de SSIS, MDS et DQS [Tutoriel] | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47bb74bf5fd35696481a88c4ccc30a8733f257a2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66429035"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153562"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gestion des informations d'entreprise en associant SSIS, MDS et DQS [Didacticiel]
   La gestion des informations dans une entreprise implique généralement l'intégration des données au sein de l'entreprise et avec l'extérieur, le nettoyage des données, leur correspondance pour supprimer tous les doublons, leur normalisation, leur enrichissement, rendre les données conformes aux exigences juridiques et de conformité, et enfin, le stockage des données dans un emplacement centralisé avec tous les paramètres de sécurité nécessaires.  
@@ -28,15 +28,15 @@ ms.locfileid: "66429035"
   
 -   SQL Server Master Data Services  
   
- SQL Server Integration Services (SSIS) fournit une plateforme puissante et souple pour intégrer les données provenant de différentes sources dans une solution d'extraction, de transformation et de chargement (ETL) complète qui prend en charge les flux de travail d'entreprise, un entrepôt de données, ou la gestion des données de référence. Consultez [présentation d’Integration Services](https://msdn.microsoft.com/library/ms141263\(SQL.105\).aspx) rubrique pour une présentation rapide et classique utilise de SSIS.  
+ SQL Server Integration Services (SSIS) fournit une plateforme puissante et souple pour intégrer les données provenant de différentes sources dans une solution d'extraction, de transformation et de chargement (ETL) complète qui prend en charge les flux de travail d'entreprise, un entrepôt de données, ou la gestion des données de référence. Consultez [Integration Services rubrique vue d’ensemble](https://msdn.microsoft.com/library/ms141263\(SQL.105\).aspx) pour obtenir une vue d’ensemble rapide et des utilisations courantes de SSIS.  
   
- SQL Server Data Quality Services (DQS) permet de nettoyer, faire correspondre, normaliser et enrichir les données, afin de disposer d'informations approuvées pour le décisionnel, d'un entrepôt de données et de charges de traitement transactionnel. Consultez [présentation de Data Quality Services](https://msdn.microsoft.com/library/ff877917.aspx) rubrique pour les besoins de l’entreprise pour DQS et la manière dont DQS répond à la nécessité.  
+ SQL Server Data Quality Services (DQS) permet de nettoyer, faire correspondre, normaliser et enrichir les données, afin de disposer d'informations approuvées pour le décisionnel, d'un entrepôt de données et de charges de traitement transactionnel. Consultez Présentation de la rubrique [Data Quality Services](https://msdn.microsoft.com/library/ff877917.aspx) pour connaître les besoins de l’entreprise pour DQS et comment DQS répond à ce besoin.  
   
- SQL Server Master Data Services (MDS) est un concentrateur de données central qui garantit l'intégrité des informations et la cohérence des données entre différentes applications. Consultez [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md) rubrique pour une brève description des fonctionnalités importantes de MDS.  
+ SQL Server Master Data Services (MDS) est un concentrateur de données central qui garantit l'intégrité des informations et la cohérence des données entre différentes applications. Consultez [Master Data Services rubrique vue d’ensemble](../master-data-services/master-data-services-overview-mds.md) pour obtenir une brève description des fonctionnalités importantes de MDS.  
   
- Consultez [nettoyage et la mise en correspondance des données de référence en utilisant les Technologies EIM](https://msdn.microsoft.com/library/hh403491.aspx) livres blancs pour obtenir une aide complète sur l’implémentation d’une solution EIM à l’aide de ces technologies Microsoft EIM ensemble et un espion [Enterprise Gestion des informations (EIM) : Associer SSIS, DQS et MDS](https://go.microsoft.com/fwlink/?LinkId=258672) vidéo pour un exemple d’un scénario EIM.  
+ Pour obtenir une aide complète sur l’implémentation d’une solution EIM à l’aide de ces technologies Microsoft EIM et regarder [la gestion des informations d’entreprise (EIM), consultez nettoyage et mise en correspondance des [données de référence à l’aide](https://msdn.microsoft.com/library/hh403491.aspx) de la technologie EIM. : Regroupez SSIS, DQS et MDS](https://go.microsoft.com/fwlink/?LinkId=258672) Video pour une démonstration pratique d’un scénario EIM.  
   
- Dans ce didacticiel, vous allez apprendre à utiliser SSIS, MDS et DQS conjointement pour implémenter un exemple de solution de gestion des informations d'entreprise (EIM). Vous utiliserez d'abord DQS pour créer une base de connaissances contenant les connaissances relatives aux données (métadonnées), puis vous allez nettoyer les données dans un fichier Excel à l'aide de la base de connaissances, et enfin, vous allez faire correspondre les données pour identifier et supprimer les doublons. Ensuite, vous utiliserez le complément MDS pour Excel pour télécharger les données nettoyées et mises en correspondance dans MDS. Enfin, vous automatiserez l'ensemble du processus en utilisant une solution SSIS. La solution SSIS décrite dans ce didacticiel lit les données d'entrée à partir d'un fichier Excel, mais vous pouvez l'étendre pour lire d'autres sources telles que Oracle, Teradata, DB2 et Microsoft Azure SQL Database.  
+ Dans ce didacticiel, vous allez apprendre à utiliser SSIS, MDS et DQS conjointement pour implémenter un exemple de solution de gestion des informations d'entreprise (EIM). Vous utiliserez d'abord DQS pour créer une base de connaissances contenant les connaissances relatives aux données (métadonnées), puis vous allez nettoyer les données dans un fichier Excel à l'aide de la base de connaissances, et enfin, vous allez faire correspondre les données pour identifier et supprimer les doublons. Ensuite, vous utiliserez le complément MDS pour Excel pour télécharger les données nettoyées et mises en correspondance dans MDS. Enfin, vous automatiserez l'ensemble du processus en utilisant une solution SSIS. La solution SSIS dans ce didacticiel lit les données d’entrée à partir d’un fichier Excel, mais vous pouvez l’étendre pour lire à partir de diverses sources telles que Oracle, Teradata, DB2 et Azure SQL Database.  
   
 ## <a name="prerequisites"></a>Prérequis  
   
@@ -50,39 +50,39 @@ ms.locfileid: "66429035"
   
     4.  SQL Server Data Tools  
   
-         Consultez [Guide d’Installation de SQL Server 2012](../database-engine/install-windows/installation-for-sql-server.md) pour plus d’informations sur l’installation du produit.  
+         Pour plus d’informations sur l’installation du produit, consultez le [Guide d’installation de SQL Server 2012](../database-engine/install-windows/installation-for-sql-server.md) .  
   
-2.  [Configurer MDS à l’aide du Gestionnaire de Configuration de Master Data Services](https://msdn.microsoft.com/library/ee633884.aspx)  
+2.  [Configurer MDS à l’aide de Gestionnaire de configuration Master Data Services](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Utilisez le Gestionnaire de configuration pour créer et configurer une base de données Master Data Services. Après avoir créé la base de données MDS, créez une application web pour MDS dans un site web (par exemple : [ http://localhost/MDS ](http://localhost/MDS)) et associer la base de données MDS à l’application web MDS. Notez que, pour créer une application Web MDS, vous devez installer IIS sur votre ordinateur. Consultez [configuration requise pour Application Web (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) et [configuration requise (Master Data Services) de la base de données](https://msdn.microsoft.com/library/ee633767.aspx) pour plus d’informations sur la configuration requise pour la configuration d’application de base de données et web MDS.  
+     Utilisez le Gestionnaire de configuration pour créer et configurer une base de données Master Data Services. Après avoir créé la base de données MDS, créez une application Web pour MDS dans un site Web (par [http://localhost/MDS](http://localhost/MDS)exemple:) et associez la base de données MDS à l’application Web MDS. Notez que, pour créer une application Web MDS, vous devez installer IIS sur votre ordinateur. Pour plus d’informations sur les conditions préalables à la configuration de la base de données MDS et de l’application Web, consultez Configuration requise pour l' [application Web (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) et [base de données (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) .  
   
-3.  [Installer et configurer DQS à l’aide de Data Quality Server Installer](https://msdn.microsoft.com/library/hh231682.aspx). Cliquez sur **Démarrer**, cliquez sur **tous les programmes**, cliquez sur **Microsoft SQL Server 2014**, cliquez sur **Data Quality Services**, puis cliquez sur **Data Quality Server Installer**.  
+3.  [Installez et configurez DQS à l’aide du programme d’installation de Data Quality Server](https://msdn.microsoft.com/library/hh231682.aspx). Cliquez **sur Démarrer**, **sur tous les programmes**, sur **Microsoft SQL Server 2014**, sur **Data Quality Services**, puis sur **Data Quality Server installer**.  
   
 4.  Microsoft Excel 2010 (32 bits) est préférable.  
   
-5.  Installer **complément Master Data Services pour Excel** (32 bits ou 64 bits basé sur la version d’Excel que vous avez sur votre ordinateur) à partir de [ici](https://www.microsoft.com/download/details.aspx?id=29064). Pour rechercher la version d’Excel installée sur votre ordinateur, exécutez **Excel**, cliquez sur **fichier** sur la barre de menus, cliquez sur **aide** pour afficher la version dans le volet droit. Notez que vous devez installer Visual Studio 2010 Tools pour Office Runtime avant d’installer la macro complémentaire Excel.  
+5.  Installez **complément Master Data Services pour Excel** (32 bits ou 64 bits en fonction de la version d’Excel que vous avez sur votre ordinateur) [ici](https://www.microsoft.com/download/details.aspx?id=29064). Pour trouver la version d’Excel installée sur votre ordinateur, exécutez **Excel**, cliquez sur **fichier** dans la barre de menus et cliquez sur **aide** pour afficher la version dans le volet droit. Notez que vous devez installer Visual Studio 2010 Tools pour Office Runtime avant d’installer le complément Excel.  
   
-6.  (Facultatif) Créez un compte avec [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Une des tâches dans le didacticiel, vous devez avoir un **place de marché Azure** (à l’origine nommé **Data Market**) compte. Vous pouvez ignorer cette tâche, si vous préférez, et passer à la tâche suivante.  
+6.  Facultatif Créez un compte avec la place de [marché Azure](https://azuremarketplace.microsoft.com/marketplace/). L’une des tâches du didacticiel nécessite que vous disposiez d’un compte **Azure Marketplace** (nommé à l’origine **Data Market**). Vous pouvez ignorer cette tâche, si vous préférez, et passer à la tâche suivante.  
   
-7.  Téléchargez le fichier Suppliers.xls à partir de [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426).  
+7.  Téléchargez le fichier Suppliers. xls à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=50426).  
   
-8.  DQS ne vous permet pas exporter le nettoyage ou la mise en correspondance les résultats vers un fichier Excel si vous utilisez **version 64 bits d’Excel**. Il s'agit d'un problème connu. Pour le contourner, procédez comme suit :  
+8.  DQS ne vous permet pas d’exporter les résultats de nettoyage ou de correspondance dans un fichier Excel si vous utilisez la **version 64 bits d’Excel**. Il s'agit d'un problème connu. Pour le contourner, procédez comme suit :  
   
-    1.  Exécutez **DQLInstaller.exe-mise à niveau**. Si vous avez installé l'instance par défaut de SQL Server, le fichier DQSInstaller.exe est copié sous C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Double-cliquez sur le fichier DQSInstaller.exe.  
+    1.  Exécutez **DQLInstaller. exe-Upgrade**. Si vous avez installé l'instance par défaut de SQL Server, le fichier DQSInstaller.exe est copié sous C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Double-cliquez sur le fichier DQSInstaller.exe.  
   
-    2.  Dans **Gestionnaire de Configuration de Master Data Services**, cliquez sur **sélectionner la base de données**, sélectionnez existant **MDS** de base de données, puis cliquez sur **mise à niveau**.  
+    2.  Dans **Gestionnaire de configuration Master Data Services**, cliquez sur **Sélectionner une base de**données, sélectionnez base de données **MDS** existante, puis cliquez sur **mettre à niveau**.  
   
 ## <a name="lessons"></a>Leçons  
   
 |Leçon|Brève description|Durée estimée (en minutes).|  
 |------------|-----------------------|------------------------------------------------|  
-|[Leçon 1 : Création de la Base de connaissances DQS nommée fournisseurs](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|Dans cette leçon, vous créez une base de connaissances DQS nommée **fournisseurs**.|60|  
-|[Leçon 2 : Nettoyage des données des fournisseurs à l’aide de la Base de connaissances fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|Dans cette leçon, vous créez et exécutez un projet DQS pour nettoyer les données des fournisseurs dans un fichier Excel à l’aide de la **fournisseurs** vous avez créé dans la première leçon de Base de connaissances.|45|  
-|[Leçon 3 : Correspondance des données pour supprimer les doublons de la liste des fournisseurs](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|Dans cette leçon, vous allez créer un projet DQS pour effectuer une activité de correspondance et identifier et supprimer les doublons de la liste des fournisseurs nettoyée.|45|  
-|[Leçon 4 : Stockage des données des fournisseurs dans MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|Dans cette leçon, vous chargez les données des fournisseurs nettoyées et mises en correspondance à Master Data Services (MDS) à l’aide de la **complément MDS pour Excel**.|45|  
-|[Leçon 5 : Automatisation du nettoyage et la mise en correspondance avec SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|Dans cette leçon, vous allez créer une solution SSIS qui nettoie les données d'entrée à l'aide de DQS, fait correspondre les données nettoyées pour supprimer les doublons, et stocke dans MDS les données nettoyées et mises en correspondance de manière automatisée.|75|  
+|[Leçon 1 : Création de la base de connaissances DQS des fournisseurs](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|Dans cette leçon, vous allez créer une base de connaissancesDQS nommée Suppliers.|60|  
+|[Leçon 2 : Nettoyage des données des fournisseurs à l’aide de la base de connaissances fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|Dans cette leçon, vous allez créer et exécuter un projet DQS pour nettoyer les données des fournisseurs dans un fichier Excel à l’aide de la base de connaissances **fournisseurs** que vous avez créée dans la première leçon.|45|  
+|[Leçon 3 : Données correspondantes pour supprimer les doublons de la liste des fournisseurs](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|Dans cette leçon, vous allez créer un projet DQS pour effectuer une activité de correspondance et identifier et supprimer les doublons de la liste des fournisseurs nettoyée.|45|  
+|[Leçon 4 : Stockage des données des fournisseurs dans MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|Dans cette leçon, vous chargez les données des fournisseurs nettoyés et mis en correspondance dans Master Data Services (MDS) à l’aide de la **complément MDS pour Excel**.|45|  
+|[Leçon 5 : Automatisation du nettoyage et de la correspondance à l’aide de SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|Dans cette leçon, vous allez créer une solution SSIS qui nettoie les données d'entrée à l'aide de DQS, fait correspondre les données nettoyées pour supprimer les doublons, et stocke dans MDS les données nettoyées et mises en correspondance de manière automatisée.|75|  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Création de la Base de connaissances DQS nommée fournisseurs](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
+ Pour commencer le didacticiel, passez à la première leçon: [Leçon 1 : Création de la base](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)de connaissances DQS des fournisseurs.  
   
   

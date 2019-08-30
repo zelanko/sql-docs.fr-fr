@@ -1,5 +1,5 @@
 ---
-title: Sauvegarde et restauration des bases de données et journaux de transactions | Microsoft Docs
+title: Sauvegarde et restauration des bases de données et des journaux de transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9480cf6bb80b73804046f8e8101567d1af26129f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b721a57d25a1187d924e8cf66b23a2f5c2b4daaa
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092812"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148548"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sauvegarde et restauration de bases de données et de journaux de transactions
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dans SMO, la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> et la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sont des classes utilitaires qui fournissent les outils permettant d'accomplir les tâches spécifiques de sauvegarde et restauration. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objet représente une tâche de sauvegarde spécifique qui est nécessaire à la place d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet sur l’instance de serveur.  
+  Dans SMO, la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> et la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sont des classes utilitaires qui fournissent les outils permettant d'accomplir les tâches spécifiques de sauvegarde et restauration. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objet représente une tâche de sauvegarde spécifique qui est requise au lieu [!INCLUDE[msCoName](../../../includes/msconame-md.md)] d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet sur l’instance de serveur.  
   
  En cas de perte ou d'endommagement des données, la sauvegarde doit être restaurée, en totalité ou partiellement. La restauration partielle utilise la collection <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> pour segmenter les données à restaurer. Si la sauvegarde concerne un journal des transactions, les données peuvent être restaurées jusqu'à un point particulier dans le temps à l'aide de la propriété <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Restore>. Les données peuvent également être validées à l'aide de la méthode <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. La procédure de sauvegarde recommandée consiste à vérifier l'intégrité de la sauvegarde en effectuant une opération de restauration et en vérifiant régulièrement les données de la base de données.  
   
- Comme le <xref:Microsoft.SqlServer.Management.Smo.Backup> objet, le <xref:Microsoft.SqlServer.Management.Smo.Restore> objet n’a pas besoin être créé à l’aide un **créer** (méthode), car il ne représente pas de n’importe quel objet sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'objet <xref:Microsoft.SqlServer.Management.Smo.Restore> est constitué des méthodes et propriétés utilisées pour restaurer une base de données.  
+ À l' <xref:Microsoft.SqlServer.Management.Smo.Backup> instar de <xref:Microsoft.SqlServer.Management.Smo.Restore> l’objet, l’objet n’a pas besoin d' être créé à l’aide d’une méthode Create, car il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ne représente aucun objet sur l’instance de. L'objet <xref:Microsoft.SqlServer.Management.Smo.Restore> est constitué des méthodes et propriétés utilisées pour restaurer une base de données.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Sauvegarde des bases de données et des journaux des transactions en Visual Basic  
  Cet exemple de code montre comment sauvegarder une base de données existante dans un fichier, puis comment la restaurer.  

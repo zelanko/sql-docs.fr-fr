@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1a99c36f8e0e26210b7f9fd7d6c7687be0d0e5e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3341bf25e43f73143fa1dd0e66add9f4b86c22bb
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119358"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155526"
 ---
-# <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
+# <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Effectue une validation pour l'abonnement spécifié. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
@@ -40,14 +40,14 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication=** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+ **[\@publication =** ] **'***publication***'**  
+ Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. Subscriber est de **type sysname**, sans valeur par défaut.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *bd_abonné* est **sysname**, sans valeur par défaut.  
+`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @level = ] level` Est le type de validation à effectuer. *niveau* est **tinyint**, sans valeur par défaut. Le paramètre « level » peut avoir l'une des valeurs suivantes :  
+`[ @level = ] level`Type de validation à effectuer. *Level* est de **type tinyint**, sans valeur par défaut. Le paramètre « level » peut avoir l'une des valeurs suivantes :  
   
 |Valeur de level (niveau)|Description|  
 |-----------------|-----------------|  
@@ -56,17 +56,17 @@ sp_validatemergesubscription [@publication=] 'publication'
 |**3**|Validation du nombre de lignes et de la somme de contrôle binaire.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_validatemergesubscription** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_validatemergesubscription**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_validatemergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Valider des données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Valider les données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

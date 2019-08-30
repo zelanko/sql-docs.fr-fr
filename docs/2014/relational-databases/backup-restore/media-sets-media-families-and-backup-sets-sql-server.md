@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6f9d80f8ea696bfbe85a7f5a7aefac32eba1211
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876247"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154791"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
   Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique s'adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la sauvegarde de SQL Server pour le service de stockage d’objets Blob Windows Azure, consultez, [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Pour plus d’informations sur la sauvegarde SQL Server dans le service de stockage d’objets BLOB Azure, consultez, [SQL Server sauvegarde et restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
@@ -48,15 +48,15 @@ ms.locfileid: "62876247"
  Contenu de sauvegarde ajouté à un jeu de supports par une opération de sauvegarde réussie.  
   
   
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> Vue d’ensemble des jeux de supports, familles de supports et jeux de sauvegarde  
- Les sauvegardes d'un ou de plusieurs supports de sauvegarde constituent un seul jeu de supports. Un *support de sauvegarde* est un ensemble ordonné de *supports de sauvegarde*, de bandes, de fichiers ou d'objets blob Windows Azure auxquels une ou plusieurs opérations ont été appliquées en utilisant un type et un nombre fixe d'unités de sauvegarde. Un support de sauvegarde donné utilise les lecteurs de bande, ou les lecteurs de disques ou les objets blob Windows Azure, mais pas une combinaison des deux ou plus. Par exemple, les unités de sauvegarde associées à un support de sauvegarde peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
+##  <a name="OvMediaSetsFamiliesBackupSets"></a>Vue d’ensemble des jeux de supports, familles de supports et jeux de sauvegarde  
+ Les sauvegardes d'un ou de plusieurs supports de sauvegarde constituent un seul jeu de supports. Un *jeu de supports* est un ensemble ordonné de *supports de sauvegarde*, de bandes, de fichiers disque ou d’objets blob Azure auxquels une ou plusieurs opérations de sauvegarde ont été appliquées en utilisant un type et un nombre fixes d’unités de sauvegarde. Un jeu de supports donné utilise des lecteurs de bandes, lecteurs de disque ou objets blob Azure, mais pas une combinaison de deux ou plus. Par exemple, les unités de sauvegarde associées à un support de sauvegarde peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
   
  Un jeu de supports est créé sur le support de sauvegarde en formatant le support au cours d'une opération de sauvegarde. Pour plus d'informations, consultez [Création d'un jeu de supports](#CreatingMediaSet), plus loin dans cette rubrique. Après le formatage, chaque fichier ou bande contient un en-tête de support pour le jeu de supports et est prêt à recevoir le contenu de la sauvegarde. Lorsque l'en-tête est en place, l'opération de sauvegarde se poursuit pour sauvegarder les données spécifiées sur le support de sauvegarde de toutes les unités de sauvegarde spécifiées pour l'opération.  
   
 > [!NOTE]  
 >  Il est possible de mettre en miroir les supports de sauvegarde pour la protection contre les volumes de sauvegarde endommagés (bande ou fichier sur disque). Pour plus d'informations, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] ou versions ultérieures peuvent lire des sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]ou version ultérieure peut lire les sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ### <a name="media-families"></a>Familles de supports  
@@ -89,7 +89,7 @@ ms.locfileid: "62876247"
 -   Si la description du support contient une étiquette de support MTF ou une description du support.  
   
     > [!NOTE]  
-    >  Tous les supports qui sont utilisées pour une opération de sauvegarde ou de restauration utilisent un format de sauvegarde standard appelé [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] conserve un exemplaire de support MTF écrite par une autre application, mais n’écrit pas d’étiquettes de support MTF.  
+    >  Tous les supports utilisés pour une opération de sauvegarde ou de restauration utilisent un format de sauvegarde [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] standard appelé préserve toute étiquette de support MTF écrite par une autre application, mais n’écrit pas d’étiquettes de support MTF.  
   
 -   Étiquette au format de bande [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou description du support au format texte libre.  
   
@@ -166,12 +166,12 @@ GO
   
 -   Nombre de jeux de sauvegarde  
   
-##  <a name="ConsiderationsForMediaSetFamilies"></a> À l’aide du support des jeux et familles  
+##  <a name="ConsiderationsForMediaSetFamilies"></a>Utilisation des jeux de supports et des familles  
  Cette section aborde plusieurs considérations concernant l'utilisation des jeux de supports et des familles de supports.  
   
   
   
-###  <a name="CreatingMediaSet"></a> Création d’un jeu de supports  
+###  <a name="CreatingMediaSet"></a>Création d’un nouveau support de sauvegarde  
  Pour créer un jeu de supports, vous devez formater le support destinataire (une ou plusieurs bandes ou un ou plusieurs fichiers disque). Le processus de formatage modifie le support destinataire de la sauvegarde comme suit :  
   
 1.  Suppression de l'ancien en-tête (s'il en existait un), du contenu antérieur du support destinataire de la sauvegarde.  
@@ -181,7 +181,7 @@ GO
 2.  Écriture d'un nouvel en-tête de support sur le support de sauvegarde (bande ou fichier disque) de chaque unité de sauvegarde.  
   
   
-###  <a name="UseExistingMediaSet"></a> Effectuez une sauvegarde sur un support de sauvegarde existant  
+###  <a name="UseExistingMediaSet"></a>Sauvegarde sur un jeu de supports existant  
  Pour effectuer une sauvegarde sur un jeu de supports existant, vous disposez des deux options suivantes :  
   
 -   Ajouter au jeu de sauvegarde existant.  
@@ -200,7 +200,7 @@ GO
     > [!NOTE]  
     >  Le remplacement des jeux de sauvegarde existants est spécifié à l'aide de l'option INIT de l'instruction BACKUP.  
   
-####  <a name="Appending"></a> Ajout aux jeux de sauvegarde existants  
+####  <a name="Appending"></a>Ajout à des jeux de sauvegarde existants  
  Les sauvegardes effectuées à des moments différents, à partir de bases de données identiques ou différentes, peuvent être stockées sur le même support. En ajoutant un autre jeu de sauvegarde au support existant, le contenu précédent du support reste intact, et la nouvelle sauvegarde est écrite à la fin de la dernière sauvegarde du support.  
   
  Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute toujours les nouvelles sauvegardes en fin de support. L'ajout ne peut avoir lieu qu'à la fin du support. Par exemple, lorsqu'un support contient cinq jeux de sauvegardes, il n'est pas possible d'ignorer les trois premiers jeux de sauvegardes pour écraser le quatrième avec un nouveau jeu de sauvegarde.  
@@ -210,10 +210,10 @@ GO
  Les sauvegardes Microsoft Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent partager le même support, mais elles ne sont pas interopérables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut sauvegarder les données Windows.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] ou versions ultérieures peuvent lire des sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]ou les versions ultérieures peuvent lire des sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
-####  <a name="Overwriting"></a> Remplacement des jeux de sauvegarde  
+####  <a name="Overwriting"></a>Remplacement des jeux de sauvegarde  
  Le remplacement des jeux de sauvegarde existants est spécifié à l'aide de l'option INIT de l'instruction BACKUP. Cette option remplace tous les jeux de sauvegarde sur le support et conserve l'en-tête de support, s'il existe. S'il n'existe aucun en-tête de support, elle en crée un.  
   
  Pour les en-têtes de bande, il peut être judicieux de les laisser en place. Pour les supports de sauvegarde sur disque, seuls les fichiers utilisés par les unités de sauvegarde spécifiées dans l'opération de sauvegarde sont remplacés. Les autres fichiers du disque ne sont pas concernés. Lors du remplacement des sauvegardes, l'en-tête de support existant est conservé et la nouvelle sauvegarde est créée comme étant la première sauvegarde sur l'unité de sauvegarde. S'il n'existe pas d'en-tête, un en-tête de support valide avec un nom et une description de support est automatiquement écrit. Si l'en-tête de support existant n'est pas valide, l'opération de sauvegarde s'arrête. Si le support est vide, le nouvel en-tête de support est généré avec les options éventuelles MEDIANAME, MEDIAPASSWORD et MEDIADESCRIPTION.  
@@ -236,7 +236,7 @@ GO
  Si le support de sauvegarde est protégé par mot de passe Microsoft Windows, Microsoft SQL Server n'écrit pas dessus. Pour remplacer un support protégé par mot de passe, vous devez le réinitialiser.  
   
   
-###  <a name="SequenceNumbers"></a> Numéros de séquence  
+###  <a name="SequenceNumbers"></a>Numéros de séquence  
  L'ordre est important pour l'utilisation de plusieurs familles de supports dans un jeu de supports ou de plusieurs supports de sauvegarde dans une même famille. Par conséquent, la sauvegarde attribue des numéros de séquence comme suit :  
   
 -   Familles de supports séquentielles dans un support de sauvegarde  
@@ -259,7 +259,7 @@ GO
      Pour une restauration à partir d'une sauvegarde de disque et pour une restauration en ligne, vous devez monter simultanément toutes les familles de supports. Pour une restauration hors connexion à partir d'une sauvegarde sur bande, vous pouvez traiter les familles de supports avec moins d'unités de sauvegarde. Chaque famille de supports doit être complètement traitée avant de démarrer le traitement d'une autre famille de supports. Les familles de supports sont toujours traitées en parallèle, sauf si la restauration a lieu sur une seule unité.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour créer un nouveau support de jeu**  
+ **Pour créer un nouveau support de sauvegarde**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants**)  
   
@@ -273,7 +273,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (option NOINIT)  
   
- **Pour remplacer les jeux de sauvegarde existants**  
+ **Pour remplacer des jeux de sauvegarde existants**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (option **Remplacer tous les jeux de sauvegarde existants**)  
   
@@ -283,7 +283,7 @@ GO
   
 -   [Définir la date d’expiration d’une sauvegarde &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **Pour afficher les numéros de séquence de séquence et de la famille de support**  
+ **Pour afficher la séquence de supports et les numéros de séquence de famille**  
   
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

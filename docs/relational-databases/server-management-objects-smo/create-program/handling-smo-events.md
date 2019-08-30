@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SMO [SQL Server], events
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ec6dccc41e160d2b56df3e3c6e7f85804552cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126742"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148728"
 ---
 # <a name="handling-smo-events"></a>Gestion des événements SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "68126742"
 ## <a name="event-subscription"></a>Abonnement à un événement  
  Pour gérer des événements, vous devez écrire une classe de gestionnaire d'événements, créer une instance de cet événement, attribuer le gestionnaire d'événements à l'objet parent, puis vous abonner à l'événement.  
   
- La gestion d'événements requiert l'écriture d'une classe de gestionnaire d'événements. La classe de gestionnaire d'événements peut contenir plusieurs fonctions de gestionnaire d'événements et doit être installée pour les événements à gérer. Les fonctions de gestionnaire d’événements recevoir des informations sur l’événement à partir de la *ServerEventNotificatificationArgs* paramètre qui peut être utilisé pour signaler des informations sur l’événement.  
+ La gestion d'événements requiert l'écriture d'une classe de gestionnaire d'événements. La classe de gestionnaire d'événements peut contenir plusieurs fonctions de gestionnaire d'événements et doit être installée pour les événements à gérer. Les fonctions du gestionnaire d’événements reçoivent des informations sur l’événement à partir du paramètre *ServerEventNotificatificationArgs* qui peut être utilisé pour signaler des informations sur l’événement.  
   
- Les types d’événements de base de données et de serveur qui peuvent être gérées sont répertoriés dans le <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe et la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
+ Les types d’événements de base de données et de serveur qui peuvent être gérés <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> sont répertoriés <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>dans la classe et la classe.  
   
 ## <a name="example"></a>Exemple  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Enregistrement de gestionnaires d'événements et abonnement à la gestion des événements en Visual Basic  

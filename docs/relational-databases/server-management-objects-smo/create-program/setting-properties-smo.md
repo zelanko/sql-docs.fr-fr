@@ -1,5 +1,5 @@
 ---
-title: Définition de propriétés - SMO | Microsoft Docs
+title: Définition des propriétés-SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - SQL Server Management Objects, properties
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf121a37bf0229ba3366e18c149530f316fcdc56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098282"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148716"
 ---
 # <a name="setting-properties---smo"></a>Définition de propriétés - SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Les propriétés sont des valeurs qui stockent des informations descriptives sur l'objet. Par exemple, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les options de configuration sont représentées par le <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriétés de l’objet. Les propriétés sont accessibles soit directement, soit indirectement par le biais de la collection de propriétés. L'accès aux propriétés utilise directement la syntaxe suivante :  
+  Les propriétés sont des valeurs qui stockent des informations descriptives sur l'objet. Par exemple, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les options de configuration sont représentées par les propriétés de l' <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> objet. Les propriétés sont accessibles soit directement, soit indirectement par le biais de la collection de propriétés. L'accès aux propriétés utilise directement la syntaxe suivante :  
   
  `objInstance.PropertyName`  
   
@@ -58,11 +58,11 @@ ms.locfileid: "68098282"
  La méthode <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> définit le comportement de chargement des propriétés pour le reste de l'application ou jusqu'à ce qu'elle soit réinitialisée. Vous pouvez enregistrer le comportement d'origine en utilisant la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> et en la restaurant selon les besoins.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Obtention et définition d'une propriété en Visual Basic  
- Cet exemple de code montre comment obtenir le <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir le <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété du <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété le **ExecuteSql** membre de la <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> énumérées type.  
+ Cet exemple de code montre comment récupérer la <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de l' <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété de <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété sur le membre **ExecuteSQL** du type énuméré.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Obtention et définition d'une propriété en Visual C#  
- Cet exemple de code montre comment obtenir le <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir le <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété du <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété le **ExecuteSql** membre de la <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> énumérées type.  
+ Cet exemple de code montre comment récupérer la <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de l' <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété de <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété sur le membre **ExecuteSQL** du type énuméré.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Parcours de toutes les propriétés d'un objet en Visual Basic  
- Cet exemple de code effectue une itération dans le **propriétés** collection de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> de l’objet et les affiche sur la [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] écran de sortie.  
+ Cet exemple de code itère au sein de la collection de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> propriétés de l’objet et les [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] affiche sur l’écran de sortie.  
   
  Dans l'exemple, l'objet <xref:Microsoft.SqlServer.Management.Smo.Property> a été mis entre crochets car il s'agit également d'un mot clé dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Parcours de toutes les propriétés d'un objet en Visual C#  
- Cet exemple de code effectue une itération dans le **propriétés** collection de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> de l’objet et les affiche sur la [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] écran de sortie.  
+ Cet exemple de code itère au sein de la collection de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> propriétés de l’objet et les [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] affiche sur l’écran de sortie.  
   
 ```csharp  
 {   

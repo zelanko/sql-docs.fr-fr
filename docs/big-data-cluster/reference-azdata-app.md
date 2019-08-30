@@ -5,22 +5,22 @@ description: Article de référence sur les commandes de l’application azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 031d8283f14e06515394bb26aa94049a43b6b79f
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: ec7e461705138905713b803e2f0f96934044d971
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653228"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155294"
 ---
 # <a name="azdata-app"></a>azdata app
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-L’article suivant fournit des références sur les commandes **application** dans l’outil **azdata**. Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md).
+Cet article est un article de référence pour **azdata**. 
 
 ## <a name="commands"></a>Commandes
 |     |     |
@@ -36,43 +36,25 @@ L’article suivant fournit des références sur les commandes **application** d
 ## <a name="azdata-app-init"></a>azdata app init
 Vous aide à lancer un nouveau squelette et/ou des fichiers de spécification d’applications basés sur des environnements runtime.
 ```bash
-azdata app init [--spec -s] 
-                [--name -n]  
-                [--version -v]  
-                [--template -t]  
-                [--destination -d]  
-                [--url -u]
+azdata app init 
 ```
 ### <a name="examples"></a>Exemples
 Générer un modèle automatique d’une nouvelle `spec.yaml` d’applications uniquement.
 ```bash
 azdata app init --spec
 ```
-Générer un modèle automatique d’un nouveau squelette d’applications R basé sur le modèle `r`.
+Structurez une nouvelle structure d’application R basée sur `r` le modèle.
 ```bash
 azdata app init --name reduce --template r
 ```
-Générer un modèle automatique d’un nouveau squelette d’applications Python basé sur le modèle `python`.
+Structurez une nouvelle structure d’application python basée sur `python` le modèle.
 ```bash
 azdata app init --name reduce --template python
 ```
-Générer un modèle automatique d’un nouveau squelette d’applications SSIS basé sur le modèle `ssis`.
+Structurez une nouvelle structure d’application SSIS basée sur `ssis` le modèle.
 ```bash
 azdata app init --name reduce --template ssis            
 ```
-### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--spec -s`
-Générez simplement une application spec.yaml.
-#### `--name -n`
-Nom de l'application.
-#### `--version -v`
-Version de l'application.
-#### `--template -t`
-Nom du modèle. Pour obtenir la liste complète des noms de modèles pris en charge, exécuter `azdata app template list`
-#### `--destination -d`
-Où placer le squelette d’applications. Par défaut : répertoire de travail actuel.
-#### `--url -u`
-Spécifiez un autre emplacement du référentiel de modèles. Valeur par défaut : https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -87,17 +69,13 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 ## <a name="azdata-app-create"></a>azdata app create
 Créez une application.
 ```bash
-azdata app create --spec -s 
-                  
+azdata app create 
 ```
 ### <a name="examples"></a>Exemples
 Créez une nouvelle application à partir d’un répertoire contenant une spécification de déploiement spec.yaml valide.
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
 ```
-### <a name="required-parameters"></a>Paramètres obligatoires
-#### `--spec -s`
-Chemin d’accès à un répertoire contenant un fichier de spécification YAML décrivant l’application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -112,19 +90,13 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 ## <a name="azdata-app-update"></a>azdata app update
 Mettez à jour une application.
 ```bash
-azdata app update [--spec -s] 
-                  [--yes -y]
+azdata app update 
 ```
 ### <a name="examples"></a>Exemples
 Mettez à jour une application existante à partir d’un répertoire contenant une spécification de déploiement spec.yaml valide.
 ```bash
 azdata app update --spec /path/to/dir/with/spec/yaml    
 ```
-### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--spec -s`
-Chemin d’accès à un répertoire contenant un fichier de spécification YAML décrivant l’application.
-#### `--yes -y`
-Ne demandez pas de confirmation lors de la mise à jour d’une application à partir du fichier spec.yalm de CWD.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -139,8 +111,7 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 ## <a name="azdata-app-list"></a>azdata app list
 Répertoriez une ou des applications.
 ```bash
-azdata app list [--name -n] 
-                [--version -v]
+azdata app list 
 ```
 ### <a name="examples"></a>Exemples
 Répertoriez les applications par nom et par version.
@@ -155,11 +126,6 @@ Répertoriez toutes les versions d’applications par nom.
 ```bash
 azdata app list
 ```
-### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--name -n`
-Nom de l'application.
-#### `--version -v`
-Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -174,19 +140,13 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 ## <a name="azdata-app-delete"></a>azdata app delete
 Supprimez une application.
 ```bash
-azdata app delete --name -n 
-                  --version -v
+azdata app delete 
 ```
 ### <a name="examples"></a>Exemples
 Supprimez les applications par nom et par version.
 ```bash
 azdata app delete --name reduce --version v1    
 ```
-### <a name="required-parameters"></a>Paramètres obligatoires
-#### `--name -n`
-Nom de l'application.
-#### `--version -v`
-Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -201,9 +161,7 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 ## <a name="azdata-app-run"></a>azdata app run
 Exécutez une application.
 ```bash
-azdata app run --name -n 
-               --version -v  
-               [--inputs]
+azdata app run 
 ```
 ### <a name="examples"></a>Exemples
 Exécutez l’application sans paramètres d’entrée.
@@ -218,14 +176,6 @@ Exécutez l’application avec plusieurs paramètres d’entrée.
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
-### <a name="required-parameters"></a>Paramètres obligatoires
-#### `--name -n`
-Nom de l'application.
-#### `--version -v`
-Version de l'application.
-### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--inputs`
-Paramètres d’entrée de l’application au format CSV `name=value`.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -240,22 +190,13 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 ## <a name="azdata-app-describe"></a>azdata app describe
 Décrivez une application.
 ```bash
-azdata app describe [--spec -s] 
-                    [--name -n]  
-                    [--version -v]
+azdata app describe 
 ```
 ### <a name="examples"></a>Exemples
 Décrivez l’application.
 ```bash
 azdata app describe --name reduce --version v1    
 ```
-### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--spec -s`
-Chemin d’accès à un répertoire contenant un fichier de spécification YAML décrivant l’application.
-#### `--name -n`
-Nom de l'application.
-#### `--version -v`
-Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -270,4 +211,6 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).
+- Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). 
+
+- Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

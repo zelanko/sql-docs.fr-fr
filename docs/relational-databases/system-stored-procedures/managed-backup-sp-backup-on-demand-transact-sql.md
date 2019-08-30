@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_backup_on_demand (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942053"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155398"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Demande la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour effectuer une sauvegarde de la base de données spécifiée.  
   
- Utilisez cette procédure stockée pour effectuer des sauvegardes ad hoc d'une base de données configurée avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Cela empêche la rupture de la chaîne de sauvegarde et les processus de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sont pris en charge, stockant la sauvegarde dans le même conteneur de stockage Blob Windows Azure.  
+ Utilisez cette procédure stockée pour effectuer des sauvegardes ad hoc d'une base de données configurée avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Cela empêche toute interruption dans la chaîne de sauvegarde [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] et les processus sont pris en charge et la sauvegarde est stockée dans le même conteneur de stockage d’objets BLOB Azure.  
   
  À la fin de la sauvegarde, le chemin de fichier de sauvegarde complet est retourné. Il comprend le nom et l'emplacement du nouveau fichier de sauvegarde résultant de l'opération de sauvegarde.  
   
@@ -50,10 +50,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> Arguments  
  @database_name  
- Nom de la base de données sur laquelle la sauvegarde doit être effectuée. Le @database_name est **SYSNAME**.  
+ Nom de la base de données sur laquelle la sauvegarde doit être effectuée. Est @database_name de **type sysname**.  
   
  @type  
- Le type de sauvegarde à effectuer :  Base de données ou journal. Le @type paramètre est **nvarchar (32)** .  
+ Type de sauvegarde à effectuer:  Base de données ou journal. Le @type paramètre est de type **nvarchar (32)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
@@ -61,10 +61,10 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au **db_backupoperator** rôle, de base de données avec **ALTER ANY CREDENTIAL** autorisations, et **EXECUTE** autorisations sur **sp_delete_ backuphistory**procédure stockée.  
+ Requiert l’appartenance au rôle de base de données **db_backupoperator** , avec les autorisations **ALTER ANY CREDENTIAL** et Execute sur la procédure stockée **sp_delete_backuphistory**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant effectue une demande de sauvegarde de base de données pour la base de données « TestDB ». La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est activée pour cette base de données.  
+ L’exemple suivant effectue une demande de sauvegarde de base de données pour la base de données «TestDB». La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est activée pour cette base de données.  
   
 ```  
 Use MSDB  

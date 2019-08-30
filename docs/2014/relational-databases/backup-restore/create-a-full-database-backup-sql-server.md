@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f8387d7b833a80cd4df09f7d4208974d40a7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922260"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154822"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
   Cette rubrique explique comment créer une sauvegarde de base de données complète dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
   
 > [!NOTE]  
->  Pour plus d'informations sur la sauvegarde SQL Server dans le service de stockage d'objets blob Windows Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Pour plus d’informations sur la sauvegarde de SQL Server dans le service de stockage d’objets BLOB Azure, consultez, [SQL Server sauvegarde et restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **Dans cette rubrique**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62922260"
   
      [Sécurité](#Security)  
   
--   **Pour créer une base de données complète à l’aide de la sauvegarde :**  
+-   **Pour créer une sauvegarde complète de base de données, utilisez:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62922260"
     > [!NOTE]  
     >  Lorsque l'option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
   
-8.  Pour **composant de sauvegarde**, cliquez sur `Database`.  
+8.  Pour **composant de sauvegarde**, `Database`cliquez sur.  
   
 9. Acceptez le nom du jeu de sauvegarde par défaut proposé dans la zone de texte **Nom** , ou attribuez-lui un autre nom.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922260"
          Pour cette option, entrez un nom dans la zone de texte **Nouveau nom du support de sauvegarde** et décrivez éventuellement le jeu de supports dans la zone de texte **Description du nouveau support de sauvegarde** .  
   
         > [!IMPORTANT]  
-        >  Cette option est désactivée si vous avez sélectionné **URL** dans la page **Général** . Ces actions ne sont pas prises en charge pour la sauvegarde vers le stockage Windows Azure.  
+        >  Cette option est désactivée si vous avez sélectionné **URL** dans la page **Général** . Ces actions ne sont pas prises en charge lors de la sauvegarde dans le stockage Azure.  
   
 14. Dans la section **Fiabilité** , vous pouvez activer les cases à cocher :  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62922260"
   
 18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la [compression de la sauvegarde](backup-compression-sql-server.md). Par défaut, la compression d’une sauvegarde dépend de la valeur de l’option de configuration de serveur **Compression par défaut des sauvegardes** . Toutefois, quelle que soit la valeur par défaut actuelle au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde**, et vous pouvez empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
   
-     **Pour afficher ou modifier la valeur par défaut de compression de la sauvegarde en cours**  
+     **Pour afficher ou modifier la valeur par défaut de compression de la sauvegarde actuelle**  
   
     -   [Afficher ou configurer la compression par défaut des sauvegardes (option de configuration de serveur)](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "62922260"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Dans SQL Server 2014 ou les versions ultérieures, spécifiez l'algorithme de chiffrement à utiliser, ainsi que le certificat ou la clé asymétrique pour sécuriser le chiffrement.  
   
-         DESCRIPTION **=** { **' *`text`* '**  |  **@** _text_variable_ }  
+         DESCRIPTION **=** { ***'`text`* '**  |  text_variable **}@**  
          Spécifie le texte au format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
          NAME **=** { *nom_jeu_sauvegarde* |  **@** _var_nom_jeu_sauvegarde_ }  
@@ -224,7 +224,7 @@ ms.locfileid: "62922260"
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>A. Sauvegarde sur une unité de disque  
+#### <a name="a-backing-up-to-a-disk-device"></a>R. Sauvegarde sur une unité de disque  
  L'exemple suivant sauvegarde entièrement la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur disque, à l'aide de `FORMAT` , pour créer une nouveau jeu de supports.  
   
 ```sql  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
-1.  Utilisez l'applet de commande `Backup-SqlDatabase`. Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de base de données, spécifiez la **- BackupAction** paramètre avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
+1.  Utilisez l’applet de commande `Backup-SqlDatabase` . Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de base de données, spécifiez le paramètre **-BackupAction** avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
   
      L'exemple suivant crée une sauvegarde complète de la base de données `MyDB` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`. Cet exemple spécifie, de manière facultative, `-BackupAction Database`.  
   
@@ -291,7 +291,7 @@ GO
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurer une sauvegarde &#40;de base de données SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurer une sauvegarde de base de données en mode de récupération simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   

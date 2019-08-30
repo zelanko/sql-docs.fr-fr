@@ -5,16 +5,16 @@ description: Découvrez comment déployer un cluster Big Data SQL Server hors co
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652367"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155268"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Effectuer un déploiement hors connexion d’un cluster Big Data SQL Server
 
@@ -33,7 +33,7 @@ Les étapes suivantes expliquent comment tirer (pull) les images conteneur du cl
 > [!TIP]
 > Ce processus est expliqué ci-dessous. Toutefois, pour simplifier cette tâche, vous pouvez utiliser le [script automatisé](#automated) au lieu d’exécuter manuellement ces commandes.
 
-1. Tirez (pull) les images conteneur du cluster Big Data en répétant la commande suivante. Remplacez `<SOURCE_IMAGE_NAME>` par chaque [nom d’image](#images). Remplacez `<SOURCE_DOCKER_TAG>` par l’étiquette de la version du cluster Big Data, par exemple **2019-CTP3.2-ubuntu**.  
+1. Tirez (pull) les images conteneur du cluster Big Data en répétant la commande suivante. Remplacez `<SOURCE_IMAGE_NAME>` par chaque [nom d’image](#images). Remplacez `<SOURCE_DOCKER_TAG>` par la balise de la Big Data version de cluster, par exemple **2019-RC1-Ubuntu**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -60,27 +60,31 @@ Les étapes suivantes expliquent comment tirer (pull) les images conteneur du cl
 ### <a id="images"></a> Images conteneur de cluster Big Data
 
 Les images conteneur de cluster Big Data suivantes sont nécessaires pour une installation hors connexion :
+- **mssql-app-service-proxy**
+- **MSSQL-Control-chien de surveillance**
+- **mssql-controller**
+- **MSSQL-DNS**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **MSSQL-sécurité-domainctl**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **MSSQL-serveur-ha**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> Script automatisé
 
@@ -113,7 +117,7 @@ Vous pouvez utiliser un script Python automatisé qui tire (pull) automatiquemen
 
 ## <a name="install-tools-offline"></a>Installer des outils hors connexion
 
-Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que **Python**, **azdata** ou **kubectl**. Suivez les étapes suivantes pour installer ces outils sur un serveur hors connexion.
+Les déploiements de cluster Big Data requièrent plusieursoutils, `azdata`notamment Python, et **kubectl**. Suivez les étapes suivantes pour installer ces outils sur un serveur hors connexion.
 
 ### <a id="python"></a> Installer Python hors connexion
 
@@ -135,13 +139,13 @@ Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que *
 
 ### <a id="azdata"></a> Installer azdata hors connexion
 
-1. Sur une machine disposant d’un accès à Internet et de [Python](https://wiki.python.org/moin/BeginnersGuide/Download), exécutez la commande suivante pour télécharger tous les packages **azdata** dans le dossier actif.
+1. Sur un ordinateur disposant d’un accès à Internet et de [python](https://wiki.python.org/moin/BeginnersGuide/Download), exécutez la commande suivante `azdata` pour télécharger tous les packages dans le dossier actif.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Copiez les packages téléchargés et le fichier **requirements.txt** sur la machine cible.
+1. Copiez les packages téléchargés `requirements.txt` et le fichier sur l’ordinateur cible.
 
 1. Exécutez la commande suivante sur la machine cible, en spécifiant le dossier dans lequel vous avez copié les fichiers précédents.
 
@@ -159,7 +163,7 @@ Pour installer **kubectl** sur une machine hors connexion, utilisez les étapes 
 
 ## <a name="deploy-from-private-repository"></a>Effectuer le déploiement à partir d’un référentiel privé
 
-Pour effectuer un déploiement à partir du référentiel privé, utilisez les étapes décrites dans [le guide de déploiement](deployment-guidance.md), mais utilisez un fichier de configuration de déploiement personnalisé spécifiant les informations de votre référentiel Docker privé. Les commandes **azdata** suivantes montrent comment modifier les paramètres Docker dans un fichier de configuration de déploiement personnalisé nommé **control.json** :
+Pour effectuer un déploiement à partir du référentiel privé, utilisez les étapes décrites dans [le guide de déploiement](deployment-guidance.md), mais utilisez un fichier de configuration de déploiement personnalisé spécifiant les informations de votre référentiel Docker privé. Les commandes `azdata` suivantes montrent comment modifier les paramètres de l’ancrage dans un fichier de configuration de déploiement `control.json`personnalisé nommé:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,7 +171,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-Le déploiement vous invite à entrer le nom d’utilisateur et le mot de passe Docker. Vous pouvez également les spécifier dans les variables d’environnement **DOCKER_USERNAME** et **DOCKER_PASSWORD**.
+Le déploiement vous invite à entrer le nom d’utilisateur et le mot de passe de l’ancrage, ou `DOCKER_USERNAME` vous `DOCKER_PASSWORD` pouvez les spécifier dans les variables d’environnement et.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -5,16 +5,16 @@ description: Découvrez comment mettre à [!INCLUDE[big-data-clusters-2019](../i
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e3fa24998e4c48dad568f926dca2bba4359fe691
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652333"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155339"
 ---
 # <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Procédure de mise à niveau[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -24,9 +24,9 @@ Cet article fournit des conseils sur la façon de mettre à niveau un cluster Bi
 
 ## <a name="backup-and-delete-the-old-cluster"></a>Sauvegarder et supprimer l’ancien cluster
 
-La seule façon de mettre à niveau un cluster Big Data vers une nouvelle version consiste à supprimer le cluster et à le recréer manuellement. Chaque version a une version unique d’**azdata** qui n’est pas compatible avec la version précédente. En outre, si un cluster plus ancien devait télécharger une image sur un nouveau nœud, la dernière image risquerait de ne pas être compatible avec les anciennes images sur le cluster. Pour effectuer une mise à niveau vers la dernière version, procédez comme suit :
+La seule façon de mettre à niveau un cluster Big Data vers une nouvelle version consiste à supprimer le cluster et à le recréer manuellement. Chaque version a une version unique de `azdata` qui n’est pas compatible avec la version précédente. En outre, si un cluster plus ancien devait télécharger une image sur un nouveau nœud, la dernière image risquerait de ne pas être compatible avec les anciennes images sur le cluster. Pour effectuer une mise à niveau vers la dernière version, procédez comme suit :
 
-1. Avant de supprimer l’ancien cluster, sauvegardez les données sur l’instance maître SQL Server et sur HDFS. Pour l’instance maître SQL Server, vous pouvez utiliser [Sauvegarde et restauration d’une base de données SQL Server](data-ingestion-restore-database.md). Pour HDFS, vous [pouvez copier les données avec **curl**](data-ingestion-curl.md).
+1. Avant de supprimer l’ancien cluster, sauvegardez les données sur l’instance maître SQL Server et sur HDFS. Pour l’instance maître SQL Server, vous pouvez utiliser [Sauvegarde et restauration d’une base de données SQL Server](data-ingestion-restore-database.md). Pour HDFS, vous [pouvez copier les données avec `curl` ](data-ingestion-curl.md).
 
 1. Supprimez l’ancien cluster à l’aide de la commande `azdata delete cluster`.
 
@@ -35,17 +35,17 @@ La seule façon de mettre à niveau un cluster Big Data vers une nouvelle versio
    ```
 
    > [!Important]
-   > Utilisez la version d’**azdata** qui correspond à votre cluster. Ne supprimez pas un ancien cluster avec la version d’**azdata** plus récente.
+   > Utilisez la version de `azdata` qui correspond à votre cluster. Ne supprimez pas un cluster plus ancien avec la version `azdata`plus récente de.
 
-1. Avant CTP 3.2, **azdata** était appelé **mssqlctl**. Si des versions précédentes de **mssqlctl** ou **azdata** sont installées, il est important de commencer par les désinstaller avant d’installer la dernière version d’**azdata**.
+1. Avant CTP 3,2, `azdata` a été appelé. `mssqlctl` Si vous avez des versions antérieures de `mssqlctl` ou `azdata` installées, il est important de commencer par désinstaller avant d’installer `azdata`la dernière version de.
 
-   Pour CTP  version 2.3 ou ultérieure, exécutez la commande suivante. Dans la commande, remplacez `ctp3.1` par la version de **mssqlctl** que vous désinstallez. Si la version est antérieure à CTP 3.1, ajoutez un tiret avant le numéro de version (par exemple, `ctp-2.5`).
+   Pour CTP  version 2.3 ou ultérieure, exécutez la commande suivante. Remplacez `ctp3.1` dans la commande par la version de `mssqlctl` que vous désinstallez. Si la version est antérieure à CTP 3.1, ajoutez un tiret avant le numéro de version (par exemple, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://aka.ms/azdata
    ```
 
-1. Installez la dernière version d’**azdata**. Les commandes suivantes installent **azdata** pour CTP 3.2 :
+1. Installez la dernière version de `azdata`. Les commandes suivantes s' `azdata` installent pour la version Release candidate:
 
    **Windows :**
 
@@ -60,11 +60,11 @@ La seule façon de mettre à niveau un cluster Big Data vers une nouvelle versio
    ```
 
    > [!IMPORTANT]
-   > Pour chaque version, le chemin d’**azdata** change. Même si vous avez déjà installé **azdata** ou **mssqlctl**, vous devez effectuer une réinstallation à partir du chemin le plus récent avant de créer le cluster.
+   > Pour chaque version, chemin d’accès `azdata` à changes. Même si vous avez déjà `azdata` installé `mssqlctl`ou, vous devez réinstaller à partir du chemin d’accès le plus récent avant de créer le nouveau cluster.
 
 ## <a id="azdataversion"></a> Vérifier la version d’azdata
 
-Avant de déployer un nouveau cluster Big Data, vérifiez que vous utilisez la dernière version d’**azdata** avec le paramètre `--version` :
+Avant de déployer un nouveau cluster Big Data, vérifiez que vous utilisez la version la plus récente `azdata` de avec `--version` le paramètre:
 
 ```bash
 azdata --version
@@ -72,7 +72,7 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>Installer la nouvelle version
 
-Après avoir supprimé le cluster Big Data précédent et installé la dernière version d’**azdata**, déployez le nouveau cluster Big Data à l’aide des instructions de déploiement actuelles. Pour plus d’informations, consultez [procédure de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] déploiement sur Kubernetes](deployment-guidance.md). Ensuite, restaurez les bases de données ou les fichiers requis.
+Après la suppression du cluster Big Data précédent et l’installation `azdata`de la dernière version, déployez le nouveau cluster Big Data à l’aide des instructions de déploiement actuelles. Pour plus d’informations, consultez [procédure de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] déploiement sur Kubernetes](deployment-guidance.md). Ensuite, restaurez les bases de données ou les fichiers requis.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -13,12 +13,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876816"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154839"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
   Utilisez la page  **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
@@ -38,7 +38,7 @@ ms.locfileid: "62876816"
 ## <a name="options"></a>Options  
   
 ### <a name="overwrite-media"></a>Remplacer le support  
- Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l'URL (Stockage Windows Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l'instruction Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Pour plus d’informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné URL (stockage Azure) comme destination de la sauvegarde dans la page général de la boîte de dialogue sauvegarder la base de données, les options sous la section remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l'instruction Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Pour plus d’informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Seule l’option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants** est prise en charge avec les options de chiffrement. Si vous sélectionnez les options sous la section **Sauvegarder sur le support de sauvegarde existant**, les options de chiffrements sur la page **Options de sauvegarde** sont désactivées.  
   

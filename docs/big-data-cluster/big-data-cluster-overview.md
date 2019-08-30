@@ -1,27 +1,24 @@
 ---
-title: Présentation des clusters Big Data
-titleSuffix: SQL Server big data clusters
+title: Qu’est-ce qu’un cluster Big Data?
+titleSuffix: SQL Server Big Data Clusters
 description: En savoir [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] plus sur (version préliminaire) qui s’exécute sur Kubernetes et fournissent des options de montée en charge pour les données relationnelles et HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15002f9d5633336fb61474a834c913a0d7dbf1c5
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c75005c35e743a87ff742352946c4fdde5fcf0b8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653160"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153649"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 À compter de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)],vous permet de déployer des clusters évolutifs de conteneurs SQL Server, Spark et HDFS s’exécutant sur Kubernetes. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Ces composants sont exécutés côte à côte pour que vous puissiez lire, écrire et traiter du Big Data à partir de Transact-SQL ou Spark, afin de pouvoir combiner et analyser facilement vos données relationnelles de grande valeur avec du Big Data volumineux.
 

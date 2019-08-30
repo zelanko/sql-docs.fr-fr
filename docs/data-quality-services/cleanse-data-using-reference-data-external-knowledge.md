@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e2a949511eea455c20880e053b64659b8f9c15f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76bb6ec47b0cfce0fb8e5f5e98f9e208f3b678b3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992348"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152734"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
 
@@ -56,7 +56,7 @@ ms.locfileid: "67992348"
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour effectuer le nettoyage des données.  
   
 ##  <a name="Cleanse"></a> Nettoyer les données à l'aide de la connaissance des données de référence  
- Nous poursuivrons avec le même exemple d’utilisation des domaines mappés dans la rubrique précédente, [Attacher un domaine ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), avec le service de données Melissa dans la Place de marché Microsoft Azure. Maintenant, nous utiliserons les mêmes domaines pour nettoyer certains exemples d'adresses américaines. Les étapes du nettoyage des données sont les mêmes que celles décrites dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Toutefois, nous attirerons votre attention chaque fois que nécessaire pendant le processus.  
+ Nous poursuivrons avec le même exemple d’utilisation des domaines que nous avons mappés dans la rubrique précédente, attacher un domaine [ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), avec le service de données Melissa dans la place de marché Azure. Maintenant, nous utiliserons les mêmes domaines pour nettoyer certains exemples d'adresses américaines. Les étapes du nettoyage des données sont les mêmes que celles décrites dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Toutefois, nous attirerons votre attention chaque fois que nécessaire pendant le processus.  
   
 1.  Créez un projet de qualité des données, puis sélectionnez l'activité **Nettoyage** . Consultez [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   

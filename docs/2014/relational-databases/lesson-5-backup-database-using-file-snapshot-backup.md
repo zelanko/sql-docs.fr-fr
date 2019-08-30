@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Migrer une base de données à partir d’une source de l’ordinateur local vers un ordinateur de destination dans Windows Azure | Microsoft Docs'
+title: 'Leçon 6 : Migrer une base de données d’une machine source locale vers une machine de destination dans Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59c063b0aca4a373671efc28c9b0d45baced836a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090693"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153728"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Leçon 6 : Migrer une base de données d’une machine source locale vers une machine de destination dans Windows Azure
-  Cette leçon suppose que vous avez déjà une autre instance SQL Server, pouvant résider sur un autre ordinateur local ou dans une machine virtuelle Windows Azure. Pour plus d’informations sur la création d’une machine virtuelle SQL Server dans Windows Azure, consultez [approvisionnement d’une Machine virtuelle de SQL Server sur Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Après avoir déployé une machine virtuelle SQL Server dans Windows Azure, assurez-vous que vous pouvez vous connecter à une instance de SQL Server dans cette machine virtuelle via SQL Server Management Studio sur un autre ordinateur.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Leçon 6 : Migrer une base de données d’une machine source locale vers une machine de destination dans Azure
+  Cette leçon part du principe que vous disposez déjà d’un autre SQL Server, qui peut résider sur un autre ordinateur local ou sur une machine virtuelle dans Azure. Pour plus d’informations sur la création d’une machine virtuelle SQL Server dans Azure, consultez [configuration d’une machine virtuelle SQL Server sur Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Après avoir configuré une machine virtuelle SQL Server dans Azure, assurez-vous que vous pouvez vous connecter à une instance de SQL Server de cette machine virtuelle via SQL Server Management Studio sur un autre ordinateur.  
   
  Cette leçon suppose également que vous avez déjà effectué les étapes suivantes :  
   
--   Vous disposez d'un compte Microsoft Azure Storage.  
+-   Vous avez un compte de stockage Azure.  
   
--   Vous avez créé un conteneur sous votre compte Microsoft Azure Storage.  
+-   Vous avez créé un conteneur sous votre compte de stockage Azure.  
   
 -   Vous avez créé une stratégie sur un conteneur avec des droits en lecture, écriture et création de liste. Vous avez également généré une clé SAS.  
   
 -   Vous avez créé des informations d'identification SQL Server sur l'ordinateur source.  
   
--   Vous avez déjà créé une machine virtuelle SQL Server de destination dans Windows Azure. Nous vous recommandons de la créer en sélectionnant une image de plateforme comprenant SQL Server 2014.  
+-   Vous avez déjà créé une destination SQL Server machine virtuelle dans Azure. Nous vous recommandons de la créer en sélectionnant une image de plateforme comprenant SQL Server 2014.  
   
- Pour migrer une base de données de SQL Server local vers une autre machine virtuelle dans Windows Azure, procédez comme suit :  
+ Pour migrer une base de données de SQL Server local vers une autre machine virtuelle dans Azure, vous pouvez suivre les étapes suivantes:  
   
 1.  Dans l'ordinateur source (un ordinateur local dans ce didacticiel), ouvrez une fenêtre de requête dans SQL Server Management Studio. Détachez votre base de données pour la déplacer vers un autre ordinateur en exécutant ces instructions :  
   
@@ -48,9 +48,9 @@ ms.locfileid: "66090693"
   
         1.  Connectez-vous à l'ordinateur de destination via SQL Server Management Studio sur votre ordinateur source.  Sinon, démarrez SQL Server Management Studio directement sur votre ordinateur de destination.  
   
-        2.  Dans la barre d’outils Standard, cliquez sur **nouvelle requête**.  
+        2.  Sur la barre d’outils standard, cliquez sur **nouvelle requête**.  
   
-        3.  Copiez et collez l'exemple suivant dans la fenêtre de requête et modifiez-le si nécessaire. L’instruction suivante crée une information d’identification du serveur SQL pour stocker le certificat d’accès partagé de votre conteneur de stockage.  
+        3.  Copiez et collez l'exemple suivant dans la fenêtre de requête et modifiez-le si nécessaire. L’instruction suivante crée un SQL Server des informations d’identification pour stocker le certificat d’accès partagé de votre conteneur de stockage.  
   
             ```sql  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66090693"
   
              À l'issue de cette étape, l'ordinateur de destination a importé le certificat de chiffrement qui a été sauvegardé depuis l'ordinateur source. Ensuite, joignez les fichiers de données dans l'ordinateur de destination.  
   
-    2.  Ensuite, créez une base de données avec des données et des fichiers journaux pointant vers les fichiers existants dans le Stockage Microsoft Azure en utilisant l'option FOR ATTACH. Dans la fenêtre de requête, exécutez l'instruction suivante :  
+    2.  Ensuite, créez une base de données avec des fichiers de données et des fichiers journaux pointant vers les fichiers existants dans Azure Storage à l’aide de l’option FOR ATTACH. Dans la fenêtre de requête, exécutez l'instruction suivante :  
   
         ```sql  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66090693"
   
  Notez que la base de données chiffrée a été transférée vers une autre instance de calcul sans déplacer de données.  
   
- Pour créer une base de données avec des fichiers de données et des fichiers journaux pointant vers les fichiers existants dans le Stockage Microsoft Azure à l'aide de l'interface utilisateur de SQL Server Management Studio, procédez comme suit :  
+ Pour créer une base de données avec des fichiers de données et des fichiers journaux pointant vers les fichiers existants dans le stockage Azure à l’aide d’SQL Server Management Studio interface utilisateur, procédez comme suit:  
   
 1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.  
   
@@ -132,20 +132,20 @@ ms.locfileid: "66090693"
   
 3.  Connectez-vous à l'ordinateur de destination, sur lequel SQL Server 2014 CTP2 ou version ultérieure est installé. Pour préparer l'ordinateur de destination, vous devez créer des informations d'identification SQL Server sur l'ordinateur de destination de façon à indiquer le même conteneur que celui qui contient TestDB1. Si vous rattachez dans le même ordinateur, vous n'avez pas besoin de créer d'autres informations d'identification.  
   
-4.  Dans **Explorateur d’objets**, avec le bouton droit **bases de données** et cliquez sur **attacher**.  
+4.  Dans l' **Explorateur d’objets**, cliquez avec le bouton droit sur **bases de données** , puis cliquez sur **attacher**.  
   
-5.  Dans le **attacher les bases de données** boîte de dialogue pour spécifier la base de données à attacher, cliquez sur **ajouter**. Dans le **rechercher les fichiers de base de données** boîte de dialogue :  
+5.  Dans la boîte de dialogue **attacher des bases de données** , pour spécifier la base de données à attacher, cliquez sur **Ajouter**. Dans la boîte de dialogue **Rechercher les fichiers de base de données** :  
   
-     Pour l’emplacement du fichier de données de base de données, tapez : `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
+     Pour emplacement du fichier de données de la `https://teststorageaccnt.blob.core.windows.net/testcontainer/`base de données, tapez:.  
   
-     Pour le nom de fichier, tapez : `TestDB1Data.mdf`.  
+     Pour nom de fichier, tapez `TestDB1Data.mdf`:.  
   
 6.  Cliquez sur **OK**.  
   
-     ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
+     ![CTP2 SQL 14](../tutorials/media/ss-was-tutlesson-6-7.gif "CTP2 SQL 14")  
   
  **Leçon suivante :**  
   
- [Leçon 7 : Déplacer vos fichiers de données vers le stockage Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Leçon 7 : Déplacer vos fichiers de données vers le stockage Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

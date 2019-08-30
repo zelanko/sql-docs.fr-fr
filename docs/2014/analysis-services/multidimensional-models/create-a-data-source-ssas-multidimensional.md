@@ -1,5 +1,5 @@
 ---
-title: Créer une Source de données (SSAS multidimensionnel) | Microsoft Docs
+title: Créer une source de données (SSAS multidimensionnel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076517"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152896"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
   Dans un modèle multidimensionnel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objet de source de données représente une connexion à la source de données depuis laquelle vous traitez (ou importez) des données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "66076517"
  Les connexions qui utilisent l’authentification Windows sont spécifiées sous l’onglet **Informations d’emprunt d’identité** du Concepteur de source de données. Utilisez cet onglet pour choisir l'option d'emprunt d'identité qui spécifie le compte sous lequel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute lors de la connexion à la source de données externe. Toutes les options ne peuvent pas être utilisées dans tous les cas. Pour plus d’informations sur ces options et sur leur utilisation, consultez [Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ### <a name="database-authentication"></a>Authentification de base de données  
- Comme alternative à l'authentification Windows, vous pouvez spécifier une connexion qui utilise un service d'authentification fourni par le système de gestion de base de données. Dans certains cas, l'utilisation de l'authentification de base de données est requise. Les scénarios qui nécessitent l'utilisation de l'authentification de base de données incluent l'utilisation de l'authentification SQL Server pour la connexion à une base de données SQL Windows Azure, ou l'accès à une source de données relationnelle qui s'exécute sur un système d'exploitation différent ou dans un domaine non approuvé.  
+ Comme alternative à l'authentification Windows, vous pouvez spécifier une connexion qui utilise un service d'authentification fourni par le système de gestion de base de données. Dans certains cas, l'utilisation de l'authentification de base de données est requise. Les scénarios qui appellent pour utiliser l’authentification de base de données incluent l’utilisation de l’authentification SQL Server pour se connecter à un Azure SQL Database, ou l’accès à une source de données relationnelle qui s’exécute sur un système d’exploitation différent ou dans un domaine non approuvé.  
   
  Pour une source de données qui utilise l'authentification de base de données, le nom d'utilisateur et le mot de passe d'une connexion à une base de données sont spécifiés dans la chaîne de connexion. Les informations d'identification sont ajoutées à la chaîne de connexion lorsque vous entrez un nom d'utilisateur et un mot de passe dans le Gestionnaire de connexions lors de la configuration de la connexion à la source de données dans votre modèle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . N'oubliez pas de spécifier une identité d'utilisateur qui a des autorisations de lecture des données.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "66076517"
   
      Le fournisseur par défaut d’une nouvelle connexion est le fournisseur OLE DB natif\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce fournisseur est utilisé pour se connecter à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’OLE DB. Pour les connexions à une base de données relationnelle SQL Server, l'utilisation du mode natif OLE DB\SQL Server Native Client 11.0 est souvent plus rapide que l'utilisation d'autres fournisseurs.  
   
-     Vous pouvez choisir un fournisseur différent pour accéder à d'autres sources de données. Pour obtenir la liste des fournisseurs et des bases de données relationnelles pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Sources de données prises en charge &#40;multidimensionnels SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
+     Vous pouvez choisir un fournisseur différent pour accéder à d'autres sources de données. Pour obtenir la liste des fournisseurs et des bases de données relationnelles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pris en charge par, consultez [sources de données prises en &#40;charge par&#41;SSAS multidimensionnel](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Tapez les informations requises par le fournisseur sélectionné pour établir la connexion à la source de données sous-jacente. Si le fournisseur **OLE DB natif\SQL Server Native Client** est sélectionné, tapez les informations suivantes :  
   
-    1.  **Nom du serveur** correspond au nom réseau de l’instance du moteur de base de données. Il peut être spécifié comme adresse IP, nom NetBIOS de l'ordinateur ou nom de domaine complet. Si le serveur est installé comme instance nommée, vous devez inclure le nom d’instance (par exemple, \<nom_ordinateur >\\< nom_instance\>).  
+    1.  **Nom du serveur** correspond au nom réseau de l’instance du moteur de base de données. Il peut être spécifié comme adresse IP, nom NetBIOS de l'ordinateur ou nom de domaine complet. Si le serveur est installé en tant qu’instance nommée, vous devez inclure le nom de l’instance ( \<par exemple\\, ComputerName\>> < nom_instance).  
   
-    2.  **Connexion au serveur** spécifie le mode d’authentification de la connexion. **Utiliser l’authentification Windows** fait appel à l’authentification Windows. **Utiliser l’authentification SQL Server** spécifie une connexion utilisateur de base de données pour une base de données SQL Microsoft Azure ou une instance SQL Server qui prend en charge le mode d’authentification mixte.  
+    2.  **Connexion au serveur** spécifie le mode d’authentification de la connexion. **Utiliser l’authentification Windows** fait appel à l’authentification Windows. **Utiliser l’authentification SQL Server** spécifie une connexion d’utilisateur de base de données pour une base de données SQL Azure ou une instance SQL Server qui prend en charge l’authentification en mode mixte.  
   
         > [!IMPORTANT]  
         >  Le gestionnaire de connexions inclut une case à cocher **Enregistrer mon mot de passe** pour les connexions qui utilisent l’authentification SQL Server. Bien que la case à cocher soit toujours visible, elle n'est pas toujours utilisée.  
@@ -105,7 +105,7 @@ ms.locfileid: "66076517"
   
          La nouvelle connexion apparaît dans le volet **Connexions de données** de la page **Sélectionner la méthode de définition de la connexion** dans l’Assistant Source de données.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
 7.  Sous **Informations d’emprunt d’identité**, spécifiez les informations d’identification ou l’identité d’utilisateur Windows qu’Analysis Services utilisera au moment de la connexion à la source de données externe. Si vous utilisez l'authentification de base de données, ces paramètres sont ignorés pour la connexion.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66076517"
   
      Le compte que vous spécifiez doit disposer d'autorisations en lecture sur la source de données.  
   
-8.  Cliquer sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
+8.  Cliquez sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
   
 9. Cliquez sur **Terminer**.  La nouvelle source de données apparaît dans le dossier **Sources de données** , dans l’Explorateur de solutions.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "66076517"
 5.  Recherchez et sélectionnez la table que vous avez ajoutée. Cliquez avec le bouton droit sur la table et sélectionnez **Nouvelle relation**. Choisissez les colonnes source et de destination qui contiennent des données correspondantes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Sources de données &#40;prises en charge pour SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)   
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)  
   
   

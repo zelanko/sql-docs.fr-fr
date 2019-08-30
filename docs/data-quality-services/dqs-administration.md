@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a84ff61d1656743953f5f854a1b658b303a7acf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b801dd3792755c93006c1c6a48cfa9dc5af9cc37
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992129"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152460"
 ---
 # <a name="dqs-administration"></a>administration de dqs
 
@@ -35,7 +35,7 @@ ms.locfileid: "67992129"
   
 -   Permet aux administrateurs de DQS d'analyser les activités de DQS sur un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et de *terminer* une activité en cours d'exécution ou d' *arrêter* un processus en cours d'exécution dans une activité, si nécessaire.  
   
--   Configurer les paramètres du service de données de référence tels que la configuration de la connectivité à Windows Azure Marketplace et la gestion des fournisseurs de services de données de référence tiers.  
+-   Configurez des paramètres de service de données de référence tels que la configuration de la connectivité avec la place de marché Azure et la gestion des fournisseurs de services de données de référence tiers directs.  
   
 -   Configurer les valeurs de seuil pour les activités de nettoyage et de mise en correspondance.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67992129"
 ### <a name="configuration"></a>Configuration  
  L'écran **Configuration** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permet à l'administrateur de DQS d'effectuer les opérations suivantes :  
   
--   **Données de référence** : configurez les fournisseurs de services de données de référence : Place de marché Microsoft Azure ou fournisseurs de services de données de référence directs. Après avoir installé les fournisseurs de services de données de référence, vous pouvez mapper un domaine/domaine composite aux données de référence pendant l'activité de gestion des domaines d'une base de connaissances, puis utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données. Elle vous permet également de spécifier les paramètres proxy de connexion à Internet pour l'utilisation de Windows Azure Marketplace.  
+-   **Données de référence** : configurez les fournisseurs de services de données de référence : Place de marché Azure ou fournisseurs de services de données de référence directs. Après avoir installé les fournisseurs de services de données de référence, vous pouvez mapper un domaine/domaine composite aux données de référence pendant l'activité de gestion des domaines d'une base de connaissances, puis utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données. Elle vous permet également de spécifier les paramètres de proxy pour la connexion à Internet afin d’utiliser la place de marché Azure.  
   
 -   **Paramètres généraux** : spécifiez les valeurs de seuil pour le nettoyage et la mise en correspondance des données, et indiquez s’il faut activer les notifications pour le profilage dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Ces valeurs de seuil sont utilisées par DQS pendant les opérations de nettoyage et de mise en correspondance assistées par ordinateur dans un projet de qualité des données.  
   

@@ -1,33 +1,33 @@
 ---
 title: azdata bdc config reference
 titleSuffix: SQL Server big data clusters
-description: Article de référence sur les commandes azdata bdc.
+description: Article de référence pour les commandes de configuration azdata BDC.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 73db63c485b7a6cd2e9355be935ff574ef827a5d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cb999ede4516f903b7d2f409e53940adc79b4f9a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653516"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155278"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L’article suivant fournit des références sur les commandes **bdc config** dans l’outil **azdata**. Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md).
+Cet article est un article de référence pour **azdata**. 
 
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Initialise un profil de configuration de cluster Big Data qui peut être utilisé avec la création du cluster.
 [azdata bdc config list](#azdata-bdc-config-list) | Répertorie les choix de profils de configuration disponibles.
-[azdata bdc config show](#azdata-bdc-config-show) | Affiche la configuration actuelle du BDC ou la configuration d’un fichier local que vous spécifiez, par exemple custom/cluster.json.
+[azdata bdc config show](#azdata-bdc-config-show) | Affiche la configuration actuelle du BDC ou la configuration d’un fichier local que vous spécifiez, par exemple Custom/BDC. JSON.
 [azdata bdc config add](#azdata-bdc-config-add) | Ajoutez une valeur pour un chemin d’accès json dans un fichier de configuration.
 [azdata bdc config remove](#azdata-bdc-config-remove) | Supprimez une valeur pour un chemin d’accès json dans un fichier de configuration.
 [azdata bdc config replace](#azdata-bdc-config-replace) | Remplacez une valeur pour un chemin d’accès json dans un fichier de configuration.
@@ -53,11 +53,11 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 Le chemin d'accès au fichier de l’emplacement où vous souhaitez placer le profil de configuration, s’affiche par défaut sur cwd avec custom-config.json.
 #### `--source -s`
-Source du profil de configuration : ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+Source du profil de configuration: ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 Forcez le remplacement du fichier cible.
 #### `--accept-eula -a`
-Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». 
+Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://aka.ms/azdata-eula.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -87,12 +87,12 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--config-profile -c`
-Profil de configuration par défaut : ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+Profil de configuration par défaut: ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 Le type de configuration que vous souhaitez afficher.
 `cluster`
 #### `--accept-eula -a`
-Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». 
+Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://aka.ms/azdata-eula.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -105,7 +105,7 @@ Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemple
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
-Affiche la configuration actuelle du BDC ou la configuration d’un fichier local que vous spécifiez, par exemple custom/cluster.json. La commande peut également utiliser un chemin d’accès json si vous souhaitez obtenir une section uniquement.  Vous pouvez également spécifier un fichier cible vers lequel effectuer la sortie.  Si un fichier cible n’est pas spécifié, il sera simplement sorti sur le terminal.
+Affiche la configuration actuelle du BDC ou la configuration d’un fichier local que vous spécifiez, par exemple Custom/BDC. JSON. La commande peut également utiliser un chemin d’accès json si vous souhaitez obtenir une section uniquement.  Vous pouvez également spécifier un fichier cible vers lequel effectuer la sortie.  Si un fichier cible n’est pas spécifié, il sera simplement sorti sur le terminal.
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
@@ -119,15 +119,15 @@ azdata bdc config show
 ```
 Dans un fichier config local, obtenez une valeur à la fin d’un chemin d’accès à la clé json simple.
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
 ```
-Dans un fichier config local, obtient une valeur à la fin d’un chemin d’accès à la clé json avec une condition
+Dans un fichier de configuration local, obtient les ressources au sein d’un service.
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.services.sql.resources' --target section.json
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--config-file -c`
-Chemin d’accès au fichier config du cluster Big Data si vous ne voulez pas la configuration du cluster auquel vous êtes actuellement connecté, par exemple, custom/cluster.json
+Chemin du fichier de configuration du cluster Big Data si vous ne voulez pas la configuration du cluster dans lequel vous currentlylogged, par exemple, Custom/BDC. JSON
 #### `--target -t`
 Fichier de sortie dans lequel stocker le résultat. Valeur par défaut : dirigée vers stdout.
 #### `--json-path -j`
@@ -158,9 +158,9 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--config-file -c`
-Chemin d’accès au fichier config du cluster Big Data de la configuration que vous souhaitez définir, par exemple custom/cluster.json
+Chemin du fichier de configuration du cluster Big Data de la configuration que vous souhaitez définir, c.-à-d. Customer/BDC. JSON
 #### `--json-values -j`
-Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. L’ajout ne prend PAS en charge les conditions.  Veuillez consulter http://jsonpatch.com/ pour obtenir des exemples d’apparence de votre chemin d’accès.  Si vous souhaitez accéder à un tableau, vous devez le faire en indiquant l’index, tel que key.0=value
+Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. L’ajout ne prend PAS en charge les conditions.  Si la valeur Inline que vous fournissez est une paire clé-valeur elle-même avec les caractères «=» et «,», mettez ces caractères dans une séquence d’échappement.  Par exemple, Key1 = "key2\=val2\,Key3\=val3". Veuillez consulter http://jsonpatch.com/ pour obtenir des exemples d’apparence de votre chemin d’accès.  Si vous souhaitez accéder à un tableau, vous devez le faire en indiquant l’index, tel que key.0=value
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -185,7 +185,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--config-file -c`
-Chemin d’accès au fichier config du cluster Big Data de la configuration que vous souhaitez définir, par exemple custom/cluster.json
+Chemin du fichier de configuration du cluster Big Data de la configuration que vous souhaitez définir, c.-à-d. Customer/BDC. JSON
 #### `--json-path -j`
 Une liste de chemins d’accès json basés sur la bibliothèque jsonpatch qui indique les valeurs que vous souhaitez supprimer, par exemple : key1.subkey1,key2.subkey2. La suppression ne prend PAS en charge les conditions. Veuillez consulter http://jsonpatch.com/ pour obtenir des exemples d’apparence de votre chemin d’accès.  Si vous souhaitez accéder à un tableau, vous devez le faire en indiquant l’index, tel que key.0=value
 ### <a name="global-arguments"></a>Arguments globaux
@@ -214,15 +214,15 @@ Ex 2 : remplacez un stockage de plan de contrôle.
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
-Ex 3 : remplacez le stockage du pool, y compris les réplicas (pool de stockage).
+Ex 3-remplacer les spécifications de ressources Storage-0, y compris les réplicas.
 ```bash
-azdata bdc config replace --config-file custom/cluster.json --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--config-file -c`
-Chemin d’accès au fichier config du cluster Big Data de la configuration que vous souhaitez définir, par exemple custom/cluster.json
+Chemin du fichier de configuration du cluster Big Data de la configuration que vous souhaitez définir, c.-à-d. Customer/BDC. JSON
 #### `--json-values -j`
-Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. Remplacer prend en charge des conditions dans la bibliothèque jsonpath.  Pour ce faire, démarrez votre chemin d’accès par un $. Cela vous permettra d’effectuer une condition telle que -j $.key1.key2[?(@.key3=='someValue'].key4=value. Consultez les exemples ci-dessous. Pour obtenir de l’aide supplémentaire, consultez : https://jsonpath.com/
+Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. Remplacer prend en charge des conditions dans la bibliothèque jsonpath.  Pour ce faire, démarrez votre chemin d’accès par un $. Cela vous permettra d’effectuer une condition telle que -j $.key1.key2[?(@.key3=='someValue'].key4=value. Si la valeur Inline que vous fournissez est une paire clé-valeur elle-même avec les caractères «=» et «,», mettez ces caractères dans une séquence d’échappement.  Par exemple, Key1 = "key2\=val2\,Key3\=val3". Consultez les exemples ci-dessous. Pour obtenir de l’aide supplémentaire, consultez : https://jsonpath.com/
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -257,14 +257,14 @@ azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 ```
 Ex 3 : remplacez le stockage du pool, y compris les réplicas (pool de stockage) par un fichier du correctif.
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
     Patch File Example (patch.json): 
-        {"patch":[{"op":"replace","path":"$.spec.pools[?(@.spec.type == 'Storage')].spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
+        {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--config-file -c`
-Chemin d’accès au fichier config du cluster Big Data de la configuration que vous souhaitez définir, par exemple custom/cluster.json
+Chemin du fichier de configuration du cluster Big Data de la configuration que vous souhaitez définir, c.-à-d. Customer/BDC. JSON
 #### `--patch-file -p`
 Chemin d'accès à un fichier json du correctif basé sur la bibliothèque jsonpatch : http://jsonpatch.com/. Vous devez démarrer votre fichier json du correctif par une clé appelée « correctif », dont la valeur est un tableau d’opérations PATCH que vous envisagez de créer. Pour le chemin d’accès d’une opération PATCH, vous pouvez utiliser la notation, telle que key1.key2 pour la plupart des opérations. Si vous souhaitez effectuer une opération de remplacement et que vous remplacez une valeur dans un tableau qui requiert une condition, utilisez la notation jsonpath en commençant votre chemin d’accès par un $. Cela vous permettra d’effectuer une condition telle que $.key1.key2[?(@.key3=='someValue'].key4. Consultez les exemples ci-dessous. Pour obtenir une aide supplémentaire sur les conditions, consultez : https://jsonpath.com/.
 ### <a name="global-arguments"></a>Arguments globaux
@@ -281,4 +281,6 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [installer azdata pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gérer ](deploy-install-azdata.md).
+- Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). 
+
+- Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

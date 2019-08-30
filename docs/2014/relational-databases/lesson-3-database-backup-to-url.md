@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Créer une base de données dans le stockage Windows Azure | Microsoft Docs'
+title: 'Leçon 4 : Créer une base de données dans Azure Storage | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7361cb5d0e68cfa3f45f46d7f99d68c88c1a556b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090819"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153764"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Leçon 4 : Créer une base de données dans Stockage Microsoft Azure
-  Dans cette leçon, vous allez apprendre comment créer une base de données à l'aide de la fonctionnalité Fichiers de données SQL Server dans Microsoft Azure. Notez que vous devez avoir terminé les leçons 1, 2 et 3 avant d'effectuer les tâches de cette leçon. La leçon 3 est une étape très importante, car vous devez supprimer les informations sur votre conteneur de stockage Windows Azure et le nom de stratégie associée, ainsi que la clé SAS dans le magasin d'informations d'identification SQL Server avant de passer à la leçon 4.  
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Leçon 4 : Créer une base de données dans Azure Storage
+  Dans cette leçon, vous allez apprendre à créer une base de données à l’aide de la fonctionnalité fichiers de données SQL Server dans Azure. Notez que vous devez avoir terminé les leçons 1, 2 et 3 avant d'effectuer les tâches de cette leçon. La leçon 3 est une étape très importante, car vous devez stocker les informations relatives à votre conteneur de stockage Azure, ainsi que le nom de la stratégie et la clé SAS qui lui sont associés dans le magasin d’informations d’identification SQL Server avant la leçon 4.  
   
- Pour chaque conteneur de stockage utilisé par un fichier de données ou un fichier journal, vous devez créer des informations d'identification SQL Server dont le nom correspond au chemin d'accès du conteneur. Ensuite, créez une base de données dans le Stockage Microsoft Azure.  
+ Pour chaque conteneur de stockage utilisé par un fichier de données ou un fichier journal, vous devez créer des informations d'identification SQL Server dont le nom correspond au chemin d'accès du conteneur. Ensuite, vous pouvez créer une nouvelle base de données dans le stockage Azure.  
   
  Cette leçon suppose que vous avez déjà effectué les étapes suivantes :  
   
--   Vous disposez d'un compte Microsoft Azure Storage.  
+-   Vous avez un compte de stockage Azure.  
   
--   Vous avez créé un conteneur sous votre compte Microsoft Azure Storage.  
+-   Vous avez créé un conteneur sous votre compte de stockage Azure.  
   
 -   Vous avez créé une stratégie sur un conteneur avec des droits en lecture, écriture et création de liste. Vous avez également généré une clé SAS.  
   
 -   Vous avez créé des informations d'identification SQL Server sur l'ordinateur source.  
   
- Pour créer une base de données dans Windows Azure à l'aide de la fonctionnalité Fichiers de données SQL Server dans le Stockage Microsoft Azure, procédez comme suit :  
+ Pour créer une base de données dans Azure à l’aide de la fonctionnalité fichiers de données SQL Server dans stockage Azure, procédez comme suit:  
   
 1.  Connectez-vous à SQL Server Management Studio.  
   
@@ -71,25 +71,25 @@ ms.locfileid: "66090819"
   
 5.  Pour afficher la nouvelle base de données TestDB1 sur votre serveur SQL Server local, actualisez les bases de données dans l'Explorateur d'objets.  
   
-6.  De même, pour afficher la base de données nouvellement créée dans votre compte de stockage, connectez-vous à votre compte de stockage via SQL Server Management Studio (SSMS). Pour plus d'informations sur la façon de se connecter à un stockage Windows Azure à l'aide de SQL Server Management Studio, suivez ces étapes :  
+6.  De même, pour afficher la base de données nouvellement créée dans votre compte de stockage, connectez-vous à votre compte de stockage via SQL Server Management Studio (SSMS). Pour plus d’informations sur la façon de se connecter à un stockage Azure à l’aide de SQL Server Management Studio, procédez comme suit:  
   
-    1.  Tout d'abord, obtenez les informations sur le compte de stockage. Connectez-vous au Portail de gestion. Ensuite, cliquez sur **stockage** et sélectionnez votre compte de stockage. Lorsqu’un compte de stockage est sélectionné, cliquez sur **gérer les clés d’accès** en bas de la page. Cela permet d'ouvrir une fenêtre de dialogue similaire :  
+    1.  Tout d'abord, obtenez les informations sur le compte de stockage. Connectez-vous au Portail de gestion. Cliquez ensuite sur **stockage** et choisissez votre compte de stockage. Quand un compte de stockage est sélectionné, cliquez sur **gérer les clés d’accès** au bas de la page. Cela permet d'ouvrir une fenêtre de dialogue similaire :  
   
-         ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
+         ![CTP2 SQL 14](../tutorials/media/ss-was-tutlesson-4-6-1.gif "CTP2 SQL 14")  
   
-    2.  Copie le **nom de compte de stockage** et **clé d’accès primaire** valeurs à la **se connecter à Windows Azure Storage** fenêtre de boîte de dialogue dans SSMS. Ensuite, cliquez sur **Connect**. Les informations sur les conteneurs du compte de stockage s'affichent dans SSMS, comme illustré dans la capture d'écran suivante :  
+    2.  Copiez les valeurs **nom du compte de stockage** et clé d' **accès primaire** dans la fenêtre de dialogue **connexion au stockage Azure** dans SSMS. Cliquez ensuite sur **se connecter**. Les informations sur les conteneurs du compte de stockage s'affichent dans SSMS, comme illustré dans la capture d'écran suivante :  
   
-         ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
+         ![CTP2 SQL 14](../tutorials/media/ss-was-tutlesson-4-6-2.gif "CTP2 SQL 14")  
   
- La capture d'écran suivante illustre la base de données nouvellement créée localement et dans l'environnement de Stockage Microsoft Azure.  
+ La capture d’écran suivante illustre la nouvelle base de données créée à la fois dans l’environnement de stockage local et Azure.  
   
- ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
+ ![CTP2 SQL 14](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "CTP2 SQL 14")  
   
- **Remarque :** S’il existe des références actives aux fichiers de données dans un conteneur, toute tentative pour supprimer les informations d’identification SQL Server associée échoue. De même, s'il existe déjà un bail sur un fichier de base de données spécifique d'un objet blob et que vous voulez le supprimer, vous devez d'abord résilier le bail sur l'objet blob. Pour interrompre le bail, vous pouvez utiliser [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Remarque :** S’il existe des références actives aux fichiers de données dans un conteneur, toute tentative de suppression des informations d’identification de SQL Server associées échoue. De même, s'il existe déjà un bail sur un fichier de base de données spécifique d'un objet blob et que vous voulez le supprimer, vous devez d'abord résilier le bail sur l'objet blob. Pour rompre le bail, vous pouvez utiliser un [objet blob de bail](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
- Grâce à cette nouvelle fonctionnalité, configurez SQL Server afin que les instructions CREATE DATABASE créent par défaut une base de données activée pour le cloud. En d'autres termes, définissez des données par défaut et consignez des emplacements dans les propriétés de l'instance SQL Server Management Studio de façon à ce que lorsque vous créez une base de données, tous les fichiers de base de données (.mdf, .ldf) soient créés en tant qu'objets blob de page dans le Stockage Microsoft Azure.  
+ Grâce à cette nouvelle fonctionnalité, configurez SQL Server afin que les instructions CREATE DATABASE créent par défaut une base de données activée pour le cloud. En d’autres termes, vous pouvez définir des emplacements de données et de journaux par défaut dans les propriétés de SQL Server Management Studio instance de serveur. ainsi, chaque fois que vous créez une base de données, tous les fichiers de base de données (. mdf,. ldf) sont créés en tant qu’objets BLOB de pages dans le stockage Azure.  
   
- Pour créer une base de données dans le Stockage Microsoft Azure à l'aide de l'interface utilisateur de SQL Server Management Studio, procédez comme suit :  
+ Pour créer une base de données dans Azure Storage à l’aide de SQL Server Management Studio interface utilisateur, procédez comme suit:  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66090819"
   
 4.  Modifiez les valeurs par défaut des données primaires et des fichiers journaux de transactions, dans la grille Fichiers de la base de données, cliquez sur la cellule appropriée, puis entrez la nouvelle valeur. Spécifiez également le chemin d'accès de l'emplacement du fichier. Pour le chemin d'accès, tapez le chemin d'accès de l'URL du conteneur de stockage, notamment `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Pour le nom de fichier, entrez les noms de fichiers physique des fichiers de base de données (.mdf, .ldf).  
   
-     ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
+     ![CTP2 SQL 14](../tutorials/media/ss-was-tutlesson-4-6-4.gif "CTP2 SQL 14")  
   
      Pour plus d’informations, consultez [Ajouter des fichiers de données ou journaux à une base de données](databases/add-data-or-log-files-to-a-database.md).  
   
@@ -111,6 +111,6 @@ ms.locfileid: "66090819"
   
  **Leçon suivante :**  
   
- [Leçon 5. &#40;Facultatif&#41; chiffrer votre base de données à l’aide du chiffrement transparent des données](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Leçon 5. &#40;Chiffrement de votre base de données facultatif&#41; à l’aide de TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   
