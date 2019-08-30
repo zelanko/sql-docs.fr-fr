@@ -91,7 +91,7 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-![Insérer des données](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insérer des données")
+![Insérer des données] (../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insérer des données")
 
 ### <a name="generate-a-model"></a>Générer un modèle
 
@@ -135,7 +135,7 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![Génère un modèle linéaire](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Génère un modèle linéaire")
+![Génère un modèle linéaire] (../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Génère un modèle linéaire")
 
 En tant que point de contrôle, une fois cette tâche terminée, vous pouvez interroger le ssis_iris_models pour voir qu’il contient un modèle binaire.
 
@@ -177,7 +177,7 @@ Dans le concepteur SSIS, créez une [tâche d’exécution SQL](https://docs.mic
 exec predict_species_length 'rxLinMod';
 ```
 
-![Générer] des prédictions (../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Générer") des prédictions
+![Générer](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Générer des prédictions")
 
 ### <a name="run-the-solution"></a>Exécuter la solution
 
