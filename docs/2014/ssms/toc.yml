@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: Mot de passe expiré
       href: ../database-engine/password-expired.md
-    - name: Se connecter au Stockage Microsoft Azure
+    - name: Se connecter à Stockage Azure
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
