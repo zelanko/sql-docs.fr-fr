@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 579f4c4e236fcc9ee22067522c47a8286b869d51
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000786"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190354"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
@@ -64,13 +64,13 @@ Si l’ordinateur client a accès à Internet, vous pouvez télécharger et inst
 Si l’ordinateur client n’a pas de connexion Internet, vous devez télécharger les packages **sqlmlutils** et **RODBCext** à l’avance à l’aide d’un ordinateur qui a accès à Internet. Vous pouvez ensuite copier les fichiers dans un dossier sur l’ordinateur client et installer les packages hors connexion.
 
 Le package **RODBCext** a plusieurs packages dépendants, et l’identification de toutes les dépendances d’un package devient compliquée. Nous vous recommandons d’utiliser [**miniCRAN**](https://andrie.github.io/miniCRAN/) pour créer un dossier de référentiel local pour le package qui comprend tous les packages dépendants.
-Pour plus d’informations, consultez [créer un référentiel de packages R local à l’aide de miniCRAN](../r/create-a-local-package-repository-using-minicran.md).
+Pour plus d’informations, consultez [créer un référentiel de packages R local à l’aide de miniCRAN](create-a-local-package-repository-using-minicran.md).
 
 Le package **sqlmlutils** se compose d’un seul fichier zip que vous pouvez copier sur l’ordinateur client et installer.
 
 Sur un ordinateur disposant d’un accès à Internet:
 
-1. Installez **miniCRAN**. Pour plus d’informations, consultez [installer miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) .
+1. Installez **miniCRAN**. Pour plus d’informations, consultez [installer miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) .
 
 1. Dans RStudio, exécutez le script R suivant pour créer un référentiel local du package **RODBCext**. Cet exemple crée le référentiel dans le dossier `c:\downloads\rodbcext`.
 
@@ -147,7 +147,7 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
 ### <a name="add-the-package-offline"></a>Ajouter le package hors connexion
 
 Si l’ordinateur client n’a pas de connexion Internet, vous pouvez utiliser **miniCRAN** pour télécharger le package de liaison à l’aide d’un ordinateur qui a accès à Internet. Vous copiez ensuite le package sur l’ordinateur client sur lequel vous pouvez installer le package hors connexion.
-Pour plus d’informations sur l’installation de **miniCRAN**, consultez [install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) .
+Pour plus d’informations sur l’installation de **miniCRAN**, consultez [install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) .
 
 Sur un ordinateur disposant d’un accès à Internet:
 
@@ -249,6 +249,6 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 ## <a name="next-steps"></a>Étapes suivantes
 
 - Pour plus d’informations sur les packages R installés, consultez [obtenir des informations](r-package-information.md) sur les packages r
-- Pour obtenir de l’aide sur l’utilisation des packages R, consultez [conseils pour l’utilisation des packages r](../r/packages-installed-in-user-libraries.md)
+- Pour obtenir de l’aide sur l’utilisation des packages R, consultez [conseils pour l’utilisation des packages r](tips-for-using-r-packages.md)
 - Pour plus d’informations sur l’installation des packages Python, consultez [installer des packages Python avec PIP](install-additional-python-packages-on-sql-server.md)
 - Pour plus d’informations sur SQL Server Machine Learning Services, consultez [qu’est-ce que SQL Server machine learning services (Python et R)?](../what-is-sql-server-machine-learning.md)

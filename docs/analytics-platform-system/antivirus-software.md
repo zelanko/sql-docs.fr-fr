@@ -1,6 +1,6 @@
 ---
-title: Un logiciel antivirus - Analytique Platform System | Microsoft Docs
-description: Si votre centre de données requiert un logiciel antivirus, utilisez ces instructions pour installer un logiciel antivirus sur le système de plateforme d’Analytique. Nous vous recommandons de ne pas installer un logiciel antivirus, sauf si elle est une exigence stricte de votre centre de données.
+title: Logiciel antivirus-système de plateforme d’analyse (APS) | Microsoft Docs
+description: Si votre centre de données nécessite un logiciel antivirus, suivez ces instructions pour installer un logiciel antivirus sur le système d’analyse de plate-forme (APS). Nous vous recommandons de ne pas installer de logiciel antivirus, sauf s’il s’agit d’une exigence ferme de votre centre de données.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,42 +8,42 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961604"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176057"
 ---
-# <a name="antivirus-software-for-analytics-platform-system"></a>Logiciel antivirus pour l’Analytique Platform System
-Si votre centre de données requiert un logiciel antivirus, utilisez ces instructions pour installer un logiciel antivirus sur le système de plateforme d’Analytique. Nous vous recommandons de ne pas installer un logiciel antivirus, sauf si elle est une exigence stricte de votre centre de données.  
+# <a name="antivirus-software-for-analytics-platform-system-aps"></a>Logiciel antivirus pour Analytics Platform System (APS)
+Si votre centre de données nécessite un logiciel antivirus, suivez ces instructions pour installer un logiciel antivirus sur Analytics Platform System. Nous vous recommandons de ne pas installer de logiciel antivirus, sauf s’il s’agit d’une exigence ferme de votre centre de données.  
   
 > [!WARNING]  
-> Nous recommandons vivement que vous individuellement à évaluer les risques de sécurité pour chaque ordinateur et pour l’Analytique Platform System dans sa globalité, et que vous sélectionnez les outils appropriés pour le niveau de risque de sécurité de chaque ordinateur. En outre, nous vous recommandons d’avant de mettre tout projet de protection contre les virus, tester l’ensemble du système sous une charge complète pour mesurer les modifications de stabilité et de performances.  
+> Nous vous recommandons vivement d’évaluer individuellement le risque de sécurité pour chaque ordinateur et le système de plateforme d’analyse dans son ensemble, et de sélectionner les outils qui conviennent au niveau de risque de sécurité de chaque ordinateur. En outre, nous vous recommandons, avant de déployer un projet de protection antivirus, de tester l’ensemble du système sous une charge complète pour mesurer les modifications de stabilité et de performances.  
 >   
-> Protection antivirus nécessite des ressources système à exécuter. Vous devez effectuer le test avant et après l’installation de votre logiciel antivirus pour déterminer s’il y a aucun effet de performances sur le système de plateforme d’Analytique.  
+> Le logiciel de protection antivirus requiert des ressources système pour s’exécuter. Vous devez effectuer des tests avant et après l’installation de votre logiciel antivirus pour déterminer s’il existe des effets sur les performances sur le système de plateforme d’analyse.  
   
-Cette rubrique est basée sur les conseils de [comment choisir un logiciel antivirus s’exécute sur les ordinateurs qui exécutent SQL Server](https://support.microsoft.com/kb/309422) et [961804 de l’Article de base de connaissances](https://support.microsoft.com/kb/961804/en-us).  
+Cette rubrique est basée sur les instructions de [sélection d’un logiciel antivirus à exécuter sur les ordinateurs qui exécutent SQL Server](https://support.microsoft.com/kb/309422) et [l’article 961804](https://support.microsoft.com/kb/961804/en-us)de la base de connaissances.  
   
-## <a name="exclusion-list-for-physical-hosts"></a>Liste d’exclusion pour les hôtes physiques  
-Pour installer le logiciel antivirus sur les hôtes physiques, exclure la liste suivante des répertoires et des processus. Ils ne doivent pas être analysés par le logiciel antivirus.  
+## <a name="exclusion-list-for-physical-hosts"></a>Liste d’exclusions pour les hôtes physiques  
+Pour installer le logiciel antivirus sur les hôtes physiques, excluez la liste suivante de répertoires et de processus. Ils ne doivent pas être analysés par le logiciel antivirus.  
   
-**Exclure ces répertoires :**  
+**Exclure ces répertoires:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - répertoire de configuration de machine virtuelle  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V-répertoire de configuration de machine virtuelle  
   
--   Disques durs C:\Users\Public\Documents\Hyper-V\Virtual - répertoire de disque dur virtuel par défaut  
+-   Disques durs C:\users\public\documents\hyper-v\virtual Hard Disks-répertoire du lecteur de disque dur virtuel par défaut  
   
--   C:\clusterStorage - répertoires de disque dur virtuel  
+-   C:\clusterStorage-répertoires de lecteur de disque dur virtuel  
   
-**Exclure les processus :**  
+**Exclure ces processus:**  
   
--   Gestion d’ordinateurs virtuels (Vmms.exe)  
+-   Gestion des machines virtuelles (VMMS. exe)  
   
--   Processus de travail de machine virtuelle (Vmwp.exe)  
+-   Processus de travail des machines virtuelles (Vmwp. exe)  
   
-## <a name="exclusion-list-for-virtual-machines-vms"></a>Liste d’exclusion pour les Machines virtuelles (VM)  
-Pour installer le logiciel antivirus sur les machines virtuelles, exclure la liste suivante des répertoires et fichiers. Ils ne doivent pas être analysés par le logiciel antivirus.  
+## <a name="exclusion-list-for-virtual-machines-vms"></a>Liste d’exclusions pour les machines virtuelles (VM)  
+Pour installer le logiciel antivirus sur les machines virtuelles, excluez la liste suivante de répertoires et de fichiers. Ils ne doivent pas être analysés par le logiciel antivirus.  
   
 **_PDW_region_-CTL01**  
   
@@ -51,7 +51,7 @@ Pour installer le logiciel antivirus sur les machines virtuelles, exclure la lis
   
 -   G:\  
   
-**_appliance_domain_-AD01** et  **_appliance_domain_-AD02**  
+**_appliance_domain_-ad01** et  **_appliance_domain_-AD02**  
   
 -   Aucune restriction  
   
@@ -65,7 +65,7 @@ Pour installer le logiciel antivirus sur les machines virtuelles, exclure la lis
   
 -   Aucune restriction  
   
-**_appliance_domain_- WDS**  
+**_appliance_domain_-WDS**  
   
 -   Aucune restriction  
   
@@ -74,5 +74,5 @@ Pour installer le logiciel antivirus sur les machines virtuelles, exclure la lis
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Voir aussi  
-[Tâches de gestion appliance &#40;Analytique Platform System&#41;](appliance-management-tasks.md)  
+[Système de plateforme &#40;d’analyse des tâches de gestion des appareils&#41;](appliance-management-tasks.md)  
   

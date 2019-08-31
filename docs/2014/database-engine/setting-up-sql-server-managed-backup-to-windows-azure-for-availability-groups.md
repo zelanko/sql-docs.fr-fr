@@ -10,12 +10,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76b19ace362d147520b9f39cecae3ce1cc65d53b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: aa2cbce81827c9085f87112b366d532077915f58
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154106"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176098"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configuration de la SQL Server la gestion de sauvegarde sur Azure pour les groupes de disponibilité
   Cette rubrique est un didacticiel sur la configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données participant à des groupes de disponibilité AlwaysOn.  
@@ -68,7 +68,7 @@ ms.locfileid: "70154106"
 #### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>Activer et configurer la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données de disponibilité  
  Ce didacticiel décrit les étapes d'activation et de configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données (AGTestDB) sur les ordinateurs Node1 et Node2, puis les étapes d'activation de la surveillance de l'état d'intégrité de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-1.  **Créez un compte de stockage Azure:** Les sauvegardes sont stockées dans le service de stockage d’objets BLOB Azure. Vous devez d’abord créer un compte de stockage Azure, si vous n’en avez pas déjà un. Pour plus d’informations, consultez [création d’un compte de stockage Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Notez le nom du compte de stockage, les clés d'accès et l'URL du compte de stockage. Le nom du compte de stockage et les informations de clé d'accès sont utilisés pour créer un objet contenant les informations d'identification SQL. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se sert des informations d'identification SQL pour authentifier le compte de stockage pendant les opérations de sauvegarde.  
+1.  **Créez un compte de stockage Azure :** Les sauvegardes sont stockées dans le service de stockage d’objets BLOB Azure. Vous devez d’abord créer un compte de stockage Azure, si vous n’en avez pas déjà un. Pour plus d’informations, consultez [création d’un compte de stockage Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Notez le nom du compte de stockage, les clés d'accès et l'URL du compte de stockage. Le nom du compte de stockage et les informations de clé d'accès sont utilisés pour créer un objet contenant les informations d'identification SQL. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se sert des informations d'identification SQL pour authentifier le compte de stockage pendant les opérations de sauvegarde.  
   
 2.  **Créer des informations d’identification SQL:** Créez des informations d’identification SQL en utilisant le nom du compte de stockage comme identité et la clé d’accès de stockage comme mot de passe.  
   

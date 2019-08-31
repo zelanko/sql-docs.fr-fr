@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985285"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176296"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -45,8 +45,8 @@ Pour obtenir des liens vers des vidéos et d’autres ressources de formation co
 - Quand vous installez [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine Windows Server 2012, vous pouvez être amené à configurer la sécurité renforcée d’Internet Explorer pour autoriser le script du site de l’application web. Sinon, la navigation sur le site sur le serveur échoue.
 - Pour fonctionner dans l’application web, Silverlight 5 doit être installé sur l’ordinateur client. Si vous n’avez pas la version requise de Silverlight, vous êtes invité à l’installer quand vous accédez à une partie de l’application web qui l’utilise. Vous pouvez installer Silverlight 5 à partir de **[cet emplacement](https://www.microsoft.com/silverlight/)** .
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure
-Par défaut, quand vous lancez une machine virtuelle Azure avec [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] déjà installé, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] est également installé. 
+## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure
+Par défaut, lorsque vous lancez une machine virtuelle Azure sur [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] laquelle est déjà installé, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] est également installé. 
 
 L’étape suivante consiste à installer IIS (Internet Information Services). Consultez la section [Installation et configuration d’IIS](#InstallIIS). 
 
@@ -127,18 +127,18 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
 2.  Dans **l’Assistant Création d’une base de données**, cliquez sur **Créer une base de données** , puis sur **Suivant**.  
   
-3.  Sur le **serveur de base de données** , spécifiez l’instance de SQL Server. 
+3.  Sur la page **serveur de base de données** , spécifiez l’instance SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Ajoute la prise en charge de SQL Server Managed Instance. Définissez la valeur de **Instance de SQL Server** à l’hôte d’un Azure SQL Database managed instance. Par exemple, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Ajoute la prise en charge de SQL Server Managed Instance. Définissez la valeur de **SQL Server instance** sur l’hôte d’une instance gérée Azure SQL Database. Par exemple, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Sélectionnez le **type d’authentification** puis cliquez sur **tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données à l’aide des informations d’identification pour le type d’authentification que vous avez sélectionné. Cliquez sur **Suivant**.
+4. Sélectionnez le **type d’authentification** , puis cliquez sur **tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données à l’aide des informations d’identification pour le type d’authentification que vous avez sélectionné. Cliquez sur **Suivant**.
 
-    >Pour [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], pour vous connecter à Azure SQL Database managed instance, utilisez un des types d’authentification suivants :
+    >Pour [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], pour vous connecter à Azure SQL database instance gérée, utilisez l’un des types d’authentification suivants:
     >
-    >- Authentification intégrée Azure Active Directory : **Utilisateur actuel-intégrées à Active Directory**
-    >- Authentification SQL Server : **Compte SQL Server**.
+    >- Azure Active Directory l’authentification intégrée: **Utilisateur actuel – Active Directory intégré**
+    >- SQL Server l’authentification: **Compte SQL Server**.
     >
-    >Dans l’instance gérée de la base de données SQL Azure, l’utilisateur doit être un membre de la `sysadmin` rôle serveur fixe.
+    >Dans Azure SQL Database Managed instance, l’utilisateur doit être membre du `sysadmin` rôle serveur fixe.
 
     > [!NOTE]  
     >  Si vous sélectionnez le type d’authentification **Utilisateur actuel - Sécurité intégrée**, la zone **Nom d’utilisateur** est en lecture seule et affiche le nom du compte d’utilisateur Windows qui a ouvert une session sur l’ordinateur. Si vous exécutez [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure, la zone **Nom d’utilisateur** affiche le nom de la machine virtuelle et le nom d’utilisateur associé au compte Administrateur local sur la machine virtuelle. 

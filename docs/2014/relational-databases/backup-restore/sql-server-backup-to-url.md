@@ -10,12 +10,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 761b1cf51304bddae4bed9b7bbc835794ddca0c8
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: c1ecaf46ebf96ab5b8d06cb5eefb69ae50ff882e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154682"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175838"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
   Cette rubrique présente les concepts, la configuration requise et les composants nécessaires à l’utilisation du service de stockage d’objets BLOB Azure en tant que destination de sauvegarde. Les fonctionnalités de sauvegarde et de restauration sont identiques ou similaires à l'utilisation de l'option DISK ou TAPE, à quelques différences près. Les différences, les exceptions notables et des exemples de code sont inclus dans cette rubrique.  

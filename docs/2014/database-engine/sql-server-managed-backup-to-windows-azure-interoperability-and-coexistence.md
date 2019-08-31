@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5a35fe9e2df55dd6b1f76c52503c5d4cad50bf
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154071"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176067"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>SQL Server la gestion de sauvegarde sur Azure: Interopérabilité et coexistence
   Cette rubrique présente l'interopérabilité et la coexistence de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avec plusieurs fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Ces fonctionnalités incluent les suivantes : Groupes de disponibilité AlwaysOn, mise en miroir de bases de données, plans de maintenance de sauvegarde, envoi de journaux, sauvegardes ad hoc, détacher la base de données et supprimer la base de données.  
   
 ### <a name="alwayson-availability-groups"></a>Groupes de disponibilité AlwaysOn  
- Groupes de disponibilité AlwaysOn qui sont configurés en tant que solution Azure uniquement prise [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]en charge pour. Les configurations de groupes de disponibilité AlwaysOn locaux ou hybrides ne sont pas prises en charge. Pour plus d’informations et d’autres éléments à prendre en considération, consultez [configuration d’SQL Server gestion de la sauvegarde sur Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Groupes de disponibilité AlwaysOn configurés en tant que solution Azure uniquement prise en charge [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]pour. Les configurations de groupes de disponibilité AlwaysOn locaux ou hybrides ne sont pas prises en charge. Pour plus d’informations et d’autres éléments à prendre en considération, consultez [configuration d’SQL Server gestion de la sauvegarde sur Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Mise en miroir de bases de données  
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est prise en charge uniquement sur la base de données principale. Si la base de données principale et le miroir sont configurés pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], la base de données mise en miroir est ignorée et ne sera pas sauvegardée. Toutefois, en cas de basculement, la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] commence le processus de sauvegarde après que le miroir a terminé de permuter le rôle, et est en ligne. Dans ce cas, les sauvegardes seront restaurées dans un nouveau conteneur. Si le miroir n'est pas configuré pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], en cas de basculement, aucune sauvegarde n'est effectuée. Nous vous recommandons de configurer la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur le serveur principal et le miroir de façon à ce que les sauvegardes continuent en cas de basculement.  

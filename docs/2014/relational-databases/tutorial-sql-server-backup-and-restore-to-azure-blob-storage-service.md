@@ -10,12 +10,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8a9cbb46b04491be3fe97cb707ad79c98990ff19
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155328"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176114"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
   Bienvenue dans le Prise en main avec SQL Server didacticiel sauvegarde et restauration avec le service de stockage d’objets BLOB Azure. Ce didacticiel vous aide à comprendre comment écrire des sauvegardes et les restaurer à partir du service Stockage Blob Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "70155328"
  Ce didacticiel montre comment créer un compte de stockage Windows et un conteneur d'objets blob, créer des informations d'identification pour accéder au compte de stockage, écrire une sauvegarde dans le service d'objet blob et effectuer une restauration simple. Ce didacticiel est divisé en quatre leçons :  
   
  [Leçon 1 : Créer des objets de stockage Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
- Dans cette leçon, vous allez créer un compte de stockage Azure et un conteneur d’objets BLOB.  
+ Dans cette leçon, vous allez créer un compte de stockage Azure et un conteneur d’objets blob.  
   
  [Leçon 2 : Créer des informations d’identification de SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  Dans cette leçon, vous allez créer des informations d’identification afin de stocker les informations de sécurité utilisées pour accéder au compte de stockage Azure.  
@@ -40,7 +40,7 @@ ms.locfileid: "70155328"
   
 -   Une instance de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et la base de données AdventureWorks2012 doivent être installées.  
   
-     L’instance de SQL Server peut être locale ou dans une machine virtuelle Azure.  
+     L’instance SQL Server peut être installée sur site ou sur une machine virtuelle Azure.  
   
      Vous pouvez utiliser une base de données utilisateur en remplacement d'AdventureWorks2012, puis modifier la syntaxe TSQL en conséquence.  
   

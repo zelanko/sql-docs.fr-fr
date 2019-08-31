@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f5dc758a6f9243fc553f597687552fdb22a481
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154402"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175997"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utiliser l'Assistant Ajout d’un réplica Azure (SQL Server)
   Utilisez l’Assistant Ajout d’un réplica Azure pour vous aider à créer une machine virtuelle Azure dans un environnement informatique hybride et à le configurer comme réplica secondaire pour un groupe de disponibilité AlwaysOn nouveau ou existant.  

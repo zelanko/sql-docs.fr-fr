@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4db43d34960de38343db3552cd83ea1147ffdf2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154633"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175976"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
   L'exportation d'une application de la couche Données (DAC) déployée ou d'une base de données crée un fichier d'exportation qui inclut les définitions des objets de la base de données et toutes les données contenues dans les tables. Le fichier d'exportation peut ensuite être importé dans une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC entre différentes instances, pour créer une sauvegarde logique ou pour créer une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

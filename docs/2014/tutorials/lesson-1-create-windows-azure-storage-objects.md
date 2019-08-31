@@ -10,12 +10,12 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6c43678851427d6498e57e8a2297449825adfb4f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154351"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176108"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>Leçon 1 : Créer des objets de stockage Azure
   Avant de créer des sauvegardes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans le Cloud de stockage, vous devez tout d'abord créer un compte de stockage, puis un conteneur d'objets blob. La leçon 1 vous guide tout au long des étapes de connexion à la Portail de gestion Azure, en créant un compte de stockage et un conteneur d’objets BLOB.  

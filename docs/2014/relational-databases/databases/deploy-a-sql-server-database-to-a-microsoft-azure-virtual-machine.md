@@ -42,12 +42,12 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfea092757a708e0a83cefd581f8321f08d344e3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154563"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175739"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
   Utilisez l’Assistant **déployer une base de données SQL Server sur une machine virtuelle Azure** pour déployer une base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)] à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir d’une instance du vers dans une machine virtuelle Azure. L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  

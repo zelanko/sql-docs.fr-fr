@@ -24,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7650f579a42453486a1d8483b9537496d454a036
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 42ede73866c45662cf653d538f59be48684c5a45
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155022"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176183"
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
   Cette rubrique est une vue d'ensemble du serveur de rapports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le composant central d'une installation [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Il se compose d'une paire de moteurs de traitement et d'une collection d'extensions spécialisées qui gèrent l'authentification, le traitement des données, le rendu et les opérations de remise. Un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] s'exécute dans l'un des deux modes de déploiement : mode natif ou mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#bkmk_featuresupport) pour obtenir une comparaison des fonctionnalités.  
@@ -44,7 +44,7 @@ ms.locfileid: "70155022"
   
 -   [SQL Server Business Intelligence dans les machines virtuelles Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
--   [Utilisez PowerShell pour créer une machine virtuelle Azure avec un serveur de rapports en mode natif](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [Utilisation de PowerShell pour créer une machine virtuelle Azure avec un serveur de rapports en mode natif](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
   

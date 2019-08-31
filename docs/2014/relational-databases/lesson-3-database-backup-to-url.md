@@ -10,12 +10,12 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153764"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175631"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>Leçon 4 : Créer une base de données dans Azure Storage
   Dans cette leçon, vous allez apprendre à créer une base de données à l’aide de la fonctionnalité fichiers de données SQL Server dans Azure. Notez que vous devez avoir terminé les leçons 1, 2 et 3 avant d'effectuer les tâches de cette leçon. La leçon 3 est une étape très importante, car vous devez stocker les informations relatives à votre conteneur de stockage Azure, ainsi que le nom de la stratégie et la clé SAS qui lui sont associés dans le magasin d’informations d’identification SQL Server avant la leçon 4.  

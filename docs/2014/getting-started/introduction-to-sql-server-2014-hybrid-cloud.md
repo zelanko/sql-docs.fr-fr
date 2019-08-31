@@ -1,5 +1,5 @@
 ---
-title: Introduction au Cloud hybride SQL Server 2014 | Microsoft Docs
+title: Présentation de SQL Server Cloud hybride 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,39 +10,39 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fccd4169245421dd33cb5f41bac85861679de823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b253c99b0fbdc0ff4e4651a981da80b9935a7184
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088611"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176032"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introduction au cloud hybride SQL Server 2014
  La plupart des applications sont confrontées à des défis, tels qu'assurer une efficacité maximale ou une valeur commerciale, ou bien gérer des configurations matérielles complexes ou des pics importants à la demande, tout en respectant les règlements du secteur et de l'entreprise. Compte tenu de tous ces facteurs, la création d'une technologie de niveau enterprise est une tâche complexe. La stratégie de cloud hybride Microsoft prend en charge les environnements de cloud computing traditionnels, privés, publics et hybrides pour surmonter ces difficultés. 
  
- Si votre entreprise requiert une infrastructure informatique flexible capable d’évoluer à la demande, vous pouvez créer un cloud privé dans votre centre de données ou un cloud public dans les centres de données global Azure. Avec l'extension de votre centre de données au cloud public, vous créez un modèle de cloud hybride. 
+ Lorsque votre entreprise a besoin d’une infrastructure informatique flexible qui peut évoluer à la demande, vous pouvez créer un Cloud privé dans votre centre de données ou un cloud public dans les centres de données globaux Azure. Avec l'extension de votre centre de données au cloud public, vous créez un modèle de cloud hybride. 
  
  Cette rubrique présente les fonctionnalités de SQL Server 2014 qui prennent en charge les scénarios de cloud hybrides. Pour des informations détaillées sur la stratégie de cloud hybride de Microsoft et SQL Server, consultez le site Web [Informatique hybride SQL Server](https://www.microsoft.com/sqlserver/solutions-technologies/hybrid-It.aspx) . 
  
-## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure et Cloud hybride 
+## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure et le Cloud hybride 
  Avec les technologies Microsoft, vous pouvez exécuter le code localement et dans le cloud, exécuter des applications dans le cloud à l'aide de données locales, ou bien en utilisant plus d'un centre de données. Par conséquent, vous pouvez migrer vos applications dans le cloud à votre rythme en conservant la valeur des investissements informatique existants. 
  
- Dans cet article, nous allons nous concentrer sur les scénarios de cloud hybride qui s’étendent à partir de la version locale SQL Server aux offres de cloud public Azure : [SQL Server dans Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) et [stockage Azure](http://www.azure.com/documentation/services/storage/). Plus précisément, nous aborderons les scénarios suivants : 
+ Dans cet article, nous nous concentrerons sur les scénarios de Cloud hybrides qui s’étendent du SQL Server local aux offres de cloud public Azure: [SQL Server dans les machines virtuelles Azure](https://msdn.microsoft.com/library/azure/jj823132.aspx) et le [stockage Azure](http://www.azure.com/documentation/services/storage/). Plus précisément, nous aborderons les scénarios suivants: 
  
--  [Sauvegarde et restauration de bases de données depuis/vers stockage Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
+-  [Sauvegarder et restaurer des bases de données vers/à partir de stockage Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
--  [Gérer les réplicas de base de données sur des Machines virtuelles](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#replica) 
+-  [Conserver les réplicas de base de données sur les machines virtuelles Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#replica) 
  
--  [Store les fichiers de données SQL Server dans le stockage Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#store) 
+-  [Stocker des fichiers de données SQL Servers dans le stockage Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#store) 
  
--  [Migrer des bases de données SQL Server existantes pour les Machines virtuelles](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#migrate) 
+-  [Migrer des bases de données SQL Server existantes vers des machines virtuelles Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#migrate) 
  
 ### <a name="hybrid-cloud-scenarios-for-sql-server-and-microsoft-azure"></a>Scénarios de Cloud hybride pour SQL Server et Microsoft Azure 
  
-#### <a name="backup"></a> Sauvegarde et restauration de bases de données depuis/vers stockage Azure 
- Les deux tâches d'administration fondamentales sont la sauvegarde et la restauration de bases de données. Avec SQL Server et Azure, vous pouvez en toute sécurité sauvegarder vos bases de données dans le cloud. 
+#### <a name="backup"></a>Sauvegarder et restaurer des bases de données vers/à partir de stockage Azure 
+ Les deux tâches d'administration fondamentales sont la sauvegarde et la restauration de bases de données. Avec SQL Server et Azure, vous pouvez sauvegarder vos bases de données dans le Cloud en toute sécurité. 
  
- Les principaux avantages d’utiliser les fonctionnalités de sauvegarde et de restauration de SQL Server avec le stockage Azure comme destination de sauvegarde sont : 
+ Les principaux avantages de l’utilisation des fonctionnalités de sauvegarde et de restauration de SQL Server avec le stockage Azure en tant que destination de sauvegarde sont les suivants: 
  
 -  un stockage illimité à moindre coût ; 
  
@@ -54,20 +54,20 @@ ms.locfileid: "66088611"
  
  La liste ci-dessous répertorie les fonctions de sauvegarde et de restauration de SQL Server pour les scénarios dans le cloud et sur site : 
  
--  Le [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) fonctionnalité vous permet d’effectuer une sauvegarde vers le stockage Azure en spécifiant une URL comme destination de sauvegarde. Avec cette fonctionnalité, vous effectuez une sauvegarde manuelle ou vous configurez votre propre stratégie de sauvegarde comme vous le feriez pour un stockage local ou d'autres options hors site. 
+-  La fonctionnalité [SQL Server sauvegarde vers une URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) vous permet de sauvegarder dans le stockage Azure en spécifiant l’URL comme destination de sauvegarde. Avec cette fonctionnalité, vous effectuez une sauvegarde manuelle ou vous configurez votre propre stratégie de sauvegarde comme vous le feriez pour un stockage local ou d'autres options hors site. 
  
--  Le [chiffrement de sauvegarde](../relational-databases/backup-restore/backup-encryption.md) fonctionnalité vous permet de chiffrer les données lors de la création d’une sauvegarde pour vos destinations de stockage : en local et stockage Azure. 
+-  La fonctionnalité de chiffrement de [sauvegarde](../relational-databases/backup-restore/backup-encryption.md) vous permet de chiffrer les données lors de la création d’une sauvegarde pour vos destinations de stockage: stockage local et stockage Azure. 
  
--  Le [la Compression de sauvegarde (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) fonctionnalité vous permet de créer une sauvegarde, ce qui est inférieure à une sauvegarde non compressée des mêmes données. La compression d'une sauvegarde nécessite moins d'E/S de périphérique et accélère généralement la sauvegarde de façon notable. Cela est très avantageux lorsque vous stockez des fichiers de sauvegarde dans le stockage Azure. 
+-  La fonctionnalité de compression de la [sauvegarde (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) vous permet de créer une sauvegarde, qui est plus petite qu’une sauvegarde non compressée des mêmes données. La compression d'une sauvegarde nécessite moins d'E/S de périphérique et accélère généralement la sauvegarde de façon notable. Cela peut offrir de nombreux avantages lors du stockage des fichiers de sauvegarde dans le stockage Azure. 
  
--  Le [SQL Server Managed Backup to Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) fonctionnalité vous permet de sauvegarder automatiquement bases de données SQL Server à [stockage Azure](http://www.azure.com/documentation/services/storage/). Grâce à elle, vous configurez SQL Server pour qu'il gère la stratégie de sauvegarde et planifie les sauvegardes d'une seule ou de plusieurs bases de données, ou bien vous définissez les valeurs par défaut au niveau de l'instance. 
+-  La fonctionnalité de [gestion des sauvegardes SQL Server sur Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) vous permet de sauvegarder automatiquement les bases de données SQL Server dans le [stockage Azure](http://www.azure.com/documentation/services/storage/). Grâce à elle, vous configurez SQL Server pour qu'il gère la stratégie de sauvegarde et planifie les sauvegardes d'une seule ou de plusieurs bases de données, ou bien vous définissez les valeurs par défaut au niveau de l'instance. 
  
--  Le [SQL Server Backup to Azure Tool](https://www.microsoft.com/download/details.aspx?id=40740) permet le stockage Blob Azure et chiffre et compresse les sauvegardes SQL Server stockées localement ou dans le cloud. Cet outil active une seule stratégie de sauvegarde dans le cloud pour différentes versions de SQL Server, telles que SQL Server 2005, 2008, 2008 R2, et 2014. 
+-  L' [outil de sauvegarde de SQL Server sur Azure](https://www.microsoft.com/download/details.aspx?id=40740) permet de sauvegarder dans le stockage d’objets BLOB Azure et de chiffrer et de compresser SQL Server sauvegardes stockées localement ou dans le Cloud. Cet outil active une seule stratégie de sauvegarde dans le cloud pour différentes versions de SQL Server, telles que SQL Server 2005, 2008, 2008 R2, et 2014. 
  
-#### <a name="replica"></a> Gérer les réplicas de base de données sur des Machines virtuelles 
- Disposer d’une solution de récupération d’urgence stable pour vos bases de données est essentielle pour le succès de votre entreprise. La plupart des clients doivent configurer un site de récupération d'urgence et acheter du matériel supplémentaire pour les réplicas de base de données. Avec SQL Server et Azure, vous pouvez conserver un ou plusieurs réplicas de vos bases de données dans le cloud. 
+#### <a name="replica"></a>Conserver les réplicas de base de données sur les machines virtuelles Azure 
+ Une solution de récupération d’urgence stable pour vos bases de données est essentielle pour la réussite de votre entreprise. La plupart des clients doivent configurer un site de récupération d'urgence et acheter du matériel supplémentaire pour les réplicas de base de données. Avec SQL Server et Azure, vous pouvez gérer un ou plusieurs réplicas de vos bases de données dans le Cloud. 
  
- Les principaux avantages de la gestion des réplicas secondaires dans Azure sont : 
+ Les principaux avantages de la gestion des réplicas secondaires dans Azure sont les suivants: 
  
 -  une solution de récupération d'urgence à moindre coût ; 
  
@@ -75,42 +75,42 @@ ms.locfileid: "66088611"
  
 -  des réplicas disponibles pour décharger les charges de travail de lecture et les sauvegardes. 
  
- Vous pouvez gérer les réplicas secondaires dans Azure à l’aide des techniques suivantes : 
+ Vous pouvez gérer les réplicas secondaires dans Azure à l’aide de l’une des techniques suivantes: 
  
--  Le [Assistant Ajouter un réplica Azure](https://msdn.microsoft.com/library/dn463980\(v=sql.120\).aspx) vous permet de déployer un ou plusieurs réplicas de vos bases de données à une machine virtuelle dans Azure pour la récupération d’urgence. 
+-  L' [Assistant Ajout d’un réplica Azure](https://msdn.microsoft.com/library/dn463980\(v=sql.120\).aspx) vous permet de déployer un ou plusieurs réplicas de vos bases de données sur une machine virtuelle dans Azure pour la récupération d’urgence. 
  
--  Groupes de disponibilité AlwaysOn, mise en miroir de base de données et l’envoi de journaux sont les technologies les plus courantes que vous pouvez utiliser pour aborder la haute disponibilité de votre application et de récupération d’urgence. Pour plus d’informations, consultez [haute disponibilité et récupération d’urgence pour SQL Server dans les Machines virtuelles](https://msdn.microsoft.com/library/azure/jj870962.aspx). 
+-  Groupes de disponibilité AlwaysOn, la mise en miroir de bases de données et la copie des journaux de session sont les technologies les plus courantes que vous pouvez utiliser pour répondre aux besoins de haute disponibilité et de récupération d’urgence de votre application. Pour plus d’informations, consultez [haute disponibilité et récupération d’urgence pour SQL Server dans machines virtuelles Azure](https://msdn.microsoft.com/library/azure/jj870962.aspx). 
  
-#### <a name="store"></a> Store les fichiers de données SQL Server dans le stockage Azure 
- Stockage des fichiers de données SQL Server en local dans le stockage Azure fournit un stockage hors site flexible, fiable et illimité pour vos bases de données. À compter de SQL Server 2014, vous pouvez utiliser [fichiers de données SQL Server dans Azure de Miceosoft](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) pour stocker les fichiers de base de données SQL Server dans le stockage Azure. Avec cette fonctionnalité, vous pouvez déplacer des données et fichiers journaux à partir de la base de données locale dans le stockage Azure, tout en conservant le nœud de calcul de SQL Server s’exécutant en local. Cette fonctionnalité vous permet d’avoir capacité de stockage illimitée dans le stockage Azure. 
+#### <a name="store"></a>Stocker des fichiers de données SQL Servers dans le stockage Azure 
+ Le stockage des fichiers de données SQL Server locaux dans le stockage Azure fournit un stockage hors site flexible, fiable et illimité pour vos bases de données. À compter de SQL Server 2014, vous pouvez utiliser des [fichiers de données SQL Server dans Miceosoft Azure](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) pour stocker des fichiers de base de données SQL Server dans le stockage Azure. Avec cette fonctionnalité, vous pouvez déplacer les fichiers de données et les fichiers journaux de la base de données locale vers le stockage Azure, tout en conservant le nœud de calcul de SQL Server s’exécutant en local. Cette fonctionnalité vous permet de disposer d’une capacité de stockage illimitée dans le stockage Azure. 
  
- Les principaux avantages du stockage des fichiers de données SQL Server le stockage Azure sont : 
+ Les principaux avantages du stockage des fichiers de données SQL Server stockage Azure sont les suivants: 
  
 -  Stockage à faible coût illimité dans le stockage Azure 
  
 -  un stockage mieux adapté pour décharger les charges de travail de lecture d'historique dans le cloud afin de prendre en charge des applications de création de rapports localement ; 
  
--  faciliter la récupération d'urgence en séparant l'instance de calcul (instance de SQL Server) et les données (fichiers de données SQL Server). Cela vous permet facilement attacher la base de données vers une autre instance de SQL Server dans un environnement local ou dans une machine virtuelle Azure en cas de sinistre. 
+-  faciliter la récupération d'urgence en séparant l'instance de calcul (instance de SQL Server) et les données (fichiers de données SQL Server). Cela vous permet d’attacher facilement la base de données à une autre instance de SQL Server dans un environnement local ou dans une machine virtuelle Azure en cas de sinistre. 
  
-#### <a name="migrate"></a> Migrer des bases de données SQL Server existantes pour les Machines virtuelles 
+#### <a name="migrate"></a>Migrer des bases de données SQL Server existantes vers des machines virtuelles Azure 
  Le cloud computing offre un certain nombre d'avantages clés aux entreprises, notamment des ressources virtualisées illimitées et payables à l'utilisation. Vous exploitez ainsi des centres de données disponibles dans le cloud public au lieu de créer et gérer vos propres centres de données, ce qui réduit les coûts informatiques et les achats de matériel. 
  
- Avec [SQL Server dans Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx), vous pouvez déplacer les applications locales existantes vers Azure avec peu ou aucun code ne change. Les administrateurs et les développeurs utilisent toujours les mêmes outils de développement et d'administration disponibles localement. 
+ Avec [SQL Server dans les machines virtuelles Azure](https://msdn.microsoft.com/library/azure/jj823132.aspx), vous pouvez déplacer les applications locales existantes vers Azure avec un minimum de modifications de code. Les administrateurs et les développeurs utilisent toujours les mêmes outils de développement et d'administration disponibles localement. 
  
- Déplacement d’une base de données à partir de la version locale SQL Server à SQL Server s’exécutant dans une Machine virtuelle Azure généralement prend l’une de ces chemins d’accès : 
+ Le déplacement d’une base de données à partir d’un SQL Server local vers SQL Server exécuté sur une machine virtuelle Azure prend généralement l’un des chemins d’accès suivants: 
  
--  **Déplacement de la base de données uniquement :** Il existe plusieurs outils et techniques déplacer des bases de données locales existantes vers SQL Server dans les Machines virtuelles Azure. Pour des instructions et recommandations sur la migration vers SQL Server dans les Machines virtuelles Azure, consultez [se préparer à migrer vers SQL Server dans Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx) et également [migration vers SQL Server dans une Machine virtuelle Azure ](https://msdn.microsoft.com/library/jj156165.aspx). 
+-  **Déplacement de la base de données uniquement:** Plusieurs outils et techniques sont disponibles pour déplacer des bases de données locales existantes vers des SQL Server dans des machines virtuelles Azure. Pour obtenir des instructions et des recommandations sur la migration vers SQL Server sur des machines virtuelles Azure, consultez se [préparer à migrer vers SQL Server sur des machines virtuelles Azure](https://msdn.microsoft.com/library/dn133142.aspx) et [migrer vers SQL Server sur une machine virtuelle Azure](https://msdn.microsoft.com/library/jj156165.aspx). 
  
-   En outre, en commençant par SQL Server 2014, un nouvel Assistant [déployer une base de données SQL Server à une Machine virtuelle de Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) est disponible pour vous permettre de déployer la base de données vers une autre instance de SQL Server en cours d’exécution dans une Machine virtuelle Azure. 
+   En outre, à compter de SQL Server 2014, un nouvel Assistant, [déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) , vous permet de déployer la base de données sur une autre instance de SQL Server s’exécutant sur une machine virtuelle Azure. 
  
--  **Déplacement de la machine virtuelle complète :** Vous pouvez apporter vos propres machines virtuelles de SQL Server dans Azure, ou créez-en un à l’aide de l’image de plateforme. Ensuite, vous pouvez télécharger et attacher un disque de données qui contient déjà des données à la machine virtuelle, ou attacher un disque vide à la machine. Avoir une instance de données SQL Server sur des Machines virtuelles Azure avec des disques de données attachés fournit un stockage persistant supplémentaire pour vos fichiers de données et les données d’application. Pour obtenir des informations complètes et des procédures, consultez [déploiement de SQL Server dans les Machines virtuelles](https://msdn.microsoft.com/library/dn133141.aspx). 
+-  **Déplacement de la totalité de la machine virtuelle:** Vous pouvez placer vos propres machines virtuelles SQL Server sur Azure ou en créer une à l’aide de l’image de plateforme. Ensuite, vous pouvez télécharger et attacher un disque de données qui contient déjà des données à la machine virtuelle, ou attacher un disque vide à la machine. Le fait de disposer d’une instance de données SQL Server sur des machines virtuelles Azure avec des disques de données attachés fournit un autre stockage persistant pour vos fichiers de données et vos données d’application. Pour obtenir des informations complètes et des procédures, consultez [SQL Server le déploiement sur des machines virtuelles Azure](https://msdn.microsoft.com/library/dn133141.aspx). 
  
- Si vous envisagez de déplacer les couches application (par exemple, la couche de présentation, le niveau métier et le niveau de base de données) aux Machines virtuelles Azure, nous vous recommandons de consulter les recommandations de le [modèles d’Application et de développement Stratégies pour SQL Server dans Azure Virtual Machines](https://msdn.microsoft.com/library/dn574746.aspx) article. L’objectif de cet article est de fournir aux architectes de solutions et aux développeurs une base pour l’architecture de la bonne application et la conception, qu’ils peuvent appliquer lors de la migration des applications existantes vers Azure, ainsi que développer de nouvelles applications dans Azure. Pour chaque modèle d'application, l'article décrit un scénario local, sa solution dans le cloud respective, et les recommandations techniques connexes. En outre, l’article aborde les stratégies de développement propres à Azure afin que vous pouvez concevoir correctement vos applications. 
+ Si vous envisagez de déplacer les couches application (telles que la couche présentation, le niveau entreprise et la couche base de données) vers des machines virtuelles Azure, nous vous recommandons de passer en revue les recommandations fournies dans les [modèles d’application et les stratégies de développement pour SQL. Serveur dans les machines virtuelles Azure](https://msdn.microsoft.com/library/dn574746.aspx) . Cet article vise à fournir aux architectes de solutions et aux développeurs une base pour une architecture et une conception de qualité, qu’ils peuvent appliquer lors de la migration d’applications existantes vers Azure ainsi que dans le cadre du développement de nouvelles applications dans Azure. Pour chaque modèle d'application, l'article décrit un scénario local, sa solution dans le cloud respective, et les recommandations techniques connexes. En outre, l’article aborde les stratégies de développement spécifiques à Azure pour vous permettre de concevoir correctement vos applications. 
  
 ## <a name="see-also"></a>Voir aussi 
- [Guide du produit SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
+ [Guide produit de SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Série de blogs Cloud de Microsoft SQL Server hybride](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
- [Migration d’Applications centrées sur les données vers Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
+ [Microsoft SQL Server série de blogs sur le Cloud hybride](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Migration d’applications centrées sur les données vers Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  
