@@ -5,17 +5,17 @@ description: En savoir plus sur la création d’un groupe de disponibilité Alw
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027247"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030310"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurer le groupe de disponibilité Always On SQL Server sur Linux
 
@@ -135,7 +135,7 @@ Exécutez **seulement un** des scripts suivants :
 - Créez un groupe de disponibilité avec deux réplicas synchrones et un réplica de configuration :
 
    >[!IMPORTANT]
-   >Cette architecture permet à n’importe quelle édition de SQL Server d’héberger le troisième réplica. Par exemple, le troisième réplica peut être hébergé sur l’édition SQL Server Entreprise. Dans l’Édition Entreprise, le seul type de point de terminaison valide est `WITNESS`. 
+   >Cette architecture permet à n’importe quelle édition de SQL Server d’héberger le troisième réplica. Par exemple, le troisième réplica peut être hébergé sur SQL Server Express Edition. Sur Express Edition, le seul type de point de terminaison valide est `WITNESS`. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ Vous pouvez également configurer un groupe de disponibilité avec `CLUSTER_TYPE
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Joindre les réplicas secondaires au groupe de disponibilité
 
-L’utilisateur Pacemaker requiert des autorisations `ALTER`, `CONTROL` et `VIEW DEFINITION` sur le groupe de disponibilité de tous les réplicas. Pour octroyer des autorisations, exécutez le script Transact-SQL suivant une fois le groupe de disponibilité créé sur le réplica principal et chaque réplica secondaire immédiatement après qu’ils aient été ajoutés au groupe de disponibilité. Avant d’exécuter le script suivant, remplacez `<pacemakerLogin>` par le nom du compte d'utilisateur Pacemaker.
+L’utilisateur Pacemaker requiert des autorisations `ALTER`, `CONTROL` et `VIEW DEFINITION` sur le groupe de disponibilité de tous les réplicas. Pour octroyer des autorisations, exécutez le script Transact-SQL suivant une fois le groupe de disponibilité créé sur le réplica principal et chaque réplica secondaire immédiatement après qu’ils aient été ajoutés au groupe de disponibilité. Avant d’exécuter le script suivant, remplacez `<pacemakerLogin>` par le nom du compte d'utilisateur Pacemaker. Si vous n’avez pas de compte de connexion pour Pacemaker, [créez un compte de connexion SQL Server pour Pacemaker](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 Le script Transact-SQL suivant joint une instance à un groupe de disponibilité nommé `ag1`. Mettez à jour le script en fonction de votre environnement. Sur chaque instance qui héberge un réplica secondaire, exécutez le script Transact-SQL suivant pour joindre le groupe de disponibilité.
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

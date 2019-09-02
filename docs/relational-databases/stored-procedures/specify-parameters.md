@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136653"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110272"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  Si la valeur par défaut est une chaîne de caractères contenant des espaces ou des signes de ponctuation ou si elle débute par un nombre (par exemple, 6xxx), elle doit figurer entre guillemets simples.  
+
+> [!NOTE] 
+> Les paramètres par défaut ne sont pas pris en charge dans Azure SQL Data Warehouse ni Parallel Data Warehouse. 
   
  Si aucune valeur ne peut être spécifiée correctement comme valeur par défaut pour le paramètre, spécifiez NULL comme valeur par défaut. Il est judicieux que la procédure retourne un message personnalisé lorsqu'elle est exécutée sans valeur pour le paramètre.  
   

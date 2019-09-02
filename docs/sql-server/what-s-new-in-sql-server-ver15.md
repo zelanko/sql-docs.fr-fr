@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903642"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026242"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -91,7 +91,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Consulter [Prise en charge du classement et d’Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/>[la version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase, et pour Always Encrypted.|
+|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Consulter [Prise en charge du classement et d’Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> La version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase et pour Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -99,7 +99,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
 |Interroger des tables externes |Les noms des colonnes de table externe sont désormais utilisés pour interroger les sources de données SQL Server, Oracle, Teradata, MongoDB et ODBC. Consultez [Qu’est-ce que PolyBase ?](../relational-databases/polybase/polybase-guide.md).|
-|Prise en charge du codage de caractères UTF-8|Prise en charge d’un caractère UTF-8 avec des tables externes. Consulter [Prise en charge du classement et d’Unicode](../relational-databases/collations/collation-and-unicode-support.md)|
+|Prise en charge du codage de caractères UTF-8|Prise en charge d’un caractère UTF-8 avec des tables externes. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="server-settings"></a>Paramètres du serveur
@@ -147,6 +147,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |:---|:---|
 |Récupération de base de données accélérée | Activer la récupération accélérée des bases de données pour chaque base de données. Consultez [Récupération accélérée des bases de données](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 |Forcer les curseurs statiques et les curseurs avec avance rapide | Prise en charge de la possibilité de forcer le plan du Magasin des requêtes pour l’avance rapide et les curseurs statiques. Consultez [Planifier la prise en charge du forçage des curseurs statiques et des curseurs avec avance rapide](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Gouvernance des ressources| La valeur configurable pour l’option `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` et `ALTER WORKLOAD GROUP` est passée d’un entier à un type de données float, pour permettre un contrôle plus granulaire des limites de la mémoire. Consultez [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) et [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Recompilations réduites pour les charges de travail| Améliore l’utilisation des tables temporaires sur plusieurs étendues. Consultez [Recompilations réduites pour les charges de travail](../relational-databases/tables/tables.md#ctp23) |
 |Scalabilité des points de contrôle indirect |Consultez [Amélioration de la scalabilité des points de contrôle indirect](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
 |Métadonnée `tempdb` à mémoire optimisée| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../relational-databases/in-memory-database.md), une nouvelle fonctionnalité, les métadonnées `tempdb` à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau d’extensibilité pour les charges de travail de base de données `tempdb` lourdes. Dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Consultez [Métadonnée `tempdb` à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
@@ -155,7 +156,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Compilation différée de variable de table|Améliore la qualité du plan et le niveau de performance global pour les requêtes faisant référence à des variables de tables. Pendant l’optimisation et la compilation initiale, cette fonctionnalité propage les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Ces informations précises sur le nombre de lignes optimisent les opérations de plan en aval. Consultez [Compilation différée de variables de tables](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
 |`APPROX_COUNT_DISTINCT `|Pour les scénarios dans lesquels la précision absolue n’est pas importante, mais la réactivité est essentielle, les agrégats `APPROX_COUNT_DISTINCT` entre les jeux de données volumineux utilisent moins de ressources que `COUNT(DISTINCT())` pour une concurrence supérieure. Consultez [Traitement des requêtes approximatif](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 |Mode Batch sur rowstore|Le mode batch sur rowstore permet l’exécution en mode batch sans avoir besoin d’index columnstore. L’exécution en mode batch utilise l’UC plus efficacement pendant les charges de travail analytiques, mais avant [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on ne l’utilisait uniquement lorsqu’une requête incluait des opérations avec des index columnstore. Toutefois, certaines applications peuvent utiliser des fonctionnalités qui ne sont pas prises en charge avec les index columnstore, et ne peuvent donc pas tirer parti du mode batch. À compter de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], le mode batch est activé sur les charges de travail analytiques éligibles dont les requêtes incluent des opérations avec n’importe quel type d’index (rowstore ou columnstore). Consultez [Mode Batch sur rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
-|Incorporation des fonctions UDF scalaires|Transforme automatiquement les fonctions scalaires définies par l’utilisateur en expressions relationnelles, et les incorpore à la requête SQL d’appel. Cette transformation améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. [Incorporation des fonctions scalaires définies par l’utilisateur](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Incorporation des fonctions UDF scalaires|Transforme automatiquement les fonctions scalaires définies par l’utilisateur en expressions relationnelles, et les incorpore à la requête SQL d’appel. Cette transformation améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. Voir [Incorporation (inlining) des fonctions UDF scalaires](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 | &nbsp; | &nbsp; |
 
 ### <a name="availability-groups"></a>Groupes de disponibilité
@@ -193,14 +194,6 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Améliorations `tempdb` | Par défaut, une nouvelle installation de SQL Server sur Linux crée plusieurs fichiers de données `tempdb` en fonction du nombre de cœurs logiques (avec jusqu’à 8 fichiers de données). Cela ne s’applique pas aux mises à niveau de versions mineures ou majeures sur place. Chaque fichier `tempdb` fait 8 Mo avec une croissance automatique de 64 Mo. Ce comportement est similaire à l’installation de SQL Server par défaut sur Windows. |
 | PolyBase sur Linux | [Installer PolyBase](../relational-databases/polybase/polybase-linux-setup.md) sur Linux pour les connecteurs non-Hadoop.<br/><br/>[Mappage de type PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Prise en charge de la capture des changements de données (CDC) | La capture des changements de données (CDC) est désormais prise en charge sur Linux pour SQL Server 2019. |
-| &nbsp; | &nbsp; |
-
-### <a name="setup"></a>Programme d’installation
-
-|Nouvelle fonctionnalité ou mise à jour | Détails |
-|:---|:---|
-|Nouvelles options de configuration de la mémoire | Définit les configurations de serveur *min server memory (Mo)* et *max server memory (Mo)* au cours de l’installation. Pour plus d’informations, consultez les paramètres `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` et `SQLMAXMEMORY` dans [Installer SQL Server à partir de l’invite de commandes](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). La valeur proposée s’aligne sur les lignes directrices de configuration de la mémoire dans les [options de configuration de la mémoire du serveur](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|Nouvelles options d’installation du parallélisme | Définit la configuration du serveur de *degré maximal de parallélisme* pendant l’installation. Pour plus d’informations, consultez le paramètre `SQLMAXDOP` dans [Installer SQL Server à partir de l’invite de commandes](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). La valeur par défaut s’aligne aux lignes directrices du degré maximal de parallélisme dans [Configurer l’option de configuration du serveur de degré maximal de parallélisme](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -247,7 +240,7 @@ De plus, les fonctionnalités suivantes ont été ajoutées ou améliorées dans
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Notes de publication de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md).
+- Notes de publication d’[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)](sql-server-ver15-release-notes.md).
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] : Livre blanc technique](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Publié en septembre 2018. S’applique à Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 pour conteneurs Docker, Linux et Windows.
 

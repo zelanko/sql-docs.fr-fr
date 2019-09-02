@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231641"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123124"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou version ultérieure et que vous passez au tout dernier [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), il est possible que les performances d’une charge de travail fassent l’objet d’une régression. Cela est également possible (à un degré moindre) lors de la mise à niveau entre [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et les versions plus récentes.
 
-À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et avec chaque nouvelle version, tous les changements de l’optimiseur de requête sont liés au niveau de compatibilité de base de données le plus récent, de sorte que les plans d’exécution ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente disponible. Pour plus d’informations sur les modifications de l’optimiseur de requête introduites dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consultez [Estimateur de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md). Pour plus d’informations sur les niveaux de compatibilité et leur impact sur les mises à niveau, consultez [Niveaux de compatibilité et mises à niveau SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades).
+À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et avec chaque nouvelle version, tous les changements de l’optimiseur de requête sont liés au niveau de compatibilité de base de données le plus récent, de sorte que les plans d’exécution ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente disponible. Pour plus d’informations sur les modifications de l’optimiseur de requête introduites dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consultez [Estimateur de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md). Pour plus d’informations sur les niveaux de compatibilité et leur impact sur les mises à niveau, consultez [Niveaux de compatibilité et mises à niveau du moteur de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades).
 
 Cette fonctionnalité de liaison fournie par le niveau de compatibilité de base de données, en association avec le Magasin des requêtes, procure un niveau élevé de contrôle sur les performances des requêtes dans le processus de mise à niveau si celle-ci respecte le flux de travail recommandé ci-dessous. Pour plus d’informations sur le flux de travail recommandé pour la mise à niveau du niveau de compatibilité, consultez [Modifier le mode de compatibilité de base de données et utiliser le magasin des requêtes](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
@@ -210,7 +210,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 Nécessite l’appartenance au rôle **db_owner**.
   
 ## <a name="see-also"></a>Voir aussi  
- [Niveaux de compatibilité et mises à niveau SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [Niveaux de compatibilité et mises à niveau du moteur de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

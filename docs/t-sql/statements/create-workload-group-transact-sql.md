@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/05/2019
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2528d770b1ad7e08898deb8e34350ccb3ad1ccfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea6501c4bfd516b99d53f9ac7e90a2cd0d59ba8c
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948089"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026221"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -55,9 +55,11 @@ CREATE WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Arguments
 
-*group_name* Nom défini par l’utilisateur pour le groupe de charges de travail. *group_name* est alphanumérique, peut contenir jusqu’à 128 caractères, doit être unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).
+*group_name*     
+Nom défini par l'utilisateur pour le groupe de charges de travail. *group_name* est alphanumérique, peut contenir jusqu’à 128 caractères, doit être unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).
 
-IMPORTANCE = { LOW | **MEDIUM** | HIGH } Spécifie l’importance relative d’une requête dans le groupe de charges de travail. Le paramètre Importance peut avoir les valeurs suivantes, MEDIUM étant la valeur par défaut :
+IMPORTANCE = { LOW | **MEDIUM** | HIGH }     
+Spécifie l'importance relative d'une demande dans le groupe de charges de travail. Le paramètre Importance peut avoir les valeurs suivantes, MEDIUM étant la valeur par défaut :
 
 - LOW
 - MEDIUM (valeur par défaut)
@@ -68,33 +70,44 @@ IMPORTANCE = { LOW | **MEDIUM** | HIGH } Spécifie l’importance relative d’u
 
 Le paramètre IMPORTANCE est local par rapport au pool de ressources : les groupes de charges de travail d'importance différente à l'intérieur du même pool de ressources s'affectent mutuellement, mais n'affectent pas les groupes de charges de travail dans un autre pool de ressources.
 
-REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* Spécifie la quantité de mémoire maximale qu’une requête unique peut prendre du pool. *value* est un pourcentage relatif à la taille du pool de ressources spécifiée par MAX_MEMORY_PERCENT. *value* est un entier pouvant aller jusqu’à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et une valeur flottante commençant par [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], avec une valeur par défaut de 25. La plage autorisée pour *value* est comprise entre 1 et 100.
+REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
+Spécifie la quantité de mémoire maximale qu'une requête unique peut prendre du pool. *value* est un pourcentage relatif à la taille du pool de ressources spécifiée par MAX_MEMORY_PERCENT. 
 
-> [!NOTE]
-> La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.
->
-> - L’affectation de la valeur 0 à *value* empêche l’exécution de requêtes avec les opérations SORT et HASH MATCH dans les groupes de charges de travail définis par l’utilisateur. > - Nous vous déconseillons d’affecter à *value* une valeur supérieure à 70, car le serveur risque de ne pas pouvoir mettre de côté suffisamment de mémoire disponible si d’autres requêtes simultanées s’exécutent. Cela risque de provoquer l'erreur de délai d'attente de requête 8645.
-> - Si les besoins en mémoire de la requête dépassent la limite spécifiée par ce paramètre, le serveur effectue les opérations suivantes :
->
-> Pour les groupes de charges de travail définis par l'utilisateur, le serveur essaie de réduire le degré de parallélisme de la requête jusqu'à ce que ses besoins en mémoire tombent sous la limite ou jusqu'à ce que le degré de parallélisme soit égal à 1. Si les besoins en mémoire de la requête sont encore supérieurs à la limite, l'erreur 8657 se produit.
->
-> Pour les groupes de charges de travail internes et par défaut, le serveur autorise la requête à obtenir la mémoire requise.
->
-> Sachez toutefois que dans les deux cas, l'erreur de délai d'attente 8645 se produit si le serveur dispose d'une mémoire physique insuffisante.
+*value* est un entier pouvant aller jusqu’à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et une valeur flottante commençant par [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. La valeur par défaut est 25. La plage autorisée pour *value* est comprise entre 1 et 100.
 
-REQUEST_MAX_CPU_TIME_SEC = *value* Spécifie la quantité maximale de temps processeur, en secondes, qu’une requête peut utiliser. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, ce qui signifie illimité.
+> [!NOTE]  
+> La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.  
+  
+> [!IMPORTANT]
+> L’affectation de la valeur 0 à *value* empêche l’exécution de requêtes avec les opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur.     
+>
+> Il est déconseillé d’affecter à *value* une valeur supérieure à 70, car le serveur risque de ne pas pouvoir mettre de côté suffisamment de mémoire disponible si d’autres requêtes simultanées s’exécutent. Cela risque de provoquer l'erreur de délai d'attente de requête 8645.      
+  
+> [!NOTE]  
+> Si les besoins en mémoire de la requête dépassent la limite spécifiée par ce paramètre, le serveur effectue les opérations suivantes :  
+>   
+> -  Pour les groupes de charges de travail définis par l'utilisateur, le serveur essaie de réduire le degré de parallélisme de la requête jusqu'à ce que ses besoins en mémoire tombent sous la limite ou jusqu'à ce que le degré de parallélisme soit égal à 1. Si les besoins en mémoire de la requête sont encore supérieurs à la limite, l'erreur 8657 se produit.  
+>   
+> -  Pour les groupes de charges de travail internes et par défaut, le serveur autorise la requête à obtenir la mémoire requise.  
+>   
+> Sachez toutefois que dans les deux cas, l'erreur de délai d'attente 8645 se produit si le serveur dispose d'une mémoire physique insuffisante.  
+
+REQUEST_MAX_CPU_TIME_SEC = *value*     
+Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, ce qui signifie illimité.
 
 > [!NOTE]
 > Par défaut, Resource Governor n’empêche pas une demande de continuer si le temps maximal est dépassé. Toutefois, un événement sera généré. Pour plus d’informations, consultez [Classe d’événements CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
 > [!IMPORTANT]
 > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 et de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, quand [l’indicateur de trace 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) est utilisé, Resource Governor abandonne une demande en cas de dépassement de la durée maximale.
 
-REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value* Spécifie la durée maximale, en secondes, pendant laquelle une requête peut attendre qu’une allocation de mémoire (mémoire tampon de travail) devienne disponible. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value*, 0, utilise un calcul interne basé sur le coût de requête pour déterminer le délai maximal.
+REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*     
+Spécifie la durée maximale, en secondes, pendant laquelle une requête peut attendre qu’une allocation de mémoire (mémoire tampon de travail) devienne disponible. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value*, 0, utilise un calcul interne basé sur le coût de requête pour déterminer le délai maximal.
 
 > [!NOTE]
 > Une requête n'échoue pas toujours lorsque le délai d'expiration d'allocation mémoire est atteint. Une requête échoue seulement si le nombre de requêtes exécutées simultanément est trop élevé. Autrement, la requête risque d'obtenir uniquement l'allocation mémoire minimale, d'où une dégradation des performances.
 
-MAX_DOP = *value* Spécifie le degré maximal de parallélisme (DOP) pour les requêtes parallèles. *value* doit être égal à 0 ou un entier positif. La plage autorisée pour *value* est comprise entre 0 et 64. Le paramètre par défaut de *value*, 0, utilise le paramètre global. MAX_DOP est géré comme suit :
+MAX_DOP = *value*     
+Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *value* doit être égal à 0 ou un entier positif. La plage autorisée pour *value* est comprise entre 0 et 64. Le paramètre par défaut de *value*, 0, utilise le paramètre global. MAX_DOP est géré comme suit :
 
 - MAX_DOP en tant qu'indicateur de requête est effectif tant qu'il ne dépasse pas le groupe de charges de travail MAX_DOP. Si la valeur d'indicateur de requête MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le moteur de base de données utilise la valeur MAXDOP du gouverneur de ressources.
 - MAX_DOP en tant qu'indicateur de requête remplace toujours l'option « max degree of parallelism » de sp_configure.
@@ -102,16 +115,19 @@ MAX_DOP = *value* Spécifie le degré maximal de parallélisme (DOP) pour les re
 - Si la requête est marquée comme étant en série au moment de la compilation, elle ne peut être reconvertie en requête parallèle au moment de l'exécution, indépendamment du groupe de charge de travail ou du paramètre sp_configure.
 - Une fois le degré maximal de parallélisme (DOP) configuré, il ne peut être diminué que sous la sollicitation de l'allocation de mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.
 
-GROUP_MAX_REQUESTS = *value* Spécifie le nombre maximal de requêtes simultanées autorisées à s’exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, qui autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.
+GROUP_MAX_REQUESTS = *value*     
+Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, qui autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.
 
-USING { *pool_name* |  **"default"** } Associe le groupe de charge de travail au pool de ressources défini par l’utilisateur identifié par *pool_name*. Cette opération revient en fait à placer le groupe de charges de travail dans le pool de ressources. Si *pool_name* n’est pas fourni ou si l’argument USING n’est pas utilisé, le groupe de charge de travail est placé dans le pool par défaut Resource Governor prédéfini.
+USING { *pool_name* |  **"default"** }     
+Associe le groupe de charge de travail au pool de ressources défini par l’utilisateur identifié par *pool_name*. Cette opération revient en fait à placer le groupe de charges de travail dans le pool de ressources. Si *pool_name* n’est pas fourni ou si l’argument USING n’est pas utilisé, le groupe de charge de travail est placé dans le pool par défaut Resource Governor prédéfini.
 
 "default" est un mot réservé et doit être placé entre des guillemets doubles ("") ou des crochets ([]) lorsqu'il est utilisé avec l'argument USING.
 
 > [!NOTE]
 > Les groupes de charges de travail et les pools de ressources prédéfinis utilisent tous des noms minuscules, tels que "default". Ce facteur doit être pris en considération pour les serveurs qui utilisent un classement qui respecte la casse. Les serveurs avec un classement qui ne respecte pas la casse, tel que SQL_Latin1_General_CP1_CI_AS, traitent "default" et "Default" comme identiques.
 
-EXTERNAL external_pool_name | "default" **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+EXTERNAL external_pool_name | "default"     
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Le groupe de charge de travail peut spécifier un pool de ressources externes. Vous pouvez définir un groupe de charge de travail et l’associer à 2 pools :
 
@@ -119,7 +135,6 @@ Le groupe de charge de travail peut spécifier un pool de ressources externes. V
 - Un pool de ressources externes pour les processus externes. Pour plus d’informations, consultez [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 ## <a name="remarks"></a>Notes
-
 Quand `REQUEST_MEMORY_GRANT_PERCENT` est utilisé, la création d’index est autorisée à utiliser une mémoire d’espace de travail supérieure à celle qui lui a été initialement allouée, afin d’améliorer les performances. Cette gestion spéciale est prise en charge par le gouverneur de ressources dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charges de travail.
 
 ### <a name="index-creation-on-a-partitioned-table"></a>Création d’un index sur une table partitionnée

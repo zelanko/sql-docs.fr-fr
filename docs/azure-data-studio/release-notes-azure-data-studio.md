@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553104"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059264"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553104"
 | Améliorations des notebooks | &bull; &nbsp; Ajouter du code ou une cellule de texte inline <br/>&bull; &nbsp; Ajout de la possibilité de cliquer avec le bouton droit sur la grille de résultats SQL pour enregistrer les résultats au format CSV, JSON, etc. <br/> &bull; &nbsp; Amélioration des performances de chargement des Notebooks afin d’accélérer le chargement JSON <br/> &bull; &nbsp; Consultez la liste complète des améliorations [ici](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
 | Prise en charge de SQL Server 2019 |  Cette version inclut la prise en charge d’autres fonctionnalités de cluster Big Data SQL Server 2019, notamment : <br/> &bull; &nbsp; Réduction du temps nécessaire pour charger les informations de table et de colonne dans la page de mappage d’objets. <br/> &bull; &nbsp; Correction d’un bogue lors du chargement des informations d’identification incluses dans l’étendue de la base de données dans la page de détails de la connexion. <br/> &bull; &nbsp; Augmentation de la taille de l’échantillon par défaut utilisée pour l’analyse PROSE. | 
 | L’extension dacpac prend désormais en charge AAD | 
-| Visual Studio Code version de mai fusionnée 1.37 | Vous trouverez les dernières améliorations [ici](https://code.visualstudio.com/updates/v1_37). |
+| Visual Studio Code version de juillet fusionnée 1.37 | Vous trouverez les dernières améliorations [ici](https://code.visualstudio.com/updates/v1_37). |
 | Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1) |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553104"
 | Améliorations de la comparaison de schémas | &bull; &nbsp; Options d’exclusion/inclusion ajoutées <br/>&bull; &nbsp; Générer le script ouvre le script après sa génération <br/>&bull; &nbsp; Barres de défilement doubles supprimées  <br/>&bull; &nbsp; Améliorations de la mise en forme et de la mise en page <br/>&bull; &nbsp; Vous trouverez les modifications complètes [ici](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Déplacement de la section Messages dans son propre onglet | Lorsque les utilisateurs exécutaient des requêtes SQL, les résultats et les messages s’affichaient dans des panneaux empilés. Ils se trouvent désormais dans des onglets séparés dans un panneau, comme dans SSMS. |
 | Améliorations du notebook SQL | &bull; &nbsp; Les utilisateurs peuvent désormais choisir d’utiliser leurs propres installations Python 3 ou Anaconda dans les notebooks <br/>&bull; &nbsp; Plusieurs correctifs de stabilité + ajustements/finitions <br/> &bull; &nbsp; Consultez la liste complète des améliorations [ici](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
-| Visual Studio Code version de mai fusionnée 1.34 | Vous trouverez les dernières améliorations [ici](https://code.visualstudio.com/updates/v1_34) |
+| Visual Studio Code version d’avril fusionnée 1.34 | Vous trouverez les dernières améliorations [ici](https://code.visualstudio.com/updates/v1_34) |
 | Bogues et problèmes résolus. | Consultez [Bogues et problèmes, sur GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495463"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110282"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL)
 
@@ -379,14 +379,14 @@ Pour plus d’informations, consultez la section « Utilisation des options de 
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
 ON         
-Spécifie que les mises à jour des statistiques pour l’option AUTO_UPDATE_STATISTICS sont asynchrones. L’optimiseur de requête n’attend pas la fin des mises à jour des statistiques pour compiler les requêtes.
+Spécifie que les mises à jour des statistiques pour l'option AUTO_UPDATE_STATISTICS sont asynchrones. L’optimiseur de requête n’attend pas la fin des mises à jour des statistiques pour compiler les requêtes.
 
 Affecter la valeur ON à cette option n'a aucun effet à moins que AUTO_UPDATE_STATISTICS n'ait également la valeur ON.
 
 Par défaut, l’option AUTO_UPDATE_STATISTICS_ASYNC a la valeur OFF ; l’optimiseur de requête met à jour les statistiques en mode synchrone.
 
 OFF         
-Spécifie que les mises à jour des statistiques pour l’option AUTO_UPDATE_STATISTICS sont synchrones. L’optimiseur de requête attend la fin des mises à jour des statistiques pour compiler les requêtes.
+Spécifie que les mises à jour des statistiques pour l'option AUTO_UPDATE_STATISTICS sont synchrones. L’optimiseur de requête attend la fin des mises à jour des statistiques pour compiler les requêtes.
 
 Affecter la valeur OFF à cette option n'a aucun effet à moins que AUTO_UPDATE_STATISTICS n'ait également la valeur ON.
 
@@ -1565,7 +1565,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne is_au
 
 Pour plus d’informations, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).
 
-INCREMENTAL = ON | OFF         
+INCREMENTAL = ON | OFF         
 Définissez AUTO_CREATE_STATISTICS sur la valeur ON, et INCREMENTAL sur la valeur ON. Ce paramètre crée automatiquement des statistiques incrémentielles sur les statistiques incrémentielles sont prises en charge. La valeur par défaut est OFF. Pour plus d’informations, voir [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
@@ -1784,7 +1784,7 @@ Le paramètre actuel de cette option peut être déterminé en examinant la colo
 **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]         
-Contrôle si le magasin de requête est activé dans la base de données ainsi que la suppression du contenu du magasin de requête.
+Contrôle si le magasin de requête est activé dans la base de données, ainsi que la suppression du contenu du magasin de requête.
 
 ON         
 Active le magasin de requêtes.
@@ -2034,7 +2034,7 @@ Spécifie la fréquence des points de contrôle indirects en fonction de chaque 
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
-Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de plantage.
+Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de sinistre.
 
 SECONDS         
 Indique que *target_recovery_time* correspond au nombre de secondes.
@@ -2339,7 +2339,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne is_au
 
 Pour plus d’informations, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).
 
-INCREMENTAL = ON | OFF         
+INCREMENTAL = ON | OFF         
 Définissez AUTO_CREATE_STATISTICS sur la valeur ON, et INCREMENTAL sur la valeur ON. Ce paramètre crée automatiquement des statistiques incrémentielles sur les statistiques incrémentielles sont prises en charge. La valeur par défaut est OFF. Pour plus d’informations, voir [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
@@ -2517,7 +2517,7 @@ Vous pouvez déterminer la valeur actuelle de cette option en consultant la colo
 **\<query_store_options> ::=**         
 
 ON | OFF | CLEAR [ ALL ]         
-Contrôle si le magasin de requête est activé dans la base de données ainsi que la suppression du contenu du magasin de requête.
+Contrôle si le magasin de requête est activé dans la base de données, ainsi que la suppression du contenu du magasin de requête.
 
 ON         
 Active le magasin de requêtes.
@@ -2767,7 +2767,7 @@ Spécifie la fréquence des points de contrôle indirects en fonction de chaque 
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
-Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de plantage.
+Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de sinistre.
 
 SECONDS         
 Indique que *target_recovery_time* correspond au nombre de secondes.
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 Nom de la base de données à modifier.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-S’applique à Azure SQL Data Warehouse (préversion)
+**S’applique à** Azure SQL Data Warehouse (préversion)
 
 Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne, is_result_set_caching_on, est introduite dans `sys.databases` pour afficher le paramètre du cache de résultats pour une base de données.  
 
@@ -2947,6 +2954,21 @@ Indique que les jeux de résultats de requête retournés à partir de cette bas
 commande|Correspond à|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**S’applique à** Azure SQL Data Warehouse (préversion)
+
+ON active l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
+
+OFF désactive l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
+
+L’activation ou la désactivation de READ_COMMITTED_SNAPSHOT pour une base de données entraîne l’arrêt de toutes les connexions ouvertes à cette base de données.  Vous pouvez effectuer cette modification pendant la fenêtre de maintenance de la base de données ou patienter jusqu’à ce qu’il n’existe aucune connexion active à la base de données, à l’exception de la connexion exécutant la commande ALTER DATABASE.  Il n'est pas nécessaire que la base de données soit en mode mono-utilisateur.  La modification du paramètre READ_COMMITTED_SNAPSHOT au niveau de la session n’est pas prise en charge.  Pour vérifier ce paramètre pour une base de données, vérifiez la colonne is_read_committed_snapshot_on dans sys. databases.
+
+Dans une base de données avec la fonction READ_COMMITTED_SNAPSHOT activée, les requêtes peuvent avoir des performances plus lentes en raison de l’analyse des versions si plusieurs versions de données sont présentes. Les transactions ouvertes longues peuvent également entraîner une augmentation de la taille de la base de données en cas de modification des données par ces transactions, ce qui bloque le nettoyage des versions.  
+
+
+
+
 ## <a name="remarks"></a>Notes
 
 Le jeu de résultats mis en cache est réutilisé pour une requête si toutes les conditions suivantes sont remplies :
@@ -2959,12 +2981,9 @@ Une fois que la mise en cache du jeu de résultats est activée pour une base de
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite ces autorisations :
+Pour définir l’option RESULT_SET_CACHING, un utilisateur a besoin d’une connexion du principal au niveau du serveur (celle créée par le processus de provisionnement) ou doit être membre du rôle de base de données `dbmanager`.  
 
-- Connexion au principal de niveau serveur (créée par le processus de provisionnement) ou
-- Membre du rôle de base de données `dbmanager`.
-
-Le propriétaire de la base de données ne peut pas modifier la base de données à moins d'être membre du rôle dbmanager.
+Pour définir l’option READ_COMMITTED_SNAPSHOT, un utilisateur doit disposer de l’autorisation ALTER sur la base de données.
 
 ## <a name="examples"></a>Exemples
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Activer l’option Read_Committed_Snapshot pour une base de données
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>Voir aussi

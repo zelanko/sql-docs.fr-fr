@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768694"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030330"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ Une fois qu’une base de données de distribution du groupe de disponibilité a
 
 ## <a name="limitations-or-exclusions"></a>Limitations ou exclusions
 
-- Le serveur de distribution local n’est pas pris en charge. Par exemple, le serveur de publication et le serveur de distribution doivent être des instances différentes de SQL Server. Un serveur de publication qui s’utilise lui-même comme serveur de distribution (aussi appelé serveur de distribution local) ne peut pas prendre en charge les bases de données de distribution qui se trouvent dans un groupe de disponibilité.
+- Le serveur de distribution local n’est pas pris en charge. Par exemple, le serveur de publication et le serveur de distribution doivent être des instances différentes de SQL Server. Ces instances peuvent être hébergées sur les mêmes ensembles de nœuds.  Un serveur de publication qui s’utilise lui-même comme serveur de distribution (aussi appelé serveur de distribution local) ne peut pas prendre en charge les bases de données de distribution qui se trouvent dans un groupe de disponibilité.
 - Les serveurs de publication Oracle ne sont pas pris en charge.
 - La réplication de fusion n'est pas prise en charge.
 - La réplication transactionnelle impliquant un abonné avec mise à jour immédiate ou en attente n’est pas prise en charge.
 - La réplication d’égal à égal n’est pas prise en charge.
-- Toutes les instances de SQL Server qui hébergent des réplicas de base de données de distribution doivent être des instances SQL Server 2017 Cumulative 6 ou version ultérieure. 
+- Toutes les instances de SQL Server 2017 qui hébergent des réplicas de base de données de distribution doivent être des instances SQL Server 2017 Cumulative 6 ou version ultérieure. 
+- Toutes les instances de SQL Server 2016 qui hébergent des réplicas de base de données de distribution doivent être des instances SQL Server 2016 SP2 Cumulative 3 ou version ultérieure.
 - Toutes les instances de SQL Server qui hébergent des réplicas de base de données de distribution doivent être de la même version, sauf pendant le court laps de temps de la mise à niveau.
 - La base de données de distribution doit être en mode de récupération complète.
 - Pour la récupération et pour permettre la troncation du journal des transactions, configurez des sauvegardes complètes du journal des transactions.
