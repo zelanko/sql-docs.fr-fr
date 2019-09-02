@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 6229d1df654aba2c83e10ee7b692464ed8e46897
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561119"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175545"
 ---
 # <a name="install-polybase-on-windows"></a>Installer PolyBase sur Windows
 
@@ -28,8 +28,6 @@ Pour installer une version d’essai de SQL Server, accédez à [Versions d’é
 - Édition d’évaluation de SQL Server 64 bits.  
    
 - Microsoft .NET Framework 4.5  
-
-- Oracle Java SE Runtime Environment (JRE). Les versions 7 (à partir de 7.51) et 8 sont prises en charge. [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) et [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) fonctionnent tous deux. Accédez à [Java SE downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html)(Téléchargements Java SE). Si JRE n’est pas présent, le programme d’installation échoue. JRE9 et JRE10 ne sont pas pris en charge.
 
 - Mémoire minimale : 4 Go. 
    

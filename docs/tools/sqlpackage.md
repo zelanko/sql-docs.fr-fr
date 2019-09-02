@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 52d3a6f14042a5208803c84557d6b3b7e4e4f37e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986233"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190375"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -219,7 +219,8 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|À la fin de la publication, toutes les contraintes sont vérifiées comme un ensemble, ce qui évite les erreurs de données provoquées par une contrainte de validation ou de clé étrangère au milieu de la publication. Si cette option a la valeur False, vos contraintes sont publiées sans que les données correspondantes ne soient vérifiées.|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|Inclure les instructions d'actualisation à la fin du script de publication.|
 |**/p:**|Storage=({File&#124;Memory})|Spécifie comment les éléments sont stockés lors de l'élaboration du modèle de base de données. Pour des raisons de performance, la valeur par défaut est InMemory. Pour les bases de données très volumineuses, un stockage sauvegardé de fichiers (File) est exigé.|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Spécifie si les erreurs rencontrées lors de la vérification de la publication doivent être considérées comme des avertissements. Cette vérification est effectuée conformément au plan de déploiement généré avant l'exécution de ce dernier dans votre base de données cible. La vérification du plan permet de détecter les problèmes, comme la perte d'objets cibles (tels que les index), qui doivent être supprimés pour que la modification soit effectuée. La vérification permet également de détecter les situations dans lesquelles les dépendances (table ou vue par exemple) existent en raison d'une référence à un projet composite, mais n'existent pas dans la base de données cible. Vous pouvez choisir de le faire pour obtenir une liste complète de tous les problèmes, au lieu que l’action publier s’arrête sur la première erreur.|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Spécifie si des avertissements doivent être générés lorsque des différences sont trouvées au niveau d'objets ne pouvant pas être modifiés, par exemple au niveau de la taille du fichier ou de son chemin d'accès.|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Spécifie si les erreurs rencontrées lors de la vérification de la publication doivent être considérées comme des avertissements. Cette vérification est effectuée conformément au plan de déploiement généré avant l'exécution de ce dernier dans votre base de données cible. La vérification du plan permet de détecter les problèmes, comme la perte d'objets cibles (tels que les index), qui doivent être supprimés pour que la modification soit effectuée. La vérification permet également de détecter les situations dans lesquelles les dépendances (table ou vue par exemple) existent en raison d'une référence à un projet composite, mais n'existent pas dans la base de données cible. Vous pouvez choisir de le faire pour obtenir une liste complète de tous les problèmes, au lieu que l’action publier s’arrête sur la première erreur.
+|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Spécifie si des avertissements doivent être générés lorsque des différences sont trouvées au niveau d'objets ne pouvant pas être modifiés, par exemple au niveau de la taille du fichier ou de son chemin d'accès.|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Spécifie si la compatibilité du classement est vérifiée.|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Spécifie si des vérifications doivent être effectuées avant la publication dans le but de rechercher les problèmes susceptibles d'empêcher une publication correcte. Par exemple, votre action de publication peut s’arrêter si vous avez des clés étrangères sur la base de données cible qui n’existent pas dans le projet de base de données, et qui provoque des erreurs lors de la publication.|
 |

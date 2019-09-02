@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05936a9555cacfc88c9219e19bc57772109ed047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957514"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154185"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Historique des pilotes pour Microsoft SQL Server
 
@@ -57,7 +57,7 @@ Introduit dans 2009 en tant que projet open source, les pilotes Microsoft pour P
 
 ### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>Pilote Microsoft pour node. js pour SQL Server
 
-Le pilote Microsoft pour node. js pour SQL Server permet aux applications node. js sur Microsoft Windows et Microsoft Azure d’accéder à Microsoft SQL Server et à Microsoft Windows Azure SQL Database. Les efforts de développement ne sont plus axés sur ce pilote. Il n’est pas recommandé de créer des applications à l’aide du pilote Microsoft pour node. js pour SQL Server.
+Le pilote Microsoft pour node. js pour SQL Server permet aux applications node. js sur Microsoft Windows et Microsoft Azure d’accéder à Microsoft SQL Server et Microsoft Azure SQL Database. Les efforts de développement ne sont plus axés sur ce pilote. Il n’est pas recommandé de créer des applications à l’aide du pilote Microsoft pour node. js pour SQL Server.
 
 Pour plus d’informations sur le pilote Microsoft pour node. js pour SQL Server, consultez [windowsazure/node-SqlServer](https://github.com/Azure/node-sqlserver).
 

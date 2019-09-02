@@ -1,10 +1,10 @@
 - name: Sauvegarde et restauration des bases de données SQL Server
   href: back-up-and-restore-of-sql-server-databases.md
   items:
-    - name: Sauvegarde et restauration SQL Server avec le service de Stockage Blob Windows Azure
+    - name: Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
       href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
-        - name: Utiliser PowerShell pour sauvegarder plusieurs bases de données dans le service de Stockage Blob Windows Azure
+        - name: Utiliser PowerShell pour sauvegarder plusieurs bases de données dans le service Stockage Blob Azure
           href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
     - name: Sauvegarde SQL Server vers une URL
       href: sql-server-backup-to-url.md
@@ -13,24 +13,24 @@
           href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
     - name: Suppression de fichiers de sauvegarde d'objets blob avec des baux actifs
       href: deleting-backup-blob-files-with-active-leases.md
-- name: Sauvegarde managée SQL Server sur Microsoft Azure
+- name: Sauvegarde managée de SQL Server vers Azure
   href: sql-server-managed-backup-to-microsoft-azure.md
   items:
-    - name: Configuration de la sauvegarde managée SQL Server sur Windows Azure
+    - name: Configuration de la sauvegarde managée SQL Server sur Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: "Gestion de sauvegarde de SQL Server vers Microsoft Azure\_: Interopérabilité et coexistence"
+    - name: "Gestion de sauvegarde de SQL Server vers Azure\_: Interopérabilité et coexistence"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
-    - name: Sauvegarde managée SQL Server sur Windows Azure - Paramètres de rétention et de stockage
+    - name: 'Sauvegarde managée SQL Server sur Azure : Paramètres de conservation et de stockage'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
-    - name: Configuration de la sauvegarde managée de SQL Server sur Windows Azure pour les groupes de disponibilité
+    - name: Configuration de la sauvegarde managée de SQL Server sur Azure pour les groupes de disponibilité
       href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
-    - name: Surveiller la sauvegarde managée SQL Server sur Windows Azure
+    - name: Surveiller la sauvegarde managée de SQL Server vers Azure
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
-    - name: Dépannage de la sauvegarde managée de SQL Server sur Microsoft Azure
+    - name: Dépannage de la sauvegarde managée de SQL Server sur Azure
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
     - name: Configuration de la sauvegarde managée (SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
-    - name: Restauration à partir des sauvegardes stockées dans Windows Azure
+    - name: Restauration à partir des sauvegardes stockées dans Azure
       href: restoring-from-backups-stored-in-microsoft-azure.md
 - name: Modes de récupération
   href: recovery-models-sql-server.md
@@ -160,7 +160,7 @@
       href: dbengine-continue-with-restore.md
     - name: Sélectionner l'unité de sauvegarde
       href: select-backup-device.md
-    - name: Se connecter au Stockage Microsoft Azure (Restauration)
+    - name: Connectez-vous au Stockage Azure (Restaurer)
       href: connect-to-microsoft-azure-storage-restore.md
     - name: Restaurer une base de données à un nouvel emplacement
       href: restore-a-database-to-a-new-location-sql-server.md

@@ -26,7 +26,7 @@
       href: security-best-practices-with-contained-databases.md
     - name: Migrer vers une base de données partiellement autonome
       href: migrate-to-a-partially-contained-database.md
-- name: Fichiers de données SQL Server dans Windows Azure
+- name: Fichiers de données SQL Server dans Azure
   href: sql-server-data-files-in-microsoft-azure.md
 - name: Groupes de fichiers et fichiers de base de données
   href: database-files-and-filegroups.md

@@ -73,7 +73,7 @@
       href: applications/using-ado-with-sql-server-native-client.md
     - name: "Stratégies de prise en charge pour SQL\_Server Native Client"
       href: applications/support-policies-for-sql-server-native-client.md
-    - name: Connexion à Azure SQL Database à l'aide de SQL Server Native Client
+    - name: Connexion à une base de données Azure SQL à l’aide de SQL Server Native Client
       href: applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
 - name: Configuration requise pour SQL Server Native Client
   href: system-requirements-for-sql-server-native-client.md

@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086760"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148832"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ Définit une date qui est associée à une heure de la journée qui prend en cha
 |Utilisation|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formats de littéraux de chaîne par défaut (utilisés pour le client de bas niveau)|AAAA-MM-JJ hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage de dates|0001-01-01 à 9999-12-31<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999|  
-|Plage temporelle|00:00:00 à 23:59:59.9999999 (les fractions de seconde ne sont pas prises en charge dans Informatica)|  
-|Plage de décalages de fuseau horaire|-14:00 à +14:00 (le décalage de fuseau horaire est ignoré dans Informatica)|  
-|Plages d'éléments|AAAA comprend quatre chiffres, entre 0001 et 9999, qui représentent une année.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l’année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.<br /><br /> hh comprend deux chiffres, entre 00 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 00 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 00 et 59, qui représentent la seconde.<br /><br /> n* comprend entre zéro et sept chiffres, entre 0 et 9999999, qui représentent les fractions de seconde. Les fractions de seconde ne sont pas prises en charge dans Informatica.<br /><br /> hh comprend deux chiffres, entre -14 et +14. Le décalage de fuseau horaire est ignoré dans Informatica.<br /><br /> mm comprend deux chiffres, entre 00 et 59. Le décalage de fuseau horaire est ignoré dans Informatica.|  
+|Plage temporelle|00:00:00 à 23:59:59.9999999|  
+|Plage de décalages de fuseau horaire|-14:00 à +14:00|  
+|Plages d'éléments|AAAA comprend quatre chiffres, entre 0001 et 9999, qui représentent une année.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l’année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.<br /><br /> hh comprend deux chiffres, entre 00 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 00 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 00 et 59, qui représentent la seconde.<br /><br /> n* comprend entre zéro et sept chiffres, entre 0 et 9999999, qui représentent les fractions de seconde.<br /><br /> hh comprend deux chiffres, entre -14 et +14. <br /><br /> mm comprend deux chiffres, entre 00 et 59.|  
 |Longueur de caractère|26 positions au minimum (AAAA-MM-JJ hh:mm:ss {+&#124;-}hh:mm) et 34 au maximum (AAAA-MM-JJ hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |Précision, échelle|Consultez le tableau ci-dessous.|  
 |Taille de stockage|10 octets, fixes, sont la valeur par défaut avec une précision à la fraction de seconde de 100 ns par défaut.|  
