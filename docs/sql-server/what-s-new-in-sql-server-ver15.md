@@ -1,6 +1,6 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026242"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155482"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -40,15 +40,12 @@ Les sections suivantes fournissent une vue d’ensemble de ces fonctionnalités.
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-| Solution de Big Data scalable | [Déployer des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes <br/><br/> Lire, écrire et traiter des Big Data à partir de Transact-SQL ou de Spark<br/><br/> Combiner et analyser facilement des données relationnelles à valeur élevée et un volume élevé de Big Data<br/><br/>Interroger des sources de données externes<br/><br/>Stocker des Big Data dans un système HDFS géré par SQL Server<br/><br/>Interroger les données de plusieurs sources de données externes par le biais du cluster<br/><br/> Utiliser les données pour l’intelligence artificielle, le Machine Learning et d’autres tâches d’analyse<br/><br/> Déployer et exécuter des applications sur [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/>|
+| Solution de Big Data scalable | [Déployer des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes <br/><br/> Lire, écrire et traiter des Big Data à partir de Transact-SQL ou de Spark<br/><br/> Combiner et analyser facilement des données relationnelles à valeur élevée et un volume élevé de Big Data<br/><br/>Interroger des sources de données externes<br/><br/>Stocker des Big Data dans un système HDFS géré par SQL Server<br/><br/>Interroger les données de plusieurs sources de données externes par le biais du cluster<br/><br/> Utiliser les données pour l’intelligence artificielle, le Machine Learning et d’autres tâches d’analyse<br/><br/> Déployer et exécuter des applications sur [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> Les bases de données d’instance principale SQL Server utilisent le groupe de disponibilité Always On<br/>|
 | &nbsp; | &nbsp; |
 
 Pour plus d’informations, consultez [Que sont les [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md) SQL Server ?.
 
 La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](what-s-new-in-sql-server-ver15-prerelease.md) contient la liste de toutes les fonctionnalités qui ont été annoncées et modifiées dans toutes les versions CTP précédentes.
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>Moteur de base de données
 
