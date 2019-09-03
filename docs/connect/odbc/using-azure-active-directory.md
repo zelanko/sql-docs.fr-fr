@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e60c376e0bced63241674b82d05700281a06ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008490"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176170"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Utilisation d’Azure Active Directory avec ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,9 +31,9 @@ La Microsoft ODBC Driver for SQL Server avec la version 13,1 ou ultérieure perm
 
 Le `Authentication` mot clé peut être utilisé lors de la connexion à un DSN ou une chaîne de connexion pour contrôler le mode d’authentification. La valeur définie dans la chaîne de connexion remplace celle figurant dans le DSN, si elle est fournie. La _valeur pré-attribut_ du `Authentication` paramètre est la valeur calculée à partir de la chaîne de connexion et des valeurs DSN.
 
-|Créer une vue d’abonnement|Valeurs|Valeur par défaut|Description|
+|Nom|Valeurs|Valeur par défaut|Description|
 |-|-|-|-|
-|`Authentication`|(non défini), (chaîne vide), `SqlPassword` `ActiveDirectoryIntegrated`, `ActiveDirectoryPassword` `ActiveDirectoryInteractive`,,,`ActiveDirectoryMsi` |(non défini)|Contrôle le mode d’authentification.<table><tr><th>Valeur<th>Description<tr><td>(non défini)<td>Mode d’authentification déterminé par d’autres mots clés (options de connexion héritées existantes).<tr><td>(chaîne vide)<td>La chaîne de connexion est « {0} » Remplacez et annulez une `Authentication` valeur définie dans le DSN.<tr><td>`SqlPassword`<td>S’authentifier directement auprès d’une instance de SQL Server en utilisant un nom d’utilisateur et un mot de passe.<tr><td>`ActiveDirectoryPassword`<td>S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et d’un mot de passe.<tr><td>`ActiveDirectoryIntegrated`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification intégrée.<tr><td>`ActiveDirectoryInteractive`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification interactive.<tr><td>`ActiveDirectoryMsi`<td>S’authentifier avec Azure Active Directory identité à l’aide de l’authentification Managed Service Identity. Pour l’identité attribuée par l’utilisateur, UID est défini sur l’ID d’objet de l’identité d’utilisateur.</table>|
+|`Authentication`|(non défini), (chaîne vide), `SqlPassword` `ActiveDirectoryIntegrated`, `ActiveDirectoryPassword` `ActiveDirectoryInteractive`,,,`ActiveDirectoryMsi` |(non défini)|Contrôle le mode d’authentification.<table><tr><th>Valeur<th>Description<tr><td>(non défini)<td>Mode d’authentification déterminé par d’autres mots clés (options de connexion héritées existantes).<tr><td>(chaîne vide)<td>Aide sur la chaîne de connexion Remplacez et annulez une `Authentication` valeur définie dans le DSN.<tr><td>`SqlPassword`<td>S’authentifier directement auprès d’une instance de SQL Server en utilisant un nom d’utilisateur et un mot de passe.<tr><td>`ActiveDirectoryPassword`<td>S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et d’un mot de passe.<tr><td>`ActiveDirectoryIntegrated`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification intégrée.<tr><td>`ActiveDirectoryInteractive`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification interactive.<tr><td>`ActiveDirectoryMsi`<td>S’authentifier avec Azure Active Directory identité à l’aide de l’authentification Managed Service Identity. Pour l’identité attribuée par l’utilisateur, UID est défini sur l’ID d’objet de l’identité d’utilisateur.</table>|
 |`Encrypt`|(non défini), `Yes`, `No`|(voir la description)|Contrôle le chiffrement pour une connexion. Si la valeur de pré-attribut du `Authentication` paramètre n’est pas _None_ dans le DSN ou la chaîne de connexion, `Yes`la valeur par défaut est. Sinon, la valeur par défaut est `No`. Si l’attribut `SQL_COPT_SS_AUTHENTICATION` remplace la valeur de pré-Attribute de `Authentication`, définissez explicitement la valeur du chiffrement dans le DSN ou la chaîne de connexion ou l’attribut de connexion. La valeur pré-attribute du chiffrement est `Yes` si la valeur est définie sur `Yes` dans le DSN ou la chaîne de connexion.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Attributs de connexion nouveaux et/ou modifiés
@@ -99,7 +99,7 @@ Ces options correspondent aux cinq mêmes cinq disponibles dans l’interface ut
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Pilote Windows uniquement_.) Authentification Windows intégrée à l’aide de ADAL, qui implique l’échange d’informations d’identification de compte Windows pour un jeton d’accès émis par AAD, en supposant que la base de données cible se trouve dans Azure SQL Database. Le certificat de serveur est validé, quel que soit le paramètre `TrustServerCertificate` de chiffrement `true`(sauf si a la valeur). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_Pilote Windows uniquement_.) L’authentification interactive AAD utilise la technologie Azure Multi-Factor Authentication pour configurer la connexion. Dans ce mode, en fournissant l’ID de connexion, une boîte de dialogue d’authentification Windows Azure est déclenchée et permet à l’utilisateur d’entrer le mot de passe pour terminer la connexion. Le nom d’utilisateur est transmis dans la chaîne de connexion.
+7. (_Pilote Windows uniquement_.) L’authentification interactive AAD utilise la technologie Azure Multi-Factor Authentication pour configurer la connexion. Dans ce mode, en fournissant l’ID de connexion, une boîte de dialogue d’authentification Azure est déclenchée et permet à l’utilisateur d’entrer le mot de passe pour terminer la connexion. Le nom d’utilisateur est transmis dans la chaîne de connexion.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
@@ -129,7 +129,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-Est une structure de longueur variable composée d’une _longueur_ de 4 octets suivie d’octets de _longueur_ des données opaques qui forment le jeton d’accès.`ACCESSTOKEN` En raison de la façon dont SQL Server gère les jetons d’accès, l’un obtenu via une réponse JSON [2,0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON doit être développé afin que chaque octet soit suivi d’un octet de remplissage 0, similaire à une chaîne UCS-2 contenant uniquement des caractères ASCII. Toutefois, le jeton est une valeur opaque et la longueur spécifiée, en octets, ne doit inclure aucune marque de fin null. En raison de leurs contraintes de format et de longueur considérables, cette méthode d’authentification n’est disponible par `SQL_COPT_SS_ACCESS_TOKEN` programmation qu’à l’aide de l’attribut de connexion; il n’existe aucun DSN ou mot clé de chaîne de connexion correspondant. La chaîne de connexion ne doit `UID`pas `PWD`contenir de mots `Trusted_Connection` clés,, `Authentication`ou.
+Est une structure de longueur variable composée d’une _longueur_ de 4 octets suivie d’octets de _longueur_ des données opaques qui forment le jeton d’accès. `ACCESSTOKEN` En raison de la façon dont SQL Server gère les jetons d’accès, l’un obtenu via une réponse JSON [2,0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON doit être développé afin que chaque octet soit suivi d’un octet de remplissage 0, similaire à une chaîne UCS-2 contenant uniquement des caractères ASCII. Toutefois, le jeton est une valeur opaque et la longueur spécifiée, en octets, ne doit inclure aucune marque de fin null. En raison de leurs contraintes de format et de longueur considérables, cette méthode d’authentification n’est disponible par `SQL_COPT_SS_ACCESS_TOKEN` programmation qu’à l’aide de l’attribut de connexion; il n’existe aucun DSN ou mot clé de chaîne de connexion correspondant. La chaîne de connexion ne doit `UID`pas `PWD`contenir de mots `Trusted_Connection` clés,, `Authentication`ou.
 
 > [!NOTE]
 > La version 13,1 du pilote ODBC ne prend en charge que cette authentification sur _Windows_.
@@ -163,7 +163,7 @@ L’exemple suivant montre le code requis pour se connecter à SQL Server à l�
     ...
     free(pAccToken);
 ~~~
-Voici un exemple de chaîne de connexion à utiliser avec l’authentification interactive Azure Active Directory. Notez qu’il ne contient pas le champ PWD, car le mot de passe est entré à l’aide de l’écran d’authentification Windows Azure.
+Voici un exemple de chaîne de connexion à utiliser avec l’authentification interactive Azure Active Directory. Notez qu’il ne contient pas le champ PWD, car le mot de passe est entré à l’aide de l’écran d’authentification Azure.
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~

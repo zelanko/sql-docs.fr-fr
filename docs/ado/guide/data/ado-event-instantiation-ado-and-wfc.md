@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e83ffa37af2a6e33cad2645105b0df034f59d9f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926181"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212342"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciation des événements ADO ADO et WFC
-ADO pour Windows Foundation Classes (ADO/WFC) s’appuie sur le modèle d’événement ADO et présente une interface de programmation simplifié des applications. En général, ADO/WFC intercepte les événements ADO, consolide les paramètres d’événement dans une classe d’événements unique, puis appelle votre gestionnaire d’événements.  
+ADO pour Windows Foundation classes (ADO/WFC) s’appuie sur le modèle d’événement ADO et présente une interface de programmation d’applications simplifiée. En général, ADO/WFC intercepte les événements ADO, consolide les paramètres d’événement dans une classe d’événements unique, puis appelle votre gestionnaire d’événements.  
   
 ### <a name="to-use-ado-events-in-adowfc"></a>Pour utiliser des événements ADO dans ADO/WFC  
   
-1.  Définir votre propre gestionnaire d’événements pour traiter un événement. Par exemple, si vous souhaitez traiter les **ConnectComplete** événement dans le **ConnectionEvent** famille, vous pouvez utiliser ce code :  
+1.  Définissez votre propre gestionnaire d’événements pour traiter un événement. Par exemple, si vous souhaitez traiter l’événement **ConnectComplete** dans la famille **ConnectionEvent** , vous pouvez utiliser ce code:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
@@ -31,22 +31,22 @@ ADO pour Windows Foundation Classes (ADO/WFC) s’appuie sur le modèle d’év�
     }  
     ```  
   
-2.  Définition d’un objet de gestionnaire pour représenter votre gestionnaire d’événements. L’objet gestionnaire doit être de type de données **ConnectEventHandler** pour un événement de type **ConnectionEvent**, ou le type de données **RecordsetEventHandler** pour un événement de type  **RecordsetEvent**. Par exemple, le code suivant pour votre **ConnectComplete** Gestionnaire d’événements :  
+2.  Définissez un objet gestionnaire pour représenter votre gestionnaire d’événements. L’objet de gestionnaire doit être de type de données **ConnectEventHandler** pour un événement de type **ConnectionEvent**, ou de type de données **RecordsetEventHandler** pour un événement de type **RecordsetEvent**. Par exemple, codez ce qui suit pour votre gestionnaire d’événements **ConnectComplete** :  
   
     ```  
     ConnectionEventHandler handler =   
         new ConnectionEventHandler(this, "onConnectComplete");  
     ```  
   
-     Le premier argument de la **ConnectionEventHandler** constructeur est une référence à la classe qui contient le Gestionnaire d’événements nommé dans le deuxième argument.  
+     Le premier argument du constructeur **ConnectionEventHandler** est une référence à la classe qui contient le gestionnaire d’événements nommé dans le deuxième argument.  
   
-3.  Ajouter votre gestionnaire d’événements à une liste de gestionnaires chargés de traiter un type particulier d’événement. Utilisez la méthode avec un nom tel que **addOn** *EventName*(*gestionnaire*).  
+3.  Ajoutez votre gestionnaire d’événements à une liste de gestionnaires désignés pour traiter un type particulier d’événement. Utilisez la méthode avec un nom tel que **addon**_EventName_(*handler*).  
   
-4.  En interne, ADO/WFC implémente tous les gestionnaires d’événements ADO. Par conséquent, un événement déclenché par un **connexion** ou **Recordset** opération est interceptée par un gestionnaire d’événements ADO/WFC.  
+4.  ADO/WFC implémente en interne tous les gestionnaires d’événements ADO. Par conséquent, un événement provoqué par une opération de **connexion** ou **d’ensemble d’enregistrements** est intercepté par un gestionnaire d’événements ADO/WFC.  
   
-     Le Gestionnaire d’événements ADO/WFC transmet ADO **ConnectionEvent** paramètres dans une instance de la ADO/WFC **ConnectionEvent** classe ou ADO **RecordsetEvent** paramètres dans un instance de la ADO/WFC **RecordsetEvent** classe. Ces classes ADO/WFC consolider les paramètres d’événement ADO ; Autrement dit, chaque classe ADO/WFC contient un membre de données pour chaque paramètre de toutes les ADO **ConnectionEvent** ou **RecordsetEvent** méthodes.  
+     Le gestionnaire d’événements ADO/WFC transmet les paramètres **CONNECTIONEVENT** ADO dans une instance de la classe **CONNECTIONEVENT** ADO/WFC, ou des paramètres ADO **RecordsetEvent** dans une instance de la classe **RecordsetEvent** ADO/WFC. Ces classes ADO/WFC consolident les paramètres d’événement ADO; autrement dit, chaque classe ADO/WFC contient un membre de données pour chaque paramètre unique dans toutes les méthodes **ConnectionEvent** ou **RecordsetEvent** ADO.  
   
-5.  ADO/WFC appelle ensuite votre gestionnaire d’événements avec l’objet d’événement ADO/WFC. Par exemple, votre **onConnectComplete** gestionnaire a une signature comme suit :  
+5.  ADO/WFC appelle ensuite votre gestionnaire d’événements avec l’objet d’événement ADO/WFC. Par exemple, votre gestionnaire **onConnectComplete** a une signature similaire à celle-ci:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
@@ -54,15 +54,15 @@ ADO pour Windows Foundation Classes (ADO/WFC) s’appuie sur le modèle d’év�
   
      Le premier argument est le type d’objet qui a envoyé l’événement ([connexion](../../../ado/reference/ado-api/connection-object-ado.md) ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)), et le deuxième argument est l’objet d’événement ADO/WFC (**ConnectionEvent** ou **RecordsetEvent**).  
   
-     La signature de votre gestionnaire d’événements est plus simple qu’un événement ADO. Toutefois, vous devez toujours comprendre le modèle d’événement ADO pour savoir quels paramètres s’appliquent à un événement et comment y répondre.  
+     La signature de votre gestionnaire d’événements est plus simple qu’un événement ADO. Toutefois, vous devez toujours comprendre le modèle d’événement ADO pour savoir quels paramètres s’appliquent à un événement et comment répondre.  
   
-6.  Retourner à partir de votre gestionnaire d’événements au gestionnaire ADO/WFC pour l’événement ADO. ADO/WFC copie les membres de données des événements ADO/WFC pertinentes dans les paramètres d’événement ADO et renvoie le Gestionnaire d’événements ADO.  
+6.  Retournez de votre gestionnaire d’événements au gestionnaire ADO/WFC pour l’événement ADO. ADO/WFC copie les membres de données d’événement ADO/WFC pertinents vers les paramètres d’événement ADO, puis le gestionnaire d’événements ADO retourne.  
   
-7.  Lorsque vous avez terminé le traitement, supprimez votre gestionnaire dans la liste des gestionnaires d’événements ADO/WFC. Utilisez la méthode avec un nom tel que **removeOn** *EventName*(*gestionnaire*).  
+7.  Une fois le traitement terminé, supprimez votre gestionnaire de la liste des gestionnaires d’événements ADO/WFC. Utilisez la méthode avec un nom tel que **RemoveAt**_EventName_(*handler*).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résumé du Gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO - Index de la syntaxe WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
+ [Résumé du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Index de la syntaxe ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Paramètres d’événement](../../../ado/guide/data/event-parameters.md)   
  [Fonctionnement conjoint des gestionnaires d’événements](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Types d’événements](../../../ado/guide/data/types-of-events.md)
