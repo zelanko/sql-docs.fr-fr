@@ -1,7 +1,7 @@
 ---
 title: Résolution des problèmes et maintenance du connecteur SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140703"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148781"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,11 +138,12 @@ Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente,
 8.  Après avoir vérifié que la mise à jour fonctionne, vous pouvez supprimer le dossier de l’ancien connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si vous avez choisi de le renommer au lieu de le désinstaller à l’étape 3.  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Modification du principal du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des principaux du service créés dans Azure Active Directory comme informations d’identification pour accéder au coffre de clés.  Le principal du service a un ID client et une clé d’authentification.  Des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont configurées avec le **nom du coffre**, l’ **ID client**et la **clé d’authentification**.  La **clé d’authentification** est valide un certain temps (1 ou 2 ans).   Avant l’expiration de cette période, une nouvelle clé doit être générée pour le principal du service dans Azure AD.  Ensuite, les informations d’identification doivent être modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] gère un cache pour les informations d’identification de la session en cours ; ainsi, si des informations d’identification sont modifiées, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] doit être redémarré.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des principaux du service créés dans Azure Active Directory comme informations d’identification pour accéder au coffre de clés.  Le principal du service a un ID client et une clé d’authentification.  Des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont configurées avec le **nom du coffre**, l’ **ID client**et la **clé d’authentification**.  La **clé d’authentification** est valide un certain temps (un ou deux ans).   Avant l’expiration de cette période, une nouvelle clé doit être générée pour le principal du service dans Azure AD.  Ensuite, les informations d’identification doivent être modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] gère un cache pour les informations d’identification de la session en cours ; ainsi, si des informations d’identification sont modifiées, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] doit être redémarré.  
   
 ### <a name="key-backup-and-recovery"></a>Sauvegarde et récupération des clés  
 Le coffre de clés doit être sauvegardé régulièrement. Si une clé asymétrique dans le coffre est perdue, elle peut être restaurée à partir d’une sauvegarde. La clé doit être restaurée à l’aide du même nom qu’avant, ce que fera la commande PowerShell Restore (voir les étapes ci-dessous).  
-Si le coffre a été perdu, vous devez recréer un coffre et restaurer la clé asymétrique dans le coffre en utilisant le même nom qu’avant. Le nom du coffre peut être différent (ou le même qu’avant). En outre, vous devez définir les autorisations d’accès sur le nouveau coffre de manière à accorder au principal du service SQL Server l’accès nécessaire pour les scénarios de chiffrement SQL Server, puis paramétrer les informations d’identification SQL Server afin qu’elles reflètent le nom du nouveau coffre.  
+Si le coffre a été perdu, vous devez recréer un coffre et restaurer la clé asymétrique dans le coffre en utilisant le même nom qu’avant. Le nom du coffre peut être différent (ou le même qu’avant). En outre, vous devez définir les autorisations d’accès sur le nouveau coffre de manière à accorder au principal du service SQL Server l’accès nécessaire pour les scénarios de chiffrement SQL Server, puis paramétrer les informations d’identification SQL Server afin qu’elles reflètent le nom du nouveau coffre.
+
 Voici un récapitulatif des étapes :  
   
 * Sauvegarder la clé de coffre (à l’aide de l’applet de commande PowerShell Backup-AzureKeyVaultKey).  
@@ -219,8 +220,8 @@ Code d'erreur  |Symbole  |Description
 3000 | ErrorSuccess | L’opération AKV a réussi.    
 3001 | ErrorUnknown | L’opération AKV a échoué avec une erreur non spécifiée.    
 3002 | ErrorHttpCreateHttpClientOutOfMemory | Impossible de créer une opération HttpClient pour AKV en raison d’une insuffisance de mémoire.    
-3003 | ErrorHttpOpenSession | Impossible d’ouvrir une session HTTP en raison d’une erreur réseau.    
-3004 | ErrorHttpConnectSession | Impossible de connecter une session HTTP en raison d’une erreur réseau.    
+3003 | ErrorHttpOpenSession | Impossible d’ouvrir une session http en raison d’une erreur réseau.    
+3004 | ErrorHttpConnectSession | Impossible de se connecter à une session http en raison d’une erreur réseau.    
 3005 | ErrorHttpAttemptConnect | Tentative de connexion impossible en raison d’une erreur réseau.    
 3006 | ErrorHttpOpenRequest | Impossible d’ouvrir une requête en raison d’une erreur réseau.    
 3007 | ErrorHttpAddRequestHeader | Impossible d’ajouter un en-tête de requête.    
@@ -237,13 +238,13 @@ Code d'erreur  |Symbole  |Description
 3018 | ErrorHttpQueryHeaderUpdateBufferLength | Impossible de mettre à jour la longueur de la mémoire tampon lors de l’interrogation de l’en-tête de réponse.    
 3019 | ErrorHttpReadData | Impossible de lire les données de la réponse en raison d’une erreur réseau. 
 3076 | ErrorHttpResourceNotFound | Le serveur a répondu par une erreur 404, car le nom de la clé est introuvable. Vérifiez que le nom de la clé existe dans le coffre.
-3077 | ErrorHttpOperationForbidden | Le serveur a répondu par une erreur 403, car l’utilisateur n’a pas l’autorisation appropriée pour effectuer l’action. Vérifiez que vous disposez des autorisations pour l’opération spécifiée. Au minimum, le connecteur exige des autorisations « get, list, wrapKey, unwrapKey » pour fonctionner correctement.   
+3077 | ErrorHttpOperationForbidden | Le serveur a répondu par une erreur 403, car l’utilisateur n’a pas l’autorisation appropriée pour effectuer l’action. Vérifiez que vous disposez de l’autorisation pour l’opération spécifiée. Au minimum, le connecteur exige des autorisations « get, list, wrapKey, unwrapKey » pour fonctionner correctement.   
   
 Si votre code d’erreur ne figure pas dans ce tableau, voici d’autres raisons pouvant expliquer pourquoi l’erreur se produit :   
   
 -   Vous ne disposez peut-être pas d’un accès Internet et vous ne pouvez pas accéder à votre service Azure Key Vault. Vérifiez votre connexion Internet.  
   
--   Le service Azure Key Vault n’est peut-être pas disponible. Réessayer ultérieurement.  
+-   Le service Azure Key Vault n’est peut-être pas disponible. Réessayez ultérieurement.  
   
 -   Vous avez peut-être supprimé la clé asymétrique d’Azure Key Vault ou de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Restaurez la clé.  
   
@@ -292,9 +293,9 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 -   Informations de référence sur les [applets de commande Azure Key Vault](/powershell/module/azurerm.keyvault/) de PowerShell  
   
-## <a name="see-also"></a>Voir aussi  
- [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+ [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  
+ [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)

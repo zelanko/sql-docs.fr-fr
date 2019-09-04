@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818bb9690153d862211739bcd134ba9fbdf11ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912653"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155655"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -308,7 +308,7 @@ Les règles SQL Server permettent de créer une connexion d’authentification S
 
 Dans SQL Database, les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Pour plus d’informations sur les connexions SQL Database, consultez [Gestion des bases de données et des connexions dans Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Pour plus d’informations sur les connexions SQL Database, consultez [Gestion des bases de données et des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Autorisations
 
@@ -607,7 +607,7 @@ Les règles SQL Server permettent de créer une connexion d’authentification S
 
 Dans SQL Database Warehouse, les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Pour plus d’informations sur les connexions SQL Database Warehouse, consultez [Gestion des bases de données et des connexions dans Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Pour plus d’informations sur les connexions SQL Data Warehouse, consultez [Gestion des bases de données et des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Autorisations
 

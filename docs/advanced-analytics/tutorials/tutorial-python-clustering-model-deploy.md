@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746629d35be93997e4cda389e284aee9bb5f8544
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 923fae2a6b215814888b04dc674b67e4c87bc00d
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211933"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238685"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-python-with-sql-server-machine-learning-services"></a>Tutoriel : Déployez un modèle de clustering dans Python avec SQL Server Machine Learning Services
 
@@ -25,7 +25,7 @@ Pour effectuer régulièrement le clustering, à mesure que de nouveaux clients 
 
 Dans cette section, vous allez déplacer le code python que vous venez d’écrire dans SQL Server et déployer le clustering à l’aide de SQL Server Machine Learning Services.
 
-Dans cet article, vous allez apprendre à:
+Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Créer une procédure stockée qui génère le modèle
@@ -44,7 +44,7 @@ Dans la [troisième partie](tutorial-python-clustering-model-build.md), vous ave
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>Créer une procédure stockée qui génère le modèle
 
-Exécutez le script T-SQL suivant pour créer la procédure stockée. La procédure recrée les étapes que vous avez développées dans les parties 1 et 2 de cette série de didacticiels:
+Exécutez le script T-SQL suivant pour créer la procédure stockée. La procédure recrée les étapes que vous avez développées dans les parties 1 et 2 de cette série de didacticiels :
 
 * classer les clients en fonction de leur historique d’achat et de retour
 * générer quatre clusters de clients à l’aide d’un algorithme K-signifiant
@@ -176,15 +176,15 @@ Lorsque vous avez terminé ce didacticiel, vous pouvez supprimer la base de donn
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans la quatrième partie de cette série de didacticiels, vous avez effectué les étapes suivantes:
+Dans la quatrième partie de cette série de didacticiels, vous avez effectué les étapes suivantes :
 
 * Créer une procédure stockée qui génère le modèle
 * Effectuer un clustering dans SQL Server
 * Utiliser les informations de clustering
 
-Pour en savoir plus sur l’utilisation de Python dans SQL Server Machine Learning Services, consultez:
+Pour en savoir plus sur l’utilisation de Python dans SQL Server Machine Learning Services, consultez :
 
-* [Démarrage rapide : Exécutez un script Python «Hello World» sur SQL Server Machine Learning Services](quickstart-python-run-using-t-sql.md)
+* [Démarrage rapide : Exécutez un script Python « Hello World » sur SQL Server Machine Learning Services](quickstart-python-run-using-t-sql.md)
 * [Autres didacticiels Python pour SQL Server Machine Learning Services](sql-server-python-tutorials.md)
 * [Installer des packages Python avec sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
 

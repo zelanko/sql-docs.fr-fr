@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db74b6381962d200242f1db912a18404d67ef06a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938894"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155836"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -178,7 +178,7 @@ CREATE USER user_name
  LOGIN *login_name*  
  Spécifie le compte de connexion pour lequel l'utilisateur de base de données est créé. *login_name* doit être un compte de connexion valide sur le serveur. Peut être un compte de connexion basé sur un principal Windows (utilisateur ou groupe), ou un compte de connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quand ce compte de connexion SQL Server accède à la base de données, il prend le nom et l’ID de l’utilisateur de base de données que vous créez. Quand vous créez un compte de connexion mappé à partir d’un principal Windows, utilisez le format **[** _\<nom_domaine\>_ **\\** _\<nom_connexion\>_ **]** . Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary).  
   
- Si l'instruction CREATE USER est la seule instruction d'un lot SQL, Microsoft Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction CREATE USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
+ Si l’instruction CREATE USER est la seule instruction d’un lot SQL, Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction CREATE USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
   
  WITH DEFAULT_SCHEMA = *schema_name*  
  Spécifie le premier schéma que le serveur doit interroger pour résoudre les noms des objets associés à cet utilisateur de base de données.  

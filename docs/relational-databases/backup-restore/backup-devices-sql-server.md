@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103785"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152133"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68103785"
  unité de sauvegarde physique  
  Soit un lecteur de bande, soit un fichier disque fourni par le système d'exploitation. Vous pouvez réaliser une sauvegarde sur 1 à 64 unités de sauvegarde. Si une sauvegarde nécessite plusieurs unités de sauvegarde, les unités doivent toutes correspondre à un seul type d'unité (disque ou bande).  
   
- Les sauvegardes SQL Server peuvent également être écrites dans le service de Stockage Blob Windows Azure, en plus d'un disque ou d'une bande.  
+ Les sauvegardes SQL Server peuvent également être écrites dans le service de stockage d’objets blob Azure, en plus d’un disque ou d’une bande.  
  
   
 ##  <a name="DiskBackups"></a> Utilisation d’unités de sauvegarde sur disque  
@@ -181,8 +181,8 @@ GO
  Si une bande a, accidentellement, été laissée ouverte, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>Utilisation du service de stockage d’objets blob Microsoft Azure  
- Les sauvegardes SQL Server peuvent être écrites dans le service de stockage d'objets blob Windows Azure.  Pour plus d’informations sur la façon d’utiliser le service de stockage d’objets blob Microsoft Azure pour les sauvegardes, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+## <a name="using-the-azure-blob-storage-service"></a>Utilisation du service Stockage Blob Azure  
+ Les sauvegardes SQL Server peuvent être écrites dans le service Stockage Blob Azure.  Pour plus d’informations sur la façon d’utiliser le service Stockage Blob Azure pour les sauvegardes, consultez [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Utiliser une unité logique de sauvegarde  
  Une *unité de sauvegarde logique* est un nom facultatif défini par l’utilisateur qui pointe vers une unité de sauvegarde physique spécifique (un fichier disque ou un lecteur de bande). Une unité de sauvegarde logique vous permet d'utiliser l'indirection au moment de référencer l'unité de sauvegarde physique correspondante.  
@@ -218,7 +218,7 @@ GO
   
   
 ##  <a name="Archiving"></a> Archiver des sauvegardes SQL Server  
- Nous vous recommandons de recourir à un utilitaire de sauvegarde système des fichiers pour archiver les sauvegardes sur disque et stocker les archives hors site. L'avantage du disque est que vous pouvez utiliser le réseau pour écrire les sauvegardes archivées sur un disque hors site. Le service de stockage d'objets blob Windows Azure peut être utilisé comme option d'archivage hors site.  Téléchargez les sauvegardes sur disque ou écrivez directement les sauvegardes dans le service de stockage d'objets blob Windows Azure.  
+ Nous vous recommandons de recourir à un utilitaire de sauvegarde système des fichiers pour archiver les sauvegardes sur disque et stocker les archives hors site. L'avantage du disque est que vous pouvez utiliser le réseau pour écrire les sauvegardes archivées sur un disque hors site. Le service Stockage Blob Azure peut être utilisé comme option d’archivage hors site.  Chargez les sauvegardes sur disque ou écrivez directement les sauvegardes dans le service Stockage Blob Azure.  
   
  Une autre approche d'archivage courante consiste à écrire des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un disque de sauvegarde local, à les archiver sur des bandes, puis à stocker les bandes hors site.  
 

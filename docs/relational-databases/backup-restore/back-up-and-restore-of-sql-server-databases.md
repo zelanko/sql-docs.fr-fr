@@ -22,22 +22,22 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1b37e555c4118ca3199e132d20a6689c80b40bab
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c948c6e26655b8a450aee22f1ca6a6a178e0db76
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893471"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176327"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cet article décrit les avantages de la sauvegarde des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les conditions de sauvegarde et de restauration de base, et présente les stratégies de sauvegarde et de restauration pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que les questions de sécurité pour la sauvegarde et la restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-> **Vous recherchez des instructions pas à pas ?** Cette rubrique **ne fournit aucune instruction spécifique sur la procédure de sauvegarde**. Si vous souhaitez effectuer correctement vos sauvegardes, faites défiler cette page vers le bas vers la section des liens organisée par tâche de sauvegarde, et spécifiez si vous souhaitez utiliser SSMS ou T-SQL.  
+> Cet article présente les sauvegardes SQL Server. Pour découvrir la procédure spécifique de sauvegarde des bases de données SQL Server, consultez [Création de sauvegardes](#creating-backups).
   
  Le composant de sauvegarde et restauration de SQL Server apporte une sécurité essentielle pour la protection des données cruciales stockées dans vos bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour réduire le risque de perte catastrophique de données, vous devez sauvegarder régulièrement vos bases de données pour conserver les modifications apportées à vos données. Une stratégie de sauvegarde et de restauration correctement planifiée permet de protéger les bases de données contre toute perte de données provoquée par différentes défaillances. Vous pouvez tester votre stratégie en restaurant un ensemble de sauvegardes, puis en récupérant votre base de données pour vous préparer à réagir efficacement en cas de sinistre.
   
- Outre le stockage local pour stocker les sauvegardes, SQL Server prend également en charge la sauvegarde et la restauration à partir du service de Stockage Blob Windows Azure. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour les fichiers de base de données stockés à l’aide du service Microsoft Azure Blob Storage, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offre la possibilité d’utiliser des instantanés Azure pour obtenir des sauvegardes quasi instantanées et des restaurations plus rapides. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+ En plus du stockage local pour stocker les sauvegardes, SQL Server prend également en charge la sauvegarde et la restauration à partir du service Stockage Blob Azure. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour les fichiers de base de données stockés à l’aide du service Microsoft Azure Blob Storage, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offre la possibilité d’utiliser des instantanés Azure pour obtenir des sauvegardes quasi instantanées et des restaurations plus rapides. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ##  <a name="why-back-up"></a>Pourquoi sauvegarder ?  
 -   La sauvegarde de vos bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'exécution de procédures de restauration de test sur vos sauvegardes et le stockage des copies des sauvegardes à un emplacement sécurisé et hors site permettent de vous protéger contre une éventuelle perte catastrophique de données. **La sauvegarde est le seul moyen de protéger vos données.**
@@ -47,7 +47,7 @@ ms.locfileid: "68893471"
     -   défaillance du support ;    
     -   erreurs utilisateur, telles que la suppression d'une table par inadvertance ;    
     -   défaillances matérielles, telles qu'un lecteur de disque endommagé ou la perte permanente d'un serveur ;    
-    -   catastrophes naturelles. Utilisez Sauvegarde SQL Server dans le service de stockage d'objets blob Windows Azure pour créer une sauvegarde hors site dans une autre région que celle de votre emplacement local, qui sera disponible en cas de catastrophe naturelle affectant votre emplacement local.  
+    -   catastrophes naturelles. Utilisez Sauvegarde SQL Server dans le service Stockage Blob Azure pour créer une sauvegarde hors site dans une autre région que celle de votre emplacement local, qui sera disponible en cas de catastrophe naturelle affectant votre emplacement local.  
   
 -   Par ailleurs, il peut être utile d'effectuer des sauvegardes d'une base de données afin d'effectuer des tâches administratives de routine, telles que la copie d'une base de données d'un serveur vers un autre, la configuration de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou la mise en miroir de bases de données et l'archivage.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68893471"
  Copie de données qui peut être utilisée pour restaurer et récupérer les données après une défaillance. Les sauvegardes d'une base de données peuvent également être utilisées pour restaurer une copie de la base de données à un nouvel emplacement.  
   
 unité de**sauvegarde**  
- Unité de disque ou de bande sur laquelle les sauvegardes de SQL Server sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service Stockage Blob Microsoft Azure, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Unité de disque ou de bande sur laquelle les sauvegardes de SQL Server sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service de stockage Blob Azure, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 **support de sauvegarde**  
  Une ou plusieurs bandes ou un ou plusieurs fichiers sur disque sur lesquels une ou plusieurs sauvegardes ont été écrites.  

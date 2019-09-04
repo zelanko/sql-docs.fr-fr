@@ -11,12 +11,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bf9d15a7816f7e51691146fc0ba927e45b7250f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134614"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155499"
 ---
 # <a name="database-engine-tutorials"></a>Didacticiels sur le moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ Ce didacticiel explore en se fondant sur un scénario les concepts de sécurité
 [Tutoriel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Il vous apprend comment créer des stratégies qui appliquent des normes d'administration de site.  
   
-[Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-Ce didacticiel explique comment effectuer une sauvegarde et une restauration SQL Server dans le service de Stockage Blob Windows Azure.  
+[Tutoriel : Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+Ce tutoriel montre comment effectuer une sauvegarde et une restauration SQL Server dans le service de stockage d’objets blob Azure.  
   
 [Tutoriel : Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-Ce didacticiel explique comment stocker directement des fichiers de données SQL Server dans le service de stockage d'objets blob Windows Azure.  
+Ce tutoriel explique comment stocker directement des fichiers de données SQL Server dans le service de stockage d’objets blob Azure.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels pour SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  

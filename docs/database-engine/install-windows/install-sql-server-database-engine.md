@@ -1,7 +1,7 @@
 ---
 title: Installer le moteur de base de données SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 787c6b96d9f4bad7372a559a1282fa1252e5e97a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419357"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148040"
 ---
 # <a name="install-sql-server-database-engine"></a>Installer le moteur de base de données SQL Server
 
@@ -39,11 +39,15 @@ Les fonctionnalités suivantes sont installées quand vous sélectionnez **Moteu
 -   [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md) (composant facultatif)  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Machine Learning Services (en base de données) avec R, Python et Java](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) est un composant facultatif
+-   [Machine Learning Services](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R et Python) et [Extensions de langage](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - composant facultatif
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
--   [Machine Learning Services (en base de données) avec R et Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) est un composant facultatif
+::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+-   [Machine Learning Services (dans la base de données)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R et Python) - composant facultatif
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+-   [R Services (dans la base de données)](../../advanced-analytics/install/sql-r-services-windows-install.md) - composant facultatif
 ::: moniker-end
 
 -   Recherche en texte intégral (composant facultatif)  

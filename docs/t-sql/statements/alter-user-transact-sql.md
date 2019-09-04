@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15ddbb8a8a58fad194750ad88f36b397aba1d22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae71b89e4dff780e8d01aa137b020665a9c8602
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911762"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155645"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +114,7 @@ ALTER USER userName
  LOGIN **=** _loginName_  
  Remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.  
   
- Si l'instruction ALTER USER est la seule instruction d'un lot SQL, Microsoft Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
+ Si l’instruction ALTER USER est la seule instruction d’un lot SQL, Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
   
  NAME **=** _newUserName_  
  Spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.  

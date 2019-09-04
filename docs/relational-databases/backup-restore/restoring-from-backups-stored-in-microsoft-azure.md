@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 51e1ce454a2b6d0309a33d155cc0e069b5a17a29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cda4fd3fa0bbb66e95d61ec87ff66dee809e2962
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041465"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155451"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restauration à partir de sauvegardes stockées dans Windows Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique présente les éléments à prendre en considération lorsque vous restaurez une base de données à l'aide d'une sauvegarde stockée dans le service de stockage d'objets Blob Windows Azure. Ceci s'applique aux sauvegardes créées à l'aide de la sauvegarde SQL Server vers l'URL ou par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Cette rubrique présente les éléments à prendre en considération quand vous restaurez une base de données à l’aide d’une sauvegarde stockée dans le service de stockage Blob Azure. Ceci s'applique aux sauvegardes créées à l'aide de la sauvegarde SQL Server vers l'URL ou par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
- Nous vous recommandons de consulter cette rubrique si vous avez des sauvegardes stockées dans le service de stockage d'objets blob Windows Azure et vous planifiez de les restaurer. Lisez ensuite la rubrique qui explique comment restaurer une base de données dont les sauvegardes sont locales ou sur le cloud, les deux méthodes étant identiques.  
+ Nous vous recommandons de consulter cette rubrique si vous avez des sauvegardes stockées dans le service de stockage Blob Azure et que vous planifiez de les restaurer. Lisez ensuite la rubrique qui explique comment restaurer une base de données dont les sauvegardes sont locales ou sur le cloud, les deux méthodes étant identiques.  
   
 ## <a name="overview"></a>Vue d’ensemble  
- Les outils et les méthodes utilisés pour restaurer une base de données à partir d'une sauvegarde local s'appliquent également à la restauration d'une base de données depuis une sauvegarde sur le cloud.  Les sections suivantes présentent ces considérations et les différences que vous devez connaître lorsque vous utilisez des sauvegardes stockées dans le service de stockage Blob Windows Azure.  
+ Les outils et les méthodes utilisés pour restaurer une base de données à partir d'une sauvegarde local s'appliquent également à la restauration d'une base de données depuis une sauvegarde sur le cloud.  Les sections suivantes présentent ces considérations et les différences que vous devez connaître lorsque vous utilisez des sauvegardes stockées dans le service de stockage Blob Azure.  
   
 ### <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
   
@@ -34,14 +34,14 @@ ms.locfileid: "68041465"
   
 ### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
   
--   La tâche de restauration est utilisée pour restaurer une base de données à l'aide de SQL Server Management Studio. La page de support de sauvegarde comprend maintenant l’option **URL** pour afficher les fichiers de sauvegarde stockés dans le service de stockage d’objets blob Microsoft Azure. Vous devez également fournir les informations d'identification SQL utilisées par vous authentifier sur le compte de stockage. La grille **Jeux de sauvegarde à restaurer** est ensuite remplie avec les sauvegardes disponibles dans le stockage d’objets blob Microsoft Azure. Pour plus d’informations, consultez [Restauration à partir du stockage Microsoft Azure à l’aide de SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+-   La tâche de restauration est utilisée pour restaurer une base de données à l'aide de SQL Server Management Studio. La page de support de sauvegarde comprend maintenant l’option **URL** pour afficher les fichiers de sauvegarde stockés dans le service de stockage Blob Azure. Vous devez également fournir les informations d'identification SQL utilisées par vous authentifier sur le compte de stockage. La grille **Jeux de sauvegarde à restaurer** est ensuite remplie avec les sauvegardes disponibles dans le stockage Blob Azure. Pour plus d’informations, consultez [Restauration à partir du stockage Azure à l’aide de SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 ### <a name="optimizing-restores"></a>Optimisation des restaurations  
  Pour réduire le temps d’écriture des restaurations, ajoutez le droit d’utilisateur **Effectuer les tâches de maintenance de volume** au compte d’utilisateur SQL Server. Pour plus d’informations, consultez [Initialisation des fichiers de base de données](https://go.microsoft.com/fwlink/?LinkId=271622). Si la restauration est toujours lente avec l'initialisation instantanée des fichiers activée, examinez la taille du fichier journal sur l'instance où la base de données a été sauvegardée. Si le fichier journal est de très grande taille (plusieurs Go), il faut s'attendre à ce que la restauration soit lente. Pendant la restauration, le fichier journal doit être remis à zéro, ce qui prend beaucoup de temps.  
   
  Pour réduire les durées de restauration, il est recommandé d'utiliser des sauvegardes compressées.  Pour des tailles de sauvegarde de plus de 25 Go, utilisez l’ [utilitaire AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) pour un téléchargement sur le disque local, puis effectuez la restauration. Pour connaître les bonnes pratiques et obtenir des recommandations, consultez [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- Vous pouvez également activer l'indicateur de trace 3051 lors de la restauration afin de générer un journal détaillé. Ce fichier journal se trouve dans le répertoire du journal et son nom est au format suivant : BackupToUrl-\<nom_instance>-\<nom_base_de_données>-action-\<PID>.log. Le fichier journal contient des informations sur chaque aller-retour dans le stockage Windows Azure, y compris le délai d'attente qui peut être utile lors du diagnostic de problèmes.  
+ Vous pouvez également activer l'indicateur de trace 3051 lors de la restauration afin de générer un journal détaillé. Ce fichier journal se trouve dans le répertoire du journal et son nom est au format suivant : BackupToUrl-\<nom_instance>-\<nom_base_de_données>-action-\<PID>.log. Le fichier journal contient des informations sur chaque aller-retour dans le Stockage Azure, y compris le délai d’attente qui peut être utile lors du diagnostic de problèmes.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Rubriques relatives aux procédures des opérations de restauration  
   

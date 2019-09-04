@@ -13,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136579"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148300"
 ---
 # <a name="stored-procedures-database-engine"></a>Procédures stockées (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,18 +59,19 @@ ms.locfileid: "68136579"
  Si des modifications significatives ont été apportées aux tables ou aux données référencés par la procédure, le plan précompilé peut ralentir la procédure. Dans ce cas, la recompilation de la procédure et l'application forcée d'un nouveau plan d'exécution peuvent améliorer les performances.  
   
 ## <a name="types-of-stored-procedures"></a>Types de procédures stockées  
- Définie par l'utilisateur  
+
+ **Définie par l’utilisateur**  
  Une procédure définie par l’utilisateur peut être créée dans une base de données définie par l’utilisateur ou dans toutes les bases de données système à l’exception de la base de données **Resource** . La procédure peut être développée dans [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en tant que référence à une méthode CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
- Temporaire  
+ **Temporaire**  
  Les procédures temporaires sont une forme de procédures définies par l'utilisateur. Les procédures temporaires sont semblables à une procédure permanente, sauf qu'elles sont stockées dans **tempdb**. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des procédures temporaires locales est un signe dièse (#) unique. Ces procédures sont visibles uniquement à la connexion actuelle de l'utilisateur et sont supprimées dès que la connexion est fermée. En revanche, le nom des procédures temporaires globales commence par deux signes dièse (##) ; ces procédures sont visibles à tout utilisateur après avoir été créées et sont supprimées à la fin de la dernière session qui utilise la procédure.  
   
- Système  
+ **Système**  
  Les procédures système sont incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont stockées physiquement dans la base de données **Resource** interne et masquée, mais elles apparaissent logiquement dans le schéma **sys** de chaque base de données définie par le système et définie par l’utilisateur. En outre, la base de données **msdb** contient également les procédures stockées système dans le schéma **dbo** , utilisées pour planifier les alertes et les travaux. Compte tenu du fait que les procédures système commencent par le préfixe **sp_** , nous vous recommandons de ne pas utiliser ce préfixe quand vous nommez des procédures définies par l’utilisateur. Pour obtenir la liste complète des procédures système, consultez [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures système qui assurent l’interface entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les programmes externes pour diverses activités de maintenance. Ces procédures étendues utilisent le préfixe xp_. Pour obtenir la liste complète des procédures étendues, consultez [Procédures stockées étendues générales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
- Étendue définie par l'utilisateur  
+ **Étendue définie par l’utilisateur**  
  Les procédures étendues vous permettent de créer des routines externes dans un langage de programmation comme le langage C. Ce sont des DLL qu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut charger et exécuter dynamiquement.  
   
 > [!NOTE]  
@@ -94,6 +95,6 @@ ms.locfileid: "68136579"
 |Décrit la façon dont les paramètres sont utilisés dans une procédure stockée.|[Paramètres](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
- [Procédures stockées du CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [Procédures stockées du CLR](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [Résolution de noms différée](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   

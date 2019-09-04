@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811186"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154654"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017 sur Linux
 
@@ -110,7 +110,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Sauvegardes en miroir|Oui|Non|Non|Non|
 |Ajout de mémoire et de processeur à chaud|Oui|Non|Non|Non|
 |Sauvegarde chiffrée|Oui|Oui|Non|Non|
-|Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|
+|Sauvegarde hybride vers Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|
   
 <sup>1</sup> Dans l’édition Entreprise, le nombre de nœuds correspond au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
 

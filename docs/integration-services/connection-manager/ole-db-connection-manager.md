@@ -1,5 +1,6 @@
 ---
 title: Gestionnaire de connexions OLE DB | Microsoft Docs
+description: Un gestionnaire de connexions OLE DB permet à un package de se connecter à une source de données à l'aide d'un fournisseur OLE DB.
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -17,35 +18,35 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: d3b1526d55321e5f32a243a48f64bde2f579caa6
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: a1a7c3d0e1648bb2c05e20c78ed293e33a34fe47
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028793"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155171"
 ---
 # <a name="ole-db-connection-manager"></a>Gestionnaire de connexions OLE DB
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Un gestionnaire de connexions OLE DB permet à un package de se connecter à une source de données à l'aide d'un fournisseur OLE DB. Par exemple, un gestionnaire de connexions OLE DB qui se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
+Un gestionnaire de connexions OLE DB permet à un package de se connecter à une source de données à l'aide d'un fournisseur OLE DB. Par exemple, un gestionnaire de connexions OLE DB qui se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 > [!NOTE]
->  Le fournisseur OLEDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 ne prend pas en charge les mots clés de la nouvelle chaîne de connexion (MultiSubnetFailover=True) pour le clustering de basculement de sous-réseaux multiples. Pour plus d’informations, consultez les [Notes de publication de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) et la publication de blog [Basculement de sous-réseaux multiples Always On et SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)sur www.mattmasson.com.    
+>  Le fournisseur OLEDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 ne prend pas en charge les mots clés de la nouvelle chaîne de connexion (MultiSubnetFailover=True) pour le clustering de basculement de sous-réseaux multiples. Pour plus d’informations, consultez les [Notes de publication pour SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824).    
 > 
 > [!NOTE]
 >  Si la source de données est [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, elle requiert un fournisseur de données différent des versions antérieures d’Excel ou d’Access. Pour plus d’informations, consultez [Établir une connexion à un classeur Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) et [Établir une connexion à une base de données Access](../../integration-services/connection-manager/connect-to-an-access-database.md).    
     
- Plusieurs tâches et composants de flux de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent un gestionnaire de connexions OLE DB. Ainsi, la source et la destination OLE DB utilisent ce gestionnaire de connexions pour extraire et charger des données, tandis que la tâche d’exécution SQL utilise ce gestionnaire pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’exécuter des requêtes.    
+Plusieurs tâches et composants de flux de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent un gestionnaire de connexions OLE DB. Par exemple, la source OLE DB et la destination OLE DB utilisent ce gestionnaire de connexions pour extraire et charger des données. La tâche d’exécution de requêtes SQL peut utiliser ce gestionnaire de connexions pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’exécuter des requêtes.    
     
- Le gestionnaire de connexions OLE DB est également utilisé pour accéder à des sources de données OLE DB dans des tâches personnalisées écrites dans du code non géré utilisant un langage comme C++.    
+Vous pouvez également utiliser le gestionnaire de connexions OLE DB pour accéder à des sources de données OLE DB dans des tâches personnalisées écrites dans du code non géré qui utilise un langage comme C++.    
     
- Quand vous ajoutez un gestionnaire de connexions OLE DB à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera résolu en une connexion OLE DB au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection **Connections** sur le package.    
+Quand vous ajoutez un gestionnaire de connexions OLE DB à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui est résolu en une connexion OLE DB au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection **Connections** sur le package.    
     
- La propriété **ConnectionManagerType** du gestionnaire de connexions a pour valeur **OLEDB**.    
+La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `OLEDB`.    
     
- Le gestionnaire de connexions OLE DB peut être configuré de plusieurs manières :    
+Configurez le gestionnaire de connexions OLE DB de plusieurs manières :    
     
 -   Indiquez une chaîne de connexion spécifique configurée pour répondre aux besoins du fournisseur sélectionné.    
     
@@ -53,22 +54,17 @@ ms.locfileid: "69028793"
     
 -   Fournissez les informations d'identification de sécurité nécessaires selon le fournisseur sélectionné.    
     
--   Indiquez si la connexion créée à partir du gestionnaire de connexions est conservée au moment de l'exécution.    
+-   Indiquez si la connexion créée à partir du gestionnaire de connexions est conservée au moment de l’exécution.    
     
-## <a name="logging"></a>Journalisation    
- Vous pouvez consigner les appels que le gestionnaire de connexions OLE DB effectue vers des fournisseurs de données externes. Cette fonctionnalité de journalisation permet de résoudre des problèmes liés aux connexions que le gestionnaire de connexions OLE DB établit avec des sources de données externes. Pour consigner les appels que le gestionnaire de connexions OLE DB effectue vers des fournisseurs de données externes, activez la journalisation de package et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).    
+## <a name="log-calls-and-troubleshoot-connections"></a>Consigner les appels et résoudre les problèmes de connexion    
+ Vous pouvez consigner les appels que le gestionnaire de connexions OLE DB effectue vers des fournisseurs de données externes. Vous pouvez alors résoudre les problèmes liés aux connexions établies par le gestionnaire de connexions OLE DB avec des sources de données externes. Pour consigner les appels que le gestionnaire de connexions OLE DB effectue vers des fournisseurs de données externes, activez la journalisation des packages et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).    
     
-## <a name="configuration-of-the-oledb-connection-manager"></a>Configuration du gestionnaire de connexions OLEDB    
+## <a name="configure-the-ole-db-connection-manager"></a>Configurer le gestionnaire de connexions OLE DB    
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md). Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez la documentation de la classe **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** dans le Guide du développeur.    
     
-## <a name="related-content"></a>Contenu associé    
-    
--   Article Wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670) (SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.    
-    
--   Article technique, [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)(Chaînes de connexion pour les fournisseurs OLE DB), sur carlprothman.net.    
-    
-## <a name="configure-ole-db-connection-manager"></a>Configurer le gestionnaire de connexions OLE DB
-  La boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** vous permet d’ajouter une connexion à une source de données, qui peut être une nouvelle connexion ou la copie d’une connexion existante.  
+### <a name="configure-ole-db-connection-manager"></a>Configurer le gestionnaire de connexions OLE DB
+
+Utilisez la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** pour ajouter une connexion à une source de données. Cette connexion peut être nouvelle ou une copie d’une connexion existante.  
   
 > [!NOTE]  
 >  Si la source de données est [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, la source de données requiert un gestionnaire de connexions différent des versions antérieures d'Excel. Pour plus d’informations, consultez [Établir une connexion à un classeur Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
@@ -77,7 +73,7 @@ ms.locfileid: "69028793"
   
  Pour en savoir plus sur le gestionnaire de connexions OLE DB, consultez [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-### <a name="options"></a>Options  
+#### <a name="options"></a>Options  
  **Connexions de données**  
  Sélectionnez une connexion de données OLE DB existante dans la liste.  
   
@@ -88,17 +84,17 @@ ms.locfileid: "69028793"
  Créez une connexion de données OLE DB à l’aide de la boîte de dialogue **Gestionnaire de connexions** .  
   
  **Supprimer**  
- Sélectionnez une connexion de données, puis supprimez-la à l’aide du bouton **Supprimer** .  
+ Sélectionnez une connexion de données, puis supprimez-la en sélectionnant **Supprimer**.  
   
-### <a name="managed-identities-for-azure-resources-authentication"></a>Identités managées pour l’authentification des ressources Azure
-Lors de l’exécution de packages SSIS sur le [runtime d’intégration Azure-SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), vous pouvez utiliser l’[identité managée](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associée à votre fabrique de données pour l’authentification Azure SQL Database (ou Managed Instance). La fabrique en question peut accéder à votre base de données et copier des données depuis ou vers celle-ci à l’aide de cette identité.
+#### <a name="managed-identities-for-azure-resources-authentication"></a>Identités managées pour l’authentification des ressources Azure
+Lors de l’exécution de packages SSIS sur le [runtime d’intégration Azure-SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), utilisez l’[identité managée](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associée à votre fabrique de données pour l’authentification Azure SQL Database (ou de l’instance gérée). La fabrique en question peut accéder à votre base de données et copier des données depuis ou vers celle-ci à l’aide de cette identité.
 
 > [!NOTE]
->  Quand vous utilisez l’authentification Azure AD (notamment l’authentification d’identité managée) pour vous connecter à Azure SQL Database (ou à Managed Instance), des problèmes connus peuvent entraîner l’échec de l’exécution du package ou une modification de comportement inattendue. Pour plus d’informations, consultez [Fonctionnalités et limitations d’Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Quand vous utilisez l’authentification Azure Active Directory (Azure AD), y compris l’authentification d’identité managée, pour vous connecter à Azure SQL Database (ou à l’instance gérée), vous pouvez rencontrer un problème lié à un échec d’exécution de package ou à un changement de comportement inattendu. Pour plus d’informations, consultez [Fonctionnalités et limitations d’Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Pour utiliser l’authentification d’identité managée pour Azure SQL Database, suivez ces étapes afin de configurer votre base de données :
 
-1. **Créez un groupe dans Azure AD.** Faites de l’identité managée un membre du groupe.
+1. Créez un groupe dans Azure AD. Faites de l’identité managée un membre du groupe.
     
    1. [Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID objet de l’identité managée**.
     
@@ -108,69 +104,69 @@ Pour utiliser l’authentification d’identité managée pour Azure SQL Databas
       Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
       ```
     
-1. **[Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)** pour votre serveur SQL Azure sur le portail Azure si ce n’est déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 3 et 4. L’administrateur a un accès complet à la base de données.
+1. [Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) pour votre serveur Azure SQL sur le portail Azure, si ce n’est pas déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 3 et 4. L’administrateur a un accès complet à la base de données.
 
-1. **[Créez des utilisateurs de base de données autonome](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)** pour le groupe Azure AD. Connectez-vous à la base de données depuis ou vers laquelle vous souhaitez copier des données à l’aide d’outils tels que SSMS, avec une identité Azure AD qui a au moins l’autorisation ALTER ANY USER. Exécutez la commande T-SQL suivante : 
+1. [Créez des utilisateurs de base de données autonome](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) pour le groupe Azure AD. Connectez-vous à la base de données depuis ou vers laquelle vous souhaitez copier des données à l’aide d’outils tels que SSMS, avec une identité Azure AD qui a au moins l’autorisation ALTER ANY USER. Exécutez la commande T-SQL suivante : 
     
     ```sql
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Accordez au groupe Azure AD les autorisations requises** comme vous le feriez, entre autres, pour des utilisateurs SQL. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles).  Par exemple, exécutez le code suivant :
+1. Accordez au groupe Azure AD les autorisations requises, comme vous le faites habituellement pour les utilisateurs SQL et autres. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Par exemple, exécutez le code suivant :
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
     ```
 
-Pour utiliser l’authentification par identité managée pour Azure SQL Database Managed Instance, suivez ces étapes afin de configurer votre base de données :
+Pour utiliser l’authentification d’identité managée pour l’instance managée Azure SQL Database, effectuez les étapes suivantes afin de configurer votre base de données :
     
-1. **[Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** pour votre instance managée sur le portail Azure si ce n’est déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 2 à 5. L’administrateur a un accès complet à la base de données.
+1. [Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) pour votre instance managée sur le portail Azure, si ce n’est pas déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 2 à 5. L’administrateur a un accès complet à la base de données.
 
-1. **[Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)** . Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID d’application de l’identité managée** (pas l’**ID d’objet de l’identité managée**).
+1. [Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID d’application de l’identité managée** (et non pas l’**ID d’objet de l’identité managée**).
 
-1. **Convertissez l’identité managée de la fabrique de données en type binaire**. Connectez-vous à la base de données **MASTER** dans votre instance managée à l’aide d’outils tels que SSMS, avec votre compte d’administrateur SQL/Active Directory. Exécutez la commande T-SQL suivante sur la base de données **MASTER** pour obtenir votre ID d’application de l’identité managée sous forme binaire :
+1. Convertissez l’identité managée de la fabrique de données en type binaire. Connectez-vous à la base de données **master** dans votre instance managée à l’aide d’outils tels que SSMS, avec votre compte d’administrateur SQL ou Active Directory. Exécutez la commande T-SQL suivante sur la base de données **master** pour obtenir votre ID d’application de l’identité managée sous forme binaire :
     
     ```sql
     DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
     select CAST(@applicationId AS varbinary)
     ```
 
-1. **Ajoutez l’identité managée de la fabrique de données en tant qu’utilisateur** dans Azure SQL Database Managed Instance. Exécutez la commande T-SQL suivante sur la base de données **MASTER** :
+1. Ajoutez l’identité managée de la fabrique de données en tant qu’utilisateur dans l’instance managée Azure SQL Database. Exécutez la commande T-SQL suivante sur la base de données **MASTER** :
     
     ```sql
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Octroyez à l’identité managée de la fabrique de données les autorisations requises**. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Exécutez la commande T-SQL suivante sur la base de données depuis ou vers laquelle vous souhaitez copier des données :
+1. Octroyez à l’identité managée de la fabrique de données les autorisations requises. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Exécutez la commande T-SQL suivante sur la base de données depuis ou vers laquelle vous souhaitez copier des données :
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
     ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
-Ensuite, **configurez le fournisseur OLE DB** pour le gestionnaire de connexions OLE DB. Pour ce faire, vous disposez de deux options.
+Ensuite, configurez le fournisseur OLE DB pour le gestionnaire de connexions OLE DB. Les options disponibles sont les suivantes :
     
-1. Effectuez la configuration au moment du design. Dans le concepteur SSIS, double-cliquez sur le gestionnaire de connexions OLE DB pour ouvrir la fenêtre **Gestionnaire de connexions**. Dans la liste déroulante **Fournisseur**, sélectionnez [**Microsoft OLE DB Driver pour SQL Server**](https://go.microsoft.com/fwlink/?linkid=871294).
+- **Configurez au moment de la conception.** Dans le concepteur SSIS, double-cliquez sur le gestionnaire de connexions OLE DB pour ouvrir la fenêtre **Gestionnaire de connexions**. Dans la liste déroulante **Fournisseur**, sélectionnez [**Microsoft OLE DB Driver pour SQL Server**](https://go.microsoft.com/fwlink/?linkid=871294).
     > [!NOTE]
     >  Il est possible que les autres fournisseurs dans la liste déroulante ne prennent pas en charge l’authentification d’identité managée.
     
-1. Effectuez la configuration au moment de l’exécution. Quand vous exécutez le package par le biais de [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) ou de l’[activité Exécuter le package SSIS d’Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), recherchez la propriété de gestionnaire de connexions **ConnectionString** pour le gestionnaire de connexions OLE DB et définissez la propriété de connexion **Fournisseur** sur **MSOLEDBSQL** (autrement dit, Microsoft OLE DB Driver pour SQL Server).
+- **Configurez au moment de l’exécution.** Quand vous exécutez le package via [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) ou l’[activité d’exécution d’un package SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), recherchez la propriété de gestionnaire de connexions **ConnectionString** pour le gestionnaire de connexions OLE DB. Mettez à jour la propriété de connexion `Provider` en spécifiant `MSOLEDBSQL` (autrement dit, Microsoft OLE DB Driver pour SQL Server).
     ```vb
     Data Source=serverName;Initial Catalog=databaseName;Provider=MSOLEDBSQL;...
     ```
 
-Enfin, **configurez l’authentification d’identité managée** pour le gestionnaire de connexions OLE DB. Pour ce faire, vous disposez de deux options.
+Enfin, configurez l’authentification d’identité managée pour le gestionnaire de connexions OLE DB. Les options disponibles sont les suivantes :
     
-1. Effectuez la configuration au moment du design. Dans le concepteur SSIS, cliquez avec le bouton droit sur le gestionnaire de connexions OLE DB et cliquez sur **Propriétés** pour ouvrir la **fenêtre Propriétés**. Définissez la propriété **ConnectUsingManagedIdentity** sur **True**.
+- **Configurez au moment de la conception.** Dans le concepteur SSIS, cliquez avec le bouton droit sur le gestionnaire de connexions OLE DB et sélectionnez **Propriétés**. Mettez à jour la propriété `ConnectUsingManagedIdentity` en spécifiant `True`.
     > [!NOTE]
-    >  La propriété du gestionnaire de connexions **ConnectUsingManagedIdentity** NE prend PAS effet (indiquant que l’authentification d’identité managée ne fonctionne pas) quand vous exécutez le package SSIS dans le concepteur SSIS ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
+    >  La propriété du gestionnaire de connexions `ConnectUsingManagedIdentity` ne prend pas effet (ce qui indique que l’authentification d’identité managée ne fonctionne pas) quand vous exécutez le package SSIS dans le concepteur SSIS ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
 
-1. Effectuez la configuration au moment de l’exécution. Quand vous exécutez le package par le biais de SSMS ou de l’activité Exécuter le package SQL, recherchez le gestionnaire de connexions OLE DB et définissez sa propriété **ConnectUsingManagedIdentity** sur **True**.
+- **Configurez au moment de l’exécution.** Quand vous exécutez le package via SSMS ou une activité **Exécuter le package SQL**, recherchez le gestionnaire de connexions OLE DB et mettez à jour sa propriété `ConnectUsingManagedIdentity` en spécifiant `True`.
     > [!NOTE]
-    >  Dans le runtime d’intégration Azure-SSIS, toutes les autres méthodes d’authentification (par exemple, sécurité intégrée, mot de passe) préconfigurées sur le gestionnaire de connexions OLE DB sont **remplacées** quand l’authentification d’identité managée est utilisée pour établir la connexion de base de données.
+    >  Dans le runtime d’intégration Azure-SSIS, toutes les autres méthodes d’authentification (par exemple, la sécurité intégrée et le mot de passe) préconfigurées sur le gestionnaire de connexions OLE DB sont remplacées quand l’authentification d’identité managée est utilisée pour établir la connexion d’une base de données.
 
 > [!NOTE]
->  Pour configurer l’authentification d’identité managée sur des packages existants, il est préférable de regénérer le projet SSIS avec le [dernier concepteur SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) au moins une fois, et de redéployer ce projet SSIS sur votre runtime d’intégration Azure-SSIS afin que la nouvelle propriété de gestionnaire de connexions **ConnectUsingManagedIdentity** soit automatiquement ajoutée à tous les gestionnaires de connexions OLE DB dans votre projet SSIS. L’autre méthode consiste à utiliser directement la substitution de propriété avec le chemin de propriété **\Package.Connections[{nom de votre gestionnaire de connexions}].Properties[ConnectUsingManagedIdentity]** au moment de l’exécution.
+>  Pour configurer l’authentification d’identité managée sur les packages existants, la méthode privilégiée consiste à regénérer au moins une fois votre projet SSIS avec le [dernier concepteur SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). Redéployez ce projet SSIS sur votre runtime d’intégration Azure-SSIS, afin que la nouvelle propriété du gestionnaire de connexions `ConnectUsingManagedIdentity` soit ajoutée automatiquement à tous les gestionnaires de connexions OLE DB dans votre projet SSIS. L’autre méthode consiste à utiliser directement une substitution de propriété avec le chemin de propriété **\Package.Connections[{nom de votre gestionnaire de connexions}].Properties[ConnectUsingManagedIdentity]** au moment de l’exécution.
 
 ## <a name="see-also"></a>Voir aussi    
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)     

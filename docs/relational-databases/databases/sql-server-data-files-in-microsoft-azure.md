@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127160"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153102"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68127160"
 ## <a name="concepts-and-requirements"></a>Concepts et configuration requise  
   
 ### <a name="azure-storage-concepts"></a>Concepts liés au stockage Azure  
- Lorsque vous utilisez la fonctionnalité Fichiers de données SQL Server dans Windows Azure, vous devez créer un compte de stockage et un conteneur dans Windows Azure. Ensuite, vous devez créer des informations d'identification SQL Server, qui comportent des informations sur la stratégie du conteneur ainsi qu'une signature d'accès partagé qui est nécessaire pour accéder au conteneur.  
+ Lorsque vous utilisez la fonctionnalité Fichiers de données SQL Server dans Azure, vous devez créer un compte de stockage et un conteneur dans Azure. Ensuite, vous devez créer des informations d'identification SQL Server, qui comportent des informations sur la stratégie du conteneur ainsi qu'une signature d'accès partagé qui est nécessaire pour accéder au conteneur.  
   
  Dans [Microsoft Azure](https://azure.microsoft.com), un compte de [stockage Azure](https://azure.microsoft.com/services/storage/) représente le niveau le plus élevé de l’espace de noms pour accéder aux objets blob. Un compte de stockage peut contenir un nombre illimité de conteneurs, tant que leur taille totale ne dépasse pas la limite de stockage. Pour les informations les plus récentes sur les limites de stockage, consultez [Abonnement Azure et limites, quotas et contraintes du service](https://docs.microsoft.com/azure/azure-subscription-service-limits). Un conteneur regroupe un ensemble d’ [objets blob](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Tous les objets blob doivent figurer dans un conteneur. Un compte peut contenir un nombre illimité de conteneurs. De la même manière, un conteneur peut également stocker un nombre illimité d'objets blob. Il existe deux types d’objets blob qui peuvent être enregistrés dans un stockage Azure : les objets blob de blocs et les objets blob de pages. Cette nouvelle fonctionnalité utilise des objets blob de pages, qui sont plus efficaces quand les plages d’octets d’un fichier sont fréquemment modifiées. Vous pouvez accéder aux objets blob avec le format d'URL suivant : `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -124,7 +124,7 @@ ON
  Utilisez des applets de commande PowerShell pour stocker des fichiers de données SQL Server dans le service de stockage d’objets blob Azure en référençant un chemin d’accès d’URL de stockage d’objets blob à la place d’un chemin d’accès de fichier. Accédez aux objets blob à l’aide du format d’URL suivant :`https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Prise en charge des compteurs de performances et des objets SQL Server  
- Depuis SQL Server 2014, un nouvel objet SQL Server a été ajouté pour être utilisé avec la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. Le nouvel objet SQL Server est appelé [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) et il peut être utilisé par le Moniteur système pour surveiller l’activité lors de l’exécution de SQL Server avec Microsoft Azure Storage.  
+ Depuis SQL Server 2014, un nouvel objet SQL Server a été ajouté pour être utilisé avec la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. Le nouvel objet SQL Server est appelé [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) et il peut être utilisé par le Moniteur système pour surveiller l’activité lors de l’exécution de SQL Server avec le Stockage Azure.  
   
 ### <a name="sql-server-management-studio-support"></a>Prise en charge de SQL Server Management Studio  
  SQL Server Management Studio vous permet d'utiliser cette fonctionnalité via plusieurs fenêtres de dialogue. Par exemple, tapez le chemin de l’URL du conteneur de stockage, comme > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :

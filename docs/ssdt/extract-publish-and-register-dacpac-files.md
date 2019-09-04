@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912802"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154803"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extraire, publier et enregistrer des fichiers .dacpac.
 Cette rubrique décrit quatre procédures réalisables en cliquant avec le bouton droit sur une base de données connectée dans l’Explorateur d’objets SQL Server :  
@@ -50,7 +50,7 @@ Si la case **Enregistrer en tant qu’application de la couche Données** est co
 Des paramètres supplémentaires de configuration de la publication sont disponibles dans la boîte de dialogue **Paramètres de publication avancés**, accessible en cliquant sur le bouton **Avancé**.  
   
 ## <a name="extract-data-tier-application"></a>Extraire une application de la couche Données  
-Extrayez un fichier .dacpac à partir d'une base de données. Le fait d’extraire crée un fichier de capture instantanée de base de données (.dacpac) à partir d’une base de données Microsoft Azure SQL Database ou SQL Server active susceptible de contenir des données provenant de tables d’utilisateur en plus du schéma de la base de données.  
+Extrayez un fichier .dacpac à partir d'une base de données. L’extraction crée un fichier de capture instantanée de base de données (.dacpac) à partir d’une base de données Azure SQL Database ou SQL Server active susceptible de contenir des données provenant de tables d’utilisateur en plus du schéma de la base de données.  
   
 Spécifiez le fichier .dacpac à créer. Le bouton **Propriétés DAC** affiche la boîte de dialogue **Propriétés DAC**, qui permet de spécifier les propriétés du fichier .dacpac.  
   

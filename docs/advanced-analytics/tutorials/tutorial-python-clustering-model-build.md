@@ -9,19 +9,19 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ce7f6cbd580afbdbf71065803af8d394323e5dc3
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e768f213edf27528e38b2f18d719869fbf089f21
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211973"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238718"
 ---
 # <a name="tutorial-build-a-clustering-model-in-python-with-sql-server-machine-learning-services"></a>Tutoriel : Créez un modèle de clustering dans Python avec SQL Server Machine Learning Services
 
 Dans la troisième partie de cette série de didacticiels en quatre parties, vous allez créer un modèle K-signifiant dans Python pour effectuer le clustering. Dans la partie suivante de cette série, vous déploierez ce modèle dans une base de données SQL avec SQL Server Machine Learning Services.
 
-Dans cet article, vous allez apprendre à:
+Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Définir le nombre de clusters pour un algorithme K-signifiant
@@ -43,7 +43,7 @@ Dans la [quatrième partie](tutorial-python-clustering-model-deploy.md), vous ap
 Pour créer un cluster de vos données client, vous allez utiliser l’algorithme de clustering **K-signifiant** , l’une des méthodes les plus simples et les plus connues de regroupement de données.
 Vous pouvez en savoir plus sur K-signifiant dans [un guide complet sur l’algorithme de clustering k-signifiant](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html).
 
-L’algorithme accepte deux entrées: Les données elles-mêmes et un nombre prédéfini «*k*» représentant le nombre de clusters à générer.
+L’algorithme accepte deux entrées : Les données elles-mêmes et un nombre prédéfini «*k*» représentant le nombre de clusters à générer.
 La sortie est de clusters *k* avec les données d’entrée partitionnées entre les clusters.
 
 L’objectif de K-signifiant est de regrouper les éléments en clusters k de telle sorte que tous les éléments du même cluster soient similaires les uns aux autres et, le cas échéant, aux éléments des autres clusters.
@@ -135,7 +135,7 @@ Les quatre moyennes du cluster sont fournies à l’aide des variables définies
 * *Frequency* = fréquence de retour
 
 L’exploration de données à l’aide de K-signifiant nécessite souvent une analyse plus approfondie des résultats et des étapes supplémentaires pour mieux comprendre chaque cluster, mais cela peut fournir des bons bons.
-Voici quelques façons d’interpréter ces résultats:
+Voici quelques façons d’interpréter ces résultats :
 
 * Le cluster 0 semble être un groupe de clients qui ne sont pas actifs (toutes les valeurs sont égales à zéro).
 * Le cluster 3 semble être un groupe qui correspond au comportement de retour.
@@ -148,13 +148,13 @@ Si vous n’allez pas poursuivre ce didacticiel, supprimez la base de données t
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans la troisième partie de cette série de didacticiels, vous avez effectué les étapes suivantes:
+Dans la troisième partie de cette série de didacticiels, vous avez effectué les étapes suivantes :
 
 * Définir le nombre de clusters pour un algorithme K-signifiant
 * Effectuer un clustering
 * Analyser les résultats
 
-Pour déployer le modèle de Machine Learning que vous avez créé, suivez la quatrième partie de cette série de didacticiels:
+Pour déployer le modèle de Machine Learning que vous avez créé, suivez la quatrième partie de cette série de didacticiels :
 
 > [!div class="nextstepaction"]
 > [Tutoriel : Déployez un modèle de clustering dans Python avec SQL Server Machine Learning Services](tutorial-python-clustering-model-deploy.md)

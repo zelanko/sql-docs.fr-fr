@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028165"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155109"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 
@@ -52,7 +52,7 @@ Pour éviter la suppression des connexions inactives par un composant réseau, l
   
 Redémarrez l’ordinateur pour appliquer les paramètres du Registre.  
 
-Pour effectuer cela lorsque vous exécutez le système dans Windows Azuren, créez une tâche de démarrage pour ajouter les clés de Registre.  Par exemple, ajoutez la tâche de démarrage suivante au fichier de définition du service :  
+Pour effectuer cela lorsque vous exécutez le système dans Azure, créez une tâche de démarrage pour ajouter les clés de Registre.  Par exemple, ajoutez la tâche de démarrage suivante au fichier de définition du service :  
 
 ```xml
 <Startup>  
@@ -80,7 +80,7 @@ Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>L'utilisation du chiffrement requiert la définition de hostNameInCertificate
 
-Avant la version [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 de, lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **Encrypt =** true (si le nom du serveur dans la connexion la chaîne *est*ShortName *. DomainName*, affectez à lapropriété **hostNameInCertificate** la valeur \*. *nom_domaine*.). Cette propriété est facultative depuis la version 7,2 du pilote.
+Avant la version [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 de, lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **encrypt = true** (si le nom du serveur dans la chaîne de connexion est *ShortName*. *domainName*, affectez à la propriété **hostNameInCertificate** la valeur. \**nom_domaine*.). Cette propriété est facultative depuis la version 7,2 du pilote.
 
 Par exemple :
 

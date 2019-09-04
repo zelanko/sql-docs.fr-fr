@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
+ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "68032289"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154575"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser une instance de cluster de basculement - SQL Server sur Linux
 
@@ -30,10 +30,10 @@ Il peut arriver que vous souhaitiez basculer manuellement l’instance de cluste
 
 Le mode de basculement dépend de la distribution Linux. Suivez les instructions pour votre distribution Linux.
 
-- [RHEL ou Ubuntu](#-manual-failover-rhel-or-ubuntu)
-- [SLES](#-manual-failover-sles)
+- [RHEL ou Ubuntu](#manual-failover-rhel-or-ubuntu)
+- [SLES](#manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Basculement manuel (RHEL ou Ubuntu)
+## <a name="manual-failover-rhel-or-ubuntu"></a>Basculement manuel (RHEL ou Ubuntu)
 
 Pour effectuer un basculement manuel, sur les serveurs Red Hat Enterprise Linux (RHEL) ou Ubuntu exécutez les étapes suivantes.
 1.  Émettez les commandes suivantes : 
@@ -54,7 +54,7 @@ Pour effectuer un basculement manuel, sur les serveurs Red Hat Enterprise Linux 
 
 \<FCIResourceName> est le nom de ressource Pacemaker de l’interface de cluster de basculement. 
 
-## <a name = "#-manual-failover-sles"></a> Basculement manuel (SLES)
+## <a name="manual-failover-sles"></a>Basculement manuel (SLES)
 
 
 Dans SUSE Linux Enterprise Server (SLES), utilisez la commande `migrate` pour basculer manuellement une interface de cluster de basculement SQL Server. Par exemple :

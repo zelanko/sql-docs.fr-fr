@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4c93f36ca78bbd6cdeedf8d88314f7374f34a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041380"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176363"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Cette rubrique présente les pratiques recommandées et des conseils de dépannage pour la sauvegarde et la restauration SQL Server dans le service d'objets blob Windows Azure.  
+  Cette rubrique présente des bonnes pratiques et des conseils de dépannage pour la sauvegarde et la restauration SQL Server dans le service Blob Azure.  
   
- Pour plus d'informations sur l'utilisation du service de stockage d'objets blob Windows Azure pour les opérations de sauvegarde et de restauration SQL Server, consultez :  
+ Pour plus d’informations sur l’utilisation du service de stockage Blob Azure pour les opérations de sauvegarde et de restauration SQL Server, consultez :  
   
 -   [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestion des sauvegardes  
  La liste suivante comprend des recommandations générales sur la gestion des sauvegardes :  
@@ -35,7 +35,7 @@ ms.locfileid: "68041380"
   
 -   Lors de la création d'un conteneur, nous vous recommandons de configurer le niveau d'accès sur **Privé**, afin que seuls les utilisateurs ou comptes qui peuvent fournir les informations d'identification requises puissent lire ou écrire les objets blob dans le conteneur.  
   
--   Pour les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutant sur une machine virtuelle Microsoft Azure, utilisez un compte de stockage qui se trouve dans la même région que la machine virtuelle, afin d’éviter les coûts de transfert des données entre les régions. L'utilisation de la même région garantit également des performances optimales pour les opérations de sauvegarde et de restauration.  
+-   Pour les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutant sur une machine virtuelle Azure, utilisez un compte de stockage qui se trouve dans la même région que la machine virtuelle, afin d’éviter les coûts de transfert des données entre les régions. L'utilisation de la même région garantit également des performances optimales pour les opérations de sauvegarde et de restauration.  
   
 -   L'échec d'une activité de sauvegarde peut générer un fichier de sauvegarde non valide. Nous vous recommandons d'identifier périodiquement les sauvegardes en échec et de supprimer les fichiers d'objets blob. Pour plus d'informations, consultez [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
@@ -45,18 +45,18 @@ ms.locfileid: "68041380"
   
 ## <a name="handling-large-files"></a>Gestion des fichiers volumineux  
   
--   L'opération de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs threads pour optimiser le transfert de données vers les services de stockage d'objets blob Windows Azure.  Toutefois, les performances dépendent de divers facteurs, tels que la bande passante de l'éditeur de logiciels et la taille de la base de données. Si vous envisagez de sauvegarder des bases de données ou groupes de fichiers volumineux à partir d'une base de données SQL Server locale, nous vous recommandons de commencer par tester le débit. Le [SLA pour Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) de Microsoft Azure impose des temps de traitement maximum pour les objets blob dont vous devez tenir compte.  
+-   L’opération de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs threads pour optimiser le transfert de données vers les services de stockage Blob Azure.  Toutefois, les performances dépendent de divers facteurs, tels que la bande passante de l'éditeur de logiciels et la taille de la base de données. Si vous envisagez de sauvegarder des bases de données ou groupes de fichiers volumineux à partir d'une base de données SQL Server locale, nous vous recommandons de commencer par tester le débit. Le [SLA pour Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) de Microsoft Azure impose des temps de traitement maximum pour les objets blob dont vous devez tenir compte.  
   
 -   L’utilisation de l’option `WITH COMPRESSION`, comme recommandé dans la section [Gestion de la sauvegarde](##managing-backups), est très importante lors de la sauvegarde de fichiers volumineux.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Dépannage des problèmes de sauvegarde vers une URL ou de restauration depuis une URL  
- Voici quelques méthodes rapides qui vous aideront à résoudre les erreurs survenant lors de la sauvegarde ou de la restauration vers/depuis le service de stockage d'objets blob Windows Azure.  
+ Voici quelques méthodes rapides qui vous aideront à résoudre les erreurs survenant lors de la sauvegarde ou de la restauration vers/depuis le service de stockage Blob Azure.  
   
  Pour éviter les erreurs attribuables à des limitations ou à des options non prises en charge, consultez la liste des limitations, ainsi que l’aide sur les commandes BACKUP et RESTORE dans l’article [Sauvegarde et restauration SQL Server avec le service Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
   
  **Erreurs d'authentification :**  
   
--   `WITH CREDENTIAL` est une nouvelle option nécessaire pour la sauvegarde ou la restauration vers/depuis le service Stockage Blob Microsoft Azure. Les défaillances liées aux informations d'identification peuvent être les suivantes :  
+-   `WITH CREDENTIAL` est une nouvelle option nécessaire pour la sauvegarde ou la restauration vers/depuis le service de stockage Blob Azure. Les défaillances liées aux informations d'identification peuvent être les suivantes :  
   
      Les informations d'identification spécifiées dans la commande **BACKUP** ou **RESTORE** n'existent pas. Pour éviter ce problème, vous pouvez inclure des instructions T-SQL afin de créer les informations d'identification si elles n'existent pas dans l'instruction de sauvegarde. Voici un exemple que vous pouvez utiliser :  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68041380"
   
 -   Les informations d'identification existent, mais le compte de connexion utilisé pour exécuter la commande de sauvegarde ne dispose pas des autorisations appropriées pour accéder aux informations d'identification. Utilisez un compte de connexion dans le rôle **db_backupoperator** avec des autorisations ***Modifier des informations d’identification*** .  
   
--   Vérifiez le nom du compte de stockage et la valeur des clés. Les informations stockées dans les informations d'identification doivent correspondre aux valeurs de propriétés du compte de stockage Windows Azure utilisé lors des opérations de sauvegarde et de restauration.  
+-   Vérifiez le nom du compte de stockage et la valeur des clés. Les informations stockées dans les informations d’identification doivent correspondre aux valeurs de propriétés du compte de stockage Azure utilisé lors des opérations de sauvegarde et de restauration.  
   
  **Erreurs/Échecs de sauvegarde :**  
   

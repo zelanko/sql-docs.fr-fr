@@ -9,19 +9,19 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a71d92023c76b7eafb25efba0bb13b1d1da1f695
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 16291c059efc34f270f6705fb17fa538e55e7459
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211963"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238675"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-python-with-sql-server-machine-learning-services"></a>Tutoriel : Préparer les données pour effectuer le clustering dans Python avec SQL Server Machine Learning Services
 
 Dans la deuxième partie de cette série de didacticiels en quatre parties, vous allez importer et préparer les données à partir d’une base de données SQL à l’aide de Python. Plus loin dans cette série, vous utiliserez ces données pour effectuer l’apprentissage et le déploiement d’un modèle de clustering dans Python avec SQL Server Machine Learning Services.
 
-Dans cet article, vous allez apprendre à:
+Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Séparer les clients en fonction de leurs dimensions à l’aide de Python
@@ -39,7 +39,7 @@ Dans la [quatrième partie](tutorial-python-clustering-model-deploy.md), vous ap
 
 ## <a name="separate-customers"></a>Clients distincts
 
-Pour préparer le clustering des clients, vous devez d’abord séparer les clients selon les dimensions suivantes:
+Pour préparer le clustering des clients, vous devez d’abord séparer les clients selon les dimensions suivantes :
 
 * **orderRatio** = ratio d’ordre de retour (nombre total de commandes partiellement ou entièrement retournées par rapport au nombre total de commandes)
 * **itemsRatio** = ratio d’élément retourné (nombre total d’éléments retournés par rapport au nombre d’articles achetés)
@@ -144,12 +144,12 @@ Si vous n’allez pas poursuivre ce didacticiel, supprimez la base de données t
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans la deuxième partie de cette série de didacticiels, vous avez effectué les étapes suivantes:
+Dans la deuxième partie de cette série de didacticiels, vous avez effectué les étapes suivantes :
 
 * Séparer les clients en fonction de leurs dimensions à l’aide de Python
 * Charger les données de la base de données SQL dans une trame de données python
 
-Pour créer un modèle de Machine Learning qui utilise ces données client, suivez la troisième partie de cette série de didacticiels:
+Pour créer un modèle de Machine Learning qui utilise ces données client, suivez la troisième partie de cette série de didacticiels :
 
 > [!div class="nextstepaction"]
 > [Tutoriel : Créer un modèle prédictif dans Python avec SQL Server Machine Learning Services](tutorial-python-clustering-model-build.md)

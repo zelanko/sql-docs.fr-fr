@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 987ce3d90159a83d141a241579e5cbfc727277c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eef20d5dce1d76d6870a39e34a3da1404838917f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045474"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155174"
 ---
 # <a name="ado-net-destination"></a>Destination ADO NET
 
@@ -32,7 +32,7 @@ ms.locfileid: "68045474"
 
   La destination ADO NET charge des données dans différentes bases de données compatibles [!INCLUDE[vstecado](../../includes/vstecado-md.md)]qui utilisent une table ou une vue de base de données. Vous pouvez charger ces données dans une table ou une vue existante ou créer une table et y charger les données.  
   
- Vous pouvez utiliser la destination ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Consignes et limitations générales de base de données SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Vous pouvez utiliser la destination ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Recommandations générales et limitations (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Résolution des problèmes liés à la destination ADO NET  
  Vous pouvez consigner les appels que la destination ADO NET effectue auprès de fournisseurs de données externes. Cette fonctionnalité de journalisation permet de résoudre des problèmes liés à l'enregistrement de données vers des sources de données externes que réalise la destination ADO NET. Pour consigner les appels aux fournisseurs de données externes effectués par la destination ADO.NET, activez la journalisation du package et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "68045474"
 >  Pour plus d’informations, consultez [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) et [IDENTITY &#40;Propriété&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Ressources externes  
- Article technique sur sqlcat.com, traitant du [chargement rapide de données sur Microsoft Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=244333)  
+ Article technique sur sqlcat.com, traitant du [chargement rapide de données sur Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>Éditeur de destination ADO NET (page Mappages)
   Utilisez la page **Mappages** de la boîte de dialogue **Éditeur de destination ADO NET** pour mapper des colonnes d’entrée à des colonnes de destination.  

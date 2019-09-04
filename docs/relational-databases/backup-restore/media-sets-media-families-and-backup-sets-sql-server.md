@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7abc9ffe6cdcc8f33c54ae8ce971330b9f9fee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13ae1c4ae17bca661289d044217f63c4bebb9a9c
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033790"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155580"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68033790"
   
   Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.  
   
->**REMARQUE !** Pour plus d’informations sur la sauvegarde SQL Server dans le service de stockage d’objets blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>**REMARQUE !** Pour plus d’informations sur la sauvegarde SQL Server dans le service de stockage d’objets blob Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
 ##  <a name="TermsAndDefinitions"></a> Termes  
  **jeu de supports**  

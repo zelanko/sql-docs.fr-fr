@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dd03d9db824204bc4904e90af4e74055f6fa79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19556dc84e916598e63f6df7b101f4f495ac3855
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076035"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155385"
 ---
 # <a name="create-an-encrypted-backup"></a>Créer une sauvegarde chiffrée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,12 @@ ms.locfileid: "68076035"
   
  Pour obtenir un exemple de chiffrement d’une sauvegarde protégée par une gestion de clés extensible, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>Sauvegarder dans le stockage Windows Azure avec chiffrement  
- Si vous créez une sauvegarde dans le stockage Windows Azure à l'aide de l'option **Sauvegarde SQL Server vers une URL** , les étapes de chiffrement sont identiques, mais vous devez utiliser l'URL de destination et les informations d'identification SQL pour l'authentification dans le stockage Windows Azure. Si vous voulez configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les options de chiffrement, consultez [Activation de la sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+### <a name="backup-to-azure-storage-with-encryption"></a>Sauvegarder dans le Stockage Azure avec chiffrement  
+ Si vous créez une sauvegarde dans le stockage Azure à l’aide de l’option **Sauvegarde SQL Server vers une URL**, les étapes de chiffrement sont identiques, mais vous devez utiliser l’URL de destination et les informations d’identification SQL pour l’authentification dans le stockage Azure. Si vous voulez configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les options de chiffrement, consultez [Activation de la sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
  **Configuration requise :**  
   
--   Un compte de stockage Windows et un conteneur. Pour plus d'informations, consultez [Leçon 1 : Créez des objets de Stockage Azure Windows](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Un compte de stockage Windows et un conteneur. Pour plus d'informations, consultez [Leçon 1 : Créer des objets de stockage Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Une clé principale de base de données pour la base de données master, et un certificat ou une clé asymétrique sur l'instance de SQL Server. Pour les conditions et les autorisations de chiffrement, consultez [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 402c417de43637f810366423fb4e66b9cb3c507c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115714"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155568"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utiliser l'Assistant Plan de maintenance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -366,12 +366,12 @@ Case à cocher**Inclure les index**
      Spécifiez le dossier dans lequel seront placés les fichiers de base de données créés automatiquement. Cette option est désactivée si URL est sélectionné en tant que destination de sauvegarde.  
   
      **Informations d'identification SQL**  
-     Sélectionnez les informations d'identification SQL utilisées pour l'authentification au stockage Windows Azure. Si vous n'avez pas d'informations d'identification SQL, cliquez sur le bouton **Créer** pour créer de nouvelles informations d'identification SQL.  
+     Sélectionnez les informations d’identification SQL utilisées pour l’authentification au stockage Azure. Si vous n'avez pas d'informations d'identification SQL, cliquez sur le bouton **Créer** pour créer de nouvelles informations d'identification SQL.  
   
     > **IMPORTANT !** La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans la rubrique [Créer des informations d’identification](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
   
      **Conteneur de stockage Windows Azure**  
-     Spécifiez le nom du conteneur de stockage Windows Azure.  
+     Spécifiez le nom du conteneur de stockage Azure  
   
      **Préfixe d'URL**  
      Est généré automatiquement à partir des informations du compte de stockage contenues dans les informations d'identification SQL, et du nom du conteneur de stockage Windows Azure que vous avez spécifié. Nous vous recommandons de ne pas modifier les informations de ce champ, sauf si vous utilisez un domaine qui utilise un format autre que **\<compte_de_stockage>.blob.core.windows.net**.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893630"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155711"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Démarrage rapide : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ GO
 
 
 ## <a name="create-a-sql-server-credential"></a>Créer des informations d'identification SQL Server
-Les informations d'identification SQL Server sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server. Ici, les processus de sauvegarde et de restauration SQL Server utilisent des informations d'identification pour s’authentifier auprès du service de stockage d'objets Blob de Microsoft Azure. Les informations d'identification contiennent le nom du compte de stockage et ses valeurs de **clé d'accès** . Une fois les informations d'identification créées, vous devez les spécifier dans l'option WITH CREDENTIAL lorsque vous publiez des instructions BACKUP/RESTORE. Pour plus d’informations sur les informations d’identification, consultez [Informations d’identification](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
+Les informations d'identification SQL Server sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server. Ici, les processus de sauvegarde et de restauration SQL Server utilisent des informations d’identification pour s’authentifier auprès du service de stockage d’objets blob Azure. Les informations d'identification contiennent le nom du compte de stockage et ses valeurs de **clé d'accès** . Une fois les informations d'identification créées, vous devez les spécifier dans l'option WITH CREDENTIAL lorsque vous publiez des instructions BACKUP/RESTORE. Pour plus d’informations sur les informations d’identification, consultez [Informations d’identification](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
   > [!IMPORTANT]
   > La configuration requise pour créer des informations d'identification SQL Server décrite ci-dessous est spécifique aux processus de sauvegarde SQL Server ([Sauvegarde SQL Server vers une URL](backup-restore/sql-server-backup-to-url.md) et [Sauvegarde managée SQL Server sur Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, lorsqu'il accède au stockage Azure pour écrire ou lire des sauvegardes, utilise le nom du compte de stockage et les informations de clé d'accès.
@@ -119,8 +119,8 @@ Vous aurez besoin des clés d’accès du compte de stockage pour créer les inf
 
 1. Exécutez cette instruction pour créer les informations d’identification. 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>Sauvegarder la base de données dans le service Stockage Blob Microsoft Azure
-Dans cette section, vous allez utiliser une instruction T-SQL pour effectuer une sauvegarde de base de données complète dans le service Stockage Blob Microsoft Azure. 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Sauvegarder la base de données dans le service de stockage d’objets blob Azure
+Dans cette section, vous allez utiliser une instruction T-SQL pour effectuer une sauvegarde de base de données complète dans le service de stockage d’objets blob Azure. 
 
 1. Connectez-vous à votre serveur SQL Server en utilisant SQL Server Management Studio. 
 1. Sélectionnez la base de données **SQLTestDB** et ouvrez une fenêtre **Nouvelle requête**. 
@@ -138,7 +138,7 @@ Dans cette section, vous allez utiliser une instruction T-SQL pour effectuer une
 1. Exécutez l’instruction pour sauvegarder votre base de données SQLTestDB vers une URL. 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>Restaurer la base de données à partir du service Stockage Blob Microsoft Azure
+## <a name="restore-database-from-azure-blob-storage-service"></a>Restaurer la base de données à partir du service de stockage d’objets blob Azure
 Dans cette section, vous allez utiliser une instruction T-SQL pour restaurer la sauvegarde de base de données complète. 
 
 1. Connectez-vous à votre serveur SQL Server en utilisant SQL Server Management Studio. 

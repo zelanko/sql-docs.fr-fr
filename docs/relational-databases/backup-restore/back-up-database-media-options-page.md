@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940913"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155558"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67940913"
 ## <a name="options"></a>Options  
   
 ### <a name="overwrite-media"></a>Remplacer le support  
- Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l'URL (Stockage Windows Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l’instruction Transact-SQL **BACKUP TO URL. WITH FORMAT**. Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+ Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l’URL (Stockage Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options figurant sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l’instruction Transact-SQL **BACKUP TO URL. WITH FORMAT**. Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
 
  L’option **Remplacer le support** est désactivée si vous avez sélectionné **URL** comme destination de sauvegarde dans la page **Général**.
   

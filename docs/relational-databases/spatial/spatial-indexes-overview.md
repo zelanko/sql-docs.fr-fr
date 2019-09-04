@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9094f5335fc3978ba2e5018873dc2cdd8b455347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048467"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190420"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,10 +123,10 @@ ms.locfileid: "68048467"
 >  Le paramètre **tessellation_scheme** d’un index spatial est visible dans l’affichage catalogue [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>Schéma de pavage de grille géométrique  
- Le pavage GEOMETRY_AUTO_GRID est le schéma de pavage par défaut pour le type de données **geometry** , pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et versions ultérieures.  Le pavage GEOMETRY_GRID est le seul schéma de pavage disponible pour les types de données de géométrie dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette section traite des aspects du pavage de grille géométrique qui sont pertinents à l'utilisation d'index spatiaux : méthodes prises en charge et zones englobantes.  
+ Le pavage GEOMETRY_AUTO_GRID est le schéma de pavage par défaut pour le type de données **geometry** , pour [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] et versions ultérieures.  Le pavage GEOMETRY_GRID est le seul schéma de pavage disponible pour les types de données de géométrie dans [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. Cette section traite des aspects du pavage de grille géométrique qui sont pertinents à l'utilisation d'index spatiaux : méthodes prises en charge et zones englobantes.  
   
 > [!NOTE]  
->  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+>  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>Cadre englobant  
  Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. Le cadre englobant est défini par quatre coordonnées, **(** _x-min_ **,** _y-min_ **)** et **(** _x-max_ **,** _y-max_ **)** , qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  

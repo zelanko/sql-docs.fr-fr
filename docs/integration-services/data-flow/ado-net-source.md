@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 262d28de4c765a6bc6edaf89db52e57a79ff0c85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3881b16729a1999b3be47dafd2fec396d495c29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901833"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155162"
 ---
 # <a name="ado-net-source"></a>Source ADO NET
 
@@ -35,7 +35,7 @@ ms.locfileid: "67901833"
 
   La source ADO .NET exploite des données issues d'un fournisseur .NET et les met à la disposition du flux de données.  
   
- Vous pouvez utiliser la source ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Recommandations générales et limitations (Microsoft Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Vous pouvez utiliser la source ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Recommandations générales et limitations (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Prise en charge du type de données  
  La source convertit tout type de données qui ne mappe pas à un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] spécifique en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Cette conversion se produit même si le type de données est **System.Object**.  

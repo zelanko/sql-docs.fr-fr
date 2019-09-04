@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6be8d736294df50a5ca3d288b77e4b0daac556b8
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941125"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176354"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,22 +41,22 @@ ms.locfileid: "68941125"
   
 -   [Sauvegarde SQL Server vers une URL à l'aide de l'Assistant Plan de maintenance](../../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [Restauration à partir du stockage Windows Azure à l'aide de SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
+-   [Restauration à partir du stockage Azure à l’aide de SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> Sécurité  
  Vous trouverez ci-dessous les considérations de sécurité et conditions requises pour la sauvegarde et la restauration à l’aide du service de stockage d’objets blob Microsoft Azure.  
   
--   Lorsque vous créez un conteneur pour le service de stockage d’objets blob Microsoft Azure, nous vous recommandons de définir l’accès sur **Privé**. La définition d'un accès privé limite l'accès aux seuls utilisateurs ou comptes capables de fournir les informations nécessaires pour s'authentifier auprès du compte Windows Azure.  
+-   Lorsque vous créez un conteneur pour le service de stockage d’objets blob Microsoft Azure, nous vous recommandons de définir l’accès sur **Privé**. La définition d’un accès privé limite l’accès aux seuls utilisateurs ou comptes capables de fournir les informations nécessaires pour s’authentifier auprès du compte Azure.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert que, soit un nom de compte Microsoft Azure et une authentification par clé d’accès, soit une signature d’accès partagé (SAP) et un jeton d’accès soient stockés dans les informations d’identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ces informations sont utilisées pour l’authentification auprès du compte Microsoft Azure lors de l’exécution d’opérations de sauvegarde ou de restauration.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert que, soit un nom de compte Azure et une authentification par clé d’accès, soit une signature d’accès partagé (SAP) et un jeton d’accès soient stockés dans les informations d’identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ces informations sont utilisées pour l’authentification auprès du compte Azure lors de l’exécution d’opérations de sauvegarde ou de restauration.  
   
 -   Le compte d’utilisateur utilisé pour émettre les commandes BACKUP (sauvegarder) ou RESTORE (restaurer) doit figurer dans le rôle de base de données **db_backup operator** avec les autorisations **Modifier des informations d’identification** .  
   
 ###  <a name="intorkeyconcepts"></a> Présentation des principaux éléments et concepts  
  Les deux sections suivantes présentent le service de stockage d’objets blob Microsoft Azure, ainsi que les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés pour la sauvegarde et la restauration à l’aide de ce service. Il est important de comprendre les composants et leur interaction pour effectuer une sauvegarde ou une restauration à l’aide du service de stockage d’objets blob Microsoft Azure.  
   
- La création d’un compte de stockage Microsoft Azure dans votre abonnement Azure est la première étape de ce processus. Ce compte de stockage est un compte d’administrateur disposant des autorisations administratives complètes sur tous les conteneurs et objets créés avec le compte de stockage. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut soit utiliser le nom du compte de stockage Microsoft Azure et la valeur de sa clé d’accès pour s’authentifier, ainsi qu’écrire et lire des objets blob dans le service de stockage d’objets blob Microsoft Azure, soit utiliser un jeton de signature d’accès partagé généré sur des conteneurs spécifiques lui octroyant des droits de lecture et d’écriture. Pour plus d’informations sur les comptes de stockage Azure, consultez [À propos des comptes de stockage Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/) et, pour plus d’informations sur les signatures d’accès partagé, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration.  
+ La création d’un compte de stockage Azure dans votre abonnement Azure est la première étape de ce processus. Ce compte de stockage est un compte d’administrateur disposant des autorisations administratives complètes sur tous les conteneurs et objets créés avec le compte de stockage. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut soit utiliser le nom du compte de stockage Azure et la valeur de sa clé d’accès pour s’authentifier, ainsi qu’écrire et lire des objets blob dans le service de stockage Blob Microsoft Azure, soit utiliser un jeton de signature d’accès partagé généré sur des conteneurs spécifiques lui octroyant des droits de lecture et d’écriture. Pour plus d’informations sur les comptes de stockage Azure, consultez [À propos des comptes de stockage Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/) et, pour plus d’informations sur les signatures d’accès partagé, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration.  
   
 ###  <a name="blockbloborpageblob"></a> Sauvegarde sur un objet blob de blocs vs un objet blob de pages 
  Deux types d’objets blob peuvent être stockés dans le service de stockage d’objets blob Microsoft Azure : les objets blob de blocs et les objets blob de pages. La sauvegarde SQL Server peut utiliser les deux types d’objets blob en fonction de la syntaxe Transact-SQL utilisée : si la clé de stockage est utilisée dans les informations d’identification, l’objet blob de pages sera utilisé ; si la signature d’accès partagé est utilisée, l’objet blob de blocs sera utilisé.
@@ -71,7 +71,7 @@ Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une 
 - Sauvegarder sur plusieurs objets blob de blocs
 
 ###  <a name="Blob"></a> Service de stockage d’objets blob Microsoft Azure  
- **Compte de stockage :** Le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage d’objets blob Microsoft Azure, commencez par créer un compte de stockage Microsoft Azure. Pour plus d’informations, voir [Créez un compte de stockage](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+ **Compte de stockage :** Le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage Blob Microsoft Azure, commencez par créer un compte de stockage Azure. Pour plus d’informations, voir [Créez un compte de stockage](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Conteneur :** un conteneur permet de regrouper un ensemble d’objets blob, et peut stocker un nombre illimité d’objets blob. Pour pouvoir écrire une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service de stockage d’objets blob Microsoft Azure, vous devez avoir créé au moins le conteneur racine. Vous pouvez générer un jeton de signature d’accès partagé sur un conteneur, et accorder l’accès aux objets uniquement sur un conteneur spécifique.  
   
@@ -211,7 +211,7 @@ Vous pouvez sauvegarder une base de données vers une URL par le biais de la tâ
 > [!NOTE]  
 >  Pour créer une sauvegarde de capture instantanée de fichier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou pour remplacer un support de sauvegarde existant, vous devez utiliser Transact-SQL, Powershell ou C# plutôt que la tâche de sauvegarde dans SQL Server Management Studio.  
   
- Les étapes suivantes décrivent les modifications apportées à la tâche Sauvegarder la base de données dans SQL Server Management Studio pour autoriser la sauvegarde vers le stockage Microsoft Azure :  
+ Les étapes suivantes décrivent les modifications apportées à la tâche Sauvegarder la base de données dans SQL Server Management Studio pour autoriser la sauvegarde vers le stockage Azure :  
   
 1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
 
@@ -242,7 +242,7 @@ Quand vous sélectionnez **URL** comme destination, certaines options de la page
  [Créer des informations d'identification - Authentification dans le stockage Azure](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Sauvegarde SQL Server vers une URL à l'aide de l'Assistant Plan de maintenance  
- Comme pour la tâche de sauvegarde décrite précédemment, l’Assistant Plan de maintenance dans SQL Server Management Studio inclut l’option **URL** parmi les options de destination, ainsi que d’autres objets de prise en charge requis pour sauvegarder vers un stockage Microsoft Azure, telles les informations d’identification SQL. Pour plus d’informations, voir la section **Définir les tâches de sauvegarde** dans [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Comme pour la tâche de sauvegarde décrite précédemment, l’Assistant Plan de maintenance dans SQL Server Management Studio inclut l’option **URL** parmi les options de destination, ainsi que d’autres objets de prise en charge requis pour sauvegarder vers un stockage Azure, telles les informations d’identification SQL. Pour plus d’informations, voir la section **Définir les tâches de sauvegarde** dans [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 > [!NOTE]  
 >  Pour créer un jeu de sauvegarde distribué, une sauvegarde de capture instantanée de fichier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des informations d’identification SQL utilisant un jeton d’accès partagé, vous devez utiliser Transact-SQL, Powershell ou C# plutôt que la tâche Sauvegarder dans l’Assistant Plan de Maintenance.  

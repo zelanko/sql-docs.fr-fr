@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 367815ef719b9a44462afc41f62e69d3c1f6fb26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fafacc6dc11415ed691fdf64b494daebc8cc64
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134803"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176345"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autor
   
 -   **Enregistrer sur le disque local** - Crée un fichier de BACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
--   **Enregistrer dans Windows Azure** - Crée un fichier BACPAC dans un conteneur Windows Azure. Vous devez vous connecter à un conteneur Windows Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
+-   **Enregistrer dans Azure** - Crée un fichier BACPAC dans un conteneur Azure. Vous devez vous connecter à un conteneur Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
   
  Pour spécifier un sous-ensemble de tables à exporter, utilisez l'option **Avancé** .  
   
