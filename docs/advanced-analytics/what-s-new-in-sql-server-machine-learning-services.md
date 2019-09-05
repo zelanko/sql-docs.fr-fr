@@ -1,7 +1,7 @@
 ---
 title: Nouveautés
 description: Nouvelles annonces de fonctionnalités pour chaque version de SQL Server 2016 R services, R Server SQL Server Machine Learning Services.
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -9,12 +9,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f582088359c2878f5dfd84d4b353b1f9d8c369e5
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715307"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652290"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services
 
@@ -32,6 +32,7 @@ Cette version ajoute les fonctionnalités les plus demandées pour les opératio
 
 | Libérer | Mise à jour des fonctionnalités |
 |---------|----------------|
+| RC 1 | [La connexion de bouclage à SQL Server à partir d’un script Python ou R](connect/loopback-connection.md) est désormais prise en charge pour Windows et Linux. |
 | CTP 3.2 | Aucune modification. |
 | CTP 3.1 | Aucune modification. |
 | CTP 3.0 | Aucune modification. |
@@ -116,7 +117,7 @@ Pour plus d’informations sur les annonces de fonctionnalités, consultez [Nouv
 
 SQL Server 2019 ajoute la prise en charge Linux pour R et Python quand vous installez les packages Machine Learning avec une instance du moteur de base de données. Pour plus d’informations, consultez [installer SQL Server machine learning services sur Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-Sur Linux, SQL Server 2017 ne dispose pas de l’intégration R ou python, mais vous pouvez utiliser le [score natif](sql-native-scoring.md) sur Linux, car cette fonctionnalité est disponible via la [prédiction](../t-sql/queries/predict-transact-sql.md) T-SQL, qui s’exécute sur Linux. Le score natif permet une notation à hautes performances à partir d’un modèle préformé, sans appeler ou même exiger un Runtime R.
+Sur Linux, SQL Server 2017 ne dispose pas de l’intégration R ou python, mais vous pouvez utiliser le [score natif](sql-native-scoring.md) sur Linux, car cette fonctionnalité est disponible via la [PREDICT](../t-sql/queries/predict-transact-sql.md) T-SQL, qui s’exécute sur Linux. Le score natif permet une notation à hautes performances à partir d’un modèle préformé, sans appeler ou même exiger un Runtime R.
 ::: moniker-end
 
 <a name="azure-sql-database-roadmap"></a>
