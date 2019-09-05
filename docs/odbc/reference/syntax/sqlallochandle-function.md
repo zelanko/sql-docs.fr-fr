@@ -84,7 +84,7 @@ SQLRETURN SQLAllocHandle(
  Pour plus d’informations sur le déroulement des appels de fonction entre le gestionnaire de pilotes et un pilote, consultez [fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLAllocHandle** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec le *comme HandleType* et le  descripteur appropriés définis sur la valeur de *InputHandle* . SQL_SUCCESS_WITH_INFO (mais pas SQL_ERROR) peut être retourné pour l’argument *OutputHandle* . Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLAllocHandle** et explique chacune d’elles dans le contexte de cette fonction. la notation «(DM)» précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLAllocHandle** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec le *comme HandleType* et le ** descripteur appropriés définis sur la valeur de *InputHandle* . SQL_SUCCESS_WITH_INFO (mais pas SQL_ERROR) peut être retourné pour l’argument *OutputHandle* . Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLAllocHandle** et explique chacune d’elles dans le contexte de cette fonction. la notation «(DM)» précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
@@ -103,7 +103,7 @@ SQLRETURN SQLAllocHandle(
 |IM001|Le pilote ne prend pas en charge cette fonction|(DM) l’argument *comme HandleType* a été SQL_HANDLE_STMT, et le pilote n’était pas un pilote ODBC valide.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_DESC, et le pilote ne prend pas en charge l’allocation d’un handle de descripteur.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLAllocHandle** est utilisé pour allouer des handles pour les environnements, les connexions, les instructions et les descripteurs, comme décrit dans les sections suivantes. Pour obtenir des informations générales sur les [](../../../odbc/reference/develop-app/handles.md)descripteurs, consultez Handles.  
+ **SQLAllocHandle** est utilisé pour allouer des handles pour les environnements, les connexions, les instructions et les descripteurs, comme décrit dans les sections suivantes. Pour obtenir des informations générales sur les descripteurs, consultez [Handles](../../../odbc/reference/develop-app/handles.md).  
   
  Plusieurs identificateurs d’environnement, de connexion ou d’instruction peuvent être alloués par une application à la fois si plusieurs allocations sont prises en charge par le pilote. Dans ODBC, aucune limite n’est définie sur le nombre de handles d’environnement, de connexion, d’instruction ou de descripteur qui peuvent être alloués à un moment donné. Les pilotes peuvent imposer une limite au nombre d’un certain type de descripteur pouvant être alloué à la fois; Pour plus d’informations, consultez la documentation du pilote.  
   
@@ -112,7 +112,7 @@ SQLRETURN SQLAllocHandle(
 > [!NOTE]  
 >  Il s’agit d’une programmation d’application ODBC incorrecte pour appeler **SQLAllocHandle** deux fois avec la même variable d’application définie pour  *\*OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le handle avant de le réallouer . Le remplacement des handles ODBC de telle manière peut entraîner des erreurs ou des comportements incohérents dans la partie des pilotes ODBC.  
   
- Sur les systèmes d’exploitation qui prennent en charge plusieurs threads, les applications peuvent utiliser le même environnement, la même connexion, la même instruction ou le même handle de descripteur sur des threads différents. Les pilotes doivent donc prendre en charge l’accès multithread sécurisé à ces informations; une façon d’y parvenir, par exemple, consiste à utiliser une section critique ou un sémaphore. Pour plus d’informations sur les threads [](../../../odbc/reference/develop-app/multithreading.md), consultez Multithreading.  
+ Sur les systèmes d’exploitation qui prennent en charge plusieurs threads, les applications peuvent utiliser le même environnement, la même connexion, la même instruction ou le même handle de descripteur sur des threads différents. Les pilotes doivent donc prendre en charge l’accès multithread sécurisé à ces informations; une façon d’y parvenir, par exemple, consiste à utiliser une section critique ou un sémaphore. Pour plus d’informations sur les threads , consultez [Multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
  **SQLAllocHandle** ne définit pas l’attribut d’environnement SQL_ATTR_ODBC_VERSION lorsqu’il est appelé pour allouer un handle d’environnement. l’attribut Environment doit être défini par l’application, ou SQLSTATE HY010 (erreur de séquence de fonction) est retourné lorsque **SQLAllocHandle** est appelé pour allouer un handle de connexion.  
   
@@ -171,7 +171,7 @@ SQLRETURN SQLAllocHandle(
   
  Lorsque le descripteur alloué explicitement est libéré, le descripteur alloué implicitement est à nouveau associé à l’instruction. (L’attribut SQL_ATTR_APP_ROW_DESC ou SQL_ATTR_APP_PARAM_DESC de cette instruction est à nouveau défini sur le handle de descripteur alloué implicitement.) Cela est vrai pour toutes les instructions associées au descripteur explicitement alloué sur la connexion.  
   
- Pour plus d’informations sur les descripteurs [](../../../odbc/reference/develop-app/descriptors.md), consultez descripteurs.  
+ Pour plus d’informations sur les descripteurs, consultez [Descripteurs](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="code-example"></a>Exemple de code  
  Consultez [exemple de programme ODBC](../../../odbc/reference/sample-odbc-program.md), [fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md), [fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)et [fonction SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md).  
