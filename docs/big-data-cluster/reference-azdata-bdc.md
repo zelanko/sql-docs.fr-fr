@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155138"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304731"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -40,7 +40,7 @@ Cet article est un article de référence pour **azdata**.
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Le module HDFS fournit des commandes pour accéder à un système de fichiers HDFS.
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Les commandes Spark permettent à l’utilisateur d’interagir avec le système Spark en créant et en gérant des sessions, des instructions et des lots.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-Créer un cluster SQL Server Big Data-Kubernetes la configuration est requise sur votre système avec les variables d’environnement suivantes [«CONTROLLER_USERNAME», «CONTROLLER_PASSWORD», «MSSQL_SA_PASSWORD», «KNOX_PASSWORD»].
+Créer un cluster SQL Server Big Data-Kubernetes la configuration est requise sur votre système avec les variables d’environnement suivantes [« CONTROLLER_USERNAME », « CONTROLLER_PASSWORD », « MSSQL_SA_PASSWORD », « KNOX_PASSWORD »].
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -69,9 +69,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Nom du cluster Big Data, utilisé pour les espaces de noms Kubernetes.
 #### `--config-profile -c`
-Profil de configuration de cluster Big Data, utilisé pour le déploiement du cluster: ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
+Profil de configuration de cluster Big Data, utilisé pour le déploiement du cluster : ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
-Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Vous pouvez consulter les termes du contrat de licence de ce produit sur https://aka.ms/azdata-eula et https://go.microsoft.com/fwlink/?LinkId=2002534.
+Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
 Étiquette de nœud de cluster Big Data, utilisée pour désigner les nœuds sur lesquels effectuer le déploiement.
 #### `--force -f`

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7f4cecd27865b069764944021639ae1a2e553d76
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155128"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304717"
 ---
 # <a name="azdata"></a>azdata
 
@@ -59,7 +59,7 @@ Utilisateur du compte. Si vous ne voulez pas utiliser cet argument, vous pouvez 
 #### `--controller-endpoint -e`
 Point de terminaison du contrôleur du cluster « https://host:port  ». Si vous ne voulez pas utiliser cet argument, vous pouvez utiliser la configuration Kube sur votre machine. Vérifiez que la configuration se trouve à l’emplacement par défaut <user home>/.kube/config ou utilisez la variable d’environnement KUBECONFIG.
 #### `--accept-eula -a`
-Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://aka.ms/azdata-eula.
+Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». 
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb999ede4516f903b7d2f409e53940adc79b4f9a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b24a552bcfaae45fa4c8644d590d2573909a03ce
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155278"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304838"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -53,11 +53,11 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 Le chemin d'accès au fichier de l’emplacement où vous souhaitez placer le profil de configuration, s’affiche par défaut sur cwd avec custom-config.json.
 #### `--source -s`
-Source du profil de configuration: ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
+Source du profil de configuration : ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 Forcez le remplacement du fichier cible.
 #### `--accept-eula -a`
-Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://aka.ms/azdata-eula.
+Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». 
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -87,12 +87,12 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--config-profile -c`
-Profil de configuration par défaut: ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
+Profil de configuration par défaut : ['AKS-dev-test', 'kubeadm-Prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 Le type de configuration que vous souhaitez afficher.
 `cluster`
 #### `--accept-eula -a`
-Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://aka.ms/azdata-eula.
+Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». 
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -160,7 +160,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--config-file -c`
 Chemin du fichier de configuration du cluster Big Data de la configuration que vous souhaitez définir, c.-à-d. Customer/BDC. JSON
 #### `--json-values -j`
-Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. L’ajout ne prend PAS en charge les conditions.  Si la valeur Inline que vous fournissez est une paire clé-valeur elle-même avec les caractères «=» et «,», mettez ces caractères dans une séquence d’échappement.  Par exemple, Key1 = "key2\=val2\,Key3\=val3". Veuillez consulter http://jsonpatch.com/ pour obtenir des exemples d’apparence de votre chemin d’accès.  Si vous souhaitez accéder à un tableau, vous devez le faire en indiquant l’index, tel que key.0=value
+Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. L’ajout ne prend PAS en charge les conditions.  Si la valeur Inline que vous fournissez est une paire clé-valeur elle-même avec les caractères « = » et « , », mettez ces caractères dans une séquence d’échappement.  Par exemple, Key1 = "key2\=val2\,Key3\=val3". Veuillez consulter http://jsonpatch.com/ pour obtenir des exemples d’apparence de votre chemin d’accès.  Si vous souhaitez accéder à un tableau, vous devez le faire en indiquant l’index, tel que key.0=value
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
@@ -222,7 +222,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.re
 #### `--config-file -c`
 Chemin du fichier de configuration du cluster Big Data de la configuration que vous souhaitez définir, c.-à-d. Customer/BDC. JSON
 #### `--json-values -j`
-Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. Remplacer prend en charge des conditions dans la bibliothèque jsonpath.  Pour ce faire, démarrez votre chemin d’accès par un $. Cela vous permettra d’effectuer une condition telle que -j $.key1.key2[?(@.key3=='someValue'].key4=value. Si la valeur Inline que vous fournissez est une paire clé-valeur elle-même avec les caractères «=» et «,», mettez ces caractères dans une séquence d’échappement.  Par exemple, Key1 = "key2\=val2\,Key3\=val3". Consultez les exemples ci-dessous. Pour obtenir de l’aide supplémentaire, consultez : https://jsonpath.com/
+Liste de paires clé/valeur de chemins d’accès json aux valeurs : key1.subkey1=value1,key2.subkey2=value2. Vous pouvez fournir des valeurs json incluses, telles que : key='{"kind":"cluster","name":"test-cluster"}' ou fournir un chemin d'accès au fichier, tel que key=./values.json. Remplacer prend en charge des conditions dans la bibliothèque jsonpath.  Pour ce faire, démarrez votre chemin d’accès par un $. Cela vous permettra d’effectuer une condition telle que -j $.key1.key2[?(@.key3=='someValue'].key4=value. Si la valeur Inline que vous fournissez est une paire clé-valeur elle-même avec les caractères « = » et « , », mettez ces caractères dans une séquence d’échappement.  Par exemple, Key1 = "key2\=val2\,Key3\=val3". Consultez les exemples ci-dessous. Pour obtenir de l’aide supplémentaire, consultez : https://jsonpath.com/
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmentez le niveau de détail de la journalisation pour afficher tous les journaux de débogage.
