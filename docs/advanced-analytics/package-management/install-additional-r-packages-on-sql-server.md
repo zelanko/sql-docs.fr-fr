@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190354"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70275678"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) pour installer de nouveaux packages R sur une instance de SQL Server Machine Learning Services ou SQL Server R services. Les packages que vous installez peuvent être utilisés dans des scripts R exécutés dans la base de données à l’aide de l’instruction T-SQL [SP-Execute-External-script-Transact-SQL](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
+Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) pour installer de nouveaux packages R sur une instance de SQL Server Machine Learning Services ou SQL Server R services. Les packages que vous installez peuvent être utilisés dans des scripts R exécutés dans la base de données à l’aide de l’instruction T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 > [!NOTE]
 > La commande r `install.packages` standard n’est pas recommandée pour l’ajout de packages R sur SQL Server. Utilisez plutôt **sqlmlutils** comme décrit dans cet article.
@@ -35,7 +35,7 @@ Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](
 
 - Le script R s’exécutant dans SQL Server peut utiliser uniquement des packages installés dans la bibliothèque d’instances par défaut. SQL Server ne peut pas charger les packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Cela comprend les bibliothèques R installées avec d’autres produits Microsoft.
 
-- Dans un environnement de SQL Server renforcé, vous souhaiterez peut-être éviter ce qui suit:
+- Dans un environnement de SQL Server renforcé, vous souhaiterez peut-être éviter ce qui suit :
   - Packages qui nécessitent un accès réseau
   - Packages nécessitant un accès avec système de fichiers élevé
   - Packages utilisés pour le développement Web ou d’autres tâches qui ne bénéficient pas de l’exécution dans SQL Server
@@ -68,7 +68,7 @@ Pour plus d’informations, consultez [créer un référentiel de packages R loc
 
 Le package **sqlmlutils** se compose d’un seul fichier zip que vous pouvez copier sur l’ordinateur client et installer.
 
-Sur un ordinateur disposant d’un accès à Internet:
+Sur un ordinateur disposant d’un accès à Internet :
 
 1. Installez **miniCRAN**. Pour plus d’informations, consultez [installer miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) .
 
@@ -124,7 +124,7 @@ Dans l’exemple suivant, vous allez ajouter le package de [**Collage**](https:/
 
 ### <a name="add-the-package-online"></a>Ajouter le package en ligne
 
-Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a accès à Internet, vous pouvez utiliser **sqlmlutils** pour rechercher le package de liaison et toutes les dépendances sur Internet, puis installer le package sur une instance de SQL Server à distance.
+Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a accès à Internet, vous pouvez utiliser **sqlmlutils** pour **Rechercher le package** de liaison et toutes les dépendances sur Internet, puis installer le package sur une instance de SQL Server à distance.
 
 1. Sur l’ordinateur client, ouvrez RStudio et créez un nouveau fichier de **script R** .
 
@@ -146,10 +146,10 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
 
 ### <a name="add-the-package-offline"></a>Ajouter le package hors connexion
 
-Si l’ordinateur client n’a pas de connexion Internet, vous pouvez utiliser **miniCRAN** pour télécharger le package de liaison à l’aide d’un ordinateur qui a accès à Internet. Vous copiez ensuite le package sur l’ordinateur client sur lequel vous pouvez installer le package hors connexion.
+Si l’ordinateur client n’a pas de connexion Internet, vous pouvez utiliser **miniCRAN** pour télécharger **le package** de liaison à l’aide d’un ordinateur qui a accès à Internet. Vous copiez ensuite le package sur l’ordinateur client sur lequel vous pouvez installer le package hors connexion.
 Pour plus d’informations sur l’installation de **miniCRAN**, consultez [install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) .
 
-Sur un ordinateur disposant d’un accès à Internet:
+Sur un ordinateur disposant d’un accès à Internet :
 
 1. Exécutez le script R suivant pour créer un référentiel local à **coller**. Cet exemple crée le dossier de référentiel dans `c:\downloads\glue`.
 
@@ -189,7 +189,7 @@ Sur un ordinateur disposant d’un accès à Internet:
 
 1. Copiez l' intégralité du dossier de dépôt de`c:\downloads\glue`la colle () sur l’ordinateur client. Par exemple, copiez-le dans `c:\temp\packages\glue`le dossier.
 
-Sur l’ordinateur client:
+Sur l’ordinateur client :
 
 1. Ouvrez RStudio et créez un nouveau fichier de **script R** .
 
@@ -251,4 +251,4 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 - Pour plus d’informations sur les packages R installés, consultez [obtenir des informations](r-package-information.md) sur les packages r
 - Pour obtenir de l’aide sur l’utilisation des packages R, consultez [conseils pour l’utilisation des packages r](tips-for-using-r-packages.md)
 - Pour plus d’informations sur l’installation des packages Python, consultez [installer des packages Python avec PIP](install-additional-python-packages-on-sql-server.md)
-- Pour plus d’informations sur SQL Server Machine Learning Services, consultez [qu’est-ce que SQL Server machine learning services (Python et R)?](../what-is-sql-server-machine-learning.md)
+- Pour plus d’informations sur SQL Server Machine Learning Services, consultez [qu’est-ce que SQL Server machine learning services (Python et R) ?](../what-is-sql-server-machine-learning.md)

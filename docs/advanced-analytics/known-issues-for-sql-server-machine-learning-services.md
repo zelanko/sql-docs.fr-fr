@@ -1,23 +1,23 @@
 ---
-title: Problèmes connus liés au langage R et à l’intégration python
+title: Problèmes connus pour Python et R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 8cf0441397c8c3a6d743b08692a6d2bac289a03f
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715193"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176194"
 ---
-# <a name="known-issues-in-machine-learning-services"></a>Problèmes connus dans Machine Learning Services
+# <a name="known-issues-in-sql-server-machine-learning-services"></a>Problèmes connus dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article décrit les problèmes connus ou les limitations avec les composants Machine Learning qui sont fournis en tant qu’option dans [SQL Server r Services 2016](r/sql-server-r-services.md) et [SQL Server machine learning services avec R et Python](what-is-sql-server-machine-learning.md).
+Cet article décrit les problèmes connus ou les limitations avec les composants Machine Learning qui sont fournis en tant qu’option dans [SQL Server machine learning services](what-is-sql-server-machine-learning.md) et [SQL Server services R 2016](r/sql-server-r-services.md).
 
 ## <a name="setup-and-configuration-issues"></a>Problèmes d’installation et de configuration
 
@@ -33,7 +33,7 @@ Définissez la variable `'MKL_CBWR'=AUTO` d’environnement pour garantir la rep
 
 **Solution de contournement**
 
-1. Dans le panneau de configuration, cliquez sur système **et sécurité** >  > **paramètres** > système avancés**variables d’environnement**.
+1. Dans le panneau de configuration, cliquez sur **système et sécurité** > **paramètres** > **système avancés** > **variables d’environnement**.
 
 2. Créez un utilisateur ou une variable système. 
 
@@ -43,7 +43,7 @@ Définissez la variable `'MKL_CBWR'=AUTO` d’environnement pour garantir la rep
 3. Redémarrez R_SERVER. Sur SQL Server, vous pouvez redémarrer SQL Server Launchpad service.
 
 > [!NOTE]
-> Si vous exécutez la version préliminaire SQL Server 2019 sur Linux, modifiez ou créez *. bash_profile* dans le répertoire de racine de votre utilisateur, `export MKL_CBWR="AUTO"`en ajoutant la ligne. Exécutez ce fichier en tapant `source .bash_profile` à l’invite de commandes bash. Redémarrez R_SERVER `Sys.getenv()` en tapant à l’invite de commandes R.
+> Si vous exécutez la version préliminaire SQL Server 2019 sur Linux, modifiez ou créez *. bash_profile* dans le répertoire de racine de votre utilisateur, `export MKL_CBWR="AUTO"`en ajoutant la ligne. Exécutez ce fichier en saisissant `source .bash_profile` à l’invite de commandes bash. Redémarrez R_SERVER `Sys.getenv()` en tapant à l’invite de commandes R.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. Erreur d’exécution de script R (SQL Server 2017 CU5-CU7 Regression)
 
@@ -166,7 +166,7 @@ Recherchez Launchpad dans le `Binn` dossier de l’instance. Par exemple, dans u
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9. Les contextes de calcul distants sont bloqués par un pare-feu dans SQL Server instances qui s’exécutent sur des machines virtuelles Azure
 
-Si vous avez installé [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sur une machine virtuelle Windows Azure, vous risquez de ne pas pouvoir utiliser les contextes de calcul qui requièrent l’utilisation de l’espace de travail de la machine virtuelle. Cela est dû au fait que, par défaut, le pare-feu sur les machines virtuelles Azure comprend une règle qui bloque l’accès réseau pour les comptes d’utilisateur R locaux.
+Si vous avez installé [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sur une machine virtuelle Azure, vous ne pourrez peut-être pas utiliser des contextes de calcul qui requièrent l’utilisation de l’espace de travail de la machine virtuelle. Cela est dû au fait que, par défaut, le pare-feu sur les machines virtuelles Azure comprend une règle qui bloque l’accès réseau pour les comptes d’utilisateur R locaux.
 
 Pour résoudre ce problème, sur la machine virtuelle Azure, ouvrez **pare-feu Windows avec fonctions avancées de sécurité**, sélectionnez **règles de trafic sortant**et désactivez la règle suivante: **Bloque l’accès réseau pour les comptes d’utilisateurs locaux R dans SQL Server instance MSSQLSERVER**. Vous pouvez également laisser la règle activée, mais changer la propriété de sécurité pour **autoriser si**elle est sécurisée.
 
@@ -238,7 +238,7 @@ L’erreur ne s’affiche pas si la version de l’API est la même, ou si vous 
 
 En d’autres termes, utilisez la même version de RevoScaleR pour les opérations de sérialisation et de désérialisation.
 
-### <a name="3-real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>3. La notation en temps réel ne gère pas correctement le paramètre _learningRate_ dans les modèles d’arborescence et de forêt
+### <a name="3-real-time-scoring-does-not-correctly-handle-the-_learningrate_-parameter-in-tree-and-forest-models"></a>3. La notation en temps réel ne gère pas correctement le paramètre _learningRate_ dans les modèles d’arborescence et de forêt
 
 Si vous créez un modèle à l’aide d’une méthode de l’arbre de décision ou de la forêt de décision et spécifiez le taux `sp_rxpredict` d’apprentissage, `PREDICT` vous pouvez constater des résultats incohérents lors de l’utilisation de ou de la fonction SQL, par rapport à l’utilisation `rxPredict`de.
 
@@ -281,7 +281,7 @@ Si vous devez utiliser des modèles plus grands, les solutions de contournement 
 + Utilisez la sélection des fonctionnalités pour supprimer les colonnes inutiles.
 + Si vous utilisez un algorithme Open source, envisagez une implémentation similaire à l’aide de l’algorithme correspondant dans MicrosoftML ou RevoScaleR. Ces packages ont été optimisés pour les scénarios de déploiement.
 + Une fois le modèle rationalisé et la taille réduite à l’aide des étapes précédentes, consultez si la fonction [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) dans la base R peut être utilisée pour réduire la taille du modèle avant de le passer à SQL Server. Cette option est recommandée lorsque le modèle est proche de la limite de 2 Go.
-+ Pour les modèles plus volumineux, vous pouvez utiliser [la fonctionnalité SQL Server](../relational-databases/blob/filetables-sql-server.md) filetable pour stocker les modèles, plutôt que d’utiliser une colonne varbinary.
++ Pour les modèles plus volumineux, vous pouvez utiliser la fonctionnalité SQL Server [FileTable](../relational-databases/blob/filetables-sql-server.md) pour stocker les modèles, plutôt que d’utiliser une colonne varbinary.
 
     Pour utiliser FileTables, vous devez ajouter une exception de pare-feu, car les données stockées dans FileTables sont gérées par le pilote du système de fichiers FILESTREAM dans SQL Server, et les règles de pare-feu par défaut bloquent l’accès au fichier réseau. Pour plus d’informations, consultez [activer les conditions préalables pour les](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)filetables.
 
@@ -322,7 +322,7 @@ Pour plus d’informations sur ce problème et d’autres conseils, consultez [p
 
 Lorsque vous utilisez la fonction rxDataStep pour écrire des résultats dans une table, l’utilisation de *varsToKeep* et de *varsToDrop* est un moyen pratique de spécifier les colonnes à inclure ou exclure dans le cadre de l’opération. Toutefois, ces arguments ne sont pas pris en charge pour les sources de données SQL Server.
 
-### <a name="11-limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>11. Prise en charge limitée des types de données\_SQL\_dans\_le script externe d’exécution SP
+### <a name="11-limited-support-for-sql-data-types-in-sp_execute_external_script"></a>11. Prise en charge limitée des types de données\_SQL\_dans\_le script externe d’exécution SP
 
 Tous les types de données pris en charge dans SQL ne peuvent pas être utilisés dans R. Pour contourner ce problème, envisagez d’effectuer un cast du type de données non pris en charge vers un\_type de\_données pris en charge avant de transmettre les données à un script externe d’exécution\_SP.
 
@@ -334,9 +334,9 @@ Le passage de données Unicode dans des [!INCLUDE[ssNoVersion](../includes/ssnov
 
 Pour envoyer des données de chaîne non-ASCII [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de à R/Python, utilisez l’encodage UTF-8 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)](disponible dans) ou utilisez le type nvarchar pour le même.
 
-### <a name="13-only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>13. Une seule valeur de type `raw` peut être retournée à partir de`sp_execute_external_script`
+### <a name="13-only-one-value-of-type-raw-can-be-returned-from-sp_execute_external_script"></a>13. Une seule valeur de type `raw` peut être retournée à partir de`sp_execute_external_script`
 
-Lorsqu’un type de données binaire (type de données brutes r) est retourné à partir de r, la valeur doit être envoyée dans la trame de données de sortie.
+Lorsqu’un type de données binaire (type **raw** de données brutes r) est retourné à partir de r, la valeur doit être envoyée dans la trame de données de sortie.
 
 Avec des types de données autres que **RAW**, vous pouvez retourner des valeurs de paramètre ainsi que les résultats de la procédure stockée en ajoutant le mot clé OUTPUT. Pour plus d’informations, consultez [paramètres](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters).
 
@@ -484,7 +484,7 @@ go
 
 À partir de SQL Server 2017 CU2, le message suivant peut s’afficher même si le code python s’exécute normalement:
 
-> *Message (s) stderr à partir du script externe:* 
+> *Message (s) stderr à partir du script externe:*
 >  *~ PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state est utilisé avant la déclaration globale*
 
@@ -501,6 +501,33 @@ Ce problème a été résolu dans SQL Server 2017 mise à jour cumulative 3 (CU3
 > *Erreur SqlSatelliteCall: Type non pris en charge dans le schéma de sortie. Types pris en charge: bit, smallint, int, DateTime, smallmoney, Real et float. Char, varchar sont partiellement pris en charge.*
 
 Ce problème a été résolu dans la mise à jour cumulative 14 de SQL Server 2017 (CU14).
+
+### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Erreur de l’interpréteur lors de l’installation de packages Python avec PIP sur Linux 
+
+Sur SQL Server 2019, si vous essayez d’utiliser **PIP**. Exemple :
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+Vous obtiendrez alors cette erreur:
+
+> *bash:/opt/MSSQL/mlservices/Runtime/python/bin/PIP:/opt/Microsoft/mlserver/9.4.7/bin/python/python: interpréteur incorrect: Aucun fichier ou répertoire de ce type*
+
+**Solution de contournement**
+
+Installer **PIP** à partir de l' [autorité de package Python (PyPA)](https://www.pypa.io):
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**Recommandation**
+
+Consultez [installer des packages Python avec sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
+
+**S’applique à :** SQL Server 2019 sur Linux
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise et Microsoft R Open
 
@@ -522,8 +549,6 @@ Pour la compatibilité [!INCLUDE[rsql_productname](../includes/rsql-productname-
 
 La révision 0,92 du pilote ODBC SQLite est incompatible avec RevoScaleR. Les révisions de 0.88-0.91 et 0,93 et versions ultérieures sont connues pour être compatibles.
 
-## <a name="see-also"></a>Voir aussi
-
-[Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+## <a name="next-steps"></a>Étapes suivantes
 
 [Résolution des problèmes de Machine Learning dans SQL Server](machine-learning-troubleshooting-faq.md)

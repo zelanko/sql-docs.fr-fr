@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155320"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304828"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurer les paramètres de déploiement pour les services et les ressources de cluster
 
@@ -99,7 +99,7 @@ Pour mettre à jour les configurations au niveau des ressources comme les instan
 }
 ``` 
 
-De même, pour modifier les paramètres d’un service authentification unique dans une ressource spécifique. Par exemple, si vous souhaitez modifier les paramètres de mémoire Spark uniquement pour le composant Spark dans le pool de stockage, vous devez mettre à niveau la ressource **Storage-0** avec une section de **paramètres** pour **Spark** service dans le fichier de configuration **BDC. JSON.** .
+De même, pour modifier les paramètres d’un service unique dans une ressource spécifique. Par exemple, si vous souhaitez modifier les paramètres de mémoire Spark uniquement pour le composant Spark dans le pool de stockage, vous devez mettre à jour la ressource **Storage-0** avec une section de **paramètres** pour **Spark** service dans le fichier de configuration **BDC. JSON.** .
 ```json
 "resources":{
     ...
@@ -243,7 +243,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> Configurer le stockage
 
-Vous pouvez également changer la classe et les caractéristiques du stockage utilisées pour chaque pool. L’exemple suivant affecte une classe de stockage personnalisée au pool de stockage et met à jour la taille de la revendication de volume persistant pour le stockage de données sur 100 Go. Commencez par créer un fichier patch.json comme ci-dessous, qui comprend la nouvelle section *storage*, en plus de *type* et de *replicas*.
+Vous pouvez également changer la classe et les caractéristiques du stockage utilisées pour chaque pool. L’exemple suivant affecte une classe de stockage personnalisée aux pools de stockage et de données et met à jour la taille de la revendication de volume persistant pour le stockage des données sur 500 Go pour HDFS (pool de stockage) et 100 Go pour le pool de données. Commencez par créer un fichier patch.json comme ci-dessous, qui comprend la nouvelle section *storage*, en plus de *type* et de *replicas*.
 
 ```json
 {
@@ -256,13 +256,33 @@ Vous pouvez également changer la classe et les caractéristiques du stockage ut
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }
@@ -297,7 +317,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 Vous pouvez contrôler le placement des pods sur les nœuds Kubernetes qui ont des ressources spécifiques pour prendre en charge différents types d’exigences de charge de travail. Par exemple, vous souhaiterez peut-être vous assurer que les gousses de ressources du pool de stockage sont placées sur des nœuds avec davantage de stockage, ou SQL Server des instances principales sont placées sur des nœuds qui ont des ressources processeur et mémoire supérieures. Dans ce cas, vous allez d’abord créer un cluster Kubernetes hétérogène avec différents types de matériels, puis [affecter les étiquettes de nœud](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) en conséquence. Au moment du déploiement du cluster Big Data, vous pouvez spécifier les mêmes étiquettes au niveau du pool dans le fichier de configuration de déploiement du cluster. Kubernetes prend alors en compte les affinités des pods avec les nœuds qui correspondent aux étiquettes spécifiées. La clé d’étiquette spécifique qui doit être ajoutée aux nœuds du cluster kubernetes est **MSSQL-à l’ensemble du cluster**. La valeur de cette étiquette peut être n’importe quelle chaîne de votre choix.
 
-L’exemple suivant montre comment modifier un fichier de configuration personnalisé pour inclure un paramètre d’étiquette de nœud pour l’instance principale SQL Server, le pool de calcul, le pool de données & pool de stockage. Notez qu’il n’existe pas de clé *nodeLabel* dans les configurations intégrées : vous devez donc modifier manuellement un fichier de configuration personnalisé, ou créer un fichier correctif et l’appliquer au fichier de configuration personnalisé. Le pod d’instance SQL Server Master sera déployé sur un nœud qui contient une étiquette **MSSQL-cluster-global** avec la valeur **BDC-Master**. Les modules de pool de calcul et de pool de données seront déployés sur les nœuds qui contiennent une étiquette **MSSQL-cluster-global** avec la valeur **BDC-SQL**. Les modules de pool de stockage seront déployés sur les nœuds qui contiennent une étiquette **MSSQL-cluster-global** avec la valeur **BDC-Storage**.
+L’exemple suivant montre comment modifier un fichier de configuration personnalisé pour inclure un paramètre d’étiquette de nœud pour l’instance principale SQL Server, le pool de calcul, le pool de données & pool de stockage. Il n’existe aucune clé *nodeLabel* dans les configurations intégrées. vous devez donc soit modifier manuellement un fichier de configuration personnalisé, soit créer un fichier correctif et l’appliquer au fichier de configuration personnalisé. Le pod d’instance SQL Server Master sera déployé sur un nœud qui contient une étiquette **MSSQL-cluster-global** avec la valeur **BDC-Master**. Les modules de pool de calcul et de pool de données seront déployés sur les nœuds qui contiennent une étiquette **MSSQL-cluster-global** avec la valeur **BDC-SQL**. Les modules de pool de stockage seront déployés sur les nœuds qui contiennent une étiquette **MSSQL-cluster-global** avec la valeur **BDC-Storage**.
 
 Créez un fichier nommé **patch.json** dans votre répertoire actif avec le contenu suivant :
 
@@ -547,7 +567,7 @@ azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ## <a name="disable-elasticsearch-to-run-in-privileged-mode"></a>Désactiver ElasticSearch pour qu’il s’exécute en mode privilégié
 Par défaut, le conteneur ElasticSearch s’exécute en mode privilège dans Big Data cluster. Cela permet de s’assurer qu’au moment de l’initialisation du conteneur, le conteneur dispose des autorisations suffisantes pour mettre à jour un paramètre sur l’ordinateur hôte, lorsque ElasticSearch traite une quantité plus importante de journaux. Vous trouverez plus d’informations sur cette rubrique dans [cet article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html). 
 
-Pour désactiver le conteneur qui exécute ElasticSearch pour qu’il s’exécute en mode privilégié, vous devez mettre à jour la section des **paramètres** dans **Control. JSON** et spécifier la valeur de **VM. Max _map_count** à **-1**. Voici un exemple de la façon dont cette section doit ressembler à ce qui suit:
+Pour désactiver le conteneur qui exécute ElasticSearch pour qu’il s’exécute en mode privilégié, vous devez mettre à jour la section des **paramètres** dans **Control. JSON** et spécifier la valeur de **VM. Max _map_count** à **-1**. Voici un exemple de la façon dont cette section doit ressembler à ce qui suit :
 ```json
 "settings": {
     "ElasticSearch": {
@@ -606,7 +626,7 @@ Vous pouvez modifier le fichier **Control. JSON** et ajouter la section ci-dessu
 }
 ```
 
-Exécutez cette commande pour corriger le fichier de configuration:
+Exécutez cette commande pour corriger le fichier de configuration :
 ```
 azdata bdc config patch --config-file control.json --patch-file elasticsearch-patch.json
 ```

@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: dc5addca9c9bbf01408cea89f85676813b97506c
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109760"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276460"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installer des packages Python avec sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) pour installer de nouveaux packages python dans une instance de SQL Server machine learning services. Les packages que vous installez peuvent être utilisés dans les scripts Python exécutés dans la base de données à l’aide de l’instruction T-SQL [SP-Execute-External-script-Transact-SQL](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
+Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) pour installer de nouveaux packages python dans une instance de SQL Server machine learning services. Les packages que vous installez peuvent être utilisés dans les scripts Python exécutés dans la base de données à l’aide de l’instruction T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 Pour plus d’informations sur l’emplacement des packages et les chemins d’installation, consultez obtenir des informations sur les [packages python](../package-management/python-package-information.md).
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur l’emplacement des packages et les chemins d’i
 
   + Si vous ajoutez des packages qui placent une pression de calcul trop importante sur le serveur, les performances en seront affectées.
 
-  + Dans un environnement de SQL Server renforcé, vous souhaiterez peut-être éviter ce qui suit:
+  + Dans un environnement de SQL Server renforcé, vous souhaiterez peut-être éviter ce qui suit :
     + Packages qui nécessitent un accès réseau
     + Packages nécessitant un accès avec système de fichiers élevé
     + Packages utilisés pour le développement Web ou d’autres tâches qui ne bénéficient pas de l’exécution dans SQL Server
