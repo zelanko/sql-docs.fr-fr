@@ -94,7 +94,7 @@ ms.locfileid: "70175965"
 -   En cas de restauration d'une sauvegarde compressée, vous pouvez rencontrer l'erreur suivante :  
   
     -   **Une exception SqlException 3284 s’est produite. Gravité : 16 État: 5**  
-        **La marque de message sur https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak l’appareil' 'n’est pas alignée. Réexécutez l’instruction RESTORE avec la même taille de bloc que celle utilisée pour créer le jeu de sauvegarde: ' 65536 'ressemble à une valeur possible.**  
+        **La marque de message sur'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak 'l’appareil' 'n’est pas alignée. Réexécutez l’instruction RESTORE avec la même taille de bloc que celle utilisée pour créer le jeu de sauvegarde: ' 65536 'ressemble à une valeur possible.**  
   
          Pour résoudre cette erreur, réexécutez l'instruction `BACKUP` en spécifiant `BLOCKSIZE = 65536`.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70175965"
   
  Les serveurs proxy peuvent avoir des paramètres qui limitent le nombre de connexions par minute. Le processus de sauvegarde vers l'URL est un processus multithread et, par conséquent, il peut dépasser cette limite. Si cela se produit, le serveur proxy supprime la connexion. Pour résoudre ce problème, modifiez les paramètres du proxy afin que SQL Server n'utilise pas le proxy.   Voici quelques exemples des types d'erreur ou des messages qui peuvent s'afficher dans le journal des erreurs :  
   
--   Échec de l'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak écriture sur «»: La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception: Impossible de lire les données à partir de la connexion de transport: La connexion a été fermée.  
+-   Échec de l'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'écriture sur «»: La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception: Impossible de lire les données à partir de la connexion de transport: La connexion a été fermée.  
   
 -   Une erreur d’E/S non récupérable s’est produite sur le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:  ». L’erreur n’a pas pu être collectée à partir du point de terminaison distant.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "70175965"
   
      La sauvegarde de base de données s'est terminée anormalement.  
   
--   BackupIoRequest:: ReportIoError: échec d’écriture sur l’unité http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak de sauvegarde' '. Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception: Impossible de lire les données à partir de la connexion de transport: La connexion a été fermée.  
+-   BackupIoRequest:: ReportIoError: échec d’écriture sur l’unité'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'de sauvegarde. Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception: Impossible de lire les données à partir de la connexion de transport: La connexion a été fermée.  
   
  Si vous activez la journalisation détaillée à l'aide de l'indicateur de trace 3051, vous pouvez également voir le message suivant dans les journaux :  
   
