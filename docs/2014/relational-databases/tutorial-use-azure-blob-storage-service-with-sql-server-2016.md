@@ -39,7 +39,7 @@ ms.locfileid: "70176088"
  **[Leçon 4: Créer une base de données dans Azure Storage](../relational-databases/lesson-3-database-backup-to-url.md)**  
  Dans cette leçon, vous allez créer une base de données dans stockage Azure à l’aide de l’option créer un nom de fichier de base de données.  
   
- **Leçon 5. &#40;Chiffrement de votre base de données facultatif&#41; à l’aide de TDE**  
+ **[Leçon 5. &#40;Chiffrement de votre base de données facultatif&#41; à l’aide de TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  Dans cette leçon, vous allez chiffrer votre base de données à l'aide d'un chiffrement transparent des données (TDE) et d'un certificat de serveur.  
   
  **[Leçon 6: Migrer une base de données d’une machine source locale vers une machine de destination dans Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
