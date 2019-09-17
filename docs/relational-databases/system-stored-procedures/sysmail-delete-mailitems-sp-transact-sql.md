@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941170"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846641"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @sent_before = ] 'sent_before'`Supprime les messages électroniques jusqu’à la date et l’heure fournies comme argument *sent_before* . *sent_before* est de **type DateTime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
+`[ \@sent_before = ] 'sent_before'`Supprime les messages électroniques jusqu’à la date et l’heure fournies comme argument *sent_before* . *sent_before* est de **type DateTime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
   
-`[ @sent_status = ] 'sent_status'`Supprime les messages électroniques du type spécifié par *sent_status*. *sent_status* est de type **varchar (8)** et n’a pas de valeur par défaut. Les entrées valides sont **Envoyer**, non **envoyé**, **nouvelle tentative**et **échec**. La valeur NULL correspond à tous les états.  
+`[ \@sent_status = ] 'sent_status'`Supprime les messages électroniques du type spécifié par *sent_status*. *sent_status* est de type **varchar (8)** et n’a pas de valeur par défaut. Les entrées valides sont **Envoyer**, non **envoyé**, **nouvelle tentative**et **échec**. La valeur NULL correspond à tous les états.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  

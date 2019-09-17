@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155482"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228463"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -88,7 +88,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Consulter [Prise en charge du classement et d’Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> La version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase et pour Always Encrypted.|
+|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> La version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase et pour Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770942"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745381"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
+# <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Répertorie des informations sur le serveur de distribution, la base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] données de distribution, le répertoire de travail et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte d’utilisateur de l’agent. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur n'importe quelle base de données.  
@@ -84,7 +84,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**directory**|**nvarchar(255)**|Nom du répertoire de travail.|  
 |**account**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
 |**rétention de la distrib min.**|**Int**|Période de rétention de distribution minimale.|  
-|**rétention maximale des détrib.**|**Int**|Période maximale de rétention de distribution.|  
+|**rétention maximale des détrib.**|**int**|Période maximale de rétention de distribution.|  
 |**rétention de l’historique**|**int**|Période de rétention de l'historique.|  
 |**agent de nettoyage de l’historique**|**nvarchar(100)**|Nom de l'Agent de nettoyage de l'historique|  
 |**agent de nettoyage de distribution**|**nvarchar(100)**|Nom de l'Agent de nettoyage de distribution.|  
@@ -101,16 +101,16 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
  Si un ou plusieurs paramètres de sortie sont spécifiés lors de l’exécution de **sp_helpdistributor**, tous les paramètres de sortie ayant la valeur NULL sont affectés à la sortie et aucun jeu de résultats n’est retourné. Si aucun paramètre de sortie n'est spécifié, un ensemble de résultats est retourné.  
   
 ## <a name="permissions"></a>Autorisations  
- Les colonnes du jeu de résultats ou les paramètres de sortie suivants sont retournés aux membres du rôle serveur fixe **sysadmin** sur le serveur de publication et le rôle de base de données fixe **db_owner** sur la base de données de publication:  
+ Les colonnes du jeu de résultats ou les paramètres de sortie suivants sont retournés aux membres du rôle serveur fixe **sysadmin** sur le serveur de publication et le rôle de base de données fixe **db_owner** sur la base de données de publication :  
   
 |Colonne de l'ensemble de résultats|Paramètre de sortie|  
 |-----------------------|----------------------|  
-|account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
-|history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
+|account|**\@compte**|  
+|min distrib retention|**\@min_distretention**|  
+|max distrib retention|**\@max_distretention**|  
+|history retention|**\@history_retention**|  
+|history cleanup agent|**\@history_cleanupagent**|  
+|distribution cleanup agent|**\@distrib_cleanupagent**|  
 |rpc login name|none|  
   
  La colonne de l'ensemble de résultats suivante est retournée aux utilisateurs dans la liste d'accès aux publications sur le serveur de distribution :  
@@ -121,10 +121,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Colonne de l'ensemble de résultats|Paramètre de sortie|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|distribution database|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
-|publisher type|**@publisher_type**|  
+|distributor|**\@conseiller**|  
+|distribution database|**\@distribdb**|  
+|rpc server name|**\@rpcsrvname**|  
+|publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

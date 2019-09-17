@@ -1,5 +1,5 @@
 ---
-title: Sys.syslanguages (Transact-SQL) | Microsoft Docs
+title: sys. syslanguages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053390"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874872"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "68053390"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|ID unique de la langue.|  
 |dateformat|**nchar(3)**|Ordre des éléments de la date, par exemple JMA.|  
-|datefirst|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, et ainsi de suite jusqu'à 7 pour dimanche.|  
-|upgrade|**Int**|Réservé pour le système.|  
+|datefirst|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, et ainsi de suite jusqu’à 7 pour dimanche.|  
+|upgrade|**int**|Réservé pour le système.|  
 |name|**sysname**|Nom officiel de la langue, par exemple « Français ».|  
 |alias|**sysname**|Nom de la langue de remplacement, par exemple « French ».|  
 |mois|**nvarchar(372)**|Liste des noms complets des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 20 caractères.|  
 |mois courts|**nvarchar(132)**|Liste des noms abrégés des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 9 caractères.|  
 |days|**nvarchar(217)**|Liste des noms des jours, séparés par des virgules, dans l'ordre, de lundi à dimanche. Chaque nom peut comporter jusqu'à 30 caractères.|  
-|lcid|**Int**|Identificateur des paramètres régionaux [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la langue.|  
+|lcid|**int**|Identificateur des paramètres régionaux [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la langue.|  
 |msglangid|**smallint**|ID du groupe de messages du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
  Les langues suivantes sont contenues dans [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -86,7 +86,7 @@ ms.locfileid: "68053390"
 |Thaïlandais|1054|1054|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Vues &#40;de compatibilité Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Mappage de tables système à des &#40;vues système Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

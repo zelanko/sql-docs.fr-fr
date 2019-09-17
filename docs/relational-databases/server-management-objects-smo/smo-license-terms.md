@@ -1,5 +1,5 @@
 ---
-title: SQL Server Shared Management Objects (SMO) - termes du contrat de licence | Microsoft Docs
+title: Objets SMO (SQL Server Shared Management Objects)-termes du contrat de licence | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2018
 ms.prod: sql
@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4f7fe6f3662cc1d82cf72b2f5d8036d0284e48c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64834ed8f35186032a3abe8f82733e4a437fffdf
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097996"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911175"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termes du contrat de licence Management Objects (SMO) partagée de SQL Server
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termes du contrat de licence SMO (Shared Management Objects) SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT
-**MICROSOFT SQL SERVER 2017 SHARED MANAGEMENT OBJECTS**
+**OBJETS DE GESTION PARTAGÉE MICROSOFT SQL SERVER 2017**
 
 ---
 Les présents termes du contrat de licence constituent un contrat entre Microsoft Corporation (ou en fonction du lieu où vous vivez, l’un de ses affiliés) et vous. Lisez-les attentivement. Ils portent sur le logiciel visé ci-dessus, y compris le support sur lequel vous l'avez reçu, le cas échéant. Ce contrat porte également sur les produits Microsoft suivants :
@@ -46,19 +46,19 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 &nbsp;&nbsp;**a.    Code distribuable.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i.    Droits d’utilisation et de distribution. Si vous vous conformez aux termes ci-dessous :**
-*   Vous pouvez copier et distribuer le code objet du logiciel (« Code distribuable ») dans les programmes que vous développez ; et
+*   Vous pouvez copier et distribuer la forme de code objet du logiciel (« code distribuable ») dans les programmes que vous développez. les
 *   vous pouvez autoriser les distributeurs de vos programmes à copier et à distribuer le Code Distribuable en tant que partie intégrante de ces programmes.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Conditions de distribution. Pour tout Code Distribuable que vous distribuez, vous devez**
 * y ajouter des fonctionnalités importantes et principales au sein de vos programmes ;
-* pour tout Code distribuable dont l’extension de nom de fichier .dll, distribuer seulement les résultats de l’exécution de ce Code distribuable via un éditeur de liens avec votre programme ;
+* pour tout code distribuable dont l’extension de nom de fichier est. dll, distribuez uniquement les résultats de l’exécution de ce code distribuable par l’intermédiaire d’un éditeur de liens avec votre programme ;
 * exiger des distributeurs et des utilisateurs finaux externes qu’ils acceptent les termes qui protègent le Code Distribuable de manière au moins équivalente à ceux du présent contrat ; 
 * afficher votre propre mention de droits d’auteur valable dans vos programmes, et
-* garantir et défendre Microsoft contre toute réclamation, y compris les honoraires d’avocats, liés à la distribution ou l’utilisation de vos programmes.
+* indemniser, défendre et mettre en danger Microsoft contre toute réclamation, y compris les honoraires d’avocats, en rapport avec la distribution ou l’utilisation de vos programmes.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**iii.  Restrictions de distribution. Vous n’êtes pas autorisé à**
 * modifier toute mention de droits d’auteur, marques ou mention de droits de propriété industrielle pouvant figurer dans le Code Distribuable ;
-* utiliser des marques de Microsoft dans les noms de vos programmes ou d’une façon qui suggère que vos programmes proviennent ou recommandés par Microsoft ;
+* Utilisez les marques de Microsoft dans les noms de vos programmes ou d’une façon qui suggère que vos programmes proviennent ou sont approuvés par Microsoft ;
 * inclure le Code Distribuable dans des programmes malveillants, trompeurs ou interdits par la loi ; ou
 * modifier ou distribuer le code source de tout Code Distribuable de manière à ce qu’il fasse l’objet, en tout ou partie, d’une Licence Exclue. Une Licence Exclue implique comme condition d’utilisation, de modification ou de distribution, que
   * le code soit divulgué ou distribué sous forme de code source, ou
@@ -67,10 +67,10 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 **3. CHAMP D’APPLICATION DE LA LICENCE.** Le logiciel n’est pas vendu mais concédé sous licence. Sauf si une loi applicable vous accorde des droits supplémentaires, Microsoft se réserve l’ensemble des autres droits qui ne sont pas expressément accordés par ce contrat, que ce soit par implication, préclusion ou autrement. Vous pouvez utiliser le logiciel uniquement tel qu’explicitement autorisé dans le présent contrat. À cette fin, vous devez vous conformer aux restrictions techniques contenues dans le logiciel qui vous permettent de l’utiliser d’une certaine façon. Vous ne pouvez pas effectuer les opérations suivantes :
 
-- Contourner les restrictions techniques contenues dans le logiciel.
-- Rétroconcevoir, décompiler ou le désassembler, sauf et uniquement dans la mesure où il autorise expressément la réglementation applicable nonobstant la présente limitation.
-- Vérifiez le nombre de copies du logiciel supérieur sont spécifiés dans le présent contrat ou autorisé par la réglementation applicable nonobstant la présente limitation.
-- Partager, publier, louer ou louer le logiciel ou fournir le logiciel en tant que solution autonome hébergée par les utilisateurs.
+- Contourner les limitations techniques du logiciel.
+- Rétroconcevoir, décompiler ou désassembler le logiciel, sauf et seulement dans la mesure où la loi applicable l’autorise expressément Nonobstant cette limitation.
+- Faire plus de copies du logiciel que ce qui est spécifié dans le présent contrat ou autorisé par la loi en vigueur en dépit de cette limitation.
+- Partager, publier, louer ou louer le logiciel, ou fournir le logiciel en tant que solution hébergée autonome que d’autres utilisateurs pourront utiliser.
 
 **4.    MENTIONS DE TIERS.** Le logiciel peut inclure des composants tiers associés à des avis juridiques distincts ou régis par d’autres contrats, tel que cela est éventuellement indiqué dans le fichier ThirdPartyNotices accompagnant le logiciel.  Même si ces composants sont régis par d’autres contrats de licence, les clauses d’exclusion de responsabilité et les limitations et exclusions de recours et de dommages ci-dessous s’appliquent également.
 
@@ -80,9 +80,9 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 **7.    RESTRICTIONS À L’EXPORTATION.** Le logiciel est soumis aux lois et réglementations américaines en matière d’exportation. Vous devez vous conformer à toutes les réglementations nationales et internationales en matière d’exportation concernant le logiciel. Ces réglementations comprennent des restrictions sur les pays destinataires, les utilisateurs finaux et les utilisations finales. Pour plus d’informations, consultez www.microsoft.com/exporting.
 
-**8.    SERVICE D’ASSISTANCE TECHNIQUE.** Ce logiciel étant « tel quel », nous ne pouvons pas fournir des services de support pour celle-ci.
+**8.    SERVICE D’ASSISTANCE TECHNIQUE.** Étant donné que ce logiciel est « tel quel », nous pouvons ne pas fournir de services de support pour celui-ci.
 
-**9.    INTÉGRALITÉ DES ACCORDS**. Le présent contrat ainsi que les termes concernant les suppléments, les mises à jour, les services Internet et d’assistance technique que vous utilisez constituent l’intégralité des accords en ce qui concerne le logiciel et les services d’assistance technique.
+**9.    INTÉGRALITÉ DES**ACCORDS. Le présent contrat ainsi que les termes concernant les suppléments, les mises à jour, les services Internet et d’assistance technique que vous utilisez constituent l’intégralité des accords en ce qui concerne le logiciel et les services d’assistance technique.
 
 **10.   RÉGLEMENTATION APPLICABLE.**
 
@@ -94,7 +94,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 **12.   EXCLUSION DE GARANTIE. LE LOGICIEL EST CONCÉDÉ SOUS LICENCE « EN L’ÉTAT ». VOUS ASSUMEZ LES RISQUES LIÉS À SON UTILISATION. MICROSOFT N’ACCORDE AUCUNE GARANTIE OU CONDITION EXPRESSE. VOUS POUVEZ BÉNÉFICIER DE DROITS DES CONSOMMATEURS SUPPLÉMENTAIRES OU DE GARANTIES STATUTAIRES DANS LE CADRE DU DROIT LOCAL, QUE CE CONTRAT NE PEUT MODIFIER. DANS TOUTE LA MESURE PERMISE PAR LE DROIT LOCAL, MICROSOFT EXCLUT LES GARANTIES IMPLICITES DE QUALITÉ, D’ADÉQUATION À UN USAGE PARTICULIER ET D’ABSENCE DE CONTREFAÇON.**
 
-**POUR l’Australie - vous avez des garanties statutaires conformément à la législation de consommateur australiens et aucune de ces termes n’est destinée à affecter ces droits.**
+**POUR l’Australie, vous bénéficiez de garanties légales en vertu de la loi australienne sur la consommation, et rien dans ces conditions n’est destiné à affecter ces droits.**
 
 **13.   LIMITATION ET EXCLUSION DE RECOURS ET DE DOMMAGES. VOUS POUVEZ OBTENIR DE MICROSOFT ET DE SES FOURNISSEURS UNE INDEMNISATION EN CAS DE DOMMAGES DIRECTS UNIQUEMENT À HAUTEUR DE 5 DOLLARS US (USD 5,00). VOUS NE POUVEZ PRÉTENDRE À AUCUNE INDEMNISATION POUR LES AUTRES DOMMAGES, Y COMPRIS LES DOMMAGES SPÉCIAUX, INDIRECTS OU ACCESSOIRES ET PERTES DE BÉNÉFICES.**
 Cette limitation s'applique uniquement à
@@ -104,5 +104,5 @@ Cette limitation s'applique uniquement à
 Elle s'applique également même si Microsoft connaissait l’éventualité d’un tel dommage. La limitation ou l’exclusion ci-dessus peut également ne pas vous être applicable si votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages incidents, indirects ou de quelque nature que ce soit.
 
 > [!NOTE]
-> Section 3 a été mis à jour à partir du 8 août 2018.
+> La section 3 a été mise à jour le 8 août 2018.
 

@@ -1,5 +1,5 @@
 ---
-title: Estimer l’Interruption de Service pendant le basculement (mise en miroir de base de données) de rôle | Microsoft Docs
+title: Estimer l’interruption de service pendant le basculement de rôle (mise en miroir de bases de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806845"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874444"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estimer l'interruption de service au cours d'un basculement de rôle (mise en miroir de bases de données)
   Au cours d'un basculement de rôle, la durée pendant laquelle la mise en miroir de base de données sera hors service dépend du type de basculement de rôle et de la raison du changement de rôle.  
@@ -37,7 +37,7 @@ ms.locfileid: "62806845"
 -   Pour un basculement manuel, seul le temps nécessaire au basculement de la base de données après la commande de basculement est pris en compte.  
   
 ## <a name="error-detection"></a>Détection d'erreurs  
- Le temps nécessaire au système pour remarquer une erreur dépend du type d'erreur ; par exemple, une erreur réseau est détectée quasiment instantanément, alors que la détection d'un blocage du serveur prend par défaut environ 10 secondes, ce qui représente le délai d'attente par défaut.  
+ Le temps nécessaire au système pour remarquer une erreur dépend du type d’erreur ; par exemple, une erreur réseau est détectée presque instantanément, tandis que la détection d’un serveur qui ne répond pas prend 10 secondes (avec le délai d’expiration par défaut).  
   
  Pour plus d’informations sur les erreurs susceptibles d’entraîner une défaillance lors d’une session de mise en miroir de bases de données et sur la détection du dépassement d’un délai d’attente en mode haute sécurité avec basculement automatique, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](possible-failures-during-database-mirroring.md).  
   

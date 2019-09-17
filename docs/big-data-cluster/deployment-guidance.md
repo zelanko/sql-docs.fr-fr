@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153456"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878718"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procédure de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -77,7 +77,7 @@ Les sections suivantes fournissent plus d’informations sur la façon de config
 
 ## <a id="configfile"></a> Configurations par défaut
 
-Les options de déploiement d’un cluster Big Data sont définies dans les fichiers de configuration JSON. Vous pouvez démarrer votre personnalisation du déploiement de cluster à partir des profils de déploiement intégrés avec les paramètres par défaut pour les environnements de développement/test:
+Les options de déploiement d’un cluster Big Data sont définies dans les fichiers de configuration JSON. Vous pouvez démarrer votre personnalisation du déploiement de cluster à partir des profils de déploiement intégrés avec les paramètres par défaut pour les environnements de développement/test :
 
 | Profil de déploiement | Environnement Kubernetes |
 |---|---|
@@ -120,7 +120,7 @@ Vous pouvez également personnaliser votre propre profil de configuration de dé
 1. Pour personnaliser les paramètres dans votre profil de configuration de déploiement, vous pouvez modifier le fichier de configuration de déploiement dans un outil adapté à la modification des fichiers JSON, par exemple VS Code. Pour une automatisation par script, vous pouvez également modifier le profil de déploiement personnalisé à l’aide de la commande **azdata bdc config**. Par exemple, la commande suivante modifie un profil de déploiement personnalisé en remplaçant le nom par défaut du cluster déployé (**mssql-cluster**) par **test-cluster** :  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -147,7 +147,7 @@ Les variables d’environnement suivantes sont utilisées pour les paramètres d
 | **CONTROLLER_USERNAME** | Obligatoire |Nom d’utilisateur de l’administrateur de cluster. |
 | **CONTROLLER_PASSWORD** | Obligatoire |Mot de passe de l’administrateur du cluster. |
 | **MSSQL_SA_PASSWORD** | Obligatoire |Mot de passe de l’utilisateur désigné comme administrateur système pour l’instance maître SQL. |
-| **KNOX_PASSWORD** | Obligatoire |Mot de passe de l’utilisateur Knox. |
+| **KNOX_PASSWORD** | Obligatoire |Mot de passe de l’utilisateur **racine** Knox. Notez que dans une configuration d’authentification de base, seul l’utilisateur pris en charge pour Knox est **root**.|
 | **ACCEPT_EULA**| Obligatoire pour la première utilisation de `azdata`| Ne nécessite aucune valeur. Si vous la définissez en tant que variable d’environnement, elle applique le CLUF à SQL Server et `azdata`. Si vous ne la définissez pas en tant que variable d’environnement, vous pouvez inclure `--accept-eula` dans la première utilisation de la commande `azdata`.|
 | **DOCKER_USERNAME** | Facultatif | Nom d’utilisateur utilisé pour accéder aux images de conteneur si elles sont stockées dans un dépôt privé. Pour plus d’informations sur l’utilisation d’un dépôt Docker privé pour le déploiement d’un cluster Big Data, consultez la rubrique [Déploiements hors connexion](deploy-offline.md).|
 | **DOCKER_PASSWORD** | Facultatif |Mot de passe nécessaire pour accéder au dépôt privé ci-dessus. |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> Vous devez utiliser l’utilisateur **racine** pour la passerelle Knox avec le mot de passe ci-dessus. **root** est le seul utilisateur pris en charge par dans cette configuration d’authentification de base (nom d’utilisateur/mot de passe). Pour SQL Server maître, le nom d’utilisateur approvisionné pour être utilisé avec le mot de passe ci-dessus est **sa**.
+
 
 Après avoir défini les variables d’environnement, vous devez exécuter `azdata bdc create` pour déclencher le déploiement. Cet exemple utilise le profil de configuration de cluster créé ci-dessus :
 
@@ -354,13 +358,13 @@ Bdc: ready                                                                      
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-Vous pouvez également obtenir un État plus détaillé avec les commandes suivantes:
+Vous pouvez également obtenir un État plus détaillé avec les commandes suivantes :
 
 - l’affichage de l' [État du contrôle azdata BDC](reference-azdata-bdc-control-status.md) retourne l’état d’intégrité de tous les composants associés au service de gestion des contrôles
 ```
 azdata bdc control status show
 ```
-Exemple de sortie:
+Exemple de sortie :
 ```output
 Control: ready                                                                                                                                                                                                      Health Status:  healthy
  ===========================================================================================================================================================================================================================================
@@ -382,7 +386,7 @@ Control: ready                                                                  
 ```
 azdata bdc sql status show
 ```
-Exemple de sortie:
+Exemple de sortie :
 ```output
 Sql: ready                                                                                                                                                                                                          Health Status:  healthy
  ===========================================================================================================================================================================================================================================

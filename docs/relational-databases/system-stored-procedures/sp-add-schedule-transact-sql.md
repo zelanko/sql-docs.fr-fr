@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088505"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810393"
 ---
-# <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crée une planification qui peut être utilisée par un nombre illimité de travaux.  
   
@@ -54,11 +54,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @schedule_name = ] 'schedule_name'` Le nom de la planification. *nom_de_la_planification* est **sysname**, sans valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'`Nom de la planification. *schedule_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @enabled = ] enabled` Indique l’état actuel de la planification. *activé* est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
+`[ @enabled = ] enabled`Indique l’état actuel de la planification. *Enabled* est de **type tinyint**, avec **1** comme valeur par défaut (activé). Si la **valeur est 0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
   
-`[ @freq_type = ] freq_type` Une valeur qui indique quand un travail doit être exécuté. *freq_type* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
+`[ @freq_type = ] freq_type`Valeur indiquant quand une tâche doit être exécutée. *freq_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -66,23 +66,23 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**4**|Tous les jours|  
 |**8**|Semaine|  
 |**16**|Mois|  
-|**32**|Mensuelle, relatif à *freq_interval*|  
-|**64**|Lancé au démarrage du service SQLServerAgent|  
-|**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
+|**32**|Mensuellement, par rapport à *freq_interval*|  
+|**64**|Exécuter au démarrage du service de l’agent SQL|  
+|**128**|Exécuter lorsque l’ordinateur est inactif (non pris en charge dans [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
-`[ @freq_interval = ] freq_interval` Les jours d’exécution du travail. *freq_interval* est **int**, avec une valeur par défaut **1**et dépend de la valeur de *freq_type*.  
+`[ @freq_interval = ] freq_interval`Jours d’exécution d’un travail. *freq_interval* est de **type int**, avec **1**comme valeur par défaut et dépend de la valeur de *freq_type*.  
   
 |Valeur de *freq_type*|Effet sur *freq_interval*|  
 |---------------------------|--------------------------------|  
 |**1** (une fois)|*freq_interval* n’est pas utilisé.|  
-|**4** (quotidienne)|Chaque *freq_interval* jours.|  
-|**8** (hebdomadaire)|*freq_interval* prend une ou plusieurs des opérations suivantes (combinées avec un opérateur logique OR) :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **4** = mardi<br /><br /> **8** = mercredi<br /><br /> **16** = jeudi<br /><br /> **32** = vendredi<br /><br /> **64** = samedi|  
-|**16** (mensuellement)|Sur le *freq_interval* jour du mois.|  
-|**32** (mensuel relatif)|*freq_interval* est une des opérations suivantes :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **3** = mardi<br /><br /> **4** = mercredi<br /><br /> **5** = jeudi<br /><br /> **6** = vendredi<br /><br /> **7** = samedi<br /><br /> **8** = jour<br /><br /> **9** = jour de semaine<br /><br /> **10** = jour de week-end|  
-|**64** (démarrage de service SQLServerAgent)|*freq_interval* n’est pas utilisé.|  
+|**4** (tous les jours)|Tous les jours de *freq_interval* .|  
+|**8** (hebdomadaire)|*freq_interval* est une ou plusieurs des valeurs suivantes (combinées avec un opérateur logique or) :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **4** = mardi<br /><br /> **8** = mercredi<br /><br /> **16** = jeudi<br /><br /> **32** = vendredi<br /><br /> **64** = samedi|  
+|**16** (mensuellement)|Le jour de *freq_interval* du mois.|  
+|**32** (par rapport à chaque mois)|*freq_interval* est l’un des éléments suivants :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **3** = mardi<br /><br /> **4** = mercredi<br /><br /> **5** = jeudi<br /><br /> **6** = vendredi<br /><br /> **7** = samedi<br /><br /> **8** = jour<br /><br /> **9** = jour de semaine<br /><br /> **10** = jour de week-end|  
+|**64** (au démarrage du service SQLServerAgent)|*freq_interval* n’est pas utilisé.|  
 |**128**|*freq_interval* n’est pas utilisé.|  
   
-`[ @freq_subday_type = ] freq_subday_type` Spécifie les unités pour *freq_subday_interval*. *freq_subday_type* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
+`[ @freq_subday_type = ] freq_subday_type`Spécifie les unités pour *freq_subday_interval*. *freq_subday_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description (unité)|  
 |-----------|--------------------------|  
@@ -91,9 +91,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
-`[ @freq_subday_interval = ] freq_subday_interval` Le nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval* est **int**, avec une valeur par défaut **0**. Remarque : Intervalle doit être supérieur à 10 secondes. *freq_subday_interval* est ignoré dans les cas où *freq_subday_type* est égal à **1**.  
+`[ @freq_subday_interval = ] freq_subday_interval`Nombre de périodes *freq_subday_type* entre chaque exécution d’un travail. *freq_subday_interval* est de **type int**, avec **0**comme valeur par défaut. Remarque : L’intervalle doit être supérieur à 10 secondes. *freq_subday_interval* est ignoré dans les cas où *freq_subday_type* est égal à **1**.  
   
-`[ @freq_relative_interval = ] freq_relative_interval` Occurrence d’un travail de *freq_interval* chaque mois, si *freq_interval* a la valeur 32 (fréquence mensuelle relative). *freq_relative_interval* est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes. *freq_relative_interval* est ignoré dans les cas où *freq_type* n’est pas égal à 32.  
+`[ @freq_relative_interval = ] freq_relative_interval`Occurrence d’un travail de *freq_interval* par mois, si *freq_interval* est 32 (mensuel relatif). *freq_relative_interval* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes. *freq_relative_interval* est ignoré dans les cas où la valeur de *freq_type* n’est pas égale à 32.  
   
 |Value|Description (unité)|  
 |-----------|--------------------------|  
@@ -103,30 +103,30 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**8**|Quatrième|  
 |**16**|Dernière|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor` Le nombre de semaines ou de mois entre chaque exécution d’une tâche planifiée. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**, ou **32**. *freq_recurrence_factor* est **int**, avec une valeur par défaut **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor`Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**ou **32**. *freq_recurrence_factor* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @active_start_date = ] active_start_date` La date à laquelle l’exécution d’un travail peut commencer. *active_start_date* est **int**, avec NULL comme valeur par défaut, ce qui indique la date d’aujourd'hui. La date est au format AAAAMMJJ. Si *active_start_date* n’est pas NULL, la date doit être supérieure ou égale à 19900101.  
+`[ @active_start_date = ] active_start_date`Date à laquelle l’exécution d’un travail peut commencer. *active_start_date* est de **type int**, avec NULL comme valeur par défaut, qui indique la date du jour. La date est au format AAAAMMJJ. Si *active_start_date* n’a pas la valeur null, la date doit être supérieure ou égale à 19900101.  
   
- Après avoir créé la planification, examinez la date de début et assurez-vous qu'elle est correcte. Pour plus d’informations, consultez la section « Planification des Date de début » dans [créer et attacher les planifications de travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
+ Après avoir créé la planification, examinez la date de début et assurez-vous qu'elle est correcte. Pour plus d’informations, consultez la section « planification de la date de début » dans [créer et attacher des planifications à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  Pour les planifications hebdomadaires ou mensuelles, l'agent ignore si active_start_date se situe dans le passé, et utilise à la place la date actuelle. Lorsqu'une planification de l'agent SQL est créée à l'aide de sp_add_schedule, il existe une option pour spécifier le paramètre active_start_date, qui correspond à la date à laquelle l'exécution du travail commencera. Si le type de planification est hebdomadaire ou mensuel et que le paramètre active_start_date est défini à une date située dans le passé, le paramètre active_start_date est ignoré et la date actuelle est utilisée pour active_start_date.  
   
-`[ @active_end_date = ] active_end_date` La date à laquelle l’exécution d’un travail peut s’arrêter. *active_end_date* est **int**, avec une valeur par défaut **99991231**, ce qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
+`[ @active_end_date = ] active_end_date`Date à laquelle l’exécution d’un travail peut être arrêtée. *active_end_date* est de **type int**, avec **99991231**comme valeur par défaut, qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
   
-`[ @active_start_time = ] active_start_time` L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *heure_de_début_active* est **int**, avec une valeur par défaut **000000**, ce qui indique 12:00:00 a.m. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @active_start_time = ] active_start_time`Heure à partir de n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *active_start_time* est de **type int**, avec **000000**comme valeur par défaut, qui indique 12:00:00 sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
-`[ @active_end_time = ] active_end_time` L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution d’un travail. *heure_fin_active* est **int**, avec une valeur par défaut **235959**, ce qui indique à 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @active_end_time = ] active_end_time`Heure d’un jour quelconque entre *active_start_date* et *active_end_date* pour terminer l’exécution d’un travail. *active_end_time* est de **type int**, avec **235959**comme valeur par défaut, qui indique 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
-`[ @owner_login_name = ] 'owner_login_name'` Le nom du principal de serveur qui détient la planification. *owner_login_name* est **sysname**, avec NULL comme valeur par défaut, ce qui indique que la planification est détenue par le créateur.  
+`[ @owner_login_name = ] 'owner_login_name'`Nom du principal de serveur qui possède la planification. *owner_login_name* est de **type sysname**, avec NULL comme valeur par défaut, ce qui indique que la planification appartient au créateur.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT` Un identificateur unique pour la planification. *schedule_uid* est une variable de type **uniqueidentifier**.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT`Identificateur unique de la planification. *schedule_uid* est une variable de type **uniqueidentifier**.  
   
-`[ @schedule_id = ] _schedule_idOUTPUT` Un identificateur pour la planification. *id_de_la_planification* est une variable de type **int**.  
+`[ @schedule_id = ] _schedule_idOUTPUT`Identificateur de la planification. *schedule_id* est une variable de type **int**.  
   
 `[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun  
@@ -191,10 +191,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des planifications et les attacher à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
+ [Créer et attacher des planifications à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Planifier un travail](../../ssms/agent/schedule-a-job.md)   
  [Créer une planification](../../ssms/agent/create-a-schedule.md)   
- [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procédures &#40;stockées SQL Server Agent Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

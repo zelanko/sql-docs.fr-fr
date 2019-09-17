@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c0e5f5a5f194045b5d1b48a383f9d4dfd282649
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158164"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874706"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Déployer SQL Server Cluster Big Data avec une haute disponibilité
 
@@ -24,24 +24,25 @@ Au moment du déploiement d’un cluster Big Data (BDC), vous pouvez configurer 
 
 En outre, d’autres tâches d’administration telles que la configuration des points de terminaison de mise en miroir de bases de données, la création du groupe de disponibilité et l’ajout de bases de données au groupe de disponibilité sont assurées par la plateforme de cluster Big Data.
 
-Voici quelques-unes des fonctionnalités que les groupes de disponibilité activent:
+Voici quelques-unes des fonctionnalités que les groupes de disponibilité activent :
 
 1. Si les paramètres de haute disponibilité sont spécifiés dans le fichier de configuration de déploiement, un `containedag` seul groupe de disponibilité nommé est créé. Par défaut, `containedag` a trois réplicas, y compris le réplica principal. Toutes les opérations CRUD pour le groupe de disponibilité sont gérées en interne.
 1. Toutes les bases de données sont automatiquement ajoutées au groupe de disponibilité `master` , `msdb`y compris et. Les bases de données de configuration Polybase ne sont pas incluses dans le groupe de disponibilité, car elles incluent des métadonnées au niveau de l’instance spécifiques à chaque réplica.
 1. Un point de terminaison externe est automatiquement approvisionné pour la connexion aux bases de données GA. Ce point `master-svc-external` de terminaison joue le rôle de l’écouteur GA.
 1. Un deuxième point de terminaison externe est configuré pour les connexions en lecture seule aux réplicas secondaires. 
 
+
 # <a name="deploy"></a>Déployer
 
-Pour déployer SQL Server maître dans un groupe de disponibilité:
+Pour déployer SQL Server maître dans un groupe de disponibilité :
 
 1. Activer la `hadr` fonctionnalité
 1. Spécifiez le nombre de réplicas pour le groupe de disponibilité (le minimum est 3)
 1. Configurer les détails du deuxième point de terminaison externe créé pour les connexions aux réplicas secondaires en lecture seule
 
-Les étapes suivantes montrent comment créer un fichier correctif qui comprend ces paramètres et comment l’appliquer à des profils de `aks-dev-test` configuration `kubeadm-dev-test` ou. Ces étapes décrivent un exemple de mise à jour corrective `aks-dev-test` du profil pour ajouter les attributs de haute disponibilité.
+Les étapes suivantes montrent comment créer un fichier correctif qui comprend ces paramètres et comment l’appliquer à des profils de `aks-dev-test` configuration `kubeadm-dev-test` ou. Ces étapes décrivent un exemple de mise à jour corrective `aks-dev-test` du profil pour ajouter les attributs de haute disponibilité. Pour un déploiement sur un cluster kubeadm, un correctif similaire s’applique, mais assurez-vous que vous utilisez *deexclusion* pour le **serviceType** dans la section **points de terminaison** .
 
-1. Créer un `ha-patch.json` fichier
+1. Créer un `patch.json` fichier
 
     ```json
     {
@@ -78,7 +79,7 @@ Les étapes suivantes montrent comment créer un fichier correctif qui comprend 
 1. Cloner votre profil ciblé
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Appliquer le fichier correctif à votre profil personnalisé
@@ -89,7 +90,7 @@ Les étapes suivantes montrent comment créer un fichier correctif qui comprend 
 
 ## <a name="connect-to-sql-server-databases"></a>Se connecter à des bases de données SQL Server
 
-Selon le type de charge de travail que vous souhaitez exécuter sur SQL Server maître, vous pouvez vous connecter à la base de données principale pour les charges de travail en lecture-écriture ou aux bases de données dans les réplicas secondaires pour le type de charges de travail en lecture seule. Voici un plan pour chaque type de connexion:
+Selon le type de charge de travail que vous souhaitez exécuter sur SQL Server maître, vous pouvez vous connecter à la base de données principale pour les charges de travail en lecture-écriture ou aux bases de données dans les réplicas secondaires pour le type de charges de travail en lecture seule. Voici un plan pour chaque type de connexion :
 
 ### <a name="connect-to-databases-on-the-primary-replica"></a>Se connecter aux bases de données sur le réplica principal
 
@@ -102,6 +103,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> Des événements de basculement peuvent se produire lors d’une exécution de requête distribuée qui accède aux données à partir de sources de données distantes telles que HDFS ou le pool de données. En guise de meilleure pratique, les applications doivent être conçues pour avoir une logique de nouvelle tentative de connexion en cas de déconnexion causée par le basculement.  
+>
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>Se connecter aux bases de données sur les réplicas secondaires
 
@@ -119,7 +124,7 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
 
 Pour certaines opérations telles que la définition de configurations au niveau du serveur ou l’ajout manuel d’une base de données au groupe de disponibilité (dans le cas où la base de données a été créée avec un flux de travail de restauration), vous avez besoin d’une connexion à l’instance. Pour fournir cette connexion, exposez un point de terminaison externe. Voici un exemple qui montre comment exposer ce point de terminaison, puis ajouter la base de données créée avec un flux de travail de restauration au groupe de disponibilité.
 
-- Déterminez le pod qui héberge le réplica principal en vous connectant au `sql-server-master` point de terminaison et exécutez:
+- Déterminez le pod qui héberge le réplica principal en vous connectant au `sql-server-master` point de terminaison et exécutez :
 
     ```sql
     SELECT @@SERVERNAME
@@ -139,20 +144,20 @@ Pour certaines opérations telles que la définition de configurations au niveau
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=LoadBalancer
     ```
 
-    Voici un exemple de cette commande exécutée sur AKS, où le pod hébergeant le serveur `master-0`principal est:
+    Voici un exemple de cette commande exécutée sur AKS, où le pod hébergeant le serveur `master-0`principal est :
 
     ```bash
     kubectl -n mssql-cluster expose pod master-0 --port=1533  --name=master-sql-0 --type=LoadBalancer
     ```
 
-    Récupérez l’adresse IP du service Kubernetes créé:
+    Récupérez l’adresse IP du service Kubernetes créé :
 
     ```bash
     kubectl get services -n <namespaceName>
     ```
 
 > [!IMPORTANT]
-> Comme meilleure pratique, vous devez effectuer un nettoyage en supprimant le service Kubernetes créé ci-dessus en exécutant la commande suivante:
+> Comme meilleure pratique, vous devez effectuer un nettoyage en supprimant le service Kubernetes créé ci-dessus en exécutant la commande suivante :
 >
 >```bash
 >kubectl delete svc master-sql-0 -n mssql-cluster
@@ -168,7 +173,7 @@ Pour certaines opérations telles que la définition de configurations au niveau
     ALTER AVAILABILITY GROUP containedag ADD DATABASE <databaseName>
     ```
 
-    L’exemple suivant ajoute une base de `sales` données nommée qui a été restaurée sur l’instance:
+    L’exemple suivant ajoute une base de `sales` données nommée qui a été restaurée sur l’instance :
 
     ```sql
     ALTER DATABASE sales SET RECOVERY FULL;
@@ -178,7 +183,7 @@ Pour certaines opérations telles que la définition de configurations au niveau
 
 ## <a name="known-limitations"></a>Limites connues
 
-Il s’agit des problèmes connus et des limitations avec les groupes de disponibilité pour SQL Server maître dans Big Data cluster:
+Il s’agit des problèmes connus et des limitations avec les groupes de disponibilité pour SQL Server maître dans Big Data cluster :
 
 - Les bases de données créées à la suite de flux `CREATE DATABASE` de `RESTORE`travail `CREATE DATABASE FROM SNAPSHOT` autres que like, ne sont pas automatiquement ajoutées au groupe de disponibilité. [Connectez-vous à l’instance](#instance-connect) et ajoutez la base de données manuellement au groupe de disponibilité.
 - Certaines opérations telles que l’exécution des paramètres `sp_configure` de configuration du serveur avec requièrent une connexion à l’instance principale. Vous ne pouvez pas utiliser le point de terminaison principal correspondant. Suivez [les instructions](#instance-connect) pour vous connecter à l’instance SQL Server et `sp_configure`exécutez.

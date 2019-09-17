@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134439"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228433"
 ---
 # <a name="common-errors-with-database-mail"></a>Erreurs courantes avec la messagerie de base de données 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Cet article décrit certaines erreurs courantes rencontrées avec la messagerie de base de données, et leurs solutions.
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>La procédure stockée « sp_send_dbmail » est introuvable
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>La procédure stockée « sp_send_dbmail » est introuvable
 La procédure stockée [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) est installée dans la base de données msdb. Vous devez exécuter **sp_send_dbmail** à partir de la base de données msdb ou spécifier un nom en trois parties pour la procédure stockée.
 
 Exemple :
@@ -33,7 +33,7 @@ Exemple :
 EXEC msdb.dbo.sp_send_dbmail ...
 ```
 
-\- ou -
+- ou -
 
 ```sql
 USE msdb;
@@ -48,7 +48,7 @@ Ce message peut s’afficher pour deux raisons. Le profil spécifié n’existe 
 
 Pour vérifier les autorisations pour un profil, exécutez la procédure stockée [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) avec le nom du profil. Utilisez la procédure stockée [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) ou l’[Assistant Configuration de Database Mail](configure-database-mail.md) pour accorder l’autorisation à un groupe ou un utilisateur de msdb d’accéder à un profil.
 
-## <a name="permission-denied-on-spsenddbmail"></a>Autorisation refusée sur la procédure sp_send_dbmail
+## <a name="permission-denied-on-sp_send_dbmail"></a>Autorisation refusée sur la procédure sp_send_dbmail
 
 Cette rubrique décrit le dépannage suite à un message d’erreur indiquant que l’utilisateur qui essaie d’envoyer des messages à l’aide de Database Mail n’est pas autorisé à exécuter la procédure sp_send_dbmail.
 
@@ -68,7 +68,7 @@ GO
 ```
 Pour plus d’informations, consultez [sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md) et [sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md).
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>Courrier en file d’attente, aucune entrée dans sysmail_event_log ou dans le journal des événements des applications Windows 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>Courrier en file d’attente, aucune entrée dans sysmail_event_log ou dans le journal des événements des applications Windows 
 
 Database Mail s’appuie sur Service Broker pour mettre les e-mails en file d’attente. Si Database Mail est arrêté ou si la remise de message Service Broker n’est pas activée dans la base de données **msdb**, Database Mail met en file d’attente les messages dans la base de données mais ne peut pas remettre les messages. Dans ce cas, les messages Service Broker restent dans la file d’attente de messagerie Service Broker. Service Broker n’active pas le programme externe ; il n’existe donc aucune entrée du journal dans **sysmail_event_log** et l’état de l’élément n’est pas mis à jour dans **sysmail_allitems** ni dans les vues associées.
 

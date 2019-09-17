@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027302"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874632"
 ---
 # <a name="understanding-ssl-support"></a>Présentation de la prise en charge de SSL
 
@@ -28,9 +28,9 @@ Si l’application ne nécessite pas de chiffrement, le [!INCLUDE[jdbcNoVersion]
 > [!NOTE]  
 > Pour garantir une connexion SSL, vérifiez que la valeur transmise à **serverName** correspond exactement au nom CN (Nom commun) ou DNS dans le nom SAN (Autre nom du sujet) du certificat de serveur.  
 >
-> Pour plus d’informations sur la façon de configurer le protocole SSL pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la rubrique sur le chiffrement des connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Pour plus d’informations sur la configuration de SSL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour, consultez [activer les connexions chiffrées dans le moteur de base de données](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Pour permettre aux applications d’utiliser le chiffrement SSL, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] comprend les propriétés de connexion suivantes, à partir de la version 1.2 : **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** et **hostNameInCertificate**. Pour plus d’informations, consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   

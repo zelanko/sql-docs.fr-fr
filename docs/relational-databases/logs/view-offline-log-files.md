@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edd83dd3b96b80052c9920bd2cd6486273b4a1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083913"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212305"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "68083913"
   
      Si vous souhaitez vous connecter à un ordinateur distant, suivez ces étapes :  
   
-    1.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** , puis cliquez sur **Se connecter à un autre ordinateur**.  
+    1.  Cliquez avec le bouton droit sur **Contrôle WMI (local)**, puis cliquez sur **Se connecter à un autre ordinateur**.  
   
     2.  Dans la boîte de dialogue **Changer d'ordinateur géré** , cliquez sur **Un autre ordinateur**.  
   
     3.  Entrez le nom de l'ordinateur distant, puis cliquez sur **OK**.  
   
-3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (***NomOrdinateurDistant***)** , puis cliquez sur **Propriétés**.  
+3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (**_NomOrdinateurDistant_**)**, puis cliquez sur **Propriétés**.  
   
 4.  Dans la boîte de dialogue **Propriétés du Contrôle WMI** , cliquez sur l'onglet **Sécurité** .  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68083913"
     > [!NOTE]  
     >  Si les fichiers journaux mettent trop de temps à se charger, vous pouvez cliquer sur **Arrêt** dans la barre d’outils de la Visionneuse du fichier journal.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Visionneuse du fichier journal](../../relational-databases/logs/log-file-viewer.md)  
   
   

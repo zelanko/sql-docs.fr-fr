@@ -1,5 +1,5 @@
 ---
-title: Durées de vie de transaction | Microsoft Docs
+title: Durées de vie des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 759af22d445bb3c67db1f39ecf69dbeee1b666fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902478"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874850"
 ---
 # <a name="transaction-lifetimes"></a>Durées de vie des transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67902478"
   
 -   Une tentative de validation d'une transaction non démarrée dans la même procédure provoque une erreur d'exécution.  
   
--   Une tentative d'annulation d'une transaction non démarrée dans la même procédure provoque le blocage de la transaction (ce qui empêche toute opération collatérale de se produire). La transaction cesse jusqu'à ce que le code CLR soit hors de portée. Notez que cela peut être utile lorsque vous détectez une erreur à l'intérieur de votre procédure et souhaitez vous assurer que la transaction entière se termine.  
+-   Une tentative de restauration d’une transaction non démarrée dans la même procédure provoque le blocage de la transaction (empêchant toute autre opération d’effet secondaire). La transaction cesse jusqu'à ce que le code CLR soit hors de portée. Notez que cela peut être utile lorsque vous détectez une erreur à l'intérieur de votre procédure et souhaitez vous assurer que la transaction entière se termine.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration et transactions du CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

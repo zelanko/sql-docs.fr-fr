@@ -17,20 +17,23 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6a3551716ad6841a7ed14c92afd4ae96d3cc297b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b679f34e16b0f22018357f3c6fd6a531d283b2bc
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140490"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810541"
 ---
-# <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
+# <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Ajoute une étape (opération) à un travail.  
+  Ajoute une étape (opération) à un travail de l’agent SQL.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+  > [!IMPORTANT]  
+  > Sur [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des types de tâches SQL Server agent ne sont pas pris en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,89 +62,89 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Le numéro d’identification du travail auquel ajouter l’étape. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail auquel ajouter l’étape. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` Le nom du travail auquel ajouter l’étape. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail auquel ajouter l’étape. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+>  *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id` Le numéro d’identification de séquence pour l’étape de travail. Début de numéros d’identification à l’étape **1** et incrémentés sans intervalle. Si une étape est insérée dans une séquence existante, les numéros de cette séquence sont ajustés automatiquement. Une valeur est fournie si *id_de_l* n’est pas spécifié. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id`Numéro d’identification de séquence de l’étape de travail. Les numéros d’identification de l’étape commencent à **1** et s’incrémentent sans intervalles. Si une étape est insérée dans une séquence existante, les numéros de cette séquence sont ajustés automatiquement. Une valeur est fournie si *step_id* n’est pas spécifié. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @step_name = ] 'step_name'` Le nom de l’étape. *nom_de_l* est **sysname**, sans valeur par défaut.  
+`[ @step_name = ] 'step_name'`Nom de l’étape. *step_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @subsystem = ] 'subsystem'` Sous-système utilisé par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)** , et peut prendre l’une des valeurs suivantes.  
+`[ @subsystem = ] 'subsystem'`Sous-système utilisé par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service agent pour exécuter la *commande*. *Subsystem* est de type **nvarchar (40)** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |«**ACTIVESCRIPTING**»|Script actif<br /><br /> **\*\* Important \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
-|«**CMDEXEC**»|Commande du système d'exécution ou programme exécutable|  
+|'**CMDEXEC**'|Commande du système d'exécution ou programme exécutable|  
 |«**DISTRIBUTION**»|Travail de l'Agent de distribution de réplication|  
 |«**INSTANTANÉ**»|Travail de l'Agent d'instantané de réplication|  
-|«**LOGREADER**»|Travail de l'Agent de lecture du journal de réplications|  
-|«**FUSION**»|Travail de l'Agent de fusion de réplication|  
+|'**LOGREADER**'|Travail de l'Agent de lecture du journal de réplications|  
+|«**FUSIONNER**»|Travail de l'Agent de fusion de réplication|  
 |«**QueueReader**»|Travail de l'Agent de lecture de la file d'attente de réplication|  
 |«**ANALYSISQUERY**»|Requête Analysis Services (MDX, DMX).|  
 |«**ANALYSISCOMMAND**»|Commande Analysis Services (XMLA).|  
-|«**Dts**»|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Exécution du package|  
+|«**DTS**»|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Exécution du package|  
 |«**PowerShell**»|script PowerShell|  
-|«**TSQL**» (valeur par défaut)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
+|'**Tsql**' (valeur par défaut)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
-`[ @command = ] 'command'` Les commandes doit être exécuté par **SQLServerAgent** service via *sous-système*. *commande* est **nvarchar (max)** , avec NULL comme valeur par défaut. L'Agent SQL Server effectue une substitution de jetons qui offre la même souplesse que les variables lorsque vous écrivez des logiciels.  
+`[ @command = ] 'command'`Commandes qui doivent être exécutées par le service **SQLServerAgent** par le biais du *sous-système*. la *commande* est de type **nvarchar (max)** , avec NULL comme valeur par défaut. L'Agent SQL Server effectue une substitution de jetons qui offre la même souplesse que les variables lorsque vous écrivez des logiciels.  
   
 > [!IMPORTANT]  
->  Une macro d’échappement doit désormais accompagner tous les jetons utilisés dans les étapes de travail, sans quoi ces étapes de travail échoue. De plus, vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Exemple :  
+>  Une macro d’échappement doit désormais accompagner tous les jetons utilisés dans les étapes de travail, sinon ces étapes de travail échouent. De plus, vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Exemple :  
 >   
->  `$(ESCAPE_` *Nom de macro* `(DATE))`  
+>  `$(ESCAPE_`*nom* de la macro`(DATE))`  
   
- Pour plus d’informations sur ces jetons et la mise à jour des étapes de travail pour utiliser la nouvelle syntaxe de jeton, consultez [utiliser des jetons dans les étapes de travail](../../ssms/agent/use-tokens-in-job-steps.md).  
+ Pour plus d’informations sur ces jetons et la mise à jour de vos étapes de travail afin d’utiliser la nouvelle syntaxe de jeton, consultez [utiliser des jetons dans les étapes de travail](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
 >  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(** _propriété_ **)** . Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
 >   
 >  Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
-`[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *paramètres* est **ntext**, avec NULL comme valeur par défaut.  
+`[ @additional_parameters = ] 'parameters'`Parameters est de type **ntext**, avec NULL comme valeur par défaut. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @cmdexec_success_code = ] code` La valeur retournée par un **CmdExec** commande du sous-système pour indiquer que *commande* exécutée avec succès. *code* est **int**, avec une valeur par défaut **0**.  
+`[ @cmdexec_success_code = ] code`La valeur retournée par une commande de sous-système **CmdExec** pour indiquer que la *commande* a été exécutée avec succès. *code* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @on_success_action = ] success_action` L’action à effectuer si l’étape réussit. *action_succès* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+`[ @on_success_action = ] success_action`Action à exécuter si l’étape se déroule correctement. *success_action* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
 |**1** (par défaut)|Quitter avec succès|  
 |**2**|Quitter avec échec|  
 |**3**|Passez à l'étape suivante|  
-|**4**|Passez à l’étape *id_étape_succès*|  
+|**4**|Aller à l’étape *on_success_step_id*|  
   
-`[ @on_success_step_id = ] success_step_id` ID de l’étape du travail à exécuter si l’étape réussit et *action_succès* est **4**. *id_étape_succès* est **int**, avec une valeur par défaut **0**.  
+`[ @on_success_step_id = ] success_step_id`ID de l’étape dans ce travail à exécuter si l’étape se déroule correctement et que *success_action* a la valeur **4**. *success_step_id* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @on_fail_action = ] fail_action` L’action à effectuer si l’étape échoue. *action_échec* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+`[ @on_fail_action = ] fail_action`Action à exécuter si l’étape échoue. *fail_action* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
 |**1**|Quitter avec succès|  
 |**2** (par défaut)|Quitter avec échec|  
 |**3**|Passez à l'étape suivante|  
-|**4**|Passez à l’étape *id_étape_échec*|  
+|**4**|Aller à l’étape *on_fail_step_id*|  
   
-`[ @on_fail_step_id = ] fail_step_id` ID de l’étape du travail à exécuter si l’étape échoue et *action_échec* est **4**. *id_étape_échec* est **int**, avec une valeur par défaut **0**.  
+`[ @on_fail_step_id = ] fail_step_id`ID de l’étape de ce travail à exécuter si l’étape échoue et que *fail_action* a la valeur **4**. *fail_step_id* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (30)** , avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'`Server est de type **nvarchar (30)** , avec NULL comme valeur par défaut. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @database_name = ] 'database'` Le nom de la base de données dans lequel exécuter un [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *base de données* est **sysname**, avec une valeur NULL par défaut, auquel cas la **master** base de données est utilisée. Les noms placés entre crochets ([ ]) ne sont pas autorisés. Pour une étape de travail ActiveX, le *base de données* est le nom de l’étape utilise le langage de script.  
+`[ @database_name = ] 'database'`Nom de la base de données dans laquelle exécuter une [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *Database est de* **type sysname**, avec NULL comme valeur par défaut. dans ce cas, la base de données **Master** est utilisée. Les noms placés entre crochets ([ ]) ne sont pas autorisés. Pour une étape de travail ActiveX, la *base de données* est le nom du langage de script que l’étape utilise.  
   
-`[ @database_user_name = ] 'user'` Le nom du compte d’utilisateur à utiliser lors de l’exécution un [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *utilisateur* est **sysname**, avec NULL comme valeur par défaut. Lorsque *utilisateur* est NULL, l’étape est exécutée dans le contexte de l’utilisateur du propriétaire du travail sur *base de données*.  L'Agent SQL Server inclut ce paramètre uniquement si le propriétaire du travail est un sysadmin SQL Server. Dans ce cas, l'étape Transact-SQL donnée est exécutée dans le contexte du nom d'utilisateur SQL Server spécifié. Si le propriétaire du travail n’est pas un administrateur système SQL Server, l’étape Transact-SQL sera toujours être exécuté dans le contexte de la connexion qui possède ce travail, et le @database_user_name paramètre sera ignoré.  
+`[ @database_user_name = ] 'user'`Nom du compte d’utilisateur à utiliser lors de l’exécution d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une étape. *User* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *User* a la valeur null, l’étape s’exécute dans le contexte utilisateur du propriétaire de la tâche sur la *base de données*.  L'Agent SQL Server inclut ce paramètre uniquement si le propriétaire du travail est un sysadmin SQL Server. Dans ce cas, l'étape Transact-SQL donnée est exécutée dans le contexte du nom d'utilisateur SQL Server spécifié. Si le propriétaire du travail n’est pas un SQL Server sysadmin, l’étape Transact-SQL est toujours exécutée dans le contexte de la connexion qui détient ce travail, et @database_user_name le paramètre est ignoré.  
   
-`[ @retry_attempts = ] retry_attempts` Le nombre de nouvelles tentatives à utiliser si cette étape échoue. *retry_attempts* est **int**, avec une valeur par défaut **0**, lequel indiquant aucune tentative.  
+`[ @retry_attempts = ] retry_attempts`Nombre de nouvelles tentatives à utiliser en cas d’échec de cette étape. *retry_attempts* est de **type int**, avec **0**comme valeur par défaut, qui n’indique aucune nouvelle tentative.  
   
-`[ @retry_interval = ] retry_interval` La quantité de temps en minutes entre chaque tentative. *intervalle_entre_reprises* est **int**, avec une valeur par défaut **0**, ce qui indique un **0**-intervalle de minutes.  
+`[ @retry_interval = ] retry_interval`Durée, en minutes, entre chaque tentative. *retry_interval* est de **type int**, avec **0**comme valeur par défaut, qui indique un intervalle de **0**minute.  
   
-`[ @os_run_priority = ] run_priority` Réservé.  
+`[ @os_run_priority = ] run_priority`Réservé.  
   
-`[ @output_file_name = ] 'file_name'` Le nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est **nvarchar (200)** , avec NULL comme valeur par défaut. *file_name* peut inclure un ou plusieurs jetons répertoriés sous *commande*. Ce paramètre est valide uniquement avec les commandes en cours d’exécution le [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sous-systèmes.  
+`[ @output_file_name = ] 'file_name'`Nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est de type **nvarchar (200)** , avec NULL comme valeur par défaut. le *nom_fichier* peut inclure un ou plusieurs des jetons listés sous *Command*. Ce paramètre est valide uniquement avec les commandes qui s' [!INCLUDE[tsql](../../includes/tsql-md.md)]exécutent sur les sous [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-systèmes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , **CmdExec**, **PowerShell**, ou.  
   
-`[ @flags = ] flags` Est une option qui contrôle le comportement. *indicateurs* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @flags = ] flags`Est une option qui contrôle le comportement. *Flags* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -153,22 +156,22 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|Écriture de toute la sortie dans l'historique des travaux|  
 |**64**|Création d'un événement Windows à utiliser comme signal pour l'étape de travail Cmd à abandonner|  
   
-`[ @proxy_id = ] proxy_id` Numéro d’identification du proxy pour lequel l’étape de travail s’exécute en tant que. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *user_name* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+`[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
   
-`[ @proxy_name = ] 'proxy_name'` Le nom de l’étape de travail s’exécute en tant que le proxy. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *user_name* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+`[ @proxy_name = ] 'proxy_name'`Nom du proxy sous lequel l’étape de travail s’exécute. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- **sp_add_jobstep** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_add_jobstep** doit être exécuté à partir de la base de données **msdb** .  
   
  SQL Server Management Studio offre un moyen simple et graphique de gérer les tâches, et est recommandé pour la création et la gestion de l'infrastructure de travail.  
   
- Une étape de travail doit spécifier un proxy, sauf si le créateur de l’étape de travail est un membre de la **sysadmin** rôle de sécurité fixe.  
+ Une étape de travail doit spécifier un proxy, sauf si le créateur de l’étape de travail est membre du rôle de sécurité fixe **sysadmin** .  
   
  Un proxy peut être identifié par *proxy_name* ou *proxy_id*.  
   
@@ -183,7 +186,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Le créateur de l'étape de travail doit disposer des droits d'accès au proxy pour cette étape. Membres de la **sysadmin** rôle de serveur fixe a accès à tous les serveurs proxy. Pour les autres utilisateurs, les droits d'accès à un proxy doivent être octroyés explicitement.  
+ Le créateur de l'étape de travail doit disposer des droits d'accès au proxy pour cette étape. Les membres du rôle serveur fixe **sysadmin** ont accès à tous les proxys. Pour les autres utilisateurs, les droits d'accès à un proxy doivent être octroyés explicitement.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre la création de l'étape d'un travail permettant de modifier l'accès à une base de données appelée Sales et de lui affecter le mode d'accès en lecture seule. En outre, cet exemple indique 5 tentatives de reprises, chacune d'elles étant exécutée toutes les 5 minutes.  

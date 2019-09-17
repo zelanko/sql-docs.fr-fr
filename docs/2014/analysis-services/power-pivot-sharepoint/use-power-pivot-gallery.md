@@ -1,5 +1,5 @@
 ---
-title: Utiliser la galerie PowerPivot | Microsoft Docs
+title: Utiliser la Galerie PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e4dd52a33fbfb84f65658db6c645a5317b39c44
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070880"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874487"
 ---
 # <a name="use-powerpivot-gallery"></a>Utiliser la Galerie PowerPivot
   La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et des rapports Reporting Services contenant des données PowerPivot et d'autres types de documents.  
@@ -25,17 +25,17 @@ ms.locfileid: "66070880"
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
   
--   [Icônes dans la galerie PowerPivot](#icons)  
+-   [Icônes dans la Galerie PowerPivot](#icons)  
   
--   [Enregistrer un classeur Excel dans la galerie PowerPivot](#add)  
+-   [Enregistrer un classeur Excel dans la Galerie PowerPivot](#add)  
   
--   [Créer des rapports ou classeurs basés sur un classeur PowerPivot publié](#newdocs)  
+-   [Créer des rapports ou des classeurs basés sur un classeur PowerPivot publié](#newdocs)  
   
 -   [Ouvrir un classeur ou un rapport en mode page entière](#view)  
   
--   [Planifier l’actualisation des données pour les classeurs PowerPivot dans la galerie PowerPivot](#newdr)  
+-   [Planifier l’actualisation des données pour les classeurs PowerPivot dans la Galerie PowerPivot](#newdr)  
   
--   [Supprimer un classeur ou un rapport dans la galerie PowerPivot](#delete)  
+-   [Supprimer un classeur ou un rapport dans la Galerie PowerPivot](#delete)  
   
 -   [Actualiser une image miniature](#image)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66070880"
   
 > [!NOTE]  
 >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
-> Pour afficher le contenu de la bibliothèque dans Edge, cliquez sur l’onglet **Bibliothèque** dans la Galerie PowerPivot, puis définissez l’affichage de la bibliothèque de documents sur **Tous les documents**.    
+> Pour afficher le contenu de la bibliothèque dans Microsoft Edge, cliquez sur l’onglet **bibliothèque** dans Power Pivot Galerie, puis remplacez la vue de la bibliothèque de documents par **tous les documents**.    
 > Pour modifier l’affichage par défaut, cliquez sur l’onglet **Bibliothèque** , puis sur Modifier l’affichage. Cliquez sur Définir cet affichage comme affichage par défaut, puis sur OK pour enregistrer l’affichage par défaut.  
->  Pour plus d’informations sur les prend en charge de Edge, consultez le blog de Windows, [un saut dans le passé, partie 2 : L’adieu à ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Pour plus d’informations sur les éléments pris en charge par Microsoft Edge, [consultez le blog Windows, une pause du passé, partie 2 : Dire adieu à ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- Pour obtenir une liste complète des conditions préalables requises, consultez [créer et personnaliser la galerie PowerPivot](create-and-customize-power-pivot-gallery.md).  
+ Pour obtenir la liste complète des conditions préalables, consultez [créer et personnaliser la Galerie PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
-##  <a name="icons"></a> Icônes dans la galerie PowerPivot  
+##  <a name="icons"></a>Icônes dans la Galerie PowerPivot  
  Les icônes fournissent une indication visuelle sur la disponibilité et l'état du contenu.  
   
 |Icône|Description|  
@@ -64,18 +64,18 @@ ms.locfileid: "66070880"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|L'icône de contenu non disponible apparaît lorsque le document que vous avez téléchargé ne peut pas être restitué dans la Galerie PowerPivot. Les types de document pris en charge sont notamment les classeurs et rapports PowerPivot créés dans le Générateur de rapports de SQL Server 2008 R2 Reporting Services.<br /><br /> Cette icône apparaît également si vous recyclez un document de la Corbeille.<br /><br /> Si vous obtenez cette icône pour un document qui présentait auparavant une image d'aperçu valide, vous pouvez actualiser l'image en modifiant une propriété du document, puis en enregistrant vos modifications.|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|L'icône de contenu verrouillée apparaît lorsque les images miniatures ont été volontairement désactivées pour ce document. La Galerie PowerPivot ne génère pas d'images miniatures pour les classeurs Excel qui ne contiennent pas de données PowerPivot, ni pour les classeurs PowerPivot ou les rapports Reporting Services qui ne satisfont pas la configuration requise pour la génération d'instantanés. Pour plus d'informations, consultez la section « Configuration requise » de cette rubrique.|  
   
-##  <a name="add"></a> Enregistrer un classeur Excel dans la galerie PowerPivot  
+##  <a name="add"></a>Enregistrer un classeur Excel dans la Galerie PowerPivot  
  Vous pouvez publier des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la bibliothèque à l'aide de toutes les techniques de partage offertes par Excel 2010. Par exemple, dans Excel 2010, vous pouvez utiliser l'option Enregistrer sous pour spécifier tout ou partie d'un chemin d'accès SharePoint à une bibliothèque.  
   
 1.  Enregistrez le fichier.  
   
-2.  1.  **Excel 2010 :** Dans le menu fichier, cliquez sur **enregistrer et envoyer**.  
+2.  1.  **Excel 2010 :** Dans le menu fichier, cliquez sur **enregistrer & envoyer**.  
   
     2.  Cliquez sur **Enregistrer dans SharePoint**.  
   
     3.  Cliquez sur **Options de publication** si vous souhaitez utiliser les options Excel Services pour sélectionner des feuilles ou paramètres individuels que vous souhaitez publier. Par exemple, l'onglet Paramètres dans Options Excel Services vous permet de choisir les découpages qui apparaissent dans le classeur publié.  
   
-    1.  **Excel 2013 :**  Dans le menu fichier, cliquez sur **enregistrer**.  
+    1.  **Excel 2013 :**  Dans le menu fichier, cliquez sur **Enregistrer**.  
   
     2.  Cliquez sur **Options du Mode Navigateur** si vous souhaitez utiliser les options Excel Services pour sélectionner des feuilles ou paramètres individuels que vous souhaitez publier. Par exemple, l'onglet Paramètres dans Options Excel Services vous permet de choisir les découpages qui apparaissent dans le classeur publié.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66070880"
   
 3.  Dans **Télécharger un document**, sélectionnez une option de téléchargement, puis entrez le nom et l'emplacement du fichier à télécharger. Les paramètres de bibliothèque déterminent où le document apparaît. Vous devrez peut-être actualiser la fenêtre du navigateur pour afficher l'ajout le plus récent.  
   
-##  <a name="newdocs"></a> Créer des rapports ou classeurs basés sur un classeur PowerPivot publié  
+##  <a name="newdocs"></a>Créer des rapports ou des classeurs basés sur un classeur PowerPivot publié  
  Pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous publiez dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous pouvez créer d'autres classeurs ou rapports Reporting Services qui utilisent le classeur publié comme source de données connectée.  
   
 |||  
@@ -118,14 +118,14 @@ ms.locfileid: "66070880"
   
  Vous avez également la possibilité d'ouvrir le classeur dans Excel sur une station de travail cliente au lieu de l'afficher dans un navigateur. Vous devez disposer d’Excel 2013 ou d’Excel 2010 et du complément [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] pour afficher le fichier. Vous pouvez utiliser Excel 2007 pour ouvrir le fichier, mais pas pour ajouter un tableau croisé dynamique sur les données. Par conséquent, les versions Excel 2013 ou Excel 2010 sont recommandées à la fois pour afficher et pour créer des données PowerPivot. Si vous ne disposez pas des applications requises, vous devez utiliser un navigateur pour afficher le classeur dans SharePoint.  
   
-##  <a name="newdr"></a> Planifier l’actualisation des données pour les classeurs PowerPivot dans la galerie PowerPivot  
+##  <a name="newdr"></a>Planifier l’actualisation des données pour les classeurs PowerPivot dans la Galerie PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d'un classeur Excel publié peuvent être actualisées à des fréquences planifiées.  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Cliquez sur le bouton Gérer l'actualisation des données pour créer ou afficher une planification qui récupère les données mises à jour à partir des sources de données connectées. Pour obtenir des instructions sur la façon de créer une planification, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Cliquez sur le bouton Gérer l'actualisation des données pour créer ou afficher une planification qui récupère les données mises à jour à partir des sources de données connectées. Pour obtenir des instructions sur la création d’une planification, consultez [planifier une &#40;actualisation&#41;des données PowerPivot pour SharePoint](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
-##  <a name="delete"></a> Supprimer un classeur ou un rapport dans la galerie PowerPivot  
+##  <a name="delete"></a>Supprimer un classeur ou un rapport dans la Galerie PowerPivot  
  Pour supprimer un document de la bibliothèque, basculez tout d'abord en mode d'affichage Tous les documents.  
   
 1.  Dans un site SharePoint, ouvrez la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -154,16 +154,16 @@ ms.locfileid: "66070880"
 ### <a name="document-type-is-not-supported"></a>Le type de document n'est pas pris en charge.  
  Le type de contenu **Document de Galerie PowerPivot** n'est pas pris en charge. Si vous activez le type de contenu **Document de Galerie PowerPivot** pour une bibliothèque de documents, et si vous tentez de créer un document de ce type, un message d'erreur semblable à l'un des messages suivants s'affiche :  
   
--   « Nouveau Document » nécessite un navigateur de l’application et web compatible avec Microsoft Sharepoint Foundation. Pour ajouter un document à cette bibliothèque de documents, cliquez sur le bouton Télécharger un Document.  
+-   « Nouveau document » nécessite une application et un navigateur Web compatibles avec Microsoft SharePoint Foundation. Pour ajouter un document à cette bibliothèque de documents, cliquez sur le bouton « Télécharger un document ».  
   
--   « L’adresse Internet ' http://[server name] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' n’est pas valide. » » Microsoft Excel ne peut pas accéder au fichier ' http://[server name] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Plusieurs raisons sont possibles :  
+-   « L’adresse Internet’ http://[nom du serveur]/testSite/PowerPivot Gallery/ReportGallery/Forms/template. xlsx’n’est pas valide. » Microsoft Excel ne peut pas accéder au fichier’ http://[nom du serveur]/testSite/PowerPivot Gallery/ReportGallery/Forms/template. xlsx'. Plusieurs raisons sont possibles :  
   
  Le type de contenu **Document de Galerie PowerPivot** n'est pas automatiquement ajouté aux bibliothèques de documents. Vous ne rencontrerez pas ce problème à moins que vous n'ayez activé manuellement le type de contenu non pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Supprimer la galerie PowerPivot](delete-power-pivot-gallery.md)   
- [Créer et personnaliser une galerie PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
+ [Créer un emplacement approuvé pour les sites PowerPivot dans l’administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Supprimer la Galerie PowerPivot](delete-power-pivot-gallery.md)   
+ [Créer et personnaliser la Galerie PowerPivot](create-and-customize-power-pivot-gallery.md)   
+ [Planifier une actualisation &#40;des données PowerPivot pour SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

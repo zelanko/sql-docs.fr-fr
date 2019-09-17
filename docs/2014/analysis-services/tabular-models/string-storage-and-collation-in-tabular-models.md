@@ -1,5 +1,5 @@
 ---
-title: Stockage et classement dans les modèles tabulaires des chaînes | Microsoft Docs
+title: Stockage et classement des chaînes dans les modèles tabulaires | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18601e43e8aea80350e297336174cce0b4ef7bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066427"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874492"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Stockage de chaîne et classement dans les modèles tabulaires
   Les chaînes (valeurs texte) sont stockées dans un format fortement compressé dans les modèles tabulaires ; en raison de cette compression, vous pouvez obtenir des résultats inattendus lorsque vous récupérez des chaînes entières ou partielles. En outre, comme les paramètres régionaux et les classements de chaîne sont hérités hiérarchiquement de l'objet parent le plus proche, si le langage de chaîne n'est pas défini explicitement, les paramètres régionaux et le classement du parent peuvent affecter la façon dont chaque chaîne est stockée et si la chaîne doit être unique ou combinée avec des chaînes semblables tel que le défini le classement parent.  
@@ -47,14 +47,14 @@ ms.locfileid: "66066427"
   
  Les données peuvent être issues de nombreuses sources, et par conséquent la casse et l'utilisation des accents sont incohérentes, et la base de données relationnelle a stocké ces différences en l'état. Mais en général les valeurs sont **Plant** ou **Tree**, uniquement avec une casse différente.  
   
- Lorsque ces valeurs sont chargées dans un modèle tabulaire qui utilise le classement et l'ordre de tri par défaut pour l'anglais américain, la casse n'est pas importante, seules deux valeurs sont stockées pour la colonne entière :  
+ Lorsque ces valeurs sont chargées dans un modèle tabulaire qui utilise le classement et l’ordre de tri par défaut pour l’anglais (États-Unis), la casse n’est pas importante, donc seules deux valeurs sont stockées pour la colonne entière :  
   
 |Classification - anglais|  
 |-------------------------------|  
 |trEE|  
 |PlAnT|  
   
- Si vous utilisez la colonne, **Classification - anglais**, dans votre modèle, si vous affichez la classification des plantes vous ne verrez pas les valeurs d’origine, avec leurs différentes utilisations de majuscules et minuscules, mais seule la première instance. En effet, toutes les variantes de majuscules et minuscules de **tree** sont considérées comme équivalentes dans ce classement et ces paramètres régionaux ; par conséquent, une seule chaîne a été conservée et la première instance de cette chaîne qui est rencontrée par le système est celle qui est enregistrée.  
+ Si vous utilisez la colonne, **classification-anglais**, dans votre modèle, où vous affichez la classification des plantes, vous ne verrez pas les valeurs d’origine, avec leurs différentes utilisations des majuscules et des minuscules, mais uniquement la première instance. En effet, toutes les variantes de majuscules et minuscules de **tree** sont considérées comme équivalentes dans ce classement et ces paramètres régionaux ; par conséquent, une seule chaîne a été conservée et la première instance de cette chaîne qui est rencontrée par le système est celle qui est enregistrée.  
   
 > [!WARNING]  
 >  Vous pouvez décider de définir la première chaîne à stocker, en fonction de ce que vous considérez correct, mais cette opération peut être très difficile à effectuer. Il n'existe aucun moyen simple de déterminer à l'avance quelle ligne doit être traitée en premier par le moteur, étant donné que toutes les valeurs sont considérées comme identiques. Au lieu de cela, si vous devez définir la valeur standard, vous devez nettoyer toutes vos chaînes avant de charger le modèle.  

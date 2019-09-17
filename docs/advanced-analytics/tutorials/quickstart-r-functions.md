@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f81b4f755441a5129892ed321d74bb8c6427ee4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: c8c8f69391db2e1028a0da33dbaf77fd60eafd8f
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714842"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70909198"
 ---
-# <a name="quickstart-using-r-functions"></a>Démarrage rapide : Utilisation des fonctions R
+# <a name="quickstart-use-r-functions"></a>Démarrage rapide : Utiliser les fonctions R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Si vous avez terminé les Démarrages rapides précédents, vous êtes familiarisé avec les opérations de base et prêt à être plus complexe, comme les fonctions statistiques. Les fonctions statistiques avancées qui sont complexes à implémenter dans T-SQL peuvent être effectuées dans R avec une seule ligne de code.
@@ -49,7 +49,7 @@ EXEC sp_execute_external_script
 
 Vous souhaitez générer plus facilement un autre ensemble de nombres aléatoires ?
 
-C’est facile lorsqu’il est combiné avec SQL Server: définissez une procédure stockée qui obtient les arguments de l’utilisateur. Vous devez ensuite passer ces arguments dans le script R sous forme de variables.
+C’est facile lorsqu’il est combiné avec SQL Server : définissez une procédure stockée qui obtient les arguments de l’utilisateur. Vous devez ensuite passer ces arguments dans le script R sous forme de variables.
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -97,7 +97,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 De nombreux utilisateurs aiment utiliser les fonctions de minutage du système dans R, `system.time` telles `proc.time`que et, pour capturer le temps utilisé par les processus r et analyser les problèmes de performances.
 
-Pour obtenir un exemple, consultez ce didacticiel: [Créer des fonctionnalités de données](../tutorials/walkthrough-create-data-features.md). Dans cette procédure pas à pas, les fonctions de minutage R sont incorporées dans la solution pour comparer les performances de deux méthodes de création de fonctionnalités à partir de données: Fonctions R et aux fonctions T-SQL.
+Pour obtenir un exemple, consultez ce didacticiel : [Créer des fonctionnalités de données](../tutorials/walkthrough-create-data-features.md). Dans cette procédure pas à pas, les fonctions de minutage R sont incorporées dans la solution pour comparer les performances de deux méthodes de création de fonctionnalités à partir de données : Fonctions R et aux fonctions T-SQL.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

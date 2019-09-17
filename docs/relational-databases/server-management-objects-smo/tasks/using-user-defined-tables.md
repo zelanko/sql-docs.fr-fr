@@ -1,5 +1,5 @@
 ---
-title: À l’aide de Tables définies par l’utilisateur | Microsoft Docs
+title: Utilisation de tables définies par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26db752cffe88a06003f3255ea42c049d62af697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048918"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911218"
 ---
 # <a name="using-user-defined-tables"></a>Utilisation de tables définies par l'utilisateur
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Les tables définies par l'utilisateur représentent des informations disposées en table. Elles sont utilisées comme paramètres lorsque vous transmettez des données tabulaires dans des procédures stockées ou des fonctions définies par l'utilisateur. Les tables définies par l'utilisateur ne peuvent pas être utilisées pour représenter des colonnes dans une table de base de données.  
   
- L'objet <xref:Microsoft.SqlServer.Management.Smo.Database> a une propriété <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> qui référence un objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Chaque <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> de l’objet de cette collection a un **colonnes** propriété qui fait référence à une collection de <xref:Microsoft.SqlServer.Management.Smo.Column> objets qui répertorient les colonnes dans la table définie par l’utilisateur. Utilisez la méthode Add pour ajouter des colonnes à la table définie par l'utilisateur.  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.Database> a une propriété <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> qui référence un objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Chaque <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objet de cette collection a une propriété **Columns** qui fait référence à une <xref:Microsoft.SqlServer.Management.Smo.Column> collection d’objets qui répertorient les colonnes de la table définie par l’utilisateur. Utilisez la méthode Add pour ajouter des colonnes à la table définie par l'utilisateur.  
   
  Lorsque vous définissez une nouvelle table définie par l'utilisateur en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, vous devez fournir des colonnes et une clé primaire basée sur l'une des colonnes.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "68048918"
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> est utilisée pour spécifier le type de données qui est associé aux colonnes et paramètres. Utilisez ce type pour spécifier le type de table défini par l'utilisateur comme paramètre pour des fonctions définies par l'utilisateur et des procédures stockées.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Création d'une table définie par l'utilisateur en Visual Basic  
- Pour cet exemple, vous devez inclure une instruction imports pour la bibliothèque de classes qui contient le **StringCollection** type.  
+ Pour cet exemple, vous devez inclure une instruction Imports pour la bibliothèque de classes qui contient le type **StringCollection** .  
   
  `Imports System.Collections.Specialized`  
   
@@ -102,7 +102,7 @@ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environne
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Création d'une table définie par l'utilisateur en Visual C#  
- Pour cet exemple, vous devez inclure une instruction imports pour la bibliothèque de classes qui contient le **StringCollection** type.  
+ Pour cet exemple, vous devez inclure une instruction Imports pour la bibliothèque de classes qui contient le type **StringCollection** .  
   
  `using System.Collections.Specialized;`  
   
@@ -172,7 +172,7 @@ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environne
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>Création d'une table définie par l'utilisateur dans PowerShell  
- Pour cet exemple, vous devez inclure une instruction imports pour la bibliothèque de classes qui contient le **StringCollection** type.  
+ Pour cet exemple, vous devez inclure une instruction Imports pour la bibliothèque de classes qui contient le type **StringCollection** .  
   
  `using System.Collections.Specialized;`  
   

@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec876262387ba4470bf225d53320ad62b4b2101
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "68890130"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Installation de démarrage rapide de SQL Server 2014
@@ -92,7 +92,7 @@ ms.locfileid: "68890130"
 ## <a name="related-tasks"></a>Tâches associées  
   
 ###  <a name="BKMK_BeforeYouInstall"></a>Planification d' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] une installation  
- Avant d'installer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous devez vérifier les configurations matérielle et logicielle requises, les considérations relatives au réseau et à Internet, ainsi que les considérations relatives à la sécurité pour l'installation et l'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [planification d’une installation de SQL Server](../../2014/sql-server/install/planning-a-sql-server-installation.md) et également les rubriques suivantes:  
+ Avant d'installer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous devez vérifier les configurations matérielle et logicielle requises, les considérations relatives au réseau et à Internet, ainsi que les considérations relatives à la sécurité pour l'installation et l'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [planification d’une installation de SQL Server](../../2014/sql-server/install/planning-a-sql-server-installation.md) et également les rubriques suivantes :  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

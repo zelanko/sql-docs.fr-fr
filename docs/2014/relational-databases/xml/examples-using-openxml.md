@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : Utilisation d’OPENXML | Microsoft Docs'
+title: 'Exemples : Utilisation d’OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205105"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874691"
 ---
-# <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
+# <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
   Les exemples de cette rubrique montrent comment utiliser OPENXML pour créer une vue d'un ensemble de lignes d'un document XML. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Les exemples montrent tous les aspects de OPENXML, sauf la spécification des métapropriétés. Pour plus d’informations sur la spécification de métapropriétés dans OPENXML, consultez [Spécifier des métapropriétés dans OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -41,7 +41,7 @@ ms.locfileid: "63205105"
   
  La valeur *flags* fournit le mappage par défaut. Si aucun *ColPattern* n’est spécifié dans *SchemaDeclaration*, le mappage défini par la valeur *flags* est appliqué. La valeur *flags* est ignorée si *ColPattern* est spécifié dans *SchemaDeclaration*. Le paramètre *ColPattern* spécifié détermine le mappage (centré sur l’attribut ou sur l’élément), ainsi que la façon dont les données en excès ou non consommées sont traitées.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Exécution d'une instruction SELECT simple avec OPENXML  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>R. Exécution d'une instruction SELECT simple avec OPENXML  
  Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients dans un ensemble de lignes à deux colonnes (**CustomerID** et **ContactName**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
@@ -691,7 +691,7 @@ AS
 DECLARE @t varchar(500)  
 DECLARE @id varchar(5)  
   
-/* Temporary Edge table */  
+/* Temporary edge table */  
 SELECT *   
 INTO #TempEdge   
 FROM OPENXML(@xmldoc, @xpath)  

@@ -1,5 +1,5 @@
 ---
-title: Durées de vie de transaction | Microsoft Docs
+title: Durées de vie des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 290d4c43767ba7e1c6f784c84473e9a05503af54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 627dafb26a4368261e820dd03525f147429cdbcb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920068"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874429"
 ---
 # <a name="transaction-lifetimes"></a>Durées de vie des transactions
   Il existe une différence importante entre des transactions démarrées dans des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] et celles démarrées dans du code managé : le code CLR (Common Language Runtime) ne peut pas déséquilibrer l'état des transactions lors de l'entrée ou de la sortie d'un appel au CLR. Soyez conscient des implications d'une telle différence :  
@@ -29,7 +29,7 @@ ms.locfileid: "62920068"
   
 -   Une tentative de validation d'une transaction non démarrée dans la même procédure provoque une erreur d'exécution.  
   
--   Une tentative d'annulation d'une transaction non démarrée dans la même procédure provoque le blocage de la transaction (ce qui empêche toute opération collatérale de se produire). La transaction cesse jusqu'à ce que le code CLR soit hors de portée. Notez que cela peut être utile lorsque vous détectez une erreur à l'intérieur de votre procédure et souhaitez vous assurer que la transaction entière se termine.  
+-   Une tentative de restauration d’une transaction non démarrée dans la même procédure provoque le blocage de la transaction (empêchant toute autre opération d’effet secondaire). La transaction cesse jusqu'à ce que le code CLR soit hors de portée. Notez que cela peut être utile lorsque vous détectez une erreur à l'intérieur de votre procédure et souhaitez vous assurer que la transaction entière se termine.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration et transactions du CLR](../native-client-ole-db-transactions/transactions.md)  

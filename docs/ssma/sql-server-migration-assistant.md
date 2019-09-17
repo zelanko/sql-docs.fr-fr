@@ -1,5 +1,5 @@
 ---
-title: SQL Server Migration Assistant | Microsoft Docs
+title: Assistant Migration SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
 ms.prod: sql
@@ -9,32 +9,32 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 823e6a71b5385674ef20504d6ec0450140395a60
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083562"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874750"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant Migration SQL Server
-Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
+Assistant Migration Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de bases de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
   
 ## <a name="migration-sources"></a>Sources de migration  
   
--   [SQL Server Migration Assistant pour Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+-   [Assistant Migration SQL Server pour l’accès](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
--   [SQL Server Migration Assistant pour DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+-   [Assistant Migration SQL Server pour DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
--   [SQL Server Migration Assistant pour MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+-   [Assistant Migration SQL Server pour MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
--   [SQL Server Migration Assistant pour Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+-   [Assistant Migration SQL Server pour Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--   [SQL Server Migration Assistant pour SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [Assistant Migration SQL Server pour SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
-## <a name="supported-sources-and-target-versions"></a>Sources prises en charge et cibler des Versions
-Pour des sources prises en charge, passez en revue les informations sur le centre de téléchargement pour le téléchargement SSMA.
+## <a name="supported-sources-and-target-versions"></a>Sources et versions cibles prises en charge
+Pour les sources prises en charge, passez en revue les informations du centre de téléchargement pour le téléchargement de SSMA.
 
-SSMA prennent en charge les versions suivantes de la cible.
+Les versions cibles suivantes sont prises en charge pour SSMA.
 
 - SQL Server 2008
 - SQL Server 2008 R2
@@ -44,9 +44,9 @@ SSMA prennent en charge les versions suivantes de la cible.
 - SQL Server 2017 sur Windows et Linux
 - SQL Server 2019 sur Windows et Linux
 - Azure SQL Database
-- L’entrepôt de données SQL Azure **
+- Azure SQL Data Warehouse * *
 
-** Cette cible est pris en charge uniquement par SSMA pour Oracle.
+\* * Cette cible est prise en charge uniquement par SSMA pour Oracle.
  
 ## <a name="downloads"></a>Téléchargements
 - [SSMA pour Access](https://aka.ms/ssmaforaccess)
@@ -55,22 +55,22 @@ SSMA prennent en charge les versions suivantes de la cible.
 - [SSMA pour Oracle](https://aka.ms/ssmafororacle)
 - [SSMA pour SAP ASE](https://aka.ms/ssmaforsybase)
  
-## <a name="getting-ssma-support"></a>Prise en charge SSMA  
-**Aide et support pour Microsoft SQL Server Migration Assistant (SSMA) :**  
+## <a name="getting-ssma-support"></a>Obtention de la prise en charge de SSMA  
+**Aide et support pour Assistant Migration Microsoft SQL Server (SSMA) :**  
   
--   **Aide produit** : pour accéder à la prise en charge du produit, lancez SSMA et sélectionnez le menu Aide ou appuyez sur la touche F1.  
+-   **Aide** sur le produit : pour accéder au support technique, lancez SSMA et sélectionnez le menu aide ou appuyez sur la touche F1.  
   
--   **Forums des Communautés SQL Server** -poser une question dans la Communauté SQL Server  
+-   **Forums de la communauté SQL Server** -poser une question dans la communauté SQL Server  
   
-    -   [Communauté SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455) -groupes de discussion et forums qui sont gérés par la Communauté SQL Server. Ce site liste également les sources d’information de la communauté, telles que les blogs et les sites web.  
+    -   [SQL Server communauté](https://go.microsoft.com/fwlink/?LinkId=42455) -groupes de discussion et forums qui sont surveillés par la communauté SQL Server. Ce site liste également les sources d’information de la communauté, telles que les blogs et les sites web.  
   
-    -   [Communauté de SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) -groupes de discussion, forums et autres ressources de communautés qui sont utiles aux développeurs de SQL Server  
+    -   [Communauté SQL Server développeur Center](https://go.microsoft.com/fwlink/?LinkId=42456) : groupes de discussion, forums et autres ressources de la communauté utiles aux développeurs SQL Server  
   
--   Support - aller à par [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) et recherchez « Assistant Migration SQL Server ».  Sélectionnez votre version, puis sélectionnez « Démarrer la demande ».  Support assisté est inclus avec l’outil Assistant Migration SQL Server.  
+-   Support assisté-accédez à [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) et recherchez « Assistant Migration SQL Server ».  Sélectionnez votre version, puis « démarrer la demande ».  Le support assisté est inclus dans l’outil Assistant Migration SQL Server.  
   
--   Support premier - si vous avez un contrat Premier, vous pouvez obtenir Premier prend en charge sur le [portail Premier Online](https://premier.microsoft.com/).  
+-   Support premier : Si vous disposez d’un contrat premier, vous pouvez obtenir un support premier sur le [portail en ligne premier](https://premier.microsoft.com/).  
   
--   Services - pour partenaire de conseil assisté des migrations, accédez la [portail Partner](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Services de Conseil : pour les migrations assistées par des partenaires, accédez au [Guide de migration de base de données Azure](https://datamigration.microsoft.com/).
   
 ## <a name="legal-notice-ssma"></a>Notice légale (SSMA)  
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  
@@ -81,7 +81,7 @@ Sauf mention contraire, les exemples de sociétés, d'organisations, de produits
   
 Les produits mentionnés dans cette documentation peuvent faire l’objet de brevets, de dépôts de brevets en cours, de marques, de droits d’auteur ou d’autres droits de propriété intellectuelle et industrielle de Microsoft. Sauf stipulation expresse contraire d’un contrat de licence écrit de Microsoft, la fourniture de cette documentation n’a pas pour effet de vous concéder une licence sur ces brevets, marques, ni de vous céder des droits d’auteur ou autres droits de propriété intellectuelle quels qu’ils soient.  
   
-© Microsoft Corporation, aux 2019. Tous droits réservés.  
+© 2019 Microsoft Corporation. Tous droits réservés.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System et WinFX sont soit des marques déposées de Microsoft Corporation, soit des marques de Microsoft Corporation aux États-Unis d’Amérique et/ou dans d’autres pays/régions.  
   
@@ -90,10 +90,10 @@ SAP NetWeaver est une marque déposée de SAP AG en Allemagne et dans plusieur
 Toutes les autres marques sont la propriété de leurs propriétaires respectifs.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Usage de la documentation pour le support et la mise à niveau de SQL Server  
-Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. Documentation du produit - documentation en ligne de SQL Server, fichiers Lisez-moi, documents relatifs aux problèmes connus et articles de la Base de connaissances - contient des informations sur les fonctionnalités de SQL Server qui est suffisamment robuste pour être sûr pour une utilisation générale par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
+Le contenu qui se trouve dans la documentation de SQL Server est publié uniquement après avoir été suffisamment testé. Documentation produit : Documentation en ligne de SQL Server, fichiers Lisez-moi, documents de problèmes connus et Articles de la base de connaissances-contient du contenu concernant les fonctionnalités de SQL Server et les fonctionnalités qui sont suffisamment fiables pour être utilisées de manière générale par tous les clients. Ceci s’applique à la totalité de la documentation SQL Server, y compris aux fichiers Lisez-moi des versions et des service packs (dans la mesure où les fichiers Lisez-moi sont considérés comme des extensions de la documentation en ligne).  
   
 Il peut arriver qu’une fonctionnalité donnée ne doive pas être utilisée directement par les clients. Dans ce cas, elle n’est pas documentée. Le contenu de documentations ou sites web tiers n’est pas pris en charge par le support technique Microsoft et ne doit pas être utilisé dans des applications ou des bases de données de production, sauf si ladite fonctionnalité est également traitée dans la documentation SQL Server publiée par Microsoft.  
   
-Les clients ne doivent pas utiliser d’API non documentées, y compris mais de manière non limitative : les procédures stockées, les procédures stockées étendues, les fonctions, les vues, les tables, les colonnes, les propriétés ou les métadonnées. Support technique de Microsoft ne prend pas en charge les bases de données ou des applications qui exploitent ou utilisent des points d’entrée non documentés.  
+Les clients ne doivent pas utiliser d’API non documentées, y compris mais de manière non limitative : les procédures stockées, les procédures stockées étendues, les fonctions, les vues, les tables, les colonnes, les propriétés ou les métadonnées. Le support technique Microsoft ne prend pas en charge les bases de données ou les applications qui exploitent ou utilisent des points d’entrée non documentés.  
   
 Les mises à niveau de serveur et de base de données vers les versions ultérieures de SQL Server ne sont pas garanties pour les applications et les bases de données qui exploitent et utilisent des points d’entrée non documentés. L’utilisation des fonctions et fonctionnalités SQL Server doit être limitée à celles qui sont incluses dans la documentation Microsoft SQL Server. Si une fonctionnalité n’est pas documentée dans la documentation Microsoft SQL Server, elle n’est pas considérée comme une partie prise en charge de SQL Server.  

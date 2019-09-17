@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a035483534ec11e2c26c8a35b654d4ee55a025cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8396b30122a393ea3532113e261a908d8079432a
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134460"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228483"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Des copies des messages de la messagerie de base de données et de leurs pièces jointes sont conservées dans les tables **msdb** avec le journal d'événements de la messagerie de base de données. Il peut être utile d'archiver périodiquement les messages et les événements dont vous n'avez plus besoin afin de réduire la taille des tables. Les procédures suivantes permettent de créer un travail de l'Agent SQL Server pour automatiser le processus.  
   
 -   **Avant de commencer :**  , [Conditions préalables](#Prerequisites), [Recommandations](#Recommendations), [Autorisations](#Permissions)  
@@ -47,11 +47,11 @@ ms.locfileid: "68134460"
   
 -   La première procédure crée un travail intitulé Archiver la messagerie de base de données avec les étapes suivantes.  
   
-    1.  Copiez tous les messages contenus dans les tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_** _<année_mois>_ .  
+    1.  Copiez tous les messages contenus dans les tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_**_<année_mois>_.  
   
-    2.  Copiez les pièces jointes associées aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Attachments_** _<année_mois>_ .  
+    2.  Copiez les pièces jointes associées aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Attachments_**_<année_mois>_.  
   
-    3.  Copiez les événements du journal des événements de la messagerie de base de données qui sont associés aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Log_** _<année_mois>_ .  
+    3.  Copiez les événements du journal des événements de la messagerie de base de données qui sont associés aux messages copiés à la première étape, à partir des tables de la messagerie de base de données vers une nouvelle table nommée d’après le mois précédent au format **DBMailArchive_Log_**_<année_mois>_.  
   
     4.  Supprimez des tables de la messagerie de base de données les enregistrements des éléments de messagerie transférés.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68134460"
   
 2.  Dans la zone **Nom de l'étape** , tapez **Copier les éléments de la messagerie de base de données**.  
   
-3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)** .  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68134460"
   
 2.  Dans la zone **Nom de l'étape** , tapez **Copier les pièces jointes de la messagerie de base de données**.  
   
-3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)** .  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68134460"
   
 2.  Dans la zone **Nom de l'étape** , tapez **Copier le journal de la messagerie de base de données**.  
   
-3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)** .  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68134460"
   
 2.  Dans la zone **Nom de l'étape** , tapez **Supprimer les lignes de la messagerie de base de données**.  
   
-3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)** .  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68134460"
   
 2.  Dans la zone **Nom de l'étape** , tapez **Supprimer les lignes du journal des événements de la messagerie de base de données**.  
   
-3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)** .  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Commande** , tapez l'instruction suivante pour supprimer du journal des événements de la messagerie de base de données les lignes antérieures au mois actuel :  
   
@@ -210,7 +210,7 @@ ms.locfileid: "68134460"
   
 5.  Dans la zone **Fréquence** , sélectionnez les options appropriées pour exécuter périodiquement le travail, par exemple une fois par mois.  
   
-6.  Dans la zone **Fréquence quotidienne**, sélectionnez **Une fois à \<heure>** .  
+6.  Dans la zone **Fréquence quotidienne**, sélectionnez **Une fois à \<heure>**.  
   
 7.  Vérifiez que les autres options sont configurées à votre convenance, puis cliquez sur **OK** pour enregistrer la planification.  
   

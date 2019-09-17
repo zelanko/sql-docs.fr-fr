@@ -1,5 +1,5 @@
 ---
-title: Enregistrer les propriétés de l’objet, méthodes et événements | Microsoft Docs
+title: Enregistrement des propriétés, méthodes et événements de l’objet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712294"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737657"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Record
-## <a name="propertiescollections"></a>Propriétés et des Collections  
- [ActiveConnection, propriété](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+## <a name="propertiescollections"></a>Propriétés/collections  
+ [Propriété ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [Collection de champs](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields, collection](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [Propriété de mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode (propriété)](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [ParentURL, propriété](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Propriétés, collection](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType, propriété](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66712294"
  [Open, méthode (objet Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

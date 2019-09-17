@@ -1,10 +1,7 @@
 ---
 title: Éditeurs de texte et de requête (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +21,29 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266032"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988159"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Vous pouvez utiliser l'un des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour modifier et tester de manière interactive un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou pour modifier un fichier texte brut ou XML. Chaque éditeur est pris en charge par un service propre à un langage qui met en couleurs les mots clés et qui vérifie la syntaxe et les erreurs d'utilisation. L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprend un débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez utiliser pour résoudre les problèmes présents dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## <a name="sql-server-management-studio-editors"></a>Éditeurs SQL Server Management Studio  
+## <a name="sql-server-management-studio-editors"></a>Éditeurs SQL Server Management Studio
+
  Les quatre éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] partagent une architecture commune. L'éditeur de texte implémente le niveau de base des fonctionnalités, et peut être utilisé comme éditeur de base pour les fichiers texte. Les trois autres éditeurs, ou éditeurs de requête, étendent cette base de fonctionnalité en incluant un service de langage qui définit la syntaxe d'un des langages pris en charge dans SQL Server. Les éditeurs de requête implémentent également différents niveaux de prise en charge des fonctionnalités de l'éditeur comme IntelliSense et le débogage. Les éditeurs de requête incluent l'éditeur de requête du moteur de base de données à utiliser dans l'élaboration de scripts contenant des instructions Transact-SQL et XQuery, l'éditeur MDX pour le langage MDX, l'éditeur DMX pour le langage DMX et l'éditeur XML/A pour le langage XML for Analysis.  
   
-## <a name="common-components"></a>Composants communs  
+## <a name="common-components"></a>Composants communs
+
  Tous les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] partagent les composants suivants :  
   
  **Volet Code**  
@@ -60,7 +63,8 @@ ms.locfileid: "68266032"
  **Retour automatique à la ligne**  
  Affiche les longues lignes de texte ou de code sous forme de plusieurs lignes afin que vous puissiez voir tout le texte sur une ligne. Le retour automatique à la ligne n'a aucune incidence sur l'apparence du texte lorsqu'il est exécuté ou imprimé. Le retour automatique à la ligne est activé dans la boîte de dialogue **Outils**, **Options** de l'Éditeur de texte, de Tous les langages, de la page Général ou d'une page spécifique de l'Éditeur.  
   
-## <a name="code-editor-components"></a>Composants de l'éditeur de code  
+## <a name="code-editor-components"></a>Composants de l'éditeur de code
+
  Les éditeurs de code contiennent les fonctionnalités suivantes en plus de celles partagées avec les éditeurs de texte et XML :  
   
  **Résultats**  
@@ -84,7 +88,8 @@ ms.locfileid: "68266032"
  **Barre d'état**  
  Affiche des informations système associées à la fenêtre de l'éditeur de requête, par exemple l'instance à laquelle l'éditeur de requête est connecté.  
   
-## <a name="database-engine-query-editor-components"></a>Composants de l'éditeur de requête du moteur de base de données  
+## <a name="database-engine-query-editor-components"></a>Composants de l'éditeur de requête du moteur de base de données
+
  Ces composants sont uniquement disponibles dans l'éditeur de requête du moteur de base de données :  
   
  **Débogueur**  
@@ -130,7 +135,6 @@ ms.locfileid: "68266032"
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code et afficher les informations de débogage telles que les valeurs des variables et des paramètres.|[Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’état &#40;éditeur de requête du moteur de base de données&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>Étapes suivantes
+
+ [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

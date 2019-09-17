@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155352"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878736"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster Big Data SQL Server sur Kubernetes
 
@@ -28,7 +28,7 @@ La façon dont un cluster Big Data SQL Server consomme ces volumes persistants c
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>Configurer les paramètres de stockage du cluster Big Data
 
-À l’instar des autres personnalisations, vous pouvez spécifier des paramètres de stockage dans les fichiers de configuration du cluster au moment du déploiement pour chaque pool et pour le plan de contrôle. S’il n’y a pas de paramètre de configuration du stockage dans les spécifications du pool, les paramètres de stockage du plan de contrôle sont utilisés. Voici un exemple de la section de configuration du stockage que vous pouvez inclure dans la spécification :
+À l’instar des autres personnalisations, vous pouvez spécifier des paramètres de stockage dans les fichiers de configuration du cluster au moment du déploiement pour chaque pool dans le fichier de configuration **BDC. JSON** et pour les services de contrôle dans le fichier **Control. JSON** . S’il n’existe aucun paramètre de configuration de stockage dans les spécifications du pool, les paramètres de stockage de contrôle sont utilisés **pour tous les autres composants**, y compris SQL Server maître (ressource**principale** ), HDFS (ressource**Storage-0** ) ou les données pool. Voici un exemple de la section de configuration du stockage que vous pouvez inclure dans la spécification :
 
 ```json
     "storage": 

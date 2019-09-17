@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b29c55f0618d095840a7f56e5618231935b6fe4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996546"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212289"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,8 +130,8 @@ ms.locfileid: "67996546"
   
      Les administrateurs système peuvent utiliser la procédure stockée système **sp_dbmmonitorresults** pour afficher (et éventuellement mettre à jour) la table d’état si cette dernière n’a pas été mise à jour au cours des 15 secondes précédentes. Cette procédure appelle la procédure **sp_dbmmonitorupdate** et retourne une ou plusieurs lignes d’historique, en fonction de la quantité demandée dans l’appel de procédure. Pour plus d’informations sur l’état dans son jeu de résultats, consultez [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>État de la mise en miroir de base de données (par les membres dbm_monitor)  
- Comme nous l’avons mentionné, lors de la première exécution de la procédure **sp_dbmmonitorupdate** , le rôle de base de données fixe **dbm_monitor** est créé dans la base de données **msdb** . Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (***\<heure>***)** et **Journal miroir (***\<heure>***)** dans la page **État**.  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>État de la mise en miroir de base de données (par les membres dbm_monitor)  
+ Comme nous l’avons mentionné, lors de la première exécution de la procédure **sp_dbmmonitorupdate** , le rôle de base de données fixe **dbm_monitor** est créé dans la base de données **msdb** . Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (**_\<heure>_**)** et **Journal miroir (**_\<heure>_**)** dans la page **État**.  
   
  Les membres du rôle de base de données fixe **dbm_monitor** sont tributaires du **travail du moniteur de mise en miroir de bases de données** pour la mise à jour de la table d’état à des fréquences régulières. Si le travail n'existe pas ou si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, l'état devient de plus en plus obsolète et ne correspondra plus forcément à la configuration de la session de mise en miroir. Par exemple, après un basculement, les partenaires peuvent sembler partager le même rôle (principal ou miroir), ou le serveur principal actuel peut être affiché comme serveur miroir, alors que le serveur miroir actuel est affiché comme principal.  
   
@@ -294,11 +294,11 @@ ms.locfileid: "67996546"
   
  Les éléments suivants sont disponibles pour la mise en miroir de bases de données :  
   
--   Classe d'événements**Database Mirroring State Change**  
+-   Classe d'événements**Database Mirroring State Change**   
   
      Indique le changement de l'état de mise en miroir d'une base de données mise en miroir. Pour plus d’informations, consultez [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Classe d'événements**Audit Database Mirroring Login**  
+-   Classe d'événements**Audit Database Mirroring Login**   
   
      Retourne les messages d'audit relatifs à la sécurité du transport de la mise en miroir de bases de données. Pour plus d’informations, consultez [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
@@ -330,7 +330,7 @@ ms.locfileid: "67996546"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Fournisseur WMI pour les concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

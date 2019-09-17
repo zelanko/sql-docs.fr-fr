@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702794"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
@@ -124,7 +124,7 @@ Voici quelques mots clés de chaîne de connexion et attributs de connexion qui 
 
 Utilisé pour décrire la source de données.
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 Contrôle la conversion ANSI vers OEM des données. 
 
@@ -133,7 +133,7 @@ Contrôle la conversion ANSI vers OEM des données.
 | SQL_AO_OFF | (Valeur par défaut) Aucune conversion n’est effectuée. |
 | SQL_AO_ON | La conversion est effectuée. |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 Contrôle l’utilisation de connexions de secours SQL Server. Cet attribut n’est plus pris en charge.
 
@@ -146,7 +146,7 @@ Contrôle l’utilisation de connexions de secours SQL Server. Cet attribut n’
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>Nouveaux attributs de connexion et mots clés de chaîne de connexion
 
-###  <a name="authentication---sqlcoptssauthentication"></a>Authentification - SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>Authentification - SQL_COPT_SS_AUTHENTICATION
 
 Définit le mode d’authentification à utiliser lors de la connexion à SQL Server. Pour plus d’informations, consultez [Utilisation d’Azure Active Directory](using-azure-active-directory.md).
 
@@ -163,7 +163,7 @@ Définit le mode d’authentification à utiliser lors de la connexion à SQL Se
 > [!NOTE]
 > Quand vous utilisez le mot clé ou l’attribut `Authentication`, vous devez explicitement définir le paramètre `Encrypt` sur la valeur souhaitée dans la chaîne de connexion / le nom de source de données / l’attribut de connexion. Pour plus d’informations, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
 Contrôle le chiffrement transparent des colonnes (Always Encrypted). Pour plus d’informations, consultez [Utilisation d’Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md).
 
@@ -173,7 +173,7 @@ Contrôle le chiffrement transparent des colonnes (Always Encrypted). Pour plus 
 |Désactivé|SQL_CE_DISABLED|(Valeur par défaut) Désactive Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Active le déchiffrement uniquement (résultats et valeurs de retour).|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 Contrôle la fonctionnalité Résolution d’adresses IP réseau transparente, qui interagit avec MultiSubnetFailover pour autoriser les tentatives de reconnexion plus rapides. Pour plus d’informations, consultez [Utilisation de la résolution d’adresses IP réseau transparente](using-transparent-network-ip-resolution.md).
 
@@ -191,7 +191,7 @@ Contrôle l’utilisation de SET FMTONLY pour les métadonnées lors de la conne
 |Non|(Valeur par défaut) Utiliser sp_describe_first_result_set pour les métadonnées si elles sont disponibles. |
 |Oui| Utiliser SET FMTONLY pour les métadonnées. |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 Autorise l’utilisation d’un jeton d’accès Azure Active Directory pour l’authentification. Pour plus d’informations, consultez [Utilisation d’Azure Active Directory](using-azure-active-directory.md).
 
@@ -200,7 +200,7 @@ Autorise l’utilisation d’un jeton d’accès Azure Active Directory pour l�
 | NULL | (Valeur par défaut) Aucun jeton d’accès n’est fourni. |
 | ACCESSTOKEN* | Pointeur vers un jeton d’accès. |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 Communique avec une bibliothèque de fournisseur de magasins de clés chargée. Consultez « Contrôle le chiffrement transparent des colonnes (Always Encrypted) ». Cet attribut n’a aucune valeur par défaut. Pour plus d’informations, consultez [Fournisseurs de magasins de clés personnalisés](custom-keystore-providers.md).
 
@@ -208,7 +208,7 @@ Communique avec une bibliothèque de fournisseur de magasins de clés chargée. 
 |-|-|
 | CEKEYSTOREDATA * | Structure des données de communication pour la bibliothèque du fournisseur de magasins de clés |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 Charge une bibliothèque de fournisseur de magasins de clés pour Always Encrypted, ou récupère les noms des bibliothèques de fournisseur de magasins de clés chargées. Pour plus d’informations, consultez [Fournisseurs de magasins de clés personnalisés](custom-keystore-providers.md). Cet attribut n’a aucune valeur par défaut.
 
@@ -216,7 +216,7 @@ Charge une bibliothèque de fournisseur de magasins de clés pour Always Encrypt
 |-|-|
 | char * | Chemin d’une bibliothèque de fournisseur de magasins de clés |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
 Pour activer les transactions XA avec un processeur de transaction (TP) compatible XA, l’application doit appeler **SQLSetConnectAttr** avec SQL_COPT_SS_ENLIST_IN_XA et un pointeur vers un objet `XACALLPARAM`. Cette option est prise en charge sur Windows, Linux (versions 17.3 et ultérieures) et Mac.
 ```

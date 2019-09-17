@@ -1,5 +1,5 @@
 ---
-title: Conseils de globalisation et de meilleures pratiques (Analysis Services) | Microsoft Docs
+title: Conseils et meilleures pratiques en matière de globalisation (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080863"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874414"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Conseils et meilleures pratiques en matière de globalisation (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensionnel uniquement  
@@ -68,9 +68,9 @@ ms.locfileid: "66080863"
   
      En République populaire de Chine et à Singapour, le Support technique Microsoft considère plutôt le Chinois simplifié avec Pinyin comme l'ordre de tri par défaut. Les classements recommandés sont Chinese_PRC (pour SQL Server 2000), Chinese_PRC_90 (pour SQL Server 2005) ou Chinese_Simplified_Pinyin_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     À Taïwan, il est plus courant de voir le chinois traditionnel avec l’ordre de tri recommandé basé sur le nombre de trait : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
+     À Taïwan, il est plus courant de voir le chinois traditionnel avec l’ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     Les autres régions (comme Hong Kong (R.A.S.) et Macao (R.A.S.)) utilisent également le Chinois traditionnel. Pour les classements, à Macao (R.A.S.) il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao (R.A.S.), Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 et versions ultérieures) est utilisé relativement souvent.  
+     Les autres régions (comme Hong Kong et Macao) utilisent également le chinois traditionnel. Pour les classements, à Macao (R.A.S.) il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao, Chinese_Traditional_Stroke_Count_100 (sur SQL Server 2008 et versions ultérieures) est utilisé assez souvent.  
   
 -   Pour le japonais, le classement le plus courant est Japanese_CI_AS. Japanese_XJIS_100 est utilisé dans les installations prenant en charge [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). On utilise généralement Japanese_BIN2 dans les projets de migration de données, avec des données provenant de plateformes non-Windows ou de sources de données autres que le moteur de base de données relationnelle de SQL Server.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66080863"
   
 |Script de langue|Respect de la casse|  
 |---------------------|----------------------|  
-|**Alphabet latin de base**|Les identificateurs d'objets exprimés dans le script Latin (les 26 lettres majuscules ou minuscules françaises) sont traités comme ne respectant pas la casse, quel que soit le classement. Par exemple, l’ID d’objet suivants sont considérés comme identiques : 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. En interne, Analysis Services traite les caractères de la chaîne comme s'ils étaient tous en majuscule, puis il effectue une comparaison d'octets simple qui est indépendante de la langue.<br /><br /> Notez que seuls les 26 caractères sont affectés. S'il s'agit d'une langue d'Europe Ouest qui utilise des caractères scandinaves, le caractère supplémentaire n'est pas mis en majuscule.|  
+|**Alphabet latin de base**|Les identificateurs d'objets exprimés dans le script Latin (les 26 lettres majuscules ou minuscules françaises) sont traités comme ne respectant pas la casse, quel que soit le classement. Par exemple, les ID d’objet suivants sont considérés comme identiques : 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. En interne, Analysis Services traite les caractères de la chaîne comme s'ils étaient tous en majuscule, puis il effectue une comparaison d'octets simple qui est indépendante de la langue.<br /><br /> Notez que seuls les 26 caractères sont affectés. S'il s'agit d'une langue d'Europe Ouest qui utilise des caractères scandinaves, le caractère supplémentaire n'est pas mis en majuscule.|  
 |**Cyrillique, grec, copte, arménien**|Les identificateurs d'objets en script bicaméral non latin, tel que le cyrillique, respectent toujours la casse. Par exemple, Измерение et измерение sont considérés comme deux valeurs distinctes, même si la seule différence est la casse de la première lettre.|  
   
  **Impact du respect de la casse pour les identificateurs d'objets**  
@@ -91,7 +91,7 @@ ms.locfileid: "66080863"
  Seuls les identificateurs d'objets, et non les noms d'objets, sont soumis aux comportements de respect de la casse décrits dans le tableau. Si vous constatez un changement dans le fonctionnement de votre solution (comparaison avant/après après l'installation de SQL Server 2012 SP2 ou version ultérieure), il s'agit très probablement d'un problème de traitement. Les requêtes ne sont pas affectées par les identificateurs d'objets. Pour les deux langages de requête (DAX et MDX), le moteur de formule utilise le nom d'objet (et non l'identificateur).  
   
 > [!NOTE]  
->  Les modifications de code liées à la casse sont une modification avec rupture pour certaines applications. Consultez [modifications avec rupture des fonctionnalités Analysis Services dans SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) pour plus d’informations.  
+>  Les modifications de code liées à la casse sont une modification avec rupture pour certaines applications. Pour plus d’informations, consultez [modifications critiques apportées aux fonctionnalités de Analysis Services dans SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) .  
   
 ##  <a name="bkmk_test"></a> Test des paramètres régionaux à l'aide d'Excel, de SQL Server Profiler et de SQL Server Management Studio  
  Lors des tests de traductions, la connexion doit spécifier le LCID de la traduction. Comme décrit dans [Get Different Language from SSAS into Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), vous pouvez utiliser Excel pour tester vos traductions.  
@@ -102,11 +102,11 @@ ms.locfileid: "66080863"
   
 -   Ajoutez `Locale Identifier=1036` à la chaîne de connexion. Enregistrez et fermez le fichier.  
   
--   Ouvrez Excel | **Données** | **Connexions existantes**. Filtrez la liste pour afficher uniquement les fichiers de connexions sur cet ordinateur. Recherchez la connexion à Adventure Works (examinez soigneusement le nom ; il peut y en avoir plusieurs). Ouvrez la connexion.  
+-   Ouvrez Excel | **Données** | **Connexions existantes**. Filtrez la liste pour afficher uniquement les fichiers de connexions sur cet ordinateur. Recherchez la connexion à Adventure Works (examinez soigneusement le nom ; il peut y en avoir plusieurs). Ouvrir la connexion.  
   
      Vous devriez voir les traductions en français de l'exemple de base de données Adventure Works.  
   
-     ![Tableau croisé dynamique Excel avec traductions en Français](media/ssas-localetest-excel.png "tableau croisé dynamique Excel avec traductions en Français")  
+     ![Tableau croisé dynamique Excel avec des traductions en français](media/ssas-localetest-excel.png "Tableau croisé dynamique Excel avec des traductions en français")  
   
  Vous pouvez utiliser SQL Server Profiler pour confirmer les paramètres régionaux. Cliquez sur un événement `Session Initialize` et examinez la liste des propriétés dans la zone de texte ci-dessous pour trouver `<localeidentifier>1036</localeidentifier>`.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66080863"
   
 -   Exécutez une requête MDX sur la base de données Adventure Works. Les résultats de la requête doivent être les traductions en français.  
   
-     ![Requête MDX avec traductions en Français dans SSMS](media/ssas-localetest-ssms.png "requête MDX avec traductions en Français dans SSMS")  
+     ![Requête MDX avec des traductions en français dans SSMS](media/ssas-localetest-ssms.png "Requête MDX avec des traductions en français dans SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Écriture de requêtes MDX dans une solution contenant des traductions  
  Les données affichées pour les noms des objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] correspondent à des traductions, mais les identificateurs de ces mêmes objets ne sont pas traduits. Chaque fois que possible, utilisez les identificateurs et les clés pour les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à la place des légendes et des noms traduits. Par exemple, utilisez les clés de membres à la place des noms de membres pour les instructions et les scripts MDX (Multidimensional Expressions) pour garantir la portabilité dans plusieurs langues.  
@@ -139,7 +139,7 @@ ms.locfileid: "66080863"
   
 3.  **Utiliser des formats de date ISO pour les informations de date et d'heure universelles**  
   
-     Un [expert Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) a cette recommandation : « J’utilise toujours l’ISO date format aaaa-mm-jj pour toutes les chaînes de date que je passe à des requêtes SQL ou MDX, car il est sans équivoque et fonctionne quel que soit le client ou les paramètres régionaux du serveur. Je pense que le serveur doit s'en remettre à ses paramètres régionaux lors de l'analyse d'un format de date ambigu, mais je pense également que si vous avez une option qui n'est pas ouverte à l'interprétation, mieux vaut choisir cela de toutes façons ».  
+     L’un des [Analysis Services experts](http://geekswithblogs.net/darrengosbell/Default.aspx) a cette recommandation : «J’utilise toujours le format de date ISO aaaa-mm-jj pour toutes les chaînes de date que je transmets aux requêtes dans SQL ou MDX, car il n’est pas ambigu et fonctionne indépendamment des paramètres régionaux du client ou du serveur. Je pense que le serveur doit s'en remettre à ses paramètres régionaux lors de l'analyse d'un format de date ambigu, mais je pense également que si vous avez une option qui n'est pas ouverte à l'interprétation, mieux vaut choisir cela de toutes façons ».  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66080863"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios de globalisation pour données multidimensionnelles Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Scénarios de globalisation pour Analysis Services données multidimensionnelles](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Rédiger des instructions Transact-SQL internationales](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775170"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70392017"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "64775170"
 Le pilote Microsoft OLE DB pour SQL Server (version 18.2.1) prend en charge l’encodage de serveur UTF-8. Pour plus d’informations sur la prise en charge UTF-8 SQL Server, voir :
 - [Prise en charge d'Unicode et du classement](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [Prise en charge d’UTF-8](#ctp23)
+
+> [!IMPORTANT]
+> Le pilote Microsoft OLE DB pour SQL Server utilise la fonction [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) pour déterminer l’encodage de la mémoire tampon d’entrée DBTYPE_STR. Les scénarios dans lesquels GetACP retourne un encodage UTF-8 ne sont pas pris en charge. Si la mémoire tampon doit stocker des données Unicode, le type de données de la mémoire tampon doit être défini sur DBTYPE_WSTR (encodée en UTF-16).
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Insertion de données dans une colonne CHAR ou VARCHAR encodée UTF-8
 Si vous créez une mémoire tampon de paramètres d’entrée pour l’insertion, elle est décrite à l’aide d’un tableau de [structures DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Chaque structure DBBINDING associe un seul paramètre à la mémoire tampon du consommateur et contient différentes informations, comme la longueur et le type de la valeur de données. Pour une mémoire tampon de paramètres d’entrée de type CHAR, le *wType* de la structure DBBINDING doit être défini sur DBTYPE_STR. Pour une mémoire tampon de paramètres d’entrée de type WCHAR, le *wType* de la structure DBBINDING doit être défini sur DBTYPE_WSTR.
@@ -65,7 +68,7 @@ Avec **CTP 2.2**, il est maintenant possible d’utiliser l’encodage de carac
 
 Avec **CTP 2.3**, il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec le classement BIN2 (UTF8_BIN2).
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 
 
 [Prise en charge d’UTF-16 dans OLE DB Driver pour SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)    

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+title: sys. DM _resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f94cc3ccd0278a3ae2f46707f2680f8d198db58a
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053304"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873918"
 ---
-# <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>Sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. DM _resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Statistiques des pools d’instantané renvoie à des intervalles de 15 secondes pour les 30 dernières minutes de ressource pour une base de données SQL Azure.  
+Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières minutes (128 recs au total) des statistiques des pools de ressources pour un Azure SQL Database.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|ID du pool de ressources. N'accepte pas la valeur NULL.
-|**name**|sysname|Le nom du pool de ressources. N'accepte pas la valeur NULL.|
-|**snapshot_time**|datetime2|Date/heure de l’instantané de statistiques de pool de ressources réalisé|
-|**duration_ms**|int|Durée entre l’instantané en cours et précédent|
+|**name**|sysname|Nom du pool de ressources. N'accepte pas la valeur NULL.|
+|**snapshot_time**|datetime2|Date et heure de l’instantané des statistiques du pool de ressources|
+|**duration_ms**|int|Durée entre l’instantané actuel et l’instantané précédent|
 |**statistics_start_time**|datetime2|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|
-|**active_session_count**|int|Nombre total de sessions actif dans l’instantané actuel|
-|**active_worker_count**|int|Nombre total de workers dans l’instantané actuel|
-|**delta_cpu_usage_ms**|int|Utilisation de l’UC en millisecondes depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
-|**delta_cpu_usage_preemptive_ms**|int|Appels win32 PreEmptive ne régissent pas par RG de processeur SQL, depuis la dernière capture instantanée|
-|**used_data_space_kb**|bigint|Espace total utilisé dans les bases de données utilisateur associés au pool de l’utilisateur|
-|**allocated_disk_space_kb**|bigint|Taille des bases de données utilisateur du fichier de données total dans associé avec le pool de l’utilisateur|
+|**active_session_count**|int|Nombre total de sessions actives dans l’instantané actuel|
+|**active_worker_count**|int|Nombre total de Workers dans l’instantané actuel|
+|**delta_cpu_usage_ms**|int|Utilisation de l’UC en millisecondes depuis le dernier instantané. N'accepte pas la valeur NULL.|
+|**delta_cpu_usage_preemptive_ms**|int|Appels de préemption Win32 non régis par le RG de l’UC SQL depuis le dernier instantané|
+|**used_data_space_kb**|bigint|Espace total utilisé dans les bases de données utilisateur associées au pool d’utilisateurs|
+|**allocated_disk_space_kb**|bigint|Taille totale du fichier de données des bases de données utilisateur dans le associé au pool d’utilisateurs|
 |**target_memory_kb**|bigint|Quantité de mémoire cible, en kilo-octets, que le pool de ressources tente d'atteindre. Cette valeur est basée sur les paramètres actuels et l'état du serveur. N'accepte pas la valeur NULL.|
 |**used_memory_kb**|bigint|Quantité de mémoire utilisée, en kilo-octets, pour le pool de ressources. N'accepte pas la valeur NULL.|
 |**cache_memory_kb**|bigint|Utilisation de la mémoire cache totale actuelle en kilo-octets. N'accepte pas la valeur NULL.|
@@ -53,50 +53,50 @@ Statistiques des pools d’instantané renvoie à des intervalles de 15 secondes
 |**active_memgrant_count**|bigint|Nombre actuel d'allocations de mémoire. N'accepte pas la valeur NULL.|
 |**active_memgrant_kb**|bigint|Somme, en kilo-octets (Ko), des allocations de mémoire actuelles. N'accepte pas la valeur NULL.|
 |**used_memgrant_kb**|bigint|Quantité totale de la mémoire utilisée (occultée) actuelle provenant des allocations de mémoire. N'accepte pas la valeur NULL.|
-|**delta_memgrant_timeout_count**|int|nombre de mémoire accorder des délais d’attente dans ce pool de ressources dans cette période. N'accepte pas la valeur NULL.|
+|**delta_memgrant_timeout_count**|int|nombre de délais d’expiration d’allocation de mémoire dans ce pool de ressources au cours de cette période. N'accepte pas la valeur NULL.|
 |**delta_memgrant_waiter_count**|int|Nombre de requêtes actuellement en attente d'allocations de mémoire. N'accepte pas la valeur NULL.|
-|**delta_out_of_memory_count**|int|Le nombre d’allocations de mémoire ayant échoué dans le pool depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
-|**delta_read_io_queued**|int|Le total de sorties de lecture empilées depuis la dernière capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
-|**delta_read_io_issued**|int|Le total de sorties de lecture émises depuis la dernière capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
-|**delta_read_io_completed**|int|Le total de sorties de lecture terminées depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
-|**delta_read_io_throttled**|int|Le total de sorties de lecture limitées depuis l’instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
-|**delta_read_bytes**|bigint|Nombre total d’octets lus depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
-|**delta_read_io_stall_ms**|int|Durée totale (en millisecondes) entre l’arrivée d’e/s en lecture et l’achèvement depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
-|**delta_read_io_stall_queued_ms**|int|Durée totale (en millisecondes) entre la lecture d’arrivée des e/s et problème depuis la dernière capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Valeur différente de zéro delta_read_io_stall_queued_ms signifie qu'e/s est affectée par RG.|
-|**delta_write_io_queued**|int|Le total de sorties d’écriture empilées depuis la dernière capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
-|**delta_write_io_issued**|int|Le total de sorties d’écriture émises depuis la dernière capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
-|**delta_write_io_completed**|int|Le total de sorties d’écriture terminées depuis la dernière capture instantanée. N'accepte pas la valeur NULL|
-|**delta_write_io_throttled**|int|L’écriture total IOs limitées depuis la dernière capture instantanée. N'accepte pas la valeur NULL|
-|**delta_write_bytes**|bigint|Le nombre total d’octets écrits depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
-|**delta_write_io_stall_ms**|int|Durée totale (en millisecondes) entre l’arrivée de d’e/s d’écriture et de saisie semi-automatique depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
-|**delta_write_io_stall_queued_ms**|int|Durée totale (en millisecondes) entre l’arrivée de d’e/s d’écriture et leur émission depuis la dernière capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
-|**delta_io_issue_delay_ms**|int|Durée totale (en millisecondes) entre l’émission planifiée et l’émission réelle des e/s depuis la dernière capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
-|**max_iops_per_volume**|int|E/s maximales par seconde (IOPS) par le paramètre de volume de disque pour ce Pool. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**delta_out_of_memory_count**|int|Nombre d’échecs d’allocation de mémoire dans le pool depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
+|**delta_read_io_queued**|int|Nombre total d’IOs lus mis en file d’attente depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**delta_read_io_issued**|int|Nombre total d’IOs lu émis depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**delta_read_io_completed**|int|L’e/s de lecture totale s’est terminée depuis le dernier instantané. N'accepte pas la valeur NULL.|
+|**delta_read_io_throttled**|int|Nombre total d’IOs de lecture limitées depuis la capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**delta_read_bytes**|bigint|Nombre total d’octets lus depuis le dernier instantané. N'accepte pas la valeur NULL.|
+|**delta_read_io_stall_ms**|int|Durée totale (en millisecondes) entre l’arrivée et l’achèvement des e/s de lecture depuis le dernier instantané. N'accepte pas la valeur NULL.|
+|**delta_read_io_stall_queued_ms**|int|Durée totale (en millisecondes) entre l’arrivée des e/s de lecture et le problème depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Un delta_read_io_stall_queued_ms différent de zéro signifie que les e/s sont affectées par RG.|
+|**delta_write_io_queued**|int|Nombre total d’IOs d’écriture mis en file d’attente depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**delta_write_io_issued**|int|Nombre total d’e/s d’écriture émises depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**delta_write_io_completed**|int|L’e/s d’écriture totale est terminée depuis le dernier instantané. N'accepte pas la valeur NULL|
+|**delta_write_io_throttled**|int|Nombre total d’IOs d’écriture limité depuis le dernier instantané. N'accepte pas la valeur NULL|
+|**delta_write_bytes**|bigint|Nombre total d’octets écrits depuis la dernière capture instantanée. N'accepte pas la valeur NULL.|
+|**delta_write_io_stall_ms**|int|Durée totale (en millisecondes) entre l’arrivée des e/s d’écriture et la fin depuis le dernier instantané. N'accepte pas la valeur NULL.|
+|**delta_write_io_stall_queued_ms**|int|Durée totale (en millisecondes) entre l’arrivée des e/s d’écriture et le problème depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**delta_io_issue_delay_ms**|int|Durée totale (en millisecondes) entre le problème planifié et le problème réel des e/s depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
+|**max_iops_per_volume**|int|Paramètre maximum d’e/s par seconde (IOPS) par volume de disque pour ce pool. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
 |**max_memory_kb**|bigint|Quantité maximale de mémoire, en kilo-octets, dont peut disposer le pool de ressources. Cette valeur est basée sur les paramètres actuels et l'état du serveur. N'accepte pas la valeur NULL.
-|**max_log_rate_kb**|bigint|Taux de journal maximal (en kilo-octets par seconde) au niveau de pool de ressources.|
-|**max_data_space_kb**|bigint|Paramètre pour ce pool élastique (en Ko) de la limite de stockage de max pool élastique.|
+|**max_log_rate_kb**|bigint|Taux de journal maximal (kilo-octets par seconde) au niveau du pool de ressources.|
+|**max_data_space_kb**|bigint|Paramètre de limite de stockage du pool élastique maximal pour ce pool élastique, en kilo-octets.|
 |**max_session**|int|Limite de session pour le pool|
-|**max_worker**|int|Nombre maximal de threads pour le pool|
+|**max_worker**|int|Limite de travail pour le pool|
 |**min_cpu_percent**|int|Configuration actuelle de la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
 |**max_cpu_percent**|int|Configuration actuelle de la bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
-|**cap_cpu_percent**|int|Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite le niveau de la bande passante processeur maximal pour le niveau spécifié. La plage autorisée pour la valeur est comprise entre 1 et 100. N'accepte pas la valeur NULL.|
-|**min_vcores**|decimal(5,2)|Configuration actuelle de la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention du processeur.  Dans les unités de vCores|
+|**cap_cpu_percent**|int|Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite le niveau de bande passante processeur maximal au niveau spécifié. La plage autorisée pour la valeur est comprise entre 1 et 100. N'accepte pas la valeur NULL.|
+|**min_vcores**|decimal(5,2)|Configuration actuelle de la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention du processeur.  En unités de vCores|
 |**max_vcores**|decimal(5,2)|Configuration actuelle de la bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur.  Dans l’unité de vCores|
-|**cap_vcores**|decimal(5,2)|Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront.  Dans l’unité sur des vCores|
-|**instance_cpu_count**|int|Nombre de processeurs configurés pour l’instance|
-|** instance_cpu_percent|decimal(5,2)|Pourcentage d’UC configurés pour l’instance|
+|**cap_vcores**|decimal(5,2)|Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront.  Dans l’unité sur vCores|
+|**instance_cpu_count**|int|Nombre de PROCESSEURs configurés pour l’instance|
+|**instance_cpu_percent|decimal(5,2)|Pourcentage d’UC configuré pour l’instance|
 |**instance_vcores**|decimal(5,2)|Nombre de vCores configurés pour l’instance|
-|**delta_log_bytes_used**|decimal(5,2)|Génération de journal total (en octets) au niveau du pool depuis la dernière capture instantanée|
-|**avg_login_rate_percent**|decimal(5,2)|Nombre de connexions depuis la dernière capture instantanée, comparée au nombre maximal de connexions|
-|**delta_vcores_used**|decimal(5,2)|Utilisation de calcul en nombre de vCores depuis la dernière capture instantanée.|
-|**cap_vcores_used_percent**|decimal(5,2)|Utilisation de calcul moyenne en pourcentage de la limite du pool.|
-|**instance_vcores_used_percent**|decimal(5,2)|Utilisation de calcul moyenne en pourcentage de la limite de l’instance SQL.|
-|**avg_data_io_percent**|decimal(5,2)|Utilisation moyenne des e/s en pourcentage de la limite du pool.|
-|**avg_log_write_percent**|decimal(5,2)|L’utilisation des ressources d’écriture moyenne en pourcentage de la limite du pool.|
-|**avg_storage_percent**|decimal(5,2)|Utilisation de stockage moyen en pourcentage de la limite de stockage du pool.|
-|**avg_allocated_storage_percent**|decimal(5,2)|Le pourcentage d’espace de données allouée par toutes les bases de données dans le pool élastique. C’est le rapport d’espace de données allouée à la taille maximale de données pour le pool élastique. Pour plus d’informations, consultez : Gestion de l’espace fichier dans la base de données SQL|
-|**max_worker_percent**|decimal(5,2)|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite du pool.|
-|**max_session_percent**|decimal(5,2)|Nombre maximal de sessions simultané en pourcentage de la limite du pool.|
+|**delta_log_bytes_used**|decimal(5,2)|Génération totale du journal (en octets) au niveau du pool depuis le dernier instantané|
+|**avg_login_rate_percent**|decimal(5,2)|Nombre de connexions depuis le dernier instantané, par rapport à la limite de connexion|
+|**delta_vcores_used**|decimal(5,2)|Utilisation du calcul du nombre de vCores depuis le dernier instantané.|
+|**cap_vcores_used_percent**|decimal(5,2)|Utilisation moyenne du calcul en pourcentage de la limite du pool.|
+|**instance_vcores_used_percent**|decimal(5,2)|Utilisation moyenne du calcul en pourcentage de la limite de l’instance SQL.|
+|**avg_data_io_percent**|decimal(5,2)|Utilisation moyenne des e/s en pourcentage en fonction de la limite du pool.|
+|**avg_log_write_percent**|decimal(5,2)|Utilisation moyenne des ressources d’écriture en pourcentage de la limite du pool.|
+|**avg_storage_percent**|decimal(5,2)|Utilisation moyenne du stockage en pourcentage de la limite de stockage du pool.|
+|**avg_allocated_storage_percent**|decimal(5,2)|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique. Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique. Pour plus d’informations, consultez : Gestion de l’espace de fichier dans SQL DB|
+|**max_worker_percent**|decimal(5,2)|Nombre maximal de threads de travail simultanés (demandes) en pourcentage en fonction de la limite du pool.|
+|**max_session_percent**|decimal(5,2)|Nombre maximal de sessions simultanées en pourcentage en fonction de la limite du pool.|
 |||
 
 ## <a name="permissions"></a>Autorisations
@@ -105,20 +105,20 @@ Cette vue nécessite l’autorisation VIEW SERVER STATE.
 
 ## <a name="remarks"></a>Notes
 
-Les utilisateurs peuvent accéder à cette vue de gestion dynamique pour surveiller de près de la consommation des ressources en temps réel pour le pool de charge de travail utilisateur, ainsi que des pools internes du système de l’instance de base de données SQL Azure.
+Les utilisateurs peuvent accéder à cette vue de gestion dynamique pour surveiller la consommation des ressources en temps quasi réel pour le pool de charges de travail utilisateur, ainsi que pour les pools internes du système de Azure SQL Database instance.
 
 > [!IMPORTANT]
-> La plupart des données signalées par cette DMV est prévu pour une utilisation interne et est susceptible de changer.
+> La plupart des données en surface par cette DMV sont destinées à la consommation interne et peuvent faire l’objet de modifications.
 
 ## <a name="examples"></a>Exemples
 
-L’exemple suivant retourne les données de taux de journal maximale et la consommation à chaque instantané par pool d’utilisateur  
+L’exemple suivant retourne la quantité maximale de données de taux de journal et la consommation de chaque instantané par pool d’utilisateurs  
 
 ```sql
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-L’exemple suivant renvoie des informations similaires en tant que sys.elastic_pool_resource_stats sans avoir à se connecter à Master logique
+L’exemple suivant retourne des informations similaires à sys. elastic_pool_resource_stats sans avoir à se connecter au maître logique
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -134,6 +134,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Gouvernance de taux de journal de traduction](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Limites de ressources DTU de pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Limites de ressources de pool élastique vCore](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Gouvernance du taux de journal des traductions](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Limites des ressources de DTU du pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Limites de ressources vCore du pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

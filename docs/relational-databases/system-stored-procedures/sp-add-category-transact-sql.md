@@ -17,19 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b29f3e348800c300698533fb8aad47066bd0b46a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941779"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810553"
 ---
-# <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Ajoute la catégorie spécifiée de travaux, alertes ou opérateurs au serveur.  
+  Ajoute la catégorie spécifiée de travaux, alertes ou opérateurs au serveur. Pour une autre méthode, consultez [créer une catégorie de travaux à l’aide de SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+ > [!IMPORTANT]  
+ > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +45,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'` La classe de la catégorie à ajouter. *classe* est **varchar(8)** avec une valeur par défaut du travail, et peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'`Classe de la catégorie à ajouter. la classe est de *type* **varchar (8)** avec une valeur par défaut Job et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -50,27 +53,27 @@ sp_add_category
 |ALERT|Ajoute une catégorie d'alertes.|  
 |OPERATOR|Ajoute une catégorie d'opérateurs.|  
   
-`[ @type = ] 'type'` Le type de catégorie à ajouter. *type* est **varchar(12)** , avec une valeur par défaut **LOCAL**, et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'`Type de catégorie à ajouter. le *type* est **varchar (12)** , avec une valeur par défaut **locale**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |LOCAL|Catégorie de travaux locaux.|  
-|PLUSIEURS SERVEURS|Une catégorie de travaux multiserveur.|  
-|Aucune|Une catégorie pour une classe différente de JOB **.**|  
+|MULTI-SERVEUR|Catégorie de travaux multiserveurs.|  
+|Aucune|Catégorie d’une classe autre que JOB **.**|  
   
-`[ @name = ] 'name'` Le nom de la catégorie à ajouter. Le nom doit être unique dans la classe spécifiée. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'`Nom de la catégorie à ajouter. Le nom doit être unique dans la classe spécifiée. *Name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- **sp_add_category** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_add_category** doit être exécuté à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_category**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_add_category**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une catégorie de travail local nommée `AdminJobs`.  
