@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160695"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988095"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>Notes de publication pour les clusters Big Data SQL Server
 
@@ -30,14 +30,16 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|SQL Server Always On groupe de disponibilité |Lorsque vous déployez un cluster SQL Server Big Data, vous pouvez configurer le déploiement pour créer un groupe de disponibilité à fournir:<br/><br/>-Haute disponibilité <br/><br/>-Lecture-montée en puissance parallèle <br/><br/>-Insertion de données avec montée en puissance parallèle dans le pool de données<br/><br>Consultez [déployer avec une haute disponibilité](../big-data-cluster/deployment-high-availability.md). |
+|SQL Server Always On groupe de disponibilité |Lorsque vous déployez un cluster SQL Server Big Data, vous pouvez configurer le déploiement pour créer un groupe de disponibilité à fournir :<br/><br/>-Haute disponibilité <br/><br/>-Lecture-montée en puissance parallèle <br/><br/>-Insertion de données avec montée en puissance parallèle dans le pool de données<br/><br>Consultez [déployer avec une haute disponibilité](../big-data-cluster/deployment-high-availability.md). |
 |`azdata` |Installation simplifiée de l’outil avec le [Gestionnaire d’installation](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`commande](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`commande](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[Téléchargez la version Release candidate de Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Ajout de bloc-notes pour la résolution des problèmes via 2019 SQL Server livre Jupyter guide.<br/><br/>Expérience de connexion du contrôleur ajoutée.<br/><br/>Ajout d’un tableau de bord de contrôleur pour afficher les points de terminaison de service, afficher l’état d’intégrité du cluster et accéder aux blocs-notes de dépannage.<br/><br/>Amélioration des performances de sortie/modification des cellules du bloc-notes.|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problèmes connus
 
-Le numéro de build de l’actualisation des clusters de Big `15.0.1900.47`Data SQL Server 2019 est.
+* Le numéro de build de l’actualisation des clusters de Big `15.0.1900.47`Data SQL Server 2019 est.
+
+* Le profil de déploiement « kubeadm-prod » n’est pas pris en charge dans les clusters Big Data SQL Server 2019 avec le numéro de version ci-dessus. Au lieu de cela, utilisez le profil « kubeadm-dev-test » pour les déploiements Kubeadm.
 
 ## <a id="ctp32"></a> CTP 3.2 (juillet)
 
@@ -167,7 +169,7 @@ Les sections suivantes décrivent les problèmes connus et les limitations de ce
 
 #### <a name="kibana-logs-dashboards"></a>Tableaux de bord de journaux Kibana
 
-- Entre Aris CTP 3.0 et 3.1, la version de Kibana a été mise à niveau de 6.3.1 vers 7.0.1.  Le navigateur Edge n’est plus compatible avec Kibana. Les utilisateurs voient une page vierge lors du chargement de la version actuelle des tableaux de bord Kibana dans Edge. Consultez [ici]( https://www.elastic.co/support/matrix#matrix_browse) les navigateurs pris en charge pour Kibana.rs 
+- Entre Aris CTP 3.0 et 3.1, la version de Kibana a été mise à niveau de 6.3.1 vers 7.0.1.  Le navigateur Microsoft Edge n’est pas compatible avec Kibana. Les utilisateurs verront une page vierge lors du chargement de la version actuelle des tableaux de bord Kibana dans Microsoft Edge. Consultez [ici]( https://www.elastic.co/support/matrix#matrix_browse) les navigateurs pris en charge pour Kibana.rs 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (mai)
@@ -816,4 +818,4 @@ Les sections suivantes fournissent des problèmes connus [!INCLUDE[big-data-clus
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont?](big-data-cluster-overview.md).
+Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont ?](big-data-cluster-overview.md).

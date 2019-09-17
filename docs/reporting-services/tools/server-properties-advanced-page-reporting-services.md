@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463584"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908263"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
 
@@ -93,9 +93,9 @@ Indique si la réponse à la requête du client peut être exposée quand l’in
 
 **AccessControlMaxAge** Spécifie le nombre de secondes pendant lesquelles les résultats de la requête préliminaire peuvent être mis en cache. La valeur par défaut est 600 (10 minutes).
 
-**AllowedResourceExtensionsForUpload** ensemble d’extensions de ressources qui peuvent être téléchargés sur le serveur de rapports. Les extensions pour les types de fichiers intégrés comme &ast;.rdl et &ast;.pbix ne doivent pas obligatoirement être incluses. La valeur par défaut est « &ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx ».
+**AllowedResourceExtensionsForUpload (Power BI Report Server et Reporting Services 2017 et versions ultérieures uniquement)** Ensemble d’extensions de ressources qui peuvent être chargées sur le serveur de rapports. Les extensions pour les types de fichiers intégrés comme &ast;.rdl et &ast;.pbix ne doivent pas obligatoirement être incluses. La valeur par défaut est « &ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx ».
 
-**RestrictedResourceMimeTypeForUpload** ensemble d’utilisateurs de types mime ne sont pas autorisés à charger du contenu avec. Toutes les ressources qui sont déjà stockées avec un type mime restreint ne peuvent être téléchargés comme une application/octet-stream au lieu d’être ouvert/exécuté par le navigateur.  Par défaut, cette liste ne contient aucun élément restreint, mais il est recommandé que les organisations remplissent cette option pour fournir une expérience plus sûre.
+**RestrictedResourceMimeTypeForUpload** Ensemble de types MIME que les utilisateurs ne sont pas autorisés à télécharger du contenu avec. Toutes les ressources qui sont déjà stockées avec un type MIME restreint peuvent uniquement être téléchargées en tant qu’application/octet-stream au lieu d’être ouvertes/exécutées par le navigateur.  Par défaut, il n’y a pas d’éléments restreints dans cette liste, mais nous recommandons aux organisations de les alimenter pour offrir l’expérience la plus sécurisée.
 
 **EditSessionCacheLimit**  
 Spécifie le nombre des entrées de cache de données qui peuvent être actives dans une session d'édition de rapport. La valeur par défaut est 5.  

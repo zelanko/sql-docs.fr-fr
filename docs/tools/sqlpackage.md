@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190375"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774209"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnorePermissions = (booléen «true»)|Spécifie si les autorisations doivent être ignorées.|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|Indique si les relations entre les utilisateurs et les connexions sont ignorées.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Spécifie le type de stockage de sauvegarde pour le modèle de schéma utilisé lors de l'extraction.|
-|**/p:**|TableData=(STRING)|Indique la table à partir de laquelle les données sont extraites. Spécifiez le nom de la table avec ou sans les crochets entourant les parties du nom au format suivant: schema_name. table_identifier.|
+|**/p:**|TableData=(STRING)|Indique la table à partir de laquelle les données sont extraites. Spécifiez le nom de la table avec ou sans les crochets entourant les parties du nom au format suivant : schema_name. table_identifier.|
+|**/p:**| TempDirectoryForTableData = (chaîne)|Spécifie le répertoire temporaire utilisé pour mettre en mémoire tampon les données de table avant d’être écrites dans le fichier de package.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|Spécifie si le fichier dacpac extrait doit être vérifié.|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>Paramètres de publication, propriétés et variables SQLCMD
@@ -149,6 +150,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|Ce paramètre détermine la façon dont le classement de la base de données est géré durant le déploiement ; par défaut, le classement de la base de données cible sera mis à jour s'il ne correspond pas à celui spécifié par la source. Lorsque cette option est définie, le classement de la base de données (ou du serveur) cible doit être utilisé.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Spécifie si la base de données cible doit être mise à jour ou bien supprimée, puis recréée lors de la publication vers une base de données.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Définit l’édition d’un Azure SQL Database.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')|Spécifie le délai d’expiration (en secondes) du verrouillage de la base de données lors de l'exécution de requêtes dans SQL Server. Utilisez-1 pour attendre indéfiniment.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Définit la taille maximale, en Go, d’une base de données Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Définit le niveau de performances d’une base de données Azure SQL Database, par exemple « P0 » ou « S1 ».|
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|Si la valeur est True, la base de données est définie en mode mono-utilisateur avant le déploiement.|
@@ -207,6 +209,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|Spécifie si les différences dans la valeur de la clause WITH NOCHECK pour les clés étrangères sont ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|Inclure tous les éléments composites dans une seule et même opération de publication.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Spécifie si les instructions transactionnelles doivent être utilisées si possible lors de la publication dans une base de données.|
+|**/p:**|LongRunningCommandTimeout = (INT32)|Spécifie le délai d'expiration (en secondes) de la commande longue lors de l'exécution de requêtes dans SQL Server. Utilisez 0 pour attendre indéfiniment.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Spécifie que la publication doit toujours supprimer, puis recréer un assembly en cas de différence, au lieu d'insérer une instruction ALTER ASSEMBLY.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Spécifie si un nouveau fichier est créé quand un FileGroup est créé dans la base de données cible.|
 |**/p:**|RegisterDataTierApplication = (booléen)|Spécifie si le schéma est inscrit avec le serveur de la base de données.|
@@ -267,7 +270,8 @@ Une action d’exportation SqlPackage. exe exporte une base de données active �
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Spécifie le délai d'expiration de la commande (en secondes) lors de l'exécution de requêtes SQL Server.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Spécifie le type de stockage de sauvegarde pour le modèle de schéma utilisé lors de l'extraction.|
-|**/p:**|TableData=(STRING)|Indique la table à partir de laquelle les données sont extraites. Spécifiez le nom de la table avec ou sans les crochets entourant les parties du nom au format suivant: schema_name. table_identifier.|
+|**/p:**|TableData=(STRING)|Indique la table à partir de laquelle les données sont extraites. Spécifiez le nom de la table avec ou sans les crochets entourant les parties du nom au format suivant : schema_name. table_identifier.|
+|**/p:**|TempDirectoryForTableData = (chaîne)|Spécifie le répertoire temporaire utilisé pour mettre en mémoire tampon les données de table avant d’être écrites dans le fichier de package.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Spécifie la version de moteur cible attendue. Cela affecte s’il faut autoriser les objets pris en charge par les serveurs Azure SQL Database avec les fonctionnalités V12, telles que les tables mémoire optimisées, dans le BacPac généré.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Indique si les types de document de texte intégral pris en charge pour Microsoft Azure SQL Database v12 doivent être vérifiés.|
   

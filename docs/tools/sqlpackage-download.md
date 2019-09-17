@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 406fb50ceaba177d02bf8d79d0c37191dbe178f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986254"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874391"
 ---
 # <a name="download-and-install-sqlpackage"></a>Télécharger et installer sqlpackage
 
@@ -24,9 +24,10 @@ Téléchargez et installez la dernière version de .NET Framework et les version
 
 |Plateforme|Télécharger|Date de publication|Options de version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 avril 2019|18.2|15.0.4384.2|
-|macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087247)|15 avril 2019 | 18.2 |15.0.4384.2|
-|Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087431)|15 avril 2019 | 18.2 |15.0.4384.2|
+|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 septembre 2019|18,3|15.0.4532.1|
+|macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102894)|6 septembre 2019| 18,3|15.0.4532.1|
+|Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102978)|6 septembre 2019| 18,3|15.0.4532.1|
+|Windows .NET Core (version préliminaire)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102979)|6 septembre 2019| 18,3|15.0.4532.1|
 
 Pour plus d’informations sur la dernière version, consultez les [notes de publication](release-notes-sqlpackage.md).
 
@@ -36,14 +37,26 @@ Pour plus d’informations sur la dernière version, consultez les [notes de pub
 
 Cette version de sqlpackage comprend une expérience du programme d’installation Windows standard et un fichier .zip : 
 
-1. Téléchargez et exécutez le [programme d’installation DacFramework.msi pour Windows](https://go.microsoft.com/fwlink/?linkid=2087429).
+1. Téléchargez et exécutez le [programme d’installation DacFramework.msi pour Windows](https://go.microsoft.com/fwlink/?linkid=2102893).
 2. Ouvrez une nouvelle fenêtre d’invite de commandes et exécutez sqlpackage.exe
     - sqlpackage est installé dans le dossier ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```
     - En cas d’installation de la version x86 sur un ordinateur x64, sqlpackage est installé dans le dossier ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```
 
-## <a name="get-sqlpackage-preview-for-macos"></a>Obtenir sqlpackage (préversion) pour macOS
+## <a name="get-sqlpackage-net-core-preview-for-windows"></a>Obtenir SqlPackage .NET Core (version préliminaire) pour Windows
 
-1. Téléchargez [sqlpackage pour macOS](https://go.microsoft.com/fwlink/?linkid=2087247).
+1. Télécharger [sqlpackage pour Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
+2. Pour extraire le fichier en cliquant avec le bouton droit sur le fichier dans l’Explorateur Windows, puis en sélectionnant l’option « extraire tout... », sélectionnez le répertoire cible.
+3. Ouvrez une nouvelle fenêtre de terminal, puis le CD-ROM à l’emplacement où SqlPackage a été exracted :
+
+   **Installation de fichier .zip :**
+
+   ```bash
+   sqlpackage
+   ```
+
+## <a name="get-sqlpackage-net-core-preview-for-macos"></a>Obtenir SqlPackage .NET Core (version préliminaire) pour macOS
+
+1. Téléchargez [sqlpackage pour macOS](https://go.microsoft.com/fwlink/?linkid=2102894).
 2. Pour extraire le fichier et lancer sqlpackage, ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation de fichier .zip :**
@@ -56,9 +69,9 @@ Cette version de sqlpackage comprend une expérience du programme d’installati
    sqlpackage
    ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>Obtenir sqlpackage (préversion) pour Linux
+## <a name="get-sqlpackage-net-core-preview-for-linux"></a>Obtenir SqlPackage .NET Core (version préliminaire) pour Linux
 
-1. Téléchargez [sqlpackage pour Linux](https://go.microsoft.com/fwlink/?linkid=2087431) à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
+1. Téléchargez [sqlpackage pour Linux](https://go.microsoft.com/fwlink/?linkid=2102978) à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
 2. Pour extraire le fichier et lancer sqlpackage, ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation de fichier .zip :**

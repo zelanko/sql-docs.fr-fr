@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307635"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910836"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68307635"
   
 -   La table n'est pas en cours de réplication.  
   
--   Le verrouillage de la table est activé (à l'aide de TABLOCK). Concernant les tables avec index columnstore cluster, vous n’avez pas besoin de TABLOCK pour la journalisation minimale.  En outre, seules les données chargées dans des rowgroups compressés font l’objet d’une journalisation minimale nécessitant une valeur BatchSize de 102 400 ou plus.  
+-   Le verrouillage de la table est activé (à l'aide de TABLOCK). 
   
     > [!NOTE]  
     >  Bien que les insertions de données ne soient pas consignées dans le journal des transactions lors des opérations d'importation en bloc à journalisation minimale, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] consigne tout de même les allocations d'extensions chaque fois qu'une nouvelle extension est allouée à la table.  

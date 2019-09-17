@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc461f1653c0d135df49384c0ad8706082fdff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937625"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278768"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restaurer une sauvegarde de base de données à l’aide de SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,27 +108,27 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
     
 8. Pour afficher ou sélectionner les options avancées, dans la page **Options**, dans le volet **Options de restauration**, vous pouvez choisir les options suivantes si elles s’appliquent à votre situation :    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  Options**WITH** (non obligatoires) :    
+   1. Options**WITH** (non obligatoires) :    
     
-        -   **Remplacer la base de données existante (WITH REPLACE)**    
+     - **Remplacer la base de données existante (WITH REPLACE)**    
     
-        -   **Conserver les paramètres de la réplication (WITH KEEP_REPLICATION)**    
+     - **Conserver les paramètres de la réplication (WITH KEEP_REPLICATION)**    
     
-        -   **Restreindre l'accès à la base de données restaurée (WITH RESTRICTED_USER)**    
+     - **Restreindre l'accès à la base de données restaurée (WITH RESTRICTED_USER)**    
     
-    2.  Sélectionnez une option pour la zone **État de récupération** . Cette zone détermine l'état de la base de données à l'issue de l'opération de restauration.    
+   2. Sélectionnez une option pour la zone **État de récupération** . Cette zone détermine l'état de la base de données à l'issue de l'opération de restauration.    
     
-        -   **RESTORE WITH RECOVERY** est le comportement par défaut qui laisse la base de données opérationnelle en annulant les transactions non validées. Les journaux des transactions supplémentaires ne peuvent pas être restaurés. Choisissez cette option si vous restaurez toutes les sauvegardes nécessaires maintenant.    
+     - **RESTORE WITH RECOVERY** est le comportement par défaut qui laisse la base de données opérationnelle en annulant les transactions non validées. Les journaux des transactions supplémentaires ne peuvent pas être restaurés. Choisissez cette option si vous restaurez toutes les sauvegardes nécessaires maintenant.    
     
-        -   **RESTORE WITH NORECOVERY** qui laisse la base de données non opérationnelle et n’annule pas les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. La base de données ne peut pas être utilisée tant qu'elle n'est pas récupérée.    
+     - **RESTORE WITH NORECOVERY** qui laisse la base de données non opérationnelle et n’annule pas les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. La base de données ne peut pas être utilisée tant qu'elle n'est pas récupérée.    
     
-        -   **RESTORE WITH STANDBY** qui laisse la base de données en lecture seule. Elle annule les transactions non validées, mais enregistre les actions d'annulation dans un fichier afin de rendre réversibles les effets de la récupération.    
+     - **RESTORE WITH STANDBY** qui laisse la base de données en lecture seule. Elle annule les transactions non validées, mais enregistre les actions d'annulation dans un fichier afin de rendre réversibles les effets de la récupération.    
     
-    3.  **Effectuez la sauvegarde de la fin du journal avant la restauration.** Les scénarios de restauration ne nécessitent pas tous une sauvegarde de la fin du journal.  Pour plus d’informations, consultez **Scénarios qui nécessitent une sauvegarde de la fin du journal** dans [Sauvegardes de la fin du journal (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
-    4.  Les opérations de restauration peuvent échouer s'il existe des connexions actives à la base de données. Activez l'option **Fermer les connexions existantes** pour garantir que toutes les connexions actives entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et la base de données sont fermées. Cette case à cocher définit la base de données en mode mono-utilisateur avant d'effectuer les opérations de restauration, et définit la base de données en mode multi-utilisateur une fois l'opération terminée.    
-    5.  Sélectionnez **Demander confirmation avant chaque restauration de sauvegarde** si vous souhaitez être invité entre chaque opération de restauration. Cela n'est généralement pas nécessaire à moins que la base de données ne soit volumineuse et que vous ne souhaitiez surveiller l'état de l'opération de restauration.    
+   3. **Effectuez la sauvegarde de la fin du journal avant la restauration.** Les scénarios de restauration ne nécessitent pas tous une sauvegarde de la fin du journal.  Pour plus d’informations, consultez **Scénarios qui nécessitent une sauvegarde de la fin du journal** dans [Sauvegardes de la fin du journal (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+  
+   4. Les opérations de restauration peuvent échouer s'il existe des connexions actives à la base de données. Activez l'option **Fermer les connexions existantes** pour garantir que toutes les connexions actives entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et la base de données sont fermées. Cette case à cocher définit la base de données en mode mono-utilisateur avant d'effectuer les opérations de restauration, et définit la base de données en mode multi-utilisateur une fois l'opération terminée.    
+  
+   5. Sélectionnez **Demander confirmation avant chaque restauration de sauvegarde** si vous souhaitez être invité entre chaque opération de restauration. Cela n'est généralement pas nécessaire à moins que la base de données ne soit volumineuse et que vous ne souhaitiez surveiller l'état de l'opération de restauration.    
     
 Pour plus d’informations sur ces options de restauration, consultez [Restaurer la base de données &#40;page Options&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
@@ -212,29 +212,29 @@ Les deux exemples ci-dessous effectuent une restauration de `Sales` à partir d�
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   Restaurer une sauvegarde distribuée sur une base de données existante quand il existe une signature d’accès partagé.
 Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste.  Une signature d’accès partagé associée à la stratégie d’accès stockée a été créée pour le conteneur `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  Les étapes sont essentiellement les mêmes s’il existe déjà des informations d’identification SQL Server.  La base de données `Sales` existe actuellement sur le serveur.  Les fichiers de sauvegarde sont `Sales_stripe1of2_20160601.bak` et `Sales_stripe2of2_20160601.bak`.  
-*  
-7.  Sélectionnez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la liste déroulante **Conteneur de stockage Azure** si les informations d’identification SQL Server existent déjà. Sinon, entrez manuellement le nom du conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
-8.  Entrez la signature d’accès partagé dans la zone de texte enrichi **Signature d’accès partagé** .
-9.  Cliquez sur **OK** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
-10. Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Maintenez la touche Ctrl enfoncée et sélectionnez les fichiers `Sales_stripe1of2_20160601.bak` et `Sales_stripe2of2_20160601.bak`.
-12. Cliquez sur **OK**.
-13. Cliquez sur **OK** pour revenir à la page **Général** .
-14. Dans le volet **Sélectionner une page** , cliquez sur **Options** .
-15. Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)** .
-16. Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
-17. Dans la section **Connexions au serveur** , sélectionnez **Fermer les connexions existantes à la base de données de destination**.
-18. Cliquez sur **OK**.
+
+1.  Sélectionnez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la liste déroulante **Conteneur de stockage Azure** si les informations d’identification SQL Server existent déjà. Sinon, entrez manuellement le nom du conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
+1. Entrez la signature d’accès partagé dans la zone de texte enrichi **Signature d’accès partagé** .
+1. Cliquez sur **OK** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
+1. Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Maintenez la touche Ctrl enfoncée et sélectionnez les fichiers `Sales_stripe1of2_20160601.bak` et `Sales_stripe2of2_20160601.bak`.
+1. Cliquez sur **OK**.
+1. Cliquez sur **OK** pour revenir à la page **Général** .
+1. Dans le volet **Sélectionner une page** , cliquez sur **Options** .
+1. Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)** .
+1. Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
+1. Dans la section **Connexions au serveur** , sélectionnez **Fermer les connexions existantes à la base de données de destination**.
+1. Cliquez sur **OK**.
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   Il n’existe aucune signature d’accès partagé.
 Dans cet exemple, la base de données `Sales` n’existe pas sur le serveur.
-7.  Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Se connecter à un abonnement Microsoft** .  
-8.  Terminez la boîte de dialogue **Se connecter à un abonnement Microsoft** et cliquez sur **OK** pour revenir à la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** .  Pour plus d’informations, consultez [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
-9.  Cliquez sur **OK** dans la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
-10. Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Sélectionnez le fichier de sauvegarde, puis cliquez **OK**.
-12. Cliquez sur **OK** pour revenir à la page **Général** .
-13. Cliquez sur **OK**.
+1. Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Se connecter à un abonnement Microsoft** .  
+1. Terminez la boîte de dialogue **Se connecter à un abonnement Microsoft** et cliquez sur **OK** pour revenir à la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** .  Pour plus d’informations, consultez [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
+1. Cliquez sur **OK** dans la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
+1. Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Sélectionnez le fichier de sauvegarde, puis cliquez **OK**.
+1. Cliquez sur **OK** pour revenir à la page **Général** .
+1. Cliquez sur **OK**.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Restaurer une sauvegarde locale dans le stockage Microsoft Azure (URL)
 La base de données `Sales` sera restaurée dans le conteneur de stockage Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` à partir d’une sauvegarde située dans `E:\MSSQL\BAK`.  Les informations d’identification SQL Server pour le conteneur Azure ont déjà été créées.  Il doit déjà exister des informations d’identification SQL Server pour le conteneur de destination, car elles ne peuvent pas être créées par la tâche **Restaurer** .  La base de données `Sales` n’existe pas sur le serveur actuellement.

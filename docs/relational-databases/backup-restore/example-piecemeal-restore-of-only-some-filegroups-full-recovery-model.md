@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 643ffbb29267a9e26a66e1b35cc55f3a88ca8789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec01941d4e8b333f3c29a38fd701b051acf04721
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089651"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279490"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>Exemple : Restauration fragmentaire de quelques groupes de fichiers (mode de restauration complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,18 +72,16 @@ ms.locfileid: "68089651"
   
 4.  Restauration en ligne du groupe de fichiers `B`.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Files in filegroup `B` are restored any time thereafter.  
+   Les fichiers du groupe de fichiers `B` sont restaurés à n'importe quel moment ensuite.  
   
-    > [!NOTE]  
-    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
+   > [!NOTE]  
+   >  La sauvegarde du groupe de fichiers `B` a été effectuée après que le groupe de fichiers soit passé en lecture seule, ces fichiers n'ont donc pas besoin d'être restaurés par progression.  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
-    ```  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
+   ```  
   
-     All filegroups are now online.  
+   Tous les groupes de fichiers sont maintenant en ligne.  
   
 ## <a name="additional-examples"></a>Autres exemples  
   

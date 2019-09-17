@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d65cb2577749a45bccf1383bdf880ce8c5a7a46
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bd7d5e0093d3805679e59b542582c263dfd56c9c
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653079"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978292"
 ---
 # <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Utilisation d’une application déployée sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] à l’aide d’un service Web RESTful
 
@@ -48,10 +48,10 @@ Les sections suivantes décrivent comment récupérer un point de terminaison po
 
 La commande **azdata app describe** fournit des informations détaillées sur l’application, notamment le point de terminaison de votre cluster. Ces informations sont généralement utilisées par les développeurs pour créer une application à l’aide du client Swagger et du service web pour interagir avec l’application de manière RESTful.
 
-Décrivez votre application en exécutant une commande semblable à l’exemple suivant:
+Décrivez votre application en exécutant une commande semblable à l’exemple suivant :
 
 ```bash
-azdata app describe --name addpy --version v1
+azdata app describe --name add-app --version v1
 ```
 
 ```json
@@ -125,4 +125,4 @@ L’application a été appelée par le biais du service web. Vous pouvez suivre
 
 Vous pouvez également consulter d’autres [exemples de déploiement d’application](https://aka.ms/sql-app-deploy).
 
-Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont?](big-data-cluster-overview.md).
+Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont ?](big-data-cluster-overview.md).

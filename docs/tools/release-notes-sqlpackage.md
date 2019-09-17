@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809451"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774177"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notes de version de SqlPackage.exe
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>18.3 sqlpackage
+
+|Plateforme|Télécharger|Date de publication|Options de version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 septembre 2019|18,3|15.0.4532.1|
+|macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102894)|6 septembre 2019| 18,3|15.0.4532.1|
+|Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102978)|6 septembre 2019| 18,3|15.0.4532.1|
+|Windows .NET Core (version préliminaire)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102979)|6 septembre 2019| 18,3|15.0.4532.1|
+
+### <a name="features"></a>Fonctionnalités
+
+| Fonctionnalité | Détails |
+| :------ | :------ |
+| Azure SQL Data Warehouse (préversion) | Ajoutez la prise en charge pour le déploiement sur Azure SQL Data Warehouse. | 
+| Déploiement | Ajoutez le paramètre/p : DatabaseLockTimeout = (INT32 « 60 ») à SqlPackage. | 
+| Déploiement | Ajoutez le paramètre/p : LongRunningCommandTimeout = (INT32) à SqlPackage. |
+| Exportation/extraction | Ajoutez le paramètre/p : TempDirectoryForTableData = (STRING) à SqlPackage. |
+| Déploiement | Autoriser le chargement des contributeurs de déploiement à partir d’emplacements supplémentaires. Les contributeurs de déploiement sont chargés à partir du même répertoire que la cible. dacpac en cours de déploiement, le répertoire des extensions par rapport au fichier binaire SqlPackage. exe et le paramètre/p : AdditionalDeploymentContributorPaths = (STRING) ajouté à SqlPackage où les emplacements de répertoire supplémentaires peuvent être spécifiés. |
+| Déploiement | Ajoutez la prise en charge de OPTIMIZE_FOR_SEQUENTIAL_KEY. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correctifs
+
+| Fix | Détails |
+| :-- | :------ |
+| Déploiement | Correction pour ignorer les index automatiques afin qu’ils ne soient pas supprimés lors du déploiement. | 
+| Always Encrypted | Correction de la gestion des colonnes Always Encrypted varchar. | 
+| Génération et déploiement | Correctif pour résoudre la méthode nodes () pour les jeux de colonnes XML.| 
+| ScriptDom | Corrigez les cas supplémentaires où la chaîne’URL’a été interprétée comme un jeton de niveau supérieur. | 
+| Graphique | Correction du TSQL généré pour les références de pseudo-colonnes dans les contraintes.  | 
+| Exporter | Générez des mots de passe aléatoires conformes aux exigences de complexité. | 
+| Déploiement | Correctif pour honorer les délais d’attente de commande lors de la récupération de contraintes. | 
+| .NET Core (version préliminaire) | Correction de la journalisation des diagnostics dans un fichier. | 
+| .NET Core (version préliminaire) | Utilisez la diffusion en continu pour exporter des données de table afin de prendre en charge les tables volumineuses. | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>SqlPackage 18.2
 
-Date de publication : &nbsp; 15 avril 2019  
-Build : &nbsp; 15.0.4384.2 
+|Plateforme|Télécharger|Date de publication|Options de version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 avril 2019|18.2|15.0.4384.2|
+|macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087247)|15 avril 2019 | 18.2 |15.0.4384.2|
+|Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087431)|15 avril 2019 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>Fonctionnalités
 

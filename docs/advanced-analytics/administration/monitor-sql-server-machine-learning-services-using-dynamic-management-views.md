@@ -1,35 +1,35 @@
 ---
-title: Surveiller l’exécution de scripts R et Python à l’aide de vues de gestion dynamique (DMV)
-description: Utilisez les vues de gestion dynamique (DMV) pour surveiller l’exécution de scripts externes R et Python dans SQL Server Machine Learning Services.
+title: Surveiller l’exécution de scripts Python et R à l’aide de DMV
+description: Utilisez les vues de gestion dynamique (DMV) pour surveiller l’exécution du script externe Python et R dans SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715318"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978402"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Utilisez les vues de gestion dynamique (DMV) pour surveiller l’exécution de scripts externes (R et Python), les ressources utilisées, diagnostiquer les problèmes et optimiser les performances dans SQL Server Machine Learning Services.
+Utilisez les vues de gestion dynamique (DMV) pour surveiller l’exécution de scripts externes (Python et R), les ressources utilisées, diagnostiquer les problèmes et optimiser les performances dans SQL Server Machine Learning Services.
 
 Dans cet article, vous trouverez les DMV qui sont spécifiques à SQL Server Machine Learning Services. Vous trouverez également des exemples de requêtes qui affichent les éléments suivants:
 
 + Paramètres et options de configuration pour Machine Learning
-+ Sessions actives exécutant des scripts R ou python externes
-+ Statistiques d’exécution pour le runtime externe pour R et Python
++ Sessions actives exécutant des scripts ou python externes
++ Statistiques d’exécution pour le runtime externe pour Python et R
 + Compteurs de performances pour les scripts externes
 + Utilisation de la mémoire pour le système d’exploitation, les SQL Server et les pools de ressources externes
 + Configuration de la mémoire pour les SQL Server et les pools de ressources externes
 + Resource Governor les pools de ressources, y compris les pools de ressources externes
-+ Packages installés pour R et Python
++ Packages installés pour Python et R
 
 Pour plus d’informations générales sur les vues DMV, consultez [vues de gestion dynamique du système](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
@@ -40,7 +40,7 @@ Pour plus d’informations générales sur les vues DMV, consultez [vues de gest
 
 Les vues de gestion dynamique suivantes peuvent être utilisées lors de l’analyse des charges de travail de Machine Learning dans SQL Server. Pour interroger les vues DMV, `VIEW SERVER STATE` vous devez disposer de l’autorisation sur l’instance.
 
-| Vue de gestion dynamique | type | Description |
+| Vue de gestion dynamique | Type | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Exécution | Renvoie une ligne pour chaque compte de travail actif qui exécute un script externe. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Exécution | Renvoie une ligne pour chaque type de demande de script externe. |
@@ -162,12 +162,12 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-**sys. DM _os_performance_counters** génère les compteurs de performance suivants pour les scripts externes:
+**sys. DM _os_performance_counters** génère les compteurs de performance suivants pour les scripts externes :
 
 | Compteur | Description |
 |---------|-------------|
 | Nombre total d’exécutions | Nombre de processus externes démarrés par des appels locaux ou distants. |
-| Exécutions parallèles | Nombre de fois où un script a inclus _@parallel_ la spécification et [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] qui a pu générer et utiliser un plan de requête parallèle. |
+| Exécutions parallèles | Nombre de fois où un script a inclus  _\@_ la spécification parallèle et [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] qui a pu générer et utiliser un plan de requête parallèle. |
 | Exécutions avec diffusion en continu | Nombre de fois où la fonctionnalité de diffusion en continu a été appelée. |
 | Exécutions de contexte de calcul SQL | Nombre de scripts externes exécutés où l’appel a été instancié à distance et SQL Server a été utilisé comme contexte de calcul. |
 | Connexions avec authentification implicite Connexions | Nombre de fois qu’un appel de bouclage ODBC a été effectué à l’aide de l’authentification implicite; autrement dit, le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a exécuté l’appel de la part de l’utilisateur qui envoie la demande de script. |

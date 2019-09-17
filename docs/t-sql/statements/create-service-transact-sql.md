@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91ad9771c9133dc3194f25fa530bd3ba458f865a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117120"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745400"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crée un nouveau service. Un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un nom pour une tâche ou un ensemble de tâches spécifiques. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise le nom du service pour acheminer les messages, les remettre à la file d'attente appropriée dans une base de données et appliquer le contrat pour une conversation.  
   

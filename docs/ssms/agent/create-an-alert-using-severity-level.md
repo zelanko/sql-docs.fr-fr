@@ -16,12 +16,12 @@ ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de2e60339c05c9c6b7c98a5ee4c767c17df9809b
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 696527b77cba555ad5c70a8ee65c8409295d18e4
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553056"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846798"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Créer une alerte à l'aide d'un niveau de gravité
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Cette rubrique explique comment créer une alerte de l'Agent [!INCLUDE[msCoName]
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, fonctionnant en mode graphique, qui permet de gérer tout le système d'alerte. Son utilisation est recommandée pour configurer une infrastructure d'alertes.  
   
--   Les événements créés à l’aide de **xp_logevent** surviennent dans la base de données master. Ainsi, la procédure **xp_logevent** ne déclenche pas d’alerte sauf si la valeur de **@database_name** pour l’alerte est **'master'** ou NULL.  
+-   Les événements créés à l’aide de **xp_logevent** surviennent dans la base de données master. Ainsi, **xp_logevent** ne déclenche pas d’alerte sauf si la valeur **\@database_name** pour l’alerte est **'master'** ou NULL.  
   
 -   Les niveaux de gravité compris entre 19 et 25 envoient un message [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au journal des applications [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows et déclenchent une alerte. Les événements dont le niveau de gravité est inférieur à 19 déclenchent des alertes uniquement si vous avez utilisé **sp_altermessage**, RAISERROR WITH LOG ou **xp_logevent** pour forcer leur enregistrement dans le journal des applications Windows.  
   
