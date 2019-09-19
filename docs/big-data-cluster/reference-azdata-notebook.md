@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f147e2b4ec785c3723d09cac6eb3548511946780
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158234"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118153"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -61,6 +61,10 @@ Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemple
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 Cette commande crée un répertoire temporaire et y exécute le notebook spécifié comme répertoire de travail.
+
+>[!NOTE]
+>Vérifié par rapport à azdata v 15.0.1900 : exécuter la commande prise en charge uniquement pour les blocs-notes python 3.
+
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -81,9 +85,9 @@ Chemin du fichier du notebook à exécuter.
 #### `--output-path`
 Chemin du répertoire à utiliser pour la sortie du notebook.  Le notebook avec des données de sortie et les fichiers générés par le notebook sont générés relativement à ce répertoire.
 #### `--output-html`
-Indicateur facultatif spécifiant s’il faut également convertir le notebook de sortie au format HTML.  Crée un deuxième fichier de sortie.
+Indicateur facultatif qui spécifie s’il faut ou non convertir le bloc-notes de sortie au format HTML.  Crée un deuxième fichier de sortie.
 #### `--arguments -a`
-Liste facultative des arguments du bloc-notes à injecter dans l’exécution du bloc-notes.  Encodé en tant que dictionnaire JSON.  Exemple: «{» Name»: «value», «nom2»: «value2»}»
+Liste facultative des arguments du bloc-notes à injecter dans l’exécution du bloc-notes.  Encodé en tant que dictionnaire JSON.  Exemple : « { » Name» : « value », « nom2 » : « value2 »}»
 #### `--interactive -i`
 Exécuter un bloc-notes en mode interactif.
 #### `--clear -c`
@@ -96,7 +100,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
