@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7d41bc68aadd9dc2c2ee471a9b14a5dea2ad53d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6cd32a9e88d53296eb2d4a94b0eb71757afbdf63
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764217"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846519"
 ---
 # <a name="delete-an-article"></a>Supprimer un article
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68764217"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Pour supprimer un article d'une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) pour supprimer un article spécifié par **@article** d’une publication spécifiée par **@publication** . Affectez la valeur **1** à **@force_invalidate_snapshot** .  
+1.  Exécutez [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) pour supprimer un article spécifié par **\@article** d’une publication spécifiée par **\@publication**. Affectez la valeur **1** à **\@force_invalidate_snapshot**.  
   
 2.  (Facultatif) Pour supprimer entièrement l'objet publié de la base de données, exécutez la commande `DROP <objectname>` au niveau du serveur de publication dans la base de données de publication.  
 
@@ -52,12 +52,12 @@ ms.locfileid: "68764217"
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Pour supprimer un article d'une publication de fusion  
   
-1.  Exécutez [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) pour supprimer un article spécifié par **@article** d’une publication spécifiée par **@publication** . Si nécessaire, affectez la valeur **1** à **@force_invalidate_snapshot** et la valeur **1** à **@force_reinit_subscription** .  
+1.  Exécutez [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) pour supprimer un article spécifié par **\@article** d’une publication spécifiée par **\@publication**. Si nécessaire, affectez la valeur **1** à **\@force_invalidate_snapshot** et la valeur **1** à **\@force_reinit_subscription**.  
   
 2.  (Facultatif) Pour supprimer entièrement l'objet publié de la base de données, exécutez la commande `DROP <objectname>` au niveau du serveur de publication dans la base de données de publication.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
- L'exemple suivant supprime un article d'une publication transactionnelle. Dans la mesure où cette modification invalide l'instantané existant, la valeur **1** est affectée au paramètre **@force_invalidate_snapshot** .  
+ L'exemple suivant supprime un article d'une publication transactionnelle. Dans la mesure où cette modification invalide l’instantané existant, la valeur **1** est affectée au paramètre **\@force_invalidate_snapshot**.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -74,7 +74,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- L'exemple suivant supprime deux articles d'une publication de fusion. Dans la mesure où ces modifications invalident l'instantané existant, la valeur **1** est affectée au paramètre **@force_invalidate_snapshot** .  
+ L'exemple suivant supprime deux articles d'une publication de fusion. Dans la mesure où ces modifications invalident l’instantané existant, la valeur **1** est affectée au paramètre **\@force_invalidate_snapshot** spécifié.  
   
 ```  
 DECLARE @publication AS sysname;  

@@ -3,19 +3,19 @@ title: Extension SQL Server 2019 (préversion)
 titleSuffix: Azure Data Studio
 description: Extension SQL Server 2019 en préversion pour Azure Data Studio
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494040"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878616"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extension SQL Server 2019 (préversion)
 
@@ -29,9 +29,9 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
 
    |Plateforme|Télécharger|Date de publication|Options de version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 août 2019 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 août 2019 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 août 2019 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|11 septembre 2019 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 septembre 2019 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 septembre 2019 |0.16.0
 
 1. Dans Azure Data Studio choisissez **Installer l’extension à partir du package VSIX** dans le menu **Fichier**, puis sélectionnez le fichier. vsix téléchargé.
 
@@ -42,6 +42,10 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
 1. Après le rechargement, l’extension installe les dépendances. Vous pouvez voir la progression dans la fenêtre de sortie, ce qui peut prendre plusieurs minutes.
 
 1. Une fois l’installation des dépendances terminée, fermez et rouvrez Azure Data Studio. Le type de connexion **Cluster Big Data SQL Server** n’est pas disponible tant que vous n’avez pas redémarré Azure Data Studio.
+
+## <a name="changes-in-release-016"></a>Modifications dans la version 0.16
+* Assistant Créer une table externe :
+  * Amélioration de la gestion des erreurs lors du chargement de tables et de vues sur la page de mappage d’objets.
 
 ## <a name="changes-in-release-015"></a>Modifications dans la version 0.15
 * Assistant Créer une table externe :
@@ -96,7 +100,7 @@ Parmi les autres améliorations et correctifs figurent les suivants :
 
 #### <a name="known-issues"></a>Problèmes connus
 * La boîte de dialogue d’installation de Python s’affiche à l’ouverture d’un notebook. Si vous annulez cette installation, les listes déroulantes Noyaux et Attacher à n’affichent pas les valeurs attendues. Une solution de contournement consiste à effectuer l’installation de Python.
-* Lorsqu’un notebook est ouvert avec un noyau qui n’est pas pris en charge, les listes déroulantes Noyaux et _Attacher à_ provoquent le blocage d’Azure Data Studio. Vous devez fermer Azure Data Studio et vous assurer que vous utilisez un noyau pris en charge (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* Quand un notebook est ouvert avec un noyau qui n’est pas pris en charge, les listes déroulantes Noyaux et _Attacher à_ amènent Azure Data Studio à cesser de répondre. Vous devez fermer Azure Data Studio et vous assurer que vous utilisez un noyau pris en charge (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
 * La liaison à l’interface utilisateur Spark échoue lors de l’utilisation de PySpark3 ou d’autres noyaux Spark sur le point de terminaison SQL Server. Pour résoudre ce problème, cliquez sur interface utilisateur Spark dans le tableau de bord ou connectez-vous à l’aide du type de connexion cluster Big Data SQL Server, car le lien hypertexte de l’interface utilisateur Spark est correct
 
 ### <a name="extensibility-improvements"></a>Améliorations de l’extensibilité

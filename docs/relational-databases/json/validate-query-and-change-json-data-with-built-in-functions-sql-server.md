@@ -13,12 +13,12 @@ ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48edab2025adda718021f6e63815fc691540753c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 337a1b694023bfba9376c461255979d944330c5f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074203"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70908323"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Valider, interroger et modifier les données JSON avec des fonctions intégrées (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,62 +34,151 @@ La prise en charge intégrée de JSON inclut les fonctions intégrées suivantes
 -   [JSON_MODIFY](#MODIFY) met à jour la valeur d’une propriété dans une chaîne JSON et renvoie la chaîne JSON mise à jour.  
  
 ## <a name="json-text-for-the-examples-on-this-page"></a>Texte JSON des exemples de cette page
-Les exemples de cette page utilisent le texte JSON suivant, qui contient un élément complexe.
 
-```sql 
-DECLARE @jsonInfo NVARCHAR(MAX)
+Les exemples de cette page utilisent le texte JSON similaire au contenu illustré dans l’exemple suivant :
 
-SET @jsonInfo=N'{  
-     "info":{    
-       "type":1,  
-       "address":{    
-         "town":"Bristol",  
-         "county":"Avon",  
-         "country":"England"  
-       },  
-       "tags":["Sport", "Water polo"]  
-    },  
-    "type":"Basic"  
- }' 
+```json
+{
+  "id": "WakefieldFamily",
+  "parents": [
+      { "familyName": "Wakefield", "givenName": "Robin" },
+      { "familyName": "Miller", "givenName": "Ben" }
+  ],
+  "children": [
+      {
+        "familyName": "Merriam",
+        "givenName": "Jesse",
+        "gender": "female",
+        "grade": 1,
+        "pets": [
+            { "givenName": "Goofy" },
+            { "givenName": "Shadow" }
+        ]
+      },
+      { 
+        "familyName": "Miller",
+         "givenName": "Lisa",
+         "gender": "female",
+         "grade": 8 }
+  ],
+  "address": { "state": "NY", "county": "Manhattan", "city": "NY" },
+  "creationDate": 1431620462,
+  "isRegistered": false
+}
+```
+
+Ce document JSON, qui contient des éléments complexes imbriqués, est stocké dans l’exemple de table suivant :
+
+```sql
+CREATE TABLE Families (
+   id int identity constraint PK_JSON_ID primary key,
+   doc nvarchar(max)
+)
 ``` 
 
 ##  <a name="ISJSON"></a> Valider le texte JSON en utilisant la fonction ISJSON  
  La fonction **ISJSON** teste si une chaîne contient un JSON valide.  
   
-L’exemple suivant retourne des lignes dans lesquelles la colonne `json_col` contient un JSON valide.  
+L’exemple suivant retourne des lignes dans lesquelles la colonne JSON contient du texte JSON valide. Notez que, sans contrainte JSON explicite, vous pouvez entrer n’importe quel texte dans la colonne NVARCHAR :  
   
 ```sql  
-SELECT id, json_col
-FROM tab1
-WHERE ISJSON(json_col) > 0 
+SELECT *
+FROM Families
+WHERE ISJSON(doc) > 0 
 ```  
 
 Pour plus d’informations, consultez [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md).  
   
 ##  <a name="VALUE"></a> Extraire une valeur d’un texte JSON en utilisant la fonction JSON_VALUE  
-La fonction **JSON_VALUE** extrait une valeur scalaire à partir d’une chaîne JSON.  
-  
-L’exemple suivant extrait la valeur de la propriété JSON imbriquée `town` dans une variable locale.  
-  
+La fonction **JSON_VALUE** extrait une valeur scalaire à partir d’une chaîne JSON. La requête suivante retourne les documents, pour lesquels le champ JSON `id` a la valeur `AndersenFamily`, triés selon les champs JSON `city` et `state` :
+
 ```sql  
-SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       JSON_VALUE(f.doc, '$.address.county') AS County
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
+ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.state') ASC
 ```  
-  
+
+Les résultats de cette requête sont présentés dans le tableau suivant :
+
+| Nom | Ville | Comté |
+| --- | --- | --- |
+| AndersenFamily | NY | Manhattan |
+
 Pour plus d’informations, consultez [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
   
 ##  <a name="QUERY"></a> Extraire un objet ou un tableau d’un texte JSON en utilisant la fonction JSON_QUERY  
-La fonction **JSON_QUERY** extrait un objet ou un tableau à partir d’une chaîne JSON.  
- 
-L’exemple suivant montre comment renvoyer un fragment JSON dans les résultats de la requête.  
+
+La fonction **JSON_QUERY** extrait un objet ou un tableau à partir d’une chaîne JSON. L’exemple suivant montre comment renvoyer un fragment JSON dans les résultats de la requête.  
   
-```sql  
-SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
-FROM Person.Person
-ORDER BY LastName
+```sql
+SELECT JSON_QUERY(f.doc, '$.address') AS Address,
+       JSON_QUERY(f.doc, '$.parents') AS Parents,
+       JSON_QUERY(f.doc, '$.parents[0]') AS Parent0
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
-  
+Les résultats de cette requête sont présentés dans le tableau suivant :
+
+| Adresse | Parents | Parent0 |
+| --- | --- | --- |
+| { "state": "NY", "county": "Manhattan", "city": "NY" } | [{ "familyName": "Wakefield", "givenName": "Robin" }, {"familyName": "Miller", "givenName": "Ben" } ]| { "familyName": "Wakefield", "givenName": "Robin" } |
+
 Pour plus d’informations, consultez [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md).  
-  
+
+## <a name="parse-nested-json-collections"></a>Analyser les collections JSON imbriquées
+
+La fonction `OPENJSON` vous permet de transformer un sous-tableau JSON en ensemble de lignes, puis de le joindre à l’élément parent. Par exemple, vous pouvez retourner tous les documents de la famille, puis les « joindre » à leurs objets `children` stockés sous forme de tableau JSON interne :
+
+```sql
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       c.givenName, c.grade
+FROM Families f
+        CROSS APPLY OPENJSON(f.doc, '$.children')
+            WITH(grade int, givenName nvarchar(100))  c
+```
+
+Les résultats de cette requête sont présentés dans le tableau suivant :
+
+| Nom | Ville | givenName | grade |
+| --- | --- | --- | --- |
+| AndersenFamily | NY | Jesse | 1 |
+| AndersenFamily | NY | Lisa | 8 |
+
+Nous obtenons deux lignes comme résultat, car une ligne parente est jointe à deux lignes enfants produites par l’analyse de deux éléments du sous-tableau des enfants. La fonction `OPENJSON` analyse un fragment `children` de la colonne `doc` et retourne les valeurs `grade` et `givenName` de chaque élément sous la forme d’un ensemble de lignes. Cet ensemble de lignes peut être joint au document parent.
+ 
+## <a name="query-nested-hierarchical-json-sub-arrays"></a>Interroger des sous-tableaux JSON hiérarchiques imbriqués
+
+Vous pouvez appliquer plusieurs appels `CROSS APPLY OPENJSON` afin d’interroger des structures JSON imbriquées. Le document JSON utilisé dans cet exemple comporte un tableau imbriqué appelé `children`, où chaque enfant comporte un tableau imbriqué de `pets`. La requête suivante analyse les enfants de chaque document, retourne chaque objet de tableau sous forme de ligne, puis analyse le tableau `pets` :
+
+```sql
+SELECT  familyName,
+    c.givenName AS childGivenName,
+    c.firstName AS childFirstName,
+    p.givenName AS petName 
+FROM Families f 
+    CROSS APPLY OPENJSON(f.doc) 
+        WITH (familyName nvarchar(100), children nvarchar(max) AS JSON)
+        CROSS APPLY OPENJSON(children) 
+        WITH (givenName nvarchar(100), firstName nvarchar(100), pets nvarchar(max) AS JSON) as c
+            OUTER APPLY OPENJSON (pets)
+            WITH (givenName nvarchar(100))  as p
+```
+
+Le premier appel `OPENJSON` retourne un fragment du tableau `children` à l’aide de la clause AS JSON. Ce fragment de tableau est fourni à la deuxième fonction `OPENJSON` qui retourne les valeurs `givenName`, `firstName` de chaque enfant, ainsi que le tableau de `pets`. Le tableau de `pets` est fourni à la troisième fonction `OPENJSON` qui retourne la valeur `givenName` de l’animal.
+Les résultats de cette requête sont présentés dans le tableau suivant :
+
+| familyName | childGivenName | childFirstName | petName |
+| --- | --- | --- | --- |
+| AndersenFamily | Jesse | Merriam | Goofy |
+| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Lisa | Miller| `NULL` |
+
+Le document racine est joint avec deux lignes `children` retournées par le premier appel `OPENJSON(children)` qui fait deux lignes (ou tuples). Ensuite, chaque ligne est jointe aux nouvelles lignes générées par `OPENJSON(pets)` à l’aide de l’opérateur `OUTER APPLY`. Jesse a deux animaux, donc `(AndersenFamily, Jesse, Merriam)` est joint avec deux lignes générées pour Goofy et Shadow. Lisa n’a pas d’animaux, donc aucune ligne n’est retournée par `OPENJSON(pets)` pour ce tuple. En revanche, étant donné que nous utilisons `OUTER APPLY`, nous obtenons `NULL` dans la colonne. Si nous mettons `CROSS APPLY` au lieu de `OUTER APPLY`, Lisa n’est pas retournée dans le résultat, car il n’y a pas de lignes d’animaux pouvant être jointes à ce tuple.
+
 ##  <a name="JSONCompare"></a> Comparer JSON_VALUE et JSON_QUERY  
 La principale différence entre **JSON_VALUE** et **JSON_QUERY** est que **JSON_VALUE** retourne une valeur scalaire, tandis que **JSON_QUERY** retourne un objet ou un tableau.  
   
@@ -113,7 +202,7 @@ Dans cet exemple de texte JSON, les membres de données « a » et « c » sont 
 |**$.b[0]**|1|NULL ou erreur|  
 |**$.c**|hi|NULL ou erreur|  
   
-## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>Tester JSON_VALUE et JSON_QUERY avec la base de données exemple AdventureWorks  
+## <a name="test-json_value-and-json_query-with-the-adventureworks-sample-database"></a>Tester JSON_VALUE et JSON_QUERY avec la base de données exemple AdventureWorks  
 Testez les fonctions intégrées décrites dans cette rubrique en exécutant les exemples suivants avec la base de données exemple AdventureWorks. Pour savoir où récupérer la base de données AdventureWorks et comment ajouter des données JSON à des fins de test en exécutant un script, consultez [Tester la prise en charge de JSON intégrée](json-data-sql-server.md#test-drive-built-in-json-support-with-the-adventureworks-sample-database).
   
 Dans les exemples suivants, la colonne `Info` de la table `SalesOrder_json` contient un texte JSON.  

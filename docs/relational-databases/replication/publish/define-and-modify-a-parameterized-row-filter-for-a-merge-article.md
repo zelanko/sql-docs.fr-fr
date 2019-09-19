@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907765"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846761"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Définir et modifier un filtre de lignes paramétrable pour un article de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67907765"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Pour définir un filtre de lignes paramétrable pour un article dans une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez **@publication** , le nom de l'article pour **@article** , la table qui est publiée pour **@source_object** , la clause WHERE qui définit le filtre paramétrable pour **@subset_filterclause** (sans `WHERE`) et affectez l'une des valeurs suivantes à **@partition_options** , qui décrit le type de partitionnement qui résultera de l'application du filtre de lignes paramétrable :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez **\@publication**, le nom de l’article pour **\@article**, la table qui est publiée pour **\@source_object**, la clause WHERE qui définit le filtre paramétrable pour **\@subset_filterclause** (sans `WHERE`) et affectez l’une des valeurs suivantes à **\@partition_options**, qui décrit le type de partitionnement qui résultera de l’application du filtre de lignes paramétrable :  
   
     -   **0** - le filtrage de l'article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (partition avec chevauchement).  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67907765"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Pour modifier un filtre de lignes paramétrable pour un article dans une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez **@publication** , **@article** , affectez la valeur **subset_filterclause** à **@property** , l'expression qui définit le filtre paramétrable à **@value** (sans `WHERE`) et la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription** .  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez **\@publication**, **\@article**, affectez la valeur **subset_filterclause** à **\@property**, l’expression qui définit le filtre paramétrable à **\@value** (sans `WHERE`) et la valeur **1** à **\@force_invalidate_snapshot** et **\@force_reinit_subscription**.  
   
-2.  Si cette modification conduit à un comportement de partitionnement différent, exécutez de nouveau [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Spécifiez **@publication** , **@article** , affectez la valeur **partition_options** à **@property** et l'option de partitionnement la plus appropriée à **@value** , qui peut être l'une des suivantes :  
+2.  Si cette modification conduit à un comportement de partitionnement différent, exécutez de nouveau [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Spécifiez **\@publication**, **\@article**, affectez la valeur **partition_options** à **\@property** et l’option de partitionnement la plus appropriée à **\@value**, qui peut être l’une des suivantes :  
   
     -   **0** - le filtrage de l'article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (partition avec chevauchement).  
   

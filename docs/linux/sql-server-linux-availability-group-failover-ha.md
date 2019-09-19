@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027219"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304844"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Basculement du groupe de disponibilité Always On sur Linux
 
@@ -43,7 +43,7 @@ Basculement manuel en deux étapes.
 
    Ensuite, [supprimez la contrainte d’emplacement](#removeLocConstraint).
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Étape 1. Basculer manuellement en déplaçant la ressource du groupe de disponibilité
+#### <a name="manualMove"></a> Étape 1. Basculer manuellement en déplaçant la ressource du groupe de disponibilité
 
 Pour basculer manuellement une ressource du groupe de disponibilité nommée *ag_cluster* vers le nœud de cluster nommé *nodeName2*, exécutez la commande appropriée pour votre distribution :
 
@@ -62,7 +62,7 @@ Pour basculer manuellement une ressource du groupe de disponibilité nommée *ag
 >[!IMPORTANT]
 >Quand vous faites basculer manuellement une ressource, vous devez supprimer une contrainte d’emplacement qui est automatiquement ajoutée.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">Étape 2. Supprimer la contrainte d’emplacement
+#### <a name="removeLocConstraint"> </a> Étape 2. Supprimer la contrainte d’emplacement
 
 À l’occasion d’un déplacement manuel, la commande `pcs` `move` ou la commande `crm` `migrate` ajoute une contrainte d’emplacement pour que la ressource prenne place sur le nouveau nœud cible. Pour afficher la nouvelle contrainte, exécutez la commande suivante après avoir déplacé manuellement la ressource :
 

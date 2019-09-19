@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110282"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304809"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL)
 
@@ -732,9 +732,6 @@ Désactive le magasin de requêtes. OFF est la valeur par défaut.
 
 CLEAR         
 Supprime le contenu du magasin de requêtes.
-
-> [!NOTE]
-> Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vous devez exécuter `ALTER DATABASE SET QUERY_STORE` à partir de la base de données utilisateur. L’exécution de l’instruction à partir d’une autre instance d’entrepôt de données n’est pas prise en charge.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 Décrit le mode de fonctionnement du magasin de requête. 
@@ -2911,20 +2908,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2935,8 +2955,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 Nom de la base de données à modifier.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**S’applique à** Azure SQL Data Warehouse (préversion)
+**<auto_option> ::=**
+
+Contrôle les options automatiques.
+
+AUTO_CREATE_STATISTICS { ON | OFF } ON : L’optimiseur de requête crée des statistiques sur les colonnes uniques des prédicats de requête, en fonction des besoins, afin d’améliorer les plans de requête et les performances des requêtes. Ces statistiques de colonnes uniques sont créées quand l’optimiseur de requête compile les requêtes. Les statistiques de colonnes uniques sont créées uniquement sur les colonnes qui ne constituent pas déjà la première colonne d'un objet de statistiques existant.
+
+La valeur par défaut est ON. Nous vous recommandons d'utiliser le paramètre par défaut pour la plupart des bases de données.
+
+OFF : L’optimiseur de requête ne crée pas de statistiques sur les colonnes uniques des prédicats de requête lorsqu’il est en train de compiler des requêtes. Si cette option a la valeur OFF, il peut en résulter des plans de requête non optimisés et une dégradation des performances des requêtes.
+Vous pouvez déterminer l’état de cette option en consultant la colonne is_auto_create_stats_on de l’affichage catalogue sys.databases. Vous pouvez également déterminer l’état en consultant la propriété IsAutoCreateStatistics de la fonction DATABASEPROPERTYEX.
+Pour plus d’informations, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans Statistiques.
+
+**<db_encryption_option> ::=**
+
+Contrôle l'état de chiffrement de la base de données.
+
+ENCRYPTION { ON | OFF } ON : Active le chiffrement de la base de données.
+
+OFF : Indique que la base de données ne doit pas être chiffrée.
+
+Pour plus d’informations sur le chiffrement de base de données, consultez Transparent Data Encryption et Transparent Data Encryption avec Azure SQL Database.
+
+Lorsque le chiffrement est activé au niveau de la base de données, tous les groupes de fichiers seront chiffrés. Tous les nouveaux groupes de fichiers hériteront de la propriété chiffrée. Si des groupes de fichiers dans la base de données ont la valeur READ ONLY, l’opération de chiffrement de la base de données échoue.
+Vous pouvez voir l’état du chiffrement de la base de données et l’état de l’analyse du chiffrement en utilisant la vue de gestion dynamique sys.dm_database_encryption_keys.
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+Contrôle si le magasin de données des requêtes est activé dans cet entrepôt de données.     
+
+ON         
+Active le magasin de requêtes.
+
+OFF         
+Désactive le magasin de requêtes. OFF est la valeur par défaut.
+
+> [!NOTE]
+> Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vous devez exécuter `ALTER DATABASE SET QUERY_STORE` à partir de la base de données utilisateur. L’exécution de l’instruction à partir d’une autre instance d’entrepôt de données n’est pas prise en charge.
+
+**\<result_set_caching_option> ::=**    
+**S’applique à** : Azure SQL Data Warehouse (préversion)
 
 Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne, is_result_set_caching_on, est introduite dans `sys.databases` pour afficher le paramètre du cache de résultats pour une base de données.  
 
@@ -2954,22 +3013,7 @@ Indique que les jeux de résultats de requête retournés à partir de cette bas
 commande|Correspond à|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-**S’applique à** Azure SQL Data Warehouse (préversion)
-
-ON active l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
-
-OFF désactive l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
-
-L’activation ou la désactivation de READ_COMMITTED_SNAPSHOT pour une base de données entraîne l’arrêt de toutes les connexions ouvertes à cette base de données.  Vous pouvez effectuer cette modification pendant la fenêtre de maintenance de la base de données ou patienter jusqu’à ce qu’il n’existe aucune connexion active à la base de données, à l’exception de la connexion exécutant la commande ALTER DATABASE.  Il n'est pas nécessaire que la base de données soit en mode mono-utilisateur.  La modification du paramètre READ_COMMITTED_SNAPSHOT au niveau de la session n’est pas prise en charge.  Pour vérifier ce paramètre pour une base de données, vérifiez la colonne is_read_committed_snapshot_on dans sys. databases.
-
-Dans une base de données avec la fonction READ_COMMITTED_SNAPSHOT activée, les requêtes peuvent avoir des performances plus lentes en raison de l’analyse des versions si plusieurs versions de données sont présentes. Les transactions ouvertes longues peuvent également entraîner une augmentation de la taille de la base de données en cas de modification des données par ces transactions, ce qui bloque le nettoyage des versions.  
-
-
-
-
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Le jeu de résultats mis en cache est réutilisé pour une requête si toutes les conditions suivantes sont remplies :
 
@@ -2979,6 +3023,21 @@ Le jeu de résultats mis en cache est réutilisé pour une requête si toutes le
 
 Une fois que la mise en cache du jeu de résultats est activée pour une base de données, les résultats sont mis en cache pour toutes les requêtes jusqu’à ce que le cache soit plein, à l’exception des requêtes avec des fonctions non déterministes telles que DateTime.Now ().   Les requêtes avec des jeux de résultats volumineux (par exemple, plus d’un million de lignes) peuvent accuser des performances plus lentes durant la première exécution au moment de la création du cache de résultats.
 
+**<snapshot_option> ::=**
+
+Calcule le niveau d’isolation de la transaction.
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**S’applique à** : Azure SQL Data Warehouse (préversion)
+
+ON active l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
+
+OFF désactive l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
+
+L’activation ou la désactivation de READ_COMMITTED_SNAPSHOT pour une base de données entraîne l’arrêt de toutes les connexions ouvertes à cette base de données.  Vous pouvez effectuer cette modification pendant la fenêtre de maintenance de la base de données ou patienter jusqu’à ce qu’il n’existe aucune connexion active à la base de données, à l’exception de la connexion exécutant la commande ALTER DATABASE.  Il n'est pas nécessaire que la base de données soit en mode mono-utilisateur.  La modification du paramètre READ_COMMITTED_SNAPSHOT au niveau de la session n’est pas prise en charge.  Pour vérifier ce paramètre pour une base de données, vérifiez la colonne is_read_committed_snapshot_on dans sys. databases.
+
+Dans une base de données avec la fonction READ_COMMITTED_SNAPSHOT activée, les requêtes peuvent avoir des performances plus lentes en raison de l’analyse des versions si plusieurs versions de données sont présentes. Les transactions ouvertes longues peuvent également entraîner une augmentation de la taille de la base de données en cas de modification des données par ces transactions, ce qui bloque le nettoyage des versions.  
+
 ## <a name="permissions"></a>Autorisations
 
 Pour définir l’option RESULT_SET_CACHING, un utilisateur a besoin d’une connexion du principal au niveau du serveur (celle créée par le processus de provisionnement) ou doit être membre du rôle de base de données `dbmanager`.  
@@ -2987,28 +3046,90 @@ Pour définir l’option READ_COMMITTED_SNAPSHOT, un utilisateur doit disposer d
 
 ## <a name="examples"></a>Exemples
 
-### <a name="enable-result-set-caching-for-a-database"></a>Activer la mise en cache d’un jeu de résultats pour une base de données
+### <a name="a-enabling-the-query-store"></a>A. Activation du magasin de requête
+
+L'exemple suivant active le magasin de requête et configure les paramètres de stockage des requêtes.
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>B. Activation du magasin des requêtes avec les statistiques d’attente
+
+L'exemple suivant active le magasin de requête et configure les paramètres de stockage des requêtes.
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>C. Activation du magasin des requêtes avec les options de stratégie de capture personnalisée
+
+L'exemple suivant active le magasin de requête et configure les paramètres de stockage des requêtes.
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>D. Activer la mise en cache d’un jeu de résultats pour une base de données
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>Désactiver la mise en cache d’un jeu de résultats pour une base de données
+### <a name="d-disable-result-set-caching-for-a-database"></a>D. Désactiver la mise en cache d’un jeu de résultats pour une base de données
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>Vérifier le paramètre de mise en cache d’un jeu de résultats pour une base de données
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. Vérifier le paramètre de mise en cache d’un jeu de résultats pour une base de données
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Vérifiez le nombre de requêtes avec correspondance dans le cache du jeu de résultats et absence dans le cache
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>D. Vérifiez le nombre de requêtes avec correspondance dans le cache du jeu de résultats et absence dans le cache
 
 ```sql
 SELECT  
@@ -3028,7 +3149,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Vérifiez la correspondance dans le cache ou l’absence dans le cache du jeu de résultats pour une requête
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>D. Vérifiez la correspondance dans le cache ou l’absence dans le cache du jeu de résultats pour une requête
 
 ```sql
 If
@@ -3040,7 +3161,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Vérifiez toutes les requêtes avec correspondances dans le cache du jeu de résultats
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>D. Vérifiez toutes les requêtes avec correspondances dans le cache du jeu de résultats
 
 ```sql
 SELECT *  
@@ -3049,6 +3170,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Activer l’option Read_Committed_Snapshot pour une base de données
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3064,3 +3186,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [Éléments de langage SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

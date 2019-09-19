@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929819"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "70190420"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- L'illustration suivante montre une vue schématique du processus de décomposition en trois étapes. Dans les pyramides, les traits pointillés représentent les limites des quatre facettes de chaque pyramide. Les étapes 1 et 2 illustrent l'ellipsoïde géodésique, avec une ligne horizontale verte pour représenter la ligne de longitude équatoriale et une série de lignes verticales vertes pour représenter plusieurs lignes de latitude. L'étape 1 illustre la projection des pyramides sur les deux hémisphères. L'étape 2 illustre l'aplatissement des pyramides. L'étape 3 illustre les pyramides aplaties, après qu'elles ont été combinées de façon à former un plan, avec plusieurs lignes de longitude projetées. Remarquez que ces lignes projetées sont tendues et que leur longueur varie en fonction de l'emplacement où elles sont sur les pyramides.  
+ L'illustration suivante montre une vue schématique du processus de décomposition en trois étapes. Dans les pyramides, les traits pointillés représentent les limites des quatre facettes de chaque pyramide. Les étapes 1 et 2 illustrent l’ellipsoïde géodésique, avec une ligne horizontale verte pour représenter la ligne de latitude équatoriale et une série de lignes verticales vertes pour représenter plusieurs lignes de longitude. L'étape 1 illustre la projection des pyramides sur les deux hémisphères. L'étape 2 illustre l'aplatissement des pyramides. L'étape 3 illustre les pyramides aplaties, après qu'elles ont été combinées de façon à former un plan, avec plusieurs lignes de longitude projetées. Remarquez que ces lignes projetées sont tendues et que leur longueur varie en fonction de l'emplacement où elles sont sur les pyramides.  
   
  ![Projection de l’ellipsoïde sur un plan](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projection de l’ellipsoïde sur un plan")  
   

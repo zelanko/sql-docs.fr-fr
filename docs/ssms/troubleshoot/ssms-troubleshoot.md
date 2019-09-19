@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/01/2019
-ms.openlocfilehash: 2011de961cc7f54a23b19928a7f6f9df8b962ac8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e73e3d8cc0b54f0251530327dbcea941546471d5
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262774"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212439"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Obtenir des données de diagnostic après un incident de SQL Server Management Studio (SSMS)
 
@@ -33,42 +33,41 @@ Pour capturer des informations de diagnostic pour détecter un problème de bloc
 
 3. Ouvrez une invite de commandes et exécutez la commande suivante.
 
-    ```invite de commandes  <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
+    ```console
+    <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
-    If it prompts you to accept a license agreement, select *Agree*.
+    S’il vous invite à accepter un contrat de licence, sélectionnez *Accepter*.
 
-4. Start SSMS, if it hasn't started already.
+4. Démarrez SSMS, s’il n’a pas déjà démarré.
 
-5. Reproduce the issue.
+5. Reproduisez le problème.
 
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
+6. Le texte doit apparaître dans l’invite de commandes sur l’écriture du fichier de sauvegarde, attendez la fin.
 
-7. Create a new folder and copy the *.dmp file that is written out to that folder.
+7. Créez un nouveau dossier et copiez le fichier *.dmp qui est écrit dans ce dossier.
 
-8. Copy the following files into the same folder.
+8. Copiez les fichiers suivants dans le même dossier.
 
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
+    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"  "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"  "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
-9. Zip up the folder
+9. Compressez le dossier.
 
-## Get full memory dump for an OutOfMemoryException
+## <a name="get-full-memory-dump-for-an-outofmemoryexception"></a>Obtenir une image mémoire complète pour une OutOfMemoryException
 
-Get a full memory dump of SSMS when it throws an OutOfMemoryException.
+Obtenez une image mémoire complète de SSMS quand il lève une OutOfMemoryException.
 
-You can get a full memory dump with any managed exception.
+Vous pouvez obtenir une image mémoire complète avec n’importe quelle exception managée.
 
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, follow the steps below.
+Pour capturer des informations de diagnostic afin de résoudre une OutOfMemoryException à partir du SSMS, suivez les étapes ci-dessous.
 
-1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Télécharger [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
 
-2. Unzip the download into a folder.
+2. Décompressez le téléchargement dans un dossier.
 
-3. Open Command Prompt and run the following command.
+3. Ouvrez une invite de commandes et exécutez la commande suivante.
 
-    ```command prompt
+    ```console
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
     ```
 

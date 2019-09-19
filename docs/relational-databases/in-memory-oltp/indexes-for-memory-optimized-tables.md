@@ -1,7 +1,7 @@
 ---
 title: Index pour les tables optimisées en mémoire | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050216"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929696"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Chaque table à mémoire optimisée doit avoir au moins un index, car l’index permet de lier les lignes de la table entre elles. Sur une table optimisée en mémoire, chaque index est également optimisé en mémoire. Il existe plusieurs différences entre un index sur un index optimisé en mémoire et un index classique sur une table sur disque :  
+Chaque table à mémoire optimisée doit avoir au moins un index, car l’index permet de lier les lignes de la table entre elles. Sur une table optimisée en mémoire, chaque index est également optimisé en mémoire. Il existe plusieurs différences entre un index sur une table à mémoire optimisée et un index classique sur une table sur disque :  
 
 - Les lignes de données ne sont pas stockées dans des pages. Il n’y a donc pas de collection de pages ou d’étendues, ni de partitions ou d’unités d’allocation qui peuvent être référencées pour obtenir toutes les pages d’une table. Le concept de pages d’index existe pour l’un des types d’index disponibles, mais ils sont stockés différemment des index des tables sur disque. Ne contribuant pas au type traditionnel de fragmentation dans une page, ils ne présentent aucun facteur de remplissage.
 - Les modifications effectuées dans les index de tables à mémoire optimisée pendant la manipulation des données ne sont jamais écrites sur le disque. Seules les lignes de données et les modifications apportées aux données sont écrites dans le journal des transactions. 
@@ -59,6 +59,7 @@ Pour être déclarée avec DURABILITY = SCHEMA\_AND_DATA (paramètre par défaut
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le nombre d’index par table à mémoire optimisée ou type de table est limité à 8. À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le nombre d’index n’est plus limité pour les tables à mémoire optimisée et les types de tables.
   

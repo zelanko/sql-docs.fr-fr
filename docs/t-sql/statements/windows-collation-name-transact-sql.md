@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051433"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874463"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 
@@ -139,9 +139,9 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Amharique (Éthiopie)|Latin1_General_100_|Non disponible|
 |Arménien (Arménie)|Cyrillic_General_100_|Non disponible|
 |Assamais (Inde)|Assamese_100_ <sup>1</sup>|Non disponible|
+|Bangla (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponible|
 |Bachkir (Russie)|Bashkir_100_|Non disponible|
 |Basque (Basque)|Latin1_General_100_|Non disponible|
-|Bengali (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponible|
 |Bengali (India)|Bengali_100_<sup>1</sup>|Non disponible|
 |Bosniaque (Bosnie-Herzégovine, cyrillique)|Bosnian_Cyrillic_100_|Non disponible|
 |Bosniaque (Bosnie-Herzégovine, latin)|Bosnian_Latin_100_|Non disponible|
@@ -187,7 +187,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Norvégien (bokmål, Norvège)|Norwegian_100_|Non disponible|
 |Norvégien (Nynorsk, Norvège)|Norwegian_100_|Non disponible|
 |Occitan (France)|French_100_|Non disponible|
-|Oriya (Inde)|Indic_General_100_<sup>1</sup>|Non disponible|
+|Odia (Inde)|Indic_General_100_<sup>1</sup>|Non disponible|
 |Pachtou (Afghanistan)|Pashto_100_<sup>1</sup>|Non disponible|
 |Persan (Iran)|Persian_100_|Non disponible|
 |Pendjabi (Inde)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -237,7 +237,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 
 <sup>1</sup> Les classements Windows Unicode seulement ne peuvent être appliqués qu’à des données de niveau colonne ou de niveau expression. Ils ne peuvent pas être utilisés en tant que classements de serveur ou de base de données.
 
-<sup>2</sup>Comme le classement chinois (Taiwan), le chinois (Macao (R.A.S.)) utilise les règles du chinois simplifié ; contrairement au chinois (Taiwan), il utilise la page de codes 950.
+<sup>2</sup>Comme le classement chinois (Taiwan), le chinois (Macao (R.A.S.)) utilise les règles du chinois simplifié ; contrairement au chinois (Taiwan), il utilise la page de codes 950.
 
 ## <a name="see-also"></a>Voir aussi
 

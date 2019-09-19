@@ -1,7 +1,7 @@
 ---
 title: Indicateurs de requête (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902004"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228402"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -218,17 +218,17 @@ NO_PERFORMANCE_SPOOL
   
 Empêche l’ajout d’un opérateur de spool aux plans de requête (à l’exception des plans où un spool est nécessaire pour garantir la validité de la sémantique de mise à jour). L’opérateur de spool est susceptible de diminuer les performances dans certains scénarios. Par exemple, du fait que le spool utilise tempdb, une contention de tempdb peut se produire quand un grand nombre de requêtes simultanées sont exécutées avec les opérations de spool.  
   
-OPTIMIZE FOR ( _@variable\_nom_ { UNKNOWN | = _constante\_littérale }_ [ **,** …_n_ ] )     
+OPTIMIZE FOR ( _\@nom\_variable_ { UNKNOWN | = _contante\_littérale }_ [ **,** ..._n_ ] )     
 Indique à l'optimiseur de requête d'attribuer à une variable locale une valeur déterminée lors de la compilation et de l'optimisation de la requête. Cette valeur n'est utilisée que pendant l'optimisation de la requête, et non pas lors de son exécution.  
   
-_@variable\_nom_  
+_\@nom\_variable_  
 Nom d'une variable locale utilisée dans une requête, à laquelle une valeur peut être attribuée pour être utilisée avec l'indicateur de requête OPTIMIZE FOR.  
   
 _UNKNOWN_  
 Spécifie que l’optimiseur de requête utilise des données statistiques à la place de la valeur initiale pour déterminer la valeur d’une variable locale pendant l’optimisation de requête.  
   
 _constante\_littérale_  
-Valeur de constante littérale à assigner à _@variable\_nom_ pour l’utiliser avec l’indicateur de requête OPTIMIZE FOR. _constante\_littérale_ n’est utilisé que pendant l’optimisation de la requête, et non comme valeur de _@variable\_nom_ lors de l’exécution de la requête. _constante\_littérale_ peut être de n’importe quel type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui peut être exprimé sous forme de constante littérale. Le type de données de _constante\_littérale_ doit être implicitement convertible dans le type de données auquel _@variable\_nom_ fait référence dans la requête.  
+Valeur de constante littérale à assigner à _\@nom\_variable_ pour l’utiliser avec l’indicateur de requête OPTIMIZE FOR. _constante\_littérale_ n’est utilisé que pendant l’optimisation de la requête, et non comme valeur de _\@nom\_variable_ lors de l’exécution de la requête. _constante\_littérale_ peut être de n’importe quel type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui peut être exprimé sous forme de constante littérale. Le type de données de _constante\_littérale_ doit être implicitement convertible dans le type de données auquel _\@nom\_variable_ fait référence dans la requête.  
   
 OPTIMIZE FOR peut contrecarrer le comportement de détection des paramètres par défaut de l’optimiseur. Utilisez également OPTIMIZE FOR pour créer des repères de plan. Pour plus d’informations, consultez [Recompiler une procédure stockée](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
@@ -327,7 +327,7 @@ Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en ch
 > [!IMPORTANT] 
 > Certains indicateurs USE HINT peuvent être en conflit avec des indicateurs de trace activés au niveau global ou session, ou avec des paramètres de configuration au niveau base de données. Dans ce cas, l’indicateur de niveau requête (USE HINT) est toujours prioritaire. En présence d’un conflit entre l’indicateur USE HINT et un autre indicateur de requête ou un indicateur de trace activé au niveau requête (par exemple, par QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur quand vous tentez d’exécuter la requête. 
 
- USE PLAN N **'** _xml\_plan_ **'**      
+USE PLAN N'_xml\_plan_'  
  Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **'** _xml\_plan_ **'** . Il n’est pas possible de spécifier USE PLAN avec des instructions INSERT, UPDATE, MERGE ou DELETE.  
   
 TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [ **,** ]…_n_ ] ] **)** 
@@ -368,7 +368,7 @@ Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_
   
 Il est possible de spécifier des indicateurs de table INDEX, FORCESCAN et FORCESEEK comme indicateurs de requête pour une requête ne disposant pas d’indicateurs de table. Vous pouvez également les utiliser pour remplacer respectivement des indicateurs INDEX, FORCESCAN et FORCESEEK existants dans la requête. 
 
-Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Dans ce cas, il faut également spécifier un indicateur correspondant comme indicateur de requête. Utilisez pour cela TABLE HINT dans la clause OPTION. Cette spécification préserve la sémantique de la requête. Par exemple, si la requête contient l’indicateur de table NOLOCK, la clause OPTION dans le paramètre **@hints** du repère de plan doit également contenir l’indicateur NOLOCK. Voir l'exemple K. 
+Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Dans ce cas, il faut également spécifier un indicateur correspondant comme indicateur de requête. Utilisez pour cela TABLE HINT dans la clause OPTION. Cette spécification préserve la sémantique de la requête. Par exemple, si la requête contient l’indicateur de table NOLOCK, la clause OPTION dans le paramètre **\@hints** du repère de plan doit également contenir l’indicateur NOLOCK. Voir l'exemple K. 
 
 L’erreur 8072 se produit dans deux scénarios : lorsqu’un indicateur de table autre que INDEX, FORCESCAN ou FORCESEEK est spécifié en utilisant TABLE HINT dans la clause OPTION sans indicateur de requête correspondant et inversement. Cette erreur indique que la clause OPTION risque d’entraîner une modification de la sémantique de la requête, et donc un échec de la requête.  
   

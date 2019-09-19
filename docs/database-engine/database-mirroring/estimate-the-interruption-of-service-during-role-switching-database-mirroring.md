@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997862"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874182"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estimer l'interruption de service au cours d'un basculement de rôle (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997862"
 -   Pour un basculement manuel, seul le temps nécessaire au basculement de la base de données après la commande de basculement est pris en compte.  
   
 ## <a name="error-detection"></a>Détection d'erreurs  
- Le temps nécessaire au système pour remarquer une erreur dépend du type d'erreur ; par exemple, une erreur réseau est détectée quasiment instantanément, alors que la détection d'un blocage du serveur prend par défaut environ 10 secondes, ce qui représente le délai d'attente par défaut.  
+ Le temps nécessaire au système pour remarquer une erreur dépend du type d’erreur ; par exemple, une erreur réseau est détectée quasiment instantanément, alors que la détection d’un serveur qui ne répond pas prend 10 secondes (avec le délai d’attente par défaut).  
   
  Pour plus d’informations sur les erreurs susceptibles d’entraîner une défaillance lors d’une session de mise en miroir de bases de données et sur la détection du dépassement d’un délai d’attente en mode haute sécurité avec basculement automatique, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   

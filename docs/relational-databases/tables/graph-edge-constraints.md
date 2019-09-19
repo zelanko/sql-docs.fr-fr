@@ -1,7 +1,7 @@
 ---
 title: Contraintes d’arête de graphe | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731053"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873883"
 ---
 # <a name="edge-constraints"></a>Contraintes d’arête
 
@@ -48,6 +48,14 @@ Considérez que vous avez les nœuds `Product` et `Customer` dans votre graphe e
 ### <a name="indexes-on-edge-constraints"></a>Index sur les contraintes d’arête
 
 La création d’une contrainte d’arête ne crée pas automatiquement un index correspondant sur les colonnes `$from_id` et `$to_id` dans la table d’arêtes. La création manuelle d’un index sur une paire `$from_id`, `$to_id` est recommandée si vous avez des requêtes de recherche de points ou une charge de travail OLTP.
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>Actions référentielles ON DELETE sur des contraintes d’arête
+Les actions en cascade sur une contrainte d’arête permettent aux utilisateurs de définir le actions que le moteur de base de données effectue lorsqu’un utilisateur supprime le(s) nœud(s) au(x)quel(s) l’arête donnée est reliée. Les actions référentielles suivantes peuvent être définies :  
+*NO ACTION*   
+Le moteur de base de données génère une erreur quand vous essayez de supprimer un nœud relié à des arêtes.  
+
+*CASCADE*   
+Lorsqu’un nœud relié à des arêtes est supprimé de la base de données, les arêtes sont supprimées.  
 
 ## <a name="working-with-edge-constraints"></a>Utilisation des contraintes d’arête
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>Définition d’actions référentielles sur une nouvelle table d’arêtes 
+
+L’exemple suivant crée une contrainte d’arête sur la table d’arêtes **bought** et définit l’action référentielle DELETE CASCADE. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Pour modifier une contrainte d’arête à l’aide de Transact-SQL, vous devez d’abord supprimer la contrainte d’arête existante, puis la recréer avec la nouvelle définition.
 
+
 ### <a name="view-edge-constraints"></a>Afficher des contraintes d’arête
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>Tâches associées
 
+[CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 Pour plus d’informations sur la technologie de graphe dans SQL Server, consultez [Traitement des graphes avec SQL Server et Azure SQL Database](../graphs/sql-graph-overview.md?view=sql-server-2017).
+

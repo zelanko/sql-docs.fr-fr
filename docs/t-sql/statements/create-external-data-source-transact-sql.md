@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 427aa6c21f108f9c488e8209e311d242d0a785df
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190407"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70274729"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -40,10 +40,10 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                               |                                                              |                                                              |                                                              |      |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| **\* _SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -81,16 +81,16 @@ Spécifie le nom défini par l’utilisateur de la source de données. Ce nom do
 
 Fournit le protocole de connectivité et le chemin d’accès à la source de données externe.
 
-| Source de données externe        | Préfixe de l’emplacement | Chemin d’emplacement                                         | Emplacements pris en charge par produit / service    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera ou Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+)                     |
-| Stockage Blob Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)        |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
-| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| MongoDB ou CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 +) - Windows uniquement           |
-| opérations en bloc             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                  |
+| Source de données externe    | Préfixe de l’emplacement | Chemin d’emplacement                                         | Emplacements pris en charge par produit / service |
+| ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera ou Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+)                       |
+| Stockage Blob Azure      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)                       |
+| SQL Server              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| MongoDB ou CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 +) - Windows uniquement        |
+| opérations en bloc         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                       |
 
 Chemin d’emplacement :
 
@@ -375,10 +375,10 @@ Pour voir une utilisation de cet exemple, consultez [BULK INSERT][bulk_insert_ex
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                 |                                                              |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -414,11 +414,11 @@ Spécifie le nom défini par l’utilisateur de la source de données. Ce nom do
 
 Fournit le protocole de connectivité et le chemin d’accès à la source de données externe.
 
-| Source de données externe        | Préfixe de l’emplacement | Chemin d’emplacement                                         |
-| --------------------------- | --------------- | ----------------------------------------------------- |
-| opérations en bloc             | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| Requête élastique (partition)       | Facultatif    | `<shard_map_server_name>.database.windows.net`        |                                 |
-| Requête élastique (distant)      | Facultatif    | `<remote_server_name>.database.windows.net`           |                                |
+| Source de données externe   | Préfixe de l’emplacement | Chemin d’emplacement                                         |
+| ---------------------- | --------------- | ----------------------------------------------------- |
+| opérations en bloc        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
+| Requête élastique (partition)  | Facultatif    | `<shard_map_server_name>.database.windows.net`        |
+| Requête élastique (distant) | Facultatif    | `<remote_server_name>.database.windows.net`           |
 
 Chemin d’emplacement :
 
@@ -461,10 +461,10 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 
 Configurez cet argument lorsque `TYPE` a la valeur `RDBMS` ou `SHARD_MAP_MANAGER`.
 
-| TYPE              | Valeur de DATABASE_NAME                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | Valeur de DATABASE_NAME                                       |
+| ----------------- | ------------------------------------------------------------ |
 | SGBDR             | Le nom de la base de données distante sur le serveur fourni à l’aide de `LOCATION` |
-| SHARD_MAP_MANAGER | Nom de la base de données faisant office de Gestionnaire de la carte de partitions                 |
+| SHARD_MAP_MANAGER | Nom de la base de données faisant office de Gestionnaire de la carte de partitions      |
 
 Pour un exemple montrant comment créer une source de données externe où `TYPE`=`RDBMS`, consultez [Créer une source de données externe SGBDR](#b-create-an-rdbms-external-data-source)
 
@@ -602,10 +602,10 @@ Pour voir une utilisation de cet exemple, consultez [BULK INSERT][bulk_insert_ex
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                                              |                                            |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL Data<br />Warehouse \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
@@ -623,7 +623,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
-[,   TYPE                      =  HADOOP | BLOB_STORAGE]
+[,   TYPE                      =  HADOOP
 )
 [;]
 ```
@@ -642,7 +642,7 @@ Fournit le protocole de connectivité et le chemin d’accès à la source de do
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Stockage Blob Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gén. 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gén. 2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gén. 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 Chemin d’emplacement :
 
@@ -667,7 +667,7 @@ Remarques et conseils supplémentaires lors de la création d’informations d�
 
 Pour créer des informations d’identification délimitées à la base de données, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type--hadoop"></a>TYPE = *HADOOP*
 
 Spécifie le type de source de données externe en cours de configuration. Ce paramètre n’est pas toujours requis.
 
@@ -857,10 +857,10 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
-||||||
+|                                                              |                                                              |                                                              |                                                         |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+|                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
 
@@ -891,10 +891,10 @@ Spécifie le nom défini par l’utilisateur de la source de données. Le nom do
 
 Fournit le protocole de connectivité et le chemin d’accès à la source de données externe.
 
-| Source de données externe        | Préfixe de l’emplacement | Chemin d’emplacement                                |
-| --------------------------- | --------------- |  ------------------------------------------- |
-| Cloudera ou Hortonworks     | `hdfs`          | `<Namenode>[:port]`                          |
-| Stockage Blob Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| Source de données externe    | Préfixe de l’emplacement | Chemin d’emplacement                                         |
+| ----------------------- | --------------- | ----------------------------------------------------- |
+| Cloudera ou Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
+| Stockage Blob Azure      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Chemin d’emplacement :
 

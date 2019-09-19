@@ -1,7 +1,7 @@
 ---
 title: Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2018
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316650"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929710"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -342,7 +342,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 5.  **Ouvrir votre clé Azure Key Vault dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     Si vous avez importé une clé asymétrique, comme décrit dans la Partie II, ouvrez la clé en fournissant le nom de votre clé dans le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant.  
+     Que vous ayez créé une clé ou importé une clé asymétrique, comme décrit dans la partie II, vous devez ouvrir cette clé. Ouvrez la clé en spécifiant son nom dans le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant.  
   
     -   Remplacez `CONTOSO_KEY` par le nom souhaité pour la clé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

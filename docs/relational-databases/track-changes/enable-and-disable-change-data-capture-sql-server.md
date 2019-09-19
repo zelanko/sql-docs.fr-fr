@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd857c9a493528b5759d83dd3b89924a2c22f74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e46578c4d06d430a037a6af066903faa7a6a8e1
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058093"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846531"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Activer et désactiver la capture de données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -74,11 +74,11 @@ GO
   
  **Les colonnes de la table source à capturer**.  
   
- Par défaut, toutes les colonnes de la table source sont identifiées comme colonnes capturées. Si un suivi concerne uniquement un sous-ensemble de colonnes, par exemple pour des raisons de confidentialité ou de performance, utilisez le paramètre *@captured_column_list* pour spécifier ce sous-ensemble.  
+ Par défaut, toutes les colonnes de la table source sont identifiées comme colonnes capturées. Si un suivi concerne uniquement un sous-ensemble de colonnes, par exemple pour des raisons de confidentialité ou de performance, utilisez le paramètre *\@captured_column_list* pour spécifier ce sous-ensemble.  
   
  **Groupe de fichiers devant contenir la table de modifications.**  
   
- Par défaut, la table de modifications se situe dans le groupe de fichiers par défaut de la base de données. Les propriétaires de base de données qui souhaitent contrôler le placement des tables de modifications individuelles peuvent utiliser le paramètre *@filegroup_name* pour spécifier un groupe de fichiers particulier pour la table de modifications associée à l’instance de capture. Le groupe de fichiers nommé doit déjà exister. En règle générale, il est recommandé de placer des tables de modifications dans un groupe de fichiers séparé des tables sources. Consultez le modèle **Activer une table en spécifiant l’option Filegroup** pour un exemple montrant l’utilisation du paramètre *@filegroup_name* .  
+ Par défaut, la table de modifications se situe dans le groupe de fichiers par défaut de la base de données. Les propriétaires de base de données qui souhaitent contrôler le placement des tables de modifications individuelles peuvent utiliser le paramètre *\@filegroup_name* pour spécifier un groupe de fichiers particulier pour la table de modifications associée à l’instance de capture. Le groupe de fichiers nommé doit déjà exister. En règle générale, il est recommandé de placer des tables de modifications dans un groupe de fichiers séparé des tables sources. Consultez le modèle **Activer une table en spécifiant l’option Filegroup** pour voir un exemple montrant l’utilisation du paramètre *\@filegroup_name*.  
   
 ```sql  
 -- =========  
@@ -100,7 +100,7 @@ GO
   
  L'objectif du rôle nommé consiste à contrôler l'accès aux données modifiées. Le rôle spécifié peut être un rôle serveur fixe existant ou un rôle de base de données. Si le rôle spécifié n'existe pas déjà, un rôle de base de données portant ce nom est automatiquement créé. Les membres du rôle **sysadmin** ou **db_owner** disposent d’un accès complet aux données des tables de modification. Tous les autres utilisateurs doivent disposer de l'autorisation SELECT pour toutes les colonnes capturées de la table source. De plus, quand un rôle est spécifié, les utilisateurs qui ne sont pas membres du rôle **sysadmin** ou **db_owner** doivent également être membres du rôle spécifié.  
   
- Si vous ne souhaitez pas utiliser de rôle de régulation, affectez explicitement la valeur NULL au paramètre *@role_name* . Consultez le modèle **Activer une table sans utiliser un rôle de régulation** pour obtenir un exemple d’activation d’une table sans un rôle de régulation.  
+ Si vous ne souhaitez pas utiliser de rôle de régulation, affectez explicitement la valeur NULL au paramètre *\@role_name*. Consultez le modèle **Activer une table sans utiliser un rôle de régulation** pour obtenir un exemple d’activation d’une table sans un rôle de régulation.  
   
 ```sql  
 -- =========  
@@ -121,9 +121,9 @@ GO
   
  Une instance de capture inclura toujours une fonction table pour retourner toutes les entrées de table de modifications qui ont eu lieu au cours d'un intervalle défini. On nomme cette fonction en ajoutant le nom de l'instance de capture à "cdc.fn_cdc_get_all_changes_". Pour plus d’informations, consultez [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
   
- Si le paramètre *@supports_net_changes* a la valeur 1, une fonction de suivi des modifications nettes est également générée pour l’instance de la capture. Cette fonction retourne une seule modification pour chaque ligne distincte modifiée dans l'intervalle spécifié dans l'appel. Pour plus d’informations, consultez [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+ Si le paramètre *\@supports_net_changes* a la valeur 1, une fonction de suivi des modifications nettes est également générée pour l’instance de la capture. Cette fonction retourne une seule modification pour chaque ligne distincte modifiée dans l'intervalle spécifié dans l'appel. Pour plus d’informations, consultez [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
- Pour prendre en charge les requêtes de modifications nettes, la table source doit disposer d'une clé primaire ou d'un index unique permettant d'identifier sans ambiguïté les lignes. Si un index unique est utilisé, le nom de l’index doit être spécifié à l’aide du paramètre *@index_name* . Les colonnes définies dans la clé primaire ou l'index unique doivent être incluses dans la liste des colonnes sources à capturer.  
+ Pour prendre en charge les requêtes de modifications nettes, la table source doit disposer d'une clé primaire ou d'un index unique permettant d'identifier sans ambiguïté les lignes. Si un index unique est utilisé, le nom de l’index doit être spécifié à l’aide du paramètre *\@index_name*. Les colonnes définies dans la clé primaire ou l'index unique doivent être incluses dans la liste des colonnes sources à capturer.  
   
  Consultez le modèle **Activer une table pour tous et pour les requêtes de modifications nettes** pour un exemple montrant la création d’une instance de capture avec les deux fonctions de requête.  
   
@@ -142,7 +142,7 @@ GO
 ```  
   
 > [!NOTE]
->  Si la capture de données modifiées est activée sur une table avec une clé primaire existante, et que le paramètre *@index_name* n’est pas utilisé pour identifier un autre index unique, la fonctionnalité de capture de données modifiées utilisera la clé primaire. Les modifications ultérieures à la clé primaire ne seront pas autorisées sans désactivation préalable de la capture de données modifiées pour la table. Cela est vrai, que la prise en charge des requêtes de modifications nettes ait été demandée ou non lors de la configuration de la capture de données. Si une table ne contient pas de clé primaire au moment de son activation pour la capture de données modifiées, tout ajout ultérieur de clé primaire sera ignoré par la capture des données modifiées. Étant donné que la capture de données modifiées n'utilisera pas de clé primaire créée une fois la table activée, la clé et les colonnes clés peuvent être supprimées sans restrictions.  
+>  Si la capture de données modifiées est activée sur une table avec une clé primaire existante, et que le paramètre *\@index_name* n’est pas utilisé pour identifier un autre index unique, la fonctionnalité de capture de données modifiées utilisera la clé primaire. Les modifications ultérieures à la clé primaire ne seront pas autorisées sans désactivation préalable de la capture de données modifiées pour la table. Cela est vrai, que la prise en charge des requêtes de modifications nettes ait été demandée ou non lors de la configuration de la capture de données. Si une table ne contient pas de clé primaire au moment de son activation pour la capture de données modifiées, tout ajout ultérieur de clé primaire sera ignoré par la capture des données modifiées. Étant donné que la capture de données modifiées n'utilisera pas de clé primaire créée une fois la table activée, la clé et les colonnes clés peuvent être supprimées sans restrictions.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Désactiver la capture des données modifiées pour une table  
  Les membres du rôle de base de données fixe **db_owner** peuvent supprimer une instance de capture pour les tables sources individuelles à l’aide de la procédure stockée **sys.sp_cdc_disable_table**. Pour déterminer si une table source est actuellement activée pour la capture des données modifiées, examinez la colonne **is_tracked_by_cdc** dans l’affichage catalogue **sys.tables** . S'il n'y a pas de tables activées pour la base de données après la désactivation, les travaux de capture de données modifiées sont également supprimés.  

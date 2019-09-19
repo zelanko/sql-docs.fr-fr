@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ffd608faf64818a7acd9e38d9c502f575be6716a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: ccc96ecf7dccede236616e4680243116b8492d6b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653055"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70309881"
 ---
 ## <a name="enabled-deployment-scenarios"></a>Scénarios de déploiement rendus possibles
 
@@ -13,7 +13,7 @@ La version Release candidate (RC) de SQL Server 2019 active les scénarios suiva
 - Installation côte à côte. Installez des instances de la version Release Candidate de SQL Server 2019 avec des instances de SQL Server 2012 à SQL Server 2017, ou d’autres instances de SQL Server 2019 CTP 3.0 ou versions ultérieures.
    >[!NOTE]
    >Alors que le mode côte à côte n’est pas bloqué avec SQL Server 2008 et 2008 R2, il n’existe pas de versions de système d’exploitation Windows couramment prises en charge entre elles et SQL Server 2019.
-- Mise à niveau sur place. Mettez à niveau des instances de la version Release Candidate de SQL Server 2019, à partir d’instances de SQL Server 2012 à SQL Server 2017 et SQL Server CTP 3.0. La mise à niveau d’une version de SQL Server 2019 CTP antérieure à 3 0 n’est pas prise en charge. Une nouvelle installation doit être effectuée.
+- Mise à niveau sur place. Effectuez une mise à niveau vers la version Release Candidate de SQL Server 2019, à partir d’instances de SQL Server 2012 à SQL Server 2017 et SQL Server CTP 3.0. La mise à niveau d’une version de SQL Server 2019 CTP antérieure à 3 0 n’est pas prise en charge. Une nouvelle installation doit être effectuée.
    >[!NOTE]
    >Alors que la mise à niveau sur place de SQL Server 2008 et 2008 R2 n’est pas bloquée, il n’existe pas de versions de système d’exploitation Windows couramment prises en charge entre elles et SQL Server 2019.
 

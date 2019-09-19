@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085954"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846738"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Afin de limiter le téléchargement, utilisez **@subscriber_upload_options** de **sp_addmergearticle** à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Afin de limiter le chargement, utilisez les **\@subscriber_upload_options** de **sp_addmergearticle** à la place.  
   
  Spécifie le type d'échange de données au cours de la synchronisation parmi les types suivants :  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  Spécifie le nombre de threads source utilisés par l'Agent de fusion pour énumérer les modifications de la source. La source est l'Abonné au cours du téléchargement ascendant et le serveur de publication au cours du téléchargement descendant. La valeur par défaut est **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Durée maximale en secondes de l'attente de l'Agent de fusion lorsque le nombre de processus de fusion simultanés en cours d'exécution a atteint la limite définie par la propriété **@max_concurrent_merge** de **sp_addmergepublication**. Si le nombre maximal de secondes est atteint et que l'Agent de fusion attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
+ Durée maximale en secondes de l’attente de l’Agent de fusion lorsque le nombre de processus de fusion simultanés en cours d’exécution a atteint la limite définie par la propriété **\@max_concurrent_merge** de **sp_addmergepublication**. Si le nombre maximal de secondes est atteint et que l'Agent de fusion attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Chemin d'accès à la base de données Jet (fichier .mdb) si **SubscriberType** a la valeur **2** (autorise une connexion à une base de données Jet sans nom de la source de données ODBC).  
