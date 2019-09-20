@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160700"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016887"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster Big Data SQL Server
 
@@ -39,9 +39,9 @@ Cet article décrit les étapes de déploiement de Kubernetes sur AKS avec Azure
 
 - Version 1,13 minimale pour le serveur Kubernetes. Pour AKS, vous devez utiliser le paramètre `--kubernetes-version` pour spécifier une version différente de la version par défaut.
 
-- Pour une expérience optimale lors de la validation des scénarios de base sur AKS, utilisez :
+- Pour garantir un déploiement réussi et une expérience optimale lors de la validation des scénarios de base sur AKS, vous pouvez utiliser un nœud unique ou un cluster AKS à plusieurs nœuds, avec les ressources disponibles :
    - 8 processeurs virtuels pour tous les nœuds
-   - 32 Go de mémoire par machine virtuelle
+   - 64 Go de mémoire par ordinateur virtuel
    - 24 disques attachés ou plus pour tous les nœuds
 
    > [!TIP]
