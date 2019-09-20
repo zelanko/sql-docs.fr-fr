@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 248a2e12199466cfaf686bcfcf10341a75981ef7
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715686"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149896"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendre le code R opérationnel à l’aide de procédures stockées dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,14 +24,14 @@ Lorsque vous utilisez les fonctionnalités R et Python dans SQL Server Machine L
 
 Traditionnellement, l’intégration de solutions de science des données impliquait un recodage extensif pour la prise en charge des performances et de l’intégration. SQL Server Machine Learning Services simplifie cette tâche, car le code R et Python peut être exécuté dans SQL Server et appelé à l’aide de procédures stockées. Pour plus d’informations sur le mécanisme d’incorporation de code dans des procédures stockées, consultez:
 
-+ [Démarrage rapide : Script R «Hello World» dans SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [Créer et exécuter des scripts R simples dans SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 Vous trouverez un exemple plus complet de déploiement du code R en production à l’aide des procédures stockées [dans le didacticiel: Analyse des données R pour les développeurs SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Instructions pour l’optimisation du code R pour SQl
 
-La conversion de votre code R dans SQL est plus facile si certaines optimisations sont effectuées au préalable dans le code R ou python. Il s’agit notamment d’éviter les types de données qui provoquent des problèmes, d’éviter les conversions de données inutiles et de réécrire le code R comme un appel de fonction unique pouvant être facilement paramétré. Pour plus d'informations, consultez :
+La conversion de votre code R dans SQL est plus facile si certaines optimisations sont effectuées au préalable dans le code R ou python. Il s’agit notamment d’éviter les types de données qui provoquent des problèmes, d’éviter les conversions de données inutiles et de réécrire le code R comme un appel de fonction unique pouvant être facilement paramétré. Pour plus d'informations, voir :
 
 + [Bibliothèques et types de données R](r-libraries-and-data-types.md)
 + [Conversion de code R pour une utilisation dans R services](converting-r-code-for-use-in-sql-server.md)

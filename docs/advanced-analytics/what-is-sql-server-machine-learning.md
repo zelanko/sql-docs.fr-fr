@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276666"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149942"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ Pour plus d’informations sur les packages installés avec Machine Learning Ser
 
 1. Écrire votre premier script Python ou R
 
-    + Démarrage rapide : Exécuter un script « Hello World » [dans python](tutorials/quickstart-python-run-using-t-sql.md) ou [R](tutorials/quickstart-r-run-using-tsql.md)
-    + Démarrage rapide : Créer un modèle prédictif [dans python](tutorials/quickstart-python-train-score-in-tsql.md) ou [R](tutorials/quickstart-r-create-predictive-model.md)
+    + Démarrage rapide : [Créer et exécuter des scripts R simples dans SQL](tutorials/quickstart-r-create-script.md)
+    + Démarrage rapide : [Créer et effectuer l’apprentissage d’un modèle prédictif dans R](tutorials/quickstart-r-train-score-model.md)
     + Tutoriel : [Utilisation de Python dans T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explorez les données, effectuez l’ingénierie des caractéristiques, formez et déployez des modèles, puis faites des prédictions (série de cinq parties)
     + Tutoriel : [Utilisez R dans T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explorez les données, effectuez l’ingénierie des caractéristiques, formez et déployez des modèles, puis faites des prédictions (série de cinq parties)
     + Tutoriel : [Utilisez machine learning services dans les outils R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explorez les données, créez des graphiques et des tracés, effectuez l’ingénierie des caractéristiques, formez et déployez des modèles, puis Élaborez des prédictions (série en six parties)

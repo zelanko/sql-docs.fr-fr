@@ -1,42 +1,46 @@
 ---
-title: Démarrage rapide avec fonctions R-SQL Server Machine Learning
-description: Dans ce guide de démarrage rapide, Découvrez comment écrire une fonction R pour un calcul statistique avancé.
+title: Écrire des fonctions R avancées
+titleSuffix: SQL Server Machine Learning Services
+description: Dans ce guide de démarrage rapide, vous apprendrez à écrire une fonction R pour un calcul statistique avancé avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 09/17/2019
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8c8f69391db2e1028a0da33dbaf77fd60eafd8f
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: cebd4ea6a356af6802a0e26f778667b2acc4b80c
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70909198"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149907"
 ---
-# <a name="quickstart-use-r-functions"></a>Démarrage rapide : Utiliser les fonctions R
+# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Écrire des fonctions R avancées avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Si vous avez terminé les Démarrages rapides précédents, vous êtes familiarisé avec les opérations de base et prêt à être plus complexe, comme les fonctions statistiques. Les fonctions statistiques avancées qui sont complexes à implémenter dans T-SQL peuvent être effectuées dans R avec une seule ligne de code.
-
-Dans ce guide de démarrage rapide, vous allez incorporer les fonctions d’utilitaire et mathématiques R dans une procédure stockée SQL Server.
+Ce guide de démarrage rapide explique comment incorporer des fonctions de l’utilitaire et du langage R mathématiques dans une procédure stockée SQL avec SQL Server Machine Learning Services. Les fonctions statistiques avancées qui sont complexes à implémenter dans T-SQL peuvent être effectuées dans R avec une seule ligne de code.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Un démarrage rapide précédent, [Vérifiez que R existe dans SQL Server](quickstart-r-verify.md), fournit des informations et des liens pour configurer l’environnement r requis pour ce guide de démarrage rapide.
+- Ce guide de démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md) avec le langage R installé.
+
+  Votre instance de SQL Server peut se trouver dans une machine virtuelle Azure ou en local. N’oubliez pas que la fonctionnalité de script externe est désactivée par défaut. par conséquent, vous devrez peut-être [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que **SQL Server Launchpad service** est en cours d’exécution avant de commencer.
+
+- Vous avez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts R. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce guide de démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Créer une procédure stockée pour générer des nombres aléatoires
 
-Pour plus de simplicité, nous allons utiliser `stats` le package r, qui est installé et chargé par défaut lorsque vous installez la prise en charge des fonctionnalités r dans SQL Server. Le package contient des centaines de fonctions qui permettent d’effectuer des tâches statistiques courantes, notamment la fonction `rnorm`, qui génère un nombre spécifié de nombres aléatoires en utilisant la distribution normale, avec un écart type et une moyenne donnés.
+Pour plus de simplicité, nous allons utiliser `stats` le package R, qui est installé et chargé par défaut dans SQL Server machine learning services avec R installé. Le package contient des centaines de fonctions qui permettent d’effectuer des tâches statistiques courantes, notamment la fonction `rnorm`, qui génère un nombre spécifié de nombres aléatoires en utilisant la distribution normale, avec un écart type et une moyenne donnés.
 
-Par exemple, ce code R retourne 100 nombres sur une moyenne de 50, compte tenu d’un écart type de 3.
+Par exemple, le code R suivant retourne 100 chiffres sur une moyenne de 50, selon un écart type de 3.
 
 ```R
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-Pour appeler cette ligne de code R à partir de T-SQL, exécutez sp_execute_external_script et ajoutez la fonction R dans le paramètre de script R, comme ceci :
+Pour appeler cette ligne de R à partir de T-SQL, ajoutez la fonction r dans le paramètre de `sp_execute_external_script`script r de, comme suit :
 
 ```sql
 EXEC sp_execute_external_script
@@ -49,13 +53,16 @@ EXEC sp_execute_external_script
 
 Vous souhaitez générer plus facilement un autre ensemble de nombres aléatoires ?
 
-C’est facile lorsqu’il est combiné avec SQL Server : définissez une procédure stockée qui obtient les arguments de l’utilisateur. Vous devez ensuite passer ces arguments dans le script R sous forme de variables.
+C’est facile lorsqu’il est combiné avec SQL Server. Vous définissez une procédure stockée qui obtient les arguments de l’utilisateur, puis transmettez ces arguments dans le script R sous forme de variables.
 
 ```sql
-CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
+CREATE PROCEDURE MyRNorm (
+    @param1 INT
+    , @param2 INT
+    , @param3 INT
+    )
 AS
-    EXEC sp_execute_external_script
-      @language = N'R'
+EXEC sp_execute_external_script @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(mynumbers, mymean, mysd));'
     , @input_data_1 = N'   ;'
@@ -63,14 +70,14 @@ AS
     , @mynumbers = @param1
     , @mymean = @param2
     , @mysd = @param3
-    WITH RESULT SETS (([Density] float NOT NULL));
+WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-+ La première ligne définit chaque paramètre d’entrée SQL nécessaire pendant l’exécution de la procédure stockée.
+- La première ligne définit chaque paramètre d’entrée SQL nécessaire pendant l’exécution de la procédure stockée.
 
-+ La ligne commençant par `@params` définit toutes les variables utilisées par le code R, ainsi que les types de données SQL correspondants.
+- La ligne commençant par `@params` définit toutes les variables utilisées par le code R, ainsi que les types de données SQL correspondants.
 
-+ Les lignes qui viennent de suite après mappent les noms de paramètres SQL aux noms de variables R correspondants.
+- Les lignes qui viennent de suite après mappent les noms de paramètres SQL aux noms de variables R correspondants.
 
 Maintenant que vous avez inclus la fonction R dans une procédure stockée, vous pouvez l’appeler facilement et passer des valeurs différentes, comme ceci :
 
@@ -80,7 +87,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Utiliser les fonctions utilitaires R pour résoudre les problèmes
 
-Par défaut, une installation de R inclut le `utils` package, qui fournit diverses fonctions utilitaires pour l’examen de l’environnement R actuel. Cela peut être utile si vous constatez des différences de fonctionnement du code R dans SQL Server et les environnements extérieurs.
+Le package **utils** , installé par défaut, fournit diverses fonctions utilitaires pour l’examen de l’environnement R actuel. Ces fonctions peuvent être utiles si vous recherchez des différences dans la façon dont votre code R s’exécute dans SQL Server et dans des environnements externes.
 
 Par exemple, vous pouvez utiliser la fonction `memory.limit()` R pour affecter de la mémoire à l’environnement R actif. Comme le package `utils` est installé par défaut mais pas chargé, vous devez utiliser la fonction `library()` pour le charger en premier lieu.
 
@@ -95,13 +102,13 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-De nombreux utilisateurs aiment utiliser les fonctions de minutage du système dans R, `system.time` telles `proc.time`que et, pour capturer le temps utilisé par les processus r et analyser les problèmes de performances.
+> [!TIP]
+> De nombreux utilisateurs aiment utiliser les fonctions de minutage du système dans R, `system.time` telles `proc.time`que et, pour capturer le temps utilisé par les processus r et analyser les problèmes de performances.
 
-Pour obtenir un exemple, consultez ce didacticiel : [Créer des fonctionnalités de données](../tutorials/walkthrough-create-data-features.md). Dans cette procédure pas à pas, les fonctions de minutage R sont incorporées dans la solution pour comparer les performances de deux méthodes de création de fonctionnalités à partir de données : Fonctions R et aux fonctions T-SQL.
+Pour obtenir un exemple, consultez ce didacticiel : [Créer des fonctionnalités de données](../tutorials/walkthrough-create-data-features.md). Dans cette procédure pas à pas, les fonctions de minutage R sont incorporées dans la solution pour comparer les performances des fonctions R et Fonctions T-SQL pour la création de fonctionnalités à partir de données.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Ensuite, vous allez créer un modèle prédictif en utilisant R dans SQL Server.
+Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
 
-> [!div class="nextstepaction"]
-> [Démarrage rapide : Créer un modèle prédictif](quickstart-r-create-predictive-model.md)
+- [Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?](../what-is-sql-server-machine-learning.md)

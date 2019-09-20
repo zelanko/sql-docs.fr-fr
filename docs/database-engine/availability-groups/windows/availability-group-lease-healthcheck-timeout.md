@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 51a683d7566fb9a4e7d25da4c89e7ef3ceb1b007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991461"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874362"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mécanismes et recommandations liés aux délais d’attente concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On 
 
@@ -45,7 +45,7 @@ Contrairement à d’autres mécanismes de basculement, l’instance SQL Server 
 
 Le mécanisme de bail applique la synchronisation entre SQL Server et le cluster de basculement Windows Server. Lorsqu’une commande de basculement est émise, le service de cluster effectue un appel hors connexion à la DLL de ressource du réplica principal actuel. La DLL de ressource essaie d’abord de mettre le groupe de disponibilité hors connexion à l’aide d’une procédure stockée. Si cette procédure stockée échoue ou expire, l’échec est signalé au service de cluster, qui, à son tour, émet une commande de fin d’exécution. La commande de fin d’exécution tente à nouveau d’exécuter la même procédure stockée. Toutefois, cette fois-ci, le cluster n’attend pas que la DLL de ressource signale une réussite ou un échec avant de mettre en ligne le groupe de disponibilité sur un nouveau réplica. Si ce deuxième appel de procédure échoue, l’hôte des ressources devra compter sur le mécanisme de bail pour mettre l’instance hors connexion. Lorsque la DLL de ressource est appelée pour mettre le groupe de disponibilité hors connexion, la DLL de ressource signale l’événement d’arrêt de bail, et sort de veille le thread de travail de bail SQL Server pour mettre le groupe de disponibilité hors connexion. Même si cet événement d’arrêt n’est pas signalé, le bail expire, et le réplica passe à l’état de résolution. 
 
-Le bail est principalement un mécanisme de synchronisation entre l’instance principale et le cluster, mais il peut également créer des conditions d’échec là où un basculement n’était pas nécessaire. Par exemple, les situations d’utilisation élevée du processeur, de mémoire insuffisante (mémoire virtuelle faible, pagination du processus), d’absence de réponse du processus SQL lors de la génération d’un vidage de mémoire, de blocage à l’échelle du système, de déconnexion du cluster (WSFC) (par exemple, en raison d’une perte de quorum) peuvent empêcher le renouvellement du bail de l’instance SQL et provoque un redémarrage ou un basculement. 
+Le bail est principalement un mécanisme de synchronisation entre l’instance principale et le cluster, mais il peut également créer des conditions d’échec là où un basculement n’était pas nécessaire. Par exemple, les situations d’utilisation élevée du processeur, de mémoire insuffisante (mémoire virtuelle faible, pagination du processus), d’absence de réponse du processus SQL lors de la génération d’un vidage de mémoire, d’absence de réponse du système, de déconnexion du cluster (WSFC) (par exemple, en raison d’une perte de quorum) peuvent empêcher le renouvellement du bail de l’instance SQL et provoquer un redémarrage ou un basculement. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Recommandations concernant les valeurs de délai d’expiration des clusters 
 
@@ -155,9 +155,9 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | Paramètre de délai d’attente | Fonction | Entre | Utilisations | IsAlive et LooksAlive | Causes | Résultat 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | Délai d’expiration du bail </br> **Par défaut : 20000** | Empêcher le Split-Brain | Principal et cluster </br> (HADR) | [Objets d’événement Windows](/windows/desktop/Sync/event-objects)| Utilisé dans les deux | Blocage du système d’exploitation, mémoire virtuelle faible, pagination de la plage de travail, génération d’un vidage sur incident, UC invariable, WSFC hors service (perte de quorum) | Ressource de groupe de disponibilité hors connexion-en ligne, basculement |  
- | Délai d’expiration de session </br> **Par défaut : 10000** | Informer de l’existence d’un problème de communication entre le principal et le secondaire | Secondaire et principal </br> (HADR) | [Sockets TCP (messages envoyés via le point de terminaison DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Utilisé dans aucun des deux | Problèmes de communication </br> réseau sur le secondaire - hors service, blocage du système d’exploitation, contention de ressources | Secondaire - DÉCONNECTÉ | 
- |Délai d’attente HealthCheck  </br> **Par défaut : 30000** | Indiquer le délai d’expiration lors d’une tentative de détermination de l’état du réplica principal | Cluster et principal </br> (ICF et HADR) | [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) T-SQL | Utilisé dans les deux | Conditions d’échec réunies, blocage du système d’exploitation, mémoire virtuelle faible, plage de travail tronquée, génération d’un vidage sur incident, WSFC (perte de quorum), problèmes de planificateur (planificateurs bloqués)| Ressource de groupe de disponibilité hors connexion-en ligne ou basculement, redémarrage/basculement de l’ICF |  
+ | Délai d’expiration du bail </br> **Par défaut : 20000** | Empêcher le Split-Brain | Principal et cluster </br> (HADR) | [Objets d’événement Windows](/windows/desktop/Sync/event-objects)| Utilisé dans les deux | Absence de réponse du système d’exploitation, mémoire virtuelle faible, pagination de la plage de travail, génération d’un vidage sur incident, UC invariable, WSFC hors service (perte de quorum) | Ressource de groupe de disponibilité hors connexion-en ligne, basculement |  
+ | Délai d’expiration de session </br> **Par défaut : 10000** | Informer de l’existence d’un problème de communication entre le principal et le secondaire | Secondaire et principal </br> (HADR) | [Sockets TCP (messages envoyés via le point de terminaison DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Utilisé dans aucun des deux | Problèmes de communication </br> réseau sur le secondaire - hors service, absence de réponse du système d’exploitation, contention de ressources | Secondaire - DÉCONNECTÉ | 
+ |Délai d’attente HealthCheck  </br> **Par défaut : 30000** | Indiquer le délai d’expiration lors d’une tentative de détermination de l’état du réplica principal | Cluster et principal </br> (ICF et HADR) | [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) T-SQL | Utilisé dans les deux | Conditions d’échec réunies, absence de réponse du système d’exploitation, mémoire virtuelle faible, plage de travail tronquée, génération d’un vidage sur incident, WSFC (perte de quorum), problèmes de planificateur (planificateurs bloqués)| Ressource de groupe de disponibilité hors connexion-en ligne ou basculement, redémarrage/basculement de l’ICF |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Voir aussi    
