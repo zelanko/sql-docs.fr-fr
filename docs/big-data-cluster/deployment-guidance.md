@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878718"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174268"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procédure de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -142,15 +142,15 @@ Vous pouvez également personnaliser votre propre profil de configuration de dé
 
 Les variables d’environnement suivantes sont utilisées pour les paramètres de sécurité qui ne sont pas stockés dans un fichier de configuration de déploiement. Notez que les paramètres Docker, à l’exception des informations d’identification, peuvent être définis dans le fichier de configuration.
 
-| Variable d'environnement | Prérequis |Description |
+| Variable d'environnement | Condition requise |Description |
 |---|---|---|
-| **CONTROLLER_USERNAME** | Obligatoire |Nom d’utilisateur de l’administrateur de cluster. |
-| **CONTROLLER_PASSWORD** | Obligatoire |Mot de passe de l’administrateur du cluster. |
-| **MSSQL_SA_PASSWORD** | Obligatoire |Mot de passe de l’utilisateur désigné comme administrateur système pour l’instance maître SQL. |
-| **KNOX_PASSWORD** | Obligatoire |Mot de passe de l’utilisateur **racine** Knox. Notez que dans une configuration d’authentification de base, seul l’utilisateur pris en charge pour Knox est **root**.|
-| **ACCEPT_EULA**| Obligatoire pour la première utilisation de `azdata`| Ne nécessite aucune valeur. Si vous la définissez en tant que variable d’environnement, elle applique le CLUF à SQL Server et `azdata`. Si vous ne la définissez pas en tant que variable d’environnement, vous pouvez inclure `--accept-eula` dans la première utilisation de la commande `azdata`.|
-| **DOCKER_USERNAME** | Facultatif | Nom d’utilisateur utilisé pour accéder aux images de conteneur si elles sont stockées dans un dépôt privé. Pour plus d’informations sur l’utilisation d’un dépôt Docker privé pour le déploiement d’un cluster Big Data, consultez la rubrique [Déploiements hors connexion](deploy-offline.md).|
-| **DOCKER_PASSWORD** | Facultatif |Mot de passe nécessaire pour accéder au dépôt privé ci-dessus. |
+| **CONTROLLER_USERNAME** | Requis |Nom d’utilisateur de l’administrateur de cluster. |
+| **CONTROLLER_PASSWORD** | Requis |Mot de passe de l’administrateur du cluster. |
+| **MSSQL_SA_PASSWORD** | Requis |Mot de passe de l’utilisateur désigné comme administrateur système pour l’instance maître SQL. |
+| **KNOX_PASSWORD** | Requis |Mot de passe de l’utilisateur **racine** Knox. Notez que dans une configuration d’authentification de base, seul l’utilisateur pris en charge pour Knox est **root**.|
+| **ACCEPT_EULA**| Obligatoire pour la première utilisation de `azdata`| Définissez sur « Oui ». Si vous la définissez en tant que variable d’environnement, elle applique le CLUF à SQL Server et `azdata`. Si vous ne la définissez pas en tant que variable d’environnement, vous pouvez inclure `--accept-eula=yes` dans la première utilisation de la commande `azdata`.|
+| **DOCKER_USERNAME** | Ce paramètre est facultatif | Nom d’utilisateur utilisé pour accéder aux images de conteneur si elles sont stockées dans un dépôt privé. Pour plus d’informations sur l’utilisation d’un dépôt Docker privé pour le déploiement d’un cluster Big Data, consultez la rubrique [Déploiements hors connexion](deploy-offline.md).|
+| **DOCKER_PASSWORD** | Ce paramètre est facultatif |Mot de passe nécessaire pour accéder au dépôt privé ci-dessus. |
 
 Ces variables d’environnement doivent être définies avant d’appeler **azdata bdc create**. Si une variable n’est pas définie, vous êtes invité à le faire.
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell

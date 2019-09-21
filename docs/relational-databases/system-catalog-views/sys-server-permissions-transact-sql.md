@@ -1,7 +1,7 @@
 ---
 title: sys.server_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -20,14 +20,14 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3b34cebe15155cf590cec5008ef8f8eaf5ba117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133101"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163933"
 ---
-# <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
+# <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Retourne une ligne pour chaque autorisation de niveau serveur.  
@@ -35,10 +35,10 @@ ms.locfileid: "68133101"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifie la classe d'éléments sur laquelle l'autorisation existe.<br /><br /> 100 = serveur<br /><br /> 101 = principal serveur<br /><br /> 105 = point de terminaison|  
-|**class_desc**|**nvarchar(60)**|Description de la classe sur laquelle l'autorisation existe. L’une des valeurs suivantes :<br /><br /> **SERVEUR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
-|**major_id**|**int**|ID de l'élément sécurisable sur lequel l'autorisation existe, interprété selon la classe. Il s'agit généralement de l'ID qui s'applique à ce que la classe représente. L'interprétation des éléments non standard s'effectue ainsi :<br /><br /> 100 = toujours 0|  
-|**minor_id**|**int**|ID secondaire d'un élément sur lequel l'autorisation existe, interprété selon la classe.|  
-|**grantee_principal_id**|**int**|ID du principal du serveur auquel les autorisations sont accordées.|  
+|**class_desc**|**nvarchar(60)**|Description de la classe sur laquelle l'autorisation existe. L’une des valeurs suivantes :<br /><br /> **SERVEURS**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**major_id**|**Int**|ID de l'élément sécurisable sur lequel l'autorisation existe, interprété selon la classe. Il s'agit généralement de l'ID qui s'applique à ce que la classe représente. L'interprétation des éléments non standard s'effectue ainsi :<br /><br /> 100 = toujours 0|  
+|**minor_id**|**Int**|ID secondaire d'un élément sur lequel l'autorisation existe, interprété selon la classe.|  
+|**grantee_principal_id**|**Int**|ID du principal du serveur auquel les autorisations sont accordées.|  
 |**grantor_principal_id**|**Int**|ID du principal du serveur de la personne qui accorde ces autorisations.|  
 |**type**|**char(4)**|Type d'autorisation serveur. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
 |**permission_name**|**nvarchar(128)**|Nom de l’autorisation.|  
@@ -47,8 +47,11 @@ ms.locfileid: "68133101"
   
 |Type d'autorisation|Nom de l’autorisation|S'applique à l'élément sécurisable|  
 |---------------------|---------------------|--------------------------|  
+|AAES|ALTER ANY EVENT SESSION|SERVER|
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
 |AL|ALTER|ENDPOINT, LOGIN|  
+|ALAA|ALTER ANY SERVER AUDIT|SERVER|
+|ALAG|ALTER ANY AVAILABILITY GROUP|SERVER|
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
@@ -56,27 +59,34 @@ ms.locfileid: "68133101"
 |ALHE|ALTER ANY ENDPOINT|SERVER|  
 |ALLG|ALTER ANY LOGIN|SERVER|  
 |ALLS|ALTER ANY LINKED SERVER|SERVER|  
-|ALRS|ALTER RESOURCES|SERVER|  
+|ALRS|ALTER RESOURCES|SERVER|
+|ALSR|ALTER ANY SERVER ROLE|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
 |ALTR|ALTER TRACE|SERVER|  
-|AUTH|AUTHENTICATE SERVER|SERVER|  
+|AUTH|AUTHENTICATE SERVER|SERVER|
+|CADB|CONNECT ANY DATABASE|SERVER|  
 |CL|CONTROL|ENDPOINT, LOGIN|  
 |CL|CONTROL SERVER|SERVER|  
 |CO|CONNECT|ENDPOINT|  
-|COSQ|CONNECT SQL|SERVER|  
+|COSQ|CONNECT SQL|SERVER|
+|CRAC|Créer un groupe de disponibilité|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
 |CRDE|CREATE DDL EVENT NOTIFICATION|SERVER|  
-|CRHE|CREATE ENDPOINT|SERVER|  
-|CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|  
+|CRHE|CREATE ENDPOINT|SERVER|
+|CRSR|CREATE SERVER ROLE|SERVER|  
+|CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|
+|IAL|IMPERSONATE ANY LOGIN|SERVER|  
 |IM|IMPERSONATE|Connexion|  
-|SHDN|SHUTDOWN|SERVER|  
+|SHDN|SHUTDOWN|SERVER|
+|SUS|SELECT ALL USER SECURABLES|SERVER|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
 |VW|VIEW DEFINITION|ENDPOINT, LOGIN|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
 |VWSS|VIEW SERVER STATE|SERVER|  
-|XA|EXTERNAL ACCESS|SERVER|  
+|XA|EXTERNAL ACCESS|SERVER|
+|XU|UNSAFE ASSEMBLY|SERVER|
   
 ## <a name="permissions"></a>Autorisations  
  Tout utilisateur peut consulter ses propres autorisations. Pour afficher les autorisations d'autres connexions, vous devez disposer de l'autorisation VIEW DEFINITION, ALTER ANY LOGIN, ou de n'importe quelle autorisation sur une connexion. Pour afficher les rôles serveur définis par l'utilisateur, vous devez disposer de l'autorisation ALTER ANY SERVER ROLE, ou appartenir au rôle.  
@@ -87,7 +97,7 @@ ms.locfileid: "68133101"
  La requête suivante répertorie les autorisations explicitement accordées ou refusées aux principaux de serveur.  
   
 > [!IMPORTANT]  
->  Les autorisations des rôles serveur fixes n'apparaissent pas dans sys.server_permissions. Par conséquent, les principaux de serveur peuvent avoir des autorisations supplémentaires non répertoriées ici.  
+> Les autorisations des rôles serveur fixes n'apparaissent pas dans sys.server_permissions. Par conséquent, les principaux de serveur peuvent avoir des autorisations supplémentaires non répertoriées ici.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -103,5 +113,3 @@ JOIN sys.server_permissions AS pe
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
-  
-  
