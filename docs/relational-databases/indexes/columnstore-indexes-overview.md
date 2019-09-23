@@ -45,7 +45,7 @@ Les termes et concepts clés suivants sont associés aux index columnstore.
 Un columnstore représente des données organisées logiquement sous la forme d’une table comportant des lignes et des colonnes, et stockées physiquement dans un format de données en colonnes.  
   
 #### <a name="rowstore"></a>Rowstore
-Un rowstore représente des données organisées logiquement sous la forme d’une table comportant des lignes et des colonnes, et stockées physiquement dans un format de données en colonnes. Il s'agit de la méthode classique de stockage des données de tables relationnelles. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un rowstore correspond à une table dont le format de stockage de données sous-jacent est un segment de mémoire, un index cluster ou une table à mémoire optimisée.  
+Un rowstore représente des données organisées logiquement sous la forme d’une table comportant des lignes et des colonnes, et stockées physiquement dans un format de données en lignes. Il s'agit de la méthode classique de stockage des données de tables relationnelles. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un rowstore correspond à une table dont le format de stockage de données sous-jacent est un segment de mémoire, un index cluster ou une table à mémoire optimisée.  
   
 > [!NOTE]  
 > Dans les discussions au sujet des index columnstore, les termes rowstore et columnstore sont utilisés pour mettre en évidence le format du stockage de données.  
