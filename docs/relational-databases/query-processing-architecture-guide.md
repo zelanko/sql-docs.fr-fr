@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929802"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096939"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ Les valeurs de paramètres sont détectées pendant la compilation ou la recompi
 -  Requêtes soumises par l’intermédiaire de sp_executesql 
 -  Requêtes préparées
 
-Pour plus d’informations sur la résolution des problèmes de détection de paramètre incorrect, consultez [Résoudre les problèmes de requête liés aux plans d’exécution de requête sensibles aux paramètres](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
+Pour plus d’informations sur la résolution des problèmes de détection de paramètre incorrect, consultez [Résoudre les problèmes de requête liés aux plans d’exécution de requête sensibles aux paramètres](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
 
 > [!NOTE]
 > Pour les requêtes utilisant l’indicateur `RECOMPILE`, les valeurs de paramètres et les valeurs actuelles des variables locales sont détectées. Les valeurs détectées (des paramètres et variables locales) sont celles présentes dans le lot juste avant l’instruction avec l’indicateur `RECOMPILE`. Pour les paramètres en particulier, les valeurs fournies avec l’appel du lot ne sont pas détectées.
