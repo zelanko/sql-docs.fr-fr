@@ -4,19 +4,19 @@ titleSuffix: ''
 description: Cet article explique comment installer SQL Server Machine Learning Services sur Windows. Vous pouvez utiliser Machine Learning Services pour exécuter des scripts Python et R dans la base de données.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 58db08edb6afd8738a1aeecec6745e4419d2fd92
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634559"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199366"
 ---
-# <a name="install-sql-server-machine-learning-services-on-windows"></a>Installer SQL Server Machine Learning Services sur Windows
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installer SQL Server Machine Learning Services (Python et R) sur Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -103,7 +103,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 7. Une fois l’installation terminée, si vous êtes invité à redémarrer l’ordinateur, faites-le maintenant. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="set-environment-variables"></a>Définition des variables d'environnement
+## <a name="set-environment-variables"></a>Définir des variables d’environnement
 
 Pour l’intégration de fonctionnalités R uniquement, vous devez définir la variable d’environnement **MKL_CBWR** pour [garantir la cohérence](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de la sortie des calculs d’Intel Math Kernel Library (MKL).
 
@@ -295,12 +295,12 @@ Pour installer et gérer des packages R, vous pouvez configurer des groupes d’
 
 Les développeurs peuvent démarrer avec quelques exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants :
 
-+ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutoriel : Analytique dans la base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutoriel : Analytique dans la base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en effectuant les didacticiels suivants :
 
-+ [Tutoriel : Exécuter Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutoriel : Analytique dans la base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutoriel : Exécuter Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Analytique dans la base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Pour consulter des exemples d’apprentissage automatique basés sur des scénarios réels, consultez les [Didacticiels d’apprentissage automatique](../tutorials/machine-learning-services-tutorials.md).

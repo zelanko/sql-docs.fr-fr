@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd458727fad637414d7c71865b2633f3caf80175
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383558"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199410"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Didacticiels Python pour SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,9 @@ Si vous débutez avec SQL Server Machine Learning Services, vous pouvez égaleme
 
 | Démarrage rapide | Description |
 |-|-|
-| [Hello World dans Python et SQL Server](quickstart-python-run-using-t-sql.md) | Découvrez les principes de base de l’appel de Python dans T-SQL. |
-| [Gérer les entrées et les sorties à l’aide de Python dans SQL Server](quickstart-python-inputs-and-outputs.md) | Découvrez comment gérer les entrées et les sorties pour Python dans [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
-| [Structures de données python dans SQL Server](quickstart-python-data-structures.md) | Montre comment SQL Server utilise le package Python pandas pour gérer les structures de données. |
-| [Former et utiliser votre premier modèle](quickstart-python-train-score-in-tsql.md) | Explique comment créer, former et utiliser un modèle Python pour prédire de nouvelles données. |
+| [Hello World dans Python et SQL Server](quickstart-python-create-script.md) | Découvrez les principes de base de l’appel de Python dans T-SQL à l’aide de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Gérer les types de données et les objets à l’aide de Python dans SQL Server](quickstart-python-data-structures.md) | Montre comment SQL Server utilise le package Python pandas pour gérer les structures de données. |
+| [Créer et évaluer un modèle prédictif dans python](quickstart-python-train-score-model.md) | Explique comment créer, former et utiliser un modèle Python pour effectuer des prédictions à partir de nouvelles données. |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

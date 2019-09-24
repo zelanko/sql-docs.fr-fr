@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 64380b71f9830292acb5c24d5a8d1578216da2de
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 373700d04bb7c3d7cc28a72f881714cef9913923
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418948"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199444"
 ---
-# <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
+# <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour la base de données, exposant l’état du réplica local.  
@@ -57,7 +57,7 @@ ms.locfileid: "68418948"
 |**last_sent_time**|**datetime**|Heure à laquelle le dernier bloc du journal a été envoyé.|  
 |**last_received_lsn**|**numeric(25,0)**|ID de bloc du journal qui identifie le point jusqu'auquel tous les blocs du journal ont été reçus par le réplica secondaire qui héberge cette base de données secondaire.<br /><br /> **last_received_lsn** reflète un ID de bloc de journal complété avec des zéros. Il ne s'agit pas d'un numéro séquentiel réel dans le journal.|  
 |**last_received_time**|**datetime**|Heure à laquelle l'ID de bloc de journal du dernier message reçu a été lu sur le réplica secondaire.|  
-|**last_hardened_lsn**|**numeric(25,0)**|Début du bloc de journal contenant les enregistrements de journal du LSN de dernière sécurisation renforcée sur une base de données secondaire.<br /><br /> Sur une base de données primaire avec validation asynchrone ou sur une base de données avec validation synchrone dont la stratégie actuelle est « delay », la valeur est NULL. Pour les autres bases de données primaires avec validation synchrone, **last_hardened_lsn** indique la valeur minimale du LSN renforcé sur toutes les bases de données secondaires.<br /><br /> **Remarque: last_hardened_lsn** reflète un ID de bloc de journal complété avec des zéros. Il ne s'agit pas d'un numéro séquentiel réel dans le journal.|  
+|**last_hardened_lsn**|**numeric(25,0)**|Début du bloc de journal contenant les enregistrements de journal du LSN de dernière sécurisation renforcée sur une base de données secondaire.<br /><br /> Sur une base de données primaire avec validation asynchrone ou sur une base de données avec validation synchrone dont la stratégie actuelle est « delay », la valeur est NULL. Pour les autres bases de données primaires avec validation synchrone, **last_hardened_lsn** indique la valeur minimale du LSN renforcé sur toutes les bases de données secondaires.<br /><br /> **Remarque : last_hardened_lsn** reflète un ID de bloc de journal complété avec des zéros. Il ne s'agit pas d'un numéro séquentiel réel dans le journal.|  
 |**last_hardened_time**|**datetime**|Sur une base de données secondaire, heure de l’identificateur de bloc de journal pour le dernier LSN renforcé (**last_hardened_lsn**). Sur une base de données primaire, reflète l'heure correspondant à la valeur minimale de LSN renforcé.|  
 |**last_redone_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal réel du dernier enregistrement du journal qui a été restauré sur la base de données secondaire. **last_redone_lsn** est toujours inférieur à **last_hardened_lsn**.|  
 |**last_redone_time**|**datetime**|Heure à laquelle le dernier enregistrement du journal a été restauré sur la base de données secondaire.|  
@@ -67,11 +67,11 @@ ms.locfileid: "68418948"
 |**redo_rate**|**bigint**|Vitesse moyenne à laquelle les enregistrements de journal sont réexécutés sur une base de données secondaire donnée, en kilo-octets (Ko)/seconde.|  
 |**filestream_send_rate**|**bigint**|Fréquence à laquelle les fichiers FILESTREAM sont envoyés sur le réplica secondaire en kilo-octets/seconde.|  
 |**end_of_log_lsn**|**numeric(25,0)**|LSN de fin de journal local. Numéro séquentiel réel dans le journal correspondant au dernier enregistrement du journal dans le cache du journal sur les bases de données primaire et secondaire. Sur le réplica principal, les lignes secondaires reflètent le LSN de fin de journal, depuis les derniers messages de progression que les réplicas secondaires ont envoyés au réplica principal.<br /><br /> **end_of_log_lsn** reflète un ID de bloc de journal complété avec des zéros. Il ne s'agit pas d'un numéro séquentiel réel dans le journal.|  
-|**last_commit_lsn**|**Numeric(25,0)**|Numéro séquentiel réel dans le journal correspondant au dernier enregistrement de validation dans le journal des transactions.<br /><br /> Sur la base de données primaire, cet argument correspond au dernier enregistrement de validation traité. Les lignes des bases de données secondaires indiquent le numéro séquentiel dans le journal que le réplica secondaire a envoyé au réplica principal.<br /><br /> Sur le réplica secondaire, il s'agit du dernier enregistrement de validation qui a été restauré.|  
+|**last_commit_lsn**|**numeric(25,0)**|Numéro séquentiel réel dans le journal correspondant au dernier enregistrement de validation dans le journal des transactions.<br /><br /> Sur la base de données primaire, cet argument correspond au dernier enregistrement de validation traité. Les lignes des bases de données secondaires indiquent le numéro séquentiel dans le journal que le réplica secondaire a envoyé au réplica principal.<br /><br /> Sur le réplica secondaire, il s'agit du dernier enregistrement de validation qui a été restauré.|  
 |**last_commit_time**|**datetime**|Heure correspondant au dernier enregistrement de validation.<br /><br /> Sur la base de données secondaire, cette heure est la même que dans la base de données primaire.<br /><br /> Sur le réplica principal, chaque ligne de base de données secondaire indique l'heure que le réplica secondaire qui héberge la base de données secondaire a signalé au réplica principal. La différence de temps entre la ligne de base de données primaire et une ligne de base de données secondaire donnée représente approximativement l’objectif de point de récupération (RPO), en supposant que le processus de rétablissement est pris en compte et que la progression a été signalée au réplica principal. par le réplica secondaire.|  
 |**low_water_mark_for_ghosts**|**bigint**|Nombre à croissance monotone pour la base de données, qui indique une limite inférieure utilisée par la tâche de nettoyage des enregistrements fantômes sur la base de données primaire. Si ce nombre n'augmente pas avec le temps, cela implique que le nettoyage des enregistrements fantômes ne se produit pas. Pour déterminer quelles lignes fantômes nettoyer, le réplica principal utilise la valeur minimale de cette colonne pour cette base de données sur tous les réplicas de disponibilité (y compris le réplica principal).|  
 |**secondary_lag_seconds**|**bigint**|Nombre de secondes pendant lesquelles le réplica secondaire est derrière le réplica principal au cours de la synchronisation.<br /><br />**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**quorum_commit_lsn**|**Numeric(25,0)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
 |**quorum_commit_time**|**datetime**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
 
 
