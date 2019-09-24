@@ -47,26 +47,22 @@
   items:
     - name: Python
       items:
-        - name: Vérifier que Python existe dans SQL Server
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Hello World dans Python et SQL
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: Gérer les entrées et les sorties
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Structures de données Python et SQL
+        - name: Créer des scripts Python
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: Gérer des types de données et des objets
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Entraîner et utiliser votre premier modèle
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: Entraîner et scorer un modèle
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
         - name: Créer des scripts R
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Entraîner et scorer un modèle
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: Gérer des types de données et des objets
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: Écrire des fonctions R
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: Entraîner et scorer un modèle
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Didacticiels
   items:
     - name: Python
