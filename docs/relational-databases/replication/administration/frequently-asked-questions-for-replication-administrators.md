@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770821"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174252"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "68770821"
   
 -   Spécifier de ne pas supprimer les objets lorsque l'abonnement est réinitialisé. Avant la réinitialisation, vous pouvez au choix :  
   
-    -   Exécutez [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ou [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez une valeur « pre_creation_cmd » (**sp_changearticle**) ou « pre_creation_command » (**sp_changemergearticle**) pour le paramètre **@property** et une valeur « none », « delete » ou « truncate » pour le paramètre **@value** .  
+    -   Exécutez [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ou [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez une valeur « pre_creation_cmd » (**sp_changearticle**) ou « pre_creation_command » (**sp_changemergearticle**) pour le paramètre **\@property**, et une valeur « none », « delete » ou « truncate » pour le paramètre **\@value**.  
   
     -   Dans la boîte de dialogue **Propriétés de l’article - \<Article>** de la section **Objet de destination**, sélectionnez une valeur de **Conserver l’objet existant inchangé**, **Supprimer les données. Si l’article possède un filtre de lignes, supprimez uniquement les données qui correspondent au filtre** ou **Tronquer toutes les données dans l’objet existant** pour l’option **Action si le nom est déjà utilisé**. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   

@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938883"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038874"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  Si une vue dépend d'une table ou d'une vue qui a été supprimée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] envoie un message d'erreur lors de toute tentative d'utilisation de la vue. Si une table ou une vue est créée pour remplacer celle qui a été supprimée et que la structure de la table n'est pas modifiée par rapport à la table de base précédente, la vue est de nouveau utilisable. Si la structure de la nouvelle table ou vue change, la vue doit être supprimée puis recréée.  
   
- Si aucune vue n’est créée avec la clause SCHEMABINDING, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) doit être exécuté quand des modifications sont apportées aux objets sous-jacents de la vue qui affectent sa définition. Autrement, la vue risque de produire des résultats imprévisibles en cas d'interrogation.  
+ Si aucune vue n’est créée avec la clause SCHEMABINDING, exécutez [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) quand des modifications sont apportées aux objets sous-jacents de la vue qui affectent sa définition. Autrement, la vue risque de produire des résultats imprévisibles en cas d'interrogation.  
   
  Quand une vue est créée, les informations la concernant sont stockées dans les vues de catalogue suivantes : [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) et [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Le texte de l’instruction CREATE VIEW est stocké dans la vue de catalogue [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  La `list` de sélection  
   
-    -   Toutes les colonnes des tables membres doivent être sélectionnées dans la liste de colonnes de la définition de la vue.  
+    -   Dans la liste des colonnes de la définition de la vue, sélectionnez toutes les colonnes dans les tables membres.  
   
-    -   Les colonnes de position ordinale identique dans chaque liste de sélection (`select list`) doivent être de même type, notamment en ce qui concerne leur classement. Il n'est pas suffisant que les colonnes soient de type convertible de façon implicite, comme cela est généralement le cas pour UNION.  
+    -   Vérifiez que les colonnes de position ordinale identique de chaque `select list` sont de même type, notamment en ce qui concerne les classements. Il n'est pas suffisant que les colonnes soient de type convertible de façon implicite, comme cela est généralement le cas pour UNION.  
   
-         De plus, au moins une colonne (par exemple `<col>`) doit apparaître dans toutes les listes SELECT à la même position ordinale. Pour que la colonne `<col>` soit définie, les tables membres `T1, ..., Tn` doivent respectivement posséder les contraintes CHECK `C1, ..., Cn` pour `<col>`.  
+         De plus, au moins une colonne (par exemple `<col>`) doit apparaître dans toutes les listes SELECT à la même position ordinale. Définissez `<col>` de façon à ce que les tables membres `T1, ..., Tn` aient des contraintes CHECK `C1, ..., Cn` définies pour `<col>`, respectivement.  
   
          La contrainte `C1` définie sur la table `T1` doit se présenter sous la forme suivante :  
   
@@ -263,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   La définition des contraintes doit permettre à toute valeur de `<col>` de satisfaire au plus une des contraintes `C1, ..., Cn` de telle sorte que les contraintes forment un ensemble d'intervalles disjoints ou sans chevauchement. La colonne `<col>` sur laquelle les contraintes disjointes sont définies est appelée colonne de partitionnement. Notez que la colonne de partitionnement peut porter différents noms dans les tables sous-jacentes. Les contraintes doivent être dans un état activé et approuvé pour répondre aux conditions précédentes associées à la colonne de partitionnement. Si les contraintes sont désactivées, réactivez la vérification des contraintes à l’aide de l’option CHECK CONSTRAINT *constraint_name* d’ALTER TABLE, puis utilisez l’option WITH CHECK pour valider ces contraintes.  
+    -   La définition des contraintes doit permettre à toute valeur spécifiée de `<col>` de satisfaire au plus une des contraintes `C1, ..., Cn`, de telle sorte que les contraintes forment un ensemble d’intervalles disjoints ou sans chevauchement. La colonne `<col>` sur laquelle les contraintes disjointes sont définies est appelée colonne de partitionnement. Notez que la colonne de partitionnement peut porter différents noms dans les tables sous-jacentes. Les contraintes doivent être dans un état activé et approuvé pour répondre aux conditions précédemment mentionnées de la colonne de partitionnement. Si les contraintes sont désactivées, réactivez la vérification des contraintes à l’aide de l’option CHECK CONSTRAINT *constraint_name* d’ALTER TABLE, puis utilisez l’option WITH CHECK pour valider ces contraintes.  
   
          Voici des exemples d'ensembles valides de contraintes :  
   
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   Il ne peut pas s’agir d’une colonne calculée, d’une colonne d’identité, d’une colonne par défaut ou d’une colonne de type **timestamp**.  
   
-    -   Si une colonne d'une table membre comporte plusieurs contraintes, le moteur de bases de données ignore toutes les contraintes et n'en tient pas compte pour déterminer si la vue est ou non une vue partitionnée. Pour que les conditions associées à la vue partitionnée soient remplies, seule une contrainte de partitionnement doit être appliquée à la colonne de partitionnement.  
+    -   Si une colonne d'une table membre comporte plusieurs contraintes, le moteur de bases de données ignore toutes les contraintes et n'en tient pas compte pour déterminer si la vue est ou non une vue partitionnée. Pour que les conditions associées à la vue partitionnée soient remplies, vérifiez qu’il n’y a qu’une seule contrainte de partitionnement sur la colonne de partitionnement.  
   
     -   Aucune restriction ne s'applique sur la possibilité de mettre à jour la colonne de partitionnement.  
   
@@ -301,9 +301,9 @@ FROM Tn;
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Conditions de modification des données dans les vues partitionnées  
  Les restrictions suivantes s'appliquent aux instructions qui modifient les données dans les vues partitionnées :  
   
--   L'instruction INSERT doit fournir des valeurs pour toutes les colonnes de la vue, même celles des tables membres sous-jacentes définies sur DEFAULT ou acceptant des valeurs NULL. Pour les colonnes de tables membres dont la contrainte porte sur la valeur DEFAULT, les instructions ne peuvent pas spécifier la valeur NULL ou utiliser le mot clé DEFAULT de manière explicite.  
+-   L’instruction INSERT fournit des valeurs pour toutes les colonnes de la vue, même si les tables membres sous-jacentes ont une contrainte DEFAULT pour ces colonnes ou si elles acceptent des valeurs NULL. Pour les colonnes de tables membres dont la contrainte porte sur la valeur DEFAULT, les instructions ne peuvent pas spécifier la valeur NULL ou utiliser le mot clé DEFAULT de manière explicite.  
   
--   La valeur insérée dans la colonne de partitionnement doit respecter au moins une des contraintes sous-jacentes, sinon l'action INSERT échoue à la suite d'une violation de contrainte.  
+-   La valeur insérée dans la colonne de partitionnement respecte au moins une des contraintes sous-jacentes ; sinon, l’action d’insertion échoue à la suite d’une violation de contrainte.  
   
 -   Les instructions UPDATE ne peuvent pas définir le mot clé DEFAULT comme valeur dans la clause SET même si une valeur DEFAULT est définie pour la colonne dans la table membre correspondante.  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   Une transaction distribuée est démarrée pour garantir l’atomicité sur tous les nœuds affectés par la mise à jour.  
   
--   Les instructions INSERT, UPDATE et DELETE ne fonctionnent que si l'option XACT_ABORT SET a pour valeur ON.  
+-   Définissez l’option XACT_ABORT SET sur ON pour que les instructions INSERT, UPDATE ou DELETE fonctionnent.  
   
 -   Toutes les colonnes de tables distantes de type **smallmoney** qui sont référencées dans une vue partitionnée sont mappées en **money**. Par conséquent, les colonnes correspondantes dans les tables locales (de position ordinale identique dans la liste de sélection) doivent également être de type **money**.  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>À prendre en considération lors des réplications  
  Pour créer des vues partitionnées sur des tables membres entrant en jeu dans une réplication, les points suivants sont à prendre en considération :  
   
--   Si les tables sous-jacentes sont impliquées dans une réplication de fusion ou transactionnelle avec mise à jour des abonnements, la colonne **uniqueidentifier** doit aussi être ajoutée à la liste de sélection.  
+-   Si les tables sous-jacentes sont impliquées dans une réplication de fusion ou transactionnelle avec mise à jour des abonnements, vérifiez que la colonne **uniqueidentifier** est également incluse dans la liste de sélection. 
   
      Toute action INSERT dans la vue partitionnée doit fournir une valeur NEWID() pour la colonne **uniqueidentifier**. Toutes les actions UPDATE portant sur la colonne **uniqueidentifier** doivent fournir NEWID() comme valeur, car le mot clé DEFAULT ne peut pas être utilisé.  
   

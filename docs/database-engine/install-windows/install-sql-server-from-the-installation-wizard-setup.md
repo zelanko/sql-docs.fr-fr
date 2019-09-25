@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009384"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149973"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -132,7 +132,11 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
     > [!NOTE]
     > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], cochez la case **Accorder le privilège Effectuer une tâche de maintenance en volume au service Moteur de base de données SQL Server** pour permettre au compte de service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’utiliser [l’initialisation instantanée de fichiers de base de données](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     Utilisez la page **Configuration du serveur - Classement** pour spécifier les classements non définis par défaut pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Classement et support Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. Utilisez la page **Configuration du serveur - Classement** pour spécifier les classements non définis par défaut pour [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].    
+
+   Le paramètre d’installation par défaut est déterminé par les paramètres régionaux du système d’exploitation. Le classement au niveau du serveur peut être modifié pendant l’installation, ou en modifiant les paramètres régionaux du système d’exploitation avant l’installation. Le classement par défaut est défini d’après la version disponible la plus ancienne associée à chaque ensemble de paramètres régionaux spécifiques. Cette approche est due à des raisons de compatibilité descendante. Par conséquent, il ne s’agit pas toujours du classement recommandé. Pour tirer pleinement parti des fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modifiez les paramètres d’installation par défaut de façon à utiliser les classements Windows. Par exemple, pour les paramètres régionaux du système d’exploitation **Anglais (États-Unis)** (page de codes 1252), le classement par défaut lors de l’installation est **SQL_Latin1_General_CP1_CI_AS** et il peut être remplacé par le classement Windows le plus proche **Latin1_General_100_CI_AS_SC** équivalent.
+
+   Pour plus d’informations, consultez [Classement et support Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. Utilisez la page **Configuration du moteur de base de données - Configuration du serveur** pour spécifier les options suivantes :  
   

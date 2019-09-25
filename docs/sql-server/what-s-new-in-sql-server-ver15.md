@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228463"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096891"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,7 +53,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Indexer les colonnes chiffrées|Créer des index sur des colonnes chiffrées à l’aide d’un chiffrement aléatoire et des clés activées par enclave, afin d’améliorer les performances des requêtes riches (à l’aide de `LIKE` et d’opérateurs de comparaison). Consultez [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Always Encrypted avec enclaves sécurisées|S’étend sur Always Encrypted avec un chiffrement sur place et des calculs enrichis en activant des calculs sur les données de texte en clair à l’intérieur d’une enclave sécurisée côté serveur. Le chiffrement sur place améliore les performances et la fiabilité des opérations de chiffrement (chiffrement des colonnes, rotation des clés de chiffrement des colonnes, etc.), car il évite de déplacer des données en dehors de la base de données. La prise en charge des calculs enrichis (correspondance à des modèles et opérations de comparaison) ouvre Always Encrypted à un ensemble beaucoup plus large de scénarios et d’applications qui demandent une protection des données sensibles tout en nécessitant des fonctionnalités plus riches dans les requêtes Transact-SQL. Consultez [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Suspendre et reprendre l’analyse initiale du chiffrement transparent des données (TDE)|Consultez [Analyse Transparent Data Encryption(TDE) - suspension et reprise](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 |Gestion des certificats dans le Gestionnaire de configuration SQL Server|Consultez [Gestion des certificats (Gestionnaire de configuration SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |

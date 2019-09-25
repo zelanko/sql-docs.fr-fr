@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3249d8ffddeec75ae576cc2bbdd9478982029758
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 1b9411f3b8740d1e70f668d903b0b18b7016653d
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69609082"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149995"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
 
@@ -244,7 +244,7 @@ Utilisez les instructions suivantes pour développer des commandes d'installatio
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Obligatoire quand /SECURITYMODE=SQL**|Spécifie le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **d’administrateur système (SA)** .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Facultatif**|Spécifie le mode de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Si ce paramètre n'est pas fourni, le mode d'authentification Windows uniquement est pris en charge.<br /><br /> Valeur prise en charge : **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Facultatif**|Spécifie le répertoire pour les fichiers de sauvegarde.<br /><br /> Valeur par défaut : `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Facultatif**|Spécifie les paramètres de classement pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> La valeur par défaut est basée sur les paramètres régionaux de votre système d'exploitation Windows. Pour plus d'informations, consultez [Paramètres de classement du programme d'installation](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Facultatif**|Spécifie les paramètres de classement pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Le paramètre d’installation par défaut est déterminé par les paramètres régionaux du système d’exploitation. Le classement au niveau du serveur peut être modifié pendant l’installation, ou en modifiant les paramètres régionaux du système d’exploitation avant l’installation. Le classement par défaut est défini d’après la version disponible la plus ancienne associée à chaque ensemble de paramètres régionaux spécifiques. Cette approche est due à des raisons de compatibilité descendante. Par conséquent, il ne s’agit pas toujours du classement recommandé. Pour tirer pleinement parti des fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modifiez les paramètres d’installation par défaut de façon à utiliser les classements Windows. Par exemple, pour les paramètres régionaux du système d’exploitation **Anglais (États-Unis)** (page de codes 1252), le classement par défaut lors de l’installation est **SQL_Latin1_General_CP1_CI_AS** et il peut être remplacé par le classement Windows le plus proche **Latin1_General_100_CI_AS_SC** équivalent. <br /><br />Pour plus d’informations, consultez [Classement et support Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Facultatif**|Ajoute l’utilisateur actuel au rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**. Le paramètre /ADDCURRENTUSERASSQLADMIN peut être utilisé lors de l'installation d'éditions Express ou lors de l'utilisation de /Role=ALLFeatures_WithDefaults. Pour plus d’informations, consultez /ROLE ci-dessous.<br /><br /> L'utilisation du paramètre /ADDCURRENTUSERASSQLADMIN est facultative, mais /ADDCURRENTUSERASSQLADMIN ou /SQLSYSADMINACCOUNTS est obligatoire. Valeurs par défaut :<br /><br /> **True** pour les éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> **False** pour toutes les autres éditions|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Obligatoire**|Spécifie le compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Obligatoire](#Accounts)|Spécifie le mot de passe pour SQLSVCACCOUNT.|  

@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a378daeb4307b9f99e055edafd5cb21d95c30977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009410"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016852"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
@@ -84,7 +84,7 @@ Vous pouvez comprendre les étapes même si vous décidez de ne pas les exécute
 - Avancé
 
 
-Le texte et les captures d’écran qui l’accompagnent peuvent perdre en précision à mesure que l’interface utilisateur de SSMS est modifiée au fil des mois ou années. Néanmoins, les captures d’écran restent efficaces à titre d’explication si les différences sont seulement mineures.
+Le texte et les captures d’écran qui l’accompagnent peuvent perdre en précision à mesure que l’interface utilisateur de SSMS est modifiée au fil des mois ou années. Les captures d’écran restent néanmoins valables à titre d’explication si les différences sont seulement mineures.
 
 
 1. Connectez-vous à SSMS.
@@ -120,7 +120,7 @@ Le texte et les captures d’écran qui l’accompagnent peuvent perdre en préc
 
 9. Dans l’angle supérieur gauche, cliquez sur la page **Stockage de données** .
 
-10. Dans la zone **Cibles** , cliquez sur **Cliquez ici pour ajouter une cible**.
+10. Dans la zone **Cibles**, cliquez sur **Cliquer ici pour ajouter une cible**.
     - Dans la liste déroulante **Type** , choisissez **event_file**.
     - Cela signifie que les données d’événement seront stockées dans un fichier consultable.
 
@@ -623,7 +623,7 @@ SELECT
 ```
 
 
-#### <a name="haspermsbyname-function"></a>HAS_PERMS_BY_NAME, fonction
+#### <a name="has_perms_by_name-function"></a>HAS_PERMS_BY_NAME, fonction
 
 
 L’instruction SELECT suivante indique vos autorisations. Elle s’appuie sur la fonction intégrée [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).

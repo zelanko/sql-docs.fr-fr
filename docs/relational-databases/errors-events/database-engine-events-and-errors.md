@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77c095ac35d9b3068882be81d0ddf6293904f8bb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810334"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127357"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 
@@ -4999,7 +4999,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   11297   |   16  |   Non  |   Un message endommagé a été reçu. Le décalage du segment de données de variable privée est incorrect.   |
 |   11298   |   16  |   Non  |   Un message endommagé a été reçu. Le décalage du segment de données de variable publique est incorrect.    |
 |   11299   |   10  |   Non  |   Un message endommagé a été reçu. Un message non séquencé avait un numéro de séquence différent de zéro. Cette erreur s'est produite dans le message avec l'ID de conversation '%.*ls', l'initiateur %d et le numéro de séquence du message %I64d. |
-|   11300   |   10  |   Oui |   Erreur lors de la validation d'un XDS en lecture seule ou d'un TEMPDB XDES ; arrêt du serveur.    |
+|   11300   |   10  |   Oui |   Erreur lors de la validation d’un XDES en lecture seule ou TEMPDB ; arrêt du serveur.   |
 |   11301   |   10  |   Oui |   Erreur lors de la notification de la transaction pour l'objet %p, événement %d. |
 |   11302   |   10  |   Oui |   Erreur lors de la restauration. Arrêt de la base de données (emplacement : %d).   |
 |   11303   |   10  |   Oui |   Erreur lors de la libération de l'espace journal réservé : %ls espace %I64d, code %d, état %d. |
@@ -5781,7 +5781,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14596   |   16  |   Non  |   Le package DTS '%s' existe dans une autre catégorie.    |
 |   14597   |   16  |   Non  |   L'ID du package DTS '%s' existe déjà sous un autre nom.   |
 |   14598   |   16  |   Non  |   Impossible de supprimer les catégories Local, Repository ou LocalDefault DTS.  |
-|   14599   |   10  |   Non  |   Créer une vue d’abonnement    |
+|   14599   |   10  |   Non  |   Nom    |
 |   14600   |   16  |   Non  |   Le proxy "%s" n'a pas obtenu l'autorisation d'utiliser le sous-système "%s".   |
 |   14601   |   16  |   Non  |   L'opérateur "%s" n'est pas activé et ne peut donc pas recevoir de notifications.    |
 |   14602   |   16  |   Non  |   Aucune adresse de messagerie n'a été spécifiée pour l'opérateur "%s".    |

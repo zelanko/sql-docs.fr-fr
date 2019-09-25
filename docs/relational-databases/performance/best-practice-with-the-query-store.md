@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903611"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163887"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 
 > [!NOTE]
 > Le graphique ci-dessus peut présenter des formes différentes pour des plans de requête spécifiques, avec les significations suivantes pour chaque état possible :<br />  
+> 
 > |Graphique à base de formes|Signification|  
 > |-------------------|-------------|
 > |Cercle|Requête effectuée (exécution normale achevée correctement)|
 > |Carré|Annulée (le client est à l’origine de l’abandon de l’exécution)|
 > |Triangle|Échec (abandon d’exécution lié à une exception)|
+> 
 > De plus, la taille de la forme reflète le nombre d’exécutions des requêtes dans l’intervalle de temps spécifié. Elle augmente en fonction du nombre d’exécutions.  
 
 -   Vous pouvez en déduire qu’il manque un index à votre requête pour qu’elle s’exécute de façon optimale. Ces informations apparaissent dans le plan d’exécution de requête. Créez l’index manquant et vérifiez les performances de requête en utilisant le magasin de requêtes.  
@@ -290,7 +292,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   Enfin, envisagez de définir le mode de capture de requête sur Auto pour éliminer les requêtes les moins pertinentes par rapport à votre charge de travail.  
   
 ### <a name="error-state"></a>État d’erreur  
- Pour récupérer le magasin de requêtes, essayez de définir explicitement le mode lecture-écriture et vérifiez à nouveau l’état réel.  
+ Pour récupérer le magasin des requêtes, essayez de définir explicitement le mode Lecture-écriture et revérifiez l’état réel.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  Si le problème persiste, cela signifie que les données du magasin des requêtes sont endommagées sur le disque.
  
- Depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], le Magasin des requêtes peut être récupéré via l’exécution de la procédure stockée **sp_query_store_consistency_check** dans la base de données affectée. Pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous devez effacer les données du Magasin des requêtes, comme indiqué ci-dessous.
+ Depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], le Magasin des requêtes peut être récupéré via l’exécution de la procédure stockée **sp_query_store_consistency_check** dans la base de données affectée. Le magasin des requêtes doit être désactivé avant de tenter l’opération de récupération. Pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous devez effacer les données du Magasin des requêtes, comme indiqué ci-dessous.
  
- Si cela n’a pas résolu le problème, vous pouvez essayer d’effacer le magasin des requêtes avant de demander le mode lecture/écriture.  
+ Si la récupération a échoué, vous pouvez essayer de supprimer le magasin des requêtes avant de définir le mode Lecture-écriture.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |Custom|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit un mode de capture personnalisée sous la commande `ALTER DATABASE SET QUERY_STORE`. Quand cette fonctionnalité est activée, vous pouvez affiner la collecte de données dans un serveur spécifique au moyen de configurations supplémentaires du Magasin des requêtes disponibles sous un nouveau paramètre de stratégie de capture pour le Magasin des requêtes.<br /><br />Les nouveaux paramètres personnalisés définissent ce qui se passe pendant le seuil de temps de la stratégie de capture interne : une limite de temps pendant laquelle les conditions configurables sont évaluées et, si elles ont la valeur true, la requête peut être capturée par le Magasin des requêtes. Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
-> Les curseurs, les requêtes dans les procédures stockées et les requêtes compilées en mode natif sont toujours capturés lorsque le mode de capture de requête est défini sur All (Tous), Auto ou Custom (Personnalisé).
+> Les curseurs, les requêtes dans les procédures stockées et les requêtes compilées en mode natif sont toujours capturés quand le mode de capture de requête est défini sur All, Auto ou Custom. Pour capturer des requêtes compilées en mode natif, activez la collecte des statistiques par requête avec [sys. sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Conserver les données les plus pertinentes dans le magasin des requêtes  
  Configurez le magasin de requêtes de sorte qu’il ne contienne que les données pertinentes. Ainsi, il s’exécutera toujours en offrant une excellente expérience de résolution des problèmes tout en ayant un impact minime sur votre charge de travail normale.  

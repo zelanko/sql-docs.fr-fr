@@ -1,7 +1,7 @@
 ---
 title: Tables | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2cf1a6cbb774640099a7465180fc879dcc75c77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016250"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127373"
 ---
 # <a name="tables"></a>Tables
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ Les tables temporaires sont stockées dans **tempdb**. Il en existe deux types :
 
 #### <a name="ctp23"></a> Recompilations réduites pour les charges de travail qui utilisent des tables temporaires sur plusieurs étendues
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md) réduit les recompilations pour les charges de travail qui utilisent des tables temporaires sur plusieurs étendues. Avant cette fonctionnalité, quand vous référenciez une table temporaire avec une instruction de langage de manipulation de données (DML) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), si la table temporaire était créée par un lot d’étendue externe, une recompilation de l’instruction DML se produisait à chacune de ses exécutions. Avec cette amélioration, SQL Server effectue de légères vérifications supplémentaires pour éviter les recompilations inutiles :
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] réduit les recompilations pour les charges de travail avec des tables temporaires sur plusieurs étendues. Avant cette fonctionnalité, quand vous référenciez une table temporaire avec une instruction de langage de manipulation de données (DML) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), si la table temporaire était créée par un lot d’étendue externe, une recompilation de l’instruction DML se produisait à chacune de ses exécutions. Avec cette amélioration, SQL Server effectue de légères vérifications supplémentaires pour éviter les recompilations inutiles :
 
 - Vérifiez si le module d’étendue externe utilisé pour la création de la table temporaire au moment de la compilation est le même que celui utilisé pour les exécutions consécutives. 
 - Gardez une trace de toutes les modifications de langage de définition de données (DDL) apportées au moment de la compilation initiale et comparez-les aux opérations DDL des exécutions consécutives.

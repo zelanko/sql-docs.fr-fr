@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176354"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118186"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176354"
 - Vous pouvez sauvegarder sur plusieurs objets blob de blocs pour obtenir une meilleure sauvegarde, restaurer les performances et prendre en charge la sauvegarde de bases de données plus volumineuses.
 - Un [objet blob de blocs](https://azure.microsoft.com/pricing/details/storage/blobs/) est moins cher qu’un [objet blob de pages](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une taille maximum des blocs de 4 Mo. La taille maximale d’un fichier d’objet blob de blocs est de 4 Mo * 50 000 = 195 Go. Si votre base de données est supérieure à 195 Go, nous vous recommandons ce qui suit :
-- Utiliser la compression de la sauvegarde
+La sauvegarde d’une grande base de données dans le stockage d’objets Blob est soumise aux limitations listées dans [Différences, limitations et problèmes connus du langage T-SQL pour les instances managées](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+
+ Si la base de données est trop grande, vous pouvez :
+- Utiliser la compression de la sauvegarde ou
 - Sauvegarder sur plusieurs objets blob de blocs
 
 ###  <a name="Blob"></a> Service de stockage d’objets blob Microsoft Azure  

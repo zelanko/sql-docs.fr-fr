@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123124"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163905"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Ce contrôle sur les mises à niveau a encore été amélioré avec [!INCLUDE[ss
 À compter de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, la nouvelle fonctionnalité **Assistant Paramétrage de requêtes** guide les utilisateurs tout le long du flux de travail recommandé pour maintenir la stabilité des performances pendant les mises à niveau vers des versions plus récentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme décrit dans la section *Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server* de [Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). Cependant, l’Assistant Paramétrage de requêtes ne revient pas à un bon plan antérieur comme dans la dernière étape du workflow recommandé. Il repère les régressions trouvées dans l’affichage [**Requêtes en régression** Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) et parcourt les permutations possibles des variations du modèle d’optimiseur applicable dans le but de produire un meilleur plan.
 
 > [!IMPORTANT]
-> L’Assistant Paramétrage de requêtes ne génère pas de charge de travail utilisateur. Si vous exécutez l’Assistant Paramétrage de requêtes dans un environnement qui n’est pas utilisé par vos applications, vérifiez que vous pouvez toujours exécuter des charges de travail de test représentatives sur le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ciblé par d’autres moyens. 
+> L’Assistant Paramétrage de requêtes ne génère pas de charge de travail utilisateur. Si vous exécutez l’Assistant Paramétrage de requêtes dans un environnement qui n’est pas utilisé par vos applications, vérifiez que vous pouvez néanmoins exécuter des charges de travail de test représentatives sur le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ciblé par d’autres moyens. 
 
 ## <a name="the-query-tuning-assistant-workflow"></a>Workflow de l’Assistant Paramétrage de requêtes
 Le point de départ de l’Assistant Paramétrage de requêtes est la supposition qu’une base de données d’une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déplacée (à l’aide de [CREATE DATABASE... FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) ou [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)) vers une version plus récente du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], et que le niveau de compatibilité de base de données avant la mise à niveau n’est pas changé immédiatement. L’Assistant Paramétrage de requêtes vous aide à effectuer les étapes suivantes :

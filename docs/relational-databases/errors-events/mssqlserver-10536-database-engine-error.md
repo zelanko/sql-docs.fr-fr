@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ace2712cd53b1b0371bd9deeb4191308a1393de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85901c0fc1a720849cb93f7392ade34ff1db35e0
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060652"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174279"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -30,10 +30,10 @@ ms.locfileid: "68060652"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_TOO_MANY_STMTS|  
-|Texte du message|Impossible de créer le repère de plan '%.\*ls', car le lot ou module correspondant au **@plan_handle** spécifié contient plus de 1000 instructions éligibles. Créez un repère de plan pour chaque instruction du lot ou module en indiquant une valeur **statement_start_offset** pour chacune.|  
+|Texte du message|Impossible de créer le repère de plan « %.\*ls », car le lot ou le module correspondant au **\@plan_handle** spécifié contient plus de 1 000 instructions éligibles. Créez un repère de plan pour chaque instruction du lot ou module en indiquant une valeur **statement_start_offset** pour chacune.|  
   
 ## <a name="explanation"></a>Explication  
-Le lot ou module correspondant au **@plan_handle** spécifié contient plus de 1000 instructions éligibles.  
+Le lot ou le module correspondant au **\@plan_handle** spécifié contient plus de 1 000 instructions éligibles.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
 Créez un repère de plan pour chaque instruction du lot ou module en indiquant une valeur **statement_start_offset** pour chacune.  
