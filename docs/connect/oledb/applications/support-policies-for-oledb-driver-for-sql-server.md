@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0bbc3a6806ab28769bd40d16356e6ad49ceaa822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ae0e332de1d1e673cfd4fff1e288acafa4a0619
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989269"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118146"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Stratégies de prise en charge d’OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,10 @@ ms.locfileid: "67989269"
 ## <a name="supported-operating-system-versions"></a>Versions du système d'exploitation prises en charge  
  Le tableau suivant répertorie les systèmes d’exploitation qui prennent en charge OLE DB pilote pour SQL Server.  
 
-|Systèmes d’exploitation pris en charge|  
+| Systèmes d’exploitation pris en charge |  |
 |--------------------------------------|---------------------------------|   
-|Microsoft Windows 8.1 + [avril 2014 mise à jour](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [avril 2014 mise à jour](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016|  
+| Microsoft Windows 8.1 + [avril 2014 mise à jour](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [avril 2014 mise à jour](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
+
 
 ## <a name="ado-support-policies"></a>Stratégies de prise en charge d’ADO  
  Les applications ADO peuvent utiliser le fournisseur OLE DB SQLOLEDB fourni avec Windows si elles n'ont pas besoin des fonctionnalités de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure.  
