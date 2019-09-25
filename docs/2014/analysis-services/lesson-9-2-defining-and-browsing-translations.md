@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493782"
 ---
 # <a name="defining-and-browsing-translations"></a>Définition et exploration de traductions
@@ -32,7 +32,7 @@ ms.locfileid: "69493782"
   
      Une liste de langues apparaît dans la boîte de dialogue **Sélectionnez une langue** .  
   
-3.  Cliquez sur **Espagnol (Espagne)** , puis sur **OK**.  
+3.  Cliquez sur **Espagnol (Espagne)**, puis sur **OK**.  
   
      Dans la nouvelle colonne qui apparaît, vous allez définir les traductions en espagnol pour les objets de métadonnées que vous souhaitez traduire. Dans ce didacticiel, nous n'allons traduire qu'un petit nombre d'objets pour illustrer le processus.  
   
@@ -44,17 +44,17 @@ ms.locfileid: "69493782"
   
 6.  Dans la ligne de l' **objet Caption** de l' **attribut Month Name** , tapez `Mes del Año` dans la colonne de traduction **espagnol (Espagne)** et `Mois d'Année` dans la colonne de traduction **français (France)** .  
   
-     Notez que lorsque vous entrez ces traductions, des points de suspension ( **...** ) s’affichent. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
+     Notez que lorsque vous entrez ces traductions, des points de suspension (**...**) s’affichent. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
   
-7.  Cliquez sur les points de suspension ( **...** ) pour la traduction **espagnol (Espagne)** de l’attribut **Month Name** .  
+7.  Cliquez sur les points de suspension (**...**) pour la traduction **espagnol (Espagne)** de l’attribut **Month Name** .  
   
      La boîte de dialogue **Traduction de données d’attribut** apparaît.  
   
 8.  Dans la liste **Colonnes de traduction** , sélectionnez **SpanishMonthName**, comme le montre l’image suivante.  
   
-     ![Boîte de dialogue traduction de données d’attribut](../../2014/tutorials/media/l9-translations-4.gif "Boîte de dialogue traduction de données d’attribut")  
+     ![Boîte de dialogue traduction de données d’attribut] (../../2014/tutorials/media/l9-translations-4.gif "Boîte de dialogue traduction de données d’attribut")  
   
-9. Cliquez sur **OK**, puis sur les points de suspension ( **...** ) pour la traduction **français (France)** de l’attribut **Month Name** .  
+9. Cliquez sur **OK**, puis sur les points de suspension (**...**) pour la traduction **français (France)** de l’attribut **Month Name** .  
   
 10. Dans la liste **Colonnes de traduction** , sélectionnez **FrenchMonthName**, puis cliquez sur **OK**.  
   
@@ -66,13 +66,13 @@ ms.locfileid: "69493782"
   
      Les métadonnées apparaissent dans la langue par défaut pour chaque objet de cube, comme le montre l'image suivante. La langue par défaut dans le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est l'anglais.  
   
-     ![Langue par défaut dans l’onglet traductions](../../2014/tutorials/media/l9-translations-5.gif "Langue par défaut dans l’onglet traductions")  
+     ![Langue par défaut dans l’onglet traductions] (../../2014/tutorials/media/l9-translations-5.gif "Langue par défaut dans l’onglet traductions")  
   
 2.  Dans la barre d’outils de l’onglet **Traductions** , cliquez sur **Nouvelle traduction** .  
   
      Une liste de langues apparaît dans la boîte de dialogue **Sélectionnez une langue**.  
   
-3.  Sélectionnez **Espagnol (Espagne)** , puis cliquez sur **OK**.  
+3.  Sélectionnez **Espagnol (Espagne)**, puis cliquez sur **OK**.  
   
      Dans la nouvelle colonne qui apparaît, vous allez définir les traductions en espagnol pour les objets de métadonnées que vous souhaitez traduire. Dans ce didacticiel, nous n'allons traduire qu'un petit nombre d'objets pour illustrer le processus.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493782"
   
      Observez que les éléments du volet Métadonnées sont remplis à nouveau. Une fois les éléments du volet Métadonnées actualisés, observez que la mesure Internet Sales-Sales Amount ne figure plus dans le dossier d'affichage Internet Sales. Au lieu de cela, elle apparaît en espagnol dans un nouveau `Ventas del lnternet`dossier d’affichage nommé, comme illustré dans l’image suivante.  
   
-     ![Volet métadonnées rempli](../../2014/tutorials/media/l9-translations-6.gif "Volet métadonnées rempli")  
+     ![Volet métadonnées rempli] (../../2014/tutorials/media/l9-translations-6.gif "Volet métadonnées rempli")  
   
 6.  Dans le volet métadonnées, cliquez `Cantidad de las Ventas del Internet` avec le bouton droit, puis sélectionnez **Ajouter à la requête**.  
   
@@ -116,14 +116,14 @@ ms.locfileid: "69493782"
   
      Observez que les noms de mois apparaissent en espagnol, comme le montre l'image suivante.  
   
-     ![Noms de mois en espagnol dans le volet données](../../2014/tutorials/media/l9-translations-7.gif "Noms de mois en espagnol dans le volet données")  
+     ![Noms de mois en espagnol dans le volet données] (../../2014/tutorials/media/l9-translations-7.gif "Noms de mois en espagnol dans le volet données")  
   
 10. Dans la barre d’outils, sélectionnez **Français (France)** dans la liste **Langue** .  
   
      Observez que les noms de mois apparaissent maintenant en français, de même que le nom de la mesure.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 10: Définition des rôles d’administration](lesson-10-defining-administrative-roles.md)  
+ [Leçon 10 : Définition des rôles d’administration](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traductions de dimensions](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

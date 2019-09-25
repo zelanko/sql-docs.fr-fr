@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493876"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Définition d’une relation plusieurs-à-plusieurs
@@ -35,7 +35,7 @@ ms.locfileid: "69493876"
   
 1.  Ouvrez le Concepteur de vues de source de données pour la vue de source de données **Adventure Works DW 2012** .  
   
-2.  Cliquez avec le bouton droit n’importe où dans le volet **bibliothèque** de diagrammes, `Internet Sales Order Reasons` cliquez sur **nouveau diagramme**, puis spécifiez comme nom pour ce nouveau diagramme.  
+2.  Cliquez avec le bouton droit n’importe où dans le volet **bibliothèque de diagrammes** , `Internet Sales Order Reasons` cliquez sur **nouveau diagramme**, puis spécifiez comme nom pour ce nouveau diagramme.  
   
 3.  Faites glisser la table **InternetSales** du volet **Tables** vers le volet **Diagramme** .  
   
@@ -111,11 +111,11 @@ ms.locfileid: "69493876"
   
 10. Dans la page **Fin de l’Assistant** , cliquez sur **Terminer** pour créer la dimension Sales Reason.  
   
-11. Dans le menu **Fichier**, cliquez sur **Enregistrer tout**.  
+11. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 12. Dans le volet **attributs** du concepteur de dimensions pour la dimension **Sales Reason** , sélectionnez **Sales Reason Key**, puis remplacez la propriété **Name** de la fenêtre Propriétés par`Sales Reason.`  
   
-13. Dans le volet Hiérarchies du concepteur de dimensions, créez une hiérarchie utilisateur **Sales Reasons** qui `Sales Reason Type` contient le niveau et le niveau **Sales Reason** , dans cet ordre.  
+13. Dans le volet **hiérarchies** du concepteur de dimensions, créez une hiérarchie utilisateur **Sales Reasons** qui `Sales Reason Type` contient le niveau et le niveau **Sales Reason** , dans cet ordre.  
   
 14. Dans la fenêtre Propriétés, définissez `All Sales Reasons` comme valeur pour la propriété **AllMemberName** de la hiérarchie Sales Reasons.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69493876"
   
 17. Dans la boîte de dialogue **Ajouter une dimension de cube** , sélectionnez **Sales Reason** puis cliquez sur **OK**.  
   
-18. Dans le menu **Fichier**, cliquez sur **Enregistrer tout**.  
+18. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="defining-the-many-to-many-relationship"></a>Définition d'une relation plusieurs-à-plusieurs  
   

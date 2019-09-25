@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "63035061"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
   L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
   
- ![Icône lien de rubrique](../../2014/database-engine/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe, consultez [référence utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icône de lien de rubrique](../../2014/database-engine/media/topic-link.gif "Icône de lien de rubrique") Pour connaître les conventions de syntaxe, consultez [référence &#40;de l'&#41;utilitaire d’invite de commandes moteur de base de données](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,17 +64,17 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
   
  **-logintimeout** _timeout_value_  
- Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int**_._  
+ Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int** _._  
   
  **-querytimeout** _timeout_value_  
- Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* a la valeur **int**_._  
+ Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* a la valeur **int** _._  
   
 ## <a name="remarks"></a>Notes  
  Il est recommandé d'utiliser les travaux de sauvegarde, de copie et de restauration pour effectuer les opérations correspondantes quand cela est possible. Pour démarrer ces travaux à partir d’une opération de traitement ou d’une autre application, appelez la procédure stockée [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  L'historique d'envoi de journaux créé par **sqllogship** comprend également l'historique des travaux de restauration, de copie et de sauvegarde de l'envoi de journaux. Si vous envisagez d'utiliser **sqllogship** de manière répétée pour effectuer des opérations de restauration, de copie ou de sauvegarde pour une configuration de l'envoi de journaux, pensez à désactiver le ou les travaux d'envoi de journaux correspondants. Pour plus d’informations, consultez [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- Le **sqllogship** application, SqlLogShip.exe, est installée dans le répertoire de x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
+ L’application **sqllogship** , sqllogship. exe, est installée dans le répertoire X:\Program Files\Microsoft SQL Server\120\Tools\Binn  
   
 ## <a name="permissions"></a>Autorisations  
  **sqllogship** utilise l'authentification Windows. Le compte d'authentification Windows où s'exécute la commande nécessite un accès au répertoire Windows et des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La configuration requise dépend de l’option spécifiée par la commande **sqllogship** : **-backup**, **-copy**ou **-restore** .  

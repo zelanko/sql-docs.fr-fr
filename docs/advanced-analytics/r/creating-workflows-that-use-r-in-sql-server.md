@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68715174"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Créer des flux de travail SSIS et SSRS avec R sur SQL Server
@@ -91,7 +91,7 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-![Insérer des données] (../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insérer des données")
+![Insérer des données](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insérer des données")
 
 ### <a name="generate-a-model"></a>Générer un modèle
 
@@ -135,7 +135,7 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![Génère un modèle linéaire] (../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Génère un modèle linéaire")
+![Génère un modèle linéaire](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Génère un modèle linéaire")
 
 En tant que point de contrôle, une fois cette tâche terminée, vous pouvez interroger le ssis_iris_models pour voir qu’il contient un modèle binaire.
 

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887940"
 ---
 # <a name="dimension-relationships"></a>Relations de dimension
@@ -44,9 +44,9 @@ ms.locfileid: "68887940"
   
  ![Schéma logique, relation de dimension référencée](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "Schéma logique, relation de dimension référencée")  
   
- Vous pouvez créer une dimension avec la table Customer comme table principale de la dimension et la table **Geography** incluse en tant que table associée. Une relation régulière est ensuite définie entre la dimension et le groupe de mesures InternetSales.  
+ Vous pouvez créer une dimension avec la table **Customer** comme table principale de la dimension et la table **Geography** incluse en tant que table associée. Une relation régulière est ensuite définie entre la dimension et le groupe de mesures InternetSales.  
   
- Vous pouvez également créer deux dimensions associées au groupe de mesures InternetSales: une dimension basée sur la table **Customer** et une dimension basée sur la table **Geography** . Vous pouvez ensuite lier la dimension Geography au groupe de mesures InternetSales au moyen d'une relation de dimension de référence utilisant la dimension Customer. Dans ce cas, quand les faits du groupe de mesures InternetSales sont dimensionnés par la dimension Geography, les faits sont dimensionnés par client et par localisation géographique. Si le cube contenait un deuxième groupe de mesures appelé Reseller Sales, il ne vous serait pas possible de dimensionner les faits dans le groupe de mesures correspondant par Geography car il n'y aurait pas de relation entre Reseller Sales et Geography.  
+ Vous pouvez également créer deux dimensions associées au groupe de mesures InternetSales : une dimension basée sur la table **Customer** et une dimension basée sur la table **Geography** . Vous pouvez ensuite lier la dimension Geography au groupe de mesures InternetSales au moyen d'une relation de dimension de référence utilisant la dimension Customer. Dans ce cas, quand les faits du groupe de mesures InternetSales sont dimensionnés par la dimension Geography, les faits sont dimensionnés par client et par localisation géographique. Si le cube contenait un deuxième groupe de mesures appelé Reseller Sales, il ne vous serait pas possible de dimensionner les faits dans le groupe de mesures correspondant par Geography car il n'y aurait pas de relation entre Reseller Sales et Geography.  
   
  Vous pouvez chaîner ensemble un nombre illimité de dimensions de référence, comme le montre l'illustration suivante.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68887940"
   
  Les ![colonnes de la table de faits peuvent prendre en charge les dimensions](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "colonnes de la table de faits peuvent prendre en charge les dimensions")  
   
- La table contient des informations d'attribut non seulement pour chaque ligne d'une commande émise par un revendeur, mais aussi sur la commande elle-même. Les attributs entourés dans le diagramme précédent identifient les informations de la table **FactResellerSales** qui peuvent être utilisées comme attributs dans une dimension. Dans ce cas, deux éléments d'informations supplémentaires, le numéro de suivi du transporteur et le numéro du bon de commande émis par le revendeur, sont représentés par les colonnes d'attribut CarrrierTrackingNumber et CustomerPONumber. Ces informations sont intéressantes: par exemple, les utilisateurs souhaitent sans aucun doute voir des informations agrégées, telles que le coût total du produit, pour toutes les commandes expédiées sous un numéro de suivi unique. Mais, sans une dimension, il est impossible d'organiser ou d'agréger les données de ces deux attributs.  
+ La table contient des informations d'attribut non seulement pour chaque ligne d'une commande émise par un revendeur, mais aussi sur la commande elle-même. Les attributs entourés dans le diagramme précédent identifient les informations de la table **FactResellerSales** qui peuvent être utilisées comme attributs dans une dimension. Dans ce cas, deux éléments d'informations supplémentaires, le numéro de suivi du transporteur et le numéro du bon de commande émis par le revendeur, sont représentés par les colonnes d'attribut CarrrierTrackingNumber et CustomerPONumber. Ces informations sont intéressantes : par exemple, les utilisateurs souhaitent sans aucun doute voir des informations agrégées, telles que le coût total du produit, pour toutes les commandes expédiées sous un numéro de suivi unique. Mais, sans une dimension, il est impossible d'organiser ou d'agréger les données de ces deux attributs.  
   
  Théoriquement, vous pouvez créer une table de dimension qui utilise les mêmes informations de clé que la table FactResellerSales, et transférer les deux autres colonnes d'attribut, CarrierTrackingNumber et CustomerPONumber, vers la table de dimension. Toutefois, vous dupliquez alors une partie significative des données et augmentez inutilement la complexité dans l'entrepôt de données pour juste représenter deux attributs sous la forme d'une dimension distincte.  
   

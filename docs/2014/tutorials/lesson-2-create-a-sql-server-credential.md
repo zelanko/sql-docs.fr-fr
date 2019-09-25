@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70154330"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Leçon 2 : Créer des informations d'identification SQL Server
@@ -25,7 +25,7 @@ ms.locfileid: "70154330"
  Pour obtenir plus d'informations et d'autres exemples d'utilisation des informations d'identification, consultez [Créer un proxy de SQL Server Agent](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
->  La configuration requise pour la création d’une SQL Server informations d’identification décrites ci-dessous est spécifique aux processus de sauvegarde SQL Server ([SQL Server sauvegarde vers une URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)et [SQL Server la sauvegarde managée dans Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, lorsqu'il accède au stockage Azure pour écrire ou lire des sauvegardes, utilise le nom du compte de stockage et les informations de clé d'accès.  Pour plus d’informations sur la création d’informations d’identification pour le stockage des fichiers [de base de données dans Azure Storage, consultez la leçon 3: Créer des informations d’identification de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  La configuration requise pour la création d’une SQL Server informations d’identification décrites ci-dessous est spécifique aux processus de sauvegarde SQL Server ([SQL Server sauvegarde vers une URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)et [SQL Server la sauvegarde managée dans Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, lorsqu'il accède au stockage Azure pour écrire ou lire des sauvegardes, utilise le nom du compte de stockage et les informations de clé d'accès.  Pour plus d’informations sur la création d’informations d’identification pour le stockage des fichiers [de base de données dans Azure Storage, consultez la leçon 3 : Créer des informations d’identification de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>Créer des informations d'identification SQL Server  
  Pour créer des informations d'identification SQL Server, procédez comme suit :  
@@ -45,7 +45,7 @@ ms.locfileid: "70154330"
   
     ```  
   
-     ![mappage du compte de stockage aux informations d’identification SQL](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mappage du compte de stockage aux informations d’identification SQL")  
+     ![mappage du compte de stockage aux informations d’identification SQL] (../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mappage du compte de stockage aux informations d’identification SQL")  
   
 5.  Vérifiez l'instruction T-SQL et cliquez sur **Exécuter**.  
   

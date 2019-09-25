@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1192deaa556dd8546d0d9fbf17d5ff79335173a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887826"
 ---
 # <a name="user-hierarchies"></a>Hiérarchies utilisateur
@@ -80,9 +80,9 @@ ms.locfileid: "68887826"
  Le niveau Province est rempli avec des membres associés à d'autres membres du niveau CountryRegion, et des membres du niveau City sont associés à leurs membres correspondants du niveau Province. Toutefois, le membre Vatican City du niveau CountryRegion n'étant associé à aucun membre du niveau Province, les membres doivent être associés directement du niveau City au membre Vatican City du niveau CountryRegion. En raison de ces modifications, la hiérarchie de la dimension est désormais irrégulière. Le parent de la ville Vatican City est Vatican City du niveau CountryRegion, qui n'est pas inclus dans le niveau immédiatement supérieur au membre Vatican City du niveau City. Pour plus d’informations sur les hiérarchies, consultez [Hiérarchies déséquilibrées](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Hiérarchies parent-enfant  
- Les hiérarchies parent-enfant de dimensions sont définies à l'aide d'un attribut spécial, nommé « attribut parent », pour déterminer la façon dont les membres sont liés les uns aux autres. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. Le schéma de dimension d'une hiérarchie parent-enfant dépend de la présence d'une relation d'auto-référencement dans la table principale de la dimension. Par exemple, le diagramme suivant illustre la table principale de la dimension dimorganisation dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemple de base de données.  
+ Les hiérarchies parent-enfant de dimensions sont définies à l'aide d'un attribut spécial, nommé « attribut parent », pour déterminer la façon dont les membres sont liés les uns aux autres. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. Le schéma de dimension d'une hiérarchie parent-enfant dépend de la présence d'une relation d'auto-référencement dans la table principale de la dimension. Par exemple, le diagramme suivant illustre la table principale de la dimension **dimorganisation** dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemple de base de données.  
   
- ![Jointure auto-référencée dans la table de] dimorganisation (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "Jointure auto-référencée dans la table de") dimorganisation  
+ ![Jointure auto-référencée dans la table de Dimorganisation](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "Jointure auto-référencée dans la table de Dimorganisation")  
   
  Dans cette table de dimension, la colonne **ParentOrganizationKey** a une relation de clé étrangère avec la colonne clé primaire **OrganizationKey** . En d'autres termes, chaque enregistrement dans cette table peut être associé à un autre enregistrement de la table par une relation parent-enfant. Ce type de jointure réflexive est généralement utilisé pour représenter les données d'une entité d'une organisation, telles que la structure de gestion des employés dans un service.  
   

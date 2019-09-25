@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68889612"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "68889612"
  Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [modélisation &#40;tabulaire&#41; SSAS tabulaire](../../tabular-models/tabular-models-ssas.md) et [comparaison des &#40;solutions tabulaires et&#41;multidimensionnelles SSAS](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Architecture de base  
- Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les instances [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de sont nommées\<«ServerName\\> <\>instanceName». L’illustration suivante montre toutes les relations mentionnées [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] entre les objets.  
+ Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les instances [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de sont nommées\<« ServerName\\> <\>instanceName ». L’illustration suivante montre toutes les relations mentionnées [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] entre les objets.  
   
  ![Relations des objets AMO en cours d’exécution](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "Relations des objets AMO en cours d’exécution")  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68889612"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- Après la création d'un cube, il est possible de définir de nouvelles agrégations ou de modifier les agrégations existantes pour définir des options qui déterminent si les agrégations sont précalculées durant le traitement ou calculées lors de l'exécution des requêtes. **Rubrique connexe:** [Agrégations et conceptions d’agrégation](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Après la création d'un cube, il est possible de définir de nouvelles agrégations ou de modifier les agrégations existantes pour définir des options qui déterminent si les agrégations sont précalculées durant le traitement ou calculées lors de l'exécution des requêtes. **Rubrique connexe :** [Agrégations et conceptions d’agrégation](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mappage de mesures, d'attributs et de hiérarchies  
  Les mesures, les attributs et les hiérarchies dans l'exemple de cube sont dérivés des colonnes suivantes des tables de faits et de dimension du cube.  
@@ -99,9 +99,9 @@ ms.locfileid: "68889612"
 |Mesure Packages|Non applicable|ImportsFactTable|.|12|  
 |Mesure Last|Non applicable|ImportsFactTable|Dernière|May-03-99|  
 |Niveau Route Category dans la dimension Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
-|Niveau Route dans la dimension Route|air,sea,road,rail|RouteDimensionTable|Routage|Sea|  
+|Niveau Route dans la dimension Route|air,sea,road,rail|RouteDimensionTable|Itinéraire|Sea|  
 |Attribut Hemisphere dans la dimension Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Attribut Continent dans la dimension Source|Afrique, Asie, AustraliaEurope, N. America,S. Amérique|SourceDimensionTable|Continent|Europe|  
+|Attribut Continent dans la dimension Source|Afrique, Asie, AustraliaEurope, N. America,S. America|SourceDimensionTable|Continent|Europe|  
 |Attribut Half dans la dimension Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Attribut Quarter dans la dimension Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
@@ -119,9 +119,9 @@ ms.locfileid: "68889612"
   
  Dans le tableau précédent, chaque ligne a les mêmes valeurs pour les colonnes **itinéraire**, **sourceKey**et **TimeKey** , ce qui indique que ces lignes contribuent à la même cellule de cube.  
   
- L'exemple présenté ici concerne un cube très simple, qui n'a qu'un seul groupe de mesures et auquel toutes les tables de dimension sont jointes à la table de faits dans un schéma en étoile. Dans un autre schéma commun, appelé schéma en flocons, une ou plusieurs tables de dimension sont jointes à une autre table de dimension au lieu d'être jointes directement à la table de faits. **Rubrique connexe:** [Dimensions &#40;Analysis Services-&#41;données](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)multidimensionnelles.  
+ L'exemple présenté ici concerne un cube très simple, qui n'a qu'un seul groupe de mesures et auquel toutes les tables de dimension sont jointes à la table de faits dans un schéma en étoile. Dans un autre schéma commun, appelé schéma en flocons, une ou plusieurs tables de dimension sont jointes à une autre table de dimension au lieu d'être jointes directement à la table de faits. **Rubrique connexe :** [Dimensions &#40;Analysis Services-données&#41;multidimensionnelles](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- L'exemple présenté ici ne contient qu'une seule table de faits. Quand un cube a plusieurs tables de faits, les mesures de chaque table de faits sont organisées en groupes de mesures et un groupe de mesures est lié à un jeu de dimensions spécifique par des relations de dimension définies. Ces relations sont définies en spécifiant les tables participantes dans la vue de source de données et la granularité de la relation. **Rubrique connexe:** [Relations de dimension](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ L'exemple présenté ici ne contient qu'une seule table de faits. Quand un cube a plusieurs tables de faits, les mesures de chaque table de faits sont organisées en groupes de mesures et un groupe de mesures est lié à un jeu de dimensions spécifique par des relations de dimension définies. Ces relations sont définies en spécifiant les tables participantes dans la vue de source de données et la granularité de la relation. **Rubrique connexe :** [Relations de dimension](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  

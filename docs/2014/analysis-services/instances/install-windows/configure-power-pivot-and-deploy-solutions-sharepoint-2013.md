@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493969"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
@@ -26,7 +26,7 @@ ms.locfileid: "69493969"
   
 -   Configurer une application Excel Services pour utiliser un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode SharePoint. Pour plus d’informations sur les services principaux [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et l’installation d’un serveur en mode SharePoint, consultez [PowerPivot pour SharePoint l’installation de 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
- Pour plus d’informations sur l’installation de l’outil de configuration PowerPivot pour SharePoint 2013, consultez [installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
+ Pour plus d’informations sur l’installation de l’outil de configuration PowerPivot pour SharePoint 2013, consultez [installer ou désinstaller &#40;le&#41; complément PowerPivot pour SharePoint SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69493969"
 ##  <a name="bkmk_run_configuration_tool"></a>Exécuter PowerPivot pour SharePoint Configuration 2013  
  **Remarque :** L' [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Assistant Installation de installe deux outils de configuration [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]différents pour. Chacun d'eux prend en charge une version différente de SharePoint.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |Configuration de PowerPivot pour SharePoint 2013|SharePoint 2013|  
 |Outil de configuration de PowerPivot|SharePoint 2010 avec SharePoint 2010 Service Pack 1 (SP1)|  
@@ -66,9 +66,9 @@ ms.locfileid: "69493969"
   
     4.  **Serveur PowerPivot pour Excel Services**: Tapez le nom d’un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur en mode SharePoint. Dans un déploiement sur un seul serveur, il est identique à celui du serveur de base de données. `[ServerName]\powerpivot`  
   
-    5.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut, examinez les pages suivantes dans la fenêtre de gauche: **Créer une application Web par défaut** et **déployer une solution d’application Web**  
+    5.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut, examinez les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **déployer une solution d’application Web**  
   
-5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section «valeurs d’entrée utilisées pour configurer le serveur dans l' [outil &#40;&#41; configurer ou réparer PowerPivot pour SharePoint 2010 configuration de PowerPivot](../../configure-repair-powerpivot-sharepoint-2010.md) » dans cette rubrique.  
+5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section « valeurs d’entrée utilisées pour configurer le serveur dans l' [outil &#40;&#41; configurer ou réparer PowerPivot pour SharePoint 2010 configuration de PowerPivot](../../configure-repair-powerpivot-sharepoint-2010.md) » dans cette rubrique.  
   
 6.  Éventuellement, supprimez toutes les actions que vous ne souhaitez pas traiter à ce stade. Par exemple, si vous souhaitez configurer le service Banque d'informations sécurisé ultérieurement, cliquez sur **Configurer le service Banque d'informations sécurisé**, puis désactivez la case à cocher **Inclure cette action dans la liste des tâches**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493969"
   
 2.  Vérifiez que **Fonctionnalité d'intégration PowerPivot pour les collections de sites** est **Activée**.  
   
- **Application de service PowerPivot:**  
+ **Application de service PowerPivot :**  
   
 1.  Dans l'Administration centrale, sous **Gestion des applications**, cliquez sur **Gérer les applications de service**.  
   

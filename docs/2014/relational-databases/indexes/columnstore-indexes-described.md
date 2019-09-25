@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68811041"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -31,7 +31,7 @@ ms.locfileid: "68811041"
   
 ## <a name="contents"></a>Sommaire  
   
--   [Concepts de base](#basics)  
+-   [Principes de base](#basics)  
   
 -   [Chargement de données](#dataload)  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68811041"
 ##  <a name="dataload"></a>Chargement de données  
   
 ###  <a name="dataload_nci"></a>Chargement de données dans un index ColumnStore non cluster  
- Pour charger des données dans un index ColumnStore non cluster, chargez d’abord les données dans une table rowstore traditionnelle stockée en tant que segment de mémoire ou index cluster, puis créez l’index non cluster ColumnStore avec [Create&#41; ColumnStore index &#40;Transact-SQL](/sql/t-sql/statements/create-columnstore-index-transact-sql) .  
+ Pour charger des données dans un index ColumnStore non cluster, chargez d’abord les données dans une table rowstore traditionnelle stockée en tant que segment de mémoire ou index cluster, puis créez l’index non cluster ColumnStore avec [Create COLUMNSTORE index &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) .  
   
  ![Chargement de données dans un index ColumnStore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Chargement de données dans un index ColumnStore")  
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70978402"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
@@ -148,7 +148,7 @@ La requête retourne les colonnes suivantes:
 | counter_name | Nom de la fonction enregistrée de script externe. |
 | counter_value | Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée. |
 
-## <a name="performance-counters"></a>Compteurs de performances
+## <a name="performance-counters"></a>Compteurs de performance
 
 Affichez les compteurs de performance liés à l’exécution de scripts externes.
 

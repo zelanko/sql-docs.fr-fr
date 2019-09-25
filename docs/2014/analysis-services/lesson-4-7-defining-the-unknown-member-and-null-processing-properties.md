@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493921"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Définition du membre inconnu et des propriétés de traitement Null
@@ -101,7 +101,7 @@ ms.locfileid: "69493921"
   
 15. Sélectionnez **EnglishProductSubcategoryName** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   
-16. Créez une nouvelle hiérarchie définie par l’utilisateur appelée **catégories de produits** avec les niveaux suivants, dans l’ordre de haut `Category`en `Subcategory`bas:, et **nom du produit**.  
+16. Créez une nouvelle hiérarchie définie par l’utilisateur appelée **catégories de produits** avec les niveaux suivants, dans l’ordre de haut `Category`en `Subcategory`bas :, et **nom du produit**.  
   
 17. Spécifiez `All Products` comme valeur pour la propriété **AllMemberName** de la hiérarchie définie par l’utilisateur des catégories de produits.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "69493921"
   
      Notez que tous les composants d’assembly apparaissent maintenant au niveau **Product Name** , comme le montre l’illustration suivante.  
   
-     ![Niveau de nom de produit avec les composants] d’assembly (../../2014/tutorials/media/l4-assemblycomponents-1.gif "Niveau de nom de produit avec les composants") d’assembly  
+     ![Niveau de nom de produit avec les composants d’assembly](../../2014/tutorials/media/l4-assemblycomponents-1.gif "Niveau de nom de produit avec les composants d’assembly")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
  [Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
