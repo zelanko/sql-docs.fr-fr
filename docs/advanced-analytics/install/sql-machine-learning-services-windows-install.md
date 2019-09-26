@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58db08edb6afd8738a1aeecec6745e4419d2fd92
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: bdd1a9e20379ae66335baa7d3c415cf68e570d47
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199366"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271919"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installer SQL Server Machine Learning Services (Python et R) sur Windows
 
@@ -295,7 +295,7 @@ Pour installer et gérer des packages R, vous pouvez configurer des groupes d’
 
 Les développeurs peuvent démarrer avec quelques exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants :
 
-+ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutoriel : Exécuter R dans T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutoriel : Analytique dans la base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en effectuant les didacticiels suivants :

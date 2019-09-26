@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715697"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271901"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Comment générer des prévisions et des prédictions à l’aide de modèles de Machine Learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Le tableau suivant récapitule les frameworks de notation pour les prévisions e
 
 | Méthodologie           | Interface         | Configuration requise pour la bibliothèque | Vitesses de traitement |
 |-----------------------|-------------------|----------------------|----------------------|
-| Framework d’extensibilité | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Aucune. Les modèles peuvent être basés sur n’importe quelle fonction R ou python | Centaines de millisecondes. <br/>Le chargement d’un environnement d’exécution a un coût fixe, avec une moyenne de trois à 600 millisecondes, avant que les nouvelles données ne soient notées. |
+| Framework d’extensibilité | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Aucun. Les modèles peuvent être basés sur n’importe quelle fonction R ou python | Centaines de millisecondes. <br/>Le chargement d’un environnement d’exécution a un coût fixe, avec une moyenne de trois à 600 millisecondes, avant que les nouvelles données ne soient notées. |
 | [Extension CLR de notation en temps réel](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) sur un modèle sérialisé | R RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Dizaines de millisecondes, en moyenne. |
 | [Extension de C++ notation Native](../sql-native-scoring.md) | [Prédire la fonction T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) sur un modèle sérialisé | R RevoScaleR <br/>Python: revoscalepy | Moins de 20 millisecondes, en moyenne. | 
 
@@ -84,7 +84,7 @@ Pour utiliser un modèle avec l’une des options de notation rapide, enregistre
 
 **Utilisation de SQL**
 
-À partir du code SQL, vous pouvez former le modèle à l’aide de [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)et insérer directement les modèles formés dans une table, dans une colonne de type **varbinary (max)** . Pour obtenir un exemple simple, consultez [créer un modèle preditive dans R](../tutorials/rtsql-create-a-predictive-model-r.md)
+À partir du code SQL, vous pouvez former le modèle à l’aide de [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)et insérer directement les modèles formés dans une table, dans une colonne de type **varbinary (max)** . Pour obtenir un exemple simple, consultez [créer un modèle preditive dans R](../tutorials/quickstart-r-train-score-model.md)
 
 **Utilisation de R**
 
@@ -96,7 +96,7 @@ La sérialisation d’un modèle dans un format binaire est utile, mais elle n�
 
 ## <a name="scoring-in-related-products"></a>Score dans les produits associés
 
-Si vous utilisez le [serveur autonome](r-server-standalone.md) ou un [Microsoft machine learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), vous avez d’autres options, outre des procédures stockées et des fonctions T-SQL pour générer des prédictions rapidement. Le serveur autonome et Machine Learning Server prennent en charge le concept de *service Web* pour le déploiement de code. Vous pouvez regrouper un modèle pré-formé R ou python en tant que service Web, appelé au moment de l’exécution pour évaluer de nouvelles entrées de données. Pour plus d’informations, voir les articles suivants :
+Si vous utilisez le [serveur autonome](r-server-standalone.md) ou un [Microsoft machine learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), vous avez d’autres options, outre des procédures stockées et des fonctions T-SQL pour générer des prédictions rapidement. Le serveur autonome et Machine Learning Server prennent en charge le concept de *service Web* pour le déploiement de code. Vous pouvez regrouper un modèle pré-formé R ou python en tant que service Web, appelé au moment de l’exécution pour évaluer de nouvelles entrées de données. Pour plus d’informations, consultez ces articles :
 
 + [Qu’est-ce que les services Web dans Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Qu’est-ce que la fonction de fonctionnement?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

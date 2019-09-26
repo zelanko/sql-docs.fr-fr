@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a255b70b71f29f9cc28e4022ecfdf2741f9a838d
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715809"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271882"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installer SQL Server 2016 R services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 7. Une fois l’installation terminée, si vous êtes invité à redémarrer l’ordinateur, faites-le maintenant. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="set-environment-variables"></a>Définition des variables d'environnement
+## <a name="set-environment-variables"></a>Définir des variables d’environnement
 
 Pour l’intégration de fonctionnalités R uniquement, vous devez définir la variable d’environnement **MKL_CBWR** pour [garantir la cohérence](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de la sortie des calculs d’Intel Math Kernel Library (MKL).
 
@@ -255,9 +255,9 @@ Le processus d’installation et de gestion des packages R est différent dans S
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les développeurs r peuvent commencer par des exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants:
+Les développeurs peuvent démarrer avec quelques exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants :
 
-+ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutoriel : Analyse en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Exécuter R dans T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Tutoriel : Analytique dans la base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Pour consulter des exemples de Machine Learning basés sur des scénarios réels, consultez didacticiels [machine learning](../tutorials/machine-learning-services-tutorials.md).
+Pour consulter des exemples d’apprentissage automatique basés sur des scénarios réels, consultez les [Didacticiels d’apprentissage automatique](../tutorials/machine-learning-services-tutorials.md).

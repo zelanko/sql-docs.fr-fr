@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715657"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271892"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Performances pour R services-optimisation des données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Par défaut, la valeur de ce paramètre est définie sur 50000 pour garantir des
 
 Les avantages de l’amélioration de la taille des lots deviennent évidents sur un jeu de données volumineux et dans une tâche qui peut s’exécuter sur plusieurs processus. Toutefois, l’augmentation de cette valeur ne produit pas toujours les meilleurs résultats. Nous vous recommandons d’expérimenter vos données et algorithmes pour déterminer la valeur optimale.
 
-## <a name="parallel-processing"></a>Traitement en parallèle
+## <a name="parallel-processing"></a>Traitement parallèle
 
 Pour améliorer les performances des fonctions analytiques **RX** , vous pouvez tirer parti de la capacité des SQL Server à exécuter des tâches en parallèle à l’aide de cœurs disponibles sur l’ordinateur serveur.
 
@@ -81,7 +81,7 @@ Il existe deux façons d’effectuer la parallélisation avec R dans SQL Server:
 
     Si le script R peut être parallélisée et que la requête SQL peut être parallélisée, le moteur de base de données crée plusieurs processus parallèles. Le nombre maximal de processus qui peuvent être créés est égal au paramètre de **degré maximal de parallélisme** (MAXDOP) pour l’instance. Tous les processus exécutent ensuite le même script, mais ne reçoivent qu’une partie des données.
     
-    Par conséquent, cette méthode n’est pas utile avec les scripts qui doivent voir toutes les données, par exemple lors de l’apprentissage d’un modèle. Au contraire, cette méthode est utile pour effectuer certaines tâches, comme la prédiction par lot en parallèle. Pour plus d’informations sur l’utilisation du `sp_execute_external_script`parallélisme avec, consultez la section **conseils avancés: traitement parallèle** de [à l’aide de code R dans Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
+    Par conséquent, cette méthode n’est pas utile avec les scripts qui doivent voir toutes les données, par exemple lors de l’apprentissage d’un modèle. Au contraire, cette méthode est utile pour effectuer certaines tâches, comme la prédiction par lot en parallèle. Pour plus d’informations sur l’utilisation du `sp_execute_external_script`parallélisme avec, consultez la section **conseils avancés: traitement parallèle** de [à l’aide de code R dans Transact-SQL](../tutorials/quickstart-r-create-script.md).
 
 -   **Utilisez numTasks = 1.** Lorsque vous utilisez des fonctions **RX** dans un contexte de calcul SQL Server, définissez la valeur du paramètre _numTasks_ sur le nombre de processus que vous souhaitez créer. Le nombre de processus créés ne peut jamais être supérieur à **MAXDOP**; Toutefois, le nombre réel de processus créés est déterminé par le moteur de base de données et peut être inférieur à celui que vous avez demandé.
 

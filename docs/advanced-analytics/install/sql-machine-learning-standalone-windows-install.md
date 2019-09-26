@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715846"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271955"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installer Machine Learning Server (autonome) ou R Server (autonome) à l’aide du programme d’installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ Si vous avez installé une version antérieure, par exemple SQL Server 2016 R Se
 
 En règle générale, nous vous recommandons de traiter les installations autonomes prenant en charge les instances de moteur de base de données et de serveur comme s’excluant mutuellement pour éviter les conflits de ressources. Toutefois, si vous disposez de ressources suffisantes, il n’y a aucune interdiction pour les installer à la fois sur le même ordinateur physique.
 
-Vous ne pouvez avoir qu’un seul serveur autonome sur l’ordinateur: SQL Server Machine Learning Server (autonome) ou SQL Server R Server (autonome). Veillez à désinstaller une version avant d’en ajouter une nouvelle.
+Vous ne pouvez avoir qu’un seul serveur autonome sur l’ordinateur : SQL Server Machine Learning Server (autonome) ou SQL Server R Server (autonome). Veillez à désinstaller une version avant d’en ajouter une nouvelle.
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -132,7 +132,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 Une fois l’installation terminée, consultez [rapports personnalisés pour SQL Server R services](../r/monitor-r-services-using-custom-reports-in-management-studio.md) pour obtenir de l’aide sur les erreurs ou les avertissements, consultez [FAQ sur la mise à niveau et l’installation-machine learning services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 ::: moniker-end
 
-## <a name="set-environment-variables"></a>Définition des variables d'environnement
+## <a name="set-environment-variables"></a>Définir des variables d’environnement
 
 Pour l’intégration de fonctionnalités R uniquement, vous devez définir la variable d’environnement **MKL_CBWR** pour [garantir la cohérence](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de la sortie des calculs d’Intel Math Kernel Library (MKL).
 
@@ -214,16 +214,16 @@ Un environnement de développement intégré n’est pas installé dans le cadre
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les développeurs r peuvent commencer par des exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants:
+Les développeurs peuvent démarrer avec quelques exemples simples et découvrir les principes de base du fonctionnement de R avec SQL Server. Pour l’étape suivante, consultez les liens suivants :
 
-+ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutoriel : Analyse en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Exécuter R dans T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Tutoriel : Analytique dans la base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Les développeurs python peuvent apprendre à utiliser Python avec SQL Server en suivant les didacticiels suivants:
+Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en effectuant les didacticiels suivants :
 
-+ [Tutoriel : Exécuter python dans T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutoriel : Analytique en base de données pour les développeurs python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutoriel : Exécuter Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Analytique dans la base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-Pour consulter des exemples de Machine Learning basés sur des scénarios réels, consultez didacticiels [machine learning](../tutorials/machine-learning-services-tutorials.md).
+Pour consulter des exemples d’apprentissage automatique basés sur des scénarios réels, consultez les [Didacticiels d’apprentissage automatique](../tutorials/machine-learning-services-tutorials.md).
