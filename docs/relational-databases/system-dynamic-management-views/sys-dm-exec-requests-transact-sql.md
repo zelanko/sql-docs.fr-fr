@@ -20,12 +20,12 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0180d8087b556ea32728ef8924681bb65ec7ea2
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611436"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326167"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -36,36 +36,36 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID de la session à laquelle cette demande est liée. N'accepte pas la valeur NULL.|  
-|request_id|**int**|ID de la demande. Unique dans le contexte de la session. N'accepte pas la valeur NULL.|  
+|request_id|**Int**|ID de la demande. Unique dans le contexte de la session. N'accepte pas la valeur NULL.|  
 |start_time|**datetime**|Horodateur lors la réception de la demande. N'accepte pas la valeur NULL.|  
-|status|**nvarchar(30)**|Statut de la demande. Il peut s'agir de l'un des états suivants :<br /><br /> Présentation<br />Exécution<br />Exécutable<br />En état de veille<br />Interrompu<br /><br /> N'accepte pas la valeur NULL.|  
-|command|**nvarchar(32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
+|status|**nvarchar(30)**|Statut de la demande. Il peut s'agir de l'un des états suivants :<br /><br /> Présentation<br />Exécution en cours<br />Exécutable<br />En état de veille<br />Suspendu<br /><br /> N'accepte pas la valeur NULL.|  
+|commande|**nvarchar(32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
 |sql_handle|**varbinary(64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Autorise la valeur NULL.|  
-|statement_start_offset|**int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
-|statement_end_offset|**int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution se terminent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
+|statement_start_offset|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
+|statement_end_offset|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution se terminent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
 |plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot en cours d’exécution. Autorise la valeur NULL.|  
 |database_id|**smallint**|ID de la base de données dans laquelle la requête s'exécute. N'accepte pas la valeur NULL.|  
-|user_id|**int**|ID de l'utilisateur qui a envoyé la demande. N'accepte pas la valeur NULL.|  
+|user_id|**Int**|ID de l'utilisateur qui a envoyé la demande. N'accepte pas la valeur NULL.|  
 |connection_id|**uniqueidentifier**|ID de la connexion à laquelle la demande est parvenue. Autorise la valeur NULL.|  
 |blocking_session_id|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé pour le moment en raison de transitions d'état de verrou interne.|  
 |wait_type|**nvarchar(60)**|Si la demande est actuellement bloquée, cette colonne retourne le type d'attente. Autorise la valeur NULL.<br /><br /> Pour plus d’informations sur les types d’attentes, consultez [sys. &#40;DM _OS_WAIT_STATS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|wait_time|**int**|Si la demande est actuellement bloquée, cette colonne retourne la durée de l'attente, en millisecondes. N'accepte pas la valeur NULL.|  
+|wait_time|**Int**|Si la demande est actuellement bloquée, cette colonne retourne la durée de l'attente, en millisecondes. N'accepte pas la valeur NULL.|  
 |last_wait_type|**nvarchar(60)**|Si la demande a été bloquée précédemment, cette colonne indique le type de la dernière attente. N'accepte pas la valeur NULL.|  
 |wait_resource|**nvarchar (256)**|Si la demande est actuellement bloquée, cette colonne retourne la ressource attendue par la demande. N'accepte pas la valeur NULL.|  
 |open_transaction_count|**Int**|Nombre de transactions ouvertes pour cette demande. N'accepte pas la valeur NULL.|  
-|open_resultset_count|**int**|Nombre de jeux de résultats ouverts pour cette demande. N'accepte pas la valeur NULL.|  
+|open_resultset_count|**Int**|Nombre de jeux de résultats ouverts pour cette demande. N'accepte pas la valeur NULL.|  
 |transaction_id|**bigint**|ID de la transaction dans laquelle cette demande s'exécute. N'accepte pas la valeur NULL.|  
 |context_info|**varbinary(128)**|Valeur CONTEXT_INFO de la session. Autorise la valeur NULL.|  
 |percent_complete|**real**|Le pourcentage de travail terminé pour les commandes suivantes :<br /><br /> ALTER INDEX REORGANIZE<br />Option AUTO_SHRINK avec ALTER DATABASE<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> N'accepte pas la valeur NULL.|  
 |estimated_completion_time|**bigint**|Interne uniquement. N'accepte pas la valeur NULL.|  
-|cpu_time|**int**|Quantité de temps UC (en millisecondes) utilisée par la demande. N'accepte pas la valeur NULL.|  
-|total_elapsed_time|**int**|Temps total écoulé en millisecondes depuis l'arrivée de la demande. N'accepte pas la valeur NULL.|  
+|cpu_time|**Int**|Quantité de temps UC (en millisecondes) utilisée par la demande. N'accepte pas la valeur NULL.|  
+|total_elapsed_time|**Int**|Temps total écoulé en millisecondes depuis l'arrivée de la demande. N'accepte pas la valeur NULL.|  
 |scheduler_id|**Int**|ID du planificateur qui planifie cette demande. N'accepte pas la valeur NULL.|  
 |task_address|**varbinary(8)**|Adresse mémoire de la tâche associée à la demande. Autorise la valeur NULL.|  
 |reads|**bigint**|Nombre de lectures effectuées par la demande. N'accepte pas la valeur NULL.|  
 |writes|**bigint**|Nombre d'écritures effectuées par la demande. N'accepte pas la valeur NULL.|  
 |logical_reads|**bigint**|Nombre de lectures logiques effectuées par la demande. N'accepte pas la valeur NULL.|  
-|text_size|**int**|Valeur du paramètre TEXTSIZE pour la demande. N'accepte pas la valeur NULL.|  
+|text_size|**Int**|Valeur du paramètre TEXTSIZE pour la demande. N'accepte pas la valeur NULL.|  
 |langage|**nvarchar(128)**|Valeur du paramètre de langue pour la demande. Autorise la valeur NULL.|  
 |date_format|**nvarchar(3)**|Valeur du paramètre DATEFORMAT pour la demande. Autorise la valeur NULL.|  
 |date_first|**smallint**|Valeur du paramètre DATEFIRST pour la demande. N'accepte pas la valeur NULL.|  
@@ -78,20 +78,20 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |ansi_nulls|**bit**|1 = ANSI_NULLS est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
 |transaction_isolation_level|**smallint**|Niveau d'isolation avec lequel la transaction pour cette demande est créée. N'accepte pas la valeur NULL.<br /><br /> 0 = Non spécifié<br /><br /> 1 = Lecture non validée<br /><br /> 2 = Lecture validée<br /><br /> 3 = Répétable<br /><br /> 4 = Sérialisable<br /><br /> 5 = Instantané|  
-|lock_timeout|**int**|Délai d'attente de verrou externe pour la demande, en millisecondes. N'accepte pas la valeur NULL.|  
-|deadlock_priority|**int**|Paramètre DEADLOCK_PRIORITY de la demande. N'accepte pas la valeur NULL.|  
+|lock_timeout|**Int**|Délai d'attente de verrou externe pour la demande, en millisecondes. N'accepte pas la valeur NULL.|  
+|deadlock_priority|**Int**|Paramètre DEADLOCK_PRIORITY de la demande. N'accepte pas la valeur NULL.|  
 |row_count|**bigint**|Nombre de lignes retournées au client par cette demande. N'accepte pas la valeur NULL.|  
 |prev_error|**Int**|Dernière erreur générée pendant l'exécution de la demande. N'accepte pas la valeur NULL.|  
-|nest_level|**int**|Niveau d'imbrication actuel du code en cours d'exécution sur la demande. N'accepte pas la valeur NULL.|  
+|nest_level|**Int**|Niveau d'imbrication actuel du code en cours d'exécution sur la demande. N'accepte pas la valeur NULL.|  
 |granted_query_memory|**Int**|Nombre de pages allouées à l'exécution d'une requête dans la demande. N'accepte pas la valeur NULL.|  
 |executing_managed_code|**bit**|Indique si une demande spécifique est en train d'exécuter des objets CLR (Common Language Runtime) tels que des routines, des types et des déclencheurs. Cette valeur est définie pour toute la durée pendant laquelle un objet CLR réside dans la pile, même lorsqu'elle exécute [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir du CLR. N'accepte pas la valeur NULL.|  
-|group_id|**int**|ID du groupe de charge de travail auquel cette requête appartient. N'accepte pas la valeur NULL.|  
+|group_id|**Int**|ID du groupe de charge de travail auquel cette requête appartient. N'accepte pas la valeur NULL.|  
 |query_hash|**binary(8)**|La valeur de hachage binaire calculée sur la requête et utilisée pour identifier des requêtes avec une logique similaire. Vous pouvez utiliser le hachage de requête pour déterminer l'utilisation des ressources globale pour les requêtes qui diffèrent uniquement par les valeurs littérales.|  
 |query_plan_hash|**binary(8)**|Valeur de hachage binaire calculée sur le plan d'exécution de requête et utilisée pour identifier des plans d'exécution de requête semblables. Vous pouvez utiliser le hachage de plan de requête pour rechercher le coût cumulatif de requêtes avec les plans d'exécution semblables.|  
 |statement_sql_handle|**varbinary(64)**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descripteur SQL de la requête individuelle.<br /><br />Cette colonne a la valeur NULL si Magasin des requêtes n’est pas activée pour la base de données. |  
 |statement_context_id|**bigint**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Clé étrangère facultative à sys. query_context_settings.<br /><br />Cette colonne a la valeur NULL si Magasin des requêtes n’est pas activée pour la base de données. |  
-|dop |**int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Degré de parallélisme de la requête. |  
-|parallel_worker_count |**int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de threads de travail parallèles réservés s’il s’agit d’une requête parallèle.  |  
+|dop |**Int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Degré de parallélisme de la requête. |  
+|parallel_worker_count |**Int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de threads de travail parallèles réservés s’il s’agit d’une requête parallèle.  |  
 |external_script_request_id |**uniqueidentifier** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de demande de script externe associé à la requête actuelle. |  
 |is_resumable |**bit** |**S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si la demande est une opération d’index pouvant être reprise. |  
 |page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si `wait_resource` la colonne contient une page. Pour plus d’informations, consultez [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
@@ -100,10 +100,10 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 ## <a name="remarks"></a>Notes 
 Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif. Les valeurs temporelles retournées par cette vue de gestion dynamique n'incluent pas le temps passé en mode préemptif.
 
-Lors de l’exécution de requêtes parallèles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [mode ligne](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), assigne un thread de travail pour coordonner les threads de travail chargés d’effectuer les tâches qui leur sont attribuées. Dans cette vue de gestion dynamique, seul le thread coordinateur est visible pour la demande. Les colonnesreads, writes, **LOGICAL_READS**et **row_count** ne sont **pas mises à jour** pour le thread coordinateur. Les colonnes **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**et **granted_query_memory** sont **uniquement mises à jour** pour le thread coordinateur. Pour plus d’informations, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
+Lors de l’exécution de requêtes parallèles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [mode ligne](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), assigne un thread de travail pour coordonner les threads de travail chargés d’effectuer les tâches qui leur sont attribuées. Dans cette vue de gestion dynamique, seul le thread coordinateur est visible pour la demande. Les colonnes **reads**, **writes**, **LOGICAL_READS**et **row_count** ne sont **pas mises à jour** pour le thread coordinateur. Les colonnes **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**et **granted_query_memory** sont **uniquement mises à jour** pour le thread coordinateur. Pour plus d’informations, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Autorisations
-Si l’utilisateur dispose `VIEW SERVER STATE` de l’autorisation sur le serveur, il voit toutes les sessions en cours d’exécution sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance de; sinon, il ne verra que la session en cours. `VIEW SERVER STATE`ne peut pas être [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] accordé `sys.dm_exec_requests` dans, est toujours limité à la connexion actuelle.
+Si l’utilisateur dispose `VIEW SERVER STATE` de l’autorisation sur le serveur, il voit toutes les sessions en cours d’exécution sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance de ; sinon, il ne verra que la session en cours. `VIEW SERVER STATE`ne peut pas être [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] accordé `sys.dm_exec_requests` dans, est toujours limité à la connexion actuelle.
   
 ## <a name="examples"></a>Exemples  
   
@@ -190,4 +190,4 @@ GO
 - [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
