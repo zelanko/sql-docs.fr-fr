@@ -184,14 +184,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificateur unique qui identifie un point de terminaison de conversation dans une application. Les descripteurs de conversation sont uniques à un point de terminaison d'une conversation, les points de terminaison initiateur et cible ont des descripteurs de conversation distincts.  
   
- Les descripteurs de conversation sont retournés aux applications par le paramètre *\@@dialog_handle* de l’instruction **BEGIN DIALOG**, et la colonne **conversation_handle** dans le jeu de résultats d’une instruction **RECEIVE**.  
+ Les descripteurs de conversation sont retournés aux applications par le paramètre *\@dialog_handle* de l’instruction **BEGIN DIALOG**, et la colonne **conversation_handle** dans le jeu de résultats d’une instruction **RECEIVE**.  
   
  Les descripteurs de conversation sont signalés dans la colonne **conversation_handle** des affichages catalogue **sys.transmission_queue** et **sys.conversation_endpoints** .  
   
  *conversation_group_id*  
  Identificateur unique qui identifie un groupe de conversations.  
   
- Les ID de groupe de conversations sont retournés aux applications par le paramètre *\@@conversation_group_id* de l’instruction **GET CONVERSATION GROUP**, et la colonne **conversation_group_id** dans le jeu de résultats d’une instruction **RECEIVE**.  
+ Les ID de groupe de conversations sont retournés aux applications par le paramètre *\@conversation_group_id* de l’instruction **GET CONVERSATION GROUP**, et la colonne **conversation_group_id** dans le jeu de résultats d’une instruction **RECEIVE**.  
   
  Les ID de groupe de conversations sont signalés dans les colonnes **conversation_group_id** des affichages catalogue **sys.conversation_groups** et **sys.conversation_endpoints** .  
   
@@ -201,7 +201,7 @@ WHERE database_id = DB_ID();
  Les ID de conversation sont signalés dans la colonne **conversation_id** de l’affichage catalogue **sys.conversation_endpoints** .  
   
  **-TIMEOUT** _intervalle_délai_d’attente_  
- Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT** , le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME** , et non sur les rapports **CONFIGURATION** . Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant**-** l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  
+ Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT** , le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME** , et non sur les rapports **CONFIGURATION** . Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant **-** l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  
   
  **\<runtimeconnectionoptions>**  
  Spécifie les informations de connexion pour les bases de données contenant les services associés aux éléments de conversation qui sont surveillés. Si tous les services se trouvent dans la même base de données, vous ne devez spécifier qu’une seule clause **CONNECT TO** . Si les services se trouvent dans des bases de données séparées, vous devez fournir une clause **CONNECT TO** pour chaque base de données. Si **runtimeconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions**.  
@@ -244,7 +244,7 @@ WHERE database_id = DB_ID();
  **-S** _nom_serveur_[\\*nom_instance*]  
  Spécifie l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser.  
   
- Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez _server\_name_**\\**_instance\_name_ pour vous connecter à une instance nommée de [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
+ Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez _server\_name_ **\\** _instance\_name_ pour vous connecter à une instance nommée de [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
   
  **-d** _nom_base_de_données_  
  Spécifie la base de données qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser. Si cette base de données n'existe pas, un message d'erreur est généré. Si vous ne spécifiez pas l’option **-d** , la valeur par défaut est la base de données spécifiée dans la propriété de base de données par défaut de votre connexion.  
@@ -255,7 +255,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Affiche l'aide de la ligne de commande.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez **ssbdiagnose** pour effectuer les opérations suivantes :  
   
 -   Confirmer qu'une application [!INCLUDE[ssSB](../../includes/sssb-md.md)] récemment configurée ne contient pas d'erreurs de configuration.  
@@ -446,7 +446,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
