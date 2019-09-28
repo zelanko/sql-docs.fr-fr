@@ -1,7 +1,7 @@
 ---
 title: Effectuer un déploiement avec un script bash sur un cluster kubeadm mononœud
 titleSuffix: SQL Server big data clusters
-description: Utilisez un script de déploiement bash pour déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] un sur un cluster kubeadm à nœud unique.
+description: Utilisez un script de déploiement bash pour déployer un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] sur un cluster kubeadm à nœud unique.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652343"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341841"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Effectuer un déploiement avec un script bash sur un cluster kubeadm mononœud
 
@@ -34,7 +34,7 @@ Dans ce tutoriel, vous utilisez un exemple de script de déploiement bash pour d
 - Mettez à jour les packages existants à l’aide des commandes ci-dessous pour vous assurer que l’image du système d’exploitation est à jour.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ Le script [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-serve
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour commencer à utiliser des clusters Big Data, consultez [le didacticiel: Chargez les exemples de données dans un](tutorial-load-sample-data.md)cluster SQL Server Big Data.
+Pour commencer à utiliser des clusters Big Data, voir [Tutorial : Chargez les exemples de données dans un SQL Server Big Data cluster @ no__t-0.

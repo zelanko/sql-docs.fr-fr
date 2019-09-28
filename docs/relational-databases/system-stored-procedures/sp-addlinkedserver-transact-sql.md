@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ef386d6643be7742c0bc042a2b2a16f1877f2e2
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 0d54f307ce71418af0b43ebae5353d2c6200e677
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314508"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341976"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,28 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-[ @server =] *serveur\'\'*           
+[@server =] *@no__t 2server @ no__t-3*          
 Nom du serveur lié à créer. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
-[ @srvproduct =] *product_name\'\'*           
+[@srvproduct =] *@no__t 2product_name @ no__t-3*          
 Nom de produit de la source de données OLE DB à ajouter comme serveur lié. *product_name* est de type **nvarchar (** 128 **)** , avec NULL comme valeur par défaut. Si **SQL Server**, *provider_name*, *source_de_données*, *location*, *chaîne_fournisseur*et *Catalog* n’ont pas besoin d’être spécifiés.  
   
-[ @provider =] *provider_name\'\'*           
-ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la source de données. *provider_name* doit être unique pour le fournisseur de OLE DB spécifié installé sur l’ordinateur actuel. *provider_name* est de type **nvarchar (** 128 **)** , avec NULL comme valeur par défaut. Toutefois, si *provider_name* est omis, SQLNCLI est utilisé. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Le fournisseur de OLE DB est supposé être inscrit avec le PROGID spécifié dans le registre.  
+[@provider =] *@no__t 2provider_name @ no__t-3*          
+ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la source de données. *provider_name* doit être unique pour le fournisseur de OLE DB spécifié installé sur l’ordinateur actuel. *provider_name* est de type **nvarchar (128)** , avec NULL comme valeur par défaut. Toutefois, si *provider_name* est omis, SQLNCLI est utilisé. 
+
+> [!NOTE]
+> À l’aide de SQLNCLI, redirigez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la dernière version du fournisseur de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Le fournisseur de OLE DB est supposé être inscrit avec le PROGID spécifié dans le registre.
+
+> [!IMPORTANT] 
+> Le fournisseur Microsoft OLE DB précédent pour SQL Server (SQLOLEDB) et SQL Server Native Client OLE DB fournisseur (SQLNCLI) reste déconseillé et il n’est pas recommandé de l’utiliser pour un nouveau travail de développement. Au lieu de cela, utilisez le nouveau [pilote de OLE DB Microsoft pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
   
-[ @datasrc =] *source_de_données\'\'*           
+[@datasrc =] *@no__t 2data_source @ no__t-3*          
  Nom de la source de données, tel qu'il est interprété par le fournisseur OLE DB. *source_de_données* est **de type nvarchar (** 4000 **)** . *source_de_données* est passé en tant que propriété DBPROP_INIT_DATASOURCE pour initialiser le fournisseur OLE DB.  
   
-[ @location =] *emplacement\'\'*           
+[@location =] *@no__t 2Location @ no__t-3*          
  Emplacement de la base de données, tel qu'il est interprété par le fournisseur OLE DB. *location* est de type **nvarchar (** 4000 **)** , avec NULL comme valeur par défaut. l' *emplacement* est passé en tant que propriété DBPROP_INIT_LOCATION pour initialiser le fournisseur OLE DB.  
   
-[ @provstr =] *chaîne_fournisseur\'\'*           
+[@provstr =] *@no__t 2provider_string @ no__t-3*          
  Chaîne de connexion spécifique au fournisseur OLE DB identifiant une source de données unique. *chaîne_fournisseur* est de type **nvarchar (** 4000 **)** , avec NULL comme valeur par défaut. *provstr* est passé à IDataInitialize ou défini en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB.  
   
  Lorsque le serveur lié est créé sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB, l’instance peut être spécifiée à l’aide du mot clé Server en tant que Server =*ServerName*\\*InstanceName* pour spécifier une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* est le nom de l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute, et *nom_instance* est le nom de l’instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle l’utilisateur est connecté.  
@@ -66,7 +72,7 @@ ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la sourc
 > [!NOTE]
 > Pour accéder à une base de données miroir, une chaîne de connexion doit contenir le nom de la base de données. Ce nom est nécessaire pour permettre au fournisseur d'accès aux données d'effectuer des tentatives de basculement. La base de données peut être spécifiée **@provstr** dans **@catalog** le paramètre ou. Le cas échéant, la chaîne de connexion peut également fournir un nom de partenaire de basculement.  
   
-[ @catalog =] *catalogue\'\'*        
+[@catalog =] *@no__t 2catalog @ no__t-3*       
  Catalogue à utiliser lors de l'établissement d'une connexion au fournisseur OLE DB. *Catalog* est de **type sysname**, avec NULL comme valeur par défaut. le *catalogue* est passé en tant que propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. Lorsque le serveur lié est défini sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le catalogue fait référence à la base de données par défaut sur laquelle le serveur lié est mappé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -104,14 +110,14 @@ ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la sourc
  **sp_addlinkedserver** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
 > [!IMPORTANT]
->  Lorsqu’un serveur lié est créé à l’aide de **sp_addlinkedserver**, un auto-mappage par défaut est ajouté pour toutes les connexions locales. Pour les non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -fournisseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les connexions authentifiées peuvent être en mesure d’accéder au fournisseur sous le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service. Les administrateurs doivent envisager d'utiliser `sp_droplinkedsrvlogin <linkedserver_name>, NULL` pour supprimer le mappage global.  
+> Lorsqu’un serveur lié est créé à l’aide de **sp_addlinkedserver**, un auto-mappage par défaut est ajouté pour toutes les connexions locales. Pour les non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -fournisseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les connexions authentifiées peuvent être en mesure d’accéder au fournisseur sous le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service. Les administrateurs doivent envisager d'utiliser `sp_droplinkedsrvlogin <linkedserver_name>, NULL` pour supprimer le mappage global.  
   
 ## <a name="permissions"></a>Autorisations  
  L' `sp_addlinkedserver` instruction requiert l' `ALTER ANY LINKED SERVER` autorisation. (La [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] boîte de dialogue **nouveau serveur lié** est implémentée d’une manière qui `sysadmin` requiert l’appartenance au rôle serveur fixe.)  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-microsoft-sql-server-native-client-ole-db-provider"></a>R. Utilisation du fournisseur Microsoft SQL Server Native Client OLE DB  
+### <a name="a-using-the-microsoft-sql-server-ole-db-provider"></a>R. Utilisation du fournisseur de OLE DB Microsoft SQL Server  
  L'exemple suivant crée un serveur lié nommé `SEATTLESales`. Le nom du produit est `SQL Server` ; aucun nom de fournisseur n'est utilisé.  
   
 ```sql  
@@ -122,8 +128,21 @@ EXEC sp_addlinkedserver
    N'SQL Server';  
 GO  
 ```  
-  
+
+ L’exemple suivant crée un serveur lié `S1_instance1` sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du pilote OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+```sql  
+EXEC sp_addlinkedserver     
+   @server=N'S1_instance1',   
+   @srvproduct=N'',  
+   @provider=N'MSOLEDBSQL',   
+   @datasrc=N'S1\instance1';  
+```  
+
  L’exemple suivant crée un serveur `S1_instance1` lié sur une instance de à l’aide du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native Client.  
+ 
+> [!IMPORTANT] 
+> SQL Server Native Client OLE DB fournisseur (SQLNCLI) reste déconseillé et il n’est pas recommandé de l’utiliser pour un nouveau travail de développement. Au lieu de cela, utilisez le nouveau [pilote de OLE DB Microsoft pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
   
 ```sql  
 EXEC sp_addlinkedserver     
@@ -163,7 +182,7 @@ GO
 ```  
   
 ### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>C. Utilisation du fournisseur Microsoft OLE DB pour ODBC avec le paramètre data_source  
- L’exemple suivant crée un serveur lié nommé `SEATTLE Payroll` qui utilise le [!INCLUDE[msCoName](../../includes/msconame-md.md)] fournisseur OLE DB pour ODBC (`MSDASQL`) et le paramètre *data_source* .  
+ L’exemple suivant crée un serveur lié nommé `SEATTLE Payroll` qui utilise le fournisseur de OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour ODBC (`MSDASQL`) et le paramètre *source_de_données* .  
   
 > [!NOTE]  
 > Le nom de la source de données ODBC spécifiée doit être défini comme DSN système dans le serveur avant d'utiliser le serveur lié.  
