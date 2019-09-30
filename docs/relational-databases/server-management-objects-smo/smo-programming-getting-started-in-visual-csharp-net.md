@@ -26,7 +26,7 @@ ms.locfileid: "70911163"
 ## <a name="references-and-imports"></a>Références et importations  
  Après avoir démarré le projet [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , vous devez ajouter des références aux assemblys SMO. Vous devez ensuite importer les espaces de noms requis afin que votre programme puisse reconnaître les types SMO.  
   
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys Smo se trouvent dans le dossier C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\  
+ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys Smo se trouvent dans le dossier C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un projet Smo&#35; Visual C dans Visual Studio .net](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
