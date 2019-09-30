@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941467"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292418"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941467"
 ### <a name="converting-datetime-data-types"></a>Conversion des types de données de date/heure  
  Vous pouvez changer le type de données d'une colonne contenant des données de date/heure afin d'extraire la partie date ou heure des données. Les tableaux suivants répertorient les résultats du changement d'un type de données de date/heure en un autre type de données de date/heure.  
   
-#### <a name="converting-from-dtfiletime"></a>Conversion à partir de DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Conversion à partir de DT_FILETIME  
   
 |Conversion de DT_FILETIME en|Résultats|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941467"
 |DT_DBTIMESTAMP2|Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMP2 peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Définit zéro pour le champ de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMPOFFSET peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Conversion à partir de DT_DATE  
+#### <a name="converting-from-dt_date"></a>Conversion à partir de DT_DATE  
   
 |Conversion de DT_DATE en|Résultats|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941467"
 |DT_DBTIMESTAMP2|Convertit le type de données.|  
 |DT_DBTIMESTAMPOFFSET|Définit zéro pour le champ de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.|  
   
-#### <a name="converting-from-dtdbdate"></a>Conversion à partir de DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Conversion à partir de DT_DBDATE  
   
 |Conversion de DT_DBDATE en|Résultats|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941467"
 |DT_DBTIMESTAMP2|Définit zéro pour les champs d'heure dans le type de données DT_DBTIMESTAMP.|  
 |DT_DBTIMESTAMPOFFSET|Définit zéro pour les champs d'heure et de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.|  
   
-#### <a name="converting-from-dtdbtime"></a>Conversion à partir de DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Conversion à partir de DT_DBTIME  
   
 |Conversion de DT_DBTIME en|Résultats|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941467"
 |DT_DBTIMESTAMP2|Définit la date actuelle pour le champ de date dans le type de données DT_DBTIMESTAMP2.|  
 |DT_DBTIMESTAMPOFFSET|Définit respectivement la date actuelle et zéro pour les champs de date et de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Conversion à partir de DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Conversion à partir de DT_DBTIME2  
   
 |Conversion de DT_DBTIME2 en|Résultats|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941467"
 |DT_DBTIMESTAMP2|Définit la date actuelle pour le champ de date dans le type de données DT_DBTIMESTAMP2.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMP2 peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Définit respectivement la date actuelle et zéro pour les champs de date et de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMPOFFSET peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Conversion à partir de DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Conversion à partir de DT_DBTIMESTAMP  
   
 |Conversion de DT_DBTIMESTAMP en|Résultats|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941467"
 |DT_DBTIMESTAMP2|Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMP2 peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Définit zéro pour le champ de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMPOFFSET peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Conversion à partir de DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Conversion à partir de DT_DBTIMESTAMP2  
   
 |Conversion de DT_DBTIMESTAMP2 en|Résultats|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941467"
 |DT_DBTIMESTAMP2|Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMP2 de destination peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Définit zéro pour le champ de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMPOFFSET peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Conversion à partir de DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Conversion à partir de DT_DBTIMESTAMPOFFSET  
   
 |Conversion de DT_DBTIMESTAMPOFFSET en|Résultats|  
 |--------------------------------------|------------|  

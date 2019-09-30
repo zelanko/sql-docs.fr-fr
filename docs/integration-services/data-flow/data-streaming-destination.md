@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d06e1b4ea0302bc8da4d7ad7a95927593c199d40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049409"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293102"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
 
@@ -62,7 +62,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 |Champ|Description|  
 |-----------|-----------------|  
-|Créer une vue d’abonnement|Nom du composant Data Streaming Destination dans le package.|  
+|Nom|Nom du composant Data Streaming Destination dans le package.|  
 |ValidateExternalMetadata|Indique si le composant est validé à l’aide de sources de données externes au moment de la conception. Si la propriété est définie sur false, la validation avec des sources de données externes est différée jusqu’au moment de l’exécution.|  
 |IDColumnName|La vue générée par l’Assistant Publication des flux de données contient cette colonne d’ID supplémentaire. La colonne d’ID est utilisée comme valeur EntityKey pour les données de sortie du flux de données lorsque les données sont consommées comme flux OData par d’autres applications.<br /><br /> Le nom par défaut de cette colonne est _ID. Vous pouvez spécifier un autre nom pour la colonne d’ID.|  
   

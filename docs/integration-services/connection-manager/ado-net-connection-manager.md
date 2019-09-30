@@ -15,14 +15,14 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43348955140600ca174781beed4adc1089ee5add
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d61b7423bb39267fe4171d661e8fe7a74fbc6faa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155187"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294490"
 ---
 # <a name="adonet-connection-manager"></a>Gestionnaire de connexions ADO.NET
 
@@ -88,11 +88,11 @@ Sélectionnez une connexion, puis supprimez-la en sélectionnant **Supprimer**.
 Lors de l’exécution de packages SSIS sur le [runtime d’intégration Azure-SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), vous pouvez utiliser l’[identité managée](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associée à votre fabrique de données pour l’authentification Azure SQL Database (ou de l’instance gérée). La fabrique en question peut accéder à votre base de données et copier des données depuis ou vers celle-ci à l’aide de cette identité.
 
 > [!NOTE]
->  Quand vous utilisez l’authentification Azure Active Directory (Azure AD), y compris l’authentification d’identité managée, pour vous connecter à Azure SQL Database (ou à l’instance managée), vous pouvez rencontrer un problème lié à un échec d’exécution de package ou à un changement de comportement inattendu. Pour plus d’informations, consultez [Fonctionnalités et limitations d’Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Quand vous utilisez l’authentification Azure Active Directory (Azure AD), y compris l’authentification d’identité managée, pour vous connecter à Azure SQL Database (ou à l’instance managée), vous pouvez rencontrer un problème lié à un échec d’exécution de package ou à un changement de comportement inattendu. Pour plus d’informations, consultez [Fonctionnalités et limitations d’Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Pour utiliser l’authentification d’identité managée pour Azure SQL Database, suivez ces étapes afin de configurer votre base de données :
 
-1. Créez un groupe dans Azure AD. Faites de l’identité managée un membre du groupe.
+1. Créez un groupe dans Azure AD. Faites de l’identité managée un membre du groupe.
     
    1. [Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID objet de l’identité managée**.
     
@@ -122,7 +122,7 @@ Pour utiliser l’authentification d’identité managée pour l’instance mana
 
 1. [Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID d’application de l’identité managée** (et non pas l’**ID d’objet de l’identité managée**).
 
-1. Convertissez l’identité managée de la fabrique de données en type binaire. Connectez-vous à la base de données **master** dans votre instance gérée à l’aide d’outils tels que SSMS, avec votre compte d’administrateur SQL ou Active Directory. Exécutez la commande T-SQL suivante sur la base de données **master** pour obtenir votre ID d’application de l’identité managée sous forme binaire :
+1. Convertissez l’identité managée de la fabrique de données en type binaire. Connectez-vous à la base de données **master** dans votre instance managée à l’aide d’outils tels que SSMS, avec votre compte d’administrateur SQL ou Active Directory. Exécutez la commande T-SQL suivante sur la base de données **master** pour obtenir votre ID d’application de l’identité managée sous forme binaire :
     
     ```sql
     DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'

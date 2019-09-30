@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149919"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251091"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ Les options associées à un classement sont le respect de la casse, le respect 
 |Point de code binaire (\_BIN2) <sup>1</sup> | Trie et compare les données des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en fonction des points de code Unicode pour les données Unicode. Pour les données non-Unicode, le point de code binaire utilise les mêmes comparaisons que les tris binaires.<br/><br/> L’utilisation d’un ordre de tri de point de code binaire présente l’avantage de ne devoir retrier les données dans les applications qui comparent les données triées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, un ordre de tri de point de code binaire simplifie le développement des applications et permet d’améliorer les performances. Pour plus d’informations, consultez la section [Classements binaires](#Binary-collations) de cette page.|
 |UTF-8 (\_UTF8)|Permet le stockage des données encodées en UTF-8 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette option n’est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le format d’encodage non-Unicode par défaut pour les types de données applicables. Pour plus d’informations, consultez la section [Prise en charge d’UTF-8](#utf8) de cette page.| 
 
-<sup>1</sup> Si Binaire ou Point de code binaire est sélectionné, les options Respecter la casse (\_CS), Respecter les accents (\_AS), Respecter les caractères Kana (\_KS) et Respecter la largeur (\WS) ne sont pas disponibles.      
+<sup>1</sup> Si Binaire ou Point de code binaire est sélectionné, les options Respecter la casse (\_CS), Respecter les accents (\_AS), Respecter les caractères Kana (\_KS) et Respecter la largeur (\_WS) ne sont pas disponibles.      
 
 #### <a name="examples-of-collation-options"></a>Exemples d’options de classement
 Chaque classement se présente comme une série de suffixes permettant de définir le respect de la casse, des accents, de la largeur ou des caractères Kana. Les exemples suivants décrivent le comportement de l’ordre de tri selon différentes combinaisons de suffixes.
