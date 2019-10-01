@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294995"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688300"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs machines pour les déploiements de cluster Big Data SQL Server
 
@@ -33,6 +33,9 @@ Consultez également [cette](deployment-script-single-node-kubeadm.md) rubrique 
    - 8 CPU
    - 64 Go de mémoire
    - 100 Go de stockage
+ 
+> [!Important] 
+> Avant de commencer le déploiement du cluster Big Data, assurez-vous que les horloges sont synchronisées entre tous les nœuds Kubernetes ciblés par le déploiement. Le cluster Big Data possède des propriétés d’intégrité intégrées pour différents services qui sont sensibles au temps et les décalages d’horloge peuvent entraîner un état incorrect.
 
 ## <a name="prepare-the-machines"></a>Préparer les machines
 

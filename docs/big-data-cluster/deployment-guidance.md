@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174268"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688312"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procédure de déploiement [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -66,6 +66,9 @@ Exécutez la commande **kubectl** pour afficher la configuration du cluster. Vé
 ```bash
 kubectl config view
 ```
+
+> [!Important] 
+> Si vous déployez sur un cluster Kuberntes à plusieurs nœuds que vous avez démarré à l’aide de kubeadm, avant de démarrer le déploiement de Big Data cluster, assurez-vous que les horloges sont synchronisées entre tous les nœuds Kubernetes ciblés par le déploiement. Le cluster Big Data possède des propriétés d’intégrité intégrées pour différents services qui sont sensibles au temps et les décalages d’horloge peuvent entraîner un état incorrect.
 
 Après avoir configuré votre cluster Kubernetes, vous pouvez passer au déploiement d’un nouveau cluster Big Data SQL Server. Si vous effectuez une mise à niveau à partir d’une version précédente, consultez [Comment effectuer la mise [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]à niveau ](deployment-upgrade.md).
 
