@@ -90,7 +90,7 @@ Les entrées de `sp_execute_external_script` la procédure stockée sont les sui
 | @language | définit l’extension de langage à appeler, dans ce cas python |
 | @script | définit les commandes passées au runtime python<br>L’intégralité de votre script Python doit être placée dans cet argument, en tant que texte Unicode. Vous pouvez également ajouter le texte à une variable de type **nvarchar** , puis appeler la variable |
 | @input_data_1 | données retournées par la requête, passées au runtime Python, qui retourne les données à SQL Server sous la forme d’une trame de données |
-|AVEC JEUX DE RÉSULTATS | la clause définit le schéma de la table de données retournée pour SQL Server, dans le cas présent, en ajoutant « Hello World » comme nom de colonne et **int** pour le type de données. |
+|WITH RESULT SETS | la clause définit le schéma de la table de données retournée pour SQL Server, dans le cas présent, en ajoutant « Hello World » comme nom de colonne et **int** pour le type de données. |
 
 La commande génère le texte suivant :
 
