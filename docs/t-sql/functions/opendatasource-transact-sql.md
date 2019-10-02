@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d0584e0dd56cdeb58e525478f88fa9bed142e223
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914785"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342058"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -40,15 +40,17 @@ ms.locfileid: "67914785"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-OPENDATASOURCE ( provider_name, init_string )  
+OPENDATASOURCE ( 'provider_name', 'init_string' )  
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *provider_name*  
+ '*provider_name*'  
  Nom enregistré comme PROGID du fournisseur OLE DB utilisé pour accéder à la source de données. *provider_name* est du type de données **char**, sans valeur par défaut.  
-  
- *init_string*  
+
+ > [!IMPORTANT]
+ > Le fournisseur Microsoft OLE DB pour SQL Server (SQLOLEDB) et le fournisseur SQL Server Native Client (SQLNCLI) précédents restent dépréciés, et nous vous déconseillons d’utiliser l’un ou l’autre dans de nouveaux développements. Au lieu de cela, utilisez le nouveau [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
+ 
+ '*init_string*'  
  Chaîne de connexion transmise à l’interface IDataInitialize du fournisseur de destination. La syntaxe de la chaîne du fournisseur est basée sur des paires mot clé-valeur séparées par un point-virgule, par exemple : **'** _mot-clé1_=_valeur_ **;** _mot-clé2_=_valeur_ **'** .  
   
  Pour plus d'informations sur les paires mot clé-valeur prises en charge par le fournisseur, consultez le kit de développement logiciel (SDK) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access. Cette documentation définit la syntaxe de base. Le tableau suivant répertorie les mots clés utilisés fréquemment dans l’argument *init_string*.  
@@ -65,41 +67,60 @@ OPENDATASOURCE ( provider_name, init_string )
 |Sécurité intégrée|DBPROP_AUTH_INTEGRATED|SSPI pour spécifier l'authentification Windows|  
   
 ## <a name="remarks"></a>Notes  
- OPENDATASOURCE ne peut être utilisé pour accéder à des données distantes à partir de sources de données OLE DB que si l'option de Registre DisallowAdhocAccess est explicitement définie avec la valeur 0 pour le fournisseur spécifié et que l'option de configuration avancée Ad Hoc Distributed Queries est activée. Lorsque ces options ne sont pas définies, le comportement par défaut n'autorise pas l'accès d'égal à égal.  
+`OPENROWSET` hérite toujours du classement de l’instance, quel que soit le classement défini pour les colonnes.
+
+`OPENDATASOURCE` peut être utilisé pour accéder à des données distantes à partir de sources de données OLE DB seulement si l’option de Registre DisallowAdhocAccess est explicitement définie sur 0 pour le fournisseur spécifié et que l’option de configuration avancée Ad Hoc Distributed Queries est activée. Lorsque ces options ne sont pas définies, le comportement par défaut n'autorise pas l'accès d'égal à égal.  
   
- La fonction OPENDATASOURCE peut être utilisée dans les mêmes emplacements de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'un nom de serveur lié. OPENDATASOURCE peut donc constituer la première des quatre parties d'un nom qui fait référence à un nom de table ou de vue (dans une instruction SELECT, INSERT, UPDATE ou DELETE) ou à une procédure stockée distante (dans une instruction EXECUTE). Lors de l'exécution de procédures stockées distantes, OPENDATASOURCE doit faire référence à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. OPENDATASOURCE n'accepte pas de variables pour ses arguments.  
+La fonction `OPENDATASOURCE` peut être utilisée aux mêmes endroits de la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] qu’un nom de serveur lié. `OPENDATASOURCE` peut donc constituer la première des quatre parties d’un nom qui fait référence à un nom de table ou de vue (dans une instruction SELECT, INSERT, UPDATE ou DELETE) ou à une procédure stockée distante (dans une instruction EXECUTE). Lors de l’exécution de procédures stockées distantes, `OPENDATASOURCE` doit référencer une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. OPENDATASOURCE n'accepte pas de variables pour ses arguments.  
   
- Comme la fonction OPENROWSET, OPENDATASOURCE doit uniquement faire référence à des sources de données OLE DB qui ne sont pas sollicitées fréquemment. Définissez un serveur lié pour toutes les sources de données qui font l'objet de nombreux accès. Ni OPENDATASOURCE ni OPENROWSET n’offrent toutes les fonctionnalités des définitions de serveur lié, notamment la gestion de la sécurité et la possibilité de consulter des informations du catalogue. Toutes les informations de connexion, y compris les mots de passe, doivent être fournies à chaque appel de OPENDATASOURCE.  
+Comme la fonction `OPENROWSET`, `OPENDATASOURCE` doit référencer seulement des sources de données OLE DB qui ne sont pas sollicitées fréquemment. Définissez un serveur lié pour toutes les sources de données qui font l'objet de nombreux accès. Ni OPENDATASOURCE ni OPENROWSET n’offrent toutes les fonctionnalités des définitions de serveur lié, notamment la gestion de la sécurité et la possibilité de consulter des informations du catalogue. Toutes les informations de connexion, y compris les mots de passe, doivent être fournies à chaque appel de OPENDATASOURCE.  
   
 > [!IMPORTANT]  
->  L'authentification Windows est plus sûre que l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Veillez à utiliser l'authentification Windows chaque fois que c'est possible. OPENDATASOURCE ne doit pas être utilisé avec des mots de passe explicites dans la chaîne de connexion.  
+> L'authentification Windows est plus sûre que l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Veillez à utiliser l'authentification Windows chaque fois que c'est possible. `OPENDATASOURCE` ne doit pas être utilisé avec des mots de passe explicites dans la chaîne de connexion.  
   
- Les exigences de connexion pour chaque fournisseur sont semblables à celles de ces paramètres lors de la création de serveurs liés. Des informations relatives à de nombreux fournisseurs courants sont présentées dans l’article [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+Les exigences de connexion pour chaque fournisseur sont semblables à celles de ces paramètres lors de la création de serveurs liés. Des informations relatives à de nombreux fournisseurs courants sont présentées dans l’article [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
- Tout appel à OPENDATASOURCE, OPENQUERY ou OPENROWSET dans la clause FROM est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées au résultat de l’un de ces appels n’ont aucun effet sur les résultats de l’autre.  
+Tout appel à `OPENDATASOURCE`, `OPENQUERY` ou `OPENROWSET` dans la clause `FROM` est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées au résultat de l’un de ces appels n’ont aucun effet sur les résultats de l’autre.  
   
 ## <a name="permissions"></a>Autorisations  
  Tous les utilisateurs peuvent exécuter OPENDATASOURCE. Les autorisations utilisées pour la connexion au serveur distant sont déterminées à partir de la chaîne de connexion.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant crée une connexion appropriée à l'instance `Payroll` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur `London`, puis interroge la table `AdventureWorks2012.HumanResources.Employee`. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.)  
+
+### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. Utilisation d’OPENDATASOURCE avec SELECT et OLE DB Driver pour SQL Server  
+ L’exemple suivant utilise le pilote [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) pour accéder à la table `HumanResources.Department` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur distant `Seattle1`. Une instruction `SELECT` définit l’ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver.  
   
-```  
+```sql  
+SELECT GroupName, Name, DepartmentID  
+FROM OPENDATASOURCE('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;TrustServerCertificate=Yes;Trusted_Connection=Yes;').HumanResources.Department  
+ORDER BY GroupName, Name;  
+``` 
+
+### <a name="b-using-opendatasource-with-select-and-the-sql-server-ole-db-provider"></a>B. Utilisation d’OPENDATASOURCE avec SELECT et le fournisseur SQL Server OLE DB  
+L'exemple suivant crée une connexion appropriée à l'instance `Payroll` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur `London`, puis interroge la table `AdventureWorks2012.HumanResources.Employee`. 
+
+> [!NOTE] 
+> L’utilisation de SQLNCLI redirige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la version la plus récente du fournisseur SQL Server Native Client OLE DB. Le fournisseur OLE DB doit être inscrit dans le Registre avec le PROGID spécifié. 
+
+> [!IMPORTANT]  
+> Le fournisseur SQL Server Native Client OLE DB (SQLNCLI) reste déprécié, et il n’est pas recommandé de l’utiliser pour les nouveaux développements. Au lieu de cela, utilisez le nouveau [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
+  
+```sql  
 SELECT *  
 FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source=London\Payroll;Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Employee  
+    .AdventureWorks2012.HumanResources.Employee;  
 ```  
-  
+
+### <a name="c-using-the-microsoft-ole-db-provider-for-jet"></a>C. Utilisation du fournisseur Microsoft OLE DB pour Jet   
  L’exemple suivant crée une connexion ad hoc avec une feuille de calcul Excel au format de document Word 1997 - 2003.  
   
-```  
+```sql  
 SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',  
-'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
+    'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
   

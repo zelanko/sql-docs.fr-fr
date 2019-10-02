@@ -55,20 +55,20 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228402"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207738"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Les indicateurs de requête spécifient que les indicateurs affichés doivent être utilisés dans l'ensemble de la requête. Ils s’appliquent à tous les opérateurs de l’instruction. Si une clause UNION se trouve dans la requête principale, seule la dernière requête impliquant une opération UNION peut avoir la clause OPTION. Les indicateurs de requête sont spécifiés dans la [clause OPTION](../../t-sql/queries/option-clause-transact-sql.md). L'erreur 8622 se produit si un ou plusieurs indicateurs de requête empêchent l'optimiseur de requête de générer un plan valide.  
+Les indicateurs de requête spécifient que les indicateurs affichés doivent être utilisés dans l'ensemble de la requête. Ils s’appliquent à tous les opérateurs de l’instruction. Si une clause UNION se trouve dans la requête principale, seule la dernière requête impliquant une opération UNION peut avoir la clause OPTION. Les indicateurs de requête sont spécifiés dans la [clause OPTION](../../t-sql/queries/option-clause-transact-sql.md). L’erreur 8622 se produit si un ou plusieurs indicateurs de requête empêchent l’optimiseur de requête de générer un plan valide.  
   
 > [!CAUTION]  
-> Étant donné que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d'exécution pour une requête, nous recommandons de ne recourir aux indicateurs qu'en dernier ressort, et à condition d'être un développeur ou un administrateur de base de données expérimenté.  
+> Comme l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d’exécution pour une requête, nous recommandons de ne recourir aux indicateurs qu’en dernier ressort, et à condition d’être un développeur ou un administrateur de base de données expérimenté.  
   
 **S’applique à :**  
   
@@ -107,7 +107,8 @@ Les indicateurs de requête spécifient que les indicateurs affichés doivent ê
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -140,7 +141,7 @@ Les indicateurs de requête spécifient que les indicateurs affichés doivent ê
 Indique que les agrégations décrites par la clause GROUP BY ou DISTINCT de la requête doivent utiliser le hachage ou le tri.  
   
 { MERGE | HASH | CONCAT } UNION  
-Indique que toutes les opérations UNION doivent être exécutées par fusion, hachage ou concaténation d'ensembles UNION. Si plusieurs indicateurs UNION sont spécifiées, l'optimiseur sélectionne la stratégie la moins coûteuse parmi les indicateurs spécifiés.  
+Indique que toutes les opérations UNION doivent être exécutées par fusion, hachage ou concaténation d'ensembles UNION. Si plusieurs indicateurs UNION sont spécifiés, l’optimiseur de requête sélectionne la stratégie la moins coûteuse parmi les indicateurs spécifiés.  
   
 { LOOP | MERGE | HASH } JOIN  
 Indique que toutes les opérations de jointure doivent être effectuées par LOOP JOIN, MERGE JOIN ou HASH JOIN dans toute la requête. Si plusieurs indicateurs de jointure sont spécifiés, l'optimiseur sélectionne la stratégie la moins coûteuse parmi celles qui sont autorisées.  
@@ -148,7 +149,7 @@ Indique que toutes les opérations de jointure doivent être effectuées par LOO
 Si vous spécifiez un indicateur de jointure dans la clause FROM de la même requête pour une paire de tables spécifique, il est prioritaire dans la jointure des deux tables. Les indicateurs de requête, toutefois, doivent quand même être respectés. L'indicateur de jointure de la paire de tables peut seulement restreindre la sélection des méthodes de jointure autorisées dans l'indicateur de requête. Pour plus d’informations, consultez [Indicateurs de jointure &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
 EXPAND VIEWS  
-Indique que les vues indexées doivent être développées, et que l’optimiseur de requête ne doit pas prendre en compte de vues indexées en remplacement d’une partie de la requête. Une vue est développée lorsque sa définition remplace son nom dans le texte de la requête.  
+Indique que les vues indexées doivent être développées, et que l’optimiseur de requête ne doit pas prendre en compte les vues indexées en remplacement d’une partie de la requête. Une vue est développée lorsque sa définition remplace son nom dans le texte de la requête.  
   
 Cet indicateur de requête interdit virtuellement l'utilisation directe de vues indexées et d'index sur des vues indexées dans le plan de requête.  
   
@@ -160,7 +161,7 @@ FAST _nombre\_lignes_
 Indique que la requête doit être optimisée pour permettre une récupération rapide des premières lignes définies par _nombre\_lignes_. Ce résultat est un entier non négatif. Une fois les premières lignes définies par _nombre\_lignes_ retournées, la requête se poursuit pour retourner un jeu de résultats complet.  
   
 FORCE ORDER  
-Spécifie que l'ordre de jointure spécifié dans la syntaxe de la requête est conservé au cours de l'optimisation de la requête. FORCE ORDER n'a aucun effet sur un éventuel comportement d’inversion des rôles de la part de l'optimiseur de requête.  
+Spécifie que l'ordre de jointure spécifié dans la syntaxe de la requête est conservé au cours de l'optimisation de la requête. FORCE ORDER n’a aucun effet sur un éventuel comportement d’inversion des rôles de la part de l’optimiseur de requête.  
   
 > [!NOTE]  
 > Dans une instruction MERGE, il convient d'accéder à la table source avant la table cible comme ordre de jointure par défaut, à moins que la clause WHEN SOURCE NOT MATCHED ne soit spécifiée. La spécification de FORCE ORDER préserve ce comportement par défaut.  
@@ -169,7 +170,7 @@ Spécifie que l'ordre de jointure spécifié dans la syntaxe de la requête est 
 Force ou désactive la poussée vers le bas (pushdown) du calcul des expressions éligibles dans Hadoop. S’applique uniquement aux requêtes avec PolyBase. Ne s’applique pas au stockage Azure.  
   
 KEEP PLAN  
-Force l'optimiseur de requête à abaisser le seuil de recompilation estimé pour une requête. Le seuil de recompilation estimé lance une recompilation automatique de la requête lorsque le nombre estimé de modifications de colonnes indexées a été apporté à une table par exécution de l’une des instructions suivantes :
+Force l’optimiseur de requête à abaisser le seuil de recompilation estimé pour une requête. Le seuil de recompilation estimé lance une recompilation automatique de la requête lorsque le nombre estimé de modifications de colonnes indexées a été apporté à une table par exécution de l’une des instructions suivantes :
 
 * UPDATE
 * Suppression
@@ -179,7 +180,7 @@ Force l'optimiseur de requête à abaisser le seuil de recompilation estimé pou
 KEEP PLAN permet de garantir qu'une requête n'est pas recompilée aussi fréquemment lorsque plusieurs mises à jour sont effectuées dans une table.  
   
 KEEPFIXED PLAN  
-Force l'optimiseur de requête à ne pas recompiler une requête en raison de modifications enregistrées au niveau des statistiques. KEEPFIXED PLAN permet de garantir qu’une requête n’est recompilée que si le schéma des tables sous-jacentes est modifié ou si **sp_recompile** s’exécute sur ces tables.  
+Force l’optimiseur de requête à ne pas recompiler une requête en raison de modifications enregistrées au niveau des statistiques. KEEPFIXED PLAN permet de garantir qu’une requête n’est recompilée que si le schéma des tables sous-jacentes est modifié ou si **sp_recompile** s’exécute sur ces tables.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -219,7 +220,7 @@ NO_PERFORMANCE_SPOOL
 Empêche l’ajout d’un opérateur de spool aux plans de requête (à l’exception des plans où un spool est nécessaire pour garantir la validité de la sémantique de mise à jour). L’opérateur de spool est susceptible de diminuer les performances dans certains scénarios. Par exemple, du fait que le spool utilise tempdb, une contention de tempdb peut se produire quand un grand nombre de requêtes simultanées sont exécutées avec les opérations de spool.  
   
 OPTIMIZE FOR ( _\@nom\_variable_ { UNKNOWN | = _contante\_littérale }_ [ **,** ..._n_ ] )     
-Indique à l'optimiseur de requête d'attribuer à une variable locale une valeur déterminée lors de la compilation et de l'optimisation de la requête. Cette valeur n'est utilisée que pendant l'optimisation de la requête, et non pas lors de son exécution.  
+Indique à l’optimiseur de requête d’attribuer à une variable locale une valeur déterminée lors de la compilation et de l’optimisation de la requête. Cette valeur n'est utilisée que pendant l'optimisation de la requête, et non pas lors de son exécution.  
   
 _\@nom\_variable_  
 Nom d'une variable locale utilisée dans une requête, à laquelle une valeur peut être attribuée pour être utilisée avec l'indicateur de requête OPTIMIZE FOR.  
@@ -233,18 +234,18 @@ Valeur de constante littérale à assigner à _\@nom\_variable_ pour l’utilise
 OPTIMIZE FOR peut contrecarrer le comportement de détection des paramètres par défaut de l’optimiseur. Utilisez également OPTIMIZE FOR pour créer des repères de plan. Pour plus d’informations, consultez [Recompiler une procédure stockée](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Indique à l'optimiseur de requête d'utiliser des données statistiques au lieu des valeurs initiales pour toutes les variables locales lorsque la requête est compilée et optimisée. Cette optimisation englobe les paramètres créés avec un paramétrage forcé.  
+Indique à l’optimiseur de requête d’utiliser des données statistiques au lieu des valeurs initiales pour toutes les variables locales quand la requête est compilée et optimisée. Cette optimisation englobe les paramètres créés avec un paramétrage forcé.  
   
-Si OPTIMIZE FOR @variable_name = _constante\_littérale_ et OPTIMIZE FOR UNKNOWN sont utilisés dans le même indicateur de requête, l’optimiseur de requête utilise la _constante\_littérale_ indiquée pour une valeur spécifique et UNKNOWN pour les autres valeurs des variables. Les valeurs ne sont utilisées que pendant l'optimisation de la requête, et non pas lors de son exécution.  
+Si vous utilisez OPTIMIZE FOR @variable_name = _constante\_littérale_ et OPTIMIZE FOR UNKNOWN dans le même indicateur de requête, l’optimiseur de requête utilise la _constante\_littérale_ spécifiée pour une valeur spécifique, et UNKNOWN pour les autres valeurs des variables. Les valeurs ne sont utilisées que pendant l'optimisation de la requête, et non pas lors de son exécution.  
   
 PARAMETERIZATION { SIMPLE | FORCED }     
-Indique les règles de paramétrage que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit appliquer à la requête lors de sa compilation.  
+Spécifie les règles de paramétrage que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit appliquer à la requête lors de sa compilation.  
   
 > [!IMPORTANT]  
 > L’indicateur de requête PARAMETERIZATION peut uniquement être spécifié à l’intérieur d’un repère de plan pour remplacer le paramètre actuel de l’option SET de base de données PARAMETERIZATION. Il n’est pas possible de le spécifier directement dans une requête.    
 > Pour plus d’informations, consultez [Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
-SIMPLE indique à l'optimiseur de requête de tenter le processus de paramétrage simple. FORCED indique à l’optimiseur de requête de tenter le processus de paramétrage forcé. Pour plus d’informations, consultez [Paramétrage forcé dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) et [Paramétrage simple dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+SIMPLE indique à l’optimiseur de requête de tenter un paramétrage simple. FORCED indique à l’optimiseur de requête de tenter un paramétrage forcé. Pour plus d’informations, consultez [Paramétrage forcé dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) et [Paramétrage simple dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
 
 RECOMPILE  
 Envoie à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l’instruction de générer un nouveau plan temporaire pour la requête et de l’abandonner juste après la fin d’exécution de la requête. Le plan de requête généré ne remplace pas un plan stocké en cache lorsque la même requête s’exécute sans l’indicateur RECOMPILE. Si RECOMPILE n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] met en cache les plans de requête et les réutilise. Lors de la compilation de plans de requête, l’indicateur de requête RECOMPILE utilise les valeurs actuelles des éventuelles variables locales dans la requête. Si la requête se trouve à l’intérieur d’une procédure stockée, les valeurs actuelles sont transmises aux paramètres.  
@@ -252,9 +253,9 @@ Envoie à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l’inst
 RECOMPILE est utile pour ne pas avoir à créer une procédure stockée. RECOMPILE utilise la clause WITH RECOMPILE lorsqu'il s'agit seulement de recompiler un sous-ensemble de requêtes dans la procédure stockée, et non la totalité de celle-ci. Pour plus d’informations, consultez [Recompiler une procédure stockée](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). RECOMPILE s'avère également utile pour créer des repères de guides.  
   
 ROBUST PLAN  
-Force l'optimiseur de requête à essayer un plan capable de prendre en charge la taille maximale potentielle des lignes, éventuellement aux dépens des performances. Lors du traitement de la requête, les tables et les opérateurs intermédiaires peuvent avoir à stocker et à traiter des lignes plus grandes que n'importe quelle ligne d'entrée. Elles sont parfois si grandes que l'opérateur particulier ne peut pas les traiter. Dans ce cas, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur lors de l'exécution de la requête. ROBUST PLAN permet d’indiquer à l'optimiseur de requête de ne considérer aucun plan de requête susceptible de présenter ce problème.  
+Force l’optimiseur de requête à essayer un plan capable de prendre en charge la taille maximale potentielle des lignes, éventuellement aux dépens des performances. Lors du traitement de la requête, les tables et les opérateurs intermédiaires peuvent avoir à stocker et à traiter des lignes plus grandes que n'importe quelle ligne d'entrée. Elles sont parfois si grandes que l'opérateur particulier ne peut pas les traiter. Dans ce cas, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur lors de l'exécution de la requête. ROBUST PLAN permet d’indiquer à l’optimiseur de requête de ne considérer aucun plan de requête susceptible de présenter ce problème.  
   
-Si un tel plan n'est pas possible, l'optimiseur de requête retourne une erreur plutôt que de différer la détection de l'erreur au moment de l'exécution de la requête. Les lignes peuvent contenir des colonnes de longueur variable. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] permet de définir des lignes d’une taille maximale potentielle que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas en mesure de traiter. En règle générale, en dépit de la taille maximale potentielle, une application stocke des lignes dont la taille réelle est comprise dans les limites gérées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] rencontre une ligne trop longue, il retourne une erreur d'exécution.  
+Si un tel plan n’est pas possible, l’optimiseur de requête retourne une erreur plutôt que de différer la détection de l’erreur au moment de l’exécution de la requête. Les lignes peuvent contenir des colonnes de longueur variable. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] permet de définir des lignes d’une taille maximale potentielle que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas en mesure de traiter. En règle générale, en dépit de la taille maximale potentielle, une application stocke des lignes dont la taille réelle est comprise dans les limites gérées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] rencontre une ligne trop longue, il retourne une erreur d'exécution.  
  
 <a name="use_hint"></a> USE HINT ( **'** _nom\_indicateur_ **'** )    
  **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -297,7 +298,7 @@ Les noms d’indicateur suivants sont pris en charge :
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
-   Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives SQL Server). Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `QUERY_OPTIMIZER_HOTFIXES = ON`.
+   Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives de SQL Server). Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `QUERY_OPTIMIZER_HOTFIXES = ON`.
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
    Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur remplace le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON` ou l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
@@ -327,8 +328,8 @@ Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en ch
 > [!IMPORTANT] 
 > Certains indicateurs USE HINT peuvent être en conflit avec des indicateurs de trace activés au niveau global ou session, ou avec des paramètres de configuration au niveau base de données. Dans ce cas, l’indicateur de niveau requête (USE HINT) est toujours prioritaire. En présence d’un conflit entre l’indicateur USE HINT et un autre indicateur de requête ou un indicateur de trace activé au niveau requête (par exemple, par QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur quand vous tentez d’exécuter la requête. 
 
-USE PLAN N'_xml\_plan_'  
- Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **'** _xml\_plan_ **'** . Il n’est pas possible de spécifier USE PLAN avec des instructions INSERT, UPDATE, MERGE ou DELETE.  
+<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+ Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **’** _xml\_plan_ **’** . USE PLAN ne peut pas être spécifié avec les instructions INSERT, UPDATE, MERGE ou DELETE.  
   
 TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [ **,** ]…_n_ ] ] **)** 
 Applique l’indicateur de table spécifié à la table ou à la vue correspondant à _nom\_objet\_exposé_. Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
@@ -350,7 +351,7 @@ Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_
 > Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
   
 ## <a name="remarks"></a>Notes  
- Il n’est pas possible de spécifier des indicateurs de requête dans une instruction INSERT, sauf si celle-ci contient une clause SELECT.  
+ Il n’est pas possible de spécifier des indicateurs de requête dans une instruction INSERT sauf si celle-ci contient une clause SELECT.  
   
  Les indicateurs de requête ne peuvent être spécifiés que dans une requête de niveau supérieur et non pas dans des sous-requêtes. Lorsqu’un indicateur de table est spécifié comme indicateur de requête, il peut se trouver dans la requête de premier niveau ou dans une sous-requête. Toutefois, la valeur spécifiée pour _nom\_objet\_exposé_ dans la clause TABLE HINT doit correspondre exactement au nom exposé dans la requête ou la sous-requête.  
   

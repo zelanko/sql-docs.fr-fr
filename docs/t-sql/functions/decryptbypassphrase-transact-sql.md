@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d24a636e47c6e969b339350caba0f8609a86d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079929"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314523"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ contenant la phrase secrète utilisée pour générer la clé de déchiffrement.
 Chaîne de données chiffrées avec la clé. *ciphertext* a le type de données **varbinary**.  
  
 @ciphertext  
-Variable de type **varbinary** contenant des données chiffrées avec la clé. La variable *@ciphertext* a une taille maximale de 8 000 octets.  
+Variable de type **varbinary** contenant des données chiffrées avec la clé. La variable *\@ciphertext* a une taille maximale de 8 000 octets.  
   
 *add_authenticator*  
 Indique si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. *add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *add_authenticator* a le type de données **int**.  
   
 @add_authenticator  
-Variable indiquant si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. *@add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *@add_authenticator* a le type de données **int**.  
+Variable indiquant si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. Is *\@add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *\@add_authenticator* a le type de données **int**.  
 
 *authenticator*  
 Données utilisées comme base pour la génération de l’authentificateur. *authenticator* a le type de données **sysname**.  
   
 @authenticator  
-Variable contenant les données utilisées comme base pour la génération des authentificateurs. *@authenticator* a le type de données **sysname**.  
+Variable contenant les données utilisées comme base pour la génération des authentificateurs. *\@authenticator* a le type de données **sysname**.  
   
 ## <a name="return-types"></a>Types de retour  
 **varbinary** d’une taille maximale de 8 000 octets.  

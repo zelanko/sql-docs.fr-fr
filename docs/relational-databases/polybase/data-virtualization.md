@@ -1,5 +1,5 @@
 ---
-title: Virtualiser des données externes dans SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: Virtualiser des données externes dans SQL Server 2019 | Microsoft Docs
 description: Cette page détaille les étapes d’utilisation de l’Assistant Création d’une table externe pour des sources de données relationnelles.
 author: Abiola
 ms.author: aboke
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7d2abf18c7442a8f57448532e5211fc5c60e1ea7
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418765"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341833"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données relationnelles
 
-Un des principaux scénarios pour SQL Server 2019 CTP 2.0 est la possibilité de virtualiser des données. Ce processus permet aux données de rester à leur emplacement d’origine. Vous pouvez *virtualiser* les données dans une instance de SQL Server, ce qui vous permet de les interroger comme n’importe quelle autre table dans SQL Server. Ce processus réduit la nécessité de recourir à des processus ETL. Il est possible grâce à l’utilisation de connecteurs PolyBase. Pour plus d’informations sur la virtualisation des données, consultez [Bien démarrer avec PolyBase](polybase-guide.md).
+Un des principaux scénarios pour SQL Server 2019 est la possibilité de virtualiser des données. Ce processus permet aux données de rester à leur emplacement d’origine. Vous pouvez *virtualiser* les données dans une instance de SQL Server, ce qui vous permet de les interroger comme n’importe quelle autre table dans SQL Server. Ce processus réduit la nécessité de recourir à des processus ETL. Il est possible grâce à l’utilisation de connecteurs PolyBase. Pour plus d’informations sur la virtualisation des données, consultez [Bien démarrer avec PolyBase](polybase-guide.md).
 
 ## <a name="start-the-external-table-wizard"></a>Démarrer l’Assistant Table externe
 
@@ -44,10 +44,7 @@ Lors de cette étape, vous allez créer une clé principale de base de données.
 ![Créer une clé principale de base de données](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> Si vous avez déjà une clé principale de base de données, les champs d’entrée sont limités et vous pouvez ignorer cette étape. Sélectionnez **Suivant** pour continuer.
-
-> [!NOTE]
-> Si vous ne choisissez pas un mot de passe fort, l’Assistant le fait à la dernière étape. Il s'agit d'un problème connu.
+> Si vous disposez déjà d’une clé principale de base de données, cette étape est ignorée automatiquement.
 
 ## <a name="enter-external-data-source-credentials"></a>Entrer les informations d’identification de la source de données externe
 

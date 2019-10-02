@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911196"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326128"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notes de publication de SQL Server 2019 Preview
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -60,17 +60,6 @@ Le numéro de build pour SQL Server 2019 RC sur Windows, Linux et les conteneur
     - Microsoft .NET Framework 4.6.2. Disponible sur le [Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=53344).
     - Pour Linux, reportez-vous à [Linux : plateformes prises en charge](../linux/sql-server-linux-setup.md#supportedplatforms).
 
-## <a name = "release-notes"></a>Fonctionnalités exclues de la prise en charge
-
-- **Problème et impact sur le client**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] exclut la prise en charge des composants, fonctionnalités et scénarios suivants :
-  - SQL Server Analysis Services
-  - SQL Server Reporting Services
-  - Groupes de disponibilité AlwaysOn sur Kubernetes
-
-- **Solution de contournement**: Aucun. L’exclusion s’applique à tous les clients, y compris aux participants au programme d’adoption anticipée de SQL.
-
-- **S’applique à** : Version Release Candidate
-
 ## <a name="updated-compiler"></a>Compilateur mis à jour
 
 - **Problème et impact sur le client** : [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] est construit avec un compilateur mis à jour. CTP 2.1 disposait d’une erreur connue où les résultats de scénarios de conversion ou à virgule flottante retournaient une valeur différente des versions précédentes à cause du compilateur mis à jour. CTP 2.2 inclut une solution qui veille à ce que les scénarios concernés retournent les mêmes résultats que les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. À compter de la version Release Candidate, nous n’avons connaissance d’aucun problème. Veuillez signaler toute anomalie de résultat comparé à [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] à l’équipe [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback) sans tarder.
@@ -114,7 +103,7 @@ Le numéro de build pour SQL Server 2019 RC sur Windows, Linux et les conteneur
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>Il est possible que le Gestionnaire de configuration SQL Server ne démarre pas
 
-- **Problème et impact sur le client** : le Gestionnaire de Configuration SQL Server (SSCM) ne démarre pas sur un ordinateur sans VCRuntime 140. Lorsque vous démarrez SSCM, l’utilisateur peut voir la boîte de dialogue suivante : 
+- **Problème et impact sur le client** : Le Gestionnaire de Configuration SQL Server (SSCM) ne démarre pas sur une machine sans le fichier du VCRuntime 140 (VCRUNTIME140.dll). Lorsque vous démarrez SSCM, l’utilisateur peut voir la boîte de dialogue suivante : 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`

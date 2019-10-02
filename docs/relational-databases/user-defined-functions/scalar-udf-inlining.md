@@ -2,7 +2,7 @@
 title: Incorporation des fonctions UDF scalaires dans les bases de données Microsoft SQL | Microsoft Docs
 description: Fonctionnalité d’incorporation (inlining) des fonctions UDF scalaires pour améliorer les performances des requêtes qui appellent des fonctions UDF scalaires dans SQL Server (version 2018 ou ultérieure) et Azure SQL Database.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030336"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299136"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -154,7 +154,8 @@ Une fonction UDF T-SQL scalaire peut être incorporée si toutes les conditions 
 - La fonction UDF utilise la clause `EXECUTE AS CALLER` (comportement par défaut si la clause `EXECUTE AS` n’est pas spécifiée).
 - La fonction UDF ne référence pas de variables de table ni de paramètres table.
 - La requête qui appelle une fonction UDF scalaire ne référence pas un appel de fonction UDF scalaire dans sa clause `GROUP BY`.
-- La requête qui appelle une fonction UDF scalaire dans sa liste de sélection avec la clause `DISTINCT` ne référence pas un appel de fonction UDF scalaire dans sa clause `ORDER BY`.
+- La requête qui appelle une fonction UDF scalaire dans sa liste de sélection avec la clause `DISTINCT` n’a pas de clause `ORDER BY`.
+- La fonction UDF n’est pas utilisée dans la clause `ORDER BY`.
 - La fonction UDF n’est pas compilée en mode natif (l’interopérabilité est prise en charge).
 - La fonction UDF n’est pas utilisée dans une colonne calculée ni une définition de contrainte de vérification.
 - La fonction UDF ne référence pas de types définis par l’utilisateur.

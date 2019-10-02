@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140368"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326139"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -91,14 +91,14 @@ ms.locfileid: "68140368"
 -   Les colonnes éparses qui contiennent des valeurs NULL sont omises de la représentation XML pour le jeu de colonnes.  
   
 > [!WARNING]  
->  L'ajout d'un jeu de colonnes modifie le comportement des requêtes SELECT *. La requête retournera le jeu de colonnes sous forme de colonne XML et ne retournera pas les colonnes éparses individuelles. Les concepteurs de schémas et développeurs de logiciels doivent prendre soin de ne pas arrêter les applications existantes.  
+>  L’ajout d’un jeu de colonnes change le comportement des requêtes `SELECT *`. La requête retournera le jeu de colonnes sous forme de colonne XML et ne retournera pas les colonnes éparses individuelles. Les concepteurs de schémas et développeurs de logiciels doivent prendre soin de ne pas arrêter les applications existantes.  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Insertion ou modification de données dans un jeu de colonnes  
  La manipulation des données d'une colonne éparse peut s'effectuer en utilisant le nom de chaque colonne ou en faisant référence au nom du jeu de colonnes et en spécifiant les valeurs du jeu de colonnes à l'aide du format XML du jeu de colonnes. Les colonnes éparses peuvent apparaître dans n'importe quel ordre dans la colonne XML.  
   
  Lorsque des valeurs de colonnes éparses sont insérées ou mises à jour à l'aide du jeu de colonnes XML, les valeurs insérées dans les colonnes éparses sous-jacentes sont converties implicitement à partir du type de données **xml** . Dans le cas des colonnes numériques, une valeur vierge dans le XML pour la colonne numérique est convertie en chaîne vide. Cela provoque l'insertion d'un zéro dans la colonne numérique, comme illustré dans l'exemple suivant.  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  Dans cet exemple, aucune valeur n'a été spécifiée pour le `i`de colonne, mais la valeur `0` a été insérée.  
   
-## <a name="using-the-sqlvariant-data-type"></a>Utilisation du Type de données sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Utilisation du Type de données sql_variant  
  Le type de données **sql_variant** peut stocker plusieurs types de données différents, tels que **int**, **char**et **date**. Les jeux de colonnes retournent les informations de type de données telles que l’échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur **sql_variant** sous la forme d’attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
   
 |Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Précision|Échelle|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Cette table ne possède que cinq colonnes, de manière à simplifier son affichage et sa lecture.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Insertion de données dans une table en utilisant les noms des colonnes éparses  
  Les exemples suivants insèrent deux lignes dans la table créée dans l'exemple A. Les exemples utilisent les noms des colonnes éparses et ne font pas référence au jeu de colonnes.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Insertion de données dans une table en utilisant le nom du jeu de colonnes  
  L'exemple suivant insère une troisième ligne dans la table créée dans l'exemple A. Cette fois, les noms des colonnes éparses ne sont pas utilisés. Au lieu de cela, le nom du jeu de colonnes est utilisé et l'insertion fournit les valeurs pour deux des quatre colonnes éparses au format XML.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Observation des résultats d'un jeu de colonnes lorsque SELECT * est utilisé  
  L'exemple suivant sélectionne toutes les colonnes de la table qui contient un jeu de colonnes. Il retourne une colonne XML avec les valeurs combinées des colonnes éparses. Il ne retourne pas les colonnes éparses individuellement.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Observation des résultats de la sélection du jeu de colonnes par nom  
  Le département Production ne s'intéressant pas aux données de marketing, cet exemple ajoute une clause `WHERE` afin de restreindre la sortie. L'exemple utilise le nom du jeu de colonnes.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Observation des résultats de la sélection des colonnes éparses par nom  
  Lorsqu'une table contient un jeu de colonnes, vous pouvez tout de même interroger la table en utilisant les noms de colonnes individuellement, comme illustré dans l'exemple suivant.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Mise à jour d'une table en utilisant un jeu de colonnes  
  L'exemple suivant met à jour le troisième enregistrement avec les nouvelles valeurs pour les deux colonnes éparses utilisées par cette ligne.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  L'exemple suivant met à jour le troisième enregistrement, mais spécifie uniquement la valeur d'une des deux colonnes remplies. La deuxième colonne `ProductionLocation` n'est pas incluse dans l'instruction `UPDATE` et est mise à jour avec la valeur NULL.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

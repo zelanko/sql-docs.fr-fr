@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163920"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227177"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL)
 
@@ -3041,7 +3041,9 @@ Le jeu de résultats mis en cache est réutilisé pour une requête si toutes le
 1. Une correspondance exacte existe entre la nouvelle requête et la requête précédente ayant généré le cache du jeu de résultats.
 1. Aucun changement au niveau des données ou du schéma n’est signalé dans les tables à partir desquelles le jeu de résultats mis en cache a été généré.  
 
-Une fois que la mise en cache du jeu de résultats est activée pour une base de données, les résultats sont mis en cache pour toutes les requêtes jusqu’à ce que le cache soit plein, à l’exception des requêtes avec des fonctions non déterministes telles que DateTime.Now ().   Les requêtes avec des jeux de résultats volumineux (par exemple, plus d’un million de lignes) peuvent accuser des performances plus lentes durant la première exécution au moment de la création du cache de résultats.
+Une fois que la mise en cache du jeu de résultats est activée pour une base de données, les résultats sont mis en cache pour toutes les requêtes jusqu’à ce que le cache soit plein, à l’exception des requêtes qui utilisent des fonctions non déterministes, comme DateTime.Now(), et des requêtes qui retournent des données avec une taille de ligne supérieure à 64 Ko.   
+
+Les requêtes avec des jeux de résultats volumineux (par exemple, plus d’un million de lignes) peuvent accuser des performances plus lentes durant la première exécution au moment de la création du cache de résultats.
 
 **<snapshot_option> ::=**        
 

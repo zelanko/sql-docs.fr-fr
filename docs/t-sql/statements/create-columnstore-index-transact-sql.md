@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b17fe334b1261d463e8389564912e48b7553dc7f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929687"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326104"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -396,7 +396,7 @@ Vous ne pouvez pas utiliser de curseurs ou de déclencheurs sur une table avec u
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] limitations spécifiques**  
 Ces limitations s’appliquent uniquement à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Dans cette version, nous avions introduit des index cluster columnstore qui pouvaient être mis à jour. Seuls les index columnstore non-cluster étaient toujours en lecture seule.  
 
--   Suivi des modifications. Vous ne pouvez pas utiliser le suivi des modifications avec des index columnstore non-cluster (NCCI), car ils sont en lecture seule. Par contre, vous le pouvez dans les index cluster columnstore (CCI).  
+-   Suivi des modifications. Vous ne pouvez pas utiliser le suivi des modifications avec des index columnstore.  
 -   Capture des modifications de données. Vous ne pouvez pas utiliser la capture des modifications de données avec des index columnstore non-cluster (NCCI), car ils sont en lecture seule. Par contre, vous le pouvez dans les index cluster columnstore (CCI).  
 -   Secondaire accessible en lecture. Vous ne pouvez pas accéder à un index cluster columnstore (CCI) à partir d’un secondaire accessible en lecture d’un groupe de disponibilité Always OnReadable.  Par contre, vous pouvez accéder à un index columnstore non-cluster (NCCI) à partir d’un secondaire accessible en lecture.  
 -   MARS (Multiple Active Result Sets). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] utilise MARS pour les connexions en lecture seule à des tables avec un index columnstore. Toutefois, SQL [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ne prend pas en charge MARS pour les opérations de langage de manipulation de données (DML) simultanées sur une table avec un index columnstore. Le cas échéant, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met fin aux connexions et abandonne les transactions.  

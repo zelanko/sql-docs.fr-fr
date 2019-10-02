@@ -1,7 +1,7 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a6290a9b8b8ff71c05d52051ffa02f097575484e
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 0cc57642bfa8b89861e79c72a1d8b378a1090042
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957465"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341994"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "68957465"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 OPENROWSET   
 ( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'   
    | 'provider_string' }   
@@ -73,10 +72,12 @@ OPENROWSET
    [ , FORMATFILE = 'format_file_path' ]   
 ```
 
-  
 ## <a name="arguments"></a>Arguments  
  '*provider_name*'  
  Chaîne de caractères représentant le nom convivial (ou PROGID) du fournisseur OLE DB tel que spécifié dans le Registre. *provider_name* n’a aucune valeur par défaut.  
+ 
+ > [!IMPORTANT]
+ > Le fournisseur Microsoft OLE DB pour SQL Server (SQLOLEDB) et le fournisseur SQL Server Native Client (SQLNCLI) précédents restent dépréciés, et nous vous déconseillons d’utiliser l’un ou l’autre dans de nouveaux développements. Au lieu de cela, utilisez le nouveau [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
   
  '*datasource*'  
  Constante de chaîne correspondant à une source de données OLE DB spécifique. *datasource* est la propriété DBPROP_INIT_DATASOURCE à transmettre à l’interface IDBProperties du fournisseur pour initialiser ce dernier. En général, cette chaîne comporte le nom du fichier de base de données, le nom d'un serveur de base de données ou un nom que comprend le fournisseur pour retrouver la ou les bases de données.  
@@ -88,7 +89,7 @@ OPENROWSET
  Constante de chaîne représentant le mot de passe utilisateur à transmettre au fournisseur OLE DB. *password* est transmis en tant que propriété DBPROP_AUTH_PASSWORD au moment de l’initialisation du fournisseur. *password* ne peut pas être un mot de passe Microsoft Windows.  
   
  '*provider_string*'  
- Chaîne de connexion spécifique au fournisseur qui est passée en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. En général, *provider_string* encapsule toutes les informations de connexion nécessaires à l’initialisation du fournisseur. Pour obtenir la liste des mots clés reconnus par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB, consultez [Propriétés d’initialisation et d’autorisation](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Chaîne de connexion spécifique au fournisseur qui est passée en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. En général, *provider_string* encapsule toutes les informations de connexion nécessaires à l’initialisation du fournisseur. Pour obtenir la liste des mots clés reconnus par le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Utilisation de mots clés de chaîne de connexion avec OLE DB Driver pour SQL Server](../../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
  *catalog*  
  Nom du catalogue ou de la base de données où réside l'objet spécifié.  
@@ -100,13 +101,13 @@ OPENROWSET
  Nom d'objet qui identifie de façon unique l'objet à manipuler.  
   
  '*query*'  
- Constante de chaîne envoyée au fournisseur en vue de son exécution. L'instance locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne traite pas cette requête, mais traite les résultats de la requête retournés par le fournisseur (requête directe). Les requêtes directes sont utiles lorsque les fournisseurs mettent leurs données tabulaires à disposition non pas par l'intermédiaire de noms de tables, mais uniquement au moyen d'un langage de commande. Les requêtes directes sont prises en charge sur le serveur distant à condition que le fournisseur de requêtes prenne en charge l’objet OLE DB Command et ses interfaces obligatoires. Pour plus d’informations, consultez [Informations de référence sur SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).  
+ Constante de chaîne envoyée au fournisseur en vue de son exécution. L'instance locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne traite pas cette requête, mais traite les résultats de la requête retournés par le fournisseur (requête directe). Les requêtes directes sont utiles lorsque les fournisseurs mettent leurs données tabulaires à disposition non pas par l'intermédiaire de noms de tables, mais uniquement au moyen d'un langage de commande. Les requêtes directes sont prises en charge sur le serveur distant à condition que le fournisseur de requêtes prenne en charge l’objet OLE DB Command et ses interfaces obligatoires. Pour plus d’informations, consultez [Programmation d’OLE DB Driver pour SQL Server](../../connect/oledb/ole-db/oledb-driver-for-sql-server-programming.md).  
   
  BULK  
  Utilise le fournisseur d'ensembles de lignes BULK pour que OPENROWSET lise les données dans un fichier. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET peut lire un fichier de données sans charger les données dans une table cible. Cela permet d’utiliser OPENROWSET avec une instruction SELECT simple.  
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
   
  Les arguments de l'option BULK permettent un contrôle significatif sur le début et la fin de la lecture des données, sur le traitement des erreurs et sur l'interprétation des données. Vous pouvez par exemple spécifier que le fichier de données soit lu comme un ensemble d’une seule ligne et deune seule colonne du type **varbinary**, **varchar** ou **nvarchar**. Le comportement par défaut est indiqué dans les descriptions des arguments ci-dessous.  
   
@@ -119,11 +120,11 @@ OPENROWSET
   
  '*data_file*'  
  Chemin d'accès complet au fichier dont les données doivent être copiées dans la table cible.   
- **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file peut se trouver dans le Stockage Blob Azure. Pour obtenir des exemples, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+ **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file peut se trouver dans Stockage Blob Azure. Pour obtenir des exemples, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
   
  \<bulk_options>  
  Spécifie un ou plusieurs arguments pour l'option BULK.  
@@ -145,23 +146,24 @@ OPENROWSET
 |*code_page*|Indique la page de codes source sur laquelle est basé l'encodage des données caractères du fichier de données, par exemple 850.<br /><br /> **Important** Les versions antérieures à la version [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prennent pas en charge la page de codes 65001 (encodage UTF-8).|  
   
  ERRORFILE ='*file_name*'  
- Fichier utilisé pour collecter les lignes comportant des erreurs de mise en forme et impossibles à convertir en un ensemble de lignes OLE DB. Ces lignes sont copiées « en l'état » du fichier de données vers ce fichier d'erreur.  
+ **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et les builds ultérieures. À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` peut se trouver dans Stockage Blob Azure.     
+
+Fichier utilisé pour collecter les lignes comportant des erreurs de mise en forme et impossibles à convertir en un ensemble de lignes OLE DB. Ces lignes sont copiées « en l'état » du fichier de données vers ce fichier d'erreur.  
   
  Le fichier d'erreur est créé au début de l'exécution de la commande. Une erreur est signalée si le fichier existe déjà. De plus, un fichier de contrôle portant l'extension .ERROR.txt est créé. Il fait référence à chacune des lignes du fichier d’erreur et propose un diagnostic. Lorsque les erreurs sont corrigées, les données peuvent être chargées.  
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` peut se trouver dans Stockage Blob Azure. 
 
 'errorfile_data_source_name'   
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et les builds ultérieures.       
+
 Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier d’erreur contenant les erreurs détectées lors de l’importation. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [CRÉER UNE SOURCE DE DONNÉES EXTERNES](../../t-sql/statements/create-external-data-source-transact-sql.md).
   
- FIRSTROW =*first_row*  
+ FIRSTROW =*première_ligne*      
  Numéro de la première ligne à charger. La valeur par défaut est 1. Cela indique la première ligne du fichier de données spécifié. Les numéros des lignes sont déterminés en comptant les indicateurs de fin de ligne. FIRSTROW commence à 1.  
   
- LASTROW =*last_row*  
+ LASTROW =*dernière_ligne*      
  Numéro de la dernière ligne à charger. La valeur par défaut est 0. Cela indique la dernière ligne du fichier de données spécifié.  
   
- MAXERRORS =*maximum_errors*  
+ MAXERRORS =*nombre_maximal_erreurs*     
  Spécifie le nombre maximal d'erreurs de syntaxe ou de lignes non conformes (défini dans le fichier de format) qui peuvent se produire avant que OPENROWSET lève une exception. Tant que la valeur de MAXERRORS n'est pas atteinte, OPENROWSET ignore les lignes incorrectes, ne les charge pas, et les compte comme des erreurs.  
   
  La valeur par défaut de *maximum_errors* est 10.  
@@ -197,7 +199,7 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
  Retourne le contenu de *data_file* sous la forme d’un ensemble de lignes à une seule ligne et une seule colonne de type **varbinary(max)** .  
   
 > [!IMPORTANT]  
-> Nous vous recommandons d'importer des données XML seulement au moyen de l'option SINGLE_BLOB, au lieu de SINGLE_CLOB et SINGLE_NCLOB, parce que seule l'option SINGLE_BLOB prend en charge toutes les conversions d'encodage de Windows.  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous recommande d’importer des données XML seulement au moyen de l’option SINGLE_BLOB, au lieu de SINGLE_CLOB et SINGLE_NCLOB, car seule l’option SINGLE_BLOB prend en charge toutes les conversions d’encodage de Windows.  
   
  SINGLE_CLOB  
  La lecture de *data_file* au format ASCII retourne son contenu sous la forme d’un ensemble de lignes à une seule ligne et une seule colonne du type **varchar(max)** en utilisant le classement de la base de données active.  
@@ -207,46 +209,48 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
 
 ### <a name="input-file-format-options"></a>Options de format de fichier d’entrée
   
-FORMAT **=** 'CSV'   
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+FORMAT **=** 'CSV'      
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et les builds ultérieures         
 Spécifie un fichier de valeurs séparées par des virgules conforme à la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
  FORMATFILE ='*format_file_path*'  
- Spécifie le chemin complet au fichier de format. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichiers de format : XML et non-XML.  
+  **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path peut être dans Stockage Blob Azure. Pour obtenir des exemples, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
+  
+  Spécifie le chemin complet au fichier de format. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichiers de format : XML et non-XML.  
   
  Un fichier de format est requis pour définir les types des colonnes dans le jeu de résultats, excepté lorsque SINGLE_CLOB, SINGLE_BLOB ou SINGLE_NCLOB est spécifié ; dans ce cas, le fichier de format n'est pas requis.  
   
  Pour plus d’informations sur les fichiers de format, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
 
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path peut être dans Stockage Blob Azure. Pour obtenir des exemples, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
-
 FIELDQUOTE **=** 'field_quote'   
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le fichier CSV. Si vous ne spécifiez pas cet argument, le caractère guillemet (") servira de caractère guillemet tel que défini dans la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.       
 
+Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le fichier CSV. Si vous ne spécifiez pas cet argument, le caractère guillemet (") servira de caractère guillemet tel que défini dans la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
   
 ## <a name="remarks"></a>Notes  
- `OPENROWSET` ne peut être utilisé pour accéder à des données distantes à partir de sources de données OLE DB uniquement si l’option de Registre **DisallowAdhocAccess** est explicitement définie sur 0 pour le fournisseur spécifié et que l’option de configuration avancée Ad Hoc Distributed Queries est activée. Lorsque ces options ne sont pas définies, le comportement par défaut n'autorise pas l'accès d'égal à égal.  
+`OPENROWSET` hérite toujours du classement de l’instance, quel que soit le classement défini pour les colonnes.
+
+`OPENROWSET` ne peut être utilisé pour accéder à des données distantes à partir de sources de données OLE DB uniquement si l’option de Registre **DisallowAdhocAccess** est explicitement définie sur 0 pour le fournisseur spécifié et que l’option de configuration avancée Ad Hoc Distributed Queries est activée. Lorsque ces options ne sont pas définies, le comportement par défaut n'autorise pas l'accès d'égal à égal.  
   
- Lors de l'accès à des sources de données OLE DB distantes, l'identité des connexions approuvées n'est pas automatiquement déléguée du serveur auquel le client est connecté au serveur qui est interrogé. Il est nécessaire de configurer la délégation de l'authentification.  
+Lors de l'accès à des sources de données OLE DB distantes, l'identité des connexions approuvées n'est pas automatiquement déléguée du serveur auquel le client est connecté au serveur qui est interrogé. Il est nécessaire de configurer la délégation de l'authentification.  
   
- Les noms de catalogues et de schémas sont requis si le fournisseur OLE DB prend en charge plusieurs catalogues et schémas dans la source de données spécifiée. Les valeurs de _catalog_ et )_schema_ peuvent être omises si le fournisseur OLE DB ne les prend pas en charge. Si le fournisseur prend en charge uniquement les noms de schémas, il est nécessaire de spécifier un nom en deux parties, sous la forme _schéma_ **.** _objet_. Si le fournisseur prend en charge uniquement les noms de catalogues, il est nécessaire de spécifier un nom en trois parties, sous la forme _catalogue_ **.** _schéma_ **.** _objet_. Vous devez spécifier des noms en trois parties pour les requêtes directes qui utilisent le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB. Pour plus d’informations, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+Les noms de catalogues et de schémas sont requis si le fournisseur OLE DB prend en charge plusieurs catalogues et schémas dans la source de données spécifiée. Les valeurs de _catalog_ et )_schema_ peuvent être omises si le fournisseur OLE DB ne les prend pas en charge. Si le fournisseur prend en charge uniquement les noms de schémas, il est nécessaire de spécifier un nom en deux parties, sous la forme _schéma_ **.** _objet_. Si le fournisseur prend en charge uniquement les noms de catalogues, il est nécessaire de spécifier un nom en trois parties, sous la forme _catalogue_ **.** _schéma_ **.** _objet_. Vous devez spécifier des noms en trois parties pour les requêtes directes qui utilisent le fournisseur OLE DB de SQL Server. Pour plus d’informations, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- `OPENROWSET` n’accepte pas de variables pour ses arguments.  
+`OPENROWSET` n’accepte pas de variables pour ses arguments.    
   
- Tout appel à `OPENDATASOURCE`, `OPENQUERY` ou `OPENROWSET` dans la clause `FROM` est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées sur le résultat de l'un de ces appels n'ont aucun effet sur les résultats de l'autre.  
+Tout appel à `OPENDATASOURCE`, `OPENQUERY` ou `OPENROWSET` dans la clause `FROM` est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées sur le résultat de l'un de ces appels n'ont aucun effet sur les résultats de l'autre.  
   
 ## <a name="using-openrowset-with-the-bulk-option"></a>Utilisation de OPENROWSET avec l'option BULK  
  Les améliorations [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes prennent en charge la fonction OPENROWSET(BULK…) :  
   
--   Une clause FROM utilisée avec `SELECT` peut appeler `OPENROWSET(BULK...)` au lieu d’un nom de table, avec des fonctionnalités `SELECT` complètes.  
+-   Une clause `FROM` utilisée avec `SELECT` peut appeler `OPENROWSET(BULK...)` au lieu d’un nom de table, avec les fonctionnalités complètes de `SELECT`.  
   
      `OPENROWSET` utilisée avec l’option `BULK` nécessite un nom de corrélation, également baptisé variable de plage ou alias, dans la clause `FROM`. Vous pouvez définir des alias de colonnes. Si une liste d'alias de colonnes n'est pas spécifiée, le fichier de format doit comporter les noms des colonnes. La spécification des alias de colonnes remplace les noms de colonnes dans le fichier de format, par exemple :  
   
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
+     
 > [!IMPORTANT]  
 > Un échec d’ajout de `AS <table_alias>` génère l’erreur :    
 > Msg 491, Niveau 16, État 1, Ligne 20    
@@ -283,18 +287,32 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Utilisation de OPENROWSET avec SELECT et le fournisseur SQL Server Native Client OLE DB  
- L’exemple suivant utilise le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB pour accéder à la table `HumanResources.Department` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur distant `Seattle1`. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Une instruction `SELECT` définit l’ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
+### <a name="a-using-openrowset-with-select-and-the-sql-server-ole-db-driver"></a>A. Utilisation d’OPENROWSET avec SELECT et OLE DB Driver pour SQL Server  
+ L’exemple suivant utilise le pilote [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) pour accéder à la table `HumanResources.Department` dans la base de données AdventureWorks2016 sur le serveur distant `Seattle1`. Une instruction `SELECT` définit l’ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver.  
   
 ```sql  
 SELECT a.*  
-FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
+FROM OPENROWSET('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;TrustServerCertificate=Yes;Trusted_Connection=Yes;',  
      'SELECT GroupName, Name, DepartmentID  
-      FROM AdventureWorks2012.HumanResources.Department  
+      FROM AdventureWorks2016.HumanResources.Department  
+      ORDER BY GroupName, Name') AS a;  
+```  
+
+### <a name="b-using-openrowset-with-select-and-the-deprecated-sql-server-native-client-ole-db-provider"></a>B. Utilisation d’OPENROWSET avec SELECT et le fournisseur SQL Server Native Client OLE DB déprécié  
+ L’exemple suivant utilise le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB pour accéder à la table `HumanResources.Department` de la base de données AdventureWorks2016 sur le serveur distant `Seattle1`. L’utilisation de SQLNCLI et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redirige vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB. Une instruction `SELECT` définit l’ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
+ 
+> [!IMPORTANT]
+> Le fournisseur SQL Server Native Client OLE DB (SQLNCLI) reste déprécié, et il n’est pas recommandé d’utiliser l’un ou l’autre pour les nouveaux développements. Au lieu de cela, utilisez le nouveau [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
+ 
+```sql  
+SELECT a.*  
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Database=AdventureWorks2012;Trusted_Connection=Yes;',  
+     'SELECT GroupName, Name, DepartmentID  
+      FROM AdventureWorks2016.HumanResources.Department  
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Utilisation du fournisseur Microsoft OLE DB pour Jet  
+### <a name="c-using-the-microsoft-ole-db-provider-for-jet"></a>C. Utilisation du fournisseur Microsoft OLE DB pour Jet  
  L'exemple suivant accède à la table `Customers` de la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Northwind` via le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Jet.  
   
 > [!NOTE]  
@@ -308,16 +326,16 @@ SELECT CustomerID, CompanyName
 GO  
 ```  
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
   
-### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. Utilisation de OPENROWSET avec une autre table dans une jointure interne INNER JOIN  
+### <a name="d-using-openrowset-and-another-table-in-an-inner-join"></a>D. Utilisation de OPENROWSET avec une autre table dans une jointure interne INNER JOIN  
  L’exemple de code suivant sélectionne toutes les données de la table `Customers` dans la base de données `Northwind` installée sur l’instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans la table `Orders` de la base de données `Northwind` Access stockée sur le même ordinateur.  
   
 > [!NOTE]  
 > L'exécution de ce code exemple suppose que Microsoft Access est installé. Pour exécuter ce code exemple, vous devez installer la base de données Northwind.  
   
 ```sql  
-USE Northwind  ;  
+USE Northwind;  
 GO  
 SELECT c.*, o.*  
 FROM Northwind.dbo.Customers AS c   
@@ -329,10 +347,9 @@ GO
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
 
-  
-### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Utilisation de OPENROWSET pour insérer en bloc un fichier de données dans une colonne de type varbinary(max)  
+### <a name="e-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>E. Utilisation de OPENROWSET pour insérer en bloc un fichier de données dans une colonne de type varbinary(max)  
  Le code exemple suivant crée une petite table aux fins de démonstration et insère dans une colonne `Text1.txt` les données du fichier `C:` situé dans le répertoire racine `varbinary(max)`.  
   
 ```sql  
@@ -350,10 +367,10 @@ GO
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
   
 
-### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Utilisation du fournisseur OPENROWSET BULK avec un fichier de format pour récupérer des lignes dans un fichier texte  
+### <a name="f-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>F. Utilisation du fournisseur OPENROWSET BULK avec un fichier de format pour récupérer des lignes dans un fichier texte  
  Le code exemple suivant utilise un fichier de format pour extraire des lignes d'un fichier texte dont les données sont délimitées par des tabulations, `values.txt`, qui contient les données suivantes :  
   
 ```sql  
@@ -379,10 +396,9 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
   
-
-### <a name="f-specifying-a-format-file-and-code-page"></a>F. Spécification d’un fichier de format et d’une page de codes  
+### <a name="g-specifying-a-format-file-and-code-page"></a>G. Spécification d’un fichier de format et d’une page de codes  
  L’exemple suivant montre comment utiliser à la fois les options de fichier de format et de page de codes en même temps.  
   
 ```sql  
@@ -390,8 +406,8 @@ INSERT INTO MyTable SELECT a.* FROM
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
-### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. Accès aux données d’un fichier CSV avec un fichier de format  
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+### <a name="h-accessing-data-from-a-csv-file-with-a-format-file"></a>H. Accès aux données d’un fichier CSV avec un fichier de format  
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 ```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
@@ -401,10 +417,10 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
 
 
-### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. Accès aux données d’un fichier CSV sans fichier de format
+### <a name="i-accessing-data-from-a-csv-file-without-a-format-file"></a>I. Accès aux données d’un fichier CSV sans fichier de format
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -422,10 +438,10 @@ from openrowset('MSDASQL'
 
 > [!IMPORTANT]
 > - Le pilote ODBC doit être 64 bits. Ouvrez l’onglet **Pilotes** de l’application [Sources de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) dans Windows pour vérifier cela. Il y a un `Microsoft Text Driver (*.txt, *.csv)` 32 bits qui ne fonctionne pas avec une version 64 bits de sqlservr.exe. 
-> - Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la lecture dans des fichiers Windows.
 
 
-### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Accès aux données d’un fichier stocké sur Stockage Blob Azure   
+### <a name="j-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>J. Accès aux données d’un fichier stocké sur Stockage Blob Azure   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 L’exemple suivant utilise une source de données externe qui pointe vers un conteneur dans un compte de stockage Azure et des informations d’identification délimitées à la base de données créées pour une signature d’accès partagé.     
 
@@ -435,10 +451,11 @@ SELECT * FROM OPENROWSET(
    DATA_SOURCE = 'MyAzureInvoices',
    SINGLE_CLOB) AS DataFile;
 ```   
+
 Pour obtenir des exemples `OPENROWSET` complets, illustrant notamment la configuration des informations d’identification et de la source de données externe, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
  
 ### <a name="additional-examples"></a>Autres exemples  
- Pour obtenir des exemples supplémentaires illustrant l’utilisation de `INSERT...SELECT * FROM OPENROWSET(BULK...)`, consultez les rubriques suivantes :  
+Pour obtenir des exemples supplémentaires illustrant l’utilisation de `INSERT...SELECT * FROM OPENROWSET(BULK...)`, consultez les rubriques suivantes :  
   
 -   [Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   

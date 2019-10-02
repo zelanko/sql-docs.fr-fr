@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096891"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326187"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -77,11 +77,12 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Génération d’index rowstore en ligne pouvant être repris | Voir [Exécuter des opérations d’index en ligne](../relational-databases/indexes/perform-index-operations-online.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>Bases de données en mémoire
+### <a name="in-memory-database"></a>Base de données en mémoire
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Contrôle DDL pour le pool de tampons hybride |Avec le [pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md), les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire.|
+|Pool de tampons hybride| Une nouvelle fonctionnalité de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] avec laquelle les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire. Consultez [Pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Métadonnée `tempdb` à mémoire optimisée| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../relational-databases/in-memory-database.md), une nouvelle fonctionnalité, les métadonnées `tempdb` à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau d’extensibilité pour les charges de travail de base de données `tempdb` lourdes. Dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Consultez [Métadonnée `tempdb` à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Prise en charge d’Unicode
@@ -99,13 +100,6 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Prise en charge du codage de caractères UTF-8|Prise en charge d’un caractère UTF-8 avec des tables externes. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>Paramètres du serveur
-
-|Nouvelle fonctionnalité ou mise à jour | Détails |
-|:---|:---|
-|Pool de tampons hybride| Une nouvelle fonctionnalité de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] avec laquelle les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire. Consultez [Pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>analyse des performances.
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
@@ -117,6 +111,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |`sys.dm_exec_query_plan_stats` |La nouvelle fonction de gestion dynamique (DMF) retourne l’équivalent du dernier plan d’exécution réel connu pour la plupart des requêtes. Voir [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | Nouvelle configuration au niveau de la base de données pour activer `sys.dm_exec_query_plan_stats`. Consultez la page [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | L’événement étendu collecte l’équivalent d’un plan d’exécution réel basé sur le profilage léger, contrairement à `query_post_execution_showplan` qui utilise le profilage standard. Voir [Infrastructure du profilage de requête](../relational-databases/performance/query-profiling-infrastructure.md).|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | La nouvelle commande DMF retourne des informations sur une page d’une base de données. Consultez [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Extensions de langage
@@ -147,7 +142,6 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Gouvernance des ressources| La valeur configurable pour l’option `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` et `ALTER WORKLOAD GROUP` est passée d’un entier à un type de données float, pour permettre un contrôle plus granulaire des limites de la mémoire. Consultez [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) et [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Recompilations réduites pour les charges de travail| Améliore l’utilisation des tables temporaires sur plusieurs étendues. Consultez [Recompilations réduites pour les charges de travail](../relational-databases/tables/tables.md#ctp23) |
 |Scalabilité des points de contrôle indirect |Consultez [Amélioration de la scalabilité des points de contrôle indirect](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Métadonnée `tempdb` à mémoire optimisée| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../relational-databases/in-memory-database.md), une nouvelle fonctionnalité, les métadonnées `tempdb` à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau d’extensibilité pour les charges de travail de base de données `tempdb` lourdes. Dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Consultez [Métadonnée `tempdb` à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Mises à jour PFS simultanées|Les [pages PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) sont des pages spéciales dans un fichier de base de données que SQL Server utilise pour localiser l’espace libre lors de l’allocation d’espace d’un objet. La contention de verrous de page sur les pages PFS est une fonctionnalité couramment associée à [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), mais elle peut également se produire sur des bases de données utilisateur lorsqu’il existe de nombreux threads d’allocation d’objets simultanés. Cette amélioration modifie la façon dont la concurrence est managée avec les mises à jour PFS afin qu’elles puissent être mises à jour sous un verrou partagé, plutôt qu’avec un verrou exclusif. Ce comportement est activé par défaut dans toutes les bases de données (y compris `tempdb`) en commençant par [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 |Rétroaction d’allocation de mémoire en mode ligne |Développe la fonctionnalité de commentaires d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne. Cela peut automatiquement corriger les octrois excessifs qui entraînent une perte de mémoire et une concurrence réduite, et corriger les allocations de mémoire insuffisantes qui entraînent des dépassements de capacité coûteux sur le disque. Consultez [Commentaires d’allocation de mémoire en mode ligne](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
 |Compilation différée de variable de table|Améliore la qualité du plan et le niveau de performance global pour les requêtes faisant référence à des variables de tables. Pendant l’optimisation et la compilation initiale, cette fonctionnalité propage les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Ces informations précises sur le nombre de lignes optimisent les opérations de plan en aval. Consultez [Compilation différée de variables de tables](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |

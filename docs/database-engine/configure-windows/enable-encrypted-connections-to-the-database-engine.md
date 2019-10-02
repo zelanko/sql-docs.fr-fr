@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874319"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314499"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Activer les connexions chiffrées dans le moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ Si vous utilisez [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[
   
 2. Suivez les étapes de l' **Assistant d'exportation de certificats**en stockant le fichier de certificat à un emplacement approprié.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Pour configurer le serveur afin qu’il force les connexions chiffrées  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Pour configurer le serveur afin qu’il force les connexions chiffrées
+
+> [!IMPORTANT]
+> Le compte de service SQL Server doit avoir des autorisations de lecture sur le certificat utilisé pour forcer le chiffrement sur le serveur SQL Server. Pour un compte de service sans privilèges, les autorisations de lecture doivent être ajoutées au certificat. Si vous ne le faites pas, vous risquez de provoquer l’échec du redémarrage du service SQL Server.
   
 1. Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<instance de serveur>_ , puis sélectionnez **Propriétés**.  
   

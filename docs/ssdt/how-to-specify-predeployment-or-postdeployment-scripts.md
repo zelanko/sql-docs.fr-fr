@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035011"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199300"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procédure : Spécifier des scripts de prédéploiement et de post-déploiement
-Les scripts de prédéploiement et de post-déploiement exécutent des instructions Transact\-SQL avant et après le script de déploiement principal, qui est généré à partir du projet de base de données. Un projet peut comporter un script de prédéploiement et un script de post-déploiement. Ces scripts peuvent être utilisés à de nombreuses fins. Par exemple :  
+Les scripts de prédéploiement et de post-déploiement exécutent des instructions Transact\-SQL avant et après le script de déploiement principal, qui est généré à partir du projet de base de données. Le script de prédéploiement ne sera pas exécuté lors de la mise à jour des cibles à partir des résultats de comparaison des schémas dans Visual Studio. Un projet peut comporter un script de prédéploiement et un script de post-déploiement. Ces scripts peuvent être utilisés à de nombreuses fins. Par exemple :  
   
 -   Un script de prédéploiement peut copier les données d'une table qui est modifiée dans une table temporaire avant de les remettre en forme et de les appliquer à la table modifiée dans un script de post-déploiement.  
   
@@ -30,7 +30,7 @@ BEGIN
     DELETE FROM [dbo].[MyReferenceTable]  
 END  
 ```  
-  
+
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>Pour ajouter et modifier un script de prédéploiement ou de post-déploiement  
   
 1.  Dans **l’Explorateur de solutions**, développez votre projet de base de données pour afficher le dossier Scripts.  

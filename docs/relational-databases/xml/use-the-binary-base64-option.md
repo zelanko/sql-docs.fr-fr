@@ -1,7 +1,7 @@
 ---
 title: Utiliser l’option BINARY BASE64 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,51 +12,61 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 84d715b1e90c54c549a255b3ee43f24f2e5556d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
+ms.openlocfilehash: eb192cdb9a7e9ffb43561b3b642f60144861c6df
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039163"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199456"
 ---
 # <a name="use-the-binary-base64-option"></a>Utiliser l'option BINARY BASE64
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Si l'option BINARY BASE64 est spécifiée dans la requête, les données binaires sont renvoyées dans un format encodé en base 64. Par défaut, si l'option BINARY BASE64 n'est pas spécifiée, le mode AUTO prend en charge l'encodage URL des données binaires. Dans ce cas, au lieu de données binaires, une référence à une URL relative vers la racine virtuelle de la base de données dans laquelle la requête est exécutée est renvoyée. Cette référence permet d'accéder aux données binaires réelles lors les opérations ultérieures à l'aide de la requête dbobject SQLXML ISAPI. La requête doit fournir suffisamment d'informations, telles que des colonnes clés primaires, pour identifier l'image.  
-  
- Lors de la spécification d'une requête, si un alias est utilisé pour la colonne binaire de la vue, il est renvoyé dans l'encodage URL des données binaires. Dans les opérations suivantes, l'alias ne signifie rien et l'encodage URL ne peut pas être utilisé pour extraire l'image. Par conséquent, n'utilisez pas d'alias lors de l'interrogation d'une vue à l'aide du mode FOR XML AUTO.  
-  
- Par exemple, dans une requête SELECT, la conversion d'une colonne en type de données d'objet blob en fait une entité temporaire puisqu'elle perd les noms de table et de colonne qui lui sont associés. De ce fait, les requêtes exprimées en mode AUTO génèrent une erreur car elles ne savent pas où placer cette valeur dans la hiérarchie XML. Par exemple :  
-  
-```  
-CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  
-INSERT INTO MyTable VALUES (1, 0x7);  
-```  
-  
- Cette requête produit une erreur en raison de la conversion en type de données d'objet blob.  
-  
-```  
-SELECT Col1,  
-CAST(Col2 as image) as Col2  
-FROM MyTable  
-FOR XML AUTO;  
-```  
-  
- La solution consiste à ajouter l'option BINARY BASE64 dans la clause FOR XML. Si vous supprimez la conversion, la requête produit les résultats escomptés :  
-  
-```  
-SELECT Col1,  
-CAST(Col2 as image) as Col2  
-FROM MyTable  
-FOR XML AUTO, BINARY BASE64;  
-```  
-  
- Voici le résultat obtenu :  
-  
-```  
-<MyTable Col1="1" Col2="Bw==" />  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [UTiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
-  
-  
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+Si l'option BINARY BASE64 est spécifiée dans la requête, les données binaires sont renvoyées dans un format encodé en base 64.
+
+Si l’option BINARY BASE64 n’est pas spécifiée dans la requête, par défaut, le mode AUTO prend en charge l’encodage URL des données binaires. Une référence à une URL relative vers la racine virtuelle de la base de données est retournée. Cette référence concerne la base de données où la requête a été exécutée. La référence retournée peut être utilisée pour accéder aux données binaires réelles lors les opérations ultérieures. Cet accès est obtenu à l’aide de la requête de dbobject ISAPI de SQLXML. La requête doit fournir suffisamment d’informations pour identifier l’image. Ces informations peuvent inclure les colonnes de la clé primaire.
+
+## <a name="column-alias"></a>Alias de colonne
+
+N’utilisez pas d’alias pour une colonne binaire quand vous interrogez une vue et que vous utilisez le mode FOR XML AUTO. Si vous utilisez un alias, l’alias est retourné dans l’encodage URL des données binaires. Dans les opérations suivantes, l’alias ne signifie rien. Dans les opérations suivantes, l’alias qui ne signifie rien et l’encodage URL ne peuvent pas être utilisés pour extraire l’image.
+
+### <a name="cast-to-a-blob"></a>Cast en objet blob
+
+Dans une requête SELECT, le cast d’une colonne en objet blob transforme la colonne en une entité temporaire. Étant temporaire, l’objet blob perd son nom de table et son nom de colonne associés. Ce cast fait que les requêtes exprimées en mode AUTO génèrent une erreur, car le système ne sait pas où placer cette valeur dans la hiérarchie XML.
+
+Par exemple, considérons la table suivante avec sa seule ligne.
+
+```sql
+CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)
+INSERT INTO MyTable VALUES (1, 0x7);
+```
+
+La requête suivante produit une erreur en raison du cast en objet blob :
+
+```sql
+SELECT Col1,
+CAST(Col2 as image) as Col2
+FROM MyTable
+FOR XML AUTO;
+```
+
+La solution consiste à ajouter l'option BINARY BASE64 dans la clause FOR XML. Si vous supprimez le cast, la requête produit les bons résultats.
+
+```sql
+SELECT Col1,
+CAST(Col2 as image) as Col2
+FROM MyTable
+FOR XML AUTO, BINARY BASE64;
+```
+
+Voici le bon résultat attendu :
+
+```console
+<MyTable Col1="1" Col2="Bw==" />
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[UTiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)

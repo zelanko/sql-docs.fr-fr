@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014476"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250982"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014476"
   
 -   **Nombre maximal de groupes de disponibilité et de bases de données de disponibilité par ordinateur :** Le nombre réel de bases de données et les groupes de disponibilité que vous pouvez placer sur un ordinateur (virtuel ou physique) dépendent du matériel et de la charge de travail, mais il n'existe aucune limite imposée. Microsoft a testé jusqu’à 10 groupes de disponibilité et 100 bases de données par machine physique, mais il ne s’agit pas d’une limite contraignante. Selon la spécification matérielle du serveur et de la charge de travail, il peut être possible de placer plus de bases de données et de groupes de disponibilité sur une instance SQL Server. Les signes d’un système surchargé incluent, notamment, l’épuisement des threads de travail, des temps de réponse longs pour les vues système et les vues de gestion dynamique des groupes de disponibilité et/ou des vidages de système de répartiteur bloqués. Veillez à tester soigneusement votre environnement avec une charge de travail semblable à celle de production pour vous assurer qu'il peut gérer la capacité de pointe conformément au contrat de niveau de service de l'application. Lorsque vous choisissez les contrats de niveau de service, assurez-vous de prendre en compte la charge en conditions d'échec ainsi que les temps de réponse attendus.  
   
--   **N'utilisez pas le gestionnaire du cluster de basculement pour manipuler des groupes de disponibilité :**  
+-   **N’utilisez pas le Gestionnaire du cluster de basculement pour manipuler les groupes de disponibilité**. L’état d’une instance de cluster de basculement SQL Server est partagé entre SQL Server et le cluster de basculement Windows, avec SQL Server conservant des informations d’état plus détaillées sur les instances que ce dont le cluster s’occupe. Le modèle de gestion est que SQL Server doit piloter les transactions et est chargé de conserver la vue de l’état du cluster synchronisée avec la vue de l’état de SQL Server. Si l’état du cluster est changé en dehors de SQL Server, il est possible que l’état soit désynchronisé entre le cluster de basculement Windows et SQL Server, ce qui peut entraîner un comportement imprévisible.
   
      Par exemple :  
   

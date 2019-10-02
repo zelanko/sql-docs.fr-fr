@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354601"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250955"
 ---
-# <a name="configure-a-distributed-always-on-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
+# <a name="configure-an-always-on-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Pour créer un groupe de disponibilité distribué, vous devez créer deux groupes de disponibilité ayant chacun son propre écouteur. Vous combinez ensuite ces groupes de disponibilité dans un groupe de disponibilité distribué. Les étapes suivantes fournissent un exemple de base dans Transact-SQL. Cet exemple ne couvre pas tous les détails de la création des groupes de disponibilité et des écouteurs. Son but est de mettre en évidence les exigences principales.
@@ -178,6 +178,19 @@ GO
   
 > [!NOTE]  
 >  **LISTENER_URL** spécifie l’écouteur pour chaque groupe de disponibilité, ainsi que le point de terminaison de mise en miroir de bases de données du groupe de disponibilité. Dans cet exemple, il s’agit du port `5022` (et non du port `60173` qui a permis de créer l’écouteur). Si vous utilisez un équilibreur de charge, par exemple dans Azure, [ajoutez une règle d’équilibrage de charge pour le port du groupe de disponibilité distribué](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Ajoutez la règle pour le port d’écoute, en plus du port de l’instance SQL Server. 
+
+### <a name="cancel-automatic-seeding-to-forwarder"></a>Annuler l’amorçage automatique du redirecteur
+S’il est nécessaire d’annuler l’initialisation du redirecteur avant que les deux groupes de disponibilité soient synchronisés, modifiez le groupe de disponibilité distribué avec ALTER en définissant le paramètre SEEDING_MODE du redirecteur sur MANUAL et annulez immédiatement l’amorçage. Exécutez la commande sur la base de données primaire : 
+
+```sql
+-- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag]   
+   MODIFY  
+   AVAILABILITY GROUP ON  
+   'ag2' WITH  
+   (  SEEDING_MODE = MANUAL  );   
+```
+
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Joindre un groupe de disponibilité distribué sur le second cluster  
  Joignez ensuite le groupe de disponibilité distribué au deuxième cluster WSFC.  
