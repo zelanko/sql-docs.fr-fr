@@ -1,9 +1,6 @@
 ---
 title: Importer et exporter des données en bloc à l’aide de l’utilitaire bcp (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/14/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +8,22 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/14/2017
+ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011929"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708213"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importer et exporter des données en bloc à l'aide de l'utilitaire bcp (SQL Server)
-  Cette rubrique est une présentation générale de l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour exporter des données à partir de n'importe quel emplacement d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant une instruction SELECT, vues partitionnées comprises.  
+
+Cette rubrique est une présentation générale de l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour exporter des données à partir de n'importe quel emplacement d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant une instruction SELECT, vues partitionnées comprises.  
   
  L'utilitaire bcp (Bcp.exe) est un outil de ligne de commande qui fait appel à l'API BCP (Bulk Copy Program). L'utilitaire exécute les tâches suivantes :  
   
@@ -45,7 +46,8 @@ ms.locfileid: "66011929"
   
  Pour obtenir une description de la syntaxe de la commande **bcp** , consultez [bcp Utility](../../tools/bcp-utility.md).  
   
-## <a name="examples"></a>Exemples  
+## <a name="examples"></a>Exemples
+
  Pour obtenir des exemples de commande **bcp** , consultez :  
   
 -   [Utilitaire bcp](../../tools/bcp-utility.md)  
@@ -69,15 +71,12 @@ ms.locfileid: "66011929"
 -   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Clause SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [Utilitaire bcp](../../tools/bcp-utility.md)   
- [Préparer l’importation de données en bloc &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Importation et exportation en bloc de données &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
-  
-  
+
+## <a name="see-also"></a>Voir aussi
+
+[Insérer &#40;&#41;](/sql/t-sql/statements/insert-transact-sql)l'[utilitaire bcp](../../tools/bcp-utility.md)Transact-SQL 
+[clause &#40;Select&#41;Transact-SQL](/sql/t-sql/queries/select-clause-transact-sql)
+    
+[Préparer l’importation en bloc &#40;de&#41;données SQL Server](prepare-to-bulk-import-data-sql-server.md)
+[Bulk Insert &#40;Transact&#41;-SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
+[importation et exportation en &#40;bloc&#41;de données SQL Server](bulk-import-and-export-of-data-sql-server.md)1[OpenRowset &#40; Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[crée un fichier &#40;de format&#41; SQL Server](create-a-format-file-sql-server.md)

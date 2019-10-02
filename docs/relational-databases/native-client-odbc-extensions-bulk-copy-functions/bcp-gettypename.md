@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895550"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707463"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -61,7 +61,7 @@ RETCODE bcp_gettypename (
 |**SQLNUMERIC**|Avant ou après|**numeric**|  
 |**SQLINT1**|Avant ou après|**tinyint**|  
 |**SQLINT2**|Avant ou après|**smallint**|  
-|**SQLINT4**|Avant ou après|**int**|  
+|**SQLINT4**|Avant ou après|**Int**|  
 |**SQLMONEY**|Avant ou après|**money**|  
 |**SQLFLT8**|Avant ou après|**float**|  
 |**SQLDATETIME**|Avant ou après|**datetime**|  
@@ -73,9 +73,9 @@ RETCODE bcp_gettypename (
 |**SQLVARCHAR**|Non|**varchar**|  
 |**SQLTEXT**|Avant ou après|**texte**|  
 |**SQLBIGBINARY**|Non|**binaire**|  
-|**SQLBINARY**|Non|**Binary**|  
-|**SQLBIGVARBINARY**|Non|**varbinary**|  
-|**SQLVARBINARY**|Non|**varbinary**|  
+|**SQLBINARY**|Non|**Binaire**|  
+|**SQLBIGVARBINARY**|Non|**Varbinary**|  
+|**SQLVARBINARY**|Non|**Varbinary**|  
 |**SQLIMAGE**|Avant ou après|**Image**|  
 |**SQLINTN**|Avant ou après|**int-null**|  
 |**SQLDATETIMN**|Avant ou après|**datetime-null**|  
@@ -87,12 +87,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Avant ou après|**Min**|  
 |**SQLAOPMAX**|Avant ou après|**Max**|  
 |**SQLDATETIM4**|Avant ou après|**smalldatetime**|  
-|**SQLMONEY4**|Avant ou après|**smallmoney**|  
-|**SQLFLT4**|Avant ou après|**réel**|  
+|**SQLMONEY4**|Avant ou après|**Smallmoney**|  
+|**SQLFLT4**|Avant ou après|**Non**|  
 |**SQLUNIQUEID**|Avant ou après|**uniqueidentifier**|  
 |**SQLNCHAR**|Non|**NCHAR**|  
 |**SQLNVARCHAR**|Non|**Nvarchar**|  
-|**SQLNTEXT**|Avant ou après|**ntext**|  
+|**SQLNTEXT**|Avant ou après|**Text**|  
 |**SQLVARIANT**|Avant ou après|**sql_variant**|  
 |**SQLINT8**|Avant ou après|**Bigint**|  
 |**SQLCHARACTER**|Oui|**varchar(max)**|  
@@ -106,12 +106,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Oui|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Oui|**nvarchar(max)**|  
 |**SQLXML**|Oui|**Xml**|  
-|**SQLUDT**|Avant ou après|**UDT**|  
+|**SQLUDT**|Avant ou après|**Assorti**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
- Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
+ Les valeurs de paramètre de jeton pour les types date/time sont décrites dans la colonne « type dans sqlncli. h » de la table dans les [modifications de copie en bloc &#40;pour les types&#41;de date et d’heure améliorés OLE DB et ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
   
- Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [améliorations &#40;de la date&#41;et de l’heure ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

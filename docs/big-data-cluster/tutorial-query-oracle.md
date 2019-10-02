@@ -1,20 +1,20 @@
 ---
 title: Interroger des données externes dans Oracle
 titleSuffix: SQL Server big data clusters
-description: Ce didacticiel montre comment interroger des données Oracle à [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]partir d’un. Vous créez une table externe sur les données dans Oracle, puis exécutez une requête.
+description: Ce didacticiel montre comment interroger des données Oracle à partir d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Vous créez une table externe sur les données dans Oracle, puis exécutez une requête.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ebad25ed0532ed6ba96dc803fa8e6dc2538977ae
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653258"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708368"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger Oracle à partir d’un cluster Big Data SQL Server
 

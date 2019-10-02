@@ -3,17 +3,17 @@ title: Surveiller l’exécution de scripts Python et R à l’aide de DMV
 description: Utilisez les vues de gestion dynamique (DMV) pour surveiller l’exécution du script externe Python et R dans SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70978402"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713178"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ La requête retourne les colonnes suivantes:
 
 ## <a name="memory-configuration"></a>Configuration de la mémoire
 
-Affichez des informations sur la configuration de mémoire maximale en pourcentage de SQL Server et de pools de ressources externes. Si SQL Server s’exécute avec la valeur `max server memory (MB)`par défaut, il est considéré comme 100% de la mémoire du système d’exploitation.
+Affichez des informations sur la configuration de mémoire maximale en pourcentage de SQL Server et de pools de ressources externes. Si SQL Server s’exécute avec la valeur par défaut de `max server memory (MB)`, il est considéré comme 100% de la mémoire du système d’exploitation.
 
 ![Sortie de la requête de configuration de la mémoire](media/dmv-memory-configuration.png "Sortie de la requête de configuration de la mémoire")
 

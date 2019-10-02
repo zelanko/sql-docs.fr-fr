@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colptr function
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09dc87f27f1e6cc9dc062addbe97945b47dc7802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2dcc08890a230155c4ffefc3cf4a20dd72dd746f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895705"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707754"
 ---
-# <a name="bcpcolptr"></a>bcp_colptr
+# <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -46,9 +46,9 @@ RETCODE bcp_colptr (
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *pData*  
- Pointeur vers les données à copier. Si le type de données liées est de type de valeur élevée (par exemple, SQLTEXT ou SQLIMAGE), *pData* peut être NULL. Une valeur NULL *pData* indique les valeurs de données de type long seront envoyées à SQL Server dans des segments à l’aide [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Pointeur vers les données à copier. Si le type de données lié est un type de valeur élevée (tel que SQLTEXT ou SQLIMAGE), *pData* peut être null. Un *pData* null indique que des valeurs de données longues sont envoyées à SQL Server en segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
- Si *pData* a la valeur NULL et la colonne correspondant au champ lié n’est pas un type de valeur élevée, **bcp_colptr** échoue.  
+ Si *pData* a la valeur null et que la colonne correspondant au champ lié n’est pas un type de valeur élevée, **bcp_colptr** échoue.  
   
  Pour plus d’informations sur les types de valeur élevée, consultez [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **.**  
   
@@ -59,11 +59,11 @@ RETCODE bcp_colptr (
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Le **bcp_colptr** fonction vous permet de modifier l’adresse de la source de données pour une colonne particulière lors de la copie des données à SQL Server avec [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ La fonction **bcp_colptr** vous permet de modifier l’adresse des données sources pour une colonne particulière lors de la copie des données vers SQL Server avec [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
- Initialement, le pointeur vers les données utilisateur est défini par un appel à **bcp_bind**. Si l’adresse de données de variable de programme change entre les appels à **bcp_sendrow**, vous pouvez appeler **bcp_colptr** pour réinitialiser le pointeur vers les données. L’appel suivant à **bcp_sendrow** envoie les données adressées par l’appel à **bcp_colptr**.  
+ Initialement, le pointeur vers les données utilisateur est défini par un appel à **bcp_bind**. Si l’adresse des données de variable de programme change entre les appels à **bcp_sendrow**, vous pouvez appeler **bcp_colptr** pour réinitialiser le pointeur vers les données. L’appel suivant à **bcp_sendrow** envoie les données adressées par l’appel à **bcp_colptr**.  
   
- Il doit y avoir un distinct **bcp_colptr** appel pour chaque colonne dans la table dont les données d’adresse que vous souhaitez modifier.  
+ Il doit y avoir un appel **bcp_colptr** distinct pour chaque colonne de la table dont vous souhaitez modifier l’adresse de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

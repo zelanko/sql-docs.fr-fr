@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6b88e9931ab7575e46f6179680ad721ce40dea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ea8cb10227ccebe10e350ce82b0887eb8a8bacf
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895495"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707519"
 ---
-# <a name="bcpmoretext"></a>bcp_moretext
+# <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -46,7 +46,7 @@ RETCODE bcp_moretext (
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *cbData*  
- Est le nombre d’octets de données sont copiées vers SQL Server à partir de données référencées par *pData*. Une valeur de SQL_NULL_DATA indique NULL.  
+ Nombre d’octets de données copiés vers SQL Server à partir des données référencées par *pData*. Une valeur de SQL_NULL_DATA indique NULL.  
   
  *pData*  
  Pointeur vers le segment de données long, de longueur variable, pris en charge à envoyer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,19 +55,19 @@ RETCODE bcp_moretext (
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction peut être utilisée conjointement avec [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour copier long, les valeurs de données de longueur variable vers SQL Server dans un nombre de blocs plus petits. **bcp_moretext** peut être utilisé avec les colonnes qui ont des types de données SQL Server suivants : **texte**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , type défini par l’utilisateur (UDT) et XML. **bcp_moretext** ne pas les conversions de données de prise en charge, les données fournies doivent correspondre au type de données de la colonne cible.  
+ Cette fonction peut être utilisée conjointement avec [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour copier des valeurs de données longues de longueur variable à SQL Server dans plusieurs segments plus petits. **bcp_moretext** peut être utilisé avec des colonnes qui ont les types de données SQL Server suivants : **Text**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , type défini par l’utilisateur (UDT) et XML. **bcp_moretext** ne prend pas en charge les conversions de données, les données fournies doivent correspondre au type de données de la colonne cible.  
   
- Si **bcp_bind** est appelée avec une valeur non NULL *pData* paramètre pour les types de données qui sont pris en charge par **bcp_moretext**, **bcp_sendrow** envoie la valeur de données entière, quelle que soit la longueur. If, toutefois, **bcp_bind** a une valeur NULL *pData* paramètre pour les types de données pris en charge, **bcp_moretext** peut être utilisé pour copier des données immédiatement après un retour réussi de **bcp_sendrow** indiquant que toutes les colonnes liées avec les données présentes ont été traitées.  
+ Si **bcp_bind** est appelé avec un paramètre *pData* non null pour les types de données pris en charge par **bcp_moretext**, **bcp_sendrow** envoie la valeur de données entière, quelle que soit la longueur. Toutefois, si **bcp_bind** possède un paramètre *pData* null pour les types de données pris en charge, **bcp_moretext** peut être utilisé pour copier des données immédiatement après un retour réussi de **bcp_sendrow** indiquant que toutes les colonnes liées contenant des données sont présentes. ont été traités.  
   
- Si vous utilisez **bcp_moretext** pour envoyer une colonne de type de données pris en charge dans une ligne, vous devez également l’utiliser pour envoyer toutes les autres colonnes de type de données pris en charge dans la ligne. Aucune colonne ne peut être ignorée. Les types de données pris en charge sont SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT et SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY et SQLVARBINARY appartiennent également à cette catégorie si la colonne est un varchar (max), nvarchar (max) ou varbinary (max), respectivement.  
+ Si vous utilisez **bcp_moretext** pour envoyer une colonne de type de données prise en charge dans une ligne, vous devez également l’utiliser pour envoyer toutes les autres colonnes de type de données prises en charge dans la ligne. Aucune colonne ne peut être ignorée. Les types de données pris en charge sont SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT et SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY et SQLVARBINARY appartiennent également à cette catégorie si la colonne est un varchar (max), nvarchar (max) ou varbinary (max), respectivement.  
   
- Appelant **bcp_bind** ou [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) définit la longueur totale de toutes les parties de données à copier vers la colonne SQL Server. Une tentative d’envoi SQL Server davantage d’octets que le nombre spécifié dans l’appel à **bcp_bind** ou **bcp_collen** génère une erreur. Cette erreur surviendrait, par exemple, dans une application ayant utilisé **bcp_collen** pour définir la longueur des données disponibles pour un serveur SQL Server **texte** colonne 4500, puis appelée **bcp_moretext** cinq reprises en indiquant à chaque appel que les données de la longueur du tampon a été de 1000 octets.  
+ L’appel de **bcp_bind** ou [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) définit la longueur totale de toutes les parties de données à copier dans la colonne SQL Server. Une tentative d’envoi d’SQL Server plus d’octets que ce qui est spécifié dans l’appel à **bcp_bind** ou **bcp_collen** génère une erreur. Cette erreur se produit, par exemple, dans une application qui utilisait **bcp_collen** pour définir la longueur des données disponibles pour une colonne de **texte** SQL Server sur 4500, puis appelée **bcp_moretext** cinq fois en indiquant à chaque appel que la mémoire tampon de données la longueur était de 1000 octets.  
   
- Si une ligne copiée contient plusieurs colonnes longues, de longueur variable, **bcp_moretext** envoie d’abord ses données à la plus basse de colonne, suivi par le prochain numéro inférieur le plus bas colonne de numéro et ainsi de suite. Il est important de définir correctement la longueur totale des données attendues. Il n'existe aucun moyen de signaler, en dehors du paramètre de longueur, que toutes les données pour une colonne ont été reçues par copie en bloc.  
+ Si une ligne copiée contient plus d’une colonne de longueur variable, **bcp_moretext** envoie d’abord ses données à la colonne portant le numéro ordinal le plus bas, suivie de la colonne numérotée ordinale suivante, et ainsi de suite. Il est important de définir correctement la longueur totale des données attendues. Il n'existe aucun moyen de signaler, en dehors du paramètre de longueur, que toutes les données pour une colonne ont été reçues par copie en bloc.  
   
- Lorsque **var(max)** les valeurs sont envoyées au serveur à l’aide de bcp_sendrow et bcp_moretext, il n’est pas nécessaire d’appeler bcp_collen pour définir la longueur de colonne. Au lieu de cela, pour ces types uniquement, la valeur est terminée en appelant bcp_sendrow avec une longueur de zéro.  
+ Lorsque les valeurs **var (max)** sont envoyées au serveur à l’aide de bcp_sendrow et bcp_moretext, il n’est pas nécessaire d’appeler bcp_collen pour définir la longueur de la colonne. Au lieu de cela, pour ces types uniquement, la valeur se termine en appelant bcp_sendrow avec une longueur de zéro.  
   
- Une application appelle normalement **bcp_sendrow** et **bcp_moretext** dans les boucles pour envoyer un nombre de lignes de données. Voici une brève présentation de la procédure à suivre pour une table qui contient deux **texte** colonnes :  
+ Une application appelle normalement **bcp_sendrow** et **bcp_moretext** dans les boucles pour envoyer un certain nombre de lignes de données. Voici un aperçu de la procédure à suivre pour une table contenant deux colonnes de **texte** :  
   
 ```  
 while (there are still rows to send)  
