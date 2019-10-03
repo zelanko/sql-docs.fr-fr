@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391947"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816649"
 ---
 # <a name="azdata"></a>azdata
 
@@ -27,9 +27,8 @@ ms.locfileid: "70391947"
 |[azdata sql](reference-azdata-sql.md) | L’interface CLI SQL DB permet à l’utilisateur d’interagir avec SQL Server via T-SQL. |
 |[azdata app](reference-azdata-app.md) | Créer, supprimer, exécuter et gérer des applications. |
 |[azdata bdc](reference-azdata-bdc.md) | Sélectionner, gérer et utiliser des clusters Big Data SQL Server. |
-|[contrôle azdata](reference-azdata-control.md) | Créer, supprimer et gérer des plans de contrôle. |
-[azdata login](#azdata-login) | Se connecter au point de terminaison du contrôleur du cluster.
-[azdata logout](#azdata-logout) | Se déconnecter du cluster.
+|[azdata login](#azdata-login) | Se connecter au point de terminaison du contrôleur du cluster.
+|[azdata logout](#azdata-logout) | Se déconnecter du cluster.
 ## <a name="azdata-login"></a>azdata login
 Quand votre cluster est déployé, il indique le point de terminaison du contrôleur lors du déploiement, que vous devez utiliser pour vous connecter.  Si vous ne connaissez pas le point de terminaison du contrôleur, vous pouvez vous connecter en faisant en sorte que la configuration Kube de votre cluster se trouve sur votre système dans l’emplacement par défaut <user home>/.kube/config ou en utilisant la variable d’environnement KUBECONFIG, par exemple exportez KUBECONFIG=path/to/.kube/configg.
 ```bash
@@ -68,7 +67,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/]).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-logout"></a>azdata logout
@@ -91,7 +90,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par d
 #### `--query -q`
 Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Augmentez le niveau de détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
