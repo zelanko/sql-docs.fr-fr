@@ -156,7 +156,7 @@ En cas d’omission, la valeur par défaut de dwloader est celle qui a été sp�
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 Nom en trois parties pour la table de destination.  
   
 **-I** *source_data_location*  
@@ -397,7 +397,7 @@ Le chargeur insère des lignes à la fin des lignes existantes dans la table de 
 fastappend  
 Le chargeur insère les lignes directement, sans utiliser de table temporaire, à la fin des lignes existantes dans la table de destination. fastappend nécessite l’option multi-transaction (-m). Une base de données intermédiaire ne peut pas être spécifiée lors de l’utilisation de fastappend. Il n’existe pas de restauration avec fastappend, ce qui signifie que la récupération à partir d’un échec ou d’une charge abandonnée doit être gérée par votre propre processus de chargement.  
   
-upsert **-K***merge_column* [,...*n* ]  
+upsert **-K**  *merge_column* [,...*n* ]    
 Le chargeur utilise l’instruction SQL Server Merge pour mettre à jour les lignes existantes et insérer de nouvelles lignes.  
   
 L’option-K spécifie la ou les colonnes sur lesquelles baser la fusion. Ces colonnes forment une clé de fusion, qui doit représenter une ligne unique. Si la clé de fusion existe dans la table de destination, la ligne est mise à jour. Si la clé de fusion n’existe pas dans la table de destination, la ligne est ajoutée.  
@@ -555,12 +555,12 @@ Le mode Append charge les données en deux phases. La phase 1 charge simultaném
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Segment de mémoire (heap)|Oui|Oui|Oui|Minimales|  
 |Segment de mémoire (heap)|Oui|Non|Oui|Minimales|  
-|Segment de mémoire (heap)|Non|Oui|Non|Minimales|  
-|Segment de mémoire (heap)|Non|Non|Non|Minimales|  
-|Cl|Oui|Oui|Non|Minimales|  
+|Segment de mémoire (heap)|Non |Oui|Non |Minimales|  
+|Segment de mémoire (heap)|Non |Non |Non |Minimales|  
+|Cl|Oui|Oui|Non |Minimales|  
 |Cl|Oui|Non|Oui|Complète|  
-|Cl|Non|Oui|Non|Minimales|  
-|Cl|Non|Non|Oui|Complète|  
+|Cl|Non |Oui|Non |Minimales|  
+|Cl|Non |Non|Oui|Complète|  
   
 Le tableau ci-dessus affiche **dwloader** en utilisant le mode Append chargé dans un segment de mémoire ou une table d’index cluster (ci), avec ou sans l’indicateur multitransactionnel, et en chargeant dans une table vide ou une table non vide. Le comportement de verrouillage et de journalisation de chaque combinaison de charge est affiché dans le tableau. Par exemple, si vous chargez (2e) la phase avec le mode Append dans un index cluster sans mode multitransactionnel et dans une table vide, PDW crée un verrou exclusif sur la table et la journalisation est minimale. Cela signifie qu’un client ne sera pas en mesure de charger (2e) la phase et la requête simultanément dans une table vide. Toutefois, lors du chargement avec la même configuration dans une table non vide, PDW n’émet pas de verrou exclusif sur la table et l’accès concurrentiel est possible. Malheureusement, la journalisation complète se produit, ce qui ralentit le processus.  
   
@@ -603,7 +603,7 @@ L’exemple suivant fait partie d’un script de commandes qui charge des donné
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. S’il utilisait InfiniBand, le serveur *< appliance_name >* `-SQLCTL01`.  
+L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. S’il utilisait InfiniBand, le serveur *< appliance_name >*`-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  
@@ -694,7 +694,7 @@ Description des paramètres de ligne de commande:
   
 -   *-r \r\n* spécifie chaque ligne dans DimAccount. txt se termine par un retour chariot et un caractère de saut de ligne.  
   
--   *-U < login_name >-P <password>*  spécifie la connexion et le mot de passe de la connexion qui dispose des autorisations nécessaires pour effectuer la charge.  
+-   *-U < login_name >-P <password> * spécifie la connexion et le mot de passe de la connexion qui dispose des autorisations nécessaires pour effectuer la charge.  
   
 
 <!-- MISSING LINK

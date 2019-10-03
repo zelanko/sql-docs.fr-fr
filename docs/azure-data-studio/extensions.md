@@ -26,8 +26,8 @@ Les extensions sont fournies par l’équipe Azure Data Studio (Microsoft), ains
 
 ## <a name="add-azure-data-studio-extensions"></a>Ajouter des extensions Azure Data Studio
 
-1. Pour ouvrir le gestionnaire d’extensions et accéder aux extensions disponibles, sélectionnez l’icône d’extensions ou sélectionnez **Extensions** dans le menu **Affichage**.
-    Vous pouvez également accéder rapidement au gestionnaire d’extensions en appuyant sur `Ctrl+Shift+X` (Windows/Linux) ou `Command+Shift+X` (Mac).
+1. Pour ouvrir le gestionnaire d’extensions et accéder aux extensions disponibles, sélectionnez l’icône d’extensions ou sélectionnez **Extensions** dans le menu **Affichage**.\
+    Vous pouvez également accéder rapidement au gestionnaire d’extensions en appuyant sur `Ctrl+Shift+X` (Windows/Linux) ou `Command+Shift+X` (Mac).\
     ![icône du gestionnaire d’extensions](media/extensions/extension-manager-icon.png)
 
 2. Sélectionnez une extension disponible pour afficher ses détails.
