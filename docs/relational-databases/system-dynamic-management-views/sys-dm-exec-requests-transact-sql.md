@@ -1,10 +1,10 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326167"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923774"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -47,7 +47,7 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |database_id|**smallint**|ID de la base de données dans laquelle la requête s'exécute. N'accepte pas la valeur NULL.|  
 |user_id|**Int**|ID de l'utilisateur qui a envoyé la demande. N'accepte pas la valeur NULL.|  
 |connection_id|**uniqueidentifier**|ID de la connexion à laquelle la demande est parvenue. Autorise la valeur NULL.|  
-|blocking_session_id|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé pour le moment en raison de transitions d'état de verrou interne.|  
+|blocking_session_id|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL ou égale à 0, la demande n’est pas bloquée ou les informations de session de la session de blocage ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé pour le moment en raison de transitions d'état de verrou interne.|  
 |wait_type|**nvarchar(60)**|Si la demande est actuellement bloquée, cette colonne retourne le type d'attente. Autorise la valeur NULL.<br /><br /> Pour plus d’informations sur les types d’attentes, consultez [sys. &#40;DM _OS_WAIT_STATS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**Int**|Si la demande est actuellement bloquée, cette colonne retourne la durée de l'attente, en millisecondes. N'accepte pas la valeur NULL.|  
 |last_wait_type|**nvarchar(60)**|Si la demande a été bloquée précédemment, cette colonne indique le type de la dernière attente. N'accepte pas la valeur NULL.|  
@@ -77,7 +77,7 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |ansi_padding|**bit**|1 = ANSI_PADDING est activé (ON) pour la demande.<br /><br /> Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
-|transaction_isolation_level|**smallint**|Niveau d'isolation avec lequel la transaction pour cette demande est créée. N'accepte pas la valeur NULL.<br /><br /> 0 = Non spécifié<br /><br /> 1 = Lecture non validée<br /><br /> 2 = Lecture validée<br /><br /> 3 = Répétable<br /><br /> 4 = Sérialisable<br /><br /> 5 = Instantané|  
+|transaction_isolation_level|**smallint**|Niveau d'isolation avec lequel la transaction pour cette demande est créée. N'accepte pas la valeur NULL.<br /> 0 = Non spécifié<br /> 1 = Lecture non validée<br /> 2 = Lecture validée<br /> 3 = Répétable<br /> 4 = Sérialisable<br /> 5 = Instantané|  
 |lock_timeout|**Int**|Délai d'attente de verrou externe pour la demande, en millisecondes. N'accepte pas la valeur NULL.|  
 |deadlock_priority|**Int**|Paramètre DEADLOCK_PRIORITY de la demande. N'accepte pas la valeur NULL.|  
 |row_count|**bigint**|Nombre de lignes retournées au client par cette demande. N'accepte pas la valeur NULL.|  
@@ -96,6 +96,7 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |is_resumable |**bit** |**S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si la demande est une opération d’index pouvant être reprise. |  
 |page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si `wait_resource` la colonne contient une page. Pour plus d’informations, consultez [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**S’applique à** : Azure SQL Database hyperscale<br /><br /> Nombre de lectures du serveur de pages effectuées par cette demande. N'accepte pas la valeur NULL.|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Notes 
 Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif. Les valeurs temporelles retournées par cette vue de gestion dynamique n'incluent pas le temps passé en mode préemptif.
@@ -132,7 +133,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO
 ```
 
-Ensuite, pour rechercher des informations de verrou, utilisez `transaction_id` le copié avec la fonction système **sys. DM _tran_locks**.  
+Ensuite, pour rechercher des informations de verrou, utilisez l' @no__t copiée-0 avec la fonction système **sys. DM _tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

@@ -1,5 +1,5 @@
 ---
-title: Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de Configuration de SSRS) | Microsoft Docs
+title: Configurer un serveur de rapports pour la remise par messagerie (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - local SMTP service [Reporting Services]
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 196bfdc78ea29b1d334660a732f087a50ae9c2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096123"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952331"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "66096123"
   
  
   
-##  <a name="bkmk_configuration_requirements"></a> Configuration requise  
+##  <a name="bkmk_configuration_requirements"></a>Configuration requise  
   
 -   La remise du courrier électronique par le serveur de rapports est implémentée sur des objets de données de collaboration (CDO) et nécessite un serveur SMTP (Simple Mail Transfer Protocol) local ou distant, ou encore un redirecteur SMTP. Le protocole SMTP n'est pas pris en charge sur tous les systèmes d'exploitation Windows. Si vous utilisez l'édition Itanium de Windows Server 2008, le protocole SMTP n'est pas pris en charge. Pour plus d'informations sur les options de configuration fournies par le biais des objets CDO, consultez [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) sur MSDN.  
   
@@ -55,26 +55,26 @@ ms.locfileid: "66096123"
   
  
   
-##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a> Configuration d’un serveur de rapports pour le Service SMTP Local ou distant  
+##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a>Configuration d’un serveur de rapports pour un service SMTP local ou distant  
  Vous pouvez utiliser un service SMTP local ou un serveur ou un redirecteur SMTP distant pour la prise en charge de la remise du courrier électronique. Si vous pouvez accéder à un serveur SMTP existant à distance, pensez à l'utiliser. Si aucun serveur SMTP n'est disponible ou si vous rencontrez par la suite des erreurs liées à la remise des rapports attribuables aux pannes de connexion de l'ordinateur, nous vous recommandons d'utiliser plutôt un service SMTP local. Cette rubrique couvre plus en détail le mode de configuration d'un serveur de rapports pour un service local ou distant.  
   
   
   
-##  <a name="bkmk_setting_email_delivery"></a> Définition des Options de Configuration pour la remise du courrier électronique  
+##  <a name="bkmk_setting_email_delivery"></a>Définition des options de configuration pour la remise par messagerie  
  Avant d'utiliser la remise du courrier électronique par le serveur de rapports, vous devez définir les valeurs de configuration fournissant des informations sur le mode d'utilisation du serveur SMTP.  
   
  Pour configurer un serveur de rapports pour la remise par messagerie, procédez comme suit :  
   
--   Utilisez le Gestionnaire de configuration de Reporting Services si vous spécifiez simplement un serveur SMTP et un compte d'utilisateur ayant l'autorisation d'envoyer des messages électroniques. Ce sont les paramètres minimum requis pour configurer l'extension de remise du courrier électronique par le serveur de rapports. Pour plus d’informations, consultez [paramètres de messagerie - Gestionnaire de Configuration &#40;SSRS en Mode natif&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) et [remise du courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Utilisez le Gestionnaire de configuration de Reporting Services si vous spécifiez simplement un serveur SMTP et un compte d'utilisateur ayant l'autorisation d'envoyer des messages électroniques. Ce sont les paramètres minimum requis pour configurer l'extension de remise du courrier électronique par le serveur de rapports. Pour plus d’informations, consultez [paramètres de messagerie &#40;électronique-Configuration Manager&#41; SSRS en mode natif](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) et [remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   (Facultatif) Utilisez un éditeur de texte pour spécifier les paramètres supplémentaires dans le fichier RSreportserver.config. Ce fichier contient tous les paramètres de configuration pour la remise du courrier électronique par le serveur de rapports. La spécification de paramètres supplémentaires dans ces fichiers est obligatoire si vous utilisez un serveur SMTP local ou si vous limitez la remise par messagerie à des hôtes spécifiques. Pour plus d’informations sur la recherche et la modification des fichiers de configuration, consultez [modifier un fichier de Configuration de Reporting Services &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans la documentation en ligne de SQL Server.  
+-   (Facultatif) Utilisez un éditeur de texte pour spécifier les paramètres supplémentaires dans le fichier RSreportserver.config. Ce fichier contient tous les paramètres de configuration pour la remise du courrier électronique par le serveur de rapports. La spécification de paramètres supplémentaires dans ces fichiers est obligatoire si vous utilisez un serveur SMTP local ou si vous limitez la remise par messagerie à des hôtes spécifiques. Pour plus d’informations sur la recherche et la modification des fichiers de configuration, consultez [modifier &#40;un fichier de&#41; configuration Reporting Services RSReportServer. config](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans documentation en ligne de SQL Server.  
   
 > [!NOTE]  
 >  Les paramètres du courrier électronique pour le serveur de rapports dépendent du CDO. Si vous souhaitez obtenir plus de détails sur des paramètres spécifiques, reportez-vous à la documentation de production CDO.  
   
 
   
-##  <a name="bkmk_example_config_file"></a> Configuration de courrier électronique du serveur de rapports exemple  
+##  <a name="bkmk_example_config_file"></a>Exemple de configuration de la messagerie du serveur de rapports  
  L'exemple suivant illustre les paramètres dans le fichier RSreportserver.config pour un serveur SMTP distant. Pour plus d'dans la documentation en ligne deformations sur les descriptions et les valeurs valides de paramètres, consultez [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onldans la documentation en ligne dee or the CDO product documentation.  
   
 ```  
@@ -107,7 +107,7 @@ ms.locfileid: "66096123"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Options de configuration pour la définition à : Champ dans un Message  
+##  <a name="bkmk_setting_TO_field"></a>Options de configuration pour la définition de la valeur : Champ dans un message  
  Les abonnements définis par l'utilisateur qui sont créés en fonction des autorisations accordées par la tâche **Gérer les abonnements individuels** contiennent un nom d'utilisateur prédéfini qui repose sur le compte d'utilisateur de domaine. Lorsque l'utilisateur crée l'abonnement, le nom du destinataire dans le champ **À :** est configuré automatiquement à l'adresse de la personne qui crée l'abonnement, au moyen du compte d'utilisateur de domaine.  
   
  Si vous utilisez un redirecteur ou un serveur SMTP qui utilise des comptes de messagerie différents du compte d'utilisateur de domaine, la remise des rapports échouera lorsque le serveur SMTP tentera de remettre le rapport à cet utilisateur.  
@@ -124,7 +124,7 @@ ms.locfileid: "66096123"
   
   
   
-##  <a name="bkmk_options_remote_SMTP"></a> Options de configuration pour le Service SMTP distant  
+##  <a name="bkmk_options_remote_SMTP"></a>Options de configuration pour le service SMTP distant  
  La connexion entre le serveur de rapports et le serveur ou redirecteur SMTP est déterminée par les paramètres de configuration suivants :  
   
 -   `SendUsing` spécifie une méthode pour l’envoi de messages. Vous pouvez choisir entre un service SMTP réseau ou un répertoire de collecte du service SMTP local. Pour utiliser un service SMTP distant, cette valeur doit être définie sur **2** dans le fichier RSReportServer.config.  
@@ -143,8 +143,8 @@ ms.locfileid: "66096123"
   
 
   
-##  <a name="bkmk_options_local_SMTP"></a> Options de configuration pour le Service SMTP Local  
- La configuration d'un service SMTP local est pratique si vous testez ou dépannez la remise du courrier électronique par le serveur de rapports. Par défaut, le service SMTP local n'est pas activé. Pour savoir comment l’activer, consultez [configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de Configuration de SSRS)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) et [paramètres de messagerie - Gestionnaire de Configuration &#40;SSRS en Mode natif&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
+##  <a name="bkmk_options_local_SMTP"></a>Options de configuration pour le service SMTP local  
+ La configuration d'un service SMTP local est pratique si vous testez ou dépannez la remise du courrier électronique par le serveur de rapports. Par défaut, le service SMTP local n'est pas activé. Pour obtenir des instructions sur la façon de l’activer, consultez [configurer un serveur de rapports pour la remise par messagerie (SSRS Configuration Manager)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) et [paramètres de messagerie-Configuration Manager &#40;le mode&#41;natif SSRS](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  La connexion entre le serveur de rapports et le serveur ou le redirecteur SMTP local est déterminée par les paramètres de configuration suivants :  
   
@@ -153,13 +153,13 @@ ms.locfileid: "66096123"
 -   **SMTPServerPickupDirectory** est défini sur un dossier de lecteur local.  
   
     > [!NOTE]  
-    >  N’oubliez pas que vous ne définissez pas `SMTPServer` si vous utilisez un serveur SMTP local.  
+    >  Veillez à ne pas définir `SMTPServer` si vous utilisez un serveur SMTP local.  
   
 -   `From` définit la valeur qui s’affiche sur la ligne **De :** d’un e-mail. Cette valeur est requise.  
   
  
   
-##  <a name="bkmk_use_configuration_manager"></a> Pour configurer la messagerie report server à l’aide du Gestionnaire de Configuration de Reporting Services  
+##  <a name="bkmk_use_configuration_manager"></a>Pour configurer la messagerie électronique du serveur de rapports à l’aide de l’Gestionnaire de configuration de Reporting Services  
   
 1.  Vérifiez que le service Report Server Windows a des autorisations `Send As` sur le serveur SMTP.  
   
@@ -173,21 +173,21 @@ ms.locfileid: "66096123"
   
 
   
-##  <a name="bkmk_confiugre_remote_SMTP"></a> Pour configurer un SMTP Service distant pour le serveur de rapports  
+##  <a name="bkmk_confiugre_remote_SMTP"></a>Pour configurer un service SMTP distant pour le serveur de rapports  
   
 1.  Vérifiez que le service Report Server Windows a des autorisations `Send As` sur le serveur SMTP.  
   
 2.  Ouvrez le fichier RSReportServer.config dans un éditeur de texte.  
   
-3.  Vérifiez que <`UrlRoot`> est définie sur l’adresse URL de serveur de rapports. Cette valeur est définie lorsque vous configurez le serveur de rapports et elle devrait normalement être déjà définie. Si elle n'est pas définie, tapez l'adresse URL du serveur de rapports.  
+3.  Vérifiez que < `UrlRoot` > est définie sur l’adresse URL du serveur de rapports. Cette valeur est définie lorsque vous configurez le serveur de rapports et elle devrait normalement être déjà définie. Si elle n'est pas définie, tapez l'adresse URL du serveur de rapports.  
   
-4.  Dans la section remise, recherchez <`ReportServerEmail`>.  
+4.  Dans la section remise, recherchez < `ReportServerEmail` >.  
   
-5.  Dans <`SMTPServer`>, tapez le nom du serveur SMTP. Il peut s'agir d'une adresse IP, du nom UNC d'un ordinateur sur l'intranet de votre entreprise ou d'un nom de domaine complet.  
+5.  Dans < `SMTPServer` >, tapez le nom du serveur SMTP. Il peut s'agir d'une adresse IP, du nom UNC d'un ordinateur sur l'intranet de votre entreprise ou d'un nom de domaine complet.  
   
-6.  Vérifiez que <`SendUsing`> est défini sur 2. Si la valeur est différente, le serveur de rapports n'est pas configuré pour utiliser un service SMTP distant.  
+6.  Vérifiez que < `SendUsing` > a la valeur 2. Si la valeur est différente, le serveur de rapports n'est pas configuré pour utiliser un service SMTP distant.  
   
-7.  Dans <`From`>, tapez le nom d’un compte qui a l’autorisation d’envoyer des messages électroniques à partir du serveur SMTP.  
+7.  Dans < `From` >, tapez le nom d’un compte qui a l’autorisation d’envoyer du courrier électronique à partir du serveur SMTP.  
   
 8.  Enregistrez le fichier.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "66096123"
   
 
   
-##  <a name="bkmk_confiugre_local_SMTP"></a> Pour configurer un SMTP Service local pour le serveur de rapports  
+##  <a name="bkmk_confiugre_local_SMTP"></a>Pour configurer un service SMTP local pour le serveur de rapports  
   
 1.  Dans le Panneau de configuration, cliquez sur **Ajout/Suppression de programmes**.  
   

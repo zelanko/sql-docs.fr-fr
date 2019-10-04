@@ -14,15 +14,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096193"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952636"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
   Chaque instance de serveur de rapports requiert une connexion à la base de données de serveur de rapports qui stocke les rapports, les modèles de rapport, les sources de données partagées, les ressources et les métadonnées gérées par le serveur. La connexion initiale peut être créée lors de l'installation d'un serveur de rapports si vous installez la configuration par défaut. Dans la plupart des cas, vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer la connexion une fois l'installation terminée. Vous pouvez modifier la connexion à tout moment afin de changer de type de compte ou de redéfinir les informations d'identification. Pour obtenir des instructions détaillées sur la création de la base de données et la configuration de la connexion, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "66096193"
   
  La base de données du serveur de rapports est un composant interne, accessible uniquement par le serveur de rapports. Les informations d'identification et de connexion que vous spécifiez pour la base de données du serveur de rapports sont utilisées exclusivement par le serveur de rapports. Les utilisateurs qui demandent des rapports n'ont pas besoin d'autorisations de base de données ou d'une connexion de base de données pour la base de données du serveur de rapports.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise `System.Data.SqlClient` pour se connecter à la [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données de serveur de rapports. Si vous utilisez une instance locale du [!INCLUDE[ssDE](../../includes/ssde-md.md)], le serveur de rapports établit la connexion à l'aide de la mémoire partagée. Si vous utilisez un serveur de base de données distant pour la base de données du serveur de rapports, il se peut que vous ayez à activer les connexions distantes selon l'édition que vous utilisez. Si vous utilisez l’édition Enterprise, les connexions distantes sont activées par défaut pour TCP/IP.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise `System.Data.SqlClient` pour se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Si vous utilisez une instance locale du [!INCLUDE[ssDE](../../includes/ssde-md.md)], le serveur de rapports établit la connexion à l'aide de la mémoire partagée. Si vous utilisez un serveur de base de données distant pour la base de données du serveur de rapports, il se peut que vous ayez à activer les connexions distantes selon l'édition que vous utilisez. Si vous utilisez l’édition Enterprise, les connexions distantes sont activées par défaut pour TCP/IP.  
   
  Pour vérifier que l’instance accepte les connexions à distance, cliquez successivement sur **Démarrer**, **Tous les programmes**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Outils de configuration**, **Gestionnaire de configuration SQL Server**, puis vérifiez que le protocole TCP/IP est activé pour chaque service.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66096193"
 ### <a name="storing-database-connection-information"></a>Stockage des informations de connexion à la base de données  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke et chiffre les informations de connexion dans les paramètres RSreportserver.config suivants. Vous devez recourir à l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou à l'utilitaire rsconfig.exe pour créer des valeurs chiffrées pour ces paramètres.  
   
- Certaines valeurs ne sont pas définies pour tous les types de connexion. Si vous configurez la connexion en utilisant les valeurs par défaut (c'est-à-dire, en utilisant les comptes de service pour établir la connexion), <`LogonUser`>, <`LogonDomain`>, et <`LogonCred`> sera vide, comme suit :  
+ Certaines valeurs ne sont pas définies pour tous les types de connexion. Si vous configurez la connexion à l’aide des valeurs par défaut (c’est-à-dire, en utilisant les comptes de service pour établir la connexion), < `LogonUser` >, < `LogonDomain` > et < `LogonCred` > sont vides, comme suit :  
   
 ```  
 <Dsn></Dsn>  

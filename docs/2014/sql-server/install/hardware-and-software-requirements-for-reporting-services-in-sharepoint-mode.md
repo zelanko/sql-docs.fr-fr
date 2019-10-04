@@ -1,5 +1,5 @@
 ---
-title: Matérielle et logicielle requise pour Reporting Services en Mode SharePoint | Microsoft Docs
+title: Configurations matérielle et logicielle requises pour Reporting Services en mode SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5584984121403b1a70e15fb02e85b7afcc169843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d17e0087c2d2899178d15845f58e03265e9f6c47
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094978"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952203"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Configurations matérielle et logicielle pour Reporting Services en mode SharePoint
 
@@ -67,7 +67,7 @@ ms.locfileid: "66094978"
   
 ##  <a name="bkmk_more_information"></a> Informations supplémentaires
 
- Pour plus d’informations sur les modifications apportées à SharePoint, consultez [changements entre SharePoint 2010 vers SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
+ Pour plus d’informations sur les modifications apportées à SharePoint, consultez [modifications de sharepoint 2010 à sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   
  [Notes de mise à jour de SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

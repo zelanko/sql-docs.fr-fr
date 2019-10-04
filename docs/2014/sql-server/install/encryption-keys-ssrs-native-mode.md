@@ -1,5 +1,5 @@
 ---
-title: Clés de chiffrement (SSRS en Mode natif) | Microsoft Docs
+title: Clés de chiffrement (SSRS en mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095414"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952171"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Clés de chiffrement (SSRS en mode natif)
   Utilisez la page Clés de chiffrement pour gérer la clé symétrique utilisée pour chiffrer et déchiffrer les données dans un serveur de rapports. La gestion des clés de chiffrement représente une partie importante de la configuration du serveur de rapports. La clé symétrique est créée et appliquée automatiquement lorsque vous créez la base de données du serveur de rapports. Créez une copie de sauvegarde de la clé symétrique de façon à pouvoir effectuer les opérations de maintenance de routine. Les tâches de maintenance suivantes nécessitent une copie valide de la clé symétrique :  
@@ -51,9 +51,9 @@ ms.locfileid: "66095414"
  **Restore**  
  Applique une copie de la clé symétrique enregistrée précédemment à la base de données du serveur de rapports. Vous devez fournir un mot de passe pour déverrouiller le fichier.  
   
- La copie précédente de la clé symétrique de l'instance du serveur de rapports à laquelle vous est actuellement connecté est remplacée par la version restaurée. Après avoir restauré la clé symétrique, vous devez initialiser tous les serveurs de rapports qui utilisent la base de données du serveur de rapports. Pour plus d’informations sur l’initialisation des serveurs de rapports, consultez [initialiser un serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ La copie précédente de la clé symétrique de l'instance du serveur de rapports à laquelle vous est actuellement connecté est remplacée par la version restaurée. Après avoir restauré la clé symétrique, vous devez initialiser tous les serveurs de rapports qui utilisent la base de données du serveur de rapports. Pour plus d’informations sur l’initialisation des serveurs de rapports, consultez [initialiser &#40;un Configuration Manager&#41;SSRS de serveur de rapports](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
- **Change**  
+ **Modifiés**  
  Recrée la clé symétrique et rechiffre toutes les valeurs chiffrées de la base de données du serveur de rapports. Veillez à arrêter le service Report Server avant de recréer la clé symétrique.  
   
  Dans un déploiement avec montée en puissance parallèle, toutes les copies de la clé symétrique sont remplacées par les versions plus récentes. Avant de remplacer la clé symétrique, veillez à passer en revue la liste des serveurs joints au déploiement avec montée en puissance parallèle pour vérifier que seules les instances valides du serveur de rapports obtiennent un accès à la nouvelle clé. Les serveurs qui font partie d'un déploiement avec montée en puissance parallèle sont répertoriés dans la page **Déploiement avec montée en puissance parallèle** . Arrêtez le service sur chaque serveur de rapports du déploiement avant de recréer la clé.  
@@ -68,7 +68,7 @@ ms.locfileid: "66095414"
  Il n'existe pas de méthode automatique de mise à jour de ces informations. Les rapports, les abonnements et les sources de données partagées qui utilisent des informations d'identification stockées et des chaînes de connexion doivent être mis à jour l'un après l'autre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques d’aide F1 Gestionnaire de Configuration de Reporting Services &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41;mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dd1f843159e4fcbfc4d46c762647f21bd7fec843
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 837843ec91a5bce8475d8153a15f61ad62721f12
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893491"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951991"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Désinstaller PowerPivot pour SharePoint
   La désinstallation d'une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est une opération comportant plusieurs étapes qui inclut la préparation pour la désinstallation, la suppression des fonctionnalités et des solutions de la batterie de serveurs, et la suppression des fichiers programme et des paramètres du Registre.  
@@ -32,11 +32,11 @@ ms.locfileid: "68893491"
   
 -   [Étape 3 : Exécuter le programme d’installation de SQL Server pour supprimer des programmes de l’ordinateur local](#bkmk_uninstall)  
   
--   [Étape 4 : Désinstaller le complément PowerPivot pour SharePoint](#bkmk_addin)  
+-   [Étape 4 : Désinstaller le complément PowerPivot pour SharePoint @ no__t-0  
   
--   [Étape 5 : Vérifier la désinstallation](#verify)  
+-   [Étape 5 : Vérifier la désinstallation](#verify)  
   
--   [Étape 6 : Check-list postdésinstallation](#bkmk_post)  
+-   [Étape 6 : Check-list postdésinstallation](#bkmk_post)  
   
 ##  <a name="prereq"></a> Conditions préalables  
   
@@ -122,7 +122,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  Passez en revue les déploiements existants pour obtenir les informations suivantes : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
-4.  Pour les déploiements ou les rétractions liés aux solutions PowerPivot, copiez la valeur GUID de **JobID** , puis collez-la dans la commande suivante (utilisez les commandes marquer, copier et coller dans le menu Edition de l’interpréteur de commandes pour copier le GUID):  
+4.  Pour les déploiements ou les rétractions liés aux solutions PowerPivot, copiez la valeur GUID de **JobID** , puis collez-la dans la commande suivante (utilisez les commandes marquer, copier et coller dans le menu Edition de l’interpréteur de commandes pour copier le GUID) :  
   
     ```  
     Stsadm -o canceldeployment -id "<GUID>"  

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714744"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952023"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutoriel : Créer des modèles basés sur des partitions dans R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Dans ce didacticiel, Découvrez la modélisation basée sur les partitions à l�
 
 ## <a name="prerequisites"></a>Prérequis
  
-Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
+Pour suivre ce didacticiel, vous devez disposer des éléments suivants:
 
 + Ressources système suffisantes. Le jeu de données est volumineux et les opérations de formation nécessitent beaucoup de ressources. Si possible, utilisez un système doté d’au moins 8 Go de RAM. Vous pouvez également utiliser des jeux de données plus petits pour contourner les contraintes de ressources. Les instructions pour réduire le jeu de données sont Inline. 
 
@@ -107,7 +107,7 @@ Parmi les entrées de paramètre utilisées par ce script, vous verrez **input_d
 
 Pour cette procédure stockée, [Utilisez le parallélisme](#parallel) pour accélérer l’exécution.
 
-Après avoir exécuté ce script, vous devriez voir **train_rxLogIt_per_partition** dans les procédures \Programmability\Stored sous la base de données **NYCTaxi_Sample** dans l’Explorateur d’objets. Vous devez également voir une nouvelle table utilisée pour le stockage des modèles: **dbo. nyctaxi_models**.
+Après avoir exécuté ce script, vous devriez voir **train_rxLogIt_per_partition** dans les procédures \Programmability\Stored sous la base de données **NYCTaxi_Sample** dans l’Explorateur d’objets. Vous devez également voir une nouvelle table utilisée pour le stockage des modèles : **dbo. nyctaxi_models**.
 
 ```sql
 USE NYCTaxi_Sample
@@ -167,14 +167,12 @@ GO
 
 ### <a name="parallel-execution"></a>Exécution en parallèle
 
-Notez que les entrées [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) incluent  **@parallel= 1**, utilisées pour activer le traitement parallèle. Contrairement aux versions précédentes, dans SQL Server 2019, la définition  **@parallelde = 1** offre une indication plus forte à l’optimiseur de requête, ce qui rend l’exécution parallèle un résultat bien plus probable.
+Notez que les entrées [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) incluent `@parallel=1`, utilisées pour activer le traitement parallèle. Contrairement aux versions précédentes, dans SQL Server 2019, la définition de `@parallel=1` offre une indication plus forte à l’optimiseur de requête, ce qui rend l’exécution parallèle un résultat bien plus probable.
 
-Par défaut, l’optimiseur de requête a tendance à fonctionner sous  **@parallel= 1** sur les tables contenant plus de 256 lignes, mais si vous pouvez le gérer explicitement en définissant  **@parallel= 1** comme indiqué dans ce script.
+Par défaut, l’optimiseur de requête a tendance à fonctionner sous `@parallel=1` sur les tables contenant plus de 256 lignes, mais si vous pouvez le gérer explicitement en définissant `@parallel=1` comme indiqué dans ce script.
 
 > [!Tip]
-> Pour la formation workoads, vous pouvez **@parallel** utiliser avec n’importe quel script d’apprentissage arbitraire, y compris ceux qui utilisent des algorithmes non-Microsoft-RX. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe RX) offrent un parallélisme dans les scénarios d’apprentissage dans SQL Server. Toutefois, avec le nouveau paramètre, vous pouvez paralléliser un script qui appelle des fonctions, y compris des fonctions R Open source, qui ne sont pas spécifiquement conçues avec cette fonctionnalité. Cela fonctionne parce que les partitions ont une affinité avec des threads spécifiques, de sorte que toutes les opérations appelées dans un script s’exécutent sur une base par partition, sur le thread donné.
-
-<a name="training-step"></a>
+> Pour la formation workoads, vous pouvez utiliser `@parallel` avec n’importe quel script d’apprentissage arbitraire, même ceux qui utilisent des algorithmes non-Microsoft-RX. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe RX) offrent un parallélisme dans les scénarios d’apprentissage dans SQL Server. Toutefois, avec le nouveau paramètre, vous pouvez paralléliser un script qui appelle des fonctions, y compris des fonctions R Open source, qui ne sont pas spécifiquement conçues avec cette fonctionnalité. Cela fonctionne parce que les partitions ont une affinité avec des threads spécifiques, de sorte que toutes les opérations appelées dans un script s’exécutent sur une base par partition, sur le port @ no__t-0<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>Exécuter la procédure et effectuer l’apprentissage du modèle
 

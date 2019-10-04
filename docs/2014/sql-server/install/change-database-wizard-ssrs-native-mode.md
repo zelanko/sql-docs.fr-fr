@@ -1,5 +1,5 @@
 ---
-title: Modifier l’Assistant base de données (Mode natif SSRS) | Microsoft Docs
+title: Assistant modification de base de données (SSRS en mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Change Database Wizard
 - report server database, create
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096667"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952664"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Assistant Modification de base de données (SSRS en mode natif)
   Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit l'Assistant Modification de la base de données pour vous guider à travers les différentes étapes de la création d'une base de données du serveur de rapports ou de la sélection d'une base de données existante du serveur de rapports en vue de l'utiliser avec l'instance en cours du serveur de rapports.  
   
  Si vous sélectionnez une base de données du serveur de rapports d'une version antérieure, elle sera mise à niveau pour correspondre à la version de l'instance du serveur de rapports à laquelle elle est connectée. Lorsque le service démarre, il vérifie automatiquement la version de la base de données et la met automatiquement à niveau avec le schéma en cours.  
   
- Pour démarrer l'Assistant, cliquez sur **Modifier la base de données** dans la page Base de données du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour obtenir des instructions sur la façon de démarrer le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consultez [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour démarrer l'Assistant, cliquez sur **Modifier la base de données** dans la page Base de données du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour obtenir des instructions sur la façon de démarrer le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consultez [ &#40;gestionnaire de configuration de Reporting Services mode&#41;natif](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66096667"
  Sélectionnez la tâche à exécuter. Vous pouvez créer une base de données en mode natif ou en mode intégré SharePoint. Ou, vous pouvez sélectionner une base de données existante du serveur de rapports afin de l'utiliser avec l'instance en cours du serveur de rapports.  
   
  **Serveur de base de données**  
- Spécifiez le nom de l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Vous pouvez utiliser une instance par défaut ou nommée sur un ordinateur local ou distant. Si vous vous connectez à une instance nommée, entrez le nom du serveur au format suivant : \< *server*>\\<*instance*>.  
+ Spécifiez le nom de l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Vous pouvez utiliser une instance par défaut ou nommée sur un ordinateur local ou distant. Si vous vous connectez à une instance nommée, entrez le nom du serveur au format suivant : \<*server*> @ no__t-3 @ no__t-4*instance*>.  
   
  Pour vous connecter à l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous devez utiliser les informations d’identification qui ont l’autorisation de se connecter au serveur et de mettre à jour les informations de la base de données. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise vos informations d'identification Windows en cours, mais si vous n'avez pas de connexion ou d'autorisations sur la base de données, vous devez spécifier une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous ne pouvez pas spécifier d'autres informations d'identification Windows. Si vous souhaitez vous connecter en tant qu'utilisateur Windows différent, connectez-vous comme cet utilisateur et démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66096667"
  **Sauvegarde de la base de données**  
  Spécifie le nom de la base de données du serveur de rapports qui stocke les données du serveur. Vous pouvez spécifier une base de données existante ou en créer une.  
   
- Les propriétés utilisées pour créer une base de données apparaissent dans l'Assistant lorsque vous sélectionnez **Créer une nouvelle base de données** sur la page Actions. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crée deux bases de données liées par le nom : une base de données pour contenir les données statiques et une base de données temporaire pour stocker les données de session et les données de travail. Pour plus d’informations, consultez [base de données du serveur de rapports &#40;SSRS en Mode natif&#41; ](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+ Les propriétés utilisées pour créer une base de données apparaissent dans l'Assistant lorsque vous sélectionnez **Créer une nouvelle base de données** sur la page Actions. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crée deux bases de données liées par le nom : une base de données pour contenir les données statiques et une base de données temporaire pour stocker les données de session et les données de travail. Pour plus d’informations, consultez [base de &#40;données du serveur&#41; de rapports en mode natif SSRS](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Vous pouvez également choisir une base de données existante du serveur de rapports. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne filtre pas les bases de données non valides. Les bases de données valides sont basées sur le schéma de base de données du serveur de rapports (vous ne pouvez pas sélectionner une base de données où manquent les tables, les vues ou les procédures stockées nécessaires). Si vous choisissez une base de données créée à partir d'une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la base de données sera mise à niveau au format actuel.  
   
@@ -62,25 +62,25 @@ ms.locfileid: "66096667"
  Si vous sélectionnez une autre base de données du serveur de rapports, le mode de la base de données courante s'affiche afin que vous sachiez comment celle-ci est utilisée.  
   
  **Informations d’identification**  
- Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local ( *\<nom_ordinateur >\\< nom d’utilisateur\>* ) si le serveur de rapports et de la base de données se trouvent sur le même ordinateur ou un utilisateur de domaine compte ( *\<domaine >\\< nom d’utilisateur\>* ) s’ils sont sur des ordinateurs différents dans le même domaine.  
+ Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local ( *\<computername > \\ < nom d’utilisateur @ no__t-3*) si le serveur de rapports et la base de données se trouvent sur le même ordinateur, ou un compte d’utilisateur de domaine ( *\<domain > \\ < nom d’utilisateur @ no__t-7*) s’ils se trouvent sur des ordinateurs différents du même domaine.  
   
  Le serveur de rapports crée alors une connexion de base de données et attribue les autorisations de base de données au compte que vous spécifiez.  
   
  Le serveur de rapports ne crée pas le compte lui-même. Le compte que vous spécifiez doit déjà exister et doit être valide pour votre configuration de déploiement. Plus particulièrement, si la base de données se trouve sur un ordinateur distant et que vous souhaitez utiliser un compte Windows, vous devez spécifier un compte qui a les autorisations de connexion sur cet ordinateur.  
   
- Si l'ordinateur se trouve dans un domaine différent ou non approuvé, pensez à utiliser la connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur le choix d’un compte, consultez [configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Si l'ordinateur se trouve dans un domaine différent ou non approuvé, pensez à utiliser la connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur le choix d’un compte, consultez [configurer une connexion &#40;de base&#41;de données du serveur de rapports Configuration Manager SSRS](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Résumé**  
  Vérifiez les paramètres avant que le programme d'installation ne configure la connexion.  
   
- **État d’avancement et fin**  
+ **Progression et terminer**  
  Surveillez la progression de chaque tâche.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Base de données &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [Modifier les informations d’identification Assistant &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)   
+ [Base &#40;de données SSRS&#41;en mode natif](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [Assistant &#40;modification des informations d’identification SSRS&#41;en mode natif](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)   
  [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Rubriques d’aide F1 Gestionnaire de Configuration de Reporting Services &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41;mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

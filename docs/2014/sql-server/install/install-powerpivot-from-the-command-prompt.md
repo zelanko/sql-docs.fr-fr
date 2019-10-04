@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8b8460927baa185233234baa2f6401fa600f3fff
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890181"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952129"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installer PowerPivot à partir de l'invite de commandes
   Vous pouvez exécuter le programme d'installation depuis la ligne de commande pour installer SQL Server PowerPivot pour SharePoint. Vous devez inclure le paramètre de `/ROLE` dans votre commande et exclure le paramètre `/FEATURES`.  
@@ -28,7 +28,7 @@ ms.locfileid: "68890181"
  L'ordinateur doit être joint au même domaine que la batterie de serveurs SharePoint.  
   
 ##  <a name="Commands"></a>Options d’installation basées sur/ROLE  
- Dans les déploiements PowerPivot pour SharePoint, le paramètre `/ROLE` est utilisé à la place du paramètre `/FEATURES`. Les valeurs valides incluent :  
+ Dans les déploiements PowerPivot pour SharePoint, le paramètre `/ROLE` est utilisé à la place du paramètre `/FEATURES`. Les valeurs valides sont les suivantes :  
   
 -   `SPI_AS_ExistingFarm`  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68890181"
   
  Ces deux rôles installent les fichiers d'application, de configuration et de déploiement qui permettent à un PowerPivot pour SharePoint de s'exécuter dans une batterie de serveurs SharePoint. La spécification de l'un ou l'autre rôle forcera le programme d'installation à vérifier les configurations matérielle et logicielle requises pour l'intégration SharePoint.  
   
- L'option batterie de serveurs existante suppose qu'une batterie de serveurs SharePoint est déjà en place. L’option nouvelle batterie de serveurs part du principe que vous allez créer une batterie de serveurs; Il prend en charge l’ajout d’une instance de Moteur de base de données dans la syntaxe de la ligne de commande afin que vous puissiez utiliser l’instance Moteur de base de données en tant que serveur de base de données de la batterie de serveurs.  
+ L'option batterie de serveurs existante suppose qu'une batterie de serveurs SharePoint est déjà en place. L’option nouvelle batterie de serveurs part du principe que vous allez créer une batterie de serveurs ; Il prend en charge l’ajout d’une instance de Moteur de base de données dans la syntaxe de la ligne de commande afin que vous puissiez utiliser l’instance Moteur de base de données en tant que serveur de base de données de la batterie de serveurs.  
   
  Contrairement aux versions précédentes, toutes les tâches de configuration du serveur sont effectuées comme après l'installation. Si vous automatisez les étapes d'installation et de configuration, vous pouvez utiliser PowerShell pour configurer le serveur. Pour plus d’informations, consultez [configuration de PowerPivot à l’aide de Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
@@ -82,9 +82,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Remplacez les espaces réservés pour \<domaine\nom_utilisateur > et \<StrongPassword > par des comptes d’utilisateur et des mots de passe valides.  
+3.  Remplacez les espaces réservés pour \<domain \ username > et \<StrongPassword > par des comptes d’utilisateur et des mots de passe valides.  
   
-     Les `/assvaccount` paramètres et **/ASSVCPASSWORD** sont utilisés pour configurer l' [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance sur le serveur d’applications. Remplacez ces espaces réservés par des informations de compte valides.  
+     Les paramètres `/assvaccount` et **/ASSVCPASSWORD** sont utilisés pour configurer l’instance [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] sur le serveur d’applications. Remplacez ces espaces réservés par des informations de compte valides.  
   
      Le paramètre **/ASSYSADMINACCOUNTS** doit être défini sur l’identité de l’utilisateur qui exécute SQL Server installation. Vous devez spécifier au moins un administrateur système. Notez que le programme d'installation de SQL Server n'accorde plus d'autorisations sysadmin automatiques aux membres du groupe intégré Administrateurs.  
   

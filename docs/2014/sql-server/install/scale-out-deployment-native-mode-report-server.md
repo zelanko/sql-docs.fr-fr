@@ -1,5 +1,5 @@
 ---
-title: Montée en puissance déploiement (serveur de rapports en Mode natif) | Microsoft Docs
+title: Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092429"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952417"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif)
   Utilisez la page **Déploiement avec montée en puissance parallèle** dans le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour afficher l'état d'initialisation d'un déploiement avec montée en puissance parallèle ou pour joindre un serveur de rapports à un déploiement avec montée en puissance parallèle. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
@@ -37,7 +37,7 @@ ms.locfileid: "66092429"
  Pour ouvrir la page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez **Déploiement avec montée en puissance parallèle** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
- **Nom du serveur SQL**  
+ **Nom de l’SQL Server**  
  Spécifiez le nom de l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports.  
   
  **Nom de la base de données**  
@@ -46,7 +46,7 @@ ms.locfileid: "66092429"
  **Mode serveur**  
  Affiche le mode du serveur et de la base de données. Le mode du serveur est le mode natif ou le mode intégré SharePoint. Les déploiements avec montée en puissance parallèle sont pris en charge pour les deux modes.  
   
- **Server**  
+ **Serveur**  
  Affiche le nom du serveur de rapports. Dans la plupart des cas, il s'agit du nom de l'ordinateur sur lequel le serveur de rapports est installé.  
   
  **Instance**  
@@ -73,7 +73,7 @@ ms.locfileid: "66092429"
   
  Par précaution, veillez à créer une copie de sauvegarde de la clé symétrique avant de la supprimer. Après avoir supprimé de la liste les clés de chiffrement du dernier serveur de rapports, vous introduisez de nouvelles conditions sur toutes les initialisations ultérieures de serveur de rapports pour cette base de données. En effet, après avoir initialisé un serveur de rapports, vous devez restaurer une copie de sauvegarde de la clé symétrique. La restauration de la clé symétrique est nécessaire pour pouvoir accéder aux données chiffrées actuellement présentes dans la base de données du serveur de rapports.  
   
- Si vous n'avez plus besoin des données chiffrées ou si vous ne possédez pas de copie de sauvegarde de la clé, vous devez supprimer les données chiffrées. Pour plus d’informations, consultez [clés de chiffrement &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+ Si vous n'avez plus besoin des données chiffrées ou si vous ne possédez pas de copie de sauvegarde de la clé, vous devez supprimer les données chiffrées. Pour plus d’informations, consultez [clés &#40;de chiffrement&#41;SSRS en mode natif](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

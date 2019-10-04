@@ -1,5 +1,5 @@
 ---
-title: Revendications au Service de jeton Windows (C2WTS) et Reporting Services | Microsoft Docs
+title: Service d’jetons Revendications vers Windows (C2WTS) et Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - C2WTS
 - WSS_WPG
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e08be032df493913cc6cebf5ae29d583f26c86ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81bc6c12720d4b841e21191db5811d583d4c5edc
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096548"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952270"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
-  Les revendications SharePoint vers Windows Token Service (c2WTS) est nécessaire avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint si vous souhaitez utiliser l’authentification windows pour les Sources de données qui sont en dehors de la batterie de serveurs SharePoint. Ceci s'applique même si les utilisateurs accèdent aux sources de données à l'aide de l'authentification Windows, car la communication entre le serveur Web frontal (WFE) et le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se fera toujours via l'authentification basée sur les revendications.  
+  Le service d’jetons Revendications vers Windows SharePoint (c2WTS) est requis avec le mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint si vous souhaitez utiliser l’authentification Windows pour les sources de données qui se trouvent en dehors de la batterie de serveurs SharePoint. Ceci s'applique même si les utilisateurs accèdent aux sources de données à l'aide de l'authentification Windows, car la communication entre le serveur Web frontal (WFE) et le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se fera toujours via l'authentification basée sur les revendications.  
   
  C2WTS est nécessaire même si votre ou vos sources de données résident sur le même ordinateur que le service partagé. Toutefois dans ce scénario, la délégation contrainte n'est pas nécessaire.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66096548"
 ## <a name="prerequisites"></a>Prérequis  
   
 > [!NOTE]  
->  Remarque : Certaines étapes de configuration peuvent changer ou peut ne pas fonctionnent dans certaines topologies de batterie de serveurs. Par exemple, l’installation d’un serveur ne prend pas en charge les services C2WTS Windows Identity Foundation. C’est pourquoi les scénarios de délégation de jetons Windows ne sont pas possibles avec cette configuration de batterie de serveurs.  
+>  Remarque : Certaines étapes de configuration peuvent changer ou ne pas fonctionner dans certaines topologies de batterie de serveurs. Par exemple, l’installation d’un serveur ne prend pas en charge les services C2WTS Windows Identity Foundation. C’est pourquoi les scénarios de délégation de jetons Windows ne sont pas possibles avec cette configuration de batterie de serveurs.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Étapes de base nécessaires pour configurer C2WTS  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66096548"
   
     -   Ouvrir une session en tant que service  
   
-     Également, le compte que vous utilisez pour c2WTS doit être configuré pour la délégation contrainte avec transition de protocole et doit être autorisé à déléguer aux Services qu’il est nécessaire pour communiquer avec (par exemple, moteur SQL Server, SQL Server Analysis Services). Pour configurer la délégation, vous pouvez utiliser le composant logiciel enfichable Active Directory utilisateurs et ordinateurs.  
+     Le compte que vous utilisez pour c2WTS doit également être configuré pour la délégation restreinte avec la transition de protocole et nécessite des autorisations pour déléguer aux services avec lesquels il doit communiquer (c.-à-d. SQL Server Engine, SQL Server Analysis Services). Pour configurer la délégation, vous pouvez utiliser le composant logiciel enfichable utilisateurs et ordinateurs Active Directory.  
   
     1.  Cliquez avec le bouton droit sur chaque compte de service et ouvrez la boîte de dialogue des propriétés. Dans la boîte de dialogue, cliquez sur l'onglet **Délégation** .  
   
@@ -61,15 +61,15 @@ ms.locfileid: "66096548"
   
     2.  Les options de configuration principales dans l'onglet Délégation sont les suivantes :  
   
-        -   Sélectionnez « N’approuver cet utilisateur pour la délégation aux services spécifiés »  
+        -   Sélectionnez « n’approuver cet utilisateur que pour la délégation aux services spécifiés »  
   
-        -   Sélectionnez « Utiliser tout protocole d’authentification »  
+        -   Sélectionnez « utiliser n’importe quel protocole d’authentification »  
   
-         Pour plus d’informations, consultez la section « Configurer la délégation contrainte Kerberos pour les ordinateurs et les comptes de service » du livre blanc suivant, [l’authentification Kerberos de configuration pour les produits SharePoint 2010 et SQL Server 2008 R2](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         Pour plus d’informations, consultez la section « configurer la délégation Kerberos autorisée pour les ordinateurs et les comptes de service » dans le livre blanc suivant : configuration de l' [authentification Kerberos pour les produits SharePoint 2010 et SQL Server 2008 R2](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
   
 2.  Configurer c2WTS « AllowedCallers »  
   
-     c2WTS requiert que les identités « appelants » explicitement répertoriées dans le fichier de configuration, **c2wtshost.exe.config**. c2WTS n’accepte pas les demandes à partir de tous les utilisateurs authentifiés dans le système, sauf si elle est configurée pour le faire. Dans ce cas, l’appelant est le groupe Windows WSS_WPG. Le fichier c2wtshost.exe.confi est enregistré à l'emplacement suivant :  
+     c2WTS requiert que les identités des appelants soient explicitement listées dans le fichier de configuration, **fichier c2wtshost. exe. config**. c2WTS n’accepte pas les demandes de tous les utilisateurs authentifiés dans le système, sauf s’il est configuré pour ce faire. Dans ce cas, l’appelant est le groupe Windows WSS_WPG. Le fichier c2wtshost.exe.confi est enregistré à l'emplacement suivant :  
   
      **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
@@ -94,12 +94,12 @@ ms.locfileid: "66096548"
   
     1.  Configurez le service pour utiliser le compte de service que vous avez configuré à l'étape précédente.  
   
-    2.  Modifiez le type de démarrage «**automatique**» et démarrez le service.  
+    2.  Définissez le type de démarrage sur**automatique**et démarrez le service.  
   
-4.  Démarrez SharePoint « Revendications vers Windows Token Service » : Démarrez les revendications SharePoint vers Windows Token Service via l’Administration centrale de SharePoint sur la page **Gérer les services sur le serveur**. Le service doit être démarré sur le serveur qui effectuera l'action. Par exemple si vous avez un serveur Web frontal et un serveur d’applications exécutant le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il vous suffit de démarrer C2WTS sur le serveur d’applications. C2WTS n’est pas nécessaire sur le serveur Web frontal.  
+4.  Démarrez le service d’jetons Revendications vers Windows SharePoint : Démarrez les revendications SharePoint vers Windows Token Service via l’Administration centrale de SharePoint sur la page **Gérer les services sur le serveur**. Le service doit être démarré sur le serveur qui effectuera l'action. Par exemple si vous avez un serveur Web frontal et un serveur d’applications exécutant le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il vous suffit de démarrer C2WTS sur le serveur d’applications. C2WTS n’est pas nécessaire sur le serveur Web frontal.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Revendications au Service de jeton Windows (c2WTS) () vue d’ensemble https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
- [Vue d’ensemble de l’authentification Kerberos pour les produits Microsoft SharePoint 2010)https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
+ [Vue d’ensemble du service d’jetons Revendications vers Windows (C2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
+ [Vue d’ensemble de l’authentification Kerberos pour les produits Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   
   

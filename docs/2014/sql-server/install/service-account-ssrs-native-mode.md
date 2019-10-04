@@ -1,5 +1,5 @@
 ---
-title: Service de compte (Mode natif SSRS) | Microsoft Docs
+title: Compte de service (SSRS en mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,22 +9,22 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092179"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952393"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Compte de service (SSRS en mode natif)
   Utilisez la page Compte de service pour spécifier le compte sous lequel le service Report Server est exécuté. Ce compte est au départ configuré pendant l'installation. Vous pouvez le modifier si vous souhaitez modifier le compte ou le mot de passe. Le service Web Report Server, le Gestionnaire de rapports et l'application de traitement en arrière-plan s'exécutent tous sous l'identité du service que vous spécifiez dans cette page.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
- Le compte que vous spécifiez pour le service Report Server requiert une autorisation pour accéder au Registre, aux fichiers programme de serveur de rapports et à la base de données du serveur de rapports. Toutes les autorisations sont configurées automatiquement pour le compte lorsque vous utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour définir le compte. Si vous utilisez le compte de service pour se connecter à la base de données de serveur de rapports, le Gestionnaire de Configuration crée une connexion de base de données pour le compte et configure les autorisations de base de données en assignant le compte au rôle RSExecRole sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance qui héberge les base de données du serveur de rapports. La base de données du serveur de rapports est le seul magasin de données dans lequel un serveur de rapports écrit. Le compte de service ne requiert pas d'autorisations à d'autres magasins de données.  
+ Le compte que vous spécifiez pour le service Report Server requiert une autorisation pour accéder au Registre, aux fichiers programme de serveur de rapports et à la base de données du serveur de rapports. Toutes les autorisations sont configurées automatiquement pour le compte lorsque vous utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour définir le compte. Si vous utilisez le compte de service pour vous connecter à la base de données du serveur de rapports, le Configuration Manager crée une connexion de base de données pour le compte et configure des autorisations de base de données en affectant le compte au RSExecRole sur l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le rapport base de données du serveur. La base de données du serveur de rapports est le seul magasin de données dans lequel un serveur de rapports écrit. Le compte de service ne requiert pas d'autorisations à d'autres magasins de données.  
   
  Pour ouvrir cette page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez le lien dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66092179"
  Sélectionnez **Service réseau**, **Système Local**ou **Service local** dans la liste. Seul **Service réseau** est recommandé ; toutefois, vous pouvez configurer le compte de façon à utiliser tout compte disponible.  
   
  **Utiliser un autre compte**  
- Sélectionnez cette option pour spécifier un compte d'utilisateur Windows. Vous pouvez entrer un compte d'utilisateur Windows local ou un compte d'utilisateur de domaine. Spécifiez un compte de domaine dans ce format :  *\<domaine >\\< utilisateur\>* . Spécifiez un compte d’utilisateur Windows local sous ce format :  *\<nom de l’ordinateur >\\< utilisateur\>* . Vous pouvez sélectionner uniquement un compte existant ; vous ne pouvez pas créer de nouveaux comptes dans l'outil Configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Sélectionnez cette option pour spécifier un compte d'utilisateur Windows. Vous pouvez entrer un compte d'utilisateur Windows local ou un compte d'utilisateur de domaine. Spécifiez un compte de domaine au format suivant : *\<domain > \\ < utilisateur @ no__t-3*. Spécifiez un compte d’utilisateur Windows local au format suivant : *\<computer nom > \\ < utilisateur @ no__t-3*. Vous pouvez sélectionner uniquement un compte existant ; vous ne pouvez pas créer de nouveaux comptes dans l'outil Configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Le nom du compte ne doit pas comporter plus de 20 caractères.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66092179"
  Si vous changez de type de compte (par exemple, en remplaçant un compte Windows par un autre ou en remplaçant un compte intégré par un compte de domaine Windows), vous serez invité à créer une copie de sauvegarde de la clé de chiffrement. La copie de sauvegarde sera restaurée automatiquement lorsque vous sélectionnerez le nouveau compte.  
   
 > [!NOTE]  
->  Le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous invite à sauvegarder et à restaurer la clé de chiffrement à chaque modification du compte de service. Ces étapes sont nécessaires pour garantir que les données chiffrées restent disponibles pour le serveur de rapports. Pour plus d’informations sur ces actions, consultez [clés de chiffrement &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+>  Le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous invite à sauvegarder et à restaurer la clé de chiffrement à chaque modification du compte de service. Ces étapes sont nécessaires pour garantir que les données chiffrées restent disponibles pour le serveur de rapports. Pour plus d’informations sur ces actions, consultez [clés &#40;de chiffrement&#41;SSRS en mode natif](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
- De plus, si vous disposez d'un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint et que vous modifiez le compte de service à l'aide du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez également ouvrir l'Administration centrale de SharePoint et vous servir de la page [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **de** pour réappliquer les paramètres du serveur de rapport et de l'instance. Cette étape accordera aux bases de données SharePoint le nouvel accès au compte de service, requis pour intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un produit ou une technologie SharePoint. Pour plus d’informations sur la façon d’accorder l’accès de base de données dans l’Administration centrale de SharePoint, consultez [Configuration et Administration d’un serveur de rapports &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) et [ Installation en Mode SharePoint de Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ De plus, si vous disposez d'un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint et que vous modifiez le compte de service à l'aide du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez également ouvrir l'Administration centrale de SharePoint et vous servir de la page [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **de** pour réappliquer les paramètres du serveur de rapport et de l'instance. Cette étape accordera aux bases de données SharePoint le nouvel accès au compte de service, requis pour intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un produit ou une technologie SharePoint. Pour plus d’informations sur la façon d’accorder l’accès à la base de données dans l’administration centrale de SharePoint, consultez [configuration et administration d’un serveur &#40;de rapports Reporting Services mode&#41; SharePoint](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) et [Reporting Services mode SharePoint Installation &#40;de SharePoint 2010 et de&#41;SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
 ## <a name="choosing-an-account"></a>Choix d'un compte  
  Pour de meilleurs résultats, spécifiez un compte qui a des autorisations de connexion réseau, avec un accès aux contrôleurs de domaine réseau et aux passerelles ou serveurs SMTP d'entreprise. Le tableau suivant fournit une synthèse des comptes et des recommandations pour leur utilisation.  
@@ -73,6 +73,6 @@ ms.locfileid: "66092179"
 ## <a name="see-also"></a>Voir aussi  
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurer un compte de service &#40;Gestionnaire de configuration de SSR&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [Rubriques d’aide F1 Gestionnaire de Configuration de Reporting Services &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Gestionnaire de configuration de Reporting Services les rubriques &#40;d’aide F1 en mode natif SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

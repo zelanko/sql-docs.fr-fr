@@ -1,5 +1,5 @@
 ---
-title: Configuration avancée de plusieurs Web Site (Mode natif SSRS) | Microsoft Docs
+title: Configuration avancée de plusieurs sites Web (SSRS en mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096829"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952667"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuration avancée de plusieurs sites Web (SSRS en mode natif)
   Utilisez cette boîte de dialogue pour créer et gérer les URL permettant d'accéder à un serveur de rapports ou au Gestionnaire de rapports. La boîte de dialogue **Configuration de site Web multiple avancée** est utilisée pour créer des URL supplémentaires, des URL personnalisées qui incluent un nom d'en-tête de l'hôte ou spécifier une adresse IP au format IPv4 ou IPv6.  
@@ -40,7 +40,7 @@ ms.locfileid: "66096829"
   
 -   **127.0.0.1** est utilisée pour l'accès à localhost. Cette valeur prend en charge l'administration locale sur le serveur de rapports. Si vous sélectionnez uniquement cette valeur, seuls les utilisateurs qui se connectent localement au serveur de rapports ont accès à l'application.  
   
--   *Nnn.nnn.nnn.nnn* est l'adresse IPv4 d'une carte réseau sur votre ordinateur. Si votre réseau utilise l’adressage IPv6, l’adresse IP sera une valeur 128 bits de 8 champs de 4 octets semblable au format suivant : \<en-tête > :*nnnn:nnnn:nnnn:nnnn*.  
+-   *Nnn.nnn.nnn.nnn* est l'adresse IPv4 d'une carte réseau sur votre ordinateur. Si votre réseau utilise l’adressage IPv6, l’adresse IP sera une valeur 128 bits de champs de 8 4 octets semblable au format suivant : \<header >:*nnnn : nnnn : nnnn : nnnn*.  
   
      Si vous avez plusieurs cartes, une adresse IP apparaît pour chacune d'elles. Si vous sélectionnez uniquement cette valeur, elle limite l'accès de l'application à la seule adresse IP (et à tout nom d'hôte mappé sur cette adresse par un serveur de noms de domaine). Vous ne pouvez pas utiliser localhost pour accéder à un serveur de rapports, et vous ne pouvez pas utiliser les adresses IP des autres cartes réseau installées sur le serveur de rapports.  
   

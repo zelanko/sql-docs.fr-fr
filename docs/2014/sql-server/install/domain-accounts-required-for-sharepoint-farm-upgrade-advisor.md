@@ -1,5 +1,5 @@
 ---
-title: Comptes de domaine requis pour la batterie de serveurs SharePoint (Conseiller de mise à niveau) | Microsoft Docs
+title: Comptes de domaine requis pour la batterie de serveurs SharePoint (conseiller de mise à niveau) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3e6d9802eafeea7babdcf23a3e8ea0f6b732e308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095513"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952510"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Comptes de domaine requis pour la batterie de serveurs SharePoint (Conseiller de mise à niveau)
   Les produits SharePoint configurés pour un environnement de batterie requièrent l'utilisation de comptes de domaine.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint.|  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -32,20 +32,20 @@ ms.locfileid: "66095513"
   
  Si vous n'utilisez pas de compte d'utilisateur de domaine pour Reporting Services, vous rencontrez des problèmes notamment en consultant les pages Administration centrale de SharePoint 2010. Lorsque vous essayez de configurer l'intégration de Reporting Services, un message d'erreur semblable au suivant s'affiche :  
   
- « Le serveur de rapports s'exécute sous le compte NT AUTHORITY\NETWORK SERVICE intégré, qui n'est pas pris en charge par les batteries de serveurs SharePoint. Reconfigurez le serveur de rapports pour s’exécuter sous un compte de domaine. »  
+ « Le serveur de rapports s'exécute sous le compte NT AUTHORITY\NETWORK SERVICE intégré, qui n'est pas pris en charge par les batteries de serveurs SharePoint. Reconfigurez le serveur de rapports pour qu’il s’exécute sous un compte de domaine.»  
   
 ## <a name="corrective-action"></a>Action corrective  
- Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les versions précédentes, utilisez le Gestionnaire de Configuration de Reporting Services pour modifier le compte qui est affecté en tant que le compte de service report server.  
+ Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les versions précédentes, utilisez le Gestionnaire de configuration de Reporting Services pour modifier le compte qui est affecté en tant que compte de service Report Server.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Pour modifier le compte de service à partir du Gestionnaire de configuration  
   
-1.  À partir de la **Démarrer** menu, sélectionnez **tous les programmes**, puis cliquez sur **Microsoft SQL Server 2008 R2**.  
+1.  Dans le menu **Démarrer** , sélectionnez **tous les programmes**, puis cliquez sur **Microsoft SQL Server 2008 R2**.  
   
-2.  Sélectionnez **outils de Configuration**, puis cliquez sur **Gestionnaire de Configuration de Reporting Services**.  
+2.  Sélectionnez **outils de configuration**, puis cliquez sur **Gestionnaire de configuration de Reporting Services**.  
   
-3.  Dans le Gestionnaire de Configuration, sélectionnez le **compte de Service** onglet.  
+3.  Dans Configuration Manager, sélectionnez l’onglet **compte de service** .  
   
-4.  Sélectionnez **utiliser un autre compte** et entrez les informations d’identification pour un compte de domaine.  
+4.  Sélectionnez **utiliser un autre compte** et entrez les informations d’identification d’un compte de domaine.  
   
 5.  Cliquez sur **Appliquer**.  
   
