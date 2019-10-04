@@ -123,12 +123,12 @@
       href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
     - name: Fonctionnalités Reporting Services dans les éditions de SQL Server
       href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Installer Reporting Services
+- name: Installer les versions Reporting Services
   items:
-    - name: "Installer Reporting Services\_2017"
+    - name: Installer Reporting Services
       href: ../reporting-services/install-windows/install-reporting-services.md
       items:
-        - name: "Rechercher la clé de produit pour Reporting Services\_2017"
+        - name: Rechercher la clé de produit pour Reporting Services
           href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
     - name: "Installer Reporting Services\_2016 en mode natif"
       href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
