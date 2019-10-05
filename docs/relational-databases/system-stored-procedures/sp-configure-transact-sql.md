@@ -18,20 +18,20 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fb4aeced22755ff2b8012e5eeff7c27ec2f73374
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 22d8f61af08f183e10910544e42614769b9dafd9
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476010"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974353"
 ---
-# <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
+# <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
 
   Affiche ou modifie des options de configuration générales pour le serveur actif.
 
 > [!NOTE]  
->  Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE scoped &#40;configuration Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer soft-NUMA, consultez [Soft-numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+> Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE scoped configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer soft-NUMA, consultez [Soft-numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,11 +60,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @configname = ] 'option_name'`Nom d’une option de configuration. *option_name* est **varchar(35)** , avec NULL comme valeur par défaut. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconnaît toute chaîne unique qui fait partie du nom de configuration. Si ce dernier n'est pas spécifié, la liste complète des options est renvoyée.  
+`[ @configname = ] 'option_name'` est le nom d’une option de configuration. *option_name* est **varchar(35)** , avec NULL comme valeur par défaut. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconnaît toute chaîne unique qui fait partie du nom de configuration. Si ce dernier n'est pas spécifié, la liste complète des options est renvoyée.  
   
  Pour plus d’informations sur les options de configuration disponibles et leurs paramètres, consultez [ &#40;options&#41;de configuration du serveur SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'`Nouveau paramètre de configuration. *value* est de type **int**, avec NULL comme valeur par défaut. La valeur maximale dépend de l'option individuelle.  
+`[ @configvalue = ] 'value'` est le nouveau paramètre de configuration. *value* est de type **int**, avec NULL comme valeur par défaut. La valeur maximale dépend de l'option individuelle.  
   
  Pour afficher la valeur maximale de chaque option, consultez la colonne **maximum** de l’affichage catalogue **sys. configurations** .  
   
@@ -80,7 +80,7 @@ RECONFIGURE
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
 |**minimum**|**Int**|Valeur minimale de l'option de configuration.|  
-|**maximum**|**int**|Valeur maximale de l'option de configuration.|  
+|**maximum**|**Int**|Valeur maximale de l'option de configuration.|  
 |**config_value**|**Int**|Valeur à laquelle l’option de configuration a été définie à l’aide de **sp_configure** (valeur dans **sys. configurations. Value**). Pour plus d’informations sur ces options, consultez [options &#40;de configuration&#41; du serveur SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) et [sys &#40;. configurations Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**Int**|Valeur en cours d’exécution de l’option de configuration (valeur dans **sys. configurations. value_in_use**).<br /><br /> Pour plus d’informations, consultez [sys. configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
@@ -93,9 +93,9 @@ RECONFIGURE
  Ces deux instructions fonctionnent avec toutes les options de configuration. Cependant, l'instruction de base RECONFIGURE rejette toute valeur d'option se trouvant en dehors d'une plage appropriée ou pouvant être à l'origine de conflits parmi les options. Par exemple, reconfigure génère une erreur si la valeur de l' **intervalle de récupération** est supérieure à 60 minutes ou si la valeur du **masque d’affinité** chevauche la valeur **Affinity I/O mask** . Par contre, RECONFIGURE WITH OVERRIDE accepte toutes les valeurs d'option présentant le bon type de données et force la reconfiguration avec la valeur spécifiée.  
   
 > [!CAUTION]  
->  Une valeur d'option inappropriée peut avoir des répercussions négatives sur la configuration de l'instance de serveur. Utilisez RECONFIGURE WITH OVERRIDE avec prudence.  
+> Une valeur d'option inappropriée peut avoir des répercussions négatives sur la configuration de l'instance de serveur. Utilisez RECONFIGURE WITH OVERRIDE avec prudence.  
   
- Certaines options peuvent être mises à jour de façon dynamique par l'instruction RECONFIGURE, alors que d'autres nécessitent un arrêt et un redémarrage du serveur. Par exemple, les options **min Server Memory** et **Max Server** Memory Server sont mises à jour dynamiquement dans [!INCLUDE[ssDE](../../includes/ssde-md.md)]le; par conséquent, vous pouvez les modifier sans redémarrer le serveur. En revanche, la reconfiguration de la valeur d’exécution de l’option **facteur de remplissage** nécessite le [!INCLUDE[ssDE](../../includes/ssde-md.md)]redémarrage de.  
+ Certaines options peuvent être mises à jour de façon dynamique par l'instruction RECONFIGURE, alors que d'autres nécessitent un arrêt et un redémarrage du serveur. Par exemple, les options **min Server Memory** et **Max Server** Memory Server sont mises à jour dynamiquement dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. par conséquent, vous pouvez les modifier sans redémarrer le serveur. En revanche, la reconfiguration de la valeur d’exécution de l’option **facteur de remplissage** nécessite le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  Après l’exécution de RECONFIGURE sur une option de configuration, vous pouvez voir si l’option a été mise à jour de manière dynamique en exécutant **sp_configure'***option_name***'** . Les valeurs des colonnes **run_value** et **config_value** doivent correspondre pour une option mise à jour dynamiquement. Vous pouvez également vérifier quelles options sont dynamiques en examinant la colonne **is_dynamic** de l’affichage catalogue **sys. configurations** .  
  
@@ -104,7 +104,7 @@ RECONFIGURE
 > [!NOTE]  
 >  Si une *valeur* spécifiée est trop élevée pour une option, la colonne **run_value** reflète le fait que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a utilisé par défaut la mémoire dynamique au lieu d’utiliser un paramètre non valide.  
   
- Pour plus d’informations, consultez reconfigure [ &#40;Transact&#41;-SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ Pour plus d’informations, consultez [REconfigure &#40;Transact&#41;-SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## <a name="advanced-options"></a>Options avancées  
  Certaines options de configuration, telles que le **masque d’affinité** et l' **intervalle de récupération**, sont désignées comme options avancées. Par défaut, ces options ne sont ni affichables ni modifiables. Pour les rendre disponibles, affectez la valeur 1 à l’option de configuration **ShowAdvandedOptions** .  
@@ -119,17 +119,17 @@ RECONFIGURE
 ### <a name="a-listing-the-advanced-configuration-options"></a>R. Affichage des options de configuration avancées  
  L'exemple suivant montre comment définir et afficher toutes les options de configuration. Pour afficher les options de configuration avancées, il faut tout d'abord donner à l'argument `show advanced option` la valeur `1`. Une fois cette option modifiée, l'exécution de `sp_configure` sans paramètre renvoie l'ensemble des options de configuration.  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Voici le message: «L’option de configuration’afficher les options avancées’est passée de 0 à 1. Pour installer, exécutez l'instruction RECONFIGURE. »  
+ Voici le message : «L’option de configuration’afficher les options avancées’est passée de 0 à 1. Pour installer, exécutez l'instruction RECONFIGURE. »  
   
  Exécutez `RECONFIGURE` et affichez toutes les options de configuration :  
   
-```  
+```sql  
 RECONFIGURE;  
 EXEC sp_configure;  
 ```  
@@ -137,7 +137,7 @@ EXEC sp_configure;
 ### <a name="b-changing-a-configuration-option"></a>B. Modification d'une option de configuration  
  L'exemple suivant définit la valeur de l'option système `recovery interval` à `3` minutes.  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_configure 'recovery interval', '3';  
@@ -149,15 +149,15 @@ RECONFIGURE WITH OVERRIDE;
 ### <a name="c-list-all-available-configuration-settings"></a>C. Liste de tous les paramètres de configuration disponibles  
  L'exemple suivant montre comment afficher toutes les options de configuration.  
   
-```  
+```sql  
 EXEC sp_configure;  
 ```  
   
- Le résultat renvoie le nom de l'option suivi des valeurs minimales et maximales de cette option. **Config_value** est la valeur qui [!INCLUDE[ssDW](../../includes/ssdw-md.md)] sera utilisée lorsque la reconfiguration est terminée. **run_value** est la valeur en cours d’utilisation. Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.  
+ Le résultat renvoie le nom de l'option suivi des valeurs minimales et maximales de cette option. Le **config_value** est la valeur que [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilisera une fois la reconfiguration terminée. **run_value** est la valeur en cours d’utilisation. Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Liste des paramètres de configuration pour un nom de configuration  
   
-```  
+```sql  
 EXEC sp_configure @configname='hadoop connectivity';  
 ```  
   
