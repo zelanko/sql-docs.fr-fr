@@ -102,7 +102,7 @@ Dans ce scénario, Mary peut accéder uniquement à la table **Products** à l'a
 > Si la table, la vue et la procédure stockée n'appartiennent pas au même schéma, l'octroi des autorisations devient plus complexe.  
   
 ### <a name="about-grant"></a>À propos de GRANT  
-Vous devez avoir l'autorisation EXECUTE pour exécuter une procédure stockée. Vous devez avoir les autorisations SELECT, INSERT, UPDATE, et DELETE pour accéder et modifier des données. L'instruction GRANT sert également à autres autorisations, telles que les autorisations de créer des tables.  
+Vous devez avoir l'autorisation EXECUTE pour exécuter une procédure stockée. Vous devez avoir les autorisations SELECT, INSERT, UPDATE, et DELETE pour accéder et modifier des données. L'instruction GRANT sert également à d'autres autorisations, telles que les autorisations de créer des tables.  
   
 ## <a name="next-steps"></a>Étapes suivantes
 L’article suivant vous apprend à supprimer des objets de base de données que vous avez créés dans les autres leçons. 
