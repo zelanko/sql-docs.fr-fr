@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 54b58cefb736fd4429c54c773f2fd6c0a9e86f59
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250982"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708488"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "71250982"
   
      L'exemple PowerShell suivant définit HostRecordTTL sur 300 secondes pour une ressource de nom réseau nommée `SQL Network Name (SQL35)`.  
   
-    ```  
+    ```powershell
     Import-Module FailoverClusters  
   
     $nameResource = "SQL Network Name (SQL35)"  

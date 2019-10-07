@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909725"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816694"
 ---
 # <a name="index-disk-space-example"></a>Exemple d'espace disque d'un index
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,7 @@ ms.locfileid: "67909725"
   
 3.  Déterminez l'espace disque temporaire supplémentaire pour le tri.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     L’espace nécessaire est indiqué pour le tri dans **tempdb** (SORT_IN_TEMPDB a la valeur ON) et pour le tri à l’emplacement cible (SORT_IN_TEMPDB a la valeur OFF).  
   
     1.  Lorsque SORT_IN_TEMPDB a la valeur ON, **tempdb** doit disposer de suffisamment d’espace pour contenir l’index le plus volumineux (1 million * 200 octets ~ 200 Mo). Le facteur de remplissage n'est pas pris en compte dans l'opération de tri.  
   

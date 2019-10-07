@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffea82cc9abdd016ec63771510109046e7da5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092228"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713249"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ Troisièmement, dans votre code T-SQL général :
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Scénario : Une variable de table peut afficher MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. Scénario : Une variable de table peut afficher MEMORY_OPTIMIZED=ON  
   
   
 Une variable de table classique représente une table dans la base de données tempdb. Pour des performances beaucoup plus rapides, vous pouvez optimiser votre variable de table en mémoire.  
@@ -298,7 +298,7 @@ go
 ```  
 
 
-Le script suivant crée le groupe de fichiers pour vous et configure les paramètres de base de données recommandés : [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+Le script suivant crée le groupe de fichiers pour vous et configure les paramètres de base de données recommandés : [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 Pour plus d’informations sur `ALTER DATABASE ... ADD` pour les fichiers et groupes de fichiers, consultez :  
   

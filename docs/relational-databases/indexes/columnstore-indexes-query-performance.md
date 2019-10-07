@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009376"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816715"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
 
@@ -154,8 +154,6 @@ Pour améliorer les performances de requête, la transmission Push des prédicat
 Avec la transmission Push des prédicats de type string, la requête calcule le prédicat d’après les valeurs dans le dictionnaire et, en cas d’éligibilité, toutes les lignes faisant référence à la valeur de dictionnaire sont automatiquement qualifiées. Cela améliore les performances de deux manières :
 1.  Seule la ligne qualifiée est renvoyée, ce qui réduit le nombre de lignes à transmettre à partir du nœud SCAN. 
 2.  Le nombre de comparaisons de chaînes s’en trouve considérablement réduit. Dans cet exemple, seulement 100 chaînes doivent être comparées au lieu d’un million. Les limitations suivantes s’appliquent :    
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Il n’y a pas de transmission Push des prédicats de type string pour les rowgroups delta. Il n’existe pas de dictionnaire pour les colonnes des rowgroups delta.    
     -   Il n’y a pas de transmission Push des prédicats de type string si le dictionnaire dépasse la taille de 64 Ko.    

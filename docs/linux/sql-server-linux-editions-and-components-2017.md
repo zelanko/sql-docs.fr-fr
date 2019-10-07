@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154654"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687388"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017 sur Linux
 
@@ -161,15 +161,15 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
   
 |Fonctionnalité|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|Oui avec indicateur de trace|   
+|Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|   
 |Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui| 
 |Prise en charge des opérations des composants d’application du niveau Données : extraction, déploiement, mise à niveau, suppression|Oui|Oui|Oui|Oui| 
-|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|Non|   
-|Collecteur de données de performances|Oui|Oui|Oui|Non|Non| 
-|Rapports de performances standard|Oui|Oui|Oui|Non|Non| 
-|Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non|Non|   
+|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|  
+|Collecteur de données de performances|Oui|Oui|Oui|Non|
+|Rapports de performances standard|Oui|Oui|Oui|Non|
+|Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non| 
 |Requête directe de vues d'index (à l'aide de l'indicateur NOEXPAND)|Oui|Oui|Oui|Oui| 
-|Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|Non| 
+|Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|
 |Vues partitionnées distribuées|Oui|Non|Non|Non| 
 |Opérations d'index parallèles|Oui|Non|Non|Non|  
 |Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|Non| 
@@ -188,10 +188,10 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Fonctions MERGE & UPSERT|Oui|Oui|Oui|Oui|   
 |Types de données de date et d'heure|Oui|Oui|Oui|Oui|  
 |Support d'internationalisation|Oui|Oui|Oui|Oui| 
-|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|Non| 
-|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|Non|   
-|Service Broker (messagerie)|Oui|Oui|Non (client uniquement)|Non (client uniquement)|Non (client uniquement)|   
-|Transact-SQL, points de terminaison|Oui|Oui|Oui|Non|Non| 
+|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|
+|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|
+|Service Broker (messagerie)|Oui|Oui|Non (client uniquement)|Non (client uniquement)|
+|Transact-SQL, points de terminaison|Oui|Oui|Oui|Non|
 |Graphique|Oui|Oui|Oui|Oui|  
 
 

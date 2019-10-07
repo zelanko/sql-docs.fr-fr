@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071703"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816759"
 ---
 # <a name="attach-a-database"></a>Attacher une base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,35 +56,33 @@ Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY
   
 2.  Cliquez avec le bouton droit sur **Bases de données** , puis cliquez sur **Attacher**.  
   
-3.  Dans la boîte de dialogue **Attacher des bases de données** , pour spécifier la base de données à attacher, cliquez sur **Ajouter**, dans la boîte de dialogue **Rechercher les fichiers de base de données** , sélectionnez l'unité de disque contenant la base de données et développez l'arborescence pour rechercher et sélectionner le fichier .mdf de la base de données. Par exemple :  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  Dans la boîte de dialogue **Attacher des bases de données** , pour spécifier la base de données à attacher, cliquez sur **Ajouter**, dans la boîte de dialogue **Rechercher les fichiers de base de données** , sélectionnez l'unité de disque contenant la base de données et développez l'arborescence pour rechercher et sélectionner le fichier .mdf de la base de données. Par exemple :
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > Une tentative de sélection d'une base de données déjà attachée génère une erreur.  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **Bases de données à attacher**  
+     Affiche des informations sur les bases de données sélectionnées.  
   
-     \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     \<aucun en-tête de colonne>  
+     Affiche une icône indiquant l'état de l'opération d'attachement. Les icônes possibles sont décrites dans la section **État** ci-dessous.  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **Emplacement du fichier MDF**  
+     Affiche le chemin d'accès et le nom du fichier MDF sélectionné.  
   
      **Database Name**  
-     Displays the name of the database.  
+     Affiche le nom de la base de données.  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **Attacher en tant que**  
+     Permet de spécifier éventuellement un autre nom sous lequel la base de données doit être attachée.  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **Propriétaire**  
+     Fournit une liste déroulante des propriétaires de bases de données possibles dans laquelle vous pouvez sélectionner un autre propriétaire.  
   
-     **Status**  
-     Displays the status of the database according to the following table.  
+     **État**  
+     Affiche l'état de la base de données conformément au tableau ci-après.  
   
     |Icône|Texte d'état|Description|  
     |----------|-----------------|-----------------|  
@@ -96,31 +94,31 @@ Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY
     |Cercle contenant une flèche courbe pointant dans le sens inverse des aiguilles d'une montre|Restauré|L'opération d'attachement a réussi, mais a été restaurée en raison d'une erreur lors de l'attachement d'un autre objet.|  
   
      **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     Affiche un message vierge ou un lien hypertexte « Fichier introuvable ».  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **Ajouter**  
+     Permet de rechercher les principaux fichiers de base de données nécessaires. Lorsque l'utilisateur sélectionne un fichier .mdf, les informations applicables sont automatiquement remplies dans les champs respectifs de la grille **Bases de données à attacher** .  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **Supprimer**  
+     Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **»détails de la base de données**  
+     Affiche le nom des fichiers à attacher. Pour vérifier ou changer le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** ( **...** ).  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > Si un fichier n'existe pas, la colonne **Message** affiche « Introuvable ». Si un fichier journal est introuvable, cela signifie qu'il se trouve dans un autre répertoire ou qu'il a été supprimé. Vous devez mettre à jour le chemin d'accès du fichier dans la grille **Détails de la base de données** pour désigner l'emplacement correct ou supprimer le fichier journal de la grille. Si un fichier de données .ndf est introuvable, vous devez mettre à jour son chemin d'accès dans la grille pour désigner l'emplacement correct.  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **Nom du fichier d'origine**  
+     Affiche le nom du fichier attaché appartenant à la base de données.  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **Type de fichier**  
+     Indique le type du fichier, **Données** ou **Journal**.  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **Chemin d'accès au fichier actuel**  
+     Affiche le chemin d'accès au fichier de base de données sélectionné. Le chemin d'accès peut être modifié manuellement.  
   
      **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     Affiche un message vierge ou un lien hypertexte «**Fichier introuvable**».  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
