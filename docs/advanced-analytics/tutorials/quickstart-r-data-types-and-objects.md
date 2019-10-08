@@ -4,25 +4,25 @@ titleSuffix: SQL Server Machine Learning Services
 description: Dans ce guide de démarrage rapide, vous allez apprendre à utiliser des types de données et des objets de données dans R et SQL Server avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149953"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006009"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Démarrage rapide : Gérer les types de données et les objets à l’aide de R dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans ce guide de démarrage rapide, vous découvrirez les problèmes courants qui se produisent lors du déplacement de données entre R et SQL Server. L’expérience que vous obtenez dans le cadre de cet exercice fournit un arrière-plan essentiel lorsque vous travaillez avec des données dans votre propre script.
 
-Voici les problèmes courants à connaître:
+Voici les problèmes courants à connaître :
 
 - Les types de données ne correspondent pas toujours
 - Des conversions implicites peuvent avoir lieu
@@ -43,7 +43,7 @@ Quand votre script retourne les résultats de R vers SQL Server, il doit retourn
 
 Tout d’abord, expérimentons quelques objets r de base r (vecteurs, matrices et listes) et voyons comment la conversion en une trame de données modifie la sortie transmise à SQL Server.
 
-Comparez ces deux scripts «Hello World» dans R. Les scripts semblent presque identiques, mais la première retourne une seule colonne de trois valeurs, tandis que la seconde retourne trois colonnes avec une seule valeur chacune.
+Comparez ces deux scripts « Hello World » dans R. Les scripts semblent presque identiques, mais la première retourne une seule colonne de trois valeurs, tandis que la seconde retourne trois colonnes avec une seule valeur chacune.
 
 **Exemple 1**
 
@@ -114,12 +114,12 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-Comme vous pouvez le constater, un léger changement dans la syntaxe R transforme le schéma des résultats. Nous n’allons pas expliquer pourquoi, mais les différences dans les types de données R sont expliquées en détail dans la section *structures de données* de [«avancé R» de Hadley Wickham](http://adv-r.had.co.nz).
+Comme vous pouvez le constater, un léger changement dans la syntaxe R transforme le schéma des résultats. Nous n’allons pas expliquer pourquoi, mais les différences dans les types de données R sont expliquées en détail dans la section *structures de données* de [« avancé R » de Hadley Wickham](http://adv-r.had.co.nz).
 
 Pour l’instant, gardez seulement à l’esprit que vous devez vérifier les résultats attendus quand vous convertissez des objets R en trames de données.
 
 > [!TIP]
-> Vous pouvez également utiliser des fonctions d’identité R, `is.matrix`telles `is.vector`que, pour retourner des informations sur la structure de données interne.
+> Vous pouvez également utiliser des fonctions d’identité R, telles que `is.matrix`, `is.vector`, pour retourner des informations sur la structure de données interne.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Conversion implicite des objets de données
 
@@ -164,7 +164,7 @@ En réalité, la colonne de trois valeurs est convertie en une matrice à une se
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-Toutefois, notez ce qui se produit lorsque vous modifiez la taille du `y`tableau.
+Toutefois, notez ce qui se produit lorsque vous modifiez la taille du tableau `y`.
 
 ```sql
 execute sp_execute_external_script
@@ -189,7 +189,7 @@ Pourquoi ? Dans ce cas, étant donné que les deux arguments peuvent être trai
 
 > [!TIP]
 > 
-> Vous obtenez des erreurs? Assurez-vous que vous exécutez la procédure stockée dans le contexte de la base de données qui contient la table, et non dans **Master** ou dans une autre base de données.
+> Vous obtenez des erreurs ? Assurez-vous que vous exécutez la procédure stockée dans le contexte de la base de données qui contient la table, et non dans **Master** ou dans une autre base de données.
 >
 > Nous vous suggérons également d’éviter d’utiliser des tables temporaires pour ces exemples. Certains clients R mettent fin à une connexion entre les lots, en supprimant les tables temporaires.
 
@@ -197,7 +197,7 @@ Pourquoi ? Dans ce cas, étant donné que les deux arguments peuvent être trai
 
 R offre une grande flexibilité pour travailler avec des vecteurs de différentes tailles, et pour combiner ces structures de type colonne en trames de données. Les listes de vecteurs ressemblent parfois à des tables, mais elles ne suivent pas toutes les règles qui régissent les tables de base de données.
 
-Par exemple, le script suivant définit un tableau numérique de longueur 6 et le stocke dans la variable R `df1`. Le tableau numérique est ensuite combiné aux entiers de la table RTestData, qui contient trois (3) valeurs, pour créer une nouvelle trame de données `df2`,.
+Par exemple, le script suivant définit un tableau numérique de longueur 6 et le stocke dans la variable R `df1`. Le tableau numérique est ensuite combiné aux entiers de la table RTestData, qui contient trois (3) valeurs, pour créer une nouvelle trame de données, `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -283,11 +283,11 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 - La colonne date/heure a été traitée avec le type de données R **POSIXct**.
-- La colonne de texte «ProductSeries» a été identifiée comme un **facteur**, ce qui signifie une variable catégorique. Par défaut, les valeurs de chaîne sont gérées comme des facteurs. Si vous passez une chaîne à R, cette chaîne est convertie en entier pour un usage interne, puis la valeur est mappée à la chaîne dans la sortie.
+- La colonne de texte « ProductSeries » a été identifiée comme un **facteur**, ce qui signifie une variable catégorique. Par défaut, les valeurs de chaîne sont gérées comme des facteurs. Si vous passez une chaîne à R, cette chaîne est convertie en entier pour un usage interne, puis la valeur est mappée à la chaîne dans la sortie.
 
 ### <a name="summary"></a>Récapitulatif
 
-À partir de ces exemples courts, vous pouvez voir la nécessité de vérifier les effets de la conversion de données lors du passage de requêtes SQL en entrée. Étant donné que certains types de données SQL Server ne sont pas pris en charge par R, utilisez les méthodes suivantes pour éviter les erreurs:
+À partir de ces exemples courts, vous pouvez voir la nécessité de vérifier les effets de la conversion de données lors du passage de requêtes SQL en entrée. Étant donné que certains types de données SQL Server ne sont pas pris en charge par R, utilisez les méthodes suivantes pour éviter les erreurs :
 
 - Testez vos données à l’avance et vérifiez les colonnes ou les valeurs de votre schéma qui peuvent être un problème lorsqu’elles sont transmises à du code R.
 - Spécifiez les colonnes dans votre source de données d’entrée individuellement, et non en utilisant `SELECT *`. Déterminez de quelle manière gérer chaque colonne.
@@ -305,6 +305,7 @@ Pour en savoir plus sur l’écriture de fonctions R avancées dans SQL Server, 
 > [!div class="nextstepaction"]
 > [Écrire des fonctions R avancées avec SQL Server Machine Learning Services](quickstart-r-functions.md)
 
-Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
+Pour plus d’informations sur l’utilisation de R dans SQL Server Machine Learning Services, consultez les articles suivants :
 
+- [Créer et évaluer un modèle prédictif dans R avec SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?](../what-is-sql-server-machine-learning.md)

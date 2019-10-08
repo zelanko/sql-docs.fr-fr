@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5e90136d319ed0f04766bfec503126999bb73dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 835ae5b262426fabdc657e78f4961a7aafb14224
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061220"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006104"
 ---
-# <a name="spupdateagentprofile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
+# <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Met à jour le profil utilisé par un Agent de réplication. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
@@ -37,8 +37,8 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@agent_type=** ] **'***agent_type***'**  
- Type de l'Agent. *agent_type* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+ [ **\@agent_type =** ] **«***agent_type***»**  
+ Type de l'Agent. *agent_type* est de **type int**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -48,20 +48,20 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|Agent de fusion.|  
 |**9**|Agent de lecture de la file d'attente|  
   
- [ **@agent_id=** ] *agent_id*  
- Identificateur de l'agent. *éléments agent_id* est **int**, sans valeur par défaut.  
+ [ **\@agent_id =** ] *agent_id*  
+ Identificateur de l'agent. *agent_id* est de **type int**, sans valeur par défaut.  
   
- [ **@profile_id=** ] *profile_id*  
- ID du profil que l'agent doit utiliser. *profile_id* est **int**, sans valeur par défaut. Pour afficher une liste des profils définis pour chaque agent, utilisez [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Pour plus d’informations sur les profils système, consultez [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ [ **\@profile_id =** ] au-dessus  
+ ID du profil que l'agent doit utiliser. l’option par *défaut est de* **type int**, sans valeur par défaut. Pour afficher la liste des profils définis pour chaque agent, utilisez [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Pour plus d’informations sur les profils système, consultez [réplication des profils d’agent](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_update_agent_profile** est utilisée dans tous les types de réplication.  
+ **sp_update_agent_profile** est utilisé dans tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_update_agent_profile**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_update_agent_profile**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Profils de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-profiles.md)   

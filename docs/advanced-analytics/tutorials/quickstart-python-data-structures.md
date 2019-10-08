@@ -4,33 +4,33 @@ titleSuffix: SQL Server Machine Learning Services
 description: Dans ce guide de démarrage rapide, vous allez apprendre à utiliser des types de données et des objets de données dans Python et SQL Server avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3606072fefa9b74adcfdb914d02e4e82c11e0eb
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199433"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006060"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Démarrage rapide : Gérer les types de données et les objets à l’aide de Python dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Ce guide de démarrage rapide montre comment utiliser des structures de données lors de l’utilisation de Python dans SQL Server Machine Learning Services.
 
-SQL Server s’appuie sur le package python pandas, qui est parfait pour travailler avec des données tabulaires. Toutefois, vous ne pouvez pas passer un scalaire de Python à SQL Server et vous attendre à ce qu’il «fonctionne» simplement. Dans ce guide de démarrage rapide, vous allez passer en revue certaines définitions de type de données de base afin de vous préparer à d’autres problèmes que vous pouvez rencontrer lors du passage de données tabulaires entre Python et SQL Server.
+SQL Server s’appuie sur le package Python **pandas** , qui est parfait pour travailler avec des données tabulaires. Toutefois, vous ne pouvez pas passer un scalaire de Python à SQL Server et vous attendre à ce qu’il « fonctionne » simplement. Dans ce guide de démarrage rapide, vous allez passer en revue certaines définitions de type de données de base afin de vous préparer à d’autres problèmes que vous pouvez rencontrer lors du passage de données tabulaires entre Python et SQL Server.
 
 Voici les concepts à connaître :
 
-+ Une trame de données est une table avec _plusieurs_ colonnes.
-+ Une seule colonne d’une trame de données est un objet de type liste appelé une série.
-+ Une valeur unique d’une trame de données est appelée une cellule et est accessible par index.
+- Une trame de données est une table avec _plusieurs_ colonnes.
+- Une seule colonne d’une trame de données est un objet de type liste appelé une série.
+- Une valeur unique d’une trame de données est appelée une cellule et est accessible par index.
 
-Comment exposeriez-vous le résultat unique d’un calcul en tant que trame de données, si un frame Data. Frame requiert une structure tabulaire? Une réponse consiste à représenter la valeur scalaire unique sous la forme d’une série, qui est facilement convertie en une trame de données. 
+Comment exposeriez-vous le résultat unique d’un calcul en tant que trame de données, si un frame Data. Frame requiert une structure tabulaire ? Une réponse consiste à représenter la valeur scalaire unique sous la forme d’une série, qui est facilement convertie en une trame de données. 
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -203,11 +203,12 @@ Après avoir converti les résultats mathématiques scalaires en une structure t
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Ensuite, vous allez créer un modèle prédictif à l’aide de Python dans SQL Server.
+Pour en savoir plus sur l’écriture de fonctions de Python avancées dans SQL Server, suivez ce guide de démarrage rapide :
 
 > [!div class="nextstepaction"]
-> [Créer et évaluer un modèle prédictif dans python](quickstart-python-train-score-model.md)
+> [Écrire des fonctions python avancées avec SQL Server Machine Learning Services](quickstart-python-functions.md)
 
-Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
+Pour plus d’informations sur l’utilisation de Python dans SQL Server Machine Learning Services, consultez les articles suivants :
 
+- [Créer et évaluer un modèle prédictif dans python](quickstart-python-train-score-model.md)
 - [Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?](../what-is-sql-server-machine-learning.md)

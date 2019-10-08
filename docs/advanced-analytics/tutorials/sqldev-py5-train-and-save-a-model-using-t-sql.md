@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85115d55f10ebafde4fe2da9c0311425c5e870dc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 470d7be0e1777d029f406e183aad644359c82f13
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715339"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005995"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Former et enregistrer un modèle Python à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,14 +22,14 @@ Cet article fait partie d’un didacticiel, [l’analytique Python en base de do
 
 Dans cette étape, vous allez apprendre à former un modèle de Machine Learning à l’aide des packages python **scikit-Learn** et **revoscalepy**. Ces bibliothèques Python sont déjà installées avec SQL Server Machine Learning Services.
 
-Vous chargez les modules et appelez les fonctions nécessaires pour créer et effectuer l’apprentissage du modèle à l’aide d’une procédure stockée SQL Server. Le modèle nécessite les fonctionnalités de données que vous avez développées dans les leçons précédentes. Enfin, vous enregistrez le modèle formé dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
+Vous chargez les modules et appelez les fonctions nécessaires pour créer et effectuer l’apprentissage du modèle à l’aide d’une procédure stockée SQL Server. Le modèle nécessite les fonctionnalités de données que vous avez développées dans les leçons précédentes. Enfin, vous enregistrez le modèle formé dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 
 ## <a name="split-the-sample-data-into-training-and-testing-sets"></a>Fractionner les exemples de données en jeux d’apprentissage et jeux de test
 
-1. Créez une procédure stockée appelée **PyTrainTestSplit** pour diviser les données de la table nyctaxi_sample en deux parties: nyctaxi_sample_training et nyctaxi_sample_testing. 
+1. Créez une procédure stockée appelée **PyTrainTestSplit** pour diviser les données de la table nyctaxi_sample en deux parties : nyctaxi_sample_training et nyctaxi_sample_testing. 
 
-    Cette procédure stockée doit déjà être créée pour vous, mais vous pouvez exécuter le code suivant pour la créer:
+    Cette procédure stockée doit déjà être créée pour vous, mais vous pouvez exécuter le code suivant pour la créer :
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
@@ -56,14 +56,14 @@ Vous chargez les modules et appelez les fonctions nécessaires pour créer et ef
 
 ## <a name="build-a-logistic-regression-model"></a>Créer un modèle de régression logistique
 
-Une fois les données préparées, vous pouvez les utiliser pour effectuer l’apprentissage d’un modèle. Pour ce faire, vous devez appeler une procédure stockée qui exécute du code Python, en prenant comme entrée la table de données d’apprentissage. Pour ce didacticiel, vous créez deux modèles, à la fois les modèles de classification binaire:
+Une fois les données préparées, vous pouvez les utiliser pour effectuer l’apprentissage d’un modèle. Pour ce faire, vous devez appeler une procédure stockée qui exécute du code Python, en prenant comme entrée la table de données d’apprentissage. Pour ce didacticiel, vous créez deux modèles, à la fois les modèles de classification binaire :
 
 + La procédure stockée **PyTrainScikit** crée un modèle de prédiction Tip à l’aide du package **scikit-Learn** .
 + La procédure stockée **TrainTipPredictionModelRxPy** crée un modèle de prédiction Tip à l’aide du package **revoscalepy** .
 
 Chaque procédure stockée utilise les données d’entrée que vous fournissez pour créer et effectuer l’apprentissage d’un modèle de régression logistique. Tout le code Python est encapsulé dans la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-Pour faciliter la reformation du modèle sur les nouvelles données, vous encapsulez l’appel à sp_execute_exernal_script dans une autre procédure stockée et transmettez les nouvelles données d’apprentissage en tant que paramètre. Cette section va vous guider tout au long de ce processus.
+Pour faciliter la reformation du modèle sur les nouvelles données, vous encapsulez l’appel à sp_execute_external_script dans une autre procédure stockée et transmettez les nouvelles données d’apprentissage en tant que paramètre. Cette section va vous guider tout au long de ce processus.
 
 ### <a name="pytrainscikit"></a>PyTrainScikit
 
@@ -106,7 +106,7 @@ Pour faciliter la reformation du modèle sur les nouvelles données, vous encaps
     GO
     ```
 
-2. Exécutez les instructions SQL suivantes pour insérer le modèle formé dans la table\_New taxi_models.
+2. Exécutez les instructions SQL suivantes pour insérer le modèle formé dans la table New-no__t-0taxi_models.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -114,14 +114,14 @@ Pour faciliter la reformation du modèle sur les nouvelles données, vous encaps
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    Le traitement des données et l’ajustement du modèle peuvent prendre quelques minutes. Les messages qui seraient dirigés vers le flux **stdout** de Python s’affichent dans la [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fenêtre **messages** de. Exemple :
+    Le traitement des données et l’ajustement du modèle peuvent prendre quelques minutes. Les messages qui seraient dirigés vers le flux **stdout** de Python s’affichent dans la fenêtre **messages** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
 
-    *Message (s) stdout provenant du script externe:* 
+    *Message (s) stdout provenant du script externe :* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. Ouvrez le tableau *\_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
+3. Ouvrez le tableau *no__t-1taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...* .
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561..* .
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -164,11 +164,11 @@ En utilisant **revoscalepy**, vous pouvez créer des contextes de calcul distant
     GO
     ```
 
-    Cette procédure stockée effectue les étapes suivantes dans le cadre de la formation du modèle:
+    Cette procédure stockée effectue les étapes suivantes dans le cadre de la formation du modèle :
 
-    - La requête SELECT applique la fonction scalaire personnalisée _fnCalculateDistance_ pour calculer la distance directe entre les emplacements de sélection et de dépose. Les résultats de la requête sont stockés dans la variable d’entrée python par `InputDataset`défaut,.
-    - La variable binaire _bonhommed_ est utilisée comme colonne d' *étiquette* ou de résultat, et le modèle est adapté à l’aide des colonnes de fonctionnalités suivantes: _passenger_count_, _trip_distance_, _trip_time_in_secs_et _direct_distance_.
-    - Le modèle formé est sérialisé et stocké dans la variable `logitObj`Python. En ajoutant le résultat du mot clé T-SQL, vous pouvez ajouter la variable en tant que sortie de la procédure stockée. À l’étape suivante, cette variable est utilisée pour insérer le code binaire du modèle dans une table de base de données _nyc_taxi_models_. Ce mécanisme facilite le stockage et la réutilisation des modèles.
+    - La requête SELECT applique la fonction scalaire personnalisée _fnCalculateDistance_ pour calculer la distance directe entre les emplacements de sélection et de dépose. Les résultats de la requête sont stockés dans la variable d’entrée python par défaut, `InputDataset`.
+    - La variable binaire _bonhommed_ est utilisée comme colonne d' *étiquette* ou de résultat, et le modèle est adapté à l’aide des colonnes de fonctionnalités suivantes : _passenger_count_, _trip_distance_, _trip_time_in_secs_et _direct_distance_.
+    - Le modèle formé est sérialisé et stocké dans la variable python `logitObj`. En ajoutant le résultat du mot clé T-SQL, vous pouvez ajouter la variable en tant que sortie de la procédure stockée. À l’étape suivante, cette variable est utilisée pour insérer le code binaire du modèle dans une table de base de données _nyc_taxi_models_. Ce mécanisme facilite le stockage et la réutilisation des modèles.
 
 2. Exécutez la procédure stockée comme suit pour insérer le modèle **revoscalepy** formé dans la table *nyc_taxi_models*.
 
@@ -178,14 +178,14 @@ En utilisant **revoscalepy**, vous pouvez créer des contextes de calcul distant
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    Le traitement des données et l’ajustement du modèle peuvent prendre un certain temps. Les messages qui seraient dirigés vers le flux **stdout** de Python s’affichent dans la [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fenêtre **messages** de. Exemple :
+    Le traitement des données et l’ajustement du modèle peuvent prendre un certain temps. Les messages qui seraient dirigés vers le flux **stdout** de Python s’affichent dans la fenêtre **messages** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
 
-    *Message (s) stdout provenant du script externe:* 
+    *Message (s) stdout provenant du script externe :* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Ouvrez la table *nyc_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *revoscalepy_model* *0x8003637265766F7363616c...* .
+    *revoscalepy_model* *0x8003637265766F7363616c..* .
 
 À l’étape suivante, vous utiliserez les modèles formés pour créer des prédictions.
 

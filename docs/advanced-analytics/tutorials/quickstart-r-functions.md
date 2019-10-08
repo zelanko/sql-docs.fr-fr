@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Dans ce guide de démarrage rapide, vous apprendrez à écrire une fonction R pour un calcul statistique avancé avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951863"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006027"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Écrire des fonctions R avancées avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Ce guide de démarrage rapide explique comment incorporer des fonctions de l’u
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Créer une procédure stockée pour générer des nombres aléatoires
 
-Pour plus de simplicité, nous allons utiliser `stats` le package R, qui est installé et chargé par défaut dans SQL Server machine learning services avec R installé. Le package contient des centaines de fonctions qui permettent d’effectuer des tâches statistiques courantes, notamment la fonction `rnorm`, qui génère un nombre spécifié de nombres aléatoires en utilisant la distribution normale, avec un écart type et une moyenne donnés.
+Pour plus de simplicité, nous allons utiliser le package R `stats`, qui est installé et chargé par défaut dans SQL Server Machine Learning Services avec R installé. Le package contient des centaines de fonctions qui permettent d’effectuer des tâches statistiques courantes, notamment la fonction `rnorm`, qui génère un nombre spécifié de nombres aléatoires en utilisant la distribution normale, avec un écart type et une moyenne donnés.
 
 Par exemple, le code R suivant retourne 100 chiffres sur une moyenne de 50, selon un écart type de 3.
 
@@ -40,7 +40,7 @@ Par exemple, le code R suivant retourne 100 chiffres sur une moyenne de 50, selo
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-Pour appeler cette ligne de R à partir de T-SQL, ajoutez la fonction r dans le paramètre de `sp_execute_external_script`script r de, comme suit :
+Pour appeler cette ligne de R à partir de T-SQL, ajoutez la fonction R dans le paramètre de script R de `sp_execute_external_script`, comme suit :
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -103,9 +103,14 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> De nombreux utilisateurs aiment utiliser les fonctions de minutage du système dans R, `system.time` telles `proc.time`que et, pour capturer le temps utilisé par les processus r et analyser les problèmes de performances. Pour obtenir un exemple, consultez le didacticiel [créer des fonctionnalités de données](../tutorials/walkthrough-create-data-features.md) où les fonctions de minutage R sont incorporées dans la solution.
+> De nombreux utilisateurs aiment utiliser les fonctions de minutage du système dans R, telles que `system.time` et `proc.time`, pour capturer le temps utilisé par les processus R et analyser les problèmes de performances. Pour obtenir un exemple, consultez le didacticiel [créer des fonctionnalités de données](../tutorials/walkthrough-create-data-features.md) où les fonctions de minutage R sont incorporées dans la solution.
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Pour créer un modèle de Machine Learning à l’aide de R dans SQL Server, suivez ce guide de démarrage rapide :
+
+> [!div class="nextstepaction"]
+> [Créer et évaluer un modèle prédictif dans R avec SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 
 Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
 
