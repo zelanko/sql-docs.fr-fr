@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006060"
+ms.locfileid: "72008430"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Démarrage rapide : Gérer les types de données et les objets à l’aide de Python dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ Voici les concepts à connaître :
 - Une valeur unique d’une trame de données est appelée une cellule et est accessible par index.
 
 Comment exposeriez-vous le résultat unique d’un calcul en tant que trame de données, si un frame Data. Frame requiert une structure tabulaire ? Une réponse consiste à représenter la valeur scalaire unique sous la forme d’une série, qui est facilement convertie en une trame de données. 
+
+> [!NOTE]
+> Lors du retour de dates, Python dans SQL utilise DATETIME qui a une plage de dates limitée de 1753-01-01 (-53690) à 9999-12-31 (2958463). 
 
 ## <a name="prerequisites"></a>Prérequis
 
