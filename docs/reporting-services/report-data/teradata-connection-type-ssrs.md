@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c50b757f6866307b52106055fd5affbf46789c0
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 0c631b873ad32082dabe2fb268b7c4254b6d7551
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500132"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680881"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Type de connexion Teradata (SSRS)
-  Pour inclure les données d'une base de données relationnelle Teradata dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type Teradata. Ce type de source de données intégré est basé sur le fournisseur managé .NET de l'extension pour le traitement des données Teradata.  
+  Pour inclure des données de Teradata dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type Teradata. Ce type de source de données intégré est basé sur le fournisseur managé .NET de l'extension pour le traitement des données Teradata.  
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Chaîne de connexion  
- Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L'exemple de chaîne de connexion suivant spécifie une base de données Teradata sur le serveur indiqué avec l'adresse IP :  
+ Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L’exemple de chaîne de connexion suivant spécifie une source de données Teradata sur le serveur indiqué avec l’adresse IP :  
   
 ```  
 data source=<IP Address>  
@@ -34,13 +34,13 @@ data source=<IP Address>
   
  Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports.  
   
- Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion &#40;Générateur de rapports et SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [spécifier les informations d’identification et les informations de connexion pour les Sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Pour plus d’informations, consultez [connexions de données, sources de données et &#40;chaînes de connexion&#41; générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Remarks"></a> Notes  
- Avant de pouvoir connecter une source de données Teradata, l'administrateur système doit installer au préalable la version du fournisseur de données .NET pour Teradata qui prend en charge la récupération des données à partir de la base de données Teradata. Ce fournisseur de données doit être installé sur le même ordinateur que le Générateur de rapports, ainsi que sur le serveur de rapports.  
+ Avant de pouvoir connecter une source de données Teradata, l’administrateur système doit installer au préalable la version du fournisseur de données .NET pour Teradata qui prend en charge la récupération des données à partir de Teradata. Ce fournisseur de données doit être installé sur le même ordinateur que le Générateur de rapports, ainsi que sur le serveur de rapports.  
   
- Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnement piloté par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) dans la documentation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][en ligne](https://go.microsoft.com/fwlink/?linkid=121312)de.  
+ Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
   
 ##  <a name="Models"></a> Modèles de rapport  
@@ -62,12 +62,8 @@ data source=<IP Address>
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs générée par la requête de dataset.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
-  
- [Using SQL Server 2008 Reporting Services with the .NET Framework Data Provider for Teradata (éventuellement en anglais)](https://go.microsoft.com/fwlink/?LinkID=130848)  
- Fournit des informations détaillées sur l'utilisation de cette extension de données.  
-  
+ [Sources de données prises en &#40;charge&#41; par Reporting Services SSRS](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Fournit des informations détaillées sur la prise en charge de la plateforme et des versions pour chaque extension de données.  
+ 
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

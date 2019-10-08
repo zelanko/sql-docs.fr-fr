@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb7c8687d1fa873c3439288a138f2d8af3778eee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194785"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687381"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilisation du contrôle WebForms ReportViewer
   Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WebForms ReportViewer afin de les afficher dans une application Windows.  
@@ -26,7 +26,7 @@ ms.locfileid: "63194785"
   
      \- Ou -  
   
-     Ouvrez un site Web ASP.NET existant et ajoutez un nouveau Web Form.  
+     Ouvrez un site web ASP.NET existant et ajoutez un nouveau formulaire web.  
   
 2.  Localisez le contrôle **ScriptManager** dans le groupe **Extensions AJAX** de la fenêtre **Boîte à outils**, puis faites-le glisser sur l’aire de conception du formulaire web.  
   

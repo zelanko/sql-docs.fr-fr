@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500464"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951787"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Sources de données prises en charge par Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] récupère des données de rapport dans des sources de données par l’intermédiaire d’une couche de données extensibles et modulaire qui utilise des extensions pour le traitement des données. Pour récupérer des données de rapport à partir d’une source de données, vous devez sélectionner une extension pour le traitement des données qui prend en charge le type de source de données, la version du logiciel s’exécutant sur la source de données ainsi que la plateforme de la source de données ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]32 bits ou 64 bits).  
@@ -109,11 +109,11 @@ ms.locfileid: "66500464"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Base de données multidimensionnelle|OLEDB|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.OledbClient<br /><br /> Version 10.0|O|O|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|O|O|   
 |Listes SharePoint|[Liste Microsoft SharePoint](#SharePointList)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Obtient des données de Lists.asmx ou des interfaces API du modèle d'objet SharePoint.<br /><br /> Consultez [Remarque](#SharePointList).|N|O|Produits SharePoint 2013 et ultérieur|O|O|   
 |XML|[XML](#XML)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Les sources de données XML n'ont pas de dépendance de plateforme.|Néant|Néant|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] ou documents|O|O|  
-|Modèle Report Server|Modèle de rapport|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépréciée pour un fichier SMDL publié|Les sources de données pour un modèle font appel aux extensions pour le traitement des données intégrées.<br /><br /> Les modèles basés sur Oracle requièrent les composants du client Oracle.<br /><br /> Les modèles basés sur Teradata requièrent le fournisseur de données .NET pour Teradata de Teradata.<br /><br /> Consultez la documentation Teradata pour la prise en charge de plateforme.|Néant|Néant|Les modèles peuvent être créés à partir de[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 ou version ultérieure<br /><br /> Teradata V14, v13, v12 et v6.2|N|N|  
+|Modèle Report Server|Modèle de rapport|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépréciée pour un fichier SMDL publié|Les sources de données pour un modèle font appel aux extensions pour le traitement des données intégrées.<br /><br /> Les modèles basés sur Oracle requièrent les composants clients Oracle.<br /><br /> Les modèles basés sur Teradata requièrent le fournisseur de données .NET pour Teradata de Teradata.<br /><br /> Consultez la documentation Teradata pour la prise en charge de plateforme.|Néant|Néant|Les modèles peuvent être créés à partir de[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 ou version ultérieure<br /><br /> Teradata V14, v13, v12 et v6.2|N|N|  
 |Base de données multidimensionnelle SAP|SAP BW|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Consultez la documentation SAP pour la prise en charge de plateforme.|Néant|Néant|SAP BW 7.0-7.5|O|Néant|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Consultez la documentation Hyperion pour la prise en charge de plateforme.|O|Néant|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|O|Néant|  
 |Base de données relationnelle Oracle|[Oracle](#OracleClient)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Nécessite les composants clients Oracle 12c ou supérieurs.|O|Néant|Oracle 11g, 11g, R2, 12c|O|O|  
-|Base de données relationnelle Teradata|[Teradata](#Teradata)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend le fournisseur de données .NET pour Teradata de Teradata.<br /><br /> Requiert le fournisseur de données .NET pour Teradata de Teradata.<br /><br /> Consultez la documentation Teradata pour la prise en charge de plateforme.|O|Néant|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|O|N|  
+|Teradata |[Teradata](#Teradata)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend le fournisseur de données .NET pour Teradata de Teradata.<br /><br /> Requiert le fournisseur de données .NET pour Teradata de Teradata.<br /><br /> Consultez la documentation Teradata pour la prise en charge de plateforme.|O|Néant|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|O|N|  
 |Base de données relationnelle DB2|Nom d'extension de données inscrite personnalisée||Host Integration (HI) Server 2004<br /><br /> Consultez la [documentation HI Server](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx).|O|Néant|Néant|O|N|  
 |Source de données OLE DB générique|OLEDB|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Toutes les sources de données qui prennent en charge OLE DB.<br /><br /> Consultez la documentation de la source de données pour la prise en charge de plateforme.|O|Néant|Toutes les sources de données qui prennent en charge OLE DB. Consultez [Remarque](#OLEDBStandard).|O|Néant|  
 |Source de données ODBC générique|[ODBC](#ODBCGeneric)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Toutes les sources de données qui prennent en charge ODBC.<br /><br /> Consultez la documentation de la source de données pour la prise en charge de plateforme.|O|Néant|Toutes les sources de données qui prennent en charge ODBC. Consultez [Remarque](#ODBCGeneric).|O|O|  
@@ -244,13 +244,13 @@ Pour installer les outils clients Oracle, vous pouvez procéder comme suit :
  [Retourner à la table des sources de données](#DataSourcesTable)  
   
 ###  <a name="Teradata"></a> Extension pour le traitement des données Teradata  
- Quand vous sélectionnez un type de source de données **Teradata**, vous sélectionnez une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui étend le fournisseur de données .NET Framework pour Teradata. Pour récupérer des données de rapport d'une base de données Teradata, l'administrateur système doit installer le fournisseur de données .NET Framework pour Teradata sur le client de création de rapports afin de modifier et d'afficher un aperçu des rapports sur le client, ainsi que sur le serveur de rapports pour afficher les rapports publiés.  
+ Quand vous sélectionnez un type de source de données **Teradata**, vous sélectionnez une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui étend le fournisseur de données .NET Framework pour Teradata. Pour récupérer des données de rapport de Teradata, l’administrateur système doit installer le fournisseur de données .NET Framework pour Teradata sur le client de création de rapports afin de modifier et d’afficher un aperçu des rapports sur le client, ainsi que sur le serveur de rapports pour afficher les rapports publiés.  
   
  Pour les projets Report Server, aucun concepteur de requêtes graphique n'est disponible pour cette extension. Vous devez utiliser le concepteur de requêtes textuel pour créer les requêtes.  
   
  Le tableau suivant indique les versions du fournisseur de données .NET pour Teradata prises en charge pour la définition d’une source de données dans une définition de rapport dans [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]:  
   
-|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Version de la base de données Teradata|Version du fournisseur de données .NET Framework pour Teradata|  
+|Version [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]|Version Teradata|Version du fournisseur de données .NET Framework pour Teradata|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
@@ -269,9 +269,7 @@ Pour installer les outils clients Oracle, vous pouvez procéder comme suit :
  Les paramètres à valeurs multiples sont pris en charge par cette extension. Les macros peuvent être spécifiées dans une requête en utilisant la commande EXECUTE en mode de requête TEXT.  
   
  Pour plus d’informations, consultez [Type de connexion Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
-  
- Vous pouvez également créer des modèles basés sur une base de données Teradata. Pour plus d’informations, consultez le livre blanc suivant sur le site Teradata : [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
-  
+ 
  [Retourner à la table des sources de données](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> Extension de données Liste SharePoint  

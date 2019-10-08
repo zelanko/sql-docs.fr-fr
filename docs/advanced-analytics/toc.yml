@@ -51,6 +51,8 @@
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
         - name: Gérer des types de données et des objets
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+        - name: Écrire des fonctions Python
+          href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: Entraîner et scorer un modèle
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R

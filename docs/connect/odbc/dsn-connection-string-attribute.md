@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68702794"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712919"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
 
@@ -116,6 +116,8 @@ Le tableau suivant liste les mots clés disponibles et les attributs pour chaque
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [Clientkey vide](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 Voici quelques mots clés de chaîne de connexion et attributs de connexion qui ne sont pas documentés dans [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) et [Fonction SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
@@ -190,6 +192,31 @@ Contrôle l’utilisation de SET FMTONLY pour les métadonnées lors de la conne
 |-|-|
 |Non|(Valeur par défaut) Utiliser sp_describe_first_result_set pour les métadonnées si elles sont disponibles. |
 |Oui| Utiliser SET FMTONLY pour les métadonnées. |
+
+
+## <a name="clientcertificate"></a>ClientCertificate
+
+Spécifie le certificat à utiliser pour l’authentification. Les options sont : 
+
+| Valeur d’option | Description |
+|-|-|
+| sha1:`<hash_value>` | Le pilote ODBC utilise le hachage SHA1 pour localiser un certificat dans le magasin de certificats Windows. |
+| subject:`<subject>` | Le pilote ODBC utilise l’objet pour localiser un certificat dans le magasin de certificats Windows. |
+| fichier : `<file_location>` [, mot de passe : `<password>`] | Le pilote ODBC utilise un fichier de certificat. |
+
+Si le certificat est au format PFX et que la clé privée dans le certificat PFX est protégée par un mot de passe, le mot clé Password est requis. Pour les certificats dans les formats PEM et DER, l’attribut Clientkey vide est obligatoire
+
+
+## <a name="clientkey"></a>Clientkey vide
+
+Spécifie un emplacement de fichier de la clé privée pour les certificats PEM ou DER spécifiés par l’attribut ClientCertificate. Format: 
+
+| Valeur d’option | Description |
+|-|-|
+| fichier : `<file_location>` [, mot de passe : `<password>`] | Spécifie l’emplacement du fichier de clé privée. |
+
+Si le fichier de clé privée est protégé par un mot de passe, le mot clé Password est requis. Si le mot de passe contient des caractères « , », un caractère « , » supplémentaire est ajouté immédiatement après chacun d’eux. Par exemple, si le mot de passe est « a, b, c », le mot de passe placé dans une séquence d’échappement présent dans la chaîne de connexion est « a,, b,, c ». 
+    
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
