@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771281"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251246"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **[@tabid =** ] «n»  
- ID d'objet de la table dans laquelle les déclencheurs de mise à jour immédiate sont recherchés. est de **type int** , sans valeur par défaut.  
+ [ **@tabid =** ] «*n »*  
+ ID d'objet de la table dans laquelle les déclencheurs de mise à jour immédiate sont recherchés. *est de* **type int** , sans valeur par défaut.  
   
- sortie de [ **@trigger_op =** ] '*trigger_output_parameters*'  
+ [ **@trigger_op =** ] sortie «*trigger_output_parameters*»  
  Spécifie si le paramètre de sortie doit renvoyer le type du déclencheur à partir duquel il est appelé. *trigger_output_parameters* est de **type char (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -52,10 +52,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Suppr**|Déclencheur DELETE.|  
 |NULL (par défaut)||  
   
-`[ @fonpublisher = ] fonpublisher`Spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est de **bits**, avec 0 comme valeur par défaut. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
+`[ @fonpublisher = ] fonpublisher` spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est de **bits**, avec 0 comme valeur par défaut. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’il est appelé dans le contexte d’un déclencheur de mise à jour immédiate et est le type de déclencheur retourné *@trigger_op* dans.  
+ 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’il est appelé dans le contexte d’un déclencheur de mise à jour immédiate et est le type de déclencheur retourné dans *\@trigger_op*.  
   
 ## <a name="remarks"></a>Notes  
  **sp_check_for_sync_trigger** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
@@ -74,7 +74,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>Exemple  
- Le code peut également être ajouté à un déclencheur sur une table sur le serveur de publication; le code est similaire, mais l’appel à **sp_check_for_sync_trigger** comprend un paramètre supplémentaire.  
+ Le code peut également être ajouté à un déclencheur sur une table sur le serveur de publication ; le code est similaire, mais l’appel à **sp_check_for_sync_trigger** comprend un paramètre supplémentaire.  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  

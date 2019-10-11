@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dc600aeabd1c988c0f9a6768da7fd0f0d280552b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119417"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252051"
 ---
-# <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
+# <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Vérifie que l'hôte actuel de la base de données de publication peut prendre en charge la réplication. Doit être exécutée à partir d'une base de données de distribution. Cette procédure est appelée par **sp_get_redirected_publisher**.  
@@ -40,27 +40,27 @@ ms.locfileid: "68119417"
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @original_publisher = ] 'original_publisher'` Le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a publié la base de données. *original_publisher* est **sysname**, sans valeur par défaut.  
+`[ @original_publisher = ] 'original_publisher'` nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Le nom de la base de données en cours de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` La cible de redirection spécifiée lorsque **sp_redirect_publisher** a été appelée pour la paire serveur de publication/base de données. *redirected_publisher* est **sysname**, sans valeur par défaut.  
+`[ @redirected_publisher = ] 'redirected_publisher'` la cible de redirection spécifiée lors de l’appel de **sp_redirect_publisher** pour la paire serveur de publication/base de données. *redirected_publisher* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune.  
+ Aucun.  
   
 ## <a name="remarks"></a>Notes  
- Si aucune entrée n’existe pour le serveur de publication et de la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null dans le paramètre de sortie *@redirected_publisher* . Si une entrée existe, elle est retournée dans le paramètre de sortie dans les deux cas (réussite et échec).  
+ Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null dans le paramètre de sortie *\@redirected_publisher*. Si une entrée existe, elle est retournée dans le paramètre de sortie dans les deux cas (réussite et échec).  
   
- Si la validation réussit, **sp_validate_redirected_publisher** retourne une indication de réussite.  
+ Si la validation réussit, **sp_validate_redirected_publisher** retourne un indicateur de réussite.  
   
  Si la validation échoue, des erreurs sont générées, qui décrivent l'échec.  
   
 ## <a name="permissions"></a>Autorisations  
- L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associé à la base de données du serveur de publication.  
+ L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution ou d’un membre d’une liste d’accès à la publication pour une publication définie associée à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

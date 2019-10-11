@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8be2e837ff71237cf6d39f8593e8b852cc08ed2e
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 22a2009b4728cfd0e1fdf9eb1623a3fb43b74904
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653375"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680914"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -67,7 +67,7 @@ Crée une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e
 ## <a name="simple-syntax"></a>Syntaxe simple
 
 ```
---Simple CREATE TABLE Syntax (common if not using options)
+-- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
@@ -77,7 +77,7 @@ CREATE TABLE
 ## <a name="full-syntax"></a>Syntaxe complète
 
 ```
---Disk-Based CREATE TABLE Syntax
+-- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
@@ -265,7 +265,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized CREATE TABLE Syntax
+-- Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
@@ -345,43 +345,36 @@ column_name <data_type>
 
 ## <a name="arguments"></a>Arguments
 
-*database_name*      
-Nom de la base de données dans laquelle la table est créée. *database_name* doit spécifier le nom d’une base de données existante. Si aucun nom n’est spécifié, *database_name* correspond par défaut à la base de données actuelle. Le nom d’accès de la connexion actuelle doit être associé à un ID d’utilisateur existant dans la base de données spécifiée par *database_name*, et cet ID d’utilisateur doit disposer des autorisations CREATE TABLE.
+*database_name* correspond au nom de la base de données dans laquelle la table est créée. *database_name* doit spécifier le nom d’une base de données existante. Si aucun nom n’est spécifié, *database_name* correspond par défaut à la base de données actuelle. Le nom d’accès de la connexion actuelle doit être associé à un ID d’utilisateur existant dans la base de données spécifiée par *database_name*, et cet ID d’utilisateur doit disposer des autorisations CREATE TABLE.
 
-*schema_name*     
-Nom du schéma auquel appartient la nouvelle table.
+*schema_name* correspond au nom du schéma auquel appartient la nouvelle table.
 
-*table_name*    
-Nom de la nouvelle table. Les noms de tables doivent respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). *table_name* peut comprendre un maximum de 128 caractères, à l’exception des noms de tables temporaires locales (noms précédés du signe #) qui ne peuvent pas dépasser 116 caractères.
+*table_name* correspond au nom de la nouvelle table. Les noms de tables doivent respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). *table_name* peut comprendre un maximum de 128 caractères, à l’exception des noms de tables temporaires locales (noms précédés du signe #) qui ne peuvent pas dépasser 116 caractères.
 
-AS FileTable    
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+AS FileTable **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Crée la table en tant que FileTable. Vous ne spécifiez pas de colonnes car un FileTable dispose d'un schéma fixe. Pour plus d’informations, consultez [FileTables](../../relational-databases/blob/filetables-sql-server.md).
 
-*column_name*      
-*computed_column_expression*    
-Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. La colonne est calculée à partir d'une expression qui utilise d'autres colonnes dans la même table. Par exemple, une colonne calculée peut avoir la définition **cost** AS **price** \* **qty**. L’expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou contenir des types de données d'alias.
+*column_name*
+*computed_column_expression* est une expression définissant la valeur d’une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. La colonne est calculée à partir d'une expression qui utilise d'autres colonnes dans la même table. Par exemple, une colonne calculée peut avoir la définition **cost** AS **price** \* **qty**. L’expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou contenir des types de données d'alias.
 
 Les colonnes calculées peuvent être utilisées dans des listes de sélection, des clauses WHERE, des clauses ORDER BY ou à tout autre emplacement où il est possible d'utiliser des expressions régulières, aux exceptions suivantes près :
 
--  Les colonnes calculées doivent être marquées comme PERSISTED pour participer à des contraintes FOREIGN KEY ou CHECK.
--  Une colonne calculée peut être utilisée en tant que colonne clé dans un index ou en tant que composante d’une contrainte PRIMARY KEY ou UNIQUE quelconque, si sa valeur est définie par une expression déterministe et si le type de données du résultat est autorisé dans les colonnes d’index.
+- Les colonnes calculées doivent être marquées comme PERSISTED pour participer à des contraintes FOREIGN KEY ou CHECK.
+- Une colonne calculée peut être utilisée en tant que colonne clé dans un index ou en tant que composante d’une contrainte PRIMARY KEY ou UNIQUE quelconque, si sa valeur est définie par une expression déterministe et si le type de données du résultat est autorisé dans les colonnes d’index.
 
    Par exemple, si la table possède les colonnes de type entier **a** et **b**, la colonne calculée **a+b** peut être indexée, contrairement à la colonne calculée **a+DATEPART(dd, GETDATE())** dont la valeur est susceptible d’évoluer au fil des appels.
 
--  Une colonne calculée ne peut pas être la cible d'une instruction INSERT ou UPDATE.
+- Une colonne calculée ne peut pas être la cible d'une instruction INSERT ou UPDATE.
 
 > [!NOTE]
 > Chaque ligne dans une table peut avoir des valeurs différentes pour les colonnes impliquées dans une colonne calculée ; par conséquent, il est possible que la colonne calculée n'ait pas la même valeur pour chaque ligne.
 
 En fonction des expressions utilisées, la possibilité de valeurs NULL dans les colonnes calculées est déterminée automatiquement par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le résultat de la plupart des expressions est considéré comme pouvant avoir la valeur Null, même si seules des colonnes n'acceptant pas cette valeur sont présentes, car des dépassements négatifs ou positifs possibles produisent également des résultats Null. Utilisez la fonction `COLUMNPROPERTY` avec la propriété **AllowsNull** pour examiner la possibilité de valeur NULL pour chaque colonne calculée dans une table. Une expression qui accepte une valeur Null peut être transformée en expression qui n’accepte pas cette valeur, quand `ISNULL` est spécifié avec la constante *check_expression*, où la constante est une valeur non nulle substituée à n’importe quel résultat NULL. L'autorisation REFERENCES sur le type est nécessaire pour les colonnes calculées basées sur des expressions de type CLR (Common Language Runtime) défini par l'utilisateur.
 
-PERSISTED    
-Spécifie que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] stockera physiquement les valeurs calculées dans la table et qu'il les mettra à jour lorsque les autres colonnes dont dépend la colonne calculée seront actualisées. Notamment, une colonne calculée en tant que `PERSISTED` vous permet de créer un index sur une colonne calculée qui est déterministe, mais pas précise. Pour plus d'informations, consultez [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Les colonnes calculées utilisées comme colonnes de partitionnement d’une table partitionnée doivent être explicitement marquées comme `PERSISTED`. *computed_column_expression* doit être déterministe quand `PERSISTED` est spécifié.
+PERSISTED spécifie que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] stockera physiquement les valeurs calculées dans la table et qu’il les mettra à jour lorsque les autres colonnes dont dépend la colonne calculée seront actualisées. Notamment, une colonne calculée en tant que `PERSISTED` vous permet de créer un index sur une colonne calculée qui est déterministe, mais pas précise. Pour plus d'informations, consultez [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Les colonnes calculées utilisées comme colonnes de partitionnement d’une table partitionnée doivent être explicitement marquées comme `PERSISTED`. *computed_column_expression* doit être déterministe quand `PERSISTED` est spécifié.
 
-ON { *partition_scheme* | *filegroup* |  **"default"** }     
-Spécifie le schéma de partition ou groupe de fichiers dans lequel la table est stockée. Si *partition_scheme* est spécifié, la table est partitionnée avec des partitions stockées dans un ensemble d’un ou de plusieurs groupes de fichiers spécifié dans *partition_scheme*. Si *filegroup* est spécifié, la table est stockée dans le groupe de fichiers nommé. Le groupe de fichiers doit exister dans la base de données. Si **"default"** est spécifié, ou si ON n’est pas spécifié du tout, la table est stockée dans le groupe de fichiers par défaut. Le mécanisme de stockage d'une table tel que spécifié dans CREATE TABLE ne peut plus être modifié ultérieurement.
+ON { *partition_scheme* | *filegroup* |  **"default"** } : Spécifie le schéma ou le groupe de fichiers de partition sur lequel la table est stockée. Si *partition_scheme* est spécifié, la table est partitionnée avec des partitions stockées dans un ensemble d’un ou de plusieurs groupes de fichiers spécifié dans *partition_scheme*. Si *filegroup* est spécifié, la table est stockée dans le groupe de fichiers nommé. Le groupe de fichiers doit exister dans la base de données. Si **"default"** est spécifié, ou si ON n’est pas spécifié du tout, la table est stockée dans le groupe de fichiers par défaut. Le mécanisme de stockage d'une table tel que spécifié dans CREATE TABLE ne peut plus être modifié ultérieurement.
 
 ON {*partition_scheme* | *filegroup* |  **"default"** } peut également être spécifié dans une contrainte PRIMARY KEY ou UNIQUE. Ces contraintes créent des index. Si *filegroup* est spécifié, l’index est stocké dans le groupe de fichiers nommé. Si **"default"** est spécifié, ou si ON n’est pas spécifié du tout, l’index est stocké dans le même groupe de fichiers que la table. Si la contrainte `PRIMARY KEY` ou `UNIQUE` crée un index cluster, les pages de données de la table sont stockées dans le même groupe de fichiers que l’index. Si `CLUSTERED` est spécifié ou si la contrainte crée un index cluster d’une autre manière, et que la valeur *partition_scheme* spécifiée est différente de la valeur *partition_scheme* ou *filegroup* de la définition de table, ou vice versa, seule la définition de la contrainte sera honorée et l’autre sera ignorée.
 
@@ -390,8 +383,7 @@ ON {*partition_scheme* | *filegroup* |  **"default"** } peut également être sp
 >
 > Après avoir créé une table partitionnée, pensez à définir l’option `LOCK_ESCALATION` de la table sur la valeur `AUTO`. Cela peut améliorer la concurrence en permettant l'escalade des verrous au niveau de la partition (HoBT) plutôt que de la table. Pour plus d’informations, consultez [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-TEXTIMAGE_ON { *filegroup*|  **"default"** }    
-Indique que les colonnes **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et de type CLR (Common Language Runtime) défini par l’utilisateur (y compris géométrie et géographie) sont stockées dans le groupe de fichiers spécifié.
+TEXTIMAGE_ON { *filegroup*|  **"default"** } : Indique que les colonnes **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et de type CLR (Common Language Runtime) défini par l’utilisateur (y compris géométrie et géographie) sont stockées dans le groupe de fichiers spécifié.
 
 `TEXTIMAGE_ON` n’est pas autorisé s’il n’y a pas de colonne de valeur élevée dans la table. `TEXTIMAGE_ON` ne peut pas être spécifié si *partition_scheme* est spécifié. Si **"default"** est spécifié, ou si `TEXTIMAGE_ON` n’est pas spécifié du tout, les colonnes de valeur élevée sont stockées dans le groupe de fichiers par défaut. Le stockage de données de colonnes de valeur élevée tel que spécifié dans `CREATE TABLE` ne peut plus être modifié ultérieurement.
 
@@ -935,10 +927,10 @@ Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] référencent une t
 
 ```sql
 CREATE TABLE #MyTempTable (
-  col1 INT PRIMARY KEY
+    col1 INT PRIMARY KEY
 );
 
-INSERT INTO #MyTempTable 
+INSERT INTO #MyTempTable
 VALUES (1);
 ```
 
@@ -959,17 +951,17 @@ Une table temporaire locale créée au sein d'une procédure stockée ou d'un d�
 ```sql
 CREATE PROCEDURE dbo.Test2
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (2);
     SELECT Test2Col = x FROM #t;
 GO
 
 CREATE PROCEDURE dbo.Test1
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (1);
     SELECT Test1Col = x FROM #t;
- EXEC Test2;
+    EXEC Test2;
 GO
 
 CREATE TABLE #t(x INT PRIMARY KEY);
@@ -1131,16 +1123,16 @@ Tous les utilisateurs peuvent créer des tables temporaires dans tempdb.
 L'exemple suivant affiche la définition de colonne pour une contrainte PRIMARY KEY avec un index cluster sur la colonne `EmployeeID` de la table `Employee`. Étant donné que le nom de la contrainte n'est pas spécifié, le système en fournit un.
 
 ```sql
-CREATE TABLE dbo.Employee (EmployeeID int
-PRIMARY KEY CLUSTERED);
+CREATE TABLE dbo.Employee (
+    EmployeeID INT PRIMARY KEY CLUSTERED
+);
 ```
 
 ### <a name="b-using-foreign-key-constraints"></a>B. Utilisation des contraintes FOREIGN KEY
 Une contrainte FOREIGN KEY sert à référencer une autre table. Les clés étrangères peuvent être des clés à colonne unique ou sur plusieurs colonnes. Cet exemple montre une contrainte FOREIGN KEY à colonne unique dans la table `SalesOrderHeader` qui fait référence à la table `SalesPerson`. Seule la clause REFERENCES est obligatoire pour une contrainte FOREIGN KEY à colonne unique.
 
 ```sql
-SalesPersonID int NULL
-REFERENCES SalesPerson(SalesPersonID)
+SalesPersonID INT NULL REFERENCES SalesPerson(SalesPersonID)
 ```
 
 Vous pouvez également utiliser de manière explicite la clause FOREIGN KEY et redéterminer l'attribut de la colonne. Notez que le nom de la colonne ne doit pas nécessairement être le même dans les deux tables.
@@ -1152,16 +1144,16 @@ FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)
 Les contraintes de clés sur plusieurs colonnes sont créées comme des contraintes de table. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la table `SpecialOfferProduct` inclut une clause PRIMARY KEY sur plusieurs colonnes. L'exemple suivant montre comment faire référence à cette clé à partir d'une autre table ; un nom de contrainte explicite n'est pas obligatoire.
 
 ```sql
-CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY
- (ProductID, SpecialOfferID)
-REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
+CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail
+    FOREIGN KEY (ProductID, SpecialOfferID)
+    REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ```
 
 ### <a name="c-using-unique-constraints"></a>C. Utilisation des contraintes UNIQUE
 Les contraintes UNIQUE servent à garantir l'unicité dans les colonnes qui n'ont pas de clés primaires. L'exemple suivant applique la restriction suivant laquelle la colonne `Name` de la table `Product` doit être unique.
 
 ```sql
-Name nvarchar(100) NOT NULL
+Name NVARCHAR(100) NOT NULL
 UNIQUE NONCLUSTERED
 ```
 
@@ -1175,7 +1167,7 @@ DEFAULT 'New Position - title not formalized yet'
 Outre des constantes, les définitions DEFAULT peuvent inclure des fonctions. Utilisez l'exemple suivant pour obtenir la date actuelle d'une entrée.
 
 ```sql
-DEFAULT (getdate())
+DEFAULT (GETDATE())
 ```
 
 Une fonction niladique peut également améliorer l'intégrité des données. Afin de garder une trace de l'utilisateur qui a inséré une ligne, utilisez la fonction niladique pour USER. N'entourez pas les fonctions niladiques de parenthèses.
@@ -1194,16 +1186,19 @@ CHECK (CreditRating >= 1 and CreditRating <= 5)
 Cet exemple montre une contrainte nommée avec un modèle de restriction pour les données caractères entrées dans une colonne d'une table.
 
 ```sql
-CONSTRAINT CK_emp_id CHECK (emp_id LIKE
-'[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
-OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
+CONSTRAINT CK_emp_id CHECK (
+    emp_id LIKE '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+    OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+)
 ```
 
 Cet exemple spécifie que les valeurs doivent figurer dans une liste spécifique ou suivre un modèle donné.
 
 ```sql
-CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')
-OR emp_id LIKE '99[0-9][0-9]')
+CHECK (
+    emp_id IN ('1389', '0736', '0877', '1622', '1756')
+    OR emp_id LIKE '99[0-9][0-9]'
+)
 ```
 
 ### <a name="f-showing-the-complete-table-definition"></a>F. Affichage des définitions de tables complètes
@@ -1223,9 +1218,9 @@ CREATE TABLE dbo.PurchaseOrderDetail
     RejectedQty float NULL,
     DueDate datetime NULL,
     rowguid uniqueidentifier ROWGUIDCOL NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (newid()),
+        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (NEWID()),
     ModifiedDate datetime NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (getdate()),
+        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (GETDATE()),
     LineTotal AS ((UnitPrice*OrderQty)),
     StockedQty AS ((ReceivedQty-RejectedQty)),
     CONSTRAINT PK_PurchaseOrderDetail_PurchaseOrderID_LineNumber
@@ -1240,8 +1235,11 @@ L'exemple suivant crée une table avec une colonne `xml` de type collection de s
 
 ```sql
 CREATE TABLE HumanResources.EmployeeResumes
-   (LName nvarchar(25), FName nvarchar(25),
-    Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );
+(
+    LName nvarchar(25),
+    FName nvarchar(25),
+    Resume xml(DOCUMENT HumanResources.HRResumeSchemaCollection)
+);
 ```
 
 ### <a name="h-creating-a-partitioned-table"></a>H. Création d'une table partitionnée
@@ -1249,16 +1247,16 @@ L'exemple suivant crée une fonction de partition pour partitionner une table ou
 
 ```sql
 CREATE PARTITION FUNCTION myRangePF1 (int)
-    AS RANGE LEFT FOR VALUES (1, 100, 1000) ;
+    AS RANGE LEFT FOR VALUES (1, 100, 1000);
 GO
 
 CREATE PARTITION SCHEME myRangePS1
     AS PARTITION myRangePF1
-    TO (test1fg, test2fg, test3fg, test4fg) ;
+    TO (test1fg, test2fg, test3fg, test4fg);
 GO  
   
 CREATE TABLE PartitionTable (col1 int, col2 char(10))
-    ON myRangePS1 (col1) ;
+    ON myRangePS1 (col1);
 GO
 ```
 
@@ -1274,11 +1272,13 @@ L'exemple suivant crée une table avec une colonne `uniqueidentifier`. Il utilis
 
 ```sql
 CREATE TABLE dbo.Globally_Unique_Data
-    (guid uniqueidentifier
+(
+    GUID UNIQUEIDENTIFIER
         CONSTRAINT Guid_Default DEFAULT
         NEWSEQUENTIALID() ROWGUIDCOL,
-    Employee_Name varchar(60)
-    CONSTRAINT Guid_PK PRIMARY KEY (guid) );
+    Employee_Name VARCHAR(60)
+    CONSTRAINT Guid_PK PRIMARY KEY (GUID)
+);
 ```
 
 ### <a name="j-using-an-expression-for-a-computed-column"></a>J. Utilisation d'une expression pour une colonne calculée
@@ -1286,7 +1286,11 @@ L'exemple suivant illustre l'utilisation d'une expression (`(low + high)/2`) pou
 
 ```sql
 CREATE TABLE dbo.mytable
-    ( low int, high int, myavg AS (low + high)/2 ) ;
+(
+    low INT,
+    high INT,
+    myavg AS (low + high)/2
+);
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. Création d'une colonne calculée basée sur une colonne de type défini par l'utilisateur
@@ -1294,7 +1298,10 @@ L'exemple suivant crée une table, avec une colonne définie comme `utf8string` 
 
 ```sql
 CREATE TABLE UDTypeTable
-    ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
+(
+    u UTF8STRING,
+    ustr AS u.ToString() PERSISTED
+);
 ```
 
 ### <a name="l-using-the-user_name-function-for-a-computed-column"></a>L. Utilisation de la fonction USER_NAME pour une colonne calculée
@@ -1302,7 +1309,11 @@ L'exemple suivant utilise la fonction `USER_NAME()` dans la colonne `myuser_name
 
 ```sql
 CREATE TABLE dbo.mylogintable
-    ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;
+(
+    date_in DATETIME,
+    user_id INT,
+    myuser_name AS USER_NAME()
+);
 ```
 
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>M. Création d'une table qui comporte une colonne FILESTREAM
@@ -1310,12 +1321,11 @@ L'exemple suivant crée une table qui comporte une colonne `FILESTREAM` `Photo`.
 
 ```sql
 CREATE TABLE dbo.EmployeePhoto
-    (
-     EmployeeId int NOT NULL PRIMARY KEY
-    ,Photo varbinary(max) FILESTREAM NULL
-    ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL
-        UNIQUE DEFAULT NEWID()
-    );
+(
+    EmployeeId INT NOT NULL PRIMARY KEY,
+    Photo VARBINARY(MAX) FILESTREAM NULL,
+    MyRowGuidColumn UNIQUEIDENTIFIER NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID()
+);
 ```
 
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>N. Création d'une table qui utilise la compression de ligne
@@ -1323,7 +1333,10 @@ L'exemple suivant crée une table qui utilise la compression de ligne.
 
 ```sql
 CREATE TABLE dbo.T1
-(c1 int, c2 nvarchar(200) )
+(
+    c1 INT,
+    c2 NVARCHAR(200)
+)
 WITH (DATA_COMPRESSION = ROW);
 ```
 
@@ -1336,18 +1349,22 @@ Cet exemple crée une table qui comporte une colonne éparse.
 
 ```sql
 CREATE TABLE dbo.T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL
+);
 ```
 
 Cet exemple crée une table qui comporte deux colonnes éparses et un jeu de colonnes nommé `CSet`.
 
 ```sql
 CREATE TABLE T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL,
-    c3 int SPARSE NULL,
-    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL,
+    c3 INT SPARSE NULL,
+    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
+);
 ```
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. Création d’une table temporelle sur disque avec version système
@@ -1360,13 +1377,13 @@ Cet exemple crée une table temporelle liée à une nouvelle table d’historiqu
 ```sql
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH (SYSTEM_VERSIONING = ON);
 ```
@@ -1374,31 +1391,29 @@ WITH (SYSTEM_VERSIONING = ON);
 Cet exemple crée une table temporelle liée à une table d’historique existante.
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
-WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. Création d’une table temporelle à mémoire optimisée avec version système
@@ -1409,53 +1424,56 @@ L’exemple suivant montre comment créer une table temporelle à mémoire optim
 Cet exemple crée une table temporelle liée à une nouvelle table d’historique.
 
 ```sql
-CREATE SCHEMA History
+CREATE SCHEMA History;
 GO
+
 CREATE TABLE dbo.Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY NONCLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (
-        MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA,
-            SYSTEM_VERSIONING = ON ( HISTORY_TABLE = History.DepartmentHistory )
-    );
+(
+    MEMORY_OPTIMIZED = ON,
+    DURABILITY = SCHEMA_AND_DATA,
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.DepartmentHistory)
+);
 ```
 
 Cet exemple crée une table temporelle liée à une table d’historique existante.
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+(
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON)
+);
 ```
 
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>R. Création d’une table avec colonnes chiffrées
@@ -1463,21 +1481,19 @@ L’exemple suivant crée une table avec deux colonnes chiffrées. Pour plus d�
 
 ```sql
 CREATE TABLE Customers (
-    CustName nvarchar(60)
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = RANDOMIZED,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    SSN varchar(11) COLLATE Latin1_General_BIN2
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = DETERMINISTIC ,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    Age int NULL
+    CustName NVARCHAR(60)
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = RANDOMIZED,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    SSN VARCHAR(11) COLLATE Latin1_General_BIN2
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = DETERMINISTIC ,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    Age INT NULL
 );
 ```
 
@@ -1487,7 +1503,7 @@ Crée une table avec un index filtré inline.
 ```sql
 CREATE TABLE t1
 (
-    c1 int,
+    c1 INT,
     index IX1 (c1) WHERE c1 > 0
 );
 ```
@@ -1496,22 +1512,22 @@ CREATE TABLE t1
 L’exemple suivant montre comment utiliser un index inline NONCLUSTERED pour les tables sur disque :
 
 ```sql
-CREATE TABLE t1 
+CREATE TABLE t1
 (
-    c1 int, 
+    c1 INT,
     INDEX ix_1 NONCLUSTERED (c1)
 );
 
-CREATE TABLE t2 
+CREATE TABLE t2
 (
-    c1 int, 
-    c2 int INDEX ix_1 NONCLUSTERED
+    c1 INT,
+    c2 INT INDEX ix_1 NONCLUSTERED
 );
 
-CREATE TABLE t3 
+CREATE TABLE t3
 (
-    c1 int, 
-    c2 int, 
+    c1 INT,
+    c2 INT,
     INDEX ix_1 NONCLUSTERED (c1,c2)
 );
 ```
@@ -1522,8 +1538,8 @@ Crée une table avec une clé primaire composée nommée de manière anonyme. Ce
 ```sql
 CREATE TABLE #tmp
 (
-    c1 int,
-    c2 int,
+    c1 INT,
+    c2 INT,
     PRIMARY KEY CLUSTERED ([c1], [c2])
 );
 GO
@@ -1545,13 +1561,14 @@ La session A crée une table temporaire globale ##test dans [!INCLUDE[ssSDSfull]
 
 ```sql
 CREATE TABLE ##test (
-    a int, 
-    b int
+    a INT,
+    b INT
 );
-INSERT INTO ##test 
-VALUES (1,1);
 
---Obtain object ID for temp table ##test
+INSERT INTO ##test
+VALUES (1, 1);
+
+-- Obtain object ID for temp table ##test
 SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
@@ -1562,26 +1579,27 @@ SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
 Obtenir le nom de la table temporaire globale pour un objet ayant l’ID 1253579504 dans tempdb (2)
+
 ```sql
-SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
+SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
+```sql
 ##test
 ```
 
 La session B se connecte à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 et peut accéder à la table ##test créée par la session A.
 
 ```sql
-SELECT * FROM ##test
+SELECT * FROM ##test;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
-1,1
+```sql
+1, 1
 ```
 
 La session C se connecte à une autre base de données dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 et veut accéder à la base de données ##test créée dans testdb1. Cette instruction select échoue à cause de l’étendue de la base de données pour les tables temporaires globales.
@@ -1589,6 +1607,7 @@ La session C se connecte à une autre base de données dans [!INCLUDE[ssSDSfull]
 ```sql
 SELECT * FROM ##test
 ```
+
 Ce qui génère l’erreur suivante :
 
 ```
@@ -1599,26 +1618,26 @@ Invalid object name '##test'
 Adressage des objets système dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb à partir de la base de données utilisateur active testdb1
 
 ```sql
-SELECT * FROM tempdb.sys.objects
-SELECT * FROM tempdb.sys.columns
-SELECT * FROM tempdb.sys.database_files
+SELECT * FROM tempdb.sys.objects;
+SELECT * FROM tempdb.sys.columns;
+SELECT * FROM tempdb.sys.database_files;
 ```
 
 ## <a name="see-also"></a>Voir aussi
-[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
-[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)    
-[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)    
-[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
-[Types de données](../../t-sql/data-types/data-types-transact-sql.md)    
-[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)    
-[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)    
-[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)    
-[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)    
-[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)    
-[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)    
-[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)    
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)    
-[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)    
-[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)    
-[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
-[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
+[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
+[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)
+[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
+[Data Types](../../t-sql/data-types/data-types-transact-sql.md)
+[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)
+[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
+[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
+[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)
+[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)
+[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)

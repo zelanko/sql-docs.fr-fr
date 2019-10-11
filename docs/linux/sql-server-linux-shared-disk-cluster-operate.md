@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154575"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682116"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser une instance de cluster de basculement - SQL Server sur Linux
 
@@ -35,7 +35,7 @@ Le mode de basculement dépend de la distribution Linux. Suivez les instructions
 
 ## <a name="manual-failover-rhel-or-ubuntu"></a>Basculement manuel (RHEL ou Ubuntu)
 
-Pour effectuer un basculement manuel, sur les serveurs Red Hat Enterprise Linux (RHEL) ou Ubuntu exécutez les étapes suivantes.
+Pour effectuer un basculement manuel sur des serveurs Red Hat Enterprise Linux (RHEL) ou Ubuntu, exécutez les étapes suivantes.
 1.  Émettez les commandes suivantes : 
 
    ```bash

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121327"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710719"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Réplication transactionnelle d’égal à égal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121327"
   
 -   paramètre de l'Agent de Distribution **-SubscriptionStreams** et paramètre de l'Agent de lecture du journal **-MaxCmdsInTran**;  
   
--   propriétés d'article **@destination_owner** et **@destination_table** .
+-   propriétés d’article `@destination_owner` et `@destination_table`.
 
 -   La réplication transactionnelle d’égal à égal ne prend pas en charge la création d’un abonnement transactionnel à sens unique à une publication d’égal à égal.   
   
  Les propriétés suivantes présentent des considérations spéciales :  
   
--   La propriété de publication **@allow_initialize_from_backup** requiert la valeur **true**.  
+-   La propriété de publication `@allow_initialize_from_backup` doit avoir la valeur **true**.  
   
--   La propriété d’article **@replicate_ddl** requiert la valeur **true**; **@identityrangemanagementoption** requiert la valeur **manual**, et **@status** nécessite la définition de l’option **24** .  
+-   La propriété d’article `@replicate_ddl` doit avoir la valeur **true** ; `@identityrangemanagementoption` doit avoir la valeur **manual**, et `@status` nécessite la définition de l’option **24**.  
   
--   Les propriétés d’article **@ins_cmd** , **@del_cmd** et **@upd_cmd** ne peuvent pas être définies sur **SQL**.  
+-   Les propriétés d’article `@ins_cmd`, `@del_cmd` et `@upd_cmd` ne peuvent pas être définies sur **SQL**.  
   
--   La propriété d’abonnement **@sync_type** requiert la valeur **none** ou **automatic**.  
+-   La propriété d’abonnement `@sync_type` doit avoir la valeur **none** ou **automatic**.  
   
 ### <a name="maintenance-considerations"></a>Considérations sur la maintenance  
  Certaines actions nécessitent la suspension du système. Ce qui signifie que toute activité sur les tables publiées doit être interrompue au niveau de tous les nœuds et que la réception par chacun des nœuds de toutes les modifications provenant des autres nœuds doit être vérifiée.  

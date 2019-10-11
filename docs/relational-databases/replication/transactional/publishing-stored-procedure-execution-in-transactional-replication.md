@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769334"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710732"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publication de l'exécution de procédures stockées dans la réplication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio : [Publier l’exécution d’une procédure stockée dans une publication transactionnelle &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programmation Transact-SQL de la réplication : exécutez [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) et spécifiez la valeur 'serializable proc exec' (recommandé) ou 'proc exec' pour le paramètre **@type** . Pour plus d’informations sur la définition d’articles, consultez [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programmation Transact-SQL de la réplication : exécutez [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) et spécifiez la valeur 'serializable proc exec' (recommandé) ou 'proc exec' pour le paramètre `@type`. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modification de la procédure sur l'Abonné  
  Par défaut, la définition de la procédure stockée sur le serveur de publication est propagée vers chaque Abonné. Cependant, vous pouvez aussi modifier la procédure stockée sur l'Abonné. Ceci est utile si vous souhaitez que des logiques différentes soient exécutées sur le serveur de publication et sur l'Abonné. Considérons par exemple la procédure stockée sur le serveur de publication **sp_big_delete**, qui a deux fonctions : elle supprime 1 000 000 de lignes de la table répliquée **big_table1** et met à jour la table non répliquée **big_table2**. Pour solliciter moins de ressources réseau, vous pouvez transmettre la suppression de ce million de lignes en tant que procédure stockée en publiant **sp_big_delete**. Sur l'Abonné, vous pouvez modifier **sp_big_delete** afin qu'elle supprime le million de lignes sans effectuer ensuite la mise à jour de **big_table2**.  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  Les verrous sont conservés plus longtemps lorsque vous exécutez la procédure dans une transaction sérialisable et peuvent aboutir à une concurrence d'accès réduite.  
   
-## <a name="the-xactabort-setting"></a>Le paramètre XACT_ABORT  
+## <a name="the-xact_abort-setting"></a>Le paramètre XACT_ABORT  
  Lors de la réplication de l'exécution d'une procédure stockée, le paramétrage de la session exécutant la procédure stockée doit spécifier XACT_ABORT ON. Si XACT_ABORT est défini à OFF et qu'une erreur se produit lors de l'exécution de la procédure sur le serveur de publication, la même erreur se produira sur l'Abonné, provoquant l'échec de l'Agent de distribution. Le fait de spécifier XACT_ABORT ON garantit que toute erreur rencontrée lors de l'exécution sur le serveur de publication provoque l'annulation de la totalité de l'exécution, évitant ainsi l'échec de l'Agent de distribution. Pour plus d’informations sur la définition de XACT_ABORT, consultez [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
   
  Si vous devez définir le paramètre XACT_ABORT à OFF, spécifiez le paramètre **-SkipErrors** pour l'Agent de distribution. Cela permet à l'agent de continuer l'application des modifications sur l'Abonné même si une erreur est rencontrée.  

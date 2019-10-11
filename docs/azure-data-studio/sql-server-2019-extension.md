@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326028"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961961"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Extension SQL Server 2019 pour Azure Data Studio (préversion)
 
-L’extension SQL Server 2019 pour Azure Data Studio (préversion) fournit une prise en charge en préversion des nouvelles fonctionnalités et des nouveaux outils fournis pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Cela comprend la prise en charge de l’aperçu pour les [clusters Big Data SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), une [expérience de notebook](../big-data-cluster/notebooks-guidance.md) intégrée et un [assistant PolyBase Créer une table externe](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
+L’extension SQL Server 2019 pour Azure Data Studio (préversion) fournit une prise en charge en préversion des nouvelles fonctionnalités et des nouveaux outils fournis pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Cette prise en charge comprend une prise en charge en préversion des [clusters Big Data SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), une [expérience de notebook](../big-data-cluster/notebooks-guidance.md) intégrée et un [Assistant Créer une table externe](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) PolyBase.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Installation de l’extension SQL Server 2019 en préversion
 
@@ -33,7 +33,7 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 septembre 2019 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 septembre 2019 |0.16.0
 
-1. Dans Azure Data Studio choisissez **Installer l’extension à partir du package VSIX** dans le menu **Fichier**, puis sélectionnez le fichier. vsix téléchargé.
+1. Dans Azure Data Studio choisissez **Installer l’extension à partir du package VSIX** dans le menu **Fichier**, puis sélectionnez le fichier .vsix téléchargé.
 
 1. Choisissez **Oui** lorsque vous êtes invité à confirmer l’installation, puis attendez la notification indiquant que l’installation a réussi.
 
@@ -61,11 +61,11 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
 
 * Le type de connexion **Cluster Big Data SQL Server** a été supprimé dans cette version. Toutes les fonctionnalités précédemment disponibles à partir de la connexion Big Data SQL Server sont désormais disponibles dans la connexion SQL Server.
 * La navigation HDFS se trouve dans le dossier **Data Services**
-* Pour les notebooks, le PySpark et les autres noyaux de Big Data fonctionnent lorsqu’ils sont connectés à l’instance SQL Server maître dans votre cluster Big Data SQL Server.
+* Pour les notebooks, le noyau PySpark et d’autres noyaux Big Data fonctionnent quand ils sont connectés à l’instance principale SQL Server dans votre cluster Big Data SQL Server.
 * Assistant Créer une table externe :
   * Prise en charge de la création d’une table externe à l’aide d’une source de données externe existante.
   * Améliorations des performances à travers l’assistant.
-  * Amélioration de la gestion des noms d’objets avec des caractères spéciaux. Dans certains cas, ces derniers provoquaient l’échec de l’assistant
+  * Amélioration de la gestion des noms d’objets avec des caractères spéciaux. Dans certains cas, ces derniers provoquaient l’échec de l’Assistant.
   * Améliorations de la fiabilité de la page Mappage d’objets.
   * Suppression des bases de données système « DWConfiguration », « DWDiagnostics », « DWQueue » dans la liste déroulante des bases de données.
   * Prise en charge de la définition du nom de l’objet de format de fichier externe dans l'assistant **Création d’une table externe à partir de fichiers CSV**.
@@ -82,15 +82,15 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
 
 ## <a name="release-notes-v0102"></a>Notes de publication (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Prise en charge de SQL Server 2019
-La prise en charge de SQL Server 2019 a été mise à jour. Lors de la connexion à une instance de cluster Big Data SQL Server Big Data, un nouveau dossier _Data Services_ s’affiche dans l’arborescence de l’explorateur. Il possède des points de lancement pour des actions telles que l’ouverture d’un nouveau notebook sur la connexion, l’envoi de travaux Spark et l’utilisation de HDFS. Notez que pour certaines actions, telles que la _Création de données externes_ à partir d’un fichier/dossier HDFS , l’extension _SQL Server 2019 (préversion)_ doit être installée.
+La prise en charge de SQL Server 2019 a été mise à jour. Après la connexion à une instance de cluster Big Data SQL Server, un nouveau dossier _Data Services_ s’affiche dans l’arborescence de l’explorateur. Ce dossier présente des points de lancement pour des actions telles que l’ouverture d’un nouveau notebook sur la connexion, l’envoi de travaux Spark et l’utilisation de HDFS. Certaines actions, telles que la _Création de données externes_ à partir d’un fichier/dossier HDFS, l’extension _SQL Server 2019 (préversion)_ doit être installée.
 
 ### <a name="notebook-support"></a>Prise en charge des notebooks
 Nous avons apporté des mises à jour significatives à l’interface utilisateur du notebook dans cette version. Notre objectif était de faciliter la lecture des notebooks partagés avec vous. Cela signifiait la suppression de toutes les zones de contour autour des cellules, sauf si elles sont sélectionnées ou survolées, l’ajout de la prise en charge du pointage pour les actions sur des cellules uniques sans avoir besoin de sélectionner une cellule, la clarification de l’état d’exécution en ajoutant le nombre d’exécutions, un bouton _arrêter l’exécution_ animé et bien plus encore. Nous avons également ajouté des raccourcis clavier pour _Nouveau notebook_ (`Ctrl+Shift+N`), _Exécuter la cellule_ (`F5`),_Nouvelle cellule de code_ (`Ctrl+Shift+C`), _Nouvelle cellule de texte_ (`Ctrl+Shift+T`). Par la suite, nous allons faire en sorte que toutes les actions clés puissent être lancées par raccourci.
 
 Parmi les autres améliorations et correctifs figurent les suivants :
-* L’extension _SQL Server 2019 (préversion)_ vous invite désormais à choisir un répertoire d’installation pour les dépendances Python. En outre, Python n’est plus inclus dans le `.vsix file`, ce qui réduit la taille globale de l’extension. Les dépendances Python sont nécessaires pour prendre en charge les noyaux Spark et Python3. L’installation de cette extension est donc nécessaire pour les utiliser.
+* Maintenant, l’extension _SQL Server 2019 (préversion)_ invite les utilisateurs à choisir un répertoire d’installation pour les dépendances Python. En outre, Python n’est plus inclus dans le `.vsix file`, ce qui réduit la taille globale de l’extension. Les dépendances Python prennent en charge les noyaux Spark et Python3.
 * La prise en charge du lancement d’un nouveau notebook à partir de la ligne de commande a été ajoutée. Le lancement avec les arguments `--command=notebook.command.new --server=myservername` doit ouvrir un nouveau notebook et se connecter à ce serveur.
-* Correctifs de performances pour les notebooks avec une longueur de code conséquente dans les cellules. Si les cellules de code se trouvent sur 250 lignes, une barre de défilement est ajoutée.
+* Correctifs de performances pour les notebooks avec une longueur de code conséquente dans les cellules. Si les cellules de code se trouvent sur plus de 250 lignes, une barre de défilement est ajoutée.
 * Prise en charge améliorée des fichiers .ipynb. Les versions 3 et ultérieures sont désormais prises en charge. Notez que, lors de l’enregistrement des fichiers, ces derniers sont mis à jour vers la version 4 ou ultérieure.
 * Le paramètre utilisateur `notebook.enabled` a été supprimé maintenant que la visionneuse de notebooks intégrée est stable
 * Un thème à contraste élevé est désormais pris en charge avec un certain nombre de correctifs pour la disposition des objets dans ce cas.

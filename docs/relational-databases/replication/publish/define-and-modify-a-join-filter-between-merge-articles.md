@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907805"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710899"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Définir et modifier un filtre de jointure entre des articles de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907805"
   
 2.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) sur la base de données de publication du serveur de publication pour définir un ou plusieurs articles connexes, également appelés « articles enfants », pour la publication. Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Spécifiez **@publication** , le nom unique de ce filtre pour **@filtername** , le nom de l'article enfant créé à l'étape 2 pour **@article** , le nom de l'article parent auquel s'effectue la jointure pour **@join_articlename** et l'une des valeurs suivantes pour **@join_unique_key** :  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Spécifiez `@publication`, le nom unique de ce filtre pour `@filtername`, le nom de l’article enfant créé à l’étape 2 pour `@article`, le nom de l’article parent auquel s’effectue la jointure pour `@join_articlename`, et l’une des valeurs suivantes pour `@join_unique_key` :  
   
     -   **0** – indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs entre les articles parents et enfants.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907805"
      Cela définit un filtre de jointure entre les deux articles.  
   
     > [!CAUTION]  
-    >  Affectez uniquement à **@join_unique_key** la valeur **1** s'il existe une contrainte sur la colonne de jointure dans la table sous-jacente pour l'article parent qui garantit l'unicité. Si **@join_unique_key** se voit affecter la valeur **1** de manière inappropriée, une non-convergence des données peut se produire.  
+    >  Affectez uniquement à `@join_unique_key` la valeur **1** s’il existe une contrainte sur la colonne de jointure dans la table sous-jacente pour l’article parent qui garantit l’unicité. Si `@join_unique_key` se voit affecter la valeur **1** de manière inappropriée, une non-convergence des données peut se produire.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple définit un article pour une publication de fusion, où l'article de la table `SalesOrderDetail` est filtré par rapport à la table `SalesOrderHeader` qui est elle-même filtrée à l'aide d'un filtre de ligne statique. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889817"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823618"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -473,6 +473,9 @@ Lorsque vous utilisez Always Encrypted avec des enclaves sécurisées, vous pouv
 *column_name*  
 Nom de la colonne à ajouter, modifier ou supprimer. Le maximum pour *column_name* est de 128 caractères. Pour les nouvelles colonnes, vous pouvez omettre *column_name* pour les colonnes créées avec un type de données **timestamp**. Le nom **timestamp** est utilisé si vous ne spécifiez pas de *column_name* pour une colonne du type de données **timestamp**.
 
+> [!NOTE]
+> Les nouvelles colonnes sont ajoutées après toutes les colonnes existantes de la table à modifier.
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 Nouveau type de données de la colonne modifiée ou type de données de la colonne ajoutée. Vous ne pouvez pas spécifier *type_name* pour les colonnes existantes de tables partitionnées. *type_name* peut être l’un des types suivants :
 
@@ -614,6 +617,9 @@ La syntaxe ALTER TABLE… ADD/DROP/ALTER INDEX est uniquement prise en charge po
 
 ADD  
 Spécifie qu’une ou plusieurs définitions de colonnes, définitions de colonnes calculées ou contraintes de tables sont ajoutées. Ou bien les colonnes utilisées par le système pour le contrôle de version sont ajoutées. Pour les tables optimisées en mémoire, vous pouvez ajouter un index.
+
+> [!NOTE]
+> Les nouvelles colonnes sont ajoutées après toutes les colonnes existantes de la table à modifier.
 
 > [!IMPORTANT]
 > En l’absence d’une instruction ALTER TABLE, les instructions [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) et [PAD_INDEX](alter-table-index-option-transact-sql.md) ne sont pas prises en charge pour les index sur les tables à mémoire optimisée.

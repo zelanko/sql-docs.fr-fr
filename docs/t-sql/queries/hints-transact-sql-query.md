@@ -53,14 +53,14 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: VanMSFT
+author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71207738"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713190"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -182,23 +182,23 @@ KEEP PLAN permet de garantir qu'une requête n'est pas recompilée aussi fréque
 KEEPFIXED PLAN  
 Force l’optimiseur de requête à ne pas recompiler une requête en raison de modifications enregistrées au niveau des statistiques. KEEPFIXED PLAN permet de garantir qu’une requête n’est recompilée que si le schéma des tables sous-jacentes est modifié ou si **sp_recompile** s’exécute sur ces tables.  
   
-IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Empêche la requête d’utiliser un index columnstore non-cluster à mémoire optimisée. Si la requête contient l’indicateur de requête pour éviter l’utilisation de l’index columnstore et un indicateur d’index pour utiliser un index columnstore, les indicateurs sont en conflit et la requête retourne une erreur.  
   
-MAX_GRANT_PERCENT = _percent_  
+MAX_GRANT_PERCENT = _percent_     
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+
 Taille de l’allocation maximale de mémoire, en pourcentage. La requête ne peut pas dépasser cette limite. La limite réelle peut être inférieure si le paramètre de Resource Governor est inférieur à la valeur spécifiée par cet indicateur. Les valeurs valides sont comprises entre 0,0 et 100,0.  
   
-**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-MIN_GRANT_PERCENT = _percent_  
+MIN_GRANT_PERCENT = _percent_        
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+
 Taille de l’allocation minimale de mémoire, en pourcentage de la limite par défaut. La requête est assurée d’avoir au moins la mémoire nécessaire pour pouvoir s’exécuter. Les valeurs valides sont comprises entre 0,0 et 100,0.  
-  
-**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-MAXDOP _number_  
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ 
+MAXDOP _number_      
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Remplace l’option de configuration **Degré maximal de parallélisme** de **sp_configure**. Remplace également Resource Governor pour la requête spécifiant cette option. L'indicateur de requête MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec Resource Governor, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la valeur MAXDOP de Resource Governor, décrite dans [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Toutes les règles sémantiques utilisées avec l’option de configuration **max degree of parallelism** sont applicables quand vous utilisez l’indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -215,7 +215,7 @@ Lorsque la limite par défaut ou spécifiée de MAXRECURSION est atteinte au cou
 Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
 NO_PERFORMANCE_SPOOL    
- **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 Empêche l’ajout d’un opérateur de spool aux plans de requête (à l’exception des plans où un spool est nécessaire pour garantir la validité de la sémantique de mise à jour). L’opérateur de spool est susceptible de diminuer les performances dans certains scénarios. Par exemple, du fait que le spool utilise tempdb, une contention de tempdb peut se produire quand un grand nombre de requêtes simultanées sont exécutées avec les opérations de spool.  
   
@@ -269,13 +269,17 @@ Les noms d’indicateur suivants sont pris en charge :
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan qui utilise la sélectivité minimale lors de l’évaluation des prédicats AND des filtres pour la prise en compte de la corrélation. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 avec le modèle d’estimation de la cardinalité fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures, ou à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 avec le modèle d’estimation de la cardinalité disponible dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou versions ultérieures.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).     
+   **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
+   **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  Désactive la compilation différée de variable de table. Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+  Désactive la compilation différée de variable de table. Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
+   **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Indique au processeur de requêtes de ne pas appliquer d’opération de tri (tri par lots) sur les jointures de boucles imbriquées optimisées au moment de la génération d’un plan de requête. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,11 +294,14 @@ Les noms d’indicateur suivants sont pris en charge :
 *  'DISABLE_PARAMETER_SNIFFING'      
    Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données lors de la compilation d’une requête comportant un ou plusieurs paramètres. Cette instruction rend le plan de requête indépendant de la valeur du paramètre utilisée initialement lors de la compilation de la requête. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `PARAMETER_SNIFFING = OFF`.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  Désactive la rétroaction d’allocation de mémoire en mode ligne. Pour plus d’informations, consultez [Rétroaction d’allocation de mémoire en mode ligne](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  Désactive la rétroaction d’allocation de mémoire en mode ligne. Pour plus d’informations, consultez [Rétroaction d’allocation de mémoire en mode ligne](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
+  **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
-  Désactive l’incorporation des fonctions UDF scalaires. Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires](../../relational-databases/user-defined-functions/scalar-udf-inlining.md). **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
+  Désactive l’incorporation des fonctions UDF scalaires. Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).     
+  **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * 'DISALLOW_BATCH_MODE'    
-  Désactive l’exécution en mode batch. Pour plus d’informations, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  Désactive l’exécution en mode batch. Pour plus d’informations, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
+  **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
@@ -304,7 +311,8 @@ Les noms d’indicateur suivants sont pris en charge :
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Force le comportement de l’optimiseur de requête au niveau de la requête, comme si celle-ci était compilée avec le niveau de compatibilité de la base de données _n_, où _n_ est un niveau pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour _n_. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
+ Force le comportement de l’optimiseur de requête au niveau de la requête, comme si celle-ci était compilée avec le niveau de compatibilité de la base de données _n_, où _n_ est un niveau pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour _n_.      
+   **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
    > L’indicateur QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ne remplace pas le paramètre d’estimation de la cardinalité hérité ou par défaut, s’il est forcé par le biais de la configuration de portée de base de données, l’indicateur de trace ou un autre indicateur de requête comme QUERYTRACEON.   
@@ -312,7 +320,8 @@ Les noms d’indicateur suivants sont pris en charge :
    > Pour en savoir plus sur cet indicateur, consultez [Developer’s Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
- Permet un profilage léger pour la requête. À la fin d’une requête contenant ce nouvel indicateur, un nouvel événement étendu, query_plan_profile, est déclenché. Cet événement étendu expose les statistiques d’exécution et le plan d’exécution réel XML semblable à l’événement étendu query_post_execution_showplan, mais uniquement pour les requêtes qui contiennent le nouvel indicateur. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
+ Permet un profilage léger pour la requête. À la fin d’une requête contenant ce nouvel indicateur, un nouvel événement étendu, query_plan_profile, est déclenché. Cet événement étendu expose les statistiques d’exécution et le plan d’exécution réel XML semblable à l’événement étendu query_post_execution_showplan, mais uniquement pour les requêtes qui contiennent le nouvel indicateur.    
+   **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
    > [!NOTE]
    > Si vous activez la collecte de l’événement étendu query_post_execution_showplan, cette opération ajoutera l’infrastructure de profilage standard à chaque requête qui est en cours d’exécution sur le serveur et pourra, par conséquent, affecter les performances globales du serveur.      
@@ -455,8 +464,6 @@ GO
 ### <a name="f-using-maxdop"></a>F. Utilisation de MAXDOP  
  L’exemple suivant utilise l’indicateur de requête MAXDOP. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
 ```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
@@ -584,8 +591,6 @@ GO
 ```  
 ### <a name="l-using-use-hint"></a>L. Utilisation d’indicateurs USE HINT  
  L’exemple suivant utilise les indicateurs de requête RECOMPILE et USE HINT. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
-  
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ```sql  
 SELECT * FROM Person.Address  

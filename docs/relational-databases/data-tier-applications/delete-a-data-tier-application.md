@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 17e12a45f8f5aa9e94936a85f62d21c88ccb8c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134831"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823563"
 ---
 # <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -134,102 +134,96 @@ ms.locfileid: "68134831"
   
  [Utilisation de l'Assistant Supprimer l'application de la couche Données](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> Supprimer une DAC à l'aide de PowerShell  
- **Pour supprimer une DAC à l'aide d'un script PowerShell**  
+##  <a name="DeleteDACPowerShell"></a> Utilisation de PowerShell  
+
+1. Créez un objet serveur SMO et définissez-le sur l'instance qui contient la DAC à supprimer.  
   
-1.  Créez un objet serveur SMO et définissez-le sur l'instance qui contient la DAC à supprimer.  
+1. Ouvrez un objet **ServerConnection** et connectez-vous à la même instance.  
   
-2.  Ouvrez un objet **ServerConnection** et connectez-vous à la même instance.  
+1. Utilisez `add_DacActionStarted` et `add_DacActionFinished` pour vous abonner aux événements de mise à niveau de la DAC.  
   
-3.  Utilisez **add_DacActionStarted** et **add_DacActionFinished** pour vous abonner aux événements de mise à niveau de la DAC.  
+1. Spécifiez la DAC à supprimer.  
   
-4.  Spécifiez la DAC à supprimer.  
+1. Utilisez l’un des trois exemples, en fonction de l’option de suppression qui convient le mieux :  
   
-5.  Utilisez l'un des trois jeux de codes, en fonction de l'option de suppression qui convient le mieux :  
+   - Pour supprimer l’inscription de la DAC et laisser la base de données intacte, utilisez la méthode `Unmanage`.  
+   - Pour supprimer l'inscription de la DAC et détacher la base de données, utilisez la méthode `Uninstall` et spécifiez `DetachDatabase`.  
+   - Pour supprimer l'inscription de la DAC et supprimer la base de données, utilisez la méthode `Uninstall` et spécifiez `DropDatabase`.
   
-    -   Pour supprimer l’inscription de la DAC, mais laisser la base de données intacte, utilisez la méthode **Unmanage()** .  
+### <a name="delete-the-dac-and-leave-the-database"></a>Supprimer la DAC et laisser intacte la base de données
+
+L’exemple suivant supprime une DAC nommée `<myApplication>` à l’aide de la méthode `Unmanage` pour supprimer la DAC tout en laissant la base de données intacte.  
   
-    -   Pour supprimer l’inscription de la DAC et détacher la base de données, utilisez la méthode **Uninstall()** et spécifiez **DetachDatabase**.  
-  
-    -   Pour supprimer l’inscription de la DAC et supprimer la base de données, utilisez la méthode **Uninstall()** et spécifiez **DropDatabase**.  
-  
-### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Exemple de suppression de la DAC mais en laissant la base de données (PowerShell)  
- L’exemple suivant supprime une DAC nommée MyApplication à l’aide de la méthode **Unmanage()** pour supprimer la DAC, mais laisser la base de données intacte.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Only delete the DAC definition from msdb, the associated database remains active.  
-$dacstore.Unmanage($dacName)  
-```  
+$dacStore.Unmanage($dacName)  
+```
   
- [Supprimer une DAC à l'aide de PowerShell](#DeleteDACPowerShell)  
+### <a name="delete-the-dac-and-detach-the-database"></a>Supprimer la DAC et détacher la base de données
+
+L’exemple suivant supprime une DAC nommée `<myApplication>` à l’aide de la méthode `Uninstall` pour supprimer la DAC et détacher la base de données.  
   
-### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Exemple de suppression de la DAC en détachant la base de données (PowerShell)  
- L’exemple suivant supprime une DAC nommée MyApplication à l’aide de la méthode **Uninstall()** pour supprimer la DAC et détacher la base de données.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Delete the DAC definition from msdb and detach the associated database.  
-$dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DetachDatabase)  
-```  
+$dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DetachDatabase)  
+```
   
- [Supprimer une DAC à l'aide de PowerShell](#DeleteDACPowerShell)  
+### <a name="delete-the-dac-and-drop-the-database"></a>Supprimer la DAC et la base de données
+
+L’exemple suivant supprime une DAC nommée `<myApplication>` à l’aide de la méthode `Uninstall` pour supprimer la DAC et la base de données.  
   
-### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>Exemple de suppression de la DAC en supprimant la base de données (PowerShell)  
- L’exemple suivant supprime une DAC nommée MyApplication à l’aide de la méthode **Uninstall()** pour supprimer la DAC et supprimer la base de données.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Delete the DAC definition from msdb and drop the associated database.  
-## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
-```  
-  
- [Supprimer une DAC à l'aide de PowerShell](#DeleteDACPowerShell)  
+$dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
+```
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   

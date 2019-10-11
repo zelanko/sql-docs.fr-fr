@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021397"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710798"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>Informations sur le serveur de publication, Liste de suivi des abonnements (Publication de fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68021397"
  Nom de chaque abonnement dans le format *NomAbonné : SubscriptionDatabaseName*.  
   
  **Nom convivial**  
- Description de chaque abonnement. La description est entrée dans la boîte de dialogue **Propriétés de l'abonnement** ou définie avec le paramètre **@description** de [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) ou de [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Les utilisateurs utilisent souvent la description sous la forme d'un « nom convivial » ou d'un alias pour l'abonnement.  
+ Description de chaque abonnement. La description est entrée dans la boîte de dialogue **Propriétés de l’abonnement**, ou spécifiée avec le paramètre `@description` de[sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) ou de [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Les utilisateurs utilisent souvent la description sous la forme d'un « nom convivial » ou d'un alias pour l'abonnement.  
   
  **Publication**  
  Nom de la publication avec laquelle un abonnement se synchronise, au format : *PublicationDatabaseName: NomPublication*.  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140140"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711065"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "68140140"
   
      Il est également possible de remplacer cette fonction par une valeur autre que le nom du serveur de publication ou de distribution. En général les applications remplacent cette fonction par des valeurs plus explicites, telles qu'un nom de vendeur ou un ID de vendeur. Pour plus d'informations, consultez la section « Substitution de la valeur de HOST_NAME() » dans cette rubrique.  
   
- La valeur retournée par la fonction système est comparée à une colonne spécifiée dans la table que vous filtrez et les données appropriées sont téléchargées vers l'Abonné. Cette comparaison est effectuée au moment de l'initialisation de l'abonnement (dès lors, seules les données pertinentes sont contenues dans l'instantané initial) et à chaque synchronisation de l'abonnement. Par défaut, si une modification apportée sur le serveur de publication enlève une ligne d’une partition, la ligne est supprimée sur l’abonné (ce comportement est contrôlé à l’aide du paramètre **@allow_partition_realignment** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
+ La valeur retournée par la fonction système est comparée à une colonne spécifiée dans la table que vous filtrez et les données appropriées sont téléchargées vers l'Abonné. Cette comparaison est effectuée au moment de l'initialisation de l'abonnement (dès lors, seules les données pertinentes sont contenues dans l'instantané initial) et à chaque synchronisation de l'abonnement. Par défaut, si une modification apportée sur le serveur de publication enlève une ligne d’une partition, la ligne est supprimée sur l’abonné (ce comportement est contrôlé à l’aide du paramètre `@allow_partition_realignment` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
 > [!NOTE]  
 >  Lors des comparaisons effectuées pour les filtres paramétrés, le classement de la base de données est toujours utilisé. Si, par exemple, le classement de la base de données ne respecte pas la casse mais que le classement de la table ou de la colonne le fait, la comparaison ne tiendra pas compte de la casse.  
   
-### <a name="filtering-with-susersname"></a>Filtrage avec SUSER_SNAME()  
+### <a name="filtering-with-suser_sname"></a>Filtrage avec SUSER_SNAME()  
  Prenons l'exemple de la **table Employee** dans la base de données exemple [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] Cette table comprend la colonne **LoginID**qui contient le nom de connexion de chaque employé sous la forme «*domaine\connexion*». Pour filtrer la table afin que les employés reçoivent uniquement les données qui les concernent, spécifiez la clause de filtre suivante :  
   
 ```  
@@ -62,7 +62,7 @@ LoginID = SUSER_SNAME()
   
  Par exemple la valeur d'un des employés est « adventure-works\john5 ». Lorsque l'Agent de fusion se connecte au serveur de publication, il utilise le nom de connexion spécifié lors de la création de l'abonnement (dans ce cas-ci, adventure-works\john5). L'Agent de fusion compare ensuite la valeur retournée par SUSER_SNAME() aux valeurs de la table et ne télécharge que la ligne qui contient la valeur « adventure-works\john5 » dans la colonne **LoginID** .  
   
-### <a name="filtering-with-hostname"></a>Filtrage avec HOST_NAME()  
+### <a name="filtering-with-host_name"></a>Filtrage avec HOST_NAME()  
  Prenons l'exemple de la table **HumanResources.Employee** . Supposons que cette table contient une colonne **ComputerName** avec le nom de l'ordinateur de chaque employé désigné sous la forme «*nom_typeordinateur*». Pour filtrer la table afin que les employés reçoivent uniquement les données qui les concernent, spécifiez la clause de filtre suivante :  
   
 ```  
@@ -82,7 +82,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!IMPORTANT]  
 >  La valeur de la fonction HOST_NAME() peut être substituée ; par conséquent, il n'est pas possible d'utiliser des filtres qui incluent HOST_NAME() pour contrôler l'accès aux partitions de données. Pour contrôler cet accès, utilisez SUSER_SNAME(), SUSER_SNAME() en combinaison avec HOST_NAME() ou employez des filtres de lignes statiques.  
   
-#### <a name="overriding-the-hostname-value"></a>Substitution de la valeur de HOST_NAME()  
+#### <a name="overriding-the-host_name-value"></a>Substitution de la valeur de HOST_NAME()  
  Comme indiqué ci-dessus, HOST_NAME() retourne, par défaut, le nom de l'ordinateur qui se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lors de l'utilisation de filtres paramétrés, il est fréquent de remplacer cette valeur par une autre valeur au moment où vous créez l'abonnement. La fonction HOST_NAME() retourne alors la valeur spécifiée à la place du nom de l'ordinateur.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Par exemple, l'employée Pamela Ansman-Wolfe possède l'ID d'employé 280. Spécifiez la valeur de l'ID d'employé (280 dans notre exemple) comme valeur de HOST_NAME() lorsque vous créez un abonnement pour celle-ci. Lorsque l'Agent de fusion se connecte au serveur de publication, il compare la valeur retournée par HOST_NAME() aux valeurs de la table et ne télécharge que la ligne contenant la valeur 280 dans la colonne **EmployeeID** .  
   
 > [!IMPORTANT]
->  Du fait que la fonction HOST_NAME() retourne une valeur de type **nchar** , vous devez utiliser CONVERT si la colonne dans la clause de filtre affiche un type de données numérique comme dans l'exemple ci-dessus. Pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrables, telles que `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En revanche, il est conseillé d'adopter l'approche illustrée dans l'exemple : `EmployeeID = CONVERT(int,HOST_NAME())`. Cette clause peut être utilisée pour le paramètre **@subset_filterclause** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)mais elle ne peut généralement pas être utilisée dans l'Assistant Nouvelle publication (l'Assistant exécute la clause de filtre pour la valider mais l'opération échoue car le nom de l'ordinateur ne peut pas être converti en un type **int**). Si vous utilisez l'Assistant Nouvelle publication, nous vous recommandons de spécifier `CONVERT(nchar,EmployeeID) = HOST_NAME()` dans l'Assistant, puis d'utiliser ensuite [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) pour modifier la clause en `EmployeeID = CONVERT(int,HOST_NAME())` avant de créer un instantané de la publication.  
+>  Du fait que la fonction HOST_NAME() retourne une valeur de type **nchar** , vous devez utiliser CONVERT si la colonne dans la clause de filtre affiche un type de données numérique comme dans l'exemple ci-dessus. Pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrables, telles que `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En revanche, il est conseillé d'adopter l'approche illustrée dans l'exemple : `EmployeeID = CONVERT(int,HOST_NAME())`. Cette clause peut être utilisée pour le paramètre `@subset_filterclause` de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), mais elle ne peut généralement pas être utilisée dans l’Assistant Nouvelle publication (l’Assistant exécute la clause de filtre pour la valider mais l’opération échoue car le nom de l’ordinateur ne peut pas être converti en un type **int**). Si vous utilisez l'Assistant Nouvelle publication, nous vous recommandons de spécifier `CONVERT(nchar,EmployeeID) = HOST_NAME()` dans l'Assistant, puis d'utiliser ensuite [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) pour modifier la clause en `EmployeeID = CONVERT(int,HOST_NAME())` avant de créer un instantané de la publication.  
   
  **Pour substituer la valeur de HOST_NAME()**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : spécifiez une valeur dans la page **Valeurs de HOST\_NAME\(\)** de l’Assistant Nouvel abonnement. Pour plus d’informations sur la création d’abonnements, consultez [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : spécifiez une valeur pour le paramètre **@hostname** de [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (pour les abonnements par émission de données) ou de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (pour les abonnements par extraction).  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : spécifiez une valeur pour le paramètre `@hostname` de [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (pour les abonnements par émission de données) ou de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (pour les abonnements par extraction).  
   
 -   Agent de fusion : spécifiez une valeur pour le paramètre **-Hostname** dans la ligne de commande ou par l’intermédiaire d’un profil d’Agent. Pour plus d'informations sur l'Agent de fusion, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Pour plus d'informations sur les profils d'Agent, consultez [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

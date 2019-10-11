@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000628"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682052"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Précision, échelle et longueur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ La précision est le nombre de chiffres qui composent un nombre. L'échelle est 
   
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la précision maximale par défaut des types de données **numeric** et **decimal** est 38. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle est de 28.
   
-La longueur d'un type de données numérique est le nombre d'octets utilisés pour stocker le nombre. La longueur d'un type de données chaîne de caractères ou Unicode est le nombre de caractères. La longueur des types de données **binary**, **varbinary** et **image** est le nombre d’octets. Par exemple, un type de données **int** peut contenir 10 chiffres, est stocké sur 4 octets et n’accepte pas de virgule décimale. La précision du type **int** est 10, sa longueur est 4 et son échelle est 0.
+La longueur d'un type de données numérique est le nombre d'octets utilisés pour stocker le nombre. Pour les types varchar et char, la longueur d’une chaîne de caractères est le nombre d’octets. Pour les types nvarchar et nchar, la longueur d’une chaîne de caractères est le nombre de paires d’octets. La longueur des types de données **binary**, **varbinary** et **image** est le nombre d’octets. Par exemple, un type de données **int** peut contenir 10 chiffres, est stocké sur 4 octets et n’accepte pas de virgule décimale. La précision du type **int** est 10, sa longueur est 4 et son échelle est 0.
   
-Lors de la concaténation de deux expressions de type **char**, **varchar**, **binary** ou **varbinary**, la longueur de l’expression obtenue est la somme des longueurs des deux expressions sources, jusqu’à 8 000 caractères.
+Quand deux expressions de type **char**, **varchar**, **binary** ou **varbinary** sont concaténées, la longueur de l’expression obtenue est la somme des longueurs des deux expressions sources, dans la limite de 8 000 octets.
   
-Lors de la concaténation de deux expressions de type **nchar** ou **nvarchar**, la longueur de l’expression obtenue est la somme des longueurs des deux expressions sources, jusqu’à 4 000 caractères.
+Quand deux expressions de type **nchar** ou **nvarchar** sont concaténées, la longueur de l’expression obtenue est la somme des longueurs des deux expressions sources, dans la limite de 4 000 paires d’octets.
   
 Lors de la comparaison de deux expressions du même type de données, mais de longueur différente, à l’aide des fonctions UNION, EXCEPT ou INTERSECT, la longueur obtenue est la plus longue des deux expressions.
   

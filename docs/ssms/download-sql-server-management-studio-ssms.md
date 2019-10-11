@@ -22,13 +22,13 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.custom: ''
-ms.date: 09/24/2019
-ms.openlocfilehash: 21678d69305cbe01e1fed3b254da627e00eb60f1
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.date: 10/03/2019
+ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342046"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816803"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -40,19 +40,19 @@ Utilisez SSMS pour interroger, concevoir et gérer vos bases de données et entr
 
 SSMS est gratuit !
 
-## <a name="download-ssms-183"></a>Télécharger SSMS 18.3
+## <a name="download-ssms-1831"></a>Télécharger SSMS 18.3.1
 
-**SSMS 18.3 est maintenant disponible. Il s’agit de la dernière version de *SQL Server Management Studio* en disponibilité générale qui prend en charge [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+**SSMS 18.3.1 est maintenant disponible. Il s’agit de la dernière version de *SQL Server Management Studio* en disponibilité générale qui prend en charge [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![Télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.3](https://go.microsoft.com/fwlink/?linkid=2104251)**
+**[![Télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
-SSMS 18.3 est la dernière version en disponibilité générale de SSMS. Si une version précédente de SSMS 18 en disponibilité générale est déjà installée, l’installation de SSMS 18.3 la met à niveau vers 18.3. Si vous disposez d’une *préversion* antérieure à SSMS 18.x, vous devez la désinstaller avant d’installer SSMS 18.3.
+SSMS 18.3.1 est la dernière version en disponibilité générale de SSMS. Si vous avez une précédente version de SSMS 18 en disponibilité générale, l’installation de SSMS 18.3.1 la met à niveau vers 18.3.1. Si vous avez une ancienne version *en préversion* de SSMS 18.x, vous devez la désinstaller avant d’installer SSMS 18.3.1.
 
 **Informations sur la version**
 
-- Numéro de version : 18.3  
-- Numéro de build : 15.0.18178.0  
-- Date de publication : 23 septembre 2019  
+- Numéro de version : 18.3.1  
+- Numéro de build : 15.0.18183.0  
+- Date de publication : 2 octobre 2019  
 
 Si vous avez des commentaires ou des suggestions, ou si vous souhaitez signaler des problèmes, la meilleure façon de contacter l’équipe SSMS est de passer par [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -60,17 +60,17 @@ L’installation de SSMS 18.x ne met pas à niveau ni ne remplace les versions�
 
 Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version correcte adaptée à vos besoins spécifiques. La version la plus récente s’intitule **Microsoft SQL Server Management Studio 18**
 
-## <a name="available-languages-ssms-183"></a>Langues disponibles (SSMS 18.3)
+## <a name="available-languages-ssms-1831"></a>Langues disponibles (SSMS 18.3.1)
 
 Cette version de SSMS peut être installée dans les langues suivantes :
 
-SQL Server Management Studio 18.2 :  
-[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40a)
+SQL Server Management Studio 18.3.1 :  
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
 
 > [!NOTE]
 > Le module SQL Server PowerShell est une installation distincte que vous pouvez effectuer via PowerShell Gallery. Pour plus d'informations, consultez la page [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-183"></a>Nouveautés de cette version (SSMS 18.3)
+## <a name="new-in-this-release-ssms-1831"></a>Nouveautés de cette version (SSMS 18.3.1)
 
 | Nouvel élément | Détails |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,13 +82,13 @@ SQL Server Management Studio 18.2 :
 
 Pour plus d’informations sur les nouveautés de cette version, voir les [notes de publication de SSMS](release-notes-ssms.md).
 
-## <a name="supported-sql-offerings-ssms-183"></a>Offres SQL prises en charge (SSMS 18.3)
+## <a name="supported-sql-offerings-ssms-1831"></a>Offres SQL prises en charge (SSMS 18.3.1)
 
 - Cette version de SSMS fonctionne avec toutes les [versions prises en charge de SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre le meilleur niveau de prise en charge pour une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et Azure SQL Data Warehouse.
 - Par ailleurs, SSMS 18.x peut être installé côte à côte avec SSMS 17.x, SSMS 16.x ou SSMS SQL Server 2014 et versions antérieures.
 - SQL Server Integration Services (SSIS) : SSMS version 17.x ou ultérieure ne prend pas en charge la connexion au service SQL Server Integration Services hérité. Pour vous connecter à une version antérieure du service Integration Services hérité, utilisez la version de SSMS alignée sur la version de SQL Server. Par exemple, utilisez SSMS 16.x pour vous connecter au service SQL Server 2016 Integration Services hérité. SSMS 17.x et SSMS 16.x peuvent être installés côte à côte sur le même ordinateur. Depuis la version de SQL Server 2012, la base de données du catalogue SSIS, SSISDB, est la méthode recommandée pour stocker, gérer, exécuter et surveiller des packages Integration Services. Pour plus d’informations, consultez [Catalogue SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-183"></a>Systèmes d’exploitation pris en charge (SSMS 18.3)
+## <a name="supported-operating-systems-ssms-1831"></a>Systèmes d’exploitation pris en charge (SSMS 18.3.1)
 
 Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand elle est utilisée avec le dernier Service Pack :
 
@@ -105,9 +105,9 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 > [!NOTE]
 > SSMS s’exécute sur Windows uniquement. Si vous avez besoin d’un outil qui s’exécute sur d’autres plateformes que Windows, envisagez Azure Data Studio. Azure Data Studio est un nouvel outil multiplateforme qui s’exécute sur macOS, Linux, ainsi que Windows. Pour plus d’informations, consultez [Azure Data Studio](../azure-data-studio/what-is.md).
 
-## <a name="release-notes-ssms-183"></a>Notes de publication (SSMS 18.3)
+## <a name="release-notes-ssms-1831"></a>Notes de publication (SSMS 18.3.1)
 
-Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-183) dans cette version.
+Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-1831) dans cette version.
 
 Pour plus d’informations sur cette version, voir les [notes de publication de SSMS](release-notes-ssms.md).
 

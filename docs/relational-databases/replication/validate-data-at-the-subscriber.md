@@ -17,12 +17,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769291"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710767"
 ---
 # <a name="validate-replicated-data"></a>Valider des données répliquées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
 
 #### <a name="all-articles"></a>Tous les articles 
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Spécifiez **@publication** et l'une des valeurs suivantes pour **@rowcount_only** :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Spécifiez `@publication` et l’une des valeurs suivantes pour `@rowcount_only` :  
   
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** - nombre de lignes et somme de contrôle binaire.  
@@ -120,7 +120,7 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
   
 #### <a name="single-article"></a>Article unique  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Spécifiez **@publication** , le nom de l'article pour **@article** et l'une des valeurs suivantes pour **@rowcount_only** :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Spécifiez `@publication`, le nom de l’article pour `@article`, et l’une des valeurs suivantes pour `@rowcount_only` :  
   
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** - nombre de lignes et somme de contrôle binaire.  
@@ -134,9 +134,9 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
 #### <a name="single-subscriber"></a>Abonné unique 
   
 1.  Dans la base de données de publication sur le serveur de publication, ouvrez une transaction explicite en utilisant [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  Dans la base de données de publication du serveur de publication, exécutez [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Spécifiez la publication pour **@publication** , le nom de l'Abonné pour **@subscriber** et le nom de la base de données d'abonnement pour **@destination_db** .    
+2.  Dans la base de données de publication du serveur de publication, exécutez [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Spécifiez la publication pour `@publication`, le nom de l’Abonné pour `@subscriber` et le nom de la base de données d’abonnement pour `@destination_db`.    
 3.  (Facultatif) Répétez l'étape 2 pour chaque abonnement en cours de validation.    
-4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Spécifiez **@publication** , le nom de l'article pour **@article** et l'une des valeurs suivantes pour **@rowcount_only** :    
+4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Spécifiez `@publication`, le nom de l’article pour `@article`, et l’une des valeurs suivantes pour `@rowcount_only` :    
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** - nombre de lignes et somme de contrôle binaire.  
   
@@ -214,7 +214,7 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
     3.  Affichez les informations dans l'onglet **Historique de synchronisation** de la zone de texte **Dernier message de la session sélectionnée** .  
 
 ### <a name="using-transact-sql"></a>Utilisation de Transact-SQL
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Spécifiez **@publication** , le nom de l'Abonné pour **@subscriber** , le nom de la base de données d'abonnement pour **@subscriber_db** et l'une des valeurs suivantes pour **@level** :   
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Spécifiez `@publication`, le nom de l’Abonné pour `@subscriber`, le nom de la base de données d’abonnement pour `@subscriber_db`, et l’une des valeurs suivantes pour `@level` :   
     -   **1** - validation du nombre de lignes uniquement.    
     -   **3** - validation de la somme de contrôle binaire du nombre de lignes.  
   
@@ -241,7 +241,7 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
     3.  Affichez les informations dans l'onglet **Historique de synchronisation** de la zone de texte **Dernier message de la session sélectionnée** . 
   
 ### <a name="using-transact-sql"></a>Utilisation de Transact-SQL
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Spécifiez **@publication** et l'une des valeurs suivantes pour **@level** :    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Spécifiez `@publication` et l’une des valeurs suivantes pour `@level` :    
     -   **1** - validation du nombre de lignes uniquement.   
     -   **3** - validation de la somme de contrôle binaire du nombre de lignes.  
   

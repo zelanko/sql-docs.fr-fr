@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80651e82fb643d044f4c953481dde2114adcadda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042861"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251240"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>Arguments  
  *FileTable_name*  
- Nom du FileTable. *FileTable_name* est de type **nvarchar**. Il s'agit d'un paramètre facultatif. La valeur par défaut est la base de données actuelle. Spécification *schema_name* est également facultative. Vous pouvez passer NULL pour *FileTable_name* à utiliser la valeur du paramètre par défaut  
+ Nom du FileTable. *FileTable_name* est de type **nvarchar**. Il s'agit d'un paramètre facultatif. La valeur par défaut est la base de données actuelle. La spécification de *schema_name* est également facultative. Vous pouvez passer NULL pour que *FileTable_name* utilise la valeur de paramètre par défaut  
   
- *@option*  
- Expression entière qui définit comment le composant serveur du chemin d'accès doit être mis en forme. *@option* Peut avoir l’une des valeurs suivantes :  
+ *@no__t 1option*  
+ Expression entière qui définit comment le composant serveur du chemin d'accès doit être mis en forme. *\@option* peut avoir l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -52,21 +52,21 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 ## <a name="return-type"></a>Type de retour  
  **nvarchar(4000)**  
   
- Lorsque la base de données appartient à un groupe de disponibilité Always On, puis le **FileTableRootPath** fonction retourne le nom de réseau virtuel (VNN) au lieu du nom de l’ordinateur.  
+ Lorsque la base de données appartient à un groupe de disponibilité Always On, la fonction **FileTableRootPath** retourne le nom du réseau virtuel (VNN) à la place du nom de l’ordinateur.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Le **FileTableRootPath** fonction retourne NULL lorsqu’une des conditions suivantes est remplie :  
+ La fonction **FileTableRootPath** retourne la valeur NULL lorsque l’une des conditions suivantes est remplie :  
   
 -   La valeur de *FileTable_name* n’est pas valide.  
   
 -   L'appelant ne dispose pas d'autorisations suffisantes pour référencer la table spécifiée ou la base de données actuelle.  
   
--   L’option FILESTREAM de *database_directory* n’est pas définie pour la base de données actuelle.  
+-   L’option FILESTREAM de *database_directory* n’est pas définie pour la base de données active.  
   
  Pour plus d'informations, consultez [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
- Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, obtenez le chemin d’accès complet à un fichier en cours d’exécution à l’aide de la **FileTableRootPath** et **GetFileNamespacePath** fonctions ensemble, comme illustré dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
+ Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant conjointement les fonctions **FileTableRootPath** et **GetFileNamespacePath** , comme indiqué dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -83,14 +83,14 @@ WHERE Name = N'document.docx';
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Le **FileTableRootPath** fonction requiert :  
+ La fonction **FileTableRootPath** requiert les éléments suivants :  
   
 -   Autorisation SELECT sur le FileTable pour obtenir le chemin d'accès racine d'un FileTable spécifique.  
   
--   **db_datareader** ou autorisation plus élevée pour obtenir le chemin d’accès racine pour la base de données actuelle.  
+-   autorisation **db_datareader** ou supérieure pour obtenir le chemin d’accès racine de la base de données actuelle.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants montrent comment appeler le **FileTableRootPath** (fonction).  
+ Les exemples suivants montrent comment appeler la fonction **FileTableRootPath** .  
   
 ```  
 USE MyDocumentDatabase;  

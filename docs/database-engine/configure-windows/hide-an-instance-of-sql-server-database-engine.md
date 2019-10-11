@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ac7c2a6cd6b1f714e4dd1aad2c04ef32854c4f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998071"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682095"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Masquer une instance du moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,10 @@ ms.locfileid: "67998071"
   Pour plus d’informations, consultez [Configurer un serveur pour écouter un port TCP spécifique &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="clustering"></a>Clustering  
- Si vous masquez une instance en cluster nommée, il se peut que le service de cluster ne soit pas en mesure de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela entraîne l’échec de la vérification **IsAlive** de l’instance de cluster et la mise hors connexion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons de créer un alias dans tous les nœuds de l'instance en cluster afin de refléter le port statique que vous avez configuré pour l'instance.  
+ Si vous masquez le nom d’une instance en cluster ou d’un groupe de disponibilité, il se peut que le service de cluster ne soit pas en mesure de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela entraîne l’échec de la vérification **IsAlive** de l’instance de cluster et la mise hors connexion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ 
+Pour éviter cela, créez un alias dans tous les nœuds de l’instance en cluster ou dans toutes les instances qui hébergent des réplicas de groupe de disponibilité afin de refléter le port statique que vous avez configuré pour l’instance.  Par exemple, sur un groupe de disponibilité avec deux réplicas, sur le premier nœud (node-one), créez un alias pour l’instance du deuxième nœud (node-two), par exemple `node-two\instancename`. Sur le deuxième nœud (node-two), créez un alias appelé `node-one\instancename`. Les alias sont nécessaires pour la réussite du basculement. 
+ 
  Pour plus d’informations, consultez [Créer ou supprimer un alias de serveur devant être utilisé par un client &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
  Si vous masquez une instance nommée en cluster, il se peut que le service de cluster ne soit pas en mesure de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si la clé de Registre **LastConnect** (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) a un autre port que le port écouté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le service de cluster ne peut pas établir une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez recevoir un message d’erreur similaire à ce qui suit :  

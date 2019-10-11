@@ -18,12 +18,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1d1e0171082811e8f3f049b66b78da02bd12b601
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766955"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711000"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>Afficher les commandes répliquées et des informations dans la base de données de distribution
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "68766955"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>Pour afficher les commandes répliquées de la base de données de distribution à partir d'un article spécifique ou d'une base de données spécifique publiée à l'aide de la réplication transactionnelle  
   
-1.  (Facultatif) Sur la base de données de publication du serveur de publication, exécutez [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Spécifiez **@publication** et **@article** . Notez la valeur de **article_id** dans le jeu de résultats.  
+1.  (Facultatif) Sur la base de données de publication du serveur de publication, exécutez [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Spécifiez `@publication` et `@article`. Notez la valeur de **article_id** dans le jeu de résultats.  
   
-2.  Sur la base de données de distribution du serveur de distribution, exécutez [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md). (Facultatif) Spécifiez l'ID d'article de l'étape 2 pour **@article_id** . (Facultatif) Spécifiez l'ID de la base de données de publication pour **@publisher_database_id** , qui peut être obtenu à partir de la colonne **database_id** de l'affichage catalogue [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
+2.  Sur la base de données de distribution du serveur de distribution, exécutez [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md). (Facultatif) Spécifiez l’ID d’article de l’étape 2 pour `@article_id`. (Facultatif) Spécifiez l’ID de la base de données de publication pour `@publisher_database_id`, qui peut être obtenu à partir de la colonne **database_id** de la vue catalogue [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller la réplication par programmation](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

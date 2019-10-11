@@ -1,5 +1,5 @@
 ---
-title: Le Concepteur de requêtes relationnelles (SSAS) | Microsoft Docs
+title: Concepteur de requêtes relationnelles (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070460"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251216"
 ---
 # <a name="relational-query-designer-ssas"></a>Concepteur de requêtes relationnelles (SSAS)
   Le Concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données à récupérer à partir de bases de données relationnelles [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], ainsi que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -247,12 +247,12 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Cliquez sur le bouton **Exécuter** ( **!** ). Le tableau suivant fournit un exemple de `uspGetWhereUsedProductID` paramètres pour lesquels vous fournissez des valeurs dans le **définir un paramètre de requête** boîte de dialogue.  
+ Cliquez sur le bouton **Exécuter** ( **!** ). Le tableau suivant fournit un exemple de paramètres `uspGetWhereUsedProductID` pour lesquels vous fournissez des valeurs dans la boîte de dialogue **définir le paramètre de requête** .  
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*@no__t 1StartProductID*|820|  
+|*@no__t 1CheckDate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>Type de commande TableDirect  
  Quand vous sélectionnez le **Type de commande TableDirect**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Lorsque vous entrez une table et cliquez sur le bouton **Exécuter** , toutes les colonnes pour cette table sont retournées.  

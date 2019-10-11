@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f08360562112b23344543d2c63c28ebfa39bc88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69766a9278b09f081bbfaaced90e45acd1cf91c5
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907844"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710985"
 ---
 # <a name="define-an-article"></a>Définir un article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "67907844"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>Pour définir un article pour une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** , le nom de l'article pour **@article** , l'objet de base de données qui est publié pour **@source_object** et tout autre paramètre optionnel. Utilisez **@source_owner** pour spécifier la propriété de schéma de l'objet, s'il ne s'agit pas de **dbo**. Si l’article n’est pas un article de table basé sur un journal, spécifiez le type d’article pour **@type** . Pour plus d’informations, consultez [Spécifier les types d’articles &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
+1.  Exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour `@publication`, le nom de l’article pour `@article`, l’objet de base de données qui est publié pour `@source_object`, et tout autre paramètre optionnel. Utilisez `@source_owner` pour spécifier la propriété de schéma de l’objet, s’il ne s’agit pas de **dbo**. Si l’article n’est pas un article de table basé sur un journal, spécifiez le type d’article pour `@type`. Pour plus d’informations, consultez [Spécifier les types d’articles &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
 2.  Pour filtrer horizontalement les lignes d'une table ou pour afficher un article, utilisez [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) pour définir la clause du filtre. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "67907844"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>Pour définir un article pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez le nom de la publication pour **@publication** , le nom de l'article pour **@article** et l'objet qui est publié pour **@source_object** . Pour filtrer horizontalement les lignes d'une table, spécifiez une valeur pour **@subset_filterclause** . Pour plus d'informations, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) et [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Si l'article n'est pas un article de table, spécifiez le type d'article pour **@type** . Pour plus d’informations, consultez [Spécifier les types d’articles &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez le nom de la publication pour `@publication`, le nom de l’article pour `@article` et l’objet qui est publié pour `@source_object`. Pour filtrer horizontalement les lignes d’une table, spécifiez une valeur pour `@subset_filterclause`. Pour plus d'informations, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) et [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Si l’article n’est pas un article de table, spécifiez le type d’article pour `@type`. Pour plus d’informations, consultez [Spécifier les types d’articles &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
 2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) pour définir un filtre de jointure entre deux articles. Pour plus d'informations, voir [Définir et modifier un filtre de jointure entre des articles de fusion](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   

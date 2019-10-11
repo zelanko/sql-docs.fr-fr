@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045646"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687369"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045646"
 |Colonnes dans les clauses GROUP BY, ORDER BY||Limité uniquement par le nombre d'octets||  
 |Colonnes ou expressions dans une instruction GROUP BY WITH CUBE ou WITH ROLLUP||10||  
 |Colonnes par clé d’index||32|Si la table contient au moins un index XML, la clé de clustering de la table d’utilisateur est limitée à 31 colonnes, car la colonne XML est ajoutée à la clé de clustering du principal index XML. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez inclure des colonnes non-clés dans un index non cluster pour éviter la limitation à un maximum de 32 colonnes clés. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Colonnes par clé étrangère||32||  
-|Colonnes par clé primaire||32||  
-|Colonnes par tableau non large||1,024||  
-|Colonnes par tableau large||30,000||  
-|Colonnes par instruction SELECT||4,096||  
-|Colonnes par instruction INSERT||4,096||  
+|Colonnes par clé étrangère ou par clé primaire||32||  
+|Colonnes par instruction `INSERT`||4,096||  
+|Colonnes par instruction `SELECT`||4,096||  
+|Colonnes par table||1,024|Les tables qui incluent des jeux de colonnes éparses incluent jusqu’à 30 000 colonnes. Consultez [Jeux de colonnes éparses](../relational-databases/tables/use-column-sets.md).|  
+|Colonnes par instruction `UPDATE`||4,096|Des limites différentes s’appliquent aux [jeux de colonnes éparses](../relational-databases/tables/use-column-sets.md).|  
+|Colonnes par vue||1,024||  
 |Connexions par client||Valeur maximale des connexions configurées||  
 |Taille de la base de données||524 272 téraoctets||  
 |Bases de données par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045646"
 |Statistiques sur les colonnes non indexées||30,000|| 
 |Tables par instruction SELECT||Limité uniquement par les ressources disponibles||  
 |Déclencheurs par table||Limité par le nombre d'objets dans une base de données|Les objets de base de données comprennent des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des déclencheurs, des règles, des valeurs par défaut et des contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|  
-|Colonnes par instruction UPDATE (tableaux larges)||4096||  
 |Connexions utilisateur||32,767||  
 |Index XML||249||  
   

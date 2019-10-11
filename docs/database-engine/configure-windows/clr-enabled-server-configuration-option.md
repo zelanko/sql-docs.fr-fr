@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fcd8ece516934b5f245465d5256a451ff4e41aed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71392e537cb034976b3c47d819897356e3bb58cb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012954"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682083"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ WOW64 uniquement. Redémarrez les serveurs WOW64 pour appliquer les modification
 
 Quand vous exécutez l’instruction RECONFIGURE et que la valeur d’exécution de l’option clr enabled est 0 et non plus 1, tous les domaines d’application contenant des assemblys utilisateur sont immédiatement déchargés.  
   
->  **L’exécution de CLR (Common language runtime) n’est pas prise en charge sous le regroupement léger** Désactivez l’une des deux options : « clr activé » ou « regroupement léger ». Les fonctionnalités qui reposent sur le CLR et qui ne fonctionnent pas correctement en mode fibre incluent le type de données **hierarchy** , la réplication et la Gestion basée sur des stratégies.  
+>  **L’exécution de CLR (Common language runtime) n’est pas prise en charge sous le regroupement léger** Désactivez l’une des deux options : « clr activé » ou « regroupement léger ». Les fonctionnalités qui reposent sur le CLR et qui ne fonctionnent pas correctement en mode fibre incluent le type de données **hierarchyid**, la fonction `FORMAT`, la réplication et la gestion basée sur des stratégies.  
 > 
 > [!WARNING]
 >  CLR utilise la sécurité d’accès du code (CAS) dans le .NET Framework, qui n’est plus pris en charge comme limite de sécurité. Un assembly CLR créé avec `PERMISSION_SET = SAFE` peut être en mesure d’accéder à des ressources système externes, d’appeler du code non managé et d’acquérir des privilèges sysadmin. À compter de [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], une option de `sp_configure` appelée `clr strict security` est introduite pour renforcer la sécurité des assemblys CLR. `clr strict security` est activée par défaut et traite les assemblys `SAFE` et `EXTERNAL_ACCESS` comme s’ils étaient marqués `UNSAFE`. L’option `clr strict security` peut être désactivée pour assurer une compatibilité descendante, mais ceci n’est pas recommandé. Microsoft recommande que tous les assemblys soient signés par un certificat ou une clé asymétrique avec une connexion correspondante à laquelle a été accordée l’autorisation `UNSAFE ASSEMBLY` dans la base de données master. Les administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent également ajouter des assemblys à une liste d’assemblys, que le moteur de base de données doit approuver. Pour plus d’informations, consultez [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).

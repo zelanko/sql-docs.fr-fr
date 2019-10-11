@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096927"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713272"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurer les transactions distribuées pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ Dans une transaction distribuée, les applications clientes utilisent Microsoft 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] n’empêche pas les transactions distribuées pour des bases de données dans un groupe de disponibilité, même quand le groupe de disponibilité n’est pas configuré pour les transactions distribuées. Cependant, quand un groupe de disponibilité n’est pas configuré pour les transactions distribuées, le basculement peut échouer dans certaines situations. En particulier, l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] du nouveau réplica principal ne peut parfois pas obtenir le résultat de la transaction auprès du DTC. Pour permettre à l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] d’obtenir le résultat des transactions incertaines auprès du DTC après un basculement, configurez le groupe de disponibilité pour les transactions distribuées. 
 
+DTC n’est pas impliqué dans le traitement d’un groupe de disponibilité sauf si une base de données est également membre d’un cluster de basculement. Dans un groupe de disponibilité, la cohérence entre les réplicas est gérée par la logique du groupe de disponibilité : Le réplica principal n’effectue pas la validation et n’envoie pas d’accusé de réception de la validation à l’appelant tant que le réplica secondaire n’a pas confirmé qu’il a rendu les enregistrements de journal persistants dans un stockage durable. C’est alors seulement que le réplica principal déclare la transaction terminée. En mode asynchrone, nous n’attendons pas que le réplica secondaire envoie un accusé de réception, et il existe explicitement un risque de perte d’une petite quantité de données.
+
 ## <a name="prerequisites"></a>Conditions préalables requises
 
 Avant de configurer un groupe de disponibilité pour prendre en charge les transactions distribuées, vous devez respecter les prérequis suivants :
@@ -50,6 +52,8 @@ Avant de configurer un groupe de disponibilité pour prendre en charge les trans
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Créer un groupe de disponibilité pour les transactions distribuées
 
 Configurez un groupe de disponibilité pour prendre en charge les transactions distribuées. Définissez le groupe de disponibilité pour permettre à chaque base de données de s’inscrire comme gestionnaire de ressources. Cet article explique comment configurer un groupe de disponibilité de sorte que chaque base de données puisse être un gestionnaire de ressources dans DTC.
+
+
 
 Vous pouvez créer un groupe de disponibilité pour les transactions distribuées sur [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] ou ultérieur. Pour créer un groupe de disponibilité pour des transactions distribuées, incluez `DTC_SUPPORT = PER_DB` dans la définition du groupe de disponibilité. Le script suivant crée un groupe de disponibilité pour des transactions distribuées. 
 

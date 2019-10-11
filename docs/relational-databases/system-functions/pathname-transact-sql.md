@@ -1,5 +1,5 @@
 ---
-title: Chemin d’accès (Transact-SQL) | Microsoft Docs
+title: PathName (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140578"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251948"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne le chemin d'accès d'un objet blob FILESTREAM. L’API OpenSqlFilestream utilise ce chemin d’accès pour retourner un handle auquel une application peut utiliser pour travailler avec les données BLOB à l’aide des API Win32. PathName est en lecture seule.  
+  Retourne le chemin d'accès d'un objet blob FILESTREAM. L’API OpenSqlFilestream utilise ce chemin d’accès pour retourner un handle qu’une application peut utiliser pour travailler avec les données BLOB à l’aide des API Win32. PathName est en lecture seule.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,12 +40,12 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>Arguments  
  *column_name*  
- Est le nom de colonne d’un **varbinary (max)** colonne FILESTREAM. *column_name* doit être un nom de colonne. Il ne peut s'agir d'une expression ou du résultat d'une instruction CAST ou CONVERT.  
+ Nom de colonne d’une colonne de type de flux **varbinary (max)** . *column_name* doit être un nom de colonne. Il ne peut s'agir d'une expression ou du résultat d'une instruction CAST ou CONVERT.  
   
- Demande de PathName pour une colonne de tout autre type de données ou pour un **varbinary (max)** columnthat n’a pas l’attribut de stockage FILESTREAM est provoquent une erreur de compilation de requête.  
+ La demande du nom de chemin d’accès d’une colonne de tout autre type de données ou d’un columnthat **varbinary (max)** n’a pas l’attribut FILESTREAM Storage entraîne une erreur de compilation de requête.  
   
- *@option*  
- Entier [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui définit comment le composant serveur du chemin d’accès doit être mis en forme. *@option* peut prendre l’une des valeurs suivantes. La valeur par défaut est 0.  
+ *@no__t 1option*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) entière qui définit comment le composant serveur du chemin d’accès doit être mis en forme. *\@option* peut prendre l’une des valeurs suivantes. La valeur par défaut est 0.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -54,11 +54,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |2|Retourne le chemin d'accès complet du serveur, par exemple : `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- Valeur binaire qui définit la façon dont le nom du serveur doit être retourné dans un groupe de disponibilité Always On.  
+ Valeur de bit qui définit la façon dont le nom du serveur doit être retourné dans un groupe de disponibilité Always On.  
   
  Lorsque la base de données n’appartient pas à un groupe de disponibilité Always On, la valeur de cet argument est ignorée. Le nom d'ordinateur est toujours utilisé dans le chemin d'accès.  
   
- Lorsque la base de données appartient à un groupe de disponibilité Always On de groupe, puis la valeur de *use_replica_computer_name* a l’effet suivant sur la sortie de la **PathName** fonction :  
+ Lorsque la base de données appartient à un groupe de disponibilité Always On, la valeur de *use_replica_computer_name* a les effets suivants sur la sortie de la fonction **pathname** :  
   
 |Value|Description|  
 |-----------|-----------------|  

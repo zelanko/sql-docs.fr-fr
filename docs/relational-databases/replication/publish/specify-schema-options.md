@@ -16,12 +16,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 516434ca2bb44701b432cb095d252f16278134a0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b427d9cdf471133d78db71159041b03f8cddebf8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764104"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710841"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>Spécifier les options de schéma pour la réplication SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68764104"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Pour obtenir la liste complète des options de schéma, consultez le paramètre **@schema_option** de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) et [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+-   Pour obtenir la liste complète des options de schéma, consultez le paramètre `@schema_option` de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) et [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Spécifiez les options de schéma, telles que la copie des contraintes et des déclencheurs sur les Abonnés, sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** . Cet onglet est disponible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -86,15 +86,15 @@ ms.locfileid: "68764104"
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>Pour spécifier des options de schéma lors de la définition d'un article pour une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** , le nom de l'article pour **@article** , l'objet de base de données qui est publié pour **@source_object** , le type d'objet de base de données pour **@type** et le résultat [| (opération de bits OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) d'une ou de plusieurs options de schéma pour **@schema_option** . Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour `@publication`, le nom de l’article pour `@article`, l’objet de base de données qui est publié pour `@source_object`, le type d’objet de base de données pour `@type` et le résultat [| (opération de bits OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) d’une ou plusieurs options de schéma pour `@schema_option`. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>Pour spécifier des options de schéma lors de la définition d'un article pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** , le nom de l'article pour **@article** , l'objet de base de données qui est publié pour **@source_object** et le résultat [| (opération de bits OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) d'une ou de plusieurs options de schéma pour **@schema_option** . Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez le nom de la publication à laquelle l’article appartient pour `@publication`, le nom de l’article pour `@article`, l’objet de base de données qui est publié pour `@source_object` et le résultat [| (opération de bits OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) d’une ou plusieurs options de schéma pour `@schema_option`. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>Pour modifier des options de schéma pour un article existant dans une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)dans la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** et le nom de l'article pour **@article** . Notez la valeur de la colonne **schema_option** dans le jeu de résultats.  
+1.  Exécutez [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)dans la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour `@publication` et le nom de l’article pour `@article`. Notez la valeur de la colonne `schema_option` dans le jeu de résultats.  
   
 2.  Exécutez une opération [& (Bitwise AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) en utilisant la valeur de l’étape 1 et la valeur de l’option de schéma de votre choix pour déterminer si cette option est définie.  
   
@@ -104,13 +104,13 @@ ms.locfileid: "68764104"
   
 3.  Si l'option n'est pas définie, exécutez une opération [| (opération de bits OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) en utilisant la valeur de l'étape 1 et la valeur de l'option de schéma de votre choix.  
   
-4.  Exécutez [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)dans la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** , le nom de l'article pour **@article** , la valeur **schema_option** pour **@property** et le résultat hexadécimal obtenu à l'étape 3 pour **@value** .  
+4.  Exécutez [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)dans la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour `@publication`, le nom de l’article pour `@article`, la valeur `schema_option` pour `@property` et le résultat hexadécimal obtenu à l’étape 3 pour `@value`.  
   
 5.  Exécutez l'Agent d'instantané afin de générer un nouvel instantané. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>Pour modifier des options de schéma pour un article existant dans une publication de fusion  
   
-1.  Exécutez [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)dans la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** et le nom de l'article pour **@article** . Notez la valeur de la colonne **schema_option** dans le jeu de résultats.  
+1.  Exécutez [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)dans la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour `@publication` et le nom de l’article pour `@article`. Notez la valeur de la colonne **schema_option** dans le jeu de résultats.  
   
 2.  Exécutez une opération [& (Bitwise AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) en utilisant la valeur de l’étape 1 et la valeur de l’option de schéma de votre choix pour déterminer si cette option est définie.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68764104"
   
 3.  Si l'option n'est pas définie, exécutez une opération [| (opération de bits OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) en utilisant la valeur de l'étape 1 et la valeur de l'option de schéma de votre choix.  
   
-4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** , le nom de l'article pour **@article** , la valeur **schema_option** pour **@property** et le résultat hexadécimal obtenu à l'étape 3 pour **@value** .  
+4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez le nom de la publication à laquelle l’article appartient pour `@publication`, le nom de l’article pour `@article`, la valeur `schema_option` pour `@property` et le résultat hexadécimal obtenu à l’étape 3 pour `@value`.  
   
 5.  Exécutez l'Agent d'instantané afin de générer un nouvel instantané. Pour plus d’informations, consultez [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   

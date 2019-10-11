@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742931"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974376"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Vue d’ensemble des groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68742931"
   
  Il existe trois types de basculement : automatique, manuel et forcé (avec perte de données possible). La ou les formes de basculement prises en charge par un réplica secondaire dépendent de son mode de disponibilité, et en mode de validation synchrone, du mode de basculement sur le réplica principal et le réplica secondaire cible, comme suit.  
   
--   Le mode de validation synchrone prend en charge deux formes de basculement : le*basculement manuel planifié* et le *basculement automatique*, si le réplica secondaire cible est actuellement synchronisé avec avt1. La prise en charge de ces formes de basculement dépend du paramètre de la *propriété de mode de basculement* sur les serveurs partenaires de basculement. Si le mode de basculement est défini sur « manuel » sur le réplica principal ou secondaire, seul le basculement manuel est pris en charge pour ce réplica secondaire. Si le mode de basculement est défini sur « automatique » dans les réplicas principal et secondaire, les basculements manuel et automatique sont pris en charge sur ce réplica secondaire.  
+-   Le mode de validation synchrone prend en charge deux formes de basculement : le *basculement manuel planifié* et le *basculement automatique*, si le réplica secondaire cible est actuellement synchronisé avec le réplica principal. La prise en charge de ces formes de basculement dépend du paramètre de la *propriété de mode de basculement* sur les serveurs partenaires de basculement. Si le mode de basculement est défini sur « manuel » sur le réplica principal ou secondaire, seul le basculement manuel est pris en charge pour ce réplica secondaire. Si le mode de basculement est défini sur « automatique » dans les réplicas principal et secondaire, les basculements manuel et automatique sont pris en charge sur ce réplica secondaire.  
   
     -   **Basculement manuel planifié** (sans perte de données)  
   

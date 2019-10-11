@@ -13,12 +13,12 @@ ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b39dafbff7c9923ca730538b46eb75ecedb040c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2fa52b0c0126c737fc3c55985aadbd596713f26b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767675"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711033"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Autoriser des non-administrateurs à utiliser le Moniteur de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,14 +77,14 @@ ms.locfileid: "68767675"
   
 1.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md). Si l’utilisateur n’est pas répertorié dans **UserName** dans le jeu de résultats, il doit se voir attribuer l’accès à la base de données de distribution à l’aide de l’instruction [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
-2.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), en spécifiant la valeur **replmonitor** pour le paramètre **@rolename** . Si l'utilisateur est répertorié dans **MemberName** dans le jeu de résultats, l'utilisateur appartient déjà à ce rôle.  
+2.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), en spécifiant la valeur **replmonitor** pour le paramètre `@rolename`. Si l'utilisateur est répertorié dans **MemberName** dans le jeu de résultats, l'utilisateur appartient déjà à ce rôle.  
   
-3.  Si l’utilisateur n’appartient pas au rôle **replmonitor**, exécutez [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) dans la base de données de distribution sur le serveur de distribution. Spécifiez une valeur de **replmonitor** pour **@rolename** et le nom de l'utilisateur de base de données ou la connexion Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ajoutée pour **@membername** .  
+3.  Si l’utilisateur n’appartient pas au rôle **replmonitor**, exécutez [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) dans la base de données de distribution sur le serveur de distribution. Spécifiez une valeur de **replmonitor** pour `@rolename` et le nom de l’utilisateur de base de données ou la connexion Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ajoutée pour `@membername`.  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>Pour supprimer un utilisateur du rôle de base de données fixe replmonitor  
   
-1.  Pour vérifier que l’utilisateur appartient au rôle **replmonitor**, exécutez [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) dans la base de données de distribution sur le serveur de distribution et spécifiez la valeur **replmonitor** pour **@rolename** . Si l'utilisateur n'est pas répertorié dans **MemberName** dans le jeu de résultats, l'utilisateur n'appartient pas à ce rôle.  
+1.  Pour vérifier que l’utilisateur appartient au rôle **replmonitor**, exécutez [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) dans la base de données de distribution sur le serveur de distribution et spécifiez la valeur **replmonitor** pour `@rolename`. Si l'utilisateur n'est pas répertorié dans **MemberName** dans le jeu de résultats, l'utilisateur n'appartient pas à ce rôle.  
   
-2.  Si l’utilisateur appartient au rôle **replmonitor**, exécutez [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) dans la base de données de distribution sur le serveur de distribution. Spécifiez une valeur de **replmonitor** pour **@rolename** et le nom de l'utilisateur de base de données ou la connexion Windows supprimée pour **@membername** .  
+2.  Si l’utilisateur appartient au rôle **replmonitor**, exécutez [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) dans la base de données de distribution sur le serveur de distribution. Spécifiez la valeur **replmonitor** pour `@rolename` et le nom de l’utilisateur de base de données ou la connexion Windows supprimée pour `@membername`. 
   
   

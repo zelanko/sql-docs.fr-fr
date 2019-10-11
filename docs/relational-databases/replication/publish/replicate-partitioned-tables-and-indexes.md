@@ -17,12 +17,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9750e85aefab0db07978cbba6a98a845888cec3d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769789"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710832"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Répliquer des tables et des index partitionnés
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68769789"
 ### <a name="enabling-partition-switching"></a>Activation du basculement de partition  
  Les propriétés suivantes pour les publications transactionnelles permettent aux utilisateurs de contrôler le comportement de l'insertion de partition dans un environnement répliqué :  
   
--   **@allow_partition_switch** , lorsque la valeur spécifiée est **true**, SWITCH PARTITION peut être exécuté sur la base de données de publication.  
+-   `@allow_partition_switch`, quand la valeur spécifiée est `true`, SWITCH PARTITION peut être exécuté sur la base de données de publication.  
   
--   **@replicate_partition_switch** détermine si l'instruction SWITCH PARTITION DDL doit être répliquée sur les Abonnés. Cette option est valide uniquement lorsque **@allow_partition_switch** a la valeur **true**.  
+-   `@replicate_partition_switch` détermine si l’instruction SWITCH PARTITION DDL doit être répliquée sur les Abonnés. Cette option est valide uniquement quand `@allow_partition_switch` a la valeur `true`.  
   
  Vous pouvez définir ces propriétés en utilisant [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) lors de la création de la publication, ou en utilisant [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) après la création de la publication. Comme indiqué précédemment, la réplication de fusion ne prend pas en charge le basculement de partition. Pour exécuter SWITCH PARTITION sur une table qui est activée pour la réplication de fusion, supprimez la table de la publication.  
   

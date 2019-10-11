@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326117"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708257"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 
@@ -219,7 +219,7 @@ Pour plus d’informations sur les améliorations des performances dans tempdb, 
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Métadonnées tempdb à mémoire optimisée
 
-La contention de métadonnées tempdb a toujours été un goulot d’étranglement pour la scalabilité de nombreuses charges de travail s’exécutant sur SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../in-memory-database.md) une nouvelle fonctionnalité, les métadonnées tempdb à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau de scalabilité pour les charges de travail de base de données tempdb lourdes. Dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../in-memory-database.md) une nouvelle fonctionnalité, les métadonnées tempdb à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau de scalabilité pour les charges de travail de base de données tempdb lourdes. Dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Pour pouvoir bénéficier de cette nouvelle fonctionnalité, utilisez le script suivant :
+La contention de métadonnées tempdb a toujours été un goulot d’étranglement pour la scalabilité de nombreuses charges de travail s’exécutant sur SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../in-memory-database.md) une nouvelle fonctionnalité, les métadonnées tempdb à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau de scalabilité pour les charges de travail de base de données tempdb lourdes. Dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Pour pouvoir bénéficier de cette nouvelle fonctionnalité, utilisez le script suivant :
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -245,6 +245,7 @@ Certaines limitations de cette implémentation méritent votre attention :
     ```
 3. Les requêtes sur les tables à mémoire optimisée ne prennent pas en charge les indicateurs de verrouillage et d’isolation ; les requêtes sur les vues de catalogue tempdb à mémoire optimisée ne respectent donc pas les indicateurs de verrouillage et d’isolation. Comme avec les autres vues de catalogue système dans SQL Server, toutes les transactions sur des vues système sont effectuées au niveau de l’isolation READ COMMITTED (ou dans ce cas READ COMMITTED SNAPSHOT).
 4. Les [index columnstore](../indexes/columnstore-indexes-overview.md) ne peuvent pas être créés sur les tables temporaires quand les métadonnées tempdb à mémoire optimisée sont activées.
+5. En raison de la limitation sur les index columnstore, l’utilisation de la procédure stockée système sp_estimate_data_compression_savings avec le paramètre de compression de données COLUMNSTORE ou COLUMNSTORE_ARCHIVE n’est pas prise en charge lorsque les métadonnées tempdb à mémoire optimisée sont activées.
 
 > [!NOTE] 
 > Ces limitations s’appliquent uniquement quand vous référencez des vues système TempDB ; si vous le souhaitez, vous pouvez créer une table temporaire dans la même transaction quand vous accédez à une table à mémoire optimisée dans une base de données utilisateur.

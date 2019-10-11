@@ -20,19 +20,19 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: dbd8e8898bf6453e456156e7c6c070a4867761b9
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923774"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261559"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les demandes, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
+   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID de la session à laquelle cette demande est liée. N'accepte pas la valeur NULL.|  
@@ -94,17 +94,17 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |parallel_worker_count |**Int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de threads de travail parallèles réservés s’il s’agit d’une requête parallèle.  |  
 |external_script_request_id |**uniqueidentifier** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de demande de script externe associé à la requête actuelle. |  
 |is_resumable |**bit** |**S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si la demande est une opération d’index pouvant être reprise. |  
-|page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si `wait_resource` la colonne contient une page. Pour plus d’informations, consultez [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si la colonne `wait_resource` contient une page. Pour plus d’informations, consultez [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**S’applique à** : Azure SQL Database hyperscale<br /><br /> Nombre de lectures du serveur de pages effectuées par cette demande. N'accepte pas la valeur NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Notes 
 Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif. Les valeurs temporelles retournées par cette vue de gestion dynamique n'incluent pas le temps passé en mode préemptif.
 
-Lors de l’exécution de requêtes parallèles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [mode ligne](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), assigne un thread de travail pour coordonner les threads de travail chargés d’effectuer les tâches qui leur sont attribuées. Dans cette vue de gestion dynamique, seul le thread coordinateur est visible pour la demande. Les colonnes **reads**, **writes**, **LOGICAL_READS**et **row_count** ne sont **pas mises à jour** pour le thread coordinateur. Les colonnes **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**et **granted_query_memory** sont **uniquement mises à jour** pour le thread coordinateur. Pour plus d’informations, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
+Lors de l’exécution de requêtes parallèles en [mode ligne](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigne un thread de travail pour coordonner les threads de travail chargés d’effectuer les tâches qui leur sont attribuées. Dans cette vue de gestion dynamique, seul le thread coordinateur est visible pour la demande. Les colonnes **reads**, **writes**, **LOGICAL_READS**et **row_count** ne sont **pas mises à jour** pour le thread coordinateur. Les colonnes **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**et **granted_query_memory** sont **uniquement mises à jour** pour le thread coordinateur. Pour plus d’informations, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Autorisations
-Si l’utilisateur dispose `VIEW SERVER STATE` de l’autorisation sur le serveur, il voit toutes les sessions en cours d’exécution sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance de ; sinon, il ne verra que la session en cours. `VIEW SERVER STATE`ne peut pas être [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] accordé `sys.dm_exec_requests` dans, est toujours limité à la connexion actuelle.
+Si l’utilisateur dispose de l’autorisation `VIEW SERVER STATE` sur le serveur, il voit toutes les sessions en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; dans le cas contraire, l’utilisateur verra uniquement la session active. `VIEW SERVER STATE` ne peut pas être accordé dans [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], `sys.dm_exec_requests` est toujours limité à la connexion actuelle.
   
 ## <a name="examples"></a>Exemples  
   
@@ -184,11 +184,12 @@ GO
 ```
 
 ## <a name="see-also"></a>Voir aussi
-
-- [Fonctions et vues de gestion dynamique](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Fonctions et vues de gestion dynamique liées à l’exécution](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+[Vues et fonctions de gestion dynamique](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)    
+[Fonctions et vues de gestion dynamique liées à l’exécution](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md)    
+[sys. DM _os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)    
+[sys. DM _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
+[sys. DM _exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys. DM _exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      

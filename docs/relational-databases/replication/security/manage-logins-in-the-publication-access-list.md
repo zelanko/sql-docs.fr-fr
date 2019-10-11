@@ -17,12 +17,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fa63ed5cf1367bc0834b0241f40fa9e52f741c87
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769653"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710780"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gérer des connexions dans la liste d'accès à la publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,15 +62,15 @@ ms.locfileid: "68769653"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Pour afficher les groupes et les connexions qui figurent dans la liste d'accès à la publication  
   
-1.  Exécutez [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication** . Cela affiche des informations sur les groupes et les connexions qui figurent dans la liste d'accès à la publication.  
+1.  Exécutez [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour `@publication`. Cela affiche des informations sur les groupes et les connexions qui figurent dans la liste d'accès à la publication.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>Pour ajouter des groupes et des connexions dans la liste d'accès à la publication  
   
-1.  Exécutez [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication** et le nom de la connexion ou du groupe à ajouter pour **@login** .  
+1.  Exécutez [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour `@publication` et le nom de la connexion ou du groupe à ajouter pour `@login`.  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>Pour supprimer des groupes et des connexions de la liste d'accès à la publication  
   
-1.  Exécutez [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication** et le nom de la connexion ou du groupe à ajouter pour **@login** .  
+1.  Exécutez [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour `@publication` et le nom de la connexion ou du groupe à ajouter pour `@login`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer des connexions dans la liste d'accès à la publication](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

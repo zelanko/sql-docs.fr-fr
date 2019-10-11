@@ -13,14 +13,14 @@ ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 62e6868e84fcdf6b861b2b03906c1ea5319f457a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9e2db420febd0bd4a607b23a6b69a014fa8d197c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68765965"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711057"
 ---
-# <a name="mssqleng021798"></a>MSSQL_ENG021798
+# <a name="mssql_eng021798"></a>MSSQL_ENG021798
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -41,7 +41,7 @@ ms.locfileid: "68765965"
   
 -   La procédure stockée **sp_addpublication** est exécutée avant l’exécution de [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Ceci s'applique à toutes les publications transactionnelles.  
   
--   La procédure stockée **sp_addpublication** est exécutée avant l’exécution de [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Ceci s'applique aux publications transactionnelles qui sont activées pour les abonnements de mise à jour en attente (valeur TRUE pour le paramètre **@allow_queued_tran** de **sp_addpublication**).  
+-   La procédure stockée **sp_addpublication** est exécutée avant l’exécution de [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Ceci s’applique aux publications transactionnelles qui sont activées pour les abonnements de mise à jour en attente (valeur TRUE pour le paramètre `@allow_queued_tran` de **sp_addpublication**).  
   
  Les procédures stockées **sp_addlogreader_agent** et **sp_addqreader_agent** créent chacune un travail d'Agent et vous permettent de spécifier le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute. Pour les utilisateurs membres du rôle **sysadmin** , les travaux d'Agents sont créés implicitement si **sp_addlogreader_agent** et **sp_addqreader_agent** ne sont pas exécutées ; les Agents s'exécutent dans le contexte du compte de service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur de distribution. Bien que **sp_addlogreader_agent** et **sp_addqreader_agent** ne soient pas nécessaires pour les utilisateurs membres du rôle **sysadmin** , il est recommandé par mesure de sécurité de spécifier un compte distinct pour les Agents. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   

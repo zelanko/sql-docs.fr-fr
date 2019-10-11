@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768275"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710351"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ snapshot [ -?]
  Indique si les suppressions non pertinentes sont envoyées à l'Abonné. Les suppressions non pertinentes sont des commandes DELETE qui sont envoyées aux Abonnés pour les lignes qui n'appartiennent pas à la partition de l'Abonné. Les suppressions non pertinentes n'affectent ni l'intégrité ni la convergence des données, mais elles peuvent générer un trafic réseau inutile. La valeur par défaut de **MaxNetworkOptimization** est **0**. Le fait d'attribuer à **MaxNetworkOptimization** la valeur **1** réduit le risque d'obtention de suppressions non pertinentes, minimisant ainsi le trafic réseau et maximisant l'optimisation du réseau. L'attribution de la valeur **1** à ce paramètre peut aussi augmenter le stockage des métadonnées et entraîner une réduction des performances au niveau du serveur de publication si plusieurs niveaux de filtres de jointure et des filtres de sous-ensemble complexes sont présents. Vous devez évaluer avec soin votre topologie de réplication et attribuer uniquement à **MaxNetworkOptimization** la valeur **1** si le trafic réseau des suppressions non pertinentes est trop élevé.  
   
 > [!NOTE]
->  L’attribution de la valeur **1** à ce paramètre est utile seulement quand l’option d’optimisation de la synchronisation de la publication de fusion a la valeur **true** (le paramètre **@keep_partition_changes** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
+>  L’attribution de la valeur **1** à ce paramètre est utile seulement quand l’option d’optimisation de la synchronisation de la publication de fusion a la valeur **true** (le paramètre `@keep_partition_changes**` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
  **-Output** _output_path_and_file_name_  
  Chemin d'accès du fichier de sortie de l'agent. Si le nom du fichier n'est pas spécifié, la sortie est envoyée à la console. Si le nom de fichier spécifié existe, la sortie est ajoutée au fichier.  
@@ -250,7 +250,7 @@ snapshot [ -?]
  Caractère ou séquence de caractères qui marque la fin d'une ligne dans le fichier de données de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La valeur par défaut est \n\<,@g>\n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Durée maximale, en secondes, de l’attente de l’Agent d’instantané quand le nombre de processus d’instantané dynamique simultanés en cours d’exécution a atteint la limite définie par la propriété **@max_concurrent_dynamic_snapshots** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Si le nombre maximal de secondes est atteint et que l'Agent d'instantané attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
+ Durée maximale, en secondes, de l’attente de l’Agent d’instantané quand le nombre de processus d’instantané dynamique simultanés en cours d’exécution a atteint la limite définie par la propriété `@max_concurrent_dynamic_snapshots` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Si le nombre maximal de secondes est atteint et que l'Agent d'instantané attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Ce paramètre est déconseillé et n'est pris en charge que dans un but de compatibilité ascendante.  

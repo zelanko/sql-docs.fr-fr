@@ -13,14 +13,14 @@ ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c043a4069788cfd6e25bd347322743cc40f3bd84
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: db0911d4af8d8cbd4860a07bc8c48305ffae0648
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770309"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711017"
 ---
-# <a name="mssqleng021797"></a>MSSQL_ENG021797
+# <a name="mssql_eng021797"></a>MSSQL_ENG021797
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -35,7 +35,7 @@ ms.locfileid: "68770309"
 |Texte du message|'%s' doit être une connexion Windows valide sous la forme : 'MACHINE\Connexion' ou 'DOMAIN\Connexion'. Consultez la documentation de '%s'.|  
   
 ## <a name="explanation"></a>Explication  
- Cette erreur est émise par les procédures stockées de réplication ci-dessous, si la valeur spécifiée pour le paramètre **@job_login** est NULL ou n'est pas correcte. Cette erreur peut se produire si un membre du rôle de base de données fixe **db_owner** exécute des scripts à partir d'anciennes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le modèle de sécurité a changé dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]et ces scripts doivent être mis à jour.  
+ Cette erreur est émise par les procédures stockées de réplication ci-dessous, si la valeur spécifiée pour le paramètre `@job_login` est Null ou non valide. Cette erreur peut se produire si un membre du rôle de base de données fixe **db_owner** exécute des scripts à partir d'anciennes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le modèle de sécurité a changé dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]et ces scripts doivent être mis à jour.  
   
 -   [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68770309"
  Ces procédures stockées peuvent être exécutées par un membre du rôle de serveur fixe **sysadmin** sur le serveur approprié, ou par un membre du rôle de base de données fixe **db_owner** dans la base de données appropriée. Les procédures stockées créent chacune un travail d'Agent et vous permettent de spécifier le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] sous lequel l'Agent s'exécute. Pour les utilisateurs membres du rôle **sysadmin** , les travaux d'Agent sont créés implicitement même si aucun compte Windows n'est spécifié (si un compte est spécifié, il doit être valide) ; les Agents s'exécutent dans le contexte du compte du service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sur le serveur approprié. Bien que ce compte ne soit pas nécessaire, il est recommandé de spécifier un compte distinct pour les Agents. Pour plus d’informations, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Assurez-vous de spécifier un compte Windows valide pour le paramètre **@job_login** de chaque procédure. Si vous avez des scritps de réplication provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mettez-les à jour pour qu'ils incluent les procédures stockées et les paramètres requis par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Mettre à niveau les scripts de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
+ Assurez-vous de spécifier un compte Windows valide pour le paramètre `@job_login` de chaque procédure. Si vous avez des scritps de réplication provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mettez-les à jour pour qu'ils incluent les procédures stockées et les paramètres requis par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Mettre à niveau les scripts de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

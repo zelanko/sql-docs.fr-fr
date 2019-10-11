@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283817"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680974"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Leçon 1-8 : Annoter et mettre en forme le package de la leçon 1 
 
@@ -55,7 +55,7 @@ Au cours de cette tâche, vous exploitez les fonctionnalités de mise en forme d
   
     Pour renvoyer à la ligne le texte de la zone d’annotation, placez le curseur à l’endroit où vous souhaitez démarrer une nouvelle ligne, puis appuyez sur **Entrée**.  
   
-    Si vous n’ajoutez aucun texte dans la zone de l’annotation, cette dernière disparaît quand vous cliquez en dehors.  
+    Si vous n’ajoutez aucun texte dans la zone de l’annotation, cette dernière disparaît quand vous cliquez en dehors.  En raison de ce comportement, si vous voulez coller du texte dans la zone de l’annotation, copiez le texte dans le Presse-papiers avant de sélectionner Ajouter une annotation. 
   
 ## <a name="go-to-next-task"></a>Passer à la tâche suivante
 [Étape 9 : Tester le package de la leçon 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

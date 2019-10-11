@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314499"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708509"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Activer les connexions chiffrées dans le moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pour charger un 
 
 - Le certificat doit être créé avec l'option **KeySpec** de **AT_KEYEXCHANGE**. Habituellement, la propriété d'utilisation de la clé du certificat (**KEY_USAGE**) inclut également un chiffrement de clé (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
-- La propriété **Subject** du certificat doit indiquer que le nom courant (CN) est le même que le nom de domaine ou le nom de domaine complet (FQDN, Fully Qualified Domain Name) de l'ordinateur serveur. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un cluster de basculement, le nom courant doit correspondre au nom d’hôte (ou FQDN) du serveur virtuel, et les certificats doivent être provisionnés sur tous les nœuds dans le cluster de basculement.
+- La propriété **Subject** du certificat doit indiquer que le nom courant (CN) est le même que le nom de domaine ou le nom de domaine complet (FQDN, Fully Qualified Domain Name) de l'ordinateur serveur. Quand vous utilisez le nom d’hôte, le suffixe DNS doit être spécifié dans le certificat. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un cluster de basculement, le nom courant doit correspondre au nom d’hôte (ou FQDN) du serveur virtuel, et les certificats doivent être provisionnés sur tous les nœuds dans le cluster de basculement.
 
 - [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) prennent en charge les certificats génériques. SNAC a depuis été déprécié et remplacé par [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) et [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Les autres clients ne prennent pas toujours en charge les certificats génériques. Pour plus d’informations, consultez la documentation du client et [KB 258858](http://support.microsoft.com/kb/258858).       
   Vous ne pouvez pas sélectionner un certificat générique à l’aide du Gestionnaire de configuration SQL Server. Pour utiliser un certificat générique, modifiez le Registre de clé `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib`, puis entrez l’empreinte numérique du certificat, sans espaces, comme valeur **Certificat**.  

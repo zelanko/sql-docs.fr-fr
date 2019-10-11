@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c96a881443c03362f58fdfa857d6244789a7fe7e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769634"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710775"
 ---
 # <a name="republish-data"></a>Republier des données
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68769634"
 |Publication de fusion|Abonnement de fusion/publication de fusion|Abonnement de fusion|  
 |Publication de fusion|Abonnement de fusion/publication transactionnelle|Abonnement transactionnel|  
   
- \*Vous devez définir la propriété **@published_in_tran_pub** sur la publication de fusion. Par défaut, la réplication transactionnelle suppose que les tables sur l'Abonné soient traitées en tant qu'éléments accessibles en lecture seule. Si la réplication de fusion apporte des modifications aux données d'une table dans un abonnement transactionnel, une non-convergence de données peut se produire. Pour éviter ce risque, il est recommandé de spécifier toute table de ce type en tant qu'objet en téléchargement seul dans la publication de fusion. Cela empêche un Abonné de fusion de télécharger les modifications apportées aux données de la table. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ \*Vous devez définir la propriété `@published_in_tran_pub` sur la publication de fusion. Par défaut, la réplication transactionnelle suppose que les tables sur l'Abonné soient traitées en tant qu'éléments accessibles en lecture seule. Si la réplication de fusion apporte des modifications aux données d'une table dans un abonnement transactionnel, une non-convergence de données peut se produire. Pour éviter ce risque, il est recommandé de spécifier toute table de ce type en tant qu'objet en téléchargement seul dans la publication de fusion. Cela empêche un Abonné de fusion de télécharger les modifications apportées aux données de la table. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   

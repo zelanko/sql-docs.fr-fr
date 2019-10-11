@@ -1,7 +1,7 @@
 ---
 title: Données hiérarchiques (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/03/2017
+ms.date: 10/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 018866c81a84455bd3480a523dbdc2fffaa538c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035850"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974253"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Exemple utilisant une transaction sérialisable  
- Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut être amenée à vérifier, une violation de clé en double après l’insertion indique une tentative d’ajouter plusieurs employés ayant le même ID. Par conséquent, **@last_child** doit être recalculé. Le code suivant utilise une transaction sérialisable et un index à largeur prioritaire pour calculer la nouvelle valeur de nœud :  
+ Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut être amenée à vérifier, une violation de clé en double après l’insertion indique une tentative d’ajouter plusieurs employés ayant le même ID. Par conséquent, **@last_child** doit être recalculé. Le code suivant calcule la nouvelle valeur de nœud dans une transaction sérialisable :  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -343,9 +343,12 @@ DECLARE @last_child hierarchyid
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  
 BEGIN TRANSACTION   
   
-UPDATE Org_T2   
-SET @last_child = LastChild = EmployeeId.GetDescendant(LastChild,NULL)  
-WHERE EmployeeId = @mgrid  
+SELECT @last_child  =  EmployeeId.GetDescendant(LastChild,NULL)
+FROM Org_T2
+WHERE EmployeeId = @mgrid
+
+UPDATE Org_T2 SET LastChild = @last_child  WHERE EmployeeId = @mgrid
+
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(@last_child, @EmpName)  
 COMMIT  

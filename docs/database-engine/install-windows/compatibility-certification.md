@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c10566cca9c92dc54efdd4f0f4248b087b670ea
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: bc4ed369b51187a86e9436e6612522d6707a3d54
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122968"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682049"
 ---
 # <a name="compatibility-certification"></a>Certification de compatibilité
 
@@ -48,7 +48,12 @@ La possibilité de nuire aux fonctionnalités et aux performances est le princip
 -  En ce qui concerne le comportement de [!INCLUDE[tsql](../../includes/tsql-md.md)], toute modification signifie que l’exactitude d’une application doit être recertifiée. Toutefois, le paramètre de [niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) fournit une compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement pour la base de données spécifiée, et non pour l’ensemble du serveur. Le fait de conserver le niveau de compatibilité de la base de données en l’état garantit que les requêtes d’application existantes continuent d’afficher le même comportement avant et après une mise à niveau du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Pour plus d’informations sur le comportement de [!INCLUDE[tsql](../../includes/tsql-md.md)] et les niveaux de compatibilité, consultez [Utilisation des niveaux de compatibilité pour la compatibilité descendante](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
 
 -  En ce qui concerne les performances, étant donné que des améliorations sont apportées à l’optimiseur de requête avec chaque version, il est possible que vous rencontriez des différences de plan de requête entre différentes versions du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Les différences de plan de requête dans l’étendue d’une mise à niveau se traduisent généralement en risques quand certaines modifications peuvent nuire à une requête ou une charge de travail donnée. À leur tour, ces risques constituent un motif de recertification, qui peut retarder les mises à niveau et poser des problèmes de cycle de vie et de support. 
-   L’atténuation des risques de mise à niveau est la raison pour laquelle les améliorations de l’optimiseur de requête sont contrôlées au niveau de compatibilité par défaut d’une nouvelle version. La certification de compatibilité comprend la **protection de la forme du plan de requête** : la notion de maintien d’un niveau de compatibilité de base de données en l’état immédiatement après une mise à niveau du [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signifie que le modèle d’optimisation des requêtes utilisé pour créer des plans de requête dans la nouvelle version est le même qu’avant la mise à niveau. Pour plus d’informations sur la protection de la forme du plan de requête, consultez [Utilisation des niveaux de compatibilité pour la compatibilité descendante](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
+   L’atténuation des risques de mise à niveau est la raison pour laquelle les améliorations de l’optimiseur de requête sont contrôlées au niveau de compatibilité par défaut d’une nouvelle version. La certification de compatibilité comprend la **protection de la forme du plan de requête** : la notion de maintien d’un niveau de compatibilité de base de données en l’état immédiatement après une mise à niveau du [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signifie que le modèle d’optimisation des requêtes utilisé pour créer des plans de requête dans la nouvelle version est le même qu’avant la mise à niveau et que la forme du plan de requête ne doit pas changer. 
+   
+   > [!NOTE]
+   > La **forme de plan de requête** fait référence à la représentation visuelle des différents opérateurs qui composent un plan de requête. Cela inclut les opérateurs tels que les recherches, les analyses, les jointures et les tris, ainsi que les connexions entre eux qui indiquent le flux des données et l’ordre des opérations. La forme du plan de requête est déterminée par l’optimiseur de requête. Pour plus d’informations, consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements).
+   
+   Pour plus d’informations, consultez [Utilisation des niveaux de compatibilité pour la compatibilité descendante](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
    
 Tant que l’application n’a pas besoin de tirer parti des améliorations disponibles uniquement dans un niveau de compatibilité de base de données plus élevé, il est judicieux de mettre à niveau le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et de conserver le niveau de compatibilité de base de données précédent, sans besoin de recertifier une application. Pour plus d’informations, consultez [Niveaux de compatibilité et mises à niveau du moteur de base de données](#compatibility-levels-and-database-engine-upgrades) plus loin dans cet article.
 

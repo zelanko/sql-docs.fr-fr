@@ -15,12 +15,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ef3e6d3daae23e48feae3e1723326c990e427075
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769323"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710706"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>Articles transactionnels - Regénérer pour refléter les modifications de schéma
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "68769323"
   
 -   La première option consiste à utiliser une procédure de script personnalisée pour remplacer les procédures par défaut utilisées par la réplication :  
   
-    1.  Lors de l’exécution de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), assurez-vous que le bit 0x02 de **@schema_option** ait la valeur **true**.  
+    1.  Quand vous exécutez [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), assurez-vous que le bit 0x02 de `@schema_option` a la valeur **true**.  
   
-    2.  Exécutez [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) et spécifiez la valeur 'insert', 'update' ou 'delete' pour le paramètre **@type** et le nom de la procédure de script personnalisée pour le paramètre **@value** .  
+    2.  Exécutez [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) et spécifiez la valeur 'insert', 'update' ou 'delete' pour le paramètre `@type`, et le nom de la procédure de script personnalisée pour le paramètre `@value`.  
   
      La prochaine fois qu'une modification de schéma est effectuée, la réplication appelle cette procédure stockée pour générer le script de la définition de la nouvelle procédure stockée personnalisée définie par l'utilisateur, puis propage la procédure à chaque Abonné.  
   
 -   La deuxième option consiste à utiliser un script qui contient une nouvelle définition de procédure personnalisée :  
   
-    1.  Lors de l’exécution de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), affectez au bit 0x02 de **@schema_option** la valeur **false**, de façon à ce que la réplication ne génère pas automatiquement des procédures personnalisées sur l’Abonné.  
+    1.  Quand vous exécutez [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), affectez au bit 0x02 de `@schema_option` la valeur **false**, de façon à ce que la réplication ne génère pas automatiquement des procédures personnalisées sur l’Abonné.  
   
-    2.  Avant chaque modification de schéma, créez un nouveau fichier de script et inscrivez le script avec la réplication en exécutant [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Spécifiez la valeur 'custom_script' pour le paramètre **@type** et le chemin d'accès au script sur le serveur de publication pour le paramètre **@value** .  
+    2.  Avant chaque modification de schéma, créez un nouveau fichier de script et inscrivez le script avec la réplication en exécutant [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Spécifiez la valeur 'custom_script' pour le paramètre `@type`, et le chemin du script sur le serveur de publication pour le paramètre `@value`.  
   
      La prochaine fois qu'une modification de schéma pertinente est effectuée, ce script s'exécutera sur chaque Abonné au sein de la même transaction que la commande DDL. Quand la modification de schéma est effectuée, le script est désinscrit. Vous devez réinscrire le script pour qu'il soit exécuté après une modification de schéma ultérieure.  
   

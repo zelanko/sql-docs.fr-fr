@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.date: 10/03/2019
+ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878627"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816642"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="october-2019"></a>2 octobre 2019
+
+2 octobre 2019 &nbsp; / &nbsp; version : 1.12.0
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Version de l’extension Historique des requêtes | L’extension Historique SQL enregistre toutes les requêtes passées exécutées dans une session Azure Data Studio et les liste dans l’ordre d’exécution. Les utilisateurs peuvent ouvrir la requête, l’exécuter, la supprimer, suspendre l’historique des requêtes ou supprimer toutes les entrées de l’historique des requêtes. |
+| Nouveaux résultats d’opérations copier/coller | Nous avons ajouté des moyens supplémentaires d’effectuer des opérations copier/coller des résultats à partir de la grille des résultats. |
+| Mise à jour de l’extension PowerShell |  |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1) |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problèmes connus
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare cas de sérialisation incorrecte du notebook
 
 ## <a name="september-2019"></a>Septembre 2019
 

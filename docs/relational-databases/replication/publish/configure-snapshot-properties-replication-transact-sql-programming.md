@@ -15,12 +15,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4b77902b69ccfd286537a985fc561b120291552c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ec6f229ded9e9a77b6164ba9c91bee9cf8070fd7
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769934"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710922"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurer les propriétés d'instantané (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,39 +28,39 @@ ms.locfileid: "68769934"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Pour configurer les propriétés d'instantané lors de la création d'une publication transactionnelle ou d'instantané  
   
-1.  Sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez un nom de publication pour **@publication** , la valeur **snapshot** ou **continuous** pour **@repl_freq** , ainsi qu'un ou plusieurs des paramètres suivants, liés à l'instantané :  
+1.  Sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez un nom de publication pour `@publication`, la valeur **snapshot** ou **continuous** pour `@repl_freq`, ainsi qu’un ou plusieurs des paramètres suivants liés à l’instantané :  
   
-    -   **@alt_snapshot_folder** – spécifiez un chemin d'accès si l'accès à l'instantané pour cette publication s'effectue à partir de cet emplacement à la place ou en plus du dossier d'instantanés par défaut.    
-    -   **@compress_snapshot** – spécifiez la valeur **true** si les fichiers d'instantanés dans le dossier d'instantanés de remplacement sont compressés dans le format de fichier CAB de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .    
-    -   **@pre_snapshot_script** – spécifiez le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, avant que l'instantané initial soit appliqué.    
-    -   **@post_snapshot_script** – spécifiez le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, après l'application de l'instantané initial.    
-    -   **@snapshot_in_defaultfolder** – spécifiez la valeur **false** si l'instantané est disponible uniquement dans un emplacement non défini par défaut.  
+    -   `@alt_snapshot_folder` – spécifiez un chemin si l’accès à l’instantané pour cette publication s’effectue à partir de cet emplacement à la place ou en plus du dossier d’instantanés par défaut.    
+    -   `@compress_snapshot` – spécifiez la valeur **true** si les fichiers d’instantanés dans le dossier d’instantanés de remplacement sont compressés au format de fichier CAB [!INCLUDE[msCoName](../../../includes/msconame-md.md)].    
+    -   `@pre_snapshot_script` – spécifiez le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, avant que l’instantané initial soit appliqué.    
+    -   `@post_snapshot_script` – spécifiez le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, après l’application de l’instantané initial.    
+    -   `@snapshot_in_defaultfolder` – spécifiez la valeur **false** si l’instantané est disponible uniquement à un emplacement non défini par défaut.  
   
      Pour plus d'informations sur la création des publications, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>Pour configurer les propriétés d'instantané lors de la création d'une publication de fusion  
   
-1.  Sur le serveur de publication, exécutez [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Spécifiez un nom de publication pour **@publication** , la valeur **snapshot** ou **continuous** pour **@repl_freq** , ainsi qu'un ou plusieurs des paramètres suivants, liés à l'instantané :  
+1.  Sur le serveur de publication, exécutez [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Spécifiez un nom de publication pour `@publication`, la valeur **snapshot** ou **continuous** pour `@repl_freq`, ainsi qu’un ou plusieurs des paramètres suivants liés à l’instantané :  
   
-    -   **@alt_snapshot_folder** – spécifiez un chemin d'accès si l'accès à l'instantané pour cette publication s'effectue à partir de cet emplacement à la place ou en plus du dossier d'instantanés par défaut.    
-    -   **@compress_snapshot** – spécifiez la valeur **true** si les fichiers d'instantanés dans le dossier d'instantanés de remplacement sont compressés dans le format de fichier CAB.   
-    -   **@pre_snapshot_script** – spécifiez le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, avant que l'instantané initial soit appliqué.    
-    -   **@post_snapshot_script** – spécifiez le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, après l'application de l'instantané initial.    
-    -   **@snapshot_in_defaultfolder** – spécifiez la valeur **false** si l'instantané est disponible uniquement dans un emplacement non défini par défaut.  
+    -   **alt_snapshot_folder** – spécifiez un chemin si l’accès à l’instantané pour cette publication s’effectue à partir de cet emplacement à la place ou en plus du dossier d’instantanés par défaut.    
+    -   `@compress_snapshot` – spécifiez la valeur **true** si les fichiers d’instantanés dans le dossier d’instantanés de remplacement sont compressés au format de fichier CAB.   
+    -   `@pre_snapshot_script` – spécifiez le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, avant que l’instantané initial soit appliqué.    
+    -   `@post_snapshot_script` – spécifiez le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, après l’application de l’instantané initial.    
+    -   `@snapshot_in_defaultfolder` – spécifiez la valeur **false** si l’instantané est disponible uniquement à un emplacement non défini par défaut.  
   
 2.  Pour plus d'informations sur la création des publications, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>Pour modifier les propriétés d'instantané d'une publication transactionnelle ou d'instantané existante  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Spécifiez la valeur **1** pour **@force_invalidate_snapshot** et l'une des valeurs suivantes pour **@property** :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Spécifiez la valeur **1** pour `@force_invalidate_snapshot` et l’une des valeurs suivantes pour `@property` :  
   
-    -   **alt_snapshot_folder** – spécifiez également un nouveau chemin d'accès au dossier d'instantanés de remplacement pour **@value** .    
-    -   **compress_snapshot** – spécifiez également la valeur **true** ou **false** pour **@value** pour indiquer si les fichiers d'instantanés stockés dans le dossier d'instantanés de remplacement sont compressés dans le format de fichier CAB.    
-    -   **pre_snapshot_script** – spécifiez également pour **@value** le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, avant que l'instantané initial soit appliqué.    
-    -   **post_snapshot_script** – spécifiez également pour **@value** le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, après l'application de l'instantané initial.    
+    -   **alt_snapshot_folder** – spécifiez également un nouveau chemin au dossier d’instantanés de remplacement pour `@value`.    
+    -   **compress_snapshot** – spécifiez également la valeur **true** ou **false** pour `@value` afin d’indiquer si les fichiers d’instantanés stockés dans le dossier d’instantanés de remplacement sont compressés au format de fichier CAB.    
+    -   **pre_snapshot_script** – spécifiez également pour `@value` le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, avant que l’instantané initial soit appliqué.    
+    -   **post_snapshot_script** – spécifiez également pour `@value` le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, après l’application de l’instantané initial.    
     -   **snapshot_in_defaultfolder** – spécifiez également la valeur **true** ou **false** pour indiquer si l'instantané est disponible uniquement dans un emplacement non défini par défaut.  
   
-2.  (Facultatif) Sur le serveur de publication, dans la base de données de publication, exécutez [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md). Spécifiez **@publication** et un ou plusieurs des paramètres de planification ou d'informations d'identification de sécurité en cours de modification.  
+2.  (Facultatif) Sur le serveur de publication, dans la base de données de publication, exécutez [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md). Spécifiez `@publication` et un ou plusieurs des paramètres de planification ou d’informations d’identification de sécurité en cours de modification.  
   
     > [!IMPORTANT]  
     >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
@@ -69,12 +69,12 @@ ms.locfileid: "68769934"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Pour modifier les propriétés d'instantané d'une publication de fusion existante  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Spécifiez la valeur **1** pour **@force_invalidate_snapshot** et l'une des valeurs suivantes pour **@property** :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Spécifiez la valeur **1** pour `@force_invalidate_snapshot` et l’une des valeurs suivantes pour `@property**` :  
   
-    -   **alt_snapshot_folder** – spécifiez également un nouveau chemin d'accès au dossier d'instantanés de remplacement pour **@value** .    
-    -   **compress_snapshot** – spécifiez également la valeur **true** ou **false** pour **@value** pour indiquer si les fichiers d'instantanés stockés dans le dossier d'instantanés de remplacement sont compressés dans le format de fichier CAB.    
-    -   **pre_snapshot_script** – spécifiez également pour **@value** le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, avant que l'instantané initial soit appliqué.    
-    -   **post_snapshot_script** – spécifiez également pour **@value** le nom de fichier et le chemin d'accès complet d'un fichier **.sql** qui sera exécuté sur l'Abonné au cours de l'initialisation, après l'application de l'instantané initial.    
+    -   **alt_snapshot_folder** – spécifiez également un nouveau chemin au dossier d’instantanés de remplacement pour `@value`.    
+    -   **compress_snapshot** – spécifiez également la valeur **true** ou **false** pour `@value` afin d’indiquer si les fichiers d’instantanés stockés dans le dossier d’instantanés de remplacement sont compressés au format de fichier CAB.    
+    -   **pre_snapshot_script** – spécifiez également pour `@value` le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, avant que l’instantané initial soit appliqué.    
+    -   **post_snapshot_script** – spécifiez également pour `@value` le nom de fichier et le chemin complet d’un fichier **.sql** qui sera exécuté sur l’Abonné au cours de l’initialisation, après l’application de l’instantané initial.    
     -   **snapshot_in_defaultfolder** – spécifiez également la valeur **true** ou **false** pour indiquer si l'instantané est disponible uniquement dans un emplacement non défini par défaut.  
   
 2.  Exécutez l' [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) à partir de l'invite de commandes ou démarrez le travail de l'Agent d'instantané pour générer un nouvel instantané. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  

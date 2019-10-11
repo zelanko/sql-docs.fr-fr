@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251058"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823570"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de mémoires tampons hybride
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ Par défaut, le pool de mémoires tampons hybride est activé dans l’étendue 
 L’exemple suivant retourne l’état actuel de la configuration système du pool de mémoires tampons hybride pour une instance de SQL Server.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 L’exemple suivant retourne deux tables :
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Bonnes pratiques pour le pool de mémoires tampons hybride
 
-Il n’est pas recommandé d’activer le pool de mémoires tampons hybride sur des instances avec moins de 16 Go de RAM.
-
 Quand vous formatez votre appareil PMEM sur Windows, utilisez la plus grande taille d’unité d’allocation disponible pour NTFS (2 Mo dans Windows Server 2019) et vérifiez que l’appareil a été formaté pour DAX (Direct Access).
+
+Pour des performances optimales, activez le [verrouillage des pages en mémoire](./enable-the-lock-pages-in-memory-option-windows.md) sur Windows.
 
 Les tailles de fichiers doivent être un multiple de 2 Mo (modulo 2 Mo doit être égal à zéro).
 

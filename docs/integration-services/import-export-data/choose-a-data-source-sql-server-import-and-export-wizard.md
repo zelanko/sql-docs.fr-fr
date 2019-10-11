@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 275ac725c0bde283fa45feccd4479c95cc71126b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296395"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951943"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
 
@@ -28,7 +28,7 @@ ms.locfileid: "71296395"
 Pour plus d’informations sur les sources de données que vous pouvez utiliser, consultez [Quelles sont les sources et destinations de données que je peux utiliser ?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 > [!NOTE]
-> L’Assistant d’importation et d’exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise SQL Server Integration Services (SSIS). Par conséquent, les mêmes limitations qui s’appliquent à SSIS, s’appliquent également à l’Assistant.  Par exemple, les colonnes ErrorCode et ErrorColumn, qui sont ajoutées par défaut, comme décrit dans [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).
+> L’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise SQL Server Integration Services (SSIS). Par conséquent, les mêmes limitations qui s’appliquent à SSIS, s’appliquent également à l’Assistant.  Par exemple, les colonnes ErrorCode et ErrorColumn, qui sont ajoutées par défaut, comme décrit dans [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).
 
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Capture d’écran de la page Choisir une source de données 
 L’image suivante montre la première partie de la page **Choisir une source de données** de l’Assistant. Le reste de la page présente un nombre variable d’options qui dépendent de la source de données que vous choisissez ici.

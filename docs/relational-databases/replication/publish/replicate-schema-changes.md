@@ -14,12 +14,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b0a8e8280db176c66e25ff97e1cc86f153286fa9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9a2b5eda749329e405a1d5d2aff1af6a6e0bb3fe
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769819"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710853"
 ---
 # <a name="replicate-schema-changes"></a>Répliquer les modifications de schéma
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,27 +73,27 @@ ms.locfileid: "68769819"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Pour créer une publication transactionnelle ou d'instantané qui ne réplique pas les modifications du schéma  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), en spécifiant la valeur **0** pour **@replicate_ddl** . Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), en spécifiant la valeur `0` pour `@replicate_ddl`. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>Pour créer une publication de fusion qui ne réplique pas les modifications du schéma  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), en spécifiant la valeur **0** pour **@replicate_ddl** . Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), en spécifiant la valeur `0` pour `@replicate_ddl`. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>Pour désactiver temporairement la réplication des modifications du schéma pour une publication transactionnelle ou d'instantané  
   
-1.  Pour une publication avec réplication des modifications du schéma, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant la valeur **replicate_ddl** pour **@property** et la valeur **0** pour **@value** .  
+1.  Pour une publication avec réplication des modifications du schéma, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant la valeur `replicate_ddl` pour `@property` et la valeur `0` pour `@value`.  
   
 2.  Exécutez la commande DDL sur l'objet publié.  
   
-3.  (Facultatif) Réactivez la réplication des modifications du schéma en exécutant [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant la valeur **replicate_ddl** pour **@property** et la valeur **1** pour **@value** .  
+3.  (Facultatif) Réactivez la réplication des modifications du schéma en exécutant [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant la valeur `replicate_ddl` pour `@property` et la valeur `1` pour `@value`.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>Pour désactiver temporairement la réplication des modifications du schéma pour une publication de fusion  
   
-1.  Pour une publication avec réplication des modifications du schéma, exécutez [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), en spécifiant la valeur **replicate_ddl** pour **@property** et la valeur **0** pour **@value** .  
+1.  Pour une publication avec réplication des modifications du schéma, exécutez [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), en spécifiant la valeur `replicate_ddl` pour `@property` et la valeur `0` pour `@value`.  
   
 2.  Exécutez la commande DDL sur l'objet publié.  
   
-3.  (Facultatif) Réactivez la réplication des modifications du schéma en exécutant [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), en spécifiant la valeur **replicate_ddl** pour **@property** et la valeur **1** pour **@value** .  
+3.  (Facultatif) Réactivez la réplication des modifications du schéma en exécutant [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), en spécifiant la valeur `replicate_ddl` pour `@property` et la valeur `1` pour `@value`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modifier le schéma dans les bases de données de publication](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   

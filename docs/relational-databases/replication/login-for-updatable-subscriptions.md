@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6776cea91288d22ed6765e8c4651266c0bcffa7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943708"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710356"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Connexion des abonnements pouvant être mis à jour
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67943708"
   
 -   Un serveur lié créé par la réplication. La connexion se fait à l'aide des informations d'identification de l'utilisateur qui apporte la modification pour l'abonné.  
   
- Vous pouvez spécifier les deux premières options dans cet Assistant. La dernière option peut uniquement être spécifiée à l’aide de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Indiquez la valeur **1** pour le paramètre **@security_mode** .  
+ Vous pouvez spécifier les deux premières options dans cet Assistant. La dernière option peut uniquement être spécifiée à l’aide de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Spécifiez la valeur **1** pour le paramètre `@security_mode`.  
   
 ## <a name="options"></a>Options  
  **Créer un serveur lié qui se connecte par une connexion d'authentification SQL Server :**  

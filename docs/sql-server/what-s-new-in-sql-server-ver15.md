@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326187"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952763"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -36,46 +36,33 @@ Pour obtenir plus d’informations et découvrir les problèmes connus, consulte
 
 Les sections suivantes fournissent une vue d’ensemble de ces fonctionnalités.
 
-## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>Virtualisation des données et [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+
+Aujourd’hui, les entreprises règnent souvent sur de vastes patrimoines de données qui se composent de jeux de données très divers et toujours plus grands, qui sont hébergés dans des sources de données compartimentées. Obtenez des insights en quasi temps réel à partir de toutes vos données avec des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] qui fournissent un environnement complet permettant d’utiliser des jeux de données volumineux, notamment les fonctionnalités de machine learning et d’intelligence artificielle.
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-| Solution de Big Data scalable | [Déployer des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes <br/><br/> Lire, écrire et traiter des Big Data à partir de Transact-SQL ou de Spark<br/><br/> Combiner et analyser facilement des données relationnelles à valeur élevée et un volume élevé de Big Data<br/><br/>Interroger des sources de données externes<br/><br/>Stocker des Big Data dans un système HDFS géré par SQL Server<br/><br/>Interroger les données de plusieurs sources de données externes par le biais du cluster<br/><br/> Utiliser les données pour l’intelligence artificielle, le Machine Learning et d’autres tâches d’analyse<br/><br/> Déployer et exécuter des applications sur [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> Les bases de données d’instance principale SQL Server utilisent le groupe de disponibilité Always On<br/>|
+| Solution de Big Data scalable | [Déployer des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes <br/><br/> Lire, écrire et traiter des Big Data à partir de Transact-SQL ou de Spark<br/><br/> Combiner et analyser facilement des données relationnelles à valeur élevée et un volume élevé de Big Data<br/><br/>Interroger des sources de données externes<br/><br/>Stocker des Big Data dans un système HDFS géré par SQL Server<br/><br/>Interroger les données de plusieurs sources de données externes par le biais du cluster<br/><br/> Utiliser les données pour l’intelligence artificielle, le Machine Learning et d’autres tâches d’analyse<br/><br/> [Déployer et exécuter des applications](../big-data-cluster/concept-application-deployment.md) dans des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> L’instance principale SQL Server fournit la haute disponibilité et la reprise d’activité après sinistre pour toutes les bases de données à l’aide de la technologie de groupe de disponibilité Always On<br/>|
+|Virtualisation des données avec Polybase | Interroger des données à partir de sources de données SQL Server, Oracle, Teradata, MongoDB & ODBC externes avec des tables externes, désormais à l’aide de la [prise en charge de l’encodage UTF-8](../relational-databases/collations/collation-and-unicode-support.md). Pour plus d’informations, consultez [Qu’est-ce que PolyBase ?](../relational-databases/polybase/polybase-guide.md).|
 | &nbsp; | &nbsp; |
 
 Pour plus d’informations, consultez [Que sont les [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md) SQL Server ?.
 
 La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](what-s-new-in-sql-server-ver15-prerelease.md) contient la liste de toutes les fonctionnalités qui ont été annoncées et modifiées dans toutes les versions CTP précédentes.
 
-## <a name="database-engine"></a>Moteur de base de données
+## <a name="intelligent-database"></a>Base de données intelligente
 
-### <a name="security"></a>Sécurité
-
-|Nouvelle fonctionnalité ou mise à jour | Détails |
-|:---|:---|
-|Always Encrypted avec enclaves sécurisées|S’étend sur Always Encrypted avec un chiffrement sur place et des calculs enrichis en activant des calculs sur les données de texte en clair à l’intérieur d’une enclave sécurisée côté serveur. Le chiffrement sur place améliore les performances et la fiabilité des opérations de chiffrement (chiffrement des colonnes, rotation des clés de chiffrement des colonnes, etc.), car il évite de déplacer des données en dehors de la base de données. La prise en charge des calculs enrichis (correspondance à des modèles et opérations de comparaison) ouvre Always Encrypted à un ensemble beaucoup plus large de scénarios et d’applications qui demandent une protection des données sensibles tout en nécessitant des fonctionnalités plus riches dans les requêtes Transact-SQL. Consultez [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
-|Suspendre et reprendre l’analyse initiale du chiffrement transparent des données (TDE)|Consultez [Analyse Transparent Data Encryption(TDE) - suspension et reprise](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
-|Gestion des certificats dans le Gestionnaire de configuration SQL Server|Consultez [Gestion des certificats (Gestionnaire de configuration SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
-| &nbsp; | &nbsp; |
-
-### <a name="graph"></a>Graphique
+### <a name="intelligent-query-processing"></a>Traitement de requêtes intelligent
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Actions de suppression en cascade des contraintes d’arête |Définir les actions de suppression en cascade au niveau d’une contrainte d’arête dans une base de données de graphe. Consultez [Contraintes d’arête](../relational-databases/tables/graph-edge-constraints.md). |
-|Nouvelle fonction de graphique - `SHORTEST_PATH` | Utilisez `SHORTEST_PATH` à l’intérieur de `MATCH` pour trouver le chemin le plus court entre 2 nœuds dans un graphique ou pour effectuer des traversées de longueur arbitraires.|
-|Tables et index de partition| Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données de graphe. |
-|Utilisation d’alias de tables dérivées ou de vues dans les requêtes de correspondance de graphe |Consultez [Requête de correspondance de graphique](../t-sql/queries/match-sql-graph.md). |
+|Rétroaction d’allocation de mémoire en mode ligne |Développe la fonctionnalité de commentaires d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne. Cela peut automatiquement corriger les octrois excessifs qui entraînent une perte de mémoire et une concurrence réduite, et corriger les allocations de mémoire insuffisantes qui entraînent des dépassements de capacité coûteux sur le disque. Consultez [Commentaires d’allocation de mémoire en mode ligne](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
+|Compilation différée de variable de table|Améliore la qualité du plan et le niveau de performance global pour les requêtes faisant référence à des variables de tables. Pendant l’optimisation et la compilation initiale, cette fonctionnalité propage les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Ces informations précises sur le nombre de lignes optimisent les opérations de plan en aval. Consultez [Compilation différée de variables de tables](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
+|Traitement approximatif des requêtes avec `APPROX_COUNT_DISTINCT `|Pour les scénarios dans lesquels la précision absolue n’est pas importante, mais la réactivité est essentielle, les agrégats `APPROX_COUNT_DISTINCT` entre les jeux de données volumineux utilisent moins de ressources que `COUNT(DISTINCT())` pour une concurrence supérieure. Consultez [Traitement des requêtes approximatif](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
+|Mode Batch sur rowstore|Le mode batch sur rowstore permet l’exécution en mode batch sans avoir besoin d’index columnstore. L’exécution en mode batch utilise l’UC plus efficacement pendant les charges de travail analytiques, mais avant [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on ne l’utilisait uniquement lorsqu’une requête incluait des opérations avec des index columnstore. Toutefois, certaines applications peuvent utiliser des fonctionnalités qui ne sont pas prises en charge avec les index columnstore, et ne peuvent donc pas tirer parti du mode batch. À compter de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], le mode batch est activé sur les charges de travail analytiques éligibles dont les requêtes incluent des opérations avec n’importe quel type d’index (rowstore ou columnstore). Consultez [Mode Batch sur rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
+|Incorporation des fonctions UDF scalaires|Transforme automatiquement les fonctions scalaires définies par l’utilisateur en expressions relationnelles, et les incorpore à la requête SQL d’appel. Cette transformation améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. Voir [Incorporation (inlining) des fonctions UDF scalaires](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 | &nbsp; | &nbsp; |
 
-### <a name="indexes"></a>Index
-
-|Nouvelle fonctionnalité ou mise à jour | Détails |
-|:---|:---|
-|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Active une optimisation dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui vous aide à améliorer le débit pour les insertions de haute concurrence dans l’index. Cette option vise les index sujets à contention d’insertion de la dernière page, souvent avec des index comportant une clé séquentielle comme une colonne d’identité, une séquence ou une colonne de date/heure. Pour plus d’informations, consultez [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
-|Générer et régénérer des index columnstore en cluster en ligne | Voir [Exécuter des opérations d’index en ligne](../relational-databases/indexes/perform-index-operations-online.md). |
-|Génération d’index rowstore en ligne pouvant être repris | Voir [Exécuter des opérations d’index en ligne](../relational-databases/indexes/perform-index-operations-online.md). |
-| &nbsp; | &nbsp; |
 
 ### <a name="in-memory-database"></a>Base de données en mémoire
 
@@ -83,24 +70,22 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |:---|:---|
 |Pool de tampons hybride| Une nouvelle fonctionnalité de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] avec laquelle les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire. Consultez [Pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md).|
 |Métadonnée `tempdb` à mémoire optimisée| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../relational-databases/in-memory-database.md), une nouvelle fonctionnalité, les métadonnées `tempdb` à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau d’extensibilité pour les charges de travail de base de données `tempdb` lourdes. Dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Consultez [Métadonnée `tempdb` à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+| Prise en charge de l’OLTP en mémoire pour les instantanés de base de données | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit la prise en charge de la création d’[instantanés de bases de données](../relational-databases/databases/database-snapshots-sql-server.md) qui incluent des groupes de fichiers à mémoire optimisée. |
 | &nbsp; | &nbsp; |
 
-### <a name="unicode-support"></a>Prise en charge d’Unicode
+### <a name="intelligent-performance"></a>Performances intelligentes
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> La version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase et pour Always Encrypted.|
+|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Active une optimisation dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui vous aide à améliorer le débit pour les insertions de haute concurrence dans l’index. Cette option vise les index sujets à contention d’insertion de la dernière page, souvent avec des index comportant une clé séquentielle comme une colonne d’identité, une séquence ou une colonne de date/heure. Pour plus d’informations, consultez [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
+|Forcer les curseurs statiques et les curseurs avec avance rapide | Prise en charge de la possibilité de forcer le plan du Magasin des requêtes pour l’avance rapide et les curseurs statiques. Consultez [Planifier la prise en charge du forçage des curseurs statiques et des curseurs avec avance rapide](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Gouvernance des ressources| La valeur configurable pour l’option `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` et `ALTER WORKLOAD GROUP` est passée d’un entier à un type de données float, pour permettre un contrôle plus granulaire des limites de la mémoire. Consultez [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) et [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
+|Recompilations réduites pour les charges de travail| Améliore l’utilisation des tables temporaires sur plusieurs étendues. Consultez [Recompilations réduites pour les charges de travail](../relational-databases/tables/tables.md#ctp23) |
+|Scalabilité des points de contrôle indirect |Consultez [Amélioration de la scalabilité des points de contrôle indirect](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
+|Mises à jour PFS simultanées|Les [pages PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) sont des pages spéciales dans un fichier de base de données que SQL Server utilise pour localiser l’espace libre lors de l’allocation d’espace d’un objet. La contention de verrous de page sur les pages PFS est une fonctionnalité couramment associée à [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), mais elle peut également se produire sur des bases de données utilisateur lorsqu’il existe de nombreux threads d’allocation d’objets simultanés. Cette amélioration modifie la façon dont la concurrence est managée avec les mises à jour PFS afin qu’elles puissent être mises à jour sous un verrou partagé, plutôt qu’avec un verrou exclusif. Ce comportement est activé par défaut dans toutes les bases de données (y compris `tempdb`) en commençant par [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 | &nbsp; | &nbsp; |
 
-### <a name="polybase"></a>PolyBase
-
-|Nouvelle fonctionnalité ou mise à jour | Détails |
-|:---|:---|
-|Interroger des tables externes |Les noms des colonnes de table externe sont désormais utilisés pour interroger les sources de données SQL Server, Oracle, Teradata, MongoDB et ODBC. Consultez [Qu’est-ce que PolyBase ?](../relational-databases/polybase/polybase-guide.md).|
-|Prise en charge du codage de caractères UTF-8|Prise en charge d’un caractère UTF-8 avec des tables externes. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).|
-| &nbsp; | &nbsp; |
-
-### <a name="performance-monitoring"></a>analyse des performances.
+### <a name="monitoring"></a>Surveillance
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
@@ -112,6 +97,25 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |`LAST_QUERY_PLAN_STATS` | Nouvelle configuration au niveau de la base de données pour activer `sys.dm_exec_query_plan_stats`. Consultez la page [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | L’événement étendu collecte l’équivalent d’un plan d’exécution réel basé sur le profilage léger, contrairement à `query_post_execution_showplan` qui utilise le profilage standard. Voir [Infrastructure du profilage de requête](../relational-databases/performance/query-profiling-infrastructure.md).|
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | La nouvelle commande DMF retourne des informations sur une page d’une base de données. Consultez [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
+| &nbsp; | &nbsp; |
+
+## <a name="developer-experience"></a>Expérience développeur
+
+### <a name="graph"></a>Graphique
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Actions de suppression en cascade des contraintes d’arête |Définir les actions de suppression en cascade au niveau d’une contrainte d’arête dans une base de données de graphe. Consultez [Contraintes d’arête](../relational-databases/tables/graph-edge-constraints.md). |
+|Nouvelle fonction de graphique - `SHORTEST_PATH` | Utilisez `SHORTEST_PATH` à l’intérieur de `MATCH` pour trouver le chemin le plus court entre 2 nœuds dans un graphique ou pour effectuer des traversées de longueur arbitraires.|
+|Tables et index de partition| Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données de graphe. |
+|Utilisation d’alias de tables dérivées ou de vues dans les requêtes de correspondance de graphe |Consultez [Requête de correspondance de graphique](../t-sql/queries/match-sql-graph.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="unicode-support"></a>Prise en charge d’Unicode
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> La version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase et pour Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Extensions de langage
@@ -133,22 +137,22 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 | Nouveaux identificateurs de référence spatiale (SRID) |Le [GDA2020 australien](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) fournit des données plus robustes et plus précises, mieux alignées avec les systèmes GPS. Les nouveaux SRID sont :<br/><br/> - 7843 pour la 2D géographique<br/> - 7844pour la 3D géographique <br/><br/>La vue [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) contient les définitions des nouveaux SRID. |
 | &nbsp; | &nbsp; |
 
-### <a name="performance"></a>Performances
+### <a name="error-messages"></a>Messages d’erreur
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Récupération de base de données accélérée | Activer la récupération accélérée des bases de données pour chaque base de données. Consultez [Récupération accélérée des bases de données](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
-|Forcer les curseurs statiques et les curseurs avec avance rapide | Prise en charge de la possibilité de forcer le plan du Magasin des requêtes pour l’avance rapide et les curseurs statiques. Consultez [Planifier la prise en charge du forçage des curseurs statiques et des curseurs avec avance rapide](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
-|Gouvernance des ressources| La valeur configurable pour l’option `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` et `ALTER WORKLOAD GROUP` est passée d’un entier à un type de données float, pour permettre un contrôle plus granulaire des limites de la mémoire. Consultez [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) et [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
-|Recompilations réduites pour les charges de travail| Améliore l’utilisation des tables temporaires sur plusieurs étendues. Consultez [Recompilations réduites pour les charges de travail](../relational-databases/tables/tables.md#ctp23) |
-|Scalabilité des points de contrôle indirect |Consultez [Amélioration de la scalabilité des points de contrôle indirect](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Mises à jour PFS simultanées|Les [pages PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) sont des pages spéciales dans un fichier de base de données que SQL Server utilise pour localiser l’espace libre lors de l’allocation d’espace d’un objet. La contention de verrous de page sur les pages PFS est une fonctionnalité couramment associée à [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), mais elle peut également se produire sur des bases de données utilisateur lorsqu’il existe de nombreux threads d’allocation d’objets simultanés. Cette amélioration modifie la façon dont la concurrence est managée avec les mises à jour PFS afin qu’elles puissent être mises à jour sous un verrou partagé, plutôt qu’avec un verrou exclusif. Ce comportement est activé par défaut dans toutes les bases de données (y compris `tempdb`) en commençant par [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
-|Rétroaction d’allocation de mémoire en mode ligne |Développe la fonctionnalité de commentaires d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne. Cela peut automatiquement corriger les octrois excessifs qui entraînent une perte de mémoire et une concurrence réduite, et corriger les allocations de mémoire insuffisantes qui entraînent des dépassements de capacité coûteux sur le disque. Consultez [Commentaires d’allocation de mémoire en mode ligne](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
-|Compilation différée de variable de table|Améliore la qualité du plan et le niveau de performance global pour les requêtes faisant référence à des variables de tables. Pendant l’optimisation et la compilation initiale, cette fonctionnalité propage les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Ces informations précises sur le nombre de lignes optimisent les opérations de plan en aval. Consultez [Compilation différée de variables de tables](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
-|`APPROX_COUNT_DISTINCT `|Pour les scénarios dans lesquels la précision absolue n’est pas importante, mais la réactivité est essentielle, les agrégats `APPROX_COUNT_DISTINCT` entre les jeux de données volumineux utilisent moins de ressources que `COUNT(DISTINCT())` pour une concurrence supérieure. Consultez [Traitement des requêtes approximatif](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
-|Mode Batch sur rowstore|Le mode batch sur rowstore permet l’exécution en mode batch sans avoir besoin d’index columnstore. L’exécution en mode batch utilise l’UC plus efficacement pendant les charges de travail analytiques, mais avant [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on ne l’utilisait uniquement lorsqu’une requête incluait des opérations avec des index columnstore. Toutefois, certaines applications peuvent utiliser des fonctionnalités qui ne sont pas prises en charge avec les index columnstore, et ne peuvent donc pas tirer parti du mode batch. À compter de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], le mode batch est activé sur les charges de travail analytiques éligibles dont les requêtes incluent des opérations avec n’importe quel type d’index (rowstore ou columnstore). Consultez [Mode Batch sur rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
-|Incorporation des fonctions UDF scalaires|Transforme automatiquement les fonctions scalaires définies par l’utilisateur en expressions relationnelles, et les incorpore à la requête SQL d’appel. Cette transformation améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. Voir [Incorporation (inlining) des fonctions UDF scalaires](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Avertissements détaillés sur la troncation | Le message d’erreur de troncation inclut par défaut les noms de tables et de colonnes, ainsi que la valeur tronquée. Voir [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).|
 | &nbsp; | &nbsp; |
+
+## <a name="mission-critical-security"></a>Sécurité stratégique
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Always Encrypted avec enclaves sécurisées|S’étend sur Always Encrypted avec un chiffrement sur place et des calculs enrichis en activant des calculs sur les données de texte en clair à l’intérieur d’une enclave sécurisée côté serveur. Le chiffrement sur place améliore les performances et la fiabilité des opérations de chiffrement (chiffrement des colonnes, rotation des clés de chiffrement des colonnes, etc.), car il évite de déplacer des données en dehors de la base de données. La prise en charge des calculs enrichis (correspondance à des modèles et opérations de comparaison) ouvre Always Encrypted à un ensemble beaucoup plus large de scénarios et d’applications qui demandent une protection des données sensibles tout en nécessitant des fonctionnalités plus riches dans les requêtes Transact-SQL. Consultez [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
+|Gestion des certificats dans le Gestionnaire de configuration SQL Server|Consultez [Gestion des certificats (Gestionnaire de configuration SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
+| &nbsp; | &nbsp; |
+
+## <a name="high-availability"></a>Haute disponibilité
 
 ### <a name="availability-groups"></a>Groupes de disponibilité
 
@@ -158,7 +162,23 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Redirection de la connexion entre un réplica secondaire et un réplica principal| Elle permet de rediriger les connexions d’applications clientes vers le réplica principal, quel que soit le serveur cible spécifié dans la chaîne de connexion. Pour plus d’informations, consultez [Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
 | &nbsp; | &nbsp; |
 
-### <a name="setup"></a>Programme d’installation 
+### <a name="recovery"></a>Récupération
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Récupération de base de données accélérée | Activer la récupération accélérée des bases de données pour chaque base de données. Consultez [Récupération accélérée des bases de données](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
+| &nbsp; | &nbsp; |
+
+### <a name="resumable-operations"></a>Opérations pouvant être reprises
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Générer et régénérer des index columnstore en cluster en ligne | Voir [Exécuter des opérations d’index en ligne](../relational-databases/indexes/perform-index-operations-online.md). |
+|Génération d’index rowstore en ligne pouvant être repris | Voir [Exécuter des opérations d’index en ligne](../relational-databases/indexes/perform-index-operations-online.md). |
+|Suspendre et reprendre l’analyse initiale du chiffrement transparent des données (TDE)|Consultez [Analyse Transparent Data Encryption(TDE) - suspension et reprise](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
+| &nbsp; | &nbsp; |
+
+## <a name="setup"></a>Programme d’installation 
 
 |Nouvelle fonctionnalité ou mise à jour | Détails | 
 |:---|:---| 
@@ -166,14 +186,9 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Nouvelles options d’installation du parallélisme | Définit la configuration du serveur de *degré maximal de parallélisme* pendant l’installation. Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) ainsi que le paramètre `SQLMAXDOP` dans [Installer SQL Server depuis l’invite de commandes](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). La valeur par défaut s’aligne aux lignes directrices du degré maximal de parallélisme dans [Configurer l’option de configuration du serveur de degré maximal de parallélisme](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 
-### <a name="error-messages"></a>Messages d’erreur
+## <a name="platform-choice"></a>Choix de la plateforme
 
-|Nouvelle fonctionnalité ou mise à jour | Détails |
-|:---|:---|
-|Avertissements détaillés sur la troncation | Le message d’erreur de troncation inclut par défaut les noms de tables et de colonnes, ainsi que la valeur tronquée. Voir [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).|
-| &nbsp; | &nbsp; |
-
-## <a name="sql-server-on-linux"></a>SQL Server sur Linux
+### <a id="sql-server-on-linux"></a>Linux
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:-----|:-----|
@@ -185,6 +200,14 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Améliorations `tempdb` | Par défaut, une nouvelle installation de SQL Server sur Linux crée plusieurs fichiers de données `tempdb` en fonction du nombre de cœurs logiques (avec jusqu’à 8 fichiers de données). Cela ne s’applique pas aux mises à niveau de versions mineures ou majeures sur place. Chaque fichier `tempdb` fait 8 Mo avec une croissance automatique de 64 Mo. Ce comportement est similaire à l’installation de SQL Server par défaut sur Windows. |
 | PolyBase sur Linux | [Installer PolyBase](../relational-databases/polybase/polybase-linux-setup.md) sur Linux pour les connecteurs non-Hadoop.<br/><br/>[Mappage de type PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Prise en charge de la capture des changements de données (CDC) | La capture des changements de données (CDC) est désormais prise en charge sur Linux pour SQL Server 2019. |
+| &nbsp; | &nbsp; |
+
+### <a name="containers"></a>Conteneurs
+
+|Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+| Registre de conteneurs Microsoft | Le [registre de conteneurs Microsoft](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) remplace désormais Docker Hub pour les nouvelles images conteneur Microsoft officielles, notamment [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Conteneurs non racines | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit la possibilité de créer des conteneurs plus sûrs en démarrant le processus [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] en tant qu’utilisateur non racine par défaut. Pour plus d’informations, consultez [Générer et exécuter des conteneurs SQL Server en tant qu’utilisateur non racine](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer). |
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -203,7 +226,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Nouveaux contrôles HTML| Les contrôles HTML remplacent tous les anciens composants Silverlight. La dépendance à Silverlight a été supprimée.|
 | &nbsp; | &nbsp; |
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|

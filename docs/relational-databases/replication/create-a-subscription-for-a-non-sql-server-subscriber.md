@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063113"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710430"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,27 +156,27 @@ ms.locfileid: "68063113"
   
     -   Si **enabled_for_het_sub** a la valeur 1, les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge.  
   
-    -   Si **enabled_for_het_sub** a la valeur 0, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant **enabled_for_het_sub** pour **@property** et **true** pour **@value** .  
+    -   Si **enabled_for_het_sub** a la valeur 0, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant **enabled_for_het_sub** pour `@property` et **true** pour `@value`.  
   
         > [!NOTE]  
         >  Avant de remplacer la valeur de **enabled_for_het_sub** par **true**, vous devez supprimer tout abonnement existant à la publication. Vous ne pouvez pas affecter la valeur **enabled_for_het_sub** à **true** lorsque la publication prend également en charge la mise à jour des abonnements. La modification de **enabled_for_het_sub** affectera d'autres propriétés de publication. Pour plus d’informations, voir [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez **@publication** , **@subscriber** , affectez la valeur **(destination par défaut)** pour **@destination_db** , affectez la valeur **push** pour **@subscription_type** et la valeur 3 à **@subscriber_type** (indique un fournisseur OLE DB).  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez `@publication`, `@subscriber`, la valeur `(default destination)` pour `@destination_db`, la valeur **push** pour `@subscription_type` et la valeur 3 pour `@subscriber_type` (spécifie un fournisseur OLE DB).  
   
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez les éléments suivants :  
   
-    -   Les paramètres **@subscriber** et **@publication** .  
+    -   Les paramètres `@subscriber` et `@publication`.  
   
-    -   La valeur **(destination par défaut)** pour **@subscriber_db** ,  
+    -   La valeur **(destination par défaut)** pour `@subscriber_db`.  
   
-    -   Les propriétés des sources de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** et **@subscriber_catalog** .  
+    -   Les propriétés de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour `@subscriber_provider`, `@subscriber_datasrc`, `@subscriber_location`, `@subscriber_provider_string` et `@subscriber_catalog`.  
   
-    -   Les paramètres [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution est exécuté sur le serveur de distribution pour **@job_login** et **@job_password** .  
+    -   Les informations d’identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l’Agent de distribution est exécuté sur le serveur de distribution pour `@job_login` et `@job_password`.  
   
-        > [!NOTE]  
-        >  Les connexions effectuées à l'aide de l'authentification intégrée Windows utilisent toujours les informations d'identification Windows spécifiées par **@job_login** et **@job_password** . L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
+       > [!NOTE]  
+       > Les connexions effectuées à l’aide de l’authentification Windows intégrée utilisent toujours les informations d’identification Windows spécifiées par `@job_login` et `@job_password`. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
-    -   La valeur **0** pour **@subscriber_security_mode** et les informations de connexion du fournisseur OLE DB pour **@subscriber_login** et **@subscriber_password** .  
+    -   La valeur **0** pour `@subscriber_security_mode` et les informations de connexion du fournisseur OLE DB pour `@subscriber_login` et `@subscriber_password`.  
   
     -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

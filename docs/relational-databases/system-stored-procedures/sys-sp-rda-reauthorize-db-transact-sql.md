@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c5150cc40fa8d2cecee02a9d3339eea0c1bf740
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083712"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251261"
 ---
-# <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
+# <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restaure la connexion authentifiée entre une base de données locale activée pour Stretch et la base de données distante.  
@@ -38,29 +38,29 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @credential = *@credential*  
- Est l’information d’identification de niveau base de données associée à la base de données locale prenant en charge Stretch.  
+ @credential = *\@credential*  
+ Informations d’identification délimitées à la base de données associées à la base de données Stretch locale.  
   
- @with_copy = *@with_copy*  
- Spécifie s’il faut effectuer une copie des données distantes et se connecter à la copie (recommandée). *@with_copy* est de type bit.  
+ @with_copy = *\@with_copy*  
+ Spécifie s’il faut effectuer une copie des données distantes et se connecter à la copie (recommandé). *\@with_copy est de* bits.  
   
- @azure_servername = *@azure_servername*  
- Spécifie le nom du serveur Azure qui contient les données distantes. *@azure_servername* est de type sysname.  
+ @azure_servername = *\@azure_servername*  
+ Spécifie le nom du serveur Azure qui contient les données distantes. *\@azure_servername est de* type sysname.  
   
- @azure_databasename = *@azure_databasename*  
- Spécifie le nom de la base de données Azure qui contient les données distantes. *@azure_databasename* est de type sysname.  
+ @azure_databasename = *\@azure_databasename*  
+ Spécifie le nom de la base de données Azure qui contient les données distantes. *\@azure_databasename est de* type sysname.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou > 0 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite les autorisations db_owner.  
+ Requiert les autorisations db_owner.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque vous exécutez [sys.sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) pour vous reconnecter à la base de données Azure distante, cette opération rétablit automatiquement le mode de requête LOCAL_AND_REMOTE, qui est le comportement par défaut pour Stretch Database. Autrement dit, les requêtes retournent des résultats à partir de données locales et distantes.  
+ Lorsque vous exécutez [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) pour vous reconnecter à la base de données Azure distante, cette opération réinitialise automatiquement le mode de requête sur LOCAL_AND_REMOTE, qui est le comportement par défaut pour Stretch Database. Autrement dit, les requêtes retournent des résultats à partir de données locales et distantes.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant restaure la connexion authentifiée entre une base de données locale activée pour Stretch et la base de données distante. Il effectue une copie des données à distance (recommandées) et se connecte à la nouvelle copie.  
+ L’exemple suivant restaure la connexion authentifiée entre une base de données locale activée pour Stretch et la base de données distante. Il effectue une copie des données distantes (recommandé) et se connecte à la nouvelle copie.  
   
 ```sql  
 DECLARE @credentialName nvarchar(128);   

@@ -21,12 +21,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 87c3a091e4a6ce3ef9462e6e0d730bcea56c18bc
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768355"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710718"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Expiration et désactivation des abonnements
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768355"
  Pour définir des périodes de rétention, consultez [Définir la période d’expiration des abonnements](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Définir la période de rétention de distribution pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) et [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
 ## <a name="transactional-replication"></a>Réplication transactionnelle  
- La réplication transactionnelle utilise la période de rétention de distribution maximale (le paramètre **@max_distretention** de [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) et la période de rétention de publication (le paramètre **@retention** de [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)) :  
+ La réplication transactionnelle utilise la période de conservation de distribution maximale (le paramètre `@max_distretention` de [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) et la période de conservation de publication (le paramètre `@retention` de [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)) :  
   
 -   Si un abonnement n'est pas synchronisé durant la période de rétention maximale (par défaut, 72 heures) et si aucune des modifications intervenues dans la base de données de distribution n'a été remise à l'Abonné, l'abonnement sera marqué comme désactivé par le travail de **nettoyage de distribution** qui s'exécute sur le serveur de distribution. L'abonnement doit être réinitialisé.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68768355"
      Si un abonnement par envoi de données expire, il est totalement supprimé, mais ce n'est pas le cas pour les abonnements par extraction de données. Vous devez nettoyer les abonnements par extraction de données au niveau de l'Abonné. Pour plus d’informations, voir [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Réplication de fusion  
- La réplication de fusion utilise la période de rétention de publication (paramètres **@retention** et **@retention_period_unit** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Lorsqu'un abonnement expire il doit être réinitialisé, parce que les métadonnées de l'abonnement sont supprimées. Les abonnements qui ne sont pas réinitialisés sont supprimés par le travail de **nettoyage de l'abonnement expiré** sur le serveur de publication. Par défaut, ce travail s'exécute chaque jour ; il supprime tous les abonnements par envoi de données qui ne se sont pas synchronisés au bout de deux fois la période de rétention de publication. Par exemple :  
+ La réplication de fusion utilise la période de conservation de publication (paramètres `@retention` et `@retention_period_unit` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Lorsqu'un abonnement expire il doit être réinitialisé, parce que les métadonnées de l'abonnement sont supprimées. Les abonnements qui ne sont pas réinitialisés sont supprimés par le travail de **nettoyage de l'abonnement expiré** sur le serveur de publication. Par défaut, ce travail s'exécute chaque jour ; il supprime tous les abonnements par envoi de données qui ne se sont pas synchronisés au bout de deux fois la période de rétention de publication. Par exemple :  
   
 -   Si une publication a une période de rétention de 14 jours, un abonnement peut expirer s'il ne s'est pas synchronisé au bout de 14 jours.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68768355"
   
     -   La réplication ne peut pas nettoyer les métadonnées dans les bases de données de publication et d'abonnement tant que la période de rétention n'est pas achevée. Soyez prudent si vous spécifiez une longue période de rétention, car cela peut affecter négativement les performances de réplication. Vous avez intérêt à spécifier une valeur faible si vous êtes certain que tous les Abonnés procéderont régulièrement à la synchronisation dans ce délai.  
   
-    -   Il est possible de spécifier que les abonnements n'expirent jamais (valeur 0 pour **@retention** ), mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
+    -   Il est possible de spécifier que les abonnements n’expirent jamais (valeur 0 pour `@retention`), mais cela est fortement déconseillé, car les métadonnées ne pourront pas être nettoyées.  
   
 -   La période de rétention pour tout serveur de republication doit être égale ou inférieure à la période de rétention définie sur le serveur de publication d'origine. Veillez à utiliser les mêmes valeurs de conservation des publications pour tous les serveurs de publication et leurs partenaires de synchronisation respectifs. L’utilisation de valeurs différentes peut produire une non-convergence. Pour modifier cette valeur, réinitialisez l'Abonné afin d'éviter la non-convergence des données.  
   

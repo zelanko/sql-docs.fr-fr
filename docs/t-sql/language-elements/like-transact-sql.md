@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122178"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816821"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +192,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce et abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Recherche générique avec la clause ESCAPE  
- Vous pouvez rechercher des chaînes de caractères comprenant un ou plusieurs caractères génériques particuliers. À titre d'exemple, la table discounts de la base de données customers peut stocker les valeurs de remises comprenant un pourcentage (%). Pour rechercher un pourcentage en tant que caractère et non en tant que caractère générique, le mot clé ESCAPE et le caractère d'échappement doivent être fournis. Par exemple, une base de données exemple contient une colonne dénommée comment comprenant la chaîne 30 %. Pour rechercher les lignes contenant la chaîne 30% n'importe où dans la colonne comment, spécifiez une clause WHERE telle que `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Si le mot clé ESCAPE et le caractère d’échappement ne sont pas spécifiés, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne toutes les lignes contenant la chaîne 30.  
+ Vous pouvez rechercher des chaînes de caractères comprenant un ou plusieurs caractères génériques particuliers. À titre d'exemple, la table discounts de la base de données customers peut stocker les valeurs de remises comprenant un pourcentage (%). Pour rechercher un pourcentage en tant que caractère et non en tant que caractère générique, le mot clé ESCAPE et le caractère d'échappement doivent être fournis. Par exemple, une base de données exemple contient une colonne dénommée comment comprenant la chaîne 30 %. Pour rechercher les lignes contenant la chaîne 30% n'importe où dans la colonne comment, spécifiez une clause WHERE telle que `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Si le mot clé ESCAPE et le caractère d’échappement ne sont pas spécifiés, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne toutes les lignes contenant la chaîne 30!.  
   
  Un modèle LIKE qui ne contient aucun caractère après un caractère d'échappement n'est pas valide ; le mot clé LIKE retourne alors la valeur FALSE. Si le caractère se trouvant après un caractère d'échappement n'est pas un caractère générique, le caractère d'échappement est ignoré et le caractère suivant est traité comme un caractère normal dans le modèle. Il s'agit notamment des caractères génériques suivants : symbole de pourcentage (%), trait de soulignement (_) et crochet gauche ([) lorsqu'ils sont placés entre deux crochets ([ ]). Les caractères d'échappement peuvent être utilisés à l'intérieur de doubles crochets ([ ]), notamment pour l'accent circonflexe (^), le trait d'union (-) et le crochet (]) droit.  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174289"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974405"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ FETCH
  *cursor_name*  
  Nom du curseur ouvert grâce auquel s'effectue l'extraction. Si un curseur global et un curseur local ont tous les deux le même nom *cursor_name*, *cursor_name* fait référence au curseur global si GLOBAL est spécifié, et au curseur local dans le cas contraire.  
   
- @*cursor_variable_name*  
+ \@*cursor_variable_name*  
  Nom d'une variable de curseur qui fait référence au curseur ouvert à partir duquel l'extraction doit être effectuée.  
   
- INTO @*variable_name*[ ,...*n*]  
+ INTO \@*variable_name*[ ,...*n*]  
  Permet aux données issues des colonnes d'une extraction d'être placées dans des variables locales. Chaque variable de la liste (de gauche à droite) est associée à la colonne correspondante dans le jeu de résultats du curseur. Le type de données de chaque variable doit correspondre ou être une conversion implicite du type de données de la colonne du jeu de résultats correspondante. Le nombre de variables doit correspondre au nombre de colonnes dans la liste de sélection du curseur.  
   
 ## <a name="remarks"></a>Notes  

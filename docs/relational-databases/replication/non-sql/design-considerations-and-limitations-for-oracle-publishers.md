@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901096"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710934"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Problèmes et limitations de conception des serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "67901096"
   
 -   Les publications transactionnelles standard prennent en charge des tables comprenant jusqu'à 1000 colonnes. Les publications transactionnelles Oracle prennent en charge 995 colonnes (la réplication ajoute cinq colonnes à chaque table publiée).  
   
--   Des clauses COLLATE sont ajoutées aux instructions CREATE TABLE pour permettre l'exécution de comparaisons respectant la casse, ce qui est important pour les clés primaires et les contraintes uniques. Ce comportement est contrôlé par l’option de schéma 0x1000, spécifiée avec le paramètre **@schema_option** de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   Des clauses COLLATE sont ajoutées aux instructions CREATE TABLE pour permettre l'exécution de comparaisons respectant la casse, ce qui est important pour les clés primaires et les contraintes uniques. Ce comportement est contrôlé par l’option de schéma 0x1000, spécifiée avec le paramètre `@schema_option` de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Si vous utilisez des procédures stockées pour configurer ou gérer un serveur de publication Oracle, ne placez pas les procédures dans une transaction explicite. L'opération n'est pas prise en charge sur le serveur lié utilisé pour la connexion au serveur de publication Oracle.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "67901096"
   
 -   Le compte utilisé par l'Agent d'instantané et l'Agent de lecture du journal pour connecter le serveur de distribution au serveur de publication est spécifié à l'aide de l'une des méthodes suivantes :  
   
-    -   Le paramètre **@security_mode** de [sp_adddistpublisher & #40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (vous spécifiez également les valeurs de **@login** et **@password** si l’authentification Oracle est utilisée)  
+    -   Le paramètre `@security_mode` de [sp_adddistpublisher & #40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (vous spécifiez également les valeurs de `@login` et `@password` si l’authentification Oracle est utilisée)  
   
     -   Dans la boîte de dialogue **Se connecter au serveur** de SQL Server Management Studio, que vous utilisez lorsque vous configurez le serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67901096"
   
 -   Le compte utilisé par l’Agent d’instantané et l’Agent de lecture du journal pour la connexion ne peut pas être modifié avec [sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) ou via une feuille de propriétés, mais le mot de passe peut l’être.  
   
--   Si vous spécifiez la valeur 1 (Authentification intégrée de Windows) pour le paramètre **@security_mode** de [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) :  
+-   Si vous spécifiez la valeur 1 (Authentification intégrée de Windows) pour le paramètre `@security_mode` de [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) :  
   
-    -   Le compte de processus et le mot de passe associé qui sont utilisés par les Agents d’instantané et de lecture du journal (paramètres **@job_login** et **@job_password** de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) et [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) doivent être identiques au compte et au mot de passe utilisés pour la connexion au serveur de publication Oracle.  
+    -   Le compte de processus et le mot de passe associé qui sont utilisés par les Agents d’instantané et de lecture du journal (paramètres `@job_login` et `@job_password` de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) et [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) doivent être identiques au compte et au mot de passe utilisés pour la connexion au serveur de publication Oracle.  
   
-    -   Vous ne pouvez pas modifier le paramètre **@job_login** via [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), mais le mot de passe, oui.  
+    -   Vous ne pouvez pas modifier le paramètre `@job_login` par le biais de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), mais vous pouvez changer le mot de passe.  
   
  Pour plus d’informations sur la sécurité de la réplication, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

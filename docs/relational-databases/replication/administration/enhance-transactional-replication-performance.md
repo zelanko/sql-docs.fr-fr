@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2db87395b7170315e14e10db075a4d6ca5721ab3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768788"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710376"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ Le paramètre **–MaxCmdsInTran** indique le nombre maximal d’instructions gr
   
 Le paramètre **–SubscriptionStreams** permet d’améliorer sensiblement le débit de la réplication d’agrégation. Il autorise plusieurs connexions à l'Abonné pour appliquer des traitements de modifications en parallèle, tout en conservant la plupart des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. Si l'une des connexions ne réussit pas à s'exécuter ou n'est pas validée, toutes les connexions abandonneront le lot actuel, et l'Agent utilisera un flux unique pour une nouvelle tentative sur les lots ayant échoué. Avant que cette phase de nouvelle tentative ne se termine, il peut se produire des incohérences transactionnelles temporaires sur l'Abonné. Une fois que les lots ayant échoué sont validés avec succès, l'Abonné retrouve un état de cohérence transactionnelle.  
   
-Il est possible d’indiquer une valeur pour le paramètre de cet agent à l’aide du **@subscriptionstreams** de [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+Il est possible d’indiquer une valeur pour le paramètre de cet agent à l’aide du `@subscriptionstreams` de [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
 
 Pour plus d’informations sur l’implémentation des flux d’abonnements, voir [Parcourir le paramètre subscriptionStream de réplication SQL](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   

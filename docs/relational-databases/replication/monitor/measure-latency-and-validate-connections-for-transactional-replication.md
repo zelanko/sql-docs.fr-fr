@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633403"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711021"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "69633403"
   
 1.  Dans la base de données du serveur de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **\@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
   
-2.  Dans la base de données du serveur de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), en spécifiant **\@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id** .  
+2.  Dans la base de données du serveur de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), en spécifiant **\@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour `@tracer_id`.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple publie un enregistrement de jeton de suivi et utilise l'ID retourné du jeton de suivi publié pour consulter les informations de latence.  

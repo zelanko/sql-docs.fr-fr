@@ -1,7 +1,7 @@
 ---
 title: Exemples d’accès en bloc à des données dans Stockage Blob Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2017
+ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,58 +16,59 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8ae6afaf55bbd146fc2fbd0984d5b430b1653f3
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 8dc38f28726067614acb12cb8daff01cf1b39e02
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742872"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974333"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Exemples d’accès en bloc à des données dans Stockage Blob Azure
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Les instructions `BULK INSERT` et `OPENROWSET` peuvent accéder directement à un fichier dans Stockage Blob Azure. Les exemples suivants utilisent des données d’un fichier de valeurs séparées par des virgules (CSV) nommé `inv-2017-01-19.csv`, stocké dans un conteneur nommé `Week3` dans un compte de stockage nommé `newinvoices`. Le chemin du fichier de format peut être utilisé, mais il n’est pas inclus dans ces exemples. 
+Les instructions `BULK INSERT` et `OPENROWSET` peuvent accéder directement à un fichier dans Stockage Blob Azure. Les exemples suivants utilisent des données d’un fichier de valeurs séparées par des virgules (CSV) nommé `inv-2017-01-19.csv`, stocké dans un conteneur nommé `Week3` dans un compte de stockage nommé `newinvoices`. Le chemin du fichier de format peut être utilisé, mais il n’est pas inclus dans ces exemples.
 
 L’accès en bloc au stockage Blob Azure à partir de SQL Server nécessite au moins [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 
 > [!IMPORTANT]
->  Tous les chemins du conteneur et des fichiers sur les objets blob sont `CASE SENSITIVE`. S’ils ne sont pas corrects, l’erreur suivante peut être retournée : « Chargement en masse impossible. Le fichier « fichier.csv » n’existe pas ou vous ne disposez pas des droits d’accès au fichier. »
+> Tous les chemins du conteneur et des fichiers sur les objets blob sont `CASE SENSITIVE`. S’ils ne sont pas corrects, l’erreur suivante peut être retournée : « Chargement en masse impossible. Le fichier « fichier.csv » n’existe pas ou vous ne disposez pas des droits d’accès au fichier. »
 
+## <a name="create-the-credential"></a>Créer les informations d’identification
 
-## <a name="create-the-credential"></a>Créer les informations d’identification   
-   
-Tous les exemples suivants nécessitent des informations d’identification incluses dans l’étendue de la base de données faisant référence à une signature d’accès partagé.   
+Tous les exemples suivants nécessitent des informations d’identification incluses dans l’étendue de la base de données faisant référence à une signature d’accès partagé.
 
 > [!IMPORTANT]
->  La source de données externe doit être créée avec des informations d’identification incluses dans l’étendue de la base de données utilisant l’identité `SHARED ACCESS SIGNATURE`. Pour créer une signature d’accès partagé pour votre compte de stockage, examinez la propriété **Signature d’accès partagé** dans la page de propriétés du compte de stockage, dans le portail Azure. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Pour plus d’informations sur les informations d’identification, consultez [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
- 
-Créez des informations d’identification incluses dans l’étendue de la base de données avec `IDENTITY` qui doit avoir la valeur `SHARED ACCESS SIGNATURE`. Utilisez le jeton SAS généré pour le compte de stockage d’objets blob. Vérifiez que votre jeton SAS ne commence pas par `?`, que vous disposez au moins d’une autorisation de lecture sur l’objet qui doit être chargé et que la période d’expiration est valide (toutes les dates sont exprimées en heure UTC). 
+> La source de données externe doit être créée avec des informations d’identification incluses dans l’étendue de la base de données utilisant l’identité `SHARED ACCESS SIGNATURE`. Pour créer une signature d’accès partagé pour votre compte de stockage, examinez la propriété **Signature d’accès partagé** dans la page de propriétés du compte de stockage, dans le portail Azure. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Pour plus d’informations sur les informations d’identification, consultez [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-Par exemple :  
+Créez des informations d’identification incluses dans l’étendue de la base de données avec `IDENTITY` qui doit avoir la valeur `SHARED ACCESS SIGNATURE`. Utilisez le jeton SAS généré pour le compte de stockage d’objets blob. Vérifiez que votre jeton SAS ne commence pas par `?`, que vous disposez au moins d’une autorisation de lecture sur l’objet qui doit être chargé et que la période d’expiration est valide (toutes les dates sont exprimées en heure UTC).
+
+Par exemple :
 
 ```sql
-CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
+CREATE DATABASE SCOPED CREDENTIAL UploadInvoices
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
 
+## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Accès aux données dans un fichier CSV faisant référence à un emplacement de stockage Blob Azure
 
-## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Accès aux données dans un fichier CSV faisant référence à un emplacement de stockage Blob Azure   
-L’exemple suivant utilise une source de données externe qui pointe vers un compte de stockage Azure, nommé `newinvoices`.  
+L’exemple suivant utilise une source de données externe qui pointe vers un compte de stockage Azure, nommé `MyAzureInvoices`.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
-    WITH  (
+    WITH (
         TYPE = BLOB_STORAGE,
-        LOCATION = 'https://newinvoices.blob.core.windows.net', 
-        CREDENTIAL = 'UploadInvoices';
+        LOCATION = 'https://newinvoices.blob.core.windows.net',
+        CREDENTIAL = UploadInvoices
     );
-```   
+```
 
 L’instruction `OPENROWSET` ajoute ensuite le nom du conteneur (`week3`) à la description du fichier. Le fichier est nommé `inv-2017-01-19.csv`.
-```sql     
+
+```sql
 SELECT * FROM OPENROWSET(
-   BULK  'week3/inv-2017-01-19.csv',
+   BULK 'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
    FORMAT = 'CSV') AS DataFile;
 ```
@@ -78,42 +79,43 @@ SELECT * FROM OPENROWSET(
 BULK INSERT Colors2
 FROM 'week3/inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
-      FORMAT = 'CSV'); 
+      FORMAT = 'CSV');
 ```
 
-## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>Accès aux données dans un fichier CSV faisant référence à un conteneur à un emplacement de stockage Blob Azure   
+## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>Accès aux données dans un fichier CSV faisant référence à un conteneur à un emplacement de stockage Blob Azure
 
-L’exemple suivant utilise une source de données externe qui pointe vers un conteneur (nommé `week3`) dans un compte de stockage Azure.   
+L’exemple suivant utilise une source de données externe qui pointe vers un conteneur (nommé `week3`) dans un compte de stockage Azure.
+
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
-    WITH  (
+    WITH (
         TYPE = BLOB_STORAGE,
-        LOCATION = 'https://newinvoices.blob.core.windows.net/week3', 
-        CREDENTIAL = UploadInvoices  
+        LOCATION = 'https://newinvoices.blob.core.windows.net/week3',
+        CREDENTIAL = UploadInvoices
     );
-```  
-  
+```
+
 L’instruction `OPENROWSET` n’ajoute pas ensuite le nom du conteneur à la description du fichier :
+
 ```sql
 SELECT * FROM OPENROWSET(
-   BULK  'inv-2017-01-19.csv',
+   BULK 'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
    FORMAT = 'CSV') AS DataFile;
-```   
+```
 
-À l’aide de `BULK INSERT`, n’utilisez pas le nom du conteneur dans la description du fichier : 
+À l’aide de `BULK INSERT`, n’utilisez pas le nom du conteneur dans la description du fichier :
 
 ```sql
 BULK INSERT Colors2
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
-      FORMAT = 'CSV'); 
+      FORMAT = 'CSV');
 ```
 
-## <a name="see-also"></a>Voir aussi   
+## <a name="see-also"></a>Voir aussi
 
-[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)   
-[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)   
-[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)   
-
+- [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
+- [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)

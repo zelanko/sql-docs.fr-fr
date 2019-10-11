@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903103"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710312"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903103"
   
      Pour plus d'informations sur les autorisations requises par les agents, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Spécifiez le même compte de domaine que celui utilisé par l'Agent de fusion lorsque vous indiquez un compte et un mot de passe dans la page **Informations sur le serveur Web** de l'Assistant Nouvel abonnement ou lorsque vous indiquez des valeurs pour les paramètres **@internet_url** et **@internet_login** de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Ce compte doit disposer d'autorisations en lecture pour le partage des instantanés.  
+-   Spécifiez le même compte de domaine que celui utilisé par l’Agent de fusion lorsque vous indiquez un compte et un mot de passe dans la page **Informations sur le serveur Web** de l’Assistant Nouvel abonnement ou quand vous spécifiez des valeurs pour les paramètres `@internet_url` et `@internet_login` de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Ce compte doit disposer d'autorisations en lecture pour le partage des instantanés.  
   
 -   Chaque publication doit utiliser un répertoire virtuel distinct pour IIS.  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653358"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680828"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -223,8 +223,8 @@ Spécifie que toutes les lignes de *target_table qui correspondent aux lignes re
 L'instruction MERGE peut avoir au plus deux clauses WHEN MATCHED. Si deux clauses sont spécifiées, la première clause doit être accompagnée d’une clause AND \<search_condition>. Pour toute ligne donnée, la deuxième clause WHEN MATCHED est appliquée uniquement si la première ne l'est pas. En présence de deux clauses WHEN MATCHED, l'une d'elles doit spécifier une action UPDATE et l'autre une action DELETE. Lorsque l’action UPDATE est spécifiée dans la clause \<merge_matched> et que plusieurs lignes de \<table_source> correspondent à une ligne dans *target_table* en fonction de \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. L'instruction MERGE ne peut pas mettre à jour la même ligne plus d'une fois, ou mettre à jour et supprimer la même ligne.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Spécifie qu’une ligne est insérée dans *target_table* pour chaque ligne retournée par \<table_source> ON \<merge_search_condition> qui ne correspond pas à une ligne dans *target_table*, mais satisfait à un critère de recherche supplémentaire, le cas échéant. Les valeurs à insérer sont spécifiées par la clause \<merge_not_matched>. L'instruction MERGE peut avoir une seule clause WHEN NOT MATCHED.  
-  
+Spécifie qu’une ligne est insérée dans *target_table* pour chaque ligne retournée par \<table_source> ON \<merge_search_condition> qui ne correspond pas à une ligne dans *target_table*, mais satisfait à un critère de recherche supplémentaire, le cas échéant. Les valeurs à insérer sont spécifiées par la clause \<merge_not_matched>. L’instruction MERGE peut avoir une seule clause WHEN NOT MATCHED [ BY TARGET ].
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Spécifie que toutes les lignes de *target_table qui ne correspondent pas aux lignes retournées par \<table_source> ON \<merge_search_condition>, et qui répondent aux critères de recherche supplémentaires, sont mises à jour ou supprimées selon la clause \<merge_matched>.  
   

@@ -1,7 +1,7 @@
 ---
 title: float et real (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086755"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682013"
 ---
 # <a name="float-and-real-transact-sql"></a>float et real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Les valeurs de **float** sont tronquées quand elles sont converties en un type 
   
 Si vous souhaitez effectuer une conversion de **float** ou **real** en données caractères, la fonction de chaîne STR constitue généralement un meilleur choix que CAST( ), car STR permet un plus grand contrôle sur le format. Pour plus d’informations, consultez [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md) et [Fonctions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md).
   
-La conversion des valeurs **float** qui utilisent la notation scientifique en **decimal** ou en **numeric** est limitée à des valeurs d’une précision de 17 chiffres uniquement. N’importe quelle valeur < 5E-18 est arrondie à 0.
+Dans les versions antérieures à [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], la conversion des valeurs **float** en valeurs **decimal** ou **numeric** est limitée à des valeurs d’une précision de 17 chiffres uniquement. Toutes les valeurs **float** inférieures à 5E-18 (quand elles sont définies avec la notation scientifique 5E-18 ou la notation décimale 0.0000000000000000050000000000000005) sont arrondies à 0. Cette limitation n’existe plus dans [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
   
 ## <a name="see-also"></a>Voir aussi
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bec94a3aaa6faab3fa88d4cd2b0d21a2bdcfd29e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d5b1f22408ecffd2ec3250441239bb423e921b66
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768615"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710282"
 ---
 # <a name="disable-publishing-and-distribution"></a>Désactiver la publication et la distribution
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68768615"
 7.  Sur le serveur de distribution, exécutez [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) pour supprimer la désignation de serveur de distribution du serveur.  
   
     > [!NOTE]  
-    >  Si tous les objets de publication et de distribution de la réplication ne sont pas supprimés avant l'exécution de [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) et [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md), ces procédures retourneront une erreur. Pour supprimer tous les objets liés à la réplication lorsqu'un serveur de publication ou un serveur de distribution est supprimé, le paramètre **@no_checks** doit avoir la valeur **1**. Si un serveur de publication ou un serveur de distribution est hors connexion ou inaccessible, la valeur **@ignore_distributor** peut être affectée au paramètre **1** afin qu'ils puissent être supprimés ; toutefois, tous les objets de publication et de distribution restants doivent être supprimés manuellement.  
+    > Si tous les objets de publication et de distribution de la réplication ne sont pas supprimés avant l'exécution de [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) et [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md), ces procédures retourneront une erreur. Pour supprimer tous les objets liés à la réplication quand un serveur de publication ou un serveur de distribution est supprimé, le paramètre `@no_checks` doit avoir la valeur **1**. Si un serveur de publication ou un serveur de distribution est hors connexion ou inaccessible, le paramètre `@ignore_distributor` peut être défini sur **1** pour permettre leur suppression ; toutefois, tous les objets de publication et de distribution restants doivent être supprimés manuellement.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple de script supprime des objets de réplication de la base de données d'abonnement.  

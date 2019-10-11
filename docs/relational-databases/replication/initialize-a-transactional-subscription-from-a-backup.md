@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251095"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710303"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Initialiser un abonnement transactionnel à partir d’une sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71251095"
   
     -   Si la valeur est **1**, la publication prend en charge cette fonctionnalité.  
   
-    -   Si la valeur est **0**, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) au niveau du serveur de publication sur la base de données de publication. Spécifiez la valeur **allow_initialize_from_backup** pour **@property** et la valeur **true** pour **@value** .  
+    -   Si la valeur est **0**, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) au niveau du serveur de publication sur la base de données de publication. Spécifiez la valeur **allow_initialize_from_backup** pour `@property` et la valeur **true** pour `@value`.  
   
 2.  Pour une nouvelle publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) au niveau du serveur de publication sur la base de données de publication. Spécifiez la valeur **true** pour **allow_initialize_from_backup**. Pour plus d’informations, voir [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -48,23 +48,23 @@ ms.locfileid: "71251095"
   
 5.  Exécutez la procédure stockée [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) sur la base de données de publication du serveur de publication. Spécifiez les paramètres suivants :  
   
-    -   **@sync_type** – valeur de **initialize with backup**.  
+    -   `@sync_type` : valeur de **initialize with backup**.  
   
-    -   **@backupdevicetype** – type d'unité de sauvegarde : **logical** (valeur par défaut), **disk**ou **tape**.  
+    -   `@backupdevicetype` : type d’unité de sauvegarde : **logical** (valeur par défaut), **disk**ou **tape**.  
   
-    -   **@backupdevicename** – unité de sauvegarde logique ou physique à utiliser pour la restauration.  
+    -   `@backupdevicename` : unité de sauvegarde logique ou physique à utiliser pour la restauration.  
   
          Pour une unité logique, spécifiez le nom de l'unité de sauvegarde qui a été spécifié quand **sp_addumpdevice** a été utilisé pour créer l'unité.  
   
          Pour une unité physique, spécifiez un chemin d'accès complet et un nom de fichier, tels que `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` ou `TAPE = '\\.\TAPE0'`;  
   
-    -   (Facultatif) **@password** – mot de passe qui a été fourni lorsque le jeu de sauvegarde a été créé ;  
+    -   (Facultatif) `@password` : mot de passe qui a été fourni lorsque le jeu de sauvegarde a été créé.  
   
-    -   (Facultatif) **@mediapassword** – mot de passe qui a été fourni lorsque le support de sauvegarde a été formaté ;  
+    -   (Facultatif) `@mediapassword` : mot de passe qui a été fourni lorsque le support de sauvegarde a été formaté.  
   
-    -   (Facultatif) **@fileidhint** – identificateur pour le jeu de sauvegarde à restaurer. Par exemple, la valeur **1** indique le premier jeu de sauvegarde sur le support de sauvegarde et la valeur **2** le second jeu de sauvegarde ;  
+    -   (Facultatif) `@fileidhint` : identificateur du jeu de sauvegarde à restaurer. Par exemple, la valeur **1** indique le premier jeu de sauvegarde sur le support de sauvegarde et la valeur **2** le second jeu de sauvegarde ;  
   
-    -   (Facultatif pour les périphériques à bandes) **@unload** – spécifiez la valeur **1** (valeur par défaut) si la bande doit être déchargée du lecteur une fois la restauration terminée et **0** si elle ne doit pas être déchargée.  
+    -   (Facultatif pour les périphériques à bandes) `@unload` : spécifiez la valeur **1** (valeur par défaut) si la bande doit être déchargée du lecteur une fois la restauration terminée, ou la valeur **0** si elle ne doit pas être déchargée.  
   
 6.  (Facultatif) Pour un abonnement par extraction, exécutez [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) et [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) au niveau de l’abonné sur la base de données d’abonnement. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046141"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251973"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Ajoute un événement d’audit défini par l’utilisateur à la **USER_DEFINED_AUDIT_GROUP**. Si **USER_DEFINED_AUDIT_GROUP** n’est pas activé, **sp_audit_write** est ignoré.  
+  Ajoute un événement d’audit défini par l’utilisateur à **USER_DEFINED_AUDIT_GROUP**. Si **USER_DEFINED_AUDIT_GROUP** n’est pas activé, **sp_audit_write** est ignoré.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Arguments  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Un paramètre défini par l’utilisateur et enregistré dans le **user_defined_event_id** colonne du journal d’audit. *@user_defined_event_id* est de type **smallint**.  
+ Paramètre défini par l’utilisateur et enregistré dans la colonne **user_defined_event_id** du journal d’audit. *\@user_defined_event_id est de* type **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Paramètre passé par l'utilisateur pour indiquer si l'événement a ou non réussi. Il apparaît dans la colonne succeeded du journal d'audit. `@succeeded` est **bits**.  
+ Paramètre passé par l'utilisateur pour indiquer si l'événement a ou non réussi. Il apparaît dans la colonne succeeded du journal d'audit. `@succeeded` est un **bit**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Texte défini par l'utilisateur et enregistré dans la nouvelle colonne user_defined_event_id du journal d'audit. `@user_defined_information` est **nvarchar (4000)** .  
+ Texte défini par l'utilisateur et enregistré dans la nouvelle colonne user_defined_event_id du journal d'audit. `@user_defined_information` est de type **nvarchar (4000)** .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Les échecs sont dus à des paramètres d'entrée incorrects ou à l'impossibilité d'écrire dans le journal d'audit cible.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque le **USER_DEFINED_AUDIT_GROUP** est ajouté à une spécification d’audit de serveur ou une spécification d’audit de base de données, l’événement déclenché par **sp_audit_write** figureront dans le journal d’audit.  
+ Lorsque le **USER_DEFINED_AUDIT_GROUP** est ajouté à une spécification de l’audit du serveur ou à une spécification de l’audit de la base de données, l’événement déclenché par **sp_audit_write** est inclus dans le journal d’audit.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **public** rôle de base de données.  
+ Requiert l’appartenance au rôle de base de données **public** .  
   
 ## <a name="examples"></a>Exemples  
   

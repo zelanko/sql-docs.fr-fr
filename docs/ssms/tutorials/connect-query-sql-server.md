@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256717"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708329"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutoriel : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio (SSMS)
 
@@ -109,9 +109,10 @@ Dans cette section, vous allez créer une table dans la base de données Tutoria
    ![Changer la base de données](media/connect-query-sql-server/changedb.png)
 
 2. Collez l’extrait de code T-SQL suivant dans la fenêtre de requête, sélectionnez-le et sélectionnez **Exécuter** (ou sélectionnez F5 sur votre clavier).  
-   Vous pouvez remplacer le texte existant dans la fenêtre de requête ou l’ajouter à la fin. Pour exécuter tous les éléments de la fenêtre de requête, sélectionnez **Exécuter**. Pour exécuter une partie du texte, sélectionnez-la et sélectionnez **Exécuter**.  
+   Vous pouvez remplacer le texte existant dans la fenêtre de requête ou l’ajouter à la fin. Pour exécuter tous les éléments de la fenêtre de requête, sélectionnez **Exécuter**. Si vous avez ajouté le texte, vous souhaiterez exécuter uniquement la partie correspondant au texte. Donc, mettez en surbrillance cette partie, puis sélectionnez **Exécuter**.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

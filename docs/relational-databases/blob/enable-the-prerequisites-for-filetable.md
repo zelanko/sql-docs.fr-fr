@@ -11,12 +11,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 4f339b343da4adc12b7b5cf692d217c5fb0419c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085373"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974310"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Activer les conditions préalables pour les FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,31 +56,31 @@ ms.locfileid: "68085373"
   
 ###  <a name="HowToCheckAccess"></a> Procédure : vérifier si l’accès non transactionnel est activé sur les bases de données  
  Interrogez l’affichage catalogue [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) et vérifiez les colonnes **non_transacted_access** et **non_transacted_access_desc**.  
-  
-```sql  
+
+```sql
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
-```  
-  
+```
+
 ###  <a name="HowToNTAccess"></a> Procédure : activer l’accès non transactionnel au niveau de la base de données  
  Les niveaux disponibles de l'accès non transactionnel sont FULL, READ_ONLY et OFF.  
   
  **Spécifier le niveau d'accès non transactionnel à l'aide de Transact-SQL**  
- -   Quand vous **créez une base de données**, appelez l’instruction [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) avec l’option FILESTREAM **NON_TRANSACTED_ACCESS**.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
--   Quand vous **modifiez une base de données existante**, appelez l’instruction [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) avec l’option FILESTREAM **NON_TRANSACTED_ACCESS**.  
-  
-    ```sql  
-    ALTER DATABASE database_name  
-        SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
+ - Quand vous **créez une base de données**, appelez l’instruction [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) avec l’option FILESTREAM **NON_TRANSACTED_ACCESS**.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
+- Quand vous **modifiez une base de données existante**, appelez l’instruction [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) avec l’option FILESTREAM **NON_TRANSACTED_ACCESS**.
+
+   ```sql
+   ALTER DATABASE database_name  
+     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
  **Spécifier le niveau d'accès non transactionnel à l'aide de SQL Server Management Studio**  
  Vous pouvez spécifier le niveau d’accès non transactionnel dans le champ **Accès non transactionnel FILESTREAM** de la page **Options** de la boîte de dialogue **Propriétés de la base de données** . Pour plus d’informations sur cette boîte de dialogue, consultez [Propriétés de la base de données &#40;page Options&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
@@ -92,15 +92,15 @@ GO
 ###  <a name="HowToDirectory"></a> Procédure : spécifier un répertoire pour les FileTables au niveau de la base de données  
  Le nom que vous spécifiez doit être unique dans l'instance pour les répertoires de niveau base de données.  
   
- **Spécifier un répertoire pour les FileTables à l'aide de Transact-SQL**  
- -   Quand vous **créez une base de données**, appelez l’instruction [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) avec l’option FILESTREAM **DIRECTORY_NAME**.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
-    GO  
-    ```  
-  
+**Spécifier un répertoire pour les FileTables à l'aide de Transact-SQL**  
+- Quand vous **créez une base de données**, appelez l’instruction [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) avec l’option FILESTREAM **DIRECTORY_NAME**.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
+   GO  
+   ```
+
 -   Quand vous **modifiez une base de données existante**, appelez l’instruction [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) avec l’option FILESTREAM **DIRECTORY_NAME**. Lorsque vous utilisez ces options pour modifier le nom de répertoire, la base de données doit être verrouillée en mode exclusif, sans descripteurs de fichiers ouverts.  
   
     ```sql  
