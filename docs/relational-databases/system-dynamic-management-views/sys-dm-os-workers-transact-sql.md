@@ -20,12 +20,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 822f4fea2764c6420da731845e8defc05807d3cf
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261654"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289350"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,8 @@ ms.locfileid: "72261654"
  Lorsqu'un processus de travail en attente sur un événement est signalé, il est placé en tête de la file d'attente exécutable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise cette situation mille fois de suite, après quoi le processus de travail est placé à la fin de la file d'attente. Le fait de placer un processus de travail à la fin de la file d'attente a un impact sur les performances.  
   
 ## <a name="permissions"></a>Autorisations
-
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert l’autorisation `VIEW SERVER STATE`.   
-Sur les niveaux Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données. Sur les niveaux [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur les niveaux Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données. Sur les niveaux [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard et de base, nécessite l’appartenance au rôle `Server Admin` ou un compte `Azure Active Directory admin`.   
 
 ## <a name="examples"></a>Exemples  
  Vous pouvez utiliser la requête suivante pour déterminer la durée d'exécution d'un processus de travail à l'état SUSPENDED ou RUNNABLE.  
@@ -137,6 +136,6 @@ SELECT
  Dans le résultat, lorsque `w_runnable` et `w_suspended` sont identiques, la valeur représente la durée pendant laquelle le processus de travail est dans l'état SUSPENDED. Dans le cas contraire, `w_runnable` représente la durée pendant laquelle le processus de travail est dans l'état RUNNABLE. Dans le résultat, la session `52` est dans l'état `SUSPENDED` pendant `35,094` millisecondes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server les &#40;vues de gestion dynamique liées au système d'&#41;exploitation, Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
- [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#DOP)       
- [Guide d’architecture de thread et de tâche](../../relational-databases/thread-and-task-architecture-guide.md)    
+[SQL Server les &#40;vues de gestion dynamique liées au système d'&#41;exploitation, Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Guide d’architecture de thread et de tâche](../../relational-databases/thread-and-task-architecture-guide.md)    

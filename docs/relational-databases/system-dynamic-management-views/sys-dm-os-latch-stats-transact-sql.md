@@ -18,40 +18,39 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 853fa815c431c720ed76f1cef693eb5ac5bf1f8c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265824"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289405"
 ---
-# <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
+# <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne des informations sur toutes les attentes de verrou interne, organisées par classe.  
+Retourne des informations sur toutes les attentes de verrou interne, organisées par classe. 
   
 > [!NOTE]  
->  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_latch_stats**.  
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. DM _pdw_nodes_os_latch_stats**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nom de la classe de verrou interne.|  
 |waiting_requests_count|**bigint**|Nombre d'attentes pour les verrous internes de cette classe. Ce compteur est incrémenté au début d'une attente de verrou interne.|  
-|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** Cette colonne est mise à jour toutes les cinq minutes pendant une attente de verrou et à la fin de l’attente.|  
+|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** Cette colonne est mise à jour toutes les cinq minutes pendant l’attente d’un verrou et à la fin de l’attente d’un verrou.|  
 |max_wait_time_ms|**bigint**|Durée maximum d'attente d'un objet de mémoire sur ce verrou interne. Si cette valeur est anormalement élevée, cela peut indiquer un blocage interne.|  
-|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|pdw_node_id|**Int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations  
-
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert l’autorisation `VIEW SERVER STATE`.   
+Sur les niveaux Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données. Sur les niveaux [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="remarks"></a>Notes  
  sys.dm_os_latch_stats peut être utilisé pour identifier l'origine d'une contention de verrouillage en examinant le nombre d'attentes et les temps d'attente relatifs pour les différentes classes de verrous internes. Dans certaines situations, vous pouvez être en mesure de résoudre ou de réduire les problèmes de contention de verrouillage. Il peut toutefois arriver que vous soyez obligé de contacter le Support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Vous pouvez réinitialiser le contenu de sys.dm_os_latch_stats en utilisant `DBCC SQLPERF` de la manière suivante :  
+Vous pouvez réinitialiser le contenu de sys.dm_os_latch_stats en utilisant `DBCC SQLPERF` de la manière suivante :  
   
-```  
+```sql  
 DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);  
 GO  
 ```  
@@ -61,15 +60,15 @@ GO
 > [!NOTE]  
 >  Ces statistiques ne sont pas conservées si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre. Toutes les données sont cumulées à partir de la dernière réinitialisation des statistiques ou à partir du démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="latches"></a>Verrous internes  
- Un verrou interne est un objet de synchronisation non activable qui est utilisé par divers composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est principalement utilisé pour synchroniser les pages d'une base de données. Chaque verrou interne est associé à une seule unité d'allocation.  
+## <a name="latches"></a>Verrous  
+ Un verrou est un objet de synchronisation légère interne similaire à un verrou, qui est utilisé par différents composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un verrou est principalement utilisé pour synchroniser des pages de base de données pendant des opérations telles que la mémoire tampon ou l’accès aux fichiers. Chaque verrou interne est associé à une seule unité d'allocation. 
   
  Une attente de verrou interne se produit lorsqu'une demande de verrou interne ne peut pas être satisfaite immédiatement parce que le verrou en question est détenu par un autre thread qui crée une situation de conflit. Contrairement aux verrous externes, les verrous internes sont libérés dès la fin de l'opération (y compris dans le cas d'opérations d'écriture).  
   
  Les verrous internes sont regroupés en classes en fonction de leur utilisation et des composants. Dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il peut à tout moment exister zéro verrou, un verrou ou plusieurs verrous internes d'une classe donnée.  
   
 > [!NOTE]  
->  sys.dm_os_latch_stats n'assure pas le suivi des demandes de verrou interne qui ont été satisfaites immédiatement ou qui ont échoué sans attente.  
+> `sys.dm_os_latch_stats` n’effectue pas le suivi des demandes de verrous accordées immédiatement ou qui ont échoué sans attendre.  
   
  Le tableau suivant fournit une description succincte des différentes classes de verrous internes.  
   
@@ -101,7 +100,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Verrous utilisés pour synchroniser les opérations de sauvegarde différentielle avec DBCC.|  
 |BACKUP_OPERATION|Verrous utilisés pour la synchronisation de la structure interne des données dans une opération de sauvegarde (de base de données, de journal ou de fichiers).|  
 |BACKUP_FILE_HANDLE|Verrous utilisés pour synchroniser les opérations d'ouverture de fichier pendant une opération de restauration.|  
-|BUFFER|Verrous utilisés pour synchroniser l'accès à court terme aux pages de base de données. Un verrou de mémoire tampon est nécessaire avant la lecture ou la modification d'une page de base de données. Une contention de verrou de ce type peut indiquer plusieurs problèmes, notamment des pages sensibles et des E/S lentes.<br /><br /> Cette classe de verrous englobe toutes les utilisations possibles des verrous de page. Sys.dm_os_wait_stats fait la distinction entre les attentes de verrou de page sont provoquées par les opérations de lecture et d’e/s et d’opérations d’écriture sur la page.|  
+|BUFFER|Verrous utilisés pour synchroniser l'accès à court terme aux pages de base de données. Un verrou de mémoire tampon est nécessaire avant la lecture ou la modification d'une page de base de données. Une contention de verrou de ce type peut indiquer plusieurs problèmes, notamment des pages sensibles et des E/S lentes.<br /><br /> Cette classe de verrous englobe toutes les utilisations possibles des verrous de page. sys. DM _os_wait_stats fait la différence entre les attentes de verrous de page provoquées par des opérations d’e/s et des opérations de lecture et d’écriture sur la page.|  
 |BUFFER_POOL_GROW|Verrous utilisés pour la synchronisation du gestionnaire de mémoires tampons interne pendant les opérations de développement du pool de mémoires tampons.|  
 |DATABASE_CHECKPOINT|Verrous utilisés pour sérialiser les points de contrôle dans une base de données.|  
 |CLR_PROCEDURE_HASHTABLE|À usage interne uniquement|  
@@ -122,7 +121,7 @@ GO
 |FCB|Verrous utilisés pour synchroniser l'accès au bloc de contrôle des fichiers.|  
 |FCB_REPLICA|À usage interne uniquement|  
 |FGCB_ALLOC|Verrous utilisés pour synchroniser l'accès aux informations d'allocation utilisant le mécanisme du tourniquet (round robin) au sein d'un groupe de fichiers.|  
-|FGCB_ADD_REMOVE|Utilisez cette option pour synchroniser l’accès aux groupes de fichiers pour ajouter, supprimer, augmenter et réduire les opérations de fichier.|  
+|FGCB_ADD_REMOVE|Utilisez pour synchroniser l’accès aux groupes de fichiers pour les opérations d’ajout, de suppression, d’agrandissement et de réduction de fichier.|  
 |FILEGROUP_MANAGER|À usage interne uniquement|  
 |FILE_MANAGER|À usage interne uniquement|  
 |FILESTREAM_FCB|À usage interne uniquement|  
@@ -165,7 +164,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|À usage interne uniquement|  
 |SERVICE_BROKER_HOST_NAME|À usage interne uniquement|  
 |SERVICE_BROKER_READ_CACHE|À usage interne uniquement|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Utilisé pour synchroniser un mappage au niveau d’instance des files d’attente waiter. Il existe une file d’attente par tuple d’ID, la Version de base de données et ID de file d’attente de base de données. Contention sur les verrous de cette classe peut se produire lorsque le nombre de connexions est : Dans un WAITFOR(RECEIVE) attente état ; WAITFOR(RECEIVE) appelant ; dépassement du délai d’attente WAITFOR ; réception d’un message ; validation ou la restauration de la transaction qui contient le WAITFOR(RECEIVE) ; Vous pouvez réduire la contention en réduisant le nombre de threads dans un état d’attente WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Utilisé pour synchroniser un mappage au niveau de l’instance des files d’attente d’attente. Il existe une file d’attente par ID de base de données, version de base de données et tuple d’ID de file d’attente. Une contention sur les verrous internes de cette classe peut se produire lorsque de nombreuses connexions sont : Dans un état d’attente WAITFOR (RECEIVE); appel de WAITFOR (RECEIVE); dépassement du délai d’attente WAITFOR ; réception d’un message ; validation ou restauration de la transaction qui contient le WAITFOR (réception); Vous pouvez réduire la contention en réduisant le nombre de threads dans un état d’attente WAITFOR (RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|À usage interne uniquement|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|À usage interne uniquement|  
 |SERVICE_BROKER_TRANSPORT|À usage interne uniquement|  
@@ -195,11 +194,6 @@ GO
 |KTM_VIRTUAL_CLOCK|À usage interne uniquement|  
   
 ## <a name="see-also"></a>Voir aussi  
- 
- [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
- 
- [Vues de gestion dynamique liées à système d’exploitation SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
-  
-  
-
-
+[DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server les &#40;vues de gestion dynamique liées au système d'&#41;exploitation, Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server, objet Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

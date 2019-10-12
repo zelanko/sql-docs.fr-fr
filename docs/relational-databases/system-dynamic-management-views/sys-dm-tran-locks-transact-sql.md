@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: sys. DM _tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32140a9ef5b1a8965876c4ee30fe72559ba8b7ce
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e52b36ff9cb8c7d0f4f7fc6086563616325cdc92
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262625"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289362"
 ---
-# <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
+# <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne des informations sur les ressources actives du gestionnaire de verrous dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Chaque ligne représente une demande active au gestionnaire de verrous pour un verrou autorisé ou en attente d'autorisation.  
@@ -35,11 +35,11 @@ ms.locfileid: "68262625"
  Les colonnes du jeu de résultats sont réparties en deux groupes principaux : ressource et demande. Le groupe ressource décrit la ressource sur laquelle la demande de verrou a lieu ; le groupe demande décrit la demande de verrou.  
   
 > [!NOTE]  
-> À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_tran_locks**.  
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. DM _pdw_nodes_tran_locks**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|Représente le type de ressource. Il peut s'agir de l'une des valeurs suivantes : Base de données, fichier, objet, PAGE, clé, EXTENT, RID, APPLICATION, métadonnées, HOBT ou ALLOCATION_UNIT.|  
+|**resource_type**|**nvarchar(60)**|Représente le type de ressource. Il peut s'agir de l'une des valeurs suivantes : DATABASE, FILE, OBJECT, PAGE, KEY, extent, RID, APPLICATION, METADATA, HOBT ou ALLOCATION_UNIT.|  
 |**resource_subtype**|**nvarchar(60)**|Représente un sous-type de **resource_type**. D'un point de vue technique, il est possible d'acquérir un verrou avec sous-type sans conserver un verrou sans sous-type du type parent. Les différents sous-types n'entrent pas en conflit entre eux ou avec le type parent sans sous-type. Toutes les ressources ne comportent pas de sous-types.|  
 |**resource_database_id**|**Int**|ID de la base de données dans laquelle cette ressource s'applique. L'ID de la base de données définit l'étendue de toutes les ressources gérées par le gestionnaire de verrous.|  
 |**resource_description**|**nvarchar (256)**|Description de la ressource qui contient uniquement les informations non disponibles dans d'autres colonnes de ressources.|  
@@ -47,65 +47,67 @@ ms.locfileid: "68262625"
 |**resource_lock_partition**|**Int**|ID de la partition de verrou pour une ressource de verrou partitionnée. La valeur pour les ressources de verrou non partitionnées est 0.|  
 |**request_mode**|**nvarchar(60)**|Mode de la demande. Pour les demandes autorisées, il s'agit du mode autorisé ; pour les demandes en attente, il s'agit du mode demandé.|  
 |**request_type**|**nvarchar(60)**|Type de la demande. La valeur est LOCK.|  
-|**request_status**|**nvarchar(60)**|État actuel de cette demande. Les valeurs possibles sont GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT ou ABORT_BLOCKERS. Pour plus d’informations sur les attentes de basse priorité et les blocages d’abandon, consultez le *low_priority_lock_wait* section de [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_status**|**nvarchar(60)**|État actuel de cette demande. Les valeurs possibles sont GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT ou ABORT_BLOCKERS. Pour plus d’informations sur les blocages Wait et Abort de faible priorité, consultez la section *low_priority_lock_wait* de [ALTER index &#40;Transact&#41;-SQL](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Retourne le nombre approximatif de fois que le même demandeur a demandé cette ressource.|  
-|**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**request_lifetime**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**Int**|ID de la session actuellement propriétaire de la demande. L'ID de la session propriétaire peut changer pour les transactions distribuées et liées. La valeur -2 indique que la demande appartient à une transaction distribuée orpheline. -3 indique que la demande appartient à une transaction de récupération différée, par exemple une transaction dont l'annulation a été différée à la récupération car l'annulation ne s'est pas déroulée correctement.|  
-|**request_exec_context_id**|**int**|ID du contexte d'exécution du processus actuellement propriétaire de cette demande.|  
-|**request_request_id**|**int**|ID de la demande (ID du traitement) du processus actuellement propriétaire de cette demande. Cette valeur change chaque fois que la connexion MARS (Multiple Active Result Set) active d'une transaction change.|  
-|**request_owner_type**|**nvarchar(60)**|Type de l'entité propriétaire de la demande. Diverses entités peuvent être propriétaires des demandes de gestionnaire de verrous. Les valeurs possibles sont les suivantes :<br /><br /> TRANSACTION = Une transaction est propriétaire de la demande.<br /><br /> CURSOR = Un curseur est propriétaire de la demande.<br /><br /> SESSION = Une session utilisateur est propriétaire de la demande.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La partie partagée de l'espace de travail des transactions est propriétaire de la demande.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = La partie exclusive de l'espace de travail des transactions est propriétaire de la demande.<br /><br /> NOTIFICATION_OBJECT = Un composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interne est propriétaire de la demande. Ce composant a demandé au gestionnaire de verrous de l'informer lorsqu'un autre composant attend le moment d'acquérir le verrou. La fonctionnalité FileTable est un composant qui utilise cette valeur.<br /><br /> **Remarque :** Espaces de travail sont utilisés en interne pour maintenir des verrous pour les sessions inscrites.|  
-|**request_owner_id**|**bigint**|ID du propriétaire spécifique de cette demande.<br /><br /> Lorsqu'une transaction est propriétaire de la demande, cette valeur contient l'ID de transaction.<br /><br /> Lorsqu’un FileTable est propriétaire de la demande, **request_owner_id** a une des valeurs suivantes.<br /><br /> <br /><br /> -4 : Un FileTable a pris un verrou de base de données.<br /><br /> -3 : Un FileTable a pris un verrou de table.<br /><br /> Autre valeur : La valeur représente un descripteur de fichier. Cette valeur apparaît également comme **fcb_id** dans la vue de gestion dynamique [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_exec_context_id**|**Int**|ID du contexte d'exécution du processus actuellement propriétaire de cette demande.|  
+|**request_request_id**|**Int**|ID de la demande (ID du traitement) du processus actuellement propriétaire de cette demande. Cette valeur change chaque fois que la connexion MARS (Multiple Active Result Set) active d'une transaction change.|  
+|**request_owner_type**|**nvarchar(60)**|Type de l'entité propriétaire de la demande. Diverses entités peuvent être propriétaires des demandes de gestionnaire de verrous. Les valeurs possibles sont les suivantes :<br /><br /> TRANSACTION = Une transaction est propriétaire de la demande.<br /><br /> CURSOR = Un curseur est propriétaire de la demande.<br /><br /> SESSION = Une session utilisateur est propriétaire de la demande.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La partie partagée de l'espace de travail des transactions est propriétaire de la demande.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = La partie exclusive de l'espace de travail des transactions est propriétaire de la demande.<br /><br /> NOTIFICATION_OBJECT = Un composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interne est propriétaire de la demande. Ce composant a demandé au gestionnaire de verrous de l'informer lorsqu'un autre composant attend le moment d'acquérir le verrou. La fonctionnalité FileTable est un composant qui utilise cette valeur.<br /><br /> **Remarque :** Les espaces de travail sont utilisés en interne pour maintenir des verrous pour les sessions inscrites.|  
+|**request_owner_id**|**bigint**|ID du propriétaire spécifique de cette demande.<br /><br /> Lorsqu'une transaction est propriétaire de la demande, cette valeur contient l'ID de transaction.<br /><br /> Lorsqu’un filetable est le propriétaire de la demande, **request_owner_id** a l’une des valeurs suivantes.<br /><br /> <br /><br /> 4 Un filetable a pris un verrou de base de données.<br /><br /> 1,3 Un filetable a pris un verrou de table.<br /><br /> Autre valeur : La valeur représente un descripteur de fichier. Cette valeur apparaît également comme **fcb_id** dans la vue de gestion dynamique [sys. DM &#40;_filestream_non_transacted_handles Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID du propriétaire spécifique de cette demande. Cette valeur est utilisée uniquement par une transaction distribuée dans laquelle la valeur correspond au GUID MS DTC de cette transaction.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Cette valeur représente l'ID de l'espace de verrouillage du demandeur. Cet ID détermine si deux demandeurs sont mutuellement compatibles et s'il est possible de leur accorder des verrous dans des modes conflictuels.|  
-|**lock_owner_address**|**varbinary(8)**|Adresse mémoire de la structure des données internes utilisées pour suivre cette demande. Cette colonne peut être jointe l’avec **resource_address** colonne **sys.dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**lock_owner_address**|**varbinary(8)**|Adresse mémoire de la structure des données internes utilisées pour suivre cette demande. Cette colonne peut être jointe à la colonne with **resource_address** dans **sys. DM _os_waiting_tasks**.|  
+|**pdw_node_id**|**Int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
-
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert l’autorisation `VIEW SERVER STATE`.   
+Sur les niveaux Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données. Sur les niveaux [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
  
 ## <a name="remarks"></a>Notes  
- Un état de demande autorisée indique qu'un verrou a été accordé au demandeur sur une ressource. Une demande en attente indique que la demande n'est pas encore autorisée. Les types de demandes en attente suivants sont retournés par la **request_status** colonne :  
+ Un état de demande autorisée indique qu'un verrou a été accordé au demandeur sur une ressource. Une demande en attente indique que la demande n'est pas encore autorisée. Les types de demande d’attente suivants sont retournés par la colonne **request_status** :  
   
 -   Une demande de conversion indique que le demandeur a déjà reçu l'autorisation pour la ressource et attend l'autorisation de mise à jour de la demande initiale.  
   
 -   Une demande en attente indique que le demandeur n'a pas reçu l'autorisation pour la ressource.  
   
- Étant donné que **sys.dm_tran_locks** est remplie à partir de structures de données de verrou interne manager, maintenir ces informations n’ajoute pas de traitement d’une charge normale. La matérialisation de la vue ne nécessite pas l'accès aux structures des données internes du gestionnaire de verrous. Ceci minimise les effets sur le traitement normal du serveur. Ces effets doivent être imperceptibles et affecter uniquement les ressources utilisées intensivement. Du fait que les données de cette vue correspondent à l'état actif du gestionnaire de verrous, elles peuvent changer à tout moment ; des lignes sont ajoutées et supprimées lorsque des verrous sont acquis et libérés. Cette vue ne comporte pas d'informations historiques.  
+ Étant donné que **sys. DM _tran_locks** est renseigné à partir des structures de données du gestionnaire de verrous internes, la conservation de ces informations n’ajoute pas de surcharge supplémentaire au traitement normal. La matérialisation de la vue ne nécessite pas l'accès aux structures des données internes du gestionnaire de verrous. Ceci minimise les effets sur le traitement normal du serveur. Ces effets doivent être imperceptibles et affecter uniquement les ressources utilisées intensivement. Du fait que les données de cette vue correspondent à l'état actif du gestionnaire de verrous, elles peuvent changer à tout moment ; des lignes sont ajoutées et supprimées lorsque des verrous sont acquis et libérés. Cette vue ne comporte pas d'informations historiques.  
   
  Deux demandes agissent sur la même ressource uniquement si toutes les colonnes du groupe de ressources sont égales.  
   
  Vous pouvez contrôler le verrouillage des opérations de lecture à l'aide des outils suivants :  
   
--   SET TRANSACTION ISOLATION LEVEL pour spécifier le niveau de verrouillage d’une session. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+-   Définissez le niveau d’ISOLATION des transactions pour spécifier le niveau de verrouillage d’une session. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
--   Conseils de verrouillage des tables pour spécifier le niveau de verrouillage de la référence d'une table dans une clause FROM. Pour la syntaxe et les restrictions, consultez [indicateurs de Table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Conseils de verrouillage des tables pour spécifier le niveau de verrouillage de la référence d'une table dans une clause FROM. Pour la syntaxe et les restrictions, consultez [indicateurs &#40;de table Transact&#41;-SQL](../../t-sql/queries/hints-transact-sql-table.md).  
   
- Une ressource qui est exécutée sous un ID de session peut comporter plusieurs verrous autorisés. Différentes entités qui sont en cours d’exécution dans une session peuvent posséder chacune un verrou sur la même ressource et les informations s’affichent dans le **request_owner_type** et **request_owner_id** les colonnes qui sont retourné par **sys.dm_tran_locks**. Si plusieurs instances du même **request_owner_type** existe, le **request_owner_id** colonne est utilisée pour distinguer chaque instance. Pour les transactions distribuées, le **request_owner_type** et **request_owner_guid** colonnes affichent les informations d’entités différents.  
+ Une ressource qui est exécutée sous un ID de session peut comporter plusieurs verrous autorisés. Les différentes entités qui s’exécutent sous une session peuvent avoir chacune un verrou sur la même ressource, et les informations s’affichent dans les colonnes **request_owner_type** et **request_owner_id** retournées par **sys. DM _tran_locks**. Si plusieurs instances du même **request_owner_type** existent, la colonne **request_owner_id** est utilisée pour distinguer chaque instance. Pour les transactions distribuées, les colonnes **request_owner_type** et **request_owner_guid** affichent les différentes informations d’entité.  
   
- Par exemple, la Session S1 possède un verrou partagé sur **Table1**; et la transaction T1, ce qui est en cours d’exécution dans la session S1, possède également un verrou partagé sur **Table1**. Dans ce cas, le **resource_description** colonne retournée par **sys.dm_tran_locks** affiche deux instances de la même ressource. Le **request_owner_type** colonne affichera une instance comme une session et l’autre comme une transaction. En outre, le **resource_owner_id** colonne aura des valeurs différentes.  
+ Par exemple, la session S1 possède un verrou partagé sur la **table1**; et la transaction T1, qui s’exécute sous la session S1, possède également un verrou partagé sur la **table1**. Dans ce cas, la colonne **resource_description** retournée par **sys. DM _tran_locks** affiche deux instances de la même ressource. La colonne **request_owner_type** affiche une instance comme une session et l’autre en tant que transaction. En outre, la colonne **resource_owner_id** aura des valeurs différentes.  
   
  Il n'est pas possible de distinguer plusieurs curseurs d'une même session qui sont traités comme une seule entité.  
   
  Les transactions distribuées non associées à un ID de session sont des transactions orphelines. L'ID de session -2 leur est attribué. Pour plus d’informations, consultez [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
-  
+
+## <a name="locks"></a> Verrous
+Des verrous sont placés sur les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telles que les lignes lues ou modifiées lors d'une transaction, pour empêcher d'autres transactions d'utiliser simultanément les ressources. Par exemple, si un verrou exclusif (X) est mis en place dans une ligne de table par une transaction, aucune autre transaction ne peut modifier cette ligne jusqu'à ce que le verrou soit débloqué. Un nombre minimal de verrous favorise la concurrence, ce qui peut améliorer les performances. 
+
 ## <a name="resource-details"></a>Détails des ressources  
- Le tableau suivant répertorie les ressources qui sont représentés dans le **resource_associated_entity_id** colonne.  
+ Le tableau suivant répertorie les ressources qui sont représentées dans la colonne **resource_associated_entity_id** .  
   
 |Type de ressource|Description de la ressource|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
 |DATABASE|Représente une base de données.|Non applicable|  
 |FILE|Représente un fichier de base de données. Il peut s'agir d'un fichier journal ou d'un fichier de données.|Non applicable|  
 |OBJECT|Représente un objet de base de données. Il peut s'agir d'une table de données, d'une vue, d'une procédure stockée, d'une procédure stockée étendue ou de tout objet possédant un ID d'objet.|ID de l'objet|  
-|PAGE|Représente une seule page dans un fichier de données.|ID HoBt. Cette valeur correspond à **sys.partitions.hobt_id**. L'ID HoBt n'est pas toujours disponible pour les ressources PAGE car il se compose d'informations supplémentaires que peut fournir l'appelant, et tous les appelants ne sont pas capables de fournir ces informations.|  
-|KEY|Représente une ligne dans un index.|ID HoBt. Cette valeur correspond à **sys.partitions.hobt_id**.|  
+|PAGE|Représente une seule page dans un fichier de données.|ID HoBt. Cette valeur correspond à **sys. partitions. hobt_id**. L'ID HoBt n'est pas toujours disponible pour les ressources PAGE car il se compose d'informations supplémentaires que peut fournir l'appelant, et tous les appelants ne sont pas capables de fournir ces informations.|  
+|KEY|Représente une ligne dans un index.|ID HoBt. Cette valeur correspond à **sys. partitions. hobt_id**.|  
 |EXTENT|Représente une étendue d'un fichier de données. Une étendue est un groupe de huit pages contiguës.|Non applicable|  
-|RID|Représente une ligne physique dans un segment de mémoire.|ID HoBt. Cette valeur correspond à **sys.partitions.hobt_id**. L'ID HoBt n'est pas toujours disponible pour les ressources RID car il se compose d'informations supplémentaires que peut fournir l'appelant, et tous les appelants ne sont pas capables de fournir ces informations.|  
+|RID|Représente une ligne physique dans un segment de mémoire.|ID HoBt. Cette valeur correspond à **sys. partitions. hobt_id**. L'ID HoBt n'est pas toujours disponible pour les ressources RID car il se compose d'informations supplémentaires que peut fournir l'appelant, et tous les appelants ne sont pas capables de fournir ces informations.|  
 |APPLICATION|Représente une ressource spécifiée pour une application.|Non applicable|  
 |METADATA|Représente des informations de métadonnées.|Non applicable|  
-|HOBT|Représente un segment de mémoire ou un arbre B-tree. Structures des chemins d'accès de base.|ID HoBt. Cette valeur correspond à **sys.partitions.hobt_id**.|  
-|ALLOCATION_UNIT|Représente un ensemble de pages liées (par exemple, une partition d'index). Chaque unité d'allocation couvre une seule chaîne de pages IAM.|ID d'unité d'allocation. Cette valeur correspond à **sys.allocation_units.allocation_unit_id**.|  
+|HOBT|Représente un segment de mémoire ou un arbre B-tree. Structures des chemins d'accès de base.|ID HoBt. Cette valeur correspond à **sys. partitions. hobt_id**.|  
+|ALLOCATION_UNIT|Représente un ensemble de pages liées (par exemple, une partition d'index). Chaque unité d'allocation couvre une seule chaîne de pages IAM.|ID d'unité d'allocation. Cette valeur correspond à **sys. allocation_units. allocation_unit_id**.|  
   
  Le tableau suivant répertorie les sous-types qui sont associés à chaque type de ressource.  
   
@@ -193,20 +195,20 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
 |METADATA.XML_COMPONENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- Le tableau suivant fournit le format de la **resource_description** colonne pour chaque type de ressource.  
+ Le tableau suivant fournit le format de la colonne **resource_description** pour chaque type de ressource.  
   
 |Resource|Format|Description|  
 |--------------|------------|-----------------|  
-|DATABASE|Non applicable|ID de base de données est déjà disponible dans le **resource_database_id** colonne.|  
+|DATABASE|Non applicable|L’ID de base de données est déjà disponible dans la colonne **resource_database_id** .|  
 |FILE|<file_id>|ID du fichier représenté par cette ressource.|  
-|OBJECT|<object_id>|ID de l'objet représenté par cette ressource. Cet objet peut être tout objet répertorié dans **sys.objects**, pas seulement d’une table.|  
-|PAGE|< file_id > : < page_in_file >|Représente le fichier et l'ID de la page qui est représentée par cette ressource.|  
+|OBJECT|<object_id>|ID de l'objet représenté par cette ressource. Cet objet peut être n’importe quel objet figurant dans **sys. Objects**, et pas seulement une table.|  
+|PAGE|< file_id >: < page_in_file >|Représente le fichier et l'ID de la page qui est représentée par cette ressource.|  
 |KEY|<hash_value>|Représente un hachage des colonnes clés de la ligne représentée par cette ressource.|  
-|EXTENT|< file_id > : < page_in_files >|Représente le fichier et l'ID de la page de l'étendue représentée par cette ressource. L'ID d'étendue est identique à l'ID de la première page de l'étendue.|  
-|RID|< file_id > : < page_in_file > : < row_on_page >|Représente l'ID de page et l'ID de ligne représentée par cette ressource. Remarquez que si l'ID de l'objet associé est égal à 99, cette ressource représente l'une des huit pages mélangées de la première page IAM d'une chaîne IAM.|  
-|APPLICATION|\<DbPrincipalId > :\<jusqu'à 32 caractères >  :(< hash_value >)|Représente l'ID du principal de base de données qui est utilisé pour fixer l'étendue de la ressource des verrous sur l'application. Jusqu'à 32 caractères de la chaîne des ressources correspondent à cette ressource de verrous pour l'application. Dans certains cas, il est possible d'afficher seulement 2 caractères du fait que la chaîne complète n'est plus disponible ; cela se produit uniquement lors de la récupération d'une base de données pour les verrous d'application qui sont repris au cours de la récupération. La valeur de hachage représente un hachage de l'ensemble de la chaîne de ressource qui correspond à cette ressource de verrous pour l'application.|  
-|HOBT|Non applicable|ID du HoBt est inclus en tant que le **resource_associated_entity_id**.|  
-|ALLOCATION_UNIT|Non applicable|ID d’unité d’allocation est inclus en tant que le **resource_associated_entity_id**.|  
+|EXTENT|< file_id >: < page_in_files >|Représente le fichier et l'ID de la page de l'étendue représentée par cette ressource. L'ID d'étendue est identique à l'ID de la première page de l'étendue.|  
+|RID|< file_id >: < page_in_file >: < row_on_page >|Représente l'ID de page et l'ID de ligne représentée par cette ressource. Remarquez que si l'ID de l'objet associé est égal à 99, cette ressource représente l'une des huit pages mélangées de la première page IAM d'une chaîne IAM.|  
+|APPLICATION|\<DbPrincipalId >: \<upto 32 caractères >:(< hash_value >)|Représente l'ID du principal de base de données qui est utilisé pour fixer l'étendue de la ressource des verrous sur l'application. Jusqu'à 32 caractères de la chaîne des ressources correspondent à cette ressource de verrous pour l'application. Dans certains cas, il est possible d'afficher seulement 2 caractères du fait que la chaîne complète n'est plus disponible ; cela se produit uniquement lors de la récupération d'une base de données pour les verrous d'application qui sont repris au cours de la récupération. La valeur de hachage représente un hachage de l'ensemble de la chaîne de ressource qui correspond à cette ressource de verrous pour l'application.|  
+|HOBT|Non applicable|L’ID HoBt est inclus en tant que **resource_associated_entity_id**.|  
+|ALLOCATION_UNIT|Non applicable|L’ID d’unité d’allocation est inclus en tant que **resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -273,7 +275,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- Les événements XEvent suivants sont liés pour partitionner **commutateur** et de reconstruction d’index en ligne. Pour plus d’informations sur la syntaxe, consultez [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) et [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+ Les XEvents suivants sont liés au **commutateur** de partition et à la reconstruction d’index en ligne. Pour plus d’informations sur la syntaxe, consultez [ALTER &#40;table&#41; Transact-SQL](../../t-sql/statements/alter-table-transact-sql.md) et [ALTER &#40;index&#41;Transact-SQL](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   
@@ -281,12 +283,12 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
   
 -   ddl_with_wait_at_low_priority  
   
- Le XEvent existant **progress_report_online_index_operation** d’index en ligne les opérations a été étendu en ajoutant **partition_number** et **partition_id**.  
+ Le **Progress_report_online_index_operation** XEvent existant pour les opérations d’index en ligne a été étendu en ajoutant **partition_number** et **partition_id**.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-sysdmtranlocks-with-other-tools"></a>R. Utilisation de sys.dm_tran_locks avec d'autres outils  
- L'exemple suivant fonctionne dans un scénario dans lequel une mise à jour est bloquée par une autre transaction. À l’aide de **sys.dm_tran_locks** et autres outils, informations sur le verrouillage des ressources sont fournies.  
+### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>R. Utilisation de sys.dm_tran_locks avec d'autres outils  
+ L'exemple suivant fonctionne dans un scénario dans lequel une mise à jour est bloquée par une autre transaction. À l’aide de **sys. DM _tran_locks** et d’autres outils, des informations sur le verrouillage des ressources sont fournies.  
   
 ```sql  
 USE tempdb;  
@@ -324,7 +326,7 @@ BEGIN TRAN
     UPDATE t_lock SET c1 = 10  
 ```  
   
- La requête suivante affiche des informations sur les verrous. La valeur de `<dbid>` doit être remplacé par le **database_id** de **sys.databases**.  
+ La requête suivante affiche des informations sur les verrous. La valeur de `<dbid>` doit être remplacée par **database_id** à partir de **sys. databases**.  
   
 ```sql  
 SELECT resource_type, resource_associated_entity_id,  
@@ -383,7 +385,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique relatives aux transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
+[sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
+[Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[Fonctions &#40;et vues de gestion dynamique liées aux transactions Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
+[SQL Server, objet Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)      
