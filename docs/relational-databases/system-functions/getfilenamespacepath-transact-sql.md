@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab369b619bc0ad378292cf71573ab973dc056c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101431"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278335"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68101431"
   
 ## <a name="arguments"></a>Arguments  
  *column-name*  
- Le nom de colonne de la varbinary (max) **file_stream** colonne dans un FileTable.  
+ Nom de colonne de la colonne VARBINARY (MAX) **file_stream** dans un filetable.  
   
- Le *nom-colonne* valeur doit être un nom de colonne valide. Il ne peut pas s'agir d'une expression ni d'une valeur convertie à partir d'une colonne présentant un autre type de données.  
+ La valeur de *nom de colonne* doit être un nom de colonne valide. Il ne peut pas s'agir d'une expression ni d'une valeur convertie à partir d'une colonne présentant un autre type de données.  
   
  *is_full_path*  
  Expression entière qui spécifie s'il faut retourner un chemin d'accès absolu ou relatif. *is_full_path* peut avoir l’une des valeurs suivantes :  
@@ -50,8 +50,8 @@ ms.locfileid: "68101431"
 |**0**|Retourne le chemin d'accès relatif dans le répertoire au niveau de la base de données.<br /><br /> Il s'agit de la valeur par défaut|  
 |**1**|Retourne le chemin d'accès UNC complet, en commençant par `\\computer_name`.|  
   
- *@option*  
- Expression entière qui définit comment le composant serveur du chemin d'accès doit être mis en forme. *@option* Peut avoir l’une des valeurs suivantes :  
+ *@no__t 1option*  
+ Expression entière qui définit comment le composant serveur du chemin d'accès doit être mis en forme. *\@option* peut avoir l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -64,17 +64,17 @@ ms.locfileid: "68101431"
   
  Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est groupée dans un cluster de basculement, le nom de l'ordinateur qui est retourné dans le cadre de ce chemin d'accès représente le nom d'hôte virtuel de l'instance cluster.  
   
- Lorsque la base de données appartient à un groupe de disponibilité Always On, puis le **FileTableRootPath** fonction retourne le nom de réseau virtuel (VNN) au lieu du nom de l’ordinateur.  
+ Lorsque la base de données appartient à un groupe de disponibilité Always On, la fonction **FileTableRootPath** retourne le nom du réseau virtuel (VNN) à la place du nom de l’ordinateur.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Le chemin d’accès qui le **GetFileNamespacePath** fonction retourne un chemin de répertoire ou fichier logique dans le format suivant :  
+ Le chemin d’accès retourné par la fonction **GetFileNamespacePath** est un chemin d’accès de fichier ou de répertoire logique au format suivant :  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- Ce chemin logique ne correspond pas directement à un chemin d'accès NTFS physique. Le chemin d’accès physique, il est traduit par le pilote de filtre de système de fichiers de FILESTREAM et l’agent FILESTREAM. Cette séparation entre le chemin d'accès logique et le chemin d'accès physique permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de réorganiser des données en interne sans affecter la validité du chemin d'accès.  
+ Ce chemin logique ne correspond pas directement à un chemin d'accès NTFS physique. Elle est traduite en chemin d’accès physique par le pilote de filtre de système de fichiers de FILESTREAM et l’agent FILESTREAM. Cette séparation entre le chemin d'accès logique et le chemin d'accès physique permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de réorganiser des données en interne sans affecter la validité du chemin d'accès.  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
- Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, obtenez le chemin d’accès complet à un fichier en cours d’exécution à l’aide de la **FileTableRootPath** et **GetFileNamespacePath** fonctions ensemble, comme illustré dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
+ Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant conjointement les fonctions **FileTableRootPath** et **GetFileNamespacePath** , comme indiqué dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -89,7 +89,7 @@ WHERE Name = N'document.docx';
 ## <a name="remarks"></a>Notes  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants montrent comment appeler le **GetFileNamespacePath** fonction pour obtenir le chemin d’accès UNC d’un fichier ou un répertoire dans un FileTable.  
+ Les exemples suivants montrent comment appeler la fonction **GetFileNamespacePath** pour obtenir le chemin d’accès UNC d’un fichier ou d’un répertoire dans un filetable.  
   
 ```  
 -- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  

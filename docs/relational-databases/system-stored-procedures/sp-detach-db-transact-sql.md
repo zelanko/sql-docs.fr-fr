@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000810"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278181"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "70000810"
   Détache d'une instance de serveur une base de données qui n'est pas en cours d'utilisation, et exécute accessoirement UPDATE STATISTICS sur toutes les tables avant de détacher la base de données.  
   
 > [!IMPORTANT]  
->  Pour détacher une base de données répliquée, celle-ci ne doit pas être publiée. Pour plus d’informations, consultez la section «Notes» plus loin dans cette rubrique.  
+>  Pour détacher une base de données répliquée, celle-ci ne doit pas être publiée. Pour plus d’informations, consultez la section « Notes » plus loin dans cette rubrique.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,16 +45,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'database_name'`Nom de la base de données à détacher. *database_name* est une valeur de **type sysname** , avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'database_name'` est le nom de la base de données à détacher. *database_name* est une valeur de **type sysname** , avec NULL comme valeur par défaut.  
   
-`[ @skipchecks = ] 'skipchecks'`Spécifie si les statistiques de mise à jour doivent être ignorées ou exécutées. *option skipchecks* est une valeur **nvarchar (10)** , avec NULL comme valeur par défaut. Pour ignorer UPDATE STATISTICs, spécifiez **true**. Pour exécuter explicitement UPDATE STATISTICs,spécifiez false.  
+`[ @skipchecks = ] 'skipchecks'` indique si les statistiques de mise à jour doivent être ignorées ou exécutées. *option skipchecks* est une valeur **nvarchar (10)** , avec NULL comme valeur par défaut. Pour ignorer UPDATE STATISTICs, spécifiez **true**. Pour exécuter explicitement UPDATE STATISTICs, spécifiez **false**.  
   
  Par défaut, UPDATE STATISTICS est exécuté pour mettre à jour les informations relatives aux données des tables et des index. L'exécution de UPDATE STATISTICS est utile pour les bases de données qui doivent être placées sur des supports en lecture seule.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Spécifie que le fichier d’index de recherche en texte intégral associé à la base de données en cours de détachement ne sera pas supprimé pendant l’opération de détachement de la base de données. *Keepfulltextindexfile* est une valeur **nvarchar (10)** avec **true**comme valeur par défaut. Si *keepfulltextindexfile* a la **valeur false**, tous les fichiers d’index de recherche en texte intégral associés à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si la valeur est NULL ou **true**, les métadonnées associées au texte intégral sont conservées.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` indique que le fichier d’index de recherche en texte intégral associé à la base de données détachée ne sera pas supprimé pendant l’opération de détachement de la base de données. *Keepfulltextindexfile* est une valeur **nvarchar (10)** avec **true**comme valeur par défaut. Si *keepfulltextindexfile* a la **valeur false**, tous les fichiers d’index de recherche en texte intégral associés à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si la valeur est NULL ou **true**, les métadonnées associées au texte intégral sont conservées.  
   
 > [!IMPORTANT]
->  Le **@keepfulltextindexfile** paramètre sera supprimé dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ce paramètre dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement ce paramètre.  
+>  Le paramètre **\@keepfulltextindexfile** sera supprimé dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ce paramètre dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement ce paramètre.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -69,7 +69,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 >  Pour plus d’informations sur l’affichage de la base de données par défaut de tous les comptes de connexion, consultez [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Si vous disposez des autorisations requises, vous pouvez utiliser [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) pour affecter une nouvelle base de données par défaut à une connexion.  
   
 ## <a name="restrictions"></a>Restrictions  
- Une base de données ne peut pas être détachée Si l’une des conditions suivantes est vraie:  
+ Une base de données ne peut pas être détachée Si l’une des conditions suivantes est vraie :  
   
 -   La base de données est en cours d'utilisation. Pour plus d'informations, consultez « Obtention d'un accès exclusif », plus loin dans cette rubrique.  
   
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Avant d'affecter la valeur SINGLE_USER à la base de données, vérifiez que l'option AUTO_UPDATE_STATISTICS_ASYNC a la valeur OFF. Si la valeur de cette option est ON, le thread d'arrière-plan utilisé pour mettre à jour les statistiques se connecte à la base de données et vous ne pourrez pas accéder à celle-ci en mode mono-utilisateur. Pour plus d’informations, consultez [définir une base de données en mode mono-utilisateur](../databases/set-a-database-to-single-user-mode.md).
 
- Par exemple, l’instruction `ALTER DATABASE` suivante obtient un accès exclusif à la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données une fois que tous les utilisateurs actuels se sont déconnectés de la base de données.  
+ Par exemple, l’instruction `ALTER DATABASE` suivante obtient un accès exclusif à la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] une fois que tous les utilisateurs actuels se sont déconnectés de la base de données.  
   
 ```  
 USE master;  
@@ -112,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Pour forcer les utilisateurs actuels à se déconnecter de la base de données immédiatement ou dans un nombre de secondes spécifié, utilisez également l’option ROLLBACK: ALTER DATABASE *nom_base_de_données* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Pour forcer les utilisateurs actuels à se déconnecter de la base de données immédiatement ou dans un nombre de secondes spécifié, utilisez également l’option ROLLBACK : ALTER DATABASE *nom_base_de_données* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Rattachement d'une base de données  
  Les fichiers détachés restent et peuvent être rattachés à l'aide de CREATE DATABASE (avec l'option FOR ATTACH ou FOR ATTACH_REBUILD_LOG). Vous pouvez les déplacer sur un autre serveur et les y attacher.  
@@ -121,7 +121,7 @@ GO
  Requiert l’appartenance au rôle serveur fixe **sysadmin** ou l’appartenance au rôle **db_owner** de la base de données.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant détache la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données avec *option skipchecks* défini sur true.  
+ L’exemple suivant détache la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] avec *option skipchecks* défini sur true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
