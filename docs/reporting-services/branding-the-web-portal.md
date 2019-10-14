@@ -8,12 +8,12 @@ description: Dans cet article, vous découvrez comment changer l’apparence du 
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199416"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251912"
 ---
 # <a name="branding-the-web-portal"></a>Personnalisation du portail web
 
@@ -75,7 +75,7 @@ Par exemple, si le fichier colors.json a les valeurs suivantes.
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-Le résultat traité recherche la variable LESS **@primaryButtonBg** et vérifie qu'elle correspond à la propriété json appelée **primary**, soit #009900 dans cet exemple. Il affiche donc la feuille CSS correcte.  
+Le résultat traité recherche la variable LESS **\@primaryButtonBg** et vérifie qu'elle correspond à la propriété json appelée **primary**, soit #009900 dans cet exemple. Il affiche donc la feuille CSS correcte.  
   
     .btn-primary {   
         color:#ffffff;   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041703"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252140"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs. 
@@ -142,9 +142,9 @@ Lorsque vous ajoutez un paramètre de requête à une requête, le Générateur 
     WHERE StoreID = (@StoreID)  
     ```  
   
-    La boîte de dialogue **WHERE** limite les données récupérées à l’identificateur de magasin spécifié par le paramètre de requête *@StoreID* .  
+    La clause **WHERE** limite les données récupérées à l’identificateur de magasin spécifié par le paramètre de requête *\@StoreID*.  
   
-4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). La boîte de dialogue **Définir les paramètres de la requête** s’ouvre et vous êtes invité à définir une valeur pour le paramètre de requête *@StoreID* .  
+4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). La boîte de dialogue **Définir les paramètres de la requête** s’ouvre et vous êtes invité à définir une valeur pour le paramètre de requête *\@StoreID*.  
   
 5.  Dans **Valeur du paramètre**, tapez **200**.  
   
@@ -156,7 +156,7 @@ Lorsque vous ajoutez un paramètre de requête à une requête, le Générateur 
   
 8.  Dans le volet des données de rapport, développez le dossier **Paramètres** .  
   
-Remarque : Vous disposez désormais d’un paramètre de rapport nommé *@StoreID* , ainsi que d’un volet Paramètres où vous pouvez disposer les paramètres du rapport.   
+Notez que vous disposez désormais d’un paramètre de rapport nommé *\@StoreID* ainsi que d’un volet Paramètres où vous pouvez disposer les paramètres du rapport.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ Après avoir créé un paramètre de rapport, vous pouvez ajuster les valeurs pa
   
 Par défaut, le paramètre que vous avez créé a pour type de données **Texte**. Dans la mesure où l’identificateur de magasin est un entier, vous pouvez remplacer le type de données par le type Entier.  
   
-1.  Dans le volet des données de rapport sous le nœud **Paramètres** , cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
+1.  Dans le volet des données de rapport sous le nœud **Paramètres** , cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
   
 2.  Dans **Invite**, tapez **Identificateur du magasin ?** . Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
   
@@ -179,7 +179,7 @@ Par défaut, le paramètre que vous avez créé a pour type de données **Texte*
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport. La visionneuse de rapports affiche l’invite **Store Identifier?** pour *@StoreID* .  
+6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport. La visionneuse de rapports affiche l’invite **Identificateur du magasin ?** pour *\@StoreID*.  
   
 7.  Dans la barre d’outils de la visionneuse de rapports, en regard de StoreID, tapez **200**, puis cliquez sur **Afficher le rapport**.  
   
@@ -220,7 +220,7 @@ Après avoir créé un dataset pour fournir des valeurs disponibles, vous modifi
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Pour fournir des valeurs disponibles pour un paramètre à partir d'un dataset  
   
-1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le paramètre *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
+1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le paramètre *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
   
 2.  Cliquez sur **Valeurs disponibles**, puis sur **Obtenir les valeurs à partir d’une requête**.  
   
@@ -253,7 +253,7 @@ Vous pouvez spécifier une valeur par défaut pour chaque paramètre afin que le
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Cliquez sur **Valeurs par défaut**, puis sur **Obtenir les valeurs à partir d’une requête**.  
   
@@ -265,13 +265,13 @@ Vous pouvez spécifier une valeur par défaut pour chaque paramètre afin que le
   
 7.  Affichez l'aperçu du rapport.  
   
-For *@StoreID* , la visionneuse de rapports affiche la valeur « Contoso North America Online Store », car il s’agit de la première valeur du jeu de résultats pour le dataset **Stores**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
+Pour *\@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North America Online Store », car il s’agit de la première valeur du jeu de résultats pour le dataset **Stores**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Pour spécifier une valeur par défaut personnalisée  
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Cliquez sur **Valeurs par défaut** > **Spécifier les valeurs** > **Ajouter**. Une nouvelle ligne de valeurs est ajoutée.  
   
@@ -281,7 +281,7 @@ For *@StoreID* , la visionneuse de rapports affiche la valeur « Contoso North A
   
 6.  Affichez l'aperçu du rapport.  
   
-For *@StoreID* , la visionneuse de rapports affiche « Contoso Catalog Store », car il s’agir du nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
+Pour *\@StoreID*, la visionneuse de rapports affiche « Contoso Catalog Store », car il s’agir du nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
   
 ## <a name="NameValue"></a>4d. Rechercher une paire nom/valeur  
 Un dataset peut contenir à la fois l'identificateur et le champ Nom correspondant. Lorsque vous avez seulement un identificateur, vous pouvez rechercher le nom correspondant dans un dataset que vous avez créé et qui inclut des paires nom/valeur.  
@@ -323,7 +323,7 @@ Quand les lecteurs de votre rapport ont des questions sur un rapport, il est uti
   
 2.  Cliquez avec le bouton droit sur le pied de page, puis choisissez **Insérer** > **Zone de texte**. Faites glisser la zone de texte en regard de la zone de texte comportant l'horodatage. Saisissez la poignée latérale de la zone de texte et augmentez la largeur de cette dernière.  
   
-3.  Dans le volet des données de rapport, faites glisser le paramètre *@StoreID* vers la zone de texte. La zone de texte affiche `[@StoreID]`.  
+3.  Dans le volet des données de rapport, faites glisser le paramètre *\@StoreID* vers la zone de texte. La zone de texte affiche `[@StoreID]`.  
   
 4.  Pour afficher l'étiquette de paramètre, cliquez dans la zone de texte jusqu'à ce que le curseur d'insertion s'affiche après l'expression existante, tapez un espace, puis faites glisser une autre copie du paramètre du volet des données de rapport vers la zone de texte. La zone de texte affiche `[@StoreID] [@StoreID]`.  
   
@@ -371,7 +371,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Sélectionnez **Autoriser les valeurs multiples**.  
   

@@ -1,7 +1,7 @@
 ---
 title: 'Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pyodbc | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 10/09/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30ba3db5e23d95128aecbb5cc8974faeb6d58d75
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: faa2d63e0d1104665768ea436986b8fd3a52c107
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016842"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251783"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pyodbc
 
@@ -27,7 +27,7 @@ Cet exemple doit être considéré comme une preuve de concept uniquement.  L’
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>Étape 1: se connecter  
+## <a name="step-1--connect"></a>Étape 1 : se connecter  
   
 ```python
 
@@ -45,7 +45,7 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>Étape 2: exécuter la requête  
+## <a name="step-2--execute-query"></a>Étape 2 : exécuter la requête  
   
 La fonction Cursor. ExecuteFunction peut être utilisée pour récupérer un jeu de résultats à partir d’une requête sur SQL Database. Cette fonction accepte essentiellement toute requête et retourne un jeu de résultats qui peut être itéré avec l’utilisation de Cursor. fetchOne ().
   
@@ -60,7 +60,7 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>Étape 3: insérer une ligne  
+## <a name="step-3--insert-a-row"></a>Étape 3 : insérer une ligne  
   
 Dans cet exemple, vous allez apprendre à exécuter une instruction [Insert](../../../t-sql/statements/insert-transact-sql.md) en toute sécurité, à transmettre des paramètres qui protègent votre application de la valeur d' [injection SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
@@ -76,7 +76,24 @@ while row:
     print 'Inserted Product key is ' + str(row[0]) 
     row = cursor.fetchone()
 ```  
-  `      
-  ## <a name="next-steps"></a>Étapes suivantes  
+
+## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory (AAD) et la chaîne de connexion
+
+pyODBC utilise le pilote Microsoft ODBC pour SQL Server.
+Si votre version du pilote ODBC est 17,1 ou une version ultérieure, vous pouvez utiliser le mode interactif AAD du pilote ODBC via pyODBC.
+Cette option interactive AAD fonctionne si Python et pyODBC permettent au pilote ODBC de s’afficher dans la boîte de dialogue.
+Cette option est disponible uniquement sur le système d’exploitation Windows.
+
+### <a name="example-connection-string-for-aad-interactive-authentication"></a>Exemple de chaîne de connexion pour l’authentification interactive AAD
+
+Voici un exemple de chaîne de connexion ODBC qui spécifie l’authentification interactive AAD :
+
+- `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+
+Pour plus d’informations sur les options d’authentification AAD du pilote ODBC, consultez l’article suivant :
+
+- [Utilisation d’Azure Active Directory avec ODBC Driver](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
+
+## <a name="next-steps"></a>Étapes suivantes
   
 Pour plus d’informations, consultez le [Centre de développement python](https://azure.microsoft.com/develop/python/).

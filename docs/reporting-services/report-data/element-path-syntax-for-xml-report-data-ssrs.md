@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573166"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173836"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
   Dans le Concepteur de rapports, vous spécifiez les données à utiliser pour un rapport à partir d'une source de données XML en définissant un chemin d'accès à l'élément qui respecte la casse. Le chemin d'accès à l'élément indique comment parcourir les nœuds hiérarchiques XML et leurs attributs dans la source de données XML. Pour utiliser le chemin de l’élément par défaut, laissez vide la requête du dataset ou le **ElementPath** XML du **Query** XML. Lorsque les données sont extraites de la source de données XML, les nœuds d'élément possédant des valeurs de texte et des attributs de nœud d'élément deviennent des colonnes dans le jeu de résultats. Les valeurs des nœuds et les attributs deviennent les données de ligne lorsque vous exécutez la requête. Les colonnes apparaissent sous la forme de collection de champs de dataset dans le volet des données de rapport. Cette rubrique décrit la syntaxe du chemin d'accès à l'élément.  
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |**Encoding**|Indique que **Value** pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
 |**FieldList**|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée ( **{}** ), aucun champ de ce nœud n’est utilisé.<br /><br /> **FieldList** ne peut pas contenir à la fois **Value** et **Element** ou **ElementNode**.|  
 |**Field**|Spécifie les données qui sont extraites en tant que champ de dataset.|  
-|**Attribute**|Paire nom-valeur dans **ElementNode**. Par exemple, dans le nœud d’élément \<Customer ID="1">, **ID** est un attribut et **@ID(Integer)** retourne « 1 » comme type d’entier dans l’élément **ID** du champ de données correspondant.|  
+|**Attribute**|Paire nom-valeur dans **ElementNode**. Par exemple, dans le nœud d’élément \<Customer ID="1">, **ID** est un attribut et **\@ID(Integer)** retourne « 1 » comme type d’entier dans l’**ID** de champ de données correspondant.|  
 |**Value**|Valeur de l'élément. **Value** ne peut être utilisé que sur le dernier **ElementNode** dans le chemin de l’élément. Par exemple, étant donné que \<Return> est un nœud terminal, si vous l’incluez à la fin du chemin d’un élément, la valeur de **Return {@}** est **Chair**.|  
 |**Element**|Valeur du sous-élément nommé. Par exemple, Customers {}/Customer {}/LastName récupère des valeurs pour l'élément LastName uniquement.|  
 |**Type**|Type de données facultatif utilisé pour le champ créé à partir de cet élément.|  

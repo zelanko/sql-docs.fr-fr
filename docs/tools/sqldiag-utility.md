@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986297"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251367"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +112,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** n’ajoute pas la sortie au dossier de sortie actif quand il démarre. Il peut uniquement remplacer le dossier de sortie par défaut (option 1) ou renommer le dossier (option 2), puis enregistrer la sortie dans le nouveau dossier de sortie par défaut nommé SQLDIAG.  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *\@machinelistfile*  
  Remplace les ordinateurs spécifiés dans le fichier de configuration. Par défaut, le fichier de configuration est SQLDiag.Xml ou est défini avec le paramètre **/I** . Lorsque vous spécifiez plusieurs ordinateurs, séparez chaque nom d'ordinateur avec un espace.  
   
- Le paramètre *@machinelistfile* spécifie un nom de fichier de liste d'ordinateurs à stocker dans le fichier de configuration.  
+ Le paramètre *\@machinelistfile* spécifie un nom de fichier de liste d'ordinateurs à stocker dans le fichier de configuration.  
   
  **/C** _type_fichier_compression_  
  Définit le type de compression de fichiers utilisé sur les fichiers du dossier de sortie de **SQLdiag** . Options disponibles :  
