@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 424268eb32eb3430e2e4eb8450abfb3471f51701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011759"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006049"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>External scripts enabled (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Vous devez activer l’option de scripts externes activés avant de pouvoir exé
 
     Installez la fonction **Extensions analytiques avancées** pendant l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour permettre l’exécution de scripts R. Le langage R est installé par défaut.
 
-+ Pour [[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
++ Pour [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] utilise la même architecture que dans SQL Server 2016, mais prend en charge le langage Python.
 

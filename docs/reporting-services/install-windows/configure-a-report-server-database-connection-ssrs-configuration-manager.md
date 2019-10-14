@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264983"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239377"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
 
@@ -105,6 +105,13 @@ Vous pouvez spécifier un compte d'utilisateur Windows pour la connexion à la b
 #### <a name="using-a-sql-server-login"></a>Utilisation d'une connexion SQL Server
 
 Vous pouvez spécifier une seule connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la connexion à la base de données du serveur de rapports. Si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et si la base de données du serveur de rapports se trouve sur un ordinateur distant, utilisez IPSec pour sécuriser la transmission des données entre les serveurs. Si vous utilisez une connexion de base de données, vous devez mettre à jour la connexion à la base de données du serveur de rapports chaque fois que vous changez le mot de passe ou le compte.  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Lors de l’utilisation d’un Managed Instance Azure SQL pour héberger Reporting Services bases de données 2019, la prise en charge est limitée à l’utilisation de SQL Server informations d’identification de connexion pour la connexion.
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>Autorisations de base de données
 

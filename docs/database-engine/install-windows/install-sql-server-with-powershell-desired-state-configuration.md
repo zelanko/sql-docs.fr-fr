@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221964"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041056"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Installer SQL Server avec la configuration d’état souhaité PowerShell
 
@@ -28,7 +28,7 @@ Ne vous est-il jamais arrivé de parcourir l’interface d’installation SQL Se
 
 Le pire, c’est que vous n’avez même plus confiance en l’installation que vous venez d’effectuer. « Ai-je oublié autre chose ? » vous pouvez vous demander.
 
-Découvrez plus en détail la [configuration DSC (Desired State Configuration) PowerShell](https://docs.microsoft.com/powershell/dsc/overview). À l’aide de DSC, vous créez un modèle de configuration qui peut être réutilisé sur plusieurs centaines voire milliers de serveurs. En fonction de la build, vous aurez peut-être quelques paramètres d’installation à ajuster, mais rien de très important, car vous pouvez conserver tous les paramètres standard. Ainsi, vous ne pouvez plus oublier d’entrer un paramètre important.
+Découvrez plus en détail la [configuration DSC (Desired State Configuration) PowerShell](/powershell/scripting/dsc/overview/overview). À l’aide de DSC, vous créez un modèle de configuration qui peut être réutilisé sur plusieurs centaines voire milliers de serveurs. En fonction de la build, vous aurez peut-être quelques paramètres d’installation à ajuster, mais rien de très important, car vous pouvez conserver tous les paramètres standard. Ainsi, vous ne pouvez plus oublier d’entrer un paramètre important.
 
 Cet article décrit la configuration initiale d’une instance autonome de SQL Server 2017 sur Windows Server 2016 à l’aide de la ressource DSC **SqlServerDsc**. Il est utile de connaître déjà DSC, car nous n’allons pas aborder son fonctionnement.
 
@@ -213,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la configuration d’état souhaité Windows PowerShell](https://docs.microsoft.com/powershell/dsc/overview)
+[Vue d’ensemble de la configuration d’état souhaité Windows PowerShell](/powershell/scripting/dsc/overview/overview)
 
 [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 
