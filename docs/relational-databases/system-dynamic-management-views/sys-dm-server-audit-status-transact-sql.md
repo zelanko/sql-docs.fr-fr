@@ -18,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530864"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313691"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|ID de l'audit. Correspond au champ **audit_id** de l’affichage catalogue **sys. audits** .|  
+|**audit_id**|**Int**|ID de l'audit. Correspond au champ **audit_id** de l’affichage catalogue **sys. audits** .|  
 |**name**|**sysname**|Nom de l’audit. Identique au champ **nom** de l’affichage catalogue **sys. server_audits** .|  
 |**status**|**smallint**|État numérique de l'audit du serveur :<br /><br /> 0 = non démarré<br /><br /> 1 =<br />        Démarré<br /><br /> 2 =<br />      Échec du Runtime<br /><br /> 3 = échec de la création de la cible<br /><br /> 4 = arrêt en cours|  
 |**status_desc**|**nvarchar (256)**|Chaîne qui indique l'état de l'audit du serveur :<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  

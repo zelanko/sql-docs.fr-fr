@@ -10,83 +10,83 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489457"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313646"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
-  Dans cette tâche, vous allez examiner les résultats du nettoyage assisté par ordinateur, et vous allez également effectuer un nettoyage interactif des données du fournisseur. Consultez [étape de nettoyage interactif](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) pour plus d’informations.  
+  Dans cette tâche, vous allez examiner les résultats du nettoyage assisté par ordinateur, et vous allez également effectuer un nettoyage interactif des données du fournisseur. Pour plus d’informations, consultez [étape de nettoyage interactif](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) .  
   
-1.  Sélectionnez **adresse E-mail de Contact** domaine à partir de la liste des domaines.  
+1.  Sélectionnez le domaine de **messagerie du contact** dans la liste des domaines.  
   
-2.  Basculez vers le **non valide** onglet dans le volet droit. Notez que deux adresses de messagerie qui ont été manquant du caractère ' à la fin. Ces deux adresses électroniques qui ont été trouvés n’est pas valide par la règle de domaine qui nécessite toutes les adresses de messagerie se terminent par **@adventure-works.com** (avec de '). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
+2.  Basculez vers l’onglet **non valide** dans le volet droit. Notez que deux adresses de messagerie manquent de caractère» à la fin. Ces deux e-mails qui ont été détectés comme étant non valides par la règle de domaine qui requiert que toutes les adresses de messagerie se terminent par **\@adventure-Works.com** (avec'). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
   
-3.  Dans le **corriger vers** , entrez la bonne adresse de messagerie qui se terminent par **@adventure-works.com** (avec de ').  
+3.  Dans la colonne **corriger vers** , tapez l’adresse de messagerie qui se termine par **\@adventure-Works.com** («»).  
   
-     ![Corrections à partir de la règle de Validation d’E-mail](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Corrections à partir de la règle de Validation d’E-mail")  
+     ![Corrections des corrections de règle de validation d’adresse](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "de messagerie à partir de la règle de validation d’e-mail")  
   
-4.  Cliquez sur **approuver** pour les deux enregistrements d’approuver les modifications. Lorsque vous approuvez, les enregistrements sont déplacés vers le **corrigés** onglet. Au lieu d’approuver chaque élément séparément, vous pouvez approuver toutes les modifications à la fois à l’aide de la **approuver tous les termes** bouton de barre d’outils.  
+4.  Cliquez sur **approuver** pour que les deux enregistrements approuvent les deux modifications. Lorsque vous approuvez, les enregistrements sont déplacés vers l’onglet **corrigé** . Au lieu d’approuver chaque élément séparément, vous pouvez approuver toutes les modifications à la fois à l’aide du bouton de la barre d’outils **approuver tous les termes** .  
   
-5.  Basculez vers le **New** onglet dans le volet droit. Les valeurs de cet onglet sont les valeurs pour lesquelles DQS ne dispose pas encore de suffisamment d'informations dans la base de connaissances pour déterminer si elles sont correctes. Par conséquent, il ne peut pas modifier ou suggérer des modifications aux valeurs de domaine.  
+5.  Basculez vers le **nouvel** onglet dans le volet droit. Les valeurs de cet onglet sont les valeurs pour lesquelles DQS ne dispose pas encore de suffisamment d'informations dans la base de connaissances pour déterminer si elles sont correctes. Par conséquent, il ne peut pas modifier ou suggérer des modifications aux valeurs de domaine.  
   
-6.  Passez en revue les valeurs pour vérifier que toutes les adresses électroniques se terminent par **@adventure-works.com** et cliquez sur **approuver tous les termes** sur la barre d’outils. Les valeurs approuvées à partir de cet onglet déplacent vers le **Correct** onglet.  
+6.  Passez en revue les valeurs pour confirmer que tous les e-mails se terminent par **\@adventure-Works.com** et cliquez sur **approuver tous les termes** dans la barre d’outils. Les valeurs approuvées de cet onglet sont déplacées vers l’onglet **correct** .  
   
-7.  Sélectionnez le **pays** domaine à partir de la liste des domaines.  
+7.  Sélectionnez le domaine **Country** dans la liste des domaines.  
   
-8.  Basculez vers le **corrigés** onglet dans le volet droit et notez que **United State** valeur est corrigée automatiquement par le **United States** avec du ' à la fin. Cette règle n’est pas une règle que vous avez défini pour le **pays** domaine, mais DQS **83 %** certain que la valeur correcte est **United States**. Le **approuver** bouton est sélectionné automatiquement pour tous les **corrigés** éléments. Vous pouvez substituer ce comportement et rejeter une modification.  
+8.  Basculez vers l’onglet **corrigé** dans le volet droit et remarquez que la valeur de l' **État des États-Unis** est automatiquement corrigée sur le **États-Unis** avec la valeur «» à la fin. Cette règle n’est pas une règle que vous avez définie pour le domaine **Country** , mais DQS est **83%** confiant que la valeur correcte est **États-Unis**. Le bouton **approuver** est automatiquement sélectionné pour tous les éléments **corrigés** . Vous pouvez substituer ce comportement et rejeter une modification.  
   
-9. Notez que **USA** est corrigé par **United States** , car ils sont synonymes et **United States** est la valeur de début (recommandée).  
+9. Notez que les **États-Unis** sont corrigés pour **États-Unis** , car il s’agit de synonymes et **États-Unis** est la valeur principale (préférée).  
   
-     ![Corrections basées sur les synonymes](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "Corrections basées sur des synonymes")  
+     ![Corrections basées sur des corrections de synonymes](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "basées sur des synonymes")  
   
-10. Notez que le **approuver** bouton est déjà sélectionné pour ces valeurs corrigées. Il s'agit du comportement par défaut pour les valeurs corrigées. Vous pouvez refuser une modification, et lorsque vous procédez ainsi, la valeur se déplace vers le **non valide** onglet.  
+10. Notez que le bouton **approuver** est déjà sélectionné pour ces valeurs corrigées. Il s'agit du comportement par défaut pour les valeurs corrigées. Vous pouvez refuser une modification et, dans ce cas, la valeur se déplace vers l’onglet **non valide** .  
   
-11. Sélectionnez **Supplier Name** à partir de la liste des domaines.  
+11. Sélectionnez **nom du fournisseur** dans la liste des domaines.  
   
-12. Basculez vers le **corrigés** onglet dans le volet droit.  
+12. Basculez vers l’onglet **corrigé** dans le volet droit.  
   
-     ![Noms corrigés des fournisseurs](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "noms corrigés des fournisseurs")  
+     ![Correction]des noms de fournisseurs(../../2014/tutorials/media/et-managingandviewingresults-03.jpg "corrigés")  
   
-    1.  Notez que **A. Datum Corp.** est corrigé par **A. Datum Corporation** et **raison** a la valeur **relation de base de termes. A. datum Corporation** est une valeur de domaine connu et DQS, car il a été détecté pendant le processus de découverte de connaissances. Par conséquent, DQS est **sûr à 100 %** sur cette correction.  
+    1.  Notez qu' **un. Datum Corp.** est corrigé en **. Datum Corporation** et la **raison** est définie sur la relation @no__t 3Term. A. Datum Corporation @ no__t-0 est une valeur de domaine connue pour DQS, car elle a été détectée pendant le processus de découverte des connaissances. Par conséquent, DQS est **assuré de 100%** de cette correction.  
   
-    2.  Notez que **Lazy Country Storex** est corrigé par **Lazy Country Store**, **niveau de confiance** a la valeur **100 %** et le **Raison** a la valeur **valeur de domaine**. Pendant le processus de découverte de connaissances, vous définissez **Lazy Country Storex** en tant qu’erreur avec **Lazy Country Store** en tant que le **correction**, et DQS **100 % certain** effectuer la correction.  
+    2.  Notez que le **storex de pays paresseux** est corrigé vers le **magasin de pays paresseux**, le **niveau de confiance** est défini sur **100%** et la **raison** est définie sur la **valeur de domaine**. Pendant le processus de découverte des connaissances, vous définissez le **storex paresseux** en tant qu’erreur avec le **magasin de pays paresseux** comme **Correction**. par conséquent, DQS est **assuré de 100%** en toute confiance.  
   
-    3.  DQS n’est pas familiarisé avec les autres valeurs dans la liste, mais il trouve les corrections de ces valeurs en utilisant la **vérificateur orthographique** et propose les corrections appropriées. DQS est **pas 100 %** inspire ces corrections, mais le niveau de confiance est supérieure à 80 %, ce qui est le niveau de seuil pour apporter des corrections, donc DQS suggère les corrections.  
+    3.  DQS n’est pas familiarisé avec les autres valeurs de la liste, mais il a trouvé les corrections pour ces valeurs à l’aide du **vérificateur d’orthographe** et propose les corrections appropriées. DQS n’est pas en confiance **100%** de ces corrections, mais le niveau de confiance est supérieur à 80%, qui est le niveau de seuil pour effectuer des corrections, de sorte que DQS propose les corrections.  
   
-13. Notez que le **approuver** est automatiquement activé pour toutes les valeurs. Vous pouvez remplacer la valeur corrigée ou refuser la modification, comme il convient. Par défaut le **approuver** bouton est sélectionné pour toutes les valeurs dans le **corrigés** onglet.  
+13. Notez que l' **approbation** est automatiquement activée pour toutes les valeurs. Vous pouvez remplacer la valeur corrigée ou refuser la modification, comme il convient. Par défaut, le bouton **approuver** est sélectionné pour toutes les valeurs sous l’onglet **corrigé** .  
   
-14. Basculez vers le **New** onglet.  
+14. Basculez vers le **nouvel** onglet.  
   
-15. Notez que **corp.** est corrigé par **Corporation**, **Co.** est corrigé par **entreprise**, et **Inc.** est corrigé par **Incorporated**. Par exemple, **Consolidate Inc.** est corrigé par **Consolidate Incorporated** et **Consolidated Co.** est corrigé par **Consolidated Company**, et **Frabrikam corp.** est corrigé par **Fabrikam Corporation**.  Vous pouvez voir que **relation de base de termes** est indiquée comme raison. Ces modifications sont suggérées à l'aide des relations à base de termes que vous avez définies pendant l'activité de gestion de domaine. Vous pouvez modifier le **corriger vers** manuellement ici.  
+15. Notez que **Corp.** est résolu en **Corporation**, **Co.** est corrigé en **Company**, et **Inc.** est remplacé par **Incorporated**. Par exemple, **consolider Inc.** est corrigé pour **consolider** les **Co. Incorporated et consolidés** est corrigé en **société consolidée**, et **Frabrikam Corp.** est corrigé pour **Fabrikam Corporation**.  Vous pouvez voir que la **relation à base de termes** est mentionnée comme raison. Ces modifications sont suggérées à l'aide des relations à base de termes que vous avez définies pendant l'activité de gestion de domaine. Vous pouvez modifier les valeurs **correctes** manuellement ici.  
   
-16. Faites défiler la liste pour voir **Hunxgry Coyote Store** avec une ligne ondulée rouge. Avec le bouton droit dessus et cliquez sur **Hungy Coyote Store** (avec aucune « x »). Le **corriger vers** colonne doit être automatiquement renseignée avec **gourmand en Coyote Store**. Vous pouvez également entrer manuellement une valeur dans la colonne Corriger vers.  
+16. Faites défiler la liste pour voir **Hunxgry Coyote Store** avec une ligne ondulée rouge. Cliquez dessus avec le bouton droit, puis cliquez sur **Store Coyote suspendu** (sans « x »). La colonne **corriger vers** doit être renseignée automatiquement avec le **magasin Coyote**le plus gourmand. Vous pouvez également entrer manuellement une valeur dans la colonne Corriger vers.  
   
-17. Cliquez sur **approuver tous les termes** à partir de la barre d’outils. Les valeurs de domaine avec le **corriger vers** valeur spécifiée se déplacer vers le **corrigés** onglet et les nouvelles valeurs sans aucune associés **corriger vers** valeurs déplacent vers le  **Correct** onglet.  
+17. Cliquez sur **approuver tous les termes** dans la barre d’outils. Les valeurs de domaine avec la valeur **correcte pour** spécifiée se déplacent vers l’onglet **corrigé** et les nouvelles valeurs sans **correct pour** les valeurs sont déplacées vers l’onglet **correct** .  
   
-18. Sélectionnez le **Validation d’adresses** domaine composite à partir de la liste des domaines.  
+18. Sélectionnez le domaine composite **validation d’adresse** dans la liste domaine.  
   
-19. Dans le volet droit, basculez vers le **Correct** onglet. Vous devez voir les adresses qui sont jugées correctes par le **Melissa Data – contrôle d’adresse** service DQS sur le **place de marché Azure**.  
+19. Dans le volet droit, basculez vers l’onglet **correct** . Vous devez voir les adresses qui sont correctes par le service de **vérification de l’adresse de données Melissa** sur la place de **marché Azure**.  
   
-20. Basculez vers le **corrigés** onglet.  
+20. Basculez vers l’onglet **corrigé** .  
   
-21. Notez que **état** pour l’enregistrement a **Ville** comme **Los Angeles** a la valeur **autorité de certification** maintenant. Notez que, dans le **raison** champ **corrigé par la règle 'Ville-état de règle'** .  
+21. Notez que l' **État** de l’enregistrement dont la **ville** est **Los Angeles** est défini sur **ca** maintenant. Notez que, dans le champ **raison** , la **règle est corrigée par la règle « régional-State Rule »** .  
   
-     ![Correction de la règle ville-état](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "Correction de la règle ville-état")  
+     Correction de la règle d’état de la ![ville correction](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "de la ville")  
   
-22. Notez que le **approuver** case d’option est déjà sélectionnée pour cet élément dans la liste. Il s’agit du comportement par défaut pour les éléments sur le **corrigés** onglet.  
+22. Notez que la case d’option **approuver** est déjà sélectionnée pour cet élément dans la liste. Il s’agit du comportement par défaut des éléments de l’onglet **corrigé** .  
   
-23. Basculez vers le **suggérés** onglet. Passez en revue les modifications suggérées par la **Melissa Data – contrôle d’adresse** service.  
+23. Basculez vers l’onglet **suggéré** . Passez en revue les modifications suggérées par le service de **vérification des adresses de données Melissa** .  
   
-24. **Cliquez sur Approuver tous les termes** sur le bouton de barre d’outils et cliquez sur **OK** sur le **Confirmation** boîte de message.  
+24. **Cliquez sur approuver tous les termes** dans le bouton de la barre d’outils, puis cliquez sur **OK** dans la boîte de message de **confirmation** .  
   
-     ![Approuver le bouton de barre d’outils tous les termes du contrat](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "approuver le bouton de barre d’outils tous les termes du contrat")  
+     ![Bouton approuver tous les termes de la barre d’outils](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "approuver tous les termes barre d’outils")  
   
-25. Cliquez sur **suivant** pour basculer vers le **exporter** page.  
+25. Cliquez sur **suivant** pour passer à la page **Exporter** .  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Tâche 5 : Exportation des résultats du nettoyage dans un fichier Excel @ no__t-0  
   
   

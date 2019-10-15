@@ -18,14 +18,14 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ce9b0972bc95a927729f55e10e329cddb2993c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896463"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313758"
 ---
-# <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
+# <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Supprime les enregistrements d'historique d'un travail.  
@@ -43,30 +43,30 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'` Le nom de la tâche pour laquelle supprimer les enregistrements d’historique. *job_name*est **sysname**, avec NULL comme valeur par défaut. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+`[ @job_name = ] 'job_name'` nom du travail pour lequel supprimer les enregistrements d’historique. *nom_du_travail*est de **type sysname**, avec NULL comme valeur par défaut. *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
   
 > [!NOTE]  
->  Membres de la **sysadmin** rôle serveur fixe ou membres de la **SQLAgentOperatorRole** rôle de base de données fixe peuvent exécuter **sp_purge_jobhistory** sans spécifier un *nom_travail* ou *job_id*. Lorsque **sysadmin** les utilisateurs ne spécifient pas de ces arguments, l’historique des travaux pour tous les travaux locaux et multiserveurs sont supprimé dans le délai spécifié par *oldest_date*. Lorsque **SQLAgentOperatorRole** les utilisateurs ne spécifient pas de ces arguments, l’historique des travaux pour tous les travaux locaux sont supprimé dans le délai spécifié par *oldest_date*.  
+>  Les membres du rôle serveur fixe **sysadmin** ou des membres du rôle de base de données fixe **SQLAgentOperatorRole** peuvent exécuter **sp_purge_jobhistory** sans spécifier de *nom_du_travail* ou de *job_id*. Lorsque les utilisateurs **sysadmin** ne spécifient pas ces arguments, l’historique des travaux pour tous les travaux locaux et multiserveurs est supprimé dans le délai spécifié par *oldest_date*. Lorsque les utilisateurs **SQLAgentOperatorRole** ne spécifient pas ces arguments, l’historique des travaux de tous les travaux locaux est supprimé dans le délai spécifié par *oldest_date*.  
   
-`[ @job_id = ] job_id` Numéro d’identification du travail pour les enregistrements doivent être supprimés. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés. Consultez la remarque dans la description de **@job_name** pour plus d’informations sur la façon **sysadmin** ou **SQLAgentOperatorRole** les utilisateurs peuvent utiliser cet argument.  
+`[ @job_id = ] job_id` Numéro d’identification du travail pour les enregistrements à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés. Pour plus d’informations sur la façon dont les utilisateurs **sysadmin** ou **SQLAgentOperatorRole** peuvent utiliser cet argument, consultez la remarque dans la description de **\@job_name** .  
   
-`[ @oldest_date = ] oldest_date` L’enregistrement le plus ancien à conserver dans l’historique. *oldest_date* est **datetime**, avec NULL comme valeur par défaut. Lorsque *oldest_date* est spécifié, **sp_purge_jobhistory** supprime uniquement les enregistrements qui sont antérieurs à la valeur spécifiée.  
+`[ @oldest_date = ] oldest_date` l’enregistrement le plus ancien à conserver dans l’historique. *oldest_date* est de **type DateTime**, avec NULL comme valeur par défaut. Quand *oldest_date* est spécifié, **sp_purge_jobhistory** supprime uniquement les enregistrements antérieurs à la valeur spécifiée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- Lorsque **sp_purge_jobhistory** se termine correctement, un message est retourné.  
+ Quand **sp_purge_jobhistory** se termine correctement, un message est retourné.  
   
 ## <a name="permissions"></a>Autorisations  
- Par défaut, seuls les membres de la **sysadmin** rôle serveur fixe ou le **SQLAgentOperatorRole** rôle de base de données fixe peut exécuter cette procédure stockée. Membres de **sysadmin** peuvent purger l’historique des travaux pour tous les travaux locaux et multiserveurs. Membres de **SQLAgentOperatorRole** peuvent purger l’historique des travaux pour tous les travaux locaux.  
+ Par défaut, seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **SQLAgentOperatorRole** peuvent exécuter cette procédure stockée. Les membres de **sysadmin** peuvent purger l’historique des travaux pour tous les travaux locaux et multiserveurs. Les membres de **SQLAgentOperatorRole** peuvent purger l’historique des travaux pour tous les travaux locaux uniquement.  
   
- Autres utilisateurs, y compris les membres de **SQLAgentUserRole** et les membres de **SQLAgentReaderRole**, doit être accordé explicitement l’autorisation EXECUTE sur **sp_purge_jobhistory**. Une fois l'autorisation accordée sur cette procédure stockée, ces utilisateurs peuvent uniquement supprimer l'historique des travaux dont ils sont propriétaires.  
+ D’autres utilisateurs, y compris les membres de **SQLAgentUserRole** et des membres de **SQLAgentReaderRole**, doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory**. Une fois l'autorisation accordée sur cette procédure stockée, ces utilisateurs peuvent uniquement supprimer l'historique des travaux dont ils sont propriétaires.  
   
- Le **SQLAgentUserRole**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** sont des rôles de base de données fixe dans le **msdb** base de données. Pour plus d’informations sur leurs autorisations, consultez [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Les rôles de base de données fixes **SQLAgentUserRole**, **SQLAgentReaderRole**et **SQLAgentOperatorRole** se trouvent dans la base de données **msdb** . Pour plus d’informations sur leurs autorisations, consultez [SQL Server Agent des rôles de base de données fixes](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -85,7 +85,7 @@ GO
 ### <a name="b-remove-history-for-all-jobs"></a>B. Suppression de l'historique de tous les travaux  
   
 > [!NOTE]  
->  Seuls les membres du **sysadmin** fixe le rôle de serveur et les membres de la **SQLAgentOperatorRole** peuvent supprimer l’historique de tous les travaux. Lorsque **sysadmin** utilisateurs exécutent cette procédure stockée sans paramètres, l’historique des travaux pour tous les travaux locaux et multiserveurs sont purgé. Lorsque **SQLAgentOperatorRole** utilisateurs exécutent cette procédure stockée sans paramètres, uniquement l’historique des travaux de tous les travaux locaux est purgée.  
+>  Seuls les membres du rôle serveur fixe **sysadmin** et les membres du **SQLAgentOperatorRole** peuvent supprimer l’historique de tous les travaux. Lorsque les utilisateurs **sysadmin** exécutent cette procédure stockée sans paramètres, l’historique des travaux de tous les travaux locaux et multiserveurs est purgé. Lorsque les utilisateurs **SQLAgentOperatorRole** exécutent cette procédure stockée sans aucun paramètre, seul l’historique des travaux de tous les travaux locaux est purgé.  
   
  Dans cet exemple, la procédure est exécutée sans paramètres pour supprimer tous les enregistrements d'historique.  
   
