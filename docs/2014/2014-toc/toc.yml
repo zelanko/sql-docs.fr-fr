@@ -46,6 +46,8 @@
       href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
     - name: Configuration et maintenance d’une installation +
       href: ../sql-server/install/setup-and-servicing-installation.md
+- name: Informations de référence sur Transact-SQL +
+  href: 'https://docs.microsoft.com/sql/t-sql/?view=sql-server-2016'
 - name: Aide sur le Gestionnaire de configuration +
   href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
 - name: Guide de conception d'index
