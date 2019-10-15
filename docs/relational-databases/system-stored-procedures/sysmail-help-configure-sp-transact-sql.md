@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909075"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304747"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche les paramètres de configuration pour la messagerie de base de données.  
@@ -39,31 +39,31 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@parameter_name** =] **'***nom_paramètre***'**  
- Nom du paramètre de configuration à extraire. Si spécifié, la valeur du paramètre de configuration est retournée dans le **@parameter_value** paramètre de sortie. En cas de non **@parameter_name** est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration de messagerie de base de données dans l’instance.  
+ [ **@parameter_name** =] **'***nom_de_paramètre***'**  
+ Nom du paramètre de configuration à extraire. Lorsqu’il est spécifié, la valeur du paramètre de configuration est retournée dans le paramètre de sortie **\@parameter_value** . Quand aucun **\@parameter_name** n’est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration Database mail de l’instance.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- En cas de non **@parameter_name** est spécifié, retourne un jeu de résultats avec les colonnes suivantes.  
+ Quand aucun **\@parameter_name** n’est spécifié, retourne un jeu de résultats avec les colonnes suivantes.  
   
 ||||  
 |-|-|-|  
 |Nom de la colonne|Type de données|Description|  
-|**paramname**|**nvarchar (256)**|Le nom du paramètre de configuration.|  
-|**paramvalue**|**nvarchar (256)**|La valeur du paramètre de configuration.|  
+|**paramname**|**nvarchar (256)**|Nom du paramètre de configuration.|  
+|**paramvalue**|**nvarchar (256)**|Valeur du paramètre de configuration.|  
 |**description**|**nvarchar (256)**|Description du paramètre de configuration.|  
   
 ## <a name="remarks"></a>Notes  
- La procédure stockée **sysmail_help_configure_sp** répertorie les paramètres de configuration de messagerie de base de données en cours pour l’instance.  
+ La procédure stockée **sysmail_help_configure_sp** répertorie les paramètres de configuration Database mail actuels pour l’instance.  
   
- Quand un **@parameter_name** est spécifié, mais aucun paramètre de sortie n’est fourni pour **@parameter_value** , cette procédure stockée ne produit aucune sortie.  
+ Quand un **\@parameter_name** est spécifié, mais qu’aucun paramètre de sortie n’est fourni pour **\@parameter_value**, cette procédure stockée ne produit aucune sortie.  
   
- La procédure stockée **sysmail_help_configure_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être appelée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ La procédure stockée **sysmail_help_configure_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être appelée avec un nom en trois parties si la base de données active n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre la liste des paramètres de configuration de la messagerie de base de données pour l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Procédures &#40;stockées Database mail Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

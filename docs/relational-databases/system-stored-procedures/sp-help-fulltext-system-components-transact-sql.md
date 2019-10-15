@@ -18,17 +18,17 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055048"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304884"
 ---
-# <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
+# <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  Retourne des informations sur les analyseurs lexicaux, le filtre et les gestionnaires de protocoles. **sp_help_fulltext_system_components** retourne également une liste des identificateurs de bases de données et catalogues de texte intégral qui ont utilisé le composant spécifié.  
+  Retourne des informations sur les analyseurs lexicaux, le filtre et les gestionnaires de protocoles. **sp_help_fulltext_system_components** retourne également une liste d’identificateurs de bases de données et de catalogues de texte intégral qui ont utilisé le composant spécifié.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_help_fulltext_system_components
  'all'  
  Retourne des informations pour tous les composants de recherche en texte intégral.  
   
-`[ @component_type = ] component_type` Spécifie le type de composant. *component_type* peut prendre l’une des opérations suivantes :  
+`[ @component_type = ] component_type` spécifie le type de composant. *component_type* peut prendre l’une des valeurs suivantes :  
   
 -   **wordbreaker**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  Si vous spécifiez un chemin d'accès complet, *param* doit également être spécifié avec le chemin d'accès complet à la bibliothèque de liens dynamiques (DLL) du composant, sans quoi un message d'erreur est retourné.  
   
-`[ @param = ] param` Selon le type de composant, c’est une des opérations suivantes : un identificateur de paramètres régionaux (LCID), l’extension de fichier «. » du préfixe, le nom du composant complet du Gestionnaire de protocole ou le chemin d’accès complet à la DLL de composant.  
+`[ @param = ] param` selon le type de composant, il s’agit de l’un des éléments suivants : un identificateur de paramètres régionaux (LCID), l’extension de fichier avec le préfixe « . », le nom complet du composant du gestionnaire de protocole ou le chemin d’accès complet à la DLL du composant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou 1 (échec)  
@@ -68,21 +68,21 @@ sp_help_fulltext_system_components
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Type de composant. Il peut s'agir :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**NomComposant**|**sysname**|Nom du composant.|  
+|**ComponentName**|**sysname**|Nom du composant.|  
 |**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
-|**fullpath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre **serveradmin** rôle serveur fixe.|  
+|**fullpath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|Numéro de version du composant.|  
-|**Fabricant**|**sysname**|Nom du fabricant du composant.|  
+|**fécule**|**sysname**|Nom du fabricant du composant.|  
   
- Le jeu de résultats suivant est retourné uniquement si un ou plusieurs catalogues de texte intégral existent et utilisent *component_type*.  
+ Le jeu de résultats suivant est retourné uniquement si un ou plusieurs catalogues de texte intégral existent qui utilisent *component_type*.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**Int**|ID de la base de données.|  
-|**ftcatid**|**int**|Identificateur du catalogue de texte intégral.|  
+|**ftcatid**|**Int**|Identificateur du catalogue de texte intégral.|  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **public** rôle ; Toutefois, les utilisateurs peuvent voir uniquement les informations sur les catalogues de texte intégral pour lequel ils ont l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
+ Requiert l’appartenance au rôle **public** ; Toutefois, les utilisateurs peuvent uniquement afficher des informations sur les catalogues de texte intégral pour lesquels ils disposent de l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode est particulièrement importante lors de la préparation d'une mise à niveau. Exécutez la procédure stockée dans une base de données spécifique et utilisez le résultat afin de déterminer si un catalogue sera affecté par la mise à niveau.  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Détermination de si un analyseur lexical spécifique est inscrit  
- L'exemple suivant répertorie l'analyseur lexical pour la langue turque (LCID = 1055) si celle-ci a été installée sur le système et enregistrée sur l'instance du service. Cet exemple spécifie les noms de paramètres, **@component_type** et **@param** .  
+ L'exemple suivant répertorie l'analyseur lexical pour la langue turque (LCID = 1055) si celle-ci a été installée sur le système et enregistrée sur l'instance du service. Cet exemple spécifie les noms des paramètres, **\@component_type** et **\@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -136,9 +136,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [Afficher ou modifier les filtres et les analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Procédures stockées de recherche en texte intégral et la recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Procédures &#40;stockées de recherche en texte intégral et de recherche sémantique Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a5750e7a2346f55d97e19ba58db548f726b38cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009191"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305105"
 ---
-# <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
+# <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime le proxy spécifié.  
@@ -40,23 +40,23 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @proxy_id = ] id` Le numéro d’identification du proxy à supprimer. Le *proxy_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id` Numéro d’identification du proxy à supprimer. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @proxy_name = ] 'proxy_name'` Le nom du proxy à supprimer. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'` nom du proxy à supprimer. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- Soit **@proxy_name** ou **@proxy_id** doit être spécifié. Si ces deux arguments sont spécifiés, ils doivent tous les deux référencer le même proxy, sinon la procédure stockée échoue.  
+ **@No__t-1proxy_name** ou **\@proxy_id** doit être spécifié. Si ces deux arguments sont spécifiés, ils doivent tous les deux référencer le même proxy, sinon la procédure stockée échoue.  
   
  Si une étape d'un travail fait référence au proxy spécifié, ce dernier ne peut pas être supprimé et la procédure stockée échoue.  
   
 ## <a name="permissions"></a>Autorisations  
- Par défaut, seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_proxy**.  
+ Par défaut, seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_delete_proxy**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime le proxy `Catalog application proxy`.  

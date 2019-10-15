@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055232"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304807"
 ---
-# <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
+# <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur les classes de travaux, d'alertes ou d'opérateurs spécifiées.  
@@ -42,48 +42,48 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'` La classe sur laquelle les informations sont demandées. *classe* est **varchar(8)** , avec une valeur par défaut **travail**. *classe* peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` la classe sur laquelle les informations sont demandées. la classe est de *type* **varchar (8)** , avec **Job**comme valeur par défaut. la *classe* peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**JOB**|Fournit des informations sur une catégorie de travaux.|  
-|**ALERTE**|Fournit des informations sur une catégorie d'alertes.|  
-|**OPÉRATEUR**|Fournit des informations sur une catégorie d'opérateurs.|  
+|**NOTIFICATION**|Fournit des informations sur une catégorie d'alertes.|  
+|**AND**|Fournit des informations sur une catégorie d'opérateurs.|  
   
-`[ @type = ] 'type'` Le type de catégorie pour laquelle les informations sont demandées. *type* est **varchar(12)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` type de catégorie pour laquelle des informations sont demandées. le *type* est **varchar (12)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Catégorie de travaux locale.|  
 |**MULTI-SERVEUR**|Catégorie de travaux multiserveur.|  
-|**NONE**|Catégorie d’une classe autre que **travail**.|  
+|**NONE**|Catégorie pour une classe autre que **Job**.|  
   
-`[ @name = ] 'name'` Le nom de la catégorie pour laquelle les informations sont demandées. *nom* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'` nom de la catégorie pour laquelle les informations sont demandées. *Name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @suffix = ] suffix` Spécifie si le **category_type** colonne du jeu de résultats est un ID ou un nom. *suffixe* est **bits**, avec une valeur par défaut **0**. **1** montre le **category_type** en tant que nom, et **0** indique qu’il a un ID.  
+`[ @suffix = ] suffix` spécifie si la colonne **category_type** du jeu de résultats est un ID ou un nom. le *suffixe* est de **bit**, avec **0**comme valeur par défaut. **1** affiche **category_type** comme nom et **0** l’affiche comme ID.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Lorsque **@suffix** est **0**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque **\@suffix** a la valeur **0**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**Int**|ID de la catégorie|  
-|**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = none|  
+|**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = aucun|  
 |**name**|**sysname**|Nom de la catégorie|  
   
- Lorsque **@suffix** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque **\@suffix** a la valeur **1**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**Int**|ID de la catégorie|  
-|**category_type**|**sysname**|Type de catégorie : Un des **LOCAL**, **multiserveur**, ou **NONE**|  
+|**category_type**|**sysname**|Type de catégorie : Un serveur **local**, **plusieurs serveurs**ou **aucun**|  
 |**name**|**sysname**|Nom de la catégorie|  
   
 ## <a name="remarks"></a>Notes  
- **sp_help_category** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_help_category** doit être exécuté à partir de la base de données **msdb** .  
   
  Si aucun paramètre n'est spécifié, le jeu de résultats fournit des informations sur toutes les catégories de travaux.  
   

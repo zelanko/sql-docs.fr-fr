@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 184ebbde266ab21c0fa94ebff0e2be0aca61988b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123802"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304864"
 ---
-# <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
+# <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ajoute un utilisateur à la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] utilisez à la place [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +43,20 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login_ '` Est le nom du groupe Windows, connexion de Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion à mapper au nouvel utilisateur de base de données. Noms des groupes de Windows et des connexions de Windows doivent être qualifiés avec un nom de domaine Windows sous la forme *domaine*\\*connexion*; par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *connexion* est un **sysname**, sans valeur par défaut.  
+`[ @loginame = ] 'login_ '` correspond au nom du groupe Windows, de la connexion Windows ou de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mapper au nouvel utilisateur de base de données. Les noms des groupes Windows et des connexions Windows doivent être qualifiés par un nom de domaine Windows sous la forme *domaine*\\*login*; par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *login* est de **type sysname**et n’a pas de valeur par défaut.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` Est le nom du nouvel utilisateur de base de données. *nom_dans_la_base_de_données* est une variable de sortie avec un type de données **sysname**et une valeur par défaut NULL. Si non spécifié, *connexion* est utilisé. S’il est spécifié en tant que variable OUTPUT avec une valeur NULL, **@name_in_db** a la valeur *connexion*. *nom_dans_la_base_de_données* ne doit pas déjà exister dans la base de données actuelle.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` est le nom du nouvel utilisateur de base de données. *name_in_db* est une variable de sortie avec un type de données **sysname**et une valeur par défaut null. S’il n’est pas spécifié, la *connexion* est utilisée. S’il est spécifié comme variable de sortie avec une valeur NULL, **\@name_in_db** est défini sur *login*. *name_in_db* ne doit pas déjà exister dans la base de données active.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_grantdbaccess** appelle CREATE USER, qui prend en charge des options supplémentaires. Pour plus d’informations sur la création d’utilisateurs de base de données, consultez [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md). Pour supprimer un utilisateur de base de données à partir d’une base de données, utilisez [DROP USER](../../t-sql/statements/drop-user-transact-sql.md).  
+ **sp_grantdbaccess** appelle Create User, qui prend en charge des options supplémentaires. Pour plus d’informations sur la création d’utilisateurs de base de données, consultez [Create user &#40;&#41;Transact-SQL](../../t-sql/statements/create-user-transact-sql.md). Pour supprimer un utilisateur de base de données d’une base de données, utilisez [DROP USER](../../t-sql/statements/drop-user-transact-sql.md).  
   
  **sp_grantdbaccess** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe ou le **db_accessadmin** rôle de base de données fixe.  
+ Requiert l’appartenance au rôle de base de données fixe **db_owner** ou au rôle de base de données fixe **db_accessadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant utilise `CREATE USER` pour ajouter un utilisateur de base de données pour la connexion Windows `Edmonds\LolanSo` à la base de données actuelle. Le nouvel utilisateur se nomme `Lolan`. Il s'agit de la méthode recommandée pour la création d'un utilisateur de base de données.  

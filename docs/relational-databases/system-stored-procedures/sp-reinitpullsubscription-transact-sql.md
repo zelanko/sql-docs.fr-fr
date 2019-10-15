@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68762336"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304914"
 ---
-# <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
+# <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Signale un abonnement par extraction de données (pull) transactionnel ou anonyme en vue de sa réinitialisation lors de la prochaine exécution de l’Agent de distribution. Cette procédure stockée est exécutée sur la base de données d'abonnement par extraction de données (pull) de l'abonné.  
@@ -39,11 +39,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` est le nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` est le nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec All comme valeur par défaut, ce qui marque tous les abonnements pour la réinitialisation.  
+`[ @publication = ] 'publication'` est le nom de la publication. *publication* est de **type sysname**, avec All comme valeur par défaut, ce qui marque tous les abonnements pour la réinitialisation.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** peut être appelé à partir de l’abonné pour réinitialiser l’abonnement lors de la prochaine exécution de la agent de distribution.  
   
- Les abonnements aux publications créées avec la valeur false pour **@immediate_sync** ne peuvent pas être réinitialisés à partir de l’abonné.  
+ Les abonnements aux publications créées avec la valeur **false** pour **\@immediate_sync** ne peuvent pas être réinitialisés à partir de l’abonné.  
   
  Vous pouvez réinitialiser un abonnement par extraction en exécutant **sp_reinitpullsubscription** sur l’abonné ou **sp_reinitsubscription** sur le serveur de publication.  
   

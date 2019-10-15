@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf96da996996a98a965d2563c729321318ac400c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046199"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305274"
 ---
-# <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
+# <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Attache une base de données à un serveur.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser CREATE DATABASE *database_name* pour attacher à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)], nous vous recommandons d’utiliser CREATe DATABASE *nom_base_de_données* pour Attach à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
->  Pour reconstruire plusieurs fichiers journaux lors d’une ou plusieurs ont un nouvel emplacement, utilisez CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG.  
+>  Pour reconstruire plusieurs fichiers journaux lorsqu’un ou plusieurs d’entre eux ont un nouvel emplacement, utilisez CREATe DATABASE *nom_base_de_données* for ATTACH_REBUILD_LOG.  
   
 > [!IMPORTANT]  
 >  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
@@ -47,9 +47,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbnam_ '` Est le nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'dbnam_ '` est le nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @filename1 = ] 'filename_n'` Est le nom physique, chemin d’accès compris, d’un fichier de base de données. *Nom_de_fichier_n* est **nvarchar (260)** , avec NULL comme valeur par défaut. Jusqu'à 16 noms de fichier peuvent être spécifiés. Les noms de paramètre commencer à **@filename1** et augmentent jusqu'à **@filename16** . La liste des noms de fichiers doit comprendre au moins le fichier primaire. Le fichier primaire contient les tables système pointant vers d'autres fichiers dans la base de données. Elle doit aussi comprendre tous les fichiers qui ont été déplacés après que la base de données fut détachée.  
+`[ @filename1 = ] 'filename_n'` est le nom physique, y compris le chemin d’accès, d’un fichier de base de données. *filename_n* est de type **nvarchar (260)** , avec NULL comme valeur par défaut. Jusqu'à 16 noms de fichier peuvent être spécifiés. Les noms de paramètres commencent à **\@filename1** et sont incrémentés à **\@filename16**. La liste des noms de fichiers doit comprendre au moins le fichier primaire. Le fichier primaire contient les tables système pointant vers d'autres fichiers dans la base de données. Elle doit aussi comprendre tous les fichiers qui ont été déplacés après que la base de données fut détachée.  
   
 > [!NOTE]  
 >  Cet argument crée un mappage vers le paramètre FILENAME de l'instruction CREATE DATABASE. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -63,7 +63,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- Le **sp_attach_db** procédure stockée doit uniquement être exécutée sur les bases de données qui ont été préalablement détachées du serveur de base de données à l’aide d’explicite **sp_detach_db** opération ou sur des bases de données copiées. Si vous devez spécifier plus de 16 fichiers, utilisez CREATE DATABASE *database_name* FOR ATTACH ou CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ La procédure stockée **sp_attach_db** doit uniquement être exécutée sur les bases de données qui ont été précédemment détachées du serveur de base de données à l’aide d’une opération **sp_detach_db** explicite ou sur des bases de données copiées. Si vous devez spécifier plus de 16 fichiers, utilisez CREATe DATABASE *nom_base_de_données* pour Attach ou CREATE DATABASE *nom_base_de_données* FOR_ATTACH_REBUILD_LOG. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Tout fichier non spécifié est considéré comme se trouvant à son dernier emplacement identifié. Pour utiliser un fichier à un emplacement différent, vous devez spécifier ce nouvel emplacement.  
   
@@ -83,7 +83,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser l’instruction **OPEN MASTER KEY** pour déchiffrer la clé principale de la base de données. Une fois la clé principale de la base de données déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en exécutant l’instruction **ALTER MASTER KEY REGENERATE** pour fournir au serveur une copie de la clé principale de la base de données chiffrée avec la clé principale du service. Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés.  
   
 ## <a name="permissions"></a>Autorisations  
- Pour plus d’informations sur la gestion des autorisations lorsqu’une base de données est attaché, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Pour plus d’informations sur la façon dont les autorisations sont gérées lors de l’attachement d’une base de données, consultez [Create database &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple suivant, des fichiers sont attachés depuis [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] au serveur en cours.  

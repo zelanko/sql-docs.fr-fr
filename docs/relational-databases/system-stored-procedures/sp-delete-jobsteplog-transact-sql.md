@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5c1587b65df123400188ba062ef40e57f9a0a550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085312"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305096"
 ---
-# <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
+# <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime tous les journaux d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont spécifiés via les arguments. Utilisez cette procédure stockée pour maintenir la **sysjobstepslogs** table dans le **msdb** base de données.  
+  Supprime tous les journaux d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont spécifiés via les arguments. Utilisez cette procédure stockée pour tenir à jour la table **sysjobstepslogs** dans la base de données **msdb** .  
   
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,32 +43,32 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] 'job_id'` Le numéro d’identification du travail qui contient le journal d’étapes de travail à supprimer. *job_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] 'job_id'` Numéro d’identification du travail qui contient le journal d’étapes de travail à supprimer. *job_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` Le nom de la tâche. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` nom du travail. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+> **REMARQUE :** *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id` Le numéro d’identification de l’étape du travail pour lequel le journal d’étapes doit être supprimé. Si ne pas inclus, tous les journaux d’étapes du travail sont supprimés, sauf si **@older_than** ou **@larger_than** sont spécifiés. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` Numéro d’identification de l’étape du travail pour lequel le journal d’étapes de travail doit être supprimé. S’il n’est pas inclus, tous les journaux d’étapes de travail du travail sont supprimés, sauf si **\@older_than** ou **\@larger_than** sont spécifiés. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @step_name = ] 'step_name'` Le nom de l’étape du travail pour lequel le journal d’étapes doit être supprimé. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'` nom de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** Soit *id_de_l* ou *nom_de_l* peut être spécifié, mais ne peut pas être spécifiés.  
+> **REMARQUE :** *Step_id* ou *step_name* peuvent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
   
-`[ @older_than = ] 'date'` La date et l’heure du journal d’étapes de travail plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *date* est **datetime**, avec NULL comme valeur par défaut. Les deux **@older_than** et **@larger_than** peut être spécifié.  
+`[ @older_than = ] 'date'` la date et l’heure du journal d’étapes de travail le plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *Date* est de **type DateTime**, avec NULL comme valeur par défaut. **@No__t-1older_than** et **\@larger_than** peuvent être spécifiés.  
   
-`[ @larger_than = ] 'size_in_bytes'` La taille en octets du journal d’étapes de travail plus grande que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. Les deux **@larger_than** et **@older_than** peut être spécifié.  
+`[ @larger_than = ] 'size_in_bytes'` taille en octets du journal d’étapes de travail le plus volumineux que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. **@No__t-1larger_than** et **\@older_than** peuvent être spécifiés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- **sp_delete_jobsteplog** est dans le **msdb** base de données.  
+ **sp_delete_jobsteplog** se trouve dans la base de données **msdb** .  
   
- Si aucun argument sauf **@job_id** ou **@job_name** sont spécifiés, tous les journaux d’étape de travail pour le travail spécifié sont supprimés.  
+ Si aucun argument n’est spécifié, à l’exception de **\@job_id** ou **\@job_name** , tous les journaux d’étapes de travail du travail spécifié sont supprimés.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -81,7 +81,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du **sysadmin** peut supprimer un journal d’étapes de travail appartenant à un autre utilisateur.  
+ Seuls les membres de **sysadmin** peuvent supprimer un journal d’étapes de travail appartenant à un autre utilisateur.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -126,6 +126,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Procédures &#40;stockées SQL Server Agent Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

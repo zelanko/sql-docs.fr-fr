@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 032ecf59a3ffba4a7a7a6f4739c92b688858d501
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768866"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304973"
 ---
-# <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
+# <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Désinstalle le serveur de distribution. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution, à l'exception de la base de données de distribution.  
@@ -38,13 +38,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @no_checks = ] no_checks`Indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est de valeur de **bit**, avec 0 comme valeur par défaut.  
+`[ @no_checks = ] no_checks` indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est de valeur de **bit**, avec 0 comme valeur par défaut.  
   
  Si la **valeur est 0**, **sp_dropdistributor** s’assure que tous les objets de publication et de distribution en plus du serveur de distribution ont été supprimés.  
   
  Si la valeur est **1**, **sp_dropdistributor** supprime tous les objets de publication et de distribution avant de désinstaller le serveur de distribution.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de valeur de **bit**, avec **0**comme valeur par défaut.  
+`[ @ignore_distributor = ] ignore_distributor` indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de valeur de **bit**, avec **0**comme valeur par défaut.  
   
  Si la **valeur est 0**, **sp_dropdistributor** se connecte au serveur de distribution et supprime tous les objets de réplication. Si **sp_dropdistributor** ne parvient pas à se connecter au serveur de distribution, la procédure stockée échoue.  
   
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>Notes  
  **sp_dropdistributor** est utilisé dans tous les types de réplications.  
   
- Si d’autres objets de publication ou de distribution existent sur le serveur, **@no_checks** sp_dropdistributor échoue, sauf si a la valeur **1**.  
+ Si d’autres objets de publication ou de distribution existent sur le serveur, **sp_dropdistributor** échoue, sauf si **\@no_checks** a la valeur **1**.  
   
  Cette procédure stockée doit être exécutée après la suppression de la base de données de distribution en exécutant **sp_dropdistributiondb**.  
   

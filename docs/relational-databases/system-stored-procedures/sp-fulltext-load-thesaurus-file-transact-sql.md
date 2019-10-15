@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124230"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305211"
 ---
-# <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+# <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Oblige l'instance de serveur à analyser et charger les données à partir du fichier de dictionnaire des synonymes qui correspond à la langue dont le LCID est spécifié. Cette procédure stockée est utile après la mise à jour d'un fichier de dictionnaire des synonymes. L’exécution de **sp_fulltext_load_thesaurus_file** provoque la recompilation des requêtes de recherche en texte intégral qui utilisent le dictionnaire des synonymes du LCID spécifié.  
+  Oblige l'instance de serveur à analyser et charger les données à partir du fichier de dictionnaire des synonymes qui correspond à la langue dont le LCID est spécifié. Cette procédure stockée est utile après la mise à jour d'un fichier de dictionnaire des synonymes. L’exécution de **sp_fulltext_load_thesaurus_file** entraîne la recompilation des requêtes de texte intégral qui utilisent le dictionnaire des synonymes du LCID spécifié.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>Arguments  
  *lcid*  
- Entier de mappage de l’identificateur de paramètres régionaux (LCID) de la langue pour laquelle vous souhaitez lade la définition XML du dictionnaire des synonymes. Pour obtenir les LCID des langues qui sont disponibles sur une instance de serveur, utilisez le [sys.fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vue de catalogue.  
+ Entier mappant l’identificateur de paramètres régionaux (LCID) de la langue pour laquelle vous souhaitez Lade la définition XML du dictionnaire des synonymes. Pour obtenir les LCID des langues disponibles sur une instance de serveur, utilisez l’affichage catalogue [Transact- &#40;SQL&#41; sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
- **@loadOnlyIfNotLoaded**  = *action*  
- Spécifie si le fichier de dictionnaire des synonymes doit être chargé dans les tables internes du dictionnaire des synonymes même s'il a déjà été chargé. *action* est une des :  
+ *action* **\@loadOnlyIfNotLoaded** =   
+ Spécifie si le fichier de dictionnaire des synonymes doit être chargé dans les tables internes du dictionnaire des synonymes même s'il a déjà été chargé. *action* est l’une des suivantes :  
   
 |Value|Définition|  
 |-----------|----------------|  
@@ -59,12 +59,12 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- Les fichiers d'un dictionnaire des synonymes sont chargés automatiquement par les requêtes de texte intégral qui l'utilisent. Pour éviter cet impact sur les performances de la première fois sur les requêtes de recherche en texte intégral, nous vous recommandons d’exécuter **sp_fulltext_load_thesaurus_file**.  
+ Les fichiers d'un dictionnaire des synonymes sont chargés automatiquement par les requêtes de texte intégral qui l'utilisent. Pour éviter cet impact de la première fois sur les performances des requêtes de texte intégral, nous vous recommandons d’exécuter **sp_fulltext_load_thesaurus_file**.  
   
- Utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**» pour mettre à jour la liste des langues inscrites avec la recherche en texte intégral.  
+ Utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'pour mettre à jour la liste des langues inscrites avec la recherche en texte intégral.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou l’administrateur système peut exécuter le **sp_fulltext_load_thesaurus_file** procédure stockée.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou de l’administrateur système peuvent exécuter la procédure stockée **sp_fulltext_load_thesaurus_file** .  
   
  Seuls des administrateurs système peuvent mettre à jour, modifier ou supprimer des fichiers de dictionnaire des synonymes.  
   

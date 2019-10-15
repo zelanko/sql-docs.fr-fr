@@ -19,19 +19,19 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e92b9ec98ee08579164c403fe1be6ff6ef47816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104504"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304763"
 ---
-# <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
+# <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retourne une plage de valeurs de séquence d'un objet séquence. L'objet séquence génère et émet le nombre de valeurs demandées et fournit l'application avec les métadonnées relatives à la plage.  
   
- Pour plus d’informations sur les numéros de séquence, consultez [les numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Pour plus d’informations sur les numéros séquentiels, consultez [numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @sequence_name = ] N'sequence'` Le nom de l’objet séquence. Le schéma est facultatif. *sequence_name* est **nvarchar(776)** .  
+`[ @sequence_name = ] N'sequence'` nom de l’objet séquence. Le schéma est facultatif. *sequence_name* est **de type nvarchar (776)** .  
   
-`[ @range_size = ] range_size` Le nombre de valeurs à extraire de la séquence. **@range_size** est **bigint**.  
+`[ @range_size = ] range_size` nombre de valeurs à extraire de la séquence. **@no__t 1range_size est de type** **bigint**.  
   
-`[ @range_first_value = ] range_first_value` Paramètre de sortie retourne la première valeur (minimale ou maximale) de l’objet séquence utilisée pour calculer la plage demandée. **@range_first_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+le paramètre de sortie `[ @range_first_value = ] range_first_value` retourne la première valeur (minimale ou maximale) de l’objet séquence utilisé pour calculer la plage demandée. **\@range_first_value** est de type **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @range_last_value = ] range_last_value` Paramètre de sortie facultatif retourne la dernière valeur de la plage demandée. **@range_last_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @range_last_value = ] range_last_value` paramètre de sortie facultatif retourne la dernière valeur de la plage demandée. **\@range_last_value** est de type **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @range_cycle_count = ] range_cycle_count` Paramètre de sortie facultatif retourne le nombre de fois que l’objet séquence a été répété pour retourner la plage demandée. **@range_cycle_count** est **int**.  
+`[ @range_cycle_count = ] range_cycle_count` paramètre de sortie facultatif retourne le nombre de fois où l’objet séquence a été recycle pour retourner la plage demandée. **\@range_cycle_count est de** **type int**.  
   
-`[ @sequence_increment = ] sequence_increment` Paramètre de sortie facultatif retourne l’incrément de l’objet séquence utilisée pour calculer la plage demandée. **@sequence_increment** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @sequence_increment = ] sequence_increment` paramètre de sortie facultatif retourne l’incrément de l’objet séquence utilisé pour calculer la plage demandée. **\@sequence_increment** est de type **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @sequence_min_value = ] sequence_min_value` Paramètre de sortie facultatif retourne la valeur minimale de l’objet séquence. **@sequence_min_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @sequence_min_value = ] sequence_min_value` paramètre de sortie facultatif retourne la valeur minimale de l’objet séquence. **\@sequence_min_value** est de type **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @sequence_max_value = ] sequence_max_value` Paramètre de sortie facultatif retourne la valeur maximale de l’objet séquence. **@sequence_max_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @sequence_max_value = ] sequence_max_value` paramètre de sortie facultatif retourne la valeur maximale de l’objet séquence. **\@sequence_max_value** est de type **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- sp_sequence_get_rangeis dans la table système sys. schéma et peut être référencé comme sys.sp_sequence_get_range.  
+ sp_sequence_get_rangeis dans la sys. le schéma et peuvent être référencés en tant que sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Séquences se répétant  
  Si nécessaire, l'objet séquence se répétera le nombre de fois approprié afin de fournir la plage demandée. Le nombre de répétitions est retourné à l'appelant via le paramètre `@range_cycle_count`.  
@@ -88,7 +88,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Requiert l'autorisation UPDATE sur l'objet séquence ou le schéma de l'objet séquence.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants utilisent un objet séquence nommé Test.RangeSeq. Utilisez l’instruction suivante pour créer la séquence Test.RangeSeq.  
+ Les exemples suivants utilisent un objet séquence nommé test. RangeSeq. Utilisez l’instruction suivante pour créer la séquence test. RangeSeq.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -106,7 +106,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>R. Récupération d'une plage de valeurs de séquence  
- L’instruction suivante obtient quatre numéros séquentiels à partir de l’objet de séquence Test.RangeSeq et retourne le premier des nombres à l’utilisateur.  
+ L’instruction suivante obtient quatre numéros de séquence de l’objet de séquence test. RangeSeq et retourne le premier des nombres à l’utilisateur.  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -122,7 +122,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. Retour de tous les paramètres de sortie  
- L’exemple suivant retourne toutes les valeurs de sortie à partir de la procédure sp_sequence_get_range.  
+ L’exemple suivant retourne toutes les valeurs de sortie de la procédure sp_sequence_get_range.  
   
 ```  
 DECLARE    
@@ -157,7 +157,7 @@ SELECT
  La modification de l'argument `@range_size` en nombre plus grand, comme 75, provoque l'exécution répétée de l'objet séquence. Vérifiez l'argument `@range_cycle_count` pour déterminer si et combien de fois l'objet séquence a été répété.  
   
 ### <a name="c-example-using-adonet"></a>C. Exemple utilisant ADO.NET  
- L’exemple suivant obtient une plage à partir de la Test.RangeSeq à l’aide d’ADO.NET.  
+ L’exemple suivant obtient une plage à partir de test. RangeSeq à l’aide de ADO.NET.  
   
 ```  
 SqlCommand cmd = new SqlCommand();  
