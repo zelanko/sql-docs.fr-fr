@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014339"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251960"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68014339"
     ```  
   
     > [!NOTE]  
-    >  Vous devez créer les travaux au niveau de toutes les cibles possibles de basculement avant le basculement, et les marquer comme étant désactivés jusqu'à ce que le réplica de disponibilité sur un hôte devienne le nouveau réplica principal. Les travaux de capture de données modifiées s'exécutant au niveau de l'ancienne base de données principale doivent également être désactivés lorsque la base de données locale devient une base de données secondaire. Pour désactiver et activer des travaux, utilisez l’option *@enabled* de [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Pour plus d’informations sur la création de travaux de capture de données modifiées, consultez [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+    >  Vous devez créer les travaux au niveau de toutes les cibles possibles de basculement avant le basculement, et les marquer comme étant désactivés jusqu'à ce que le réplica de disponibilité sur un hôte devienne le nouveau réplica principal. Les travaux de capture de données modifiées s'exécutant au niveau de l'ancienne base de données principale doivent également être désactivés lorsque la base de données locale devient une base de données secondaire. Pour désactiver et activer des travaux, utilisez l’option *\@enabled* de [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Pour plus d’informations sur la création de travaux de capture de données modifiées, consultez [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
 -   **Ajout de rôles de capture de données modifiées à un réplica de base de données principal Always On**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68014339"
   
      Le nom d'écouteur de groupe de disponibilité ou le nom du nœud explicite peut être utilisé pour rechercher le réplica secondaire. Si le nom d'écouteur du groupe de disponibilité est utilisé, l'accès est dirigé vers un réplica secondaire approprié.  
   
-     Quand **sp_addlinkedserver** est utilisé pour créer un serveur lié afin d’accéder au serveur secondaire, le paramètre *@datasrc* est utilisé pour le nom d’écouteur de groupe de disponibilité ou le nom du serveur explicite, et le paramètre *@provstr* permet de spécifier l’intention de lecture seule.  
+     Quand **sp_addlinkedserver** est utilisé pour créer un serveur lié afin d’accéder au serveur secondaire, le paramètre *\@datasrc* est utilisé pour le nom d’écouteur de groupe de disponibilité ou le nom du serveur explicite, et le paramètre *\@provstr* permet de spécifier l’intention de lecture seule.  
   
     ```sql  
     EXEC sp_addlinkedserver   

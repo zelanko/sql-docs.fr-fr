@@ -1,6 +1,6 @@
 ---
 title: Spécifications des capacités maximales pour SQL Server | Microsoft Docs
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687369"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008440"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687369"
 |Verrous par connexion||Verrous maximaux par serveur||  
 |Verrous par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limité uniquement par la mémoire|Cette valeur s’applique à l’allocation de verrouillage statique. Les verrous dynamiques sont uniquement limités par la mémoire.|  
 |Niveaux d’imbrication des procédures stockées||32|Si une procédure stockée accède à plus de 64 bases de données ou à plus de 2 bases entrelacées, vous recevez un message d’erreur.|  
-|Sous-requêtes imbriquées||32||  
+|Sous-requêtes imbriquées||32||    
+|Transactions imbriquées||4,294,967,296||     
 |Niveaux de déclencheurs imbriqués||32||  
 |Index non cluster par table||999||  
 |Nombre d'expressions distinctes dans la clause GROUP BY lorsque l'un des éléments suivants est présent : CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  

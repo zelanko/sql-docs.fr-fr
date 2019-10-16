@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 32b8c8b1bbac53b099afc64f06a0eb5137292555
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: d382d8ee7a871244213467b7a46bdc5b864c55cb
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006092"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381901"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crée un nouveau compte de messagerie de base de données contenant des informations sur un compte SMTP.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,11 +53,11 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="arguments"></a>Arguments  
 `[ @account_name = ] 'account_name'` nom du compte à ajouter. *nom_de_compte* est de **type sysname**, sans valeur par défaut.  
   
-`[ @email_address = ] 'email_address'` adresse de messagerie à partir de laquelle envoyer le message. Cette adresse doit être une adresse de messagerie Internet. *email_address* est de type **nvarchar (128)** , sans valeur par défaut. Par exemple, un compte pour l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut envoyer un message électronique à partir de l’adresse **SqlAgent@Adventure-Works.com** .  
+`[ @email_address = ] 'email_address'` adresse de messagerie à partir de laquelle envoyer le message. Cette adresse doit être une adresse de messagerie Internet. *email_address* est de type **nvarchar (128)** , sans valeur par défaut. Par exemple, un compte pour l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut envoyer un message électronique à partir de l’adresse **SQLAgent\@Adventure-Works.com**.  
   
 `[ @display_name = ] 'display_name'` nom complet à utiliser pour les messages électroniques à partir de ce compte. *display_name* est de type **nvarchar (128)** , avec NULL comme valeur par défaut. Par exemple, un compte pour l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut afficher le nom **SQL Server Agent courrier électronique automatisé** sur les messages électroniques.  
   
-`[ @replyto_address = ] 'replyto_address'` adresse à laquelle les réponses aux messages de ce compte sont envoyées. *replyto_address* est de type **nvarchar (128)** , avec NULL comme valeur par défaut. Par exemple, les réponses à un compte pour l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être envoyées à l’administrateur de la base de données, **danw@Adventure-Works.com** .  
+`[ @replyto_address = ] 'replyto_address'` adresse à laquelle les réponses aux messages de ce compte sont envoyées. *replyto_address* est de type **nvarchar (128)** , avec NULL comme valeur par défaut. Par exemple, les réponses à un compte pour l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être envoyées à l’administrateur de la base de données, **danw\@Adventure-Works.com**.  
   
 `[ @description = ] 'description'` est une description du compte. *Description* est de type **nvarchar (256)** , avec NULL comme valeur par défaut.  
   
@@ -89,7 +89,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
  La procédure stockée **sysmail_add_account_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

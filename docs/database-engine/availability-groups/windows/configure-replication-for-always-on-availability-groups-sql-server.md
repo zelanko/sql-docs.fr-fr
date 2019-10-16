@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988459"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251933"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurer la réplication avec les groupes de disponibilité Always On
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988459"
   
  La base de données de distribution ne peut pas être placée dans un groupe de disponibilité avec SQL Server 2012 et SQL Server 2014. Le placement de la base de données de distribution dans un groupe de disponibilité est pris en charge avec SQL 2016 et les versions supérieures. Pour plus d’informations, consultez [Configurer une base de données de distribution dans un groupe de disponibilité](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
-1.  Configurez la distribution sur le serveur de distribution. Si des procédures stockées sont utilisées pour la configuration, exécutez **sp_adddistributor**. Utilisez le paramètre *@password* pour identifier le mot de passe qui est utilisé lorsqu'un serveur de publication distant se connecte au serveur de distribution. Le mot de passe est également nécessaire sur chaque serveur de publication distant lorsque le serveur de distribution distant est configuré.  
+1.  Configurez la distribution sur le serveur de distribution. Si des procédures stockées sont utilisées pour la configuration, exécutez **sp_adddistributor**. Utilisez le paramètre *\@password* pour identifier le mot de passe qui est utilisé lorsqu'un serveur de publication distant se connecte au serveur de distribution. Le mot de passe est également nécessaire sur chaque serveur de publication distant lorsque le serveur de distribution distant est configuré.  
   
     ```  
     USE master;  

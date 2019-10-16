@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710388"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041196"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710388"
 ## <a name="logins-and-object-ownership"></a>Noms d'accès et propriété d'objet  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Les noms d'accès et mots de passe sont-ils répliqués ?  
- Non. Vous pourriez créer un package DTS pour transférer les noms d'accès et mots de passe d'un serveur de publication sur un ou plusieurs abonnés.  
+ Non. Vous pourriez créer un package SSIS pour transférer des connexions et des mots de passe d'un serveur de publication vers un ou plusieurs abonnés.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Que sont les schémas et comment sont-ils répliqués ?  
  À commencer par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schéma* a deux significations :  
   
--   La définition d'un objet, par exemple une instruction CREATE TABLE. Par défaut, la réplication copie les définitions de tous les objets répliqués sur l'Abonné.  
+-   La définition d'un objet, par exemple une instruction `CREATE TABLE`. Par défaut, la réplication copie les définitions de tous les objets répliqués sur l'Abonné.  
   
--   L’espace de noms dans lequel un objet est créé : \<Base de données>.\<Schéma>.\<Objet>. Les schémas sont définis à l'aide de l'instruction CREATE SCHEMA.  
+-   L’espace de noms dans lequel un objet est créé : \<Base de données>.\<Schéma>.\<Objet>. Les schémas sont définis à l'aide de l'instruction `CREATE SCHEMA`.  
   
 -   La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710388"
  Il existe différents mécanismes pour la reconstruction d'index. Ils peuvent tous être utilisés sans règle spécifique à la réplication, à l'exception suivante près : des clés primaires sont nécessaires sur les tables dans les publications transactionnelles, vous ne pouvez donc pas supprimer et recréer de clés primaires sur ces tables.  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>Comment puis-je ajouter ou modifier des index sur des bases de données de publication ou d'abonnement ?  
- Les index peuvent être ajoutés sur le serveur de publication ou sur les abonnés sans règle spécifique à la réplication (sachez que les index peuvent affecter les performances). CREATE INDEX et ALTER INDEX ne sont pas répliqués, donc si par exemple vous ajoutez ou modifiez un index sur le serveur de publication, vous devez effectuer le même ajout ou la même modification sur l'Abonné si vous souhaitez qu'il ou qu'elle soit prise en compte.  
+ Les index peuvent être ajoutés sur le serveur de publication ou sur les abonnés sans règle spécifique à la réplication (sachez que les index peuvent affecter les performances). `CREATE INDEX` et `ALTER INDEX` ne sont pas répliqués, donc si par exemple vous ajoutez ou modifiez un index sur le serveur de publication, vous devez effectuer le même ajout ou la même modification sur l'abonné si vous souhaitez qu'il ou elle soit prise en compte.  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>Comment puis-je déplacer ou renommer des fichiers pour des bases de données impliquées dans une réplication ?  
  Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], le déplacement ou le changement de noms de fichiers de base de données nécessitait le détachement et le rattachement de la base de données. Comme une base de données répliquée ne peut pas être détachée, la réplication a d'abord du être supprimée de ces bases de données. Avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vous pouvez déplacer ou renommer les fichiers sans détachement ou rattachement de la base de données, sans aucune incidence sur la réplication. Pour plus d’informations sur le déplacement et le changement de noms de fichiers, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -187,7 +187,7 @@ ms.locfileid: "71710388"
  Commencez par supprimer l’article de la publication en utilisant [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , puis supprimez-le de la base de données à l’aide de `DROP <Object>`. Vous ne pouvez pas supprimer d'articles d'un instantané ou de publications transactionnelles après avoir ajouté les abonnements, vous devez d'abord supprimer les abonnements. Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Comment puis-je ajouter ou supprimer des colonnes sur une table publiée ?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, si vous exécutez ALTER TABLE … DROP COLUMN sur le serveur de publication, l’instruction est répliquée vers les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) et [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, exécutez `ALTER TABLE … DROP COLUMN` sur le serveur de publication et l’instruction est répliquée vers les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) et [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Maintenance de réplication  
   

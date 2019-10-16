@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934765"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008457"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Mettre à niveau ou corriger des bases de données répliquées
 
@@ -104,7 +104,7 @@ Ces étapes décrivent l’ordre dans lequel les serveurs d’une topologie de r
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Étapes de la migration côte à côte du distributeur vers Windows Server 2012 R2
-Si vous envisagez de mettre à niveau votre instance SQL Server vers SQL 2016 (ou version ultérieure) et que votre système d’exploitation actuel est Windows 2008 (ou 2008 R2), vous devez effectuer une mise à niveau côte à côte du système d’exploitation vers Windows Server 2012 R2 ou version ultérieure. La raison de cette mise à niveau intermédiaire du système d’exploitation est la suivante : SQL Server 2016 ne peut pas être installé sur un système Windows Server 2008/2008 R2 et Windows Server 2008/20008 R2 n’autorise pas les mises à niveau sur place pour les clusters de basculement. Les étapes suivantes peuvent être effectuées sur une instance SQL Server autonome ou de cluster de basculement Always On.
+Si vous envisagez de mettre à niveau votre instance SQL Server vers SQL Server 2016 (ou version ultérieure) et que votre système d’exploitation actuel est Windows 2008 (ou 2008 R2), vous devez effectuer une mise à niveau côte à côte du système d’exploitation vers Windows Server R2 ou version ultérieure. La raison de cette mise à niveau intermédiaire du système d’exploitation est la suivante : SQL Server 2016 ne peut pas être installé sur un système Windows Server 2008/2008 R2 et Windows Server 2008/20008 R2 n’autorise pas les mises à niveau sur place directement vers Windows Server 2016. Bien qu’il soit possible d’effectuer une mise à niveau sur place de Windows Server 2008/2008 R2 vers Windows Server 2012, puis vers Windows Server 2016, cette opération est généralement déconseillée en raison du temps d’arrêt et de la complexité supplémentaire qui empêche un chemin de restauration simple. Une mise à niveau côte à côte est le seul chemin de mise à niveau disponible pour les instances de SQL Server qui participent à un cluster de basculement.  Les étapes suivantes peuvent être effectuées sur une instance SQL Server autonome ou de cluster de basculement Always On.
 
 1. Configurez une nouvelle édition, version et instance de SQL Server (autonome ou de cluster de basculement Always On), en tant que distributeur sur Windows Server 2012 R2/2016, avec un nom d’instance de cluster de basculement SQL Server ou de cluster Windows différent ou un nom d’hôte autonome. Vous devez conserver la même structure de répertoire que l’ancien distributeur afin que les fichiers exécutables des agents de réplication, les dossiers de réplication et les chemins de fichier de base de données se trouvent dans le même chemin sur le nouvel environnement. Les étapes éventuelles à effectuer après la migration/mise à jour s’en trouvent réduites.
 1. Vérifiez que la réplication est synchronisée, puis arrêtez tous les agents de réplication. 

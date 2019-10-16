@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3a5d0271f1adc4c402518422997e6f7f7c3db8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 177da1486d7cab622bacaea56cd886bd8dc06d06
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056689"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251488"
 ---
-# <a name="mssqlserver21889"></a>MSSQLSERVER_21889
+# <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -36,5 +36,5 @@ ms.locfileid: "68056689"
 Pour pouvoir héberger la base de données du serveur de publication, l’instance SQL Server doit être un serveur de publication de réplication. **sp_validate_redirected_publisher** appelle **sp_helpdistributor** sur le serveur distant pour déterminer si le serveur est un serveur de publication de réplication. Cette erreur indique que l’instance SQL Server cible n’est pas un serveur de publication de réplication.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Exécutez **sp_adddistributor** sur l’instance SQL Server qui héberge la base de données du serveur de publication. Lors de l’exécution de **sp_adddistributor**, spécifiez le serveur de distribution approprié. Utilisez la même valeur pour le paramètre *@password* que celle utilisée quand **sp_adddistributor** a été initialement exécuté sur le serveur de distribution.  
+Exécutez **sp_adddistributor** sur l’instance SQL Server qui héberge la base de données du serveur de publication. Lors de l’exécution de **sp_adddistributor**, spécifiez le serveur de distribution approprié. Utilisez la même valeur pour le paramètre *\@mot de passe* que celle utilisée quand **sp_adddistributor** a été initialement exécuté sur la base de données du serveur de distribution.  
   

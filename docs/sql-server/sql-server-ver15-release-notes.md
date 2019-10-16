@@ -1,6 +1,6 @@
 ---
 title: Notes de publication de SQL Server 2019 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 9b6895abfa0b09459911eba03b52837379f2d162
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326128"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041189"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notes de publication de SQL Server 2019 Preview
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,6 +59,22 @@ Le numéro de build pour SQL Server 2019 RC sur Windows, Linux et les conteneur
     - Windows Server 2016 ou version ultérieure. Pour connaître la configuration requise supplémentaire, consultez [Configuration requise pour l’installation de SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
     - Microsoft .NET Framework 4.6.2. Disponible sur le [Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=53344).
     - Pour Linux, reportez-vous à [Linux : plateformes prises en charge](../linux/sql-server-linux-setup.md#supportedplatforms).
+
+## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>L’installation de SQL Server peut échouer si SSMS 18.x est installé
+
+- **Problème et impact sur le client** : [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] l’installation échoue lorsque les installations suivantes sont effectuées dans cet ordre :
+  1. SQL Server Management Studio (SSMS) version 18.0, 18.1, 18.2 ou 18.3 est installé sur le serveur.
+  1. Une tentative d’installation de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] est effectuée à partir d’un support amovible. Par exemple, le support d’installation est un DVD.
+
+- **Solution de contournement**:
+  1. Désinstallez toute version de SSMS antérieure à SSMS 18.3.1.
+  1. Installez une version plus récente de SSMS (18.3.1 ou une version ultérieure). Pour obtenir la dernière version, consultez [Télécharger SSMS](../ssms/download-sql-server-management-studio-ssms.md).
+  1. Installez [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normalement.
+
+  >[!NOTE]
+  >La désinstallation est requise.
+
+- **S’applique à** : version finale (RC) de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 ## <a name="updated-compiler"></a>Compilateur mis à jour
 
@@ -111,7 +127,7 @@ Le numéro de build pour SQL Server 2019 RC sur Windows, Linux et les conteneur
 - **Solution de contournement**:  installez la dernière version de VC Runtime 2013 (x86) :
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [Direct](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **S’applique à** : [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
@@ -132,6 +148,10 @@ Le numéro de build pour SQL Server 2019 RC sur Windows, Linux et les conteneur
 - **Solution de contournement**: Ouvrez le portail MDS et accédez à la ressource manuellement.
 
 - **S’applique à** : Version Release Candidate de SQL Server 2019
+
+## <a name="machine-learning-services"></a>Machine Learning Services
+
+Pour les problèmes rencontrés dans SQL Server Machine Learning Services, consultez [Problèmes connus dans SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

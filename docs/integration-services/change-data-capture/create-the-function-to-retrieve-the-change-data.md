@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae7aa810e58cf7e21a4045e0c408c76e8754a620
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298828"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251984"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
 
@@ -80,7 +80,7 @@ ms.locfileid: "71298828"
 > [!NOTE]  
 >  Pour plus d'informations sur la syntaxe de cette procédure stockée et ses paramètres, consultez [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
- La procédure stockée génère systématiquement une fonction wrapper pour retourner toutes les modifications de chaque instance de capture. Si le paramètre *@supports_net_changes* a été défini lors de la création de l'instance de capture, la procédure stockée génère également une fonction wrapper pour retourner les modifications de chaque instance de capture applicable.  
+ La procédure stockée génère systématiquement une fonction wrapper pour retourner toutes les modifications de chaque instance de capture. Si le paramètre *\@supports_net_changes* a été défini lors de la création de l'instance de capture, la procédure stockée génère également une fonction wrapper pour retourner les modifications de chaque instance de capture applicable.  
   
  La procédure stockée retourne un jeu de résultats à deux colonnes :  
   
@@ -112,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Présentation et utilisation des fonctions créées par la procédure stockée  
- Pour guider systématiquement la chronologie des données de modification capturées, les fonctions wrapper générées attendent que le paramètre *@end_time* d'un intervalle devienne le paramètre *@start_time* de l'intervalle suivant. Lorsque cette convention est suivie, les fonctions wrapper générées peuvent effectuer les tâches suivantes :  
+ Pour guider systématiquement la chronologie des données de modification capturées, les fonctions wrapper générées attendent que le paramètre *\@end_time* d'un intervalle devienne le paramètre *\@start_time* de l'intervalle suivant. Lorsque cette convention est suivie, les fonctions wrapper générées peuvent effectuer les tâches suivantes :  
   
 -   Mapper les valeurs de date/d'heure aux valeurs LSN utilisées en interne.  
   
@@ -130,7 +130,7 @@ deallocate #hfunctions
   
 -   La valeur de date/d'heure de début et celle de date/d'heure de fin de l'intervalle. Lorsque les fonctions wrapper utilisent des valeurs de date/d'heure comme points pour l'intervalle de requête, les fonctions de capture de données modifiées utilisent deux valeurs LSN comme points de fin.  
   
--   Le filtre de lignes. Pour les fonctions wrapper et les fonctions de capture de données modifiées, le paramètre *@row_filter_option* est le même. Pour plus d’informations, consultez [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+-   Le filtre de lignes. Pour les fonctions wrapper et les fonctions de capture de données modifiées, le paramètre *\@row_filter_option* est le même. Pour plus d’informations, consultez [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
  Le jeu de résultats retourné par les fonctions wrapper inclut les données suivantes :  
   
@@ -138,7 +138,7 @@ deallocate #hfunctions
   
 -   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides de ce champ sont les suivantes : « I » pour insert (insertion), « D » pour delete (suppression), « UO » pour update old values (mise à jour des anciennes valeurs) et « UN » pour update new values (mise à jour des nouvelles valeurs).  
   
--   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *@update_flag_list* . Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
+-   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *\@update_flag_list*. Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
   
  Si votre package appelle une fonction wrapper qui interroge toutes les modifications, elle retourne également les colonnes __CDC_STARTLSN et \__CDC_SEQVAL. Ces deux colonnes deviennent les première et deuxième colonnes, respectivement, du jeu de résultats. La fonction wrapper trie également le jeu de résultats en fonction de ces deux colonnes.  
   

@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/03/2019
-ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.date: 10/08/2019
+ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816642"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041118"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="october-2019-hotfix"></a>Octobre 2019 (correctif logiciel)
+
+8 octobre 2019 &nbsp; / &nbsp; version : 1.12.1
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Problèmes résolus pour que les guillemets et les barres obliques inverses dans Notebooks s’échappent correctement. |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019"></a>2 octobre 2019
 

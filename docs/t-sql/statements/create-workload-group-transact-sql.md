@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea6501c4bfd516b99d53f9ac7e90a2cd0d59ba8c
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026221"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260332"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -96,7 +96,8 @@ REQUEST_MAX_CPU_TIME_SEC = *value*
 Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, ce qui signifie illimité.
 
 > [!NOTE]
-> Par défaut, Resource Governor n’empêche pas une demande de continuer si le temps maximal est dépassé. Toutefois, un événement sera généré. Pour plus d’informations, consultez [Classe d’événements CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
+> Par défaut, Resource Governor n’empêche pas une demande de continuer si le temps maximal est dépassé. Toutefois, un événement sera généré. Pour plus d’informations, consultez [Classe d’événements CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).     
+
 > [!IMPORTANT]
 > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 et de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, quand [l’indicateur de trace 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) est utilisé, Resource Governor abandonne une demande en cas de dépassement de la durée maximale.
 
@@ -107,13 +108,17 @@ Spécifie la durée maximale, en secondes, pendant laquelle une requête peut at
 > Une requête n'échoue pas toujours lorsque le délai d'expiration d'allocation mémoire est atteint. Une requête échoue seulement si le nombre de requêtes exécutées simultanément est trop élevé. Autrement, la requête risque d'obtenir uniquement l'allocation mémoire minimale, d'où une dégradation des performances.
 
 MAX_DOP = *value*     
-Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *value* doit être égal à 0 ou un entier positif. La plage autorisée pour *value* est comprise entre 0 et 64. Le paramètre par défaut de *value*, 0, utilise le paramètre global. MAX_DOP est géré comme suit :
+Spécifie le **degré maximal de parallélisme (MAXDOP)** pour l’exécution de demandes parallèles. *value* doit être égal à 0 ou un entier positif. La plage autorisée pour *value* est comprise entre 0 et 64. Le paramètre par défaut de *value*, 0, utilise le paramètre global. MAX_DOP est géré comme suit :
 
-- MAX_DOP en tant qu'indicateur de requête est effectif tant qu'il ne dépasse pas le groupe de charges de travail MAX_DOP. Si la valeur d'indicateur de requête MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le moteur de base de données utilise la valeur MAXDOP du gouverneur de ressources.
-- MAX_DOP en tant qu'indicateur de requête remplace toujours l'option « max degree of parallelism » de sp_configure.
-- Le groupe de charge de travail MAX_DOP remplace le degré maximal de parallélisme sp_configure.
-- Si la requête est marquée comme étant en série au moment de la compilation, elle ne peut être reconvertie en requête parallèle au moment de l'exécution, indépendamment du groupe de charge de travail ou du paramètre sp_configure.
-- Une fois le degré maximal de parallélisme (DOP) configuré, il ne peut être diminué que sous la sollicitation de l'allocation de mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.
+> [!NOTE]
+> Le groupe de charge de travail MAX_DOP remplace la [configuration du serveur pour le degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) et la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.
+
+> [!TIP]
+> Pour définir cette option au niveau de la requête, utilisez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**. Définir le degré maximal de parallélisme en tant qu'indicateur de requête est efficace tant qu'il ne dépasse pas le groupe de charges de travail MAX_DOP. Si la valeur d'indicateur de requête MAXDOP dépasse la valeur configurée avec Resource Governor, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilise la valeur de `MAX_DOP` Resource Governor. L’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) MAXDOP remplace toujours la [configuration du serveur pour le degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).      
+>   
+> Pour le faire au niveau de la base de données, utilisez la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.      
+>   
+> Pour ce faire, au niveau du serveur, utilisez l’[option de configuration serveur](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) du **degré maximal de parallélisme (MAXDOP)** .     
 
 GROUP_MAX_REQUESTS = *value*     
 Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, qui autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.
@@ -137,19 +142,20 @@ Le groupe de charge de travail peut spécifier un pool de ressources externes. V
 ## <a name="remarks"></a>Notes
 Quand `REQUEST_MEMORY_GRANT_PERCENT` est utilisé, la création d’index est autorisée à utiliser une mémoire d’espace de travail supérieure à celle qui lui a été initialement allouée, afin d’améliorer les performances. Cette gestion spéciale est prise en charge par le gouverneur de ressources dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charges de travail.
 
-### <a name="index-creation-on-a-partitioned-table"></a>Création d’un index sur une table partitionnée
+La limite `MAX_DOP` est définie par [tâche](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Il ne s’agit pas d’une limite par [requête](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Cela signifie que lors d’une exécution de requête parallèle, une requête unique peut générer plusieurs tâches qui sont affectées à un [planificateur](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Pour plus d’informations, consultez le [Guide de l’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
+
+Lorsque `MAX_DOP` est utilisé et qu’une requête est marquée comme étant en série au moment de la compilation, elle ne peut être reconvertie en requête parallèle au moment de l'exécution, indépendamment du groupe de charge de travail ou du paramètre de configuration du serveur. Après la configuration de `MAX_DOP`, il ne peut être diminué qu’en raison de la sollicitation de la mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.
+
+### <a name="index-creation-on-a-partitioned-table"></a>Création d'un index sur une table partitionnée
 
 La mémoire consommée par la création d'index sur une table partitionnée non alignée est proportionnelle au nombre de partitions impliquées. Si la mémoire totale requise dépasse la limite par requête (`REQUEST_MAX_MEMORY_GRANT_PERCENT`) imposée par le paramètre du groupe de charges de travail de Resource Governor, cette création d’index peut échouer. Étant donné que le groupe de charges de travail *"default"* permet à une requête de dépasser la limite par requête avec la mémoire minimale, l’utilisateur peut être en mesure d’exécuter la même création d’index dans le groupe de charges de travail *"default"* , si le pool de ressources *"default"* possède assez de mémoire totale configurée pour exécuter cette requête.
 
 ## <a name="permissions"></a>Autorisations
-
 Nécessite l'autorisation `CONTROL SERVER`.
 
 ## <a name="example"></a>Exemple
 
-- Créer un groupe de charges de travail appelé newReports
-
-Ce pool utilise les paramètres par défaut du gouverneur de ressources et se trouve dans le pool par défaut du gouverneur de ressources. L'exemple spécifie le pool `default`, mais cela n'est pas obligatoire.
+Créez un groupe de charge de travail nommé `newReports` qui utilise les paramètres par défaut de Resource Governor et se trouve dans le pool par défaut de ce dernier. L'exemple spécifie le pool `default`, mais cela n'est pas obligatoire.
 
 ```sql
 CREATE WORKLOAD GROUP newReports

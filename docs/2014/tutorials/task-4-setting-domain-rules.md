@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 4 : Définition des règles de domaine | Microsoft Docs'
+title: 'Tâche 4 : définition des règles de domaine | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,55 +10,55 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489076"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381743"
 ---
-# <a name="task-4-setting-domain-rules"></a>Tâche 4 : Définition de règles de domaine
-  Dans cette tâche, vous créez une règle pour le **adresse E-mail de Contact** afin de vérifier si l’adresse de messagerie se termine par **@adventure-works.com** . Consultez [création d’une règle de domaine](https://msdn.microsoft.com/library/hh510397.aspx) rubrique pour plus d’informations sur la page.  
+# <a name="task-4-setting-domain-rules"></a>Tâche 4 : Définition de règles de domaine
+  Dans cette tâche, vous allez créer une règle pour le domaine de **messagerie du contact** afin de vérifier si l’adresse de messagerie se termine par **\@adventure-Works.com**. Pour plus d’informations sur la page, consultez la rubrique [création d’une règle de domaine](https://msdn.microsoft.com/library/hh510397.aspx) .  
   
-1.  Cliquez sur **adresse E-mail de Contact** dans le **liste des domaines**.  
+1.  Cliquez sur **adresse de messagerie du contact** dans la **liste domaine**.  
   
-2.  Basculez vers le **règles de domaine** onglet dans le volet droit.  
+2.  Basculez vers l’onglet **règles de domaine** dans le volet droit.  
   
-     ![Ajoutez un nouveau bouton de barre d’outils de règle de domaine](../../2014/tutorials/media/et-settingdomainrules-01.jpg "ajouter un nouveau bouton de barre d’outils de règle de domaine")  
+     ![Bouton de barre d’outils ajouter une nouvelle règle de domaine](../../2014/tutorials/media/et-settingdomainrules-01.jpg "Bouton de barre d’outils ajouter une nouvelle règle de domaine")  
   
-3.  Dans le volet droit, cliquez sur **ajouter une nouvelle règle de domaine** dans la barre d’outils (voir l’image) pour ajouter une règle.  
+3.  Dans le volet droit, cliquez sur le bouton **Ajouter une nouvelle règle de domaine** dans la barre d’outils (Voir l’image) pour ajouter une règle.  
   
-4.  Type **Validation par E-mail** pour le **nom de la règle** et appuyez sur **entrée**. Le **Active** case à cocher doit être activée par défaut. Ce contrôle vous permet de désactiver temporairement une règle.  
+4.  Tapez **validation** de l’adresse de messagerie pour le nom de la **règle** et appuyez sur **entrée**. La case à cocher **active** doit être activée par défaut. Ce contrôle vous permet de désactiver temporairement une règle.  
   
-5.  Dans le **une règle de génération** volet, cliquez sur **flèche vers le bas**, puis sélectionnez **valeur se termine par**.  
+5.  Dans le volet **créer une règle** , cliquez sur **flèche bas**, puis sélectionnez la **valeur se termine par**.  
   
-6.  Type **@adventure-works.com** dans la zone de texte et appuyez sur **onglet**. Vous pouvez ajouter plus de conditions en cliquant sur **ajouter une nouvelle condition à la clause sélectionnée** bouton de barre d’outils dans le **une règle de génération** volet.  
+6.  Tapez **\@adventure-Works.com** dans la zone de texte et appuyez sur la touche **Tab**. Vous pouvez ajouter d’autres conditions en cliquant sur le bouton **Ajouter une nouvelle condition à la clause sélectionnée** dans le volet **créer une règle** .  
   
-     ![Règle de Validation de la messagerie](../../2014/tutorials/media/et-settingdomainrules-02.jpg "règle de Validation de la messagerie")  
+     ![Règle de validation d’e-mail](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Règle de validation d’e-mail")  
   
-7.  Cliquez sur **exécuter la règle de domaine sélectionné sur les données de test** dans la barre d’outils dans le volet droit pour tester la règle par rapport à des exemples de données.  
+7.  Cliquez sur le bouton **exécuter la règle de domaine sélectionnée sur les données de test** dans la barre d’outils du volet droit pour tester la règle par rapport aux exemples de données.  
   
-     ![Exécuter la règle de domaine sur le bouton de barre d’outils de données de Test](../../2014/tutorials/media/et-settingdomainrules-03.jpg "exécuter la règle de domaine sur le bouton de barre d’outils de données de Test")  
+     ![Bouton de barre d’outils exécuter la règle de domaine sur les données de test](../../2014/tutorials/media/et-settingdomainrules-03.jpg "Bouton de barre d’outils exécuter la règle de domaine sur les données de test")  
   
-8.  Dans le **tester une règle de domaine** boîte de dialogue, cliquez sur **ajoute un nouveau terme de test pour la règle de domaine** dans la barre d’outils.  
+8.  Dans la boîte de dialogue **tester la règle de domaine** , cliquez sur **ajoute un nouveau terme de test pour le bouton règle de domaine** dans la barre d’outils.  
   
-     ![Tester la boîte de dialogue règle de domaine](../../2014/tutorials/media/et-settingdomainrules-04.jpg "tester la boîte de dialogue règle de domaine")  
+     ![Boîte de dialogue tester la règle de domaine](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Boîte de dialogue tester la règle de domaine")  
   
-9. Type **frank7@adventure-works.com** (une valeur valide) dans le **adresse E-mail de Contact** colonne.  
+9. Tapez **frank7\@adventure-works.com** (une valeur valide) dans la colonne **adresse de messagerie du contact** .  
   
-10. Répétez les étapes précédentes pour ajouter **joe2@adventure-work.com** (une valeur non valide sans nécessiter de ').  
+10. Répétez les deux étapes précédentes pour ajouter **Joe2\@adventure-work.com** (une valeur non valide sans' ' ').  
   
-11. Cliquez sur le bouton dernière (**tester la règle de domaine sur tous les termes**) dans la barre d’outils pour tester les données d’entrée par rapport à la règle.  
+11. Cliquez sur le dernier bouton (**tester la règle de domaine sur tous les termes**) de la barre d’outils pour tester les données d’entrée par rapport à la règle.  
   
-     ![Tester la règle de domaine sur le bouton de barre d’outils tous les termes du contrat](../../2014/tutorials/media/et-settingdomainrules-05.jpg "tester la règle de domaine sur le bouton de barre d’outils tous les termes du contrat")  
+     ![Bouton de la barre d’outils tester la règle de domaine sur tous les termes](../../2014/tutorials/media/et-settingdomainrules-05.jpg "Bouton de la barre d’outils tester la règle de domaine sur tous les termes")  
   
 12. Notez que la première entrée est affichée comme un élément valide, et la seconde comme un élément non valide.  
   
-     ![Tester les résultats des règles de domaine](../../2014/tutorials/media/et-settingdomainrules-06.jpg "tester les résultats des règles de domaine")  
+     ![Tester les résultats des règles de domaine](../../2014/tutorials/media/et-settingdomainrules-06.jpg "Tester les résultats des règles de domaine")  
   
-13. Cliquez sur **fermer** pour fermer la **tester une règle de domaine** boîte de dialogue.  
+13. Cliquez sur **Fermer** pour fermer la boîte de dialogue **tester la règle de domaine** .  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 5 : Définition du terme en fonction des relations](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Tâche 5 : Définition des relations basées sur des termes](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

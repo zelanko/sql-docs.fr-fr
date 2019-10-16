@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974407"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006069"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ Désactive le partitionnement logiciel automatique des nœuds NUMA matériels vo
 
 **\<memory_optimized> ::=**
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 ON <br>
 Active toutes les fonctionnalités de niveau instance qui font partie de la famille de fonctionnalités [Base de données en mémoire](../../relational-databases/in-memory-database.md). Cela inclut les [métadonnées tempdb à mémoire optimisée](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) et le [pool de mémoires tampons hybride](../../database-engine/configure-windows/hybrid-buffer-pool.md). Nécessite un redémarrage.
@@ -284,9 +284,11 @@ Cette instruction ne nécessite pas un redémarrage de [!INCLUDE[ssNoVersion](..
 Cette instruction ne prend pas en charge les déclencheurs DDL.  
   
 ## <a name="permissions"></a>Autorisations  
-Requiert des autorisations ALTER SETTINGS pour l'option d'affinité de processus. Requiert des autorisations ALTER SETTINGS et VIEW SERVER STATE pour les options de propriété de cluster de basculement et de journal de diagnostics, et des autorisations CONTROL SERVER pour l'option de contexte de cluster HADR.  
-  
-Nécessite l’autorisation ALTER SERVER STATE pour l’option d’extension du pool de mémoires tampons.  
+Nécessite :
+- Autorisations `ALTER SETTINGS` pour l'option d'affinité de processus.
+- Autorisations `ALTER SETTINGS` et `VIEW SERVER STATE` pour les options de propriété de cluster de basculement et de journal de diagnostic.
+- Autorisation `CONTROL SERVER` pour l’option de contexte de cluster HADR.  
+- Autorisation `ALTER SERVER STATE` pour l’option d’extension du pool de mémoires tampons.  
   
 La DLL de ressource du [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sous le compte Système local. Par conséquent, le compte Système local doit disposer d'un accès en lecture et en écriture au chemin d'accès spécifié dans l'option de journal de diagnostics.  
   
@@ -337,14 +339,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. Définition de l'affinité sur l'UC 0 sur un système qui compte deux unités centrales  
 L'exemple suivant définit l'affinité sur `CPU=0` sur un ordinateur qui compte deux unités centrales. Avant l'exécution de l'instruction suivante, le masque de bits d'affinité interne est de 00.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### <a name="e-setting-affinity-to-auto"></a>E. Définition de l'affinité sur AUTO  
 L'exemple suivant définit l'affinité sur la valeur `AUTO`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

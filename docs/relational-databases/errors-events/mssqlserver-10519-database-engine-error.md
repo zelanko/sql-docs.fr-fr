@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e23a11e1fdd2bef3e9fe646ad2b5e59d1aa03456
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068270"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006076"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -30,10 +30,10 @@ ms.locfileid: "68068270"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Texte du message|Impossible de créer le repère de plan '%.\*ls', car les indicateurs spécifiés dans **@hints** ne peuvent pas être appliqués à l’instruction spécifiée par **@stmt** ou **@statement_start_offset** . Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls', car les indicateurs spécifiés dans **\@hints** ne peuvent pas être appliqués à l'instruction spécifiée par **\@stmt** ou par **\@statement_start_offset**. Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
   
 ## <a name="explanation"></a>Explication  
-Les indicateurs spécifiés dans **@hints** ne peuvent pas être appliqués à l’instruction spécifiée par **@stmt** ou **@statement_start_offset** .  
+Les indicateurs spécifiés dans **\@hints** ne peuvent pas être appliqués à l'instruction spécifiée par **\@stmt** ou par **\@statement_start_offset**.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
 Spécifiez des indicateurs qui peuvent être appliqués à l'instruction.  

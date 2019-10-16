@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087172"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173658"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
   
 2.  Dans la boîte de dialogue **Créer une nouvelle condition** , dans la zone **Nom** , tapez **Tables de finance**.  
     1. Dans la liste **Facette** , sélectionnez **Nom en plusieurs parties**. 
-    1. Dans la boîte de dialogue **Expression**, dans la zone **Champ**, sélectionnez **@Name** , dans la zone **Opérateur**, sélectionnez **Comme** et dans la zone **Valeur**, tapez ```'fintbl%'``` pour forcer tous les noms de tables à commencer par les lettres **fintbl**.
+    1. Dans la boîte de dialogue **Expression**, dans la zone **Champ**, sélectionnez **\@Nom**, dans la zone **Opérateur**, sélectionnez **Comme** et dans la zone **Valeur**, tapez ```'fintbl%'``` pour forcer tous les noms de tables à commencer par les lettres **fintbl**.
     1. Dans la page **Description** , tapez **Les noms des tables de finance doivent commencer par fintbl**, puis cliquez sur **OK** pour créer la condition.  
 
     ![Condition Tables de finance](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

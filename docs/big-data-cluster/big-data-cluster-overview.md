@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7790c133ae9f686f2551de8744c6836ffc8ae25
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342030"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359531"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Qu’est-ce que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ?
 
@@ -90,7 +90,7 @@ Le diagramme suivant montre les composants d’un cluster Big Data pour SQL Serv
 
 ### <a id="controlplane"></a> Contrôleur
 
-Le contrôleur assure la gestion et la sécurité du cluster. Il contient le service de contrôle, le magasin de configuration et d’autres services de niveau cluster tels que Kibana, Grafana et Elasticsearch.
+Le contrôleur assure la gestion et la sécurité du cluster. Il contient le service de contrôle, le magasin de configuration et d’autres services de niveau cluster tels que Kibana, Grafana et la recherche élastique.
 
 ### <a id="computeplane"></a> Pool de calcul
 
@@ -105,7 +105,7 @@ Le pool de données est utilisé pour la persistance et la mise en cache des don
 Le pool de stockage est composé de pods de pool de stockage constitués de SQL Server sur Linux, Spark et HDFS. Tous les nœuds de stockage d’un cluster Big Data SQL Server sont membres d’un cluster HDFS.
 
 > [!TIP]
-> Pour une présentation approfondie de l’architecture et de l’installation des clusters Big Data, consultez [Atelier : Architecture Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] @ no__t-1.
+> Pour une analyse approfondie de Big Data architecture et de l’installation du cluster, consultez la page [atelier : architecture Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

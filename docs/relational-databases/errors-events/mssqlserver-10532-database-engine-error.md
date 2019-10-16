@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fa07d4adada303c9e1b2470879574f554992bf36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060757"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005989"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -30,13 +30,13 @@ ms.locfileid: "68060757"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_NO_ELIGIBLE_STMT|  
-|Texte du message|Impossible de créer le repère de plan ’%.\*ls’, car le module ou lot spécifié par **@plan_handle** ne contient pas d’instruction éligible pour un repère de plan. Indiquez une autre valeur pour **@plan_handle** .|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls', car le module ou lot spécifié par **\@plan_handle** ne contient pas d'instruction éligible pour un repère de plan. Indiquez une autre valeur pour **\@plan_handle**.|  
   
 ## <a name="explanation"></a>Explication  
-Le module ou lot spécifié par **@plan_handle** ne contient pas d’instruction éligible pour un repère de plan.  
+Le module ou lot spécifié par **\@plan_handle** ne contient pas d'instruction éligible pour un repère de plan.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Indiquez une autre valeur pour **@plan_handle** .  
+Indiquez une autre valeur pour **\@plan_handle**.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Repères de plan](~/relational-databases/performance/plan-guides.md)  

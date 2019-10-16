@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713212"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261013"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,17 +114,22 @@ Spécifiez un descripteur de plan de requête pour effacer un seul plan de requ�
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-Spécifiez le paramètre MAXDOP par défaut qui doit être utilisé pour les instructions. 0 est la valeur par défaut, et indique que la configuration du serveur doit être utilisée. Le paramètre MAXDOP défini au niveau de la base de données remplace (sauf si sa valeur est 0) le paramètre **max degree of parallelism** défini au niveau du serveur par sp_configure. Les indicateurs de requête peuvent tout de même remplacer le paramètre MAXDOP défini au niveau de la base de données afin de configurer les requêtes qui nécessitent un paramétrage différent. Tous ces paramètres sont limités par le paramètre MAXDOP défini pour le groupe de charge de travail.
+Spécifiez le **degré maximal de parallélisme (MAXDOP)** par défaut qui doit être utilisé pour les instructions. 0 est la valeur par défaut, et indique que la configuration du serveur doit être utilisée. Le paramètre MAXDOP défini au niveau de la base de données remplace (sauf si sa valeur est 0) le paramètre **max degree of parallelism** défini au niveau du serveur par sp_configure. Les indicateurs de requête peuvent tout de même remplacer le paramètre MAXDOP défini au niveau de la base de données afin de configurer les requêtes qui nécessitent un paramétrage différent. Tous ces paramètres sont limités par le degré maximal de parallélisme (MAXDOP) défini pour le [groupe de charge de travail]().
 
-Vous pouvez utiliser l'option max degree of parallelism pour limiter le nombre de processeurs à utiliser lors de l'exécution des plans parallèles. SQL Server prend en compte les plans d’exécution parallèle pour les requêtes, les opérations DDL d’index, l’insertion parallèle, la modification de colonne en ligne, la collecte de statistiques parallèle et l’alimentation des curseurs statiques et de jeu de clés.
+Vous pouvez utiliser l'option MAXDOP pour limiter le nombre de processeurs à utiliser dans une exécution de plans parallèles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en compte les plans d’exécution parallèle pour les requêtes, les opérations du langage de définition de données (DDL) d’index, l’insertion parallèle, la modification de colonne en ligne, la collecte de statistiques parallèle et l’alimentation des curseurs statiques et de jeux de clés.
+
+> [!NOTE]
+> La limite du **degré maximal de parallélisme (MAXDOP)**  est spécifiée par [tâche](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Il ne s’agit pas d’une limite par [requête](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Cela signifie que lors d’une exécution de requête parallèle, une requête unique peut générer plusieurs tâches qui sont affectées à un [planificateur](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Pour plus d’informations, consultez le [Guide de l’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md). 
 
 Pour définir cette option au niveau de l’instance, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> Dans Azure SQL Database, la configuration du **degré maximal de parallélisme** au niveau du serveur est toujours définie sur 0. MAXDOP peut être configuré pour chaque base de données, comme décrit dans cet article. Pour obtenir des recommandations sur la configuration optimale de MAXDOP, consultez la section [Ressources supplémentaires](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources).
+> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la valeur affectée à la configuration du **degré maximal de parallélisme** au niveau du serveur est toujours 0. MAXDOP peut être configuré pour chaque base de données, comme décrit dans cet article. Pour obtenir des recommandations sur la configuration optimale de MAXDOP, consultez la section [Ressources supplémentaires](#additional-resources).
 
 > [!TIP]
-> Pour définir cette option au niveau de la requête, ajoutez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.
+> Pour définir cette option au niveau de la requête, utilisez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
+> Pour ce faire, au niveau du serveur, utilisez l’[option de configuration serveur](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) du **degré maximal de parallélisme (MAXDOP)** .     
+> Pour ce faire, au niveau de la charge de travail, utilisez l’[option de configuration de groupe de charges de travail Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
 PRIMARY
 
@@ -550,13 +555,13 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 [Instructions pour les opérations d’index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## <a name="more-information"></a>Informations complémentaires
-
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [Affichages catalogue de bases de données et de fichiers](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [Options de configuration de serveur](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [Fonctionnement des opérations d’index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md)
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## <a name="more-information"></a>Informations complémentaires   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+ [Recommandations et directives pour l’option de configuration Degré maximal de parallélisme dans SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+ [Affichages catalogue de bases de données et de fichiers](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+ [Options de configuration de serveur](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+ [Fonctionnement des opérations d'index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)    
+ [Exécuter des opérations d’index en ligne](../../relational-databases/indexes/perform-index-operations-online.md)    
+ [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    

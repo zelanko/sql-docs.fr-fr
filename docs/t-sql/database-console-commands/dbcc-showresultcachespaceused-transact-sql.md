@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476305"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174656"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ La taille maximale du cache de jeu de résultats est de 1 To par base de donnée
 - toutes les 48 heures si le jeu de résultats n’a pas été utilisé.
 - lorsque le cache du jeu de résultats approche la taille maximale.
 
-Les utilisateurs peuvent vider manuellement le cache du jeu de résultats pour une base de données en désactivant la fonctionnalité de cache du jeu de résultats ou en utilisant la commande `DBCC DROPRESULTSETCACHE`.   La suspension d’une base de données ne permet pas de vider le cache du jeu de résultats.  
+Pour vider manuellement le cache des résultats d’une base de données, les utilisateurs peuvent utiliser l’une des options suivantes :
+
+- Désactiver la fonctionnalité de résultats pour la base de données
+- Exécuter `DBCC DROPRESULTSETCACHE` pendant la connexion à la base de données 
+
+La suspension d’une base de données ne permet pas de vider le cache du jeu de résultats.  
 
 ## <a name="permissions"></a>Autorisations
 

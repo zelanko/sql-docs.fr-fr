@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082400"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252174"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>Arguments  
  WITH COOKIE = @*varbinary_variable*  
- Spécifie le cookie créé dans une instruction [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) autonome correspondante. *@varbinary_variable* est **varbinary(100)** .  
+ Spécifie le cookie créé dans une instruction [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) autonome correspondante. *\@varbinary_variable* est **varbinary(100)** .  
   
 ## <a name="remarks"></a>Notes  
  REVERT peut figurer dans un module tel qu'une procédure stockée ou une fonction définie par l'utilisateur, mais aussi en tant qu'instruction autonome. À l'intérieur d'un module, REVERT s'applique uniquement aux instructions EXECUTE AS définies dans le module. Par exemple, la procédure stockée suivante exécute une instruction `EXECUTE AS` suivie d'une instruction `REVERT`.  
@@ -77,9 +77,9 @@ EXECUTE dbo.usp_myproc;
  Lorsque REVERT est une instruction autonome, elle s'applique aux instructions EXECUTE AS définies dans un traitement ou une session. REVERT n'a aucun effet si l'instruction EXECUTE AS correspondante contient la clause WITH NO REVERT. Dans ce cas, le contexte d'exécution reste en vigueur jusqu'à la suppression de la session.  
   
 ## <a name="using-revert-with-cookie"></a>Utilisation de REVERT WITH COOKIE  
- L’instruction EXECUTE AS utilisée pour définir le contexte d’exécution d’une session peut comprendre la clause facultative WITH NO REVERT COOKIE = @*varbinary_variable*. Quand cette instruction est exécutée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] passe le cookie à @*varbinary_variable*. Le contexte d’exécution défini par cette instruction ne peut être restauré vers le contexte précédent que si l’instruction REVERT WITH COOKIE = @*varbinary_variable* appelante contient la valeur *@varbinary_variable* correcte.  
+ L’instruction EXECUTE AS utilisée pour définir le contexte d’exécution d’une session peut comprendre la clause facultative WITH NO REVERT COOKIE = @*varbinary_variable*. Quand cette instruction est exécutée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] passe le cookie à @*varbinary_variable*. Le contexte d’exécution défini par cette instruction ne peut être restauré vers le contexte précédent que si l’instruction REVERT WITH COOKIE = @*varbinary_variable* appelante contient la valeur *\@varbinary_variable* correcte.  
   
- Ce mécanisme est utile dans un environnement utilisant le groupement de connexions. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données en vue de leur réutilisation par plusieurs utilisateurs finaux. Comme la valeur passée à *@varbinary_variable* n’est connue que de l’appelant de l’instruction EXECUTE AS (en l’occurrence, l’application), celui-ci peut garantir que le contexte d’exécution qu’il établit ne sera pas modifié par l’utilisateur final qui appelle l’application. Après restauration du contexte d'exécution, l'application peut changer de contexte au profit d'un autre principal.  
+ Ce mécanisme est utile dans un environnement utilisant le groupement de connexions. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données en vue de leur réutilisation par plusieurs utilisateurs finaux. Comme la valeur passée à *\@varbinary_variable* n’est connue que de l’appelant de l’instruction EXECUTE AS (en l’occurrence, l’application), celui-ci peut garantir que le contexte d’exécution qu’il établit ne sera pas modifié par l’utilisateur final qui appelle l’application. Après restauration du contexte d'exécution, l'application peut changer de contexte au profit d'un autre principal.  
   
 ## <a name="permissions"></a>Autorisations  
  Aucune autorisation n'est requise.  

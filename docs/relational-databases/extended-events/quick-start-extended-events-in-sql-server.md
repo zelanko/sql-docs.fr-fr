@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016852"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251534"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
@@ -410,7 +410,7 @@ Dans l’ **Explorateur d’objets**de SSMS, vous pouvez cliquer avec le bouton 
 Il existe d’innombrables scénarios d’utilisation efficace des événements étendus. Les articles suivants donnent des exemples de scénarios qui impliquent les verrous utilisés pendant les requêtes.
 
 
-Les scénarios spécifiques des sessions d’événements dont le but est d’évaluer des verrous sont décrits dans les articles suivants. Les articles présentent également certaines techniques avancées, telles que l’utilisation de **@dbid** et de l’instruction `EXECUTE (@YourSqlString)`dynamique :
+Les scénarios spécifiques des sessions d’événements dont le but est d’évaluer des verrous sont décrits dans les articles suivants. Les articles présentent également certaines techniques avancées, telles que l’utilisation de **\@dbid** et de l’instruction dynamique `EXECUTE (@YourSqlString)` :
 
 - [Trouver les objets comportant le plus de verrous](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Ce scénario utilise l’objet package0.histogram cible, qui traite les données d’événement brutes avant de vous les afficher.

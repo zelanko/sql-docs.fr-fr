@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161339"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252216"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -69,8 +69,7 @@ ms.locfileid: "70161339"
 > [!IMPORTANT]  
 >  Tant que le changement de contexte en faveur d'un utilisateur de base de données est en vigueur, toute tentative d'accès à des ressources situées en dehors de la base de données causera l'échec de l'instruction. Cela inclut les instructions USE *database*, les requêtes distribuées et les requêtes qui référencent une autre base de données utilisant des identificateurs en trois ou quatre parties.  
   
- **'** *name* **'**  
- Nom d'utilisateur ou de connexion valide. *name* doit être membre du rôle serveur fixe **sysadmin**, ou exister comme principal respectivement dans [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ '*name*' est un nom d'utilisateur ou de connexion valide. *name* doit être membre du rôle serveur fixe **sysadmin**, ou exister comme principal respectivement dans [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  *name* peut être spécifié sous forme de variable locale.  
   
@@ -83,10 +82,10 @@ ms.locfileid: "70161339"
   
  Pour plus d’informations sur la restauration du contexte précédent, consultez [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO * *@***varbinary_variable*  
- Spécifie que le contexte d’exécution peut être restauré vers le contexte précédent uniquement si l’instruction REVERT WITH COOKIE appelante contient la valeur * *@***varbinary_variable* correcte. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] passe le cookie à * *@***varbinary_variable*. L’option **COOKIE INTO** peut uniquement être utilisée au niveau adhoc.  
+ COOKIE INTO @*varbinary_variable*  
+ Spécifie que le contexte d’exécution peut être restauré vers le contexte précédent uniquement si l’instruction REVERT WITH COOKIE appelante contient la valeur @*varbinary_variable* correcte. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] passe le cookie à @*varbinary_variable*. L’option **COOKIE INTO** peut uniquement être utilisée au niveau adhoc.  
   
- **@** *varbinary_variable* est **varbinary(8000)** .  
+ @*varbinary_variable* est **varbinary(8000)** .  
   
 > [!NOTE]  
 >  Le paramètre **OUTPUT** de cookie est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(100)** . Les applications doivent réserver **varbinary(8000)** pour continuer à fonctionner correctement si la taille de retour des cookies augmente dans une version ultérieure.  
@@ -95,7 +94,7 @@ ms.locfileid: "70161339"
  Dans un module, il spécifie que les instructions de ce module sont exécutées dans le contexte de l'appelant du module.
 En dehors d'un module, cette instruction n'a pas d'effet.
  > [!NOTE]  
->  Cette option n’est pas disponible dans SQL DataWarehouse.  
+>  Cette option n’est pas disponible dans SQL Data Warehouse.  
   
 ## <a name="remarks"></a>Notes  
  Le changement dans le contexte d'exécution reste en vigueur jusqu'à ce que se produise l'une des actions suivantes :  

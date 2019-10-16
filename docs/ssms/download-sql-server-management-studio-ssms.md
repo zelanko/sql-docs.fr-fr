@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816803"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251394"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS est gratuit !
 
 **SSMS 18.3.1 est maintenant disponible. Il s’agit de la dernière version de *SQL Server Management Studio* en disponibilité générale qui prend en charge [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![Télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+**[Télécharger SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
 SSMS 18.3.1 est la dernière version en disponibilité générale de SSMS. Si vous avez une précédente version de SSMS 18 en disponibilité générale, l’installation de SSMS 18.3.1 la met à niveau vers 18.3.1. Si vous avez une ancienne version *en préversion* de SSMS 18.x, vous devez la désinstaller avant d’installer SSMS 18.3.1.
 
@@ -76,7 +76,7 @@ SQL Server Management Studio 18.3.1 :
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Classification des données | Ajout des informations de classification des données à l’interface utilisateur des propriétés de colonne (*Type d’informations*, *ID du type d’informations*, *Étiquette de sensibilité* et *ID de l’étiquette de sensibilité* ne sont pas exposés dans l’interface utilisateur de SSMS). |
 | IntelliSense/Éditeur | Mise à jour de la prise en charge des fonctionnalités récemment ajoutées à SQL Server 2019 (par exemple « ALTER SERVER CONFIGURATION »). |
-| Integration Services | Ajout d’un nouvel élément du menu de sélection, `Tools > Migrate to Azure > Configure Azure-enabled DTExec`, qui appelle des exécutions de packages SSIS sur Azure-SSIS Integration Runtime en tant qu’activités Exécuter le package SSIS dans des pipelines ADF. |
+| Integration Services | Ajout d’un nouvel élément du menu de sélection `Tools > Migrate to Azure > Configure Azure-enabled DTExec` qui appelle des exécutions de packages SSIS sur Azure-SSIS Integration Runtime en tant qu’activités Exécuter le package SSIS dans des pipelines ADF. |
 | SMO/Création de scripts | Ajout de la prise en charge des scripts de contrainte unique Azure SQL DW. |
 | SMO/Création de scripts | Classification des données - Ajout de la prise en charge de SQL version 10 (SQL 2008) et ultérieur.  - Ajout d’un nouvel attribut de sensibilité « rang » pour SQL version 15 (SQL 2019) et ultérieur et Azure SQL DB. |
 
