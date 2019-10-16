@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d01bb0a6d61220daa49b60dce1cb173f344d9f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076738"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278286"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "68076738"
 ## <a name="benefits-of-data-tier-applications"></a>Avantages des applications de la couche Données  
  Le cycle de vie de la plupart des applications de base de données implique le partage et l'échange par les administrateurs de bases de données et les développeurs de scripts et de notes d'intégration ad hoc pour les opérations de mise à jour et de maintenance d'application. Bien que cela soit acceptable pour un petit nombre de bases de données, cela devient rapidement ingérable dès lors que les bases de données se développent et que leur nombre, leur taille et leur complexité augmentent.  
   
- Une application DAC correspond à un outil de productivité et de gestion du cycle de vie de base de données qui permet au développement de base de données déclaratif de simplifier le déploiement et la gestion. Un développeur peut créer une base de données dans un projet de base de données de l'outil de données SQL Server, puis créer la base de données dans un DACPAC pour la transférer à un administrateur de base de données. L'administrateur peut alors déployer la DAC à l'aide de SQL Server Management Studio dans une instance de test ou de production de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Sinon, l'administrateur peut utiliser le DACPAC pour mettre à niveau une base de données déjà déployée à l'aide de SQL Server Management Studio. Pour terminer le cycle de vie, l'administrateur peut extraire la base de données dans un DACPAC et la remettre à un développeur afin de refléter les réglages de test ou de production, ou de permettre d'autres modifications de conception de base de données en réponse à des modifications de l'application.  
+ Une application DAC correspond à un outil de productivité et de gestion du cycle de vie de base de données qui permet au développement de base de données déclaratif de simplifier le déploiement et la gestion. Un développeur peut créer une base de données dans un projet SQL Server Data Tools, puis créer la base de données dans un DACPAC pour la transférer à un administrateur de base de données. L'administrateur peut alors déployer la DAC à l'aide de SQL Server Management Studio dans une instance de test ou de production de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Sinon, l'administrateur peut utiliser le DACPAC pour mettre à niveau une base de données déjà déployée à l'aide de SQL Server Management Studio. Pour terminer le cycle de vie, l'administrateur peut extraire la base de données dans un DACPAC et la remettre à un développeur afin de refléter les réglages de test ou de production, ou de permettre d'autres modifications de conception de base de données en réponse à des modifications de l'application.  
   
  L'avantage d'un déploiement piloté par une DAC par rapport à celui piloté par script est que l'outil aide l'administrateur à identifier et à valider les comportements émanant de bases de données sources et cibles différentes. Lors de mises à niveau, l'outil avertit l'administrateur si la mise à niveau peut entraîner la perte de données ; il fournit également un plan de mise à niveau. L'administrateur peut évaluer le plan, puis utiliser l'outil pour poursuivre la mise à niveau.  
   
- Les DAC prennent également en charge le contrôle de version pour aider le développeur et l’administrateur à conserver et à gérer le lignage d’une base de données par son cycle de vie.  
+ Les DAC prennent également en charge le contrôle de version pour aider le développeur et l’administrateur à conserver et à gérer la traçabilité de la base de pendant tout son cycle de vie.  
   
 ## <a name="dac-concepts"></a>Concepts DAC  
  Une DAC simplifie le développement, le déploiement et la gestion des éléments de la couche Données qui prennent en charge une application :  
@@ -43,7 +43,7 @@ ms.locfileid: "68076738"
   
 -   Pour qu’une base de données SQL Server soit traitée comme une DAC, elle doit être inscrite, soit explicitement par une opération utilisateur, soit implicitement par l’une des opérations DAC. Lorsqu'une base de données est inscrite, la version de la DAC et d'autres propriétés sont enregistrées dans le cadre des métadonnées de la base de données. Inversement, l'inscription d'une base de données peut également être annulée et les propriétés de la DAC supprimées.  
   
--   En général, les outils DAC sont capables de lire des fichiers DACPAC générés par les outils DAC de versions précédentes de SQL Server, et peuvent également déployer des fichiers DACPAC dans des versions précédentes de SQL Server. Toutefois, les outils DAC de versions antérieures ne peuvent pas lire les fichiers DACPAC générés par les outils DAC de versions ultérieures. Plus précisément :  
+-   En général, les outils DAC sont capables de lire des fichiers DACPAC générés par les outils DAC de versions précédentes de SQL Server et peuvent également déployer des fichiers DACPAC dans des versions précédentes de SQL Server. Toutefois, les outils DAC de versions antérieures ne peuvent pas lire les fichiers DACPAC générés par les outils DAC de versions ultérieures. Plus précisément :  
   
     -   Les opérations DAC sont apparues dans SQL Server 2008 R2. Outre les bases de données SQL Server 2008 R2, les outils prennent en charge la génération de fichiers DACPAC provenant de bases de données SQL Server 2008, SQL Server 2005 et SQL Server 2000.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68076738"
   
 -   Un DACPAC est un fichier Windows avec une extension .dacpac. Le fichier prend en charge un format ouvert constitué de plusieurs sections XML représentant des détails de l'origine de DACPAC, des objets de la base de données, ainsi que d'autres caractéristiques. Un utilisateur expérimenté peut décompresser le fichier à l'aide de l'utilitaire DacUnpack.exe fourni avec le produit afin d'examiner chaque section plus en détail.  
   
--   L'utilisateur doit être membre du rôle dbmanager ou disposer d'autorisations CREATE DATABASE afin de créer une base de données, notamment créer une base de données en déployant un package DAC. L'utilisateur doit être membre du rôle dbmanager, ou bénéficier d'autorisations DROP DATABASE pour pouvoir supprimer une base de données.  
+-   L'utilisateur doit être membre du rôle **dbmanager** ou disposer d'autorisations **CREATE DATABASE** afin de créer une base de données, ce qui inclut la création d’une base de données en déployant un package DAC. L'utilisateur doit être membre du rôle **dbmanager**, ou bénéficier d'autorisations **DROP DATABASE** pour pouvoir supprimer une base de données.  
   
 ## <a name="dac-tools"></a>Outils DAC  
  Un DACPAC peut être utilisé de façon transparente avec plusieurs outils fournis avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ces outils répondent aux conditions des différents utilisateurs recourant à un DACPAC comme unité d'interopérabilité.  
@@ -96,8 +96,7 @@ ms.locfileid: "68076738"
 -   **UPGRADE** : une base de données peut être mise à niveau à l’aide d’un DACPAC. La mise à niveau est prise en charge même sur les bases de données qui ne sont pas déjà inscrites en tant qu'applications de la couche Données, mais qui le sont implicitement suite à une mise à niveau.  
   
 ## <a name="bacpac"></a>BACPAC  
- Un BACPAC est un fichier Windows avec une extension .bacpac qui = encapsule le schéma et les données d’une base de données. L’utilisation principale d’un BACPAC consiste à déplacer une base de données d’un serveur vers un autre, ou de [migrer une base de données d’un serveur local vers le cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/), et à archiver une base de données existante dans un format ouvert.  
-  
+ Un BACPAC est un fichier Windows avec une extension .bacpac qui encapsule le schéma et les données d’une base de données. L’utilisation principale d’un BACPAC consiste à déplacer une base de données d’un serveur vers un autre, ou de [migrer une base de données d’un serveur local vers le cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/), et à archiver une base de données existante dans un format ouvert.  
  Tout comme le DACPAC, le format de fichier BACPAC est ouvert ; le contenu de schéma du BACPAC est identique à celui du DACPAC. Les données d’un BACPAC sont stockées au format JSON.  
   
  Les DACPAC et BACPAC sont similaires, mais ils conviennent à des scénarios différents. Le but d'un DACPAC est de capturer et de déployer le schéma, y compris de mettre à niveau une base de données existante. Un DACPAC sert essentiellement à déployer un schéma bien défini dans les environnements de développement, de test, puis de production. Il permet également d’effectuer l’opération inverse, c’est-à-dire capturer le schéma de l’environnement de production, puis l’appliquer aux environnements de test et de développement.  

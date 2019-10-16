@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077962"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278359"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ Type **hierarchyid** qui représente le nœud. Remplacez la section _oldRoot_ du
   
 **Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Utilisé pour modifier l’arborescence en déplaçant des nœuds de _oldRoot_ vers _newRoot_. GetReparentedValue est utilisé pour déplacer un nœud de hiérarchie vers un nouvel emplacement de la hiérarchie. Le type de données **hierarchyid** représente mais n’applique pas la structure hiérarchique. Les utilisateurs doivent s'assurer que la structure hierarchyid convient au nouvel emplacement. Un index unique sur le type de données **hierarchyid** peut éviter la duplication des entrées. Pour obtenir un exemple de déplacement d’une sous-arborescence entière, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Comparaison de deux emplacements de nœuds  
-L'exemple suivant montre le hierarchyid actuel d'un nœud. Il montre également ce que serait le type **hierarchyid** du nœud si vous déplaciez le nœud pour en faire un descendant du nœud **@NewParent** . Il utilise la méthode `ToString()` pour afficher les relations hiérarchiques.
+L'exemple suivant montre le hierarchyid actuel d'un nœud. Il montre également ce que serait le type **hierarchyid** du nœud si vous déplaciez le nœud pour en faire un descendant du nœud **\@NewParent**. Il utilise la méthode `ToString()` pour afficher les relations hiérarchiques.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

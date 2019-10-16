@@ -1,7 +1,7 @@
 ---
 title: Définir ou changer le classement de la base de données | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,19 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3411477bbb183c7b9585f0cb93afde0b2bfebc6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140846"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289344"
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique explique comment définir et modifier le classement de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
  
 > [!NOTE]
-> Le classement ne peut pas être modifié une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Le classement ne peut pas être modifié avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ne peut être modifié qu’à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
  **Dans cette rubrique**  
   
@@ -51,30 +51,28 @@ ms.locfileid: "68140846"
   
 -   Si le classement spécifié ou le classement utilisé par l'objet référencé utilise une page de codes non gérée par Windows, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] affiche une erreur.  
 
--   Le classement ne peut pas être modifié une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+-   Le classement ne peut pas être modifié avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ne peut être modifié qu’à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Vous trouverez les noms des classements pris en charge dans [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) et [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). Vous pouvez également utiliser la fonction système [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
+Vous trouverez les noms des classements pris en charge dans [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) et [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). Vous pouvez également utiliser la fonction système [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
--   Lorsque vous modifiez le classement d'une base de données, vous changez les éléments suivants :  
+Lorsque vous modifiez le classement d'une base de données, vous changez les éléments suivants :  
   
-    -   Toutes les colonnes **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** présentes dans les tables système sont modifiées en fonction du nouveau classement.  
+-   Toutes les colonnes **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** présentes dans les tables système sont modifiées en fonction du nouveau classement.  
   
-    -   Tous les paramètres **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** existants et les valeurs de retour scalaires destinés aux procédures stockées et aux fonctions définies par l’utilisateur sont modifiés en fonction du nouveau classement.  
+-   Tous les paramètres **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** existants et les valeurs de retour scalaires destinés aux procédures stockées et aux fonctions définies par l’utilisateur sont modifiés en fonction du nouveau classement.  
   
-    -   Les types de données système **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** et tous les types de données définis par l’utilisateur sur la base de ces types de données système sont modifiés en fonction du nouveau classement par défaut.  
+-   Les types de données système **char**, **varchar**, **text**, **nchar**, **nvarchar**ou **ntext** et tous les types de données définis par l’utilisateur sur la base de ces types de données système sont modifiés en fonction du nouveau classement par défaut.  
   
--   Vous pouvez modifier le classement de tous les objets créés dans une base de données utilisateur à l'aide de la clause COLLATE de l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Cette instruction ne modifie pas le classement des colonnes dans les tables définies par l'utilisateur existantes. Celles-ci peuvent être modifiées à l'aide de la clause COLLECT de l'instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+Vous pouvez modifier le classement de tous les objets créés dans une base de données utilisateur à l'aide de la clause `COLLATE` de l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Cette instruction **ne modifie pas** le classement des colonnes dans les tables définies par l'utilisateur existantes. Celles-ci peuvent être modifiées à l'aide de la clause `COLLATE` de l'instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- CREATE DATABASE  
- Nécessite l’autorisation CREATE DATABASE sur la base de données **master** , ou l’autorisation ALTER ANY DATABASE ou VIEW ANY DEFINITION.  
+ La création d’une base de données requiert l’autorisation `CREATE DATABASE` dans la base de données **MASTER** ou bien l’autorisation `CREATE ANY DATABASE` ou `ALTER ANY DATABASE`.  
   
- ALTER DATABASE  
- Nécessite l'autorisation ALTER sur la base de données.  
+ La modification du classement d’une base de données existante, requiert l’autorisation `ALTER` sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -113,7 +111,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-database-collation"></a>Pour modifier le classement de la base de données  
@@ -136,10 +133,9 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

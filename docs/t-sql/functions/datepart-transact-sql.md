@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119142"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278194"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ Chaque *datepart* et ses abréviations retournent la même valeur.
   
 La valeur retournée dépend de l’environnement de langue défini à l’aide de [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) et de l’[option de configuration de serveur Configurer la langue par défaut](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) de la connexion. La valeur retournée dépend de [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) si *date* est un littéral de chaîne de certains formats. SET DATEFORMAT ne change pas la valeur de retour quand la date est une expression de colonne d’un type de données de date ou d’heure.
   
-Le tableau suivant répertorie tous les arguments *datepart*, avec les valeurs retournées correspondantes, pour l’instruction `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L’argument *date* a le type de données **datetimeoffset(7)** . Les deux dernières positions de la valeur de retour **nanosecond** *datepart* sont toujours `00` et cette valeur a une échelle de 9 :
+Le tableau suivant répertorie tous les arguments *datepart*, avec les valeurs retournées correspondantes, pour l’instruction `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L’argument *date* a le type de données **datetimeoffset(7)**. Les deux dernières positions de la valeur de retour **nanosecond** *datepart* sont toujours `00` et cette valeur a une échelle de 9 :
 
 **.123456700**
   
@@ -150,7 +150,7 @@ est utilisée comme valeur par défaut. Après avoir défini DATEFIRST, utilisez
 ## <a name="year-month-and-day-datepart-arguments"></a>Arguments des parties de date année, mois et jour  
 Les valeurs retournées pour DATEPART (**year**, *date*), DATEPART (**month**, *date*) et DATEPART (**day**, *date*) sont les mêmes que celles retournées par les fonctions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) et [DAY](../../t-sql/functions/day-transact-sql.md), respectivement.
   
-## <a name="isoweek-datepart"></a>Partie de date ISO_WEEK  
+## <a name="iso_week-datepart"></a>Partie de date ISO_WEEK  
 ISO 8601 inclut le système semaine-date ISO, un système de numérotation pour les semaines. Chaque semaine est associée à l'année dans laquelle jeudi se produit. Par exemple, la semaine 1 de 2004 (2004W01) couvrait la période du lundi 29 décembre 2003 au dimanche 4 janvier 2004. En général, les pays européens utilisent ce style de numérotation, ce qui n’est normalement pas le cas des autres pays.
 
 Remarque : Le numéro de semaine le plus élevé dans une année peut être 52 ou 53.
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-Si l’argument *date* est spécifié comme variable ou colonne de table, et que cette variable ou colonne n’a pas l’argument *datepart* spécifié, `DATEPART` retourne l’erreur 9810. Dans l’exemple suivant, la variable *@t* a le type de données**time**. L’exemple échoue car la partie année de la date n’est pas valide pour le type de données **time** :
+Si l’argument *date* est spécifié comme variable ou colonne de table, et que cette variable ou colonne n’a pas l’argument *datepart* spécifié, `DATEPART` retourne l’erreur 9810. Dans l’exemple suivant, la variable *\@t* a le type de données **time**. L’exemple échoue car la partie année de la date n’est pas valide pour le type de données **time** :
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -210,7 +210,7 @@ SELECT DATEPART(microsecond, '00:00:01.1234567'); -- Returns 123456
 SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 `DATEPART` peut être utilisé dans la liste de sélection et les clauses WHERE, HAVING, GROUP BY et ORDER BY.
   
 DATEPART caste implicitement des littéraux de chaîne en type **datetime2** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cela signifie que DATENAME ne prend pas en charge le format YDM lorsque la date est transmise en tant que chaîne. Vous devez caster explicitement la chaîne en type **datetime** ou **smalldatetime** pour utiliser le format AJM.

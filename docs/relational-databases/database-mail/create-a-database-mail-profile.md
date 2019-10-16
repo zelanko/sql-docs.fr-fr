@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 789d56e63572f6744055bb78e819e69e2e15c824
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211246"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278311"
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,35 +93,35 @@ ms.locfileid: "70211246"
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*nom_de_profil*'  
+     *\@profile_name* = '*nom du profil*'  
   
-     *@description* = '*description*'  
+     *\@description* = '*description*'  
   
-     où *@profile_name* est le nom du profil, et *@description* est la description du profil. Ce paramètre est facultatif.  
+     où *\@profile_name* est le nom du profil, et *\@description* est la description du profil. Ce paramètre est facultatif.  
   
 -   Pour chaque compte, exécutez la procédure stockée [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) comme suit :  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*nom_de_profil*'  
+     *\@profile_name* = '*nom du profil*'  
   
-     *@account_name* = '*nom_de_compte*'  
+     *\@account_name* = '*nom du compte*'  
   
-     *@sequence_number* = '*numéro_de_séquence_du_compte_dans_le_profil* »  
+     *\@sequence_number* = '*numéro de séquence du compte dans le profil.* »  
   
-     où *@profile_name* est le nom du profil, et *@account_name* est le nom du compte à ajouter au profil, et *@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
+     où *\@profile_name* est le nom du profil, *\@account_name* est le nom du compte à ajouter au profil, et *\@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
   
 -   Octroyez une autorisation d'accès au profil à chaque rôle de base de données ou à chaque utilisateur qui enverra des messages électroniques via ce profil. Pour ce faire, exécutez la procédure stockée [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) comme suit :  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*nom_de_profil*'  
+     *\@profile_name* = '*nom du profil*'  
   
-     *@ principal_name* = ’*nom_de_l’utilisateur_de_base_de_données_ou_rôle*’  
+     *\@ principal_name* = '*nom de l’utilisateur ou du rôle de la base de données*'  
   
-     *@is_default* = '*état_du_profil_par_défaut* '  
+     *\@is_default* = '*état du profil par défaut*'  
   
-     où *@profile_name* est le nom du profil, et *@principal_name* est le nom du rôle ou de l’utilisateur de base de données, et *@is_default* détermine si ce profil est ou non le paramètre par défaut pour le rôle ou l’utilisateur de base de données.  
+     où *\@profile_name* est le nom du profil, *\@principal_name* le nom du rôle ou de l’utilisateur de la base de données et *\@is_default* détermine si ce profil est ou non le paramètre par défaut pour le rôle ou l’utilisateur de la base de données.  
   
  L'exemple suivant crée un compte et un profil privé de messagerie de base de données, puis ajoute le compte au profil et octroie au rôle de base de données **DBMailUsers** dans la base de données **msdb** l'accès à ce profil.  
   
@@ -161,35 +161,35 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*nom_de_profil*'  
+     *\@profile_name* = '*nom du profil*'  
   
-     *@description* = '*description*'  
+     *\@description* = '*description*'  
   
-     où *@profile_name* est le nom du profil, et *@description* est la description du profil. Ce paramètre est facultatif.  
+     où *\@profile_name* est le nom du profil, et *\@description* est la description du profil. Ce paramètre est facultatif.  
   
 -   Pour chaque compte, exécutez la procédure stockée [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) comme suit :  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*nom_de_profil*'  
+     *\@profile_name* = '*nom du profil*'  
   
-     *@account_name* = '*nom_de_compte*'  
+     *\@account_name* = '*nom du compte*'  
   
-     *@sequence_number* = '*numéro_de_séquence_du_compte_dans_le_profil* »  
+     *\@sequence_number* = '*numéro de séquence du compte dans le profil.* »  
   
-     où *@profile_name* est le nom du profil, et *@account_name* est le nom du compte à ajouter au profil, et *@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
+     où *\@profile_name* est le nom du profil, *\@account_name* est le nom du compte à ajouter au profil, et *\@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
   
 -   Pour accorder un accès public, exécutez la procédure stockée [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) comme suit :  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*nom_de_profil*'  
+     *\@profile_name* = '*nom du profil*'  
   
-     *@ principal_name* = '**public** ou **0**'  
+     *\@ principal_name* = '**public** ou **0**'  
   
-     *@is_default* = '*état_du_profil_par_défaut* '  
+     *\@is_default* = '*état du profil par défaut*'  
   
-     où *@profile_name* est le nom du profil, et *@principal_name* indique qu’il s’agit d’un profil public, et *@is_default* détermine si ce profil est ou non le paramètre par défaut pour le rôle ou l’utilisateur de base de données.  
+     où *\@profile_name* est le nom du profil, *\@principal_name* indique s’il s’agit d’un profil public, et *\@is_default* détermine si ce profil est ou non le paramètre par défaut pour le rôle ou l’utilisateur de base de données.  
   
  L'exemple suivant crée un compte et un profil privé de messagerie de base de données, puis ajoute le compte au profil et octroie l'accès public au profil.  
   

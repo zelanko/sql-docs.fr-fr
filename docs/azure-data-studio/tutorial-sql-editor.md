@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959013"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278246"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azur
 
    ![Widget de recherche rapide](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Modifiez la colonne **Email** de la première ligne, saisissez *orlando0@adventure-works.com* , puis appuyez sur **Entrée** pour enregistrer la modification.
+1. Modifiez la colonne **Email** de la première ligne, saisissez *orlando0\@adventure-works.com*, puis appuyez sur **Entrée** pour enregistrer la modification.
 
    ![modifier les données](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ La procédure stockée est maintenant créée, et le volet **RESULTS** affiche l
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Utiliser l’enregistrement des résultats de la requête au format JSON pour tester la procédure stockée setCustomer
 
-La procédure stockée *setCustomer* créée dans la section précédente nécessite que les données JSON soient passées dans le paramètre *@json_val* . Cette section montre comment obtenir du JSON correctement mis en forme à transmettre au paramètre afin de pouvoir tester la procédure stockée.
+La procédure stockée *setCustomer* créée dans la section précédente nécessite que les données JSON soient passées dans le paramètre *\@json_val*. Cette section montre comment obtenir du JSON correctement mis en forme à transmettre au paramètre afin de pouvoir tester la procédure stockée.
 
 1. Dans le volet **SERVERS**, cliquez avec le bouton droit sur *dbo.Customers*, puis cliquez sur **SELECT TOP 1000 Rows**.
 

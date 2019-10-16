@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986659"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251297"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Utilisation du magasin de requêtes avec l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Toutefois, il existe quelques aspects spécifiques que les utilisateurs doivent 
   
 -   Lorsque le magasin de requêtes est activé, les requêtes, les plans et les statistiques de compilation sont collectées par défaut. Toutefois, la collecte de statistiques d’exécution n’est pas activée, sauf si vous l’activez explicitement avec [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   Lorsque vous attribuez la valeur 0 à *@new_collection_value* , le magasin de requêtes arrête de collecter les statistiques d’exécution pour la procédure concernée ou pour l’intégralité de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Lorsque vous attribuez la valeur 0 à *\@new_collection_value*, le magasin de requêtes arrête de collecter les statistiques d’exécution pour la procédure concernée ou pour l’intégralité de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   La valeur configurée avec [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) n’est pas rendue persistante. Veillez à vérifier et configurer à nouveau la collecte de statistiques après le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -134,7 +134,7 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)   

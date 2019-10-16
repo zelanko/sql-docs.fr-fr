@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988141"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278253"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur SQL Server sur Docker
 
@@ -25,6 +25,9 @@ Cet article explique comment configurer et utiliser [l’image de conteneur mssq
 
 > [!NOTE]
 > Cet article se concentre spécifiquement sur l’utilisation de l’image mssql-server-linux. L’image Windows n’est pas traitée, mais vous pouvez obtenir plus d’informations dans la [page du Hub Docker mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+
+> [!IMPORTANT]
+> Avant de choisir d’exécuter un conteneur SQL Server pour les cas d’utilisation de production, consultez notre [stratégie de support pour les conteneurs SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) afin de vérifier que vous êtes en cours d’exécution sur une configuration prise en charge.
 
 ## <a name="pull-and-run-the-container-image"></a>Extraire et exécuter l’image conteneur
 
@@ -536,7 +539,7 @@ Sur Windows, vérifiez que vous lancez PowerShell ou votre invite de commandes e
 
 Si le conteneur SQL Server ne parvient pas à s’exécuter, essayez les tests suivants :
 
-- Si vous recevez une erreur telle que **'failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.'** , vous essayez de mapper le port de conteneur 1433 à un port qui est déjà utilisé. Cela peut se produire si vous exécutez SQL Server localement sur l’ordinateur hôte. Cela peut également se produire si vous démarrez deux conteneurs SQL Server et que vous essayez de les mapper tous les deux sur le même port hôte. Dans ce cas, utilisez le paramètre `-p` pour mapper le port de conteneur 1433 sur un port d’hôte différent. Par exemple : 
+- Si vous recevez une erreur telle que **'failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.'**, vous essayez de mapper le port de conteneur 1433 à un port qui est déjà utilisé. Cela peut se produire si vous exécutez SQL Server localement sur l’ordinateur hôte. Cela peut également se produire si vous démarrez deux conteneurs SQL Server et que vous essayez de les mapper tous les deux sur le même port hôte. Dans ce cas, utilisez le paramètre `-p` pour mapper le port de conteneur 1433 sur un port d’hôte différent. Par exemple : 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

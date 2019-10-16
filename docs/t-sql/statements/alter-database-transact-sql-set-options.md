@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952751"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251356"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -53,7 +53,7 @@ Dans la ligne suivante, sélectionnez le nom du produit qui vous intéresse. Cec
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**\*_ SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -300,7 +300,7 @@ CURRENT
 
 Exécute l’action dans la base de données actuelle. `CURRENT` n’est pas pris en charge pour toutes les options dans tous les contextes. Si `CURRENT` échoue, fournissez le nom de la base de données.
 
-**\<accelerated_database_recovery> ::=**         
+**\<accelerated_database_recovery> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Active la [récupération de base de données accélérée](../../relational-databases/accelerated-database-recovery-management.md) pour chaque base de données. ADR est défini par défaut sur OFF dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. À l’aide de cette syntaxe, vous pouvez choisir de désigner un groupe de fichiers spécifique pour les données du magasin de versions persistantes. Si aucun groupe de fichiers n’est spécifié, le magasin de versions persistantes est stocké dans le groupe de fichiers PRIMARY. Pour obtenir des exemples et des informations supplémentaires, consultez [Récupération de base de données accélérée](../../relational-databases/accelerated-database-recovery-management.md).
@@ -405,7 +405,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne `is_a
 
 Pour plus d’informations décrivant quand utiliser des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Options des statistiques » dans [Statistiques](../../relational-databases/statistics/statistics.md#statistics-options).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)])
 
 Active ou désactive l’option `FORCE_LAST_GOOD_PLAN` [Optimisation automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -419,7 +419,7 @@ S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ss
 OFF        
 Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] indique les régressions des performances de requêtes potentielles dues à des changements de plan de requête dans la vue [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Toutefois, ces recommandations ne sont pas appliquées automatiquement. Les utilisateurs peuvent superviser les recommandations actives et résoudre les problèmes identifiés en appliquant les scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] qui sont montrés dans la vue. La valeur par défaut est OFF.
 
-**\<change_tracking_option> ::=**         
+**\<change_tracking_option> ::=**        
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Pour des exemples, consultez la section « Exemples » plus loin dans cet article.
@@ -444,7 +444,7 @@ La période de conservation par défaut est **2 jours**. La période de rétent
 OFF        
 Désactive le suivi des modifications pour la base de données. Désactivez le suivi des modifications sur toutes les tables avant de le désactiver sur la base de données.
 
-**\<containment_option> ::=**         
+**\<containment_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle des options de la relation contenant-contenu de la base de données.
@@ -488,12 +488,12 @@ Le curseur n'est libéré implicitement qu'au moment de la déconnexion. Pour pl
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `is_local_cursor_default` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsLocalCursorsDefault` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<database_mirroring>**         
+**\<database_mirroring>**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Pour une description des arguments, voir [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
 
-**\<date_correlation_optimization_option> ::=**         
+**\<date_correlation_optimization_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle l'option date_correlation_optimization.
@@ -534,7 +534,7 @@ Quand le chiffrement est activé au niveau de la base de données, tous les grou
 
 Vous pouvez voir l’état du chiffrement de la base de données et l’état de l’analyse du chiffrement en utilisant la vue de gestion dynamique [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_state_option> ::=**         
+**\<db_state_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle l'état de la base de données.
@@ -598,7 +598,7 @@ Tous les utilisateurs qui bénéficient des autorisations appropriées peuvent s
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `user_access` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `UserAccess` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<delayed_durability_option> ::=**         
+**\<delayed_durability_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle si les transactions sont validées de manière entièrement durable ou durable différée.
@@ -612,7 +612,7 @@ Toutes les transactions suivant SET ALLOWED sont soit entièrement durables, soi
 FORCED        
 Toutes les transactions suivant SET FORCED sont durables différées. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
-**\<external_access_option> ::=**         
+**\<external_access_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle si des ressources externes, par exemple des objets d'une autre base de données, peuvent accéder à la base de données.
@@ -676,7 +676,7 @@ TWO_DIGIT_YEAR_CUTOFF
 
 Spécifie un entier compris entre 1 753 et 9 999 qui représente l'année de coupure permettant d'interpréter les années à deux chiffres comme des années à quatre chiffres. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.
 
-**\<FILESTREAM_option> ::=**         
+**\<FILESTREAM_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle les paramètres des FileTables.
@@ -691,15 +691,15 @@ Les données FILESTREAM dans les FileTables de cette base de données peuvent ê
 FULL        
 Active l’accès non transactionnel complet aux données FILESTREAM dans les FileTables.
 
-DIRECTORY_NAME = *\<directory_name>*         
+DIRECTORY_NAME = *\<directory_name>*        
 Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous les noms de répertoire au niveau de la base de données dans cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement. Cette option doit être définie avant de créer un FileTable dans cette base de données.
 
-**\<HADR_options> ::=**         
+**\<HADR_options> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Voir [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
-**\<mixed_page_allocation_option> ::=**         
+**\<mixed_page_allocation_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle si la base de données peut créer des pages initiales à l’aide d’une extension mixte pour les huit premières pages d’une table ou d’un index.
@@ -726,7 +726,7 @@ FORCED
 
 La valeur actuelle de cette option peut être déterminée en examinant la colonne `is_parameterization_forced column` dans la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-<a name="query-store"></a> **\<query_store_options> ::=**         
+<a name="query-store"></a> **\<query_store_options> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 ON | **OFF** | CLEAR [ ALL ]        
@@ -802,7 +802,7 @@ QUERY_CAPTURE_MODE est de type **nvarchar**.
 max_plans_per_query        
 Définit le nombre maximal de plans gérés pour chaque requête. La valeur par défaut est 200. MAX_PLANS_PER_QUERY est de type **int**.
 
-**\<query_capture_policy_option_list> :: =**         
+**\<query_capture_policy_option_list> :: =**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
 
 Contrôle les options de stratégie de capture du magasin des requêtes. Sauf pour STALE_CAPTURE_POLICY_THRESHOLD, ces options définissent dans la valeur de la durée de validité de la stratégie de capture les conditions OR qui doivent intervenir pour que les requêtes soient capturées.
@@ -819,7 +819,7 @@ Définit le temps UC de compilation écoulé total utilisé par une requête pen
 TOTAL_EXECUTION_CPU_TIME_MS        
 Définit le temps UC d’exécution écoulé total utilisé par une requête pendant la période d’évaluation. La valeur par défaut est 100 ; ainsi, pour la durée de validité par défaut de la stratégie de capture, une requête doit avoir un total d’au moins 100 ms de temps processeur écoulé pendant l’exécution dans une même journée pour devenir persistante dans le Magasin des requêtes. TOTAL_EXECUTION_CPU_TIME_MS est de type **int**.
 
-**\<recovery_option> ::=**         
+**\<recovery_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle les options de récupération de base de données et la vérification des erreurs d'E/S disque.
@@ -888,7 +888,7 @@ Pour plus d’informations sur les messages d’erreur 823, 824 et 825, consulte
 
 Vous pouvez déterminer la valeur actuelle de cette option en consultant la colonne `page_verify_option` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété `IsTornPageDetectionEnabled` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<remote_data_archive_option> ::=**         
+**\<remote_data_archive_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Active ou désactive Stretch Database pour la base de données. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
@@ -922,7 +922,7 @@ Vous pouvez uniquement désactiver Stretch Database pour une base de données un
 
 La désactivation de Stretch ne supprime pas la base de données distante. Pour supprimer la base de données distante, supprimez-la en utilisant le portail Azure.
 
-**\<service_broker_option> ::=**         
+**\<service_broker_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle les options [!INCLUDE[ssSB](../../includes/sssb-md.md)] suivantes : active ou désactive la remise de messages, définit un nouvel identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou définit les priorités de conversation sur ON ou OFF.
@@ -1149,7 +1149,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne `is_r
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `is_recursive_triggers_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété `IsRecursiveTriggersEnabled` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<target_recovery_time_option> ::=**         
+**\<target_recovery_time_option> ::=**        
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est **1 minute**, ce qui signifie que la base de données utilise des points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.
@@ -1383,7 +1383,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -1632,7 +1632,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne `is_a
 
 Pour plus d’informations décrivant quand utiliser des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Options des statistiques » dans [Statistiques](../../relational-databases/statistics/statistics.md#statistics-options).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**        
 **S’applique à** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 Contrôle les options automatiques pour [Optimisation automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -2180,7 +2180,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -2410,7 +2410,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne is_au
 
 Pour plus d’informations sur l’utilisation des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**        
 **S’applique à** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 Active ou désactive l’option `FORCE_LAST_GOOD_PLAN` [Optimisation automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -2780,7 +2780,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne `is_r
 
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est **1 minute**, ce qui signifie que la base de données utilise des points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }        
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }        
 *target_recovery_time*        
 Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de sinistre.
 
@@ -2888,7 +2888,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -3018,7 +3018,7 @@ Désactive le magasin des requêtes. OFF est la valeur par défaut.
 > [!NOTE]
 > Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vous devez exécuter `ALTER DATABASE SET QUERY_STORE` à partir de la base de données utilisateur. L’exécution de l’instruction à partir d’une autre instance d’entrepôt de données n’est pas prise en charge.
 
-**<result_set_caching_option> ::=**         
+**<result_set_caching_option> ::=**        
 **S’applique à** : Azure SQL Data Warehouse (préversion)
 
 Contrôle si le résultat de la requête est mis en cache dans la base de données.
@@ -3029,18 +3029,36 @@ ON
 Indique que les jeux de résultats de requête retournés à partir de cette base de données seront mis en cache dans le stockage Azure SQL Data Warehouse.
 
 OFF        
-Indique que les jeux de résultats de requête retournés à partir de cette base de données ne seront pas mis en cache dans le stockage Azure SQL Data Warehouse. Les utilisateurs peuvent indiquer si une requête a été exécutée avec une correspondance dans le cache de résultats ou absence dans le cache en interrogeant sys.pdw_request_steps avec un request_id spécifique.   S’il existe une correspondance dans le cache, le résultat de la requête aura une seule étape avec les détails suivants :
+Indique que les jeux de résultats de requête retournés à partir de cette base de données ne seront pas mis en cache dans le stockage Azure SQL Data Warehouse. 
 
-|**Nom de colonne** |**Opérateur** |**Value** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-commande|Correspond à|%DWResultCacheDb%|
-| | |
+### <a name="remarks"></a>Notes 
+Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. 
 
-### <a name="remarks"></a>Notes
-Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne, is_result_set_caching_on, est introduite dans [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) pour montrer le paramètre du cache de résultats pour une base de données.  
+Exécutez cette commande pour vérifier la configuration de la mise en cache de l’ensemble des résultats d’une base de données.  Si la mise en cache des résultats est activée, is_result_set_caching_on retourne 1.
+
+```sql
+
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
+
+```
+
+Exécutez cette commande pour vérifier si une requête a été exécutée avec une correspondance ou un échec dans le cache des résultats.  En cas de correspondance dans le cache, result_cache_hit retourne 1. 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
+
+Une fois que la mise en cache du jeu de résultats est activée pour une base de données, les résultats sont mis en cache pour toutes les requêtes jusqu’à ce que le cache soit plein, à l’exception des requêtes suivantes :
+
+- Requêtes utilisant des fonctions non déterministes telles que DateTime.Now() 
+- Requêtes utilisant des fonctions définies par l'utilisateur
+- Requêtes retournant des données avec une taille de ligne supérieure à 64 Ko   
+
+Les requêtes avec des jeux de résultats volumineux (par exemple, plus d’un million de lignes) peuvent accuser des performances plus lentes durant la première exécution au moment de la création du cache de résultats.
 
 Le jeu de résultats mis en cache est réutilisé pour une requête si toutes les conditions suivantes sont remplies :
 
@@ -3048,11 +3066,8 @@ Le jeu de résultats mis en cache est réutilisé pour une requête si toutes le
 1. Une correspondance exacte existe entre la nouvelle requête et la requête précédente ayant généré le cache du jeu de résultats.
 1. Aucun changement au niveau des données ou du schéma n’est signalé dans les tables à partir desquelles le jeu de résultats mis en cache a été généré.  
 
-Une fois que la mise en cache du jeu de résultats est activée pour une base de données, les résultats sont mis en cache pour toutes les requêtes jusqu’à ce que le cache soit plein, à l’exception des requêtes qui utilisent des fonctions non déterministes, comme DateTime.Now(), et des requêtes qui retournent des données avec une taille de ligne supérieure à 64 Ko.   
 
-Les requêtes avec des jeux de résultats volumineux (par exemple, plus d’un million de lignes) peuvent accuser des performances plus lentes durant la première exécution au moment de la création du cache de résultats.
-
-**<snapshot_option> ::=**         
+**<snapshot_option> ::=**        
 **S’applique à** : Azure SQL Data Warehouse (préversion)
 
 Contrôle le niveau d’isolation des transactions d’une base de données.
@@ -3065,7 +3080,7 @@ Active l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
 OFF        
 Désactive l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes 
 Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`. La définition de READ_COMMITTED_SNAPSHOT sur ON ou sur OFF pour une base de données utilisateur entraîne la fermeture de toutes les connexions ouvertes à cette base de données. Vous pouvez effectuer cette modification pendant la fenêtre de maintenance de la base de données ou attendre qu’il n’existe plus de connexion active à la base de données, à l’exception de la connexion exécutant la commande ALTER DATABASE.  Il n'est pas nécessaire que la base de données soit en mode mono-utilisateur. La modification du paramètre READ_COMMITTED_SNAPSHOT au niveau de la session n’est pas prise en charge.  Pour vérifier ce paramètre pour une base de données, vérifiez la colonne is_read_committed_snapshot_on dans sys. databases.
 
 Dans une base de données avec la fonction READ_COMMITTED_SNAPSHOT activée, les requêtes peuvent avoir des performances plus lentes en raison de l’analyse des versions si plusieurs versions de données sont présentes. Les transactions longues peuvent également entraîner une augmentation de la taille de la base de données. Ce problème se produit s’il existe des modifications de données effectuées par ces transactions qui bloquent le nettoyage de la version.  
