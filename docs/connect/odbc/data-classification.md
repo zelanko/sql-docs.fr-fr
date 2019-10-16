@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264002"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041134"
 ---
 # <a name="data-classification"></a>Classification des données
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ Pour plus d’informations sur la façon d’attribuer une classification aux co
 Le pilote Microsoft ODBC 17,2 permet la récupération de ces métadonnées via SQLGetDescField à l’aide de l’identificateur de champ SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Format
-SQLGetDescField a la syntaxe suivante:
+SQLGetDescField a la syntaxe suivante :
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -57,39 +57,39 @@ SQLRETURN SQLGetDescField(
  *BufferLength*  
  Entrée Longueur de la mémoire tampon de sortie en octets
 
- *StringLengthPtr* Sortie Pointeur vers la mémoire tampon dans laquelle retourner le nombre total d’octets disponibles à retourner dans *ValuePtr*.
+ *StringLengthPtr* [Output] pointeur vers la mémoire tampon dans laquelle retourner le nombre total d’octets disponibles à retourner dans *ValuePtr*.
  
 > [!NOTE]
 > Si la taille de la mémoire tampon est inconnue, elle peut être déterminée en appelant SQLGetDescField avec *ValuePtr* comme null et en examinant la valeur de *StringLengthPtr*.
  
-Si les informations de classification des données ne sont pas disponibles, une erreur de champ de descripteur *non valide* est retournée.
+Si les informations de classification des données ne sont pas disponibles, une erreur de *champ de descripteur non valide* est retournée.
 
-Lors d’un appel réussi à SQLGetDescField, la mémoire tampon vers laquelle pointe *ValuePtr* contient les données suivantes:
+Lors d’un appel réussi à SQLGetDescField, la mémoire tampon vers laquelle pointe *ValuePtr* contient les données suivantes :
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt` et`cc cc` sont des entiers multioctets, qui sont stockés avec l’octet le moins significatif à l’adresse la plus basse.
+> `nn nn`, `tt tt` et `cc cc` sont des entiers multioctets, qui sont stockés avec l’octet le moins significatif à l’adresse la plus basse.
 
-*`sensitivitylabel`* et *`informationtype`* sont tous deux de la forme
+*`sensitivitylabel`* et *`informationtype`* se présentent sous la forme
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* est de la forme
+*`columnsensitivity`* se présente sous la forme
 
  `nn nn [n sensitivityprops]`
 
-Pour chaque colonne *(c)* , *n* 4 octets *`sensitivityprops`* sont présents:
+Pour chaque colonne *(c)* , *n* *@no__t de 4 octets-3* sont présents :
 
  `ss ss tt tt`
 
-s-index dans le *`sensitivitylabels`* tableau, `FF FF` s’il n’est pas étiqueté
+s-index dans le tableau *`sensitivitylabels`* , `FF FF` s’il n’est pas étiqueté
 
 index t dans le tableau *`informationtypes`* , `FF FF` s’il n’est pas étiqueté
 
 
 <br><br>
-Le format des données peut être exprimé sous la forme des Pseudo-structures suivantes:
+Le format des données peut être exprimé sous la forme des Pseudo-structures suivantes :
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Exemple de code
-Application de test qui montre comment lire les métadonnées de classification des données. Sur Windows, il peut être compilé `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` à l’aide de et exécuté avec une chaîne de connexion, et une requête SQL (qui retourne des colonnes classifiées) en tant que paramètres:
+Application de test qui montre comment lire les métadonnées de classification des données. Sur Windows, il peut être compilé à l’aide de `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` et exécuté avec une chaîne de connexion, et une requête SQL (qui retourne des colonnes classifiées) en tant que paramètres :
 
 ```
 #ifdef _WIN32
@@ -241,5 +241,26 @@ int main(int argc, char **argv)
     }
     return 0;
 }
+```
+
+## <a name="bkmk-version"></a>Version prise en charge
+Le pilote Microsoft ODBC 17,2 permet d’extraire les informations de classification des données via `SQLGetDescField` si `FieldIdentifier` est défini sur `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
+
+À partir de Microsoft ODBC Driver 17.4.1.1 il est possible de récupérer la version de classification des données prise en charge par un serveur via `SQLGetDescField` à l’aide de l’identificateur de champ `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). Dans 17.4.1.1, la version de classification des données prise en charge est définie sur « 2 ».
+
+ 
+
+À partir de 17.4.2.1, vous avez introduit la version par défaut de la classification des données qui a la valeur « 1 » et le pilote de version signale à SQL Server comme étant pris en charge. Nouvel attribut de connexion `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) peut permettre à l’application de modifier la version prise en charge de la classification des données de « 1 » jusqu’à la valeur maximale prise en charge.  
+
+Exemple : 
+
+Pour définir la version, cet appel doit être effectué juste avant l’appel de SQLConnect ou SQLDriverConnect :
+```
+ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
+```
+
+La valeur de la version actuellement prise en charge de la classification des données peut être retirved via l’appel SQLGetConnectAttr : 
+```
+ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
 

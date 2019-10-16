@@ -70,7 +70,8 @@ ms.locfileid: "70874414"
   
      À Taïwan, il est plus courant de voir le chinois traditionnel avec l’ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     Les autres régions (comme Hong Kong et Macao) utilisent également le chinois traditionnel. Pour les classements, à Macao (R.A.S.) il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao, Chinese_Traditional_Stroke_Count_100 (sur SQL Server 2008 et versions ultérieures) est utilisé assez souvent.  
+     Les autres régions (comme Hong Kong (R.A.S.) et Macao (R.A.S.)) utilisent également le chinois traditionnel. Pour les classements, à Macao (R.A.S.) il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao (R.A.S.)
+, Chinese_Traditional_Stroke_Count_100 (sur SQL Server 2008 et versions ultérieures) est utilisé assez souvent.  
   
 -   Pour le japonais, le classement le plus courant est Japanese_CI_AS. Japanese_XJIS_100 est utilisé dans les installations prenant en charge [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). On utilise généralement Japanese_BIN2 dans les projets de migration de données, avec des données provenant de plateformes non-Windows ou de sources de données autres que le moteur de base de données relationnelle de SQL Server.  
   
