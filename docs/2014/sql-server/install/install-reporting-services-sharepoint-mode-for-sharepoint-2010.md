@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952517"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Installer le mode SharePoint de Reporting Services pour SharePoint 2010
@@ -31,7 +31,7 @@ ms.locfileid: "71952517"
   
 
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="bkmk_prereq"></a> Prérequis  
   
 -   > [!IMPORTANT]  
     >  Le gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est plus nécessaire ou pris en charge pour configurer et administrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Utilisez l'Administration centrale pour configurer un serveur de rapports en mode SharePoint. Pour plus d’informations, consultez [gérer une application de Service Reporting Services SharePoint](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "71952517"
   
 -   Vérifiez que le service d' **administration SharePoint 2010** est démarré dans Windows Gestionnaire de serveur.  
   
- ![Composants SSRS sur un serveur 1 installation]de(../../../2014/sql-server/install/media/rs-deployment-1-server.gif "composants SSRS sur une installation à 1 serveur")  
+ ![Composants SSRS sur une installation à 1 serveur](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "Composants SSRS sur une installation à 1 serveur")  
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>Considérations relatives aux bases de données pour la configuration d'un serveur unique  
   
@@ -86,13 +86,13 @@ ms.locfileid: "71952517"
   
      Cliquez sur **Suivant**.  
   
-     ![Installation des fonctionnalités SQL Server pour le rôle d’installation](../../../2014/sql-server/install/media/rs-setuprole.gif "Installation des fonctionnalités SQL Server pour le rôle d’installation")  
+     ![Installation de la fonctionnalité SQL Server pour le rôle d’installation](../../../2014/sql-server/install/media/rs-setuprole.gif "Installation de la fonctionnalité SQL Server pour le rôle d’installation")  
   
 9. Sélectionnez ce qui suit dans la page **Sélection de fonctionnalités** :  
   
     -   **Reporting Services - SharePoint**  
   
-    -   **Reporting Services complément pour les produits SharePoint 2010**. ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png ":")l’option de l’Assistant Installation pour installer le complément est une nouveauté de la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    -   **Reporting Services complément pour les produits SharePoint 2010**. ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png "note") L’option de l’Assistant Installation pour installer le complément est une nouveauté de la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
     -   Si vous n'avez pas encore d'instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)]SQL Server, vous pouvez également sélectionner les **Services de moteur de base de données** et les **Outils de gestion - Complet** pour un environnement complet.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "71952517"
 3.  Dans le menu Nouveau, cliquez sur **Application de service SQL Server Reporting Services**.  
   
     > [!WARNING]  
-    >  Si l’option [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne figure pas dans la liste, cela **indique que le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est pas installé**. Examinez la section précédente sur l'utilisation des applets de commande PowerShell pour installer le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+    >  Si l’option [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne figure pas dans la liste, cela **indique que le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est pas installé**. Examinez la section précédente sur l'utilisation des applets de commande PowerShell pour installer le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Dans la page **Créer une application de service SQL Server Reporting Services** , entrez un nom pour l'application. Si vous créez plusieurs applications de service Reporting Services, un nom descriptif ou une convention d'affectation de noms peut vous aider à organiser votre administration et vos opérations de gestion.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "71952517"
   
 11. Le processus de création d'une application de service peut durer plusieurs minutes. Lorsqu'il est terminé, vous voyez s'afficher un message de confirmation et un lien vers la page **Configurer les abonnements et les alertes** . Terminez l'étape de configuration si vous souhaitez utiliser les fonctionnalités d'abonnement et d'alerte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- Contenu relatif à PowerShell ![contenu]relatif à(../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell pour plus d’informations") sur l’utilisation de PowerShell pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [pour créer une application de service Reporting Services à l’aide de PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
+ ![Contenu relatif à PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Pour plus d’informations sur l’utilisation de PowerShell pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [pour créer une application de service Reporting Services à l’aide de PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
 
   

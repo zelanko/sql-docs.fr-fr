@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d1d8d503fc5020fb9d44bb8daa4be79abd00dc0d
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952642"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Topologies de déploiement pour les fonctionnalités SQL Server BI dans SharePoint
@@ -60,7 +60,7 @@ ms.locfileid: "71952642"
 ###  <a name="bkmk_bi_Sharepoint2013_3tier"></a>PowerPivot pour SharePoint 2013 et Reporting Services déploiement à trois serveurs  
  Dans le déploiement à trois serveurs suivant, le moteur de base de données SQL Server, le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint et SharePoint s'exécutent chacun sur un serveur distinct. Le package d'installation [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 2013 (**spPowerPivot.msi**) doit être exécuté sur le serveur SharePoint.  
   
- Déploiement ![de serveur en mode SharePoint SSAS et SSRS 3 déploiement](../../../2014/sql-server/install/media/as-and-rs-3server-deployment.gif "de") serveur  
+ ![Déploiement de serveur en mode SharePoint SSAS et SSRS](../../../2014/sql-server/install/media/as-and-rs-3server-deployment.gif "Déploiement de serveur en mode SharePoint SSAS et SSRS")  
   
 |||  
 |-|-|  
@@ -72,14 +72,14 @@ ms.locfileid: "71952642"
 |**(6)**|Serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint Configurez l'application Excel Services dans les **Paramètres du modèle de données** pour utiliser ce serveur.|  
 |**(7)**|Bases de données de contenu, de configuration et d'application de service SharePoint.|  
   
- ![Paramètres]SharePoint paramètres(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint") [Envoyer des commentaires et des informations de contact via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ Les ![paramètres SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") [soumettent des commentaires et des informations de contact via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>Déploiement d’un seul serveur PowerPivot pour SharePoint 2013  
  Un déploiement de serveur unique est utile à des fins de test mais n'est pas recommandée pour les déploiements de production.  
   
  Le diagramme suivant montre les composants qui font partie d'un déploiement d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur un seul serveur.  
   
- Déploiement ![PowerPivot pour SharePoint un seul serveur](../../../2014/sql-server/install/media/as-powerpivot-mode-1server-deployment.gif "PowerPivot pour SharePoint déploiement sur un seul serveur")  
+ ![Déploiement PowerPivot pour SharePoint un seul serveur](../../../2014/sql-server/install/media/as-powerpivot-mode-1server-deployment.gif "Déploiement PowerPivot pour SharePoint un seul serveur")  
   
 |||  
 |-|-|  
@@ -108,7 +108,7 @@ ms.locfileid: "71952642"
 ###  <a name="bkmk_powerpivot_sharepoint2013_3server"></a>Déploiement du serveur PowerPivot pour SharePoint 2013 3  
  Dans le déploiement à trois serveurs suivant, le moteur de base de données SQL Server, le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint et SharePoint s'exécutent chacun sur un serveur distinct. Le package d'installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 (spPowerPivot.msi) doit être installé sur le serveur SharePoint.  
   
- ![En tant que déploiement du serveur MODE3 PowerPivot](../../../2014/sql-server/install/media/as-powerpivot-mode-3server-deployment.gif "en tant que déploiement de serveur MODE3 PowerPivot")  
+ ![En tant que déploiement du serveur MODE3 PowerPivot](../../../2014/sql-server/install/media/as-powerpivot-mode-3server-deployment.gif "En tant que déploiement du serveur MODE3 PowerPivot")  
   
 |||  
 |-|-|  
@@ -121,7 +121,7 @@ ms.locfileid: "71952642"
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_1server"></a>PowerPivot pour SharePoint 2013 et Reporting Services déploiement sur un seul serveur  
  Un déploiement de serveur unique est utile à des fins de test mais n'est pas recommandée pour les déploiements de production.  
   
- Déploiement serveur ![en mode SharePoint SSAS et SSRS 1 déploiement serveur](../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "SSAS et SSRS mode SharePoint mode 1")  
+ ![Déploiement d’un serveur en mode SharePoint SSAS et SSRS](../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "Déploiement d’un serveur en mode SharePoint SSAS et SSRS")  
   
 |||  
 |-|-|  
@@ -135,7 +135,7 @@ ms.locfileid: "71952642"
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot pour SharePoint 2013 et Reporting Services déploiement sur deux serveurs  
  Dans le déploiement à deux serveurs suivant, le moteur de base de données SQL Server et le serveur Analysis Services en mode SharePoint s'exécutent sur un serveur autre que celui sur lequel SharePoint s'exécute. Le package d'installation PowerPivot pour SharePoint 2013 **(spPowerPivot.msi)** doit être exécuté sur le serveur SharePoint.  
   
- Déploiement ![de serveur en mode SharePoint SSAS et SSRS 2 déploiement](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "de serveurs SSAS et SSRS en mode SharePoint (2") )  
+ ![Déploiement de serveur en mode SharePoint SSAS et SSRS](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "Déploiement de serveur en mode SharePoint SSAS et SSRS")  
   
 |||  
 |-|-|  
@@ -150,12 +150,12 @@ ms.locfileid: "71952642"
 ##  <a name="bkmk_example_deployments_2010"></a>Exemples de topologies de déploiement SharePoint 2010  
  Le schéma suivant illustre les services et fournisseurs qui s'exécutent sur chaque niveau. Notez que le schéma inclut plusieurs services intégrés ; ces services sont requis pour certains scénarios de SQL Server BI. Excel Services, les services Banque d'informations sécurisés et les services d'émission de jetons Revendications vers Windows sont requis ou recommandés pour un déploiement de PowerPivot pour SharePoint ou de Reporting Services dans SharePoint. De plus, les fournisseurs de MSOLAP OLE DB et les services ADO.NET sont requis pour certains scénarios d'accès aux données PowerPivot. Vous pouvez Éventuellement installer Analysis Services sur le niveau de données, si vous souhaitez créer des rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] basés sur des bases de données model tabulaires  hébergées en dehors de SharePoint.  
   
- Diagramme de l’architecture(../../../2014/sql-server/install/media/sql11bisetup.gif "logique") du ![diagramme d’architecture logique]  
+ ![Diagramme d’architecture logique](../../../2014/sql-server/install/media/sql11bisetup.gif "Diagramme d’architecture logique")  
   
 ##  <a name="bkmk_sharepoint2010_1server"></a>Déploiements sur un seul serveur  
  Vous pouvez installer tous les composants serveur, notamment le niveau de données, sur un ordinateur unique. Cette configuration de déploiement est utile si vous évaluez le logiciel ou que vous développez des applications personnalisées qui incluent Reporting Services en mode SharePoint. Ce déploiement est le plus simple à configurer. Tous les composants étant installés sur le même ordinateur, moins de licences sont requises. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] et le [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont installés comme une copie unique sous licence de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour installer toutes les fonctionnalités sur un seul serveur, vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de manière séquentielle, sur le même serveur physique. Pour obtenir des instructions sur une configuration de serveur autonome, consultez la liste de vérification [Deployment : Reporting Services, Power View et PowerPivot pour SharePoint @ no__t-0.  
+ Pour installer toutes les fonctionnalités sur un seul serveur, vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de manière séquentielle, sur le même serveur physique. Pour obtenir des instructions sur une configuration de serveur autonome, consultez [liste de vérification du déploiement : Reporting Services, Power View et PowerPivot pour SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_sharepoint2010_2server"></a>Déploiement sur deux niveaux  
  Un déploiement sur deux niveaux suit généralement le schéma suivant : SharePoint Server 2010 sur un ordinateur et le moteur de base de données SQL Server sur le deuxième ordinateur. Le déplacement du niveau de données sur un serveur dédié constitue la configuration la plus courante pour une batterie de 2 ordinateurs. Dans une batterie à deux niveaux, vous installez à la fois [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sur le serveur SharePoint. Tous les services Web sur le frontal et les services partagés dans le niveau d'applications s'exécutent sur le même serveur physique. Les étapes d'installation pour un déploiement à deux niveaux sont très semblables à un déploiement autonome, car vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de manière séquentielle, sur le même serveur physique.  
@@ -163,12 +163,12 @@ ms.locfileid: "71952642"
 ##  <a name="bkmk_sharepoint2010_3server"></a>Déploiement à trois niveaux  
  Un déploiement à trois niveaux sépare en général les services Web frontaux et les applications de traitement ou nécessitant beaucoup de mémoire. Sur cette topologie, vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] uniquement sur le serveur d'applications. Les services Web qui s'exécutent sur le Web frontal sont installés via des solutions déployées aux applications de la batterie, lors de la configuration du serveur, en tant que tâche consécutive à l'installation. Le schéma suivant illustre un déploiement sur 3 niveaux.  
   
- ![3-Server topologie](../../../2014/sql-server/install/media/sql11bisetup-3server.gif "3-Server topologie")  
+ ![3-serveur topologie](../../../2014/sql-server/install/media/sql11bisetup-3server.gif "3-serveur topologie")  
   
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a>Déploiement avec montée en puissance parallèle à trois niveaux  
  Cette topologie illustre un déploiement avec montée en puissance parallèle qui exécute le même service partagé sur plusieurs serveurs, traitant ainsi un plus grand volume de demandes et fournissant une puissance de traitement supérieure pour les données PowerPivot ou les rapports Reporting Services. Dans le schéma ci-dessous, il existe trois clusters de serveurs d'applications, chacun exécutant une combinaison différente de services partagés. Dans un environnement SharePoint, la découverte de service et la disponibilité sont intégrées à la batterie de serveurs. L'équilibrage de charge sur plusieurs serveurs physiques exécutant la même application de service partagé fait partie de l'architecture du service partagé.  
   
- Lors du déploiement d’une batterie de plusieurs serveurs, veillez à suivre les instructions de cet article SharePoint : [Plusieurs serveurs pour une batterie à trois niveaux (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
+ Lors du déploiement d'une batterie de plusieurs serveurs, veillez à suivre les instructions dans cet article SharePoint : [Plusieurs serveurs pour une batterie de serveurs à trois niveaux (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
   
  ![5-serveur topologie](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-serveur topologie")  
   
