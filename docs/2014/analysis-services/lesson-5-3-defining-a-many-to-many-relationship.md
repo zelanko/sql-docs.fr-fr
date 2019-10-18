@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493876"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Définition d’une relation plusieurs-à-plusieurs
@@ -35,7 +35,7 @@ ms.locfileid: "69493876"
   
 1.  Ouvrez le Concepteur de vues de source de données pour la vue de source de données **Adventure Works DW 2012** .  
   
-2.  Cliquez avec le bouton droit n’importe où dans le volet **bibliothèque de diagrammes** , `Internet Sales Order Reasons` cliquez sur **nouveau diagramme**, puis spécifiez comme nom pour ce nouveau diagramme.  
+2.  Cliquez avec le bouton droit n’importe où dans le volet **bibliothèque de diagrammes** , cliquez sur **nouveau diagramme**, puis spécifiez `Internet Sales Order Reasons` comme nom pour ce nouveau diagramme.  
   
 3.  Faites glisser la table **InternetSales** du volet **Tables** vers le volet **Diagramme** .  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69493876"
   
 6.  Dans le menu **Format** , pointez sur **Disposition automatique**, puis cliquez sur **Diagramme**.  
   
-7.  Dans la fenêtre Propriétés, remplacez la propriété **FriendlyName** de la table **DimSalesReason** par `SalesReason`, puis remplacez la propriété **FriendlyName** de la table **FactInternetSalesReason** par `InternetSalesReason`.  
+7.  Dans la Fenêtre Propriétés, modifiez la propriété **FriendlyName** de la table **DimSalesReason** en `SalesReason`, puis modifiez la propriété **FriendlyName** de la table **FactInternetSalesReason** en `InternetSalesReason`.  
   
 8.  Dans le volet **Tables** , développez **InternetSalesReason (dbo.FactInternetSalesReason)** , sélectionnez **SalesOrderNumber**, puis vérifiez la propriété **DataType** pour cette colonne de données dans la fenêtre des propriétés.  
   
      Notez que le type de données de la colonne **SalesOrderNumber** est un type de données chaîne.  
   
-9. Passez en revue les types de données des autres colonnes `InternetSalesReason` de la table.  
+9. Passez en revue les types de données des autres colonnes de la table `InternetSalesReason`.  
   
      Notez que les types de données des deux autres colonnes dans cette table sont des types de données numériques.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69493876"
   
 2.  Cliquez dans le volet **Mesures** et choisissez **Nouveau groupe de mesures**. Pour plus d’informations, consultez [Création de mesures et de groupes de mesures dans les modèles multidimensionnels](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-3.  Dans la boîte de dialogue **nouveau groupe** de mesures `InternetSalesReason` , sélectionnez dans la liste **Sélectionnez une table dans la vue de source de données** , puis cliquez sur **OK**.  
+3.  Dans la boîte de dialogue **nouveau groupe de mesures** , sélectionnez `InternetSalesReason` dans la liste **Sélectionnez une table dans la vue de source de données** , puis cliquez sur **OK**.  
   
      Notez que le groupe de mesures **Internet Sales Reason** apparaît maintenant dans le volet **Mesures** .  
   
@@ -107,19 +107,19 @@ ms.locfileid: "69493876"
   
 8.  Cliquez sur **Suivant**.  
   
-9. Dans la page **Sélectionner les attributs de la dimension** , l’attribut **Sales Reason Key** est sélectionné automatiquement car c’est l’attribut de clé. Activez la case à cocher en regard de l’attribut **Sales Reason Reason type** , `Sales Reason Type`remplacez son nom par, puis cliquez sur **suivant**.  
+9. Dans la page **Sélectionner les attributs de la dimension** , l’attribut **Sales Reason Key** est sélectionné automatiquement car c’est l’attribut de clé. Activez la case à cocher en regard de l’attribut **Sales Reason Reason type** , remplacez son nom par `Sales Reason Type`, puis cliquez sur **suivant**.  
   
 10. Dans la page **Fin de l’Assistant** , cliquez sur **Terminer** pour créer la dimension Sales Reason.  
   
 11. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
-12. Dans le volet **attributs** du concepteur de dimensions pour la dimension **Sales Reason** , sélectionnez **Sales Reason Key**, puis remplacez la propriété **Name** de la fenêtre Propriétés par`Sales Reason.`  
+12. Dans le volet **attributs** du concepteur de dimensions pour la dimension **Sales Reason** , sélectionnez **Sales Reason Key**, puis remplacez la propriété **Name** de la fenêtre Propriétés par `Sales Reason.`  
   
-13. Dans le volet **hiérarchies** du concepteur de dimensions, créez une hiérarchie utilisateur **Sales Reasons** qui `Sales Reason Type` contient le niveau et le niveau **Sales Reason** , dans cet ordre.  
+13. Dans le volet **hiérarchies** du concepteur de dimensions, créez une hiérarchie utilisateur **Sales Reasons** qui contient le niveau `Sales Reason Type` et le niveau **Sales Reason** , dans cet ordre.  
   
-14. Dans la fenêtre Propriétés, définissez `All Sales Reasons` comme valeur pour la propriété **AllMemberName** de la hiérarchie Sales Reasons.  
+14. Dans la Fenêtre Propriétés, définissez `All Sales Reasons` comme valeur de la propriété **AllMemberName** de la hiérarchie Sales Reasons.  
   
-15. Définissez `All Sales Reasons` comme valeur pour la propriété **AttributeAllMemberName** de la dimension Sales Reason.  
+15. Définissez `All Sales Reasons` comme valeur de la propriété **AttributeAllMemberName** de la dimension Sales Reason.  
   
 16. Pour ajouter la dimension créée récemment au cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] comme dimension du cube, basculez vers le **Concepteur de cube**. Sous l’onglet **Structure de cube** , cliquez avec le bouton droit dans le volet **Dimensions** et sélectionnez **Ajouter une dimension de cube**.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "69493876"
   
      L’illustration suivante montre les modifications apportées dans la boîte de dialogue **Définir une relation** .  
   
-     ![Boîte de dialogue définir une relation](../../2014/tutorials/media/l5-many-to-many-3.gif "Boîte de dialogue définir une relation")  
+     ![Boîte de dialogue définir une relation](../../2014/tutorials/media/l5-many-to-many-3.gif "Boîte de dialogue Définir une relation")  
   
 5.  Cliquez sur **OK**.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "69493876"
   
 5.  Dans le volet Métadonnées, développez **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**et **Australia**, cliquez avec le bouton droit sur **Queensland**, puis cliquez sur **Ajouter au filtre**.  
   
-6.  Développez chaque membre du `Sales Reason Type` niveau pour passer en revue les valeurs en dollars associées à chaque raison pour laquelle un client de Queensland a donné son [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] achat d’un produit sur Internet.  
+6.  Développez chaque membre du niveau `Sales Reason Type` pour passer en revue les valeurs en dollars associées à chaque raison pour laquelle un client de Queensland a donné son achat d’un produit [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] sur Internet.  
   
      Notez que la somme des totaux associés à chaque raison de vente est supérieure au total des ventes. Cela s'explique par le fait que certains clients ont cité plusieurs raisons pour leur achat.  
   

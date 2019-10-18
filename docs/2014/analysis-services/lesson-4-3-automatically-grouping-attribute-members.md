@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890835"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Regroupement automatique des membres d'attribut
@@ -28,7 +28,7 @@ ms.locfileid: "69890835"
  **Clusters**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en créant des regroupements unidimensionnels sur les valeurs d’entrée en utilisant la méthode de clustering K-Means avec des distributions gaussiennes. Cette option est valide uniquement pour les colonnes numériques.  
   
- Après avoir spécifié une méthode de regroupement, vous devez spécifier le nombre de groupes, en utilisant la propriété **DiscretizationBucketCount** . Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ Après avoir spécifié une méthode de regroupement, vous devez spécifier le nombre de groupes, en utilisant la propriété **DiscretizationBucketCount** . Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
  Au cours des tâches de cette rubrique, vous allez regrouper différents types pour les éléments suivants : les revenus annuels dans la dimension **Customer** , le nombre d'heures de congé maladie des employés dans la dimension **Employees** et enfin, le nombre d'heures de congé des employés dans la dimension **Employees** . Vous allez ensuite traiter et explorer le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour constater le résultat des regroupements. Enfin, vous allez modifier les propriétés des groupes de membres pour constater le résultat des modifications dans les types de regroupements.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69890835"
   
 4.  Dans le volet **Attributs** , sélectionnez **Yearly Income**.  
   
-5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **Automatic** et remplacez la valeur de la propriété `5`DiscretizationBucketCount par.  
+5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **Automatic** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5`.  
   
      L'illustration suivante montre les propriétés modifiées pour l'attribut **Yearly Income**.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "69890835"
   
 4.  Dans le volet **Attributs** , sélectionnez **Sick Leave Hours**.  
   
-5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **clusters** et remplacez la valeur de la propriété `5`DiscretizationBucketCount par.  
+5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **clusters** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5`.  
   
 6.  Dans le volet **Attributs** , sélectionnez **Vacation Hours**.  
   
-7.  Dans la Fenêtre Propriétés, modifiez la valeur de la propriété **DiscretizationMethod** en **zones égales** et remplacez la valeur de la propriété `5`DiscretizationBucketCount par.  
+7.  Dans la Fenêtre Propriétés, modifiez la valeur de la propriété **DiscretizationMethod** en **zones égales** et modifiez la valeur de la propriété **DiscretizationBucketCount** en `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Exploration des hiérarchies d'attributs modifiées  
   

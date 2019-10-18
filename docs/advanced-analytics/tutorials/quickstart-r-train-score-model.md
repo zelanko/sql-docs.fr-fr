@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005979"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542125"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Démarrage rapide : Créer et évaluer un modèle prédictif dans R avec SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Démarrage rapide : créer et évaluer un modèle prédictif dans R avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans ce guide de démarrage rapide, vous allez créer et effectuer l’apprentissage d’un modèle prédictif à l’aide de R, enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données à l’aide de [SQL Server machine learning services](../what-is-sql-server-machine-learning.md).
 
-Le modèle que vous allez utiliser dans ce guide de démarrage rapide est un modèle GLM (simple Generalized Linear) qui prédit la probabilité qu’un véhicule ait été équipé d’une transmission manuelle. Vous utiliserez le jeu de données **mtcars** inclus avec R.
+Vous allez créer et exécuter deux procédures stockées qui s’exécutent dans SQL. La première utilise le jeu de données **mtcars** inclus avec R et génère un modèle linéaire généralisé simple (GLM) qui prédit la probabilité qu’un véhicule ait été équipé d’une transmission manuelle. La deuxième procédure concerne la notation : elle appelle le modèle généré dans la première procédure pour générer un ensemble de prédictions en fonction de nouvelles données. En plaçant le code R dans une procédure stockée SQL, les opérations sont contenues dans SQL, sont réutilisables et peuvent être appelées par d’autres procédures stockées et applications clientes.
 
 > [!TIP]
-> Si vous avez besoin d’un actualisateur sur des modèles linéaires, essayez ce didacticiel qui décrit le processus d’ajustement d’un modèle à l’aide de rxLinMod :  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Ajustement des modèles linéaires)
+> Si vous avez besoin d’un actualisateur sur des modèles linéaires, essayez ce didacticiel qui décrit le processus d’ajustement d’un modèle à l’aide de rxLinMod : [modèles linéaires](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
-## <a name="prerequisites"></a>Prérequis
+En suivant ce guide de démarrage rapide, vous apprendrez à :
+
+> [!div class="checklist"]
+> - Comment incorporer du code R dans une procédure stockée
+> - Comment passer des entrées à votre code via des entrées sur la procédure stockée
+> - Comment les procédures stockées sont utilisées pour rendre les modèles opérationnels
+
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Ce guide de démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md) avec le langage R installé.
 
@@ -41,7 +48,7 @@ Pour créer le modèle, vous allez créer des données sources pour l’apprenti
 
 ### <a name="create-the-source-data"></a>Créer la source de données
 
-1. Ouvrez **SQL Server Management Studio** et connectez-vous à votre instance SQL Server.
+1. Ouvrez SSMS, connectez-vous à votre instance de SQL Server, puis ouvrez une nouvelle fenêtre de requête.
 
 1. Créez une table pour enregistrer les données d’apprentissage.
 
@@ -61,7 +68,7 @@ Pour créer le modèle, vous allez créer des données sources pour l’apprenti
    );
    ```
 
-1. Insérez les données du DataSet intégré `mtcars`.
+1. Insérez les données à partir du DataSet intégré `mtcars`.
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -124,7 +131,7 @@ Ensuite, stockez le modèle dans une base de données SQL afin de pouvoir l’ut
    ```
 
    > [!TIP]
-   > Si vous exécutez ce code une deuxième fois, vous recevez cette erreur : «Violation de la contrainte de clé primaire... Impossible d’insérer une clé en double dans l’objet dbo. stopping_distance_models ". Vous pouvez éviter cette erreur en mettant à jour le nom de chaque nouveau modèle. Par exemple, vous pouvez opter pour un nom plus descriptif en indiquant par exemple le type du modèle, le jour de sa création, etc.
+   > Si vous exécutez ce code une deuxième fois, vous recevez l’erreur suivante : «violation de la contrainte de clé primaire... Impossible d’insérer une clé en double dans l’objet dbo. stopping_distance_models ". Vous pouvez éviter cette erreur en mettant à jour le nom de chaque nouveau modèle. Par exemple, vous pouvez opter pour un nom plus descriptif en indiquant par exemple le type du modèle, le jour de sa création, etc.
 
      ```sql
      UPDATE GLM_models
@@ -201,7 +208,7 @@ Le script ci-dessus effectue les étapes suivantes :
 - Appliquez la fonction `predict` avec les arguments appropriés au modèle et fournissez les nouvelles données d’entrée.
 
 > [!NOTE]
-> Dans l’exemple, la fonction `str` est ajoutée au cours de la phase de test, pour vérifier le schéma des données retournées à partir de R. Vous pouvez supprimer l’instruction ultérieurement.
+> Dans l’exemple, la fonction `str` est ajoutée au cours de la phase de test, afin de vérifier le schéma des données retournées à partir de R. Vous pouvez supprimer l’instruction ultérieurement.
 >
 > Les noms de colonne utilisés dans le script R ne sont pas nécessairement passés à la sortie de la procédure stockée. Ici, la clause WITH RESULTs est utilisée pour définir de nouveaux noms de colonnes.
 

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493791"
 ---
 # <a name="defining-and-browsing-kpis"></a>Définition et exploration d'indicateurs de performance clés
@@ -152,7 +152,7 @@ ms.locfileid: "69493791"
   
 1.  Cliquez sur le bouton **Mode Formulaire** dans la barre d’outils de l’onglet **Indicateurs de performance clés** , puis cliquez sur le bouton **Nouvel indicateur de performance clé (KPI)** .  
   
-2.  Dans la zone **nom** , tapez `Product Gross Profit Margin`, puis vérifiez que  **\<tous les >** s’affichent dans la liste **groupe de mesures associé** .  
+2.  Dans la zone **nom** , tapez `Product Gross Profit Margin`, puis vérifiez que **\<All >** apparaît dans la liste **groupe de mesures associé** .  
   
 3.  Sous l’onglet **Métadonnées** du volet **Outils de calcul** , faites glisser la mesure **Total GPM** jusqu’à la zone **Expression de valeur** .  
   
@@ -261,7 +261,7 @@ ms.locfileid: "69493791"
   
 2.  Après avoir déployé le didacticiel, cliquez sur **Reconnexion** dans la barre d’outils de l’onglet **Indicateurs de performance clés** , puis cliquez sur **Mode Navigateur**.  
   
-     L' `Product Gross Profit Margin` indicateur de performance clé apparaît et affiche la valeur KPI pour **Q3 CY 2007** et le secteur de vente **Amérique du Nord** .  
+     L’indicateur de performance clé `Product Gross Profit Margin` apparaît et affiche la valeur de l’indicateur de performance clé pour **Q3 CY 2007** et le secteur de vente **Amérique du Nord** .  
   
 3.  Dans le volet **Filtre** , sélectionnez **Product** dans la liste **Dimension** , sélectionnez **Category** dans la liste **Hiérarchie** , sélectionnez **Equal** dans la liste **Opérateur** , sélectionnez **Bikes** dans la liste **Expression de filtre** , puis cliquez sur **OK**.  
   

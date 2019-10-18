@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 31c745a585adf26b521054cbcd0234fd4087a114
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682030"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542174"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurer les paramètres de déploiement pour les services et les ressources de cluster
 
@@ -151,7 +151,7 @@ Si vous souhaitez appliquer les mêmes configurations pour un service associé �
 
 Pour personnaliser les fichiers de configuration de vos déploiement de clusters, vous pouvez utiliser n’importe quel éditeur pour le format JSON, comme VSCode. Pour générer un script avec ces modifications à des fins d’automatisation, utilisez la commande **azdata bdc config**. Cet article explique comment configurer des déploiements de clusters Big Data en modifiant les fichiers de configuration du déploiement. Il fournit des exemples de modification de la configuration pour différents scénarios. Pour plus d’informations sur la façon dont les fichiers de configuration sont utilisés dans les déploiements, consultez le [guide de déploiement](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Installer azdata](deploy-install-azdata.md).
 
@@ -539,18 +539,8 @@ Le fichier **patch.json** suivant effectue les modifications suivantes :
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```
@@ -635,4 +625,4 @@ azdata bdc config patch --config-file control.json --patch-file elasticsearch-pa
 > Nous vous recommandons de mettre à jour manuellement le paramètre **max_map_count** manuellement sur chaque ordinateur hôte dans le cluster Kubernetes, en suivant les instructions de [cet article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’utilisation des fichiers de configuration dans Big Data les déploiements de cluster, voir [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
+Pour plus d’informations sur l’utilisation de fichiers de configuration dans des déploiements de cluster Big Data, consultez [comment déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md#configfile).

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493893"
 ---
 # <a name="defining-named-sets"></a>Définition de jeux nommés
@@ -36,7 +36,7 @@ ms.locfileid: "69493893"
   
      Dans le volet **Organisateur de script** , remarquez l'icône unique qui différencie un jeu nommé d'une commande de script ou d'un membre calculé.  
   
-4.  Sous l' **onglet métadonnées** du **volet outils de calcul** , développez **Product**, développez `Members` **Category**, développez, puis développez **All Products**.  
+4.  Sous l' **onglet métadonnées** du volet **outils de calcul** , développez **Product**, développez **Category**, développez `Members`, puis développez **All Products**.  
   
     > [!NOTE]  
     >  Si le volet **Outils de calcul** ne contient pas de métadonnées, cliquez sur **Reconnexion** dans la barre d'outils. Si cette opération ne donne pas de résultats, il se peut que vous deviez traiter le cube ou démarrer une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "69493893"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Définition d'un jeu nommé Large Resellers  
   
-1.  Cliquez `[Core Products]` avec le bouton droit dans le volet **organisateur de script** , puis cliquez sur **nouveau jeu nommé**.  
+1.  Cliquez avec le bouton droit sur `[Core Products]` dans le volet **organisateur de script** , puis cliquez sur **nouveau jeu nommé**.  
   
 2.  Dans la zone **nom** , remplacez le nom de ce jeu nommé par `[Large Resellers]`.  
   
@@ -69,31 +69,31 @@ ms.locfileid: "69493893"
   
      Maintenant que vous avez défini le premier jeu pour l’expression d’ensemble Exists, vous êtes prêt à ajouter le second ensemble : l’ensemble de membres de la dimension Reseller qui contient le plus grand nombre d’employés.  
   
-7.  Sous l' **onglet métadonnées** du volet **outils de calcul** , développez **nombre d’employés** dans la dimension Reseller, développez `Members`, puis développez **All**Resellers.  
+7.  Sous l’onglet **métadonnées** du volet **outils de calcul** , développez **nombre d’employés** dans la dimension Reseller, développez `Members`, puis développez **tous les revendeurs**.  
   
      Observez que les membres de cette hiérarchie d'attribut ne sont pas groupés.  
   
 8.  Ouvrez le Concepteur de dimensions pour la dimension **Reseller** , puis cliquez sur **Number of Employees** dans le volet **Attributs** .  
   
-9. Dans la fenêtre Propriétés, remplacez la `DiscretizationMethod` valeur de la propriété par **automatique**, puis `DiscretizationBucketCount` remplacez la `5`propriété par. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+9. Dans la Fenêtre Propriétés, remplacez la valeur de la propriété `DiscretizationMethod` par **automatique**, puis remplacez la valeur de la propriété `DiscretizationBucketCount` par `5`. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 10. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez sur **Déployer Analysis Services Tutorial**.  
   
 11. Une fois le déploiement achevé, ouvrez le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le Concepteur de cube, puis cliquez sur **Reconnexion** dans la barre d'outils de l'onglet **Calculs** .  
   
-12. Sous l’onglet **métadonnées** du volet **outils de calcul** , développez **nombre d’employés** dans la dimension **Reseller** , développez `Members`, puis développez **All**Resellers.  
+12. Sous l’onglet **métadonnées** du **volet outils de calcul** , développez **nombre d’employés** dans la dimension **Reseller** , développez `Members`, puis développez **tous les revendeurs**.  
   
      Observez que les membres de cette hiérarchie d'attributs sont maintenant contenus dans cinq groupes, numérotés de 0 à 4. Pour afficher le numéro d'un groupe, arrêtez le pointeur sur le groupe qui vous intéresse pour faire apparaître une info-bulle. Pour la plage `2 -17`, l'info-bulle doit contenir `[Reseller].[Number of Employees].&[0]`.  
   
-     Les membres de cette hiérarchie d’attributs sont regroupés, car la propriété DiscretizationBucketCount `5` a la valeur et la propriété DiscretizationMethod est définie sur **Automatic**.  
+     Les membres de cette hiérarchie d’attributs sont regroupés, car la propriété DiscretizationBucketCount est définie sur `5` et la propriété DiscretizationMethod est définie sur **automatique**.  
   
 13. Dans la zone **Expression** , ajoutez une virgule à l’expression d’ensemble Exists après la fonction Members et avant la parenthèse fermante, puis faites glisser **83 - 100** depuis le volet **Métadonnées** jusqu’à la position suivant immédiatement cette virgule.  
   
      Vous avez maintenant terminé l’expression d’ensemble Exists qui, quand le jeu nommé Large Resellers sera placé sur un axe, retournera le jeu de membres ayant une intersection avec les deux jeux spécifiés, à savoir le jeu de tous les revendeurs et le jeu de revendeurs qui ont de 83 à 100 employés.  
   
-     L’illustration suivante montre le volet des **expressions** de calcul `[Large Resellers]` pour le jeu nommé.  
+     L’illustration suivante montre le volet des **expressions de calcul** pour le jeu nommé `[Large Resellers]`.  
   
-     ![Volet des expressions de calcul pour [grands revendeurs]] (../../2014/tutorials/media/l6-named-set-02.gif "Volet des expressions de calcul pour [grands revendeurs]")  
+     ![Volet des expressions de calcul pour [grands revendeurs]](../../2014/tutorials/media/l6-named-set-02.gif "Volet des expressions de calcul pour [grands revendeurs]")  
   
 14. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode Script**et examinez les deux jeux nommés que vous venez d'ajouter au script de calcul.  
   
@@ -117,25 +117,25 @@ ms.locfileid: "69493893"
   
 5.  Développez la dimension Product, puis ajoutez Category et Subcategory dans la zone de lignes, comme le montre l'image suivante.  
   
-     ![Membres de l’attribut de sous-catégorie] (../../2014/tutorials/media/l6-named-set-03.gif "Membres de l’attribut de sous-catégorie")  
+     ![Membres de l’attribut de sous-catégorie](../../2014/tutorials/media/l6-named-set-03.gif "Membres de l’attribut de sous-catégorie")  
   
 6.  Dans le volet **Métadonnées** , dans la dimension **Product** , faites glisser **Core Products** vers la zone de filtre.  
   
      Notez que seuls le membre **Bike** de l'attribut **Category** et les membres des sous-catégories de **Bike** restent dans le cube. Cela est dû au fait que le jeu nommé **Core Products** est utilisé pour définir un sous-cube. Ce sous-cube limite les membres de l'attribut **Category** dans la dimension **Product** à l'intérieur du sous-cube à ceux qui sont membres du jeu nommé **Core Product** , comme le montre l'image suivante.  
   
-     ![Membres du jeu nommé Core Product] (../../2014/tutorials/media/l6-named-set-04.gif "Membres du jeu nommé Core Product")  
+     ![Membres du jeu nommé Core Product](../../2014/tutorials/media/l6-named-set-04.gif "Membres du jeu nommé Core Product")  
   
 7.  Dans le volet **Métadonnées** , développez **Reseller**, ajoutez **Large Resellers** à la zone de filtre.  
   
      Notez que la mesure Reseller Sales Amount dans le volet Données n'affiche les montants des ventes que pour les grands revendeurs de vélos. Observez également que le volet Filtre affiche maintenant les deux jeux nommés utilisés pour définir ce sous-cube particulier, comme le montre l'image suivante.  
   
-     ![Volet de filtre contenant deux jeux nommés] (../../2014/tutorials/media/l6-named-set-05.gif "Volet de filtre contenant deux jeux nommés")  
+     ![Volet de filtre contenant deux jeux nommés](../../2014/tutorials/media/l6-named-set-05.gif "Volet de filtre contenant deux jeux nommés")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Leçon 7 : Définition des indicateurs de &#40;performance clés KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Touchant](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)    
  [Créer des jeux nommés](multidimensional-models/create-named-sets.md)  
   
   

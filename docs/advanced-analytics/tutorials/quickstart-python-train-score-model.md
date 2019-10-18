@@ -10,19 +10,19 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313666"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542129"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Démarrage rapide : Créer et évaluer un modèle prédictif dans Python avec SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Démarrage rapide : créer et évaluer un modèle prédictif dans Python avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans ce guide de démarrage rapide, vous allez créer et effectuer l’apprentissage d’un modèle prédictif à l’aide de Python, enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données à l’aide d' [SQL Server machine learning services](../what-is-sql-server-machine-learning.md).
 
-Vous allez créer et exécuter deux procédures stockées qui s’exécutent dans SQL. La première utilise le jeu de données de la fleur Iris classique et génère un modèle Naïve Bayes pour prédire une espèce iris en fonction des caractéristiques de la fleur. La deuxième procédure concerne la notation : elle appelle le modèle généré dans la première procédure pour générer un ensemble de prédictions en fonction de nouvelles données. En plaçant le code dans une procédure stockée, les opérations sont contenues, réutilisables et pouvant être appelées par d’autres procédures stockées et applications clientes.
+Vous allez créer et exécuter deux procédures stockées qui s’exécutent dans SQL. La première utilise le jeu de données de la fleur Iris classique et génère un modèle Naïve Bayes pour prédire une espèce iris en fonction des caractéristiques de la fleur. La deuxième procédure concerne la notation : elle appelle le modèle généré dans la première procédure pour générer un ensemble de prédictions en fonction de nouvelles données. En plaçant le code python dans une procédure stockée SQL, les opérations sont contenues dans SQL, sont réutilisables et peuvent être appelées par d’autres procédures stockées et applications clientes.
 
 En suivant ce guide de démarrage rapide, vous apprendrez à :
 
@@ -31,7 +31,7 @@ En suivant ce guide de démarrage rapide, vous apprendrez à :
 > - Comment passer des entrées à votre code via des entrées sur la procédure stockée
 > - Comment les procédures stockées sont utilisées pour rendre les modèles opérationnels
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Ce guide de démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server machine learning services](../install/sql-machine-learning-services-windows-install.md) avec le langage Python installé.
 
@@ -43,7 +43,9 @@ En suivant ce guide de démarrage rapide, vous apprendrez à :
 
 Dans cette étape, vous allez créer une procédure stockée qui génère un modèle pour prédire les résultats.
 
-1. Ouvrez une nouvelle fenêtre de requête dans SSMS connectée à la base de données **irissql** . 
+1. Ouvrez SSMS, connectez-vous à votre instance de SQL Server, puis ouvrez une nouvelle fenêtre de requête.
+
+1. Connectez-vous à la base de données irissql.
 
     ```sql
     USE irissql
@@ -117,9 +119,9 @@ Les modèles qui sont stockés pour être réutilisés dans SQL Server sont sér
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>Créer et exécuter une procédure stockée pour générer des prédictions
 
-Maintenant que vous avez créé, formé et enregistré un modèle, passez à l’étape suivante : création d’une procédure stockée qui génère des prédictions. Pour ce faire, appelez `sp_execute_external_script` pour exécuter un script Python qui charge le modèle sérialisé et lui donne de nouvelles entrées de données à noter.
+Maintenant que vous avez créé, formé et enregistré un modèle, passez à l’étape suivante : création d’une procédure stockée qui génère des prédictions. Pour ce faire, appelez `sp_execute_external_script` pour exécuter un script Python qui charge le modèle sérialisé et lui attribue le score de nouvelles entrées de données.
 
-1. Exécutez le code suivant pour créer la procédure stockée qui effectue le calcul de score. Au moment de l’exécution, cette procédure chargera un modèle binaire, utilisera les colonnes `[1,2,3,4]` comme entrées et spécifiera les colonnes `[0,5,6]` comme sortie.
+1. Exécutez le code suivant pour créer la procédure stockée qui effectue le calcul de score. Au moment de l’exécution, cette procédure chargera un modèle binaire, utilisera des colonnes `[1,2,3,4]` comme entrées et spécifiera des colonnes `[0,5,6]` en tant que sortie.
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))

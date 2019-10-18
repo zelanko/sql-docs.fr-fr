@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275678"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542142"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
@@ -23,15 +23,15 @@ ms.locfileid: "70275678"
 Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) pour installer de nouveaux packages R sur une instance de SQL Server Machine Learning Services ou SQL Server R services. Les packages que vous installez peuvent être utilisés dans des scripts R exécutés dans la base de données à l’aide de l’instruction T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 > [!NOTE]
-> La commande r `install.packages` standard n’est pas recommandée pour l’ajout de packages R sur SQL Server. Utilisez plutôt **sqlmlutils** comme décrit dans cet article.
+> La commande R `install.packages` standard n’est pas recommandée pour l’ajout de packages R sur SQL Server. Utilisez plutôt **sqlmlutils** comme décrit dans cet article.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Installez [R](https://www.r-project.org) et [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) sur l’ordinateur client que vous utilisez pour vous connecter à SQL Server. Vous pouvez utiliser n’importe quel IDE R pour exécuter les scripts, mais cet article suppose RStudio.
 
 - Installez [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) ou [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) sur l’ordinateur client que vous utilisez pour vous connecter à SQL Server. Vous pouvez utiliser d’autres outils de gestion de base de données ou de requête, mais cet article suppose Azure Data Studio ou SSMS.
 
-### <a name="other-considerations"></a>Autres points à considérer
+### <a name="other-considerations"></a>Autres considérations
 
 - Le script R s’exécutant dans SQL Server peut utiliser uniquement des packages installés dans la bibliothèque d’instances par défaut. SQL Server ne peut pas charger les packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Cela comprend les bibliothèques R installées avec d’autres produits Microsoft.
 
@@ -50,7 +50,7 @@ Le package **sqlmlutils** dépend du package **RODBCext** , et **RODBCext** dép
 
 Si l’ordinateur client a accès à Internet, vous pouvez télécharger et installer **sqlmlutils** et ses packages dépendants en ligne.
 
-1. Téléchargez le fichier zip **sqlmlutils** le plus https://github.com/Microsoft/sqlmlutils/tree/master/R/dist récent à partir de sur l’ordinateur client. Ne Décompressez pas le fichier.
+1. Téléchargez le fichier zip **sqlmlutils** le plus récent à partir de https://github.com/Microsoft/sqlmlutils/tree/master/R/dist sur l’ordinateur client. Ne Décompressez pas le fichier.
 
 1. Ouvrez une **invite de commandes** et exécutez les commandes suivantes pour installer les packages **sqlmlutils** et **RODBCext**. Remplacez le chemin d’accès complet au fichier zip **sqlmlutils** que vous avez téléchargé (cet exemple suppose que le fichier se trouve dans votre dossier Documents). Le package **RODBCext** est trouvé en ligne et installé.
 
@@ -100,16 +100,16 @@ Sur un ordinateur disposant d’un accès à Internet :
 
    ::: moniker-end
 
-   Pour la `Rversion` valeur, utilisez la version de R installée sur SQL Server. Pour vérifier la version installée, utilisez la commande T-SQL suivante.
+   Pour la valeur `Rversion`, utilisez la version de R installée sur SQL Server. Pour vérifier la version installée, utilisez la commande T-SQL suivante.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Téléchargez le fichier zip **sqlmlutils** le plus https://github.com/Microsoft/sqlmlutils/tree/master/R/dist récent à partir de (ne Décompressez pas le fichier). Par exemple, téléchargez le fichier dans `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Téléchargez le fichier zip **sqlmlutils** le plus récent à partir de https://github.com/Microsoft/sqlmlutils/tree/master/R/dist (ne Décompressez pas le fichier). Par exemple, téléchargez le fichier sur `c:\downloads\sqlmlutils_0.7.1.zip`.
 
-1. Copiez l' intégralité du dossier de référentiel RODBCext`c:\downloads\rodbcext`() et le fichier zip sqlmlutils`c:\downloads\sqlmlutils_0.7.1.zip`() sur l’ordinateur client. Par exemple, copiez-les dans `c:\temp\packages` le dossier sur l’ordinateur client.
+1. Copiez l’intégralité du dossier de référentiel **RODBCext** (`c:\downloads\rodbcext`) et le fichier zip **sqlmlutils** (`c:\downloads\sqlmlutils_0.7.1.zip`) sur l’ordinateur client. Par exemple, copiez-les dans le dossier `c:\temp\packages` sur l’ordinateur client.
 
 Sur l’ordinateur client que vous utilisez pour vous connecter à SQL Server, ouvrez une invite de commandes et exécutez les commandes suivantes pour installer **RODBCext** , puis **sqlmlutils**.
 
@@ -128,15 +128,13 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
 
 1. Sur l’ordinateur client, ouvrez RStudio et créez un nouveau fichier de **script R** .
 
-1. Utilisez le script R suivant pour installer le package **Glue** à l’aide de **sqlmlutils**. Remplacez vos propres informations de connexion à la base de données SQL Server.
+1. Utilisez le script R suivant pour installer le package **Glue** à l’aide de **sqlmlutils**. Remplacez vos propres informations de connexion SQL Server base de données (si vous n’utilisez pas l’authentification Windows, ajoutez des paramètres `uid` et `pwd`).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -180,28 +178,26 @@ Sur un ordinateur disposant d’un accès à Internet :
    ::: moniker-end
 
 
-   Pour la `Rversion` valeur, utilisez la version de R installée sur SQL Server. Pour vérifier la version installée, utilisez la commande T-SQL suivante.
+   Pour la valeur `Rversion`, utilisez la version de R installée sur SQL Server. Pour vérifier la version installée, utilisez la commande T-SQL suivante.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Copiez l' intégralité du dossier de dépôt de`c:\downloads\glue`la colle () sur l’ordinateur client. Par exemple, copiez-le dans `c:\temp\packages\glue`le dossier.
+1. Copiez l’intégralité du dossier de dépôt de la **colle** (`c:\downloads\glue`) sur l’ordinateur client. Par exemple, copiez-le dans le dossier `c:\temp\packages\glue`.
 
 Sur l’ordinateur client :
 
 1. Ouvrez RStudio et créez un nouveau fichier de **script R** .
 
-1. Utilisez le script R suivant pour installer le package **Glue** à l’aide de **sqlmlutils**. Remplacez vos propres informations de connexion à la base de données SQL Server.
+1. Utilisez le script R suivant pour installer le package **Glue** à l’aide de **sqlmlutils**. Remplacez vos propres informations de connexion SQL Server base de données (si vous n’utilisez pas l’authentification Windows, ajoutez des paramètres `uid` et `pwd`).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))
@@ -216,7 +212,7 @@ Une fois le package de **Collage** installé, vous pouvez l’utiliser dans un s
 
 1. Ouvrez Azure Data Studio ou SSMS et connectez-vous à votre base de données SQL Server.
 
-1. Exécutez la commande suivante :
+1. Exécutez la commande suivante :
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "70874398"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
@@ -22,7 +22,7 @@ ms.locfileid: "70874398"
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
   
--   [Conditions préalables](#prereq)  
+-   [Prérequis](#prereq)  
   
 -   [Vue d’ensemble](#overview)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70874398"
   
 -   [Passer à la vue Galerie ou Théâtre](#switch)  
   
-##  <a name="prereq"></a> Conditions préalables  
+##  <a name="prereq"></a> Prérequis  
   
 -   Vous devez disposer de Silverlight. Silverlight peut être téléchargé et installé via Microsoft Update. Si vous affichez une bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à l'aide d'un navigateur qui ne dispose pas de Silverlight, cliquez sur le lien dans la page pour l'installer. Vous devez fermer le navigateur puis le rouvrir une fois que vous avez installé Silverlight.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70874398"
     >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
     > Pour afficher le contenu de la bibliothèque dans Microsoft Edge, cliquez sur l’onglet **bibliothèque** dans Power Pivot Galerie, puis remplacez la vue de la bibliothèque de documents par **tous les documents**.    
     > Pour modifier l’affichage par défaut, cliquez sur l’onglet **Bibliothèque** , puis sur Modifier l’affichage. Cliquez sur Définir cet affichage comme affichage par défaut, puis sur OK pour enregistrer l’affichage par défaut.  
-    >  Pour plus d’informations sur les éléments pris en charge par Microsoft Edge, [consultez le blog Windows, une pause du passé, partie 2 : Dire adieu à ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Pour plus d’informations sur les éléments pris en charge par Microsoft Edge, consultez le blog Windows, [une pause du passé, partie 2 : dire adieu à ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Vous devez être propriétaire de site pour créer une bibliothèque.  
   
@@ -59,18 +59,18 @@ ms.locfileid: "70874398"
   
  Les images d'aperçu reposent sur la façon dont le classeur est restitué par Excel Services. La représentation dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être identique à celle que vous voyez quand vous affichez un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un navigateur. L'aperçu a cependant une surface d'exposition limitée. Les parties d'un classeur ou rapport peuvent être réduites de façon à s'ajuster à l'espace disponible. Vous devrez peut-être ouvrir un classeur ou un rapport pour visualiser le document dans son intégralité.  
   
- L'actualisation des données de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à partir de sources de données externes est pleinement prise en charge dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais requiert une configuration supplémentaire. Un administrateur de batterie ou de service doit ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en tant qu'emplacement approuvé Excel Services. Pour plus d'informations, consultez [Créer un emplacement approuvé pour les sites PowerPivot dans l'Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ L'actualisation des données de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à partir de sources de données externes est pleinement prise en charge dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais requiert une configuration supplémentaire. Un administrateur de batterie ou de service doit ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en tant qu'emplacement approuvé Excel Services. Pour plus d'informations, consultez [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a>Créer la Galerie PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est créée automatiquement lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] à l'aide de l'option d'installation Nouveau serveur. Si vous avez ajouté [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à une batterie de serveurs existante ou si vous voulez disposer d'une bibliothèque supplémentaire, vous pouvez en créer une pour votre application ou votre site.  
   
-1.  1.  **SharePoint 2010**: Cliquez sur **actions du site** dans l’angle supérieur gauche de la page d’hébergement de votre site.  
+1.  1.  **SharePoint 2010**: cliquez sur **Actions du site** dans l'angle supérieur gauche de la page d'accueil de votre site.  
   
     2.  Cliquez sur **Autres options**.  
   
     3.  Sous Bibliothèques, cliquez sur **Galerie PowerPivot**.  
   
-    1.  **SharePoint 2013**: Cliquez sur l’icône paramètres paramètres ![SharePoint]paramètres(../media/as-sharepoint2013-settings-gear.gif "SharePoint"). Cliquez sur **Contenu du site**.  
+    1.  **Sharepoint 2013**: cliquez sur l’icône paramètres ![paramètres SharePoint](../media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint"). Cliquez sur **Contenu du site**.  
   
     2.  Cliquez sur **Ajouter une application**.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "70874398"
   
 2.  Dans le ruban, cliquez sur **Bibliothèque**.  
   
-3.  **SharePoint 2010 :** Dans affichages personnalisés, cliquez sur **modifier cet affichage**.  
+3.  **SharePoint 2010 :** dans Affichages personnalisés, cliquez sur **Modifier cet affichage**.  
   
-     **SharePoint 2013 :** Dans **gérer les affichages**, cliquez sur **modifier l’affichage**.  
+     **SharePoint 2013 :** dans **Gérer les affichages**, cliquez sur **Modifier cet affichage**.  
   
 4.  Dans Tri, spécifiez les critères à utiliser pour déterminer le mode d'affichage des classeurs dans la liste. Par défaut, les documents apparaissent dans l'ordre dans lequel ils ont été ajoutés.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "70874398"
   
  Le tableau suivant décrit les différentes mises en page pour la présentation des croquis miniatures de chaque page affichée en aperçu :  
   
-|Vue|Description|  
+|Afficher|Description|  
 |----------|-----------------|  
 |Vue Galerie (valeur par défaut)|Galerie constitue la vue par défaut pour une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'aperçu s'affiche à gauche. Des miniatures plus petites de chaque feuille de calcul s'affichent en regard de celui-ci, en ordre séquentiel de gauche à droite.|  
 |Tous les documents|Il s'agit de la mise en page standard pour les bibliothèques de documents. Vous pouvez choisir cette vue pour gérer des documents individuels ou afficher le contenu de bibliothèques sous forme de liste.<br /><br /> Utilisez cette vue pour modifier des propriétés ou pour supprimer ou déplacer des documents.<br /><br /> Si vous avez activé le contrôle de version, vous devez utiliser cette vue pour archiver des documents dans la bibliothèque ou les en extraire.|  
-|Vue Théâtre et vue Carrousel|Ces vues spécialisées sont idéales pour exposer un petit nombre de documents connexes. La rotation complète des miniatures inclut toutes les pages de tous les documents de la bibliothèque. Si vous avez un grand nombre de documents, ces vues peuvent être impraticables pour les utilisateurs qui souhaitent trouver ou ouvrir un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique.<br /><br /> Vue théâtre : La zone d’aperçu est centrée. Des miniatures plus petites de chaque feuille de calcul s'affichent plus bas dans la page, des deux côtés.<br /><br /> Vue carrousel : La zone d’aperçu est centrée. Les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
+|Vue Théâtre et vue Carrousel|Ces vues spécialisées sont idéales pour exposer un petit nombre de documents connexes. La rotation complète des miniatures inclut toutes les pages de tous les documents de la bibliothèque. Si vous avez un grand nombre de documents, ces vues peuvent être impraticables pour les utilisateurs qui souhaitent trouver ou ouvrir un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique.<br /><br /> Vue Théâtre : la zone d'aperçu est centrée. Des miniatures plus petites de chaque feuille de calcul s'affichent plus bas dans la page, des deux côtés.<br /><br /> Vue Carrousel : la zone d'aperçu est centrée. Les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
   
 ### <a name="switch-to-a-different-view"></a>Passer à une vue différente  
   
@@ -147,9 +147,9 @@ ms.locfileid: "70874398"
 3.  Dans Gérer les affichages, sous Affichage actuel, sélectionnez la vue que vous voulez utiliser dans la liste. Les vues prédéfinies sont les suivantes : Galerie, Théâtre et Carrousel. Vous pouvez également choisir Tous les documents si vous souhaitez déplacer, supprimer ou gérer des documents dans la bibliothèque.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résoudre les problèmes d’une installation PowerPivot pour SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [Utiliser la Galerie PowerPivot](use-power-pivot-gallery.md)   
- [Créer un emplacement approuvé pour les sites PowerPivot dans l’administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Résoudre les problèmes liés à une Installation PowerPivot pour SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
+ [Utiliser la Galerie PowerPivot](use-power-pivot-gallery.md)    
+ [Créer un emplacement approuvé pour les sites PowerPivot dans l’administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)    
  [Supprimer une Galerie PowerPivot](delete-power-pivot-gallery.md)  
   
   

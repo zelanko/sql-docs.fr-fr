@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "71713178"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
@@ -20,7 +20,7 @@ ms.locfileid: "71713178"
 
 Utilisez les vues de gestion dynamique (DMV) pour surveiller l’exécution de scripts externes (Python et R), les ressources utilisées, diagnostiquer les problèmes et optimiser les performances dans SQL Server Machine Learning Services.
 
-Dans cet article, vous trouverez les DMV qui sont spécifiques à SQL Server Machine Learning Services. Vous trouverez également des exemples de requêtes qui affichent les éléments suivants:
+Dans cet article, vous trouverez les DMV qui sont spécifiques à SQL Server Machine Learning Services. Vous trouverez également des exemples de requêtes qui affichent les éléments suivants :
 
 + Paramètres et options de configuration pour Machine Learning
 + Sessions actives exécutant des scripts ou python externes
@@ -38,17 +38,17 @@ Pour plus d’informations générales sur les vues DMV, consultez [vues de gest
 
 ## <a name="dynamic-management-views"></a>Vues de gestion dynamique
 
-Les vues de gestion dynamique suivantes peuvent être utilisées lors de l’analyse des charges de travail de Machine Learning dans SQL Server. Pour interroger les vues DMV, `VIEW SERVER STATE` vous devez disposer de l’autorisation sur l’instance.
+Les vues de gestion dynamique suivantes peuvent être utilisées lors de l’analyse des charges de travail de Machine Learning dans SQL Server. Pour interroger les vues DMV, vous devez `VIEW SERVER STATE` autorisation sur l’instance.
 
-| Vue de gestion dynamique | Type | Description |
+| Vue de gestion dynamique | Tapez | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Exécution | Renvoie une ligne pour chaque compte de travail actif qui exécute un script externe. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Exécution | Renvoie une ligne pour chaque type de demande de script externe. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Exécution | Renvoie une ligne par compteur de performance maintenu par le serveur. Si vous utilisez la condition `WHERE object_name LIKE '%External Scripts%'`de recherche, vous pouvez utiliser ces informations pour savoir combien de scripts ont été exécutés, quels scripts ont été exécutés à l’aide du mode d’authentification ou combien d’appels R ou python ont été émis sur l’instance en général. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Exécution | Renvoie une ligne par compteur de performance maintenu par le serveur. Si vous utilisez la condition de recherche `WHERE object_name LIKE '%External Scripts%'`, vous pouvez utiliser ces informations pour voir combien de scripts ont été exécutés, quels scripts ont été exécutés à l’aide du mode d’authentification, ou combien d’appels R ou python ont été émis sur l’instance dans son ensemble. |
 | [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | gouverneur de ressources | Retourne des informations sur l’état actuel du pool de ressources externes dans Resource Governor, la configuration actuelle des pools de ressources et les statistiques de pool de ressources. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | gouverneur de ressources | Retourne les informations d’affinité de l’UC relatives à la configuration actuelle du pool de ressources externes dans Resource Governor. Retourne une ligne par planificateur dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] où chaque planificateur est associé à un processeur. Vous pouvez utiliser cette vue pour surveiller la condition d'un planificateur ou pour identifier des tâches d'échappement. |
 
-Pour plus d’informations [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sur la surveillance des instances, consultez [affichages catalogue](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) et [Resource Governor vues de gestion dynamique associées](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+Pour plus d’informations sur la surveillance des instances de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], consultez [affichages catalogue](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) et [Resource Governor vues de gestion dynamique associées](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## <a name="settings-and-configuration"></a>Paramètres et configuration
 
@@ -76,7 +76,7 @@ FROM sys.configurations
 WHERE name = 'external scripts enabled';
 ```
 
-La requête retourne les colonnes suivantes:
+La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
@@ -104,7 +104,7 @@ INNER JOIN sys.dm_exec_sessions AS s
 ON s.session_id = r.session_id;
 ```
 
-La requête retourne les colonnes suivantes:
+La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
@@ -121,7 +121,7 @@ La requête retourne les colonnes suivantes:
 | reads | Nombre de lectures effectuées par la demande. |
 | logical_reads | Nombre de lectures logiques effectuées par la demande. |
 | writes | Nombre d'écritures effectuées par la demande. |
-| langage | Mot clé qui représente un langage de script pris en charge. |
+| langue | Mot clé qui représente un langage de script pris en charge. |
 | degree_of_parallelism | Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés. |
 | external_user_name | Le compte de travail Windows sous lequel le script a été exécuté. |
 
@@ -140,11 +140,11 @@ WHERE counter_value > 0
 ORDER BY language, counter_name;
 ```
 
-La requête retourne les colonnes suivantes:
+La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
-| langage | Nom du langage enregistré de script externe. |
+| langue | Nom du langage enregistré de script externe. |
 | counter_name | Nom de la fonction enregistrée de script externe. |
 | counter_value | Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée. |
 
@@ -167,10 +167,10 @@ WHERE object_name LIKE '%External Scripts%'
 | Compteur | Description |
 |---------|-------------|
 | Nombre total d’exécutions | Nombre de processus externes démarrés par des appels locaux ou distants. |
-| Exécutions parallèles | Nombre de fois où un script a inclus  _\@_ la spécification parallèle et [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] qui a pu générer et utiliser un plan de requête parallèle. |
+| Exécutions parallèles | Nombre de fois où un script a inclus la spécification _\@parallel_ et que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a pu générer et utiliser un plan de requête parallèle. |
 | Exécutions avec diffusion en continu | Nombre de fois où la fonctionnalité de diffusion en continu a été appelée. |
 | Exécutions de contexte de calcul SQL | Nombre de scripts externes exécutés où l’appel a été instancié à distance et SQL Server a été utilisé comme contexte de calcul. |
-| Connexions avec authentification implicite Connexions | Nombre de fois qu’un appel de bouclage ODBC a été effectué à l’aide de l’authentification implicite; autrement dit, le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a exécuté l’appel de la part de l’utilisateur qui envoie la demande de script. |
+| Connexions implicites auth. | Nombre de fois qu’un appel de bouclage ODBC a été effectué à l’aide de l’authentification implicite ; autrement dit, le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] exécuté l’appel pour le compte de l’utilisateur qui envoie la demande de script. |
 | Durée totale d’exécution (ms) | Temps écoulé entre l’appel et l’achèvement de l’appel. |
 | Erreurs d’exécution | Nombre de fois où les scripts ont signalé des erreurs. Ce nombre n’inclut pas les erreurs R ou python. |
 
@@ -190,7 +190,7 @@ SELECT physical_memory_kb, committed_kb
 FROM sys.dm_os_sys_info;
 ```
 
-La requête retourne les colonnes suivantes:
+La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
@@ -219,11 +219,11 @@ SELECT CONCAT ('External Pool - ', ep.name) AS pool_name, ep.max_memory_percent
 FROM sys.dm_resource_governor_external_resource_pools AS ep;
 ```
 
-La requête retourne les colonnes suivantes:
+La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
-| name | Nom du pool de ressources externe ou SQL Server. |
+| NAME | Nom du pool de ressources externe ou SQL Server. |
 | max_memory_percent | Mémoire maximale que SQL Server ou le pool de ressources externes peut utiliser. |
 
 ## <a name="resource-pools"></a>Pools de ressources
@@ -244,11 +244,11 @@ SELECT CONCAT ('External Pool - ', ep.name) AS pool_name
 FROM sys.dm_resource_governor_external_resource_pools AS ep;
 ```
 
-La requête retourne les colonnes suivantes:
+La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
-| pool_name | Nom du pool de ressources. SQL Server pools de ressources sont préfixés avec `SQL Server` et les pools de ressources externes ont pour `External Pool`préfixe.
+| pool_name | Nom du pool de ressources. SQL Server pools de ressources sont préfixés avec `SQL Server` et les pools de ressources externes sont préfixés avec `External Pool`.
 | total_cpu_usage_hours | Utilisation cumulative de l’UC, en millisecondes, depuis la réinitialisation des statistiques de du gouverneur de ressources. |
 | read_io_completed_total | Total d'entrées/sorties de lecture terminées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. |
 | write_io_completed_total | Total des entrées/sorties d'écriture terminées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. |
@@ -273,12 +273,12 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
     , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
 ```
 
-Les colonnes retournées sont les suivantes:
+Les colonnes retournées sont les suivantes :
 
 | colonne | Description |
 |--------|-------------|
 | Package | Nom du package installé. |
-| Version | Version du package. |
+| Options de version | Version du package. |
 | Dépend | Répertorie le ou les packages dont dépend le package installé. |
 | Licence | Licence du package installé. |
 | LibPath | Répertoire où se trouve le package. |
@@ -299,12 +299,12 @@ OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.ge
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
-Les colonnes retournées sont les suivantes:
+Les colonnes retournées sont les suivantes :
 
 | colonne | Description |
 |--------|-------------|
 | Package | Nom du package installé. |
-| Version | Version du package. |
+| Options de version | Version du package. |
 | Location | Répertoire où se trouve le package. |
 
 ## <a name="next-steps"></a>Étapes suivantes
