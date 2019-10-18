@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: Nouveautés de SQL Server
+    - name: What's New
       items:
         - name: SQL Server 2019
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -23,6 +23,8 @@
           href: database-engine/whats-new-in-sql-server-2016.md
     - name: Éditions et fonctionnalités
       items:
+        - name: SQL Server 2019
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: "SQL Server\_2017"
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: "SQL Server\_2016"
@@ -89,8 +91,6 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: Scripts de déploiement
               items:
                 - name: Script Python AKS
@@ -8348,27 +8348,27 @@
         - name: Extensions
           href: azure-data-studio/extensions.md
           items:
-            - name: Extension PostgreSQL (préversion)
+            - name: Extension PostgreSQL
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019 (préversion)
+            - name: SQL Server 2019
               href: azure-data-studio/sql-server-2019-extension.md
-            - name: SQL Server Agent (préversion)
+            - name: SQL Server Agent
               href: azure-data-studio/sql-server-agent-extension.md
-            - name: Extension de serveurs SQL Server Central Management (préversion)
+            - name: Extension de serveurs SQL Server Central Management
               href: azure-data-studio/sql-server-cms-extension.md
-            - name: Extension dacpac SQL Server (préversion)
+            - name: Extension dacpac SQL Server
               href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server Import (préversion)
+            - name: SQL Server Import
               href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler (préversion)
+            - name: SQL Server Profiler
               href: azure-data-studio/sql-server-profiler-extension.md
-            - name: Extension de comparaison de schéma (préversion)
+            - name: Extension de comparaison de schéma
               href: azure-data-studio/schema-compare-extension.md
             - name: Extension PowerShell
               href: azure-data-studio/powershell-extension.md
-            - name: Extension Managed Instance (préversion)
+            - name: Extension Managed Instance
               href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: Extension SandDance (préversion)
+            - name: Extension SandDance
               href: azure-data-studio/sanddance-extension.md
         - name: Création d’extensions
           items:
@@ -10293,7 +10293,7 @@
           items:
             - name: "SQL Server\_2017"
               href: linux/sql-server-linux-release-notes.md
-            - name: SQL Server 2019 - Preview
+            - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
         - name: Nouveautés
           href: linux/sql-server-linux-whats-new.md
