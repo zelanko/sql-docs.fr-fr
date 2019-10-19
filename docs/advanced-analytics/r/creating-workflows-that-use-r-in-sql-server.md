@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715174"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Créer des flux de travail SSIS et SSRS avec R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article explique comment utiliser le script R et Python incorporé à l’aide du langage et des fonctionnalités de science des données de SQL Server Machine Learning Services avec deux fonctionnalités de SQL Server importantes: SQL Server Integration Services (SSIS) et SQL Server Reporting Services SSRS. Les bibliothèques R et Python dans SQL Server fournissent des fonctions statistiques et prédictives. SSIS et SSRS fournissent respectivement des visualisations et une transformation ETL coordonnées. Cet article explique comment rassembler toutes ces fonctionnalités dans ce modèle de flux de travail:
+Cet article explique comment utiliser le script R et Python incorporé à l’aide du langage et des fonctionnalités de science des données de SQL Server Machine Learning Services avec deux fonctionnalités SQL Server importantes : SQL Server Integration Services (SSIS) et SQL Server Reporting Services SSRS. Les bibliothèques R et Python dans SQL Server fournissent des fonctions statistiques et prédictives. SSIS et SSRS fournissent respectivement des visualisations et une transformation ETL coordonnées. Cet article explique comment rassembler toutes ces fonctionnalités dans ce modèle de flux de travail :
 
 > [!div class="checklist"]
 > * Créer une procédure stockée contenant un exécutable R ou python
@@ -32,9 +32,9 @@ Les exemples de cet article concernent essentiellement R et SSIS, mais les conce
 
 Les workflows de science des données sont hautement itératifs et impliquent beaucoup de transformations de données, notamment la mise à l'échelle, les agrégations, le calcul des probabilités, le renommage et la fusion des attributs. Les scientifiques des données sont habitués à effectuer une grande partie de ces tâches dans R, Python ou un autre langage, mais l’exécution de ces flux de travail sur des données d’entreprise nécessite une intégration transparente avec les outils et processus ETL.
 
-Étant [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] donné que vous permet d’exécuter des opérations complexes dans R via des procédures stockées et Transact-SQL, vous pouvez intégrer des tâches de science des données à des processus ETL existants. Au lieu d’effectuer une chaîne de tâches gourmandes en mémoire, la préparation des données peut être optimisée à l' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] aide [!INCLUDE[tsql](../../includes/tsql-md.md)]des outils les plus efficaces, y compris et. 
+Étant donné que [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] vous permet d’exécuter des opérations complexes dans R à l’aide de Transact-SQL et de procédures stockées, vous pouvez intégrer des tâches de science des données à des processus ETL existants. Au lieu d’effectuer une chaîne de tâches gourmandes en mémoire, la préparation des données peut être optimisée à l’aide des outils les plus efficaces, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
-Voici quelques idées sur la façon dont vous pouvez automatiser le traitement des données et les pipelines de modélisation à l’aide [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]de:
+Voici quelques idées sur la façon dont vous pouvez automatiser vos pipelines de traitement et de modélisation de données à l’aide de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :
 
 + Extraire des données à partir de sources locales ou Cloud pour créer des données d’apprentissage 
 + Générer et exécuter des modèles R ou python dans le cadre d’un flux de travail d’intégration de données
@@ -45,7 +45,7 @@ Voici quelques idées sur la façon dont vous pouvez automatiser le traitement d
 
 ## <a name="ssis-example"></a>Exemple SSIS
 
-L’exemple suivant provient d’un billet de blog MSDN maintenant mis hors service créé par Jimmy Wong à l’adresse suivante:`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
+L’exemple suivant provient d’un billet de blog MSDN maintenant mis hors service créé par Jimmy Wong à l’adresse suivante : `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
 Cet exemple vous montre comment automatiser des tâches à l’aide de SSIS. Vous créez des procédures stockées avec R incorporé à l’aide de SQL Server Management Studio, puis vous exécutez ces procédures stockées à partir des [tâches exécuter T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) dans un package SSIS.
 
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-Dans le concepteur SSIS, créez une [tâche d’exécution SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) pour exécuter la procédure stockée **generate_iris_rx_model** . Le modèle est sérialisé et enregistré dans la table ssis_iris_models. Le script pour **SQLStatement** est le suivant:
+Dans le concepteur SSIS, créez une [tâche d’exécution SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) pour exécuter la procédure stockée **generate_iris_rx_model** . Le modèle est sérialisé et enregistré dans la table ssis_iris_models. Le script pour **SQLStatement** est le suivant :
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -139,7 +139,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 En tant que point de contrôle, une fois cette tâche terminée, vous pouvez interroger le ssis_iris_models pour voir qu’il contient un modèle binaire.
 
-### <a name="predict-score-outcomes-using-the-trained-model"></a>Résultats de prédiction (score) à l’aide du modèle «formé»
+### <a name="predict-score-outcomes-using-the-trained-model"></a>Résultats de prédiction (score) à l’aide du modèle « formé »
 
 Maintenant que vous avez du code qui charge les données d’apprentissage et génère un modèle, la seule étape restante consiste à utiliser le modèle pour générer des prédictions. 
 
@@ -177,7 +177,7 @@ Dans le concepteur SSIS, créez une [tâche d’exécution SQL](https://docs.mic
 exec predict_species_length 'rxLinMod';
 ```
 
-![Générer](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Générer des prédictions")
+![Générer des prédictions](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Générer des prédictions")
 
 ### <a name="run-the-solution"></a>Exécuter la solution
 
@@ -191,13 +191,13 @@ Dans le concepteur SSIS, appuyez sur F5 pour exécuter le package. Vous devez vo
 
 Bien que R puisse créer des graphiques et des visualisations intéressantes, il n’est pas bien intégré avec des sources de données externes, ce qui signifie que chaque graphique ou graphique doit être produit individuellement. Le partage peut également être difficile.
 
-À l' [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]aide de, vous pouvez exécuter des opérations complexes [!INCLUDE[tsql](../../includes/tsql-md.md)] dans R via des procédures stockées, qui peuvent facilement être utilisées par divers outils de création [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de rapports d’entreprise, y compris et Power bi.
+En utilisant [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], vous pouvez exécuter des opérations complexes dans R via des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)], qui peuvent facilement être utilisées par un large éventail d’outils de création de rapports d’entreprise, y compris [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et Power BI.
 
 ### <a name="ssrs-example"></a>Exemple SSRS
 
 [Appareil graphique R pour Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/)
 
-Ce projet CodePlex fournit le code pour vous aider à créer un élément de rapport personnalisé qui restitue la sortie graphique de R sous la forme d’une image [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui peut être utilisée dans les rapports.  Avec l’élément de rapport personnalisé, vous pouvez :
+Ce projet CodePlex fournit le code pour vous aider à créer un élément de rapport personnalisé qui restitue la sortie graphique de R sous la forme d’une image qui peut être utilisée dans les rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  Avec l’élément de rapport personnalisé, vous pouvez :
 
 + Publier des graphiques et tracés créés à l’aide du périphérique graphique de R dans les tableaux de bord [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 

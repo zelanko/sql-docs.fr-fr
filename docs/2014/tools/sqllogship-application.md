@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "63035061"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
@@ -60,14 +60,14 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |0|N'envoie en sortie aucun message de traçage et de débogage.|  
 |1|Envoie en sortie des messages de gestion des erreurs.|  
 |2|Envoie en sortie des messages de gestion des erreurs et d'avertissement.|  
-|**3**|Envoie en sortie des messages de gestion des erreurs, d'avertissement et d'information. Valeur par défaut.|  
+|**3**|Envoie en sortie des messages de gestion des erreurs, d'avertissement et d'information. Ceci est la valeur par défaut.|  
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
   
  **-logintimeout** _timeout_value_  
- Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int** _._  
+ Spécifie la durée allouée à la tentative de connexion à l’instance de serveur avant l’expiration du délai d’attente. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int** _._  
   
  **-querytimeout** _timeout_value_  
- Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* a la valeur **int** _._  
+ Spécifie la durée allouée au démarrage de l’opération spécifiée avant l’expiration de la tentative. La valeur par défaut est aucune période d’expiration. *timeout_value* a la valeur **int** _._  
   
 ## <a name="remarks"></a>Notes  
  Il est recommandé d'utiliser les travaux de sauvegarde, de copie et de restauration pour effectuer les opérations correspondantes quand cela est possible. Pour démarrer ces travaux à partir d’une opération de traitement ou d’une autre application, appelez la procédure stockée [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
@@ -76,10 +76,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  L’application **sqllogship** , sqllogship. exe, est installée dans le répertoire X:\Program Files\Microsoft SQL Server\120\Tools\Binn  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  **sqllogship** utilise l'authentification Windows. Le compte d'authentification Windows où s'exécute la commande nécessite un accès au répertoire Windows et des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La configuration requise dépend de l’option spécifiée par la commande **sqllogship** : **-backup**, **-copy**ou **-restore** .  
   
-|Option|Accès au répertoire|Autorisations|  
+|Option|Accès au répertoire|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|Nécessite un accès en lecture/écriture au répertoire de sauvegarde.|Nécessite les mêmes autorisations que l'instruction BACKUP. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
 |**-copy**|Nécessite l'accès en lecture au répertoire de sauvegarde et l'accès en écriture au répertoire de copie.|Nécessite les mêmes autorisations que la procédure stockée [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  
