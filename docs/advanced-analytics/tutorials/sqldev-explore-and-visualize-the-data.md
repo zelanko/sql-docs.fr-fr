@@ -9,20 +9,20 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715371"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorez et Visualisez les données
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
 
 Dans cette étape, vous allez examiner les exemples de données, puis générer des tracés à l’aide de [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) à partir de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et de la fonction [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) générique dans base R. Ces fonctions R sont déjà incluses dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
-L’objectif principal de cette leçon est d’illustrer comment appeler des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] R à partir de procédures stockées et enregistrer les résultats dans des formats de fichiers d’application:
+L’objectif principal de cette leçon est d’illustrer comment appeler des fonctions R à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] dans des procédures stockées et enregistrer les résultats dans des formats de fichiers d’application :
 
 + Créez une procédure stockée à l’aide de **RxHistogram** pour générer un tracé R sous forme de données varbinary. Utilisez **BCP** pour exporter le flux binaire vers un fichier image.
 + Créez une procédure stockée à l’aide de la fonction **Hist** pour générer un tracé, en enregistrant les résultats au format jpg et PDF.
@@ -34,13 +34,13 @@ L’objectif principal de cette leçon est d’illustrer comment appeler des fon
 
 Le développement d’une solution de science des données comprend généralement l’exploration et la visualisation des données. Par conséquent, prenez une minute pour examiner les exemples de données, si vous ne l’avez pas déjà fait.
 
-Dans le jeu de données public d’origine, les identificateurs et les enregistrements de trajet des taxis ont été fournis dans des fichiers distincts. Toutefois, pour faciliter l’utilisation des exemples de données, les deux jeux de données d’origine ont été joints aux colonnes _Medallion_, _hack\_License_et _pick\_DateTime_.  Les enregistrements ont aussi été échantillonnés pour obtenir seulement 1 % du nombre d’enregistrements d’origine. Le dataset échantillonné obtenu compte 1 703 957 lignes et 23 colonnes.
+Dans le jeu de données public d’origine, les identificateurs et les enregistrements de trajet des taxis ont été fournis dans des fichiers distincts. Toutefois, pour faciliter l’utilisation des exemples de données, les deux jeux de données d’origine ont été joints sur les colonnes _Medallion_, _hack \_license_et _Pickup \_datetime_.  Les enregistrements ont aussi été échantillonnés pour obtenir seulement 1 % du nombre d’enregistrements d’origine. Le dataset échantillonné obtenu compte 1 703 957 lignes et 23 colonnes.
 
 **Identificateurs de taxis**
   
 -   La colonne _Medallion_ représente le numéro d’identification unique du taxi.
   
--   La colonne de _licence hack\__ contient le numéro de licence du pilote taxi (rendu anonyme).
+-   La colonne _hack \_license_ contient le numéro de licence du pilote taxi (rendu anonyme).
   
 **Enregistrements de trajets et de prix**
   
@@ -48,11 +48,11 @@ Dans le jeu de données public d’origine, les identificateurs et les enregistr
   
 -   Chaque enregistrement de prix inclut des informations telles que le type de paiement, le montant total du paiement et le montant du pourboire.
   
--   Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique. La _colonne\_montant du pourboire_ contient des valeurs numériques continues et peut être utilisée comme colonne d' **étiquette** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. La colonne de _classe\_Tip_ contient plusieurs **étiquettes de classe** et peut donc être utilisée comme étiquette pour les tâches de classification multiclasse.
+-   Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique. L' _info-bulle \_amount_ colonne contient des valeurs numériques continues et peut être utilisée comme colonne d' **étiquette** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. Le _conseil \_class_ colonne a plusieurs **étiquettes de classe** et peut donc être utilisé comme étiquette pour les tâches de classification multiclasse.
   
     Cette procédure pas à pas ne montre que la tâche de classification binaire. Si vous le souhaitez, vous pouvez essayer de créer des modèles pour les autres deux tâches d’apprentissage automatique, la régression et la classification multiclasse.
   
--   Les valeurs utilisées pour les colonnes d’étiquette sont toutes basées sur la colonne du _montant\__ des pourboires, à l’aide des règles d’entreprise suivantes:
+-   Les valeurs utilisées pour les colonnes d’étiquette sont toutes basées sur l' _info-bulle \_amount_ colonne, à l’aide des règles d’entreprise suivantes :
   
     |Nom de la colonne dérivée|Règle|
     |-|-|
@@ -61,7 +61,7 @@ Dans le jeu de données public d’origine, les identificateurs et les enregistr
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>Créer une procédure stockée à l’aide de rxHistogram pour tracer les données
 
-Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), l’une des fonctions R améliorées fournies dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Cette étape trace un histogramme basé sur les données d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une requête. Vous pouvez encapsuler cette fonction dans une procédure stockée, **PlotRxHistogram**.
+Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), l’une des fonctions R améliorées fournies dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Cette étape trace un histogramme basé sur les données d’une requête de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez encapsuler cette fonction dans une procédure stockée, **PlotRxHistogram**.
 
 1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample** et sélectionnez **nouvelle requête**.
 
@@ -90,7 +90,7 @@ Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine
     GO
     ```
 
-Les points clés à comprendre dans ce script sont les suivants: 
+Les points clés à comprendre dans ce script sont les suivants : 
   
 + La variable `@query` définit le texte de requête (`'SELECT tipped FROM nyctaxi_sample'`), qui est transmis au script R comme argument de la variable d’entrée du script, `@input_data_1`. Pour les scripts R qui s’exécutent en tant que processus externes, vous devez disposer d’un mappage un-à-un entre les entrées de votre script et les entrées de la procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) qui démarre la session R sur SQL Server.
   
@@ -114,7 +114,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
     **Résultats**
     
-    *tracé* *0xFFD8FFE000104A4649...*
+    *tracer* le *0xFFD8FFE000104A4649...*
   
 2. Ouvrez une invite de commandes PowerShell et exécutez la commande suivante, en indiquant le nom de l’instance, le nom de la base de données, le nom d’utilisateur et les informations d’identification appropriés comme arguments. Pour ceux qui utilisent des identités Windows, vous pouvez remplacer **-U** et **-P** par **-T**.
   
@@ -157,7 +157,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
 4.  Le fichier de sortie est créé dans le même répertoire que celui où vous avez exécuté la commande PowerShell. Pour afficher le tracé, il suffit d’ouvrir le fichier plot.jpg.
   
-    ![courses de taxi avec et sans pourboires](media/rsql-devtut-tippedornot.jpg "courses de taxi avec et sans pourboires")  
+    ![voyages de taxi avec et sans conseils](media/rsql-devtut-tippedornot.jpg "voyages de taxi avec et sans conseils")  
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Créer une procédure stockée à l’aide de l’historique et de plusieurs formats de sortie
 
@@ -264,11 +264,11 @@ Les nombres dans les noms de fichiers sont générés de manière aléatoire pou
 
 Pour afficher le tracé, ouvrez le dossier de destination et passez en revue les fichiers qui ont été créés par le code R dans la procédure stockée.
 
-1. Accédez au dossier indiqué dans le message STDOUT (dans l’exemple, il s’agit de C:\temp\plots\)
+1. Accédez au dossier indiqué dans le message STDOUT (dans l’exemple, il s’agit de C:\temp\plots \)
 
 2. Ouvrez `rHistogram_Tipped.jpg` pour afficher le nombre de voyages qui ont reçu un Conseil et les voyages qui n’ont pas eu de Conseil. (Cet histogramme est semblable à celui que vous avez généré à l’étape précédente.)
 
-3. Ouvrir `rHistograms_Tip_and_Fare_Amount.pdf` pour afficher la répartition des montants des pourboires, en fonction des montants des prix.
+3. Ouvrez `rHistograms_Tip_and_Fare_Amount.pdf` pour afficher la répartition des montants des pourboires, en fonction des montants des prix.
     
   ![histogramme présentant tip_amount et fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogramme présentant tip_amount et fare_amount")
 
@@ -278,7 +278,7 @@ Pour afficher le tracé, ouvrez le dossier de destination et passez en revue les
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 2 : Créer des fonctionnalités de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Leçon 2 : créer des fonctionnalités de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 

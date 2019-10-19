@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68887940"
 ---
 # <a name="dimension-relationships"></a>Relations de dimension
-  L'utilisation d'une dimension définit les relations entre une dimension de cube et les groupes de mesures d'un cube. Une dimension de cube est une instance d'une dimension de base de données qui est utilisée dans un cube spécifique. Un cube peut (et c'est souvent le cas) avoir des dimensions de cube qui ne sont pas directement liées à un groupe de mesures, mais qui peuvent être indirectement liées au groupe de mesures via une autre dimension ou un autre groupe de mesures. Lorsque vous ajoutez une dimension de base de données ou un groupe de [!INCLUDE[msCoName](../../includes/msconame-md.md)] mesures à un cube, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de déterminer l’utilisation de la dimension en examinant les relations entre les tables de dimension et les tables de faits dans la vue de source de données du cube, et en examinant relations entre les attributs dans les dimensions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définit automatiquement les paramètres d'utilisation de la dimension pour les relations qu'il peut détecter.  
+  L'utilisation d'une dimension définit les relations entre une dimension de cube et les groupes de mesures d'un cube. Une dimension de cube est une instance d'une dimension de base de données qui est utilisée dans un cube spécifique. Un cube peut (et c'est souvent le cas) avoir des dimensions de cube qui ne sont pas directement liées à un groupe de mesures, mais qui peuvent être indirectement liées au groupe de mesures via une autre dimension ou un autre groupe de mesures. Lorsque vous ajoutez une dimension de base de données ou un groupe de mesures à un cube, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de déterminer l’utilisation de la dimension en examinant les relations entre les tables de dimension et les tables de faits dans la vue de source de données du cube, et en examinant les relations entre les attributs dans les dimensions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définit automatiquement les paramètres d'utilisation de la dimension pour les relations qu'il peut détecter.  
   
  Une relation entre une dimension et un groupe de mesures est constituée des tables de dimension et de faits qui participent à la relation et d'un attribut de granularité qui spécifie la granularité de la dimension dans le groupe de mesures particulier.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "68887940"
  Pour plus d’informations sur les relations référencées, consultez [définir une relation référencée et des propriétés de relation référencées](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="fact-dimension-relationships"></a>Relations de dimension de fait  
- Les dimensions de fait, fréquemment appelées dimensions dégénérées, sont des dimensions standard construites à partir de colonnes d'attributs de tables de faits, et non de tables de dimension. Des données dimensionnelles utiles sont parfois stockées dans une table de faits pour réduire la duplication. Par exemple, le diagramme suivant affiche la table de faits **FactResellerSales** , à [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] partir de l’exemple de base de données.  
+ Les dimensions de fait, fréquemment appelées dimensions dégénérées, sont des dimensions standard construites à partir de colonnes d'attributs de tables de faits, et non de tables de dimension. Des données dimensionnelles utiles sont parfois stockées dans une table de faits pour réduire la duplication. Par exemple, le diagramme suivant affiche la table de faits **FactResellerSales** , à partir de l’exemple de base de données [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)].  
   
- Les ![colonnes de la table de faits peuvent prendre en charge les dimensions](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "colonnes de la table de faits peuvent prendre en charge les dimensions")  
+ ![Les colonnes de la table de faits peuvent prendre en charge les dimensions](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "Les colonnes de la table de faits peuvent prendre en charge les dimensions")  
   
  La table contient des informations d'attribut non seulement pour chaque ligne d'une commande émise par un revendeur, mais aussi sur la commande elle-même. Les attributs entourés dans le diagramme précédent identifient les informations de la table **FactResellerSales** qui peuvent être utilisées comme attributs dans une dimension. Dans ce cas, deux éléments d'informations supplémentaires, le numéro de suivi du transporteur et le numéro du bon de commande émis par le revendeur, sont représentés par les colonnes d'attribut CarrrierTrackingNumber et CustomerPONumber. Ces informations sont intéressantes : par exemple, les utilisateurs souhaitent sans aucun doute voir des informations agrégées, telles que le coût total du produit, pour toutes les commandes expédiées sous un numéro de suivi unique. Mais, sans une dimension, il est impossible d'organiser ou d'agréger les données de ces deux attributs.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68887940"
   
  ![Relation de dimension plusieurs-à-plusieurs de schéma logique](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "Relation de dimension plusieurs-à-plusieurs de schéma logique")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet de définir une relation plusieurs-à-plusieurs entre une dimension et une table de faits.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet de définir une relation plusieurs-à-plusieurs entre une dimension et une table de faits.  
   
 > [!NOTE]  
 >  Pour pouvoir prendre en charge une relation de dimension plusieurs-à-plusieurs, la vue de source de données doit avoir établi une relation de clé étrangère entre toutes les tables impliquées, comme indiqué dans le schéma précédent. Dans le cas contraire, vous ne pourrez pas sélectionner le groupe de mesures intermédiaire approprié lors de l’établissement de la relation dans l’onglet utilisation de la **dimension** du concepteur de dimensions.  

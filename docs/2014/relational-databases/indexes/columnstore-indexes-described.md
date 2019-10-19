@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811041"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  L' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *index ColumnStore en mémoire* stocke et gère des données à l’aide du stockage de données basé sur les colonnes et du traitement de requête basé sur les colonnes. Les index columnstore fonctionnent bien pour les charges de travail de stockage de données qui effectuent principalement des chargements en masse et des requêtes en lecture seule. Utilisez l'index columnstore pour atteindre des gains de **performances des requêtes** pouvant être multipliés par 10 par rapport au stockage orienté lignes traditionnel, et une **compression de données** multipliée par 7 par rapport à la taille des données non compressées.  
+  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *index ColumnStore en mémoire* stocke et gère des données à l’aide du stockage de données basé sur les colonnes et du traitement des requêtes en colonnes. Les index columnstore fonctionnent bien pour les charges de travail de stockage de données qui effectuent principalement des chargements en masse et des requêtes en lecture seule. Utilisez l’index columnstore pour atteindre des **performances des requêtes** pouvant être multipliées par 10 par rapport au stockage orienté lignes traditionnel, et une **compression de données** multipliée par 7 par rapport à la taille des données non compressées.  
   
 > [!NOTE]  
 >  Nous considérons l'index columnstore cluster comme étant la norme pour le stockage de grandes tables de faits de stockage des données, et nous pensons qu'il va être utilisé dans la plupart des scénarios de stockage des données. Étant donné que l'index columnstore cluster est modifiable, votre charge de travail peut exécuter un grand nombre d'insertions, mises à jour, et suppressions.  
@@ -82,7 +82,7 @@ ms.locfileid: "68811041"
   
 ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un index non cluster :  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68811041"
   
 -   Nécessite un stockage supplémentaire pour stocker une copie des colonnes dans l'index.  
   
--   Est mis à jour par la reconstruction de l'index ou le basculement de partitions. Il ne peut pas être mis à jour en utilisant des opérations DML telles que l'insertion, la mise à jour et la suppression.  
+-   Est mis à jour par la reconstruction de l’index ou le basculement des partitions. Elle ne peut pas être mise à jour à l’aide d’opérations DML telles que l’insertion, la mise à jour et la suppression.  
   
 -   Peut être associé à d'autres index sur la table.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68811041"
  Un *rowgroup* est un groupe de lignes qui sont compressées au format columnstore en même temps.  
   
  segment de colonne  
- Un *segment de colonne* est une colonne de données au sein d'un rowgroup.  
+ Un *segment de colonne* est une colonne de données au sein d’un rowgroup.  
   
 -   Un rowgroup contient généralement le nombre maximal de lignes par rowgroup qui est de 1 048 576 lignes.  
   
@@ -125,19 +125,19 @@ ms.locfileid: "68811041"
   
 -   Chaque segment de colonne est compressé et stocké sur un support physique.  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![Segment de colonne](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "segment de colonne")  
   
  index columnstore non cluster  
  Un *nonclustered columnstore index* est un index en lecture seule créé sur un index cluster existant ou une table de segments de mémoire. Il contient une copie d'un sous-ensemble de colonnes, et peut contenir toutes les colonnes de la table. La table est en lecture seule alors qu’elle contient un index ColumnStore non cluster.  
   
  Un index columnstore non cluster permet d'avoir un index columnstore pour exécuter les requêtes d'analyse tout en exécutant des opérations en lecture seule sur la table d'origine.  
   
- ![Index ColumnStore non cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Index ColumnStore non cluster")  
+ ![Index ColumnStore non cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "index columnstore non cluster")  
   
  index columnstore cluster  
  Un *clustered columnstore index* est le stockage physique de la totalité de la table, et est le seul index de la table. L'index cluster peut être mis à jour. Effectuez des opérations d'insertion, suppression, et mise à jour sur l'index et chargez en masse des données dans l'index.  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![Index ColumnStore cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "index columnstore cluster")  
   
  Pour réduire la fragmentation des segments de colonne et améliorer les performances, l'index columnstore peut stocker des données temporaires dans une table rowstore, appelée un deltastore, plus un arbre B d'ID pour les lignes supprimées. Les opérations deltastore sont effectuées en coulisse. Pour retourner des résultats de requête corrects, l'index columnstore cluster associe les résultats de columnstore et de deltastore.  
   
@@ -155,12 +155,12 @@ ms.locfileid: "68811041"
   
  ![Chargement de données dans un index ColumnStore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Chargement de données dans un index ColumnStore")  
   
- Une table avec un index columnstore non cluster est en lecture seule jusqu'à ce que l'index soit désactivé ou supprimé. Pour mettre à jour la table et l'index columnstore non cluster, basculez des partitions. Vous pouvez également désactiver l'index, mettre à jour la table, puis reconstruire l'index.  
+ Une table avec un index columnstore non cluster est en lecture seule jusqu'à ce que l'index soit désactivé ou supprimé. Pour mettre à jour la table et l’index ColumnStore non-cluster, vous pouvez basculer les partitions. Vous pouvez également désactiver l’index, mettre à jour la table, puis reconstruire l’index.  
   
  Pour plus d'informations, consultez [Using Nonclustered Columnstore Indexes](indexes.md)  
   
 ###  <a name="dataload_cci"></a>Chargement de données dans un index ColumnStore cluster  
- ![Chargement dans un index columnstore cluster](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Chargement dans un index columnstore cluster")  
+ ![Chargement dans un index ColumnStore cluster](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Chargement dans un index ColumnStore cluster")  
   
  Comme le suggère le diagramme, pour charger des données dans un index columnstore cluster, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
