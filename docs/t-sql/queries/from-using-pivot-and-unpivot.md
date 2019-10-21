@@ -1,7 +1,7 @@
 ---
 title: Utilisation des opérateurs PIVOT et UNPIVOT | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559421"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305178"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Utilisation des opérateurs PIVOT et UNPIVOT
 
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-Les valeurs uniques retournées par la colonne `EmployeeID` deviennent des champs dans l'ensemble de résultats final. Par conséquent, il existe une colonne pour chaque numéro `EmployeeID` spécifié dans la clause PIVOT : dans ce cas les employés `164`, `198`, `223`, `231` et `233`. La colonne `PurchaseOrderID` sert de colonne de valeur par rapport à laquelle les colonnes retournées dans la sortie finale (colonnes de regroupement) sont regroupées. Dans ce cas, les colonnes de regroupement sont agrégées par la fonction `COUNT`. Un message d'avertissement apparaît indiquant qu'aucune valeur NULL figurant dans la colonne `PurchaseOrderID` n'a été prise en compte pour le calcul de la valeur `COUNT` de chaque employé.  
+Les valeurs uniques retournées par la colonne `EmployeeID` deviennent des champs dans l'ensemble de résultats final. Par conséquent, il existe une colonne pour chaque numéro `EmployeeID` spécifié dans la clause PIVOT : dans ce cas les employés `250`, `251`, `256`, `257` et `260`. La colonne `PurchaseOrderID` sert de colonne de valeur par rapport à laquelle les colonnes retournées dans la sortie finale (colonnes de regroupement) sont regroupées. Dans ce cas, les colonnes de regroupement sont agrégées par la fonction `COUNT`. Un message d'avertissement apparaît indiquant qu'aucune valeur NULL figurant dans la colonne `PurchaseOrderID` n'a été prise en compte pour le calcul de la valeur `COUNT` de chaque employé.  
   
 > [!IMPORTANT]  
 >  Quand vous utilisez des fonctions d’agrégation avec l’opérateur `PIVOT`, les valeurs NULL présentes dans la colonne de valeurs ne sont pas prises en compte lors du calcul d’une agrégation.  

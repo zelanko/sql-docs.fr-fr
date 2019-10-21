@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809951"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586755"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes de base de la disponibilité SQL Server pour les déploiements Linux
 
@@ -76,7 +76,7 @@ Samba, qui est la variante Linux du protocole SMB (Server Message Block), peut �
 
 Les partages SMB basés sur Windows peuvent également être utilisés ; les partages SMB n’ont pas besoin d’être basés sur Linux tant que la partie cliente de Samba est configurée correctement sur le serveur Linux hébergeant [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] et que le partage dispose de l’accès approprié. Pour ceux qui se trouvent dans un environnement mixte, c’est une façon de tirer parti de l'infrastructure existante pour les déploiements [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basés sur Linux.
 
-Une chose importante est que la version de Samba déployée doit être compatible avec SMB 3.0. Lors de l’ajout de la prise en charge de SMB dans [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], tous les partages sont nécessaires pour prendre en charge de SMB 3.0. Si Samba, et non Windows Server, est utilisé pour le partage, le partage basé sur Samba doit utiliser Samba 4.0 ou une version ultérieure, et dans l’idéal, 4.3 ou une version ultérieure qui prend en charge SMB 3.1.1. Une bonne source d’informations sur SMB et Linux est [SMB3 dans Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Une chose importante est que la version de Samba déployée doit être compatible avec SMB 3.0. Lors de l’ajout de la prise en charge de SMB dans [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], tous les partages sont nécessaires pour prendre en charge de SMB 3.0. Si Samba, et non Windows Server, est utilisé pour le partage, le partage basé sur Samba doit utiliser Samba 4.0 ou une version ultérieure, et dans l’idéal, 4.3 ou une version ultérieure qui prend en charge SMB 3.1.1. Une bonne source d’informations sur SMB et Linux est [SMB3 dans Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Enfin, l’utilisation d’un partage de système de fichiers réseau (NFS) est une option. L’utilisation de NFS n’est pas une option sur les déploiements de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basés sur Windows et ne peut être utilisée que pour les déploiements basés sur Linux.
 

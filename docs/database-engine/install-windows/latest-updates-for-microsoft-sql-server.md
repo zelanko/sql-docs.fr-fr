@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 948604fbd548a2fb614fd4a671f512c4a4890d52
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72245577"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586729"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Dernières mises à jour pour Microsoft SQL Server
 
@@ -49,7 +49,7 @@ Chacun des liens suivants fournit des informations sur tous les produits et tech
 |SQL Server 2005 |SP4 [(KB 2463332)](http://support.microsoft.com/kb/2463332)|Néant|Néant|Néant|[Installation de SQL Server 2005](https://msdn.microsoft.com/en-us/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](http://support.microsoft.com/kb/290211)|Néant|Néant|Néant|[Installation de SQL Server 2000](https://technet.microsoft.com/en-us/library/aa197941(sql.80).aspx)|
 
-**Découvrez comment tester les mises à jour :**  [Testing and Developing Supportability Roadmaps for ISV Applications (Feuilles de route pour le développement et les tests de la prise en charge d’applications ISV) (PDF)](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf)
+**Découvrez comment tester les mises à jour :**  [Testing and Developing Supportability Roadmaps for ISV Applications (Feuilles de route pour le développement et les tests de la prise en charge d’applications ISV) (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>Base de connaissances
 
