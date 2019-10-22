@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ba569631723bc456ceae2429d7c0fa8acac9769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031672"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586778"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,13 @@ L’unité fondamentale du stockage des données dans [!INCLUDE[ssNoVersion](../
 
 L’unité fondamentale du stockage des données dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est la page. L’espace disque alloué à un fichier de données (.mdf ou .ndf) d’une base de données est logiquement divisé en pages numérotées consécutivement de 0 à n. Les opérations d'E/S disque sont effectuées au niveau page. En d’autres termes, SQL Server lit ou écrit des pages entières de données.
 
-Les extensions sont une collection de huit pages physiques contiguës ; elles sont utilisées pour gérer les pages de manière efficace. Toutes les pages sont stockées dans des extensions.
+Les extensions sont une collection de huit pages physiques contiguës ; elles sont utilisées pour gérer les pages de manière efficace. Toutes les pages sont organisées en étendues.
 
 ### <a name="pages"></a>Pages
 
-Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la taille des pages est de 8 Ko. Autrement dit, les bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disposent de 128 pages par mégaoctet. Chaque page commence par un en-tête de 96 octets qui sert à stocker les informations système relatives à la page. Ces informations sont notamment le numéro de page, le type de page, la quantité d'espace disponible sur la page et l'ID de l'unité d'allocation de l'objet auquel appartient la page.
+Considérez un livre ordinaire : tout son contenu est écrit sur des pages. À l’image d’un livre, dans SQL Server, toutes les lignes de données sont écrites sur des pages. Dans un livre, toutes les pages ont la même taille physique. De même, dans SQL Server, toutes les pages de données ont la même taille : 8 kilo-octets. Dans un livre, la plupart des pages contiennent les données (le contenu principal du livre), tandis que certaines pages contiennent des métadonnées sur le contenu (par exemple, une table des matières et un index). Là encore, SQL Server n’est pas différent : la plupart des pages contiennent des lignes de données réelles stockées par les utilisateurs ; il s’agit de pages de données et de pages de texte/image (pour les cas spéciaux). Les pages d’index contiennent des références d’index sur l’emplacement des données et, enfin, il existe des pages système qui stockent de nombreuses métadonnées sur l’organisation des données (pages BCM, PFS, GAM, SGAM, IAM, DCM). Consultez le tableau ci-dessous pour connaître les types de page et leur description.
+
+Comme mentionné, dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la taille des pages est de 8 Ko. Autrement dit, les bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disposent de 128 pages par mégaoctet. Chaque page commence par un en-tête de 96 octets qui sert à stocker les informations système relatives à la page. Ces informations sont notamment le numéro de page, le type de page, la quantité d'espace disponible sur la page et l'ID de l'unité d'allocation de l'objet auquel appartient la page.
 
 Le tableau suivant présente les types de page utilisés dans les fichiers de données d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

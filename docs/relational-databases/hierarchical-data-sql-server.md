@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974253"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304951"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Exemple utilisant une transaction sérialisable  
- Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut être amenée à vérifier, une violation de clé en double après l’insertion indique une tentative d’ajouter plusieurs employés ayant le même ID. Par conséquent, **@last_child** doit être recalculé. Le code suivant calcule la nouvelle valeur de nœud dans une transaction sérialisable :  
+ L’index **Org_BreadthFirst** garantit que la détermination de **\@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut être amenée à vérifier, une violation de clé en double après l’insertion indique une tentative d’ajouter plusieurs employés ayant le même ID. Ainsi, **\@last_child** doit être recalculé. Le code suivant calcule la nouvelle valeur de nœud dans une transaction sérialisable :  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Déplacement de sous-arborescences  
- Une autre opération courante concerne le déplacement de sous-arborescences. La procédure suivante prend la sous-arborescence de **@oldMgr** pour en faire une sous-arborescence de **@oldMgr** (en y incluant **@newMgr** .  
+ Une autre opération courante concerne le déplacement de sous-arborescences. La procédure suivante prend la sous-arborescence de **\@oldMgr** pour en faire une sous-arborescence de **\@newMgr** (en y incluant **\@oldMgr**).  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

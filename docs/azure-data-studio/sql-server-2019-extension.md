@@ -10,12 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 17a618fb10f234d839243b0523260d19d0a2b599
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961961"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381784"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Extension SQL Server 2019 pour Azure Data Studio (préversion)
 
@@ -32,6 +32,9 @@ Pour installer l’extension SQL Server 2019 (préversion), téléchargez et ins
    |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|11 septembre 2019 |0.16.0
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 septembre 2019 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 septembre 2019 |0.16.0
+
+   > [!NOTE]
+   > Un problème connu affecte Internet Explorer, lié au téléchargement du fichier VSIX sous la forme de fichiers zip. Utilisez Edge ou un autre navigateur pour télécharger le fichier VSIX correctement. 
 
 1. Dans Azure Data Studio choisissez **Installer l’extension à partir du package VSIX** dans le menu **Fichier**, puis sélectionnez le fichier .vsix téléchargé.
 

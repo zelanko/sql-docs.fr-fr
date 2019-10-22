@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261013"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589992"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,7 +114,7 @@ Spécifiez un descripteur de plan de requête pour effacer un seul plan de requ�
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-Spécifiez le **degré maximal de parallélisme (MAXDOP)** par défaut qui doit être utilisé pour les instructions. 0 est la valeur par défaut, et indique que la configuration du serveur doit être utilisée. Le paramètre MAXDOP défini au niveau de la base de données remplace (sauf si sa valeur est 0) le paramètre **max degree of parallelism** défini au niveau du serveur par sp_configure. Les indicateurs de requête peuvent tout de même remplacer le paramètre MAXDOP défini au niveau de la base de données afin de configurer les requêtes qui nécessitent un paramétrage différent. Tous ces paramètres sont limités par le degré maximal de parallélisme (MAXDOP) défini pour le [groupe de charge de travail]().
+Spécifiez le **degré maximal de parallélisme (MAXDOP)** par défaut qui doit être utilisé pour les instructions. 0 est la valeur par défaut, et indique que la configuration du serveur doit être utilisée. Le paramètre MAXDOP défini au niveau de la base de données remplace (sauf si sa valeur est 0) le paramètre **max degree of parallelism** défini au niveau du serveur par sp_configure. Les indicateurs de requête peuvent tout de même remplacer le paramètre MAXDOP défini au niveau de la base de données afin de configurer les requêtes qui nécessitent un paramétrage différent. Tous ces paramètres sont limités par le degré maximal de parallélisme (MAXDOP) défini pour le [groupe de charge de travail](create-workload-group-transact-sql.md).
 
 Vous pouvez utiliser l'option MAXDOP pour limiter le nombre de processeurs à utiliser dans une exécution de plans parallèles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en compte les plans d’exécution parallèle pour les requêtes, les opérations du langage de définition de données (DDL) d’index, l’insertion parallèle, la modification de colonne en ligne, la collecte de statistiques parallèle et l’alimentation des curseurs statiques et de jeux de clés.
 

@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553213"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545066"
 ---
 # <a name="oracle-source"></a>Source Oracle
 

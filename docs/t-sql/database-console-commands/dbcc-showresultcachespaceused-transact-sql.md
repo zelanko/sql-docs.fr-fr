@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 0a8e9207e22a0e9bb4fbb75d872697fc9d2ff76e
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72174656"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452832"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -37,18 +37,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 La commande `DBCC SHOWRESULTCACHESPACEUSED` n’accepte aucun paramètre et retourne l’espace utilisé par la base de données à l’endroit où la commande est exécutée.
 
-La taille maximale du cache de jeu de résultats est de 1 To par base de données.  Azure SQL Data Warehouse supprime automatiquement les entrées dans le cache du jeu de résultats :
-
-- toutes les 48 heures si le jeu de résultats n’a pas été utilisé.
-- lorsque le cache du jeu de résultats approche la taille maximale.
-
-Pour vider manuellement le cache des résultats d’une base de données, les utilisateurs peuvent utiliser l’une des options suivantes :
-
-- Désactiver la fonctionnalité de résultats pour la base de données
-- Exécuter `DBCC DROPRESULTSETCACHE` pendant la connexion à la base de données 
-
-La suspension d’une base de données ne permet pas de vider le cache du jeu de résultats.  
-
 ## <a name="permissions"></a>Autorisations
 
 Requiert l'autorisation VIEW SERVER STATE.
@@ -65,6 +53,7 @@ Requiert l'autorisation VIEW SERVER STATE.
 
 ## <a name="see-also"></a>Voir aussi
 
+[Réglage des performances avec mise en cache du jeu de résultats](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

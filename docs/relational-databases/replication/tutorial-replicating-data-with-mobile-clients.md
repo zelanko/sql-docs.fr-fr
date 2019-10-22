@@ -13,12 +13,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895369"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517967"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : configurer la réplication entre un serveur et des clients mobiles (fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
    - N’importe quelle édition de SQL Server, à l’exception de SQL Server Express et SQL Server Compact. Ces éditions ne peuvent pas constituer un serveur de publication de réplication.   
    - Exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut.  
   
-- Sur le serveur d’abonné (destination), installez une édition quelconque de SQL Server, sauf [!INCLUDE[ssEW](../../includes/ssew-md.md)]. La publication créée dans ce tutoriel ne prend pas en charge [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
+- Sur le serveur d’abonné (destination), installez une édition quelconque de SQL Server, sauf SQL Server Express ou SQL Server Compact. La publication créée dans ce tutoriel ne prend pas en charge SQL Server Express ou SQL Server Compact. 
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).

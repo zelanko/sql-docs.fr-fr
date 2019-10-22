@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/08/2019
-ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.date: 10/11/2019
+ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041118"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313624"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="october-2019-hotfix-2"></a>Octobre 2019 (correctif logiciel 2)
+
+11 octobre 2019 &nbsp; / &nbsp; version : 1.12.2
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Désactiver le démarrage automatique de la gestion des erreurs en mode inspection |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix"></a>Octobre 2019 (correctif logiciel)
 

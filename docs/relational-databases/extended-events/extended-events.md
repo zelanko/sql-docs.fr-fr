@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941138"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313698"
 ---
 # <a name="extended-events-overview"></a>Vue d’ensemble des événements étendus
 
@@ -108,6 +108,23 @@ En utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCL
 |Explique comment utiliser les événements étendus avec le suivi d'événements pour Windows pour surveiller l'activité système.|[Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 |Utilisation des affichages catalogue et des vues de gestion dynamique pour les événements étendus | [Utilisation de SELECT et JOIN dans les vues système pour les événements étendus dans SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 | &nbsp; | &nbsp; |
+
+Utilisez la requête Transact-SQL (T-SQL) suivante pour lister tous les événements étendus possibles et leurs descriptions :
+
+```sql
+SELECT
+     obj1.name as [XEvent-name],
+     col2.name as [XEvent-column],
+     obj1.description as [Descr-name],
+     col2.description as [Descr-column]
+  FROM
+               sys.dm_xe_objects        as obj1
+      JOIN sys.dm_xe_object_columns as col2 on col2.object_name = obj1.name
+  ORDER BY
+    obj1.name,
+    col2.name
+```
+
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Les exemples de code peuvent être différents pour Azure SQL Database
 

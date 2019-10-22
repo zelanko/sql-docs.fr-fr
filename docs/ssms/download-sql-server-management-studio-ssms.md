@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251394"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542214"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -40,11 +40,7 @@ Utilisez SSMS pour interroger, concevoir et gérer vos bases de données et entr
 
 SSMS est gratuit !
 
-## <a name="download-ssms-1831"></a>Télécharger SSMS 18.3.1
-
-**SSMS 18.3.1 est maintenant disponible. Il s’agit de la dernière version de *SQL Server Management Studio* en disponibilité générale qui prend en charge [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
-
-**[Télécharger SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Télécharger SSMS](https://aka.ms/ssmsfullsetup)
 
 SSMS 18.3.1 est la dernière version en disponibilité générale de SSMS. Si vous avez une précédente version de SSMS 18 en disponibilité générale, l’installation de SSMS 18.3.1 la met à niveau vers 18.3.1. Si vous avez une ancienne version *en préversion* de SSMS 18.x, vous devez la désinstaller avant d’installer SSMS 18.3.1.
 
@@ -59,6 +55,9 @@ Si vous avez des commentaires ou des suggestions, ou si vous souhaitez signaler 
 L’installation de SSMS 18.x ne met pas à niveau ni ne remplace les versions 17.x ou antérieures de SSMS. SSMS 18.x s’installe côte à côte avec les versions précédentes pour que vous puissiez utiliser les deux versions.
 
 Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version correcte adaptée à vos besoins spécifiques. La version la plus récente s’intitule **Microsoft SQL Server Management Studio 18**
+
+> [!Note]
+> Si vous accédez à cette page à partir d’une version autre que l’anglais et que vous souhaitez voir le contenu le plus à jour, consultez cette page en [anglais](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). Vous pouvez télécharger différentes langues à partir du site en version anglaise en sélectionnant [Langues disponibles](#available-languages-ssms-1831).
 
 ## <a name="available-languages-ssms-1831"></a>Langues disponibles (SSMS 18.3.1)
 
@@ -76,7 +75,7 @@ SQL Server Management Studio 18.3.1 :
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Classification des données | Ajout des informations de classification des données à l’interface utilisateur des propriétés de colonne (*Type d’informations*, *ID du type d’informations*, *Étiquette de sensibilité* et *ID de l’étiquette de sensibilité* ne sont pas exposés dans l’interface utilisateur de SSMS). |
 | IntelliSense/Éditeur | Mise à jour de la prise en charge des fonctionnalités récemment ajoutées à SQL Server 2019 (par exemple « ALTER SERVER CONFIGURATION »). |
-| Integration Services | Ajout d’un nouvel élément du menu de sélection `Tools > Migrate to Azure > Configure Azure-enabled DTExec` qui appelle des exécutions de packages SSIS sur Azure-SSIS Integration Runtime en tant qu’activités Exécuter le package SSIS dans des pipelines ADF. |
+| Integration Services | Ajout d’un nouvel élément du menu de sélection `Tools > Migrate to Azure > Configure Azure-enabled DTExec` qui appelle des exécutions de packages de services d’intégration (SSIS) sur Azure-SSIS Integration Runtime en tant qu’activités Exécuter le package SSIS dans des pipelines ADF. |
 | SMO/Création de scripts | Ajout de la prise en charge des scripts de contrainte unique Azure SQL DW. |
 | SMO/Création de scripts | Classification des données - Ajout de la prise en charge de SQL version 10 (SQL 2008) et ultérieur.  - Ajout d’un nouvel attribut de sensibilité « rang » pour SQL version 15 (SQL 2019) et ultérieur et Azure SQL DB. |
 

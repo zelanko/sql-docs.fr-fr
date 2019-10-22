@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822613"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545055"
 ---
 # <a name="what-is-azure-data-studio"></a>Qu’est-ce qu’Azure Data Studio ?
 
@@ -68,6 +68,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 - Pouvez exécuter la plupart des tâches d’administration via le terminal intégré à l’aide de sqlcmd ou de PowerShell
 - Avez des besoins minimaux en assistants
 - N’avez pas besoin d’effectuer une configuration d’administration complète
+- Le voulez 
 
 **Utilisez SQL Server Management Studio si vous :**
 - Consacrez la majeure partie de votre temps aux tâches d’administration de base de données
@@ -117,6 +118,8 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Résultats dans du texte||Oui|
 |Visionneuse spatiale||Oui|
 |SQLCMD||Oui|
+|Notebooks|Oui||
+|Enregistrer la requête sous forme d’extrait de code|Oui||
 
 ### <a name="operating-system-support"></a>Prise en charge du système d'exploitation
 
@@ -139,6 +142,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sauvegarder/restaurer|Oui|Oui|
+|Prise en charge des clusters Big Data|Oui||
 |Importation de fichiers plats|Aperçu|Oui|
 |Agent SQL|Aperçu|Oui|
 |SQL Profiler|Aperçu|Oui|
@@ -160,6 +164,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Explorateur de modèles||Oui|
 |Évaluation des vulnérabilités||Oui|
 |Gestion de XEvent||Oui|
+|Intégration de l’API SQL Assessment||Oui|
 
 ## <a name="next-steps"></a>Étapes suivantes
 

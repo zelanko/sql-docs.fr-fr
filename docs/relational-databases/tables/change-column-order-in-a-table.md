@@ -14,12 +14,12 @@ ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b792338b5576926f1012bed59ac60c4d88fb11f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d59f36bc315f6adf62d2ce8f09be4a1bb57bf428
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101394"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452891"
 ---
 # <a name="change-column-order-in-a-table"></a>Modifier l'ordre des colonnes dans une table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "68101394"
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour changer l'ordre des colonnes**  
   
- Cette tâche ne peut pas être effectuée à l'aide d'instructions Transact-SQL.  
+ Cette tâche n’est pas prise en charge à l’aide d’instructions Transact-SQL.  
   
 ###  <a name="TsqlExample"></a>  

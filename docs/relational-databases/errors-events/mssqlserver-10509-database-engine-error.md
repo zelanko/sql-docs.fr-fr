@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9808157b943a45f9d23320d270752e7ec712c310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068281"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305887"
 ---
-# <a name="mssqlserver10509"></a>MSSQLSERVER_10509
+# <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -30,10 +30,10 @@ ms.locfileid: "68068281"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INVALID_STMT|  
-|Texte du message|Impossible de créer le repère de plan '%.\*ls', car l’instruction spécifiée par **@stmt** ou **@statement_start_offset** contient une erreur de syntaxe ou n’est pas éligible pour le repère de plan. Fournissez une seule instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide ou une position de départ de l'instruction valide dans le lot. Pour obtenir une position de départ valide, interrogez la colonne statement_start_offset de la fonction de gestion dynamique sys.dm_exec_query_stats.|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls', car l’instruction spécifiée par **\@stmt** ou **\@statement_start_offset** contient une erreur de syntaxe ou n’est pas éligible pour le repère de plan. Fournissez une seule instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide ou une position de départ de l'instruction valide dans le lot. Pour obtenir une position de départ valide, interrogez la colonne statement_start_offset de la fonction de gestion dynamique sys.dm_exec_query_stats.|  
   
 ## <a name="explanation"></a>Explication  
-L’instruction spécifiée par **@stmt** ou **@statement_start_offset** contient une erreur de syntaxe ou n’est pas éligible pour une utilisation dans un repère de plan.  
+L’instruction spécifiée par **\@stmt** ou **\@statement_start_offset** contient une erreur de syntaxe ou n’est pas éligible pour le repère de plan.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
 Fournissez une seule instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide ou une position de départ de l'instruction valide dans le lot. Pour obtenir une position de départ valide, interrogez la colonne statement_start_offset de la fonction de gestion dynamique sys.dm_exec_query_stats.  

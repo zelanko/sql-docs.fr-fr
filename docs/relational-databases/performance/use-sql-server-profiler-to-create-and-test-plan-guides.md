@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987273"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305090"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Ouvrez le fichier du texte de traitement dans l'application Bloc-notes puis copiez le texte dans le Presse-papiers.  
   
-8.  Créez le repère de plan, puis collez le texte copié entre les guillemets ( **''** ) de l’argument **@stmt** . Vous devez isoler tout guillemet simple contenu dans l'argument **@stmt** en le faisant précéder par un autre guillemet simple. Faites attention de ne pas ajouter ou supprimer d'autres caractères lorsque vous insérez ces guillemets simples. Par exemple, le littéral de date **'** 20000101 **'** doit être délimité de la façon suivante : **''** 20000101 **''** .  
+8.  Créez le repère de plan, puis collez le texte copié entre les guillemets ( **''** ) de l’argument **\@stmt**. Vous devez isoler tout guillemet simple contenu dans l’argument **\@stmt** en le faisant précéder par un autre guillemet simple. Faites attention de ne pas ajouter ou supprimer d'autres caractères lorsque vous insérez ces guillemets simples. Par exemple, le littéral de date **'** 20000101 **'** doit être délimité de la façon suivante : **''** 20000101 **''** .  
   
  Voici le repère de plan :  
   

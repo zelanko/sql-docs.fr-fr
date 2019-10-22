@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109761"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545077"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (préversion)
 
@@ -52,7 +52,7 @@ Cet article explique l’instruction SQL CREATE MATERIALIZED VIEW AS SELECT T da
 
 Un affichage matérialisé conserve les données retournées à partir de la requête de définition d’affichage et est automatiquement mis à jour lors des modifications de données dans les tables sous-jacentes.   Il améliore les performances des requêtes complexes (généralement des requêtes avec jointures et agrégations) tout en offrant des opérations de maintenance simple.   Avec sa capacité d’automatching du plan d’exécution, un affichage matérialisé ne devra pas être référencés dans la requête pour que l’optimiseur prenne en compte l’affichage pour substitution.  Ainsi, les ingénieurs de données peuvent implémenter des affichages matérialisés comme un mécanisme pour améliorer les temps de réponse de requête, sans avoir à modifier les requêtes.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -111,8 +111,8 @@ Lorsque les agrégats MIN/MAX sont utilisés dans la liste SELECT de la définit
 Un affichage matérialisé dans l’entrepôt de données Azure est très similaire à une vue indexée dans SQL Server.  Il partage presque les mêmes restrictions que la vue indexée (consultez [Créer des vues indexées](/sql/relational-databases/views/create-indexed-views) pour plus d’informations), à ceci près qu’un affichage matérialisé prend en charge des fonctions d’agrégation.   Voici certaines remarques supplémentaires concernant l’affichage matérialisé.  
  
 Seul CLUSTERED COLUMNSTORE INDEX est pris en charge par l’affichage matérialisé. 
- 
-Un affichage matérialisé peut être déposé par le biais de DROP VIEW.  Vous pouvez utiliser ALTER MATERIALIZED VIEW pour désactiver ou régénérer un affichage matérialisé.   
+
+Une vue matérialisée ne peut pas référencer d’autres vues.  
  
 Les affichages matérialisés peuvent être créés sur les tables partitionnées.  Les opérations SPLIT/MERGE sont prises en charge sur les tables référencées dans les affichages matérialisés.  SWITCH n’est pas pris en charge sur les tables référencées dans les affichages matérialisés. Dans ce cas, l’utilisateur verra l’erreur,  `Msg 106104, Level 16, State 1, Line 9`
  
@@ -129,6 +129,8 @@ ALTER TABLE SWITCH n’est pas pris en charge sur les tables référencées dans
 Après la création, des affichages matérialisés sont visibles dans SQL Server Management Studio sous le dossier des affichages de l’instance Azure SQL Data Warehouse.
 
 Les utilisateurs peuvent exécuter [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) et [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) pour déterminer l’espace occupé par un affichage matérialisé.  
+
+Un affichage matérialisé peut être déposé par le biais de DROP VIEW.  Vous pouvez utiliser ALTER MATERIALIZED VIEW pour désactiver ou régénérer un affichage matérialisé.   
 
 Le plan EXPLAIN et le Plan d’exécution graphique estimé dans SQL Server Management Studio peuvent indiquer si un affichage matérialisé est pris en compte par l’optimiseur de requête pour l’exécution des requêtes. et le Plan d’exécution graphique estimé dans SQL Server Management Studio peuvent indiquer si un affichage matérialisé est pris en compte par l’optimiseur de requête pour l’exécution des requêtes.
 

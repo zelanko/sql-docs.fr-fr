@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013893"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517957"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Interrompre une base de données de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ms.locfileid: "68013893"
   
 1.  Connectez-vous à l'instance de serveur qui héberge le réplica dont vous souhaitez interrompre la base de données. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.  
   
-2.  Interrompez la base de données à l’aide de l’instruction [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)suivante :  
+2.  Suspendez la base de données à l’aide de l’instruction [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) suivante :  
   
-     ALTER DATABASE *nom_base_de_données* SET HADR SUSPEND  
+     ALTER DATABASE *nom_base_de_données* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour interrompre une base de données**  

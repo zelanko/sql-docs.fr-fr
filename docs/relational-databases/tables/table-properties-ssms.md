@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f54ff6306e3a4b2066a05ded891f4b8e6e98f99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad8e6a73ee20a98f9dd97d8220a592c8c1600b2e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016219"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305005"
 ---
 # <a name="table-properties---ssms"></a>Propriétés de la table - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -75,9 +75,8 @@ ms.locfileid: "68016219"
  AUTO  
  Cette option permet au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de sélectionner la granularité de l'escalade de verrous appropriée pour le schéma de la table.  
   
--   Si la table est partitionnée, l'escalade de verrous sera autorisée jusqu'à la granularité de segment de mémoire ou d'arbre B (B-tree) (HoBT, Heap or B-tree). Une fois que le verrou a atteint le niveau HoBT, il n'est plus escaladé jusqu'à la granularité TABLE.  
-  
--   Si la table n'est pas partitionnée, l'escalade de verrous continue jusqu'à la granularité TABLE.  
+- Si la table est partitionnée, l'escalade de verrous sera autorisée jusqu'à la granularité de segment de mémoire ou d'arbre B (B-tree) (HoBT, Heap or B-tree). En d’autres termes, l’escalade est autorisée au niveau de la partition. Une fois que le verrou a atteint le niveau HoBT, il n'est plus escaladé jusqu'à la granularité TABLE.
+- Si la table n'est pas partitionnée, l'escalade de verrous continue jusqu'à la granularité TABLE. 
   
  TABLE  
  L'escalade de verrous continue jusqu'à la granularité TABLE que la table soit ou non partitionnée. TABLE est la valeur par défaut.  

@@ -1,7 +1,7 @@
 ---
 title: Déterminer quelles requêtes détiennent des verrous | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,26 +17,26 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 413e395a865245b4e4a6c3c7705e654e6855c245
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021915"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589981"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Déterminer quelles requêtes détiennent des verrous
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Les administrateurs de base de données ont souvent besoin d’identifier la source des verrous qui entravent les performances d’une base de données.  
+Les administrateurs de base de données ont souvent besoin d’identifier la source des verrous qui entravent les performances d’une base de données.  
   
- Par exemple, vous soupçonnez qu’un problème de performances sur votre serveur est provoqué par des verrous. Lorsque vous interrogez sys.dm_exec_requests, vous trouvez plusieurs sessions en mode suspendu avec un type d'attente qui indique que la ressource attendue est un verrou.  
+Par exemple, vous soupçonnez qu’un problème de performances sur votre serveur est provoqué par des verrous. Lorsque vous interrogez sys.dm_exec_requests, vous trouvez plusieurs sessions en mode suspendu avec un type d'attente qui indique que la ressource attendue est un verrou.  
   
- Vous interrogez sys.dm_tran_locks et les résultats indiquent que de nombreux verrous sont en attente, mais que les sessions auxquelles ces verrous ont été accordés ne font pas l’objet de requêtes actives dans sys.dm_exec_requests.  
+Vous interrogez sys.dm_tran_locks et les résultats indiquent que de nombreux verrous sont en attente, mais que les sessions auxquelles ces verrous ont été accordés ne font pas l’objet de requêtes actives dans sys.dm_exec_requests.  
   
- Cet exemple illustre une méthode permettant de déterminer quelle requête a pris le verrou, le plan de la requête et la pile [!INCLUDE[tsql](../../includes/tsql-md.md)] au moment où le verrou a été pris. Cet exemple illustre également comment la cible d'appariement est utilisée dans une session d'événements étendus.  
+Cet exemple illustre une méthode permettant de déterminer quelle requête a pris le verrou, le plan de la requête et la pile [!INCLUDE[tsql](../../includes/tsql-md.md)] au moment où le verrou a été pris. Cet exemple illustre également comment la cible d'appariement est utilisée dans une session d'événements étendus.  
   
- L’utilisation de l'éditeur de requêtes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est nécessaire pour effectuer la procédure suivante.  
+L’utilisation de l'éditeur de requêtes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est nécessaire pour effectuer la procédure suivante.  
   
 > [!NOTE]  
 >  Cet exemple utilise la base de données AdventureWorks.  
@@ -45,7 +45,7 @@ ms.locfileid: "68021915"
   
 1.  Dans l'éditeur de requêtes, émettez les instructions suivantes.  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -88,12 +88,11 @@ ms.locfileid: "68021915"
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  Après exécution d'une charge de travail sur le serveur, émettez les instructions suivantes dans l’éditeur de requêtes pour déterminer quelles requêtes détiennent encore des verrous.  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -150,11 +149,17 @@ ms.locfileid: "68021915"
   
 3.  Après avoir identifié les problèmes, supprimez les éventuelles tables temporaires et la session d'événement.  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> L’exemple de code Transact-SQL précédent s’exécute sur SQL Server localement, mais peut _ne pas s’exécuter sur Azure SQL Database._ Les parties principales de l’exemple qui impliquent directement des événements, telles que `ADD EVENT sqlserver.lock_acquired`, fonctionnent également sur Azure SQL Database. Toutefois, les éléments préliminaires, tels que `sys.server_event_sessions`, doivent être modifiés en leurs équivalents Azure SQL Database comme `sys.database_event_sessions` pour que l’exemple s’exécute.
+> Pour plus d’informations sur ces différences mineures entre SQL Server localement et Azure SQL Database, consultez les articles suivants :
+> - [Événements étendus dans Azure SQL Database](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [Objets système qui prennent en charge les événements étendus](xevents-references-system-objects.md)
+
 ## <a name="see-also"></a>Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   

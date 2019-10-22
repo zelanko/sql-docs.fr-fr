@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063992"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517943"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Avant d’installer un cluster de basculement SQL Server, vous devez sélectionner le matériel et le système d’exploitation que SQL Server utilisera. Vous devez aussi configurer le clustering de basculement Windows Server (WSFC) et examiner le réseau, la sécurité ainsi que les points importants à prendre en compte pour les autres logiciels qui seront exécutés sur votre cluster de basculement.  
   
- Si un cluster Windows dispose d'un lecteur de disque local et que la même lettre de lecteur est aussi utilisée sur un ou plusieurs nœuds de cluster en tant que lecteur partagé, vous ne pouvez pas installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce lecteur.  
+ Si un cluster Windows dispose d'un lecteur de disque local et que la même lettre de lecteur est aussi utilisée sur un ou plusieurs nœuds de cluster en tant que lecteur partagé, vous ne pouvez pas installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce lecteur. Cette restriction s’applique à la fois aux instances de cluster de basculement SQL Server et aux instances autonomes sur un serveur qui fait partie d’une instance de cluster de basculement Windows.
   
  Vous pouvez également examiner les rubriques suivantes pour en savoir plus sur les concepts, les fonctionnalités et les tâches de clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

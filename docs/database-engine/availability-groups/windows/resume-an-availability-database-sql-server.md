@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c2a266c6cedcec3e11a57fcb08f152789a74097a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014263"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517950"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reprendre une base de données de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "68014263"
   
 1.  Connectez-vous à l'instance de serveur qui héberge le réplica secondaire dont vous souhaitez reprendre la base de données.  
   
-2.  Reprenez la base de données secondaire à l’aide de l’instruction [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)suivante :  
-  
-     ALTER DATABASE *nom_base_de_données* SET HADR RESUME  
+2.  Reprenez la base de données secondaire à l’aide de l’instruction [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) suivante :  
+
+     ALTER DATABASE *nom_base_de_données* SET HADR RESUME;
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour reprendre une base de données secondaire**  

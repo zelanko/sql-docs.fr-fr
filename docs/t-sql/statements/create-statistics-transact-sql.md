@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac673a94b0d85eb4ac2623139231392ba7da4b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f76f03e2953c6fe460aa958858709d0ca5943bbc
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117099"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586749"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68117099"
   
  Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -287,19 +287,19 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilisation de CREATE STATISTICS avec FULLSCAN et PERSIST_SAMPLE_PERCENT  
+### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. Utilisation de CREATE STATISTICS avec FULLSCAN et PERSIST_SAMPLE_PERCENT  
  L’exemple suivant crée les statistiques `NamePurchase` pour toutes les lignes des colonnes `BusinessEntityID` et `EmailPromotion` de la table `Person`, et définit un pourcentage d’échantillonnage égal à 100 pour toutes les mises à jour ultérieures qui ne spécifient pas explicitement un pourcentage d’échantillonnage.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+```  
   
-### Examples using AdventureWorksDW database. 
+### <a name="examples-using-adventureworksdw-database"></a>Exemples avec la base de données AdventureWorksDW. 
   
-### F. Create statistics on two columns  
- The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
+### <a name="f-create-statistics-on-two-columns"></a>F. Créer des statistiques sur deux colonnes  
+ L’exemple suivant crée les statistiques `CustomerStats1`, en fonction des colonnes `CustomerKey` et `EmailAddress` de la table `DimCustomer`. Les statistiques sont créées d’après un échantillon statistiquement significatif des lignes dans la table `Customer`.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
