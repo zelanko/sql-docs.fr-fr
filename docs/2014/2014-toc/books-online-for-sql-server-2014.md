@@ -1,6 +1,6 @@
 ---
 title: Documentation en ligne de SQL Server 2014 | Microsoft Docs
-ms.date: 05/25/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
@@ -19,16 +19,16 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a66e558abcd1835674915955d0cda65eff58f8c0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a943685156ce9ec0ed3c94f4650c5a8222bff445
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887755"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688780"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Documentation en ligne de SQL Server 2014
 
-  Bienvenue dans [!INCLUDE[msCoName](../includes/msconame-md.md)]la documentation en ligne [!INCLUDE[msCoName](../includes/msconame-md.md)] de® pour [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. La documentation en ligne contient les descriptions et la documentation de référence des tâches qui explique comment réaliser la gestion des données et le travail de décisionnel à l'aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Bienvenue dans [!INCLUDE[msCoName](../includes/msconame-md.md)] documentation en ligne de® pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. La documentation en ligne contient les descriptions et la documentation de référence des tâches qui explique comment réaliser la gestion des données et le travail de décisionnel à l'aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 SQL Server 2016, et versions ultérieures, sont documentées [ici](https://docs.microsoft.com/sql/sql-server/index). SQL Server 2012, et les versions antérieures, sont documentées [ici](#previous-versions-gm2014). <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
 
@@ -41,7 +41,7 @@ SQL Server 2016, et versions ultérieures, sont documentées [ici](https://docs.
   
 |||  
 |-|-|  
-|![Icône moteur de base de données](media/database-engine.gif "Icône moteur de base de données")|[Moteur de base de données](../database-engine/sql-server-database-engine-overview.md)<br /><br /> Le moteur de base de données est un service central qui permet de stocker, traiter et sécuriser les données. Il fournit des accès contrôlés et des traitements de transactions rapides pour répondre aux besoins des applications les plus gourmandes en données utilisées au sein des entreprises. Il offre également les fonctions nécessaires pour faire face à des besoins de haute disponibilité.|  
+|![Icône Moteur de base de données](media/database-engine.gif "Icône Moteur de base de données")|[Moteur de base de données](../database-engine/sql-server-database-engine-overview.md)<br /><br /> Le moteur de base de données est un service central qui permet de stocker, traiter et sécuriser les données. Il fournit des accès contrôlés et des traitements de transactions rapides pour répondre aux besoins des applications les plus gourmandes en données utilisées au sein des entreprises. Il offre également les fonctions nécessaires pour faire face à des besoins de haute disponibilité.|  
 |![Logo DQS pour la rubrique d’hébergement de la documentation](media/dqs-logo.jpg "Logo DQS pour la rubrique d’hébergement de la documentation")|[Data Quality Services](../data-quality-services/data-quality-services.md)<br /><br /> SQL Server Data Quality Services (DQS) fournit une solution de nettoyage de données reposant sur des connaissances. DQS vous permet de générer une base de connaissances, puis utilise cette dernière pour effectuer la correction des données et la déduplication de vos données, à l'aide de moyens assistés par ordinateur et interactifs. Vous pouvez utiliser des services de données de référence en nuage, et vous pouvez générer une solution de gestion de données qui intègre DQS avec SQL Server Integration Services et Master Data Services.|  
 |![Icône Analysis Services](media/analysisserver.gif "Icône Analysis Services")|[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)<br /><br /> [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est une plateforme de données analytiques et un ensemble d'outils dédié au décisionnel personnel, en équipe et en entreprise. Les serveurs et concepteurs de clients prennent en charge des solutions OLAP traditionnelles, de nouvelles solutions de modélisation tabulaire, ainsi que des fonctionnalités d'analyse et de collaboration en libre-service grâce à PowerPivot, Excel et à un environnement de serveur SharePoint. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] propose également l’exploration des données pour que vous puissiez découvrir les modèles et relations masqués à l’intérieur de grands volumes de données.|  
 |![Icône Integration Services](media/dts.gif "Icône Integration Services")|[Integration Services](../integration-services/sql-server-integration-services.md)<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est une plateforme permettant de créer des solutions d’intégration de données à hautes performances, y compris des packages qui autorisent les processus d’extraction, de transformation et de chargement (ETL) pour l’entreposage de données.|  
@@ -59,7 +59,7 @@ SQL Server 2016, et versions ultérieures, sont documentées [ici](https://docs.
   
 -   [Centre de ressources SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
--   [TechCenter SQL Server](https://go.microsoft.com/fwlink/?linkid=28107)  
+-   [TechCenter SQL Server](https://go.microsoft.com/fwlink/?linkid=28107)  
   
 -   [Centre de SQL Server Développeur](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
@@ -69,7 +69,7 @@ SQL Server 2016, et versions ultérieures, sont documentées [ici](https://docs.
 
 ## <a name="previous-versions-gm2014"></a>SQL Server 2005, 2008, 2012, 2016 +
 
-[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+[!INCLUDE[previous versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>Voir aussi  
 
