@@ -17,12 +17,12 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 593c065e9567c6b298e45d6130f944816325fbbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813986"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782871"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Supprimer une base de données primaire d'un groupe de disponibilité (SQL Server)
   Cette rubrique décrit comment supprimer la base de données primaire et la ou les bases de données secondaires correspondantes d'un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "62813986"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :**  [Après la suppression d’une base de données de disponibilité dans un groupe de disponibilité](#FollowUp)  
+-   **Suivi :**  [Après la suppression d'une base de données de disponibilité dans un groupe de disponibilité](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62813986"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -86,7 +86,7 @@ ms.locfileid: "62813986"
   
      L'exemple suivant supprime une bases de données nommée `Db6` du groupe de disponibilité `MyAG` .  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
@@ -99,9 +99,8 @@ ms.locfileid: "62813986"
   
      Par exemple, la commande suivante supprime la base de données de disponibilité `MyDb9` du groupe de disponibilité nommé `MyAg`. Dans la mesure où la commande est exécutée sur l'instance de serveur qui héberge le réplica principal, la base de données primaire et toutes ses bases de données secondaires correspondantes sont supprimées du groupe de disponibilité. La synchronisation de données ne se produira plus pour cette base de données sur aucun réplica secondaire.  
   
-    ```  
-    Remove-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
+    ```powershell
+    Remove-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
     ```  
   
     > [!NOTE]  
@@ -109,12 +108,12 @@ ms.locfileid: "62813986"
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Suivi : Après la suppression d’une base de données de disponibilité dans un groupe de disponibilité  
+##  <a name="FollowUp"></a> Suivi : Après la suppression d'une base de données de disponibilité dans un groupe de disponibilité  
  La suppression d'une base de données de disponibilité de son groupe de disponibilité met fin à la synchronisation des données entre l'ancienne base de données primaire et les bases de données secondaires correspondantes. L'ancienne base de données primaire reste en ligne. Chaque base de données secondaire correspondante est placée dans l'état RESTORING.  
   
- À ce stade, il existe d'autres méthodes pour traiter une base de données secondaire supprimée :  
+ À ce stade, il existe d'autres méthodes pour traiter une base de données secondaire supprimée :  
   
 -   Si vous n'avez plus besoin d'une base de données secondaire particulière, vous pouvez la supprimer.  
   
@@ -125,7 +124,5 @@ ms.locfileid: "62813986"
      Pour plus d’informations, consultez [Récupérer une base de données sans restauration des données &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [Supprimer une base de données secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
-  
-  

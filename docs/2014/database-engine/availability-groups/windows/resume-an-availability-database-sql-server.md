@@ -17,12 +17,12 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788716"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782919"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reprendre une base de données de disponibilité (SQL Server)
   Vous pouvez reprendre une base de données de disponibilité interrompue dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La reprise d'une base de données interrompue met la base de données dans l'état SYNCHRONIZING. La reprise de la base de données primaire rétablit également toutes ses bases de données secondaires qui ont été interrompues suite à l'interruption de la base de données primaire. Si une base de données secondaire a été interrompue localement, depuis l'instance de serveur qui héberge le réplica secondaire, cette base de données secondaire doit être reprise localement. Une fois qu'une base de données secondaire particulière et que la base de données principale correspondante sont dans l'état SYNCHRONIZING, la synchronisation des données reprend sur la base de données secondaire.  
@@ -34,7 +34,7 @@ ms.locfileid: "62788716"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Configuration requise](#Prerequisites)  
+     [Prérequis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -46,14 +46,14 @@ ms.locfileid: "62788716"
   
      [PowerShell](#PowerShellProcedure)  
   
--   [Tâches associées](#RelatedTasks)  
+-   [Tâches connexes](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  Une commande RESUME retourne dès qu'elle est acceptée par le réplica qui héberge la base de données cible, mais en réalité, la reprise de la base de données se produit de façon asynchrone.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge la base de données à reprendre.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62788716"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite l'autorisation ALTER sur la base de données.  
   
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
@@ -94,7 +94,8 @@ ms.locfileid: "62788716"
      ALTER DATABASE *nom_base_de_données* SET HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
- **Pour reprendre une base de données secondaire**  
+
+### <a name="to-resume-a-secondary-database"></a>Pour reprendre une base de données secondaire
   
 1.  Accédez au répertoire (`cd`) de l'instance de serveur qui héberge le réplica dont vous souhaitez reprendre la base de données. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.  
   
@@ -102,9 +103,8 @@ ms.locfileid: "62788716"
   
      Par exemple, la commande suivante reprend la synchronisation des données pour la base de données de disponibilité `MyDb3` dans le groupe de disponibilité `MyAg`.  
   
-    ```  
-    Resume-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Resume-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -112,13 +112,11 @@ ms.locfileid: "62788716"
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches connexes  
   
 -   [Interrompre une base de données de disponibilité &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+ [Vue d’ensemble &#40;de groupes de disponibilité AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

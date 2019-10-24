@@ -1,5 +1,5 @@
 ---
-title: Création et la mise à jour des statistiques | Microsoft Docs
+title: Création et mise à jour des statistiques | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06fee22dc02a543aa9ab8ff249ca26f4cfb4aa40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54995cc99aae2065112cbb510203b656c409dcac
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226160"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782130"
 ---
 # <a name="creating-and-updating-statistics"></a>Création et mise à jour des statistiques
   Dans SMO, les informations statistiques à propos du traitement de requêtes dans la base de données peuvent être recueillies en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic>.  
@@ -27,7 +27,7 @@ ms.locfileid: "63226160"
  Il est possible de créer des statistiques pour n'importe quelle colonne en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. La méthode <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> peut être exécutée pour mettre à jour les statistiques dans l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Les résultats peuvent être affichés dans l'optimiseur de requête.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet SMO Visual Basic dans Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Création et mise à jour des statistiques en Visual Basic  
  Cet exemple de code crée une table sur une base de données existante pour laquelle l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et l'objet <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> sont créés.  
@@ -37,7 +37,7 @@ ms.locfileid: "63226160"
 ## <a name="creating-and-update-statistics-in-visual-c"></a>Création et mise à jour des statistiques en Visual C#  
  Cet exemple de code crée une table sur une base de données existante pour laquelle l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et l'objet <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> sont créés.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -64,7 +64,7 @@ ms.locfileid: "63226160"
 ## <a name="creating-and-update-statistics-in-powershell"></a>Création et mise à jour des statistiques dans PowerShell  
  Cet exemple de code crée une table sur une base de données existante pour laquelle l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et l'objet <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> sont créés.  
   
-```  
+```powershell
 # Example of implementing a full text search on the default instance.  
 # Set the path context to the local, default instance of SQL Server and database tables  
   
@@ -107,5 +107,3 @@ $fti.CatalogName = "Test_Catalog2"
 # Create the Full Text Search Index  
 $fti.Create()  
 ```  
-  
-  

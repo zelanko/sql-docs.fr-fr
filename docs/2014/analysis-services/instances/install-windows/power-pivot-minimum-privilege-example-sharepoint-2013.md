@@ -1,5 +1,5 @@
 ---
-title: Exemple de Configuration avec privilèges Minimum pour PowerPivot pour SharePoint 2013 | Microsoft Docs
+title: Exemple de configuration avec privilèges minimum pour PowerPivot pour SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f24ee3e02daaaa906c8285cd6d78dacb9973c6ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079890"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782778"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Exemple de configuration avec privilèges minimum pour Power Pivot pour SharePoint 2013
   Cette rubrique décrit un exemple de configuration de PowerPivot pour SharePoint 2013 avec les privilèges minimums. La configuration utilise un compte différent pour chacun des trois composants et chaque compte dispose du niveau minimum de privilèges.  
   
 ## <a name="summary-of-accounts"></a>Récapitulatif des comptes  
- PowerPivot pour SharePoint 2013 prend en charge l'utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de Service, consultez [configurer les comptes de Service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot pour SharePoint 2013 prend en charge l'utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de service, consultez [configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
   
  Le tableau suivant récapitule les trois comptes utilisés dans cet exemple de configuration avec privilèges minimums.  
   
-|Portée|Nom|  
+|portée|Créer une vue d’abonnement|  
 |-----------|----------|  
 |Compte Administrateur SharePoint|**SPAdmin**|  
 |Compte de batterie de serveurs SharePoint|**SPFarm**|  
 |Compte de service Analysis Services|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>Compte Administrateur SharePoint (SpAdmin)  
- **SPAdmin** est un compte de domaine que vous utilisez pour installer et configurer la batterie de serveurs. Il s’agit du compte utilisé pour exécuter l’Assistant Configuration SharePoint et l’outil de Configuration de PowerPivot pour SharePoint 2013 **SPAdmin** compte est le seul compte qui requiert des droits d’administrateur local. Avant d’exécuter l’outil de Configuration de PowerPivot, accordez le **SPAdmin** des privilèges à l’instance de base de données SQL Server où SharePoint crée les bases de données de contenu et la configuration du compte. Pour configurer le compte SPAdmin dans un scénario avec privilèges minimums, il doit être membre des rôles **securityadmin** et **dbcreator**.  
+ **SPAdmin** est un compte de domaine que vous utilisez pour installer et configurer la batterie de serveurs. Il s’agit du compte utilisé pour exécuter l’Assistant Configuration de SharePoint et l’outil de configuration de PowerPivot pour SharePoint 2013 **. le compte d’administrateur est** le seul compte qui requiert des droits d’administrateur local. Avant d’exécuter l’outil de configuration de PowerPivot, accordez les privilèges de compte d' **administrateur** à l’instance de base de données SQL Server dans laquelle SharePoint crée des bases de données de contenu et de configuration. Pour configurer le compte SPAdmin dans un scénario avec privilèges minimums, il doit être membre des rôles **securityadmin** et **dbcreator**.  
   
 ### <a name="the-farm-account-spfarm"></a>Compte de batterie de serveurs (SPFarm)  
  **SPFarm** est un compte de domaine que le service du minuteur SharePoint et l'application Web de l'Administration centrale utilisent pour accéder à la base de données de contenu SharePoint. Ce compte n'a pas besoin d'être administrateur local. L’Assistant Configuration SharePoint octroie le privilège minimal approprié dans la base de données SQL Server principale. La configuration de privilèges minimums SQL Server correspond à l’appartenance aux rôles **securityadmin** et **dbcreator**.  
@@ -50,19 +50,19 @@ ms.locfileid: "66079890"
   
  **Pour créer un compte de domaine SPsvc à utiliser comme compte de service SharePoint :**  
   
-1.  Dans Administration centrale de SharePoint, cliquez sur **sécurité**.  
+1.  Dans l’administration centrale de SharePoint, cliquez sur **sécurité**.  
   
-2.  Cliquez sur **configurer des comptes de Service**  
+2.  Cliquez sur **configurer les comptes de service**  
   
-3.  Cliquez sur **inscrire le nouveau compte géré**.  
+3.  Cliquez sur **inscrire un nouveau compte géré**.  
   
  Le compte **SPSvc** ne dispose d'aucun privilège d'administrateur local et SPsvc ne disposera d'aucun privilège dans la base de données SharePoint. Seuls les privilèges requis par SPsvc sont les droits d'administration sur l'instance PowerPivot d'Analysis Services.  
   
  **Pour configurer le pool d'applications approprié pour utiliser le compte de SPsvc :**  
   
-1.  Dans Administration centrale de SharePoint, cliquez sur **sécurité**.  
+1.  Dans l’administration centrale de SharePoint, cliquez sur **sécurité**.  
   
-2.  Cliquez sur **configurer des comptes de Service**.  
+2.  Cliquez sur **configurer les comptes de service**.  
   
 3.  Sélectionnez le pool d'application de service utilisé par l'application de service PowerPivot. Ensuite, sélectionnez le compte SPSvc.  
   
@@ -72,10 +72,7 @@ ms.locfileid: "66079890"
   
 2.  Exécutez le code PowerShell suivant :  
   
-    ```  
+    ```powershell
     $webApp = Get-SPWebApplication "http://<servername>"  
-    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")  
-  
+    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")
     ```  
-  
-  
