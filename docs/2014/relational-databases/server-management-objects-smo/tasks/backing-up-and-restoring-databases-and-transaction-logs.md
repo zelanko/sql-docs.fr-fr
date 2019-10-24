@@ -1,5 +1,5 @@
 ---
-title: Sauvegarde et restauration des bases de données et journaux de transactions | Microsoft Docs
+title: Sauvegarde et restauration des bases de données et des journaux de transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,27 +19,27 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655694"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783051"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sauvegarde et restauration de bases de données et de journaux de transactions
-  Dans SMO, la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> et la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sont des classes utilitaires qui fournissent les outils permettant d'accomplir les tâches spécifiques de sauvegarde et restauration. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objet représente une tâche de sauvegarde spécifique qui est nécessaire à la place d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet sur l’instance de serveur.  
+  Dans SMO, la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> et la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sont des classes utilitaires qui fournissent les outils permettant d'accomplir les tâches spécifiques de sauvegarde et restauration. Un objet <xref:Microsoft.SqlServer.Management.Smo.Backup> représente une tâche de sauvegarde spécifique qui est requise au lieu d’un objet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l’instance de serveur.  
   
  En cas de perte ou d'endommagement des données, la sauvegarde doit être restaurée, en totalité ou partiellement. La restauration partielle utilise la collection <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> pour segmenter les données à restaurer. Si la sauvegarde concerne un journal des transactions, les données peuvent être restaurées jusqu'à un point particulier dans le temps à l'aide de la propriété <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Restore>. Les données peuvent également être validées à l'aide de la méthode <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. La procédure de sauvegarde recommandée consiste à vérifier l'intégrité de la sauvegarde en effectuant une opération de restauration et en vérifiant régulièrement les données de la base de données.  
   
  Comme pour l'objet <xref:Microsoft.SqlServer.Management.Smo.Backup>, il n'est pas nécessaire de créer l'objet <xref:Microsoft.SqlServer.Management.Smo.Restore> en utilisant une méthode `Create` parce qu'il ne représente pas d'objet sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'objet <xref:Microsoft.SqlServer.Management.Smo.Restore> est constitué des méthodes et propriétés utilisées pour restaurer une base de données.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet SMO Visual Basic dans Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Sauvegarde des bases de données et des journaux des transactions en Visual Basic  
  Cet exemple de code montre comment sauvegarder une base de données existante dans un fichier, puis comment la restaurer.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Common  
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.VisualBasic.MyServices  
@@ -179,7 +179,7 @@ End Module
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-c"></a>Sauvegarde des bases de données et des journaux des transactions en Visual C#  
  Cet exemple de code montre comment sauvegarder une base de données existante dans un fichier, puis comment la restaurer.  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
   
@@ -317,9 +317,7 @@ class A {
 ## <a name="backing-up-databases-and-transaction-logs-in-powershell"></a>Sauvegarde des bases de données et des journaux des transactions dans PowerShell  
  Cet exemple de code montre comment sauvegarder une base de données existante dans un fichier, puis comment la restaurer.  
   
-```  
-#Backing up and restoring a Database from PowerShell  
-  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -452,7 +450,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 > [!NOTE]  
 >  L'objet <xref:System.Collections.Specialized.StringCollection> requiert une référence à l'espace de noms à l'aide de l'instruction `imports System.Collections.Specialized`.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -482,7 +480,7 @@ End Module
 > [!NOTE]  
 >  L'objet <xref:System.Collections.Specialized.StringCollection> requiert une référence à l'espace de noms à l'aide de l'instruction `imports System.Collections.Specialized`.  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
@@ -514,16 +512,14 @@ class A {
 > [!NOTE]  
 >  L'objet <xref:System.Collections.Specialized.StringCollection> requiert une référence à l'espace de noms à l'aide de l'instruction `imports System.Collections.Specialized`.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 $sc = $db.CheckTables([Microsoft.SqlServer.Management.SMO.RepairType]::None)  
-foreach ($c in $sc)  
+ForEach ($c In $sc)  
 {  
     $c  
- }  
+}  
 ```  
-  
-  

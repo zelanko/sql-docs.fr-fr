@@ -20,12 +20,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 917abf00789cfca75ee6edb52ffef07832bfe981
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782401"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783037"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Activer ou désactiver un protocole réseau de serveur
   Tous les protocoles réseau sont installés par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais ils peuvent être activés ou non. Cette rubrique décrit comment activer ou désactiver un protocole réseau de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de PowerShell. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être arrêté et redémarré pour que la modification soit prise en compte.  
@@ -34,7 +34,7 @@ ms.locfileid: "62782401"
 >  Lors de l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] une connexion est ajoutée pour le groupe BUILTIN\Users. Cela permet à tous les utilisateurs authentifiés sur l'ordinateur d'accéder à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] en tant que membres du rôle public. La connexion BUILTIN\Users peut être supprimée sans risque pour restreindre l'accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] aux utilisateurs de l'ordinateur qui disposent de connexions ou qui sont membres d'autres groupes Windows avec des connexions.  
   
 > [!WARNING]  
->  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
   
  **Dans cette rubrique**  
   
@@ -66,13 +66,13 @@ ms.locfileid: "62782401"
   
 2.  Démarrez Windows PowerShell 2.0 à partir de la barre des tâches, ou cliquez successivement sur Démarrer, Tous les Programmes, Accessoires, Windows PowerShell, puis Windows PowerShell.  
   
-3.  Importer le **sqlps** module en entrant `Import-Module "sqlps"`  
+3.  Importez le module **sqlps** en entrant `Import-Module "sqlps"`  
   
 4.  Exécutez les instructions suivantes pour activer les protocoles TCP et de canaux nommés. Remplacez `<computer_name>` par le nom de l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous configurez une instance nommée, remplacez `MSSQLSERVER` par le nom de cette instance.  
   
      Pour désactiver des protocoles, affectez aux propriétés `IsEnabled` la valeur `$false`.  
   
-    ```  
+    ```powershell
     $smo = 'Microsoft.SqlServer.Management.Smo.'  
     $wmi = new-object ($smo + 'Wmi.ManagedComputer').  
   
@@ -98,18 +98,18 @@ ms.locfileid: "62782401"
   
 -   Lorsque le script est exécuté localement et configure l'ordinateur local, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell peut rendre le script plus souple en déterminant de façon dynamique le nom de l'ordinateur local. Pour récupérer le nom de l'ordinateur local, remplacez la ligne qui définit la variable `$uri` par la ligne suivante.  
   
-    ```  
-    $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
+    ```powershell
+    $uri = "ManagedComputer[@Name='" + (Get-Item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
 #### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>Pour redémarrer le Moteur de base de données à l'aide de SQL Server PowerShell  
   
 -   Après avoir activé ou désactivé des protocoles, vous devez arrêter et redémarrer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour que la modification entre en vigueur. Exécutez les instructions suivantes pour arrêter et démarrer l'instance par défaut à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Pour arrêter et démarrer une instance nommée, remplacez `'MSSQLSERVER'` par `'MSSQL$<instance_name>'`.  
   
-    ```  
+    ```powershell
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\<computer_name>  
-    $Wmi = (get-item .).ManagedComputer  
+    $Wmi = (Get-Item .).ManagedComputer  
     # Get a reference to the default instance of the Database Engine.  
     $DfltInstance = $Wmi.Services['MSSQLSERVER']  
     # Display the state of the service.  
@@ -127,5 +127,3 @@ ms.locfileid: "62782401"
     # Refresh the cache and display the state of the service.  
     $DfltInstance.Refresh(); $DfltInstance  
     ```  
-  
-  

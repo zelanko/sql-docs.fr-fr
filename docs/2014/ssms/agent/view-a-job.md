@@ -15,14 +15,14 @@ ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a732ccf71e0b52b83ae1fabdef88235595d4c194
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50ed3ac0703429f7848a7eb7b4fc9413a0f3e5cf
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188761"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783380"
 ---
-# <a name="view-a-job"></a>Afficher un travail
+# <a name="view-a-job"></a>View a Job
   Cette rubrique explique comment consulter les travaux de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
@@ -58,13 +58,13 @@ ms.locfileid: "68188761"
   
 #### <a name="to-view-a-job"></a>Pour afficher un travail  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql
     -- lists all aspects of the information for the job NightlyBackups.  
     USE msdb ;  
     GO  
@@ -75,9 +75,7 @@ ms.locfileid: "68188761"
     GO  
     ```  
   
-##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
+##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour afficher un travail**  
   
  Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

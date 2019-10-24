@@ -1,5 +1,5 @@
 ---
-title: Planification des tâches administratives automatiques dans SQL Server Agent | Microsoft Docs
+title: Planification de tâches administratives automatiques dans SQL Server Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519224"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782208"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planification des tâches administratives automatiques dans l'Agent SQL Server
   Dans SMO, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est représenté par les objets suivants :  
@@ -35,7 +35,7 @@ ms.locfileid: "62519224"
  Les objets de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se trouvent dans l'espace de noms <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet SMO Visual Basic dans Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 1.  Pour les programmes qui utilisent l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez inclure l'instruction `Imports` pour qualifier l'espace de noms de l'Agent. Insérez l'instruction après les autres instructions `Imports`, avant toute autre déclaration dans l'application, par exemple :  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62519224"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-visual-c"></a>Création d'un travail avec des étapes et une planification en Visual C#  
  Cet exemple de code crée un travail avec des étapes et une planification, puis informe un opérateur.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -112,7 +112,7 @@ ms.locfileid: "62519224"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-powershell"></a>Création d'un travail avec des étapes et une planification dans PowerShell  
  Cet exemple de code crée un travail avec des étapes et une planification, puis informe un opérateur.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -145,7 +145,7 @@ $jbstp.OnFailAction =[Microsoft.SqlServer.Management.SMO.Agent.StepCompletionAct
 $jbstp.Create();   
   
 #Define a JobSchedule object variable by supplying the parent job and name arguments in the constructor.   
-$jbsch =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
+$jbsch = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
   
 #Set properties to define the schedule frequency, and duration.   
 $jbsch.FrequencyTypes =  [Microsoft.SqlServer.Management.SMO.Agent.FrequencyTypes]::Daily  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Création d'une alerte en Visual Basic  
  Cet exemple de code crée une alerte déclenchée par une condition de performance. La condition doit être fournie selon un format spécifique.  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
   
  Un opérateur est requis pour la notification d'alerte. Le type <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> doit être placé entre crochets car `operator` est un mot clé Visual Basic.  
   
@@ -175,11 +175,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Création d'une alerte en Visual C#  
  Cet exemple de code crée une alerte déclenchée par une condition de performance. La condition doit être fournie selon un format spécifique.  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
   
  Un opérateur est requis pour la notification d'alerte. Le type <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> doit être placé entre crochets car `operator` est un mot clé [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   
-```  
+```csharp
 {  
              //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
@@ -208,11 +208,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Création d'une alerte dans PowerShell  
  Cet exemple de code crée une alerte déclenchée par une condition de performance. La condition doit être fournie selon un format spécifique.  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
   
  Un opérateur est requis pour la notification d'alerte. Le type <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> doit être placé entre crochets car `operator` est un mot clé [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -251,7 +251,7 @@ $op.Drop()
 ## <a name="allowing-user-access-to-subsystem-by-using-a-proxy-account-in-visual-c"></a>Autorisation de l'accès utilisateur au sous-système à l'aide d'un compte proxy en Visual C#  
  L'exemple de code suivant montre comment autoriser un utilisateur à accéder à un sous-système spécifié en utilisant la méthode <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount>.  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
 {   
 Server srv = default(Server);   
@@ -281,7 +281,5 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
+ [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)    
  [Implémenter des travaux](../../../ssms/agent/implement-jobs.md)  
-  
-  

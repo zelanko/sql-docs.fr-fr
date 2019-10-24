@@ -10,12 +10,12 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e007dfaf2e14b488fb538f6b0c0ad958988a4c0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 177eef6f6280e236106f9ec67684e4a15ef479a3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154843"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783080"
 ---
 # <a name="backup-encryption"></a>Chiffrement de sauvegarde
   Cette rubrique fournit une présentation des options de chiffrement pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle contient des informations détaillées sur l'utilisation, les avantages et les méthodes recommandées de chiffrement pendant la sauvegarde.  
@@ -26,20 +26,20 @@ ms.locfileid: "70154843"
   
  Pour chiffrer pendant la sauvegarde, vous devez spécifier un algorithme de chiffrement, et un chiffreur pour sécuriser la clé de chiffrement. Les options de chiffrement suivantes sont prises en charge :  
   
--   **Algorithme de chiffrement :** les algorithmes de chiffrement pris en charge sont : AES 128, AES 192, AES 256 et Triple DES  
+-   **Algorithme de chiffrement :** Les algorithmes de chiffrement pris en charge sont : AES 128, AES 192, AES 256 et Triple DES  
   
--   **Chiffreur :** un certificat ou une clé asymétrique  
+-   **Encryptor :** certificat ou clé asymétrique.  
   
 > [!CAUTION]  
->  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un autre emplacement que celui du fichier de sauvegarde que le certificat ou la clé a servi à chiffrer. Sans le certificat ou la clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable.  
+>  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un emplacement autre que le fichier de sauvegarde pour lequel il a été utilisé pour le chiffrement. Sans certificat ou clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable.  
   
- **Restauration de la sauvegarde chiffrée :** Une restauration SQL Server ne nécessite pas de spécifier des paramètres de chiffrement pendant les restaurations. Elle nécessite que le certificat ou la clé asymétrique qui a servi à chiffrer le fichier de sauvegarde soit disponible sur l'instance sur laquelle vous effectuez la restauration. Le compte d'utilisateur qui effectue la restauration doit avoir l'autorisation `VIEW DEFINITION` sur le certificat ou la clé. Si vous restaurez la sauvegarde chiffrée dans une autre instance, vous devez vous assurer que le certificat est disponible sur cette instance.  
+ **Restauration de la sauvegarde chiffrée :** Une restauration SQL Server ne nécessite pas de paramètres de chiffrement lors des restaurations. Elle nécessite que le certificat ou la clé asymétrique qui a servi à chiffrer le fichier de sauvegarde soit disponible sur l'instance sur laquelle vous effectuez la restauration. Le compte d'utilisateur qui effectue la restauration doit avoir l'autorisation `VIEW DEFINITION` sur le certificat ou la clé. Si vous restaurez la sauvegarde chiffrée dans une autre instance, vous devez vous assurer que le certificat est disponible sur cette instance.  
   
  Si vous restaurez une sauvegarde d'une base de données chiffrée par chiffrement transparent des données (TDE), le certificat de chiffrement transparent des données doit être disponible sur l'instance sur laquelle vous effectuez la restauration.  
   
 ##  <a name="Benefits"></a> Avantages  
   
-1.  Le chiffrement des sauvegardes de base de données permet de sécuriser les données : SQL Server offre la possibilité de chiffrer les données de sauvegarde lors de la création d’une sauvegarde.  
+1.  Le chiffrement des sauvegardes de base de données vous aide à protéger les données : SQL Server fournit l'option permettant de chiffrer les données de sauvegarde lors de la création d'une sauvegarde.  
   
 2.  Le chiffrement sert également pour les bases de données qui sont chiffrées à l'aide du chiffrement transparent des données.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "70154843"
 5.  Vous pouvez intégrer des clés de chiffrement avec les fournisseurs EKM (Gestion de clés extensible).  
   
   
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a> Prérequis  
  Voici les conditions requises pour chiffrer une sauvegarde :  
   
-1.  **Créer une clé principale de base de données pour la base de données MASTER :** La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Pour plus d’informations, consultez [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Créez une clé principale de base de données pour la base de données master :** la clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Pour plus d’informations, consultez [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Créez un certificat ou une clé asymétrique à utiliser pour le chiffrement de la sauvegarde. Pour plus d’informations sur la création d’un certificat, consultez [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Pour plus d’informations sur la création d’une clé asymétrique, consultez [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "70154843"
 -   L'option Ajouter au jeu de sauvegarde existant n'est pas prise en charge pour les sauvegardes chiffrées.  
   
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  **Pour chiffrer une sauvegarde ou restaurer à partir d'une sauvegarde chiffrée :**  
   
  `VIEW DEFINITION` sur le certificat ou la clé asymétrique utilisée pour chiffrer la sauvegarde de la base de données.  
@@ -84,16 +84,16 @@ ms.locfileid: "70154843"
  Les sections ci-dessous fournissent une brève introduction aux étapes de chiffrement des données pendant la sauvegarde. Pour une procédure pas à pas complète des différentes étapes de chiffrement de votre sauvegarde à l’aide de Transact-SQL, consultez [Créer une sauvegarde chiffrée](create-an-encrypted-backup.md).  
   
 ### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
- Chiffrez une sauvegarde lors de la création de la sauvegarde d'une base de données dans l'une des boîtes de dialogue suivantes :  
+ Chiffrez une sauvegarde lors de la création de la sauvegarde d'une base de données dans l'une des boîtes de dialogue suivantes :  
   
 1.  [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](back-up-database-backup-options-page.md) Dans la page **Options de sauvegarde**, sélectionnez **Chiffrement**, ainsi que l’algorithme de chiffrement et le certificat ou la clé asymétrique à utiliser pour le chiffrement.  
   
-2.  [Utilisation de l’Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Lorsque vous sélectionnez une tâche de sauvegarde, sous l’onglet **Options** de la page **Définir la tâche Sauvegarder**, sélectionnez **Chiffrement de sauvegarde**, puis indiquez l’algorithme de chiffrement et le certificat ou la clé à utiliser pour le chiffrement.  
+2.  [Utilisation de l’Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Lorsque vous sélectionnez une tâche de sauvegarde, sous l’onglet **Options** de la page **Définir la tâche Sauvegarder** , sélectionnez **Chiffrement de sauvegarde**, puis indiquez l’algorithme de chiffrement et le certificat ou la clé à utiliser pour le chiffrement.  
   
 ### <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
- Voici un exemple d'instruction Transact-SQL pour chiffrer le fichier de sauvegarde :  
+ Voici un exemple d'instruction Transact-SQL pour chiffrer le fichier de sauvegarde :  
   
-```  
+```sql
 BACKUP DATABASE [MYTestDB]  
 TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
 WITH  
@@ -104,8 +104,7 @@ WITH
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
-GO  
-  
+GO
 ```  
   
  Pour connaître la syntaxe complète de l’instruction Transact-SQL, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
@@ -113,12 +112,9 @@ GO
 ### <a name="using-powershell"></a>Utilisation de PowerShell  
  Cet exemple crée les options de chiffrement et les utilise en tant que valeur de paramètre dans **Backup-SqlDatabase** pour créer une sauvegarde chiffrée.  
   
-```  
-C:\PS>$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
-```  
-  
-```  
-C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
+```powershell
+$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
+Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
 ##  <a name="RecommendedPractices"></a> Méthodes recommandées  
@@ -130,7 +126,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
  Si la base de données est activée pour le chiffrement transparent des données, sélectionnez différents certificats ou clés asymétriques pour chiffrer la base de données et la sauvegarde afin de renforcer la sécurité.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches connexes  
   
 |Rubrique/tâche|Description|  
 |-----------------|-----------------|  
