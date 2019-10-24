@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62877339"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783118"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Sauvegarder un journal des transactions (SQL Server)
   Cette rubrique explique comment sauvegarder un journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
@@ -34,7 +34,7 @@ ms.locfileid: "62877339"
   
      [Sécurité](#Security)  
   
--   **Pour sauvegarder un journal des transactions, à l’aide de :**  
+-   **Pour sauvegarder un journal des transactions à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62877339"
     > [!NOTE]  
     >  Vous pouvez également utiliser l'[Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md)pour créer des sauvegardes.  
   
--   [Tâches associées](#RelatedTasks)  
+-   [Tâches connexes](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62877339"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d'écrire sur l'unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit avoir des autorisations d'écriture. Toutefois, [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.  
@@ -70,9 +70,9 @@ ms.locfileid: "62877339"
   
 #### <a name="to-back-up-a-transaction-log"></a>Pour sauvegarder un journal des transactions  
   
-1.  Après vous être connecté à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
-2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
+2.  Développez **Bases de données**puis, selon le cas, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Sauvegarder**. La boîte de dialogue **Sauvegarder la base de données** s'affiche.  
   
@@ -82,10 +82,10 @@ ms.locfileid: "62877339"
   
 6.  Dans la zone de liste **Type de sauvegarde** , sélectionnez **Journal des transactions**.  
   
-7.  Vous pouvez si vous le souhaitez sélectionner **Sauvegarde de copie uniquement** pour créer une sauvegarde de copie uniquement. Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  Vous pouvez si vous le souhaitez sélectionner **Sauvegarde de copie uniquement** pour créer une sauvegarde de copie uniquement. Une *sauvegarde de données en copie seule* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
-    >  Quand l’option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
+    >  Lorsque l'option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
   
 8.  Acceptez le nom du jeu de sauvegarde par défaut proposé dans la zone de texte **Nom** , ou attribuez-lui un autre nom.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "62877339"
   
      **Pour consulter la valeur par défaut de compression de la sauvegarde actuelle**  
   
-    -   [Afficher ou configurer l'option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [Afficher ou configurer la compression par défaut des sauvegardes (option de configuration de serveur)](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
  **Chiffrement**  
   
@@ -180,20 +180,17 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
-1.  Utilisez l'applet de commande `Backup-SqlDatabase` et spécifiez `Log` comme valeur du paramètre `-BackupAction`.  
+Utilisez l'applet de commande `Backup-SqlDatabase` et spécifiez `Log` comme valeur du paramètre `-BackupAction`.  
   
-     L'exemple suivant crée une sauvegarde de fichier journal de la base de données `MyDB` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`.  
+L'exemple suivant crée une sauvegarde de fichier journal de la base de données `MyDB` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Log  
     ```  
   
- **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
+Pour configurer et utiliser le fournisseur de SQL Server PowerShell, consultez [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
   
--   [Fournisseur SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
-  
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches connexes  
   
 -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
@@ -206,5 +203,3 @@ GO
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Plans de maintenance](../maintenance-plans/maintenance-plans.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
-  
-  

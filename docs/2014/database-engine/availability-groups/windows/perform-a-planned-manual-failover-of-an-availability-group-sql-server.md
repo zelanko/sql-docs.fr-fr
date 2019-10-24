@@ -15,12 +15,12 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c81f5b22aa61dce596896ccd90bfb1d56054742d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789292"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782968"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment effectuer un basculement manuel sans perte de données ( *basculement manuel planifié*) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un basculement manuel planifié, à l'instar de tout basculement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , entraîne la transition d'un réplica secondaire vers le rôle principal et, simultanément, celle de l'ancien réplica principal vers le rôle secondaire.  
@@ -49,13 +49,13 @@ ms.locfileid: "62789292"
 -   Le réplica secondaire cible doit être actuellement synchronisé avec le réplica principal. Pour cela, il faut que toutes les bases de données secondaires sur ce réplica secondaire aient été jointes au groupe de disponibilité et soient synchronisées avec leurs bases de données primaires correspondantes (autrement dit, les bases de données secondaires locales doivent avoir l'état SYNCHRONIZED).  
   
     > [!TIP]  
-    >  Pour déterminer la disponibilité de basculement d’un réplica secondaire, interrogez la colonne **is_failover_ready** dans la vue de gestion dynamique [sys.dm_hadr_database_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql), ou regardez dans la colonne **Disponibilité du basculement** du [tableau de bord du groupe AlwaysOn](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    >  Pour déterminer la disponibilité de basculement d'un réplica secondaire, interrogez la colonne **is_failover_ready** dans la vue de gestion dynamique [sys.dm_hadr_database_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql) , ou regardez dans la colonne **Disponibilité de basculement** du [tableau de bord du groupe AlwaysOn](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
 -   Cette tâche est prise en charge uniquement sur le réplica secondaire cible. Vous devez être connecté à l'instance de serveur qui héberge le réplica secondaire cible.  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -65,9 +65,9 @@ ms.locfileid: "62789292"
   
 2.  Développez le nœud **Haute disponibilité AlwaysOn** et le nœud **Groupes de disponibilité** .  
   
-3.  Cliquez avec le bouton droit sur le groupe de disponibilité à basculer et sélectionnez la commande **Basculement**.  
+3.  Cliquez avec le bouton droit sur le groupe de disponibilité à basculer et sélectionnez la commande **Basculement** .  
   
-4.  Cette commande lance l'Assistant Basculer le groupe de disponibilité. Pour plus d’informations, consultez [Utiliser l’Assistant Basculer le groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+4.  Cette commande lance l'Assistant Basculer le groupe de disponibilité. Pour plus d'informations, consultez [Utiliser l’Assistant Basculer le groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour basculer manuellement un groupe de disponibilité**  
@@ -82,7 +82,7 @@ ms.locfileid: "62789292"
   
      L’exemple suivant effectue un basculement manuel du groupe de disponibilité *MyAg* vers le réplica secondaire connecté.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
@@ -98,22 +98,20 @@ ms.locfileid: "62789292"
   
      L’exemple suivant effectue un basculement manuel du groupe de disponibilité *MyAg* vers le réplica secondaire dont le chemin est spécifié.  
   
-    ```  
+    ```powershell
     Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg  
     ```  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Obtenir de l'aide sur SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir basculé manuellement un groupe de disponibilité  
+##  <a name="FollowUp"></a> Suivi : Après avoir basculé manuellement un groupe de disponibilité  
  Si vous avez effectué le basculement en dehors de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] du groupe de disponibilité, ajustez les votes de quorum des nœuds WSFC afin de refléter la nouvelle configuration du groupe de disponibilité. Pour plus d’informations, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Basculement et Modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+ [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Basculement et modes &#40;de&#41; basculement groupes de disponibilité AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)    
  [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
-  
-  

@@ -16,12 +16,12 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c9bc55a6a5af15d6d21c4d3e7d74e2dc8296e84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211483"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782767"
 ---
 # <a name="clear-the-job-history-log"></a>Effacer le journal d'historique des travaux
   Cette rubrique explique comment supprimer le contenu du journal d'historique des travaux de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de SQL Server Management Objects.  
@@ -61,19 +61,19 @@ ms.locfileid: "68211483"
   
     -   Cliquez sur **État du travail** si vous souhaitez effacer l'historique d'un travail multiserveur. Cliquez sur **Travail**, puis sur un nom de travail et enfin sur **Afficher l'historique des travaux distants**.  
   
-5.  Cliquez sur **Delete**.  
+5.  Cliquez sur **Supprimer**.  
   
 ##  <a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-clear-the-job-history-log"></a>Pour effacer le journal d'historique des travaux  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql
     -- example removes the history for a job named NightlyBackups.  
     USE msdb ;  
     GO  
@@ -83,9 +83,9 @@ ms.locfileid: "68211483"
     GO  
     ```  
   
-##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
+##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour effacer le journal d'historique des travaux**  
   
- Utilisez la méthode `PurgeJobHistory` de la classe `JobServer` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la méthode `PurgeJobHistory` de la classe `JobServer` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

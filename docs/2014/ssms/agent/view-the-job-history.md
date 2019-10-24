@@ -16,12 +16,12 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec79de6769f8059819ebe4e6eacaa3aff6d2dbec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211282"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783387"
 ---
 # <a name="view-the-job-history"></a>Afficher l'historique des travaux
   Cette rubrique décrit comment afficher le journal d'historique des travaux de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de SQL Server Management Objects.  
@@ -61,13 +61,13 @@ ms.locfileid: "68211282"
   
 #### <a name="to-view-the-job-history-log"></a>Pour afficher le journal d'historique des travaux  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql
     -- lists all job information for the NightlyBackups job.  
     USE msdb ;  
     GO  
@@ -77,11 +77,9 @@ ms.locfileid: "68211282"
     GO  
     ```  
   
- Pour plus d’informations, consultez [sp_help_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
+ Pour plus d’informations, [consultez &#40;SP_HELP_JOBHISTORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
-##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
+##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour afficher le journal d'historique des travaux**  
   
  Appelez la méthode `EnumHistory` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  
