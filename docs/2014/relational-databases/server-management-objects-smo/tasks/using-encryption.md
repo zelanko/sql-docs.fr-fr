@@ -1,5 +1,5 @@
 ---
-title: À l’aide du chiffrement | Microsoft Docs
+title: Utilisation du chiffrement | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,12 +19,12 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09de7053de66d2d280c2bc6da61b8bf6b2ebf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213496"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781846"
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
   Dans SMO, la clé principale du service est représentée par l'objet <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>. Elle est référencée par la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server>. Elle peut être régénérée par la méthode <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  
@@ -40,7 +40,7 @@ ms.locfileid: "63213496"
  Dans SMO, les certificats sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate>. L'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate> a des propriétés qui spécifient la clé publique, le nom du sujet, la période de validité et les informations sur l'émetteur. L'autorisation d'accès au certificat est contrôlée en utilisant les méthodes `Grant`, `Revoke` et `Deny`.  
   
 ## <a name="example"></a>Exemple  
- Dans l'exemple de code suivant, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet SMO Visual Basic dans Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) et [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Dans l'exemple de code suivant, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) et [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>Ajout d'un certificat en Visual Basic  
  L'exemple de code crée un certificat simple avec un mot de passe de chiffrement. Contrairement à d'autres objets, la méthode <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> a plusieurs surcharges. La surcharge utilisée dans l'exemple crée un certificat avec un mot de passe de chiffrement.  
@@ -50,7 +50,7 @@ ms.locfileid: "63213496"
 ## <a name="adding-a-certificate-in-visual-c"></a>Ajout d'un certificat en Visual C#  
  L'exemple de code crée un certificat simple avec un mot de passe de chiffrement. Contrairement à d'autres objets, la méthode <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> a plusieurs surcharges. La surcharge utilisée dans l'exemple crée un certificat avec un mot de passe de chiffrement.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             {  
@@ -78,24 +78,20 @@ ms.locfileid: "63213496"
 ## <a name="adding-a-certificate-in-powershell"></a>Ajout d'un certificat dans PowerShell  
  L'exemple de code crée un certificat simple avec un mot de passe de chiffrement. Contrairement à d'autres objets, la méthode <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> a plusieurs surcharges. La surcharge utilisée dans l'exemple crée un certificat avec un mot de passe de chiffrement.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
 $db = get-item AdventureWorks2012  
   
-#Create a certificate  
-  
-$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -argumentlist $db, "Test_Certificate"  
+#Create a certificate
+$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -ArgumentList $db, "Test_Certificate"  
 $c.StartDate = "January 01, 2010"  
 $c.Subject = "This is a test certificate."  
 $c.ExpirationDate = "January 01, 2015"  
   
 #Create the certificate on the instance of SQL Server by supplying the certificate password argument.  
-$c.Create("pGFD4bb925DGvbd2439587y")  
-  
+$c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide de clés de chiffrement](using-encryption.md)  
-  
-  
+ [Utilisation des clés de chiffrement](using-encryption.md)  

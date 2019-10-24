@@ -1,5 +1,5 @@
 ---
-title: Compteurs de performance pour les MSRS 2014 en Mode de SharePoint du Service Web MSRS 2014 Windows Service SharePoint Mode objets de Performance (Mode SharePoint) | Microsoft Docs
+title: Compteurs de performances du service Web MSRS 2014 en mode SharePoint et des objets de performance du service Windows MSRS 2014 en mode SharePoint (mode SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d994fa563870f01f4a9ca8824b5372587eca804b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23dd102c0144761d3c84d0735357318f27666706
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103695"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782843"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Compteurs de performance du service Web MSRS 2014 en mode SharePoint et des objets de performance du service Windows MSRS 2014 en mode SharePoint (mode SharePoint)
   Cette rubrique décrit les compteurs de performance pour les objets de performance `MSRS 2014 Web Service SharePoint Mode` et `MSRS 2014 Windows Service SharePoint Mode` qui font partie d'un déploiement [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en mode SharePoint.  
@@ -36,13 +36,13 @@ ms.locfileid: "66103695"
   
  **Dans cette rubrique :**  
   
--   [Compteurs de performances en Mode de MSRS 2014 Web Service SharePoint](#bkmk_webservice)  
+-   [Compteurs de performance du service Web MSRS 2014 en mode SharePoint](#bkmk_webservice)  
   
--   [Compteurs de performances en Mode de MSRS 2014 Windows Service SharePoint](#bkmk_windowsservice)  
+-   [Compteurs de performance du service Windows MSRS 2014 en mode SharePoint](#bkmk_windowsservice)  
   
 -   [Utiliser des applets de commande PowerShell pour retourner des listes](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Compteurs de performances en Mode de MSRS 2014 Web Service SharePoint  
+##  <a name="bkmk_webservice"></a>Compteurs de performance du service Web MSRS 2014 en mode SharePoint  
  L'objet de performance `MSRS 2014 Web Service SharePoint Mode` contrôle les performances du serveur de rapports. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement du serveur de rapports initialisé en général via des opérations de consultation du rapport interactives. Lorsque vous configurez ce compteur, vous pouvez l'appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou sélectionner des instances spécifiques. Ces compteurs sont réinitialisés à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
   
  Le tableau suivant répertorie les compteurs inclus dans l'objet de performance `MSRS 2014 Web Service SharePoint Mode`.  
@@ -55,7 +55,7 @@ ms.locfileid: "66103695"
 |`Cache Misses/Sec`|Nombre de requêtes par seconde qui n'ont pas retourné un rapport à partir du cache. Utilisez ce compteur afin de déterminer si les ressources utilisées pour la mise en cache (disque ou mémoire) sont suffisantes.|  
 |`Cache Misses/Sec (Semantic Models)`|Nombre de requêtes par seconde qui n'ont pas retourné de modèle à partir du cache. Utilisez ce compteur afin de déterminer si les ressources utilisées pour la mise en cache (disque ou mémoire) sont suffisantes.|  
 |`First Session Requests/Sec`|Nombre de nouvelles sessions utilisateur démarrées chaque seconde à partir du cache du serveur de rapports.|  
-|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
+|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache en mémoire* fait partie du cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
 |`Memory Cache Misses/Sec`|Nombre de fois par seconde où les rapports n'ont pas pu être récupérés du cache mémoire.|  
 |`Next Session Requests/Sec`|Nombre de requêtes par seconde pour les rapports qui sont ouverts dans une session existante (tels que les rapports rendus à partir d'un instantané de session).|  
 |`Report Requests`|Nombre de rapports qui sont actuellement actifs et gérés par le serveur de rapports.|  
@@ -72,7 +72,7 @@ ms.locfileid: "66103695"
 |`Total Reports Executed`|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
 |`Total Requests`|Nombre total des demandes envoyées au serveur de rapports après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
   
-##  <a name="bkmk_windowsservice"></a> Compteurs de performances en Mode de MSRS 2014 Windows Service SharePoint  
+##  <a name="bkmk_windowsservice"></a>Compteurs de performance du service Windows MSRS 2014 en mode SharePoint  
  L'objet de performance `MSRS 2014 Windows Service SharePoint Mode` est utilisé pour contrôler le service Windows Report Server. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement des rapports initialisé via des opérations planifiées. Les opérations planifiées peuvent englober l'abonnement et la remise, les instantanés d'exécution de rapport et l'historique de rapport. Lorsque vous configurez ce compteur, vous pouvez l'appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou sélectionner des instances spécifiques.  
   
  Le tableau suivant répertorie les compteurs inclus dans l'objet de performance `MSRS 2014 Windows Service SharePoint mode`.  
@@ -96,7 +96,7 @@ ms.locfileid: "66103695"
 |`Delivers/Sec`|Nombre de remises de rapport par seconde, de toute extension de remise.|  
 |`Events/Sec`|Nombre d'événements traités par seconde. Les événements contrôlés incluent `SnapshotUpdated` et `TimedSubscription`.|  
 |`First Session Requests/Sec`|Nombre de nouvelles sessions d'exécution de rapport crées par seconde.|  
-|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
+|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache en mémoire* fait partie du cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
 |`Memory Cache Misses/Sec`|Nombre de fois par seconde où les rapports ne peuvent pas être récupérés du cache mémoire.|  
 |`Next Session Requests/Sec`|Nombre de requêtes par seconde pour les rapports qui sont ouverts dans une session existante (tels que les rapports rendus à partir d'un instantané de session).|  
 |`Report Requests`|Nombre de rapports qui sont actuellement actifs et gérés par le serveur de rapports. Utilisez ce compteur pour évaluer la stratégie de mise en cache. Il peut exister beaucoup plus de requêtes que de rapports générés.|  
@@ -120,23 +120,25 @@ ms.locfileid: "66103695"
 |`Total Snapshot Updates`|Nombre total de mises à jour d'instantanés d'exécution de rapport.|  
   
 ##  <a name="bkmk_powershell"></a> Utiliser des applets de commande PowerShell pour retourner des listes  
- ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Le script Windows PowerShell suivant retourne les ensembles de compteurs dans lesquels CounterSetName commence par « msr »  
+ ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne les ensembles de compteurs où le CounterSetName commence par « MSR ».  
   
-```  
-get-counter -listset msr*  
-Returns a list with the following information  
+```powershell
+Get-Counter -ListSet msr*
+```
+
+Retourne une liste avec les informations suivantes :
+
+```
 CounterSetName     : MSRS 2014 Windows Service SharePoint Mode  
 CounterSetName     : MSRS 2014 Web Service SharePoint Mode  
 ```  
   
- Le script Windows PowerShell suivant retourne la liste des compteurs de performance de CounterSetName « MSRS 2014 Windows Service SharePoint Mode ».  
+ Le script Windows PowerShell suivant retourne la liste des compteurs de performance pour le CounterSetName « service Windows MSRS 2014 » en mode SharePoint.  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service SharePoint Mode").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyse des performances d'un serveur de rapports](monitoring-report-server-performance.md)   
- [Compteurs de performance pour le Service Web MSRS 2014 et les objets de Performance Service MSRS 2014 Windows &#40;en Mode natif&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
-  
-  
+ [Compteurs de performances pour le service Web MSRS 2014 et les objets &#40;de performance du service Windows MSRS 2014 en mode natif&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

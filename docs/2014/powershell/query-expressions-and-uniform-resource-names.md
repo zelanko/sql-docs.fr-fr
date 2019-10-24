@@ -14,20 +14,19 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922882"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782763"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
   Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```
       Object1  
       [<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]<FilterExpression>::=  
 <PropertyExpression> [and <PropertyExpression>][...n]  
@@ -84,7 +83,7 @@ ms.locfileid: "62922882"
 |||  
 |-|-|  
 |aaaa|Année à quatre chiffres.|  
-|MM|Mois à deux chiffres (01 à 12).|  
+|mm|Mois à deux chiffres (01 à 12).|  
 |jj|Date à deux chiffres (01 à 31).|  
 |hh|Heure à deux chiffres au format 24 heures (01 à 23).|  
 |mi|Minutes à deux chiffres (01 à 59).|  
@@ -122,7 +121,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>B. Énumération d'objets à l'aide de contains  
+### <a name="b-enumerating-objects-using-contains"></a>b. Énumération d'objets à l'aide de contains  
  Cette expression de requête énumère toutes les bases de données qui ne respectent pas la casse et dont le nom comporte le caractère « m ».  
   
 ```  
@@ -150,7 +149,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>F. Énumération d'objets à l'aide de is_null  
+### <a name="f-enumerating-objects-using-is_null"></a>F. Énumération d'objets à l'aide de is_null  
  Cette expression de requête énumère toutes les tables dans la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] dont la propriété de date de dernière modification n'a pas la valeur NULL :  
   
 ```  
@@ -160,5 +159,3 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ## <a name="see-also"></a>Voir aussi  
  [Invoke-PolicyEvaluation (applet de commande)](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40moteur de base de données&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
