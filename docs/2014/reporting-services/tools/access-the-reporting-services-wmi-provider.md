@@ -19,12 +19,12 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: deeba8dd32d50b2bb31da49e798cd867d5913fa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66100489"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783207"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Accéder au fournisseur WMI de Reporting Services
   Le fournisseur WMI de Reporting Services présente deux classes WMI pour l'administration des instances de serveur de rapports en mode natif par script :  
@@ -44,51 +44,48 @@ ms.locfileid: "66100489"
   
  Pour répertorier les noms d'instance encodés de vos instances de serveur de rapports dans le chemin d'accès de l'espace de noms WMI, utilisez la commande suivante PowerShell :  
   
-```  
-PS C:\windows\system32> Get-WmiObject -namespace root\Microsoft\SqlServer\ReportServer  -class __Namespace -ComputerName hostname | select Name  
+```powershell
+Get-WmiObject -Namespace root\Microsoft\SqlServer\ReportServer -Class __Namespace -ComputerName hostname | Select Name  
 ```  
   
 ## <a name="access-the-wmi-classes-using-powershell"></a>Accédez aux classes WMI à l'aide de PowerShell  
  Pour accéder aux classes WMI, exécutez la commande suivante :  
   
-```  
-PS C:\windows\system32> Get-WmiObject -namespace <namespacename> -class <classname> -ComputerName <hostname>  
+```powershell
+Get-WmiObject -Namespace <namespacename> -Class <classname> -ComputerName <hostname>  
 ```  
   
  Par exemple, pour accéder à la classe MSReportServer_ConfigurationSetting sur l'instance de serveur de rapports par défaut de l'hôte myrshost, exécutez la commande suivante. L'instance du serveur de rapports par défaut doit être installée sur myrshost pour que cette commande réussisse.  
   
-```  
-PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+```powershell
+Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -Class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  Cette syntaxe de commande génère tous les noms et valeurs de propriété de classe. Notez que toutes les instances de la classe MSReportServer_ConfigurationSetting sont retournées, même si vous accédez à la classe dans l'espace de noms de l'instance de serveur de rapports par défaut (RS_MSSQLSERVER). Par exemple, si myrshost est installé avec l'instance de serveur de rapports par défaut et une instance du serveur de rapports nommée appelées SHAREPOINT, cette commande retourne deux objets WMI et génère les noms et valeurs des propriétés pour les deux instances du serveur de rapports.  
   
  Pour retourner une instance de classe spécifique quand plusieurs instances sont retournées, utilisez le paramètre –Filter pour filtrer les résultats en fonction de propriétés à valeurs uniques comme InstanceName. Par exemple, pour retourner uniquement l'objet WMI pour l'instance de serveur de rapports par défaut, utilisez la commande suivante :  
   
-```  
-PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  
+```powershell
+Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -Class MSReportServer_ConfigurationSetting -ComputerName myrshost -Filter "InstanceName='MSSQLSERVER'"  
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>Interrogez les méthodes et les propriétés disponibles  
- Pour connaître les méthodes et propriétés disponibles dans l'une des classes WMI de Reporting Services, acheminez les résultats de Get-WmiObject vers la commande Get-Member. Exemple :  
+ Pour connaître les méthodes et propriétés disponibles dans l'une des classes WMI de Reporting Services, acheminez les résultats de Get-WmiObject vers la commande Get-Member. Par exemple:  
   
-```  
-PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
+```powershell
+Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -Class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
 ```  
   
- Pour obtenir une documentation sur les propriétés et méthodes des classes WMI de Reporting Services, consultez...  
+ Pour obtenir de la documentation sur les propriétés et les méthodes des classes WMI Reporting Services, consultez....  
   
 ## <a name="use-a-wmi-method-or-property"></a>Utilisez une propriété ou une méthode WMI  
  une fois que vous avez les objets WMI dans les classes de Reporting Services et que vous connaissez les propriétés et les méthodes disponibles, vous pouvez utiliser ces méthodes et propriétés. Par exemple, si vous avez une instance de serveur de rapports nommée dans le mode intégré SharePoint appelée SHAREPOINT, utilisez la séquence de commande suivante pour récupérer l'URL pour le site Administration centrale de SharePoint :  
   
+```powershell
+$rsconfig = Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -Class MSReportServer_ConfigurationSetting -ComputerName myrshost -Filter "InstanceName='SHAREPOINT'"  
+$rsconfig.GetAdminSiteUrl()  
 ```  
-PS C:\windows\system32> $rsconfig = Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='SHAREPOINT'"  
-PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()  
   
-```  
-  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
  [Référence de bibliothèque du fournisseur WMI de Reporting Services &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
-  
-  

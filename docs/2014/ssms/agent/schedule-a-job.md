@@ -14,12 +14,12 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb84377c48778d0c7244c13620fe192b5421ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5037448a3ec3cb3590e6fd649d83878bb573f48c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666760"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783177"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   Cette rubrique décrit la méthode à suivre pour planifier un travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -67,7 +67,7 @@ ms.locfileid: "62666760"
   
 #### <a name="to-attach-a-schedule-to-a-job"></a>Pour attacher une planification à un travail  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Développez **Agent SQL Server**et **Travaux**, cliquez avec le bouton droit sur le travail à planifier, puis cliquez sur **Propriétés**.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "62666760"
   
 #### <a name="to-schedule-a-job"></a>Pour planifier un travail  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     -- creates a schedule named NightlyJobs.   
@@ -109,9 +109,7 @@ ms.locfileid: "62666760"
     GO  
     ```  
   
- Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) et [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
+ Pour plus d’informations, [consultez &#40;sp_add_schedule Transact-&#41; SQL](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) et [sp_attach_schedule &#40;Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
   
-##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
+##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  Utilisez la classe `JobSchedule` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

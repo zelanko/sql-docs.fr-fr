@@ -12,12 +12,12 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101040"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783252"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modification de l’extension de remise par défaut de Reporting Services
   Vous pouvez modifier les paramètres de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour modifier l’extension de remise par défaut qui s’affiche dans la liste **Remis par** d’une page de définition d’abonnement. Par exemple, vous pouvez modifier la configuration afin que, lorsque les utilisateurs créent un nouvel abonnement, la remise par partage de fichiers soit activée par défaut, plutôt que la remise par messagerie électronique. Vous pouvez également modifier l'ordre selon lequel les extensions de remise sont répertoriées dans l'interface utilisateur.  
@@ -33,7 +33,7 @@ ms.locfileid: "66101040"
   
  Voici la section par défaut de **RSReportServer.config** qui contrôle l’extension de remise par défaut et l’ordre d’apparition dans le Gestionnaire de rapports. Notez que la messagerie électronique apparaît en premier dans le fichier, elle est définie comme valeur par défaut.  
   
-```  
+```xml
 <DeliveryUI>  
      <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">  
           <DefaultDeliveryExtension>True</DefaultDeliveryExtension>  
@@ -85,9 +85,9 @@ ms.locfileid: "66101040"
   
      Lors de la lecture de la configuration, l'événement suivant est écrit dans le journal des événements Windows.  
   
-     **ID d’événement :** 109  
+     **ID de l’événement :** 109  
   
-     **Source :** Service Windows de Report Server (nom de l’instance)  
+     **Source :** service Windows Report Server (nom de l’instance)  
   
      Le fichier RSReportServer.config a été modifié.  
   
@@ -100,22 +100,20 @@ ms.locfileid: "66101040"
   
 2.  Vous pouvez ignorer cette étape si vous connaissez déjà le nom de votre application de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Utilisez la commande PowerShell suivante pour dresser la liste des applications de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] présentes dans votre batterie de serveurs SharePoint.  
   
-    ```  
-    get-sprsserviceapplication | format-list *  
+    ```powershell
+    Get-SPRSServiceApplication | Format-List *  
     ```  
   
 3.  Exécutez la commande PowerShell suivante pour vérifier l’extension de remise par défaut actuelle de l’application de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] « ssrsapp ».  
   
-    ```  
-    $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
-  
+    ```powershell
+    $app = Get-SPRSServiceApplication | Where {$_.name -Like "ssrsapp*"};
+    Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Remise par partage de fichiers dans Reporting Services](file-share-delivery-in-reporting-services.md)   
- [Remise par e-mail dans Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
-  
-  
+ [Remise par courrier électronique dans Reporting Services](e-mail-delivery-in-reporting-services.md)   
+ [Configurer un serveur de rapports pour la &#40;remise par courrier électronique SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

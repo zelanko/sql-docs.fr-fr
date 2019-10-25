@@ -10,12 +10,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154764"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783056"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Suppression de fichiers de sauvegarde d'objets blob avec des baux actifs
   Lors de la sauvegarde ou de la restauration à partir du stockage Azure, SQL Server acquiert un bail infini pour verrouiller l’accès exclusif à l’objet BLOB. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l'objet blob ne peut pas être écrit ou supprimé tant que le bail n'a pas été libéré. Cette rubrique explique comment libérer le bail et supprimer l'objet blob.  
@@ -29,29 +29,28 @@ ms.locfileid: "70154764"
 ## <a name="managing-orphaned-blobs"></a>Gestion des objets blob orphelins  
  Les étapes suivantes décrivent la procédure de nettoyage après l'échec d'une activité de sauvegarde ou de restauration. Toutes les opérations peuvent être effectuées à l'aide de scripts PowerShell. Un exemple de code est fourni dans la section suivante :  
   
-1.  **Identification des objets BLOB qui ont des baux:** si vous avez un script ou un processus qui exécute les processus de sauvegarde, vous pouvez capturer l’erreur dans le script ou le processus, et l’utiliser pour nettoyer les objets blob.   Vous pouvez également utiliser les propriétés LeaseStats et LeastState pour identifier les objets blob auxquels des baux sont associés. Une fois que vous avez identifié les objets blob, nous vous recommandons de consulter la liste et de vérifier la validité du fichier de sauvegarde avant de supprimer l'objet blob.  
+1.  **Identification des objets blob avec baux :** si vous avez un script ou un processus qui exécute les processus de sauvegarde, vous pouvez capturer l’erreur dans le script ou le processus et l’utiliser pour nettoyer les objets blob.   Vous pouvez également utiliser les propriétés LeaseStats et LeastState pour identifier les objets blob auxquels des baux sont associés. Une fois que vous avez identifié les objets blob, nous vous recommandons de consulter la liste et de vérifier la validité du fichier de sauvegarde avant de supprimer l'objet blob.  
   
-2.  **Résiliation du bail:** une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Résiliation du bail :** une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server génère un ID de bail pour établir un accès exclusif pendant l'opération de restauration. L'ID de bail de la restauration est BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Suppression de l’objet BLOB:** Pour supprimer un objet blob dont le bail est actif, vous devez d'abord résilier le bail.  
+3.  **Suppression de l’objet blob :** pour supprimer un objet blob dont le bail est actif, vous devez d’abord résilier le bail.  
   
 ###  <a name="Code_Example"></a> Exemple de script PowerShell  
- **Important sivous\* exécutez PowerShell 2,0, vous risquez de rencontrer des problèmes lors du chargement de l’assembly Microsoft WindowsAzure. Storage. dll. \* \* \*** Nous vous recommandons d'effectuer une mise à niveau vers Powershell 3.0 pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
+ **\*\* \*importante\*** Si vous exécutez PowerShell 2,0, vous risquez de rencontrer des problèmes lors du chargement de l’assembly Microsoft WindowsAzure. Storage. dll. Nous vous recommandons d'effectuer une mise à niveau vers Powershell 3.0 pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
   
 -   Créez ou modifiez le fichier powershell.exe.config pour charger les assemblies .NET 2.0 et .NET 4.0 au moment de l'exécution avec les informations suivantes :  
   
-    ```  
-    <?xml version="1.0"?>   
-    <configuration>   
-        <startup useLegacyV2RuntimeActivationPolicy="true">   
-            <supportedRuntime version="v4.0.30319"/>   
-            <supportedRuntime version="v2.0.50727"/>   
-        </startup>   
-    </configuration>  
-  
+    ```xml
+    <?xml version="1.0"?>
+    <configuration>
+        <startup useLegacyV2RuntimeActivationPolicy="true">
+            <supportedRuntime version="v4.0.30319"/>
+            <supportedRuntime version="v2.0.50727"/>
+        </startup>
+    </configuration>
     ```  
   
  L'exemple suivant montre comment identifier les objets blob qui ont des baux actifs, puis résilier ces derniers. Il montre également comment filtrer les identificateurs de bail de la version.  
@@ -84,7 +83,7 @@ ms.locfileid: "70154764"
   
      **Le bail sur \<URL de l’objet blob> n’est pas un bail de restauration. Résiliation du bail sur \<URL de l’objet blob.**  
   
-```  
+```powershell
 param(  
        [Parameter(Mandatory=$true)]  
        [string]$storageAccount,  
@@ -104,34 +103,32 @@ $bytes = [System.IO.File]::ReadAllBytes($storageAssemblyPath)
 [System.Reflection.Assembly]::Load($bytes)  
   
 $cred = New-Object 'Microsoft.WindowsAzure.Storage.Auth.StorageCredentials' $storageAccount, $storageKey  
-  
 $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "https://$storageAccount.blob.core.windows.net", $cred  
-  
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs()
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
 foreach($blob in $allBlobs)  
 {  
-    $blobProperties = $blob.Properties   
+    $blobProperties = $blob.Properties
     if($blobProperties.LeaseStatus -eq "Locked")  
     {  
         $lockedBlobs += $blob  
-  
     }  
 }  
   
 if ($lockedBlobs.Count -eq 0)  
-    {   
-        Write-Host " There are no blobs with locked lease status"  
-    }  
+{
+    Write-Host " There are no blobs with locked lease status"  
+}
+
 if($lockedBlobs.Count -gt 0)  
 {  
-    write-host "Breaking leases"  
-    foreach($blob in $lockedBlobs )   
+    Write-Host "Breaking leases"  
+    foreach($blob in $lockedBlobs )
     {  
         try  
         {  
@@ -149,11 +146,8 @@ if($lockedBlobs.Count -gt 0)
         Write-Host "Breaking lease on $($blob.Uri)"  
         $blob.BreakLease($(New-TimeSpan), $null, $null, $null) | Out-Null  
     }  
-}  
-  
+}
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  

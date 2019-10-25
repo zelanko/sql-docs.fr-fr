@@ -22,12 +22,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d37a00e0a4fb71672f3bedcfc0e1651a7c42ce71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0ea3b81f69b46fbb829879f9976cb45a11ab803
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66099713"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783349"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Écrire des scripts pour les tâches d'administration et de déploiement
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l'utilisation de scripts pour automatiser les installations courantes, le déploiement et les tâches administratives. Le déploiement d'un serveur de rapports est un processus qui implique plusieurs étapes. Vous devez faire appel à plusieurs outils et processus pour configurer un déploiement ; il n'existe pas un seul programme ou une seule approche pour automatiser l'ensemble des tâches.  
@@ -52,7 +52,7 @@ ms.locfileid: "66099713"
 |Configurez la connexion à la base de données du serveur de rapports.|Si vous modifiez la chaîne de connexion, le compte ou le mot de passe, ou le type d’authentification, exécutez l’utilitaire **rsconfig** pour configurer la connexion. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) et [Utilitaire rsconfig &#40;SSRS&#41;](rsconfig-utility-ssrs.md).<br /><br /> L'utilisation de cet utilitaire n'est pas possible pour la création ou la mise à niveau de la base de données. La base de données et RSExecRole doivent déjà exister.|  
 |Configurer un déploiement avec montée en puissance parallèle.|Choisissez l'une des approches suivantes pour automatiser un déploiement avec montée en puissance parallèle :<br /><br /> Exécutez l'utilitaire rskeymgmt.exe pour joindre les instances du serveur de rapports à une installation existante. Pour plus d’informations, consultez [Ajouter et supprimer des clés de chiffrement pour un déploiement par montée en puissance parallèle &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).<br /><br /> Écrivez le code personnalisé à exécuter sur le fournisseur WMI Report Server.|  
 |Sauvegarder les clés de chiffrement.|Choisissez l'une des approches suivantes pour automatiser la sauvegarde des clés de chiffrement :<br /><br /> Exécutez l'utilitaire rskeymgmt.exe pour sauvegarder les clés. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).<br /><br /> Écrivez le code personnalisé à exécuter sur le fournisseur WMI Report Server.|  
-|Configurez la messagerie Report Server.|Écrivez le code personnalisé à exécuter sur le fournisseur WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le fournisseur prend en charge un sous-ensemble des paramètres de configuration de la messagerie.<br /><br /> Bien que le fichier RSReportServer.config contienne tous les paramètres, n'utilisez pas ce fichier de manière automatisée. En particulier, n'utilisez pas un fichier de commandes pour copier le fichier sur un autre serveur de rapports. Chaque fichier de configuration inclut des valeurs qui sont spécifiques à l'instance active. Ces valeurs ne sont pas valides sur les autres instances du serveur de rapports.<br /><br /> Pour plus d’informations sur les paramètres, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
+|Configurez la messagerie Report Server.|Écrivez le code personnalisé à exécuter sur le fournisseur WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le fournisseur prend en charge un sous-ensemble des paramètres de configuration de la messagerie.<br /><br /> Bien que le fichier RSReportServer.config contienne tous les paramètres, n'utilisez pas ce fichier de manière automatisée. En particulier, n'utilisez pas un fichier de commandes pour copier le fichier sur un autre serveur de rapports. Chaque fichier de configuration inclut des valeurs qui sont spécifiques à l'instance active. Ces valeurs ne sont pas valides sur les autres instances du serveur de rapports.<br /><br /> Pour plus d’informations sur les paramètres, consultez [configurer un serveur de rapports pour &#40;la remise&#41;par courrier électronique SSRS Configuration Manager](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
 |Configurer le compte d'exécution sans assistance.|Choisissez l'une des approches suivantes pour automatiser la configuration du compte de traitement sans assistance :<br /><br /> Exécutez l'utilitaire rsconfig.exe pour configurer le compte. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br /><br /> Écrivez le code personnalisé chargé de soumettre des appels au fournisseur WMI Report Server.|  
 |Déployez le contenu existant sur un autre serveur de rapports, y compris l'arborescence des dossiers, les attributions de rôles, les rapports, les abonnements, les planifications, les sources de données et les ressources.|Le meilleur moyen de recréer un environnement de serveur de rapports existant est de copier la base de données du serveur de rapports dans une nouvelle instance du serveur de rapports.<br /><br /> Une autre approche consiste à écrire un code personnalisé capable de recréer par programme le contenu du serveur de rapports existant. Soyez toutefois conscient du fait que les abonnements, les instantanés de rapports et l'historique des rapports ne peuvent pas être recréés par programme.<br /><br /> Certains déploiements peuvent tirer parti de l'utilisation conjointe de ces techniques (soit restaurer une base de données du serveur de rapports, puis exécuter un code personnalisé qui modifie cette base de données pour une installation précise).<br /><br /> Pour obtenir un exemple détaillé, consultez [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).<br /><br /> Pour plus d’informations sur le déplacement d’une base de données du serveur de rapports, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;mode natif SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md). Pour plus d'informations sur la création par programme d'un environnement de serveur de rapports, consultez la section « Utilisation de scripts pour migrer les dossiers et le contenu du Report Server » plus loin dans cette rubrique.|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66099713"
 > [!TIP]  
 >  Pour obtenir un exemple détaillé, consultez [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-```  
+```vb
 Public Sub Main()  
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
@@ -124,11 +124,9 @@ End Sub
  [Méthode GenerateDatabaseCreationScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
  [Méthode GenerateDatabaseRightsScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [Méthode GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
- [Installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [Installez SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Installer le serveur de rapports Reporting Services en mode natif](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Planification de la prise en &#40;charge des navigateurs&#41; Reporting Services et Power View Reporting Services 2014](../browser-support-for-reporting-services-and-power-view.md)   
  [Outils de Reporting Services](reporting-services-tools.md)  
-  
-  

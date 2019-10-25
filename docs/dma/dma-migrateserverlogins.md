@@ -1,8 +1,8 @@
 ---
-title: Migration des connexions SQL Server avec Data Migration Assistant | Microsoft Docs
-description: Découvrez comment migrer des connexions SQL Server avec Data Migration Assistant
+title: Migrer des connexions SQL Server avec Assistant Migration de données | Microsoft Docs
+description: Découvrez comment migrer des connexions SQL Server avec Assistant Migration de données
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,44 +13,47 @@ helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
-ms.openlocfilehash: 84740f9787a7244228ef16af139a9e0b18ffb3a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.author: jtoland
+ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054703"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783271"
 ---
-# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migration des connexions SQL Server avec Data Migration Assistant
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrer des connexions SQL Server avec Assistant Migration de données
 
-Cet article fournit une vue d’ensemble de la migration des connexions SQL Server à l’aide de Data Migration Assistant. 
+Cet article fournit une vue d’ensemble de la migration des connexions SQL Server à l’aide de Assistant Migration de données.
 
-## <a name="which-logins-are-migrated"></a>Les noms de connexion sont migrés.
+> [!IMPORTANT]
+> Cette rubrique s’applique aux scénarios qui impliquent des mises à niveau de SQL Server vers des versions ultérieures du produit local ou à des SQL Server sur des machines virtuelles Azure.
 
-- Vous pouvez migrer les connexions basées sur un principal Windows (par exemple, un utilisateur de domaine ou un groupe de domaine Windows). Vous pouvez également migrer les connexions créées en fonction de l’authentification SQL, appelée également les connexions SQL Server.
+## <a name="which-logins-are-migrated"></a>Connexions à migrer
 
-- Assistant Migration de données actuellement ne prend en charge les connexions associées à un certificat de sécurité autonomes (connexions mappés au certificat), une clé asymétrique autonome (connexions mappées à la clé asymétrique) et connexions mappées aux informations d’identification.
+- Vous pouvez migrer les connexions basées sur un principal Windows (tel qu’un utilisateur de domaine ou un groupe de domaine Windows). Vous pouvez également migrer des connexions créées en fonction de l’authentification SQL, également appelées connexions SQL Server.
 
-- Assistant Migration des données sans avoir à déplacer le **sa** principes de connexion et le serveur avec des noms délimitées par des doubles de hachage (\#\#), qui sont à usage interne uniquement.
+- Assistant Migration de données ne prend actuellement pas en charge les connexions associées à un certificat de sécurité autonome (connexions mappées au certificat), une clé asymétrique autonome (connexions mappées à une clé asymétrique) et des connexions mappées à des informations d’identification.
 
-- Par défaut, Data Migration Assistant sélectionne toutes les connexions qualifiées à migrer. Si vous le souhaitez, vous pouvez sélectionner des connexions spécifiques à migrer. Lorsque Data Migration Assistant migre toutes les connexions qualifiées, le mappage de connexion utilisateur reste intact dans les bases de données qui sont migrés. 
+- Assistant Migration de données ne déplace pas la connexion **sa** et les principes du serveur avec les noms encadrés par des marques de hachage double (\#\#), qui sont réservées à un usage interne uniquement.
 
-  Si vous projetez de migrer des connexions spécifiques, veillez à sélectionner les connexions qui sont mappées à un ou plusieurs utilisateurs dans les bases de données sélectionnées pour la migration.
+- Par défaut, Assistant Migration de données sélectionne toutes les connexions qualifiées à migrer. Si vous le souhaitez, vous pouvez sélectionner des connexions spécifiques à migrer. Lorsque Assistant Migration de données migre toutes les connexions qualifiées, le mappage de l’utilisateur de connexion reste intact dans les bases de données qui sont migrées.
 
-- Dans le cadre de la migration de connexion, Data Migration Assistant également déplace les rôles serveur définis par l’utilisateur et ajoute les autorisations au niveau du serveur pour les rôles de serveur définis par l’utilisateur. Le propriétaire du rôle est défini sur **sa** principal.
+  Si vous envisagez de migrer des connexions spécifiques, veillez à sélectionner les connexions qui sont mappées à un ou plusieurs utilisateurs dans les bases de données sélectionnées pour la migration.
+
+- Dans le cadre de la migration de la connexion, Assistant Migration de données déplace également les rôles de serveur définis par l’utilisateur et ajoute des autorisations au niveau du serveur aux rôles de serveur définis par l’utilisateur. Le propriétaire du rôle est défini sur **sa** principal.
 
 ## <a name="during-and-after-migration"></a>Pendant et après la migration
 
-- Dans le cadre de la migration de connexion, Data Migration Assistant attribue les autorisations aux éléments sécurisables sur la cible de SQL Server tels qu’ils existent sur la source de SQL Server. 
+- Dans le cadre de la migration de la connexion, Assistant Migration de données affecte les autorisations aux éléments sécurisables sur le SQL Server cible, tels qu’ils existent sur le SQL Server source.
 
-  Si la connexion existe déjà sur la cible de SQL Server, Data Migration Assistant migre uniquement les autorisations affectées aux éléments sécurisables et ne sont pas recréer la connexion entière.
+  Si la connexion existe déjà sur le SQL Server cible, Assistant Migration de données migre uniquement les autorisations affectées aux éléments sécurisables et ne recrée pas la connexion entière.
 
-- Assistant Migration de données rend le meilleur effort pour mapper la connexion aux utilisateurs de base de données si la connexion existe déjà sur le serveur cible.
+- Assistant Migration de données permet de mapper la connexion aux utilisateurs de base de données si la connexion existe déjà sur le serveur cible.
 
-- Il est recommandé que vous passez en revue les résultats de la migration pour comprendre l’état général de la migration de connexion et les actions recommandées de post-migration.
+- Il est recommandé de passer en revue les résultats de la migration pour comprendre l’état global de la migration de la connexion et toutes les actions de postconnexion recommandées.
 
 ## <a name="resources"></a>Ressources
 
-[Data Migration Assistant (DMA)](../dma/dma-overview.md)
+[Assistant Migration de données (DMA)](../dma/dma-overview.md)
 
-[Assistant de Migration de données : Paramètres de configuration](../dma/dma-configurationsettings.md)
+[Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
