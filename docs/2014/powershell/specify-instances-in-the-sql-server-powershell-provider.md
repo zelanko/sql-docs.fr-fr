@@ -10,19 +10,19 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762353"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797761"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Spécifier des instances dans le fournisseur SQL Server PowerShell
   Les chemins d'accès spécifiés pour le fournisseur PowerShell SQL Server doivent identifier l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] et de l'ordinateur sur lequel elle s'exécute. La syntaxe pour spécifier l'ordinateur et l'instance doit être conforme aux règles relatives aux identificateurs SQL Server et aux chemins d'accès Windows PowerShell.  
   
-1.  **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions)  
+1.  **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions)  
   
-2.  **Pour spécifier une instance :**  [Exemples](#Examples)  
+2.  **Pour spécifier une instance :**  [Exemples](#Examples)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Le premier nœud venant après SQLSERVER:\SQL dans un chemin d'accès de fournisseur SQL Server est le nom de l'ordinateur qui exécute l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]; par exemple :  
@@ -51,27 +51,27 @@ SQLSERVER:\SQL\MyComputer\MyInstance
 ##  <a name="Examples"></a> Exemples : noms d'ordinateur et d'instance  
  Cet exemple utilise localhost et DEFAULT pour spécifier l'instance par défaut sur l'ordinateur local :  
   
-```  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT   
+```powershell
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT
 ```  
   
  Les parenthèses contenues dans (local) sont normalement traitées comme des commandes par Windows PowerShell. Vous devez effectuer l'une des opérations suivantes :  
   
 -   Mettre la chaîne de chemin d'accès entre guillemets :  
   
-    ```  
+    ```powershell
     Set-Location "SQLSERVER:\SQL\(local)\DEFAULT"  
     ```  
   
 -   Placer la parenthèse dans une séquence d'échappement à l'aide du caractère « ` » (backtick) :  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
     ```  
   
 -   Encoder la parenthèse à l'aide de sa représentation hexadécimale :  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
@@ -79,5 +79,3 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
  [Identificateurs SQL Server dans PowerShell](sql-server-identifiers-in-powershell.md)   
  [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

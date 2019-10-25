@@ -10,15 +10,15 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb70ab2f2098b0857ba632a3b9501d596c0af864
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922960"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798054"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Charger les assemblys SMO dans Windows PowerShell
-  Cette rubrique décrit comment charger les assemblys SMO (SQL Server Management Object) dans des scripts Windows PowerShell qui n'utilisent pas le fournisseur SQL Server PowerShell.  
+  Cette rubrique décrit comment charger les assemblys SMO (SQL Server Management Object) dans des scripts Windows PowerShell qui n'utilisent pas le fournisseur SQL Server PowerShell.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Le mécanisme recommandé pour le chargement des assemblys SMO consiste à charger le module `sqlps`. Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclus dans le module charge automatiquement les assemblys SMO et implémente des fonctionnalités qui étendent l'utilité des objets SMO dans les scripts PowerShell.  
@@ -29,17 +29,15 @@ ms.locfileid: "62922960"
   
 -   Vous souhaitez porter du code SMO à partir d'un autre langage, par exemple C# ou Visual Basic, qui n'utilise pas le fournisseur ou les applets de commande.  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>Exemple : Le chargement de SQL Server Management Objects  
+## <a name="example-loading-the-sql-server-management-objects"></a>Exemple : chargement d'objets SMO (SQL Server Management Object)  
  Le code suivant charge les assemblys SMO :  
   
-```  
-#  
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
   
 $ErrorActionPreference = "Stop"  
   
-$sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
+$sqlpsreg = "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
 if (Get-ChildItem $sqlpsreg -ErrorAction "SilentlyContinue")  
 {  
@@ -81,11 +79,9 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+Update-FormatData -PrependPath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

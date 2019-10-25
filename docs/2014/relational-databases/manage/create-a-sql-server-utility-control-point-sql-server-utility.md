@@ -20,15 +20,15 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db76db817561095b7b09b1a86e7c2ca10ec9174a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806369"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798086"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
-  Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer de nombreuses instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d'application de la couche Données est membre d'un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
+  Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer de nombreuses instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d’application de la couche Données est membre d’un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
   
  L'UCP recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62806369"
   
 -   Les données FILESTREAM ne sont pas prises en charge pour la surveillance de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Pour plus d’informations, consultez [spécifications des capacités maximales pour SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Pour plus d’informations, consultez [spécifications de capacité maximale pour les SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) et [les fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>Supprimez les points de contrôle d'utilitaire précédents avant d'en installer un nouveau  
  Si vous installez un point de contrôle d'utilitaire (UCP) sur une instance de SQL Server qui a déjà été configurée comme UCP, vous devez, auparavant, supprimer toutes les instances gérées de SQL Server, ainsi que l'UCP. Pour ce faire, exécutez la procédure stockée **sp_sysutility_ucp_remove** .  
@@ -76,13 +76,13 @@ ms.locfileid: "62806369"
   
 -   Cette procédure doit être exécutée par un utilisateur disposant d'autorisations sysadmin, qui sont les mêmes autorisations requises pour créer un UCP.  
   
--   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d’informations, consultez [Procédure : Supprimer une Instance de SQL Server à partir de l’utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d'informations, consultez [Procédure : supprimer une instance de SQL Server de l'utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Utilisez cette procédure pour supprimer un UCP SQL Server de l'utilitaire SQL Server. Une fois l'opération terminée, il est possible de créer à nouveau un UCP sur l'instance de SQL Server.  
   
  Utilisez SQL Server Management Studio pour la connexion au point de contrôle de l'utilitaire, puis exécutez le script suivant :  
   
-```  
+```sql
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
@@ -101,7 +101,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Étapes de l'Assistant  
  ![](../../database-engine/media/create-ucp.gif "Create_UCP")  
   
- Les sections suivantes fournissent des informations sur chaque page du flux de travail de l'Assistant pour créer un UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour lancer l’Assistant pour créer un UCP, ouvrez le volet Explorateur de l’utilitaire dans le menu Affichage dans SSMS, puis cliquez sur le bouton ![](../../database-engine/media/create-ucp.gif "Créer un UCP") **Créer un UCP** en haut du volet Explorateur de l’utilitaire.  
+ Les sections suivantes fournissent des informations sur chaque page du flux de travail de l'Assistant pour créer un UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour lancer l’Assistant afin de créer un UCP, ouvrez le volet Explorateur de l’utilitaire dans le menu Affichage dans SSMS, puis cliquez ![](../../database-engine/media/create-ucp.gif "Bouton") sur le bouton **créer un UCP** en haut du volet Explorateur de l’utilitaire.  
   
  Cliquez sur un lien dans la liste ci-dessous pour accéder aux détails d'une page dans l'Assistant :  
   
@@ -124,14 +124,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introduction à l'Assistant Créer un UCP  
  Si vous ouvrez l'Explorateur de l'utilitaire et qu'aucun point de contrôle d'utilitaire n'est connecté, vous devez en connecter un ou en créer un.  
   
- **Se connecter à un UCP existant** - Si un point de contrôle d’utilitaire existe déjà dans votre déploiement, vous pouvez vous y connecter en cliquant sur le bouton ![](../../database-engine/media/connect-to-utility.gif "Se connecter à l’utilitaire")**Se connecter à l’utilitaire** en haut du volet Explorateur de l’utilitaire. Pour se connecter à un UCP existant, vous devez disposer d'informations d'identification d'administrateur ou être membre du rôle de lecteur d'utilitaire. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que vous ne pouvez être connecté qu'à un UCP d'une instance de SSMS.  
+ **Se connecter à un UCP existant** : s’il existe déjà un point de contrôle de l’utilitaire dans votre déploiement, vous pouvez vous ![ ](../../database-engine/media/connect-to-utility.gif "Se")y connecter en cliquant sur le bouton **se connecter à l’utilitaire** en haut du volet Explorateur de l’utilitaire. Pour se connecter à un UCP existant, vous devez disposer d'informations d'identification d'administrateur ou être membre du rôle de lecteur d'utilitaire. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que vous ne pouvez être connecté qu'à un UCP d'une instance de SSMS.  
   
- **Créer un UCP** - Pour créer un point de contrôle d’utilitaire, cliquez sur le bouton ![](../../database-engine/media/create-ucp.gif "Créer un UCP")**Créer un UCP** en haut du volet Explorateur de l’utilitaire. Pour créer un UCP, vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournir des informations d'identification d'administrateur dans le dialogue de connexion. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Créer un nouveau UCP** -pour créer un point de contrôle d’utilitaire, cliquez ![ ](../../database-engine/media/create-ucp.gif "Bouton")sur le bouton **créer un UCP** en haut du volet Explorateur de l’utilitaire. Pour créer un UCP, vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournir des informations d'identification d'administrateur dans le dialogue de connexion. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="Instance_name"></a> Spécifier une instance  
  Spécifiez les informations suivantes à propos de l'UCP que vous créez :  
   
--   **Nom de l’instance** - Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance.  
+-   **Nom** de l’instance : pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la boîte de dialogue de connexion, cliquez sur **se connecter...** . Indiquez le nom de l’ordinateur et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom de l’instance au format Nomordinateur\nominstance.  
   
 -   **Nom de l’utilitaire** - Spécifiez un nom qui sera utilisé pour identifier l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le réseau.  
   
@@ -165,9 +165,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne doit pas être une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inscrite avec un autre UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Spécifiez une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger l'UCP, ou inscrire l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'UCP où c'est actuellement une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être déjà l'hôte d'un point de contrôle de l'utilitaire.|Spécifiez une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger l’UCP.|  
 |L'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir TCP/IP activé.|Activez TCP/IP pour l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|L’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas avoir de base de données nommée « sysutility_mdw ».|L'opération créer un UCP créera un entrepôt de données de gestion de l'utilitaire (UMDW) nommé « sysutility_mdw ». L'opération exige que ce nom n'existe pas sur l'ordinateur au moment où les règles de validation sont exécutées. Pour continuer, vous devez supprimer ou renommer toute base de données nommée « sysutility_mdw ». Pour plus d’informations sur les opérations de modification de nom, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).|  
+|L’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas avoir de base de données nommée « sysutility_mdw ».|L'opération créer un UCP créera un entrepôt de données de gestion de l'utilitaire (UMDW) nommé « sysutility_mdw ». L'opération exige que ce nom n'existe pas sur l'ordinateur au moment où les règles de validation sont exécutées. Pour continuer, vous devez supprimer ou renommer toute base de données nommée « sysutility_mdw ». Pour plus d’informations sur les opérations de modification de nom, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).|  
 |Les jeux d'éléments de collecte sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être interrompus.|Interrompez les jeux d'éléments de collecte préexistants lors de la création de l'UCP sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le collecteur de données est désactivé, activez-le, interrompez tous jeux d'éléments de collecte en cours d'exécution, puis réexécutez des règles de validation pour l'opération Créer un UCP.<br /><br /> Pour activer le collecteur de données :<br /><br /> Dans l'Explorateur d'objets, développez le nœud **Gestion** .<br /><br /> Cliquez avec le bouton droit sur **Collecte de données**, puis cliquez sur **Activer la collecte de données**.<br /><br /> Pour arrêter un jeu d'éléments de collecte :<br /><br /> Dans l'Explorateur d'objets, développez le nœud Gestion et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.<br /><br /> Cliquez avec le bouton droit sur le jeu d’éléments de collecte à arrêter, puis cliquez sur **Arrêter le jeu d’éléments de collecte de données**.<br /><br /> Une zone de message affiche les résultats de cette action et un cercle rouge sur l'icône du jeu d'éléments de collecte indique que celui-ci s'est arrêté.|  
-|Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée doit être démarré. Si l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour démarrer manuellement. Sinon, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour démarrer automatiquement.|Démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Si l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer manuellement. Sinon, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer automatiquement.|  
+|Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée doit être démarré. Si l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour démarrer manuellement. Sinon, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour démarrer automatiquement.|Démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Si l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer manuellement. Sinon, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer automatiquement.|  
 |WMI doit être correctement configuré.|Pour résoudre les problèmes de configuration de WMI, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).|  
 |Le compte d’agent proxy de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être un compte intégré, comme Service réseau.|Si le compte proxy de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un compte intégré, comme Service réseau, réattribuez le compte à un compte de domaine Windows qui est sysadmin.|  
 |Si vous sélectionnez l'option de compte proxy, le compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un compte de domaine Windows valide.|Spécifiez un compte de domaine Windows valide. Pour vérifier que le compte est valide, ouvrez une session sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du compte de domaine Windows.|  
@@ -219,14 +219,12 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="PowerShell_create_UCP"></a> Créer un point de contrôle d'utilitaire à l'aide de PowerShell  
  Utilisez l'exemple suivant pour créer un point de contrôle d'utilitaire :  
   
-```  
-> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
-> $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
-> $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
+```powershell
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+$SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
+$Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](sql-server-utility-features-and-tasks.md)   
- [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
-  
-  
+ [Résolution des problèmes liés à l'utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
