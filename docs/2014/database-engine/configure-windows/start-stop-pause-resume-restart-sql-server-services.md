@@ -1,5 +1,5 @@
 ---
-title: Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, l’Agent SQL Server ou le Service SQL Server Browser | Microsoft Docs
+title: Démarrer, arrêter, suspendre, reprendre, redémarrer le service Moteur de base de données, SQL Server Agent ou SQL Server Browser | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808739"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797947"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser
   Cette rubrique explique comment démarrer, des commandes arrêter, des commandes interrompre, des commandes reprendre, des commandes ou redémarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], des commandes l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , des commandes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des commandes **net** à partir d'une invite de commandes, de des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)], des commandes or PowerShell.  
@@ -114,10 +114,10 @@ ms.locfileid: "62808739"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Par défaut, seuls les membres du groupe des administrateurs locaux peuvent démarrer, arrêter, interrompre, reprendre ou redémarrer un service. Pour accorder aux non-administrateurs la capacité de gérer des services, consultez [Comment accorder aux utilisateurs des droits de gestion des services dans Windows Server 2003](https://support.microsoft.com/kb/325349). (le processus est semblable sur d'autres versions de Windows).  
   
- L’arrêt du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` commande nécessite l’appartenance au **sysadmin** ou **serveradmin** rôles serveur fixes et n’est pas transférable.  
+ L’arrêt de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` requiert l’appartenance aux rôles serveur fixes **sysadmin** ou **ServerAdmin** , et n’est pas transférable.  
   
 ##  <a name="SSCMProcedure"></a> Utilisation du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62808739"
 5.  Cliquez sur **OK** pour fermer le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  L’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être suspendu.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’Agent ne peut pas être suspendu.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
@@ -180,7 +180,7 @@ ms.locfileid: "62808739"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -ou-  
+     \- ou -  
   
      **net start MSSQLSERVER**  
   
@@ -190,7 +190,7 @@ ms.locfileid: "62808739"
   
      **net start "SQL Server (** *nom_instance* **)"**  
   
-     -ou-  
+     \- ou -  
   
      **net start MSSQL$** *nom_instance*  
   
@@ -200,7 +200,7 @@ ms.locfileid: "62808739"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -ou-  
+     \- ou -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -213,7 +213,7 @@ ms.locfileid: "62808739"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -ou-  
+     \- ou -  
   
      **net start SQLSERVERAGENT**  
   
@@ -223,7 +223,7 @@ ms.locfileid: "62808739"
   
      **net start "SQL Server Agent (** *nom_instance* **)"**  
   
-     -ou-  
+     \- ou -  
   
      **net start SQLAgent$** *nom_instance*  
   
@@ -235,7 +235,7 @@ ms.locfileid: "62808739"
   
      **net start "SQL Server Browser"**  
   
-     -ou-  
+     \- ou -  
   
      **net start SQLBrowser**  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62808739"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Pour plus d’informations sur la `SHUTDOWN` instruction, consultez [arrêt &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Pour plus d’informations sur l’instruction `SHUTDOWN`, [consultez &#40;Shutdown Transact-&#41;SQL](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
@@ -281,8 +281,7 @@ ms.locfileid: "62808739"
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  Identifiez le service que vous souhaitez arrêter ou démarrer. Choisissez l'une des lignes suivantes. Remplacez `instancename` par le nom de l'instance nommée.  
@@ -339,7 +338,5 @@ ms.locfileid: "62808739"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer SQL Server avec une configuration minimale](start-sql-server-with-minimal-configuration.md)   
+ [Démarrage de SQL Server avec une configuration minimale](start-sql-server-with-minimal-configuration.md)   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

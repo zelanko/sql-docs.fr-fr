@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889612"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797636"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
   Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. Le **mode multidimensionnel et d’exploration de données** prend en charge les données OLAP et l’exploration de données traditionnelles. Le **mode tabulaire** prend en charge les modèles tabulaires. Le **mode intégré SharePoint** fait référence à une instance de Analysis Services qui a été installée en tant que PowerPivot pour SharePoint, utilisé pour le chargement et l’interrogation des modèles de données Excel ou PowerPivot à l’intérieur d’un classeur.  
@@ -26,9 +26,9 @@ ms.locfileid: "68889612"
  Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [modélisation &#40;tabulaire&#41; SSAS tabulaire](../../tabular-models/tabular-models-ssas.md) et [comparaison des &#40;solutions tabulaires et&#41;multidimensionnelles SSAS](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Architecture de base  
- Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont nommées « \<ServerName > \\ < nom_instance \> ». L’illustration suivante montre toutes les relations mentionnées entre des objets [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont nommées «\<ServerName >\\< nom_instance\>». L’illustration suivante montre toutes les relations mentionnées entre des objets [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- ![Relations des objets AMO en cours d’exécution](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "Relations des objets AMO en cours d’exécution")  
+ ![Relations des objets AMO en cours d’exécution](../../dev-guide/media/amo-runningobjects.gif "Relations des objets AMO en cours d’exécution")  
   
  Les classes Basic sont le jeu minimum d'objets requis pour générer un cube. Ce jeu minimum d'objets est une dimension, un groupe de mesures et une partition. L'agrégation est facultative.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889612"
 ## <a name="example"></a>Exemple  
  Le cube Imports contient deux mesures, Packages et Last, ainsi que trois dimensions connexes, Route, Source et Time.  
   
- ![Exemple de cube 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Exemple de cube 1")  
+ ![Exemple de cube 1](../../dev-guide/media/cubeintro1.gif "Exemple de cube 1")  
   
  Les petites valeurs alphanumériques autour du cube représentent les membres des dimensions. Les membres sont par exemple ground (membre de la dimension Route), Africa (membre de la dimension Source) et 1st quarter (membre de la dimension Time).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889612"
 ### <a name="aggregates"></a>Agrégats  
  Les utilisateurs professionnels d'un cube peuvent déterminer les valeurs des mesures pour chaque membre de toutes les dimensions, quel que soit le niveau du membre dans la dimension, parce que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrège les valeurs à des niveaux supérieurs s'il y a lieu. Par exemple, les valeurs de mesure de l’illustration précédente peuvent être agrégées en fonction d’une hiérarchie de calendrier standard à l’aide de la hiérarchie Calendar Time de la dimension Time, comme illustré dans le diagramme suivant.  
   
- ![Diagramme des mesures organisées selon la dimension de temps](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagramme des mesures organisées selon la dimension de temps")  
+ ![Diagramme des mesures organisées selon la dimension de temps](../../dev-guide/media/cubeintro2.gif "Diagramme des mesures organisées selon la dimension de temps")  
   
  Outre l'agrégation au sein d'une même dimension, les mesures peuvent faire l'objet d'une agrégation combinant un nombre de membres appartenant à différentes dimensions. Cela permet aux utilisateurs professionnels d'évaluer les mesures dans plusieurs dimensions en même temps. Par exemple, si un utilisateur professionnel souhaite analyser les importations trimestrielles arrivées par voie aérienne en provenance des hémisphères Est (Eastern Hemisphere) et Ouest (Western Hemisphere), il peut exécuter une requête sur le cube pour extraire le dataset suivant.  
   

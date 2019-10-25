@@ -10,12 +10,12 @@ ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fcc82b03ff6d44e8c7c85088f625feb6bd8102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108354"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796371"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service SharePoint Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont gérées à partir de l'Administration centrale de SharePoint. Les pages de gestion et des propriétés vous permettent de mettre à jour la configuration de l'application de service ainsi que les tâches d'administration courantes.  
@@ -43,7 +43,7 @@ ms.locfileid: "66108354"
   
 2.  Cliquez à côté du nom de votre application de service ou sur la colonne **type** pour sélectionner toute la ligne, puis cliquez sur **Propriétés** dans le ruban SharePoint.  
   
- Pour plus d’informations sur les propriétés d’application de service, consultez [étape 3 : Créer une application de service Reporting Services](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+ Pour plus d'informations sur les propriétés d'application de service, consultez [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> Pour ouvrir les pages de gestion de l'application de service  
  Pour ouvrir les pages de gestion d'une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , procédez comme suit :  
@@ -93,7 +93,7 @@ ms.locfileid: "66108354"
 |Activer la journalisation des exécutions|La valeur par défaut est TRUE.<br /><br /> Vous pouvez spécifier si le serveur de rapports génère des journaux de traces et le nombre de jours pendant lesquels ces journaux sont conservés. . Les journaux sont stockés sur l'ordinateur serveur de rapports dans le dossier \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Un nouveau fichier journal est démarré chaque fois que le service est démarré. Pour plus d'informations sur les fichiers journaux, consultez [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
 |Nombre de jours de conservation dans le journal des exécutions|La valeur par défaut est 60 jours.|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge la journalisation ULS SharePoint.  Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge la journalisation ULS SharePoint.  Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  
   
 ###  <a name="bkmk_security_settings_section"></a> Paramètres de sécurité  
   
@@ -149,13 +149,13 @@ ms.locfileid: "66108354"
   
  L'exemple suivant est une commande PowerShell qui retourne la liste des applications de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] avec la propriété UEAccount :  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
  Pour plus d’informations, consultez [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>.  
  **Spécifier un compte d'exécution**  
  Sélectionnez un compte.  
   
@@ -171,7 +171,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> Paramètres de messagerie  
  Utilisez cette page pour spécifier les paramètres du protocole SMTP (Simple Mail Transfer Protocol) qui activent la remise du courrier électronique à partir du serveur de rapports. Vous pouvez utiliser l'extension de remise du courrier électronique Report Server pour distribuer des rapports ou des notifications de traitement de rapport par le biais d'abonnements à la messagerie. L'extension de remise par messagerie Report Server nécessite un serveur SMTP et une adresse de messagerie à utiliser dans le champ De :.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>.  
  **Utiliser le serveur SMTP**  
  Spécifie que le message du serveur de rapports est acheminé par le biais d'un serveur SMTP.  
   

@@ -24,19 +24,19 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872655"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797980"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
   
--   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Prérequis](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
+-   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Conditions préalables](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
   
--   **Pour mettre à niveau une DAC à l’aide de** :  [l’Assistant Mise à niveau de l’application de la couche Données](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Pour mettre à niveau une DAC en utilisant :**  [L’Assistant Mise à niveau de l’application de la couche Données](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  La mise à niveau d'une DAC est un processus sur place qui modifie le schéma de la base de données existante de manière à ce qu'il corresponde au schéma défini dans une nouvelle version de la DAC. La nouvelle version de la DAC est fournie dans un fichier de package DAC. Pour plus d’informations sur la création d’un package DAC, consultez [Applications de la couche Données](data-tier-applications.md).  
@@ -44,21 +44,21 @@ ms.locfileid: "62872655"
 ###  <a name="ChoseDACUpgOptions"></a> Choix des options de mise à niveau de la DAC  
  Il existe quatre options de mise à niveau dans le cadre d'une mise à niveau sur place :  
   
--   **Ignorer les pertes de données** : si `True`, la mise à niveau sera effectuée même si certaines opérations mènent à une perte de données. Si sa valeur est `False`, ces opérations mettent fin à la mise à niveau. Par exemple, si l'une des tables de la base de données actuelle n'est pas présente dans le schéma de la nouvelle DAC, la table est supprimée si la valeur `True` est spécifiée. La valeur par défaut est `True`.  
+-   **Ignorer la perte de données** -si `True`, la mise à niveau se poursuivra même si certaines opérations entraînent la perte de données. Si sa valeur est `False`, ces opérations mettent fin à la mise à niveau. Par exemple, si l'une des tables de la base de données actuelle n'est pas présente dans le schéma de la nouvelle DAC, la table est supprimée si la valeur `True` est spécifiée. La valeur par défaut est `True`.  
   
--   **Empêcher les modifications** : si `True`, la mise à niveau est interrompue si le schéma de base de données est différent de celui défini dans la DAC précédente. Si la valeur est `False`, la mise à niveau continue, même si des modifications sont détectées. La valeur par défaut est `False`.  
+-   **Bloquer sur les modifications** : si `True`, la mise à niveau est interrompue si le schéma de base de données est différent de celui défini dans la DAC précédente. Si la valeur est `False`, la mise à niveau continue, même si des modifications sont détectées. La valeur par défaut est `False`.  
   
--   **Restauration en cas d’échec** : si `True`, la mise à niveau est englobée dans une transaction, et si vous rencontrez des erreurs de restauration sera tentée. Si la valeur est `False`, toutes les modifications sont validées au fur et à mesure qu'elles sont effectuées. Par conséquent, si des erreurs se produisent, vous pourrez avoir à restaurer une sauvegarde de la base de données. La valeur par défaut est `False`.  
+-   **Restauration en cas d’échec** : si `True`, la mise à niveau est placée dans une transaction et, si des erreurs sont rencontrées, une restauration est tentée. Si la valeur est `False`, toutes les modifications sont validées au fur et à mesure qu'elles sont effectuées. Par conséquent, si des erreurs se produisent, vous pourrez avoir à restaurer une sauvegarde de la base de données. La valeur par défaut est `False`.  
   
--   **Ignorer la Validation de stratégie** : si `True`, la stratégie de sélection du serveur DAC n’est pas évaluée. Si la valeur est `False`, la stratégie est évaluée et la mise à niveau s'arrête en cas d'erreur de validation. La valeur par défaut est `False`.  
+-   **Ignorer la validation de stratégie** -si `True`, la stratégie de sélection du serveur DAC n’est pas évaluée. Si la valeur est `False`, la stratégie est évaluée et la mise à niveau s'arrête en cas d'erreur de validation. La valeur par défaut est `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Les mises à niveau d'une DAC ne peuvent être effectuées que dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Par mesure de prudence, il est recommandé d'effectuer une sauvegarde complète de la base de données avant de la mettre à niveau. Si une erreur se produit lors d'une mise à niveau et que toutes ses modifications ne peuvent pas être restaurées, vous devrez peut-être restaurer la sauvegarde.  
   
- Avant de démarrer la mise à niveau, plusieurs actions peuvent être entreprises pour valider le package DAC et les actions de mise à niveau. Pour plus d'informations sur la façon de procéder à ces vérifications, consultez [Validate a DAC Package](validate-a-dac-package.md).  
+ Avant de démarrer la mise à niveau, plusieurs actions peuvent être entreprises pour valider le package DAC et les actions de mise à niveau. Pour plus d’informations sur la façon de procéder à ces vérifications, consultez [Valider un package DAC](validate-a-dac-package.md).  
   
 -   Nous vous recommandons de pas effectuer de mise à niveau en utilisant un package DAC provenant de sources inconnues ou non approuvées. De tels packages peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un package provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62872655"
 ###  <a name="Security"></a> Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Une DAC ne peut être mise à niveau que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions situées dans le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. La connexion doit être propriétaire de la base de données existante. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut aussi mettre à niveau une DAC.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> Utilisation de l'Assistant Mise à niveau de l'application de la couche Données  
@@ -85,7 +85,7 @@ ms.locfileid: "62872655"
   
 3.  Cliquez avec le bouton droit sur le nœud de la DAC à mettre à niveau, puis sélectionnez **Mettre à niveau l’application de la couche Données...** .  
   
-4.  Renseignez les boîtes de dialogue de l'Assistant :  
+4.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     1.  [Page Introduction](#Introduction)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62872655"
 ##  <a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de mise à niveau d'une application de couche Données.  
   
- **Ne plus afficher cette page.** - Cochez la case pour ne plus afficher la page à l'avenir.  
+ **Ne plus afficher cette page** - Cochez la case pour ne plus afficher la page à l'avenir.  
   
  **Suivant >** : passe à la page **Sélectionner un package**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62872655"
   
  **Validation du contenu de la DAC** : barre de progression qui indique l’état actuel de la validation.  
   
- **\< Précédent** -retourne à son état initial de la **sélectionner un Package** page.  
+ **\< précédent** -revient à l’état initial de la page **Sélectionner un package** .  
   
  **Suivant >** : passe à la dernière version de la page **Sélectionner un package**.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62872655"
   
  **Ignorez les violations de stratégie** : utilisez cette case à cocher pour poursuivre la mise à niveau en cas d’échec d’une ou plusieurs conditions de stratégie. Ne sélectionnez cette option que si vous êtes sûr que toutes les conditions qui ont échoué n'empêcheront pas l'opération de la DAC de réussir.  
   
- **\< Précédent** -retourne à la **sélectionner un Package** page.  
+ **\< précédent** -retourne à la page **Sélectionner un package** .  
   
  **Suivant >** : passe à la page **Détecter les modifications**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62872655"
   
  **Enregistrer le rapport** : cliquez sur ce bouton pour enregistrer un rapport des modifications détectées par l’Assistant entre les objets de la base de données et leurs équivalents dans la définition de la DAC. Vous pouvez ensuite vérifier le rapport pour déterminer si vous devez prendre des mesures, une fois la mise à niveau terminée, pour incorporer dans la nouvelle base de données tout ou partie des objets répertoriés dans le rapport.  
   
- **\< Précédent** -retourne à la **sélectionner le Package DAC** page.  
+ **\< précédent** -revient à la page **Sélectionner le package DAC** .  
   
  **Suivant >** : passe à la page **Options**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "62872655"
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   
- **\< Précédent** -retourne à la **détecter les modifications** page.  
+ **\< précédent** -revient à la page **détecter les modifications** .  
   
  **Suivant >** : passe à la page **Vérifier le plan de mise à niveau**.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "62872655"
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   
- **\< Précédent** -retourne à la **détecter les modifications** page.  
+ **\< précédent** -revient à la page **détecter les modifications** .  
   
  **Suivant >** : passe à la page **Résumé**.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "62872655"
   
  **Les paramètres suivants seront utilisés pour mettre à niveau votre DAC.** - Vérifiez les informations affichées pour vous assurer que les actions prises seront correctes. La fenêtre affiche la DAC que vous avez sélectionnée pour être mise à niveau, et le package de DAC qui contient la nouvelle version de la DAC. La fenêtre s'affiche également si la version actuelle de la base de données est identique à la définition de la DAC actuelle, ou si la base de données a été modifiée.  
   
- **\< Précédent** -vous renvoie à la **vérifier le Plan de mise à niveau** page.  
+ **\< précédent** : vous renvoie à la page **vérifier le plan de mise à niveau** .  
   
  **Suivant >** : déploie la DAC et affiche les résultats dans la page **Mettre à niveau la DAC**.  
   
@@ -249,10 +249,10 @@ ms.locfileid: "62872655"
 ### <a name="example-powershell"></a>Exemple (PowerShell)  
  L'exemple suivant met à niveau la DAC nommée MyApplication sur une instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]en utilisant une nouvelle version de DAC dans un package MyApplicationVNext.dacpac.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -287,5 +287,3 @@ $fileStream.Close()
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
-  
-  

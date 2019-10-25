@@ -15,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6aff97c8bee8fe8ccc469c2ee57bc94466e1e31
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064707"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797855"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd (applet de commande)
   **Invoke-Sqlcmd** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui exécute des scripts contenant des instructions des langages [!INCLUDE[tsql](../includes/tsql-md.md)] et XQuery ainsi que les commandes prises en charge par l’utilitaire **sqlcmd**.  
@@ -30,40 +30,40 @@ ms.locfileid: "66064707"
   
  Voici un exemple d’appel d’Invoke-Sqlcmd visant à exécuter une requête simple, qui revient à spécifier **sqlcmd** avec les options **-Q** et **-S** :  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
  Voici un exemple d’appel d’ **Invoke-Sqlcmd**qui spécifie un fichier d’entrée et dirige la sortie vers un fichier. Cette opération revient à spécifier **sqlcmd** avec les options **-i** et **-o** :  
   
-```  
-Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
+```powershell
+Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -FilePath "C:\MyFolder\TestSQLCmd.rpt"  
 ```  
   
  Cet exemple montre comment utiliser un tableau Windows PowerShell pour transmettre plusieurs variables de script **sqlcmd** à **Invoke-Sqlcmd**. Les caractères « $ » qui identifient les variables de script **sqlcmd** dans l’instruction SELECT ont été placés dans une séquence d’échappement à l’aide du caractère d’échappement PowerShell « ` » (backtick) :  
   
-```  
+```powershell
 $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"  
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
  L’exemple suivant utilise le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell pour naviguer jusqu’à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], puis utilise l’applet de commande **Get-Item** de Windows PowerShell pour récupérer l’objet serveur SMO pour l’instance et le transmettre à **Invoke-Sqlcmd**:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
  Le paramètre -Query est positionnel et il n'est pas nécessaire de le nommer. Si la première chaîne transmise à **Invoke-Sqlcmd**est sans nom, elle est traitée comme le paramètre -Query.  
   
-```  
+```powershell
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
 ## <a name="path-context-in-invoke-sqlcmd"></a>Contexte de chemin d'accès dans Invoke-Sqlcmd  
  Si vous n'utilisez pas le paramètre -Database, le contexte de base de données pour Invoke-Sqlcmd est défini par le chemin d'accès qui est actif lors de l'appel à l'applet de commande.  
   
-|Chemin d'accès|Contexte de base de données|  
+|chemin|Contexte de base de données|  
 |----------|----------------------|  
 |Commence par un lecteur autre que SQLSERVER:|Base de données par défaut pour l'ID de connexion dans l'instance par défaut sur l'ordinateur local.|  
 |SQLSERVER:\SQL|Base de données par défaut pour l'ID de connexion dans l'instance par défaut sur l'ordinateur local.|  
@@ -74,14 +74,14 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
   
  Par exemple, supposons que votre compte Windows dans l'instance par défaut de l'ordinateur local a pour base de données par défaut master. Les commandes suivantes retournent donc master :  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
- Les commandes suivantes retournent [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]:  
+ Les commandes suivantes retournent [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] :  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
@@ -95,9 +95,9 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** n’initialise pas l’environnement **sqlcmd** ou les variables de script telles que SQLCMDDBNAME ou SQLCMDWORKSTATION.  
   
- **Invoke-Sqlcmd** n’affiche pas les messages, tels que la sortie des instructions PRINT, sauf si vous spécifiez le paramètre commun Windows PowerShell **-Verbose** . Exemple :  
+ **Invoke-Sqlcmd** n’affiche pas les messages, tels que la sortie des instructions PRINT, sauf si vous spécifiez le paramètre commun Windows PowerShell **-Verbose** . Par exemple:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
@@ -109,11 +109,11 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Base de données initiale à utiliser.|-d|-Database|  
 |Exécuter la requête spécifiée et quitter.|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-p|-Password|  
 |Définition de variable.|-V|-Variable|  
 |Intervalle de délai de requête.|-T|-QueryTimeout|  
 |Arrêter l'exécution en cas d'erreur|-b|-AbortOnError|  
-|Connexion administrateur dédiée.|-A|-DedicatedAdministratorConnection|  
+|Connexion administrateur dédiée.|-a|-DedicatedAdministratorConnection|  
 |Désactiver les commandes interactives, le script de démarrage et les variables d'environnement.|-X|-DisableCommands|  
 |Désactiver la substitution de variable.|-X|-DisableVariables|  
 |Niveau de gravité minimal pour le rapport.|-v|-SeverityLevel|  
@@ -135,20 +135,18 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Séparateur de colonnes|-S|Aucun paramètre|  
 |En-têtes de sortie des contrôles|-H|Aucun paramètre|  
 |Spécifier des caractères de contrôle|-k|Aucun paramètre|  
-|Largeur d'écran de longueur fixe|-Y|Aucun paramètre|  
-|Largeur d'écran de longueur variable|-Y|Aucun paramètre|  
+|Largeur d'écran de longueur fixe|-y|Aucun paramètre|  
+|Largeur d'écran de longueur variable|-y|Aucun paramètre|  
 |Entrée d'écho|-E|Aucun paramètre|  
 |Activer les identificateurs entre guillemets|-i|Aucun paramètre|  
 |Supprimer des espaces de fin|-w|Aucun paramètre|  
 |Instances de liste|-l|Aucun paramètre|  
-|Mettre en forme la sortie en Unicode|-u|Aucun paramètre|  
+|Mettre en forme la sortie en Unicode|-U|Aucun paramètre|  
 |Imprimer les statistiques|-P|Aucun paramètre|  
 |Fin de la commande|-c|Aucun paramètre|  
 |Connexion avec l'authentification Windows|-E|Aucun paramètre|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser les applets de commande du Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [Utilitaire sqlcmd](../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../tools/sqlcmd-utility.md)   
  [Utiliser l'utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
-  
-  

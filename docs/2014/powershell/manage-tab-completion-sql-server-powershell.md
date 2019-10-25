@@ -10,12 +10,12 @@ ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922950"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797788"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Gérer la saisie semi-automatique par tabulation (SQL Server PowerShell)
   Les composants logiciels enfichables PowerShell [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] introduisent trois variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` et `$SqlServerIncludeSystemObjects`) pour contrôler la saisie semi-automatique par tabulation de Windows PowerShell. La saisie semi-automatique par tabulation réduit la quantité de caractères que vous devez taper en renvoyant des tableaux d'éléments dont le nom commence par la chaîne que vous tapez.  
@@ -42,7 +42,7 @@ ms.locfileid: "62922950"
 ### <a name="example-powershell"></a>Exemple (PowerShell)  
  L'exemple suivant définit les trois variables et répertorie leurs paramètres :  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
@@ -51,5 +51,3 @@ dir variable:sqlserver*
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

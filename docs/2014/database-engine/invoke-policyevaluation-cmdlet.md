@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624368"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797849"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation (applet de commande)
   **Invoke-PolicyEvaluation** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui indique si un jeu cible d’objets SQL Server est conforme ou non aux conditions spécifiées dans une ou plusieurs stratégies de gestion basée sur des stratégies.  
@@ -32,7 +32,7 @@ ms.locfileid: "67624368"
  Le paramètre **-AdHocPolicyEvaluationMode** spécifie les actions effectuées :  
   
  Vérifier  
- Indique l'état de conformité des objets cibles à l'aide des informations d'identification de votre connexion actuelle. Ne reconfigure pas d'objets. Il s'agit du paramètre par défaut.  
+ Indique l'état de conformité des objets cibles à l'aide des informations d'identification de votre connexion actuelle. Ne reconfigure pas d'objets. Valeur par défaut.  
   
  CheckSqlScriptAsProxy  
  Indique l’état de conformité des objets cibles à l’aide des informations d’identification de la connexion proxy **##MS_PolicyTSQLExecutionLogin##** . Ne reconfigure pas d'objets.  
@@ -49,34 +49,34 @@ ms.locfileid: "67624368"
   
  Si les stratégies sont stockées dans un magasin de stratégies, vous devez passer un jeu de PSObjects pointant vers les stratégies à évaluer. Pour ce faire, dirigez la sortie d’une applet de commande, telle que Get-Item, vers **Invoke-PolicyEvaluation**. Inutile de spécifier le paramètre **-Policy** . Par exemple, si vous avez importé les stratégies Recommandations de Microsoft dans votre instance du moteur de base de données, cette commande évalue la stratégie **État de la base de données** :  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
  Cet exemple montre comment utiliser Where-Object pour filtrer plusieurs stratégies d’un magasin de stratégies, en fonction de leur propriété **PolicyCategory** . Les objets de la sortie dirigée de **Where-Object** sont consommés par **Invoke-PolicyEvaluation**.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 gci | Where-Object {$_.PolicyCategory -eq "Microsoft Best Practices: Maintenance"} | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
   
  Si les stratégies sont stockées sous la forme de fichiers XML, vous devez utiliser le paramètre **-Policy** pour fournir le chemin et le nom de chaque stratégie. Si vous ne spécifiez pas de chemin dans le paramètre **-Policy** , **Invoke-PolicyEvaluation** utilise le paramètre actuel du chemin **sqlps** . Par exemple, cette commande évalue l'une des stratégies Recommandations de Microsoft installées avec SQL Server par rapport à la base de données par défaut pour votre connexion :  
   
-```  
+```powershell
 Invoke-PolicyEvaluation -Policy "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033\Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  Cette commande a le même effet, sauf qu’elle utilise le chemin d’accès **sqlps** courant pour établir l’emplacement du fichier XML de la stratégie :  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  Cet exemple montre comment utiliser l’applet de commande **Get-ChildItem** pour récupérer plusieurs fichiers XML de stratégie et diriger les objets vers **Invoke-PolicyEvaluation**:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
@@ -88,13 +88,13 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** accepte un objet ou un tableau d’objets représentant les objets SQL Server dans le jeu cible. Par exemple, vous pouvez créer un tableau d’objets de classe <xref:Microsoft.SqlServer.Management.Smo.Database> à transmettre à **-TargetObjects**.  
   
--   **-TargetExpressions** accepte une chaîne contenant une expression de requête qui spécifie les objets dans le jeu cible. L'expression de requête se présente sous la forme de nœuds séparés par le caractère « / ». Chaque nœud se présente sous la forme ObjectType[Filter]. Type d’objet est un des objets dans une hiérarchie d’objets SQL Server Management Object (SMO). Le filtre est une expression qui filtre les objets au niveau de ce nœud. Pour plus d’informations, consultez [Expressions de requête et noms URN](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** accepte une chaîne contenant une expression de requête qui spécifie les objets dans le jeu cible. L'expression de requête se présente sous la forme de nœuds séparés par le caractère « / ». Chaque nœud se présente sous la forme ObjectType[Filter]. Le type d’objet est l’un des objets d’une hiérarchie d’objets SMO (SQL Server Management Object). Le filtre est une expression qui filtre les objets au niveau de ce nœud. Pour plus d’informations, consultez [Expressions de requête et noms URN](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Spécifiez **-TargetObjects** ou **-TargetExpression**, mais pas les deux.  
   
  Cet exemple utilise un objet Sfc.SqlStoreConnection pour spécifier le serveur cible :  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 $conn = New-Object Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection("server='MYCOMPUTER';Trusted_Connection=True")  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn  
@@ -102,7 +102,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn
   
  Cet exemple utilise **-TargetExpression** pour identifier la base de données à évaluer :  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyComputer" -TargetExpression "Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']"  
 ```  
@@ -110,10 +110,10 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ## <a name="evaluating-analysis-services-policies"></a>Évaluation de stratégies Analysis Services  
  Pour évaluer des stratégies par rapport à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez charger et inscrire un assembly dans PowerShell, créer une variable avec un objet de connexion Analysis Services, puis transmettre la variable au paramètre **-TargetObject** . Cet exemple montre comment évaluer la stratégie de configuration de la surface d'exposition des Recommandations pour [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\AnalysisServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.AnalysisServices")  
-$SSASsvr = new-object Microsoft.AnalysisServices.Server  
+$SSASsvr = New-Object Microsoft.AnalysisServices.Server  
 $SSASsvr.Connect("Data Source=Localhost")  
 Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Services Features.xml" -TargetObject $SSASsvr  
 ```  
@@ -121,7 +121,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ## <a name="evaluating-reporting-services-policies"></a>Évaluation de stratégies Reporting Services  
  Pour évaluer des stratégies [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vous devez charger et inscrire un assembly dans PowerShell, créer une variable avec un objet de connexion [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , puis transmettre la variable au paramètre **-TargetObject** . Cet exemple montre comment évaluer la stratégie de configuration de la surface d'exposition des Recommandations pour [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\ReportingServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Dmf.Adapters")  
 $SSRSsvr = new-object Microsoft.SqlServer.Management.Adapters.RSContainer('MyComputer')  
@@ -131,12 +131,10 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ## <a name="formatting-output"></a>Mise en forme de la sortie  
  Par défaut, la sortie de **Invoke-PolicyEvaluation** s’affiche dans la fenêtre d’invite de commandes sous la forme d’un rapport concis au format explicite. Vous pouvez utiliser le paramètre **-OutputXML** pour que l’applet de commande génère plutôt un rapport détaillé sous la forme d’un fichier XML. **Invoke-PolicyEvaluation** utilise le schéma SML-IF (Systems Modeling Language Interchange Format) pour que le fichier soit lisible par les lecteurs SML-IF.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser les applets de commande du Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  
+ [Utiliser les applets de commande du moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

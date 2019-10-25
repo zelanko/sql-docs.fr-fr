@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893133"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798221"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
   Une étape du travail est une action exécutée par le travail sur une base de données ou un serveur. Chaque travail doit posséder au moins une étape de travail. Les étapes de travail peuvent être :  
@@ -101,7 +101,7 @@ ms.locfileid: "68893133"
   
 -   Un fichier de script PowerShell existant à ouvrir.  
   
- Le sous-système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell ouvre une session PowerShell et charge les composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Le script PowerShell utilisé comme commande d’étape de travail peut faire référence aux applets de commande et au fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations sur l’écriture de scripts PowerShell à l’aide des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Le sous-système PowerShell de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent ouvre une session PowerShell et charge les composants logiciels enfichables PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le script PowerShell utilisé comme commande d’étape de travail peut référencer le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations sur l’écriture de scripts PowerShell à l’aide des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Étapes de travail ActiveX Scripting  
   
@@ -128,8 +128,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>Étapes de travail de réplication  
@@ -203,16 +202,14 @@ Set oServer = nothing
 |Décrit comment créer une étape de travail avec un programme exécutable.|[Créer une étape de travail CmdExec](create-a-cmdexec-job-step.md)|  
 |Décrit comment réinitialiser les autorisations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurer un utilisateur de manière à créer et à gérer des travaux de SQL Server Agent](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Décrit comment créer une étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Créer une étape de travail Transact-SQL](create-a-transact-sql-job-step.md)|  
-|Décrit comment définir les options des étapes de travail Transact-SQL de l'Agent Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Définir les options d'une étape de travail Transact-SQL](define-transact-sql-job-step-options.md)|  
+|Décrit comment définir les options des étapes de travail Transact-SQL de l'Agent Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Définir les options d’une étape de travail Transact-SQL](define-transact-sql-job-step-options.md)|  
 |Décrit comment créer une étape de travail de script ActiveX.|[Créer une étape de travail de script ActiveX](create-an-activex-script-job-step.md)|  
 |Décrit comment créer et définir les étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent les commandes et requêtes Analysis Services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Créer une étape de travail Analysis Services](create-an-analysis-services-job-step.md)|  
 |Décrit quelle mesure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit exécuter si une défaillance se produit pendant l'exécution d'une tâche.|[Définir un flux en cas de réussite ou d'échec de l'étape de travail](set-job-step-success-or-failure-flow.md)|  
 |Décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail.|[Afficher des informations sur une étape de travail](view-job-step-information.md)|  
-|Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d'étapes de travail](delete-a-job-step-log.md)|  
+|Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d’étapes de travail](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [dbo. sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+  [Transact- &#40;SQL&#41; dbo. sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
  [Créer des travaux](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

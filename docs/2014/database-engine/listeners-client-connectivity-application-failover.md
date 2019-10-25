@@ -1,5 +1,5 @@
 ---
-title: Écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application (SQL Server) | Microsoft Docs
+title: Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774792"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797840"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server)
   Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../includes/sshadr-md.md)] et de fonctionnalité de basculement d'application.  
@@ -84,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Vous pouvez néanmoins choisir de référencer directement l'instance du nom SQL Server des réplicas principaux ou secondaires au lieu d'utiliser le nom du serveur de l'écouteur du groupe de disponibilité ; toutefois, si vous choisissez d'agir ainsi, les nouvelles connexions ne seront plus dirigées automatiquement vers le réplica principal actuel.  Vous perdrez également l'avantage du routage en lecture seule.  
   
 ##  <a name="ConnectToSecondary"></a> Utilisation d'un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)  
- Le*routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’acheminer les connexions entrantes à un écouteur de groupe de disponibilité vers un réplica secondaire qui est configuré pour autoriser des charges de travail en lecture seule. Une connexion entrante faisant référence à un nom d'écouteur de groupe de disponibilité peut automatiquement être acheminée vers un réplica en lecture seule si les conditions suivantes sont réunies :  
+ Le *routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’acheminer les connexions entrantes à un écouteur de groupe de disponibilité vers un réplica secondaire qui est configuré pour autoriser des charges de travail en lecture seule. Une connexion entrante faisant référence à un nom d'écouteur de groupe de disponibilité peut automatiquement être acheminée vers un réplica en lecture seule si les conditions suivantes sont réunies :  
   
 -   Au moins un réplica secondaire est défini sur l'accès en lecture seule, et chaque réplica secondaire en lecture seule et le réplica principal sont configurés pour prendre en charge le routage en lecture seule. Pour plus d’informations, consultez [Pour configurer des réplicas de disponibilité pour le routage en lecture seule](#ConfigureARsForROR), plus loin dans cette section.  
   
@@ -101,7 +101,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 2.  Pour chacun de ces réplicas, une liste de routage en lecture seule doit être spécifiée pour le rôle principal. Spécifiez un ou plusieurs noms de serveur comme cibles de routage.  
   
-####  <a name="RelatedTasksROR"></a> Tâches associées  
+####  <a name="RelatedTasksROR"></a> Tâches connexes  
   
 -   [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- Dans cet exemple de chaîne de connexion, le client tente de se connecter à un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l'écouteur du groupe de disponibilité écoute sur le port 1433).  La chaîne de connexion a la `ApplicationIntent` propriété définie sur `ReadOnly`, ce qui en fait un *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
+ Dans cet exemple de chaîne de connexion, le client tente de se connecter à un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l'écouteur du groupe de disponibilité écoute sur le port 1433).  La chaîne de connexion a la propriété `ApplicationIntent` définie sur `ReadOnly`, ce qui en fait une *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
   
  La base de données primaire du groupe de disponibilité traite la demande de routage en lecture seule entrante et tente de localiser un réplica en ligne et en lecture seule joint au réplica principal et configuré pour le routage en lecture seule.  Le client reçoit les informations de connexion depuis le serveur de réplica principal et se connecte au réplica en lecture seule identifié.  
   
@@ -126,7 +126,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Vous pouvez contourner le routage en lecture seule en ne définissant pas la propriété de connexion d'intention d'application avec la valeur `ReadOnly` (en l'absence de spécification, la valeur par défaut est `ReadWrite` pendant la connexion) ou en effectuant une connexion directe à l'instance du réplica principal de SQL Server au lieu d'utiliser le nom de l'écouteur du groupe de disponibilité.  Le routage en lecture seule n'a pas lieu non plus si vous vous connectez directement à un réplica en lecture seule.  
   
-####  <a name="RelatedTasksApps"></a> Tâches associées  
+####  <a name="RelatedTasksApps"></a> Tâches connexes  
   
 -   [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
@@ -172,7 +172,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; Mult
   
  Un certificat X.509 doit être configuré pour chaque nœud serveur participant dans le cluster de basculement, avec une liste de tous les écouteurs de groupe de disponibilité définis dans le nom SAN du certificat.  
   
- Par exemple, si le WSFC dispose de trois écouteurs de groupe de disponibilité avec les noms `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`et `AG3_listener.Adventure-Works.com`, le nom SAN du certificat doit être défini comme suit :  
+ Par exemple, si le WSFC dispose de trois écouteurs de groupe de disponibilité avec les noms `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com` et `AG3_listener.Adventure-Works.com`, le nom SAN du certificat doit être défini comme suit :  
   
 ```  
 CN = ServerFQDN  
@@ -184,15 +184,15 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
   
  Utilisez l'outil de ligne de commande `setspn` de Windows pour configurer le SPN.  Par exemple, pour configurer un SPN pour un groupe de disponibilité nommé `AG1listener.Adventure-Works.com` hébergé dans un ensemble d'instances de SQL Server, toutes configurées pour s'exécuter sous le compte de domaine `corp/svclogin2`:  
   
-```  
+```cmd
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
  Pour plus d'informations sur l'inscription manuelle d'un SPN pour SQL Server, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches connexes  
   
--   [Connectivité Client AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [SQL Server de connectivité &#40;client AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -206,17 +206,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Guide de solutions AlwaysOn pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Présentation de l'écouteur du groupe de disponibilité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog de l'équipe SQL Server AlwaysOn)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server AlwaysOn : blog officiel de l’équipe SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Connectivité Client AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+ [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+ [SQL Server de connectivité &#40;client AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Secondaires actifs : Réplicas secondaires lisibles &#40;groupes de disponibilité AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ Secondaires [actifs : réplicas secondaires accessibles &#40;en&#41; lecture groupes de disponibilité AlwaysOn](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
-  
-  

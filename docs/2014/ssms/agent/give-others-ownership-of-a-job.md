@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63075250"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798229"
 ---
-# <a name="give-others-ownership-of-a-job"></a>Attribuer la propriété d’un travail à d’autres utilisateurs
+# <a name="give-others-ownership-of-a-job"></a>Attribuer la propriété d'un travail à d'autres utilisateurs
   Cette rubrique explique comment réattribuer la propriété de travaux  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à un autre utilisateur.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
 -   **Pour attribuer la propriété d'un travail à d'autres utilisateurs, utilisez :**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63075250"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
- Pour créer un travail, l'utilisateur doit être membre de l'un des rôles de base de données fixes de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou du rôle de serveur fixe **sysadmin** . Un travail ne peut être modifié que par son propriétaire ou par les membres du rôle **sysadmin** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Rôles de base de données fixe de SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
+ Pour créer un travail, l'utilisateur doit être membre de l'un des rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou du rôle de serveur fixe **sysadmin**. Un travail ne peut être modifié que par son propriétaire ou par les membres du rôle **sysadmin** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Rôles de base de données fixe de SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
  Vous devez être administrateur système pour modifier le propriétaire d'un travail.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63075250"
 > [!NOTE]  
 >  Si vous transférez la propriété d’un travail à un utilisateur qui n’est pas membre du rôle serveur fixe **sysadmin** et que ce travail exécute des étapes qui nécessitent des comptes proxy (par exemple l’exécution de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), vérifiez que l’utilisateur en question a accès à ce compte proxy, sinon le travail échouera.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProc2"></a> Utilisation de SQL Server Management Studio  
@@ -70,9 +70,9 @@ ms.locfileid: "63075250"
   
 2.  Dans la barre d'outils, cliquez sur **Nouvelle requête**.  
   
-3.  Dans la fenêtre de requête, entrez les instructions suivantes qui utilisent le [sp_manage_jobs_by_login &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) procédure stockée système. L'exemple suivant réaffecte tous les travaux de `danw` à `fran??oisa`.  
+3.  Dans la fenêtre de requête, entrez les instructions suivantes qui utilisent la procédure stockée système [Transact-SQL &#40;&#41; sp_manage_jobs_by_login](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . L'exemple suivant réaffecte tous les travaux de `danw` à `fran??oisa`.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -83,13 +83,12 @@ ms.locfileid: "63075250"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a> À l’aide de SQL Server Management Objects  
- **Pour attribuer la propriété d'un travail à d'autres utilisateurs**  
+##  <a name="SMOProc2"></a>Utilisation de SQL Server Management Objects  
+
+### <a name="to-give-others-ownership-of-a-job"></a>Pour attribuer la propriété d'un travail à d'autres utilisateurs
   
-1.  Appelez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](sql-server-agent.md).  
+1.  Appelez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans SQL Server Agent](sql-server-agent.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter des travaux](implement-jobs.md)   
  [Créer des travaux](create-jobs.md)  
-  
-  

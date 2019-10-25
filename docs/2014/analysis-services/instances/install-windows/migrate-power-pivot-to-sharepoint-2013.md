@@ -10,12 +10,12 @@ ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db1cdc1f10d53f11e06e37196d938667fb96327a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f792790e6bdc8c116c629910cdd64ec9aa0e6701
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888519"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797257"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrer PowerPivot vers SharePoint 2013
   
@@ -43,7 +43,7 @@ ms.locfileid: "68888519"
   
 -   [4) mettre à niveau les planifications PowerPivot](#bkmk_upgrade_powerpivot_schedules)  
   
--   [Ressources supplémentaires pour MSBuild](#bkmk_additional_resources)  
+-   [Ressources supplémentaires](#bkmk_additional_resources)  
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Préparer la batterie de serveurs SharePoint 2013  
   
@@ -56,20 +56,20 @@ ms.locfileid: "68888519"
   
 4.  Exécutez le package d'installation [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** sur chaque serveur de la batterie SharePoint. Pour plus d’informations, consultez [installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-5.  Dans l'Administration centrale de SharePoint 2013, configurez l'application de service Excel Services de sorte à utiliser le serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode SharePoint créé à l'étape précédente. Pour plus d’informations, consultez la section «configurer l’intégration de base Analysis Services SharePoint» de [PowerPivot pour SharePoint installation de 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
+5.  Dans l'Administration centrale de SharePoint 2013, configurez l'application de service Excel Services de sorte à utiliser le serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode SharePoint créé à l'étape précédente. Pour plus d’informations, consultez la section « configurer l’intégration de base Analysis Services SharePoint » de [PowerPivot pour SharePoint installation de 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
 ##  <a name="bkmk_backup_restore"></a> 2) Sauvegarder, copier et restaurer les bases de données  
- Le processus de «mise à niveau avec liaison des bases de données SharePoint» est une séquence d’étapes permettant de sauvegarder, copier et restaurer des bases de données de contenu et d’application de service liées à PowerPivot dans la batterie de serveurs SharePoint 2013.  
+ Le processus de « mise à niveau avec liaison des bases de données SharePoint » est une séquence d’étapes permettant de sauvegarder, copier et restaurer des bases de données de contenu et d’application de service liées à PowerPivot dans la batterie de serveurs SharePoint 2013.  
   
-1.  **Définir la base de données en lecture seule:** Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le nom de la base de données, puis cliquez sur **Propriétés**. Dans la page **Options** , affectez à la propriété **Base de données en lecture seule** la valeur **True**.  
+1.  **Définir la base de données en lecture seule :** dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le nom de la base de données, puis cliquez sur **Propriétés**. Dans la page **Options** , affectez à la propriété **Base de données en lecture seule** la valeur **True**.  
   
-2.  **Recule:** Sauvegardez chaque base de données de contenu et chaque base de données d’application de service que vous souhaitez migrer vers la batterie de serveurs SharePoint 2013. Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le nom de la base de données, cliquez sur **Tâches**, puis sur **Sauvegarder**.  
+2.  **Sauvegarde :** sauvegardez chaque base de données de contenu et chaque base de données d'application de service que vous souhaitez migrer vers la batterie de serveurs SharePoint 2013. Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le nom de la base de données, cliquez sur **Tâches**, puis sur **Sauvegarder**.  
   
 3.  Copiez les fichiers de sauvegarde de base de données (.bak) sur le serveur de destination souhaité.  
   
-4.  **Tabli** Restaurez les bases de données vers [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]la destination. Cette étape peut être effectuée à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+4.  **Restauration :** restaurez les bases de données sur le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]de destination. Cette étape peut être effectuée à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-5.  **Définir la base de données en lecture-écriture:** Affectez la valeur false àla **base de données en lecture seule** .  
+5.  **Définir la base de données en lecture-écriture :** attribuez au paramètre **Base de données en lecture seule** la valeur **False**.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Préparer les applications Web et monter les bases de données de contenu  
  Pour obtenir une explication plus détaillée des procédures suivantes, consultez [mettre à niveau des bases de données de sharepoint 2010 vers sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
@@ -90,15 +90,15 @@ ms.locfileid: "68888519"
   
 -   **Monter les bases de données de contenu :**  
   
-     Utilisez les applets de commande PowerShell dans le shell de gestion SharePoint 2013 pour monter la base de données de contenu migrée. La base de données d'application de service n'a pas besoin d'être montée, seules les bases de données de contenu le doivent : ![Contenu relatif à PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
+     Utilisez les applets de commande PowerShell dans le shell de gestion SharePoint 2013 pour monter la base de données de contenu migrée. La base de données d’application de service n’a pas besoin d’être montée, uniquement les bases de données de contenu : ![contenu associé à PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
-    ```  
+    ```powershell
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
      Pour plus d’informations, consultez [attacher ou détacher des bases de données de contenu (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).  
   
-     **État lorsque l’étape est terminée:**  Lorsque l’opération de montage est terminée, les utilisateurs peuvent voir les fichiers qui étaient dans l’ancienne base de données de contenu. Par conséquent, les utilisateurs peuvent voir et ouvrir des classeurs dans la bibliothèque de documents.  
+     **État lorsque l'étape est terminée :**  lorsque l'opération de montage est terminée, les utilisateurs peuvent voir les fichiers qui étaient dans l'ancienne base de données de contenu. Par conséquent, les utilisateurs peuvent voir et ouvrir des classeurs dans la bibliothèque de documents.  
   
     > [!TIP]  
     >  À ce stade du processus de migration, il est possible de créer des planifications pour les classeurs migrés. Toutefois, les planifications sont créées dans la nouvelle base de données d'application de service [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , et non dans la base de données copiée depuis l'ancienne batterie de serveurs SharePoint. Par conséquent, il ne contient pas les anciennes planifications. Après avoir terminé les étapes suivantes pour utiliser l'ancienne base de données ou migrer les anciennes planifications, les nouvelles planifications ne sont pas disponibles.  
@@ -106,9 +106,9 @@ ms.locfileid: "68888519"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Résoudre les problèmes lors du montage des bases de données  
  Cette section résume les problèmes que vous pouvez rencontrer lors du montage de la base de données.  
   
-1.  **Erreurs d’authentification:** Si des erreurs liées à l’authentification s’affichent, vérifiez quel mode d’authentification est utilisé par les applications Web source. L'erreur peut être due à une incohérence entre l'authentification de l'application Web SharePoint 2013 et celle de l'application Web SharePoint 2010. Pour plus d'informations, consultez [1) Préparer la batterie de serveurs SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
+1.  **Erreurs d'authentification :** si des erreurs liées à l'authentification s'affichent, vérifiez quel mode d'authentification est utilisé par les applications Web source. L'erreur peut être due à une incohérence entre l'authentification de l'application Web SharePoint 2013 et celle de l'application Web SharePoint 2010. Pour plus d'informations, consultez [1) Préparer la batterie de serveurs SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
   
-2.  **Fichiers PowerPivot manquants:** Si vous constatez des erreurs liées à des fichiers. dll PowerPivot manquants, le fichier PowerPivot **. msi** n’a pas été installé ou l' [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] outil de configuration n’a pas été utilisé pour configurer PowerPivot.  
+2.  **Fichiers PowerPivot manquants :** si des erreurs liées des fichiers .dll PowerPivot manquants s'affichent, **spPowerPivot.msi** n'a pas été installé ou l'outil de configuration de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] n'a pas été utilisé pour configurer PowerPivot.  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a>4) mettre à niveau les planifications PowerPivot  
  Cette section décrit les détails et les options de migration des planifications PowerPivot. La migration des planifications est un processus en deux étapes. Tout d'abord, configurez l'application de service PowerPivot pour qu'elle utilise la base de données d'application de service migrée. Ensuite, choisissez l'une des deux options pour la migration des planifications.  
@@ -119,7 +119,7 @@ ms.locfileid: "68888519"
   
 1.  Dans l'Administration centrale de SharePoint, cliquez sur **Gérer les applications de service**.  
   
-2.  Recherchez l’application de service PowerPivot, par exemple «application de service PowerPivot par défaut», cliquez sur le nom de l’application de service et cliquez sur **Propriétés** dans le ruban SharePoint.  
+2.  Recherchez l’application de service PowerPivot, par exemple « application de service PowerPivot par défaut », cliquez sur le nom de l’application de service et cliquez sur **Propriétés** dans le ruban SharePoint.  
   
 3.  Mettez à jour l'instance nommée du serveur de base de données et le nom de la base de données avec les noms corrects pour la base de données que vous avez sauvegardée, copiée et restaurée. Une fois que vous cliquez sur **OK**, la base de données d'application de service est mise à niveau. Les erreurs figurent dans le journal ULS.  
   
@@ -127,12 +127,12 @@ ms.locfileid: "68888519"
   
  Configurez 'application de service PowerPivot pour migrer les planifications d'actualisation.  
   
--   **Migrer les planifications option1: Administrateur de batterie de serveurs SharePoint**  
+-   **Migrer les planifications, option 1 : administrateur de batterie de serveurs SharePoint**  
   
-    1.  Dans la gestion de SharePoint 2013, `Set-PowerPivotServiceApplication` exécutez l’applet `-StartMigratingRefreshSchedules` de commande avec le commutateur pour activer la migration de la planification automatique à la demande contenu ![relatif à PowerShell](../../../reporting-services/media/rs-powershellicon.jpg " contenu relatif à PowerShell"). Le script Windows PowerShell suivant suppose qu'il existe une seule application de service PowerPivot.  
+    1.  Dans la gestion de SharePoint 2013, exécutez l’applet de commande `Set-PowerPivotServiceApplication` avec le commutateur `-StartMigratingRefreshSchedules` pour activer la migration automatique du ![contenu relatif à PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")de la planification à la demande. Le script Windows PowerShell suivant suppose qu'il existe une seule application de service PowerPivot.  
   
-        ```  
-        $app=Get-PowerPivotServiceApplication  
+        ```powershell
+        $app = Get-PowerPivotServiceApplication  
         Set-PowerPivotServiceApplication $app -StartMigratingRefreshSchedules  
         ```  
   
@@ -140,13 +140,12 @@ ms.locfileid: "68888519"
   
     2.  Si vous souhaitez vérifier la valeur actuelle de la propriété StartMigratingRefreshSchedules, exécutez le script PowerShell suivant. Le script parcourt tous les objets d'application de service PowerPivot et affiche le nom et les valeurs des propriétés :  
   
-        ```  
+        ```powershell
         $apps = Get-PowerPivotServiceApplication  
-        foreach ($app in $apps){}  
-        Get-PowerPivotServiceApplication $appp | format-table -property displayname,id,StartMigratingRefreshSchedules  
+        foreach ($app in $apps){ Get-PowerPivotServiceApplication $app | Format-Table -Property displayname, id, StartMigratingRefreshSchedules }
         ```  
   
-     **Migrer les planifications option2: L’utilisateur met à jour chaque classeur**  
+     **Migrer les planifications, option 2 : l'utilisateur met à jour tous les classeurs**  
   
     1.  Une autre possibilité pour migrer les planifications consiste à activer l'actualisation planifiée pour chaque classeur. Naviguez jusqu'à la bibliothèque de documents qui contient les classeurs.  
   
@@ -162,7 +161,7 @@ ms.locfileid: "68888519"
   
 -   Les classeurs PowerPivot SQL Server 2008 R2 ne sont pas mis à niveau automatiquement lorsqu'ils sont utilisés dans SQL Server 2012 SP1 PowerPivot pour SharePoint 2013. Après avoir migré une base de données de contenu qui contient des classeurs 2008 R2, vous pouvez utiliser les classeurs et les planifications ne sont pas mises à niveau.  
   
--   Pour plus d’informations, consultez [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).  
+-   Pour plus d’informations, consultez [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).  
   
 ##  <a name="bkmk_additional_resources"></a> Ressources supplémentaires  
   
@@ -173,8 +172,6 @@ ms.locfileid: "68888519"
   
 -   [Vue d’ensemble du processus de mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Nettoyer les préparations avant une mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Nettoyez les préparations avant une mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Mettre à niveau des bases de données de sharepoint 2010 vers sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
-  
-  
+-   [Mettez à niveau les bases de données de sharepoint 2010 vers sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).

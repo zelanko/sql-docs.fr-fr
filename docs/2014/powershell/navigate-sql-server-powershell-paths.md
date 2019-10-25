@@ -10,12 +10,12 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762091"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797814"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins PowerShell SQL Server
   Le fournisseur PowerShell du [!INCLUDE[ssDE](../includes/ssde-md.md)] expose le jeu d'objets dans une instance de SQL Server dans une structure similaire à un chemin d'accès de fichier. Vous pouvez utiliser des applets de commande Windows PowerShell pour naviguer jusqu'au chemin d'accès du fournisseur et créer des lecteurs personnalisés pour raccourcir le chemin d'accès que vous devez taper.  
@@ -61,7 +61,7 @@ ms.locfileid: "62762091"
 ### <a name="alias-example-powershell"></a>Exemple d'alias (PowerShell)  
  Par exemple, vous pouvez utiliser l'un des jeux d'applets de commande ou ensembles d'alias suivants pour récupérer la liste des instances [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles si vous accédez au dossier SQLSERVER:\SQL et si vous demandez la liste des éléments enfants de ce dossier :  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -80,7 +80,8 @@ ls
 ```  
   
 ## <a name="use-get-childitem"></a>Utiliser Get-ChildItem  
- **Renvoyer des informations à l'aide de Get-Childitem**  
+
+### <a name="return-information-by-using-get-childitem"></a>Renvoyer des informations à l'aide de Get-Childitem
   
 1.  Accédez au nœud pour lequel vous souhaitez obtenir une liste de childrem  
   
@@ -89,14 +90,13 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Exemple de Get-ChildItem (PowerShell)  
  Ces exemples illustrent les informations retournées par Get-Childitem pour différents nœuds dans un chemin d'accès de fournisseur SQL Server.  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -112,7 +112,8 @@ Get-ChildItem -force
 ```  
   
 ## <a name="create-a-custom-drive"></a>Créer un lecteur personnalisé  
- **Créer et utiliser un lecteur personnalisé**  
+
+### <a name="create-and-use-a-custom-drive"></a>Créer et utiliser un lecteur personnalisé
   
 1.  Utilisez `New-PSDrive` pour définir un lecteur personnalisé. Utilisez le paramètre `Root` pour spécifier le chemin d'accès représenté par le nom du lecteur personnalisé.  
   
@@ -121,7 +122,7 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>Exemple de lecteur personnalisé (PowerShell)  
  Cet exemple crée un lecteur virtuel nommé AWDB qui mappe au nœud pour une copie déployée de l’exemple de base de données AdventureWorks2012. Le lecteur virtuel est ensuite utilisé pour naviguer jusqu'à une table dans la base de données.  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -134,5 +135,3 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
  [Utiliser des chemins d'accès PowerShell SQL Server](work-with-sql-server-powershell-paths.md)   
  [Convertir des URN en chemins d'accès de fournisseur SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
