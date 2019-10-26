@@ -1,5 +1,5 @@
 ---
-title: 'Exclusion d’éléments de schéma du Document XML à l’aide sql : mappé | Microsoft Docs'
+title: 'Exclusion d’éléments de schéma du document XML à l’aide de SQL : mapped | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,30 +23,30 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e92b8b90793a82df9c38b819630070373e6e8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067134"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905964"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Exclusion d’éléments du schéma du document XML à l’aide de sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Chaque élément et chaque attribut du schéma XSD sont mappés à une vue/table et à une colonne de base de données en raison du mappage par défaut. Si vous souhaitez créer un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données (vue) ou une colonne et qui n’apparaît pas dans le code XML, vous pouvez spécifier le **sql : mappé** annotation.  
+  Chaque élément et chaque attribut du schéma XSD sont mappés à une vue/table et à une colonne de base de données en raison du mappage par défaut. Si vous souhaitez créer un élément dans le schéma XSD qui n’est mappé à aucune table de base de données (vue) ou colonne et qui n’apparaît pas dans le XML, vous pouvez spécifier l’annotation **SQL : mapped** .  
   
- Le **sql : mappé** annotation est particulièrement utile si le schéma ne peut pas être modifié ou si le schéma est utilisé pour valider le code XML à partir d’autres sources et qu’il contient encore des données qui ne sont pas stockées dans votre base de données. Le **sql : mappé** diffère de l’annotation **sql : constante est** dans la mesure où les éléments non mappés et les attributs n’apparaissent pas dans le document XML.  
+ L’annotation **SQL : mapped** est particulièrement utile si le schéma ne peut pas être modifié ou si le schéma est utilisé pour valider le code XML à partir d’autres sources et contient encore des données qui ne sont pas stockées dans votre base de données. L’annotation **SQL : mapped** diffère de **SQL : is-constant** en ce que les éléments et les attributs non mappés n’apparaissent pas dans le document XML.  
   
- Le **sql : mappé** annotation accepte une valeur booléenne (0 = Faux, 1 = true). Les valeurs acceptables sont 0, 1, true et false.  
+ L’annotation **SQL : mapped** prend une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>R. Spécification de l'annotation sql:mapped  
- Supposons que vous ayez un schéma XSD provenant d'une autre source. Ce schéma XSD se compose d’un  **\<Person.Contact >** élément avec **ContactID**, **FirstName**, **LastName**, et **HomeAddress** attributs.  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Spécification de l'annotation sql:mapped  
+ Supposons que vous ayez un schéma XSD provenant d'une autre source. Ce schéma XSD se compose d’un élément **\<Person. Contact >** avec les attributs **ContactID**, **FirstName**, **LastName**et **HomeAddress** .  
   
- Lors du mappage de ce schéma XSD pour la table Person.Contact dans la base de données AdventureWorks, **sql : mappé** est spécifié sur le **HomeAddress** attribut, car la table Employees ne stocke pas de la page d’accueil adresses des employés. En conséquence, cet attribut n'est pas mappé avec la base de données et n'est pas retourné dans le document XML obtenu lorsqu'une requête XPath est spécifiée sur le schéma de mappage.  
+ Lors du mappage de ce schéma XSD à la table Person. contact de la base de données AdventureWorks, **SQL : mapped** est spécifié sur l’attribut **HomeAddress** parce que la table Employees ne stocke pas les adresses personnelles des employés. En conséquence, cet attribut n'est pas mappé avec la base de données et n'est pas retourné dans le document XML obtenu lorsqu'une requête XPath est spécifiée sur le schéma de mappage.  
   
- Le mappage par défaut a lieu pour le reste du schéma. Le  **\<Person.Contact >** élément est mappé à la table Person.Contact et tous les attributs sont mappés aux colonnes portant le même nom dans la table Person.Contact.  
+ Le mappage par défaut a lieu pour le reste du schéma. L’élément **\<Person. contact >** est mappé à la table Person. contact, et tous les attributs sont mappés aux colonnes portant le même nom dans la table Person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -85,9 +85,7 @@ ms.locfileid: "68067134"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  L'ensemble de résultats est le suivant :  
   
@@ -105,9 +103,9 @@ ms.locfileid: "68067134"
 </ROOT>  
 ```  
   
- Notez que ContactID, FirstName et LastName sont présents, mais que HomeAddress n’est pas, car le schéma de mappage a spécifié 0 pour le **sql : mappé** attribut.  
+ Notez que ContactID, FirstName et LastName sont présents, mais HomeAddress n’est pas parce que le schéma de mappage a spécifié 0 pour l’attribut **SQL : mapped** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mappage par défaut d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Mappage par défaut d’éléments et d’attributs XSD à des &#40;tables et des colonnes SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

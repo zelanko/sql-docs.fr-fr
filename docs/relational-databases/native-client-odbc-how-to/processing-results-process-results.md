@@ -13,18 +13,18 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfd7e36ca2bad2e067d82fa5ad0751f2ef7aef34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee80b68bafa419472c5c650a270a20d4d54526bd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133449"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908192"
 ---
 # <a name="processing-results---process-results"></a>Traitement des résultats - Traiter les résultats
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-Le traitement des résultats dans une application ODBC implique tout d’abord déterminer les caractéristiques du jeu de résultats, puis récupérer les données dans des variables de programme à l’aide [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+Le traitement des résultats dans une application ODBC implique d’abord de déterminer les caractéristiques du jeu de résultats, puis d’extraire les données dans des variables de programme à l’aide de [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ### <a name="to-process-results"></a>Pour traiter des résultats  
   
@@ -40,7 +40,7 @@ Le traitement des résultats dans une application ODBC implique tout d’abord d
   
     -   Si des colonnes indépendantes sont utilisées, appelez [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante. Les appels à **SQLGetData** doivent être dans l’ordre croissant des numéros de colonnes.  
   
-    -   Appelez plusieurs fois **SQLGetData** pour obtenir des données à partir d’une colonne text ou image.  
+    -   Appelez plusieurs fois **SQLGetData** pour obtenir des données à partir d'une colonne text ou image.  
   
 4.  Quand [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) signale la fin du jeu de résultats en retournant SQL_NO_DATA, appelez [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) pour déterminer si un autre jeu de résultats est disponible.  
   
@@ -59,12 +59,10 @@ Le traitement des résultats dans une application ODBC implique tout d’abord d
   
 6.  Si un autre jeu de résultats est disponible, allez à l’étape 1.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  Pour annuler le traitement d’un jeu de résultats avant que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ne retourne SQL_NO_DATA, appelez [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Récupérer les informations du jeu de résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Récupérer les informations &#40;du jeu de résultats ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

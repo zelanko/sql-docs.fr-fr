@@ -1,5 +1,5 @@
 ---
-title: 'Récupération des données à l’aide de SQL : overflow-field (SQLXML 4.0) | Microsoft Docs'
+title: 'Récupération de données non consommées à l’aide de SQL : overflow-field (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292c07e1ab55313f0eedf7f4cb0c3f4a155aff30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067012"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907169"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Extraction de données non consommées à l'aide de sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Lorsque les enregistrements sont insérés dans une base de données à partir d'un document XML à l'aide de la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, toutes les données non consommées du document XML source peuvent être stockées dans une colonne. Lorsque vous récupérez des données à partir d’une base de données à l’aide des schémas annotés, vous pouvez spécifier le **SQL : Overflow-champ** attribut pour identifier la colonne dans la table dans laquelle les données de dépassement de capacité sont stockées. Le **SQL : Overflow-champ** attribut peut être spécifié sur  **\<élément >** .  
+  Lorsque les enregistrements sont insérés dans une base de données à partir d'un document XML à l'aide de la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, toutes les données non consommées du document XML source peuvent être stockées dans une colonne. Lorsque vous récupérez des données à partir d’une base de données à l’aide de schémas annotés, vous pouvez spécifier l’attribut **SQL : overflow-field** pour identifier la colonne dans la table dans laquelle les données de dépassement de capacité sont stockées. L’attribut **SQL : overflow-field** peut être spécifié sur **\<élément >** .  
   
  Ces données sont alors récupérées selon les méthodes suivantes :  
   
--   Attributs stockés dans la colonne de dépassement sont ajoutés à l’élément qui contient le **SQL : Overflow-champ** annotation.  
+-   Les attributs stockés dans la colonne de dépassement sont ajoutés à l’élément qui contient l’annotation **SQL : overflow-field** .  
   
 -   Les éléments enfants et leurs descendants, stockés dans la colonne de dépassement de capacité de la base de données, sont ajoutés comme éléments enfants après le contenu spécifié explicitement dans le schéma. (Aucun ordre n'est conservé.)  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>R. Spécification de sql:overflow-field pour un élément  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Spécification de sql:overflow-field pour un élément  
  Cet exemple suppose que le script suivant a été exécuté afin qu'une table nommée Customers2 existe dans la base de données tempdb :  
   
 ```  
@@ -62,7 +62,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- En outre, vous devez créer un répertoire virtuel pour la base de données tempdb- et un nom virtuel du modèle de **modèle** type intitulé « template ».  
+ En outre, vous devez créer un répertoire virtuel pour la base de données tempdb et un nom virtuel de modèle de type de **modèle** nommé « template ».  
   
  Dans l'exemple suivant, le schéma de mappage extrait les données non consommées stockées dans la colonne AddressOverflow de la table Customers2 :  
   
@@ -101,9 +101,7 @@ GO
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici l'ensemble de résultats obtenu :  
   

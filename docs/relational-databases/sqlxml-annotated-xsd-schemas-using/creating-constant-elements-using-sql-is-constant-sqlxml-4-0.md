@@ -1,5 +1,5 @@
 ---
-title: 'Création d’éléments constants à l’aide de sql : est-constant (SQLXML 4.0) | Microsoft Docs'
+title: 'Création d’éléments constants à l’aide de SQL : is-constant (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -19,33 +19,33 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2155087406860a70c70d8a2be6a8ed64425adb57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1cb1223c7c72aa091a3dd15da3beacaf65c4b21b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126502"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906046"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Pour spécifier un élément constant-autrement dit, un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données ou de la colonne-vous pouvez utiliser la **sql : constante est** annotation. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. Le **sql : constante est** annotation peut être spécifiée sur un élément qui n’a pas d’attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
+  Pour spécifier un élément constant, c’est-à-dire un élément dans le schéma XSD qui n’est mappé à aucune table ou colonne de base de données, vous pouvez utiliser l’annotation **SQL : is-constant** . Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. L’annotation **SQL : is-constant** peut être spécifiée sur un élément qui n’a pas d’attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
   
- Le **sql : constante est** annotation peut être utilisée pour :  
+ L’annotation **SQL : is-constant** peut être utilisée pour :  
   
 -   ajouter un élément de niveau supérieur au document XML. Le code XML requiert un seul élément de niveau supérieur (élément racine) pour le document ;  
   
--   Créer des éléments de conteneur, comme un  **\<Orders >** élément qui encapsule toutes les commandes.  
+-   La création d’éléments conteneurs, tels qu’un **\<orders >** élément qui encapsule toutes les commandes.  
   
- Le **sql : constante est** annotation peut être ajoutée à un  **\<complexType >** élément.  
+ L’annotation **SQL : is-constant** peut être ajoutée à une **\<élément complexType >** .  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>R. Spécification de sql:is-constant pour ajouter un élément conteneur  
- Ce schéma XSD, annotés  **\<CustomerOrders >** est défini comme un élément constant en spécifiant le **sql : constante est** attribut avec une valeur de 1. Par conséquent,  **\<CustomerOrders >** n’est pas mappé à aucune table de base de données ou de la colonne. Cet élément constant se compose de la  **\<ordre >** éléments enfants.  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Spécification de sql:is-constant pour ajouter un élément conteneur  
+ Dans ce schéma XSD annoté, **\<CustomerOrders >** est défini en tant qu’élément constant en spécifiant l’attribut **SQL : is-constant** avec la valeur 1. Par conséquent, **\<> CustomerOrders** n’est mappé à aucune table ou colonne de base de données. Cet élément constant est constitué de l' **ordre de\<** éléments enfants.  
   
- Bien que  **\<CustomerOrders >** ne mappe pas à aucune table de base de données ou d’une colonne, il apparaît toujours dans le XML résultant comme un élément conteneur qui contient le  **\<ordre >** éléments enfants.  
+ Bien que **\<CustomerOrders >** ne soit mappé à aucune table ou colonne de base de données, il apparaît toujours dans le XML résultant en tant qu’élément conteneur contenant l' **ordre\<** éléments enfants.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -107,9 +107,7 @@ ms.locfileid: "68126502"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel :  
   

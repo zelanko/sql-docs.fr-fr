@@ -14,12 +14,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a21ebe62cb9a62172ffc63e15ced0deb6a23b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3a1e8f9076cce34de811713455c914f41b5814d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908158"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908050"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Récupérer des lignes à l'aide de signets (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "67908158"
 4.  Définissez le champ **dwFlag** de la structure de liaison avec l'indicateur DBCOLUMNSINFO_ISBOOKMARK de la colonne qui sera utilisée comme signet.  
   
 5.  Utilisez **IRowsetLocate::GetRowsAt** pour extraire les lignes, en commençant par la ligne spécifiée par un offset du signet.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment extraire des lignes au moyen d'un signet. Cet exemple n'est pas pris en charge sur la plateforme IA64.  

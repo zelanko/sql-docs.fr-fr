@@ -1,5 +1,5 @@
 ---
-title: Appliquer une Transformation XSL (Classes managées de SQLXML) | Microsoft Docs
+title: Application d’une transformation XSL (classes managées SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3422f785cb57254695d0960b27d03604a4af6101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26a2cea817c7e1ca7855b48512f4bf645cf4dcc3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934302"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908502"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Application d'une transformation XSL (classes managées SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Dans cet exemple, une requête SQL est exécutée sur la base de données AdventureWorks. La transformation XSL est appliquée au résultat de la requête pour générer une table à deux colonnes comportant respectivement le prénom et le nom des employés.  
   
- La xslpath, propriété de l’objet SqlXmlCommand est utilisée pour spécifier le fichier XSL et son chemin d’accès de répertoire.  
+ La propriété XslPath de l’objet SqlXmlCommand est utilisée pour spécifier le fichier XSL et son chemin d’accès au répertoire.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  
@@ -110,8 +110,6 @@ class Test
      Un fichier exécutable (DocSample.exe) est alors créé.  
   
 4.  À l'invite de commandes, exécutez DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>Application d'une Transformation XSL dans le .NET Framework  
  Au lieu d'appliquer une transformation XSL dans la couche intermédiaire, comme décrit précédemment, vous pouvez appliquer une transformation XSL côté client (dans le .NET Framework). Le code C# modifié suivant montre comment la transformation XSL est appliquée dans le .NET Framework.  

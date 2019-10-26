@@ -1,5 +1,5 @@
 ---
-title: Copie de données avec IRowsetFastLoad (OLE DB) | Microsoft Docs
+title: Copier des données en bloc avec IRowsetFastLoad (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d166dd4f08ef46a87b1dc467453056ad88d84c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8d3d095e038f296ffbaf908798bcdc7f9bfe6d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106743"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906656"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copier des données en bloc avec IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "68106743"
 
   Cet exemple illustre l'utilisation d IRowsetFastLoad pour effectuer une copie en bloc des enregistrements dans une table.  
   
- Le consommateur notifie SQLOLEDB de son besoin de copie en bloc en affectant la valeur  VARIANT_TRUE à la propriété SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec la propriété définie sur la source de données, le consommateur crée une session SQLOLEDB. La nouvelle session permet au client d’accéder à **IRowsetFastLoad**.  
+ Le consommateur notifie SQLOLEDB de son besoin de copie en bloc en affectant la valeur  VARIANT_TRUE à la propriété SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec la propriété définie sur la source de données, le consommateur crée une session SQLOLEDB. La nouvelle session permet à l’utilisateur d’accéder à **IRowsetFastLoad**.  
   
  Un exemple complet illustrant l’utilisation de **IRowsetFastLoad** pour copier en bloc les enregistrements dans une table est disponible. Dans cet exemple, 10 enregistrements sont ajoutés à la table **IRFLTable**. Vous devez créer la table **IRFLTable** dans la base de données.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Utilisez l'authentification Windows quand c'est possible. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Pour copier des données en bloc dans une table SQL Server  
   
@@ -44,17 +44,15 @@ ms.locfileid: "68106743"
   
 2.  Affectez la valeur VARIANT_TRUE à la propriété de source de données SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec cette propriété définie sur VARIANT_TRUE, la session nouvellement créée accorde au consommateur l’accès à **IRowsetFastLoad**.  
   
-3.  Créer une session qui demande le **IOpenRowset** interface.  
+3.  Créez une session demandant l’interface **IOpenRowset** .  
   
 4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans laquelle les données doivent être copiées avec l’opération de copie en bloc).  
   
-5.  Effectuez les liaisons nécessaires et créez un accesseur à l’aide de **IAccessor::CreateAccessor**.  
+5.  Effectuez les liaisons nécessaires et créez un accesseur à l’aide de **IAccessor :: CreateAccessor**.  
   
 6.  Configurez la mémoire tampon à partir de laquelle les données seront copiées vers la table.  
   
-7.  Appelez **IRowsetFastLoad::InsertRow** pour copier en bloc les données dans la table.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  Appelez **IRowsetFastLoad :: InsertRow** pour copier en bloc les données dans la table.  
 
 ## <a name="example"></a>Exemple  
  Dans cet exemple, 10 enregistrements sont ajoutés à la table IRFLTable. Vous devez créer la table IRFLTable dans la base de données. Cet exemple n'est pas pris en charge sur la plateforme IA64.  

@@ -1,5 +1,5 @@
 ---
-title: L’exécution de requêtes XPath avec des espaces de noms (fournisseur SQLXMLOLEDB) | Microsoft Docs
+title: Exécution de requêtes XPath avec des espaces de noms (fournisseur SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c72948e0497b65aed942bad9afa12d07fbd09e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a77fc2ee8dd70b8ef8956b99d7412232cbcae0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109594"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909339"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Exécution de requêtes XPath avec des espaces de noms (fournisseur SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Les requêtes XPath peuvent inclure des espaces de noms. Si les éléments de schéma sont qualifiés par un espace de noms (autrement dit, s'ils incluent un espace de noms cible), les requêtes XPath contre le schéma doivent spécifier cet espace de noms.  
   
- L'utilisation du caractère générique (*) n'étant pas prise en charge dans SQLXML 4.0, vous devez spécifier la requête XPath en utilisant un préfixe d'espace de noms. Pour résoudre ce préfixe, utilisez la propriété d’espaces de noms pour spécifier la liaison de l’espace de noms.  
+ L'utilisation du caractère générique (*) n'étant pas prise en charge dans SQLXML 4.0, vous devez spécifier la requête XPath en utilisant un préfixe d'espace de noms. Pour résoudre ce préfixe, utilisez la propriété Namespaces pour spécifier la liaison d’espace de noms.  
   
- Dans l’exemple suivant, la requête XPath spécifie les espaces de noms en utilisant le caractère générique (\*) et les fonctions XPath dépourvue et namespace-uri(). Cette requête XPath retourne tous les éléments dont le nom local est **Contact** et l’espace de noms URI **urn : myschema:Contacts**.  
+ Dans l’exemple suivant, la requête XPath spécifie des espaces de noms à l’aide du caractère générique (\*) et des fonctions XPath de nom local () et d’URI (). Cette requête XPath retourne tous les éléments dont le nom local est **contact** et l’URI de l’espace de noms est **urn : MySchema : contacts**.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- Dans SQLXML 4.0, cette requête XPath doit être spécifiée avec un préfixe d'espace de noms. Par exemple, **x : contactez**, où **x** est le préfixe d’espace de noms. Prenons le schéma XSD suivant :  
+ Dans SQLXML 4.0, cette requête XPath doit être spécifiée avec un préfixe d'espace de noms. Par exemple, **x :contact**, où **x** est le préfixe d’espace de noms. Prenons le schéma XSD suivant :  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -55,10 +55,10 @@ ms.locfileid: "68109594"
   
  Étant donné que ce schéma définit l'espace de noms cible, une requête Xpath (telle que « Employee ») contre le schéma doit inclure l'espace de noms.  
   
- Voici un exemple d'application [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic qui exécute une requête XPath (x:Employee) contre le schéma XSD précédent. Pour résoudre le préfixe, la liaison de l’espace de noms est spécifiée à l’aide de la propriété d’espaces de noms.  
+ Voici un exemple d'application [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic qui exécute une requête XPath (x:Employee) contre le schéma XSD précédent. Pour résoudre le préfixe, la liaison d’espace de noms est spécifiée à l’aide de la propriété Namespaces.  
   
 > [!NOTE]  
->  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) comme fournisseur de données, ce qui requiert l'installation d'un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [configuration système requise pour SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) comme fournisseur de données, ce qui requiert l'installation d'un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [Configuration système requise pour SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  
@@ -95,8 +95,6 @@ End Sub
     ```  
   
 4.  Exécutez l’application.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Voici le résultat partiel :  
   

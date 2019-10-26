@@ -1,5 +1,5 @@
 ---
-title: Création d’un Assembly | Microsoft Docs
+title: Création d’un assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9493567f33cf07dbfa9ae4f19d037a7db6157eda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027927"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907401"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   l'assembly appelé ou référencé a été créé dans la même base de données.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Définition de la sécurité lors de la création d'assemblys  
- Lors de la création d’un assembly dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données, vous pouvez spécifier une des trois différents niveaux de sécurité dans lequel votre code peut être exécuté : **SAFE**, **EXTERNAL_ACCESS**, ou **UNSAFE**. Au moment de l'exécution de l'instruction **CREATE ASSEMBLY** , l'assembly de code est soumis à certains contrôles qui peuvent entraîner l'échec de l'enregistrement de l'assembly sur le serveur. Pour plus d'informations, consultez l'exemple d'emprunt d'identité sur [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Lorsque vous créez un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez spécifier un des trois niveaux différents de sécurité dans lesquels votre code peut être exécuté : **SAFE**, **EXTERNAL_ACCESS**ou **UNSAFE**. Au moment de l'exécution de l'instruction **CREATE ASSEMBLY** , l'assembly de code est soumis à certains contrôles qui peuvent entraîner l'échec de l'enregistrement de l'assembly sur le serveur. Pour plus d'informations, consultez l'exemple d'emprunt d'identité sur [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** est le jeu d'autorisations par défaut et fonctionne pour la majorité des scénarios. Pour spécifier un niveau de sécurité donné, vous devez modifier la syntaxe de l'instruction CREATE ASSEMBLY comme suit :  
   
@@ -69,7 +69,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  Lorsque le code dans un assembly s'exécute sous le jeu d'autorisations **SAFE** , tout calcul ou accès aux données sur le serveur ne peut avoir lieu que par l'entremise du fournisseur managé in-process.  
   
-### <a name="creating-externalaccess-and-unsafe-assemblies"></a>Création d'assemblys EXTERNAL_ACCESS et UNSAFE  
+### <a name="creating-external_access-and-unsafe-assemblies"></a>Création d'assemblys EXTERNAL_ACCESS et UNSAFE  
  **EXTERNAL_ACCESS** propose des scénarios dans lesquels le code doit accéder à des ressources externes au serveur, tel que des fichiers, le réseau, le Registre et des variables d'environnement. Lorsque le serveur accède à une ressource externe, il emprunte l'identité du contexte de sécurité de l'utilisateur appelant le code managé.  
   
  **UNSAFE** convient dans des situations où la sécurité d'un assembly ne peut être vérifiée ou exige un accès supplémentaire à des ressources restreintes, telles que l'API Win32 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
@@ -79,8 +79,6 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  L'assembly est signé avec un nom fort ou porte une signature Authenticode avec certificat. Ce nom fort (ou certificat) est créé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que clé asymétrique (ou certificat) et dispose d'une connexion correspondante avec l'autorisation **EXTERNAL ACCESS ASSEMBLY** (pour les assemblys à accès externe) ou l'autorisation **UNSAFE ASSEMBLY** (pour les assemblys non sécurisés).  
   
 2.  Le propriétaire de la base de données (DBO) bénéficie de l'autorisation **EXTERNAL ACCESS ASSEMBLY** (pour les assemblys **EXTERNAL ACCESS** ) ou **UNSAFE ASSEMBLY** (pour les assemblys **UNSAFE** ) et la [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) de la base de données est définie sur **ON**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Les deux conditions mentionnées ci-dessus sont également vérifiées au moment du chargement de l'assembly (exécution incluse). Une des conditions doit au minimum être satisfaite pour le chargement de l'assembly.  
   
@@ -132,10 +130,10 @@ WITH PERMISSION_SET = UNSAFE;
  Pour obtenir des informations détaillées sur les autorisations pour chacun de ces paramètres, consultez [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Modification d’un Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Suppression d’un Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [Sécurité d’accès du Code CLR Integration](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Modification d’un assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [Suppression d’un assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+   de [sécurité d’accès du code d’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  [Propriété de base de données TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
  [Autorisation d’appelants partiellement approuvés](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'SQL : mapped (SQLXML 4.0) | Microsoft Docs'
+title: 'SQL : mappé (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c639a9eaf7165bfc83b141235e1ce0b2ed9bb246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055414"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907135"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interprétation des annotations - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Processus de chargement en masse XML le **sql : mappé** annotation dans le schéma XSD comme prévu que, si le schéma de mappage spécifie est **sql : mappé = « false »** pour n’importe quel élément ou l’attribut, le chargement en masse XML ne tentez de stocker les données associées dans la colonne correspondante.  
+  Le chargement en masse XML traite l’annotation **SQL : mapped** dans le schéma XSD comme prévu, autrement dit, si le schéma de mappage spécifie **SQL : mapped = "false"** pour tout élément ou attribut, le chargement en masse XML ne tente pas de stocker les données associées dans le colonne correspondante.  
   
- Chargement en masse XML ignore les éléments et attributs qui ne sont pas mappés (soit, car ils ne sont pas décrits dans le schéma, soit parce qu’ils sont annotés dans le schéma XSD avec **sql : mappé = « false »** ). Toutes les données non mappées transitent dans la colonne de dépassement de capacité, si une telle colonne est spécifiée à l’aide de **SQL : Overflow-champ**.  
+ Le chargement en masse XML ignore les éléments et les attributs qui ne sont pas mappés (soit parce qu’ils ne sont pas décrits dans le schéma, soit parce qu’ils sont annotés dans le schéma XSD avec **SQL : mapped = "false"** ). Toutes les données non mappées sont placées dans la colonne Overflow, si une telle colonne est spécifiée à l’aide de **SQL : overflow-field**.  
   
  Considérons par exemple ce schéma XSD :  
   
@@ -55,11 +55,11 @@ ms.locfileid: "68055414"
 </xsd:schema>  
 ```  
   
- Étant donné que le **HomePhone** attribut spécifie **sql : mappé = « false »** , chargement en masse XML ne mappe pas cet attribut à la colonne correspondante. Le schéma XSD identifie une colonne de dépassement de capacité (**OverflowColumn**) dans lequel le chargement en masse XML stocke les données non consommées.  
+ Étant donné que l’attribut **HomePhone** spécifie **SQL : mapped = "false"** , le chargement en masse XML ne mappe pas cet attribut à la colonne correspondante. Le schéma XSD identifie une colonne de dépassement (**OverflowColumn**) dans laquelle le chargement en masse XML stocke ces données non consommées.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   
-1.  Créez la table suivante dans le **tempdb** base de données :  
+1.  Créez la table suivante dans la base de données **tempdb** :  
   
     ```  
     USE tempdb  
@@ -85,8 +85,6 @@ ms.locfileid: "68055414"
     ```  
   
 4.  Pour exécuter le chargement en masse XML, enregistrez cet exemple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) sous le nom Sample.vbs et exécutez-le :  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

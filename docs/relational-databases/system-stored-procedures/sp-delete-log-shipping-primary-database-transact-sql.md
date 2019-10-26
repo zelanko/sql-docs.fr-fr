@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d1d1d341a12e417c118e6dfb64ecd9a5da5f2bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009165"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909866"
 ---
-# <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
+# <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Cette procédure stockée supprime la copie des journaux de transactions de la base de données primaire, y compris les travaux de sauvegarde, ainsi que les historiques locaux et distants. Utilisez uniquement cette procédure stockée après avoir supprimé les bases de données secondaire à l’aide de **sp_delete_log_shipping_primary_secondary**.  
+  Cette procédure stockée supprime la copie des journaux de transactions de la base de données primaire, y compris les travaux de sauvegarde, ainsi que les historiques locaux et distants. Utilisez cette procédure stockée uniquement après avoir supprimé les bases de données secondaires à l’aide de **sp_delete_log_shipping_primary_secondary**.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +40,16 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @database = ] 'database'` Est le nom du journal de transaction base de données primaire. *base de données* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @database = ] 'database'` est le nom de la base de données primaire d’envoi de journaux. *Database est de* **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune.  
+ Aucun.  
   
 ## <a name="remarks"></a>Notes  
- **sp_delete_log_shipping_primary_database** doit être exécuté à partir de la **master** base de données sur le serveur principal. Elle effectue les actions suivantes :  
+ **sp_delete_log_shipping_primary_database** doit être exécuté à partir de la base de données **Master** sur le serveur principal. Elle effectue les actions suivantes :  
   
 1.  Supprime le travail de sauvegarde de la base de données primaire spécifiée.  
   
@@ -63,12 +63,10 @@ sp_delete_log_shipping_primary_database
   
 6.  Supprime l’entrée dans **log_shipping_primary_databases** pour cette base de données primaire.  
   
-7.  Appels **sp_delete_log_shipping_alert_job** sur le serveur moniteur.  
+7.  Appelle **sp_delete_log_shipping_alert_job** sur le serveur moniteur.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple illustre l’utilisation de **sp_delete_log_shipping_primary_database** pour supprimer la base de données primaire **AdventureWorks2012**.  

@@ -1,5 +1,5 @@
 ---
-title: Traitement XML du côté Client (la Classes managées SQLXML) | Microsoft Docs
+title: Traitement du code XML côté client (classes managées SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 547e7df24fcf18b3183cd2d279c84e9b38977671
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119585"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909169"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>traitement du XML côté client (classes managées SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cet exemple illustre l’utilisation de la propriété ClientSideXml. L'application exécute une procédure stockée sur le serveur. Le résultat de la procédure stockée (un ensemble de lignes à deux colonnes) est traité sur le côté client pour produire un document XML.  
   
- Le GetContacts suivant procédure stockée renvoie **FirstName** et **LastName** des employés dans la table Person.Contact dans la base de données AdventureWorks.  
+ La procédure stockée GetContacts suivante retourne **FirstName** et **LastName** des employés dans la table Person. contact de la base de données AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -40,7 +40,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Cette application c# exécute la procédure stockée et spécifie l’option FOR XML AUTO en spécifiant la valeur CommandText. Dans l’application, la propriété ClientSideXml de l’objet SqlXmlCommand est définie sur true. Cela vous permet d'exécuter les procédures stockées préexistantes qui retournent un ensemble de lignes et lui appliquent une transformation XML.  
+ Cette C# application exécute la procédure stockée et spécifie l’option for XML auto dans la spécification de la valeur CommandText. Dans l’application, la propriété ClientSideXml de l’objet SqlXmlCommand a la valeur true. Cela vous permet d'exécuter les procédures stockées préexistantes qui retournent un ensemble de lignes et lui appliquent une transformation XML.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  
@@ -96,6 +96,4 @@ public static int Main(String[] args)
      Un fichier exécutable (DocSample.exe) est alors créé.  
   
 4.  À l'invite de commandes, exécutez DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

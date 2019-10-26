@@ -1,5 +1,5 @@
 ---
-title: Envoi de données comme un paramètre table avec toutes les valeurs en mémoire (ODBC) | Microsoft Docs
+title: Envoi de données en tant que paramètre table avec toutes les valeurs en mémoire (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf7d8b166a06d2b4c9973cf310b90f693ba1c6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a95e676ff7d5d39358638727e317116aa05687f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129129"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907361"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Envoi de données comme paramètre table avec toutes les valeurs en mémoire (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour un autre exemple illustrant des paramètres table, consultez [utiliser les paramètres &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser les paramètres &#40;table ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Condition préalable  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
@@ -90,7 +90,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La deuxième étape consiste à lier les colonnes pour le paramètre table. Le focus de paramètre est d'abord défini sur la position ordinale du paramètre table. Puis les colonnes de la valeur de la table sont liées à l’aide de SQLBindParameter de la même façon qu’ils seraient si elles étaient des paramètres de la procédure stockée, mais avec des ordinaux de colonne pour ParameterNumber. S'il y avait plus de paramètres table, nous définirions le focus sur chacun d'eux à tour de rôle et lierions leurs colonnes. Enfin, le focus de paramètre est réinitialisé à la valeur 0.  
+3.  La deuxième étape consiste à lier les colonnes pour le paramètre table. Le focus de paramètre est d'abord défini sur la position ordinale du paramètre table. Ensuite, les colonnes de la valeur de table sont liées à l’aide de SQLBindParameter de la même façon que s’il s’agissait de paramètres de la procédure stockée, mais avec des ordinaux de colonne pour ParameterNumber. S'il y avait plus de paramètres table, nous définirions le focus sur chacun d'eux à tour de rôle et lierions leurs colonnes. Enfin, le focus de paramètre est réinitialisé à la valeur 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -123,8 +123,6 @@ from @Items
     ```  
   
 5.  Appelez la procédure :  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     // Call the procedure.  

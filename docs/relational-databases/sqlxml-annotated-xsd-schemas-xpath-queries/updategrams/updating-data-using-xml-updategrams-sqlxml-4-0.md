@@ -1,5 +1,5 @@
 ---
-title: La mise à jour des données à l’aide de codes XML (SQLXML 4.0) | Microsoft Docs
+title: Mise à jour de données à l’aide de codes XML (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7da3eda9962feae31a07048f2ed1f14cd1a296f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffaa1f91e117c6d2e244e5b677025c60649b6408
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018482"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907927"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Lorsque vous mettez à jour les données existantes, vous devez spécifier à la fois le  **\<avant >** et  **\<après >** blocs. Les éléments spécifiés dans le  **\<avant >** et  **\<après >** blocs décrivent la modification souhaitée. Mise à jour utilise l’ou les éléments qui sont spécifié dans le  **\<avant >** bloc pour identifier les ou les enregistrements existants dans la base de données. Les éléments correspondants dans le  **\<après >** bloc indiquer comment les enregistrements doivent ressembler après l’exécution de l’opération de mise à jour. À partir de ces informations, la mise à jour crée une instruction SQL qui correspond à la  **\<après >** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  
+  Lorsque vous mettez à jour des données existantes, vous devez spécifier à la fois le **\<avant >** et **\<après >** blocs. Les éléments spécifiés dans le **\<avant >** et **\<après** les blocs > décrivent la modification souhaitée. Le mise à jour utilise le ou les éléments spécifiés dans le **\<avant >** bloc pour identifier les enregistrements existants dans la base de données. Le ou les éléments correspondants dans le **\<après >** bloc indiquent comment les enregistrements doivent ressembler après l’exécution de l’opération de mise à jour. À partir de ces informations, mise à jour crée une instruction SQL qui correspond à la **\<après >** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  
   
  Voici le format du code de mise à jour (updategram) pour une opération de mise à jour :  
   
@@ -55,45 +55,45 @@ ms.locfileid: "68018482"
 </ROOT>  
 ```  
   
- **\<updg:before>**  
- Les éléments dans le  **\<avant >** bloc identifient les enregistrements existants dans les tables de base de données.  
+ **\<attribut updg : avant >**  
+ Les éléments de la **\<avant >** bloquer l’identification des enregistrements existants dans les tables de la base de données.  
   
- **\<updg:after>**  
- Les éléments dans le  **\<après >** bloc décrivent la façon dont les enregistrements spécifiés dans le  **\<avant >** bloc doit se présenter une fois que les mises à jour sont appliquées.  
+ **\<attribut updg : après >**  
+ Les éléments de la **\<après >** bloc décrivent la manière dont les enregistrements spécifiés dans l' **\<avant >** bloc doivent apparaître après l’application des mises à jour.  
   
- Le **schéma de mappage** attribut identifie le schéma de mappage à utiliser par la mise à jour. Si la mise à jour Spécifie un schéma de mappage, les noms d’élément et d’attribut spécifié dans le  **\<avant >** et  **\<après >** blocs doivent correspondre aux noms dans le schéma. Le schéma de mappage mappe ces noms d'éléments ou d'attributs aux noms de tables et de colonnes de la base de données.  
+ L’attribut **mapping-schema** identifie le schéma de mappage qui doit être utilisé par le mise à jour. Si le mise à jour spécifie un schéma de mappage, les noms d’élément et d’attribut spécifiés dans le **\<avant >** et **\<après** les blocs de > doivent correspondre aux noms du schéma. Le schéma de mappage mappe ces noms d'éléments ou d'attributs aux noms de tables et de colonnes de la base de données.  
   
- Si le code de mise à jour (updategram) ne spécifie pas de schéma, le mappage par défaut est utilisé. Mappage par défaut, le  **\<ElementName >** spécifié dans les cartes de mise à jour à la table de base de données et les enfants éléments ou attributs sont mappés aux colonnes de base de données.  
+ Si le code de mise à jour (updategram) ne spécifie pas de schéma, le mappage par défaut est utilisé. Dans le mappage par défaut, le **\<ElementName >** spécifié dans le mise à jour est mappé à la table de base de données et les éléments ou attributs enfants sont mappés aux colonnes de base de données.  
   
- Un élément dans le  **\<avant >** bloc doit correspondre à une ligne qu’une seule table dans la base de données. Si l’élément correspond à plusieurs lignes de la table ou ne correspond pas à n’importe quelle ligne de table, la mise à jour retourne une erreur et annule l’intégralité  **\<synchronisation >** bloc.  
+ Un élément de la **\<avant >** bloc doit correspondre à une seule ligne de table dans la base de données. Si l’élément correspond à plusieurs lignes de table ou ne correspond à aucune ligne de table, le mise à jour retourne une erreur et annule l’intégralité du bloc de **> de synchronisation\<** .  
   
- Une mise à jour peut inclure plusieurs  **\<synchronisation >** blocs. Chaque  **\<synchronisation >** bloc est traité comme une transaction. Chaque  **\<synchronisation >** bloc peut avoir plusieurs  **\<avant >** et  **\<après >** blocs. Par exemple, si vous mettez à jour des enregistrements existants, vous pouvez spécifier deux  **\<avant >** et  **\<après >** paires, une pour chaque enregistrement mis à jour.  
+ Un mise à jour peut inclure plusieurs blocs de **> de synchronisation\<** . Chaque bloc de **\<Sync** est traité comme une transaction. Chaque bloc de **> de synchronisation\<** peut avoir plusieurs **\<avant >** et **\<après >** blocs. Par exemple, si vous mettez à jour deux des enregistrements existants, vous pouvez spécifier deux **\<avant >** et **\<après** les paires de >, une pour chaque enregistrement en cours de mise à jour.  
   
 ## <a name="using-the-updgid-attribute"></a>Utilisation de l'attribut updg:id  
- Lorsque plusieurs éléments sont spécifiés dans le  **\<avant >** et  **\<après >** blocs, utilisez le **updg : ID** attribut pour marquer les lignes dans le  **\<avant >** et  **\<après >** blocs. La logique de traitement utilise ces informations pour déterminer quel est l’enregistrement dans le  **\<avant >** bloc quel est l’enregistrement dans le  **\<après >** bloc.  
+ Lorsque plusieurs éléments sont spécifiés dans la **\<avant >** et **\<après** les blocs de >, utilisez l’attribut **attribut updg : ID** pour marquer les lignes du **\<avant >** et **\<après** les blocs >. La logique de traitement utilise ces informations pour déterminer l’enregistrement dans le **\<avant >** paires de blocs avec l’enregistrement de la **\<après >** bloc.  
   
- Le **updg : ID** attribut n’est pas nécessaire (bien qu’il est recommandé) si une des opérations suivantes existe :  
+ L’attribut **attribut updg : ID** n’est pas nécessaire (bien qu’il soit recommandé) s’il existe l’un des éléments suivants :  
   
--   Les éléments dans le schéma de mappage spécifié ont la **SQL : Key-champs** attribut défini sur ces derniers.  
+-   L’attribut **SQL : key-fields** est défini pour les éléments du schéma de mappage spécifié.  
   
 -   Il existe une ou plusieurs valeurs spécifiques fournies pour le ou les champs clés dans le code de mise à jour (updategram).  
   
- Quel que soit le cas, la mise à jour utilise les colonnes clés qui sont spécifiés dans le **SQL : Key-champs** à apparier les éléments dans le  **\<avant >** et  **\< une fois >** blocs.  
+ Si l’un ou l’autre est le cas, le mise à jour utilise les colonnes clés spécifiées dans **SQL : key-fields** pour coupler les éléments de la **\<avant >** et **\<après >** blocs.  
   
- Si le schéma de mappage n’identifie pas de colonnes clés (à l’aide de **SQL : Key-champs**) ou si la mise à jour met à jour une valeur de colonne clé, vous devez spécifier **updg : ID**.  
+ Si le schéma de mappage n’identifie pas les colonnes clés (à l’aide de **SQL : key-fields**) ou si mise à jour met à jour une valeur de colonne clé, vous devez spécifier **attribut updg : ID**.  
   
- Les enregistrements qui sont identifiés dans le  **\<avant >** et  **\<après >** blocs n’ont pas à être dans le même ordre. Le **updg : ID** attribut force l’association entre les éléments qui sont spécifiés dans le  **\<avant >** et  **\<après >** blocs.  
+ Les enregistrements qui sont identifiés dans la **\<avant >** et **\<après** les blocs de > n’ont pas besoin d’être dans le même ordre. L’attribut **attribut updg : ID** force l’association entre les éléments spécifiés dans le **\<avant >** et **\<après >** blocs.  
   
- Si vous spécifiez un élément dans le  **\<avant >** bloc et qu’un seul élément correspondant dans le  **\<après >** bloquer, à l’aide de **updg : ID** n’est pas nécessaire. Toutefois, il est recommandé de spécifier **updg : ID** malgré tout pour éviter toute ambiguïté.  
+ Si vous spécifiez un élément dans le **\<avant >** bloc et qu’un seul élément correspondant dans le **\<après >** bloc, l’utilisation de **attribut updg : ID** n’est pas nécessaire. Toutefois, il est recommandé de spécifier **attribut updg : ID** pour éviter toute ambiguïté.  
   
 ## <a name="examples"></a>Exemples  
  Avant d'utiliser les exemples de code de mise à jour (updategram), notez les points suivants :  
   
--   La plupart des exemples utilisent le mappage par défaut (en d'autres termes, aucun schéma de mappage n'est spécifié dans le code de mise à jour (updategram)). Pour plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans une mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   La plupart des exemples utilisent le mappage par défaut (en d'autres termes, aucun schéma de mappage n'est spécifié dans le code de mise à jour (updategram)). Pour obtenir plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage &#40;annoté dans&#41;un mise à jour SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   La plupart des exemples sont basés sur l'exemple de base de données AdventureWorks. Toutes les mises à jour sont appliquées aux tables de cette base de données. Vous pouvez restaurer la base de données AdventureWorks.  
   
-### <a name="a-updating-a-record"></a>R. Mise à jour d'un enregistrement  
+### <a name="a-updating-a-record"></a>A. Mise à jour d'un enregistrement  
  Le code de mise à jour (updategram) suivant met à jour le nom de famille d'un employé en le remplaçant par Fuller dans la table Person.Contact de la base de données AdventureWorks. Le code de mise à jour (updategram) ne spécifie pas de schéma de mappage ; par conséquent, le mappage par défaut est utilisé.  
   
 ```  
@@ -109,9 +109,9 @@ ms.locfileid: "68018482"
 </ROOT>  
 ```  
   
- L’enregistrement décrit dans le  **\<avant >** bloc représente l’enregistrement actif dans la base de données. Mise à jour utilise toutes les valeurs de colonne spécifiés dans le  **\<avant >** bloc pour rechercher l’enregistrement. Dans cette mise à jour, le  **\<avant >** bloc fournit uniquement la colonne ContactID ; par conséquent, la mise à jour utilise uniquement la valeur à rechercher l’enregistrement. Si vous deviez ajouter la valeur de LastName à ce bloc, le code de mise à jour (updategram) utiliserait à la fois les valeurs de ContactID et de LastName pour effectuer la recherche.  
+ L’enregistrement décrit dans le **\<avant >** bloc représente l’enregistrement actif dans la base de données. Mise à jour utilise toutes les valeurs de colonne spécifiées dans le **\<avant >** bloc pour Rechercher l’enregistrement. Dans ce mise à jour, le **\<avant >** bloc fournit uniquement la colonne ContactID ; par conséquent, mise à jour utilise uniquement la valeur pour Rechercher l’enregistrement. Si vous deviez ajouter la valeur de LastName à ce bloc, le code de mise à jour (updategram) utiliserait à la fois les valeurs de ContactID et de LastName pour effectuer la recherche.  
   
- Dans cette mise à jour, le  **\<après >** bloc fournit uniquement la valeur de la colonne LastName, car c’est la seule valeur qui est en cours de modification.  
+ Dans ce mise à jour, le **\<après >** bloc fournit uniquement la valeur de la colonne LastName, car il s’agit de la seule valeur en cours de modification.  
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
@@ -119,18 +119,16 @@ ms.locfileid: "68018482"
   
 2.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le code de mise à jour (updategram).  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
  Dans cet exemple, le code de mise à jour (updategram) effectue deux mises à jour sur la table HumanResources.Shift de la base de données AdventureWorks :  
   
 -   Il modifie le nom de l'équipe de jour d'origine qui commence à 7 h 09 en remplaçant « Day » par « Early Morning ».  
   
 -   Il insère une nouvelle équipe nommée « Late Morning » qui commence à 10 h 00.  
   
- Dans la mise à jour, le **updg : ID** attribut crée des associations entre les éléments dans le  **\<avant >** et  **\<après >** blocs.  
+ Dans mise à jour, l’attribut **attribut updg : ID** crée des associations entre les éléments de la **\<avant >** et **\<après >** blocs.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -149,7 +147,7 @@ ms.locfileid: "68018482"
 </ROOT>  
 ```  
   
- Notez comment la **updg : ID** attribut associe la première instance de la \<HumanResources.Shift > élément dans le  **\<avant >** bloc avec la deuxième instance de la \< HumanResources.Shift > élément dans le  **\<après >** bloc.  
+ Notez que l’attribut **attribut updg : ID** couple la première instance de l’élément \<HumanResources. Shift > dans le **\<avant >** bloc avec la deuxième instance de l’élément \<HumanResources. Shift > dans le **\<après >** bloc.  
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
@@ -157,15 +155,15 @@ ms.locfileid: "68018482"
   
 2.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le code de mise à jour (updategram).  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Spécification de plusieurs \<avant > et \<après > blocs  
- Pour éviter toute ambiguïté, vous pouvez écrire la mise à jour dans l’exemple B en utilisant plusieurs  **\<avant >** et  **\<après >** paires de blocs. Spécification  **\<avant >** et  **\<après >** paires est une façon d’indiquer plusieurs mises à jour avec un minimum de confusion. En outre, si chaque de la  **\<avant >** et  **\<après >** blocs spécifient au plus un élément, il est inutile d’utiliser le **updg : ID** attribut .  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Spécification de plusieurs \<avant > et \<après les blocs de >  
+ Pour éviter toute ambiguïté, vous pouvez écrire le mise à jour dans l’exemple B en utilisant plusieurs **\<avant >** et **\<après >** paires de blocs. La spécification d' **\<avant >** et **\<après** les paires de > est une façon de spécifier plusieurs mises à jour avec un minimum de confusion. En outre, si chaque **\<avant >** et **\<après** les blocs de > spécifient au plus un élément, il n’est pas nécessaire d’utiliser l’attribut **attribut updg : ID** .  
   
 > [!NOTE]  
->  Pour former une paire, le  **\<après >** balise doit suivre immédiatement le correspondant  **\<avant >** balise.  
+>  Pour former une paire, le **\<après >** balise doit immédiatement suivre son **\<correspondant avant >** balise.  
   
- Dans la mise à jour suivant, la première  **\<avant >** et  **\<après >** paire met à jour le nom de l’équipe de jour. La seconde paire insère un nouvel enregistrement d'équipe.  
+ Dans le mise à jour suivant, le premier **\<avant >** et **\<après** la paire de > a mis à jour le nom du décalage pour l’équipe de jour. La seconde paire insère un nouvel enregistrement d'équipe.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -194,16 +192,16 @@ ms.locfileid: "68018482"
   
 2.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le code de mise à jour (updategram).  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. Spécification de plusieurs \<synchronisation > blocs  
- Vous pouvez spécifier plusieurs  **\<synchronisation >** blocs dans une mise à jour. Chaque  **\<synchronisation >** bloc spécifié est une transaction indépendante.  
+### <a name="d-specifying-multiple-sync-blocks"></a>D. Spécification de plusieurs blocs de > de synchronisation \<  
+ Vous pouvez spécifier plusieurs blocs de **> de synchronisation\<** dans un mise à jour. Chaque **\<** bloc de synchronisation spécifié est une transaction indépendante.  
   
- Dans la mise à jour suivant, la première  **\<synchronisation >** bloc met à jour un enregistrement dans la table Sales.Customer. Pour des raisons de simplicité, le code de mise à jour (updategram) spécifie uniquement les valeurs de colonne requises, la valeur d'identité (CustomerID) et la valeur mise à jour (SalesPersonID).  
+ Dans le mise à jour suivant, la première **\<** bloc de synchronisation met à jour un enregistrement dans la table Sales. Customer. Pour des raisons de simplicité, le code de mise à jour (updategram) spécifie uniquement les valeurs de colonne requises, la valeur d'identité (CustomerID) et la valeur mise à jour (SalesPersonID).  
   
- La seconde  **\<synchronisation >** bloc ajoute deux enregistrements à la table Sales.SalesOrderHeader. Pour cette table, SalesOrderID est une colonne de type IDENTITY. Par conséquent, la mise à jour ne spécifie pas la valeur de SalesOrderID dans chacun de la \<Sales.SalesOrderHeader > éléments.  
+ Le deuxième bloc **\<sync >** ajoute deux enregistrements à la table Sales. SalesOrderHeader. Pour cette table, SalesOrderID est une colonne de type IDENTITY. Par conséquent, mise à jour ne spécifie pas la valeur de SalesOrderID dans chaque élément \<Sales. SalesOrderHeader >.  
   
- Spécification de plusieurs  **\<synchronisation >** blocs est utile, car si le second  **\<synchronisation >** bloc (une transaction) ne parvient pas à ajouter des enregistrements à la table Sales.SalesOrderHeader, le première  **\<synchronisation >** bloc peut mettre à jour l’enregistrement de client dans la table Sales.Customer.  
+ La spécification de plusieurs blocs de **\<Sync** est utile, car si le\<deuxième bloc de **> de synchronisation** (une transaction) ne parvient pas à ajouter des enregistrements à la table Sales. SalesOrderHeader, le premier bloc\<**Sync >** peut toujours mettre à jour le enregistrement du client dans la table Sales. Customer.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -260,14 +258,14 @@ ms.locfileid: "68018482"
   
 2.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le code de mise à jour (updategram).  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="e-using-a-mapping-schema"></a>E. Utilisation d'un schéma de mappage  
- Dans cet exemple, la mise à jour Spécifie un schéma de mappage à l’aide de la **schéma de mappage** attribut. (Il n'y a aucun mappage par défaut ; en d'autres termes, le schéma de mappage fournit le mappage nécessaire des éléments et attributs du code de mise à jour (updategram) aux tables et colonnes de la base de données.)  
+ Dans cet exemple, le mise à jour spécifie un schéma de mappage à l’aide de l’attribut **mapping-schema** . (Il n'y a aucun mappage par défaut ; en d'autres termes, le schéma de mappage fournit le mappage nécessaire des éléments et attributs du code de mise à jour (updategram) aux tables et colonnes de la base de données.)  
   
  Les éléments et attributs spécifiés dans le code de mise à jour (updategram) font référence aux éléments et attributs du schéma de mappage.  
   
- Le schéma de mappage XSD suivant a  **\<client >** ,  **\<ordre >** , et  **\<OD >** éléments qui mappent à la Tables Sales.Customer, Sales.SalesOrderHeader et Sales.SalesOrderDetail dans la base de données.  
+ Le schéma de mappage XSD suivant a **\<> client**, **\<commande >** et **\<éléments OD >** mappés aux tables Sales. Customer, sales. SalesOrderHeader et Sales. SalesOrderDetail de la base de données.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -320,7 +318,7 @@ ms.locfileid: "68018482"
 </xsd:schema>  
 ```  
   
- Ce schéma de mappage (UpdategramMappingSchema.xml) est spécifié dans le code de mise à jour (updategram) suivant. Le code de mise à jour (updategram) ajoute un article dans la table Sales.SalesOrderDetail pour une commande spécifique. Mise à jour inclut des éléments imbriqués : un  **\<OD >** élément imbriqué dans un  **\<ordre >** élément. La relation clé primaire/clé étrangère entre ces deux éléments est spécifiée dans le schéma de mappage.  
+ Ce schéma de mappage (UpdategramMappingSchema.xml) est spécifié dans le code de mise à jour (updategram) suivant. Le code de mise à jour (updategram) ajoute un article dans la table Sales.SalesOrderDetail pour une commande spécifique. Le mise à jour comprend des éléments imbriqués : un **\<OD >** élément imbriqué dans un élément **> ordre de\<** . La relation clé primaire/clé étrangère entre ces deux éléments est spécifiée dans le schéma de mappage.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -346,9 +344,9 @@ ms.locfileid: "68018482"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le code de mise à jour (updategram).  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Pour plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans une mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Pour obtenir plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage &#40;annoté dans&#41;un mise à jour SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. Utilisation d'un schéma de mappage avec les attributs IDREFS  
  Cet exemple montre comment les codes de mise à jour (updategrams) utilisent les attributs IDREFS du schéma de mappage pour mettre à jour des enregistrements dans plusieurs tables. Pour cet exemple, supposez que la base de données comporte les tables suivantes :  
@@ -361,7 +359,7 @@ ms.locfileid: "68018482"
   
  Dans la mesure où un étudiant peut s'inscrire à de nombreux cours et comme un cours peut avoir de nombreux étudiants, la troisième table, la table Enrollment, est requise pour représenter cette relation M:N.  
   
- Le schéma de mappage XSD suivant fournit une vue XML des tables à l’aide de la  **\<Student >** ,  **\<cours >** , et  **\<l’inscription >** éléments. Le **IDREFS** attributs dans le schéma de mappage spécifient la relation entre ces éléments. Le **StudentIDList** d’attribut sur le  **\<cours >** élément est un **IDREFS** attribut de type qui fait référence à la colonne StudentID dans la table Enrollment. De même, le **EnrolledIn** d’attribut sur le  **\<Student >** élément est un **IDREFS** attribut de type qui fait référence à la colonne CourseID lors de l’inscription table.  
+ Le schéma de mappage XSD suivant fournit une vue XML des tables à l’aide de l' **\<Student**, **\<> de cours**et\<> d' **inscription** . Les attributs **IDREFS** dans le schéma de mappage spécifient la relation entre ces éléments. L’attribut **StudentIDList** sur le **\<cours >** élément est un attribut de type **IDREFS** qui fait référence à la colonne StudentID de la table d’inscription. De même, l’attribut **EnrolledIn** sur l’élément **\<Student >** est un attribut de type **IDREFS** qui fait référence à la colonne CourseID dans la table d’inscription.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -458,7 +456,7 @@ ms.locfileid: "68018482"
   
 5.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le code de mise à jour (updategram).  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 6.  Enregistrez et exécutez le code de mise à jour (updategram) suivant, comme décrit dans les étapes précédentes. Le code de mise à jour (updategram) rajoute l'étudiant pour lequel StudentID="1" dans le cours CS102 en insérant un enregistrement dans la table Enrollment.  
   
@@ -477,7 +475,7 @@ ms.locfileid: "68018482"
     </ROOT>  
     ```  
   
-7.  Enregistrez et exécutez cette mise à jour suivant, comme décrit dans les étapes précédentes. Ce code de mise à jour (updategram) insère trois nouveaux étudiants et les inscrit au cours CS101. À nouveau, la relation IDREFS insère des enregistrements dans la table Enrollment.  
+7.  Enregistrez et exécutez le mise à jour suivant comme décrit dans les étapes précédentes. Ce code de mise à jour (updategram) insère trois nouveaux étudiants et les inscrit au cours CS101. À nouveau, la relation IDREFS insère des enregistrements dans la table Enrollment.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -556,9 +554,9 @@ ms.locfileid: "68018482"
 </Schema>  
 ```  
   
- Pour plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans une mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Pour obtenir plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage &#40;annoté dans&#41;un mise à jour SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur &#40;la sécurité mise à jour SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   
