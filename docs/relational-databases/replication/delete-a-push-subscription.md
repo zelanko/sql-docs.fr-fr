@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846702"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908267"
 ---
 # <a name="delete-a-push-subscription"></a>Supprimer un abonnement par émission (push)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "70846702"
 4.  Cliquez avec le bouton droit sur l'abonnement puis cliquez sur **Supprimer**.  
   
 5.  Dans la boîte de dialogue de confirmation, indiquez si vous souhaitez vous connecter à l'Abonné pour supprimer les informations d'abonnement. Si vous désactivez la case à cocher **Se connecter à l'Abonné** , vous devrez vous connecter plus tard à l'Abonné pour supprimer les informations.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-delete-a-push-subscription-at-the-subscriber"></a>Pour supprimer un abonnement par envoi de données au niveau de l'Abonné  
   

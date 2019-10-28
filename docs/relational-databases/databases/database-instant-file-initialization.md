@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea9ab84a59fd020a7dc5c67b6ad74630e113ee55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037603"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909077"
 ---
 # <a name="database-file-initialization"></a>Initialisation des fichiers de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ Pour accorder l'autorisation `Perform volume maintenance tasks` à un compte
 5.  Cliquez sur **Appliquer**, puis fermez toutes les boîtes de dialogue **Stratégie de sécurité locale** .  
 
 1. Redémarrez le service SQL Server.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez accorder cette autorisation au compte de service au moment de l’installation. Si vous effectuez [l’installation depuis une invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), ajoutez l’argument /SQLSVCINSTANTFILEINIT ou cochez la case *Accorder le privilège Effectuer une tâche de maintenance en volume au service Moteur de base de données SQL Server* dans [l’Assistant Installation](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).

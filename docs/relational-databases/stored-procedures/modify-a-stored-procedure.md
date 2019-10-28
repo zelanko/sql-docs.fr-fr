@@ -14,12 +14,12 @@ ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa0cac44c29f98a6adaa1f1301131781f400d1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136832"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907246"
 ---
 # <a name="modify-a-stored-procedure"></a>Modifier une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "68136832"
 6.  Pour enregistrer les modifications apportées à la procédure, dans le menu **Requête** , cliquez sur **Exécuter**.  
   
 7.  Pour enregistrer la procédure mise à jour en tant que script [!INCLUDE[tsql](../../includes/tsql-md.md)] , dans le menu **Fichier** , cliquez sur **Enregistrer sous**. Acceptez le nom de fichier ou remplacez-le par un autre nom, puis cliquez sur **Enregistrer**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!IMPORTANT]  
 >  Validez toutes les entrées utilisateur. Ne concaténez pas les entrées utilisateur avant de les avoir validées. N'exécutez jamais une commande élaborée à partir d'une entrée utilisateur non validée.  

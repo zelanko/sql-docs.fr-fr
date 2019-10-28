@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620598"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542179"
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d’accès URL
   Vous pouvez utiliser les paramètres suivants dans une URL afin de configurer l’apparence de vos rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Les paramètres les plus courants sont répertoriés dans cette section. Les paramètres ne sont pas sensibles à la casse et commencent par le préfixe de paramètre *rs:* s’ils sont dirigés vers le serveur de rapports ou par *rc:* s’ils sont dirigés vers une visionneuse HTML. Vous pouvez également spécifier des paramètres spécifiques aux périphériques ou des extensions de rendu. Pour plus d’informations sur les paramètres spécifiques au périphérique, consultez [Spécifier les paramètres d’informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md).  

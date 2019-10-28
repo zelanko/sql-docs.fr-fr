@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69766a9278b09f081bbfaaced90e45acd1cf91c5
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8708518270e3d7d6597471e855505c06f3853f1b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710985"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908565"
 ---
 # <a name="define-an-article"></a>Définir un article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "71710985"
 3.  Cliquez sur **Nouvelle publication**.  
   
 4.  Exécutez les pages de l'Assistant Nouvelle publication pour.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Spécifier un serveur de distribution si la distribution n'a pas été configurée sur le serveur. Pour plus d’informations sur la configuration de la distribution, consultez [Configurer la publication et la distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   

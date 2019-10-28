@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545084"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807443"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Télécharger et installer SQL Server Data Tools (SSDT) pour Visual Studio
 
@@ -32,12 +32,12 @@ Avec Visual Studio 2019, les fonctionnalités requises pour activer des projets 
 Si vous disposez déjà d’une licence pour Visual Studio 2019 :
 
 - Pour les projets de base de données SQL, installez la charge de travail de stockage et de traitement des données pour Visual Studio
-- Pour les projets Analysis Services, Integration Services ou Reporting Services, installez la ou les [extensions](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) appropriées à partir de la marketplace
+- Pour les projets Analysis Services, Integration Services ou Reporting Services, installez la ou les [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) appropriées à partir de la marketplace
 
 Si vous n’avez pas encore de licence pour Visual Studio 2019 :
 
 - Installez [Visual Studio Community 2019](https://visualstudio.microsoft.com/downloads/)
-- Installez la ou les [extensions](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) Analysis Services, Integration Services et Reporting Services de manière appropriée
+- Installez la ou les [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) Analysis Services, Integration Services et Reporting Services de manière appropriée
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Modifications apportées à SSDT pour Visual Studio 2017
 

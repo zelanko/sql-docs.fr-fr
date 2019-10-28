@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: d405373dbd22b66310768a727f236d7596d05809
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32a4c21e924769a5e498b9fd597be0d51fca8de7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111661"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908370"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,6 @@ Les procédures suivantes vous montrent comment créer une base de données prot
      Modifie la base de données pour activer ou désactiver le chiffrement transparent des données.  
   
 8.  Lorsque vous avez terminé, cliquez sur **OK**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlCreate"></a> Utilisation de Transact-SQL  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0e10891c4627c881f9ef8f9cb9c9ae81b61c8f17
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: c3b599ac576a71438fb13505521eff24b6c7e3fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846733"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907967"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Activer les abonnements pouvant être mis à jour pour les publications transactionnelles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,7 @@ ms.locfileid: "70846733"
   
 2.  Dans la page **Sécurité de l'Agent** , spécifiez des paramètres de sécurité pour l'Agent de lecture de file d'attente, en plus de l'Agent d'instantané et de l'Agent de lecture du journal. Pour plus d'informations sur les autorisations nécessaires pour le compte sour lequel s'exécute l'Agent de lecture de file d'attente, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
+    > **REMARQUE :** L'Agent de lecture de file d'attente est configuré même si vous n'utilisez que des abonnements mis à jour immédiatement.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Lors de la création d'une publication transactionnelle par programme à l'aide de procédures stockées de réplication, vous pouvez activer les abonnements avec mise à jour immédiate ou avec mise à jour en file d'attente.  

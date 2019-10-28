@@ -28,7 +28,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68220503"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque les analyseurs lexicaux sont inscrits pour une langue, ses autres linguistiques ressources-générateurs de formes dérivées, mots parasites (mots vides) et du dictionnaire des synonymes fichiers deviennent disponibles pour les opérations d’indexation et d’interrogation de texte intégral. La valeur de **nom** ou **lcid** peuvent être spécifiés dans les requêtes de recherche en texte intégral et les index de recherche en texte intégral [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions.  
@@ -72,7 +72,7 @@ ms.locfileid: "68220503"
 |Lituanien|1063|  
 |Malay - Malaysia|1086|  
 |Malayalam|1100|  
-|Marathe|1102|  
+|Marathi|1102|  
 |Neutre|0|  
 |Norwegian (Bokmål)|1044|  
 |**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Polonais|1045|  

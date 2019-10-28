@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6b463e8afdfa7f3f1c2054c273ed1b9074b7035b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033811"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908913"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment gérer la table **suspect_pages** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La table **suspect_pages** est conçue pour gérer les informations sur les pages suspectes et aide à déterminer si une restauration est nécessaire ou non. La table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) réside dans la [base de données msdb](../../relational-databases/databases/msdb-database.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68033811"
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Pour gérer la table suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Pour gérer la table suspect_pages  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
   
@@ -133,11 +133,9 @@ ms.locfileid: "68033811"
   
 4.  Dans la fenêtre de requête, modifiez, mettez à jour ou supprimez les lignes de votre choix.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Pour gérer la table suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Pour gérer la table suspect_pages  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

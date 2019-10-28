@@ -10,12 +10,12 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 702bc2a5dd5578bff85d7e386e2abe3a4a0a658f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050081"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903009"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configurer Always Encrypted à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,8 +52,6 @@ Import-Module "SqlServer"
 Certaines des applets de commande Always Encrypted fonctionnent avec des données ou des métadonnées dans la base de données et nécessitent que vous vous connectiez d’abord à la base de données. Il existe deux méthodes recommandées pour se connecter à une base de données lors de la configuration d’Always Encrypted à l’aide du module SqlServer : 
 1. Se connecter à l’aide de SQL Server PowerShell.
 2. Se connecter à l’aide de SQL Server Management Objects (SMO).
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-sql-server-powershell"></a>Utilisation de SQL Server PowerShell
 

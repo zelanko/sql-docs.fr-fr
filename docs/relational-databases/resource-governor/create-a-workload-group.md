@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6fa3223751de2b8b9019cd48473dc0b07d9d72d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136880"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903954"
 ---
 # <a name="create-a-workload-group"></a>Créer un groupe de charge de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ ms.locfileid: "68136880"
 6.  Cliquez ou double-cliquez sur toutes les autres cellules de la ligne dont vous souhaitez modifier les paramètres par défaut, puis entrez les nouvelles valeurs.  
   
 7.  Cliquez sur **OK**pour enregistrer les modifications.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="CreRPTSQL"></a> Créer un groupe de charge de travail avec Transact-SQL  
  **Pour créer un groupe de charge de travail à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

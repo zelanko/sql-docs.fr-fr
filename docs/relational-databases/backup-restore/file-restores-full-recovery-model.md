@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8c7c50136b05c94bacda9d400bf8afd5d8640f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138761"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908929"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurations de fichiers (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,8 +75,6 @@ ms.locfileid: "68138761"
      Vous devez restaurer les sauvegardes du journal des transactions créées après les sauvegardes de fichiers pour rendre à la base de données sa cohérence. Les sauvegardes du journal des transactions peuvent être rapidement restaurées par progression, car seuls les changements concernant les fichiers restaurés sont appliqués. La restauration de fichiers individuels est parfois une meilleure option que la restauration intégrale d'une base de données parce que les fichiers non endommagés ne sont pas copiés puis restaurés par progression. Cependant, la lecture de la séquence complète des sauvegardes de journaux reste nécessaire.  
   
 5.  Récupérez la base de données.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  Les sauvegardes de fichiers peuvent également servir à restaurer la base de données à un état antérieur dans le temps. Pour cela, vous devez restaurer un jeu complet de sauvegardes de fichiers, puis restaurer dans l'ordre les sauvegardes du journal des transactions pour atteindre un moment cible postérieur à la fin de la dernière sauvegarde de fichiers restaurée. Pour plus d’informations sur la récupération jusqu’à une date et heure, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  

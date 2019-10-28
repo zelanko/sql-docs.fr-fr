@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934117"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907079"
 ---
 # <a name="statistics"></a>Statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Plus précisément, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cr
 
 Le diagramme suivant illustre un histogramme avec six étapes : La zone située à gauche de la première valeur limite supérieure représente la première étape.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramme") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 Pour chaque étape de l’histogramme ci-dessus :
 -   La ligne en gras représente la valeur limite supérieure (*range_high_key*) et le nombre d’occurrences (*equal_rows*) correspondant.  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>Option AUTO_UPDATE_STATISTICS  
+#### <a name="auto_update_statistics-option"></a>Option AUTO_UPDATE_STATISTICS  
  Quand l’option de mise à jour automatique des statistiques [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) est activée, l’optimiseur de requête détermine si les statistiques sont obsolètes, puis les met à jour le cas échéant quand elles sont utilisées par une requête. Les statistiques deviennent obsolètes après que des opérations d'insertion, de mise à jour, de suppression ou de fusion ont modifié la distribution des données dans la table ou la vue indexée. L'optimiseur de requête détermine si les statistiques sont obsolètes en comptant le nombre de modifications de données depuis la dernière mise à jour des statistiques et en comparant le nombre de modifications à un seuil. Ce seuil est basé sur le nombre de lignes contenues dans la table ou la vue indexée.  
   
 * Jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un seuil reposant sur le pourcentage de lignes modifiées. Cette valeur est indépendante du nombre de lignes figurant dans la table. Le seuil est :
@@ -122,7 +122,7 @@ L’option AUTO_UPDATE_STATISTICS s’applique aux objets de statistiques créé
  
 Pour plus d’informations sur le contrôle de AUTO_UPDATE_STATISTICS, voir [Contrôle du comportement Autostat (AUTO_UPDATE_STATISTICS) dans SQL Server](https://support.microsoft.com/help/2754171).
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  L’option de mise à jour asynchrone des statistiques [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) détermine si l’optimiseur de requête utilise des mises à jour des statistiques synchrones ou asynchrones. Par défaut, l’option de mise à jour asynchrone des statistiques est désactivée, et l’optimiseur de requête met à jour les statistiques de façon synchrone. L’option AUTO_UPDATE_STATISTICS_ASYNC s’applique aux objets de statistiques créés pour les index, aux colonnes uniques contenues dans les prédicats de requête et aux statistiques créées à l’aide de l’instruction [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ Pour plus d’informations sur le contrôle de AUTO_UPDATE_STATISTICS, voir [Con
 1.  L'optimiseur de requête crée des statistiques pour les index de tables ou de vues lors de la création des index. Ces statistiques sont créées sur les colonnes de clés de l'index. Si l'index est un index filtré, l'optimiseur de requête crée des statistiques filtrées sur le même sous-ensemble de lignes spécifié pour l'index filtré. Pour plus d’informations sur les index filtrés, consultez [Créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md) et [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  L’optimiseur de requête crée des statistiques pour les colonnes individuelles des prédicats de requête quand l’option [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) est activée.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Pour la plupart des requêtes, ces deux méthodes de création de statistiques sont l’assurance de disposer d’un plan de requête de haute qualité. Dans certains cas, vous pouvez améliorer les plans de requête en créant des statistiques supplémentaires à l’aide de l’instruction [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Ces statistiques supplémentaires peuvent capturer des corrélations statistiques dont l'optimiseur de requête ne tient pas compte lorsqu'il crée des statistiques pour des index ou des colonnes uniques. Il se peut que votre application présente des corrélations statistiques supplémentaires dans les données de table qui, si elles sont calculées dans un objet de statistiques, peuvent permettre à l'optimiseur de requête d'améliorer les plans de requête. Par exemple, les statistiques filtrées sur un sous-ensemble de lignes de données ou les statistiques multicolonnes sur des colonnes de prédicat de requête sont susceptibles d'améliorer le plan de requête.  
   

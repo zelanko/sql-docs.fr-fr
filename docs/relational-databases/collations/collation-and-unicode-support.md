@@ -276,13 +276,13 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Bas-sorabe (Allemagne)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgeois (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
 |Macédonien (Ex-Rép. yougoslave de Macédoine)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
-|Malais (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
+|Malais (Brunéi Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malais (Malaisie)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (Inde)|0x044c|0x0439|Non disponible au niveau du serveur|
 |Maltais (Malte)|0x043a|0x043a|Latin1_General_CI_AI|
 |Maori (Nouvelle-Zélande)|0x0481|0x0481|Latin1_General_CI_AI|
 |Mapuche (Chili)|0x047a|0x047a|Latin1_General_CI_AI|
-|Marathe (Inde)|0x044e|0x0439|Non disponible au niveau du serveur|
+|Marathi (Inde)|0x044e|0x0439|Non disponible au niveau du serveur|
 |Mohawk (Canada)|0x047c|0x047c|Latin1_General_CI_AI|
 |Mongol (Mongolie)|0x0450|0x0419|Cyrillic_General_CI_AS|
 |Mongol (République populaire de Chine)|0x0850|0x0419|Cyrillic_General_CI_AS|
@@ -319,7 +319,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Serbe (latin, Serbie)|0x081a|0x081a|Latin1_General_CI_AI|
 |Sesotho sa Leboa/Sotho du Nord (Afrique du Sud)|0x046c|0x0409|Latin1_General_CI_AS|
 |Setswana/Tswana (Afrique du Sud)|0x0432|0x0409|Latin1_General_CI_AS|
-|Cinghalais (Sri Lanka)|0x045b|0x0439|Non disponible au niveau du serveur|
+|Cingalais (Sri Lanka)|0x045b|0x0439|Non disponible au niveau du serveur|
 |Slovaque (Slovaquie)|0x041b|0x041b|Slovak_CI_AS|
 |Slovène (Slovénie)|0x0424|0x0424|Slovenian_CI_AS|
 |Espagnol (Argentine)|0x2c0a|0x0c0a|Modern_Spanish_CI_AS|

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc4d75a6af4441d2030a71306801449ee74a6a02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579978"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359405"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
   Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier les rapports sur un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server qui peut inclure plusieurs rapports et sources de données. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*à la place du terme *publier*. Les deux termes sont interchangeables.  

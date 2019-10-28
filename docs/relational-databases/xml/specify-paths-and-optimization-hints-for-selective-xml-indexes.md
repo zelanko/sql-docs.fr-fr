@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cab94f3f628f1b3423af25467c12ba7b595ede77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021073"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905234"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -235,8 +235,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Le nœud `b`, car un prédicat est appliqué sur le nœud`b` dans l'expression XQuery.  
   
 2.  **Principe 2** : pour obtenir de meilleures performances, indexez tous les nœuds nécessaires pour évaluer une expression XQuery donnée. Si vous indexez uniquement certains nœuds, l'index XML sélectif améliore l'évaluation des sous-expressions qui incluent uniquement les nœuds indexés.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Pour améliorer les performances de l'instruction SELECT ci-dessus, créez l'index XML sélectif suivant :  
   

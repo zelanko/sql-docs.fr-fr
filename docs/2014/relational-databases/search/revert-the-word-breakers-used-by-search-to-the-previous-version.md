@@ -74,7 +74,7 @@ ms.locfileid: "70874722"
 |Lituanien|lth|1063|  
 |Letton|lvi|1062|  
 |Malayalam|mal|1100|  
-|Marathe|mar|1102|  
+|Marathi|mar|1102|  
 |Malais|msl|1086|  
 |Neutre|Neutre|0000|  
 |Norvégien (bokmål)|nor|1044|  

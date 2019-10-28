@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 207f8816df5cc64240d91d389f7a662688123fc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1848be82d5ed1ddfbefd693303104ac4688eb59
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140772"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909667"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,6 @@ ms.locfileid: "68140772"
     -   Cliquez avec le bouton droit sur **Collecte de données**, puis cliquez sur **Propriétés**. Sous l'onglet **Général** , spécifiez l'entrepôt de données de gestion existant et le serveur sur lequel il est installé.  
   
 6.  Répétez l'étape 5 jusqu'à ce que toutes les instances de base de données qui utilisent le collecteur de données soient configurées pour télécharger les données vers l'entrepôt de données de gestion partagé.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ####  <a name="Wizard"></a> Assistant Configuration de l'entrepôt de données de gestion  
  **Page d'accueil**  

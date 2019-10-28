@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e00c22ed3b7728d906ab2a143ca30f2eec8c7ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016279"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909873"
 ---
 # <a name="specify-default-values-for-columns"></a>Spécifier des valeurs par défaut pour les colonnes
 
@@ -65,8 +65,6 @@ Vous pouvez utiliser l’Explorateur d’objets pour spécifier une valeur par d
    > Pour entrer une valeur par défaut numérique, entrez le nombre. Pour un objet ou une fonction, entrez son nom. Pour une valeur par défaut alphanumérique, entrez la valeur dans des guillemets simples.
 
 4. Dans le menu **Fichier**, cliquez sur **Enregistrer** _nom de la table_.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="TsqlProcedure"></a> Utiliser Transact-SQL pour spécifier une valeur par défaut
 

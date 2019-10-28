@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c840140008f56e492271d5792031e4e56233673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048760"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909206"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68048760"
 1.  Il doit contenir au moins une instance **CircularString** ou **LineString** .  
   
 2.  La séquence d’instances **CircularString** ou **LineString** doit être continue.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Si un **CompoundCurve** contient une séquence de plusieurs instances **CircularString** et **LineString** , le point de terminaison de fin de chaque instance, à l’exception de la dernière, doit correspondre au point de terminaison de début de l’instance suivante dans la séquence. Cela signifie que si le point de fin d'une instance précédente dans la séquence est (4 3 7 2), le point de départ de l'instance suivante dans la séquence doit être (4 3 7 2). Notez que les valeurs Z (élévation) et M (mesure) du point doivent également être identiques. Si les deux points présentent une différence, une `System.FormatException` est levée. Les points d’un **CircularString** n’ont pas besoin d’une valeur Z ou M. Si aucune valeur Z ou M n'est indiquée pour le point de fin de l'instance précédente, le point de départ de l'instance suivante ne peut pas inclure de valeur Z ou M. Si le point de fin de la séquence précédente est (4 3), le point de départ de la séquence suivante doit être (4 3), mais pas (4 3 7 2). Tous les points d’une instance **CompoundCurve** doivent soit ne pas avoir de valeur Z, soit avoir une valeur Z identique.  
   

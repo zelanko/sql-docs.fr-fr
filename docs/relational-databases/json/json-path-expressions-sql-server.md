@@ -13,12 +13,12 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b06468560c612801efbf75a7717399659ec71eab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bca9bcff4a622964d6f6e05fb46b458a1cd78ddf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005467"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909917"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressions de chemin JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "68005467"
 1.  Le [mode PATH](#PATHMODE) facultatif, avec la valeur **lax** ou **strict**.  
   
 2.  Le [chemin](#PATH) lui-même.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="PATHMODE"></a> Path mode  
  Au début de l’expression de chemin, vous pouvez éventuellement déclarer le mode PATH en spécifiant le mot clé **lax** ou **strict**. La valeur par défaut est **lax**.  

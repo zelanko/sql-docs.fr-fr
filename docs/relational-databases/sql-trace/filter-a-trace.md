@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072900"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909483"
 ---
 # <a name="filter-a-trace"></a>Filtrer une trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072900"
 2.  Identifiez les données et les colonnes des données qui contiennent les informations dont vous avez besoin.  
   
 3.  Identifiez un sous-ensemble des données dont vous avez besoin et définissez des filtres en fonction de ce sous-ensemble.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Par exemple, vous pouvez être intéressé uniquement par les événements qui durent plus longtemps qu'une certaine période de temps. Vous pouvez créer une trace qui inclut les événements pour lesquels les données de la colonne **Durée** sont supérieures à 300 millisecondes. Votre trace n'inclura pas les événements qui se terminent en moins de 300 millisecondes.  
   

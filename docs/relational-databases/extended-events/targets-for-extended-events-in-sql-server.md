@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12fea405001214a3f380c204b27c9932b9e59470
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009363"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908001"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 
@@ -73,7 +73,7 @@ Vous pouvez voir les paramètres, les champs et actions utilisées dans le conte
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## <a name="etwclassicsynctarget-target"></a>Cible etw_classic_sync_target
+## <a name="etw_classic_sync_target-target"></a>Cible etw_classic_sync_target
 
 
 Les événements SQL Server peuvent interagir avec le suivi d’événements pour Windows (ETW) pour surveiller l’activité système. Pour plus d'informations, consultez :
@@ -91,7 +91,7 @@ Cette cible ETW traite de manière *synchrone* les données qu’elle reçoit, t
 
 <a name="h2_target_event_counter"></a>
 
-## <a name="eventcounter-target"></a>Cible event_counter
+## <a name="event_counter-target"></a>Cible event_counter
 
 
 La cible event_counter compte simplement le nombre de fois où chaque événement spécifié se produit.
@@ -107,7 +107,7 @@ Contrairement à la plupart des autres cibles :
     - Le moteur de base de données se déconnecte de toutes les cibles trop lentes, qui risquent, par conséquent de ralentir ses performances. C’est une des raisons pour lesquelles la plupart des cibles procèdent de manière *asynchrone*.
 
 
-#### <a name="example-output-captured-by-eventcounter"></a>Exemple de sortie capturée par event_counter
+#### <a name="example-output-captured-by-event_counter"></a>Exemple de sortie capturée par event_counter
 
 
 ```
@@ -139,7 +139,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## <a name="eventfile-target"></a>Cible event_file
+## <a name="event_file-target"></a>Cible event_file
 
 
 La cible **event_file** écrit la sortie de session d’événements à partir de la mémoire tampon sur un fichier de disque :
@@ -161,7 +161,7 @@ La cible **event_file** écrit la sortie de session d’événements à partir d
 ::: moniker-end
 
 
-#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION avec cible **event_file**
+#### <a name="create-event-session-with-event_file-target"></a>CREATE EVENT SESSION avec cible **event_file**
 
 
 Ensuite, vient l’instruction CREATE EVENT SESSION utilisée pour le test. L’une des clauses ADD TARGET spécifie une cible event_file.
@@ -213,7 +213,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file (fonction)
+#### <a name="sysfn_xe_file_target_read_file-function"></a>sys.fn_xe_file_target_read_file (fonction)
 
 
 La cible event_file stocke les données reçues dans un format binaire qui n’est pas lisible. Transact-SQL peut signaler le contenu du fichier .xel en le sélectionnant à partir de la fonction [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) .
@@ -249,7 +249,7 @@ SELECT f.*
 Bien sûr, vous pouvez utiliser également manuellement l’interface utilisateur SSMS pour voir les données .xel :
 
 
-#### <a name="data-stored-in-the-eventfile-target"></a>Données stockées dans la cible event_file
+#### <a name="data-stored-in-the-event_file-target"></a>Données stockées dans la cible event_file
 
 
 Ensuite vient le rapport issu de la sélection de **sys.fn_xe_file_target_read_file**, dans SQL Server 2016.
@@ -412,7 +412,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## <a name="pairmatching-target"></a>Cible pair_matching
+## <a name="pair_matching-target"></a>Cible pair_matching
 
 
 La cible pair_matching vous permet de détecter les événements de début qui se produisent sans événement de fin correspondant. Par exemple, cela peut poser problème lorsqu’un événement lock_acquired se produit, mais qu’aucun événement lock_released correspondant ne suit en temps voulu.
@@ -450,7 +450,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### <a name="example-of-pairmatching"></a>Exemple de pair_matching
+### <a name="example-of-pair_matching"></a>Exemple de pair_matching
 
 
 L’instruction CREATE EVENT SESSION suivante spécifie deux événements et deux cibles. La cible pair_matching spécifie deux ensembles de champs afin de faire correspondre les événements par paires. La séquence de champs délimités par des virgules affectées à **begin_matching_columns =** et **end_matching_columns =** doit être identique. Aucune tabulation ou saut de ligne n’est autorisé entre les champs mentionnés dans la valeur délimitée par une virgule, bien que les espaces soient autorisés.
@@ -520,8 +520,6 @@ Pour tester la session d’événements, nous avons empêché volontairement le 
 3. N’émettez volontairement aucune instruction COMMIT TRANSACTION tant que nous n’avons pas examiné les cibles.
 4. Ultérieurement une fois le test, nous avons émis une instruction COMMIT TRANSACTION.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 La cible **event_counter** simple a donné les lignes de sortie suivantes. Étant donné que 52-50=2, la sortie nous indique que nous devrions voir 2 événements lock_acquired non jumelés lorsque nous examinons la sortie à partir de la cible pair-matching.
 
 
@@ -549,7 +547,7 @@ Les lignes des événements lock_acquired non appariés pourraient inclure le te
 
 <a name="h2_target_ring_buffer"></a>
 
-## <a name="ringbuffer-target"></a>Cible ring_buffer
+## <a name="ring_buffer-target"></a>Cible ring_buffer
 
 
 La cible ring_buffer est pratique pour le test d’événements simple et rapide. Lorsque vous arrêtez la session d’événements, la sortie stockée est ignorée.
@@ -557,7 +555,7 @@ La cible ring_buffer est pratique pour le test d’événements simple et rapide
 Dans cette section ring_buffer nous montrons également comment vous pouvez utiliser l’implémentation Transact-SQL de XQuery pour copier le contenu XML de la cible ring_buffer dans un ensemble de lignes relationnel plus lisible.
 
 
-#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION avec ring_buffer
+#### <a name="create-event-session-with-ring_buffer"></a>CREATE EVENT SESSION avec ring_buffer
 
 
 Aucune information particulière n’est à mentionner au sujet de cette instruction CREATE EVENT SESSION, qui utilise la cible ring_buffer.
@@ -591,7 +589,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>Sortie XML reçue pour lock_acquired par ring_buffer
+### <a name="xml-output-received-for-lock_acquired-by-ring_buffer"></a>Sortie XML reçue pour lock_acquired par ring_buffer
 
 
 Le contenu extrait par une instruction SELECT est au format d’une chaîne XML. La chaîne XML stockée par la cible ring_buffer dans nos tests, est présentée ci-après. Toutefois, pour limiter l’affichage XML suivant, tous les éléments d’&#x3c ;événement &#x3e ;, à l’exception de deux éléments ont été supprimés. En outre, au sein de chaque élément &#x3c;event&#x3e;, quelques éléments &#x3c;data&#x3e; superflus ont été supprimés.

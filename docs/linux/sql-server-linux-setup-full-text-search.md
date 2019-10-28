@@ -120,7 +120,7 @@ La recherche en texte intégral utilise des [séparateurs de mots](../relational
 | Lituanien | 1063 |
 | Malay - Malaysia | 1086 |
 | Malayalam | 1100 |
-| Marathe | 1102 |
+| Marathi | 1102 |
 | Polonais | 1045 |
 | Portugais | 2070 |
 | Pendjabi | 1094 |
@@ -146,7 +146,7 @@ La recherche en texte intégral utilise des [séparateurs de mots](../relational
 
 La recherche en texte intégral fonctionne également avec du texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est requis pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [Configurer et gérer les filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Vous pouvez consulter une liste des filtres installés en appelant **sp_help_fulltext_system_components ’Filter'**. Pour SQL Server, les filtres suivants sont installés :
+Vous pouvez consulter une liste des filtres installés en appelant **sp_help_fulltext_system_components ’Filter'** . Pour SQL Server, les filtres suivants sont installés :
 
 | Nom du composant | ID de classe | Options de version |
 |---|---|---|

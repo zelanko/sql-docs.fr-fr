@@ -15,12 +15,12 @@ ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f98435c4c8813d6cf5f9b9d3f451b9be0bb8f284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb42d6630d5dd4632a9674c2b783aa2059f80cda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129533"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905800"
 ---
 # <a name="view-foreign-key-properties"></a>Afficher les propriétés de clés étrangères
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -53,8 +53,6 @@ ms.locfileid: "68129533"
 1.  Ouvrez le Concepteur de tables pour la table contenant la clé étrangère que vous souhaitez afficher, cliquez avec le bouton droit dans le Concepteur de tables puis, dans le menu contextuel, choisissez **Relations** .  
   
 2.  Dans la boîte de dialogue **Relations de clé étrangère** , sélectionnez la relation possédant les propriétés à afficher.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Si les colonnes clés étrangères sont en relation avec une clé primaire, les colonnes clés primaires sont identifiées dans le **Concepteur de tables** par un symbole de clé primaire dans le sélecteur de ligne.  
   

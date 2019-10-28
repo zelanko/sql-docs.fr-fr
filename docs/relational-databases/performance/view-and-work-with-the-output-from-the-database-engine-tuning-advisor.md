@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811359"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907038"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811359"
 5.  Désactivez la case à cocher **Afficher les objets existants** située au bas de la page à onglets **Recommandations** . La grille n'affiche alors que les objets de base de données mentionnés dans la recommandation. Utilisez la barre de défilement inférieure pour visualiser la colonne située à l’extrême droite de la grille des recommandations, puis cliquez sur un élément de la colonne **Définition** pour visualiser ou copier le script [!INCLUDE[tsql](../../includes/tsql-md.md)] générateur de cet objet dans votre base de données.  
   
 6.  Si vous souhaitez enregistrer dans un fichier de script l'ensemble des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui créent ou suppriment les objets de base de données mentionnés dans cette recommandation, cliquez sur **Enregistrer les recommandations** dans le menu **Actions** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Pour afficher le résumé et les rapports de paramétrage dans l'interface graphique de l'Assistant Paramétrage du moteur de base de données  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a77c321f5ba63e7c6db3d1aac47b6ad4b0c2027a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020030"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907186"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68020030"
 3.  Installez le logiciel client Oracle et le fournisseur OLE DB Oracle sur le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puis arrêtez et redémarrez l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si le serveur de distribution s’exécute sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB Oracle.  
   
 4.  Configurez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les scénarios divers suivants pour la réplication transactionnelle et d'instantané :  
   

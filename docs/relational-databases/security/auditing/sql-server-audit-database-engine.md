@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878686"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903846"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,8 +109,6 @@ ms.locfileid: "70878686"
 3.  Activez l'audit.  
   
 4.  Lisez les événements d’audit à l’aide de l’ **Observateur d’événements**Windows, de la **Visionneuse du fichier journal**ou de la fonction fn_get_audit_file.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   

@@ -11,12 +11,12 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75cf54d5e52b708bf50d45ddefa7beaf1f3a8fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97bac2561b7d022b2e5028d8f18410b206931b6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086272"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907459"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,9 +36,7 @@ ms.locfileid: "68086272"
   
 4.  Pour ajouter un fichier (conteneur) au groupe de fichiers, cliquez sur la page **Général** . Sous **Fichiers de la base de données**, cliquez sur **Ajouter**. Sélectionnez **Type de fichier** comme **Données FILESTREAM**, spécifiez le nom logique du conteneur, sélectionnez le groupe de fichiers optimisé en mémoire, puis assurez-vous que l’option **Croissance automatique/Taille maximale** est définie sur **Illimité**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
+     Pour plus d’informations sur la création d’une base de données à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [Créer une base de données](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>Pour créer une table optimisée en mémoire  
   

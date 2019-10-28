@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: a803d848d12965f7e0c0b167bf3a2f20a235ecdc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846752"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907390"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Créer un instantané d'une publication de fusion avec des filtres paramétrés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications d
 1.  créer une publication de fusion à l'aide de l'Assistant Nouvelle publication et spécifier un ou plusieurs filtres de lignes paramétrables dans la page **Ajouter un filtre** de l'Assistant. Pour plus d'informations, voir [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Générez un instantané du schéma pour la publication. Par défaut, un instantané du schéma est généré lorsque vous terminez l'Assistant Nouvelle publication ; vous pouvez également générer un instantané du schéma à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-generate-a-schema-snapshot"></a>Pour générer un instantané du schéma  
   

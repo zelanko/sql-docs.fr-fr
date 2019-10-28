@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a44e97d97a98b1b3f10c77ca632a67437ca48ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127233"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909511"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,8 +117,6 @@ ms.locfileid: "68127233"
 5.  Démarrez la base de données.  
   
 6.  En option, sauvegardez la base de données restaurée, notamment si elle utilise le mode de récupération complète (ou utilisant les journaux de transactions). Pour sauvegarder une base de données, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cette section présente les exemples suivants de rétablissement d'une base de données à un état antérieur par le biais d'un instantané de base de données :  

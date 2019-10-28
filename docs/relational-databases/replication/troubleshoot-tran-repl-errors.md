@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769350"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907291"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Outil de résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ Ce processus crée la publication et la place dans l’état *En cours de synchr
 1. Des transactions se produisent sur des objets qui sont répliqués et sont marqués « pour réplication » dans le journal des transactions. 
 2. L’Agent de lecture du journal parcourt le journal des transactions et recherche les transactions marquées « pour réplication ». Ces transactions sont alors enregistrées dans la base de données de distribution. 
 3. L’Agent de distribution parcourt la base de données de distribution en utilisant le thread de lecture. Ensuite, en utilisant le thread d’écriture, cet agent se connecte à l’abonné pour lui appliquer ces modifications.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Des erreurs peuvent se produire à chaque étape de ce processus. La recherche de ces erreurs peut être l’aspect le plus complexe de la résolution des problèmes de synchronisation. Heureusement, l’utilisation du moniteur de réplication facilite ce processus. 
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb169478337e160c63ccd538c2d2f8120de8311f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125028"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903939"
 ---
 # <a name="delete-a-resource-pool"></a>Supprimer un pool de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,10 +46,8 @@ ms.locfileid: "68125028"
   
 3.  Dans la fenêtre **Supprimer un objet** , le pool de ressources est répertorié dans la liste **Objet à supprimer** . Pour supprimer le pool de ressources, cliquez sur **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
+    >  Si le pool de ressources que vous cherchez à supprimer contient un groupe de charge de travail, l'action échoue.  
   
 ##  <a name="DelRPTSQL"></a> Supprimer un pool de ressources à l'aide de Transact-SQL  
  **Pour supprimer un pool de ressources à l'aide de Transact-SQL**  

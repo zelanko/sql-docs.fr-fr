@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4fafacc6dc11415ed691fdf64b494daebc8cc64
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176345"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904181"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,8 +40,6 @@ ms.locfileid: "70176345"
 1.  L’exportation génère une définition de la DAC dans le fichier d’exportation (fichier BACPAC), de la même manière que l’extraction d’une DAC génère une définition de la DAC dans un fichier de package DAC. La définition de la DAC exportée inclut tous les objets de la base de données active. Si le processus d'exportation est exécuté sur une base de données à l'origine déployée à partir de la DAC et si des modifications ont été apportées directement à la base de données après le déploiement, la définition exportée correspond au jeu d'objets dans la base de données, pas à ce qui a été défini dans la DAC d'origine.  
   
 2.  L'exportation copie en bloc les données de toutes les tables dans la base de données et les incorpore dans le fichier d'exportation.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Le processus d'exportation définit la version de la DAC sur 1.0.0.0 et la description de la DAC dans le fichier d'exportation sur une chaîne vide. Si la base de données a été déployée à partir de la DAC, la définition de la DAC dans le fichier d'exportation contient le nom donné à la DAC d'origine, sinon le nom de la DAC est défini sur le nom de la base de données.  
   

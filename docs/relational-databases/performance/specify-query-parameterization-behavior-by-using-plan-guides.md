@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e3722a6860fea48f32fd2528435b9929cc3bd689
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7a6cbd0829105c03dbb453de52d84455faeaef99
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278224"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907451"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 
     > [!IMPORTANT]  
     >  Dans le cadre du paramétrage d'une requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte un type de données aux paramètres remplaçant les valeurs littérales, en fonction de la valeur et de la taille du littéral. Ce même procédé est utilisé sur la valeur des littéraux constants transmis au paramètre de sortie **\@stmt** de **sp_get_query_template**. Comme le type de données précisé dans l’argument **\@params** de **sp_create_plan_guide** doit correspondre à celui de la requête tel qu’il est paramétré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il se peut que vous soyez amené à créer plusieurs repères de plan afin de couvrir l’ensemble des valeurs de paramètres possibles relatives à la requête.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Le script suivant peut être utilisé aussi bien pour obtenir la requête paramétrable que pour créer plus tard un repère de plan s'y rapportant :  
   

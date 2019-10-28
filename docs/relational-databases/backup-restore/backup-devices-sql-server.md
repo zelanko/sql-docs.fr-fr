@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152133"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909174"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,8 +208,6 @@ GO
 1.  La suppression de l'unité de sauvegarde logique d'origine.  
   
 2.  La définition d'une nouvelle unité de sauvegarde logique qui utilise le nom d'origine de l'unité mais mappe à une unité de sauvegarde physique différente. Les unités de sauvegarde logiques s'avèrent particulièrement utiles pour l'identification des unités de sauvegarde sur bande.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="MirroredMediaSets"></a> Jeux de supports de sauvegarde en miroir  
  La mise en miroir des jeux de supports de sauvegarde permet de réduire l'impact des dysfonctionnements des unités de sauvegarde. Ces dysfonctionnements représentent une menace particulièrement sérieuse car une sauvegarde constitue la dernière protection possible contre une perte de données. À mesure que la taille des bases de données augmente, le risque de perte irrécupérable d'une sauvegarde suite à la défaillance d'une unité ou d'un support de sauvegarde se fait plus présent. La mise en miroir des supports de sauvegarde accroît la fiabilité des sauvegardes en permettant la redondance de l'unité de sauvegarde physique. Pour plus d'informations, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  

@@ -1,0 +1,54 @@
+---
+title: Sécurité de SQL Server
+description: Fournit une vue d’ensemble de la sécurité de SQL Server et des scénarios d’application pour créer des applications ADO.NET sécurisées qui ciblent SQL Server.
+ms.date: 09/26/2019
+ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: v-kaywon
+ms.author: v-kaywon
+ms.reviewer: rothja
+ms.openlocfilehash: bb9e02743122958cb567e01f5011fc9f8b3481e6
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.translationtype: MTE75
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452008"
+---
+# <a name="sql-server-security"></a>Sécurité de SQL Server
+
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+SQL Server dispose de nombreuses fonctionnalités qui prennent en charge la création d’applications de base de données sécurisées.  
+  
+Les principaux éléments à prendre en compte au niveau de la sécurité, tels que le vol ou l’altération de données, concernent toutes les versions de SQL Server. L’intégrité des données doit également être considérée comme un problème de sécurité. Si les données ne sont pas protégées, il est possible qu’elles deviennent inutilisables si la manipulation de données ad hoc est autorisée et si les données sont modifiées par inadvertance ou par malveillance avec des valeurs incorrectes ou supprimées entièrement. En outre, il existe souvent des exigences légales qui doivent être respectées, telles que le stockage correct des informations confidentielles. Le stockage de certains types de données personnelles est entièrement inscrit, en fonction des lois qui s’appliquent dans une juridiction donnée.  
+  
+Chaque version de SQL Server présente des fonctionnalités de sécurité différentes, comme chaque version de Windows, les versions les plus récentes apportant des améliorations par rapport aux plus anciennes. Il est important de comprendre que les fonctionnalités de sécurité seules ne peuvent pas garantir une application de base de données sécurisée. Chaque application de base de données est unique dans ses exigences, son environnement d’exécution, son modèle de déploiement, son emplacement physique et le remplissage des utilisateurs. Certaines applications locales dans l’étendue peuvent uniquement nécessiter une sécurité minimale, tandis que d’autres applications locales ou des applications déployées sur Internet peuvent nécessiter des mesures de sécurité strictes, ainsi qu’une surveillance et une évaluation continues.  
+  
+Les exigences de sécurité d’une application de base de données SQL Server doivent être examinées au moment de la conception, et non pas à une étape ultérieure. L’évaluation des menaces au début du cycle de développement vous donne la possibilité d’atténuer les dommages potentiels lorsqu’une vulnérabilité est détectée.  
+  
+Même si la conception initiale d’une application est saine, de nouvelles menaces peuvent émerger au fur et à mesure que le système évolue. En créant plusieurs lignes de défense autour de votre base de données, vous pouvez réduire les dommages infligés par une violation de la sécurité. Votre première ligne de défense consiste à réduire la surface d’attaque en n’accordant jamais plus d’autorisations que ce qui est absolument nécessaire.  
+  
+Les rubriques de cette section décrivent brièvement les fonctionnalités de sécurité de SQL Server qui concernent les développeurs, et fournissent des liens vers des rubriques pertinentes dans la Documentation en ligne de SQL Server et d’autres ressources qui fournissent des explications plus détaillées.  
+  
+## <a name="in-this-section"></a>Contenu de cette section  
+[Authentification dans SQL Server](authentication-sql-server.md)  
+Décrit les connexions et l’authentification dans SQL Server et fournit des liens vers des ressources supplémentaires. 
+  
+[Scénarios de sécurité des applications dans SQL Server](application-security-scenarios-sql-server.md)  
+Contient des rubriques présentant différents scénarios de sécurité pour les applications ADO.NET et SQL Server.  
+  
+[Sécurité de SQL Server Express](sql-server-express-security.md)  
+Décrit les considérations sur la sécurité de SQL Server Express.  
+  
+## <a name="related-sections"></a>Sections connexes  
+[Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+Décrit les considérations de sécurité pour SQL Server et Azure SQL Database.
+
+[Considérations sur la sécurité pour une installation SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+Décrit les problèmes de sécurité à prendre en compte avant d’installer SQL Server.
+
+## <a name="next-steps"></a>Étapes suivantes
+- [SQL Server et ADO.NET](index.md)

@@ -14,12 +14,12 @@ ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f7d5fa8c7398f57cfc5272109b9efc0f24077cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75046ec1915de92a1319b273bd2cce8e718aac1b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085749"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909776"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copier des colonnes d'une table vers une autre (Moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68085749"
 4.  Cliquez sur l'onglet de la table dans laquelle vous souhaitez copier les colonnes.  
   
 5.  Sélectionnez la colonne qui doit suivre les colonnes insérées, puis cliquez sur **Coller** dans le menu **Edition**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-copy-data-from-one-table-to-another"></a>Pour copier des données d'une table vers une autre  
   

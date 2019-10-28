@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173658"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907060"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,6 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
     ```  
   
 2.  Dans l’Explorateur d’objets, cliquez sur **Bases de données**, puis appuyez sur la touche F5 pour actualiser la liste de bases de données.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Créer la condition Tables de finance 
 

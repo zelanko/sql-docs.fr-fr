@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 95a1761334328ed01c54ea03ff282cbec0bb6903
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14327b3d8b06355445ae92edaa65464124faff8a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089817"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908950"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Activer ou désactiver des sommes de contrôle de sauvegarde au cours d'opérations de sauvegarde ou de restauration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68089817"
 1.  Suivez les étapes pour [créer une sauvegarde de base de données](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  Sur la page **Options** , dans la section **Fiabilité** , cliquez sur **Effectuer une somme de contrôle avant d'écrire sur le support**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

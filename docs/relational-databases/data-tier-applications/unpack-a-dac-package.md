@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 159369a30ffe4f0b67f59f3970c241d9275f7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134673"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909526"
 ---
 # <a name="unpack-a-dac-package"></a>Décompresser un package DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68134673"
 1.  **Avant de commencer :**  [Sécurité](#Security)  
   
 2.  **Pour décompresser une DAC, à l’aide de la**  [boîte de dialogue Décompresser une application de la couche Données](#UnpackDACDial), [Examen du contenu d’un package DAC](#ExamDACPack)  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="Security"></a> Sécurité  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser une DAC provenant d'une source inconnue ou non approuvée, déployez-la sur une instance de test isolée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], décompressez la DAC et examinez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur.  

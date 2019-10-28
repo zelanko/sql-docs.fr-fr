@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b9f63c9fed9be5a88c68c88938b77483a077df1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081360"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908977"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurer les options avancées pour la sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68081360"
   
 ## <a name="configure-encryption"></a>Configurer le chiffrement  
  Les étapes suivantes expliquent comment spécifier les paramètres de chiffrement à l’aide de la procédure stockée [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  **Définir l'algorithme de chiffrement :** Commencez par définir le nom de l'algorithme de chiffrement à utiliser. Sélectionnez l'une des algorithmes suivants.  
   

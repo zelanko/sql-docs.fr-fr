@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24c587168f9778601e672141775f822b1b0362fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41ad2257f18b73794fa788cefdd3e77e602e11b7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055485"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909625"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Afficher les journaux de jeu d'éléments de collecte (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +32,6 @@ ms.locfileid: "68055485"
      La **Visionneuse du fichier journal**s’ouvre. Tous les fichiers journaux de chaque jeu d’éléments de collecte sont répertoriés et présélectionnés sous le nœud **Collecte de données** de la visionneuse.  
   
 3.  Pour consulter des journaux de jeux d'éléments de collecte spécifiques, désactivez la case à cocher située en regard de chaque jeu d'éléments de collecte dont vous ne souhaitez pas afficher le journal. Les informations de journal de ce jeu d’éléments de collecte sont supprimées du volet d’informations de la **Visionneuse du fichier journal** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-view-a-specific-collection-set-log-file"></a>Pour afficher le fichier journal d'un jeu d'éléments de collecte spécifique  
   

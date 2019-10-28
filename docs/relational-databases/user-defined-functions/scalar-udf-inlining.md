@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72518001"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909322"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -134,8 +134,6 @@ Comme mentionné précédemment, le plan de requête n’a plus d’opérateur d
 1. SQL Server a déduit la jointure implicite entre `CUSTOMER` et `ORDERS`, et l’a rendue explicite via un opérateur de jointure.
 2. SQL Server a également déduit le `GROUP BY O_CUSTKEY on ORDERS` implicite et a utilisé IndexSpool + StreamAggregate pour l’implémenter.
 3. SQL Server utilise désormais le parallélisme entre tous les opérateurs.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Selon la complexité de la logique dans la fonction UDF, le plan de requête obtenu peut également grandir et se complexifier. Comme nous pouvons le constater, les opérations au sein de la fonction UDF ne sont plus une boîte noire et, par conséquent, l’optimiseur de requête est en mesure d’évaluer le coût de ces opérations et de les optimiser. En outre, comme la fonction UDF n’est plus dans le plan, l’appel itératif de la fonction UDF est remplacé par un plan qui permet d’éviter toute surcharge d’appel de fonction.
 

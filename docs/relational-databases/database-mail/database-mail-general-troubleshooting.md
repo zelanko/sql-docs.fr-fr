@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 304306edc78229899b0660b99df6f6b78b60e6ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228423"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906077"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Étapes de résolution des problèmes généraux liés à Database Mail 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir dépanner to
     ```
 
 1. Pour rétablir la procédure sp_configure à son état par défaut, qui ne présente pas d’options avancées, exécutez le code suivant :
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

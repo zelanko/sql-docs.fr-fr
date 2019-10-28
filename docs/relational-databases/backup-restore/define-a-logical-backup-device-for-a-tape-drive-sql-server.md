@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65cb5e39b8bda5d0f964a1586588c5f6e60bb89c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f260ee4737f1d493986e5cfa8e308d8882328140
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075921"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908958"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Définir une unité de sauvegarde logique pour un lecteur de bande (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,6 @@ ms.locfileid: "68075921"
 5.  Pour la destination, cliquez sur **Bande** puis sélectionnez un lecteur de bande qui n'est pas déjà associé à une autre unité de sauvegarde. Si aucun lecteur de bande de ce type n'est disponible, l'option **Bande** est inactive.  
   
 6.  Pour définir la nouvelle unité, cliquez sur **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Pour procéder à une sauvegarde sur cette nouvelle unité, ajoutez-la au champ **Sauvegarde sur** dans la boîte de dialogue **Sauvegarder la base de données** (**Général**). Pour plus d’informations, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   

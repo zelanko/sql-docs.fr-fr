@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e8e11ec0256805d8bbe4ac37234660a9ea1a050
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c468376a67b955c467177161e3ea4bd932bb25a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132207"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907028"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>Afficher une trace enregistrée (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,7 @@ ms.locfileid: "68132207"
   
 1.  Exécutez **fn_trace_getinfo** en spécifiant l’identificateur de la trace sur laquelle vous souhaitez des informations. Cette fonction retourne un tableau qui présente la trace, ses propriétés et des informations sur celle-ci.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Invoke the function this way:  
+     Appelez la fonction comme suit :  
   
     ```  
     SELECT *  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b39b4391780a8133dae199e39638a6db77d73aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64427c005dca0e7a69dcc73b953260429b325332
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083902"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908536"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -231,50 +231,48 @@ ms.locfileid: "68083902"
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
+     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal -** _nom\_serveur_.  
   
-     **Load Log**  
-     Open a dialog box where you can specify a log file to load.  
+     **Charger le journal**  
+     Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
   
-     **Export**  
-     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
+     **Exporter**  
+     Ouvre une boîte de dialogue qui vous permet d’exporter les informations figurant dans la grille **Résumé du fichier journal** vers un fichier texte.  
   
-     **Refresh**  
-     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
+     **Actualiser**  
+     Actualise l'affichage des journaux sélectionnés. Le bouton **Actualiser** permet de relire les journaux sélectionnés à partir du serveur cible lors de l'application des paramètres de filtre.  
   
-     **Filter**  
-     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
+     **Filtre**  
+     Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date**et d’autres critères de filtre **Général** .  
   
-     **Search**  
-     Search the log file for specific text. Searching with wildcard characters is not supported.  
+     **Recherche**  
+     Permet de rechercher un texte spécifique dans le fichier journal. La recherche des caractères génériques n'est pas prise en charge.  
   
-     **Stop**  
-     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
+     **Arrêter**  
+     Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
-     **Log file summary**  
-     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
+     **Résumé du fichier journal**  
+     Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
   
      **Date**  
-     Displays the date of the event.  
+     Affiche la date de l'événement.  
   
      **Source**  
-     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
+     Affiche la fonctionnalité source à partir de laquelle l'événement est créé, par exemple le nom du service (comme MSSQLSERVER). Ceci n'apparaît pas pour tous les types de journaux.  
   
      **Message**  
-     Displays any messages associated with the event.  
+     Affiche les messages associés à l'événement.  
   
-     **Log Type**  
-     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
+     **Type de journal**  
+     Affiche le type de journal auquel appartient l'événement. Tous les journaux sélectionnés s'affichent dans la fenêtre de résumé du fichier journal.  
   
-     **Log Source**  
-     Displays a description of the source log in which the event is captured.  
+     **Source du journal**  
+     Affiche une description du journal source dans lequel l'événement est capturé.  
   
-     **Selected row details**  
-     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
+     **Détails de la ligne sélectionnée**  
+     Sélectionnez une ligne pour afficher des détails supplémentaires sur la ligne d'événement sélectionnée en bas de la page. Vous pouvez changer l'ordre des colonnes en les faisant glisser sur la grille. Vous pouvez redimensionner les colonnes en faisant glisser les barres de séparation des colonnes dans l'en-tête de la grille vers la gauche ou la droite. Double-cliquez sur les barres de séparation des colonnes dans l'en-tête de la grille pour ajuster automatiquement la largeur de la colonne au contenu.  
   
      **Instance**  
-     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
+     Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme *nom de l'ordinateur*\\*nom de l'instance*.  
   
   

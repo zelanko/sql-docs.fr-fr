@@ -24,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3115fa833f657236939200b262c862182d9117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132189"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903881"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,8 +207,6 @@ Dans certains cas, la demande d’une alimentation incrémentielle entraîne une
     -   Pour **supprimer** une planification existante, sélectionnez-la, puis cliquez sur **Supprimer**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="crawl"></a> Résoudre les erreurs dans une alimentation de texte intégral (analyse)  
 Lorsqu'une erreur se produit durant une analyse, la fonction d'analyse de la recherche en texte intégral crée et conserve un journal de l'analyse sous forme de fichier texte. Chaque journal de l'analyse correspond à un catalogue de texte intégral particulier. Par défaut, les journaux d’analyse pour une instance donnée (dans cet exemple, l’instance par défaut) figurent dans le dossier `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.

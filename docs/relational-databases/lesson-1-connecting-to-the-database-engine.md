@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72162560"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909762"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,6 @@ Les exemples de bases de données et les exemples ne sont pas fournis avec [!INC
 2.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur **Annuler**.  
 3.  Si le composant Serveurs inscrits n'apparaît pas, dans le menu **Affichage** , cliquez sur **Serveurs inscrits**.
 4.  Sélectionnez l’option **Moteur de base de données** dans la barre d’outils Serveurs inscrits, développez **Moteur de base de données**, cliquez avec le bouton droit sur **Groupes de serveurs locaux**, pointez sur **Tâches**, puis cliquez sur **Inscrire les serveurs locaux**. Développez des **groupes de serveurs locaux** pour voir toutes les instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] installées sur l’ordinateur affiché. L'instance par défaut n'a pas de nom et prend le nom de l'ordinateur. Une instance nommée s’affiche sous le nom de l’ordinateur suivi d’une barre oblique inversée (\\), puis du nom de l’instance. Pour [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l’instance est nommée *<nom_ordinateur>* \sqlexpress sauf si vous avez modifié le nom pendant l’installation.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Pour vérifier que le moteur de base de données est en cours d'exécution
 

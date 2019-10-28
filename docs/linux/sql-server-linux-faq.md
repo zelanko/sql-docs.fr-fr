@@ -3,16 +3,16 @@ title: FAQ de SQL Server sur Linux
 description: Cet article fournit des réponses aux questions fréquemment posées sur SQL Server sur Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952631"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929906"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Forum aux questions pour SQL Server sur Linux
 
@@ -32,7 +32,7 @@ Les sections suivantes fournissent des questions et des réponses courantes sur 
 
 1. **Est-ce que SQL Server sur Linux est le même que sur Windows ?**
 
-   Le moteur de base de données central pour SQL Server est le même sur Linux que sur Windows. Toutefois, certaines fonctionnalités ne sont actuellement pas prises en charge sur Linux. Pour obtenir la liste des fonctionnalités qui ne sont pas prises en charge sur Linux, consultez les [Fonctionnalités et services non pris en charge](sql-server-linux-release-notes.md#Unsupported). Passez aussi en revue les [problèmes connus](sql-server-linux-release-notes.md#known-issues). Sauf indication contraire dans ces listes, les autres services et fonctionnalités de SQL Server sont pris en charge sur Linux.
+   Le moteur de base de données central pour SQL Server est le même sur Linux que sur Windows. Toutefois, certaines fonctionnalités ne sont actuellement pas prises en charge sur Linux. Pour obtenir la liste des fonctionnalités qui ne sont pas prises en charge sur Linux, consultez les [Fonctionnalités et services non pris en charge](sql-server-linux-editions-and-components-2019.md#Unsupported). Passez aussi en revue les [problèmes connus](sql-server-linux-release-notes.md#known-issues). Sauf indication contraire dans ces listes, les autres services et fonctionnalités de SQL Server sont pris en charge sur Linux.
 
 1. **Quelle est la stratégie de prise en charge de SQL Server ?**
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6cf247d20cdc25fe18e5d263b62fd87b561b5b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69d5766b7431f1352b292306f595033a3070053b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055533"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909642"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,8 +25,6 @@ ms.locfileid: "68055533"
 1.  Créer et exporter une trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
 2.  Écrire un nouveau script de jeu d'éléments de collecte basé sur une trace exportée.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Le scénario des procédures suivantes implique la collecte de données relatives à toute procédure stockée dont l'exécution requiert 80 millisecondes ou plus. Pour effectuer ces procédures, vous devez être en mesure :  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 22e393c2758342c0d4a48b8b03ed757d8f95d38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c1641f0aad5758f709776322e7eb66f93fcca0f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073011"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909240"
 ---
 # <a name="create-a-trace-transact-sql"></a>Créer une trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,10 @@ ms.locfileid: "68073011"
   
 3.  Vous pouvez aussi exécuter **sp_trace_setfilter** pour définir un ou plusieurs filtres.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
+     **sp_trace_setevent** et **sp_trace_setfilter** ne peuvent être exécutées que sur des traces existantes arrêtées.  
   
     > [!IMPORTANT]  
-    >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (<strong>sp_trace_*xx*</strong>) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
+    >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées de SQL Server Profiler (<strong>sp_trace_*xx*</strong>) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre comment créer une trace à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il est divisé en trois sections : création de la trace, remplissage du fichier de trace et arrêt de la trace. Personnalisez la trace en ajoutant les événements dont vous souhaitez effectuer le suivi. Pour obtenir la liste des événements et des colonnes, consultez [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  

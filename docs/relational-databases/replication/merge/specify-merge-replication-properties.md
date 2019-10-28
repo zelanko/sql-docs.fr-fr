@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 058e46441b22f5be5b0d63cf8e9a61dd6c75ef27
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711043"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908158"
 ---
 # <a name="specify-merge-replication-properties"></a>Spécifier les propriétés de la réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,6 @@ Dans la page **Articles** de l'Assistant Nouvelle publication, sélectionnez une
     -   **Téléchargement seul pour l'Abonné, interdire les modifications de l'Abonné**    
     -   **Téléchargement seul pour l'Abonné, autoriser les modifications de l'Abonné**    
 4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="use-transact-sql"></a>Utiliser Transact-SQL  
   

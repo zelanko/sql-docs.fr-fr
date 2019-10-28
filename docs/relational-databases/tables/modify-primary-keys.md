@@ -14,12 +14,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c224493a9ada07b4153632f4a9aa4fd80646d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef278fbdc9fa2599e7612cd9c3b54b909a9bf1f0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999476"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907319"
 ---
 # <a name="modify-primary-keys"></a>Modifier des clés primaires
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "67999476"
     |Changer l'ordre des colonnes|Sélectionnez **Colonnes**, puis cliquez sur le bouton de sélection **(...)** situé à droite de la propriété. Dans la boîte de dialogue  **Colonnes d'index** , supprimez les colonnes de la clé primaire. Rajoutez-les ensuite dans l'ordre voulu. Pour supprimer une colonne clé, retirez simplement le nom de la colonne de la liste **Nom de la colonne** .|  
   
 4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom de la table_.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé primaire**  

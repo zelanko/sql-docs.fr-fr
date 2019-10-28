@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b26765281f650a73e7c21e40ce63916eeb9fa21f
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841595"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903787"
 ---
 # <a name="application-roles"></a>Rôles d'applications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68841595"
 4.  Si le nom et le mot de passe du rôle d'application sont valides, le rôle d'application est activé.  
   
 5.  À ce stade, la connexion perd les autorisations de l'utilisateur et adopte les autorisations du rôle d'application.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Les autorisations acquises via le rôle d'application restent effectives pendant la durée de la connexion.  
   

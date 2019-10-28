@@ -20,7 +20,7 @@ ms.lasthandoff: 08/09/2019
 ms.locfileid: "68889322"
 ---
 # <a name="ragged-hierarchies"></a>Hiérarchies déséquilibrées
-  Une hiérarchie déséquilibrée est une hiérarchie définie par l'utilisateur qui a un nombre de niveaux impair. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., la Cité du Vatican ou New Dehli.  
+  Une hiérarchie déséquilibrée est une hiérarchie définie par l'utilisateur qui a un nombre de niveaux impair. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., l’État de la Cité du Vatican ou New Dehli.  
   
  Pour la plupart des hiérarchies dans une dimension, chaque niveau a le même nombre de membres au-dessus de lui que tout autre membre au même niveau. Dans une hiérarchie déséquilibrée, en revanche, le membre parent logique d'au moins un membre ne figure pas dans le niveau immédiatement supérieur à ce membre. En pareil cas, la hiérarchie descend à des niveaux différents pour des chemins d'extraction différents. Dans une application cliente, cela peut rendre les chemins d'extraction inutilement compliqués.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1b4a155e7f3c23508080a5fd55f15d05c5432c50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f32e6952634e5bd4d376ac06d6c3f067fb75a0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078126"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907558"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Élément &lt;xsd:redefine&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68078126"
 2.  Retapez tous les types de données **xml** (XML DT) qui utilisent la collection de schémas XML à redéfinir de façon à utiliser à la place la nouvelle collection de schémas XML. Pour cela, utilisez l'option ALTER COLUMN de la commande ALTER TABLE pour retaper les colonnes ou modifiez les contraintes de collection de schémas XML sur les variables ou les paramètres.  
   
 3.  Supprimez l'ancienne version de la collection de schémas XML.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Voir aussi  
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

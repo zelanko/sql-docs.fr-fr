@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68d1ea1ee1adc7c5126606bd0cf72ca8e54a725c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8926e74c96c6da9796466a39c1a9ea3cb2bd953d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132258"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903838"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gérer et surveiller la recherche en texte intégral pour une instance de serveur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,8 +38,6 @@ ms.locfileid: "68132258"
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
   
 2.  Dans la boîte de dialogue **Propriétés du serveur** , cliquez sur la page **Avancé** pour afficher les informations du serveur relatives à la recherche en texte intégral. Les propriétés de recherche en texte intégral sont les suivantes :  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **Langue de texte intégral par défaut**  
   

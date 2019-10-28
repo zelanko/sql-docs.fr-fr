@@ -180,7 +180,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Maltais (Malte)|Maltese_100_|Non disponible|
 |Maori (Nouvelle-Zélande)|Maori_100_|Non disponible|
 |Mapuche (Chili)|Mapudungan_100_|Non disponible|
-|Marathe (Inde)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
+|Marathi (Inde)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |Mohawk (Canada)|Mohawk_100_|Non disponible|
 |Mongol (République populaire de Chine)|Cyrillic_General_100_|Non disponible|
 |Népalais (Népal)|Nepali_100_<sup>1</sup>|Non disponible|
@@ -211,7 +211,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Serbe (latin, Serbie)|Serbian_Latin_100_|Non disponible|
 |Sesotho sa Leboa/Sotho du Nord (Afrique du Sud)|Latin1_General_100_|Non disponible|
 |Setswana/Tswana (Afrique du Sud)|Latin1_General_100_|Non disponible|
-|Cinghalais (Sri Lanka)|Indic_General_100_<sup>1</sup>|Non disponible|
+|Cingalais (Sri Lanka)|Indic_General_100_<sup>1</sup>|Non disponible|
 |Swahili (Kenya)|Latin1_General_100_|Non disponible|
 |Syriaque (Syrie)|Syriac_100_<sup>1</sup>|Syriac_90_|
 |Tadjik (Tadjikistan)|Cyrillic_General_100_|Non disponible|

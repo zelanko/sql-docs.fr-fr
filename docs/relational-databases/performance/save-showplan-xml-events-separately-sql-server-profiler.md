@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc0fcbe1a04e9b49f47c30e9eae40abbd1dccfd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113368"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908073"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Enregistrer séparément les événements Showplan XML (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68113368"
 10. Sélectionnez **Tous les lots Showplan XML dans un seul fichier** pour enregistrer tous les événements **Showplan XML** dans un même fichier XML. Sinon, vous pouvez sélectionner l’option **Chaque lot Showplan XML dans un fichier différent** afin de créer un fichier XML pour chaque événement **Showplan XML**.  
   
 11. Pour afficher le fichier d’événements **Showplan XML** dans SQL Server Management Studio, ouvrez le menu **Fichier**, pointez sur **Ouvrir**, puis sélectionnez **Fichier**. Parcourez le répertoire où vous avez enregistré le ou les fichiers d’événements **Showplan XML** pour en sélectionner un et l’ouvrir. Les fichiers d'événements**Showplan XML** ont l'extension .SQLPlan.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Voir aussi  
  [Analyser des requêtes avec des résultats Showplan dans SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

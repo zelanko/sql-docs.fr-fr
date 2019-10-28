@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575569"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305043"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Pour distribuer un rapport par courrier électronique, vous devez 1) configurer le serveur de rapports pour la remise du courrier électronique et 2) définir un abonnement standard ou piloté par les données. Un abonnement unique ne permet pas de distribuer plusieurs rapports dans un seul message électronique. Toutefois, vous pouvez créer plusieurs abonnements.  
@@ -41,9 +41,9 @@ ms.locfileid: "65575569"
   
 -   Envoi d'une notification dans la ligne Objet d'un message électronique. Par défaut, la ligne Objet de la définition d'abonnement contient les variables suivantes qui sont remplacées par des informations spécifiques au rapport lors du traitement de l'abonnement.  
   
-     **@ReportName** spécifie le nom du rapport.  
+     **\@ReportName** spécifie le nom du rapport.  
   
-     **@ExecutionTime** spécifie l'heure d'exécution du rapport.  
+     **\@ExecutionTime** spécifie l’heure d’exécution du rapport.  
   
      Vous pouvez combiner ces variables avec du texte statique ou modifier le texte dans la ligne Objet de chaque abonnement.  
   

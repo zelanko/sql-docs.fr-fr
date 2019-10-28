@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4203f082d093cae12dc546b083adc6e049d8799f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087387"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908627"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Exporter une stratégie de gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +57,4 @@ ms.locfileid: "68087387"
 6.  Dans la boîte de dialogue **Exporter la stratégie** , tapez le chemin d'accès et le nom du fichier dans la barre d'adresses. Ou bien, recherchez un emplacement approprié pour le fichier dans le volet de navigation de la boîte de dialogue, puis tapez le nom du fichier XML dans la zone **Nom de fichier** .  
   
 7.  Lorsque vous avez terminé, cliquez sur **Enregistrer**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

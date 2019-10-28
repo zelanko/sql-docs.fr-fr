@@ -23,12 +23,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0ed09a881d0bbf7a1f284b3b2971077725e6d91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094962"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903034"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,8 +96,6 @@ ms.locfileid: "68094962"
 10. Dans la liste **Langue par défaut** , sélectionnez une langue par défaut pour le compte de connexion.  
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="additional-options"></a>Options supplémentaires  
  La boîte de dialogue **Connexion – Nouvelle** offre également des options sur quatre pages supplémentaires : **Rôles de serveur**, **Mappage utilisateur**, **Éléments sécurisables** et **État**.  

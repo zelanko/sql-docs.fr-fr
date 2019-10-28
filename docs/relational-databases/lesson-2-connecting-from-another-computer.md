@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073714"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909712"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ Si vous prévoyez de vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] 
   
     > [!NOTE]  
     > Lorsque vous avez apporté des modifications aux protocoles réseau, vous devez redémarrer le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ; toutefois, cette opération est prévue dans la tâche suivante.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="port"></a>Configuration d'un port fixe  
 Pour une sécurité optimale, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]et Windows 7 activent le Pare-feu Windows. Pour vous connecter à cette instance à partir d'un autre ordinateur, vous devez ouvrir un port de communication dans le pare-feu. L'instance par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)] écoute sur le port 1433 ; par conséquent, vous n'avez pas besoin de configurer un port fixe. Toutefois, les instances nommées incluant [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] sont à l'écoute sur des ports dynamiques. Avant d'ouvrir un port sur le pare-feu, vous devez configurer le [!INCLUDE[ssDE](../includes/ssde-md.md)] pour l'écoute sur un port spécifique appelé port fixe ou port statique ; le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut également écouter sur un port différent à chaque démarrage. Pour plus d’informations sur les pare-feu, les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le moteur de base de données, Analysis Services, Reporting Services et Integration Services, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

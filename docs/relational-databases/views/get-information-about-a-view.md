@@ -22,12 +22,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22a591c770a09e0bd57f4c92116fcf72af45758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123410"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909890"
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,42 +63,40 @@ ms.locfileid: "68123410"
   
 2.  Cliquez avec le bouton droit sur la vue dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties show in the **View Properties** dialog box.  
+     Les propriétés suivantes s'affichent dans la boîte de dialogue **Propriétés de la vue** .  
   
-     **Database**  
-     The name of the database containing this view.  
+     **Sauvegarde de la base de données**  
+     Nom de la base de données contenant cette vue.  
   
      **Server**  
-     The name of the current server instance.  
+     Nom de l'instance actuelle du serveur.  
   
-     **User**  
-     The name of the user of this connection.  
+     **Utilisateur**  
+     Nom de l'utilisateur de cette connexion.  
   
-     **Created date**  
-     Displays the date the view was created.  
+     **Date de création**  
+     Affiche la date de création de la vue.  
   
      **Name**  
-     The name of the current view.  
+     Nom de la vue actuelle.  
   
-     **Schema**  
-     Displays the schema that owns the view.  
+     **Schéma**  
+     Affiche le schéma propriétaire de la vue.  
   
-     **System object**  
-     Indicates whether the view is a system object. Values are True and False.  
+     **Objet système**  
+     Indique si la vue est un objet système. Les valeurs sont True et False.  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **Valeurs ANSI NULL**  
+     Indique si l'objet a été créé avec l'option Valeurs ANSI NULL.  
   
-     **Encrypted**  
-     Indicates whether the view is encrypted. Values are True and False.  
+     **Chiffré**  
+     Indique si la vue est chiffrée. Les valeurs sont True et False.  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **Identificateur entre guillemets**  
+     Indique si l'objet a été créé avec l'option Identificateurs entre guillemets.  
   
-     **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **Lié(e) au schéma**  
+     Indique si la vue est liée au schéma. Les valeurs sont True et False. Pour plus d’informations sur les vues liées au schéma, consultez la partie SCHEMABINDING de [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Obtention des propriétés d'une vue à l'aide de l'outil Concepteur de vues  
   

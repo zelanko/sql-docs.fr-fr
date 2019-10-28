@@ -2,7 +2,7 @@
 title: Que sont les groupes de disponibilité distribués ?
 description: Un groupe de disponibilité distribué est un type spécial de groupe de disponibilité qui englobe deux groupes de disponibilité distincts. Les groupes de disponibilité qui participent à un groupe de disponibilité distribué n’ont pas besoin de se trouver au même emplacement.
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702743"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907277"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Les groupes de disponibilité distribués sont une nouvelle fonctionnalité introduite dans SQL Server 2016, et constituent une variante de la fonctionnalité de groupes de disponibilité Always On existante. Cet article clarifie certains aspects des groupes de disponibilité distribués et complète la [documentation de SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) existante.
+Les groupes de disponibilité distribués sont une nouvelle fonctionnalité introduite dans SQL Server 2016, et constituent une variante de la fonctionnalité de groupes de disponibilité Always On existante. Cet article clarifie certains aspects des groupes de disponibilité distribués et complète la [documentation de SQL Server](https://docs.microsoft.com/sql/sql-server/index.yml) existante.
 
 > [!NOTE]
 > « DAG » n’est pas l’abréviation officielle de *distributed availability group* (groupe de disponibilité distribué), car elle est déjà utilisée pour la fonctionnalité de groupe de disponibilité de base de données Exchange. Cette fonctionnalité Exchange n’a aucune relation avec les groupes de disponibilité SQL Server ou les groupes de disponibilité distribués.

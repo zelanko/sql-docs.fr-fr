@@ -15,12 +15,12 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 791864168d216a3cb498b89c2e45ec4384fcdd27
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769384"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907866"
 ---
 # <a name="synchronize-a-push-subscription"></a>Synchroniser un abonnement par émission de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68769384"
 5.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
   
 6.  Cliquez sur **Fermer**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Pour synchroniser un abonnement par envoi de données à la demande dans Management Studio (sur l'Abonné)  
   

@@ -1,7 +1,7 @@
 ---
 title: Conseils de navigation dans la documentation de SQL Server
 description: Conseils et astuces pour la navigation dans la documentation technique de SQL Server. Aborde des éléments tels que la page hub, la table des matières et l’en-tête, et explique comment utiliser la barre de navigation et le filtre de version.
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621714"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904309"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guide de navigation dans la documentation de SQL Server 
 
@@ -93,6 +93,6 @@ Vous pouvez également envoyer des commentaires et des suggestions d’ordre gé
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Bien démarrer avec la [documentation technique de SQL Server](sql-server-technical-documentation.md). 
+- Bien démarrer avec la [documentation technique de SQL Server](index.yml).
 - Pour plus d’informations sur la procédure à suivre pour envoyer des commentaires ou obtenir de l’aide sur SQL Server, consultez la page [Obtenir de l’aide](sql-server-get-help.md). 
 - Pour accéder rapidement à tous les tutoriels et guides de démarrage rapide, accédez au [Centre de formation SQL Server](../lp/sql-server/sql-education-center.md).

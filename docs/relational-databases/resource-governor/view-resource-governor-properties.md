@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 461c222e6558ca2c003abc7920e1479c050df89e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106724"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903911"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,8 +61,6 @@ ms.locfileid: "68106724"
 3.  Pour obtenir les descriptions des champs de la page, consultez [Propriétés de Resource Governor](#RGProp).  
   
 4.  Cliquez sur **OK**pour enregistrer les éventuelles modifications.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="RGProp"></a> Resource Governor properties  
  **Nom de la fonction classifieur**  

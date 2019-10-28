@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add1b0fc86c5e43bedd1e3ebbf7921fb1e9847c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f16d6cd8cbc27e675da9f8153555dcaf9c99749f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058059"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909928"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
 
@@ -174,8 +174,6 @@ Le collecteur de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 3. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Gestion**, puis développez **Collecte de données**. Cliquez avec le bouton droit sur **Collecteur de données de performance de capture de données modifiées**, puis cliquez sur **Démarrer le jeu d’éléments de collecte de données**.  
   
 4. Dans l'entrepôt de données que vous avez configuré à l'étape 1, recherchez la table custom_snapshots.cdc_log_scan_data. Cette table fournit un instantané historique de données de sessions d'analyse du journal. Ces données peuvent être utilisées pour analyser la latence, le débit et d'autres mesures de la performance sur la durée.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ScriptUpgrade"></a> Mode de mise à niveau du script
 

@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf597d5a9be6a1e2e7fb3f045cd329f861379ad4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769658"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908296"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,6 @@ ms.locfileid: "68769658"
 4.  Démarrez le travail de l'Agent d'instantané pour générer l'instantané initial pour cette publication. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 5.  Ensuite, créez un abonnement. Dans l’ **Assistant Nouvel abonnement** , définissez **Abonnement de mémoire optimisée** sur **true**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Les tables mémoire optimisées doivent maintenant commencer à recevoir les mises à jour du serveur de publication.  
   

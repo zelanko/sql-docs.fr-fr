@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110955"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907989"
 ---
 # <a name="oracle-subscribers"></a>Abonnés Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68110955"
     |Spécifier les informations d'hôte pour identifier l'écouteur de la base de données|L'hôte est le nom ou l'alias DNS de l'ordinateur sur lequel s'exécute l'écouteur d'Oracle ; cet ordinateur est en général celui sur lequel réside la base de données. Pour certains protocoles, vous devez fournir des informations supplémentaires. Par exemple, si vous sélectionnez TCP, vous devez fournir le port sur lequel l'écouteur est à l'écoute des demandes de connexion sur la base de données cible. La configuration TCP par défaut utilise le port 1521.|  
   
 3.  Créez une publication transactionnelle ou d'instantané, activez-la pour les Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puis créez un abonnement par émission de données pour l'Abonné. Pour plus d’informations, voir [Créer un abonnement pour un Abonné non-SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="setting-directory-permissions"></a>Définition des autorisations sur les répertoires  
  Les comptes sous lesquels s'exécute le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de distribution doivent détenir les autorisations de lecture et d'exécution pour le répertoire (et tous ses sous-répertoires) sur lequel le logiciel réseau client est installé.  

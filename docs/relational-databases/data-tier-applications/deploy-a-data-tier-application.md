@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7dcb81e48ddd4861e3f89547280b372df4c56ec3
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
+ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72359537"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907885"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,8 +66,6 @@ Le déploiement d'une DAC avec des connexions à [!INCLUDE[ssSDS](../../includes
 2.  Cliquez avec le bouton droit sur le nœud **Bases de données**, puis sélectionnez **Déployer une application de la couche Données...** .  
   
 3.  Renseignez les boîtes de dialogue de l’Assistant, puis cliquez sur Terminer.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Plus d’informations sur certaines pages de l’Assistant sont fournies ci-dessous : 
      

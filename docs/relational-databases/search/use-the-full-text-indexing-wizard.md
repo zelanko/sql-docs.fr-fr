@@ -23,12 +23,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1c5a46dda4c9b2c5793ff62aaf6eb8606efbe9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095280"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903822"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68095280"
 4. **Langue pour l’analyseur lexical.** Sélectionnez une langue dans la liste déroulante. Cette option sera utilisée pour identifier les analyseurs lexicaux appropriés pour l’index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des analyseurs lexicaux pour identifier les limites des mots dans les données indexées en texte intégral.  
   
 5.  **Colonne de type.** Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **REMARQUE :** L’option **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
   
@@ -82,7 +80,7 @@ ms.locfileid: "68095280"
 
      **Sélectionner un catalogue :** Sélectionnez un catalogue de texte intégral dans la liste. Le catalogue par défaut pour la base de données devient l'élément sélectionné par défaut dans la liste. Si aucun catalogue n’est disponible, cette dernière est désactivée, et la case **Créer un nouveau catalogue** est cochée, mais désactivée.  
   
-  \- ou -
+  OR
   
  10. **Créer un nouveau catalogue**
  - Sélectionnez un catalogue de recherche en texte intégral.  

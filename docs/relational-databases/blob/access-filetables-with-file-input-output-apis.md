@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6b89d8c561df851b3cbc8696283f1ed95489f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041197"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908775"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68041197"
 1.  L'accès aux API d'E/S de fichier commence en général par l'acquisition d'un chemin d'accès UNC logique pour le fichier ou le répertoire. Les applications peuvent utiliser une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] avec la fonction [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) pour obtenir le chemin d’accès logique du fichier ou du répertoire. Pour plus d'informations, consultez [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 2.  L'application utilise ensuite ce chemin d'accès logique pour obtenir un handle de fichier ou de répertoire et effectuer une action à l'aide de l'objet. Le chemin d'accès peut être passé à toute fonction API du système de fichiers prise en charge, par exemple CreateFile() ou CreateDirectory(), pour créer ou ouvrir un fichier et obtenir un handle. Le handle peut ensuite être utilisé pour créer un flux de données, énumérer ou organiser les répertoires, obtenir ou définir des attributs de fichier, supprimer des fichiers ou des répertoires, etc.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="create"></a> Création de fichiers et de répertoires dans un FileTable  
  Il est possible de créer un fichier ou un répertoire dans un FileTable en appelant les API d'E/S de fichier, telles que CreateFile ou CreateDirectory.  

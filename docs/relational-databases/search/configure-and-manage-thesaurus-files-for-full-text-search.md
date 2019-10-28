@@ -13,12 +13,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 792b605f4c85484a8cb6ab7987aeee2bd427c67a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb88891354154ff987cedc31a56f56e4bf953532
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098271"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903888"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ Vous pouvez modifier l'emplacement et le nom d'un fichier de dictionnaire des sy
 Une requête de dictionnaire des synonymes utilise à la fois le dictionnaire des synonymes spécifique à la langue et le dictionnaire des synonymes global.
 1.  En premier lieu, la requête recherche le fichier spécifique à la langue et le charge en vue du traitement (à moins qu'il ne soit déjà chargé). La requête est développée pour inclure les synonymes spécifiques à la langue spécifiés par les règles de jeu d'expansion et de jeu de remplacement définies dans le fichier du dictionnaire des synonymes. 
 2.  Ces étapes sont ensuite répétées pour le dictionnaire des synonymes global. Toutefois, si un terme fait déjà partie d'une correspondance dans le fichier du dictionnaire des synonymes spécifique à la langue, ce terme est inéligible pour la mise en correspondance dans le dictionnaire des synonymes global.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Structure d’un fichier de dictionnaire des synonymes  
  Chaque fichier de dictionnaire des synonymes définit un conteneur XML dont l’ID est `Microsoft Search Thesaurus` et un commentaire, `<!--` ... `-->`, qui contient un exemple de dictionnaire des synonymes. Le dictionnaire des synonymes est défini dans un élément `<thesaurus>` qui contient des exemples des éléments enfants qui définissent le paramètre de signes diacritiques, les jeux d’expansion et les jeux de remplacement.
