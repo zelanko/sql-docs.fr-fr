@@ -16,12 +16,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043192"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903168"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ Pour mettre à jour correctement la colonne, effectuez les étapes suivantes :
 
 1. Sélectionnez les données de la colonne SSN et stockez-les comme jeu de résultats dans l’application. Cela permettra à l’application (*pilote* client) de déchiffrer la colonne.
 2. Insérez les données du jeu de résultats dans SQL Server. 
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > Dans ce scénario, les données sont non chiffrées quand elles sont renvoyées au serveur, car la colonne de destination est un type varchar standard qui n’accepte pas les données chiffrées. 
