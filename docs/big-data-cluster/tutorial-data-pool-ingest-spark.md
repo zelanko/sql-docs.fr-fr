@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2390da93f9359c2f812bc93ec588490a218ad87
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916010"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049861"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Didacticiel : réception de données dans un pool de données SQL Server avec des travaux Spark
 
@@ -53,6 +53,8 @@ Les étapes suivantes permettent de créer une table externe nommée **web_click
 1. Créez une source de données externe dans le pool de données, si elle n’existe pas déjà.
 
    ```sql
+   USE Sales
+   GO
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
