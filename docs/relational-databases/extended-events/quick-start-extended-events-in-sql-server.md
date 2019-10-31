@@ -11,19 +11,19 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251534"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798429"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Cet article vise à aider le développeur SQL qui ne connaît pas encore les événements étendus et qui veut créer une session d’événements en quelques minutes seulement. Grâce aux événements étendus, vous pouvez afficher des détails sur les opérations internes du système SQL et votre application. Quand vous créez une session d’événements étendus, vous indiquez au système :
+Les événements étendus sont un système léger d’analyse des performances qui permet aux utilisateurs de collecter les données nécessaires pour analyser et résoudre les problèmes liés à SQL Server. Consultez [Vue d’ensemble des événements étendus](extended-events.md) pour en savoir plus sur l’architecture des événements étendus.  Cet article vise à aider le développeur SQL qui ne connaît pas encore les événements étendus et qui veut créer une session d’événements en quelques minutes seulement. Grâce aux événements étendus, vous pouvez afficher des détails sur les opérations internes du système SQL et votre application. Quand vous créez une session d’événements étendus, vous indiquez au système :
 
 - les occurrences qui vous intéresse,
 - la manière dont vous voulez que le système vous indique les données.

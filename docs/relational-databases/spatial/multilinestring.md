@@ -13,12 +13,12 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d144129f296a1e5c131bdc90364e3e2a969d3bdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048641"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907019"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68048641"
 ## <a name="multilinestring-instances"></a>Instances MultiLineString  
  L’illustration suivante montre des exemples d’instances **MultiLineString** .  
   
- ![Exemples d’instances MultiLineString géométriques](../../relational-databases/spatial/media/multilinestring.gif "Exemples d’instances MultiLineString géométriques")  
+ ![Exemples d'instances MultiLineString géométriques](../../relational-databases/spatial/media/multilinestring.gif "Exemples d'instances MultiLineString géométriques")  
   
  Comme indiqué par l'illustration :  
   
@@ -65,8 +65,6 @@ Pour qu’une instance **MultiLineString** soit valide, elle doit répondre aux 
 1.  Toutes les instances comprenant l’instance **MultiLineString** doivent être des instances **LineString** valides.  
   
 2.  Deux instances **LineString** comprenant l’instance **MultiLineString** ne peuvent pas se chevaucher sur un intervalle. Les instances **LineString** peuvent uniquement se croiser, se toucher ou toucher d’autres instances **LineString** à un nombre fini de points.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 L’exemple suivant illustre trois instances **MultiLineString** valides et une instance **MultiLineString** non valide.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995882"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783402"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l'outil mssql-conf
 
@@ -510,7 +510,7 @@ Il existe plusieurs autres paramètres pour mssql-conf que vous pouvez utiliser 
 | paramètre mssql-conf | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurer les appels sécurisés RPC pour les transactions distribuées |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configurer les appels de sécurité RPC pour les transactions distribuées |transactions
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configurer les appels de sécurité RPC pour les transactions distribuées |
 | distributedtransaction.maxlogsize | Taille du fichier journal des transactions DTC en Mo. La valeur par défaut est 64 Mo |
 | distributedtransaction.memorybuffersize | Taille de la mémoire tampon circulaire dans laquelle les traces sont stockées. Cette taille est en Mo et sa valeur par défaut est de 10 Mo |
 | distributedtransaction.servertcpport | Port du serveur rpc MSDTC |

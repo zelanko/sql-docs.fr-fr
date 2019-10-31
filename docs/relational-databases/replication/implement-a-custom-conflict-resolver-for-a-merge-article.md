@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b36d610912f518f0586739e0380e300efefbed40
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561139"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905113"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implémenter un outil personnalisé de résolution des conflits pour un article de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "69561139"
      Cette procédure stockée utilise les valeurs transmises par l’Agent de fusion à ces paramètres pour implémenter votre logique de résolution de conflit personnalisée. Elle doit retourner un jeu de résultats de ligne unique dont la structure est identique à celle de la table de base, et qui contient les valeurs de données pour la version gagnante de la ligne.  
   
 2.  Accordez les autorisations EXECUTE sur la procédure stockée à toutes connexions utilisées par les Abonnés pour se connecter au serveur de publication.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>Utiliser un outil personnalisé de résolution des conflits avec un nouvel article de table  
   

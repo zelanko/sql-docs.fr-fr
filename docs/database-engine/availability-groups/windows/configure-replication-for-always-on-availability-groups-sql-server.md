@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251933"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689661"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurer la réplication avec les groupes de disponibilité Always On
 
@@ -52,7 +52,7 @@ ms.locfileid: "72251933"
         @security_mode = 1;  
     ```  
   
-3.  Configurez le serveur de publication distant. Si des procédures stockées sont utilisées pour configurer le serveur de distribution, exécutez **sp_adddistpublisher**. Le paramètre *@security_mode* sert à déterminer comment la procédure stockée de validation du serveur de publication exécutée à partir des agents de réplication se connecte au principal actuel. Si la valeur est 1, l'authentification Windows est utilisée pour la connexion au principal actuel. Si la valeur est 0, l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est utilisée avec les valeurs *@login* et *@password* spécifiées. La connexion et le mot de passe spécifiés doivent être valides sur chaque réplica secondaire pour que la procédure stockée de validation se connecte avec succès à ce réplica.  
+3.  Configurez le serveur de publication distant. Si des procédures stockées sont utilisées pour configurer le serveur de distribution, exécutez **sp_adddistpublisher**. Le paramètre *\@security_mode* sert à déterminer comment la procédure stockée de validation du serveur de publication exécutée à partir des agents de réplication se connecte au principal actuel. Si la valeur est 1, l'authentification Windows est utilisée pour la connexion au principal actuel. Si la valeur est 0, l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est utilisée avec les valeurs *\@login* et *\@password* spécifiées. La connexion et le mot de passe spécifiés doivent être valides sur chaque réplica secondaire pour que la procédure stockée de validation se connecte avec succès à ce réplica.  
   
     > [!NOTE]  
     >  Si des agents de réplication modifiés s'exécutent sur un ordinateur autre que le serveur de distribution, l'utilisation de l'authentification Windows pour la connexion au principal requiert la configuration de l'authentification Kerberos pour la communication entre les ordinateurs hôtes de réplica. L'utilisation d'une connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour la connexion au principal actuel ne requiert pas l'authentification Kerberos.  
@@ -72,7 +72,7 @@ ms.locfileid: "72251933"
   
  **Configurer le serveur de publication sur le serveur de publication d'origine**  
   
-1.  Configurez la distribution à distance. Si des procédures stockées sont utilisées pour configurer le serveur de publication, exécutez **sp_adddistributor**. Spécifiez pour *@password* la même valeur que celle utilisée quand **sp_adddistrbutor** a été exécuté sur le serveur de distribution pour configurer la distribution.  
+1.  Configurez la distribution à distance. Si des procédures stockées sont utilisées pour configurer le serveur de publication, exécutez **sp_adddistributor**. Spécifiez pour *\@password* la même valeur que celle utilisée quand **sp_adddistrbutor** a été exécuté sur le serveur de distribution pour configurer la distribution.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Si *@installed* est 0, la réplication doit être ajoutée à l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Si *\@installed* est 0, la réplication doit être ajoutée à l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="step4"></a> 4. Configurer les hôtes de réplica secondaire comme des serveurs de publication de réplication  
- Un réplica secondaire ne peut pas servir de serveur de publication ou de de republication de réplication, mais la réplication doit être configurée de sorte que le serveur secondaire puisse prendre la suite après un basculement. Sur le serveur de distribution, configurez la distribution pour chaque hôte de réplica secondaire. Indiquez la même base de données de distribution et le même répertoire de travail spécifiés lorsque le serveur de publication d'origine a été ajouté au serveur de distribution. Si vous utilisez des procédures stockées pour configurer la distribution, utilisez **sp_adddistpublisher** pour associer les serveurs de publication distants au serveur de distribution. Si *@login* et *@password* ont été utilisés pour le serveur de publication d'origine, spécifiez les mêmes valeurs lorsque vous ajoutez les hôtes de réplica secondaire comme serveurs de publication.  
+ Un réplica secondaire ne peut pas servir de serveur de publication ou de de republication de réplication, mais la réplication doit être configurée de sorte que le serveur secondaire puisse prendre la suite après un basculement. Sur le serveur de distribution, configurez la distribution pour chaque hôte de réplica secondaire. Indiquez la même base de données de distribution et le même répertoire de travail spécifiés lorsque le serveur de publication d'origine a été ajouté au serveur de distribution. Si vous utilisez des procédures stockées pour configurer la distribution, utilisez **sp_adddistpublisher** pour associer les serveurs de publication distants au serveur de distribution. Si *\@login* et *\@password* ont été utilisés pour le serveur de publication d'origine, spécifiez les mêmes valeurs lorsque vous ajoutez les hôtes de réplica secondaire comme serveurs de publication.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Pour chaque hôte de réplica secondaire, configurez la distribution. Identifiez le serveur de distribution du serveur de publication d'origine comme serveur de distribution distant. Utilisez le même mot de passe que celui utilisé quand **sp_adddistributor** a été exécuté initialement sur le serveur de distribution. Si des procédures stockées sont utilisées pour configurer la distribution, le paramètre *@password* de **sp_adddistributor** est utilisé pour spécifier le mot de passe.  
+ Pour chaque hôte de réplica secondaire, configurez la distribution. Identifiez le serveur de distribution du serveur de publication d'origine comme serveur de distribution distant. Utilisez le même mot de passe que celui utilisé quand **sp_adddistributor** a été exécuté initialement sur le serveur de distribution. Si des procédures stockées sont utilisées pour configurer la distribution, le paramètre *\@password* de **sp_adddistributor** est utilisé pour spécifier le mot de passe.  
   
 ```  
 EXEC sp_adddistributor   

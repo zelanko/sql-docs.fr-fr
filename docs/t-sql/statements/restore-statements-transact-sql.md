@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082466"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916176"
 ---
 # <a name="restore-statements-transact-sql"></a>Instructions RESTORE (Transact-SQL)
 
@@ -312,7 +312,6 @@ RESTORE LOG peut contenir une liste de fichiers pour permettre la création des 
 > Pour une base de données en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions, vous devez dans la plupart des cas effectuer une sauvegarde de la fin du journal, avant la restauration de la base de données. Restaurer une base de données sans effectuer une sauvegarde de la fin du journal au préalable entraîne une erreur, sauf si l'instruction RESTORE DATABASE contient la clause WITH REPLACE ou WITH STOPAT, qui doit spécifier une heure ou une transaction qui s'est produite après la fin de la sauvegarde des données. Pour plus d’informations sur les sauvegardes de la fin du journal, consultez l’article [Sauvegardes de la fin du journal](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
 ### <a name="comparison-of-recovery-and-norecovery"></a>Comparaison entre RECOVERY et NORECOVERY
-
 La restauration est contrôlée par l'instruction RESTORE et les options [ RECOVERY | NORECOVERY ] :
 
 - NORECOVERY indique que la restauration ne s'effectue pas. Cela permet la poursuite de la restauration par progression avec l'instruction suivante de la séquence.
@@ -321,10 +320,9 @@ La restauration est contrôlée par l'instruction RESTORE et les options [ RECO
 
 - RECOVERY (valeur par défaut) indique que la restauration doit être effectuée après la restauration par progression de la sauvegarde actuelle.
 
-  Pour récupérer la base de données, le jeu de données faisant l’objet de la restauration (*jeu de restauration par progression*) doit être entièrement cohérent par rapport à la base de données. Si la restauration par progression du jeu de restauration par progression n'est pas allée assez loin pour être cohérente par rapport à la base de données et si l'option RECOVERY est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur.
+  Pour récupérer la base de données, le jeu de données faisant l’objet de la restauration (*jeu de restauration par progression*) doit être entièrement cohérent par rapport à la base de données. Si la restauration par progression du jeu de restauration par progression n'est pas allée assez loin pour être cohérente par rapport à la base de données et si l'option RECOVERY est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur. Pour plus d’informations sur le processus de récupération, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Prise en charge de la compatibilité
-
 Les sauvegardes des bases de données **master**, **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
@@ -337,14 +335,11 @@ Après avoir restauré une base de données de version antérieure dans [!INCLUD
 Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser l’instruction **OPEN MASTER KEY** pour déchiffrer la clé principale de la base de données. Une fois la clé principale de la base de données déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en exécutant l’instruction **ALTER MASTER KEY REGENERATE** pour fournir au serveur une copie de la clé principale de la base de données chiffrée avec la clé principale du service. Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez l’article [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés.
 
 ## <a name="general-remarks"></a>Remarques d'ordre général
-
 Lors d'une restauration hors ligne, si la base de données spécifiée est en cours d'utilisation, RESTORE force la déconnexion des utilisateurs après un court délai. Pour la restauration en ligne d'un groupe de fichiers non primaire, la base de données peut rester active, sauf si le groupe de fichiers restaurés est hors ligne. Toutes les données que la base contient sont remplacées par les données restaurées.
-
-Pour plus d’informations sur la récupération de base de données, consultez l’article [Vue d’ensemble de la restauration et de la récupération](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 Les opérations de restauration inter-plateformes, impliquant éventuellement des types de processeurs différents, peuvent être réalisées tant que le classement de la base de données est pris en charge par le système d'exploitation.
 
-La commande RESTORE peut être redémarrée après une erreur. En outre, vous pouvez contraindre la commande RESTORE à poursuivre son traitement en dépit des erreurs. Elle restaure ainsi le plus de données possible (voir l'option CONTINUE_AFTER_ERROR).
+La commande RESTORE peut être redémarrée après une erreur. En outre, vous pouvez contraindre la commande RESTORE à poursuivre son traitement en dépit des erreurs. Elle restaure ainsi le plus de données possible (voir l'option `CONTINUE_AFTER_ERROR`).
 
 La commande RESTORE n'est pas autorisée dans une transaction explicite ou implicite.
 
@@ -384,7 +379,6 @@ L'instruction RESTORE permet également d'effectuer des restaurations dans d'au
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre des tables d'historique de sauvegarde et de restauration qui assurent le suivi des activités de sauvegarde et de restauration pour chaque instance de serveur. Lorsqu'une restauration est effectuée, les tables d'historique de sauvegarde sont également modifiées. Pour plus d’informations sur ces tables, consultez l’article [Historique de sauvegarde et informations d’en-tête](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
 ## <a name="REPLACEoption"></a> Impact de l’option REPLACE
-
 L'option REPLACE ne doit être utilisée que rarement et après un examen attentif. Généralement, la restauration empêche le remplacement accidentel d'une base de données par une autre. Si la base de données nommée dans l'instruction RESTORE existe déjà sur le serveur actif et que le GUID de famille de la base de données spécifié ne correspond pas à celui qui est enregistré dans le jeu de sauvegarde, la base de données n'est pas restaurée. Cette mesure de sécurité est très importante,
 
 L'option REPLACE annule d'importants contrôles de sécurité normalement effectués lors d'une restauration. Ces contrôles ignorés sont les suivants :
@@ -402,13 +396,11 @@ L'option REPLACE annule d'importants contrôles de sécurité normalement effect
   Par exemple, une erreur peut entraîner le remplacement des fichiers existants d'un type incorrect (par exemple, fichiers .xls) ou de fichiers actuellement utilisés par une autre base de données qui n'est pas en ligne. Une perte de données arbitraire peut avoir lieu si des fichiers existants sont remplacés, même si la base de données restaurée est complète.
 
 ## <a name="redoing-a-restore"></a>Rétablir une restauration
-
 Il n'est pas possible d'annuler les effets d'une restauration. Cependant, vous pouvez annuler les effets de la copie et de la restauration par progression des données en recommençant fichier par fichier. Pour recommencer, restaurez le fichier approprié et réeffectuez la restauration par progression. Par exemple, si vous avez accidentellement restauré trop de sauvegardes du journal et dépassé le point d'arrêt voulu, redémarrez la séquence.
 
 Une séquence de restauration peut être annulée et redémarrée en restaurant l'ensemble du contenu des fichiers concernés.
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>Restauration d'une base de données vers un instantané de base de données
-
 Une *opération de rétablissement de base de données* (spécifiée avec l’option DATABASE_SNAPSHOT) ramène une base de données source complète à un moment donné dans le temps, en rétablissant l’instantané de base de données à cet instant-là, c’est-à-dire en remplaçant la base de données source par les données correspondant à une date et heure précises dans l’instantané de base de données spécifié. Seul l'instantané vers lequel vous effectuez le rétablissement peut exister. Cette opération reconstruit ensuite le journal (par conséquent, vous ne pouvez pas effectuer une restauration par progression d'une base de données rétablie au point d'erreur de l'utilisateur).
 
 La perte de données est limitée aux mises à jour de la base de données depuis la création de l'instantané. Les métadonnées d'une base de données rétablie sont identiques aux métadonnées au moment de la création de l'instantané. Toutefois, le retour à un instantané supprime tous les catalogues de texte intégral.
@@ -416,7 +408,6 @@ La perte de données est limitée aux mises à jour de la base de données depui
 Le rétablissement à partir d'un instantané de base de données n'est pas destiné à la récupération des supports. Contrairement à un jeu de sauvegarde classique, l'instantané de base de données est une copie incomplète des fichiers de la base de données. Si la base de données ou l'instantané de base de données est endommagé, le rétablissement à partir d'un instantané sera probablement impossible. En outre, même lorsque le rétablissement est possible, il est peu probable qu'il permette de corriger le problème en cas de dommages.
 
 ### <a name="restrictions-on-reverting"></a>Restrictions liées au rétablissement
-
 Le rétablissement n'est pas pris en charge dans les conditions suivantes :
 
 - La base de données source contient des groupes de fichiers en lecture seule ou compressés.
@@ -426,19 +417,18 @@ Le rétablissement n'est pas pris en charge dans les conditions suivantes :
 Pour plus d’informations, consultez [Rétablir une base de données dans l’état d’un instantané de base de données](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).
 
 ## <a name="security"></a>Sécurité
-
 Une opération de sauvegarde peut éventuellement spécifier des mots de passe pour un support de sauvegarde, un jeu de sauvegarde ou les deux. Lorsqu'un mot de passe a été défini sur un support de sauvegarde ou un jeu de sauvegarde, vous devez entrer le ou les mots de passe corrects dans l'instruction RESTORE. Ces mots de passe empêchent les opérations non autorisées de restauration et d'ajouts de jeux de sauvegarde au support à l'aide d'outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cependant, les supports protégés par un mot de passe peuvent être remplacés par l'option FORMAT de l'instruction BACKUP.
 
 > [!IMPORTANT]
 > Le niveau de protection de ce mot de passe est faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La bonne pratique en matière de protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sûr ou à sauvegarder les fichiers disque protégés par une liste de contrôle d’accès (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.
+
 > [!NOTE]
 > Pour obtenir des informations spécifiques sur la sauvegarde et la restauration SQL Server avec le service de stockage Microsoft Blob Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Microsoft Blob Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
 ### <a name="permissions"></a>Autorisations
+Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations `CREATE DATABASE` afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe `sysadmin` et `dbcreator` et au propriétaire (`dbo`) de la base de données (pour l’option `FROM DATABASE_SNAPSHOT`, la base de données existe toujours).
 
-Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).
-
-Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.
+Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe `db_owner` ne détiennent pas d’autorisations RESTORE.
 
 ## <a name="examples"></a> Exemples
 
@@ -625,7 +615,7 @@ L'exemple suivant restaure une base de données nommée `MyDatabase` qui est com
 La sauvegarde de la base de données est le neuvième jeu de sauvegarde dans le support de sauvegarde sur une unité de sauvegarde logique nommée `MyDatabaseBackups`. Trois sauvegardes de fichier journal, qui se trouvent dans les trois jeux de sauvegarde suivants (`10`, `11` et `12`) sur l'unité `MyDatabaseBackups` sont ensuite restaurés à l'aide de `WITH NORECOVERY`. Une fois restaurée la dernière sauvegarde de fichier journal, la base de données est récupérée.
 
 > [!NOTE]
-> La récupération est réalisée séparément afin d'éviter qu'elle n'ait lieu trop tôt, c'est-à-dire avant que la totalité des sauvegardes de fichier journal n'ait été restaurée.
+> La récupération est réalisée séparément afin d'éviter qu'elle n'ait lieu trop tôt, c'est-à-dire avant que la totalité des sauvegardes de fichier journal n'ait été restaurée. Pour plus d’informations sur le processus de récupération, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 Dans l'instruction `RESTORE DATABASE`, il existe deux types d'options `FILE`. Les options `FILE` qui précèdent le nom de l'unité de sauvegarde spécifient les noms de fichiers logiques des fichiers de base de données à restaurer à partir du jeu de sauvegarde, par exemple `FILE = 'MyDatabase_data_1'`. Ce jeu de sauvegarde n'est pas la première sauvegarde de base de données dans le support de sauvegarde. Par conséquent, sa position dans le support de sauvegarde est indiquée via l'option `FILE` dans la clause `WITH`, en l'occurrence `FILE=9`.
 
@@ -683,7 +673,8 @@ Pour plus d’informations, consultez [Rétablir une base de données dans l’�
 
 Les trois exemples ci-dessous impliquent l’utilisation du service de stockage Microsoft Azure. Le nom du compte de stockage est `mystorageaccount`. Le conteneur des fichiers de données est appelé `myfirstcontainer`. Le conteneur des fichiers de sauvegarde est appelé `mysecondcontainer`. Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste pour chaque conteneur. Des informations d’identification SQL Server ont été créées en utilisant des signatures d’accès partagé associées aux stratégies d’accès stockées. Pour obtenir des informations spécifiques sur la sauvegarde et la restauration SQL Server avec le service de stockage Microsoft Blob Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Microsoft Blob Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-**K1. Restaurer une sauvegarde complète de base de données à partir du service Stockage Microsoft Azure** Une sauvegarde complète de base de données, située dans le conteneur `mysecondcontainer`, de `Sales` sera restaurée dans `myfirstcontainer`. `Sales` n’existe actuellement pas sur le serveur.
+**K1. Restaurer une sauvegarde complète de base de données à partir du service de stockage Microsoft Azure**    
+Une sauvegarde complète de base de données située dans le conteneur `mysecondcontainer` de `Sales` sera restaurée dans `myfirstcontainer`. `Sales` n’existe actuellement pas sur le serveur.
 
 ```sql
 RESTORE DATABASE Sales
@@ -717,18 +708,19 @@ RESTORE DATABASE Sales
 
 ## <a name="more-information"></a>Informations complémentaires
 
-- [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Sauvegarder et restaurer des bases de données système (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
-- [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Jeux de supports, familles de supports et jeux de sauvegarde](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [Historique de sauvegarde et informations d’en-tête](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
+[Vue d'ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
+[Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
+[Sauvegarder et restaurer des bases de données système (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
+[Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
+[Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
+[Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
+[BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+[Jeux de supports, familles de supports et jeux de sauvegarde](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
+[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
+[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
+[RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
+[RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
+[Historique de sauvegarde et informations d’en-tête](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -806,19 +798,17 @@ Les limitations suivantes s’appliquent :
 Pour plus d’informations, consultez [Instance managée](/azure/sql-database/sql-database-managed-instance)
 
 ## <a name="restoring-an-encrypted-database"></a>Restauration d'une base de données chiffrée
-
 Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
 ## <a name="permissions"></a>Autorisations
-
-L’utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE.
+L’utilisateur doit posséder les autorisations `CREATE DATABASE` afin de pouvoir exécuter RESTORE.
 
 ```sql
 CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
 GRANT CREATE ANY DATABASE TO [mylogin];
 ```
 
-Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.
+Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe `db_owner` ne détiennent pas d’autorisations RESTORE.
 
 ## <a name="examples"></a> Exemples
 
@@ -935,8 +925,7 @@ RESTORE HEADERONLY Spécifie le renvoi des seules informations d’en-tête d’
 Les résultats de RESTORE HEADERONLY sont modélisés d’après les résultats de RESTORE HEADERONLY de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les résultats comportent plus de 50 colonnes, qui ne sont pas toutes utilisées par [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour une description des colonnes présentes dans les résultats de RESTORE HEADERONLY de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez l’article [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
 
 ## <a name="permissions"></a>Autorisations
-
-Nécessite l’autorisation **CREATE ANY DATABASE**.
+Nécessite l’autorisation `CREATE ANY DATABASE`.
 
 Nécessite un compte Windows doté d’un droit d’accès et de lecture à partir du répertoire de sauvegarde. Vous devez aussi stocker le nom de compte et le mot de passe Windows dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
@@ -983,14 +972,13 @@ Dans le cadre de ces limitations et restrictions, l’appliance source est celle
 - Une sauvegarde qui a été créée dans une appliance basée sur du matériel SQL Server 2012 PDW ne pas être restaurée dans une appliance basée sur du matériel SQL Server 2008 R2. Cela est vrai même si l’appliance a été acquise à l’origine avec du matériel SQL Server 2008 R2 PDW et exécute maintenant un logiciel SQL Server 2012 PDW.
 
 ## <a name="locking"></a>Verrouillage
-
 Applique un verrou exclusif sur l’objet DATABASE.
 
 ## <a name="examples"></a>Exemples
 
 ### <a name="a-simple-restore-examples"></a>A. Exemples simples RESTORE
 
-L’exemple suivant restaure une sauvegarde complète dans la base de données `SalesInvoices2013`. Les fichiers de sauvegarde sont stockés dans le répertoire \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full. La base de données SalesInvoices2013 ne doit pas déjà se trouver dans l’appliance cible, car cette commande échouerait avec une erreur.
+L’exemple suivant restaure une sauvegarde complète dans la base de données `SalesInvoices2013`. Les fichiers de sauvegarde sont stockés dans le répertoire `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. La base de données SalesInvoices2013 ne doit pas déjà se trouver dans l’appliance cible, car cette commande échouerait avec une erreur.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1001,7 +989,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 L’exemple suivant restaure une sauvegarde complète, puis une sauvegarde différentielle dans la base de données SalesInvoices2013.
 
-La sauvegarde complète de la base de données est restaurée à partir de la sauvegarde complète, qui est stockée dans le répertoire « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ». Si la restauration aboutit, la sauvegarde différentielle est restaurée dans la base de données SalesInvoices2013. La sauvegarde différentielle est stockée dans le répertoire « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff ».
+La sauvegarde complète de la base de données est restaurée à partir de la sauvegarde complète, qui est stockée dans le répertoire `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Si la restauration aboutit, la sauvegarde différentielle est restaurée dans la base de données SalesInvoices2013. La sauvegarde différentielle est stockée dans le répertoire `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff`.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1013,7 +1001,7 @@ RESTORE DATABASE SalesInvoices2013
 
 ### <a name="c-restoring-the-backup-header"></a>C. Restauration de l’en-tête de sauvegarde
 
-Cet exemple restaure les informations d’en-tête pour la sauvegarde de base de données « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ». La commande génère une ligne d’informations pour la sauvegarde Invoices2013Full.
+Cet exemple restaure les informations d’en-tête pour la sauvegarde de base de données `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. La commande génère une ligne d’informations pour la sauvegarde Invoices2013Full.
 
 ```sql
 RESTORE HEADERONLY
@@ -1024,7 +1012,6 @@ RESTORE HEADERONLY
 Vous pouvez vous servir des informations d’en-tête pour vérifier le contenu d’une sauvegarde ou pour vous assurer que l’appliance de restauration cible est compatible avec l’appliance de sauvegarde source avant d’entreprendre la restauration de la sauvegarde.
 
 ## <a name="see-also"></a>Voir aussi
-
-- [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)
+[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
 
 ::: moniker-end

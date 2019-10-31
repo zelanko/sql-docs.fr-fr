@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031629"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909569"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68031629"
   
 2.  Dans la fenêtre **Sélectionner des tables** , cochez la case de la table d’historique temporelle et cliquez sur Suivant.  
   
-     ![Sélection de la table d’historique dans la page Sélectionner les tables](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Sélection de la table d’historique dans la page Sélectionner les tables")  
+     ![Sélection de la table d’historique dans la page Sélectionner des tables](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Sélection de la table d’historique dans la page Sélectionner des tables")  
   
 3.  Dans la fenêtre **Configurer Azure** , fournissez vos informations d’identification de connexion. Connectez-vous à Microsoft Azure ou inscrivez-vous pour ouvrir un compte. Sélectionnez l’abonnement à utiliser, ainsi que la région Azure. Créez ensuite un serveur ou sélectionnez-en un existant. Cliquez sur **Suivant**.  
   
@@ -80,15 +80,13 @@ ms.locfileid: "68031629"
   
 4.  Dans la fenêtre **Informations d’identification sécurisées** , indiquez un mot de passe pour la clé principale de la base de données afin de sécuriser vos informations d’identification de base de données SQL Server source et cliquez sur Suivant.  
   
-     ![Page Informations d’identification sécurisées de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Page Informations d’identification sécurisées de l’Assistant Stretch Database")  
+     ![Page d’informations d’identification sécurisées de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")  
   
 5.  Dans la fenêtre **Sélectionner une adresse IP** , indiquez la plage d’adresses IP pour que votre serveur SQL Server permette à votre serveur Azure de communiquer avec lui (si vous sélectionnez un serveur existant pour lequel une règle de pare-feu existe déjà, il suffit de cliquer sur Suivant ici pour utiliser cette règle de pare-feu existante). Cliquez sur **Suivant** , puis sur **Terminer** pour activer Stretch Database pour la table d’historique temporelle.  
   
-     ![Page Sélectionner une adresse IP de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Page Sélectionner une adresse IP de l’Assistant Stretch Database")  
+     ![Page de sélection de l’adresse IP de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Page de sélection de l’adresse IP de l’Assistant Stretch Database")  
   
 6.  Quand l’Assistant a terminé, vérifiez que Stretch est correctement activé pour votre base de données. Notez que les icônes de l’Explorateur d’objets indique que Stretch a été activé pour la base de données.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **REMARQUE :** Si Activer la base de données pour Stretch échoue, consultez le journal des erreurs. Une erreur courante consiste à configurer incorrectement la règle de pare-feu.  
   
@@ -190,7 +188,7 @@ Au fil du temps, les nouvelles lignes de la table d’historique atterriront dan
   
  Le schéma suivant illustre les tâches de maintenance périodique de partition (voir la procédure détaillée ci-dessous).  
   
- ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
+ ![Partitionnement2](../../relational-databases/tables/media/partitioning2.png "Partitionnement2")  
   
  Voici la procédure à suivre pour effectuer les tâches de maintenance périodique de partition :  
   
@@ -336,7 +334,7 @@ COMMIT TRANSACTION
   
  Pour commencer, expliquons visuellement la signification des options RANGE LEFT et RANGE RIGHT :  
   
- ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
+ ![Partitionnement3](../../relational-databases/tables/media/partitioning3.png "Partitionnement3")  
   
  Quand vous définissez une fonction de partition avec RANGE LEFT, les valeurs spécifiées correspondent aux limites supérieures des partitions. Quand vous utilisez RANGE RIGHT, les valeurs spécifiées correspondent aux limites inférieures des partitions. Quand vous utilisez l’opération MERGE RANGE pour supprimer une limite de la définition de la fonction de partition, l’implémentation sous-jacente supprime aussi la partition qui contient la limite. Si cette partition n’est pas vide, les données sont déplacées dans la partition qui résulte de l’opération MERGE RANGE.  
   
@@ -498,7 +496,7 @@ Le processus de nettoyage dépend de la disposition de l’index de la table d�
 
 La tâche de nettoyage de l’index columnstore cluster supprime des groupes de lignes entiers (qui contiennent généralement 1 million de lignes chacun), ce qui est très efficace, en particulier quand les données d’historique sont générées à un rythme élevé.
 
-![Rétention de l’index columnstore cluster](../../relational-databases/tables/media/cciretention.png "Rétention de l’index columnstore cluster")
+![Rétention de columnstore en cluster](../../relational-databases/tables/media/cciretention.png "Rétention de columnstore en cluster")
 
 En raison de l’excellence de la compression des données et de l’efficacité du nettoyage de la rétention, l’index columnstore cluster est un choix idéal dans les scénarios où votre charge de travail génère rapidement une grande quantité de données d’historique. Ce modèle est généralement utilisé pour les charges de travail avec traitement transactionnel intensif, qui utilisent des tables temporelles pour l’audit et le suivi des changements, l’analyse des tendances ou l’ingestion des données IoT.
 

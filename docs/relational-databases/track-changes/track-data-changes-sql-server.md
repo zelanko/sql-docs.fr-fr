@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 76e375259132528b84cbc0cc85b1f61da49f9b93
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621779"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907839"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "69621779"
   
  Comme indiqué dans l'illustration suivante, les modifications apportées aux tables utilisateur sont capturées dans des tables de modifications correspondantes. Ces tables de modifications fournissent une vue historique des modifications au fil du temps. Les fonctions de [capture des changements de données](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) fournies par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent de consommer facilement et systématiquement les changements de données.  
   
- ![Illustration conceptuelle de la capture des données modifiées](../../relational-databases/track-changes/media/cdcart1.gif "Illustration conceptuelle de la capture des données modifiées")  
+ ![Illustration conceptuelle de la capture de données modifiées](../../relational-databases/track-changes/media/cdcart1.gif "Illustration conceptuelle de la capture de données modifiées")  
   
 ### <a name="security-model"></a>Modèle de sécurité  
  Cette section décrit le modèle de sécurité de la capture de données modifiées.  
@@ -108,8 +108,6 @@ ms.locfileid: "69621779"
 1.  Vérifiez que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le miroir.  
   
 2.  Créez le travail de capture et le travail de nettoyage sur le miroir le basculement de l'unité principale sur l'unité miroir. Pour créer les travaux, utilisez la procédure stockée [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Pour plus d’informations sur la mise en miroir des bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

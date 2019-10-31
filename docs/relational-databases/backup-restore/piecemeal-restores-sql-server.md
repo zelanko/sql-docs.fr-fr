@@ -1,7 +1,7 @@
 ---
 title: Restaurations fragmentaires (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033654"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915995"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurations fragmentaires (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "68033654"
      Dans l'édition Enterprise, tout groupe de fichiers secondaire hors connexion peut être restauré et récupéré tant que la base de données reste en ligne. Un fichier en lecture seule spécifique ne doit être restauré que s'il est endommagé ou s'il est incohérent avec la base de données. Pour plus d’informations, consultez [Récupérer une base de données sans restauration des données &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ### <a name="applying-log-backups"></a>Application des sauvegardes de journaux  
- Si un groupe de fichiers est en lecture seule avant la création de la sauvegarde de fichiers, l'application des sauvegardes de journaux au groupe de fichiers n'est pas nécessaire et n'est pas effectuée par la restauration de fichiers. Si le groupe de fichiers est en lecture/écriture, une séquence non rompue de sauvegardes de journaux doit être appliquée à la dernière restauration complète ou différentielle pour restaurer par progression le groupe de fichiers jusqu'au fichier journal actuel.  
+ Si un groupe de fichiers est en lecture seule avant la création de la sauvegarde de fichiers, l'application des sauvegardes de journaux au groupe de fichiers n'est pas nécessaire et n'est pas effectuée par la restauration de fichiers. Si le groupe de fichiers est en lecture/écriture, une séquence non rompue de sauvegardes de journaux doit être appliquée à la dernière restauration complète ou différentielle pour restaurer par progression le groupe de fichiers jusqu'au fichier journal actuel. Pour plus d’informations sur le processus de récupération, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 ### <a name="examples"></a>Exemples  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033654"
   
 4.  Sauvegarde différentielle suivie d'autres sauvegardes restaurées dans la séquence de restauration fragmentaire d'origine pour restaurer les données jusqu'au point de récupération d'origine.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>Voir aussi  
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Planifier et exécuter des séquences de restauration &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [Planifier et exécuter des séquences de restauration &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [Vue d'ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

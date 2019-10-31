@@ -11,12 +11,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a362e060eb9fc9d8e39459007e50a0c81fba393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069663"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907537"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "68069663"
 2.  Cliquez sur **Nouvelle requête**.  
   
 3.  Collez ce code dans la nouvelle fenêtre de requête et exécutez chaque section.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     -- create a database to be used  
@@ -248,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  Pour plus d’informations, consultez [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Mémoire consommée par le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sur l'instance  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>Mémoire consommée par le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sur l'instance  
  La mémoire allouée au moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] et aux objets optimisés en mémoire est gérée de la même façon que pour tout autre consommateur de mémoire dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les régisseurs de mémoire de type MEMORYCLERK_XTP tiennent compte de toute la mémoire allouée au moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Utilisez la requête suivante pour rechercher toute la mémoire utilisée par le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 ```sql  

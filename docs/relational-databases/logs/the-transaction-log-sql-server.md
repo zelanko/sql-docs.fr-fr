@@ -1,7 +1,7 @@
 ---
 title: Journal des transactions (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083938"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916031"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +39,24 @@ Pour plus d’informations sur l’architecture du journal des transactions et l
  Le journal des transactions prend en charge les opérations suivantes :  
   
 -   Récupération des transactions individuelles.  
--   Récupération de toutes les transactions incomplètes au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Récupération de toutes les transactions incomplètes au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 -   Restauration par progression d'une base de données, d'un fichier, d'un groupe de fichiers ou d'une page jusqu'au point de défaillance  
 -   Prise en charge de la réplication transactionnelle  
 -   Prise en charge de la haute disponibilité et de solutions de récupération d'urgence : [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], mise en miroir de bases de données et copie des journaux de transaction.
 
 ### <a name="individual-transaction-recovery"></a>Récupération des transactions individuelles
-Si une application envoie une instruction `ROLLBACK`, ou si le moteur de base de données détecte une erreur telle que la perte de la communication avec un client, les enregistrements du journal permettent de restaurer les modifications effectuées par une transaction incomplète. 
+Si une application envoie une instruction `ROLLBACK`, ou si le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte une erreur telle que la perte de la communication avec un client, les enregistrements du journal permettent de restaurer les modifications effectuées par une transaction incomplète. 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Récupération de toutes les transactions incomplètes au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-En cas de défaillance d’un serveur, il peut arriver que certaines modifications effectuées dans les bases de données n’aient jamais pu être écrites de la mémoire tampon vers les fichiers de données ou proviennent de transactions incomplètes dans les fichiers de données. Lorsqu'elle démarre, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une récupération de chaque base de données. Chaque modification enregistrée dans le journal qui risque de ne pas avoir été répercutée dans les fichiers de données est récupérée. Chaque transaction incomplète trouvée dans le journal des transactions est ensuite restaurée afin de préserver l'intégrité de la base de données. 
+En cas de défaillance d’un serveur, il peut arriver que certaines modifications effectuées dans les bases de données n’aient jamais pu être écrites de la mémoire tampon vers les fichiers de données ou proviennent de transactions incomplètes dans les fichiers de données. Lorsqu'elle démarre, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une récupération de chaque base de données. Chaque modification enregistrée dans le journal qui risque de ne pas avoir été répercutée dans les fichiers de données est récupérée. Chaque transaction incomplète trouvée dans le journal des transactions est ensuite restaurée afin de préserver l'intégrité de la base de données. Pour plus d’informations, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Restauration par progression d’une base de données, d’un fichier, d’un groupe de fichiers ou d’une page jusqu’au point de défaillance
 Après un incident matériel ou une défaillance de disque touchant les fichiers de base de données, vous pouvez restaurer la base de données jusqu'au point de défaillance. Restaurez tout d'abord la dernière sauvegarde complète et différentielle de la base de données, puis restaurez la séquence suivante des sauvegardes des journaux des transactions jusqu'au point de défaillance. 
 
-Quand vous restaurez chaque sauvegarde de journal, le moteur de base de données réapplique toutes les modifications enregistrées dans le journal pour restaurer par progression toutes les transactions. Quand la dernière sauvegarde de journal a été restaurée, le moteur de base de données utilise les informations des journaux pour restaurer toutes les transactions qui n’ont pas été terminées à ce stade. 
+Lorsque vous restaurez chaque sauvegarde de journal, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] réapplique toutes les modifications enregistrées dans le journal pour restaurer par progression toutes les transactions. Lorsque la dernière sauvegarde de journal a été restaurée, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utilise les informations des journaux pour restaurer toutes les transactions qui n'ont pas été terminées à ce stade. Pour plus d’informations, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Prise en charge de la réplication transactionnelle
-L’Agent de lecture du journal surveille le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution. Pour plus d’informations sur la réplication transactionnelle, consultez [Fonctionnement de la réplication transactionnelle](https://msdn.microsoft.com/library/ms151706.aspx).
+L’Agent de lecture du journal surveille le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution. Pour plus d’informations sur la réplication transactionnelle, consultez [Fonctionnement de la réplication transactionnelle](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Prise en charge des solutions de récupération d’urgence et de haute disponibilité
 Les solutions à serveur de secours, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], les mises en miroir de base de données et les copies des journaux de transactions dépendent fortement du journal des transactions. 
@@ -68,11 +68,13 @@ Dans un **scénario de copie des journaux de transactions**, le serveur principa
 Dans un **scénario de mise en miroir de base de données**, toutes les mises à jour d’une base de données, à savoir la base de données principale, sont immédiatement reproduites dans une copie distincte complète de la base de données, la base de données miroir. L'instance du serveur principal envoie chaque enregistrement du journal immédiatement à l'instance du serveur miroir, qui applique ces enregistrements à la base de données miroir en la restaurant constamment par progression. Pour plus d’informations, consultez [Mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
 ##  <a name="Characteristics"></a>Caractéristiques du journal des transactions
-
 Caractéristiques du journal des transactions [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] : 
 -  Le journal des transactions est mis en œuvre sous la forme d'un fichier ou d'un ensemble de fichiers distinct dans la base de données. Le cache du journal est géré indépendamment du cache des tampons des pages de données, ce qui se traduit par un code simple, rapide et robuste dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Pour plus d’informations, consultez [Architecture physique du journal des transactions](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
+
 -  Le format des enregistrements et des pages du journal ne suit pas obligatoirement celui des pages de données.
+
 -  Le journal des transactions peut être implémenté dans plusieurs fichiers. Les fichiers peuvent être configurés pour croître automatiquement en définissant la valeur `FILEGROWTH` pour le journal. Le risque d'insuffisance de l'espace dans le journal des transactions et la surcharge administrative sont ainsi réduits. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers &#40;Transact-SQL&#41; ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+
 -  Le mécanisme de réutilisation de l'espace des fichiers journaux est rapide et a une incidence minimale sur le débit des transactions.
 
 Pour plus d’informations sur l’architecture du journal des transactions et les structures internes, consultez [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
@@ -136,7 +138,7 @@ Quand la réplication transactionnelle est activée, les opérations `BULK INSER
   
 -   Opérations [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-Lorsque la réplication transactionnelle est activée, les opérations SELECT INTO sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
+Quand la réplication transactionnelle est activée, les opérations `SELECT INTO` sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
   
 -   Mises à jour partielles vers des types de données de valeur élevée, en incluant la clause `.WRITE` dans l’instruction [UPDATE](../../t-sql/queries/update-transact-sql.md) pendant l’insertion ou l’ajout de nouvelles données. Notez que la journalisation minimale n'est pas utilisée quand des valeurs existantes sont mises à jour. Pour plus d’informations sur les types de données de valeur élevée, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -166,7 +168,9 @@ Lorsque la réplication transactionnelle est activée, les opérations SELECT IN
 **Sauvegarde du journal des transactions (mode de récupération complète)**  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-  
+
+-   [Sauvegarder le journal des transactions quand la base de données est endommagée (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)
+
 **Restauration du journal des transactions (mode de récupération complète)**  
   
 -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -175,7 +179,8 @@ Lorsque la réplication transactionnelle est activée, les opérations SELECT IN
 [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md)   
 [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[Vue d'ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Afficher ou modifier les propriétés d’une base de données](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

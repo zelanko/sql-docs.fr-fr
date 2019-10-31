@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476216"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807464"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer des paramètres SQL Server à l’aide de variables d’environnement sur Linux
 
@@ -94,7 +94,7 @@ Vous pouvez utiliser plusieurs variables d’environnement différentes pour con
 Cet exemple exécute `mssql-conf setup` avec des variables d’environnement configurées. Les variables d’environnement suivantes sont spécifiées :
 
 - **ACCEPT_EULA** accepte le contrat de licence utilisateur final.
-- **MSSSQL_PID** spécifie l’édition Développeur sous licence gratuite de SQL Server pour une utilisation hors production.
+- **MSSQL_PID** spécifie l’édition Développeur sous licence gratuite de SQL Server pour une utilisation hors production.
 - **MSSQL_SA_PASSWORD** définit un mot de passe fort.
 - **MSSQL_TCP_PORT** définit le port TCP que SQL Server écoute sur 1234.
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 Cet exemple de commande Docker utilise les variables d’environnement suivantes pour créer un conteneur SQL Server :
 
 - **ACCEPT_EULA** accepte le contrat de licence utilisateur final.
-- **MSSSQL_PID** spécifie l’édition Développeur sous licence gratuite de SQL Server pour une utilisation hors production.
+- **MSSQL_PID** spécifie l’édition Développeur sous licence gratuite de SQL Server pour une utilisation hors production.
 - **MSSQL_SA_PASSWORD** définit un mot de passe fort.
 - **MSSQL_TCP_PORT** définit le port TCP que SQL Server écoute sur 1234. Cela signifie qu’au lieu de mapper le port 1433 (par défaut) à un port hôte, le port TCP personnalisé doit être mappé avec la commande `-p 1234:1234` dans cet exemple.
 

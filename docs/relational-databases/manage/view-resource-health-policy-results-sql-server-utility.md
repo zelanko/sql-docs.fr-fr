@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42832ef91f33bbe4e66ad82bc3498106502e7ecb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e10d2bcd280e1c353fb30613a6d65b715caf82e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024448"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907527"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Consulter les résultats d'une stratégie de contrôle d'intégrité des ressources (Utilitaire SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,15 +27,13 @@ ms.locfileid: "68024448"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), cliquez sur **Affichage**, puis sur **Explorateur de l’utilitaire** pour afficher le volet Navigation de l’Explorateur de l’utilitaire. Pour afficher le volet de contenu, cliquez sur **Affichage**, puis sur **Contenu de l'Explorateur de l'utilitaire**.  
   
-2.  Dans le volet Navigation, cliquez sur ![](../../relational-databases/manage/media/connect-to-utility.gif "Se connecter à l’utilitaire")**Se connecter à l’utilitaire**. Si vous n’avez pas créé de point de contrôle d’utilitaire (UCP) ou si vous n’avez pas inscrit d’instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d’applications de la couche Données dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+2.  Dans le volet Navigation, cliquez sur ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Se connecter à l’utilitaire**. Si vous n’avez pas créé de point de contrôle d’utilitaire (UCP) ou si vous n’avez pas inscrit d’instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d’applications de la couche Données dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 3.  Cliquez sur le nœud UCP pour afficher les données de synthèse des instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des applications de la couche Données (cliquez avec le bouton droit pour actualiser). Les données du tableau de bord sont affichées dans le volet Contenu.  
   
 4.  Cliquez sur le nœud **Instances managées** pour afficher les données en mode Liste des instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (cliquez avec le bouton droit pour actualiser). Les données en mode Liste sont affichées dans le volet Contenu.  
   
 5.  Cliquez sur le nœud **Applications de la couche Données déployées** pour afficher les données en mode Liste des applications de la couche Données (cliquez avec le bouton droit pour actualiser). Les données en mode Liste sont affichées dans le volet Contenu.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

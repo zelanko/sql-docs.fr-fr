@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140322"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796639"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utiliser les paramètres table (Moteur de base de données)
 
@@ -57,6 +57,9 @@ Les paramètres table offrent davantage de souplesse et dans certains cas de mei
 - Sont fortement typées.
 - Permettent au client de spécifier un ordre de tri et des clés uniques.
 - Sont mis en cache comme une table temporaire en cas de utilisation dans une procédure stockée. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les paramètres table sont également mis en cache pour les requêtes paramétrables.
+
+## <a name="Permissions"></a> Autorisations
+Pour créer une instance d’un type de table défini par l’utilisateur ou appeler une procédure stockée avec un paramètre Table, l’utilisateur doit disposer de l’autorisation EXECUTE sur le type, ou sur le schéma ou la base de données contenant le type.
 
 ## <a name="Restrictions"></a> Restrictions
 

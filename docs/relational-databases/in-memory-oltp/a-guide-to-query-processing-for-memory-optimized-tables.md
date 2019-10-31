@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811147"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908723"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Le plan estimé pour cette requête est le suivant :  
   
- ![Plan de requête d’une jointure hachée des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Plan de requête d’une jointure hachée des tables sur disque.")  
+ ![Plan de requête d'une jointure hachée des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Plan de requête d'une jointure hachée des tables sur disque.")  
 Plan de requête d'une jointure hachée des tables sur disque.  
   
  Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. L’opérateur physique **Correspondances de hash** est désormais utilisé pour la **Jointure interne**. L’index cluster sur Order n’étant pas trié sur CustomerID, une **Jointure de fusion** nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l’opérateur **Correspondances de hash** (75 %) comparé au coût de l’opérateur **Jointure de fusion** dans l’exemple précédent (46 %). L’optimiseur aurait pu utiliser l’opérateur **Correspondances de hash** également dans l’exemple précédent, mais il a considéré que l’opérateur **Jointure de fusion** fournirait de meilleures performances.  
@@ -100,7 +100,7 @@ Plan de requête d'une jointure hachée des tables sur disque.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Traitement des requêtes pour les tables sur disque  
  Le diagramme suivant représente le flux de traitement des requêtes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les requêtes ad hoc :  
   
- ![Pipeline de traitement des requêtes SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Pipeline de traitement des requêtes SQL Server.")  
+ ![Pipeline de traitement des requêtes SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Pipeline de traitement des requêtes SQL Server")  
 Pipeline de traitement des requêtes SQL Server  
   
  Dans ce scénario :  
@@ -117,17 +117,15 @@ Pipeline de traitement des requêtes SQL Server
   
 6.  Les méthodes d'accès récupèrent les lignes de l'index et les pages de données dans le pool de mémoires tampons, et chargent les pages à partir du disque dans le pool de mémoires tampons si nécessaire.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Pour le premier exemple de requête, le moteur d’exécution demande des lignes à l’index cluster sur la table Customer, et à l’index non-cluster sur la table Order, à partir des méthodes d’accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
   
- Le [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables mémoire optimisées et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées :  
+ Le [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables mémoire optimisées et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables optimisées en mémoire :  
   
  ![Pipeline de traitement des requêtes pour le TSQL interprété.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Pipeline de traitement des requêtes pour le TSQL interprété.")  
-Pipeline de traitement des requêtes pour l'accès en Transact-SQL interprété aux tables mémoire optimisées.  
+Pipeline de traitement des requêtes pour l'accès en Transact-SQL interprété aux tables optimisées en mémoire.  
   
  Comme illustré dans la figure, le pipeline de traitement des requêtes reste principalement inchangé :  
   
@@ -164,8 +162,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Le plan estimé est le suivant :  
   
- ![Plan de requête pour joindre des table à mémoire optimisée.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Plan de requête pour joindre des table à mémoire optimisée.")  
-Plan de requête pour joindre des tables mémoire optimisées.  
+ ![Plan de requête pour joindre des tables optimisées en mémoire.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Plan de requête pour joindre des tables mémoire optimisées.")  
+Plan de requête pour joindre des tables optimisées en mémoire.  
   
  Observez les différences suivantes dans le plan pour la même requête sur des tables sur disque (figure 1) :  
   

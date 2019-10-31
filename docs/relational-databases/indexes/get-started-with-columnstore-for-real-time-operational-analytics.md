@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009489"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908024"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Bien commencer avec columnstore pour l’analytique opérationnelle en temps réel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70009489"
   
 -   **Latence des données.** L’implémentation des opérations ETL ajoute un délai pour l’exécution de l’analytique. Par exemple, si la tâche ETL est exécutée à la fin de chaque journée de travail, les requêtes analytiques sont exécutées sur des données qui ont au moins un jour. Pour de nombreuses entreprises, ce délai est inacceptable, car les affaires dépendent de l’analyse des données en temps réel. Par exemple, la détection des fraudes nécessite l’analytique en temps réel des données opérationnelles.  
   
- ![vue d’ensemble de l’analytique opérationnelle en temps réel](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "vue d’ensemble de l’analytique opérationnelle en temps réel")  
+ ![Vue d’ensemble de l’analytique opérationnelle en temps réel](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "Vue d’ensemble de l’analytique opérationnelle en temps réel")  
   
  L’analytique opérationnelle en temps réel offre une solution à ces inconvénients.   
         Il n’existe aucun délai quand les charges de travail analytiques et OLTP sont exécutées sur la même table sous-jacente.   Pour les scénarios qui peuvent utiliser l’analytique en temps réel, les coûts et la complexité sont considérablement réduits en éliminant le besoin d’opérations ETL et la nécessité d’acheter et de gérer un entrepôt de données distinct.  
@@ -84,8 +84,6 @@ ms.locfileid: "70009489"
   
 3.  Vous n’avez rien d’autre à faire !  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Vous êtes maintenant prêt à exécuter l’analytique opérationnelle en temps réel sans apporter aucune modification à votre application.  Les requêtes analytiques sont exécutées sur l’index columnstore et les opérations OLTP continuent de s’exécuter sur les index BTree OLTP. Les charges de travail OLTP continuent de fonctionner, mais encourent une surcharge supplémentaire pour gérer l’index columnstore. Consultez les optimisations des performances dans la section suivante.  
   
 ## <a name="blog-posts"></a>Billets de blog  
@@ -122,7 +120,7 @@ ms.locfileid: "70009489"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Exemple A : Accès aux données chaudes à partir de l’index B-tree, aux données tièdes à partir de l’index columnstore  
  Cet exemple utilise une condition filtrée (accountkey > 0) pour déterminer les lignes qui seront dans l’index columnstore. L’objectif est de concevoir la condition filtrée et les requêtes suivantes pour accéder aux données « chaudes » qui changent fréquemment à partir de l’index BTree et pour accéder aux données « tièdes » plus stables à partir de l’index columnstore.  
   
- ![Index combinés de données tièdes et chaudes](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Index combinés de données tièdes et chaudes")  
+ ![Index combinés pour les données à chaud et chaudes](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Index combinés pour les données à chaud et chaudes")  
   
 > [!NOTE]  
 >  L’optimiseur de requête envisage, mais ne choisit pas toujours, l’index columnstore pour le plan de requête. Quand l’optimiseur de requête choisit l’index columnstore filtré, il associe en toute transparence à la fois les lignes de l’index columnstore et les lignes qui ne respectent pas la condition filtrée pour permettre l’analytique en temps réel. Cela est différent d’un index non cluster filtré standard qui peut être utilisé uniquement dans les requêtes qui se limitent aux lignes présentes dans l’index.  
@@ -165,7 +163,7 @@ Group By customername
   
  La requête analytique est exécutée avec le plan de requête suivant. Vous pouvez voir que les lignes ne respectant pas la condition filtrée sont accessibles via l’index BTree cluster.  
   
- ![Plan de requête](../../relational-databases/indexes/media/query-plan-columnstore.png "Plan de requête")  
+ ![Plan de la requête](../../relational-databases/indexes/media/query-plan-columnstore.png "Plan de la requête")  
   
  Consultez le blog pour plus d’informations sur l’ [index non cluster columnstore filtré](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/).  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006131"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909162"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 
@@ -43,7 +43,7 @@ Pour plus d’informations sur les changements apportés à l’optimiseur de re
 
 Remplacez le [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) par celui de la version de la source, puis suivez la procédure de mise à niveau recommandée que présente l’image suivante :
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![requête-magasin-utilisation-5](../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5")  
 
 Pour plus d’informations à ce sujet, consultez [Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -107,8 +107,6 @@ Voici quelques exemples de prédicats non SARGable :
   -   Cela peut impliquer la comparaison d’une construction de code définie par l’utilisateur et stockée dans la base de données (par exemple des procédures stockées, des fonctions définies par l’utilisateur ou des vues) aux tables système qui contiennent des informations sur les types de données utilisés dans les tables sous-jacentes (par exemple [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Si vous ne parvenez pas à traverser l’ensemble du code jusqu’au point précédent, pour la même finalité, changez le type de données de la table afin qu’il corresponde à une déclaration de variable/paramètre.
 3. Vérifiez l’utilité des constructions suivantes :
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   fonctions utilisées en tant que prédicats ;
   -   recherches à l’aide de caractères génériques ;

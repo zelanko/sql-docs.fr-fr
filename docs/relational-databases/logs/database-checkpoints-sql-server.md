@@ -27,12 +27,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 034e4c9ed8df53c6600896b4a5877f1b48a3288d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084080"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916021"
 ---
 # <a name="database-checkpoints-sql-server"></a>Points de contrôle de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge plusieurs types de points de contrôle : automatique, indirect, manuel et interne. Le tableau suivant récapitule les types de **points de contrôle**.
   
-|Créer une vue d’abonnement|[!INCLUDE[tsql](../../includes/tsql-md.md)] .|Description|  
+|Nom|[!INCLUDE[tsql](../../includes/tsql-md.md)] .|Description|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'** recovery interval **','** _seconds_ **'**|Émis automatiquement en arrière-plan pour respecter la limite de durée supérieure suggérée par l'option de configuration de serveur **recovery interval** . Les points de contrôle automatiques s'exécutent jusqu'à la fin.  Les points de contrôle automatiques sont accélérés en fonction du nombre d’écritures en attente et si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détecte une augmentation de latence d’écriture supérieure à 50 millisecondes.<br /><br /> Pour plus d'informations, consultez [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indirect|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _temps\_récupération\_cible_ { SECONDES &#124; MINUTES }|Émis en arrière-plan pour obtenir un temps de récupération cible spécifié par l'utilisateur pour une base de données. À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], la valeur par défaut est de 1 minute. La valeur par défaut est 0 pour les anciennes versions, ce qui indique que la base de données utilisera les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur.<br /><br /> Pour plus d'informations, consultez [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
@@ -59,7 +59,7 @@ Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]
 > Les transactions non validées longues augmentent le temps de récupération pour tous les types de points de contrôle.   
   
 ##  <a name="InteractionBwnSettings"></a> Interaction des options TARGET_RECOVERY_TIME et « recovery interval »  
- Le tableau suivant résume l’interaction entre le paramètre **sp_configure'** recovery interval **'** à l’échelle du serveur et le paramètre ALTER DATABASE ... TARGET_RECOVERY_TIME spécifique à la base de données.  
+ Le tableau suivant résume l’interaction entre le paramètre **sp_configure '** recovery interval **'** à l’échelle du serveur et le paramètre `ALTER DATABASE ... TARGET_RECOVERY_TIME` spécifique à la base de données.  
   
 |target_recovery_time|'recovery interval'|Type de point de contrôle utilisé|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -81,7 +81,7 @@ Après une panne système, le temps nécessaire pour récupérer une base de don
 ###  <a name="PerformanceImpact"></a> Impact de l’intervalle de récupération sur les performances de récupération  
 Pour un système de traitement transactionnel en ligne (OLTP, online transaction processing), qui utilise de petites transactions, le paramètre **recovery interval** est le principal facteur déterminant le temps de récupération. Toutefois, l’option **recovery interval** n’affecte pas le temps nécessaire pour annuler une transaction longue. La récupération d’une base de données avec une transaction longue peut prendre beaucoup plus de temps que la valeur spécifiée dans le paramètre **recovery interval** . 
  
-Par exemple, si une transaction d’exécution longue a mis deux heures pour effectuer des mises à jour avant la défaillance de l’instance de serveur, la récupération elle-même prendra beaucoup plus de temps pour restaurer la transaction longue que la valeur spécifiée pour l’option **recovery interval** . Pour plus d’informations sur l’impact d’une transaction longue sur la durée de récupération, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+Par exemple, si une transaction d’exécution longue a mis deux heures pour effectuer des mises à jour avant la défaillance de l’instance de serveur, la récupération elle-même prendra beaucoup plus de temps pour restaurer la transaction longue que la valeur spécifiée pour l’option **recovery interval** . Pour plus d’informations sur l’impact d’une transaction longue sur la durée de récupération, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). Pour plus d’informations sur le processus de récupération, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 En général, les valeurs par défaut fournissent les performances de récupération optimales. Toutefois, modifier l'intervalle de récupération peut améliorer les performances dans les circonstances suivantes :  
   
@@ -92,7 +92,6 @@ En général, les valeurs par défaut fournissent les performances de récupéra
 Si vous décidez d'augmenter le paramètre **recovery interval** , nous vous recommandons de l'augmenter progressivement par de petits incréments et d'évaluer l'effet de chaque augmentation incrémentielle sur les performances de récupération. Cette approche est importante, car à mesure que le paramètre **recovery interval** augmente, la récupération de la base de données prend plus de longtemps. Par exemple, si vous indiquez un **recovery interval** de 10 minutes, la récupération prend environ 10 fois plus de temps que si le paramètre **recovery interval** est défini sur 1 minute.  
   
 ##  <a name="IndirectChkpt"></a> Points de contrôle indirects
-  
 Les points de contrôle indirects, nouveauté de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], sont une alternative de base de données configurable aux points de contrôle automatiques. Ceci peut être configuré en spécifiant l’option de configuration de base de données **Temps de récupération cible**. Pour plus d’informations, consultez [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 En cas de panne système, les points de contrôle indirects fournissent un temps de récupération plus prédictible et plus rapide que les points de contrôle automatiques. Les points de contrôle indirects offrent les avantages suivants :  
   
@@ -111,7 +110,6 @@ Une charge de travail transactionnelle en ligne sur une base de données configu
 > Les bases de données qui ont été mises à niveau sur place ou restaurées à partir d’une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliseront le comportement de point de contrôle automatique précédent, sauf si elles sont modifiées explicitement pour utiliser le point de contrôle indirect.       
 
 ### <a name="ctp23"></a> Scalabilité du point de contrôle indirect améliorée
-
 Dans les versions antérieures à [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], vous pouvez rencontrer des erreurs de planificateur improductives lorsqu’il existe une base de données qui génère un grand nombre de pages de modifications, comme `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit une meilleure scalabilité pour le point de contrôle indirect, ce qui devrait permettre d’éviter ces erreurs sur les bases de données dont la charge de travail `UPDATE`/`INSERT` est importante.
   
 ##  <a name="EventsCausingChkpt"></a> Points de contrôle internes  
@@ -129,7 +127,6 @@ Les points de contrôle internes sont générés par les divers composants serve
   
 -   La mise hors connexion d'une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .      
   
-
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Pour modifier l'intervalle de récupération sur une instance de serveur**  
   
@@ -143,9 +140,7 @@ Les points de contrôle internes sont générés par les divers composants serve
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-  
 ## <a name="see-also"></a>Voir aussi  
 [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Architecture physique du journal des transactions](https://technet.microsoft.com/library/ms179355.aspx) (dans la documentation en ligne [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , mais toutefois applicable)       
-  
-  
+[Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
+ 

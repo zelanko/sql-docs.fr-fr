@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024982"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909254"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,8 +58,6 @@ Vous pouvez utiliser un fichier de format non-XML ou un fichier de format XML po
 1.   Utilisez l’utilitaire de ligne de commande **bcp** pour créer un fichier de format non XML par défaut.
 
 2.   Modifiez le fichier de format par défaut dans un éditeur de texte
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Le fichier de format modifié doit mapper chaque champ existant à une colonne correspondante dans la table de destination. Il doit également indiquer la ou les colonnes de table à ignorer. 
 

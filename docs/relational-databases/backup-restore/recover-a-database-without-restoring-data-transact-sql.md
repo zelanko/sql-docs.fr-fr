@@ -1,7 +1,7 @@
 ---
 title: Récupérer une base de données sans restaurer les données (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e87e806b8af58c74bf4406d697a99f42d7f67c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033597"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916051"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "68033597"
   
  La syntaxe [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) pour une restauration de base de données avec récupération uniquement est la suivante :  
   
- RESTORE DATABASE *nom_base_de_données* WITH RECOVERY  
+ `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
->  La clause FROM **=** \<*unité_de_sauvegarde>* n’est pas destinée aux restaurations avec récupération uniquement, car aucune sauvegarde n’est nécessaire.  
+> La clause FROM **=** \<*unité_de_sauvegarde>* n’est pas destinée aux restaurations avec récupération uniquement, car aucune sauvegarde n’est nécessaire.  
   
  **Exemple**  
   
  L'exemple suivant récupère l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans le cadre d'une opération de restauration sans restaurer les données.  
   
-```  
+```sql  
 -- Restore database using WITH RECOVERY.  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY  
@@ -60,17 +60,17 @@ RESTORE DATABASE AdventureWorks2012
   
  Une base de données est restaurée par fragments. Une fois le groupe de fichiers primaire restauré, un ou plusieurs des fichiers non restaurés sont cohérents avec le nouvel état de la base de données, peut-être pour avoir été en lecture seule un moment. Ces fichiers doivent seulement être récupérés ; la copie des données n'est pas nécessaire.  
   
- Une opération de restauration avec récupération uniquement met en ligne les données du groupe de fichiers hors connexion ; aucune phase de copie des données ni d'annulation ou de restauration par progression n'est effectuée. Pour plus d’informations sur les phases de restauration, consultez [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+ Une opération de restauration avec récupération uniquement met en ligne les données du groupe de fichiers hors connexion ; aucune phase de copie des données ni d'annulation ou de restauration par progression n'est effectuée. Pour plus d’informations sur les phases de restauration, consultez [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).  
   
  La syntaxe [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) pour une restauration de fichier avec récupération uniquement est la suivante :  
   
- RESTORE DATABASE *nom_base_de_données* { FILE **=** _nom_fichier_logique_ | FILEGROUP **=** _nom_groupe_fichiers_logique_ } [ **,** ...*n* ] WITH RECOVERY  
+ `RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY`  
   
  **Exemple**  
   
  L'exemple suivant illustre une restauration de fichier avec récupération uniquement des fichiers dans un groupe de fichiers secondaire, `SalesGroup2`, dans la base de données `Sales` . Le groupe de fichiers primaire a déjà été restauré au cours de l'étape initiale d'une restauration fragmentaire, et `SalesGroup2` est cohérent avec le groupe de fichiers primaire restauré. La récupération de ce groupe de fichiers et sa mise en ligne ne requièrent qu'une seule instruction.  
   
-```  
+```sql  
 RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;  
 ```  
   
@@ -95,5 +95,5 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [Restauration de fichiers &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [Vue d'ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 
   

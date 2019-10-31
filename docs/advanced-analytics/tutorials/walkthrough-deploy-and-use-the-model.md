@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714679"
@@ -73,7 +73,7 @@ Créer une procédure stockée, *PredictTipBatchMode*, qui génère plusieurs pr
 
     + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que données **varbinary (max)** , stockées  _\@_ dans la variable SQL lmodel2, puis passé comme paramètre *Mod* à la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Les données utilisées comme entrées pour la notation sont définies en tant que requête SQL et stockées sous forme de chaîne dans l'  _\@entrée_de la variable SQL. À mesure que les données sont récupérées de la base de données, elles sont stockées dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée de la procédure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ; vous pouvez définir un autre nom de variable si nécessaire à l’aide du paramètre  *_\@input_data_1_name_* .
+    + Les données utilisées comme entrées pour la notation sont définies en tant que requête SQL et stockées sous forme de chaîne dans l'  _\@entrée_de la variable SQL. À mesure que les données sont récupérées de la base de données, elles sont stockées dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée de la procédure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ; vous pouvez définir un autre nom de variable si nécessaire à l’aide du paramètre *_\@input_data_1_name_* .
 
     + Pour générer les scores, la procédure stockée appelle la fonction rxPredict à partir de la bibliothèque **RevoScaleR** .
 

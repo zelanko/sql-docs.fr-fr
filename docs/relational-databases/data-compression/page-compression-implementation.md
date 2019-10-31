@@ -14,12 +14,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ff36fb2d0a5ed84beae6a90f6058a7a66ab9f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43086213ec4c13e6849a40a4013a99ffc9df3903
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030492"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907089"
 ---
 # <a name="page-compression-implementation"></a>Implémentation de la compression de page
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,8 +35,6 @@ ms.locfileid: "68030492"
 2.  Compression de préfixe  
   
 3.  Compression de dictionnaire  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Quand vous utilisez la compression de page, les pages qui ne sont pas au niveau feuille sont compressées en utilisant uniquement la compression de ligne. Pour plus d’informations sur la compression de ligne, consultez [Implémentation de la compression de ligne](../../relational-databases/data-compression/row-compression-implementation.md).  
   

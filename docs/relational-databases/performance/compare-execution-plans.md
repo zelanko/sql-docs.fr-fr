@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289299"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907668"
 ---
 # <a name="compare-execution-plans"></a>Comparer des plans d’exécution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ Quand deux plans d’exécution sont comparés, les régions du plan qui **font 
 
 2.  Cliquez avec le bouton droit dans une zone vide du plan d’exécution et cliquez sur **Comparer un plan d’exécution de requêtes**. 
 
-    ![Cliquez avec le bouton droit sur Comparer un plan d’exécution de requêtes](../../relational-databases/performance/media/plancomparisonmenuoption.png "Cliquez avec le bouton droit sur Comparer un plan d’exécution de requêtes")   
+    ![Cliquez avec le bouton droit sur Comparer le plan d'exécution de requêtes](../../relational-databases/performance/media/plancomparisonmenuoption.png "Cliquez avec le bouton droit sur Comparer le plan d'exécution de requêtes")   
 
 3.  Choisissez le deuxième fichier de plan de requête avec lequel vous souhaitez effectuer une comparaison. Le deuxième fichier s’ouvrira afin que vous puissiez comparer les plans.
 
 4.  Les plans comparés s’ouvriront dans une nouvelle fenêtre, par défaut l’un dans la partie supérieure et l’autre dans la partie inférieure. La sélection par défaut sera la première occurrence d’un opérateur ou d’un nœud qui est commune dans les plans comparés, mais avec affichage des différences entre les plans. Tous les opérateurs et les nœuds mis en surbrillance existent dans les deux plans comparés. La sélection d’un opérateur en surbrillance dans le plan du haut ou de gauche sélectionne automatiquement l’opérateur correspondant dans le plan du bas ou de droite. La sélection de l’opérateur de nœud racine dans l’un des plans comparés (le nœud SELECT dans l’image ci-dessous) sélectionne également l’opérateur de nœud racine respectif dans l’autre plan comparé.
 
-    ![Comparaison des plans de deux fichiers de plan enregistrés](../../relational-databases/performance/media/plancomparison-plans.png "Comparaison des plans de deux fichiers de plan enregistrés")  
+    ![Comparaison du plan de deux fichiers de plan enregistrés](../../relational-databases/performance/media/plancomparison-plans.png "Comparaison du plan de deux fichiers de plan enregistrés")  
 
      > [!TIP]
      > Vous pouvez choisir un affichage côte à côte de la comparaison des plans d’exécution en cliquant avec le bouton droit sur une zone vide du plan d’exécution et en sélectionnant **Basculer l’orientation du fractionnement**.
@@ -71,18 +71,16 @@ Quand deux plans d’exécution sont comparés, les régions du plan qui **font 
 
 5.  Une double fenêtre de propriétés s’ouvre également sur le côté droit, dans la portée de la sélection par défaut. Les propriétés qui existent dans les deux opérateurs comparés mais qui présentent des différences sont précédées du signe *différent* (&ne;) afin de faciliter leur identification.
 
-    ![Double fenêtre de propriétés](../../relational-databases/performance/media/plancomparison-properties.png "Double fenêtre de propriétés")  
+    ![Fenêtre Propriétés double](../../relational-databases/performance/media/plancomparison-properties.png "Fenêtre Propriétés double")  
 
 6.  La fenêtre de comparaison **Analyse du plan d’exécution de requêtes** s’ouvre également en bas. Trois onglets sont disponibles :
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Sous l’onglet **Options d’instruction**, la sélection par défaut est *Mettre en évidence les opérations similaires*, et les mêmes opérateurs ou nœuds en surbrillance dans les plans comparés partagent le même modèle de ligne et la même couleur. Naviguez entre les zones similaires dans les plans comparés en cliquant sur un modèle de ligne. Vous pouvez également choisir de mettre en évidence les différences dans les plans (au lieu des similitudes) en sélectionnant *Mettre en évidence les opérateurs qui ne correspondent pas à des segments similaires*. 
     
        > [!NOTE]
        > Par défaut, les noms des bases de données sont ignorés lors de la comparaison des plans, afin d’autoriser la comparaison des plans capturés pour les bases de données qui ont des noms différents mais qui partagent le même schéma. Par exemple, lors de la comparaison des plans des bases de données *ProdDB* et *TestDB*. Vous pouvez changer ce comportement avec l’option *Ignorer le nom de la base de données lors de la comparaison des opérateurs*.
 
-       ![Fenêtre Analyse du plan d’exécution de requêtes](../../relational-databases/performance/media/plancomparison-analysis.png "Fenêtre Analyse du plan d’exécution de requêtes") 
+       ![Fenêtre d'analyse du plan d'exécution de requêtes](../../relational-databases/performance/media/plancomparison-analysis.png "Fenêtre d'analyse du plan d'exécution de requêtes") 
 
     2.  L’onglet **Instructions multiples** est utile lors de la comparaison de plans comprenant plusieurs instructions, car il permet de comparer la bonne paire d’instructions.
 
@@ -94,7 +92,7 @@ Quand deux plans d’exécution sont comparés, les régions du plan qui **font 
 
     Si cette fenêtre est fermée, cliquez avec le bouton droit sur une zone vide d’un plan comparé, puis sélectionnez **Options de comparaison de plans d’exécution de requête** pour la rouvrir.
 
-    ![Options de comparaison de plans](../../relational-databases/performance/media/plancomparison-options.png "Options de comparaison de plans")  
+    ![Options de comparaison de plan](../../relational-databases/performance/media/plancomparison-options.png "Options de comparaison de plan")  
 
 ## <a name="to-compare-execution-plans-in-query-store"></a>Pour comparer des plans d’exécution dans le Magasin des requêtes
 
@@ -106,4 +104,4 @@ Quand deux plans d’exécution sont comparés, les régions du plan qui **font 
 
 3.  Utilisez le bouton **Comparer les plans pour la requête sélectionnée dans une fenêtre distincte** pour lancer la comparaison des plans. Ensuite, les étapes 4 à 6 de *Pour comparer des plans d’exécution* sont applicables. 
 
-    ![Comparer des plans d’exécution de requêtes dans le Magasin des requêtes](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Comparer des plans d’exécution de requêtes dans le Magasin des requêtes") 
+    ![Comparer le plan d'exécution de requêtes dans le Magasin des requêtes](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Comparer le plan d'exécution de requêtes dans le Magasin des requêtes") 

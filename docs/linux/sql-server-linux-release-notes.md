@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278262"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930488"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour SQL Server 2017 sur Linux
 
@@ -392,7 +392,7 @@ Il s’agit de la mise en production en disponibilité générale (DG) de [!INCL
 
 ### <a name="package-details"></a>Détails du package
 
-Les détails et les emplacements de téléchargement des packages RPM et Debian sont répertoriés dans la table suivante. Notez que vous n’avez pas besoin de télécharger ces packages directement si vous suivez les étapes décrites dans les guides d’installation suivants :
+Les détails et les emplacements de téléchargement des packages RPM et Debian sont répertoriés dans la table suivante. Vous n’avez pas besoin de télécharger ces packages directement si vous suivez les étapes décrites dans les guides d’installation suivants :
 
 - [Installer un package SQL Server](sql-server-linux-setup.md)
 - [Installer un package de recherche en texte intégral](sql-server-linux-setup-full-text-search.md)
@@ -404,42 +404,6 @@ Les détails et les emplacements de téléchargement des packages RPM et Debian 
 | Package Red Hat RPM | 14.0.1000.169-2 | [Package RPM du moteur](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Package RPM SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package SLES RPM | 14.0.1000.169-2 | [Package RPM du moteur mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Package RPM SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Package Ubuntu 16.04 Debian | 14.0.1000.169-2 | [Package Debian du moteur](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Package Debian haute disponibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Package Debian SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Package SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> Fonctionnalités et services non pris en charge
-
-Les fonctionnalités et services suivants ne sont pas disponibles sur Linux au moment de la mise en production en disponibilité générale. Le support de ces fonctionnalités sera de plus en plus activé dans le temps.
-
-| Domaine | Fonctionnalité ou service non pris en charge |
-|-----|-----|
-| **Moteur de base de données** | Réplication transactionnelle |
-| &nbsp; | Réplication de fusion |
-| &nbsp; | Capture des changements de données (consultez SQL Server Agent) |
-| &nbsp; | Base de données pour Stretch |
-| &nbsp; | PolyBase |
-| &nbsp; | Requête distribuée avec connexions tierces |
-| &nbsp; | Serveurs liés à des sources de données autres que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
-| &nbsp; | Procédures stockées étendues système (XP_CMDSHELL, etc.) |
-| &nbsp; | FileTable, FILESTREAM |
-| &nbsp; | Assemblys CLR avec l’ensemble d’autorisations EXTERNAL_ACCESS ou UNSAFE |
-| &nbsp; | Buffer Pool Extension |
-| **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecture de la file d’attente, SSIS, SSAS, SSRS |
-| &nbsp; | Alertes |
-| &nbsp; | l'Agent de lecture du journal ; |
-| &nbsp; | Capture de données modifiées (CDC) |
-| &nbsp; | Sauvegarde managée |
-| **Haute disponibilité** | Mise en miroir de bases de données  |
-| **Sécurité** | Gestion de clés extensible |
-| &nbsp; | Authentification AD pour les serveurs liés | 
-| &nbsp; | Authentification AD pour les groupes de disponibilité | 
-| &nbsp; | Outils AD tiers (Centrify, Vintela, Powerbroker) | 
-| **Services** | SQL Server Browser |
-| &nbsp; | Services SQL Server R |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## <a name="known-issues"></a>Problèmes connus
 
@@ -470,8 +434,6 @@ Les sections suivantes décrivent les problèmes connus avec la mise en producti
 - La base de données MASTER ne peut pas être déplacée avec l’utilitaire mssql-conf. D’autres bases de données système peuvent être déplacées avec mssql-conf.
 
 - Lors de la restauration d’une base de données qui a été sauvegardée sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Windows, vous devez utiliser la clause **WITH MOVE** dans l’instruction Transact-SQL.
-
-- Les transactions distribuées qui requièrent le service Microsoft Distributed Transaction Coordinator ne sont pas prises en charge sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’exécutant sur Linux. Les serveurs liés de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont pris en charge, sauf s’ils impliquent le DTC. Pour plus d’informations, consultez [Les transactions distribuées qui requièrent le service Microsoft Distributed Transaction Coordinator ne sont pas prises en charge sur SQL Server s’exécutant sur Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
 - Certains algorithmes (suites de chiffrement) pour le protocole TLS (Transport Layer Security) ne fonctionnent pas correctement avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux. Cela entraîne des échecs de connexion lors d’une tentative de connexion à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ainsi que des problèmes lors de l’établissement de connexions entre les réplicas dans des groupes à haute disponibilité.
 

@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture et gestion du journal des transactions SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 7444659676f6f8270b5cc8013c872e492e0cd8c8
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874201"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916058"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70874201"
 
   
 ##  <a name="Logical_Arch"></a> Architecture logique du journal des transactions  
- Le journal des transactions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne de façon logique comme s'il s'agissait d'une chaîne d'enregistrements de journal. Chacun de ces enregistrements est identifié par un numéro séquentiel dans le journal (LSN). Chaque nouvel enregistrement est écrit à la fin logique du journal avec un LSN supérieur à celui de l'enregistrement qui le précède. Lors de leur création, les enregistrements de journal sont stockés séquentiellement. Chacun d'eux contient l'ID de la transaction à laquelle il appartient. Pour chaque transaction, tous les enregistrements de journal associés sont reliés de façon individuelle dans une chaîne grâce aux pointeurs arrière qui accélèrent la restauration de la transaction.  
+ Le journal des transactions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne de façon logique comme s'il s'agissait d'une chaîne d'enregistrements de journal. Chacun de ces enregistrements est identifié par un numéro séquentiel dans le journal (LSN). Chaque nouvel enregistrement est écrit à la fin logique du journal avec un LSN supérieur à celui de l'enregistrement qui le précède. Les enregistrements de journal sont stockés dans une séquence en série à mesure qu’ils sont créés de sorte que si LSN2 est supérieur à LSN1, la modification décrite par l'enregistrement de journal référencé par LSN2 se produit après la modification décrite par le numéro LSN1 d'enregistrement de journal. Chacun d'eux contient l'ID de la transaction à laquelle il appartient. Pour chaque transaction, tous les enregistrements de journal associés sont reliés de façon individuelle dans une chaîne grâce aux pointeurs arrière qui accélèrent la restauration de la transaction.  
   
  Les enregistrements de journal relatifs aux modifications de données consignent soit l'opération logique effectuée, soit les images avant/après des données modifiées. L'image avant est une copie des données avant que l'opération n'ait été effectuée, tandis que l'image après est une copie des données après que l'opération a été effectuée.  
   
@@ -65,7 +65,9 @@ De nombreux types d'opérations sont enregistrés dans le journal des transactio
   
  Les opérations de restauration sont également consignées dans le journal. Chaque transaction réserve de l'espace dans le journal des transactions afin qu'il existe suffisamment d'espace journal pour prendre en charge une restauration déclenchée par une instruction de restauration explicite ou par la détection d'une erreur. Le volume d'espace réservé dépend des opérations effectuées dans la transaction, mais il est généralement égal au volume d'espace utilisé pour la journalisation de chaque opération. Cet espace réservé est libéré lorsque la transaction est terminée.  
   
-<a name="minlsn"></a> La section du fichier journal comprise entre le premier enregistrement de journal nécessaire à une restauration portant sur l’ensemble de la base de données et la fin du journal représente la partie active du journal, également appelée le *journal actif*. Cette section est indispensable pour procéder à une récupération complète de la base de données. Aucune partie de ce journal actif ne peut être tronquée. Le LSN (numéro séquentiel dans le journal) de ce premier enregistrement est le **LSN de récupération minimum (*MinLSN*)** .  
+<a name="minlsn"></a> La section du fichier journal comprise entre le premier enregistrement de journal nécessaire à une restauration portant sur l’ensemble de la base de données et la fin du journal représente la partie active du journal, le *journal actif* ou la *fin du journal*. Cette section est indispensable pour procéder à une [récupération](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery) complète de la base de données. Aucune partie de ce journal actif ne peut être tronquée. Le LSN (numéro séquentiel dans le journal) de ce premier enregistrement est le **LSN de récupération minimum (*MinLSN*)** . Pour plus d’informations sur les opérations prises en charge par le journal des transactions, consultez [Journal des transactions (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md).  
+
+Les sauvegardes différentielles et de journaux font passer la base de données restaurée à une date ultérieure qui correspond à un numéro LSN supérieur. 
   
 ##  <a name="physical_arch"></a> Architecture physique du journal des transactions  
 Le journal des transactions d'une base de données s'étend sur un ou plusieurs fichiers physiques. D'un point de vue conceptuel, le fichier journal est une chaîne d'enregistrements. D'un point de vue physique, la séquence des enregistrements du journal est stockée de façon efficace dans l'ensemble de fichiers physiques qui implémente le journal des transactions. Chaque base de données doit posséder au moins un fichier journal.  
@@ -231,14 +233,14 @@ L'illustration ci-dessous présente une version simplifiée de la fin d'un journ
 LSN 148 est le dernier enregistrement du journal des transactions. Au moment où le point de contrôle enregistré au numéro LSN 147 était traité, Tran 1 avait été validée et Tran 2 était la seule transaction active. Ainsi, le premier enregistrement de Tran 2 est l'enregistrement de journal le plus ancien pour une transaction active au moment du dernier point de contrôle. Par ailleurs, le numéro LSN 142 est l'enregistrement du début de la transaction pour Tran 2, la valeur MinLSN.
 
 ### <a name="long-running-transactions"></a>Transactions de longue durée
-
-Le journal actif doit contenir chaque partie de toutes les transactions non validées. Une application qui démarre une transaction et qui ne la valide pas ou ne la restaure pas empêche le moteur de base de données de faire progresser le MinLSN. Ceci peut provoquer deux types de problèmes :
+Le journal actif doit contenir chaque partie de toutes les transactions non validées. Une application qui démarre une transaction et qui ne la valide pas ou ne la restaure pas empêche le [!INCLUDE[ssde_md](../includes/ssde_md.md)] de faire progresser le MinLSN. Ceci peut provoquer deux types de problèmes :
 
 * Si le système est arrêté après que la transaction a effectué de nombreuses modifications non validées, la phase de récupération lors du démarrage ultérieur peut être beaucoup plus longue que la durée spécifiée dans l’option **intervalle de récupération** .
 * Le journal peut devenir très volumineux parce qu'il ne peut pas être tronqué au-delà du MinLSN. Cela se produit même si la base de données utilise le modèle de récupération simple, dans lequel le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.
 
-### <a name="replication-transactions"></a>Transactions de réplication
+À partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] et dans [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], la récupération des transactions de longue durée et des problèmes décrits ci-dessus peut être évitée à l’aide de la [récupération de base de données accélérée](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
+### <a name="replication-transactions"></a>Transactions de réplication
 L'Agent de lecture du journal surveille le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution. Le journal actif doit contenir toutes les transactions qui sont marquées pour la réplication mais qui n'ont pas encore été transmises à la base de données de distribution. Si ces transactions ne sont pas répliquées à temps, elles peuvent empêcher la troncature du journal. Pour plus d’informations, consultez [Réplication transactionnelle](../relational-databases/replication/transactional/transactional-replication.md).
 
 ## <a name="see-also"></a>Voir aussi 
@@ -249,6 +251,7 @@ Pour plus d’informations sur le journal des transactions et les bonnes pratiqu
 [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Configurer l’option de configuration de serveur d’intervalle de récupération](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[Récupération de base de données accélérée](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Fonctionnement de la journalisation et de la récupération dans SQL Server, par Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    

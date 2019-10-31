@@ -20,12 +20,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653247"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798417"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Retourne le nombre de caractères de l’expression de type chaîne spécifiée,
 > [!NOTE]  
 > Pour retourner le nombre d’octets utilisés pour représenter une expression, utilisez la fonction [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> Utilisez [LEN](../../t-sql/functions/len-transact-sql.md) pour retourner le nombre de caractères encodés dans une expression de chaîne donnée et [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) pour retourner la taille en octets d’une expression de chaîne donnée. Ces sorties peuvent différer selon le type de données et le type d’encodage utilisé dans la colonne. Pour plus d’informations sur les différences de stockage entre les différents types d’encodage, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
+> Lorsque vous utilisez [LEN](../../t-sql/functions/len-transact-sql.md) pour retourner le nombre de caractères encodés pour une expression de chaîne donnée ou [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) pour retourner la taille en octets d’une expression de chaîne donnée, les sorties peuvent différer selon le type de données et le type de codage utilisé dans la colonne. Pour plus d’informations sur les différences de stockage entre les différents types d’encodage, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
 
 ## <a name="examples"></a>Exemples  
  L'exemple suivant sélectionne le nombre de caractères et les données figurant dans `FirstName` pour les personnes résidant en `Australia`. Cet exemple utilise la base de données AdventureWorks.  

@@ -12,12 +12,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082766"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930274"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  Pour plus d’informations, consultez [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md).  
@@ -92,7 +92,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  Ces deux processus contiennent les composants de l'architecture de recherche en texte intégral. Ces composants et leurs relations sont résumés dans l'illustration ci-dessous. Les composants sont décrits après l'illustration.  
   
- ![architecture de recherche en texte intégral](../../relational-databases/search/media/ifts-arch.gif "architecture de recherche en texte intégral")  
+ ![Architecture de la recherche en texte intégral](../../relational-databases/search/media/ifts-arch.gif "Architecture de la recherche en texte intégral")  
 
 ###  <a name="sqlprocess"></a> Processus SQL Server  
  Le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les composants suivants pour la recherche en texte intégral :  
@@ -111,7 +111,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
 
     >[!NOTE]  
     >  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, le moteur d'indexation et de recherche en texte intégral réside dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , plutôt que dans un service séparé. L’intégration du moteur d’indexation et de recherche en texte intégral au moteur de base de données a permis l’amélioration de la gestion du texte intégral ainsi que l’optimisation des requêtes mixtes et des performances globales.  
- 
+
 -   **Générateur d'index (indexeur).** Le générateur d'index crée la structure utilisée pour stocker les jetons indexés.  
   
 -   **Gestionnaire du démon de filtre.** Le gestionnaire du démon de filtre est responsable de la surveillance de l'état du processus du démon du filtre du Moteur d'indexation et de recherche en texte intégral.  

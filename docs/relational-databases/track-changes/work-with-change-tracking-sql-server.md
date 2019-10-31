@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057945"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905551"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utiliser le suivi des modifications (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,8 +207,6 @@ ON
   
 4.  Obtenez les modifications de la table SalesOrders à l’aide de CHANGETABLE(CHANGES ...).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Deux processus qui se produisent dans la base de données peuvent affecter les résultats retournés par les étapes précédentes :  
   
 -   Le processus de nettoyage s'exécute en arrière-plan et supprime les informations de suivi des modifications antérieures à la période de rétention spécifiée.  
@@ -267,6 +265,10 @@ COMMIT TRAN
   
  Pour plus d’informations sur les transactions d’instantanés, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>Nettoyage et isolement d’instantané   
+L’activation de l’isolement d’instantané et du suivi des modifications sur la même base de données ou sur deux bases de données différentes au sein de la même instance, peut entraîner que le processus de nettoyage laisse les lignes expirées dans sys.syscommittab lorsqu’il existe une transaction ouverte dans la base de données avec l’isolement d’instantané. Cela peut se produire lorsque le processus de nettoyage du suivi des modifications prend une limite inférieure à l’échelle de l’instance (qui est la version de nettoyage sécurisée) en compte lors de l’exécution du nettoyage. Cela permet de s’assurer que le processus de nettoyage automatique du suivi des modifications ne supprime pas les lignes qui peuvent être requises par la transaction ouverte dans la base de données pour laquelle l’isolement d’instantané est activé. Faites en sorte que les transactions d’isolement d’instantané de lecture validée et d’isolement d’instantané soient aussi courtes que possible pour garantir que les lignes expirées dans sys.syscommittab sont nettoyées en temps utile. 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>Alternatives à l'utilisation du niveau d'isolement d'instantané  
  Il existe des alternatives à l'utilisation du niveau d'isolement d'instantané, mais elles nécessitent davantage de travail afin de s'assurer que toutes les spécifications d'applications sont satisfaites. Pour vérifier que le paramètre *last_synchronization_version* est valide et qu’aucune donnée n’est supprimée par le processus de nettoyage avant l’obtention des modifications, procédez comme suit :  
   

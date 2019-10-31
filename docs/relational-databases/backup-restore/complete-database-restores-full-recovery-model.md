@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1220ec831860baee2221004af19d9fd735c03cec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081408"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908968"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ Nous vous recommandons de ne _pas_ attacher ni restaurer de bases de données pr
 Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
 ##  <a name="PointOfFailure"></a> Restauration d'une base de données jusqu'au point de défaillance  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Généralement, la récupération d'une base de données jusqu'au point de défaillance comprend les étapes de base suivantes :  
   
@@ -66,7 +64,7 @@ Pour plus d’informations sur la prise en charge de sauvegardes provenant de ve
   
  L'illustration suivante montre cette séquence de restauration. Après une défaillance (1), une sauvegarde de la fin du journal est créée (2). Ensuite, la base de données est restaurée jusqu'au point de défaillance. Cela implique la restauration d'une sauvegarde de base de données suivie d'une sauvegarde différentielle, ainsi que de chaque sauvegarde de journal effectuée après la sauvegarde différentielle, y compris la sauvegarde de la fin du journal.  
   
- ![Restauration de base de données complète au moment d’une défaillance](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauration de base de données complète au moment d’une défaillance")  
+ ![Restauration de base de données complète au moment d'une défaillance](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauration de base de données complète au moment d'une défaillance")  
   
 > [!NOTE]  
 >  Quand vous restaurez une sauvegarde de base de données sur une instance de serveur différente, consultez [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

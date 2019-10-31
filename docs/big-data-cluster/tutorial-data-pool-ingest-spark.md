@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049861"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182631"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Didacticiel : réception de données dans un pool de données SQL Server avec des travaux Spark
 
@@ -131,9 +131,9 @@ L’étape suivante consiste à créer un travail de streaming Spark afin de cha
 
 Les étapes suivantes montrent que le travail de streaming Spark a chargé les données HDFS dans le pool de données.
 
-1. Avant d’interroger les données ingérées, consultez l’historique des tâches pour vérifier que le travail est bien terminé.
+1. Avant d’interroger les données ingérées, examinez l’état d’exécution Spark, y compris l’ID d’application de fil, l’interface utilisateur Spark et les journaux de pilote.
 
-   ![Historique des travaux Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Détails de l’exécution Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Revenez à la fenêtre de la requête de l’instance maître SQL Server que vous avez ouverte au début de ce tutoriel.
 

@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298272"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807411"
 ---
 # <a name="flexible-file-task"></a>Tâche de fichier flexible
 
@@ -35,7 +35,9 @@ Flexible File Task est un composant du [Feature Pack SQL Server Integration Serv
 Pour ajouter une tâche Flexible File Task à un package, faites-la glisser de la boîte à outils SSIS vers la zone de conception. Ensuite, double-cliquez sur la tâche, ou cliquez dessus avec le bouton droit et sélectionnez **Modifier**, pour ouvrir la boîte de dialogue **Flexible File Task Editor**.
 
 La propriété **Operation** indique l’opération de fichier à réaliser.
-Seule l’opération **Copy** est actuellement prise en charge.
+Les opérations actuellement prises en charge sont les suivantes :
+- Opération **Copy**
+- Opération **Delete**
 
 Pour l’opération **Copy**, les propriétés suivantes sont disponibles.
 
@@ -48,6 +50,12 @@ Pour l’opération **Copy**, les propriétés suivantes sont disponibles.
 - **DestinationConnection :** spécifie le gestionnaire de connexions de destination.
 - **DestinationFolderPath :** spécifie le chemin du dossier de destination.
 - **DestinationFileName :** spécifie le nom du fichier de destination.
+
+Pour l’opération **Delete**, les propriétés suivantes sont disponibles.
+- **ConnectionType :** Spécifie le type de gestionnaire de connexions.
+- **Connection :** Spécifie le gestionnaire de connexions.
+- **FolderPath :** Spécifie le chemin du dossier.
+- **FileName :** Spécifie le nom du fichier. Si ce champ est vide, le dossier sera supprimé. Pour le Stockage Blob Azure, la suppression de dossier n’est pas prise en charge.
 
 ***Remarques sur la configuration des autorisations du principal de service***
 

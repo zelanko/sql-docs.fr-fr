@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099787"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798409"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Met à jour les statistiques d'optimisation de requête d'une table ou d'une vue
   
 La mise à jour des statistiques est l'assurance que les requêtes sont compilées avec des statistiques à jour. Toutefois, la mise à jour des statistiques entraîne une recompilation des requêtes. À ce titre, il est déconseillé de mettre à jour les statistiques de façon trop régulière eu égard aux performances. Un compromis doit être trouvé entre le souhait d'améliorer les plans de requête et le temps nécessaire à la recompilation des requêtes. Ce compromis peut varier en fonction de votre application. `UPDATE STATISTICS` peut utiliser tempdb pour trier l’échantillon de lignes à des fins statistiques.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -125,6 +125,9 @@ Si vous spécifiez **ON**, les statistiques conserveront le pourcentage d’éch
  > Si l’option AUTO_UPDATE_STATISTICS est exécutée, elle utilise le pourcentage d’échantillonnage persistant s’il est disponible, ou le pourcentage d’échantillonnage par défaut dans le cas contraire.
  > Le comportement de RESAMPLE n’est pas affecté par cette option.
  
+ > [!NOTE]
+ > Si la table est tronquée, toutes les statistiques générées sur le HoBT tronqué sont rétablies à l’aide du pourcentage d’échantillonnage par défaut.
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) et [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) exposent la valeur de pourcentage d’échantillonnage persistante pour la statistique sélectionnée.
  
@@ -190,7 +193,7 @@ MAXDOP = *max_degree_of_parallelism*
 * L’option `MAXDOP` n’est pas compatible avec les options `STATS_STREAM`, `ROWCOUNT` et `PAGECOUNT`.
 * L’option `MAXDOP` est limitée par le paramètre `MAX_DOP` du groupe de charge de travail de Resource Governor, s’il est utilisé.
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>Mise à jour de toutes les statistiques avec sp_updatestats  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>Mise à jour de toutes les statistiques avec sp_updatestats  
 Pour plus d’informations sur la mise à jour des statistiques pour toutes les tables définies par l’utilisateur et les tables internes de la base de données, consultez la procédure stockée [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Par exemple, la commande suivante appelle sp_updatestats pour mettre à jour toutes les statistiques de la base de données.  
   
 ```sql  

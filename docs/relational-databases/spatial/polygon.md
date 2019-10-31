@@ -13,14 +13,14 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026142"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907207"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>Polygone
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -33,7 +33,7 @@ Les anneaux extérieurs et intérieurs d’un **polygone** définissent sa limit
   
 L’illustration suivante montre des exemples d’instances **Polygon** .  
   
- ![Exemples d’instances Polygon géométriques](../../relational-databases/spatial/media/polygon.gif "Exemples d’instances Polygon géométriques")  
+ ![Exemples d'instances Polygon géométriques](../../relational-databases/spatial/media/polygon.gif "Exemples d'instances Polygon géométriques")  
   
 Comme indiqué par l'illustration :  
   
@@ -42,8 +42,6 @@ Comme indiqué par l'illustration :
 2.  La Figure 2 est une instance **Polygon** dont la limite est définie par un anneau extérieur et deux anneaux intérieurs. La zone à l’intérieur des anneaux intérieurs fait partie de l’extérieur de l’instance **Polygon** .  
   
 3.  La Figure 3 est une instance **Polygon** valide, car ses anneaux intérieurs se croisent à un point tangent unique.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="accepted-instances"></a>Instances acceptées  
  Les instances **Polygon** acceptées sont des instances qui peuvent être stockées dans une variable **geometry** ou **geography** sans lever d’exception. Les instances **Polygon** suivantes sont acceptées :  
@@ -167,6 +165,6 @@ L'instance geometry retourné ci-dessus est un `Point(1 3)`.  Si le `Polygon` do
  [MultiPolygon](../../relational-databases/spatial/multipolygon.md)   
  [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [STIsValid &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)   
- [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ [STIsValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
   

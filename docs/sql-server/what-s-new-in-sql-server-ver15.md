@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: bb83237e33f477468cd58ea8a692970268bf1d66
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952763"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807476"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -69,7 +69,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
 |Pool de tampons hybride| Une nouvelle fonctionnalité de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] avec laquelle les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire. Consultez [Pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-|Métadonnée `tempdb` à mémoire optimisée| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../relational-databases/in-memory-database.md), une nouvelle fonctionnalité, les métadonnées `tempdb` à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau d’extensibilité pour les charges de travail de base de données `tempdb` lourdes. Dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Consultez [Métadonnée `tempdb` à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Métadonnées TempDB à mémoire optimisée| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../relational-databases/in-memory-database.md) une nouvelle fonctionnalité, les métadonnées TempDB à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau de scalabilité pour les charges de travail de base de données TempDB lourdes. Dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Consultez [Métadonnées tempdb à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | Prise en charge de l’OLTP en mémoire pour les instantanés de base de données | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit la prise en charge de la création d’[instantanés de bases de données](../relational-databases/databases/database-snapshots-sql-server.md) qui incluent des groupes de fichiers à mémoire optimisée. |
 | &nbsp; | &nbsp; |
 
@@ -115,7 +115,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> La version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase et pour Always Encrypted.|
+|Prise en charge du codage de caractères UTF-8 |Prend en charge le caractère UTF-8 pour l’encodage d’importation et d’exportation, ainsi que le classement au niveau de la base de données ou au niveau des colonnes pour les données de chaîne. Cela prend en charge les applications qui s’étendent à une échelle mondiale, où l’exigence de fournir des applications et des services de base de données multilingues globaux est essentielle pour répondre aux demandes des clients et aux réglementations spécifiques du marché. Voir [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> La version Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] active la prise en charge d’UTF-8 pour les tables externes Polybase et pour Always Encrypted (si les Enclaves ne sont pas utilisées).|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Extensions de langage
@@ -197,7 +197,7 @@ La rubrique [Précédentes annonces des versions CTP de [!INCLUDE[sql-server-20
 |Prise en charge de MSDTC (Microsoft Distributed Transaction Coordinator) |[Comment configurer MSDTC sur Linux](../linux/sql-server-linux-configure-msdtc.md) |
 |Prise en charge d’OpenLDAP pour les fournisseurs AD tiers |[Tutoriel : Utiliser l’authentification Active Directory avec SQL Server sur Linux](../linux/sql-server-linux-active-directory-authentication.md) |
 |Machine learning sur Linux |[Configurer le Machine Learning sur Linux](../linux/sql-server-linux-setup-machine-learning.md) |
-|Améliorations `tempdb` | Par défaut, une nouvelle installation de SQL Server sur Linux crée plusieurs fichiers de données `tempdb` en fonction du nombre de cœurs logiques (avec jusqu’à 8 fichiers de données). Cela ne s’applique pas aux mises à niveau de versions mineures ou majeures sur place. Chaque fichier `tempdb` fait 8 Mo avec une croissance automatique de 64 Mo. Ce comportement est similaire à l’installation de SQL Server par défaut sur Windows. |
+|Améliorations apportées à TempDB | Par défaut, une nouvelle installation de SQL Server sur Linux crée plusieurs fichiers de données TempDB en fonction du nombre de cœurs logiques (avec jusqu'à 8 fichiers de données). Cela ne s’applique pas aux mises à niveau de versions mineures ou majeures sur place. Chaque fichier de TempDB fait 8 Mo avec une croissance automatique de 64 Mo. Ce comportement est similaire à l’installation de SQL Server par défaut sur Windows. |
 | PolyBase sur Linux | [Installer PolyBase](../relational-databases/polybase/polybase-linux-setup.md) sur Linux pour les connecteurs non-Hadoop.<br/><br/>[Mappage de type PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Prise en charge de la capture des changements de données (CDC) | La capture des changements de données (CDC) est désormais prise en charge sur Linux pour SQL Server 2019. |
 | &nbsp; | &nbsp; |

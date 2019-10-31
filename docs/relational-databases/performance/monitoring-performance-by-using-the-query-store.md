@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163911"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909305"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "71163911"
 2.  Dans la boîte de dialogue **Propriétés de la base de données** , sélectionnez la page **Magasin de requêtes** .  
   
 3.  Dans la zone **Mode d’opération (demandé)** , sélectionnez **Lecture Écriture**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-transact-sql-statements"></a>Utilisation d’instructions Transact-SQL  
   
@@ -113,12 +111,12 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Utiliser la fonctionnalité Requêtes régressées  
 Après avoir activé le magasin des requêtes, actualisez la partie de la base de données du volet de l’Explorateur d’objets pour ajouter la section **Magasin des requêtes** .  
   
-![Arborescence du Magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Arborescence du Magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS")   ![Arborescence du Magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Arborescence du Magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS") 
+![Arborescence du magasin des requêtes SQL Server 2016 dans l’Explorateur d'objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Arborescence du magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS")   ![Arborescence du magasin des requêtes SQL Server 2017 dans l’Explorateur d'objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Arborescence du magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS") 
   
 Sélectionnez **Requêtes régressées** pour ouvrir le volet **Requêtes régressées** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le volet Requêtes régressées affiche les requêtes et les plans du magasin de requêtes. Utilisez les listes déroulantes situées en haut du volet pour filtrer les requêtes selon différents critères : **Durée (ms)** (par défaut), Temps processeur (ms), Lectures logiques (Ko), Écritures logiques (Ko), Lectures physiques (Ko), Temps CLR (ms), DOP, Consommation de mémoire (Ko), Nombre de lignes, Mémoire utilisée par la journalisation (Ko), Mémoire utilisée par la base de données temporaire (Ko) et Temps d’attente (ms).  
 Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons sont disponibles pour afficher la requête source, forcer et désactiver l’application forcée d’un plan de requête, basculer entre les formats de grille et de graphique, comparer des plans sélectionnés (si plusieurs plans sont sélectionnés) et actualiser l’affichage.  
   
-![Requêtes régressées SQL Server 2016 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Requêtes régressées SQL Server 2016 dans l’Explorateur d’objets SSMS")  
+![Requêtes régressées SQL Server 2016 dans l’Explorateur d'objets SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Requêtes régressées SQL Server 2016 dans l’Explorateur d'objets SSMS")  
   
 Pour forcer un plan, sélectionnez une requête et un plan, puis cliquez sur **Forcer le plan.** Vous pouvez uniquement forcer des plans qui ont été enregistrés par la fonctionnalité de plan de requête et sont toujours conservés dans le cache du plan de requête.
 
@@ -129,11 +127,11 @@ Dans le Magasin des requêtes, les types d’attente sont combinés en **catégo
 
 Sélectionnez **Statistiques d’attente des requêtes** pour ouvrir le volet **Statistiques d’attente des requêtes** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 ou version ultérieure. Le volet Statistiques d’attente des requêtes contient un graphique à barres qui indique les principales catégories d’attente dans le Magasin des requêtes. Utilisez la liste déroulante en haut pour sélectionner un critère d’agrégation pour le temps d’attente : moy, max, min, écart type et **total** (valeur par défaut).
 
- ![Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS")
+ ![Statistiques d'attente des requêtes SQL Server 2017 dans l’Explorateur d'objets SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Statistiques d'attente des requêtes SQL Server 2017 dans l’Explorateur d'objets SSMS")
 
 Sélectionnez une catégorie d’attente en cliquant sur la barre. Un affichage détaillé de la catégorie d’attente sélectionnée apparaît. Ce nouveau graphique à barres contient les requêtes qui ont contribué à cette catégorie d’attente. 
   
- ![Affichage détaillé des Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Affichage détaillé des Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS")
+ ![Vue détaillée des statistiques d'attente des requêtes SQL Server 2017 dans l’Explorateur d'objets SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Vue détaillée des statistiques d'attente des requêtes SQL Server 2017 dans l’Explorateur d'objets SSMS")
 
 Utilisez la zone de liste déroulante en haut pour filtrer les requêtes en fonction de différents critères de temps d’attente pour la catégorie d’attente sélectionnée : moy, max, min, écart type et **total** (valeur par défaut). Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons permettent d'afficher la requête source, de forcer un plan de requête et d’annuler son application forcée, ainsi que d'actualiser l'affichage.  
 
