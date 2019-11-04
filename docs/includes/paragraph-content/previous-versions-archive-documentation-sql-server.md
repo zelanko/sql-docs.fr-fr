@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e80ca43ad2a16496673b20cb4144784988333a55
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912845"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73057331"
 ---
 
 Nous accumulons et conservons la documentation des très anciennes versions de Microsoft SQL Server dans des groupes de pages web archivées. Les pages web archivées ne sont pas traitées par les moteurs de recherche tels que Bing.com et Google.com. Vous pouvez toutefois consulter ces archives sur notre site de documentation _previous-versions/sql/_ à l’adresse :
@@ -20,7 +20,7 @@ Ces archives incluent la documentation pour au moins les versions antérieures s
 
 La [documentation de SQL Server 2014](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) est toujours disponible à l’adresse principale de notre documentation.
 
-La [documentation de SQL Server 2019](https://docs.microsoft.com/sql/sql-server/index.yml?view=sql-server-ver15) est disponible à l’adresse principale de notre documentation. Utilisez ensuite la liste déroulante de gestion des versions située en haut de la page pour sélectionner une autre version.
+La [documentation de SQL Server 2019](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15) est disponible à l’adresse principale de notre documentation. Utilisez ensuite la liste déroulante de gestion des versions située en haut de la page pour sélectionner une autre version.
 
 Pour plus d’informations sur la documentation des versions précédentes de SQL Server, consultez la [documentation des précédentes versions de SQL Server](/sql/toc/previous-versions-sql-server).
 

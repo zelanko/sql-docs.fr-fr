@@ -9,12 +9,12 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7813368e08c8d1fdf4da1e2ee1e6775f56557d0a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907951"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049911"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Système de gestion de versions dans la documentation SQL
 
@@ -166,7 +166,7 @@ Le système de gestion de versions est entièrement implémenté pour SQL Server
     - [Documentation de SQL Server 2014](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - _Versions 2016 et ultérieures :_ &nbsp; le système de gestion de versions est entièrement implémenté pour SQL Server versions 2016 et ultérieures.
-    - [Bienvenue dans la documentation SQL Server versions 2016 et ultérieures](/sql/sql-server/index.yml?view=sql-server-2016)
+    - [Bienvenue dans la documentation SQL Server versions 2016 et ultérieures](/sql/sql-server/?view=sql-server-2016)
 
 ## <a name="see-also"></a>Voir aussi
 

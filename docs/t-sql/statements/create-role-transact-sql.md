@@ -27,23 +27,23 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49741cf920c85ac55288b7cd881b1c52335d3d07
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661426"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064619"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Crée un rôle de base de données dans la base de données active.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```sql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   
@@ -79,7 +79,7 @@ Les exemples suivants utilisent tous la base de données AdventureWorks.
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Création d'un rôle de base de données possédé par un utilisateur de base de données  
  Le code exemple suivant crée le rôle de base de données `buyers` possédé par l'utilisateur `BenMiller`.  
   
-```  
+```sql  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
 ### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. Création d'un rôle de base de données possédé par un rôle de base de données fixe  
  Le code exemple suivant crée le rôle de base de données `auditors` possédé par le rôle de base de données fixe `db_securityadmin`.  
   
-```  
+```sql  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
 GO  
 ```  

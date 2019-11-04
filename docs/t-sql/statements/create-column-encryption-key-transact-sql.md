@@ -28,19 +28,19 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061085"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064573"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Crée une clé de chiffrement de colonne (CEK) avec l’ensemble initial de valeurs, chiffrées avec les clés principales de colonne (CMK) spécifiées. Ce chiffrement est une opération sur les métadonnées. Une clé CEK peut avoir jusqu’à deux valeurs, ce qui permet de permuter une clé CMK. Il est nécessaire de créer une clé CEK avant que la fonctionnalité [Always Encrypted &#40;Moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ne chiffre une colonne dans la base de données. Les clés CEK peuvent également être créées à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Avant de créer une clé CEK, vous devez définir une clé CMK à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou de l’instruction[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -94,7 +94,7 @@ Nécessite l’autorisation **ALTER ANY COLUMN ENCRYPTION KEY**.
 ### <a name="a-creating-a-column-encryption-key"></a>A. Création d’une clé de chiffrement de colonne  
 L’exemple suivant crée une clé de chiffrement de colonne nommée `MyCEK`.  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -108,8 +108,8 @@ GO
 ### <a name="creating-a-column-encryption-key-with-two-values"></a>Création d’une clé de chiffrement de colonne avec deux valeurs  
 L’exemple suivant crée une clé de chiffrement de colonne nommée `TwoValueCEK` avec deux valeurs.  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  

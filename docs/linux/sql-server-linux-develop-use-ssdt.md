@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545042"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033021"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utiliser Visual Studio pour créer des bases de données pour SQL Server sur Linux
 
@@ -29,7 +29,7 @@ SQL Server Data Tools (SSDT) transforme Visual Studio en environnement de dével
 
 3. Sélectionnez **Microsoft SQL Server Data Tools**, **Git pour Windows** et **Extension GitHub pour Visual Studio** dans la liste de sélection de fonctionnalités.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
 4. Continuez et terminez l’installation de Visual Studio. Cela peut prendre quelques minutes.
 
@@ -47,15 +47,15 @@ SQL Server sur Linux est pris en charge par SSDT version 17.0 RC ou ultérieure.
 
 3. Cliquez sur **Nouveau** dans la section **Référentiel Git local** sur la page **Connexion**.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Cliquez sur **Créer**. Une fois le dépôt Git local créé, double-cliquez sur **SSDTRepo**.
+4. Cliquez sur **Créer**. Une fois le dépôt Git local créé, double-cliquez sur **SSDTRepo**.
 
-4. Cliquez sur **Nouveau** dans la section **Solutions**. Sélectionnez **SQL Server** sous le nœud **Autres langages** dans la boîte de dialogue **Nouveau projet**.
+5. Cliquez sur **Nouveau** dans la section **Solutions**. Sélectionnez **SQL Server** sous le nœud **Autres langages** dans la boîte de dialogue **Nouveau projet**.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. Tapez le nom **TutorialDB** et cliquez sur **OK** pour créer un nouveau projet de base de données.
+6. Tapez le nom **TutorialDB** et cliquez sur **OK** pour créer un nouveau projet de base de données.
 
 ## <a name="create-a-new-table-in-the-database-project"></a>Créez une table dans le projet de base de données
 
@@ -65,11 +65,11 @@ SQL Server sur Linux est pris en charge par SSDT version 17.0 RC ou ultérieure.
 
 3. Sélectionnez **Table** sous **Ajouter**.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
 4. À l’aide du concepteur de tables, ajoutez deux colonnes, Nom `nvarchar(50)` et Emplacement `nvarchar(50)`, comme le montre l’illustration. SSDT génère le script `CREATE TABLE` lorsque vous ajoutez les colonnes dans le concepteur.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
 
 5. Enregistrez le fichier **Table1.sql**.
 
@@ -77,7 +77,7 @@ SQL Server sur Linux est pris en charge par SSDT version 17.0 RC ou ultérieure.
 
 1. Ouvrez le menu du projet de base de données sur **TutorialDB** et sélectionnez **Créer**. SSDT compile les fichiers de code source .sql dans votre projet et génère un fichier de package d’application de la couche Données (dacpac). Cela peut être utilisé pour publier une base de données sur votre instance SQL Server sur Linux. 
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Vérifiez la réussite de la création dans la fenêtre **Sortie** de Visual Studio. 
 
@@ -87,11 +87,11 @@ SQL Server sur Linux est pris en charge par SSDT version 17.0 RC ou ultérieure.
 
 2. Cliquez sur **Modifier** pour sélectionner votre instance SQL Server sur Linux.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
 3. Dans la boîte de dialogue de connexion, tapez l’adresse IP ou le nom d’hôte de votre instance SQL Server sur Linux, le nom d’utilisateur et le mot de passe.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
 
 4. Cliquez sur le bouton **Publier** dans la boîte de dialogue de publication.
 
@@ -99,7 +99,7 @@ SQL Server sur Linux est pris en charge par SSDT version 17.0 RC ou ultérieure.
 
 6. Cliquez sur **Afficher les résultats** ou sur **Afficher le script** pour voir des détails du résultat de la publication de la base de données sur votre instance SQL Server sur Linux.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
 Vous avez créé avec succès une base de données sur l’instance SQL Server sur Linux et appris les bases du développement d’une base de données avec un projet de base de données sous contrôle de code source.
 

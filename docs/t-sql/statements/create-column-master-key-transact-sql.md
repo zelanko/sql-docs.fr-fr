@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061066"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064563"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Crée un objet de métadonnées de clé principale de colonne dans une base de données. Une entrée de métadonnées de clé principale de colonne représente une clé stockée dans un magasin de clés externes. Cette clé protège (chiffre) les clés de chiffrement de colonne lorsque vous utilisez la fonctionnalité [&#40;Moteur de base de données&#41; Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Plusieurs clés principales de colonne autorisent la rotation périodique de clés pour améliorer la sécurité. Créez une clé principale de colonne dans un magasin de clés et son objet de métadonnées associé dans la base de données en utilisant l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou PowerShell. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -192,7 +192,7 @@ WITH (
   
 Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne. Les applications clientes qui utilisent le fournisseur MSSQL_CNG_STORE ont accès à la clé principale de colonne :  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne. La clé principale de colonne est stockée dans Azure Key Vault, pour les applications clientes qui utilisent le fournisseur AZURE_KEY_VAULT, afin d’accéder à la clé principale de colonne.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne. La clé principale de colonne est stockée dans un magasin de clés principales de colonne personnalisé :  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Création d’une clé principale de colonne prenant en charge les enclaves  
 L’exemple suivant crée une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne prenant en charge les enclaves. La clé principale de colonne prenant en charge les enclaves est stockée dans le magasin de certificats, pour les applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE afin d’accéder à la clé principale de colonne :  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne prenant en charge les enclaves. La clé principale de colonne prenant en charge les enclaves est stockée dans Azure Key Vault, pour les applications clientes qui utilisent le fournisseur AZURE_KEY_VAULT, afin d’accéder à la clé principale de colonne.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  

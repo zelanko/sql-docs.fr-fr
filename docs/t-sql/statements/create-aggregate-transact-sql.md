@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064633"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée une fonction d'agrégation définie par l'utilisateur dont l'implémentation est définie dans une classe d'un assembly dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Pour que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lie la fonction d’agrégation à son implémentation, vous devez d’abord charger l’assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contient cette implémentation dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’une instruction CREATE ASSEMBLY.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -94,7 +94,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  L'exemple crée une agrégation `Concatenate`. Avant la création de celle-ci, l'assembly `StringUtilities.dll` est enregistré dans la base de données locale.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

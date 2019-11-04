@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991290"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240755"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Générer et analyser le fichier CLUSTER.LOG pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En tant que ressource de cluster de basculement, certaines interactions externes entre SQL Server, le cluster du service WSFC (Windows Server Failover Cluster) et la DLL de ressource SQL Server (hadrres.dll) ne peuvent pas faire l’objet d’un monitoring dans SQL Server. Le journal WSFC, CLUSTER.LOG, peut diagnostiquer des problèmes dans le cluster WSFC ou la DLL de ressource SQL Server.  
-  
- Le diagramme suivant illustre la relation entre les applications comme SQL Server et le gestionnaire de clusters Windows qui déclenchent la création de ressources de groupe de disponibilité, leur destruction ou des changements d’état.  
+  En tant que ressource de cluster de basculement, certaines interactions externes entre SQL Server, le cluster du service WSFC (Windows Server Failover Cluster) et la DLL de ressource SQL Server (hadrres.dll) ne peuvent pas faire l’objet d’un monitoring dans SQL Server. Le journal WSFC, CLUSTER.LOG, peut diagnostiquer des problèmes dans le cluster WSFC ou la DLL de ressource SQL Server. 
   
 ## <a name="generate-cluster-log"></a>Générer le journal de cluster  
  Vous pouvez générer les journaux de cluster de deux manières :  
