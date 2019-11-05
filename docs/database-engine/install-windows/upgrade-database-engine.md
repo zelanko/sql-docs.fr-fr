@@ -1,7 +1,7 @@
 ---
 title: Mettre à niveau le moteur de base de données | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122963"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531560"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
 
@@ -41,6 +41,6 @@ ms.locfileid: "70122963"
 
     Pour plus d’informations sur les nouvelles fonctionnalités et les comportements améliorés disponibles après avoir modifié un niveau de compatibilité de base de données, consultez [Différences entre les niveaux de compatibilité](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
 
-5.  [Tirer parti des nouvelles fonctionnalités SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Enfin, une fois que vous avez exécuté les étapes précédentes, vous pouvez découvrir comment bénéficier des nouvelles améliorations spécifiques du moteur de base de données. Cet article suggère quelques exemples d’améliorations et fournit des liens contenant davantage d’informations.  
+5.  [Tirer parti des nouvelles fonctionnalités SQL Server](https://www.microsoft.com/sql-server/sql-server-2019). Enfin, une fois que vous avez exécuté les étapes précédentes, vous pouvez découvrir comment bénéficier des nouvelles améliorations spécifiques du moteur de base de données. Cet article suggère quelques exemples d’améliorations et fournit des liens contenant davantage d’informations.  
   
   

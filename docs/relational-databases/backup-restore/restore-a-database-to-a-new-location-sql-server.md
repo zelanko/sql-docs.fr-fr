@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278921"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989559"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurer une base de données à un nouvel emplacement (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,25 +108,25 @@ ms.locfileid: "70278921"
 2.  Utilisez l'instruction [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) pour restaurer la sauvegarde complète de la base de données. Par défaut, les fichiers de données et les fichiers journaux sont restaurés à leur emplacement d'origine. Pour déplacer une base de données, utilisez l'option MOVE pour déplacer chacun des fichiers de la base de données et éviter des collisions avec les fichiers existants.  
 
   La syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] de base pour restaurer la base de données en utilisant un nouvel emplacement et un nouveau nom est :  
+  ```sql
+  RESTORE DATABASE *new_database_name*  
   
-  RESTORE DATABASE *nouveau_nom_base_de_données*  
-  
-  FROM *unité_sauvegarde* [ ,...*n* ]  
+  FROM *backup_device* [ ,...*n* ]  
   
   [ WITH  
+ 
+   {  
   
-  {  
+      [ **RECOVERY** | NORECOVERY ]  
   
-  [ **RECOVERY** | NORECOVERY ]  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-  [ , ] [ FILE ={ *numéro_fichier_jeu_sauvegarde* | @*numéro_fichier_jeu_sauvegarde* } ]  
-  
-  [ , ] MOVE '*nom_fichier_logique_dans_sauvegarde*' TO '*nom_fichier_système_d’exploitation*' [ ,...*n* ]  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
   }  
   
   ;  
-  
+  ```
   > [!NOTE] 
   > Lorsque vous préparez le déplacement d'une base de données vers un autre disque, vous devez vérifier que l'espace y est suffisant et identifier les collisions potentielles avec des fichiers existants. Cela suppose d'utiliser une instruction [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) spécifiant les mêmes paramètres MOVE que ceux que vous envisagez d'utiliser dans votre instruction RESTORE DATABASE.  
   

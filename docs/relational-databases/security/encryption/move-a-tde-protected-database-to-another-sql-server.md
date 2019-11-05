@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 32a4c21e924769a5e498b9fd597be0d51fca8de7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908370"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594314"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment protéger une base de données à l’aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données **master** du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
+  Cette rubrique explique comment protéger une base de données à l’aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données **master** du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.   
    
 ##  <a name="Restrictions"></a> Limitations et restrictions  
   

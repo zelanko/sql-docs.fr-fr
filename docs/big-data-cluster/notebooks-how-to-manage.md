@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958282"
@@ -22,7 +22,7 @@ ms.locfileid: "67958282"
 
 Cet article explique comment ouvrir et enregistrer des fichiers de notebooks dans Azure Data Studio avec la préversion de SQL Server 2019. Il montre également comment modifier la connexion à votre cluster Big Data SQL Server.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Cet article part du principe que vous disposez déjà d’un notebook à utiliser dans Azure Data Studio. Si vous souhaitez créer un notebook, consultez [Guide pratique pour utiliser des notebooks dans SQL Server 2019 (préversion)](notebooks-guidance.md). Pour utiliser des notebooks dans Azure Data Studio, vous devez respecter les prérequis suivants :
 
