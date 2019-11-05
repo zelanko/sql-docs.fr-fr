@@ -1,6 +1,6 @@
 ---
 title: Stocker des données chiffrées du serveur de rapports (Gestionnaire de configuration de SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513291"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988421"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Clés de chiffrement SSRS - Stocker des données chiffrées du serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  
@@ -51,6 +51,8 @@ ms.locfileid: "62513291"
  Les données de la base de données du serveur de rapports sont chiffrées à l'aide d'une clé symétrique. Il existe une clé symétrique pour chaque base de données de serveur de rapports. Cette clé symétrique est elle-même chiffrée à l'aide de la clé publique d'une paire de clés asymétriques générée par Windows. La clé privée est détenue par le compte du service Report Server Windows.  
   
  Dans un déploiement évolutif de serveur de rapports où plusieurs instances de serveur de rapports partagent la même base de données de serveur de rapports, une clé symétrique unique est employée par tous les nœuds de serveur de rapports. Chaque nœud doit avoir une copie de la clé symétrique partagée. Une copie de la clé symétrique est créée automatiquement pour chaque nœud lorsque le déploiement évolutif est configuré. Chaque nœud chiffre sa copie de la clé symétrique à l'aide de la clé publique d'une paire de clés spécifiques de son compte de service Windows. Pour en savoir plus sur la création de la clé symétrique pour les déploiements à instance unique et évolutifs, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ 
+ En outre, à partir de 2019, la base de données du serveur de rapports peut être configurée avec Transparent Data Encryption dans SQL Server pour fournir une protection supplémentaire pour vos données au repos.
   
 > [!NOTE]  
 >  Lorsque vous changez le compte du service Report Server Windows, les clés asymétriques peuvent devenir non valides, ce qui affecte les opérations du serveur. Pour éviter ce problème, utilisez toujours l'outil de configuration de Reporting Services pour modifier les paramètres de compte de service. Lorsque vous utilisez l'outil de configuration, les clés sont mises à jour automatiquement. Pour plus d’informations, consultez [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

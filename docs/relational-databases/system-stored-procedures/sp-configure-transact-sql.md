@@ -1,7 +1,7 @@
 ---
 title: sp_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22d8f61af08f183e10910544e42614769b9dafd9
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974353"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536217"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "71974353"
 > [!NOTE]  
 > Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE scoped configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer soft-NUMA, consultez [Soft-numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,17 +76,21 @@ RECONFIGURE
   
  Les valeurs de **config_value** et **run_value** ne sont pas équivalentes automatiquement. Après la mise à jour d’un paramètre de configuration à l’aide de **sp_configure**, l’administrateur système doit mettre à jour la valeur de configuration en cours d’exécution en utilisant RECONFIGURE ou RECONFIGURE WITH OVERRIDE. Pour plus d'informations, consultez la section Notes.  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
-|**minimum**|**Int**|Valeur minimale de l'option de configuration.|  
-|**maximum**|**Int**|Valeur maximale de l'option de configuration.|  
-|**config_value**|**Int**|Valeur à laquelle l’option de configuration a été définie à l’aide de **sp_configure** (valeur dans **sys. configurations. Value**). Pour plus d’informations sur ces options, consultez [options &#40;de configuration&#41; du serveur SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) et [sys &#40;. configurations Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**Int**|Valeur en cours d’exécution de l’option de configuration (valeur dans **sys. configurations. value_in_use**).<br /><br /> Pour plus d’informations, consultez [sys. configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**nom**|**nvarchar(35)**|Nom de l'option de configuration.|  
+|**minimum**|**int**|Valeur minimale de l'option de configuration.|  
+|**maximum**|**int**|Valeur maximale de l'option de configuration.|  
+|**config_value**|**int**|Valeur à laquelle l’option de configuration a été définie à l’aide de **sp_configure** (valeur dans **sys. configurations. Value**). Pour plus d’informations sur ces options, consultez [options &#40;de configuration&#41; du serveur SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) et [sys &#40;. configurations Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|Valeur en cours d’exécution de l’option de configuration (valeur dans **sys. configurations. value_in_use**).<br /><br /> Pour plus d’informations, consultez [sys. configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez **sp_configure** pour afficher ou modifier les paramètres au niveau du serveur. Pour modifier les paramètres au niveau de la base de données, utilisez ALTER DATABASE. Pour modifier uniquement les paramètres qui ont une incidence sur la session de l'utilisateur actuel, utilisez l'instruction SET.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## <a name="updating-the-running-configuration-value"></a>Mise à jour de la valeur de configuration en cours d'exécution  
  Lorsque vous spécifiez une nouvelle *valeur* pour une *option*, le jeu de résultats affiche cette valeur dans la colonne **config_value** . Cette valeur est initialement différente de la valeur de la colonne **run_value** , qui affiche la valeur de configuration en cours d’exécution. Pour mettre à jour la valeur de configuration en cours d’exécution dans la colonne **run_value** , l’administrateur système doit exécuter RECONFIGURE ou RECONFIGURE WITH OVERRIDE.  
   
@@ -95,7 +99,7 @@ RECONFIGURE
 > [!CAUTION]  
 > Une valeur d'option inappropriée peut avoir des répercussions négatives sur la configuration de l'instance de serveur. Utilisez RECONFIGURE WITH OVERRIDE avec prudence.  
   
- Certaines options peuvent être mises à jour de façon dynamique par l'instruction RECONFIGURE, alors que d'autres nécessitent un arrêt et un redémarrage du serveur. Par exemple, les options **min Server Memory** et **Max Server** Memory Server sont mises à jour dynamiquement dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. par conséquent, vous pouvez les modifier sans redémarrer le serveur. En revanche, la reconfiguration de la valeur d’exécution de l’option **facteur de remplissage** nécessite le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Certaines options peuvent être mises à jour de façon dynamique par l'instruction RECONFIGURE, alors que d'autres nécessitent un arrêt et un redémarrage du serveur. Par exemple, les options **min Server Memory** et **Max Server** Memory Server sont mises à jour dynamiquement dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]; par conséquent, vous pouvez les modifier sans redémarrer le serveur. En revanche, la reconfiguration de la valeur d’exécution de l’option **facteur de remplissage** nécessite le redémarrage de l' [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  Après l’exécution de RECONFIGURE sur une option de configuration, vous pouvez voir si l’option a été mise à jour de manière dynamique en exécutant **sp_configure'***option_name***'** . Les valeurs des colonnes **run_value** et **config_value** doivent correspondre pour une option mise à jour dynamiquement. Vous pouvez également vérifier quelles options sont dynamiques en examinant la colonne **is_dynamic** de l’affichage catalogue **sys. configurations** .  
  
@@ -116,7 +120,7 @@ RECONFIGURE
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-the-advanced-configuration-options"></a>R. Affichage des options de configuration avancées  
+### <a name="a-listing-the-advanced-configuration-options"></a>A. Affichage des options de configuration avancées  
  L'exemple suivant montre comment définir et afficher toutes les options de configuration. Pour afficher les options de configuration avancées, il faut tout d'abord donner à l'argument `show advanced option` la valeur `1`. Une fois cette option modifiée, l'exécution de `sp_configure` sans paramètre renvoie l'ensemble des options de configuration.  
   
 ```sql  
@@ -125,7 +129,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Voici le message : «L’option de configuration’afficher les options avancées’est passée de 0 à 1. Pour installer, exécutez l'instruction RECONFIGURE. »  
+ Voici le message : « L'option de configuration 'show advanced options' est passée de 0 à 1. Pour installer, exécutez l'instruction RECONFIGURE. »  
   
  Exécutez `RECONFIGURE` et affichez toutes les options de configuration :  
   
