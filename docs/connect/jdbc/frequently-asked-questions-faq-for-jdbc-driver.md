@@ -1,7 +1,7 @@
 ---
 title: Questions fréquentes (FAQ) sur le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028071"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049817"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Questions fréquentes (FAQ) sur le pilote JDBC
 
@@ -34,7 +34,7 @@ Pour obtenir des détails, consultez la page [Matrice de prise en charge de Micr
 **Quelle est la différence entre les packages de pilotes JDBC disponibles dans le Centre de téléchargement Microsoft et le pilote JDBC disponible sur GitHub ?**  
 Les fichiers de pilotes JDBC disponibles sur le référentiel GitHub pour Microsoft JDBC Driver sont au cœur du pilote JDBC et sous la licence open source indiquée dans le référentiel. Les packages de pilotes du Centre de téléchargement Microsoft incluent des bibliothèques supplémentaires pour l’authentification Windows intégrée et les transactions XA avec le pilote JDBC, sous la licence incluse avec le package téléchargeable.
 
-**Que faut-il savoir avant la mise à niveau du pilote ?**
+**Que faut-il savoir avant la mise à niveau du pilote ?**  
 Microsoft JDBC Driver 7.4 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les trois bibliothèques de classes JAR suivantes :
 
 | JAR                        | Spécification JDBC            | Version JDK |
@@ -42,20 +42,23 @@ Microsoft JDBC Driver 7.4 prend en charge les spécifications JDBC 4.2 et 4.3 (p
 | MSSQL-JDBC-7.4.1. jre12. jar | JDBC 4.3 (partiellement) et 4.2 | JDK 12.0    |
 | MSSQL-JDBC-7.4.1. jre11. jar | JDBC 4.3 (partiellement) et 4.2 | JDK 11.0    |
 | MSSQL-JDBC-7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.2 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
+Microsoft JDBC Driver 7.2 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
 
 | JAR                        | Spécification JDBC            | Version JDK |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3 (partiellement) et 4.2 | JDK 11.0    |
 | mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.0 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
+Microsoft JDBC Driver 7.0 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
 
 | JAR                        | Spécification JDBC            | Version JDK |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 (partiellement) et 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 6.4 prend en charge les spécifications JDBC 4.1, 4.2 et 4.3 (partiellement). Le package d’installation comprend les trois bibliothèques de classes JAR suivantes :
 
@@ -64,6 +67,7 @@ Microsoft JDBC Driver 6.4 prend en charge les spécifications JDBC 4.1, 4.2 et 4
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 (partiellement), 4.2 et 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 et 4.1                  | JDK 8.0     |
 | mssql-jdbc-6.4.0.jre7.jar | JDBC 4.1                           | JDK 7.0     |
+| &nbsp;                    | &nbsp;                             | &nbsp;      |
 
 Microsoft JDBC Driver 6.2 prend en charge les spécifications JDBC 4.0, 4.1 et 4.2. Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
 
@@ -71,6 +75,7 @@ Microsoft JDBC Driver 6.2 prend en charge les spécifications JDBC 4.0, 4.1 et 4
 | ------------------------- | ---------------------- | ----------- |
 | mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 et 4.0 | JDK 8.0     |
 | mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 et 4.0       | JDK 7.0     |
+| &nbsp;                    | &nbsp;                 | &nbsp;      |
 
 Microsoft JDBC Driver 6.0 et 4.2 pour SQL Server prennent en charge les spécifications JDBC 4.0, 4.1 et 4.2. Le package d’installation comprend les deux bibliothèques de classes JAR suivantes :
 
@@ -78,12 +83,14 @@ Microsoft JDBC Driver 6.0 et 4.2 pour SQL Server prennent en charge les spécifi
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2, 4.1 et 4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 et 4.0       | JDK 7.0     |
+| &nbsp;        | &nbsp;                 | &nbsp;      |
 
 Microsoft JDBC Driver 4.1 pour SQL Server prend en charge la spécification JDBC 4.0. Le package d’installation comprend la bibliothèque de classes JAR suivante :
 
 | JAR           | Spécification JDBC | Version JDK     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 et 6.0 |
+| &nbsp;        | &nbsp;             | &nbsp;      |
 
 **Dois-je modifier le code de mon application pour pouvoir utiliser le pilote le plus récent avec ma version existante de SQL Server ?**  
 En règle générale, le pilote est conçu pour assurer une compatibilité descendante. Il est donc inutile de modifier les applications existantes quand vous mettez à niveau le pilote. Lorsqu’une nouvelle version du pilote introduit un changement cassant, la section [Notes de publication du pilote JDBC](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) donne des informations claires sur cette modification et son impact sur les applications existantes. Vous pouvez également consulter les notes de publication fournies avec le pilote pour obtenir la liste des bogues corrigés dans cette version et les problèmes connus.
@@ -91,21 +98,20 @@ En règle générale, le pilote est conçu pour assurer une compatibilité desce
 **Combien coûte le pilote ?**  
 Le pilote Microsoft JDBC Driver pour SQL Server est disponible gratuitement.
 
-**Puis-je redistribuer le pilote ?**
-Les pilotes JDBC 4.1, 4.2, 6.0, 6.2, 6.4 et 7.0 sont redistribuables. Lisez la clause « Code distribuable » des contrats de licence.
+**Puis-je redistribuer le pilote ?**  
+Les pilotes JDBC 6.0, 6.2, 6.4 et 7.0 sont redistribuables. Lisez la clause « Code distribuable » des contrats de licence.
 
-**Puis-je utiliser le pilote pour accéder à Microsoft SQL Server à partir d’un ordinateur Linux ?**
+**Puis-je utiliser le pilote pour accéder à Microsoft SQL Server à partir d’un ordinateur Linux ?**  
 Oui. Le pilote vous permet d’accéder à SQL Server à partir de Linux, d’Unix et d’autres plateformes non-Windows. Pour plus d’informations, voir [Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) .
 
-**Le pilote prend-il en charge le chiffrement SSL (Secure Sockets Layer) ?**
+**Le pilote prend-il en charge le chiffrement SSL (Secure Sockets Layer) ?**  
 Le pilote prend en charge le chiffrement SSL à compter de la version 1.2. Pour plus d’informations, consultez [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md).
 
 **Quels sont les types d’authentification pris en charge par le pilote Microsoft JDBC Driver pour SQL Server ?**  
 Le tableau ci-dessous répertorie les options d’authentification disponibles. Une authentification Kerberos en Java pur est disponible à compter de la version 4.0 du pilote.
 
-|             |                                       |
-| ----------- | ------------------------------------- |
 | Plateforme    | Authentification                        |
+| ----------- | ------------------------------------- |
 | Non-Windows | Kerberos en Java pur                    |
 | Non-Windows | SQL Server                            |
 | Non-Windows | Authentification Azure Active Directory |
@@ -114,6 +120,7 @@ Le tableau ci-dessous répertorie les options d’authentification disponibles. 
 | Windows     | Kerberos avec sauvegarde NTLM             |
 | Windows     | NTLM                                  |
 | Windows     | Authentification Azure Active Directory |
+| &nbsp;      | &nbsp;                                |
 
 **Le pilote prend-il en charge les adresses IPv6 (Internet Protocol version 6) ?**  
 Oui. Le pilote prend en charge les adresses IPv6. Utilisez la collection de propriétés de connexion et la propriété de chaîne de connexion serverName. Pour plus d’informations, consultez [Création de l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).
@@ -127,7 +134,7 @@ Le pilote prend en charge le regroupement de connexions Java EE 5 (Java Platform
 **Le pilote bénéficie-t-il des services du support technique ?**  
 Plusieurs options de support technique sont disponibles. Vous pouvez publier votre question ou votre problème dans notre [référentiel GitHub](https://github.com/microsoft/mssql-jdbc), contrôlé par Microsoft. Les [forums](https://go.microsoft.com/fwlink/?LinkID=246673) sont gérés par Microsoft, les MVP et la communauté. Vous pouvez aussi contacter le support technique Microsoft. L’équipe de développement peut vous demander de reproduire le problème en dehors de tout serveur d’applications tiers. Si le problème ne peut pas être reproduit en dehors de l’environnement conteneur Java hôte, vous devez impliquer le tiers associé pour que l’équipe puisse continuer à vous aider. L’équipe pourra éventuellement vous demander de reproduire votre problème sur un système d’exploitation comme Windows pour mieux vous aider.
 
-**Le pilote est-il certifié dans le cadre d’une utilisation avec des serveurs d’applications tiers ?**
+**Le pilote est-il certifié dans le cadre d’une utilisation avec des serveurs d’applications tiers ?**  
 Le pilote a été testé sur divers serveurs d’applications, notamment IBM WebSphere et SAP Netweaver.
 
 **Comment activer le suivi ?**  

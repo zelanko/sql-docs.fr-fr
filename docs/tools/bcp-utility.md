@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0f9081562a0cb0f8ddba663f04305c7bd2b387fe
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708714"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989565"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 
@@ -45,7 +45,7 @@ ms.locfileid: "71708714"
 
 L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur. L’utilitaire **bcp** permet d’importer un grand nombre de nouvelles lignes dans des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d’exporter des données de tables dans des fichiers de données. Sauf lorsqu’il est utilisé avec l’option **queryout** , l’utilitaire ne nécessite aucune connaissance de [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour importer des données dans une table, vous devez utiliser un fichier de format créé pour cette table ou comprendre la structure de la table et les types de données valides pour ses colonnes.  
 
-![Icône de lien vers une rubrique](../database-engine/configure-windows/media/topic-link.gif "Icône de lien vers une rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées pour **bcp**, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Icône de lien vers une rubrique](../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées pour **bcp**, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
 > [!NOTE]
 > Si vous utilisez **bcp** pour sauvegarder vos données, créez un fichier de format pour enregistrer le format de données. Les fichiers de données**bcp**  **n’incluent pas** de schéma ni d’informations de format, ce qui fait que si une table ou une vue est supprimée et si vous n’avez pas de fichier de format, il se peut que vous ne soyez pas en mesure d’importer les données.
@@ -55,7 +55,7 @@ L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des donnée
 **[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0 pour SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0 pour SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-Les outils en ligne de commande sont la disponibilité générale (GA), mais ils sont publiés avec le package d’installation pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Les outils en ligne de commande sont la disponibilité générale (GA), mais ils sont publiés avec le package d’installation de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### <a name="version-information"></a>Informations sur la version
 
@@ -68,11 +68,11 @@ Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise
 
 ### <a name="system-requirements"></a>Configuration système requise
 
-Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016
 
 Ce composant nécessite à la fois [Windows Installer 4,5](https://www.microsoft.com/download/details.aspx?id=8483) et le [pilote ODBC Microsoft 17,3 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-Pour vérifier la version de BCP, exécutez la commande `bcp /v` et vérifiez que 15.0.1000.34 ou une version ultérieure est en cours d’utilisation.
+Pour vérifier la version de BCP, exécutez `bcp /v` commande et vérifiez que 15.0.1000.34 ou une version ultérieure est en cours d’utilisation.
 
 <table><th>Syntaxe</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -220,12 +220,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     Lorsque vous souhaitez utiliser un nom d’utilisateur Azure Active Directory et le mot de passe, vous pouvez fournir l’option **- G** et utiliser également le nom d’utilisateur et le mot de passe en fournissant les options **-U** et **-P** . 
 
-    L’exemple suivant exporte des données à l’aide d’Azure AD nom d’utilisateur et mot de passe, où utilisateur et mot de passe sont des informations d’identification AAD. L’exemple exporte la table `bcptest` de la base de données `testdb` à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data1.dat` :
+    L’exemple suivant exporte des données à l’aide d’Azure AD nom d’utilisateur et mot de passe, où utilisateur et mot de passe sont des informations d’identification AAD. L’exemple exporte la table `bcptest` de la base de données `testdb` à partir d’Azure Server `aadserver.database.windows.net` et stocke les données dans le `c:\last\data1.dat`de fichiers :
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    L’exemple suivant importe des données à l’aide d’Azure AD nom d’utilisateur et mot de passe, où utilisateur et mot de passe sont des informations d’identification AAD. L’exemple importe des données à partir du fichier `c:\last\data1.dat` dans la table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide de Azure AD utilisateur/mot de passe :
+    L’exemple suivant importe des données à l’aide d’Azure AD nom d’utilisateur et mot de passe, où utilisateur et mot de passe sont des informations d’identification AAD. L’exemple importe des données à partir de `c:\last\data1.dat` de fichiers dans la table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide de Azure AD utilisateur/mot de passe :
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -234,13 +234,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     Pour l’authentification intégrée à Azure Active Directory, spécifiez l’option **-G** sans nom d’utilisateur ni mot de passe. Cette configuration suppose que le compte d’utilisateur Windows actuel (le compte sous lequel s’exécute la commande bcp) est fédéré avec Azure AD : 
 
-    L’exemple suivant exporte des données à l’aide d’un compte intégré à Azure AD. L’exemple exporte la table `bcptest` de la base de données `testdb` à l’aide d’Azure AD intégrée à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data2.dat` :
+    L’exemple suivant exporte des données à l’aide d’un compte intégré à Azure AD. L’exemple exporte la table `bcptest` de la base de données `testdb` à l’aide d’Azure AD intégrée à partir d’Azure Server `aadserver.database.windows.net` et stocke les données dans le `c:\last\data2.dat`de fichiers :
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    L’exemple suivant importe des données à l’aide de l’authentification intégrée Azure AD. L’exemple importe des données à partir du fichier `c:\last\data2.txt` dans la table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide de l’authentification intégrée de Azure AD :
+    L’exemple suivant importe des données à l’aide de l’authentification intégrée Azure AD. L’exemple importe des données à partir de `c:\last\data2.txt` de fichiers dans la table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide de l’authentification intégrée de Azure AD :
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -262,7 +262,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   Si un utilisateur Azure AD est un domaine fédéré à l’aide d’un compte Windows, le nom d’utilisateur requis sur la ligne de commande contient son compte de domaine (par exemple, joe@contoso.com, voir ci-dessous) :   
+   Si un utilisateur Azure AD est un domaine fédéré à l’aide d’un compte Windows, le nom d’utilisateur requis sur la ligne de commande contient son compte de domaine (par exemple, joe@contoso.com voir ci-dessous) :   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
