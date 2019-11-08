@@ -14,16 +14,15 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908271"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789865"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter une procédure stockée avec ODBC CALL et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Les procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont par conséquent pas accessibles à l'application tant que l'ensemble de lignes n'a pas été complètement libéré. Si la commande retourne plusieurs résultats, les données des paramètres de sortie sont disponibles quand **IMultipleResults::GetResult** retourne DB_S_NORESULT ou quand l’interface **IMultipleResults** est complètement libérée (selon l’événement qui se produit en premier).  
   
@@ -36,13 +35,13 @@ ms.locfileid: "67908271"
   
 2.  Créez un jeu de liaisons (un pour chaque marqueur de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-3.  Créez un accesseur pour les paramètres définis à l’aide de la **IAccessor::CreateAccessor** (méthode). **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
+3.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor :: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
   
 4.  Remplissez la structure DBPARAMS.  
   
 5.  Appelez la commande **Execute** (dans ce cas, un appel à une procédure stockée).  
   
-6.  Traiter l’ensemble de lignes et libérez-le à l’aide du **IRowset::Release** (méthode).  
+6.  Traitez l’ensemble de lignes et libérez-le à l’aide de la méthode **IRowset :: Release** .  
   
 7.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   

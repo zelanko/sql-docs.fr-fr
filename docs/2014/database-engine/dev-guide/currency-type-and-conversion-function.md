@@ -1,5 +1,5 @@
 ---
-title: Type de devise et fonction de Conversion | Microsoft Docs
+title: Type de devise et fonction de conversion | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753240"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637648"
 ---
 # <a name="currency-type-and-conversion-function"></a>Type de devise et fonction de conversion
   Cet exemple crée un type de données Currency défini par l'utilisateur à l'aide de C#. Ce type de données défini par l'utilisateur encapsule un montant et une culture qui permet de déterminer la façon correcte d'exprimer le montant comme valeur monétaire dans la culture en question. Cet exemple fournit également une fonction de conversion monétaire qui retourne une instance du type de données Currency défini par l'utilisateur. Si la base de données AdventureWorks dispose d'un taux de conversion des dollars (USD) vers la devise associée à la culture spécifiée, la fonction de conversion retourne un type de données Currency défini par l'utilisateur avec le montant converti et une culture qui correspond à la culture demandée. Sinon, un type de données Currency défini par l'utilisateur est retourné avec le montant d'origine, qui doit être en USD, avec la culture `en-us`. Cet exemple montre également comment inscrire des méthodes CLR (Common Language Runtime) et des assemblys et annuler leur inscription à l'aide de Transact-SQL.  
@@ -23,10 +23,10 @@ ms.locfileid: "62753240"
 > [!CAUTION]  
 >  Les taux de change employés dans cet exemple sont fictifs et ne doivent pas être utilisés pour de véritables transactions financières.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   

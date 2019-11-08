@@ -18,16 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707463"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782659"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
   
@@ -41,7 +40,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *token*  
+ *lexical*  
  Valeur indiquant un jeton de type BCP.  
   
  *field*  
@@ -61,7 +60,7 @@ RETCODE bcp_gettypename (
 |**SQLNUMERIC**|Avant ou après|**numeric**|  
 |**SQLINT1**|Avant ou après|**tinyint**|  
 |**SQLINT2**|Avant ou après|**smallint**|  
-|**SQLINT4**|Avant ou après|**Int**|  
+|**SQLINT4**|Avant ou après|**int**|  
 |**SQLMONEY**|Avant ou après|**money**|  
 |**SQLFLT8**|Avant ou après|**float**|  
 |**SQLDATETIME**|Avant ou après|**datetime**|  
@@ -78,8 +77,8 @@ RETCODE bcp_gettypename (
 |**SQLVARBINARY**|Non|**Varbinary**|  
 |**SQLIMAGE**|Avant ou après|**Image**|  
 |**SQLINTN**|Avant ou après|**int-null**|  
-|**SQLDATETIMN**|Avant ou après|**datetime-null**|  
-|**SQLMONEYN**|Avant ou après|**money-null**|  
+|**SQLDATETIMN**|Avant ou après|**DateTime-null**|  
+|**SQLMONEYN**|Avant ou après|**Money-null**|  
 |**SQLFLTN**|Avant ou après|**float-null**|  
 |**SQLAOPSUM**|Avant ou après|**Sum**|  
 |**SQLAOPAVG**|Avant ou après|**Avg**|  

@@ -1,5 +1,5 @@
 ---
-title: Supprimer un attribut (Master Data Services) | Microsoft Docs
+title: Supprimer un attribut
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9f0266120a298ab6f033c7d2e2a4b4fe4903fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906376"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728340"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Supprimer un attribut (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67906376"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez un attribut lorsque vous souhaitez supprimer définitivement l’attribut et toutes les valeurs d’attribut associées.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -45,18 +45,18 @@ ms.locfileid: "67906376"
   
 5.  Sur la page **Gérer les attributs** , effectuez l’une des opérations suivantes.  
   
-    -   Si l’attribut concerne les membres feuille, sélectionnez **Feuille** dans la zone de liste **Types de membres** .  
+    -   Si l’attribut concerne les membres feuille, sélectionnez **Feuille** dans la zone de liste **Types de membre** .  
   
     -   Si l’attribut concerne les membres consolidés, sélectionnez **Consolidé** dans la zone de liste **Types de membre** .  
   
-    -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membre** .  
+    -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membres** .  
   
 6.  Sélectionnez la ligne de l’attribut que vous souhaitez supprimer.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas supprimer les attributs Name ni Code.  
   
-7.  Cliquez sur **Delete**.  
+7.  Cliquez sur **Supprimer**.  
   
 8.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

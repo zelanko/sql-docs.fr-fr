@@ -13,17 +13,17 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011327"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637895"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
   Cette rubrique explique comment extraire les valeurs requises avant d'ajouter une propriété à une liste de propriétés de recherche et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
   
- Propriétés de document qui sont extraites par IFilters à partir des données binaires : autrement dit, les données stockées dans un `varbinary`, `varbinary(max)` (y compris `FILESTREAM`), ou `image` colonne de type de données - peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md).  
+ Les propriétés de document qui sont extraites par les IFilters des données binaires, c’est-à-dire à partir des données stockées dans un `varbinary`, `varbinary(max)` (y compris `FILESTREAM`) ou `image` colonne de type de données, peuvent être mises à disposition pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md).  
   
  Avant d'ajouter une propriété disponible à une liste de propriétés, vous devez obtenir deux informations sur la propriété :  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66011327"
 |Nom connu|Nom canonique Windows|GUID du jeu de propriétés|ID entier|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Auteurs|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Auteur ou auteurs d'un élément donné.|  
-|Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Ensemble de mots clés (également appelé balises) affecté à l'élément.|  
-|type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Type de fichier perçu selon son type canonique.|  
-|Titre|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titre de l'élément. Par exemple, le titre d'un document, l'objet d'un message, la légende d'une photo ou le nom d'une piste de musique.|  
+|Balises|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Ensemble de mots clés (également appelé balises) affecté à l'élément.|  
+|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Type de fichier perçu selon son type canonique.|  
+|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titre de l'élément. Par exemple, le titre d'un document, l'objet d'un message, la légende d'une photo ou le nom d'une piste de musique.|  
   
  Pour favoriser la cohérence parmi les formats de fichier, Microsoft a identifié des sous-ensembles de propriétés du document fréquemment utilisées et prioritaires pour plusieurs catégories de documents. Celles-ci incluent des communications, des contacts, des documents, des fichiers de musique, des images et des vidéos. Pour plus d’informations sur les propriétés principales de chaque catégorie, consultez [Propriétés définies par le système pour les formats de fichiers personnalisés](https://go.microsoft.com/fwlink/?LinkId=144336) dans la documentation Windows Search.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66011327"
   
  Exécutez **filtdump.exe** à partir de l’invite de commandes et fournissez un argument unique. Cet argument est le nom d'un fichier individuel dont le type de fichier correspond à un IFilter installé. L'utilitaire affiche une liste de toutes les propriétés identifiées par l'IFilter dans le document, avec leurs GUID de jeu de propriétés, leurs ID d'entier et des informations supplémentaires.  
   
- Pour plus d’informations sur l’installation de ce logiciel, consultez [Kit de développement logiciel (SDK) Microsoft Windows pour Windows 7 et .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Après avoir téléchargé et installé le Kit de développement logiciel (SDK), recherchez l'utilitaire filtdump.exe dans les dossiers suivants.  
+ Pour plus d’informations sur l’installation de ce logiciel, consultez [Kit de développement logiciel (SDK) Microsoft Windows pour Windows 7 et .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). Après avoir téléchargé et installé le Kit de développement logiciel (SDK), recherchez l'utilitaire filtdump.exe dans les dossiers suivants.  
   
 -   Pour la version 64 bits, recherchez dans `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

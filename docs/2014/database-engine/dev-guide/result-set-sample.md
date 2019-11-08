@@ -1,5 +1,5 @@
 ---
-title: Exemple de jeu de résultat | Microsoft Docs
+title: Exemple de jeu de résultats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782142"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637638"
 ---
 # <a name="result-set-sample"></a>Exemple de jeu de résultats
   Il est parfois utile d'être en mesure d'exécuter des commandes tout en lisant les résultats d'une requête, sans ouvrir de nouvelle connexion ni charger tous les résultats en mémoire. La fonctionnalité MARS (Multiple Active Result Set) d'ADO.NET 2.0 est une technologie qui vous permet de le faire. À l'heure actuelle, cette technologie n'est pas implémentée pour le fournisseur de processus interne employé dans la programmation côté serveur. Pour contourner cette limitation, il est possible d'utiliser des curseurs côté serveur. Cet exemple montre comment utiliser les curseurs côté serveur afin de pallier l'absence de prise en charge de MARS dans la programmation côté serveur.  
@@ -25,10 +25,10 @@ ms.locfileid: "62782142"
   
  L'API pour cette classe est semblable à un lecteur de données, excepté que vous pouvez vous déplacer en avant ou en arrière dans le jeu de résultats et que d'autres commandes peuvent être exécutées sur la connexion même lorsque le jeu de résultats est ouvert. Cette implémentation est hautement simplifiée afin de faciliter la compréhension de l'exemple. Une mise en œuvre plus efficace consisterait à extraire plusieurs lignes pour éviter un parcours complet de la base de données pour chaque ligne extraite. L'utilisation de cette classe présente un avantage très important pour la programmation côté serveur dans la mesure où elle aboutit à un encombrement mémoire nettement inférieur à celui occasionné par le remplissage d'un dataset avec tous les résultats d'une requête. Cet exemple démontre également l'utilisation de l'attribut d'autorisation des appelants partiellement approuvés visant à indiquer que l'assembly ResultSet est une bibliothèque que vous pouvez appeler en toute sécurité à partir d'autres assemblys. Cette approche est un peu plus complexe mais beaucoup plus sûre que d'inscrire l'assembly appelant avec l'autorisation unsafe. Elle est plus sûre parce qu'en inscrivant l'assembly appelant en tant que safe, vous affectez de manière limitée les ressources en dehors du serveur et éviter d'endommager l'intégrité de ce dernier.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -1358,7 +1358,7 @@ WHERE ProductID = @ProductID;
 GO  
 ```  
   
- Il s’agit du script test [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`), qui teste l’exemple.  
+ Il s'agit du script test [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`), qui teste l'exemple.  
   
 ```  
 USE AdventureWorks  

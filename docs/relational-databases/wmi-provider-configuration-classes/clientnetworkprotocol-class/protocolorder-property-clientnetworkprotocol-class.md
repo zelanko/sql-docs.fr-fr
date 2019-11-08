@@ -1,6 +1,6 @@
 ---
-title: Protocolorder, propriété (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Propriété ProtocolOrder, (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b855e75cc2d541604d6a2e5417c63b2f3f03e86e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 030e35fca5fc6a2dbc31a16fc1bc1cb0e5c9fea5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040882"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660206"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Propriété ProtocolOrder (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.ProtocolOrder [= value]
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)   
- [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuration des protocoles réseau clients et des bibliothèques Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

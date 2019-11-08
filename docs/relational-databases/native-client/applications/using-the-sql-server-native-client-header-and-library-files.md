@@ -1,5 +1,5 @@
 ---
-title: À l’aide de l’en-tête SQL Server Native Client et les fichiers de bibliothèque | Microsoft Docs
+title: Utilisation des fichiers de bibliothèque et d’en-tête SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,21 @@ ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01cfd9fe1aba63e5b63c6878d0332bd3a4a8eaff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db0f7fd455c84e11e64abf12c089f3855ebb055b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987543"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761449"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilisation des fichiers bibliothèques et de l'en-tête SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Les fichiers bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sont installés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lors du développement d'une application, il importe de copier et d'installer tous les fichiers requis pour le développement sur votre environnement de développement. Pour plus d’informations sur l’installation et la redistribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [l’installation de SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+  Les fichiers bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sont installés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lors du développement d'une application, il importe de copier et d'installer tous les fichiers requis pour le développement sur votre environnement de développement. Pour plus d’informations sur l’installation et la redistribution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [installation de SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
  Les fichiers bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sont installés à l'emplacement suivant :  
   
- *%Program Files%* \Microsoft SQL Server\110\SDK  
+ *% Program Files%* \Microsoft SQL Server\110\SDK  
   
  Le fichier d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) peut être utilisé pour ajouter la fonctionnalité d'accès aux données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à vos applications personnalisées. Le fichier d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contient l'ensemble des définitions, attributs, propriétés et interfaces nécessaires pour tirer parti des nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
@@ -50,12 +49,12 @@ ms.locfileid: "67987543"
  Les applications OLE DB qui utilisent le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client doivent uniquement référencer sqlncli.h. Si une application utilise MDAC (SQLOLEDB) et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, elle peut faire référence à sqloledb.h et à sqlncli.h, mais la référence à sqloledb.h doit être placée en premier.  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>Utilisation du fichier d'en-tête SQL Server Native Client  
- Pour utiliser le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fichier d’en-tête Native Client, vous devez utiliser un **incluent** instruction au sein de votre code de programmation C/C++. Les sections suivantes décrivent comment y parvenir pour les applications OLE DB et ODBC.  
+ Pour utiliser le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fichier d’en-tête Native Client, vous devez utiliser une instruction **include** dans votre code C/C++ Programming. Les sections suivantes décrivent comment y parvenir pour les applications OLE DB et ODBC.  
   
 > [!NOTE]  
 >  Les fichiers bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne peuvent être compilés qu'à l'aide de Visual Studio C++ 2002 ou version ultérieure.  
   
-### <a name="ole-db"></a>OLE DB  
+### <a name="ole-db"></a>OLE DB  
  Pour utiliser le fichier d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dans une application OLE DB, à l'aide des lignes de code de programmation suivantes :  
   
 ```  
@@ -64,7 +63,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  La première ligne de code ci-dessus doit être omise si les API OLE DB et ODBC sont utilisées par l'application. En outre, si l’application possède un **incluent** instruction pour sqloledb.h, le **incluent** instruction pour sqlncli.h doit venir après elle.  
+>  La première ligne de code ci-dessus doit être omise si les API OLE DB et ODBC sont utilisées par l'application. En outre, si l’application possède une instruction **include** pour SQLOLEDB. h, l’instruction **include** pour sqlncli. h doit être postérieure à celle-ci.  
   
  Lorsque vous créez une connexion à une source de données via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, utilisez "SQLNCLI11" comme chaîne du nom de fournisseur.  
   
@@ -83,9 +82,9 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>Noms des composants et propriétés par version  
   
-|Propriété|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|Propriété|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10,0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
-|Nom du pilote ODBC|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
+|Nom du pilote ODBC|SQL Native Client|SQL Server Native Client 10,0|SQL Server Native Client 11.0|SQL Server|  
 |Nom du fichier d'en-tête ODBC|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
 |DLL du pilote ODBC|Sqlncli.dll|Sqlncl10.dll|Sqlncl11.dll|sqlsrv32.dll|  
 |Fichier bibliothèque ODBC pour les API BCP|Sqlncli.lib|Sqlncli10.lib|Sqlncli11.lib|Odbcbcp.lib|  
@@ -101,9 +100,9 @@ include "sqlncli.h";
   
  Par exemple, si vous compilez une application à l'aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, le fichier de bibliothèque associé (sqlncli11.lib) et le fichier d'en-tête (sqlncli.h) à partir de \Program Files\Microsoft SQL Server\110\SDK, veillez à spécifier (en utilisant ODBC comme exemple) « DRIVER={SQL Server Native Client 11.0} » dans la chaîne de connexion.  
   
- Pour plus d’informations, consultez exécution [effectuant des opérations de copie en bloc](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
+ Pour plus d’informations, consultez exécution d' [opérations de copie en bloc](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Génération d'applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

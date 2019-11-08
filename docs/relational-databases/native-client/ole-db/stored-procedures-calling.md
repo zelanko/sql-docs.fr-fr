@@ -19,16 +19,15 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907370"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759045"
 ---
 # <a name="stored-procedures---calling"></a>Procédures stockées - Appel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Une procédure stockée peut avoir entre zéro et plusieurs paramètres. Elle peut également retourner une valeur. Lorsque vous utilisez le fournisseur de OLE DB Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les paramètres d’une procédure stockée peuvent être passés par :  
   
@@ -95,9 +94,9 @@ ms.locfileid: "72907370"
   
  La syntaxe générale pour l'appel d'une procédure à l'aide de la séquence d'échappement ODBC CALL est :  
   
- {[ **? =** ]**Call**_PROCEDURE_NAME_[ **(** [*paramètre*] [ **,** [*paramètre*]]... **)** ]}  
+ {[ **? =** ]**appel**_PROCEDURE_NAME_[ **(** [*paramètre*] [ **,** [*paramètre*]]... **)** ]}  
   
- Par exemple:  
+ Par exemple :  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  

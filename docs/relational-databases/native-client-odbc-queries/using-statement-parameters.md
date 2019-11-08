@@ -1,5 +1,5 @@
 ---
-title: À l’aide des paramètres d’instruction | Microsoft Docs
+title: Utilisation des paramètres d’instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1168c81d8eeb6a25b84f473858bc924f529a572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058671"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779540"
 ---
 # <a name="using-statement-parameters"></a>Utilisation de paramètres d'instruction
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Un paramètre est une variable dans une instruction SQL qui peut permettre à une application ODBC d'effectuer les actions suivantes :  
   
@@ -36,9 +35,9 @@ ms.locfileid: "68058671"
   
 -   améliorer l'interaction de l'utilisateur lors de la construction de critères de requête ;  
   
--   Gérer **texte**, **ntext**, et **image** données et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-types de données C spécifiques.  
+-   Gérez les données **Text**, **ntext**et **image** et les types de données C spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Par exemple, un **parties** table possède des colonnes nommées **PartID**, **Description**, et **prix**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
+ Par exemple, une table de **pièces** contient des colonnes nommées **partid**, **Description**et **Price**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -59,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Liaison de paramètres](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

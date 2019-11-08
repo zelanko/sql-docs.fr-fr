@@ -1,5 +1,5 @@
 ---
-title: Méthode SetStringValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
+title: Méthode SetStringValue (classe SqlServiceAdvancedProperty)
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68eaccce3d82ddb0085a73c6fbbce751b69e245a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da797051ba3ce9c8a0d818388c999e89c7300e9f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139538"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659503"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Méthode SetStringValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ object.SetStringValue(StrValue)
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
 ## <a name="remarks"></a>Notes  
- Le type de valeur de propriété doit être **chaîne** pour être en mesure de définir la propriété à une valeur de chaîne.  
+ Le type de valeur de propriété doit être une **chaîne** pour être en mesure de définir la propriété sur une valeur de chaîne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage et arrêt des Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -19,28 +19,27 @@ ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61d02defdd99d508ae1acfff2cda656c20e68c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7949d646ac8890a9f4a5631de991168f9a0997e4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076664"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73778974"
 ---
 # <a name="processing-results-odbc"></a>Traitement des résultats (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Après qu'une application a soumis une instruction SQL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne les données obtenues sous forme d'un ou plusieurs jeux de résultats. Un jeu de résultats est un ensemble de lignes et colonnes qui correspondent aux critères de la requête. Les instructions SELECT, les fonctions de catalogue et certaines procédures stockées produisent un jeu de résultats sous forme de tableau, accessible par une application. Si l'instruction SQL exécutée est une procédure stockée, un lot contenant plusieurs commandes ou une instruction SELECT avec des mots clés, il y aura plusieurs jeux de résultats à traiter.  
   
  Les fonctions de catalogue ODBC peuvent aussi récupérer les données. Par exemple, [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md) récupère les données relatives aux colonnes dans la source de données. Ces jeux de résultats peuvent contenir zéro ou plusieurs lignes.  
   
- D'autres instructions SQL, telles que GRANT ou REVOKE, ne retournent pas de jeux de résultats. Pour ces instructions, le code de retour à partir de **SQLExecute** ou **SQLExecDirect** est généralement la seule indication que l’instruction a réussi.  
+ D'autres instructions SQL, telles que GRANT ou REVOKE, ne retournent pas de jeux de résultats. Pour ces instructions, le code de retour de **SQLExecute** ou **SQLExecDirect** est généralement la seule indication que l’instruction a réussi.  
   
- Chaque instruction INSERT, UPDATE et DELETE retourne un jeu de résultats qui contient uniquement le nombre de lignes concernées par la modification. Ce nombre est rendu disponible lorsque l’application appelle [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* applications doivent appeler **SQLRowCount** pour récupérer le résultat défini ou [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) pour l’annuler. Lorsqu’une application exécute un lot ou une procédure stockée contenant plusieurs instructions INSERT, UPDATE ou DELETE, le jeu de résultats de chaque instruction de modification doivent être traités à l’aide de **SQLRowCount** ou annulée à l’aide de **SQLMoreResults**. Ces nombres peuvent être annulés en incluant une instruction SET NOCOUNT ON dans le lot ou la procédure stockée.  
+ Chaque instruction INSERT, UPDATE et DELETE retourne un jeu de résultats qui contient uniquement le nombre de lignes concernées par la modification. Ce nombre est rendu disponible quand l’application appelle [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* doivent appeler **SQLRowCount** pour récupérer le jeu de résultats ou [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) pour l’annuler. Lorsqu’une application exécute un traitement ou une procédure stockée contenant plusieurs instructions INSERT, UPDATE ou DELETE, le jeu de résultats de chaque instruction de modification doit être traité à l’aide de **SQLRowCount** ou annulé à l’aide de **SQLMoreResults**. Ces nombres peuvent être annulés en incluant une instruction SET NOCOUNT ON dans le lot ou la procédure stockée.  
   
- Transact-SQL inclut l'instruction SET NOCOUNT. Lorsque l’option NOCOUNT est définie sur, SQL Server ne retourne pas le nombre de lignes affectées par une instruction et **SQLRowCount** retourne 0. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version du pilote ODBC Native Client introduit une spécifiques au pilote [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) option, SQL_SOPT_SS_NOCOUNT_STATUS, pour indiquer si l’option NOCOUNT est activée ou désactivée. À tout moment **SQLRowCount** retourne 0, l’application doit tester SQL_SOPT_SS_NOCOUNT_STATUS. Si SQL_NC_ON est retourné, la valeur 0 de **SQLRowCount** indique seulement que SQL Server n’a pas retourné un nombre de lignes. Si SQL_NC_OFF est retourné, cela signifie que l’option NOCOUNT est désactivée et la valeur 0 de **SQLRowCount** indique que l’instruction n’a affecté aucune ligne. Les applications ne doivent pas afficher la valeur de **SQLRowCount** quand SQL_SOPT_SS_NOCOUNT_STATUS a la valeur SQL_NC_OFF. Comme les lots ou procédures stockées importants peuvent contenir plusieurs instructions SET NOCOUNT, les programmeurs ne peuvent pas en déduire que SQL_SOPT_SS_NOCOUNT_STATUS demeure constant. L’option doit être testée chaque fois **SQLRowCount** retourne 0.  
+ Transact-SQL inclut l'instruction SET NOCOUNT. Lorsque l’option NOCOUNT est activée, SQL Server ne retourne pas le nombre de lignes affectées par une instruction et **SQLRowCount** retourne 0. La version du pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client introduit une option [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) spécifique au pilote, SQL_SOPT_SS_NOCOUNT_STATUS, pour indiquer si l’option NOCOUNT est activée ou désactivée. Chaque fois que **SQLRowCount** retourne 0, l’application doit tester SQL_SOPT_SS_NOCOUNT_STATUS. Si SQL_NC_ON est retourné, la valeur 0 de **SQLRowCount** indique uniquement que SQL Server n’a pas retourné de nombre de lignes. Si SQL_NC_OFF est retourné, cela signifie que NOCOUNT est désactivé et la valeur 0 de **SQLRowCount** indique que l’instruction n’a affecté aucune ligne. Les applications ne doivent pas afficher la valeur de **SQLRowCount** lorsque SQL_SOPT_SS_NOCOUNT_STATUS est SQL_NC_OFF. Comme les lots ou procédures stockées importants peuvent contenir plusieurs instructions SET NOCOUNT, les programmeurs ne peuvent pas en déduire que SQL_SOPT_SS_NOCOUNT_STATUS demeure constant. L’option doit être testée à chaque fois que **SQLRowCount** retourne 0.  
   
- Plusieurs autres instructions Transact-SQL retournent leurs données dans des messages plutôt que dans des jeux de résultats. Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client reçoit ces messages, il retourne SQL_SUCCESS_WITH_INFO pour permettre à l’application que les messages d’information sont disponibles. L’application peut ensuite appeler **SQLGetDiagRec** pour récupérer ces messages. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui fonctionnent ainsi sont :  
+ Plusieurs autres instructions Transact-SQL retournent leurs données dans des messages plutôt que dans des jeux de résultats. Lorsque le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client reçoit ces messages, il retourne SQL_SUCCESS_WITH_INFO pour indiquer à l’application que des messages d’information sont disponibles. L’application peut alors appeler **SQLGetDiagRec** pour extraire ces messages. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui fonctionnent ainsi sont :  
   
 -   DBCC  
   
@@ -52,7 +51,7 @@ ms.locfileid: "68076664"
   
 -   RAISERROR  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne SQL_ERROR sur une instruction RAISERROR avec une gravité supérieure ou égale à 11. Si la gravité de RAISERROR est supérieure ou égale à 19, la connexion est également abandonnée.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_ERROR sur une instruction RAISERROR dont le niveau de gravité est supérieur ou égal à 11. Si la gravité de RAISERROR est supérieure ou égale à 19, la connexion est également abandonnée.  
   
  Pour traiter les jeux de résultats d'une instruction SQL, l'application :  
   
@@ -68,20 +67,20 @@ ms.locfileid: "68076664"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Détermination des caractéristiques d’un jeu de résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [Détermination des caractéristiques d’un jeu &#40;de résultats ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
 -   [Assignation du stockage](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
   
 -   [Récupération (fetch) des données de résultat](../../relational-databases/native-client-odbc-results/fetching-result-data.md)  
   
--   [Mappage des Types de données &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
+-   [Mappage de types &#40;de données ODBC&#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
   
 -   [Utilisation des types de données](../../relational-databases/native-client-odbc-results/data-type-usage.md)  
   
 -   [Traduction automatique de données caractères](../../relational-databases/native-client-odbc-results/autotranslation-of-character-data.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Traitement des rubriques de procédures de résultats &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+ [SQL Server Native Client &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Rubriques de procédures relatives &#40;au traitement des résultats ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
   

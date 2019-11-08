@@ -1,5 +1,5 @@
 ---
-title: Créer un administrateur d’entité (Master Data Services) | Microsoft Docs
+title: Créer un administrateur d’entité
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025067"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729535"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Créer un administrateur d’entité (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68025067"
 > [!TIP]  
 >  Pour simplifier l’administration, créez un groupe Windows ou local et configurez-le en tant qu’administrateur d’entité. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans le groupe sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  

@@ -1,5 +1,5 @@
 ---
-title: États de validation (Master Data Services) | Microsoft Docs
+title: États de validation
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 27a205b5cf6775ea8d7486cbc6c3776fc5c9e825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017384"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728861"
 ---
 # <a name="validation-statuses-master-data-services"></a>États de validation (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68017384"
 
   Dans la zone fonctionnelle **Gestion des versions** , sur la page **Valider la version** , les états suivants sont possibles.  
   
-|Statut|Description|  
+|État|Description|  
 |------------|-----------------|  
 |En attente de validation.|Tous les membres créés récemment en attente de validation.|  
 |En attente de revalidation.|Membres existants qui attendent d'être validés.|  

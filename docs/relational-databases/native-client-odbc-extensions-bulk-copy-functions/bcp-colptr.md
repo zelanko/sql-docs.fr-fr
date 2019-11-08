@@ -18,16 +18,15 @@ ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dcc08890a230155c4ffefc3cf4a20dd72dd746f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0bb4e1011448ef4ea98179c3de49c43e66b811e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707754"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783015"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Définit l'adresse de données de variable de programme pour la copie actuelle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -46,9 +45,9 @@ RETCODE bcp_colptr (
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *pData*  
- Pointeur vers les données à copier. Si le type de données lié est un type de valeur élevée (tel que SQLTEXT ou SQLIMAGE), *pData* peut être null. Un *pData* null indique que des valeurs de données longues sont envoyées à SQL Server en segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Pointeur vers les données à copier. Si le type de données lié est un type de valeur élevée (tel que SQLTEXT ou SQLIMAGE), *pData* peut être null. Un *pData* null indique que des valeurs de données longues sont envoyées à SQL Server dans des segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
- Si *pData* a la valeur null et que la colonne correspondant au champ lié n’est pas un type de valeur élevée, **bcp_colptr** échoue.  
+ Si *pData* a la valeur null et que la colonne correspondant au champ lié n’est pas de type valeur élevée, **bcp_colptr** échoue.  
   
  Pour plus d’informations sur les types de valeur élevée, consultez [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **.**  
   
@@ -63,7 +62,7 @@ RETCODE bcp_colptr (
   
  Initialement, le pointeur vers les données utilisateur est défini par un appel à **bcp_bind**. Si l’adresse des données de variable de programme change entre les appels à **bcp_sendrow**, vous pouvez appeler **bcp_colptr** pour réinitialiser le pointeur vers les données. L’appel suivant à **bcp_sendrow** envoie les données adressées par l’appel à **bcp_colptr**.  
   
- Il doit y avoir un appel **bcp_colptr** distinct pour chaque colonne de la table dont vous souhaitez modifier l’adresse de données.  
+ Il doit y avoir un appel de **bcp_colptr** distinct pour chaque colonne de la table dont vous souhaitez modifier l’adresse de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

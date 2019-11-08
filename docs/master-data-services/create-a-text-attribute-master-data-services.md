@@ -1,5 +1,5 @@
 ---
-title: Créer un attribut de texte (Master Data Services) | Microsoft Docs
+title: Créer un attribut de texte
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ee4dd1000f4a737f989a7f882e350096e3b46657
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 691d7e30fd64e99970fa22ee0f551162be945c36
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094533"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728455"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Créer un attribut de texte (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68094533"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut de texte lorsque vous souhaitez que les utilisateurs entrent une chaîne de caractères comme valeur d'attribut.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -38,10 +38,10 @@ ms.locfileid: "68094533"
 ## <a name="attribute-information"></a>Informations sur les attributs  
  Pour chaque attribut créé, une ligne comportant sept colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Statut|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Name|Nom de l'attribut.|  
+|État|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icon pour la mise à jour de l’État») s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icon pour l’état d’erreur») s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icon pour l’état OK») s’affiche.|  
+|Créer une vue d’abonnement|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
@@ -50,13 +50,13 @@ ms.locfileid: "68094533"
   
  Quand vous cliquez sur un attribut, les informations suivantes s’affichent.  
   
--   **Créé par** : nom de l’utilisateur qui a créé l’attribut.  
+-   **Créé par**: nom de l’utilisateur qui a créé l’attribut.  
   
--   **Le** : date et heure de création de l’attribut.  
+-   **Le**: date et heure de création de l’attribut.  
   
 -   **Mis à jour par**: nom du dernier utilisateur qui a mis à jour l’attribut.  
   
--   **Le** : date et heure de la dernière mise à jour de l’attribut.  
+-   **Le**: date et heure de la dernière mise à jour de l’attribut.  
   
 ### <a name="to-create-a-text-attribute"></a>Pour créer un attribut de texte  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68094533"
   
     -   Si l’attribut concerne les membres consolidés, sélectionnez **Consolidé** dans la zone de liste **Types de membre** .  
   
-    -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membre** .  
+    -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membres** .  
   
 6.  Dans la zone **Nom** , tapez un nom pour l'attribut. Pour obtenir la liste des mots qui ne doivent pas être utilisés comme noms d’attributs, consultez [Mots réservés &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   

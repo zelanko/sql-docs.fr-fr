@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142847"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632750"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` retourne la valeur entière du mode de basculement et est un paramètre de **sortie** . *failover_mode_id* est de **type tinyint** , avec **0**comme valeur par défaut. Elle retourne **0** pour la mise à jour immédiate et **1** pour la mise à jour en file d’attente.  
   
- [ **\@failover_mode =** ] **sortie «***failover_mode***»**  
- Renvoie le mode dans lequel les modifications sont effectuées au niveau de l'Abonné. *failover_mode* est de type **nvarchar (10)** avec NULL comme valeur par défaut. Est un paramètre de **sortie** .  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` retourne le mode dans lequel les modifications de données sont effectuées sur l’abonné. *failover_mode* est de type **nvarchar (10),** avec NULL comme valeur par défaut. Est un paramètre de **sortie** .  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -63,7 +62,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_helpreplfailovermode** est utilisé dans la réplication d’instantané ou dans la réplication transactionnelle pour laquelle les abonnements sont activés pour la mise à jour immédiate avec mise à jour en file d’attente comme basculement en cas d’échec.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Voir aussi  

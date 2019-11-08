@@ -1,6 +1,6 @@
 ---
-title: Getnextordervalue, méthode (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Méthode GetNextOrderValue, (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d3ed7a5a6b55da9724fc9565a788bf908de6db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f9b9a8d69dad76d2ec1d6e38f7151238d0e91c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040973"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660748"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>Méthode GetNextOrderValue (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.GetNextOrderValue()
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)   
- [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuration des protocoles réseau clients et des bibliothèques Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

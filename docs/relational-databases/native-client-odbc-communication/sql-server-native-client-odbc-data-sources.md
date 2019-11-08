@@ -1,5 +1,5 @@
 ---
-title: Sources de données SQL Server Native Client ODBC | Microsoft Docs
+title: SQL Server Native Client des sources de données ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,19 @@ ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa20711c59a2e6bdc901e0fe1b6287139103ddb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b8ae0fdf9c28ecb488a0b5f0aa285e8597d84072
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134199"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784991"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Sources de données ODBC SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Un nom de source de données (DSN) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifie une source de données ODBC qui contient toutes les informations nécessaires à une application ODBC pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur spécifique. Il existe deux moyens de définir un nom de source de données ODBC :  
   
--   Sur un ordinateur client, ouvrez Outils d’administration dans le panneau de configuration, double-cliquez sur **Sources de données (ODBC)** . L'Administrateur de sources de données ODBC qui vous permet de créer un DSN s'ouvre.  
+-   Sur un ordinateur client, ouvrez outils d’administration dans le panneau de configuration, puis double-cliquez sur **sources de données (ODBC)** . L'Administrateur de sources de données ODBC qui vous permet de créer un DSN s'ouvre.  
   
 -   Dans une application ODBC, appelez [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md).  
   

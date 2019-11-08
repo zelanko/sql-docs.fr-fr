@@ -1,6 +1,6 @@
 ---
-title: Setnumericalvalue, méthode (classe ServerNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Méthode SetNumericalValue (ServerNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- SetNumericalValue Method (ServerNetworkProtocolProperty Class)
+- SetNumericalValue Method (ServerNetworkProtocolProperty
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6314962c4b4c4a8f331a48f1e111a170899beaef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c73916392c87df199ce5cb99e71a325f45a9540
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052999"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658925"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>Méthode SetNumericalValue (classe ServerNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,6 +51,6 @@ object.SetNumericalValue(NumValue)
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des protocoles réseau du serveur et des bibliothèques Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

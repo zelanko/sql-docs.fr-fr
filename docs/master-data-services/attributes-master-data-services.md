@@ -1,5 +1,5 @@
 ---
-title: Attributs (Master Data Services) | Microsoft Docs
+title: Attributs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047581"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728752"
 ---
 # <a name="attributes-master-data-services"></a>Attributs (Master Data Services)
 
@@ -33,9 +33,9 @@ ms.locfileid: "68047581"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Relations entre les attributs et les autres objets de modèle  
  Vous pouvez considérer un attribut comme une colonne dans une table d'entités. Une valeur d'attribut est la valeur utilisée pour décrire un membre spécifique.  
   
- ![Entité Master Data Services représentée en tant que table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée en tant que table")  
+ ![Entité Master Data Services représentée sous forme de table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée sous forme de table")  
   
- Lorsque vous créez une entité qui contient de nombreux attributs, vous pouvez les organiser en groupes d'attributs. Pour plus d’informations, consultez [Groupes d’attributs &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
+ Lorsque vous créez une entité qui contient de nombreux attributs, vous pouvez les organiser en groupes d'attributs. Pour plus d’informations, consultez [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
 ## <a name="required-attributes"></a>Attributs requis  
  Lorsque vous créez une entité, les attributs Name et Code sont créés automatiquement. L'attribut Code requiert une valeur et doit être unique dans l'entité. Vous ne pouvez pas supprimer les attributs Name et Code.  
@@ -45,7 +45,7 @@ ms.locfileid: "68047581"
   
 -   Les attributs de forme libre qui acceptent comme entrées de forme libre du texte, des nombres, des dates et des liens.  
   
--   Les attributs basés sur un domaine, remplis par les entités. Pour plus d’informations, consultez [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+-   Les attributs basés sur un domaine, remplis par les entités. Pour plus d’informations, consultez [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 -   Les attributs de fichier qui permettent de stocker des fichiers, des documents ou des images. Les attributs de fichier qui contribuent à la cohérence de vos données en requérant que les fichiers aient une extension spécifique. Les attributs de fichier ne peuvent pas empêcher un utilisateur malveillant de télécharger un fichier d'un type différent.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "68047581"
 -   Il peut arriver qu’une valeur n’effectue pas *d’aller-retour* si un nombre à virgule flottante est utilisé. Une valeur est dite d'aller-retour lorsqu'une opération convertit un nombre à virgule flottante d'origine sous une autre forme, lorsque l'opération inverse retransforme la forme convertie en un nombre à virgule flottante et lorsque le dernier chiffre du nombre à virgule flottante est égal au chiffre du nombre à virgule flottante d'origine. L'aller-retour peut échouer parce qu'un ou plusieurs chiffres de droite sont perdus ou ont changé au cours d'une conversion.  
   
 ## <a name="attribute-examples"></a>Exemples d'attributs  
- Dans l’exemple suivant, l’entité comporte les attributs ci-dessous : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
+ Dans l'exemple suivant, l'entité comporte les attributs suivants : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
   
- ![Table de l’entité Bike Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l’entité Bike Product")  
+ ![Table d’entité du produit Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table d’entité du produit Bike")  
   
  Dans l'exemple suivant, l'entité Product contient :  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68047581"
   
  Subcategory est une entité utilisée comme un attribut basé sur un domaine de Product. Category est une entité utilisée comme un attribut basé sur un domaine de Subcategory. Comme l'entité Product, les entités Category et Subcategory contiennent chacune les attributs par défaut Name et Code.  
   
- ![Arborescence de l’entité Product](../master-data-services/media/mds-conc-entity-ui.gif "Arborescence de l’entité Product")  
+ ![Structure de l’arborescence de l’entité Product](../master-data-services/media/mds-conc-entity-ui.gif "Structure de l’arborescence de l’entité Product")  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68047581"
 |Modifier l'ordre des attributs.|[Changer l'ordre des attributs](../master-data-services/change-the-order-of-attributes.md)|  
 |Créer un attribut de date.|[Créer un attribut de date &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
   
 -   [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   

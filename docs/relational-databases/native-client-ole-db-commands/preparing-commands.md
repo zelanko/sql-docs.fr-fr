@@ -16,20 +16,19 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921b5f4ce929c5a719bcabd09e2f2e7e567a831a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f0e582d0e6ca7e2087f35fa9b8e5005478d0a43
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128719"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790266"
 ---
 # <a name="preparing-commands"></a>Préparation des commandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge la préparation de commande pour l'exécution multiple optimisée d'une commande unique ; toutefois, la préparation de commande génère une charge mémoire et un consommateur n'a pas besoin de préparer une commande pour l'exécuter plus d'une fois. En général, la préparation de commande est nécessaire si celle-ci doit être exécutée plus de trois fois.  
   
- Pour des raisons de performance, la préparation de commande est différée jusqu'à ce que la commande soit exécutée. Il s’agit du comportement par défaut. Toute erreur dans la commande en cours de préparation est inconnue tant que la commande n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. L'affectation de la valeur FALSE à la propriété [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE peut désactiver ce comportement par défaut.  
+ Pour des raisons de performance, la préparation de commande est différée jusqu'à ce que la commande soit exécutée. Il s'agit du comportement par défaut. Toute erreur dans la commande en cours de préparation est inconnue tant que la commande n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. L'affectation de la valeur FALSE à la propriété [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE peut désactiver ce comportement par défaut.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lorsqu'une commande est exécutée directement (sans la préparer au préalable), un plan d'exécution est créé et mis en cache. Si l'instruction SQL est réexécutée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispose d'un algorithme efficace pour faire correspondre la nouvelle instruction au plan d'exécution existant dans le cache et réutilise le plan d'exécution pour cette instruction.  
   

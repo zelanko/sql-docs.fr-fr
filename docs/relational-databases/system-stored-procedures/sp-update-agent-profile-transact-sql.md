@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 835ae5b262426fabdc657e78f4961a7aafb14224
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 730f996a35e7ea2e31518322d710b197cf31f38b
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006104"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632828"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Met à jour le profil utilisé par un Agent de réplication. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,22 +37,19 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **\@agent_type =** ] **«***agent_type***»**  
- Type de l'Agent. *agent_type* est de **type int**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
+`[ @agent_type = ] 'agent_type'` est le type d’agent. *agent_type* est de **type int**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**1**|Agent d’instantané.|  
+|**1**|Agent d'instantané.|  
 |**2**|Agent de lecture du journal|  
 |**3**|Agent de distribution.|  
 |**4**|Agent de fusion.|  
-|**9**|Agent de lecture de la file d'attente|  
+|**0,9**|Agent de lecture de la file d'attente|  
   
- [ **\@agent_id =** ] *agent_id*  
- Identificateur de l'agent. *agent_id* est de **type int**, sans valeur par défaut.  
+`[ @agent_id = ] 'agent_id'` est l’ID de l’agent. *agent_id* est de **type int**, sans valeur par défaut.  
   
- [ **\@profile_id =** ] au-dessus  
- ID du profil que l'agent doit utiliser. l’option par *défaut est de* **type int**, sans valeur par défaut. Pour afficher la liste des profils définis pour chaque agent, utilisez [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Pour plus d’informations sur les profils système, consultez [réplication des profils d’agent](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+`[ @profile_id = ] 'profile_id'` est l’ID du profil que l’agent doit utiliser. *profile_id* est de **type int**, sans valeur par défaut. Pour afficher la liste des profils définis pour chaque agent, utilisez [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Pour plus d’informations sur les profils système, consultez [réplication des profils d’agent](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -65,10 +62,10 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
   
 ## <a name="see-also"></a>Voir aussi  
  [Profils de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)  
+ [sp_change_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)  
+ [sp_drop_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)  
+ [sp_help_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

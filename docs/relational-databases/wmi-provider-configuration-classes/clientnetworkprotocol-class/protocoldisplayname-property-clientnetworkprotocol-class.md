@@ -1,6 +1,6 @@
 ---
-title: Protocoldisplayname, propriété (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Propriété ProtocolDisplayName (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ffea0e2043e600eea2995b3cd047d97a30a8d7b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6941d2b6ad7417a6193318ab94d90a37d4a77ea
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223374"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660257"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Propriété ProtocolDisplayName (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtient le nom complet du protocole réseau client spécifié par le [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
+  Obtient le nom complet du protocole réseau client spécifié par la [Configuration des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,6 +45,6 @@ object.ProtocolDisplayName [= value]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuration des protocoles réseau clients et des bibliothèques Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

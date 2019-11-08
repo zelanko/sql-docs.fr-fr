@@ -1,5 +1,5 @@
 ---
-title: Créer un ensemble de modifications (Master Data Services) | Microsoft Docs
+title: Créer un ensemble de modifications
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3e15590e2d8f8e3317c8d116ebbeac7049fb1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079751"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729625"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Créer un ensemble de modifications (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Un ensemble de modifications regroupe des modifications en attente, qui portent sur les données de référence. Si l’entité requiert l’approbation des modifications, les modifications en attente doivent être enregistrées dans un ensemble de modifications, puis soumises à l’administrateur à des fins d’approbation.  
+  Un ensemble de modifications est un ensemble de modifications en attente portant sur les données de référence. Si l’entité requiert l’approbation des modifications, les modifications en attente doivent être enregistrées dans un ensemble de modifications, puis soumises à l’administrateur à des fins d’approbation.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
   
 -   Vous devez être autorisé à accéder à la zone fonctionnelle Explorateur. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68079751"
   
 1.  Sur la page d’accueil de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , sélectionnez le modèle et la version, puis cliquez sur **Explorateur**.  
   
-2.  Dans le menu **Entités** , cliquez sur une entité.  
+2.  Cliquez sur une entité dans le menu **Entités** .  
   
 3.  Dans le volet de droite, sélectionnez **Ensembles de modifications** et cliquez sur **Créer**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68079751"
   
 1.  Sur la page d’accueil de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , sélectionnez le modèle et la version, puis cliquez sur **Explorateur**.  
   
-2.  Dans le menu **Entités** , cliquez sur une entité.  
+2.  Cliquez sur une entité dans le menu **Entités** .  
   
 3.  Apportez des modifications à l’entité, puis cliquez sur**OK**.  
   

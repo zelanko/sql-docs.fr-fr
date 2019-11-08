@@ -1,5 +1,5 @@
 ---
-title: Description du code XML d’un flux de travail personnalisé (Master Data Services) | Microsoft Docs
+title: Description personnalisée XML de flux de travail
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd291d1615920c3b576386b3f026a4b4d7f29dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901675"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729308"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Créer un flux de travail personnalisé - Description du code XML
 
@@ -65,7 +65,7 @@ ms.locfileid: "67901675"
   
  Le tableau suivant décrit quelques-unes des balises contenues dans ce code XML :  
   
-|Tag|Description|  
+|Balise|Description|  
 |---------|-----------------|  
 |\<Type>|Texte que vous avez entré dans la zone de texte **Type de flux de travail** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pour identifier quels assemblys personnalisés de flux de travail doivent être chargés.|  
 |\<SendData>|Valeur booléenne contrôlée par la case à cocher **Inclure les données de membre dans le message** dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. La valeur 1 indique que la section \<MemberData> est envoyée ; sinon la section \<MemberData> n’est pas envoyée.|  

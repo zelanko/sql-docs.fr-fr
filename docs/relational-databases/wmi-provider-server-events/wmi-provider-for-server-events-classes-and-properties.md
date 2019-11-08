@@ -1,5 +1,5 @@
 ---
-title: Fournisseur WMI pour les événements serveur Classes et propriétés | Microsoft Docs
+title: Fournisseur WMI pour les classes et propriétés d'événements serveur
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaa82b6f8b7f4a1abc8e43e16eee87ad2513bdb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3db7139105b331c1e9fac831330a04cd2a0939a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039188"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660504"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Fournisseur WMI pour les classes et propriétés d'événements serveur
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Les événements serveur suivants composent le modèle de programmation du fournisseur WMI pour les événements serveur. Deux catégories principales d'événements peuvent être interrogées en émettant des requêtes WQL sur le fournisseur. Il s'agit des événements DDL (Data Definition Language) et des événements de trace. Les événements de Service Broker QUEUE_ACTIVATION et BROKER_QUEUE_DISABLED peuvent également être interrogés. Notez la nature inclusive des arborescences suivantes. L'événement DDL_ASSEMBLY_EVENTS, par exemple, inclut tout événement ALTER_ASSEMBLY, CREATE_ASSEMBLY et DROP_ASSEMBLY. De la même façon, l'événement TRC_FULL_TEXT inclut tout événement FT_CRAWL_ABORTED, FT_CRAWL_STARTED et FT_CRAWL_STOPPED. ALL_EVENTS couvre tous les événements DDL, événements de trace, QUEUE_ACTIVATION et BROKER_QUEUE_DISABLED.  
   
- Pour savoir quelles propriétés d'un événement ou d'un groupe d'événements peuvent être interrogées, reportez-vous au schéma d'événement. Par défaut, le schéma d’événement est installé dans le répertoire suivant : [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+ Pour savoir quelles propriétés d'un événement ou d'un groupe d'événements peuvent être interrogées, reportez-vous au schéma d'événement. Par défaut, le schéma d'événement est installé dans le répertoire suivant : [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
   
- Ou bien, vous pouvez consulter le schéma d’événement publié à [ https://schemas.microsoft.com/sqlserver ](https://go.microsoft.com/fwlink/?linkid=43100).  
+ Vous pouvez également consulter le schéma d’événement publié à l’adresse [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100).  
   
- Par exemple, en faisant référence à l’événement ALTER_DATABASE, vous apprendrez que son événement parent est DDL_SERVER_LEVEL_EVENTS et ses propriétés sont **TSQLCommand** et **DatabaseName**. L’événement hérite également des propriétés **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, et **LoginName** . Il ne possède pas d'événements enfants.  
+ Par exemple, en faisant référence à l’événement ALTER_DATABASE, vous allez apprendre que son événement parent est DDL_SERVER_LEVEL_EVENTS et que ses propriétés sont **TSQLCommand** et **DatabaseName**. L’événement hérite également des propriétés **SqlInstance**, **PostTime**, **ComputerName**, **SPID**et **LoginName**. Il ne possède pas d'événements enfants.  
   
 > [!NOTE]  
->  Les procédures stockées système qui exécutent des opérations de type DDL peuvent également déclencher des notifications d'événements. Testez vos notifications d'événements pour déterminer leur réponse aux procédures stockées du système qui sont exécutées. Par exemple, l’instruction CREATE TYPE et **sp_addtype** procédure stockée activeront toutes deux une notification d’événement qui est créée sur un événement CREATE_TYPE. Pour plus d’informations, consultez[événements DDL](../../relational-databases/triggers/ddl-events.md).  
+>  Les procédures stockées système qui exécutent des opérations de type DDL peuvent également déclencher des notifications d'événements. Testez vos notifications d'événements pour déterminer leur réponse aux procédures stockées du système qui sont exécutées. Par exemple, l’instruction CREATe TYPE et la procédure stockée **sp_addtype** déclenchent toutes deux une notification d’événement qui est créée sur un événement CREATE_TYPE. Pour plus d’informations, consultez[événements DDL](../../relational-databases/triggers/ddl-events.md).  
   
- **Événements de langage de définition de données et les groupes d’événements**  
+ **Événements du langage de définition de données et groupes d’événements**  
   
- ![Fournisseur WMI pour les événements événements arborescence](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "fournisseur WMI pour l’arborescence de d’événements de serveur")  
+ ![Fournisseur WMI pour l’arborescence des événements des événements de serveur](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Fournisseur WMI pour l’arborescence des événements des événements de serveur")  
   
  **Événements de trace et groupes d’événements**  
   
- ![Événements de trace et groupes d’événements](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "et groupes d’événements de Trace")  
+ ![Événements de trace et groupes d’événements](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Événements de trace et groupes d’événements")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseur WMI pour les Concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
+ [Fournisseur WMI pour les concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Utilisation de WQL avec le fournisseur WMI pour les événements de serveur](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   
   

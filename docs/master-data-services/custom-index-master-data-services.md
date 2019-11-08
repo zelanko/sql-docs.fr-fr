@@ -1,5 +1,5 @@
 ---
-title: Index personnalisé (Master Data Services) | Microsoft Docs
+title: Index personnalisé
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88b94a0c476921d501bd4f456fa2d7e9077dee36
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810947"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729497"
 ---
 # <a name="custom-index-master-data-services"></a>Index personnalisé (Master Data Services)
 

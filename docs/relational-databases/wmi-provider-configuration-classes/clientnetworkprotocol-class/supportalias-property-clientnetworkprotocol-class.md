@@ -1,6 +1,6 @@
 ---
-title: Supportalias, propriété (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Propriété SupportAlias, (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cd3ba42974c65591f7920d5df8d7dd8a937d352
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cb18806ed4f83f34a6436c79c5a89acf68db294
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040835"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660233"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Propriété SupportAlias (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtient la propriété booléenne qui spécifie si le protocole réseau actuel spécifié par le [setordervalue, méthode (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) prennent en charge les alias.  
+  Obtient la propriété booléenne qui spécifie si le protocole réseau actuel spécifié par la [méthode SetOrderValue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) prend en charge les alias.  
   
 ## <a name="syntax"></a>Syntaxe  
   

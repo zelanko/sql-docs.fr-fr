@@ -23,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828052"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637823"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -125,7 +125,7 @@ ms.locfileid: "62828052"
  Utilisez les suggestions de cette section pour améliorer les performances des transformations d'agrégation, de recherche floue, de regroupement probable, de recherche, de jointure de fusion et de dimension à variation lente.  
   
 #### <a name="aggregate-transformation"></a>Transformation d'agrégation  
- La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif des groupes qui sont attendues d’une **Group by** opération, définissez la `Keys` et `KeysScale` propriétés, respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes qui sont attendues d’une **comptage de valeurs** opération, définissez la `CountDistinctKeys` et `CountDistinctScale` propriétés, respectivement.  
+ La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif de groupes attendus d’une opération **Group by** , définissez les propriétés `Keys` et `KeysScale`, respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes qui sont supposées résulter d’une opération de **comptage** de valeurs, définissez respectivement les propriétés `CountDistinctKeys` et `CountDistinctScale`.  
   
  Si vous devez créer plusieurs agrégations dans un flux de données, songez à créer plusieurs agrégations qui utilisent une transformation d'agrégation au lieu de créer plusieurs transformations. Cette approche améliore les performances lorsqu'une agrégation est un sous-ensemble d'une autre agrégation, car la transformation peut optimiser le stockage interne et analyser une seule fois les données entrantes. Par exemple, si une agrégation utilise une clause GROUP BY et une agrégation AVG, le fait de les combiner en une seule transformation peut améliorer les performances. Toutefois, du fait que la réalisation de plusieurs agrégations au sein d'une transformation d'agrégation sérialise les opérations d'agrégation, il est possible que les performances ne s'améliorent pas lorsque plusieurs agrégations doivent être calculées indépendamment.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828052"
 #### <a name="lookup-transformation"></a>Transformation de recherche  
  Réduisez la taille des données de référence en mémoire en entrant une instruction SELECT qui recherche uniquement les colonnes dont vous avez besoin. Cette approche est plus performante que la sélection d'une table ou d'une vue entière qui retourne une quantité importante de données inutiles.  
   
-#### <a name="merge-join-transformation"></a>transformation de jointure de fusion  
+#### <a name="merge-join-transformation"></a>Transformation de jointure de fusion  
  Vous n'avez plus à configurer la valeur de la propriété `MaxBuffersPerInput` car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme de la mémoire en excès. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente  
@@ -143,7 +143,7 @@ ms.locfileid: "62828052"
   
  En général, les composants les plus lents de la transformation de dimension à variation lente sont les transformations de commande OLE DB qui effectuent des mises à jour sur une ligne à la fois. Par conséquent, le moyen le plus efficace pour améliorer les performances de la transformation de dimension à variation lente consiste à remplacer les transformations de commande OLE DB. Vous pouvez remplacer ces transformations par des composants de destination qui enregistrent toutes les lignes à mettre à jour dans une table de transit. Ensuite, vous pouvez ajouter une tâche d'exécution SQL qui effectue une opération UPDATE Transact-SQL basée sur un jeu unique sur toutes les lignes en même temps.  
   
- Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Unique dimension scenario » (scénario à dimension unique) dans le livre blanc [Project REAL : Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (en anglais).  
+ Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Scénario de dimension Unique » dans le livre blanc [Projet REAL: Pratiques de conception ETL Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### <a name="destinations"></a>Destinations  
  Pour obtenir de meilleures performances avec les destinations, songez à utiliser une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à tester les performances de la destination.  
@@ -163,12 +163,12 @@ ms.locfileid: "62828052"
   
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
  **Articles et publications de blog**  
   
--   Article technique, [SQL Server 2005 Integration Services : stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899) sur technet.microsoft.com  
+-   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
   
--   Technical article, [Integration Services : techniques de réglage du niveau de performance](https://go.microsoft.com/fwlink/?LinkId=98900) on technet.microsoft.com  
+-   Article technique, [Integration Services : techniques de réglage des performances](https://go.microsoft.com/fwlink/?LinkId=98900), sur le site technet.microsoft.com  
   
 -   Article technique, [Augmentation du débit de pipelines en fractionnant les transformations synchrones en plusieurs tâches](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), sur le site sqlcat.com  
   

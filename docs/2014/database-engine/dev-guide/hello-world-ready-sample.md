@@ -1,5 +1,5 @@
 ---
-title: Exemple Helloworldready | Microsoft Docs
+title: Exemple de Hello World Ready | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781170"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637657"
 ---
 # <a name="hello-world-ready-sample"></a>Exemple HelloWorldReady
   L'exemple HelloWorldReady présente les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple basée sur l'intégration du CLR (Common Language Runtime) et adaptée pour un usage international. Un composant est dit adapté pour un usage international lorsqu'il est possible de le localiser facilement, sans changer son code source, en différentes langues pour divers marchés dans le monde entier. Cet exemple montre également comment retourner des données via un paramètre de sortie et via un enregistrement, qui est construit de manière dynamique par la procédure stockée et est retourné au client. Cet exemple est presque identique à l'exemple Hello World, mais il est beaucoup plus facile et sécurisé de localiser cette application. La modification du texte localisé nécessite les opérations suivantes :  
   
-1.  Modification d’un fichier XML (le fichier.`resx` fichier) pour la culture particulière dans le répertoire des ressources  
+1.  Modification d’un fichier XML (.`resx` ) pour la culture particulière dans le répertoire Resources  
   
 2.  Génération du fichier des ressources de la culture à l'aide de l'utilitaire `resgen`.  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62781170"
   
  Le code source et l'assembly pour la procédure stockée CLR elle-même ne changent pas. Un script `build.cmd` est fourni, qui montre comment compiler et lier les assemblys de ressource. Bien que le code source pour l'application crée un gestionnaire de ressources basé sur l'assembly en cours d'exécution, vous n'avez pas à incorporer les ressources neutres de culture dans la DLL qui contient la procédure stockée. Le `System.Resources.NeutralResourcesLanguage attribute` permet aux ressources indépendantes de la culture d'exister dans une DLL satellite. Il est bien plus avantageux d'utiliser une DLL distincte à cet effet, de sorte qu'il ne soit pas nécessaire de modifier la DLL principale contenant la procédure stockée CLR lorsqu'un texte localisé doit être ajouté ou modifié. Cela set particulièrement utile pour les types clr définis par l'utilisateur qui peuvent avoir des colonnes et d'autres dépendances qui rendraient la suppression et le rajout du type difficiles à effectuer. Généralement, les versions de DLL satellites doivent être identiques à la version d'assembly principale. Toutefois, vous pouvez utiliser l'attribut `SatelliteContractVersion` pour permettre une mise à jour de l'assembly principal sans mise à jour des assemblys satellites. Pour plus d'informations, consultez la classe `ResourceManager` dans la documentation Microsoft .NET.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Cet exemple fonctionne uniquement avec SQL Server 2005 et les versions ultérieures.  
   
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62781170"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Dans c:\MySample, créez le fichier `messages.resx` et copiez l'exemple de code C# dans le fichier.  
   

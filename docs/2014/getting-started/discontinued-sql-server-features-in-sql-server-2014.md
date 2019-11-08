@@ -1,5 +1,5 @@
 ---
-title: SQL Server fonctionnalités abandonnées dans SQL Server 2014 | Microsoft Docs
+title: Fonctionnalités de SQL Server abandonnées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9aadb14004ff3e73c4678f08b8aafa3cdab53b28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088639"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637775"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server supprimées dans SQL Server 2014
   Cette rubrique décrit des fonctionnalités qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "66088639"
 ### <a name="discontinued-active-directory-helper-service"></a>Service Active Directory Helper  
  Le service Active Directory Helper et les composants associés ont été supprimés. Le tableau suivant répertorie les composants associés qui se trouvent par conséquent supprimés :  
   
-|Category|Fonctionnalité supprimée|Remplacement|  
+|Catégorie|Fonctionnalité supprimée|Remplacement|  
 |--------------|--------------------------|-----------------|  
 |Procédures stockées système|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Aucun remplacement disponible|  
   
@@ -40,23 +40,23 @@ ms.locfileid: "66088639"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Fonctionnalités supprimées dans SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Suppression de l'installation de SQL-DMO à partir de SQL Server Express  
- SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installez les composants de compatibilité descendante de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack à partir du [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=51230). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
+ SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installez les composants de compatibilité descendante à partir du Feature Pack [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=24793). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Suppression de l'option de l'Assistant Web  
  L'option `sp_configure` permettant d'activer l'Assistant Web est supprimée de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nous vous recommandons d'utiliser [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à la place.  
   
-### <a name="surface-area-configuration-tool"></a>Outil de Configuration de la surface d’exposition  
- L’outil de Configuration de la surface n’est plus disponible pour [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. La table suivante indique ce que vous pouvez utiliser pour configurer des paramètres, des options et des fonctionnalités de composant dans cette version.  
+### <a name="surface-area-configuration-tool"></a>Outil Configuration de la surface d’exposition  
+ L’outil Configuration de la surface d’exposition n’est plus disponible pour [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. La table suivante indique ce que vous pouvez utiliser pour configurer des paramètres, des options et des fonctionnalités de composant dans cette version.  
   
-|Paramètres de remplacement et des fonctionnalités de composant|Comment configurer|  
+|Paramètres de remplacement et fonctionnalités de composant|Comment configurer|  
 |-------------------------------------------------|----------------------|  
 |Protocoles, connexion et options de démarrage|Utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |Fonctionnalités [!INCLUDE[ssDE](../includes/ssde-md.md)]|Utilisez la Gestion basée sur une stratégie, les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou sp_Configure.|  
 |Fonctionnalités [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Utilisez les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Propriété Enableintegratedsecurity|Utilisez les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -« Événements programmés et remise du rapport » et « Service Web et accès HTTP »|Modifiez le fichier de configuration RSReportServer.config.|  
+|propriété de sécurité [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-propriété EnableIntegratedSecurity|Utilisez les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-« planifier les événements et la remise des rapports » et « service Web et accès HTTP »|Modifiez le fichier de configuration RSReportServer.config.|  
 |Options de ligne de commande|Pas de prise en charge dans cette version.|  
-|Points de terminaison SOAP et [!INCLUDE[ssSB](../includes/sssb-md.md)]|Utilisez [créer le point de terminaison](/sql/t-sql/statements/create-endpoint-transact-sql)et [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
+|Points de terminaison SOAP et [!INCLUDE[ssSB](../includes/sssb-md.md)]|Utilisez [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)et [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
 ### <a name="discontinued-command-prompt-parameters-for-sql-server-setup"></a>Paramètres d'invite de commandes abandonnés pour l'installation de SQL Server  
  Le tableau suivant répertorie les paramètres d'invite de commandes d'installation des versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ne sont pas pris en charge dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
@@ -76,9 +76,9 @@ ms.locfileid: "66088639"
 |UPGRADE|/ACTION=Upgrade et /FEATURES|  
 |USESYSDB|Pas de fonction équivalente dans cette version.|  
   
- <sup>1</sup>ces paramètres sont valides uniquement pour l’installation.  
+ <sup>1</sup> Ces paramètres sont valides uniquement pour l’installation.  
   
- <sup>2</sup>démarrage [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], spécifiez/action = EditionUpgrade, pour mettre à niveau une édition existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une autre édition tout moment sans utiliser le support d’installation d’origine. Pour plus d'informations sur les mises à niveau des versions et éditions prises en charge, consultez [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> À partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], spécifiez/action = EditionUpgrade pour mettre à niveau une édition existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une édition différente à tout moment sans utiliser le support d’installation d’origine. Pour plus d'informations sur les mises à niveau des versions et éditions prises en charge, consultez [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Pour plus d’informations, consultez [Installer SQL Server 2014 à partir de l’invite de commandes](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

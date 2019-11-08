@@ -10,20 +10,20 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780213"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637726"
 ---
 # <a name="udt-utilities"></a>Utilitaires UDT
   L'exemple Utilitaires UDT contient diverses fonctions utilitaires, Celles-ci incluent notamment des fonctions pour afficher les métadonnées d'un assembly dans Transact-SQL, des exemples de fonctions table en continu pour retourner les types dans un assembly sous forme de table, et enfin des fonctions pour retourner les champs, méthodes et propriétés dans un type défini par l'utilisateur. Les technologies illustrées comprennent les fonctions table en continu, les API de réflexion du .NET Framework et l'appel des fonctions table à partir de Transact-SQL.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] qui est disponible sur le site Web [Codeplex](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62780213"
   
 -   La base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n’êtes pas un administrateur de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez, demandez à un administrateur de vous accorder l’autorisation **CreateAssembly** pour effectuer l’installation.  
+-   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   

@@ -1,5 +1,5 @@
 ---
-title: Déverrouiller une version (Master Data Services) | Microsoft Docs
+title: Déverrouiller une version
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2c81d52fadad91bb91ccf69af4b77627ef53846a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc3b79de19795ec13fd8720b68c827d9b964084e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102598"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727840"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Déverrouiller une version (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68102598"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], déverrouillez une version d'un modèle pour permettre que des modifications soient apportées aux membres du modèle et à leurs attributs.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  

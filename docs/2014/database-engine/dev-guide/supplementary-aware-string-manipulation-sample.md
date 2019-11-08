@@ -1,5 +1,5 @@
 ---
-title: Exemple de Manipulation de chaîne respect prenant en charge les | Microsoft Docs
+title: Exemple de manipulation de chaînes prenant en charge les compléments | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780489"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637718"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemple de manipulation de chaînes sensible aux caractères supplémentaires
-  Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont lens(), `lefts(), rights(), subs()` et `replace_s()` qui sont équivalentes aux fonctions intégrées `LEN(), LEFT(), RIGHT(), SUBSTRING()` et `REPLACE()` fonctions de chaîne.  
+  Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont Lens (), `lefts(), rights(), subs()` et `replace_s()` qui sont équivalentes aux fonctions intégrées `LEN(), LEFT(), RIGHT(), SUBSTRING()` et `REPLACE()` fonctions de chaîne.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
