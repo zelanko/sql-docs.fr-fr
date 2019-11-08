@@ -3,16 +3,16 @@ title: Guide pratique pour utiliser des transactions distribuées avec SQL Serve
 description: Cet article explique comment utiliser Microsoft Distributed Transaction Coordinator (MSDTC) pour les transactions distribuées dans un conteneur SQL Server Docker.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770842"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531312"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Guide pratique pour utiliser des transactions distribuées avec SQL Server sur Docker
 
@@ -56,14 +56,14 @@ docker run `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-L’exemple suivant montre comment utiliser ces variables d’environnement pour tirer (pull) et exécuter un seul conteneur SQL Server 2019 (préversion) configuré pour MSDTC. Cela lui permet de communiquer avec n’importe quelle application sur tous les ordinateurs hôtes.
+L’exemple suivant montre comment utiliser ces variables d’environnement pour tirer (pull) et exécuter un seul conteneur SQL Server 2019 configuré pour MSDTC. Cela lui permet de communiquer avec n’importe quelle application sur tous les ordinateurs hôtes.
 
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
@@ -71,7 +71,7 @@ docker run `
    -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -107,9 +107,14 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing-on-the-host"></a>Configurer le routage de ports sur l’hôte
 
-Dans l’exemple précédent, étant donné qu’un conteneur Docker unique mappe le port RPC 135 au port 135 sur l’hôte, les transactions distribuées avec l’hôte devraient maintenant fonctionner sans configuration supplémentaire. Notez qu’il est possible d’utiliser directement le port 135 dans le conteneur, car SQL Server s’exécute avec des privilèges élevés dans un conteneur. Pour SQL Server en dehors d’un conteneur, un autre port éphémère doit être utilisé et le trafic sur le port 135 doit alors être acheminé vers ce port.
+Dans l’exemple précédent, étant donné qu’un conteneur Docker unique mappe le port RPC 135 au port 135 sur l’hôte, les transactions distribuées avec l’hôte devraient maintenant fonctionner sans configuration supplémentaire. Notez qu’il est possible d’utiliser directement le port 135 dans les conteneurs s’exécutant en tant que root, car SQL Server s’exécute avec des privilèges élevés dans ces conteneurs. Pour SQL Server en dehors d’un conteneur ou pour des conteneurs non root, vous devez utiliser un port éphémère différent dans le conteneur, par exemple 13500, puis router le trafic sur le port 135 vers ce port. Vous devez également configurer des règles de routage de port dans le conteneur à partir du port 135 du conteneur vers le port éphémère.
 
-Toutefois, si vous avez décidé de mapper le port 135 du conteneur sur un port différent sur l’ordinateur hôte, par exemple 13500, vous devez configurer le routage de port sur l’ordinateur hôte. Cela permet au conteneur Docker de participer aux transactions distribuées avec l’hôte et les autres serveurs externes. Pour plus d’informations, consultez [Configurer le routage de ports](sql-server-linux-configure-msdtc.md#configure-port-routing).
+Par ailleurs, si vous décidez de mapper le port 135 du conteneur à un port différent sur l’hôte, par exemple 13500, vous devez configurer le routage de port sur l’hôte. Cela permet au conteneur Docker de participer aux transactions distribuées avec l’hôte et les autres serveurs externes.
+
+Pour plus d’informations, consultez [Configurer le routage de ports](sql-server-linux-configure-msdtc.md#configure-port-routing).
+
+> [!NOTE]
+> Les conteneurs SQL Server 2017 s’exécutent dans des conteneurs root par défaut, tandis que les conteneurs SQL Server 2019 s’exécutent en tant qu’utilisateur non-root.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -1,77 +1,90 @@
 ---
-title: Architecture d’extensibilité pour le langage R et le script Python
-description: Prise en charge du code externe pour le moteur de base de données SQL Server, avec une architecture double pour l’exécution de scripts R et Python sur des données relationnelles.
+title: Architecture d’extensibilité pour les scripts externes
+description: Cet article décrit l’architecture du framework d’extensibilité pour l’exécution d’un script externe (p.ex., en R ou Python) sur un serveur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 3f2f61208f9c43ce827cb65a4f7107ced62b9219
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715255"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532728"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server a un Framework d’extensibilité pour l’exécution de scripts externes tels que R ou python sur le serveur. Le script s’exécute dans un environnement de Runtime de langage en tant qu’extension du moteur de base de données principal. 
+SQL Server est doté d’un framework d’extensibilité pour l’exécution d’un script externe (p.ex., en R ou Python) sur le serveur. Le script s’exécute dans un environnement de runtime de langage en tant qu’extension du moteur de base de données de base.
 
-## <a name="background"></a>Présentation
+## <a name="background"></a>Arrière-plan
 
-L’infrastructure d’extensibilité a été introduite dans SQL Server 2016 pour prendre en charge le runtime R. SQL Server 2017 et versions ultérieures prennent en charge Python.
+Le framework d’extensibilité a été introduit dans SQL Server 2016 pour prendre en charge le runtime R. SQL Server 2017 et les versions ultérieures prennent en charge Python.
 
-L’objectif de l’infrastructure d’extensibilité est de fournir une interface entre les SQL Server et les langages de science des données tels que R et Python, ce qui réduit la friction lors du déplacement des solutions de science des données en production et la protection des données exposées pendant le développement traiter. En exécutant un langage de script approuvé au sein d’une infrastructure sécurisée gérée par SQL Server, les administrateurs de base de données peuvent maintenir la sécurité tout en autorisant l’accès des scientifiques des données aux données d’entreprise.
+Le framework d’extensibilité vise à offrir une interface entre SQL Server et les langages de science des données comme R et Python. L’objectif est de réduire la friction pendant le déplacement de solutions de science des données en production et quand il s’agit de protéger les données exposées durant le processus de développement. L’exécution d’un langage de script approuvé au sein d’un framework sécurisé et gérée par SQL Server permet aux administrateurs de base de données d’assurer la sécurité tout en permettant aux scientifiques des données d’accéder aux données de l’entreprise.
 
-Le diagramme suivant décrit visuellement les opportunités et les avantages de l’architecture extensible.
+Le schéma suivant décrit visuellement les possibilités et les avantages de l’architecture extensible.
 
-  ![Objectifs de l’intégration avec SQL Server](../media/ml-service-value-add.png "Ajout de la valeur machine learning services")
+  ![Objectifs de l’intégration avec SQL Server](../media/ml-service-value-add.png "Valeur ajoutée de Machine Learning Services")
 
-Tout script R ou python peut être exécuté en appelant une procédure stockée, et les résultats sont retournés en tant que résultats tabulaires directement à SQL Server, ce qui facilite la génération ou la consommation des Machine Learning à partir de toute application pouvant envoyer une requête SQL et gérer les résultats.
+Il est possible d’exécuter un script externe en appelant une procédure stockée ; les résultats sont alors directement retournés sous forme tabulaire à SQL Server. Cela facilite la génération ou l’utilisation du Machine Learning à partir de n’importe quelle application capable d’envoyer une requête SQL et de gérer les résultats.
 
-+ L’exécution du script externe est sujette à SQL Server la sécurité des données, où un utilisateur qui exécute un script externe peut uniquement accéder aux données qui sont également disponibles dans une requête SQL. Si une requête échoue en raison d’une autorisation insuffisante, l’exécution du script par le même utilisateur échoue également pour la même raison. SQL Server la sécurité est appliquée au niveau de la table, de la base de données et de l’instance. Les administrateurs de base de données peuvent gérer l’accès utilisateur, les ressources utilisées par les scripts externes et les bibliothèques de code externes ajoutées au serveur.  
++ L’exécution d’un script externe est soumise aux règles de sécurité des données de SQL Server. Un utilisateur exécutant un script externe peut uniquement accéder aux données qui sont également disponibles dans une requête SQL. Si une requête échoue en raison d’autorisations insuffisantes, un script exécuté par le même utilisateur échouera aussi pour la même raison. La sécurité de SQL Server est appliquée au niveau de la table, de la base de données et de l’instance. Les administrateurs de base de données peuvent gérer l’accès des utilisateurs, les ressources utilisées par les scripts externes et les bibliothèques de code externes ajoutées au serveur.  
 
-+ Les opportunités de mise à l’échelle et d’optimisation ont une base double: bénéficient de la plate-forme de base de données (index ColumnStore, [gouvernance des ressources](../../advanced-analytics/r/resource-governance-for-r-services.md)) et des gains spécifiques à l’extension lorsque les bibliothèques Microsoft pour R et Python sont utilisées pour les modèles de science des données. Alors que R est monothread, les fonctions RevoScaleR sont multithread et peuvent distribuer une charge de travail sur plusieurs cœurs.
++ Les possibilités de mise à l’échelle et d’optimisation reposent sur deux piliers : avantages liés à la plateforme de base de données (index ColumnStore, [gouvernance des ressources](../../advanced-analytics/r/resource-governance-for-r-services.md)) et avantages propres à l’extension, par exemple quand les bibliothèques Microsoft pour R et Python sont utilisées pour les modèles de science des données. Si R est monothread, les fonctions RevoScaleR sont en revanche multithread et capables de répartir une charge de travail entre plusieurs cœurs.
 
-+ Le déploiement utilise des méthodologies de SQL Server: des procédures stockées encapsulant des scripts externes, des requêtes Embedded SQL ou T-SQL appelant des fonctions comme PREDICT pour retourner des résultats à partir de modèles de prévision conservés sur le serveur.
++ Le déploiement s’appuie sur les méthodologies SQL Server. Il peut s’agir de procédures stockées encapsulant un script externe, des requêtes SQL ou T-SQL incorporées appelant des fonctions comme PREDICT pour retourner des résultats à partir de modèles de prévision conservés sur le serveur.
 
-+ Les développeurs R et Python ayant des compétences établies dans des outils et des IDE spécifiques peuvent écrire du code dans ces outils, puis porter le code vers SQL Server.
++ Les développeurs qui maîtrisent des outils et IDE spécifiques peuvent écrire du code dans ces outils, puis porter ce code sur SQL Server.
 
-## <a name="architecture-diagram"></a>Diagramme de l’architecture
+## <a name="architecture-diagram"></a>Diagramme de l'architecture
 
-L’architecture est conçue de manière à ce que les scripts externes s’exécutent dans un processus distinct de SQL Server, mais avec des composants qui gèrent en interne la chaîne des demandes de données et d’opérations sur SQL Server. Selon la version de SQL Server, les extensions de langage prises en charge incluent R et Python. 
+L’architecture est conçue de telle sorte que les scripts externes s’exécutent dans un processus distinct de SQL Server, mais avec des composants qui gèrent en interne la chaîne des demandes de données et d’opérations dans SQL Server. Selon la version de SQL Server, les extensions de langage prises en charge incluent [R](extension-r.md), [Python](extension-python.md) et des langages tiers comme Java et .NET.
 
-  ![Architecture des composants](../media/generic-architecture.png "Architecture des composants")
+  ***Architecture des composants dans Windows :***
+  
+  ![Architecture des composants Windows](../media/generic-architecture-windows.png "Architecture des composants")
+  
+  ***Architecture des composants dans Linux :***
 
-Les composants incluent un service **Launchpad** utilisé pour appeler des lanceurs spécifiques à une langue (R ou python), une logique spécifique au langage et à la bibliothèque pour charger des interpréteurs et des bibliothèques. Le lanceur charge une exécution de langage, ainsi que tous les modules propriétaires. Par exemple, si votre code comprend des fonctions RevoScaleR, un interpréteur RevoScaleR se chargera. **BxlServer** et **SQL satellite** gèrent la communication et le transfert de données avec SQL Server.
+  ![Architecture des composants Linux](../media/generic-architecture-linux.png "Architecture des composants")
+  
+Parmi les composants figurent un service **launchpad** destiné à appeler des runtimes externes et une logique spécifique de bibliothèque pour charger interpréteurs et autres bibliothèques. Le lanceur charge un runtime de langage ainsi que les modules propriétaires éventuels. Par exemple, si votre code comprend des fonctions RevoScaleR, un interpréteur RevoScaleR est chargé. **BxlServer** et **SQL Satellite** gèrent la communication et le transfert de données avec SQL Server. 
+
+Dans Linux, SQL utilise un service **launchpad** pour communiquer avec un processus launchpad distinct pour chaque utilisateur.
 
 <a name="launchpad"></a>
 
 ## <a name="launchpad"></a>Launchpad
 
-Le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est un service qui gère et exécute des scripts externes, de la même façon que le service d’indexation et de recherche en texte intégral lance un hôte distinct pour le traitement des requêtes de texte intégral. Le service Launchpad peut démarrer uniquement les lanceurs approuvés publiés par Microsoft, ou qui ont été certifiés par Microsoft comme exigences en matière de performances et de gestion des ressources.
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est un service qui gère et exécute les scripts externes, à l’image du service de requête et d’indexation de texte intégral qui lance un hôte distinct pour le traitement de requêtes de texte intégral. Le service launchpad peut démarrer uniquement les lanceurs approuvés et publiés par Microsoft ou qui ont été certifiés par Microsoft comme répondant aux exigences de performances et de gestion des ressources.
 
 | Lanceurs approuvés | Extension | Versions de SQL Server |
 |-------------------|-----------|---------------------|
-| RLauncher. dll pour le langage R | [Extension R](extension-r.md) | SQL Server 2016 et versions ultérieures |
-| Pythonlauncher. dll pour Python 3,5 | [Extension Python](extension-python.md) | SQL Server 2017 et versions ultérieures |
+| RLauncher. dll pour le langage R pour Windows | [Extension R](extension-r.md) | SQL Server 2016 et versions ultérieures |
+| Pythonlauncher.dll pour Python 3.5 pour Windows | [Extension Python](extension-python.md) | SQL Server 2017 et versions ultérieures |
+| RLauncher.so pour le langage R pour Linux | [Extension R](extension-r.md) | SQL Server 2019 et versions ultérieures |
+| Pythonlauncher.so for Python 3.5 pour Linux | [Extension Python](extension-python.md) | SQL Server 2019 et versions ultérieures |
 
-Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous son propre compte d’utilisateur. Si vous modifiez le compte qui exécute Launchpad, veillez à utiliser Gestionnaire de configuration SQL Server pour vous assurer que les modifications sont écrites dans les fichiers associés.
+Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous son propre compte d’utilisateur. Si vous modifiez le compte qui exécute launchpad, veillez à utiliser le Gestionnaire de configuration SQL Server pour faire en sorte que les modifications soient écrites dans les fichiers associés.
 
-Un service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] distinct est créé pour chaque instance du moteur de base de données à laquelle vous avez ajouté SQL Server machine learning services. Il existe un service Launchpad pour chaque instance du moteur de base de données. par conséquent, si vous avez plusieurs instances avec prise en charge des scripts externes, vous disposerez d’un service Launchpad pour chacun d’eux. Une instance du moteur de base de données est liée au service Launchpad créé pour celle-ci. Tous les appels de script externe dans une procédure stockée ou un résultat T-SQL dans le service SQL Server appelant le service Launchpad créé pour la même instance.
+Dans Windows, un service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] distinct est créé pour chaque instance de moteur de base de données à laquelle vous avez ajouté SQL Server Machine Learning Services. Il existe un service launchpad pour chaque instance de moteur de base de données. Par conséquent, si vous avez plusieurs instances avec prise en charge des scripts externes, vous aurez un service launchpad pour chacune d’elles. Une instance de moteur de base de données est liée au service launchpad qui a été créé pour celle-ci. Pour tous les appels de script externe d’une procédure stockée ou de T-SQL, le service SQL Server appelle le service launchpad créé pour la même instance.
 
-Pour exécuter des tâches dans une langue spécifique prise en charge, le Launchpad obtient un compte de travail sécurisé à partir du pool et démarre un processus satellite pour gérer le runtime externe. Chaque processus satellite hérite du compte d’utilisateur du Launchpad et utilise ce compte de travail pour la durée de l’exécution du script. Si le script utilise des processus parallèles, ceux-ci sont créés sous le même compte Worker unique.
+Pour exécuter des tâches dans un langage spécifique pris en charge, le service launchpad obtient un compte de travail sécurisé auprès du pool, puis démarre un processus satellite pour gérer le runtime externe. Chaque processus satellite hérite du compte d’utilisateur du service launchpad et utilise ce compte de travail pendant la durée d’exécution du script. Si le script utilise des processus parallèles, ceux-ci sont créés sous le même compte de travail.
 
-## <a name="bxlserver-and-sql-satellite"></a>BxlServer et SQL satellites
+Dans Linux, une seule instance de moteur de base de données est prise en charge et un seul service launchpad est lié à l’instance. Quand un script est exécuté, le service launchpad lance un processus launchpad distinct avec le compte d’utilisateur à faibles privilèges **mssql_satellite**. Chaque processus satellite hérite du compte d’utilisateur mssql_satellite du service launchpad et l’utilise pendant la durée d’exécution du script.
 
-**BxlServer** est un fichier exécutable fourni par Microsoft qui gère la communication entre SQL Server et Python ou R. Il crée les objets de tâche Windows qui sont utilisés pour contenir des sessions de script externes, configure des dossiers de travail sécurisés pour chaque travail de script externe et utilise SQL satellite pour gérer le transfert de données entre le runtime externe et les SQL Server. Si vous exécutez l' [Explorateur de processus](https://technet.microsoft.com/sysinternals/processexplorer.aspx) pendant l’exécution d’un travail, vous pouvez voir une ou plusieurs instances de BxlServer.
+## <a name="bxlserver-and-sql-satellite"></a>BxlServer et SQL Satellite
 
-En effet, BxlServer est un complément à un environnement d’exécution de langage qui fonctionne avec SQL Server pour transférer des données et gérer des tâches. BXL correspond au langage d’échange binaire et fait référence au format de données utilisé pour déplacer efficacement les données entre les SQL Server et les processus externes. BxlServer est également une partie importante des produits associés tels que Microsoft R Client et Microsoft R Server.
+**BxlServer** est un exécutable fourni par Microsoft qui gère la communication entre SQL Server et le runtime de langage. Il crée les objets de traitement Windows pour Windows, ou les espaces de noms pour Linux, qui servent à accueillir les sessions de script externe. De même, il provisionne des dossiers de travail sécurisés pour chaque travail de script externe et utilise SQL Satellite pour gérer le transfert de données entre le runtime externe et SQL Server. Si vous exécutez l’[Explorateur de processus](https://technet.microsoft.com/sysinternals/processexplorer.aspx) pendant l’exécution d’un travail, vous pouvez noter la présence d’une ou plusieurs instances de BxlServer.
 
-**SQL satellite** est une API d’extensibilité, incluse dans le moteur de base de données, qui prend en charge le code externe ou C++les runtimes externes implémentés à l’aide de C ou.
+En effet, BxlServer est un complément d’environnement de runtime de langage qui fonctionne avec SQL Server pour transférer les données et gérer les tâches. BXL, qui est l’abréviation de « Binary Exchange Language », désigne le format de données utilisé pour déplacer efficacement les données entre SQL Server et les processus externes. BxlServer est aussi une composante importante de produits associés comme Microsoft R Client et Microsoft R Server.
+
+**SQL Satellite** est une API d’extensibilité intégrée dans le moteur de base de données qui prend en charge le code ou les runtimes externes implémentés en C ou C++.
 
 BxlServer utilise SQL Satellite pour les tâches suivantes :
 
@@ -82,9 +95,9 @@ BxlServer utilise SQL Satellite pour les tâches suivantes :
 + Gestion des erreurs
 + Réécriture de STDOUT et de STDERR sur le client
 
-SQL satellite utilise un format de données personnalisé qui est optimisé pour un transfert de données rapide entre des SQL Server et des langages de script externes. Il effectue des conversions de type et définit les schémas des jeux de données d’entrée et de sortie pendant les communications entre SQL Server et le runtime de script externe.
+SQL Satellite utilise un format de données personnalisé qui est optimisé pour accélérer les transferts de données entre SQL Server et les langages de script externe. Il assure les conversions de type et définit les schémas des jeux de données d’entrée et de sortie pendant les communications entre SQL Server et le runtime de script externe.
 
-Le satellite SQL peut être surveillé à l’aide des événements étendus Windows (xEvents). Pour plus d’informations, consultez [événements étendus pour R](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md) et les [événements étendus pour Python](../../advanced-analytics/python/extended-events-for-python.md).
+SQL Satellite peut être supervisé en utilisant des événements étendus Windows (xEvents). Pour plus d’informations, consultez [Événements étendus pour R](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md) et [Événements étendus pour Python](../../advanced-analytics/python/extended-events-for-python.md).
 
 ## <a name="communication-channels-between-components"></a>Canaux de communication entre les composants
 
@@ -92,27 +105,27 @@ Les protocoles de communication entre les composants et les plateformes de donn�
 
 + **TCP/IP**
 
-  Par défaut, les communications internes entre SQL Server et le satellite SQL utilisent TCP/IP.
+  Par défaut, les communications internes entre SQL Server et SQL Satellite utilisent TCP/IP.
 
 + **Canaux nommés**
 
-  Le transport de données internes entre BxlServer et SQL Server via SQL satellite utilise un format de données propriétaire et compressé pour améliorer les performances. Les données sont échangées entre les temps d’exécution de langage et les BxlServer au format BXL, à l’aide de canaux nommés.
+  Le transport de données interne entre BxlServer et SQL Server via SQL Satellite utilise un format de données propriétaire et compressé pour améliorer les performances. Les données sont échangées entre les runtimes de langage et BxlServer au format BXL, en utilisant les canaux nommés.
 
 + **ODBC**
 
-  Les communications entre les clients de science des données externes et une instance de SQL Server distante utilisent ODBC. Le compte qui envoie les travaux de script à SQL Server doit disposer des autorisations pour se connecter à l’instance et pour exécuter des scripts externes.
+  Les communications entre les clients de science des données externes et une instance SQL Server distante utilisent ODBC. Le compte utilisé pour l’envoi des travaux de script à SQL Server doit avoir l’autorisation de se connecter à l’instance et l’autorisation d’exécuter des scripts externes.
 
-  En outre, en fonction de la tâche, le compte peut avoir besoin des autorisations suivantes:
+  De plus, selon la tâche, le compte peut avoir besoin des autorisations suivantes :
 
-  + Lire les données utilisées par le travail
-  + Écrire des données dans des tables: par exemple, lors de l’enregistrement des résultats dans une table
-  + Créer des objets de base de données: par exemple, si vous enregistrez un script externe dans le cadre d’une nouvelle procédure stockée.
+  + Lecture des données utilisées par le travail
+  + Écriture de données dans des tables : par exemple, quand il s’agit d’enregistrer des résultats dans une table
+  + Création d’objets de base de données : par exemple, si vous enregistrez un script externe dans une nouvelle procédure stockée.
 
-  Lorsque SQL Server est utilisé comme contexte de calcul pour un script exécuté à partir d’un client distant, et que l’exécutable doit extraire des données d’une source externe, ODBC est utilisé pour l’écriture différée. SQL Server mappe l’identité de l’utilisateur qui émet la commande à distance à l’identité de l’utilisateur sur l’instance actuelle, puis exécute la commande ODBC à l’aide des informations d’identification de cet utilisateur. La chaîne de connexion nécessaire pour effectuer cet appel ODBC est obtenue à partir du code client.
+  Quand SQL Server sert de contexte de calcul pour un script exécuté à partir d’un client distant et que l’exécutable doit récupérer des données à partir d’une source externe, ODBC est utilisé pour l’écriture différée. SQL Server mappe l’identité de l’utilisateur qui émet la commande à distance à l’identité de l’utilisateur de l’instance actuelle, puis exécute la commande ODBC en utilisant les informations d’identification de cet utilisateur. La chaîne de connexion nécessaire pour effectuer cet appel ODBC est obtenue à partir du code client.
 
 + **RODBC (R uniquement)** 
 
-  Des appels ODBC supplémentaires peuvent être effectués à l’intérieur du script à l’aide du package **RODBC**. RODBC est un package R populaire utilisé pour accéder aux données dans les bases de données relationnelles. Toutefois, ses performances sont généralement plus lentes que les fournisseurs comparables utilisés par SQL Server. De nombreux scripts R utilisent des appels au RODBC incorporés comme moyen de récupérer les jeux de données « secondaires » à utiliser dans les analyses. Par exemple, la procédure stockée qui forme un modèle peut définir une requête SQL pour obtenir les données d’apprentissage d’un modèle, mais utiliser un appel RODBC incorporé pour obtenir d’autres facteurs, effectuer des recherches ou obtenir de nouvelles données de sources externes telles que des fichiers texte ou Excel.
+  Des appels ODBC supplémentaires peuvent être effectués à l’intérieur du script à l’aide du package **RODBC**. RODBC est un package R couramment utilisé pour accéder aux données de bases de données relationnelles. Cependant, il est généralement moins rapide que les fournisseurs comparables utilisés par SQL Server. De nombreux scripts R utilisent des appels au RODBC incorporés comme moyen de récupérer les jeux de données « secondaires » à utiliser dans les analyses. Par exemple, la procédure stockée qui forme un modèle peut définir une requête SQL pour obtenir les données d’apprentissage d’un modèle, mais utiliser un appel RODBC incorporé pour obtenir d’autres facteurs, effectuer des recherches ou obtenir de nouvelles données de sources externes telles que des fichiers texte ou Excel.
 
   Le code suivant illustre un appel RODBC incorporé dans un script R :
 
@@ -125,7 +138,7 @@ Les protocoles de communication entre les composants et les plateformes de donn�
 
 + **Autres protocoles**
 
-  Les processus qui peuvent avoir besoin de travailler dans des «segments» ou de transférer des données vers un client distant peuvent également utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données réel s’effectue par le biais d’objets BLOB encodés.
+  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données réel se fait via des objets blob encodés.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,7 +1,7 @@
 ---
 title: 'Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7012ae6863394e6895a192f9ec7df3d8ceea3ee0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909675"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592347"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Ce tutoriel vous apprend à bien démarrer avec [Always Encrypted avec enclaves sécurisées](encryption/always-encrypted-enclaves.md). Il vous montre comment :
 - Créer un environnement de base pour tester et évaluer Always Encrypted avec enclaves sécurisées.
@@ -35,20 +35,17 @@ Pour bien démarrer avec Always Encrypted avec enclaves sécurisées, vous avez 
 
 ### <a name="sql-server-computer-requirements"></a>Configuration requise de l’ordinateur SQL Server
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] ou version ultérieure.
-- Windows 10 Entreprise version 1809 ou Windows Server 2019 Datacenter.
-- Si votre ordinateur SQL Server est une machine physique, il doit respecter la [Configuration matérielle Hyper-V requise](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) :
-   - Processeur 64 bits avec traduction d’adresses de deuxième niveau (SLAT)
-   - Prise en charge du processeur pour l’extension Mode moniteur de machine virtuelle (VT-c sur processeurs Intel)
-   - Prise en charge de la virtualisation activée (Intel VT-x ou AMD-V)
-- Si votre ordinateur SQL Server est une machine virtuelle, celle-ci doit être configurée de façon à prendre en charge la sécurité basée sur la virtualisation.
-   - Dans Hyper-V 2016 ou version ultérieure, utilisez une machine virtuelle de génération 1 et [activez les extensions de virtualisation imbriquée](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) sur le processeur de la machine virtuelle. Sinon, utilisez une machine virtuelle de génération 2. Pour plus d’informations sur les générations des machines virtuelles, consultez [Dois-je créer une machine virtuelle de génération 1 ou 2 dans Hyper-V ?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
-   - Dans Azure, choisissez une taille de machine virtuelle qui prend en charge l’une des options suivantes :
-      - La virtualisation imbriquée, par exemple les machines virtuelles Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-      - Les machines virtuelles de génération 2, par exemple, les machines virtuelles Dsv3 ou Esv3. Consultez [Prise en charge des machines virtuelles de génération 2 dans Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
-   - Sur VMware vSphere 6.7 et les versions ultérieures, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-   - D’autres hyperviseurs et clouds publics peuvent prendre en charge la virtualisation à l’aide d’Always Encrypted avec des enclaves sécurisées dans une machine virtuelle tant que les extensions de virtualisation (parfois appelées virtualisation imbriquée) sont exposées à la machine virtuelle. Consultez les instructions relatives à la compatibilité et à la configuration de la documentation de votre solution de virtualisation.
-- [SQL Server Management Studio (SSMS) version 18.0 ou ultérieure](../../ssms/download-sql-server-management-studio-ssms.md).
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] ou une version ultérieure.
+- Windows 10 Entreprise version 1809 ou ultérieur ; ou Windows Server 2019 Édition Datacenter. Les autres éditions de Windows 10 et de Windows Server ne prennent pas en charge l’attestation avec SGH.
+- Prise en charge du processeur pour les technologies de virtualisation :
+  - Intel VT-x avec des tables de pages étendues.
+  - AMD-V avec indexation de virtualisation rapide.
+  - Si vous exécutez [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sur une machine virtuelle, l’hyperviseur et le processeur physique doivent offrir des fonctionnalités de virtualisation imbriquées. 
+    - Sur Hyper-V 2016 ou ultérieur, [activez les extensions de virtualisation imbriquée sur le processeur de la machine virtuelle](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - Dans Azure, sélectionnez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée. Cela comprend toutes les machines virtuelles de la série v3, par exemple Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - Sur VMware vSphere 6.7 et les versions ultérieures, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - D’autres hyperviseurs et clouds publics peuvent prendre en charge les fonctionnalités de virtualisation imbriquées qui activent aussi Always Encrypted avec enclaves VBS. Consultez les instructions relatives à la compatibilité et à la configuration de la documentation de votre solution de virtualisation.
+- [SQL Server Management Studio (SSMS) version 18.3 ou ultérieure](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Vous pouvez aussi installer SSMS sur un autre ordinateur.
 
@@ -158,7 +155,7 @@ Si vous obtenez l’erreur HostUnreachable, cela signifie que votre ordinateur S
 
 L’erreur UnauthorizedHost indique que la clé publique n’a pas été inscrite sur le serveur SGH. Répétez les étapes 5 et 6 pour résoudre l’erreur.
 
-Si le problème persiste, exécutez Clear-HgsClientHostKey et répétez les étapes 4 à 7.
+Si le problème persiste, exécutez Remove-HgsClientHostKey et répétez les étapes 4 à 7.
 
 ## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Étape 3 : Activer Always Encrypted avec enclaves sécurisées dans SQL Server
 
@@ -343,10 +340,12 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
 3. Essayez à nouveau la même requête dans l’instance SSMS dont Always Encrypted n’est pas activé et notez l’échec survenu.
 
 ## <a name="next-steps"></a>Next Steps
-Accédez à [Didacticiel : Création et utilisation des index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement aléatoire](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), qui est la continuation de ce didacticiel.
+À l’issue de ce tutoriel, vous pouvez accéder à l’un des tutoriels suivants :
+- [Tutoriel : Développer une application .NET Framework avec Always Encrypted avec enclaves sécurisées](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Tutoriel : Création et utilisation des index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement aléatoire](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-Consultez [Configurer Always Encrypted avec enclaves sécurisées](encryption/configure-always-encrypted-enclaves.md) pour plus d’informations sur les autres cas d’utilisation pour Always Encrypted avec enclaves sécurisées. Par exemple :
-
-- [Configurer l’attestation TPM.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Configurer HTTPS pour votre instance SGH.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- Développer des applications qui émettent des requêtes complexes sur des colonnes chiffrées.
+## <a name="see-also"></a>Voir aussi
+- [Configurer le type d’enclave pour l’option de configuration de serveur Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [Provisionner des clés activées pour les enclaves](encryption/always-encrypted-enclaves-provision-keys.md)
+- [Configurer le chiffrement de colonne sur place avec Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Interroger des colonnes avec Always Encrypted avec enclaves sécurisées](encryption/always-encrypted-enclaves-query-columns.md)

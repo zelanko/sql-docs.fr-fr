@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263363"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988416"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Générer des scripts d’objet dans SQL Server Management Studio
 
@@ -209,7 +209,7 @@ Cette section explique comment scripter des [événements étendus](https://docs
 
 4. Développez le nœud **Sessions**.
 
-5. Cliquez avec le bouton droit sur la session étendue qui vous intéresse > **Scripter une session comme** > **Nouvelle fenêtre d'éditeur de requête** :
+5. Cliquez avec le bouton droit sur la session étendue qui vous intéresse dans > **Générer un script de la session en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête** :
 
     ![Session étendue de nouvelle fenêtre d’éditeur de requête](media/scripting-ssms/scriptxevents.png)
 

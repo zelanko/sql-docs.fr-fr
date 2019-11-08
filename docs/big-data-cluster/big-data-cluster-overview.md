@@ -1,38 +1,36 @@
 ---
-title: Qu’est-ce qu’un cluster Big Data ?
+title: Présentation des clusters Big Data
 titleSuffix: SQL Server Big Data Clusters
-description: En savoir plus sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (version préliminaire) qui s’exécutent sur Kubernetes et fournissent des options de montée en puissance parallèle pour les données relationnelles et HDFS.
+description: Découvrez les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (préversion) qui s’exécutent sur Kubernetes et fournissent des options de scale-out pour les données relationnelles et HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MT
+ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72359531"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532512"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Qu’est-ce que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ?
+# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-À partir de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] vous permet de déployer des clusters évolutifs de conteneurs SQL Server, Spark et HDFS s’exécutant sur Kubernetes. Ces composants sont exécutés côte à côte pour que vous puissiez lire, écrire et traiter du Big Data à partir de Transact-SQL ou Spark, afin de pouvoir combiner et analyser facilement vos données relationnelles de grande valeur avec du Big Data volumineux.
+À compter de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] vous permettent de déployer des clusters scalables de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. Ces composants sont exécutés côte à côte pour que vous puissiez lire, écrire et traiter du Big Data à partir de Transact-SQL ou Spark, afin de pouvoir combiner et analyser facilement vos données relationnelles de grande valeur avec du Big Data volumineux.
 
 Pour plus d’informations sur les nouvelles fonctionnalités et les problèmes connus concernant la dernière version, consultez les [notes de publication](release-notes-big-data-cluster.md).
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## <a name="scenarios"></a>Scénarios
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] offre une flexibilité dans la façon dont vous interagissez avec vos Big Data. Vous pouvez interroger des sources de données externes, stocker du Big Data dans un système HDFS géré par SQL Server ou interroger des données à partir de plusieurs sources de données externes par le biais du cluster. Vous pouvez ensuite utiliser les données pour l’intelligence artificielle, le Machine Learning et d’autres tâches d’analyse. Les sections ci-dessous fournissent des informations supplémentaires sur ces scénarios.
+Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] offrent une certaine flexibilité dans la façon dont vous interagissez avec votre Big Data. Vous pouvez interroger des sources de données externes, stocker du Big Data dans un système HDFS géré par SQL Server ou interroger des données à partir de plusieurs sources de données externes par le biais du cluster. Vous pouvez ensuite utiliser les données pour l’intelligence artificielle, le Machine Learning et d’autres tâches d’analyse. Les sections ci-dessous fournissent des informations supplémentaires sur ces scénarios.
 
 ### <a name="data-virtualization"></a>Virtualisation de données
 
-En tirant parti de [SQL Server Polybase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] peut interroger des sources de données externes sans déplacer ou copier les données. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit de nouveaux connecteurs aux sources de données.
+En tirant parti de [SQL Server Polybase](../relational-databases/polybase/polybase-guide.md), les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] peuvent interroger des sources de données externes sans déplacer ni copier les données. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit de nouveaux connecteurs aux sources de données.
 
 ![Virtualisation de données](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -44,13 +42,13 @@ Un cluster Big Data SQL Server comprend un *pool de stockage* HDFS scalable. Ce 
 
 ### <a name="scale-out-data-mart"></a>DataMart avec scale-out
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] assure le calcul et le stockage avec montée en puissance parallèle pour améliorer les performances d’analyse des données. Les données provenant de diverses sources peuvent être ingérées et réparties entre les nœuds du *pool de données* en tant que cache pour une analyse plus poussée.
+Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] fournissent des fonctionnalités de stockage et de calcul avec scale-out pour améliorer les performances d’analyse des données. Les données provenant de diverses sources peuvent être ingérées et réparties entre les nœuds du *pool de données* en tant que cache pour une analyse plus poussée.
 
 ![DataMart](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>IA et Machine Learning intégrés
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] active les tâches AI et Machine Learning sur les données stockées dans les pools de stockage HDFS et les pools de données. Vous pouvez utiliser Spark ainsi que des outils AI intégrés dans SQL Server, à l’aide de R, Python, Scala ou Java.
+Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] autorisent les tâches IA et Machine Learning sur les données stockées dans les pools de stockage HDFS et les pools de données. Vous pouvez utiliser Spark ainsi que des outils AI intégrés dans SQL Server, à l’aide de R, Python, Scala ou Java.
 
 ![IA et ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -80,7 +78,7 @@ Kubernetes est un orchestrateur de conteneurs open source, qui peut mettre à l�
 | **Pod** | Un pod est l’unité de déploiement atomique de Kubernetes. Un pod regroupe, sous forme logique, un ou plusieurs conteneurs ainsi que les ressources associées nécessaires pour exécuter une application. Chaque pod s’exécute sur un nœud ; un nœud peut exécuter un ou plusieurs pod. Le master Kubernetes attribue automatiquement des pods aux nœuds du cluster. |
 | &nbsp; ||
 
-Dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], Kubernetes est responsable de l’état de la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ; Kubernetes crée et configure les nœuds de cluster, assigne des Pod aux nœuds et analyse l’intégrité du cluster.
+Dans les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], Kubernetes est responsable de l’état des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ; il génère et configure les nœuds de cluster, attribue des pods aux nœuds et supervise l’intégrité du cluster.
 
 ### <a name="big-data-clusters-architecture"></a>Architecture des clusters Big Data
 
@@ -90,7 +88,7 @@ Le diagramme suivant montre les composants d’un cluster Big Data pour SQL Serv
 
 ### <a id="controlplane"></a> Contrôleur
 
-Le contrôleur assure la gestion et la sécurité du cluster. Il contient le service de contrôle, le magasin de configuration et d’autres services de niveau cluster tels que Kibana, Grafana et la recherche élastique.
+Le contrôleur assure la gestion et la sécurité du cluster. Il contient le service de contrôle, le magasin de configuration et d’autres services de niveau cluster tels que Kibana, Grafana et ElasticSearch.
 
 ### <a id="computeplane"></a> Pool de calcul
 
@@ -105,8 +103,8 @@ Le pool de données est utilisé pour la persistance et la mise en cache des don
 Le pool de stockage est composé de pods de pool de stockage constitués de SQL Server sur Linux, Spark et HDFS. Tous les nœuds de stockage d’un cluster Big Data SQL Server sont membres d’un cluster HDFS.
 
 > [!TIP]
-> Pour une analyse approfondie de Big Data architecture et de l’installation du cluster, consultez la page [atelier : architecture Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Pour une présentation approfondie de l’architecture et de l’installation des clusters Big Data, consultez [Atelier : Architecture des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur le déploiement de clusters de SQL Server Big Data, consultez [prise en main des clusters Big data SQL Server](deploy-get-started.md).
+Pour plus d’informations sur le déploiement des clusters Big Data SQL Server, consultez [Bien démarrer avec les clusters Big Data SQL Server](deploy-get-started.md).

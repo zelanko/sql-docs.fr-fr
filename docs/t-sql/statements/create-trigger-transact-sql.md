@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190367"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168758"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Les déclencheurs LOGON sont activés en réponse à l’événement LOGON qui e
 > [!NOTE]  
 >  L’intégration du CLR .NET Framework à SQL Server est décrite dans cet article. L’intégration du CLR ne s’applique pas à Azure SQL Database.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -206,9 +206,7 @@ Garantit que les tables référencées par un déclencheur ne peuvent pas être 
 Cette option est obligatoire pour les déclencheurs sur les tables optimisées en mémoire et n’est pas prise en charge pour les déclencheurs sur des tables traditionnelles.  
   
 FOR | AFTER  
-AFTER spécifie que le déclencheur DML est activé seulement lorsque toutes les opérations spécifiées dans l'instruction SQL de déclenchement ont été lancées correctement. Toutes les actions référentielles en cascade et les vérifications de contraintes doivent également être effectuées avec succès pour que ce déclencheur soit activé.  
-  
-AFTER est la valeur par défaut lorsque FOR est le seul mot clé spécifié.  
+FOR ou AFTER spécifie que le déclencheur DML est activé seulement lorsque toutes les opérations spécifiées dans l’instruction SQL de déclenchement ont été lancées correctement. Toutes les actions référentielles en cascade et les vérifications de contraintes doivent également être effectuées avec succès pour que ce déclencheur soit activé.  
   
 Vous ne pouvez pas définir de déclencheurs AFTER sur des vues.  
   

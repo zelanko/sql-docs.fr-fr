@@ -1,27 +1,35 @@
 ---
 title: Options de configuration pour SQL Server sur Docker
-description: Explorez les différentes façons d’utiliser et d’interagir avec les images de conteneur SQL Server 2017 et 2019 (préversion) dans Docker. Cela comprend la conservation des données, la copie de fichiers et le dépannage.
+description: Explorez les différentes façons d’utiliser les images conteneur SQL Server 2017 et 2019 dans Docker et d’interagir avec elles. Cela comprend la conservation des données, la copie de fichiers et le dépannage.
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 01/17/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278253"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531341"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur SQL Server sur Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article explique comment configurer et utiliser [l’image de conteneur mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) avec Docker. Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubuntu 16.04. Elle peut être utilisée avec Docker Engine 1.8+ sur Linux ou sur Docker pour Mac/Windows.
+Cet article explique comment configurer et utiliser [l’image de conteneur mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) avec Docker. 
+
+Pour d’autres scénarios de déploiement, consultez :
+
+- [Windows](../database-engine/install-windows/install-sql-server.md)
+- [Linux](../linux/sql-server-linux-setup.md)
+- [Kubernetes - Clusters Big Data](../big-data-cluster/deploy-get-started.md)
+
+Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubuntu 16.04. Elle peut être utilisée avec Docker Engine 1.8+ sur Linux ou sur Docker pour Mac/Windows.
 
 > [!NOTE]
 > Cet article se concentre spécifiquement sur l’utilisation de l’image mssql-server-linux. L’image Windows n’est pas traitée, mais vous pouvez obtenir plus d’informations dans la [page du Hub Docker mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
@@ -31,10 +39,10 @@ Cet article explique comment configurer et utiliser [l’image de conteneur mssq
 
 ## <a name="pull-and-run-the-container-image"></a>Extraire et exécuter l’image conteneur
 
-Pour extraire et exécuter les images de conteneur Docker pour SQL Server 2017 et SQL Server 2019 (préversion), suivez les conditions préalables et étapes décrites dans le démarrage rapide suivant :
+Pour extraire et exécuter les images conteneur Docker pour SQL Server 2017 et SQL Server 2019, suivez les prérequis et les étapes du guide de démarrage rapide suivant :
 
 - [Exécuter l’image conteneur de SQL Server 2017 avec Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Exécuter l’image conteneur de SQL Server 2019 (préversion) avec Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Exécuter l’image conteneur SQL Server 2019 avec Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 Cet article de configuration fournit des scénarios d’utilisation supplémentaires dans les sections suivantes.
 
@@ -43,17 +51,20 @@ Cet article de configuration fournit des scénarios d’utilisation supplémenta
 
 ## <a id="rhel"></a> Exécuter des images conteneurs basées sur RHEL
 
-Toute la documentation sur les images de conteneur SQL Server Linux pointent vers des conteneurs Ubuntu. À partir de SQL Server 2019 (préversion), vous pouvez utiliser des conteneurs basés sur Red Hat Enterprise Linux (RHEL). Changez le référentiel de conteneurs de **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** à **mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2** dans toutes vos commandes Docker.
+La documentation pour les images conteneur SQL Server Linux pointe vers des conteneurs basés sur Ubuntu. À partir de SQL Server 2019, vous pouvez utiliser des conteneurs basés sur Red Hat Enterprise Linux (RHEL). Remplacez le référentiel de conteneurs **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** par **mcr.microsoft.com/mssql/rhel/server:2019-RC1** dans toutes vos commandes Docker.
 
-Par exemple, la commande suivante extrait le dernier conteneur SQL Server 2019 (préversion) qui utilise RHEL :
+Par exemple, la commande suivante tire (pull) le dernier conteneur SQL Server 2019 qui utilise RHEL :
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
 ```
+
+> [!NOTE]
+> À partir de la version en disponibilité générale de SQL Server 2019, la dernière image conteneur RHEL est toujours la version RC1. Cette version n’est pas destinée à une utilisation en production. Cet article sera mis à jour quand une nouvelle image conteneur RHEL sera disponible.
 
 ::: moniker-end
 
@@ -127,7 +138,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### <a name="tools-inside-the-container"></a>Outils au sein du conteneur
 
-À partir de SQL Server 2017 (préversion), les [outils en ligne de commande SQL Server](sql-server-linux-setup-tools.md) sont inclus dans l’image de conteneur. Si vous attachez l’image à l’aide d’une invite de commandes interactive, vous pouvez exécuter les outils localement.
+À partir de SQL Server 2017, les [outils en ligne de commande SQL Server](sql-server-linux-setup-tools.md) sont inclus dans l’image conteneur. Si vous joignez une invite de commandes interactive à l’image, vous pouvez exécuter les outils localement.
 
 1. Utilisez la commande `docker exec -it` pour démarrer un interpréteur de commandes bash interactif dans votre conteneur en cours d’exécution. Dans l’exemple suivant, `e69e056c702d` est l’ID de conteneur.
 
@@ -171,16 +182,16 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-L’exemple suivant crée deux conteneurs SQL Server 2019 (préversion) et les mappe aux ports **1401** et **1402** sur l’ordinateur hôte.
+L’exemple suivant crée deux conteneurs SQL Server 2019 et les mappe aux ports **1401** et **1402** sur l’ordinateur hôte.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -234,11 +245,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -268,11 +279,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 ::: moniker-end
 
@@ -398,14 +409,14 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -p 1433:1433 --name sql1 \
    -e 'TZ=America/Los_Angeles'\
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
 sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 ::: moniker-end
 
@@ -512,6 +523,118 @@ Cela met à jour l’image de SQL Server pour les nouveaux conteneurs que vous c
 
 1. Si vous le souhaitez, supprimez l'ancien conteneur avec `docker rm`.
 
+## <a id="buildnonrootcontainer"></a> Générer et exécuter des conteneurs SQL Server 2017 non-root
+
+Suivez les étapes ci-dessous pour générer un conteneur SQL Server 2017 qui démarre en tant qu’utilisateur `mssql` (non-root).
+
+> [!NOTE]
+> Les conteneurs SQL Server 2019 ne démarrant pas automatiquement en tant que root, les étapes suivantes s’appliquent uniquement aux conteneurs SQL Server 2017 qui démarrent en tant que root par défaut.
+
+1. Téléchargez l’[exemple de fichier Dockerfile pour le conteneur SQL Server non racine](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile) et enregistrez-le comme `dockerfile`.
+ 
+2. Exécutez la commande suivante dans le contexte du répertoire de fichier Dockerfile pour générer le conteneur SQL Server non racine :
+
+```bash
+cd <path to dockerfile>
+docker build -t 2017-latest-non-root .
+```
+ 
+3. Démarrez le conteneur.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root
+```
+
+> [!NOTE]
+> L’indicateur `--cap-add SYS_PTRACE` est requis pour les conteneurs SQL Server non racine afin de générer des vidages à des fins de dépannage.
+ 
+4. Vérifiez que le conteneur s’exécute en tant qu’utilisateur non racine :
+
+docker exec dans le conteneur.
+```bash
+docker exec -it sql1 bash
+```
+ 
+Exécutez `whoami` qui retourne l’utilisateur qui s’exécute dans le conteneur.
+ 
+```bash
+whoami
+```
+
+## <a id="nonrootuser"></a> Exécuter le conteneur comme un autre utilisateur non racine sur l’hôte
+
+Pour exécuter le conteneur SQL Server en tant qu’autre utilisateur non racine, ajoutez l’indicateur -u à la commande docker run. Le conteneur non racine a comme restriction qu’il doit s’exécuter dans le cadre du groupe racine, sauf si un volume est monté sur « /var/opt/mssql » qui est accessible à l’utilisateur non racine. Le groupe racine n’accorde pas d’autorisations racine supplémentaires à l’utilisateur non racine.
+ 
+**Exécuter en tant qu’utilisateur avec un UID 4000**
+ 
+Vous pouvez démarrer SQL Server avec un UID personnalisé. Par exemple, la commande ci-dessous démarre SQL Server avec un UID 4000 :
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+> [!Warning]
+> Vérifiez que le conteneur SQL Server a un utilisateur nommé, tel que « mssql » ou « racine », ou SQLCMD ne pourra pas s’exécuter dans le conteneur. Vous pouvez vérifier si le conteneur SQL Server s’exécute en tant qu’utilisateur nommé en exécutant `whoami` dans le conteneur.
+
+**Exécuter le conteneur non racine en tant qu’utilisateur racine**
+
+Vous pouvez exécuter le conteneur non racine en tant qu’utilisateur racine, si nécessaire. Cela permet également d’octroyer automatiquement toutes les autorisations de fichiers au conteneur, car il s’agit d’un privilège plus élevé.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**Exécuter en tant qu’utilisateur sur votre ordinateur hôte**
+ 
+Vous pouvez démarrer SQL Server avec un utilisateur existant sur l’ordinateur hôte à l’aide de la commande suivante :
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**Exécuter en tant qu’utilisateur ou groupe différent**
+ 
+Vous pouvez démarrer SQL Server avec un utilisateur ou groupe personnalisé. Dans cet exemple, le volume monté dispose des autorisations configurées pour l’utilisateur ou le groupe sur l’ordinateur hôte.
+ 
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+## <a id="storagepermissions"></a> Configurer des autorisations de stockage persistant pour les conteneurs non racine
+
+Pour permettre à l’utilisateur non racine d’accéder aux fichiers de base de fichiers qui se trouvent sur des volumes montés, vérifiez que l’utilisateur ou le groupe sous lequel vous exécutez le conteneur peut atteindre le stockage de fichiers persistant.  
+
+Vous pouvez obtenir la propriété actuelle des fichiers de base de données à l’aide de cette commande.
+ 
+```bash
+ls -ll <database file dir>
+```
+
+Exécutez l’une des commandes suivantes si SQL Server n’a pas accès aux fichiers de base de données conservés.
+ 
+**Accorder au groupe racine l’accès en lecture/écriture aux fichiers de base de données**
+
+Accordez au groupe racine des autorisations sur les répertoires suivants afin que le conteneur SQL Server non racine ait accès aux fichiers de base de données.
+
+```bash
+chgroup -R 0 <database file dir>
+chmod -R g=u <database file dir>
+```
+
+**Définir l’utilisateur non racine comme propriétaire des fichiers.**
+
+Il peut s’agir de l’utilisateur non racine par défaut ou de tout autre utilisateur non racine que vous souhaitez spécifier. Dans cet exemple, nous définissons UID 10001 en tant qu’utilisateur non racine.
+
+```bash
+chown -R 10001:0 <database file dir>
+```
+
+## <a id="changefilelocation"></a> Modifier l’emplacement des fichiers par défaut
+
+Ajoutez la variable `MSSQL_DATA_DIR` pour modifier votre répertoire de données dans votre commande `docker run`, puis montez un volume à cet emplacement auquel l’utilisateur de votre conteneur a accès.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
 ## <a id="troubleshooting"></a> Dépannage
 
 Les sections suivantes fournissent des suggestions de dépannage pour l’exécution de SQL Server dans des conteneurs.
@@ -539,7 +662,7 @@ Sur Windows, vérifiez que vous lancez PowerShell ou votre invite de commandes e
 
 Si le conteneur SQL Server ne parvient pas à s’exécuter, essayez les tests suivants :
 
-- Si vous recevez une erreur telle que **'failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.'**, vous essayez de mapper le port de conteneur 1433 à un port qui est déjà utilisé. Cela peut se produire si vous exécutez SQL Server localement sur l’ordinateur hôte. Cela peut également se produire si vous démarrez deux conteneurs SQL Server et que vous essayez de les mapper tous les deux sur le même port hôte. Dans ce cas, utilisez le paramètre `-p` pour mapper le port de conteneur 1433 sur un port d’hôte différent. Par exemple : 
+- Si vous recevez une erreur telle que **'failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.'** , vous essayez de mapper le port de conteneur 1433 à un port qui est déjà utilisé. Cela peut se produire si vous exécutez SQL Server localement sur l’ordinateur hôte. Cela peut également se produire si vous démarrez deux conteneurs SQL Server et que vous essayez de les mapper tous les deux sur le même port hôte. Dans ce cas, utilisez le paramètre `-p` pour mapper le port de conteneur 1433 sur un port d’hôte différent. Par exemple : 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -557,11 +680,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu`.
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04`.
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu`.
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04`.
 ```
 
 ::: moniker-end
@@ -599,7 +722,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -651,118 +774,6 @@ cat errorlog
 
 > [!TIP]
 > Si vous avez monté un répertoire hôte sur **/var/opt/mssql** lorsque vous avez créé votre conteneur, vous pouvez à la place l’examiner dans le sous-répertoire **log** sur le chemin d’accès mappé sur l’ordinateur hôte.
-
-
-## <a id="buildnonrootcontainer"></a> Générer et exécuter des conteneurs SQL Server en tant qu’utilisateur non racine
-
-Suivez les étapes ci-dessous pour générer un conteneur SQL Server qui démarre en tant qu’utilisateur `mssql` (non racine).
-
-1. Téléchargez l’[exemple de fichier Dockerfile pour le conteneur SQL Server non racine](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile) et enregistrez-le comme `dockerfile`.
- 
-2. Exécutez la commande suivante dans le contexte du répertoire de fichier Dockerfile pour générer le conteneur SQL Server non racine :
-
-```bash
-cd <path to dockerfile>
-docker build -t 2017-latest-non-root .
-```
- 
-3. Démarrez le conteneur.
-
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root
-```
-
-> [!NOTE]
-> L’indicateur `--cap-add SYS_PTRACE` est requis pour les conteneurs SQL Server non racine afin de générer des vidages à des fins de dépannage.
- 
-4. Vérifiez que le conteneur s’exécute en tant qu’utilisateur non racine :
-
-docker exec dans le conteneur.
-```bash
-docker exec -it sql1 bash
-```
- 
-Exécutez `whoami` qui retourne l’utilisateur qui s’exécute dans le conteneur.
- 
-```bash
-whoami
-```
- 
-
-## <a id="nonrootuser"></a> Exécuter le conteneur comme un autre utilisateur non racine sur l’hôte
-
-Pour exécuter le conteneur SQL Server en tant qu’autre utilisateur non racine, ajoutez l’indicateur -u à la commande docker run. Le conteneur non racine a comme restriction qu’il doit s’exécuter dans le cadre du groupe racine, sauf si un volume est monté sur « /var/opt/mssql » qui est accessible à l’utilisateur non racine. Le groupe racine n’accorde pas d’autorisations racine supplémentaires à l’utilisateur non racine.
- 
-**Exécuter en tant qu’utilisateur avec un UID 4000**
- 
-Vous pouvez démarrer SQL Server avec un UID personnalisé. Par exemple, la commande ci-dessous démarre SQL Server avec un UID 4000 :
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-> [!Warning]
-> Vérifiez que le conteneur SQL Server a un utilisateur nommé, tel que « mssql » ou « racine », ou SQLCMD ne pourra pas s’exécuter dans le conteneur. Vous pouvez vérifier si le conteneur SQL Server s’exécute en tant qu’utilisateur nommé en exécutant `whoami` dans le conteneur.
-
-**Exécuter le conteneur non racine en tant qu’utilisateur racine**
-
-Vous pouvez exécuter le conteneur non racine en tant qu’utilisateur racine, si nécessaire. Cela permet également d’octroyer automatiquement toutes les autorisations de fichiers au conteneur, car il s’agit d’un privilège plus élevé.
-
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-**Exécuter en tant qu’utilisateur sur votre ordinateur hôte**
- 
-Vous pouvez démarrer SQL Server avec un utilisateur existant sur l’ordinateur hôte à l’aide de la commande suivante :
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-**Exécuter en tant qu’utilisateur ou groupe différent**
- 
-Vous pouvez démarrer SQL Server avec un utilisateur ou groupe personnalisé. Dans cet exemple, le volume monté dispose des autorisations configurées pour l’utilisateur ou le groupe sur l’ordinateur hôte.
- 
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
- 
-## <a id="storagepermissions"></a> Configurer des autorisations de stockage persistant pour les conteneurs non racine
-Pour permettre à l’utilisateur non racine d’accéder aux fichiers de base de fichiers qui se trouvent sur des volumes montés, vérifiez que l’utilisateur ou le groupe sous lequel vous exécutez le conteneur peut atteindre le stockage de fichiers persistant.  
-
-Vous pouvez obtenir la propriété actuelle des fichiers de base de données à l’aide de cette commande.
- 
-```bash
-ls -ll <database file dir>
-```
-
-Exécutez l’une des commandes suivantes si SQL Server n’a pas accès aux fichiers de base de données conservés.
- 
- 
-**Accorder au groupe racine l’accès en lecture/écriture aux fichiers de base de données**
-
-Accordez au groupe racine des autorisations sur les répertoires suivants afin que le conteneur SQL Server non racine ait accès aux fichiers de base de données.
-
-```bash
-chgroup -R 0 <database file dir>
-chmod -R g=u <database file dir>
-```
- 
-**Définir l’utilisateur non racine comme propriétaire des fichiers.**
-
-Il peut s’agir de l’utilisateur non racine par défaut ou de tout autre utilisateur non racine que vous souhaitez spécifier. Dans cet exemple, nous définissons UID 10001 en tant qu’utilisateur non racine.
-
-```bash
-chown -R 10001:0 <database file dir>
-```
- 
-## <a id="changefilelocation"></a> Modifier l’emplacement des fichiers par défaut
-
-Ajoutez la variable `MSSQL_DATA_DIR` pour modifier votre répertoire de données dans votre commande `docker run`, puis montez un volume à cet emplacement auquel l’utilisateur de votre conteneur a accès.
-
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 

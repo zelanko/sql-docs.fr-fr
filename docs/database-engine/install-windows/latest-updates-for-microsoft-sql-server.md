@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 5d0664b0d02eee638c3f8d9589ff3d883e6f0083
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586729"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594139"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Dernières mises à jour pour Microsoft SQL Server
 
@@ -30,8 +30,9 @@ Chacun des liens suivants fournit des informations sur tous les produits et tech
 
 |Versions du produit   | Dernier Service Pack |  Dernier correctif logiciel grand public | Dernière mise à jour cumulative | Date de mise en production de la mise à jour cumulative | Conseils d’ordre général  |
 |--|--|--|--|--|--|
-|SQL Server 2017|Néant|KB 4505224|Mise à jour cumulative 16 [(KB 4508218)](https://support.microsoft.com/en-us/help/4508218)|1/8/2019|[Installation de SQL Server 2017](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server) |
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|Mise à jour cumulative 8 [(KB 4505830)](https://support.microsoft.com/en-us/kb/4505830)|31/7/2019|[Installation de SQL Server 2016](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
+|SQL Server 2019|Néant|[Article 4517790 de la base de connaissances](https://support.microsoft.com/en-us/help/4517790)|Néant|Néant|[Installation de SQL Server 2019](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|Néant|[Article 4505224 de la base de connaissances](https://support.microsoft.com/en-us/help/4505224)|Mise à jour cumulative 17 [(article 4515579 de la base de connaissances)](https://support.microsoft.com/en-us/help/4515579)|8/10/2019|[Installation de SQL Server 2017](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|Mise à jour cumulative 10 [(article 4524334 de la base de connaissances)](https://support.microsoft.com/en-us/kb/4524334)|8/10/2019|[Installation de SQL Server 2016](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(article 3182545 de la base de connaissances)](https://support.microsoft.com/en-us/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/en-us/help/4505219)|Mise à jour cumulative 15 + correctif logiciel grand public [(KB 4505221)](https://support.microsoft.com/en-us/help/4505221)|9/7/2019|[Installation de SQL Server 2016](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|Néant|[KB 4058560](https://support.microsoft.com/en-us/help/4058560)|Mise à jour cumulative 9 [(KB 4058559)](https://support.microsoft.com/en-us/help/4058559)|22/11/2017|[Installation de SQL Server 2016](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/en-us/kb/4022619)|[KB 4505218](https://support.microsoft.com/en-us/help/4505218)|Mise à jour cumulative 4 [(KB 4500181)](https://support.microsoft.com/en-us/kb/4500181)|29/7/2019|[Installation de SQL Server 2014](https://technet.microsoft.com/en-us/library/cc281837(v=sql.120).aspx)|

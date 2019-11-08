@@ -5,16 +5,16 @@ description: Découvrez comment utiliser le connecteur Spark MSSQL dans Spark po
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653303"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531611"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL
 
@@ -35,21 +35,21 @@ L’exemple effectue les tâches suivantes :
 
 ## <a name="mssql-spark-connector-interface"></a>Interface du connecteur Spark MSSQL
 
-La préversion de SQL Server 2019 fournit le **connecteur Spark MSSQL** pour les clusters Big Data qui utilisent des API d’écriture en bloc SQL Server pour les écritures de Spark à SQL. Le connecteur Spark MSSQL est basé sur des API de source de données Spark et fournit une interface familière au connecteur JDBC Spark. Pour obtenir les paramètres d’interface, consultez la [documentation sur Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Le connecteur Spark MSSQL est référencé par le nom **com.microsoft.sqlserver.jdbc.spark**.
+SQL Server 2019 fournit le **connecteur Spark MSSQL** pour les clusters Big Data qui utilisent des API d’écriture en bloc SQL Server pour les écritures de Spark à SQL. Le connecteur Spark MSSQL est basé sur des API de source de données Spark et fournit une interface familière au connecteur JDBC Spark. Pour obtenir les paramètres d’interface, consultez la [documentation sur Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Le connecteur Spark MSSQL est référencé par le nom **com.microsoft.sqlserver.jdbc.spark**.
 
 Le tableau suivant décrit les nouveaux paramètres d’interface et ceux qui ont été modifiés :
 
-| Nom de la propriété | Facultatif | Description |
+| Nom de la propriété | Ce paramètre est facultatif | Description |
 |---|---|---|
 | **isolationLevel** | Oui | Décrit le niveau d’isolation de la connexion. La valeur par défaut pour le connecteur MSSQLSpark est **READ_COMMITTED** |
 
 Le connecteur utilise les API d’écriture en bloc SQL Server. Tous les paramètres d’écriture en bloc peuvent être passés en tant que paramètres facultatifs par l’utilisateur et sont passés en l’état par le connecteur à l’API sous-jacente. Pour plus d’informations sur les opérations d’écriture en bloc, consultez [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Cluster Big Data SQL Server](deploy-get-started.md)
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders)
+- [Azure Data Studio](https://aka.ms/getazuredatastudio)
 
 ## <a name="create-the-target-database"></a>Créer la base de données cible
 
@@ -90,4 +90,4 @@ Pour illustrer l’utilisation du connecteur Spark MSSQL avec ces données, vous
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [comment [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] déployer sur Kubernetes](deployment-guidance.md)
+Pour plus d’informations sur les clusters Big Data, consultez [Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md)

@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: Ce démarrage rapide montre comment installer SQL Server 2017 ou SQL Server 2019 sur SUSE Linux Enterprise Server, puis comment créer et interroger une base de données avec sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: b878e76546642ee9b9792ece31029c0640eb8864
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910494"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594535"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur SUSE Linux Enterprise Server
 
@@ -23,13 +23,16 @@ ms.locfileid: "67910494"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Dans ce démarrage rapide, vous installez SQL Server 2017 ou la préversion de SQL Server 2019 sur SUSE Linux Enterprise Server (SLES) version 12 SP2. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Dans ce guide de démarrage rapide, vous installez SQL Server 2017 ou SQL Server 2019 sur SUSE Linux Enterprise Server (SLES) v12 SP2. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Dans ce démarrage rapide, vous installez la préversion de SQL Server 2019 sur SUSE Linux Enterprise Server (SLES) version 12 SP2. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Dans ce guide de démarrage rapide, vous installez SQL Server 2019 sur SUSE Linux Enterprise Server (SLES) v12. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+
+> [!IMPORTANT]
+> SQL Server 2019 est pris en charge sur SUSE Enterprise Linux Server v12 SP2, SP3 ou SP4.
 
 ::: moniker-end
 
@@ -38,11 +41,23 @@ Dans ce démarrage rapide, vous installez la préversion de SQL Server 2019 sur
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 Vous devez disposer d’une machine SLES version 12 SP2 avec **au moins 2 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. Les autres systèmes de fichiers, tels que **BTRFS**, ne sont pas pris en charge.
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+Vous devez disposer d’une machine SLES v12 SP2, SP3 ou SP4 avec **au moins 2 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. Les autres systèmes de fichiers, tels que **BTRFS**, ne sont pas pris en charge.
+
+::: moniker-end
 
 Pour installer SUSE Linux Enterprise Server sur votre propre machine, accédez à [https://www.suse.com/products/server](https://www.suse.com/products/server). Vous pouvez également créer des machines virtuelles SLES dans Azure. Consultez [Créer et gérer des machines virtuelles Linux avec l’interface Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), puis utilisez `--image SLES` dans l’appel à `az vm create`.
 
-Si vous avez déjà installé une version CTP ou RC de SQL Server 2017, vous devez d'abord supprimer l'ancien référentiel avant de suivre ces étapes. Pour plus d'informations, voir [Configurer des référentiels Linux pour SQL Server 2017 et 2019](sql-server-linux-change-repo.md).
+Si vous avez déjà installé une version CTP ou RC de SQL Server, vous devez d’abord supprimer l’ancien référentiel avant de suivre ces étapes. Pour plus d'informations, voir [Configurer des référentiels Linux pour SQL Server 2017 et 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
 > Pour le moment, le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) pour Windows 10 n'est pas pris en charge comme cible d'installation.
@@ -63,10 +78,10 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    ```
 
    > [!TIP]
-   > Si vous voulez tester SQL Server 2019, vous devez plutôt enregistrer le référentiel de la **préversion (2019)** . Utilisez la commande suivante pour les installations SQL Server 2019 :
+   > Si vous voulez tester SQL Server 2019, vous devez inscrire à la place le référentiel SQL Server 2019. Utilisez la commande suivante pour les installations SQL Server 2019 :
    >
    > ```bash
-   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    > ```
 
 2. Actualisez vos référentiels.
@@ -115,10 +130,10 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
 
 Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un terminal afin d’installer le package **mssql-server** :
 
-1. Téléchargez la préversion du fichier config du référentiel Microsoft SQL Server 2019 preview SLES :
+1. Téléchargez le fichier config du référentiel Microsoft SQL Server 2019 SLES :
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    ```
 
 2. Actualisez vos référentiels.
@@ -154,7 +169,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-À ce stade, la préversion de SQL Server 2019 fonctionne sur votre machine SLES et est prête à l'emploi !
+À ce stade, SQL Server 2019 fonctionne sur votre machine SLES et est prêt à l’emploi !
 
 ::: moniker-end
 

@@ -1,88 +1,91 @@
 ---
 title: Concepts de sécurité
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit les concepts de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sécurité pour. Il aborde notamment les points de terminaison de cluster et l’authentification des clusters.
+description: Cet article décrit les concepts de sécurité des clusters Big Data SQL Server. Il aborde notamment les points de terminaison de cluster et l’authentification des clusters.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652255"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532378"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Concepts de sécurité pour[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Concepts de sécurité pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Un cluster Big Data sécurisé implique une prise en charge uniforme et cohérente des scénarios d’authentification et d’autorisation, à la fois sur SQL Server et HDFS/Spark. L’authentification est le processus qui consiste à vérifier l’identité d’un utilisateur ou d’un service et à confirmer qu’il correspond bien à ce qu’il prétend être. L’autorisation fait référence à l’octroi ou au refus de l’accès à des ressources spécifiques en fonction de l’identité de l’utilisateur à l’origine de la demande. Cette étape est effectuée après l’identification d’un utilisateur au moyens du processus d’authentification.
+Cet article aborde les principaux concepts liés à la sécurité dans le cluster Big Data
 
-L’autorisation dans le contexte du Big Data est généralement effectuée par le biais de listes de contrôle d’accès (ACL) qui associent des identités d’utilisateur à des autorisations spécifiques. HDFS prend en charge l’autorisation en limitant l’accès aux API de service, aux fichiers HDFS et à l’exécution de travaux.
+Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] assurent des fonctionnalités d’autorisation et d’authentification uniformes et cohérentes. Un cluster Big Data peut être intégré à Active Directory par le biais d’un déploiement entièrement automatisé qui configure l’intégration Active Directory sur un domaine existant. Une fois qu’un cluster Big Data est configuré avec l’intégration Active Directory, vous pouvez tirer parti des identités et des groupes d’utilisateurs existants pour un accès unifié sur tous les points de terminaison. En outre, une fois que vous avez créé des tables externes dans SQL Server, vous pouvez contrôler l’accès aux sources de données en accordant l’accès à des tables externes aux utilisateurs et groupes Active Directory, en centralisant ainsi les stratégies d’accès aux données à un emplacement unique.
 
-Cet article aborde les principaux concepts liés à la sécurité dans le cluster Big Data.
+## <a name="authentication"></a>Authentification
 
-## <a name="cluster-endpoints"></a>Points de terminaison de cluster
+Les points de terminaison de cluster externes prennent en charge l’authentification Active Directory. Cela signifie que vous pouvez utiliser votre identité AD pour vous authentifier auprès du cluster Big Data.
 
-Il existe trois points d’entrée au cluster Big Data :
+### <a name="cluster-endpoints"></a>Points de terminaison de cluster
 
-* Passerelle HDFS/Spark (Knox) : point de terminaison basé sur HTTPS. Il sert à traiter par proxy les autres points de terminaison. La passerelle HDFS/Spark est utilisée pour accéder à des services tels que webHDFS et Livy. Chaque fois que vous voyez des références à Knox, il s’agit du point de terminaison.
+Il existe cinq points d’entrée pour le cluster Big Data
 
-* Point de terminaison de contrôleur : service de gestion de cluster Big Data qui expose les API REST pour gérer le cluster. Certains outils sont également accessibles par le biais de ce point de terminaison.
+* Instance maître : point de terminaison TDS permettant d’accéder à l’instance maître SQL Server dans le cluster, à l’aide d’outils de base de données et d’applications comme SSMS ou Azure Data Studio. Lorsque vous utilisez des commandes HDFS ou SQL Server à partir d’azdata, l’outil se connecte aux autres points de terminaison, en fonction de l’opération.
 
-* Instance maître : point de terminaison TDS utilisé par les applications et outils de base de données pour se connecter à l’instance maître SQL Server dans le cluster.
+* Passerelle pour accéder aux fichiers HDFS, Spark (Knox) : il s’agit d’un point de terminaison basé sur HTTPS. Ce point de terminaison est utilisé pour accéder à des services tels que webHDFS et Spark.
+
+* Point de terminaison de service de gestion de cluster (contrôleur) : service de gestion de cluster Big Data qui expose les API REST pour gérer le cluster. L’outil azdata nécessite une connexion à ce point de terminaison.
+
+* Proxy de gestion : pour accéder au tableau de bord de recherche des journaux et au tableau de bord des métriques.
+
+* Proxy d’application : point de terminaison pour la gestion des applications déployées dans le cluster Big Data.
 
 ![Points de terminaison de cluster](media/concept-security/cluster_endpoints.png)
 
 Actuellement, il n’est pas possible d’ouvrir des ports supplémentaires pour accéder au cluster de l’extérieur.
 
-### <a name="how-endpoints-are-secured"></a>Mode de sécurisation des points de terminaison
+## <a name="authorization"></a>Autorisation
 
-La sécurisation des points de terminaison dans le cluster Big Data s’effectue à l’aide de mots de passe qui peuvent être définis/mis à jour à l’aide de variables d’environnement ou de commandes CLI. Tous les mots de passe internes du cluster sont stockés sous la forme de secrets Kubernetes.  
+Dans l’ensemble du cluster, la sécurité intégrée entre les différents composants permet de transmettre l’identité de l’utilisateur d’origine lors de l’émission de requêtes à partir de Spark et SQL Server jusqu’à HDFS. Comme indiqué ci-dessus, les différents points de terminaison de cluster externes prennent en charge l’authentification Active Directory.
 
-## <a name="authentication"></a>Authentication
+Il existe deux niveaux de contrôles d’autorisation dans le cluster pour la gestion de l’accès aux données. L’autorisation dans le contexte de Big Data s’effectue dans SQL Server, à l’aide des autorisations SQL Server traditionnelles sur les objets et dans HDFS avec des listes de contrôle (ACL), qui associent les identités des utilisateurs à des autorisations spécifiques.
 
-Lors du provisionnement du cluster, plusieurs connexions sont créées.
+Un cluster Big Data sécurisé implique une prise en charge uniforme et cohérente des scénarios d’authentification et d’autorisation, à la fois sur SQL Server et HDFS/Spark. L’authentification est le processus qui consiste à vérifier l’identité d’un utilisateur ou d’un service et à confirmer qu’il correspond bien à ce qu’il prétend être. L’autorisation fait référence à l’octroi ou au refus de l’accès à des ressources spécifiques en fonction de l’identité de l’utilisateur à l’origine de la demande. Cette étape est effectuée après l’identification d’un utilisateur au moyens du processus d’authentification.
 
-Certaines de ces connexions permettent aux services de communiquer entre eux, tandis que d’autres sont destinées aux utilisateurs finaux qui accèdent au cluster.
+L’autorisation dans le contexte du Big Data est généralement effectuée par le biais de listes de contrôle d’accès (ACL) qui associent des identités d’utilisateur à des autorisations spécifiques. HDFS prend en charge l’autorisation en limitant l’accès aux API de service, aux fichiers HDFS et à l’exécution de travaux.
 
-### <a name="end-user-authentication"></a>Authentification des utilisateurs finaux
-Lors du provisionnement du cluster, un certain nombre de mots de passe d’utilisateur final doivent être définis à l’aide de variables d’environnement. Ces mots de passe sont utilisés par les administrateurs SQL et les administrateurs de cluster pour accéder aux services :
+## <a name="encryption-and-other-security-mechanisms"></a>Chiffrement et autres mécanismes de sécurité
 
-Nom d’utilisateur du contrôleur :
- + CONTROLLER_USERNAME=<nom_utilisateur_contrôleur>
+Le chiffrement de la communication entre les clients et les points de terminaison externes, ainsi qu’entre les composants à l’intérieur du cluster, est sécurisé avec TLS/SSL, à l’aide de certificats.
 
-Mot de passe du contrôleur :  
- + CONTROLLER_PASSWORD=<mot_de_passe_contrôleur>
+Toutes les communications de SQL Server à SQL Server, telles que l’instance maître SQL communiquant avec un pool de données, sont sécurisées à l’aide de connexions SQL.
 
-Mot de passe d’administrateur système SQL Master : 
- + MSSQL_SA_PASSWORD=<controller_sa_password>
+## <a name="basic-administrator-login"></a>Connexion administrateur de base
 
-Mot de passe pour accéder au point de terminaison HDFS/Spark :
- + KNOX_PASSWORD=<knox_password>
+Vous pouvez choisir de déployer le cluster en mode Active Directory ou à l’aide d’une connexion administrateur de base uniquement. L’utilisation de la connexion administrateur de base seule n’est pas un mode de sécurité pris en charge par la production et est principalement destinée à l’évaluation du produit.
 
-### <a name="intra-cluster-authentication"></a>Authentification intra-cluster
+Même si vous choisissez le mode Active Directory, les connexions de base seront créées pour l’administrateur de cluster. Cela fournit une « porte dérobée » en cas de défaillance de la connectivité Active Directory.
 
-Lors du déploiement du cluster, plusieurs connexions SQL sont créées :
+Lors du déploiement, cette connexion de base se verra accorder des autorisations d’administrateur dans le cluster. Cela signifie que l’utilisateur sera administrateur système dans l’instance maître SQL Server et un administrateur dans le contrôleur de cluster.
+Les composants Hadoop ne prennent pas en charge l’authentification en mode mixte, ce qui signifie qu’il n’est pas possible d’utiliser une connexion administrateur de base pour l’authentification auprès de la passerelle (Knox).
 
-* Une connexion SQL spéciale est créée dans l’instance SQL du contrôleur qui est gérée par le système, avec le rôle sysadmin. Le mot de passe de cette connexion est capturé sous la forme d’un secret K8s.
 
-* Une connexion sysadmin est créée dans toutes les instances SQL du cluster détenues et gérées par ce contrôleur. Elle est nécessaire pour que le contrôleur puisse effectuer des tâches d’administration sur ces instances, comme l’installation ou la mise à niveau à haute disponibilité. Ces connexions sont également utilisées pour la communication intra-cluster entre les instances SQL (par exemple, l’instance SQL Master qui communique avec un pool de données).
+Il s’agit des informations d’identification de connexion que vous devez définir lors du déploiement.
+
+Nom d’utilisateur d’administrateur de cluster :
+ + `AZDATA_USERNAME=<username>`
+
+Mot de passe d’administrateur de cluster :  
+ + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> Dans la version actuelle, seule l’authentification de base est prise en charge. Le contrôle d’accès à granularité fine aux objets HDFS ainsi que les pools de calcul et de données d’un cluster Big Data SQL ne sont pas encore disponibles.
-
-## <a name="intra-cluster-communication"></a>Communication intra-cluster
-
-La communication avec des services non-SQL au sein du cluster Big Data, par exemple de Livy à Spark ou de Spark au pool de stockage, est sécurisée à l’aide de certificats. Toutes les communications de SQL Server à SQL Server sont sécurisées à l’aide de connexions SQL.
+> Notez que, en mode non-AD, la « racine » du nom d’utilisateur doit être utilisée conjointement avec le mot de passe ci-dessus, pour l’authentification auprès de la passerelle (Knox) pour l’accès à HDFS/Spark.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]le, consultez les ressources suivantes:
+Pour en savoir plus sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez les ressources suivantes :
 
-- [Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Atelier : Architecture [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
+- [Atelier : Architecture des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

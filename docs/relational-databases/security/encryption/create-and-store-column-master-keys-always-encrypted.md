@@ -1,24 +1,24 @@
 ---
-title: Créer et stocker des clés principales de colonne (Always Encrypted) | Microsoft Docs
+title: Créer et stocker des clés principales de colonne pour Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902962"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594434"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>Créer et stocker des clés principales de colonne (Always Encrypted)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Créer et stocker des clés principales de colonne pour Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dans Always Encrypted, les*clés principales de colonne* sont des clés de protection de clés servant à chiffrer les clés de chiffrement de colonne. Les clés principales de colonne doivent être stockées dans un magasin de clés approuvé, et les clés doivent être accessibles aux applications qui doivent chiffrer ou déchiffrer des données, ainsi qu’aux outils servant à la configuration d’Always Encrypted et à la gestion des clés Always Encrypted.
@@ -35,28 +35,20 @@ Il existe deux catégories principales de magasins de clés : les *magasins de c
 
 * **Magasins de clés locaux** : utilisables uniquement par les applications installées sur des ordinateurs sur lesquels se trouve un magasin de clés local. En d’autres termes, vous devez répliquer le magasin de clés et la clé pour chaque ordinateur qui exécute votre application. Le magasin de certificats Windows est un exemple de magasin de clés local. Lorsque vous utilisez un magasin de clés local, vous devez vérifier que le magasin de clés existe sur chaque ordinateur qui héberge votre application, et que l’ordinateur contient les clés principales de colonne dont votre application a besoin pour accéder aux données protégées à l’aide d’Always Encrypted. Lorsque vous mettez en service une clé principale de colonne pour la première fois, ou lorsque vous modifiez (permutez) la clé, vous devez vérifier que la clé est déployée sur tous les ordinateurs hébergeant vos applications.
 
-* **Magasins de clés centralisés** : diffusent des applications sur plusieurs ordinateurs. [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)est un exemple de magasin de clés centralisé. Un magasin de clés centralisé facilite généralement la gestion des clés, car vous n’avez pas besoin de maintenir plusieurs copies de vos clés principales de colonne sur plusieurs ordinateurs. Vous devez vérifier que vos applications sont configurées pour se connecter au magasin de clés centralisé.
+* **Magasins de clés centralisés** : diffusent des applications sur plusieurs ordinateurs. [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)est un exemple de magasin de clés centralisé. Un magasin de clés centralisé facilite généralement la gestion des clés, car vous n’avez pas besoin de maintenir plusieurs copies de vos clés principales de colonne sur plusieurs ordinateurs. Vérifiez que vos applications sont configurées pour se connecter au magasin de clés centralisé.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>Quels sont les magasins de clés pris en charge par les pilotes clients avec Always Encrypted ?
 
-Les pilotes clients avec Always Encrypted sont des pilotes clients SQL Server qui disposent d’une prise en charge intégrée permettant l’intégration d’Always Encrypted aux applications clientes. Les pilotes avec Always Encrypted comprennent certains fournisseurs intégrés pour les magasins de clés les plus courants. Notez que certains pilotes vous permettent également d’implémenter et d’inscrire un fournisseur de magasin de clés principales de colonne personnalisé, afin que vous puissiez utiliser n’importe quel magasin de clés, même s’il n’existe aucun fournisseur intégré pour celui-ci. Lorsque vous devez choisir entre un fournisseur intégré et un fournisseur personnalisé, gardez à l’esprit que l’utilisation d’un fournisseur intégré implique généralement moins de modifications pour vos applications (dans certains cas, seule la modification d’une chaîne de connexion de base de données est nécessaire).
+Les pilotes clients avec Always Encrypted sont des pilotes clients SQL Server qui disposent d’une prise en charge intégrée permettant l’intégration d’Always Encrypted aux applications clientes. Les pilotes avec Always Encrypted comprennent certains fournisseurs intégrés pour les magasins de clés les plus courants. Certains pilotes autorisent également l’implémentation et l’inscription d’un fournisseur de magasin de clés principales de colonne personnalisé pour vous permettre d’utiliser n’importe quel magasin de clés, même s’il ne correspond à aucun fournisseur intégré. Lorsque vous devez choisir entre un fournisseur intégré et un fournisseur personnalisé, gardez à l’esprit que l’utilisation d’un fournisseur intégré implique généralement moins de modifications pour vos applications (dans certains cas, seule la modification d’une chaîne de connexion de base de données est nécessaire).
 
-Les fournisseurs intégrés disponibles varient selon le pilote, la version du pilote et le système d’exploitation sélectionné.  Consultez la documentation relative à Always Encrypted pour votre pilote afin de connaître les magasins de clés pris en charge de manière autonome et afin de savoir si votre pilote prend en charge les fournisseurs de magasins de clés personnalisés.
+Les fournisseurs intégrés disponibles varient selon le pilote, la version du pilote et le système d’exploitation sélectionné.  Consultez la documentation Always Encrypted pour votre pilote afin de déterminer les magasins de clés pris en charge sans configuration et si votre pilote prend en charge les fournisseurs de magasins de clés personnalisés ([Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md)).
 
-- [Développer des applications à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>Outils pris en charge
-
-Vous pouvez utiliser [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) et le [module PowerShell SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) pour configurer Always Encrypted et les clés Always Encrypted. Pour obtenir la liste des magasins de clés pris en charge par ces outils, consultez les rubriques suivantes :
-
-- [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>Quels sont les magasins de clés pris en charge dans les outils SQL ?
+SQL Server Management Studio et le module SqlServer PowerShell prennent uniquement en charge les clés principales de colonne stockées dans Azure Key Vault, le magasin de certificats Windows et les magasins de clés qui fournissent l’API CNG (Cryptography Next Generation) ou CAPI (Cryptography API). 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>Génération de clés principales de colonne dans le magasin de certificats Windows    
 
-Une clé principale de colonne peut être un certificat stocké dans le magasin de certificats Windows. Notez qu’un pilote avec Always Encrypted ne vérifie pas les dates d’expiration et les chaînes d’autorité de certification. Un certificat est utilisé simplement comme une paire de clés comprenant une clé publique et une clé privée.
+Une clé principale de colonne peut être un certificat stocké dans le magasin de certificats Windows. Un pilote Always Encrypted ne vérifie pas les dates d’expiration ou les chaînes d’autorité de certification. Un certificat est utilisé simplement comme une paire de clés comprenant une clé publique et une clé privée.
 
 Pour être une clé principale de colonne valide, un certificat doit :
 * Être un certificat X.509.
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Créer un certificat auto-signé à l’aide de SQL Server Management Studio (SSMS)
 
-Pour plus d’informations, consultez [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md).
+Pour plus d’informations, consultez [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Pour obtenir un didacticiel pas à pas qui utilise SSMS et stocke les clés Always Encrypted dans le magasin de certificats Windows, consultez le [didacticiel de l’Assistant Always Encrypted (magasin de certificats Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
@@ -113,7 +105,7 @@ Pour accorder à un utilisateur une autorisation *en lecture* pour un certificat
 
 Azure Key Vault permet de protéger des secrets et des clés de chiffrement. Cet outil est très pratique pour le stockage des clés principales de colonne Always Encrypted, surtout si vos applications sont hébergées dans Azure. Pour créer une clé dans [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), vous devez disposer d’un [abonnement Azure](https://azure.microsoft.com/free/) et d’un coffre de clés Azure.
 
-#### <a name="using-powershell"></a>Utilisation de PowerShell
+### <a name="using-powershell"></a>Utilisation de PowerShell
 
 L’exemple suivant crée une clé et un coffre de clés Azure, puis accorde des autorisations à l’utilisateur de votre choix.
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+### <a name="using-sql-server-management-studio-ssms"></a>Utilisation de SQL Server Management Studio (SSMS)
 
+Pour plus d’informations sur la création d’une clé principale de colonne dans Azure Key Vault à l’aide de SSMS, consultez [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Pour obtenir un didacticiel pas à pas qui utilise SSMS et stocke les clés Always Encrypted dans Azure Key Vault, consultez le [didacticiel de l’Assistant Always Encrypted (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Mise à disposition des clés Azure Key Vault pour les applications et les utilisateurs
@@ -144,7 +137,7 @@ Pour mettre en service les clés de chiffrement de colonne qui sont protégées 
 
 #### <a name="using-powershell"></a>Utilisation de PowerShell
 
-Pour permettre aux utilisateurs et aux applications d’accéder aux clés d’Azure Key Vault, vous devez définir la stratégie d’accès au coffre ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)) :
+Pour permettre aux utilisateurs et aux applications d’accéder aux clés d’Azure Key Vault, vous devez définir la stratégie d’accès au coffre ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)) :
 
 ```
 $vaultName = "<vault name>"
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio
 
-Consultez [Provisioning Column Master using SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2)(Mise en service des clés principales de colonne à l’aide de SQL Server Management Studio (SSMS)).
-
+Consultez [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Mise à disposition des clés CNG pour les applications et les utilisateurs
 
@@ -206,7 +198,10 @@ Consultez la documentation relative au module de sécurité matériel et au four
 
 Vous pouvez stocker une clé principale de colonne Always Encrypted dans un magasin de clés qui implémente l’API Cryptography (CAPI). En général, ce type de magasin est un module de sécurité matériel, c’est-à-dire un périphérique physique qui protège et gère les clés numériques et fournit un traitement du chiffrement. Les modules de sécurité matériels se présentent généralement sous la forme d’une carte enfichable ou d’un périphérique externe qui se connecte directement à un ordinateur (modules de sécurité matériels locaux) ou à un serveur réseau.
 
-Pour rendre un module de sécurité matériel disponible pour les applications d’un ordinateur donné, un fournisseur de services de chiffrement (CSP) implémentant CAPI doit être installé et configuré sur l’ordinateur. Un pilote client avec Always Encrypted (fournisseur de clés principales de colonne intégré au pilote) utilise le CSP pour chiffrer et déchiffrer les clés de chiffrement de colonne, protégées par la clé principale de colonne stockée dans le magasin de clés. Remarque : CAPI est une API héritée obsolète. Si un fournisseur de stockage de clés est disponible pour votre module de sécurité matériel, vous devez l’utiliser plutôt que le fournisseur de services de chiffrement avec CAPI.
+Pour rendre un module de sécurité matériel disponible pour les applications d’un ordinateur donné, un fournisseur de services de chiffrement (CSP) implémentant CAPI doit être installé et configuré sur l’ordinateur. Un pilote client avec Always Encrypted (fournisseur de clés principales de colonne intégré au pilote) utilise le CSP pour chiffrer et déchiffrer les clés de chiffrement de colonne, protégées par la clé principale de colonne stockée dans le magasin de clés. 
+
+> [!NOTE]
+> CAPI est une API héritée obsolète. Si un fournisseur de stockage de clés est disponible pour votre module de sécurité matériel, vous devez l’utiliser plutôt que le fournisseur de services de chiffrement avec CAPI.
 
 Un fournisseur de services de chiffrement doit prendre en charge l’algorithme RSA à utiliser avec Always Encrypted.
 
@@ -220,25 +215,15 @@ Une clé principale de colonne doit être une clé asymétrique (paire de clés 
 Consultez la documentation de votre module de sécurité matériel.
 
 #### <a name="using-sql-server-management-studio-ssms"></a>Utilisation de SQL Server Management Studio (SSMS)
-Consultez la section « Mise en service des clés principales de colonne » dans la rubrique « Configurer Always Encrypted à l’aide de SQL Server Management Studio ».
+Consultez [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Mise à disposition des clés CNG pour les applications et les utilisateurs
-Consultez la documentation relative au module de sécurité matériel et au fournisseur de services de chiffrement pour savoir comment configurer le fournisseur de services de chiffrement sur un ordinateur et comment accorder aux applications et aux utilisateurs l’accès au module de sécurité matériel.
- 
+Consultez la documentation de votre module HSM et de votre fournisseur de services de chiffrement pour savoir comment configurer le fournisseur de services de chiffrement sur un ordinateur, et comment accorder aux applications et aux utilisateurs l’accès au module HSM.
  
 ## <a name="next-steps"></a>Next Steps  
+- [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Provisionner des clés Always Encrypted à l’aide de PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
-- [Configurer des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Permuter des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>Ressources supplémentaires  
-
-- [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Développer des applications à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Blog Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>Voir aussi 
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Vue d’ensemble de la gestion de clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

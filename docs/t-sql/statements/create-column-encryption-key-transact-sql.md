@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,25 +26,25 @@ helpviewer_keywords:
 - column encryption key
 - CREATE COLUMN ENCRYPTION KEY statement
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064573"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593904"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Crée une clé de chiffrement de colonne (CEK) avec l’ensemble initial de valeurs, chiffrées avec les clés principales de colonne (CMK) spécifiées. Ce chiffrement est une opération sur les métadonnées. Une clé CEK peut avoir jusqu’à deux valeurs, ce qui permet de permuter une clé CMK. Il est nécessaire de créer une clé CEK avant que la fonctionnalité [Always Encrypted &#40;Moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ne chiffre une colonne dans la base de données. Les clés CEK peuvent également être créées à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Avant de créer une clé CEK, vous devez définir une clé CMK à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou de l’instruction[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
+Crée un objet de métadonnées de clé de chiffrement de colonne pour [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Un objet de métadonnées de clé de chiffrement de colonne contient une ou deux valeurs chiffrées d’une clé de chiffrement de colonne qui est utilisée pour chiffrer les données dans une colonne. Chaque valeur est chiffrée à l’aide d’une clé principale de colonne. 
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY key_name   
 WITH VALUES  
   (  
@@ -64,25 +64,28 @@ WITH VALUES
 _key\_name_  
 Nom sous lequel la clé de chiffrement de colonne est connue dans la base de données.  
   
-_column\_master\_key\_name_ Spécifie le nom de la clé CMK personnalisée utilisée pour le chiffrement de la clé CEK.  
+_column\_master\_key\_name_ Spécifie le nom de la clé CMK personnalisée utilisée pour le chiffrement de la clé de chiffrement de colonne.  
   
 _algorithm\_name_  
 Nom de l’algorithme de chiffrement utilisé pour chiffrer la valeur de la clé de chiffrement de colonne. L’algorithme des fournisseurs de système doit être **RSA_OAEP**.  
   
 _varbinary\_literal_  
-Objet blob de la valeur de la clé CEK chiffrée.  
+BLOB de la valeur chiffrée de clé de chiffrement de colonne.  
   
 > [!WARNING]  
->  Ne passez jamais des valeurs de clé CEK en texte clair dans cette instruction. Cela compromet l’avantage de cette fonctionnalité.  
+>  Ne passez jamais de valeurs de clé de chiffrement de colonne en texte clair dans cette instruction. Cela compromet l’avantage de cette fonctionnalité.  
   
 ## <a name="remarks"></a>Notes  
-L’instruction CREATE COLUMN ENCRYPTION KEY doit inclure au moins une clause VALUES et peut en avoir jusqu’à deux. Si vous n’en spécifiez qu’une seule, vous pouvez utiliser l’instruction ALTER COLUMN ENCRYPTION KEY pour ajouter une seconde valeur ultérieurement. Vous pouvez également utiliser l’instruction ALTER COLUMN ENCRYPTION KEY pour supprimer une clause VALUES.  
+L’instruction `CREATE COLUMN ENCRYPTION KEY` doit inclure au moins une ou deux valeurs. Vous pouvez utiliser [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) pour ajouter une seconde valeur ultérieurement. Vous pouvez également utiliser l’instruction `ALTER COLUMN ENCRYPTION KEY` pour supprimer une valeur.  
   
-En général, une clé CEK est créée avec une seule valeur chiffrée. Parfois, vous devez faire pivoter une clé CMK. Remplacez la clé CMK actuelle par la nouvelle clé CMK. Lorsque vous avez besoin de faire pivoter la clé, ajoutez une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé CMK. Cette rotation vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé CMK, tandis que la nouvelle clé CMK est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale utilisera la valeur de la clé CMK chiffrée avec l’ancienne clé CMK pour accéder aux données sensibles.  
+En général, une clé de chiffrement de colonne est créée avec une seule valeur chiffrée. Dans certains cas, vous devez effectuer la rotation d’une clé principale de colonne pour remplacer la clé principale de colonne actuelle par la nouvelle clé principale de colonne. Quand vous devez effectuer la rotation de la clé, ajoutez une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé de chiffrement de colonne. Cette rotation vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé de chiffrement de colonne, tandis que la nouvelle clé principale de colonne est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale utilisera la valeur de la clé de chiffrement de colonne chiffrée avec l’ancienne clé principale de colonne pour accéder aux données sensibles.  
+
   
 Les algorithmes de chiffrement pris en charge par Always Encrypted exigent que la valeur de texte en clair comporte 256 bits.  
   
-Une valeur chiffrée doit être générée à l’aide d’un fournisseur de magasin de clés qui encapsule le magasin de clés contenant la clé CMK. Pour plus d’informations, consultez [Always Encrypted &#40;développement client&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
+Nous vous recommandons d’utiliser des outils, tels que SQL Server Management Studio (SSMS) ou PowerShell, pour gérer les clés de chiffrement de colonne. Ces outils génèrent des valeurs chiffrées et émettent automatiquement des instructions `CREATE COLUMN ENCRYPTION KEY` pour créer un objet de métadonnées de clé de chiffrement de colonne. Consultez [Provisionner des clés Always Encrypted avec SQL Server Management Studio](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) et [Provisionner des clés Always Encrypted avec PowerShell](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md). 
+
+Vous pouvez aussi générer programmatiquement une valeur de clé de chiffrement de colonne en utilisant un fournisseur de magasin de clés qui encapsule le magasin de clés détenant la clé principale de colonne. Pour plus d’informations, consultez [Développer des applications avec Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md).
   
 Pour afficher les informations sur les clés de chiffrement de colonne, utilisez [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) et [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
   
@@ -129,9 +132,12 @@ GO
 [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
 [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
-[Always Encrypted &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+[Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+[Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

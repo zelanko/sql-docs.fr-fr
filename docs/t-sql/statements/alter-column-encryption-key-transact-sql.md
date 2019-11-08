@@ -1,7 +1,7 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065937"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594391"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Modifie une clé de chiffrement de colonne dans une base de données, en ajoutant ou en supprimant une valeur chiffrée. Une clé CEK peut avoir jusqu’à deux valeurs, ce qui permet de permuter la clé principale de colonne correspondante. Une clé CEK est utilisée lors du chiffrement des colonnes à l’aide de la fonctionnalité [Always Encrypted &#40;moteur de base de données&#41; ](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Avant d’ajouter une valeur de clé CEK, vous devez définir la clé principale de colonne qui a été utilisée pour chiffrer la valeur à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de l’instruction [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
+  Modifie une clé de chiffrement de colonne dans une base de données, en ajoutant ou en supprimant une valeur chiffrée. Une clé de chiffrement de colonne peut avoir jusqu’à deux valeurs, ce qui permet de permuter la clé principale de colonne correspondante. Une clé de chiffrement de colonne est utilisée lors du chiffrement des colonnes avec [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Avant d’ajouter une valeur de clé de chiffrement de colonne, vous devez définir la clé principale de colonne qui a été utilisée pour chiffrer la valeur à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de l’instruction [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY key_name   
     [ ADD | DROP ] VALUE   
     (  
@@ -62,13 +62,16 @@ ALTER COLUMN ENCRYPTION KEY key_name
 >  Ne passez jamais des valeurs de clé CEK en texte clair dans cette instruction. Cela compromet l’avantage de cette fonctionnalité.  
   
 ## <a name="remarks"></a>Notes  
- En général, une clé de chiffrement de colonne est créée avec une seule valeur chiffrée. Quand une clé principale de colonne doit être permutée (c’est-à-dire quand la clé principale de colonne actuelle doit être remplacée par la nouvelle clé principale de colonne), vous pouvez ajouter une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé principale de colonne. Ce workflow vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé de chiffrement de colonne, tandis que la nouvelle clé principale de colonne est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale peut utiliser la valeur de la clé de chiffrement de colonne chiffrée avec l’ancienne clé principale de colonne pour accéder aux données sensibles. Les algorithmes de chiffrement pris en charge par Always Encrypted exigent que la valeur de texte en clair comporte 256 bits. Une valeur chiffrée doit être générée à l’aide d’un fournisseur de magasin de clés qui encapsule le magasin de clés contenant la clé principale de colonne.  
+En général, une clé de chiffrement de colonne est créée avec une seule valeur chiffrée. Quand une clé principale de colonne doit être permutée (c’est-à-dire quand la clé principale de colonne actuelle doit être remplacée par la nouvelle clé principale de colonne), vous pouvez ajouter une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé principale de colonne. Ce workflow vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé de chiffrement de colonne, tandis que la nouvelle clé principale de colonne est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale peut utiliser la valeur de la clé de chiffrement de colonne chiffrée avec l’ancienne clé principale de colonne pour accéder aux données sensibles. Les algorithmes de chiffrement pris en charge par Always Encrypted exigent que la valeur de texte en clair comporte 256 bits. 
+ 
+Nous vous recommandons d’utiliser des outils, tels que SQL Server Management Studio (SSMS) ou PowerShell, pour la rotation des clés principales de colonne. Consultez [Effectuer la rotation de clés Always Encrypted avec SQL Server Management Studio](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) et [Effectuer la rotation de clés Always Encrypted avec PowerShell](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md).
+
+Une valeur chiffrée doit être générée à l’aide d’un fournisseur de magasin de clés qui encapsule le magasin de clés contenant la clé principale de colonne.  
 
  Les clés principales de colonne sont permutées pour les raisons suivantes :
 - Les réglementations de conformité peuvent exiger que les clés soient permutées régulièrement.
 - Une clé principale de colonne est compromise et doit être permutée pour des raisons de sécurité.
-- Pour activer ou désactiver le partage de clés de chiffrement de colonne avec une enclave sécurisée côté serveur. Par exemple, si votre clé principale de colonne actuelle ne prend pas en charge les calculs d’enclave (n’a pas été définie avec la propriété ENCLAVE_COMPUTATIONS) et que vous souhaitez activer les calculs d’enclave sur les colonnes protégées avec une clé de chiffrement de colonne que chiffre votre clé principale de colonne, vous devez remplacer la clé principale de colonne par la nouvelle clé avec la propriété ENCLAVE_COMPUTATIONS. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-
+- Pour activer ou désactiver le partage de clés de chiffrement de colonne avec une enclave sécurisée côté serveur. Par exemple, si votre clé principale de colonne actuelle ne prend pas en charge les calculs d’enclave (n’a pas été définie avec la propriété ENCLAVE_COMPUTATIONS) et que vous souhaitez activer les calculs d’enclave sur les colonnes protégées avec une clé de chiffrement de colonne que chiffre votre clé principale de colonne, vous devez remplacer la clé principale de colonne par la nouvelle clé avec la propriété ENCLAVE_COMPUTATIONS. [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) et [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md).
 
 Pour afficher des informations sur les clés de chiffrement de colonne, utilisez [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) et [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
   
@@ -80,7 +83,7 @@ Pour afficher des informations sur les clés de chiffrement de colonne, utilisez
 ### <a name="a-adding-a-column-encryption-key-value"></a>A. Ajout d’une valeur de clé de chiffrement de colonne  
  L’exemple suivant modifie une clé de chiffrement de colonne nommée `MyCEK`.  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 ADD VALUE  
 (  
@@ -95,7 +98,7 @@ GO
 ### <a name="b-dropping-a-column-encryption-key-value"></a>B. Suppression d’une valeur de clé de chiffrement de colonne  
  L’exemple suivant modifie une clé de chiffrement de colonne nommée `MyCEK` en supprimant une valeur.  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 DROP VALUE  
 (  
@@ -112,5 +115,8 @@ GO
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

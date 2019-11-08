@@ -3,17 +3,17 @@ title: Configurer des référentiels Linux pour SQL Server 2017 et 2019
 description: Vérifiez et configurez les référentiels source pour SQL Server 2019 et SQL Server 2017 sur Linux. Le référentiel source affecte la version de SQL Server appliquée lors de l’installation et de la mise à niveau.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/11/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967520"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531331"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer les référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
@@ -32,24 +32,25 @@ Cet article explique comment configurer le référentiel approprié pour les ins
 ::: zone-end
 
 > [!TIP]
-> La préversion de SQL Server 2019 est maintenant disponible ! Pour l’essayer, utilisez cet article pour configurer le nouveau référentiel **mssql-server-preview**. Ensuite, installez à l’aide des instructions du [guide d’installation](sql-server-linux-setup.md).
+> SQL Server 2019 est maintenant disponible ! Si vous souhaitez l’essayer, lisez cet article pour configurer le nouveau référentiel **mssql-server-2019**. Ensuite, installez à l’aide des instructions du [guide d’installation](sql-server-linux-setup.md).
 
 ## Référentiels <a id="repositories"></a>
 
-Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package du moteur de base de données, **mssql-server**, et les packages SQL Server associés. Il existe actuellement trois référentiels principaux :
+Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package du moteur de base de données, **mssql-server**, et les packages SQL Server associés. Il existe actuellement cinq référentiels principaux :
 
-| Référentiel | Créer une vue d’abonnement | Description |
+| Référentiel | Nom | Description |
 |---|---|---|
-| **Préversion (2017)** | **mssql-server** | SQL Server 2017 CTP et le référentiel RC (qui n’est plus disponible). |
-| **Préversion (2019)** | **mssql-server-preview** | SQL Server 2019 (préversion) et le référentiel RC. |
-| **CU** | **mssql-server-2017** | Référentiel SQL Server 2017 mise à jour cumulative (CU). |
-| **GDR** | **mssql-server-2017-gdr** | Référentiel SQL Server 2017 GDR pour les mises à jour critiques uniquement. |
+| **2019** | **mssql-server-2019** | Référentiel contenant la mise à jour cumulative de SQL Server 2019. |
+| **2019 GDR** | **mssql-server-2019-gdr** | Référentiel SQL Server 2019 GDR pour les mises à jour critiques uniquement. |
+| **2019 Preview** | **mssql-server-preview** | Référentiel contenant la préversion et la version Release Candidate de SQL Server 2019. |
+| **2017** | **mssql-server-2017** | Référentiel SQL Server 2017 mise à jour cumulative (CU). |
+| **2017 GDR** | **mssql-server-2017-gdr** | Référentiel SQL Server 2017 GDR pour les mises à jour critiques uniquement. |
 
 ## <a id="cuversusgdr"></a> Mise à jour cumulative et GDR
 
 Il est important de noter qu’il existe deux principaux types de référentiels pour chaque distribution :
 
-- **Mises à jour cumulatives (CU)** : Le référentiel de mise à jour cumulative (CU) contient des packages pour la version de base de SQL Server et des correctifs de bogues ou des améliorations à partir de cette version. Les mises à jour cumulatives sont spécifiques à une version, par exemple SQL Server 2017. Elles sont publiées à un rythme régulier.
+- **Mises à jour cumulatives (CU)** : Le référentiel de mise à jour cumulative (CU) contient des packages pour la version de base de SQL Server et des correctifs de bogues ou des améliorations à partir de cette version. Les mises à jour cumulatives sont spécifiques à une version, par exemple SQL Server 2019. Elles sont publiées à un rythme régulier.
 
 - **GDR** : Le référentiel GDR contient des packages pour la version de base de SQL Server et uniquement les correctifs et mises à jour de sécurité critiques depuis cette version. Ces mises à jour sont également ajoutées à la version CU suivante.
 
@@ -144,10 +145,11 @@ Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes s
 
 | Référentiel | Commande à supprimer |
 |---|---|
-| **Préversion (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 | **Préversion (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+| **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
+| **2019 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019-gdr'`|
+| **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **2017 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ::: zone-end
 
@@ -157,10 +159,11 @@ Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes s
 
 | Référentiel | Commande à supprimer |
 |---|---|
-| **Préversion (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 | **Préversion (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-| **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+| **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 ::: zone-end
 
@@ -172,9 +175,10 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 
 | Référentiel | Options de version | Command |
 |---|---|---|
-| **Préversion (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -184,9 +188,10 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 
 | Référentiel | Options de version | Command |
 |---|---|---|
-| **Préversion (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -204,9 +209,10 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 
    | Référentiel | Options de version | Command |
    |---|---|---|
-   | **Préversion (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
-   | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. Exécutez **apt-get update**.
 

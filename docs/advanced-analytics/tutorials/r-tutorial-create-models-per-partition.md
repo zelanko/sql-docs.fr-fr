@@ -1,53 +1,53 @@
 ---
-title: Didacticiel sur la création, la formation et l’évaluation des modèles basés sur des partitions dans R
-description: Apprenez à modéliser, à former et à utiliser les données partitionnées créées dynamiquement lors de l’utilisation des fonctionnalités de modélisation basées sur les partitions de SQL Server Machine Learning.
+title: Tutoriel sur la création, l’entraînement et le scoring des modèles basés sur des partitions en R
+description: Apprenez à modéliser, à entraîner et à utiliser les données partitionnées créées dynamiquement lors de l’utilisation des fonctionnalités de modélisation basées sur les partitions de SQL Server Machine Learning.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 11/04/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.openlocfilehash: 1f73f45d2ac9830fed810746a5895554cded0691
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952023"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532577"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutoriel : Créer des modèles basés sur des partitions dans R sur SQL Server
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutoriel : Créer des modèles basés sur des partitions en R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans SQL Server 2019, la modélisation basée sur les partitions est la possibilité de créer et d’effectuer l’apprentissage de modèles sur des données partitionnées. Pour les données stratifiées qui se segmentent naturellement dans un schéma de classification donné, telles que les régions géographiques, la date et l’heure, l’âge ou le sexe, vous pouvez exécuter un script sur l’ensemble du jeu de données, avec la possibilité de modéliser, de former et de noter les partitions qui restent intactes. sur toutes ces opérations. 
+Dans SQL Server 2019, la modélisation basée sur les partitions est la possibilité de créer et d’entraîner des modèles sur des données partitionnées. Pour les données stratifiées qui se segmentent naturellement dans un schéma de classification donné, telles que les régions géographiques, la date et l’heure, l’âge ou le sexe, vous pouvez exécuter un script sur l’ensemble du jeu de données, avec la possibilité de modéliser, d’entraîner et de noter les partitions qui restent intactes sur toutes ces opérations. 
 
-La modélisation basée sur les partitions est activée via deux nouveaux paramètres sur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+La modélisation basée sur les partitions est activée via deux nouveaux paramètres sur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) :
 
-+ **input_data_1_partition_by_columns**, qui spécifie une colonne de partition.
-+ **input_data_1_order_by_columns** spécifie les colonnes à trier. 
++ **input_data_1_partition_by_columns**, qui indique par quelle colonne partitionner.
++ **input_data_1_order_by_columns**, qui indique par quelles colonnes trier. 
 
-Dans ce didacticiel, Découvrez la modélisation basée sur les partitions à l’aide des exemples de données de taxi de New York classiques et du script R. La colonne de partition est le mode de paiement.
+Dans ce tutoriel, découvrez la modélisation basée sur les partitions avec l’exemple de données NYC Taxi classique et le script R. La colonne de partition est le mode de paiement.
 
 > [!div class="checklist"]
 > * Les partitions sont basées sur les types de paiement (5).
-> * Créez et exercez des modèles sur chaque partition et stockez les objets dans la base de données.
-> * Prédire la probabilité des résultats des pourboires sur chaque modèle de partition, à l’aide d’exemples de données réservés à cet effet.
+> * Créez et entraînez des modèles sur chaque partition et stockez les objets dans la base de données.
+> * Prédisez la probabilité des résultats des pourboires sur chaque modèle de partition à l’aide d’exemples de données réservés à cet effet.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
  
-Pour suivre ce didacticiel, vous devez disposer des éléments suivants:
+Pour suivre ce tutoriel, vous devez disposer des éléments suivants :
 
-+ Ressources système suffisantes. Le jeu de données est volumineux et les opérations de formation nécessitent beaucoup de ressources. Si possible, utilisez un système doté d’au moins 8 Go de RAM. Vous pouvez également utiliser des jeux de données plus petits pour contourner les contraintes de ressources. Les instructions pour réduire le jeu de données sont Inline. 
++ Ressources système suffisantes. Le jeu de données est volumineux et les entraînements nécessitent beaucoup de ressources. Si possible, utilisez un système doté d’au moins 8 Go de RAM. Vous pouvez également utiliser des jeux de données plus petits pour contourner les contraintes de ressources. Les instructions pour réduire le jeu de données sont inline. 
 
-+ Outil pour l’exécution de requêtes T-SQL, comme [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
++ Outil pour l’exécution de requêtes T-SQL, par exemple [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-+ [NYCTaxi_Sample. bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), que vous pouvez [Télécharger et restaurer](demo-data-nyctaxi-in-sql.md) sur votre instance du moteur de base de données locale. La taille du fichier est d’environ 90 Mo.
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), que vous pouvez [télécharger et restaurer](demo-data-nyctaxi-in-sql.md) sur votre instance du moteur de base de données locale. La taille du fichier est d’environ 90 Mo.
 
-+ SQL Server instance du moteur de base de données 2019 en version préliminaire, avec Machine Learning Services et l’intégration de R.
++ Instance du moteur de base de données SQL Server 2019 en préversion, avec intégration de Machine Learning Services et R.
 
-Vérifiez la version en exécutant **`SELECT @@Version`** en tant que requête T-SQL dans un outil de requête. La sortie doit être «Microsoft SQL Server 2019 (CTP 2,4)-15. x».
+Vérifiez la version en exécutant **`SELECT @@Version`** en tant que requête T-SQL dans un outil de requête.
 
-Vérifiez la disponibilité des packages R en retournant une liste bien mise en forme de tous les packages R actuellement installés avec votre instance du moteur de base de données:
+Vérifiez la disponibilité des packages R en retournant une liste correctement mise en forme de tous les packages R actuellement installés avec votre instance du moteur de base de données :
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -61,15 +61,15 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-## <a name="connect-to-the-database"></a>Connexion à la base de données
+## <a name="connect-to-the-database"></a>Se connecter à la base de données
 
-Démarrez Management Studio et connectez-vous à l’instance du moteur de base de données. Dans l’Explorateur d’objets, vérifiez que la [base de données NYCTaxi_Sample](demo-data-nyctaxi-in-sql.md) existe. 
+Démarrez Management Studio et connectez-vous à l’instance du moteur de base de données. Dans l’Explorateur d’objets, vérifiez la présence de la base de données [NYCTaxi_Sample](demo-data-nyctaxi-in-sql.md). 
 
 ## <a name="create-calculatedistance"></a>Créer CalculateDistance
 
-La base de données de démonstration est fournie avec une fonction scalaire pour le calcul de la distance, mais notre procédure stockée fonctionne mieux avec une fonction table. Exécutez le script suivant pour créer la fonction **CalculateDistance** utilisée dans l' [étape d’apprentissage](#training-step) plus tard.
+La base de données de démonstration est fournie avec une fonction scalaire pour le calcul de la distance, mais notre procédure stockée fonctionne mieux avec une fonction table. Exécutez le script suivant pour créer la fonction **CalculateDistance** utilisée plus tard dans l’[étape d’entraînement](#training-step).
 
-Pour confirmer la création de la fonction, vérifiez les fonctions \Programmability\Functions\Table-valued sous la base de données **NYCTaxi_Sample** dans l’Explorateur d’objets.
+Pour confirmer la création de la fonction, vérifiez \Programmability\Functions\Table-valued Functions sous la base de données **NYCTaxi_Sample** dans l’Explorateur d’objets.
 
 ```sql
 USE NYCTaxi_sample
@@ -99,15 +99,15 @@ FROM (
 GO
  ```
 
-## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>Définir une procédure pour créer et former des modèles par partition
+## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>Définir une procédure pour créer et entraîner des modèles par partition
 
-Ce didacticiel inclut le script R dans une procédure stockée. Dans cette étape, vous allez créer une procédure stockée qui utilise R pour créer un jeu de données d’entrée, créer un modèle de classification pour prédire les résultats des pourboires, puis stocke le modèle dans la base de données.
+Ce tutoriel inclut le script R dans une procédure stockée. Dans cette étape, vous allez créer une procédure stockée qui utilise R pour créer un jeu de données d’entrée, générer un modèle de classification pour prédire les résultats des pourboires, puis stocker le modèle dans la base de données.
 
-Parmi les entrées de paramètre utilisées par ce script, vous verrez **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**. Rappelez-vous que ces paramètres sont le mécanisme par lequel la modélisation partitionnée se produit. Les paramètres sont passés comme entrées à [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) pour traiter les partitions avec le script externe qui s’exécute une fois pour chaque partition. 
+Parmi les entrées de paramètre utilisées par ce script, vous verrez **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**. Rappelez-vous que ces paramètres constituent le mécanisme par lequel la modélisation partitionnée se produit. Les paramètres sont passés comme entrées à [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) pour traiter les partitions avec le script externe qui s’exécute une fois pour chaque partition. 
 
-Pour cette procédure stockée, [Utilisez le parallélisme](#parallel) pour accélérer l’exécution.
+Pour cette procédure stockée, [utilisez le parallélisme](#parallel) afin d’accélérer l’exécution.
 
-Après avoir exécuté ce script, vous devriez voir **train_rxLogIt_per_partition** dans les procédures \Programmability\Stored sous la base de données **NYCTaxi_Sample** dans l’Explorateur d’objets. Vous devez également voir une nouvelle table utilisée pour le stockage des modèles : **dbo. nyctaxi_models**.
+Après avoir exécuté ce script, vous devriez voir **train_rxLogIt_per_partition** dans \Programmability\Stored Procedures sous la base de données **NYCTaxi_Sample** dans l’Explorateur d’objets. Vous devez également voir une nouvelle table utilisée pour le stockage des modèles : **dbo.nyctaxi_models**.
 
 ```sql
 USE NYCTaxi_Sample
@@ -165,20 +165,20 @@ GO
 
 <a name="parallel"></a>
 
-### <a name="parallel-execution"></a>Exécution en parallèle
+### <a name="parallel-execution"></a>Exécution parallèle
 
-Notez que les entrées [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) incluent `@parallel=1`, utilisées pour activer le traitement parallèle. Contrairement aux versions précédentes, dans SQL Server 2019, la définition de `@parallel=1` offre une indication plus forte à l’optimiseur de requête, ce qui rend l’exécution parallèle un résultat bien plus probable.
+Notez que les entrées [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) incluent `@parallel=1`, utilisé pour activer le traitement parallèle. Contrairement aux versions précédentes, le paramétrage de `@parallel=1` dans SQL Server 2019 offre une meilleure indication à l’optimiseur de requête, ce qui fait de l’exécution parallèle un résultat bien plus probable.
 
-Par défaut, l’optimiseur de requête a tendance à fonctionner sous `@parallel=1` sur les tables contenant plus de 256 lignes, mais si vous pouvez le gérer explicitement en définissant `@parallel=1` comme indiqué dans ce script.
+Par défaut, l’optimiseur de requête a tendance à fonctionner sous `@parallel=1` sur des tables contenant plus de 256 lignes, mais si vous pouvez le gérer explicitement en définissant `@parallel=1` comme indiqué dans ce script.
 
 > [!Tip]
-> Pour la formation workoads, vous pouvez utiliser `@parallel` avec n’importe quel script d’apprentissage arbitraire, même ceux qui utilisent des algorithmes non-Microsoft-RX. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe RX) offrent un parallélisme dans les scénarios d’apprentissage dans SQL Server. Toutefois, avec le nouveau paramètre, vous pouvez paralléliser un script qui appelle des fonctions, y compris des fonctions R Open source, qui ne sont pas spécifiquement conçues avec cette fonctionnalité. Cela fonctionne parce que les partitions ont une affinité avec des threads spécifiques, de sorte que toutes les opérations appelées dans un script s’exécutent sur une base par partition, sur le port @ no__t-0<a name="training-step"></a>
+> Pour les charges de travail d’entraînement, vous pouvez utiliser `@parallel` avec n’importe quel script d’entraînement arbitraire, même ceux qui utilisent des algorithmes non-Microsoft-rx. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe rx) offrent un parallélisme dans les scénarios d’entraînement dans SQL Server. Toutefois, avec le nouveau paramètre, vous pouvez paralléliser un script qui appelle des fonctions, dont des fonctions R open source, qui ne sont pas spécifiquement conçues avec cette fonctionnalité. Cela fonctionne parce que les partitions ont une affinité sur des threads spécifiques, de sorte que toutes les opérations appelées dans un script s’exécutent pour chaque partition, sur le `thread.`<a name="training-step"></a> donné
 
-## <a name="run-the-procedure-and-train-the-model"></a>Exécuter la procédure et effectuer l’apprentissage du modèle
+## <a name="run-the-procedure-and-train-the-model"></a>Exécuter la procédure et entraîner le modèle
 
-Dans cette section, le script effectue l’apprentissage du modèle que vous avez créé et enregistré à l’étape précédente. Les exemples ci-dessous illustrent deux approches pour l’apprentissage de votre modèle: l’utilisation d’un jeu de données entier ou d’une donnée partielle. 
+Dans cette section, le script entraîne le modèle que vous avez créé et enregistré à l’étape précédente. Les exemples ci-dessous illustrent deux approches pour l’entraînement de votre modèle : l’utilisation d’un jeu de données entier ou de données partielles. 
 
-Attendez-vous à ce que cette étape prenne un certain temps. La formation est gourmande en ressources de calcul et prend beaucoup de minutes. Si les ressources système, en particulier la mémoire, sont insuffisantes pour la charge, utilisez un sous-ensemble des données. Le deuxième exemple fournit la syntaxe.
+Attendez-vous à ce que cette étape prenne un certain temps. L’entraînement est gourmand en ressources de calcul et prend beaucoup de minutes. Si les ressources système, en particulier la mémoire, sont insuffisantes pour la charge, utilisez un sous-ensemble des données. Le deuxième exemple fournit la syntaxe.
 
 ```sql
 --Example 1: train on entire dataset
@@ -200,11 +200,11 @@ GO
 ```
 
 > [!NOTE]
-> Si vous exécutez d’autres charges de travail, vous pouvez `OPTION(MAXDOP 2)` ajouter à l’instruction SELECT si vous souhaitez limiter le traitement des requêtes à seulement 2 cœurs.
+> Si vous exécutez d’autres charges de travail, vous pouvez ajouter `OPTION(MAXDOP 2)` à l’instruction SELECT si vous souhaitez limiter le traitement des requêtes à seulement 2 cœurs.
 
 ## <a name="check-results"></a>Vérifier les résultats
 
-Le résultat de la table Models doit être de cinq modèles différents, basés sur cinq partitions segmentées par les cinq types de paiement. Les modèles se trouvent dans la source de données **ml_models** .
+Le résultat de la table models doit afficher cinq modèles différents, basés sur cinq partitions segmentées par les cinq types de paiement. Les modèles se trouvent dans la source de données **ml_models**.
 
 ```sql
 SELECT *
@@ -213,9 +213,9 @@ FROM ml_models
  
 ## <a name="define-a-procedure-for-predicting-outcomes"></a>Définir une procédure pour prédire les résultats
 
-Vous pouvez utiliser les mêmes paramètres pour le calcul de score. L’exemple suivant contient un script R qui est évalué à l’aide du modèle correct pour la partition qu’il traite actuellement.
+Vous pouvez utiliser les mêmes paramètres pour le scoring. L’exemple suivant contient un script R qui procède à l’évaluation à l’aide du modèle correct pour la partition qu’il traite actuellement.
 
-Comme précédemment, créez une procédure stockée pour encapsuler votre code R.
+Comme précédemment, créez une procédure stockée pour inclure votre code R.
 
 ```sql
 USE NYCTaxi_Sample
@@ -334,26 +334,8 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, vous avez utilisé [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) pour itérer des opérations sur des données partitionnées. Pour examiner de plus près l’appel de scripts externes dans des procédures stockées et l’utilisation de fonctions RevoScaleR, passez au didacticiel suivant.
+Dans ce tutoriel, vous avez utilisé [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) pour itérer des opérations sur des données partitionnées. Pour examiner de plus près l’appel de scripts externes dans des procédures stockées et l’utilisation de fonctions RevoScaleR, passez au tutoriel suivant.
 
 > [!div class="nextstepaction"]
-> [procédure pas à pas pour R et SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
+> [Procédure pas à pas pour R et SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
-<!--
-## Old intro
-
-**(Not for production workloads)**
-
-One of the more common approaches for executing R or Python code on SQL data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. In this CTP release, SQL Server 2019 adds new parameters to `sp_execute_external_script` to process partitions with the external script executing once for every partition:
-
-| Parameter | Usage |
-|-----------|-------|
-| **input_data_1_partition_by_columns** | Specifies which columns to partition by. |
-| **input_data_1_order_by_columns** | Specifies which columns to order by.  |
-
-Partitions are an organizational mechanism for stratified data that naturally segments into a given classification scheme. Common examples include partitioning by geographic region, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you might want to execute script over the entire data set, with the ability to model, train, and score partitions that remain intact over all these operations. Calling `sp_execute_external_script` with the new parameters allows you to do just that.
-
-You can run this operation in parallel by combining `partition_by` with `@parallel`. If the input query can be parallelized, set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows.
-
-When the scenario is training, one advantage is that any arbitrary training script, even those using non-Microsoft-rx algorithms, can be parallelized by also using the @parallel parameter. Typically, you would have to use RevoScaleR algorithms (with the rx prefix) to obtain parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
--->

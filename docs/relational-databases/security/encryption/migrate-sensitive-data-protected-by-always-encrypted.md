@@ -1,5 +1,5 @@
 ---
-title: Migrer des données sensibles protégées par Always Encrypted | Microsoft Docs
+title: Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2015
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff72a94df79c6f8fe7b8bb37caeb57587e44b034
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111672"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594168"
 ---
-# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrer des données sensibles protégées par Always Encrypted
+# <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Pour charger des données chiffrées sans effectuer de contrôle des métadonnées sur le serveur pendant les opérations de copie en bloc, créez l’utilisateur avec l’option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Cette option est destinée à être utilisée par les outils hérités à partir de versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (par exemple, bcp.exe) ou à l’aide de flux de travail ETL (Extract-Transform-Load) tiers qui ne peuvent pas utiliser Always Encrypted. Cela permet à un utilisateur de déplacer des données en toute sécurité d’un ensemble de tables contenant des colonnes chiffrées vers un autre ensemble de tables avec des colonnes chiffrées (dans la même base de données ou dans une autre).  
+Pour charger des données chiffrées sans effectuer de contrôle des métadonnées sur le serveur pendant les opérations de copie en bloc, créez l’utilisateur avec l’option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Cette option doit être utilisée par les outils hérités ou les flux de travail ETL (Extract-Transform-Load) tiers qui ne peuvent pas utiliser Always Encrypted. Cela permet à un utilisateur de déplacer des données en toute sécurité d’un ensemble de tables contenant des colonnes chiffrées vers un autre ensemble de tables avec des colonnes chiffrées (dans la même base de données ou dans une autre).  
 
- ## <a name="the-allowencryptedvaluemodifications-option"></a>L’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
+ ## <a name="the-allow_encrypted_value_modifications-option"></a>L’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
  [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) et [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) comprennent l’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Si cette option est définie sur ON (la valeur par défaut est OFF), elle supprime les contrôles des métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc, ce qui permet à l’utilisateur de copier en bloc des données chiffrées entre des tables ou des bases de données, sans déchiffrage des données.  
   
 ## <a name="data-migration-scenarios"></a>Scénarios de migration de données  
@@ -42,7 +42,7 @@ Procédez comme suit pour charger des données chiffrées.
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
    ```  
 
-2.  Exécutez votre application de copie en bloc ou l’outil de connexion avec l’identité de cet utilisateur. (Si votre application utilise un pilote client compatible avec Always Encrypted, assurez-vous que la chaîne de connexion pour la source de données ne contient pas **column encryption setting=enabled** (paramètre de chiffrement de colonne = activé) de sorte que les données récupérées à partir des colonnes chiffrées restent chiffrées. Pour plus d’informations, consultez [Always Encrypted &#40;développement client&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md).  
+2.  Exécutez votre application de copie en bloc ou l’outil de connexion avec l’identité de cet utilisateur. (Si votre application utilise un pilote client compatible avec Always Encrypted, assurez-vous que la chaîne de connexion pour la source de données ne contient pas **column encryption setting=enabled** (paramètre de chiffrement de colonne = activé) de sorte que les données récupérées à partir des colonnes chiffrées restent chiffrées. Pour plus d’informations, consultez [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md).  
   
 3.  Redéfinissez l’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS sur OFF. Par exemple :  
 
@@ -69,11 +69,15 @@ Utilisez les comptes d’utilisateur désignés pour les charges de travail de l
  
 Pour des applications ou des outils de copie en bloc à exécution courte qui doivent déplacer des données chiffrées sans déchiffrage, définissez l’option ON immédiatement avant d’exécuter l’application, et redésactivez-la (OFF) immédiatement après l’exécution de l’opération.  
  
-N’utilisez pas cette option pour développer de nouvelles applications. Utilisez plutôt un pilote client (comme ADO 4.6.1) qui offre une API permettant de supprimer les contrôles de métadonnées de chiffrement pour une seule session.  
+N’utilisez pas cette option pour développer de nouvelles applications. Utilisez plutôt un pilote client qui fournit une API afin de supprimer les vérifications des métadonnées de chiffrement pour une seule session, par exemple, l’option AllowEncryptedValueModifications dans le fournisseur de données .NET Framework pour SQL Server. Consultez [Copie de données chiffrées à l’aide de SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
+
+## <a name="next-steps"></a>Next Steps
+- [Interroger les colonnes à l’aide d’Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Voir aussi  
-[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
-[ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
-[Always Encrypted &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Assistant Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[Always Encrypted &#40;développement client&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Migrer des données à partir ou à destination de colonnes à l’aide d’Always Encrypted avec l’Assistant Importation et exportation SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
+- [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
+- [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
+

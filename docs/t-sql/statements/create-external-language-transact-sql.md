@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: nelgson
 ms.author: negust
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0a371e328a585e8a559e3c23c28be135f16c208
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893413"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536246"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -110,7 +110,7 @@ Ce paramètre est nécessaire pour les scénarios de systèmes d’exploitation 
 
 ## <a name="remarks"></a>Notes
 
-Dans CTP 3.0, **PARAMETERS** et **ENVIRONMENT_VARIABLES** ne sont pas pris en charge.
+Actuellement, **PARAMETERS** et **ENVIRONMENT_VARIABLES** ne sont pas pris en charge.
 
 ## <a name="permissions"></a>Autorisations
 
@@ -120,7 +120,7 @@ La modification d’une bibliothèque nécessite l’autorisation distincte `ALT
 
 ### <a name="execute-external-script-permission"></a>Autorisation EXECUTE EXTERNAL SCRIPT
 
-Dans SQL Server 2019, nous introduisons des autorisations EXECUTE EXTERNAL SCRIPT, afin qu’une exécution de script externe puisse être accordée sur des langages spécifiques. Avant, nous avions uniquement une autorisation de base de données EXECUTE ANY EXTERNAL SCRIPT, qui ne permettait pas d’accorder d’autorisation d’exécution sur un langage spécifique.
+Vous pouvez utiliser des autorisations EXECUTE EXTERNAL SCRIPT afin qu’une exécution de script externe puisse être accordée sur des langages spécifiques. C’est différent de l’autorisation de base de données EXECUTE ANY EXTERNAL SCRIPT qui ne permet pas d’accorder d’autorisation d’exécution sur un langage spécifique.
 
 Cela signifie que les utilisateurs non-**dbo** doivent se voir accorder une autorisation pour exécuter un langage spécifique :
 

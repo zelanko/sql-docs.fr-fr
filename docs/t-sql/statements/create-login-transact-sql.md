@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155655"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594486"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -397,9 +397,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> Les connexions Azure AD pour l’instance managée SQL Database sont en **préversion publique**. Elles sont introduites avec la syntaxe **FROM EXTERNAL PROVIDER**.
-
 ## <a name="arguments"></a>Arguments
 
 *login_name* En cas d’utilisation avec la clause **FROM EXTERNAL PROVIDER**, la connexion spécifie le principal Azure Active Directory (AD), qui est un utilisateur, un groupe ou une application Azure AD. Autrement, la connexion représente le nom de la connexion SQL qui a été créée.
@@ -423,12 +420,6 @@ SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement au
     - UserPrincipalName de l’objet Azure AD pour les utilisateurs Azure AD.
     - DisplayName de l’objet Azure AD pour les groupes Azure AD et les applications Azure AD.
   - Vous ne pouvez pas utiliser l’option **PASSWORD**.
-  - Actuellement, la première connexion Azure AD doit être créée par le compte SQL Server standard (non Azure AD) qui est un `sysadmin` à l’aide de la syntaxe ci-dessus.
-  - Quand vous créez une connexion Azure Active Directory à l’aide d’un administrateur Azure AD pour l’instance managée SQL Database, l’erreur suivante se produit :</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - Il s’agit d’une limitation connue pour la **préversion publique**, qui sera résolue à une date ultérieure.
-  - Une fois la première connexion Azure AD créée, elle peut créer d’autres connexions Azure AD dès lors que les autorisations nécessaires lui ont été accordées.
 - Par défaut, quand la clause **FROM EXTERNAL PROVIDER** est omise, une connexion SQL standard est créée.
 - Les connexions AD Azure sont visibles dans sys.server_principals, avec une valeur de colonne de type définie sur **E** et une valeur type_desc définie sur **EXTERNAL_LOGIN** pour les connexions mappées à des utilisateurs d’Azure AD, ou une valeur de colonne de type définie sur  **X** et une valeur type_desc définie sur **EXTERNAL_GROUP** pour les connexions mappées à des groupes Azure AD.
 - Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -463,6 +454,7 @@ Après la création d’une connexion, celle-ci peut se connecter à une instanc
 - Seuls les principaux (connexions) au niveau du serveur SQL titulaires du rôle `sysadmin` peuvent exécuter les opérations suivantes ciblant des principaux Azure AD :
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
+- Les utilisateurs (invités) externes importés à partir d’un autre annuaire Azure AD ne peuvent pas être configurés directement comme administrateur Azure AD pour instance managée. Joignez plutôt l’utilisateur externe à un groupe de sécurité Azure AD et configurez le groupe comme administrateur d’instance.
 
 ## <a name="examples"></a>Exemples
 

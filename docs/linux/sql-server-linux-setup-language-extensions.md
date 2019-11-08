@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653522"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531234"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installer les extensions de langage SQL Server 2019 (Java) sur Linux
 
@@ -29,9 +29,11 @@ L’emplacement des packages pour les extensions Java se trouve dans les référ
 
 Les extensions de langage sont également prises en charge sur les conteneurs Linux. Nous ne fournissons pas de conteneurs prédéfinis avec les extensions de langage, mais vous pouvez en créer un à partir des conteneurs SQL Server à l’aide [d’un exemple de modèle disponible sur GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp-version"></a>Désinstaller la version CTP précédente
+Les extensions de langage et [Machine Learning Services](../advanced-analytics/index.yml) sont installés par défaut sur Clusters Big Data SQL Server. Si vous utilisez Clusters Big Data, vous n’avez pas besoin de suivre les étapes décrites dans cet article. Pour plus d’informations, consultez [Utiliser Machine Learning Services (Python et R) sur Clusters Big Data](../big-data-cluster/machine-learning-services.md).
 
-La liste des packages a été modifiée sur les dernières CTP, ce qui a réduit le nombre de packages. Nous vous recommandons de désinstaller la version CTP pour supprimer tous les packages précédents avant d’installer RC 1. La cohabitation de plusieurs versions n’est pas prise en charge.
+## <a name="uninstall-preview-version"></a>Désinstaller la préversion
+
+Si vous avez installé une préversion comme CTP (Community Technology Preview) ou RC (Release Candidate), nous vous recommandons de la désinstaller pour supprimer tous les packages précédents avant d’installer SQL Server 2019. L’installation côte à côte de plusieurs versions n’est pas prise en charge et la liste des packages a changé au cours des dernières préversions (CTP/RC).
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmer l’installation du package
 
@@ -41,7 +43,7 @@ Vous souhaiterez peut-être vérifier l’existence d’une installation précé
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2. Désinstaller les packages CTP précédents
+### <a name="2-uninstall-previous-ctprc-packages"></a>2. Désinstaller les packages CTP/RC précédents
 
 Désinstallez au niveau du package le plus bas. Tout package en amont dépendant d’un package de niveau inférieur est automatiquement désinstallé.
 
@@ -55,7 +57,7 @@ Les commandes de suppression des packages s’affichent dans le tableau suivant.
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3. Installer la version Release Candidate 1 (RC 1)
+### <a name="3-install-sql-server-2019"></a>3. Installer SQL Server 2019
 
 Installez au niveau de package le plus élevé en suivant les instructions de cet article pour votre système d’exploitation.
 
@@ -286,12 +288,9 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>Limitations dans la version RC 1
-
-Les extensions de langage et l’extensibilité Java sur Linux sont toujours en cours de développement actif. Les fonctionnalités suivantes ne sont pas encore activées dans la préversion.
+## <a name="limitations"></a>Limitations
 
 + L’authentification implicite n’est actuellement pas disponible sur Linux, ce qui signifie que vous ne pouvez pas vous reconnecter au serveur à partir de Java en cours d’exécution pour accéder à des données ou à d’autres ressources.
-
 
 ### <a name="resource-governance"></a>Gouvernance des ressources
 

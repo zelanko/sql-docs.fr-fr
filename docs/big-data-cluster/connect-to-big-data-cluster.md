@@ -1,57 +1,60 @@
 ---
-title: Se connecter aux clusters Big Data maître et HDFS
-description: Découvrez comment vous connecter à l’instance SQL Server Master et à la passerelle HDFS/Spark pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
+title: Se connecter aux clusters Big Data HDFS et principal
+description: Découvrez comment vous connecter à l’instance principale SQL Server et à la passerelle HDFS/Spark pour un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 0717226ee785df568d4cea75511e65acb728c592
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652422"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532241"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster Big Data SQL Server avec Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment se connecter à un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] à partir de Azure Data Studio.
+Cet article explique comment se connecter à un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] à partir d’Azure Data Studio.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Un [cluster Big Data SQL Server 2019](deployment-guidance.md) déployé.
 - [Outils de Big Data SQL Server 2019](deploy-big-data-tools.md) :
    - **Azure Data Studio**
    - **Extension SQL Server 2019**
    - **kubectl**
+   - **azdata**
 
 ## <a id="master"></a> Se connecter au cluster
 
 Pour vous connecter à un cluster Big Data avec Azure Data Studio, établissez une nouvelle connexion à l’instance principale SQL Server dans le cluster. Les étapes suivantes décrivent comment se connecter à l’instance principale avec Azure Data Studio.
 
-1. À partir de la ligne de commande, recherchez l’adresse IP de votre instance principale avec la commande suivante :
+1. Recherchez le point de terminaison de l’instance principale SQL Server :
 
    ```
-   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
+   azdata bdc endpoint list -e sql-server-master
    ```
 
    > [!TIP]
-   > Le nom du cluster Big Data est par défaut **mssql-cluster**, sauf si vous avez personnalisé le nom dans un fichier de configuration du déploiement. Pour plus d’informations, consultez [Configurer les paramètres de déploiement de clusters Big Data](deployment-custom-configuration.md#clustername).
+   > Pour plus d’informations sur la façon de récupérer des points de terminaison, consultez [Récupérer des points de terminaison](deployment-guidance.md#endpoints).
 
 1. Dans Azure Data Studio, appuyez sur **F1** > **Nouvelle connexion**.
 
 1. Dans **Type de connexion**, sélectionnez **Microsoft SQL Server**.
 
-1. Tapez l’adresse IP de l’instance principale SQL Server dans **Nom du serveur** (par exemple : **\<Adresse IP\>,31433**).
+1. Tapez le nom du point de terminaison que vous avez trouvé pour l’instance principale SQL Server dans la zone de texte **Nom du serveur** (par exemple : **\<IP_Address\>,31433**). 
 
-1. Entrez un **Nom d’utilisateur** et un **Mot de passe** pour la connexion SQL.
+1. Choisissez votre type d’authentification. Pour une instance principale SQL Server s’exécutant dans des clusters Big Data, seules l’**authentification Windows** et la **connexion SQL** sont prises en charge. 
+
+1. Entrez le **nom d’utilisateur** et le **mot de passe** de la connexion SQL. Si vous utilisez l’authentification Windows, ceci n’est pas nécessaire.
 
    > [!TIP]
-   > Par défaut, le nom d’utilisateur est **SA** et, sauf s’il a été changé, le mot de passe correspond à la variable d’environnement **MSSQL_SA_PASSWORD** utilisée lors du déploiement.
+   > Par défaut, le nom d’utilisateur **SA** est désactivé durant le déploiement de clusters Big Data. Un nouvel utilisateur sysadmin est provisionné lors du déploiement avec le nom correspondant à la variable d’environnement **AZDATA_USERNAME** et le mot de passe correspondant à la variable d’environnement **AZDATA_PASSWORD** utilisée pendant le déploiement.
 
 1. Remplacez le **Nom de la base de données** cible par une de vos bases de données relationnelles.
 
@@ -69,4 +72,4 @@ Avec la version de février 2019 d’Azure Data Studio, la connexion à l’inst
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont les ](big-data-cluster-overview.md).
+Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md).

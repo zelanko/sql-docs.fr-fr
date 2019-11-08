@@ -1,7 +1,8 @@
 ---
-title: Always Encrypted (moteur de base de données) | Microsoft Docs
+title: Always Encrypted | Microsoft Docs
+description: Vue d’ensemble d’Always Encrypted qui prend en charge le chiffrement transparent côté client, et le calcul confidentiel dans SQL Server et Azure SQL Database
 ms.custom: ''
-ms.date: 04/24/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,37 +14,43 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a24105ff8deb7e3b2dea54d6c1cb859736ae6f5f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903168"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593995"
 ---
-# <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
+# <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted est une fonctionnalité conçue pour protéger les données sensibles, telles que les numéros de carte de crédit ou les numéros nationaux d’identification (par exemple, les numéros de sécurité sociale aux États-Unis), qui sont stockées dans des bases de données [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Always Encrypted permet aux clients de chiffrer des données sensibles dans des applications clientes et de ne jamais révéler les clés de chiffrement au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Ainsi, Always Encrypted fournit une séparation entre ceux qui possèdent les données (et qui peuvent les afficher) et ceux qui les gèrent (mais qui ne doivent pas y avoir accès). En empêchant que les administrateurs de base de données locaux, les opérateurs de base de données cloud ou les autres utilisateurs dotés de privilèges élevés, mais non autorisés, accèdent aux données chiffrées, Always Encrypted permet aux clients de stocker en toute confiance les données sensibles en dehors de leur contrôle direct. Ainsi, les organisations peuvent chiffrer les données au repos et en cours d’utilisation à des fins de stockage dans Azure, activer la délégation de l’administration de base de données locale à des tiers ou réduire les contraintes d’habilitation de sécurité pour leur propre personnel d’administration de base de données.  
-  
+ Always Encrypted est une fonctionnalité conçue pour protéger les données sensibles, telles que les numéros de carte de crédit ou les numéros nationaux d’identification (par exemple, les numéros de sécurité sociale aux États-Unis), qui sont stockées dans des bases de données [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Always Encrypted permet aux clients de chiffrer des données sensibles dans des applications clientes et de ne jamais révéler les clés de chiffrement au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Ainsi, Always Encrypted fournit une séparation entre ceux qui détiennent les données et peuvent les voir, et ceux qui les gèrent mais ne doivent pas y avoir accès. En empêchant les administrateurs de base de données locales, les opérateurs de base de données cloud ou d’autres utilisateurs avec des privilèges élevés, mais non autorisés, d’accéder aux données chiffrées, Always Encrypted permet aux clients de stocker des données sensibles de manière sécurisée en dehors de leur contrôle direct. De cette manière, les organisations peuvent stocker leurs données dans Azure et activer la délégation de l’administration de base de données locale à des tiers, ou réduire les contraintes d’attestation de sécurité pour leur propre personnel d’administration de base de données.
+
+ Always Encrypted fournit des fonctionnalités de calcul confidentiel en permettant au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] de traiter certaines requêtes sur les données chiffrées, tout en préservant la confidentialité des données et en offrant les avantages de sécurité ci-dessus. Dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] et dans [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted prend en charge la comparaison d’égalité par le biais du chiffrement déterministe. Consultez [Sélection d’un chiffrement déterministe ou aléatoire](#selecting--deterministic-or-randomized-encryption). 
+
+  > [!NOTE] 
+  > Dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], les enclaves sécurisées étendent substantiellement les fonctionnalités de calcul confidentiel d’Always Encrypted avec des critères spéciaux, d’autres opérateurs de comparaison et le chiffrement sur place. Consultez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md).
+
  Always Encrypted rend le chiffrement transparent pour les applications. À cette fin, un pilote Always Encrypted installé sur l’ordinateur client chiffre et déchiffre automatiquement les données sensibles dans l’application cliente. Le pilote chiffre les données dans les colonnes sensibles avant de les transmettre au [!INCLUDE[ssDE](../../../includes/ssde-md.md)]et il réécrit automatiquement les requêtes pour que la sémantique de l’application soit conservée. De même, il déchiffre de manière transparente les données stockées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête.  
   
- Always Encrypted est disponible dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Pour les versions avant [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted était limité à l’édition Enterprise.) Pour visualiser une présentation Channel 9 qui aborde Always Encrypted, consultez [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Sécurisation des données sensibles avec Always Encrypted).  
+ Always Encrypted est disponible dans toutes les éditions de [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], à partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et de tous les niveaux de service de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Pour les versions avant [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted était limité à l’édition Enterprise.) Pour visualiser une présentation Channel 9 qui aborde Always Encrypted, consultez [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Sécurisation des données sensibles avec Always Encrypted).  
+
   
 ## <a name="typical-scenarios"></a>Scénarios typiques  
   
 ### <a name="client-and-data-on-premises"></a>Client et données locaux  
- Un client dispose d’une application cliente et de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui s’exécutent localement, au sein de son entreprise. Le client souhaite embaucher un fournisseur externe pour administrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Afin de protéger les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le client utilise toujours Always Encrypted pour garantir la séparation des responsabilités entre les administrateurs de base de données et les administrateurs d’application. Le client stocke les valeurs de texte en clair des clés Always Encrypted dans un magasin de clés approuvé accessible à l’application cliente. Les administrateurs[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’ont pas accès aux clés et, de ce fait, ne peuvent pas déchiffrer les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un client dispose d’une application cliente et de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui s’exécutent localement, au sein de son entreprise. Le client souhaite embaucher un fournisseur externe pour administrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Afin de protéger les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le client utilise toujours Always Encrypted pour garantir la séparation des responsabilités entre les administrateurs de base de données et les administrateurs d’application. Le client stocke les valeurs en texte clair des clés Always Encrypted dans un magasin de clés approuvé accessible à l’application cliente. Les administrateurs[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’ont pas accès aux clés et, de ce fait, ne peuvent pas déchiffrer les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Client local avec des données dans Azure  
- Un client dispose d’une application cliente locale au sein de son entreprise. L’application manipule des données sensibles stockées dans une base de données hébergée dans Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’exécutant sur une machine virtuelle dans Microsoft Azure). Le client utilise Always Encrypted et stocke les clés Always Encrypted dans un magasin de clés approuvé hébergé localement, pour s’assurer que les administrateurs de cloud [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n’aient pas accès aux données sensibles.  
+ Un client dispose d’une application cliente locale au sein de son entreprise. L’application manipule des données sensibles stockées dans une base de données hébergée dans Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’exécutant dans une machine virtuelle sur Microsoft Azure). Le client utilise Always Encrypted et stocke les clés Always Encrypted dans un magasin de clés approuvé hébergé localement, pour s’assurer que les administrateurs de cloud [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n’aient pas accès aux données sensibles.  
   
 ### <a name="client-and-data-in-azure"></a>Client et données dans Azure  
- Un client dispose d’une application cliente, hébergée dans Microsoft Azure (par exemple, dans un rôle de travail ou un rôle web), qui manipule des données sensibles également stockées dans une base de données hébergée dans Azure (SQL Database ou SQL Server s’exécutant sur une machine virtuelle Microsoft Azure). Même si Always Encrypted n’isole pas complètement les données des administrateurs de cloud, puisque les données et les clés sont exposées aux administrateurs de cloud de la plateforme qui héberge la couche cliente, le client tire quand même profit de la réduction de la surface d’attaque (les données sont chiffrées intégralement dans la base de données).  
+ Un client dispose d’une application cliente, hébergée dans Microsoft Azure (par exemple, dans un rôle de travail ou un rôle web), qui manipule des données sensibles également stockées dans une base de données hébergée dans Azure (SQL Database ou SQL Server s’exécutant sur une machine virtuelle Microsoft Azure). Même si Always Encrypted n’isole pas complètement les données des administrateurs de cloud, puisque les données et les clés sont exposées aux administrateurs de cloud de la plateforme qui héberge la couche cliente, le client tire quand même profit de la réduction de la surface d’attaque (les données sont toujours chiffrées dans la base de données).  
  
 ## <a name="how-it-works"></a>Fonctionnement
 
@@ -55,15 +62,15 @@ Pour accéder aux données stockées dans une colonne chiffrée en texte clair, 
 
 Ensuite, le pilote contacte le magasin de clés, qui contient la clé principale de colonne, afin de déchiffrer la valeur de la clé de chiffrement de colonne chiffrée, puis il utilise la clé de chiffrement de colonne en texte clair pour chiffrer le paramètre. La clé de chiffrement de colonne en texte clair résultante est mise en cache pour réduire le nombre d’allers-retours vers le magasin de clés lors des utilisations ultérieures de la même clé de chiffrement de colonne. Le pilote remplace les valeurs de texte en clair des paramètres ciblant des colonnes chiffrées par leurs valeurs chiffrées, et il envoie la requête au serveur pour traitement.
 
-Le serveur calcule le jeu de résultats et, pour toutes les colonnes chiffrées dans le jeu de résultats, le pilote attache les métadonnées de chiffrement pour la colonne, notamment les informations sur l’algorithme de chiffrement et les clés correspondantes. Le pilote tente d’abord de trouver la clé de chiffrement de colonne en texte clair dans le cache local, et il accède à la clé principale de colonne uniquement s’il ne peut pas trouver la clé dans le cache. Ensuite, le pilote déchiffre les résultats et retourne des valeurs en texte clair à l’application.
+Le serveur calcule le jeu de résultats et, pour toutes les colonnes chiffrées dans le jeu de résultats, le pilote attache les métadonnées de chiffrement pour la colonne, notamment les informations sur l’algorithme de chiffrement et les clés correspondantes. Le pilote tente d’abord de trouver la clé de chiffrement de colonne en texte clair dans le cache local, et il accède à la clé principale de colonne uniquement s’il ne trouve pas la clé dans le cache. Ensuite, le pilote déchiffre les résultats et retourne des valeurs en texte clair à l’application.
 
- Un pilote client interagit avec un magasin de clés, qui contient une clé principale de colonne, à l’aide d’un fournisseur de magasins de clé principale de colonne, qui est un composant logiciel côté client qui encapsule un magasin de clé contenant la clé principale de colonne. Les fournisseurs pour les types courants de magasins de clés sont disponibles dans des bibliothèques de pilotes côté client à partir de Microsoft ou sous forme de téléchargements autonomes. Vous pouvez également implémenter votre propre fournisseur. Les fonctionnalités d’Always Encrypted, notamment les fournisseurs de magasins de clé principale de colonne intégrés, varient en fonction de la bibliothèque de pilote et de sa version. 
+ Un pilote client interagit avec un magasin de clés, qui contient une clé principale de colonne, à l’aide d’un fournisseur de magasins de clé principale de colonne, qui est un composant logiciel côté client qui encapsule un magasin de clé contenant la clé principale de colonne. Les fournisseurs des types courants de magasins de clés sont disponibles dans des bibliothèques de pilotes côté client chez Microsoft ou sous forme de téléchargements autonomes. Vous pouvez également implémenter votre propre fournisseur. Les fonctionnalités d’Always Encrypted, notamment les fournisseurs de magasins de clés principales de colonne intégrés, varient en fonction de la bibliothèque de pilotes et de sa version. 
 
-Pour plus d’informations sur la façon de développer des applications à l’aide d’Always Encrypted avec des pilotes clients particuliers, consultez [Always Encrypted (développement client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
+Pour plus d’informations sur le développement des applications à l’aide d’Always Encrypted avec des pilotes clients particuliers, consultez [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md).
 
 ## <a name="remarks"></a>Notes
 
-Le déchiffrement est effectué via le client. Cela signifie que certaines actions qui se produisent uniquement côté serveur ne fonctionneront pas en utilisant Always Encrypted. 
+Le déchiffrement est effectué via le client. Cela signifie que certaines actions qui se produisent uniquement côté serveur ne fonctionnent pas avec Always Encrypted. 
 
 Voici un exemple d’une mise à jour qui tente de déplacer des données d’une colonne chiffrée vers une colonne non chiffrée sans retourner de jeu de résultats au client : 
 
@@ -86,20 +93,19 @@ Pour mettre à jour correctement la colonne, effectuez les étapes suivantes :
  >[!IMPORTANT]
  > Dans ce scénario, les données sont non chiffrées quand elles sont renvoyées au serveur, car la colonne de destination est un type varchar standard qui n’accepte pas les données chiffrées. 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a>Sélection d’un chiffrement déterministe ou aléatoire  
+## <a name="selecting--deterministic-or-randomized-encryption"></a> Sélection d’un chiffrement déterministe ou aléatoire  
  Le moteur de base de données n’opère jamais sur des données en texte clair stockées dans des colonnes chiffrées, mais il prend quand même en charge les requêtes sur des données chiffrées, en fonction du type de chiffrement de la colonne. Always Encrypted prend en charge deux types de chiffrement : le chiffrement aléatoire et le chiffrement déterministe.  
   
-- Le chiffrement déterministe génère toujours la même valeur chiffrée pour une valeur en texte clair donnée. Le chiffrement déterministe permet d’effectuer des recherches de point, des jointures d’égalité, ainsi que des regroupements et une indexation sur les colonnes chiffrées. Toutefois, il peut également permettre aux utilisateurs non autorisés de deviner des informations sur des valeurs chiffrées en examinant les modèles dans la colonne chiffrée, en particulier s’il existe un petit ensemble de valeurs chiffrées possibles, telles que Vrai/Faux ou la région Nord/Sud/Est/Ouest. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.
+- Le chiffrement déterministe génère toujours la même valeur chiffrée pour une valeur en texte clair donnée. Le chiffrement déterministe permet d’effectuer des recherches de point, des jointures d’égalité, ainsi que des regroupements et une indexation sur les colonnes chiffrées. Toutefois, il peut également permettre aux utilisateurs non autorisés de deviner des informations sur des valeurs chiffrées en examinant les modèles dans la colonne chiffrée, en particulier en cas de petit ensemble de valeurs chiffrées possibles, par exemple, Vrai/Faux ou la région Nord/Sud/Est/Ouest. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.
 
 - Le chiffrement aléatoire utilise une méthode qui chiffre les données de manière moins prévisible. Le chiffrement aléatoire est plus sécurisé, mais il empêche la recherche, le regroupement, l’indexation et la jointure sur des colonnes chiffrées.
 
-Utilisez le chiffrement déterministe pour les colonnes à utiliser comme paramètres de recherche ou de regroupement, par exemple un numéro d’identification gouvernemental. Utilisez le chiffrement aléatoire pour les données telles que des commentaires sur une enquête confidentielle, qui ne sont pas regroupées avec d’autres enregistrements et ne sont pas utilisées pour joindre des tables.
-Pour plus d’informations sur les algorithmes Always Encrypted, consultez [Cryptographie Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md). 
-
+Utilisez le chiffrement déterministe pour les colonnes que vous utilisez comme paramètres de recherche ou de regroupement. Par exemple, un numéro d’identité officiel. Utilisez le chiffrement aléatoire pour des données (par exemple, des commentaires d’enquête confidentielle) qui ne sont pas regroupées avec d’autres enregistrements et ne sont pas utilisées pour joindre des tables.
+Pour plus d’informations sur les algorithmes de chiffrement Always Encrypted, consultez [Chiffrement Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md).
 
 ## <a name="configuring-always-encrypted"></a>Configuration d’Always Encrypted
 
- L’installation initiale d’Always Encrypted dans une base de données implique la génération de clés Always Encrypted, la création de métadonnées de clé, la configuration des propriétés de chiffrement des colonnes de base de données sélectionnées et/ou le chiffrement des données qui existent déjà dans les colonnes qui doivent être chiffrées. Notez que certaines de ces tâches ne sont pas prise en charge dans Transact-SQL et nécessitent l’utilisation d’outils côté client. Les clés Always Encrypted et les données sensibles protégées n’étant jamais révélée en texte clair au serveur, le moteur de base de données ne peut pas participer à la mise en service des clés ni effectuer des opérations de chiffrement ou de déchiffrement des données. Vous pouvez utiliser SQL Server Management Studio ou PowerShell pour accomplir ces tâches. 
+ L’installation initiale d’Always Encrypted dans une base de données implique la génération de clés Always Encrypted, la création de métadonnées de clé, la configuration des propriétés de chiffrement des colonnes de base de données sélectionnées et/ou le chiffrement des données qui existent déjà dans les colonnes qui doivent être chiffrées. Notez que certaines de ces tâches ne sont pas prise en charge dans Transact-SQL et nécessitent l’utilisation d’outils côté client. Les clés Always Encrypted et les données sensibles protégées n’étant jamais révélées en texte clair au serveur, le moteur de base de données ne peut pas participer au provisionnement des clés ni effectuer d’opérations de chiffrement ou de déchiffrement des données. Vous pouvez utiliser SQL Server Management Studio ou PowerShell pour accomplir ces tâches. 
 
 |Tâche|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
@@ -107,6 +113,9 @@ Pour plus d’informations sur les algorithmes Always Encrypted, consultez [Cryp
 |Création des métadonnées de clé dans la base de données|Oui|Oui|Oui|
 |Création de tables avec des colonnes chiffrées|Oui|Oui|Oui|
 |Chiffrement de données existantes dans les colonnes de base de données sélectionnées|Oui|Oui|Non|
+
+> [!NOTE]
+> [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md), introduit dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], prend en charge le chiffrement des données existantes à l’aide de Transact-SQL. Vous n’avez alors plus besoin de déplacer les données hors de la base de données pour les opérations de chiffrement.
 
 > [!NOTE]
 > Veillez à exécuter les outils de chiffrement de données ou de mise en service des clés dans un environnement sécurisé, sur un ordinateur différent de celui qui héberge votre base de données. Dans le cas contraire, il pourrait y avoir une fuite des données sensibles ou des clés dans l’environnement serveur, ce qui réduirait les avantages liés à l’utilisation d’Always Encrypted.  
@@ -130,7 +139,7 @@ Utilisez l’ [Assistant Always Encrypted](../../../relational-databases/securit
 6.  Pour chaque colonne sélectionnée pour le chiffrement, sélectionnez une **Clé de chiffrement**. Si vous n’avez encore jamais créé de clé de chiffrement pour cette base de données, sélectionnez l’option par défaut de génération automatique d’une nouvelle clé, puis cliquez sur **Suivant**.
 7.  Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**.
 8.  Dans la page **Validation** , indiquez si vous souhaitez exécuter le script immédiatement ou créer un script PowerShell, puis cliquez sur **Suivant**.
-9.  Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer**. Fermez l’Assistant à la fin.
+9.  Dans la page **Récapitulatif**, passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer**. Fermez l’Assistant à la fin.
 
   
 ## <a name="feature-details"></a>Détails sur les fonctionnalités  
@@ -138,6 +147,8 @@ Utilisez l’ [Assistant Always Encrypted](../../../relational-databases/securit
 -   Les requêtes peuvent effectuer une comparaison d’égalité sur des colonnes chiffrées à l’aide du chiffrement déterministe, mais aucune autre opération (par exemple, comparaison de supériorité ou d’infériorité, correspondance de modèle à l’aide de l’opérateur LIKE ou opérations arithmétiques).  
   
 -   Les requêtes sur les colonnes chiffrées à l’aide du chiffrement aléatoire ne peuvent pas effectuer d’opérations sur ces colonnes. L’indexation des colonnes chiffrées à l’aide du chiffrement aléatoire n’est pas prise en charge.  
+ > [!NOTE] 
+ > [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md), introduit dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], résout la limitation ci-dessus en activant des critères spéciaux, des opérateurs de comparaison et l’indexation sur les colonnes qui utilisent le chiffrement aléatoire.
 
 -   Une clé de chiffrement de colonne peut avoir jusqu’à deux valeurs chiffrées différentes, chacune chiffrée avec une clé principale de colonne différente. Cela facilite la permutation des clés principales de colonne.  
   
@@ -145,48 +156,48 @@ Utilisez l’ [Assistant Always Encrypted](../../../relational-databases/securit
 
 -   Après avoir modifié la définition d’un objet chiffré, exécutez [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) pour mettre à jour les métadonnées Always Encrypted de l’objet.
   
-Always Encrypted n’est pas pris en charge pour les colonnes présentant les caractéristiques ci-après (par exemple, la clause *Encrypted WITH* ne peut pas être utilisée dans **CREATE TABLE/ALTER TABLE** pour une colonne à laquelle s’applique l’une des conditions suivantes) :  
+Always Encrypted n’est pas pris en charge pour les colonnes avec les caractéristiques ci-dessous. Par exemple, si l’une des conditions suivantes s’applique à la colonne, la clause `ENCRYPTED WITH` ne peut pas être utilisée dans `CREATE TABLE/ALTER TABLE` pour une colonne :  
   
--   Colonnes utilisant l’un des types de données suivants : **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias, types définis par l’utilisateur.  
-- Colonnes FILESTREAM  
-- Colonnes avec la propriété IDENTITY  
-- Colonnes avec la propriété ROWGUIDCOL  
-- Colonnes de type chaîne (varchar, char, etc.) avec des classements autres que BIN2.  
-- Colonnes qui font office de clés pour les index non ordonnés en clusters utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent)  
-- Colonnes qui font office de clés pour les index ordonnés en clusters utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent)  
-- Colonnes qui font office de clés pour les index de texte intégral contenant des colonnes chiffrées aléatoires et déterministes  
-- Colonnes référencées par des colonnes calculées (quand l’expression effectue des opérations non prises en charge pour Always Encrypted)  
-- Jeu de colonnes éparses  
-- Colonnes référencées par les statistiques  
-- Colonnes utilisant un type d’alias  
-- Colonnes de partitionnement  
-- Colonnes avec des contraintes par défaut  
-- Colonnes référencées par des contraintes uniques quand vous utilisez le chiffrement aléatoire (le chiffrement déterministe est pris en charge)  
-- Colonnes de clé primaire quand vous utilisez le chiffrement aléatoire (le chiffrement déterministe est pris en charge)  
-- Colonnes de référence dans les contraintes de clé étrangère quand vous utilisez un chiffrement aléatoire ou déterministe, si les colonnes de référence et référencées recourent à des clés ou algorithmes différents  
-- Colonnes référencées par des contraintes de validation  
-- Colonnes dans des tables qui utilisent la capture de données modifiées  
-- Colonnes de clé primaire sur des tables qui font l’objet d’un suivi des modifications  
-- Colonnes masquées (à l’aide du masquage des données dynamiques)  
+-   Colonnes utilisant l’un des types de données suivants : `xml`, `timestamp`/`rowversion`, `image`, `ntext`, `text`, `sql_variant`, `hierarchyid`, `geography`, `geometry`, alias, types définis par l’utilisateur.  
+- Colonnes `FILESTREAM`  
+- Colonnes avec la propriété `IDENTITY`.  
+- Colonnes avec la propriété `ROWGUIDCOL`.  
+- Chaîne (`varchar`, `char`, etc.) avec des classements non-bin2.  
+- Colonnes qui font office de clés pour les index non cluster utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent).  
+- Colonnes qui font office de clés pour les index cluster utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent).  
+- Colonnes qui font office de clés pour les index de texte intégral contenant des colonnes chiffrées aléatoires et déterministes.  
+- Colonnes calculées
+- Colonnes référencées par des colonnes calculées (quand l’expression effectue des opérations non prises en charge pour Always Encrypted).  
+- Jeu de colonnes éparses.  
+- Colonnes référencées par des statistiques.  
+- Colonnes utilisant un type d’alias.  
+- Colonnes de partitionnement.  
+- Colonnes avec des contraintes par défaut.  
+- Colonnes référencées par des contraintes uniques en cas d’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).  
+- Colonnes de clé primaire en cas d’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).  
+- Colonnes de référence dans les contraintes de clé étrangère en cas d’utilisation du chiffrement aléatoire ou déterministe, si les colonnes de référence et référencées utilisent des clés ou algorithmes différents.  
+- Colonnes référencées par des contraintes de validation.  
+- Colonnes dans des tables qui utilisent la capture des changements de données.  
+- Colonnes de clé primaire sur des tables avec suivi des changements.  
+- Colonnes masquées (à l’aide de Dynamic Data Masking).  
 - Colonnes dans les tables Stretch Database. (Les tables comportant des colonnes chiffrées avec Always Encrypted peuvent être activées pour l’extension.)  
-- Colonnes de tables externes (PolyBase) (remarque : l’utilisation de tables externes et de tables comportant des colonnes chiffrées dans la même requête est prise en charge)  
+- Colonnes de tables externes (PolyBase) (remarque : l’utilisation de tables externes et de tables avec des colonnes chiffrées dans la même requête est prise en charge).  
 - Les paramètres tabulaires ciblant des colonnes chiffrées ne sont pas pris en charge.  
 
-Vous ne pouvez pas utiliser les clauses suivantes pour les colonnes chiffrées :
+Vous ne pouvez pas utiliser les clauses suivantes pour les colonnes chiffrées :
 
-- FOR XML
-- FOR JSON PATH
+- `FOR XML`
+- `FOR JSON PATH`
 
-Les fonctionnalités suivantes ne fonctionnent pas sur les colonnes chiffrées :
+Les fonctionnalités suivantes ne fonctionnent pas sur les colonnes chiffrées :
 
 - Réplication transactionnelle ou de fusion
-- Requêtes distribuées (serveurs liés, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
+- Requêtes distribuées (serveurs liés, `OPENROWSET`(T-SQL), `OPENDATASOURCE`(T-SQL))
 
 Spécifications des outils
 
-- SQL Server Management Studio peut déchiffrer les résultats récupérés à partir de colonnes chiffrées si vous vous connectez avec *column encryption setting=enabled* sous l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** . Nécessite au moins SQL Server Management Studio version 17 pour insérer, mettre à jour ou filtrer les colonnes chiffrées. Pour que les chaînes de connexion soient utilisées dans les applications clientes, consultez [Always Encrypted (développement client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-
-- Les connexions chiffrées depuis `sqlcmd` requièrent au moins la version 13.1, disponible dans le [Centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=825643).
+- SQL Server Management Studio version 18 ou ultérieure est recommandé pour exécuter des requêtes qui déchiffrent les résultats récupérés dans les colonnes chiffrées ou qui insèrent, mettent à jour ou filtrent des colonnes chiffrées. 
+- Nécessite `sqlcmd` version 13.1 ou ultérieure, disponible dans le [Centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## <a name="database-permissions"></a>Autorisations de base de données  
@@ -211,11 +222,11 @@ Spécifications des outils
   
 -   Les autorisations s’appliquent aux actions à l’aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] (boîtes de dialogue et Assistant) ou de PowerShell.  
   
--   Les deux autorisations *VIEW* sont obligatoires lors de la sélection des colonnes chiffrées, même si l’utilisateur n’est pas autorisé à déchiffrer les colonnes.  
+-   Les deux autorisations *VIEW* sont obligatoires quand l’utilisateur sélectionne des colonnes chiffrées, même s’il n’est pas autorisé à déchiffrer les colonnes.  
   
 -   Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les deux autorisations *VIEW* sont accordées par défaut au rôle de base de données fixe `public` . Un administrateur de base de données peut choisir de révoquer (ou refuser) les autorisations *VIEW* pour le rôle `public` , et de les accorder à des rôles ou des utilisateurs spécifiques pour implémenter un contrôle plus restreint.  
   
--   Dans [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], les autorisations *VIEW* ne sont pas accordées par défaut au rôle de base de données fixe `public` . Cela permet à certains outils hérités (utilisant des versions antérieures de DacFx) de fonctionner correctement. Ainsi, pour travailler avec des colonnes chiffrées (même si vous ne les déchiffrez pas), un administrateur de base de données doit accorder explicitement les deux autorisations *VIEW* .  
+-   Dans [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], les autorisations *VIEW* ne sont pas accordées par défaut au rôle de base de données fixe `public`. Cela permet à certains outils hérités (utilisant des versions antérieures de DacFx) de fonctionner correctement. Ainsi, pour travailler avec des colonnes chiffrées (même si vous ne les déchiffrez pas), un administrateur de base de données doit accorder explicitement les deux autorisations *VIEW* .  
 
   
 ## <a name="example"></a>Exemple  
@@ -224,7 +235,7 @@ Spécifications des outils
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = 'MSSQL_CERTIFICATE_STORE',   
@@ -253,22 +264,20 @@ CREATE TABLE Customers (
 GO  
   
 ```  
-  
 ## <a name="see-also"></a>Voir aussi  
-[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
-[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-[CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
-[column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
-[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
-[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
-[sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
-[sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
-[Assistant Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[Migrer des données sensibles protégées par Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-[Always Encrypted &#40;développement client&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
-[Chiffrement Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
-[Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-[Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
-[sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
+- [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
+- [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
+- [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md) 
+- [Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted](always-encrypted-wizard.md)
+- [Chiffrement Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
+- [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
+- [column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+- [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)  
+- [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+- [sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+- [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+- [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   

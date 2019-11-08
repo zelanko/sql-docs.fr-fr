@@ -1,31 +1,29 @@
 ---
 title: Extension de comparaison de schéma
 titleSuffix: Azure Data Studio
-description: Installer et utiliser l’extension de comparaison de schémas (préversion) pour Azure Data Studio
+description: Installer et utiliser l’extension de comparaison de schémas pour Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381813"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532542"
 ---
-# <a name="schema-compare-extension-preview"></a>Extension de comparaison de schéma (préversion)
+# <a name="schema-compare-extension"></a>Extension de comparaison de schéma
 L’extension de comparaison de schémas fournit une expérience facile à utiliser pour comparer deux définitions de base de données et appliquer les différences de la source à la cible.
-
-Cette expérience est actuellement dans sa préversion initiale. Signalez les problèmes et les demandes de fonctionnalités [ici.](https://github.com/microsoft/azuredatastudio/issues)
 
 
 ## <a name="features"></a>Fonctionnalités
 
-* Comparer les schémas de deux bases de données ou fichiers .dacpac
+* Comparer les schémas de deux bases de données ou fichiers dacpac
 * Afficher les résultats sous la forme d’un ensemble d’actions qui doivent être effectuées sur la cible pour qu’elle corresponde à la source
 * Exclure de manière sélective des actions listées dans les résultats
 * Définir les options qui contrôlent l’étendue de la comparaison
@@ -72,3 +70,4 @@ Il peut être fastidieux de gérer et de synchroniser manuellement différentes 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour en savoir plus sur la comparaison de schémas, [consultez notre documentation.](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+Signalez les problèmes et les demandes de fonctionnalités [ici.](https://github.com/microsoft/azuredatastudio/issues)

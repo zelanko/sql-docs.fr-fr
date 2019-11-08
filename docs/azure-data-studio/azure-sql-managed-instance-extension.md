@@ -1,7 +1,7 @@
 ---
-title: Extension d’Azure SQL Managed Instance
+title: Extension Azure SQL Database Managed Instance
 titleSuffix: Azure Data Studio
-description: Utiliser Azure Data Studio avec Azure SQL Managed instance
+description: Utiliser Azure Data Studio avec Azure SQL Database Managed Instance
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alayu; sstein
@@ -11,90 +11,91 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: d443292fb091679d3d6a18d557a5a7aac464fdec
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041140"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594012"
 ---
-# <a name="managed-instance-support-for-azure-data-studio-preview"></a>Prise en charge de Managed Instance pour Azure Data Studio (préversion)
+# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Tableau de bord Azure SQL Database Managed Instance pour Azure Data Studio (préversion)
 
-Cette extension vous permet d’utiliser [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Cette extension fournit les fonctionnalités suivantes :
+L’extension Azure SQL Database Managed Instance fournit un tableau de bord permettant de travailler avec une [instance managée Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Cette extension fournit les fonctionnalités suivantes :
 
-- Affichage des propriétés d’instance gérée (vCores, stockage utilisé).
-- Surveillance de l’UC et de l’utilisation du stockage au cours des deux dernières heures.
-- Affichage des avertissements de configuration et des recommandations de paramétrage.
-- Affichage de l’état des réplicas de base de données.
-- Affichage des journaux des erreurs filtrés.
+- Affiche les propriétés de l’instance managée, notamment les vCores et le stockage utilisé
+- Supervise l’utilisation du processeur et du stockage au cours des deux heures précédentes
+- Affiche des avertissements de configuration et des recommandations de paramétrage
+- Affiche l’état des réplicas de base de données
+- Affiche les journaux des erreurs filtrés
 
-## <a name="installations"></a>Installations
+## <a name="install"></a>Installation
 
-Vous pouvez installer la version officielle de l'extension de Managed Instance en suivant les étapes de la [documentation Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-Dans le volet Extensions, recherchez l'extension « Managed Instance » et installez-la.  Vous recevrez automatiquement une notification à chaque mise à jour de l'extension !
+Vous pouvez installer la version officielle de cette extension. Suivez pour cela les étapes décrites dans la documentation sur [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Dans le volet **Extensions**, recherchez « managed instance » et installez l’extension. Une fois l’installation terminée, vous recevrez automatiquement une notification à chaque mise à jour de l’extension.
 
-Une fois l’extension de Managed Instance installée, vous voyez un onglet `Managed Instance` dans Azure Data Studio. Cet onglet contient des informations spécifiques à Managed Instance.
+Quand l’extension est installée, un onglet **Instance managée** apparaît dans Azure Data Studio. Vous trouverez ici des informations spécifiques à votre instance managée.
 
 ## <a name="properties"></a>Propriétés
 
-Cette extension vous permet de voir les caractéristiques techniques de votre Managed Instance et l’utilisation des ressources.
+Cette extension affiche les caractéristiques techniques de votre instance managée et son utilisation de certaines ressources.
 
-![Propriétés de l’instance gérée](media/azure-sql-mi-extension/ads-mi-tab1.png)
+[ ![Propriétés de l’instance managée](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
-Dans le premier panneau, vous pouvez voir les détails suivants :
+Le volet supérieur affiche les détails suivants :
 
-- Les **propriétés de base**, telles que le nombre de vCores disponibles, la mémoire, le stockage, le niveau de service actuel et la génération de matériel ainsi que les caractéristiques d’E/S telles que le débit d’écriture du journal d’instance ou les caractéristiques d’E/S du fichier.
-- **Utilisation du stockage SSD local**. Au niveau de service Usage général, seuls les fichiers **TEMPDB** sont placés localement, tandis qu’au niveau vital pour l'entreprise, tous les fichiers de base de données sont placés sur le stockage SSD local. Dans cette section, vous pouvez voir la quantité d’espace de stockage local utilisée par Managed Instance.
-- **Utilisation du stockage sur disque Azure Premium** : les bases de données utilisateur et système au niveau de service Usage général sont placées sur le stockage Azure Premium. Ici, vous pouvez trouver combien de données vous avez utilisées et le stockage et le nombre de fichiers restants. Au niveau de service vital pour l'entreprise, cette section est vide.
-- **Utilisation des ressources** : vous indique la quantité de stockage et d’UC utilisées par votre instance au cours des deux dernières heures. Augmentez la taille de l’instance si vous atteignez la limite.
+- **Propriétés**. Obtenez des informations de base sur votre instance managée, notamment les vCores, la mémoire et le stockage disponibles. Trouvez également le niveau de service actuel, la génération de matériel et les caractéristiques d’E/S telles que le débit d’écriture dans les journaux d’instance ou le débit d’E/S dans les fichiers.
+- **Stockage SSD local**. Au niveau de service universel, les fichiers **TempDB** sont stockés localement. Au niveau de service vital pour l’entreprise, _tous_ les fichiers de base de données sont placés dans le stockage SSD local. Dans cette section, vous pouvez voir la quantité d’espace de stockage local utilisée par votre instance managée.
+- **Stockage sur disque Azure Premium**. Si vous êtes au niveau de service universel, les fichiers des bases de données utilisateur et système sont placés dans le stockage Azure Premium. Dans cette section, vous pouvez voir la quantité de données utilisées, le nombre de fichiers et le stockage disponible. Au niveau de service vital pour l’entreprise, cette section est vide.
+- **Utilisation des ressources**. Examinez le pourcentage de stockage et de processeur utilisé par votre instance managée au cours des deux heures précédentes. Vous pouvez ainsi augmenter la taille de l’instance si elle est proche de la limite.
 
 ## <a name="recommendations"></a>Recommandations
 
-Cette extension fournit des recommandations et des alertes qui peuvent vous aider à optimiser Managed Instance.
+Quand vous sélectionnez le deuxième volet sous l’onglet **Instance managée**, vous recevez des recommandations et des alertes pour vous aider à optimiser votre instance managée.
 
-![Recommandations relatives à une instance gérée](media/azure-sql-mi-extension/ads-mi-tab2.png)
+[ ![Recommandations relatives aux instances managées](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
-Quelques-unes de ces recommandations sont mentionnées dans ce tableau :
+Parmi les recommandations affichées, vous pouvez voir les suivantes :
 
-- Atteinte de la limite d’espace de stockage : vous devez soit supprimer les données inutiles, soit augmenter la taille de stockage de l’instance, car les bases de données qui atteignent la limite de stockage peuvent ne pas pouvoir traiter même les requêtes de lecture.
-- Atteinte de la limite de débit : si vous chargez environ 22 Mo/s sur GP ou environ 48 Mo/s sur BC, l’instance gérée limite votre charge pour garantir les sauvegardes.
-- Sollicitation de la mémoire : la faible espérance de vie d'une page ou de nombreuses statistiques d’attente `PAGEIOLATCH` peuvent indiquer que votre instance supprime des pages de la mémoire et essaie constamment de charger plus de pages à partir du disque.
-- Limites du fichier journal : si vos journaux atteignent les [limites d’E/S de fichier au niveau de service à usage général](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille de fichier pour améliorer les performances.
-- Limites du fichier de données : si vos fichiers de données atteignent les [limites d’E/S de fichier au niveau de service à usage général](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille de fichier pour améliorer les performances. Ce problème peut entraîner une sollicitation de la mémoire et ralentir les sauvegardes.
-- Problèmes de disponibilité : un nombre élevé de fichiers journaux virtuels peut avoir un impact sur les performances et augmenter la durée de récupération de la base de données au niveau de service à usage général en cas d’échec du processus.
+- **Limite d’espace de stockage en passe d’être atteinte**. Supprimez les données inutiles ou augmentez la taille de stockage de l’instance. Les bases de données qui atteignent la limite de stockage risquent même de ne pas pouvoir traiter les requêtes lues.
+- **Limite de débit de l’instance en passe d’être atteinte**. Vous avertit quand votre charge s’approche de la limite de votre niveau de service : 22 Mo/s pour le niveau universel ou 48 Mo/s pour le niveau vital pour l’entreprise. N’oubliez pas que votre instance managée limite votre charge pour que les sauvegardes puissent être effectuées.
+- **Sollicitation de la mémoire**. La faible espérance de vie d’une page ou de nombreuses statistiques d’attente `PAGEIOLATCH` peuvent indiquer que votre instance supprime des pages de la mémoire et essaie constamment de charger plus de pages à partir du disque.
+- **Limites des fichiers journaux**. Si vos fichiers journaux s’approchent des [limites d’E/S de fichier au niveau de service universel](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille des fichiers journaux pour améliorer les performances.
+- **Limites des fichiers de données**. Si vos fichiers de données s’approchent des [limites d’E/S de fichier au niveau de service universel](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille des fichiers pour améliorer les performances. Ce problème peut entraîner une sollicitation de la mémoire et ralentir les sauvegardes.
+- **Problèmes de disponibilité**. Un nombre élevé de fichiers journaux virtuels peut affecter les performances. En cas de défaillance d’un processus, ces problèmes peuvent entraîner un allongement de la récupération de la base de données au niveau de service universel.
 
-Vous devez lire régulièrement ces recommandations, étudier les causes racines et prendre des mesures correctives. L’extension de Managed Instance fournit les scripts que vous pouvez exécuter pour atténuer certains des problèmes signalés.
+Examinez régulièrement ces recommandations, étudiez les causes racines et prenez les mesures nécessaires pour corriger les problèmes. L’extension Azure SQL Database Managed Instance fournit les scripts que vous pouvez exécuter pour atténuer certains des problèmes signalés.
 
 ## <a name="replicas"></a>Réplicas
 
-L’extension Managed Instance vous permet de voir l’état des réplicas de base de données dans votre instance gérée.
+Le troisième volet de l’onglet **Instance managée** affiche l’état des réplicas de base de données dans votre instance managée.
 
-![Réplicas d’instance gérée](media/azure-sql-mi-extension/ads-mi-tab3.png)
+[ ![Réplicas d’instance managée](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
-Sur la couche de service à usage général, chaque base de données a un seul réplica (principal), tandis que sur l’instance critique pour l'entreprise, chaque base de données a un réplica principal et trois réplicas secondaires (l’un étant utilisé pour les charges de travail en lecture seule). Ici, vous pouvez surveiller le processus de synchronisation et vérifier que tous les réplicas secondaires sont bien  synchronisés avec le réplica principal.
+Au niveau de service universel, chaque base de données a un seul réplica (principal). Sur une instance au niveau vital pour l’entreprise, chaque base de données a un réplica principal et trois réplicas secondaires, dont un est utilisé pour les charges de travail en lecture seule. Dans le volet **Réplicas**, vous pouvez superviser le processus de synchronisation et vérifier que tous les réplicas secondaires sont bien synchronisés avec le réplica principal.
 
 ## <a name="logs"></a>Journaux
 
-L’extension Managed Instance affiche les dernières entrées du journal d’erreurs SQL les plus pertinentes.
+Le quatrième volet de l’onglet **Instance managée** affiche les entrées du journal des erreurs SQL les plus récentes et les plus pertinentes.
 
-![Entrées de journal de Managed Instance](media/azure-sql-mi-extension/ads-mi-tab4.png)
+[ ![Entrées du journal de l’instance managée](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
-Managed Instance émet un grand nombre d’entrées de journal, dont la plupart sont des informations internes/système. Certaines entrées du journal affichent des noms de bases de données physiques (valeurs `GUID`) au lieu de noms de bases de données logiques réelles.
+Bien que votre instance managée génère un grand nombre d’entrées de journal, la plupart d’entre elles sont des informations internes/système. Par ailleurs, certaines entrées du journal montrent des noms de bases de données physiques (valeurs `GUID`) au lieu de noms de bases de données logiques réelles.
 
-L’extension Managed Instance filtre les entrées de journal inutiles en se basant sur la [méthode Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506) et affiche les noms de fichiers logiques réels au lieu des noms physiques.
+L’extension Azure SQL Database Managed Instance filtre les entrées de journal inutiles selon la méthode [Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). L’extension affiche également les noms des fichiers logiques réels au lieu des noms physiques.
 
 ## <a name="reporting-problems"></a>Signalement des problèmes
 
-Si vous rencontrez des problèmes avec l’extension Managed Instance, signalez le problème sur [projet Extension GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
-
-## <a name="maintainers"></a>Chargés de maintenance
-
-- [Jovan Popovic(MSFT)](https://github.com/jovanpop_msft) - [@jovanpop_msft](https://twitter.com/JovanPop_MSFT)
+Si vous rencontrez des problèmes avec l’extension Azure SQL Database Managed Instance, accédez au [projet Extension GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) pour les signaler.
 
 ## <a name="code-of-conduct"></a>Code de conduite
 
 Ce projet a adopté le [Code de conduite Open Source de Microsoft][conduct-code].
+
 Pour plus d'informations, voir la [FAQ sur le Code de conduite ][conduct-FAQ] ou contacter [opencode@microsoft.com][conduct-email] pour toute question ou commentaire supplémentaire.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations, visitez le [projet GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
 [conduct-code]: http://opensource.microsoft.com/codeofconduct/
 [conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/

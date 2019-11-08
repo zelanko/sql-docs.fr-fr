@@ -1,51 +1,51 @@
 ---
-title: Développer à l’aide d’Always Encrypted avec le Fournisseur de données .NET Framework | Microsoft Docs
+title: Utilisation d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4771d3a0fbf49c2d8c87c96d99b3e387b392e3bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049944"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594459"
 ---
-# <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Développer à l’aide d’Always Encrypted avec le Fournisseur de données .NET Framework
+# <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Utilisation d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Cet article fournit des informations sur le développement d’applications .NET avec [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) et le [Fournisseur de données .NET Framework pour SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
+Cet article fournit des informations sur le développement d’applications .NET à l’aide d’[Always Encrypted](always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md) et du [fournisseur de données .NET Framework pour SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
 
-Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. À cette fin, un pilote avec Always Encrypted, tel que le fournisseur de données .NET Framework, chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
-
+Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. À cette fin, un pilote avec Always Encrypted, tel que le fournisseur de données .NET Framework, chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md) et [Développer des applications à l’aide d’Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-client-development.md).
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-- Configurez Always Encrypted dans votre base de données. Pour cela, vous devez mettre en service des clés Always Encrypted et configurer le chiffrement pour les colonnes de base de données sélectionnées. Si vous n’avez pas déjà une base de données dans laquelle est configuré Always Encrypted, suivez les instructions de [Prise en main d’Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
-- Vérifiez que .NET Framework version 4.6 ou ultérieure est installé sur votre ordinateur de développement. Pour plus d’informations, consultez [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Vous devez également vérifier que .NET Framework version 4.6 ou ultérieure est configuré en tant que version cible de .NET Framework dans votre environnement de développement. Si vous utilisez Visual Studio, reportez-vous à [Comment : cibler une version de .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Configurez Always Encrypted dans votre base de données. Pour cela, vous devez mettre en service des clés Always Encrypted et configurer le chiffrement pour les colonnes de base de données sélectionnées. Si vous n’avez pas déjà une base de données configurée avec Always Encrypted, suivez les instructions de [Bien démarrer avec Always Encrypted](always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Vérifiez que .NET Framework version 4.6.1 ou ultérieure est installé sur votre machine de développement. Pour plus d’informations, consultez [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Vous devez également vérifier que .NET Framework version 4.6 ou ultérieure est configuré comme version cible de .NET Framework dans votre environnement de développement. Si vous utilisez Visual Studio, consultez [Guide pratique pour cibler une version de .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
 
 > [!NOTE]
-> Le niveau de prise en charge d’Always Encrypted varie selon la version du .NET Framework. Pour plus d’informations, consultez la section « Référence de l’API Always Encrypted » ci-dessous. 
+> Le niveau de prise en charge d’Always Encrypted varie selon la version du .NET Framework. Pour plus d’informations, consultez la section « Référence de l’API Always Encrypted » ci-dessous.
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>Activation d’Always Encrypted pour les requêtes d’application
 Le moyen le plus simple d’activer le chiffrement des paramètres et le déchiffrement des résultats de requête ciblant des colonnes chiffrées, est de définir la valeur du mot clé de chaîne de connexion du paramètre de chiffrement de colonne sur **Activé**.
 
 Voici un exemple de chaîne de connexion activant Always Encrypted :
-```
+
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
 SqlConnection connection = new SqlConnection(connectionString);
 ```
 
 L’exemple suivant est équivalent et utilise la propriété SqlConnectionStringBuilder.ColumnEncryptionSetting.
 
-```
+```cs
 SqlConnectionStringBuilder strbldr = new SqlConnectionStringBuilder();
 strbldr.DataSource = "server63";
 strbldr.InitialCatalog = "Clinic";
@@ -55,14 +55,30 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 ```
 
 Always Encrypted peut également être activé pour les requêtes individuelles. Consultez la section **Contrôle de l’impact d’Always Encrypted sur les performances** ci-dessous.
-Notez que l’activation d’Always Encrypted ne suffit pas à la réussite du chiffrement ou du déchiffrement. Vous devez également vérifier ce qui suit :
+L’activation d’Always Encrypted ne suffit pas à la réussite du chiffrement ou du déchiffrement. Vous devez également vérifier ce qui suit :
 - L’application dispose des autorisations de base de données *VIEW ANY COLUMN MASTER KEY DEFINITION* et *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* qui sont nécessaires pour accéder aux métadonnées des clés Always Encrypted dans la base de données. Pour plus d’informations, consultez la [section « Autorisations » de la rubrique « Always Encrypted (moteur de base de données) »](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7).
 - L’application peut accéder à la clé principale de colonne qui protège les clés de chiffrement de colonne, en chiffrant les colonnes de base de données interrogées.
+
+## <a name="enabling-always-encrypted-with-secure-enclaves"></a>Activation d’Always Encrypted avec les enclaves sécurisées
+
+À partir de .NET Framework version 4.7.2, le pilote prend en charge [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md). 
+
+Pour activer l’utilisation de l’enclave pendant la connexion à [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] ou version ultérieure, vous devez configurer votre application et le fournisseur de données .NET Framework pour SQL Server afin d’activer les calculs d’enclave et l’attestation d’enclave. 
+
+Pour obtenir des informations générales sur le rôle du pilote client dans les calculs d’enclave et l’attestation d’enclave, consultez [Développer des applications à l’aide d’Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-client-development.md). 
+
+Pour configurer votre application :
+
+1. Intégrez le package NuGet [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) à votre application. NuGet est une bibliothèque de fournisseurs d’enclave qui implémente la logique côté client pour des protocoles d’attestation et pour établir un canal sécurisé avec une enclave sécurisée au sein de SQL Server.  
+2. Mettez à jour la configuration de votre application (par exemple, dans web.config ou app.config) pour définir le mappage au type d’enclave avec lequel votre instance [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] a été configurée (consultez [Configurer le type d’enclave pour l’option de configuration de serveur Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] prend en charge les enclaves VBS et le service Guardian hôte pour l’attestation. Par conséquent, vous devez mapper le type d’enclave VBS à la classe Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider à partir du package NuGet. 
+3. Activez les calculs d’enclave pour connecter votre application à la base de données en définissant le mot clé de l’URL d’attestation d’enclave dans la chaîne de connexion sur un point de terminaison d’attestation. La valeur du mot clé doit être définie sur le point de terminaison d’attestation du serveur SGH configuré dans votre environnement. 
+
+Pour obtenir un tutoriel pas à pas, consultez [Tutoriel : Développer une application .NET Framework à l’aide d’Always Encrypted avec enclaves sécurisées](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
 Lorsque vous activez Always Encrypted pour les requêtes d’application, vous pouvez utiliser les API ADO.NET standard (voir [Extraction et modification de données dans ADO.NET](https://msdn.microsoft.com/library/ms254937(v=vs.110).aspx)) ou les API du [Fournisseur de données .NET Framework pour SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) qui sont définies dans [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx), pour récupérer ou modifier les données de colonnes de base de données chiffrées. Si votre application dispose des autorisations de base de données nécessaires et qu’elle peut accéder à la clé principale de colonne, le fournisseur de données .NET Framework pour SQL Server chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées et déchiffre les données extraites des colonnes chiffrées en retournant des valeurs de types .NET en texte clair, qui correspondent aux types de données SQL Server définis pour les colonnes du schéma de base de données.
-Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui ciblent des colonnes chiffrées échouent. Une requête peut toujours récupérer des données à partir de colonnes chiffrées, tant qu’aucun de ses paramètres ne cible des colonnes chiffrées. Toutefois, dans ce cas, le fournisseur de données .NET Framework pour SQL Server ne tente pas de déchiffrer les valeurs extraites des colonnes chiffrées et l’application ne reçoit pas les données chiffrées binaires (sous la forme de tableaux d’octets).
+Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui ciblent des colonnes chiffrées échouent. Une requête peut toujours récupérer des données à partir de colonnes chiffrées, tant qu’aucun de ses paramètres ne cible des colonnes chiffrées. Toutefois, le fournisseur de données .NET Framework pour SQL Server ne tente pas de déchiffrer les valeurs extraites des colonnes chiffrées et l’application reçoit des données chiffrées binaires (sous la forme de tableaux d’octets).
 
 Le tableau ci-dessous récapitule le comportement des requêtes, selon qu’Always Encrypted est activé ou non :
 
@@ -71,10 +87,10 @@ Le tableau ci-dessous récapitule le comportement des requêtes, selon qu’Alwa
 | Requêtes avec des paramètres ciblant des colonnes chiffrées. | Des valeurs de paramètres sont chiffrées en toute transparence. | Error | Error|
 | Requêtes qui récupèrent des données à partir de colonnes chiffrées, sans paramètres ciblant des colonnes chiffrées.| Les résultats de colonnes chiffrées sont déchiffrés de manière transparente. L’application reçoit des valeurs en texte clair des types de données .NET correspondant aux types SQL Server configurés pour les colonnes chiffrées. | Error | Les résultats des colonnes chiffrées ne sont pas déchiffrés. L’application reçoit des valeurs chiffrées sous la forme de tableaux d’octets (byte[]). 
 
-Les exemples suivants illustrent la récupération et la modification de données dans des colonnes chiffrées. Ces exemples impliquent une table cible avec le schéma ci-dessous. Notez que les colonnes SSN et BirthDate sont chiffrées.
+Les exemples suivants illustrent la récupération et la modification de données dans des colonnes chiffrées. Ces exemples impliquent une table cible avec le schéma ci-dessous. Les colonnes SSN et BirthDate sont chiffrées.
 
 
-```
+```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1), 
  [SSN] [char](11) COLLATE Latin1_General_BIN2 
  ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC, 
@@ -94,11 +110,11 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 Cet exemple insère une ligne dans la table Patients. Notez les points suivants :
 - L’exemple de code ne contient aucun élément spécifique au chiffrement. Le fournisseur de données .NET Framework pour SQL Server détecte et chiffre automatiquement les paramètres *paramSSN* et *paramBirthdate* qui ciblent des colonnes chiffrées. Le chiffrement est donc transparent pour l’application. 
-- Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passées en tant qu’objets [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) . L’utilisation de **SqlParameter** est facultative lors de l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échouera, car le fournisseur de données .NET Framework pour SQL Server ne sera pas en mesure de déterminer les valeurs des colonnes chiffrées cibles et ne chiffrera donc pas les valeurs. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
-- Le type de données du paramètre ciblant la colonne SSN est défini sur une chaîne ANSI (non Unicode) qui est mappée vers le type de données SQL Server char/varchar. Si le type du paramètre avait été défini sur une chaîne Unicode (String) mappée vers nchar/nvarchar, la requête aurait échoué, car Always Encrypted ne prend pas en charge les conversions de valeurs nchar/nvarchar chiffrées en valeurs char/varchar chiffrées. Pour plus d’informations sur les mappages de type de données, consultez [Mappages de type de données SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
+- Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passées en tant qu’objets [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) . L’utilisation de **SqlParameter** est facultative pour l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échouera, car le fournisseur de données .NET Framework pour SQL Server ne sera pas en mesure de déterminer les valeurs des colonnes chiffrées cibles et ne chiffrera donc pas les valeurs. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
+- Le type de données du paramètre ciblant la colonne SSN est défini sur une chaîne ANSI (non Unicode) qui est mappée vers le type de données SQL Server char/varchar. Si le type du paramètre est défini sur une chaîne Unicode (String) mappée à nchar/nvarchar, la requête échoue, car Always Encrypted ne prend pas en charge les conversions de valeurs nchar/nvarchar chiffrées en valeurs char/varchar chiffrées. Pour plus d’informations sur les mappages de type de données, consultez [Mappages de type de données SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
 - Le type de données du paramètre inséré dans la colonne BirthDate est explicitement défini sur le type de données SQL Server cible à l’aide de la [propriété SqlParameter.SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), au lieu d’utiliser le mappage implicite des types .NET vers les types de données SQL Server appliqués lors de l’utilisation de la [propriété SqlParameter.DbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx). Par défaut, la [structure DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) est mappée vers le type de données SQL Server datetime. Étant donné que les données de la colonne BirthDate sont de type « date » et qu’Always Encrypted ne prend pas en charge la conversion de valeurs « datetime » chiffrées en valeurs « date » chiffrées, l’utilisation du mappage par défaut entraînerait une erreur. 
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
 using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 {
@@ -150,9 +166,9 @@ L’exemple suivant montre le filtrage de données basé sur des valeurs chiffr�
 
 
 > [!NOTE]
-> Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes si elles sont chiffrées à l’aide du chiffrement déterministe. Pour plus d’informations, consultez la section *Sélection du chiffrement déterministe ou aléatoire* de la rubrique [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+> Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes si elles sont chiffrées à l’aide du chiffrement déterministe. Pour plus d’informations, consultez [Sélection d’un chiffrement déterministe ou aléatoire](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
     
 using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
@@ -185,10 +201,10 @@ Si Always Encrypted n’est pas activé, une requête peut toujours récupérer 
 L’exemple suivant montre comment récupérer des données chiffrées binaires à partir de colonnes chiffrées. Notez les points suivants :
 
 - Étant donné qu’Always Encrypted n’est pas toujours activé dans la chaîne de connexion, la requête retourne des valeurs SSN et BirthDate chiffrées sous la forme de tableaux d’octets (le programme convertit les valeurs en chaînes).
-- Une requête qui récupère des données à partir de colonnes chiffrées lorsqu’Always Encrypted est désactivé peut avoir des paramètres, tant qu’aucun d’eux ne cible une colonne chiffrée. La requête ci-dessus filtre par nom (LastName), ce qui n’est pas chiffré dans la base de données. Si la requête filtre par SSN ou BirthDate, la requête échoue.
+- Une requête qui récupère des données à partir de colonnes chiffrées lorsqu’Always Encrypted est désactivé peut avoir des paramètres, tant qu’aucun d’eux ne cible une colonne chiffrée. La requête ci-dessus filtre par nom (LastName), qui n’est pas chiffré dans la base de données. Si la requête filtre par SSN ou BirthDate, la requête échoue.
 
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
                 
 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -222,7 +238,7 @@ Cette section décrit des catégories d’erreurs courantes liées à l’interr
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Erreurs liées à la conversion de types de données non pris en charge
 
-Always Encrypted ne prend en charge que peu de conversions de types de données chiffrées. Pour obtenir la liste détaillée des conversions de types prises en charge, consultez [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) . Procédez comme suit pour éviter les erreurs de conversion de type de données :
+Always Encrypted ne prend en charge que peu de conversions de types de données chiffrées. Consultez [Always Encrypted](always-encrypted-database-engine.md) pour obtenir la liste détaillée des conversions de types prises en charge. Procédez comme suit pour éviter les erreurs de conversion de type de données :
 
 - Définissez les types de paramètres ciblant les colonnes chiffrées pour que le type de données SQL Server du paramètre soit exactement le même que le type de la colonne cible, ou pour que soit prise en charge la conversion du type de données SQL Server du paramètre vers le type cible de la colonne. Vous pouvez appliquer le mappage des types de données .NET vers des types de données SQL Server spécifiques à l’aide de la propriété SqlParameter.SqlDbType.
 - Vérifiez que la précision et l’échelle des paramètres ciblant les colonnes des types de données SQL Server decimal et numeric sont les mêmes que celles configurées pour la colonne cible.  
@@ -233,7 +249,7 @@ Always Encrypted ne prend en charge que peu de conversions de types de données 
 Les valeurs qui ciblent une colonne chiffrée doivent être chiffrées dans l’application. Toute tentative d’insertion, de modification ou de filtrage par une valeur en texte clair dans une colonne chiffrée entraîne une erreur similaire à celle-ci :
 
 
-```
+```cs
 System.Data.SqlClient.SqlException (0x80131904): Operand type clash: varchar is incompatible with varchar(8000) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', column_encryption_key_database_name = 'Clinic') collation_name = 'SQL_Latin1_General_CP1_CI_AS'
 ```
 
@@ -242,7 +258,7 @@ Pour éviter ces erreurs, procédez comme suit :
 - Utilisez SqlParameter pour envoyer des données ciblant des colonnes chiffrées. L’exemple suivant illustre une requête qui filtre incorrectement une colonne chiffrée (SSN) à l’aide d’un littéral (ou d’une constante), au lieu de passer le littéral à l’intérieur d’un objet SqlParameter. 
 
 
-```
+```cs
 using (SqlCommand cmd = connection.CreateCommand())
 {
    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
@@ -287,7 +303,7 @@ Le fournisseur de données .NET Framework pour SQL Server est fourni avec les fo
 Vous n’avez pas besoin d’apporter des modifications au code de l’application pour utiliser ces fournisseurs, toutefois, notez les points suivants :
 
 - Vous (ou votre administrateur de base de données) devez vérifier que le nom du fournisseur (configuré dans les métadonnées de clé principale de colonne) est correct et que le chemin de la clé principale de colonne est valide pour un fournisseur donné. Il est recommandé de configurer les clés à l’aide d’outils tels que SQL Server Management Studio, qui génère automatiquement des noms de fournisseurs et des chemins de clés valides lors de l’émission de l’instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) . Pour plus d’informations, consultez [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) et [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
-- Vous devez vérifier que votre application peut accéder à la clé dans le magasin de clés. Pour cela, vous devrez peut-être accorder à votre application l’accès à la clé ou au magasin de clés (selon le magasin de clés) ou effectuer d’autres étapes de configuration spécifiques au magasin de clés. Par exemple, pour accéder à un magasin de clés qui implémente CNG ou CAPI (tel qu’un module de sécurité matériel), vous devez vérifier qu’une bibliothèque implémentant CNG ou CAPI pour votre magasin est installée sur l’ordinateur de votre application. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+- Vérifiez que votre application peut accéder à la clé dans le magasin de clés. Pour cela, vous devrez peut-être accorder à votre application l’accès à la clé ou au magasin de clés (selon le magasin de clés) ou effectuer d’autres étapes de configuration spécifiques au magasin de clés. Par exemple, pour accéder à un magasin de clés qui implémente CNG ou CAPI (tel qu’un module de sécurité matériel), vous devez vérifier qu’une bibliothèque implémentant CNG ou CAPI pour votre magasin est installée sur l’ordinateur de votre application. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne pour Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-azure-key-vault-provider"></a>Utilisation du fournisseur Azure Key Vault
 
@@ -298,7 +314,7 @@ Azure Key Vault est un outil est très pratique qui permet de stocker et de gér
 Si vous voulez stocker des clés principales de colonne dans un magasin de clés qui n’est pas pris en charge par un fournisseur existant, vous pouvez implémenter un fournisseur personnalisé en étendant la [classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) et en inscrivant le fournisseur à l’aide de la méthode [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx) .
 
 
-```
+```cs
 public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
     {
         public override byte[] EncryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, byte[] columnEncryptionKey)
@@ -329,11 +345,11 @@ public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
 ### <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Utilisation des fournisseurs de magasin de clés principales de colonne pour la mise en service des clés par programmation
 
 Quand il accède à des colonnes chiffrées, le fournisseur de données .NET Framework pour SQL Server localise et appelle de manière transparente le fournisseur de magasin de clés principales de colonne qui convient pour déchiffrer les clés de chiffrement de colonne. En règle générale, un code d’application normal n’appelle pas directement les fournisseurs de magasin de clés principales de colonne. Vous pouvez, toutefois, instancier et appeler explicitement un fournisseur afin de mettre en service et de gérer par programmation les clés Always Encrypted, et ce, dans le but de générer une clé de chiffrement de colonne chiffrée et de déchiffrer une clé de chiffrement de colonne (par exemple, dans le cadre d’une permutation de clé principale de colonne). Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
-Notez que l’implémentation de vos propres outils de gestion de clés peut n’être nécessaire que si vous utilisez un fournisseur de magasin de clés personnalisé. Quand vous utilisez des clés stockées dans des magasins de clés (pour lesquels des fournisseurs intégrés existent) ou dans Azure Key Vault, vous pouvez utiliser les outils existants, tels que SQL Server Management Studio ou PowerShell, pour gérer et mettre en service les clés.
+L’implémentation de vos propres outils de gestion de clés peut être nécessaire uniquement si vous utilisez un fournisseur de magasin de clés personnalisé. Quand vous utilisez des clés stockées dans des magasins de clés (pour lesquels des fournisseurs intégrés existent) ou dans Azure Key Vault, vous pouvez utiliser les outils existants, tels que SQL Server Management Studio ou PowerShell, pour gérer et mettre en service les clés.
 L’exemple ci-dessous illustre la génération d’une clé de chiffrement de colonne et l’utilisation de la [classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx) pour chiffrer la clé avec un certificat.
 
 
-```
+```cs
 using System.Security.Cryptography;
 static void Main(string[] args)
 {
@@ -370,12 +386,12 @@ Cette section décrit les outils intégrés d’optimisation des performances du
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Contrôle des allers-retours vers la base de données en vue de la récupération des métadonnées pour les paramètres de requête
 
-Par défaut, si Always Encrypted est activé pour une connexion, le fournisseur de données .NET Framework pour SQL Server appelle [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. **sys.sp_describe_parameter_encryption** analyse l’instruction de requête afin de savoir si des paramètres doivent être chiffrés. Si c’est le cas, pour chaque paramètre à chiffrer, il renvoie des informations relatives au chiffrement qui permettent au fournisseur de données .NET Framework de chiffrer les valeurs de paramètre. Ce comportement garantit un haut niveau de transparence à l’application cliente. L’application et le développeur d’applications n’ont pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au fournisseur de données .NET Framework pour SQL Server dans des objets SqlParameter.
+Par défaut, si Always Encrypted est activé pour une connexion, le fournisseur de données .NET Framework pour SQL Server appelle [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. **sys.sp_describe_parameter_encryption** analyse l’instruction de requête afin de savoir si des paramètres doivent être chiffrés. Si c’est le cas, pour chaque paramètre à chiffrer, il renvoie des informations relatives au chiffrement qui permettent au fournisseur de données .NET Framework de chiffrer les valeurs de paramètre. Ce comportement garantit un haut niveau de transparence à l’application cliente. L’application (et le développeur d’application) n’ont pas besoin de connaître les requêtes qui accèdent aux colonnes chiffrées, tant que les valeurs ciblant les colonnes chiffrées sont passées au fournisseur de données .NET Framework pour SQL Server dans des objets SqlParameter.
 
 
 ### <a name="query-metadata-caching"></a>Mise en cache des métadonnées de requête
 
-Dans .NET Framework 4.6.2 et versions ultérieures, le fournisseur de données .NET Framework pour SQL Server met en cache les résultats de **sys.sp_describe_parameter_encryption** pour chaque instruction de requête. Par conséquent, si la même instruction de requête est exécutée plusieurs fois, le pilote appelle **sys.sp_describe_parameter_encryption** une seule fois. La mise en cache des métadonnées de chiffrement pour les instructions de requête réduit sensiblement le coût en termes de performances de l’extraction des métadonnées à partir de la base de données. La mise en cache est activée par défaut. Vous pouvez désactiver la mise en cache des métadonnées de paramètre en définissant la  [propriété SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) sur false, bien que cela ne soit pas recommandé, sauf dans de très rares cas comme celui décrit ci-dessous :
+Dans .NET Framework 4.6.2 et versions ultérieures, le fournisseur de données .NET Framework pour SQL Server met en cache les résultats de **sys.sp_describe_parameter_encryption** pour chaque instruction de requête. Par conséquent, si la même instruction de requête est exécutée plusieurs fois, le pilote appelle **sys.sp_describe_parameter_encryption** une seule fois. La mise en cache des métadonnées de chiffrement pour les instructions de requête réduit sensiblement le coût en termes de performances de l’extraction des métadonnées à partir de la base de données. La mise en cache est activée par défaut. Vous pouvez désactiver la mise en cache des métadonnées de paramètre en définissant la [propriété SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) sur false, bien que cela ne soit pas recommandé, sauf dans de très rares cas comme celui décrit ci-dessous :
 
 Supposons une base de données ayant deux schémas différents : s1 et s2. Chaque schéma contient une table portant le même nom : t. Les définitions des tables s1.t et s2.t sont identiques, à l’exception des propriétés relatives au chiffrement : Une colonne nommée c dans s1.t n’est pas chiffrée, et elle est chiffrée dans s2.t. La base de données comporte deux utilisateurs : u1 et u2. Le schéma par défaut de l’utilisateur u1 est s1. Le schéma par défaut de l’utilisateur u2 est s2. Une application .NET ouvre deux connexions sur la base de données, en empruntant l’identité de l’utilisateur u1 sur une connexion et celle de l’utilisateur u2 sur une autre. L’application envoie une requête avec un paramètre ciblant la colonne c sur la connexion pour l’utilisateur u1 (le schéma de l’utilisateur par défaut est utilisé, dans la mesure où la requête ne spécifie aucun schéma). Ensuite, l’application envoie la même requête sur la connexion pour l’utilisateur u2. Si la mise en cache des métadonnées de requête est activée, après la première requête, le cache sera rempli avec les métadonnées en indiquant que la colonne c (celle ciblée par le paramètre de requête) n’est pas chiffrée. Dans la mesure où la deuxième requête comporte la même instruction de requête, les informations stockées dans le cache seront utilisées. Par conséquent, le pilote envoie la requête sans chiffrer le paramètre (qui est incorrect, car la colonne cible, s2.t.c, est chiffrée), entraînant la fuite de la valeur de texte en clair du paramètre vers le serveur. Le serveur détecte cette incompatibilité et force le pilote à actualiser le cache. L’application renvoie alors en toute transparence la requête avec la valeur de paramètre correctement chiffrée. Dans ce cas, la mise en cache doit être désactivée pour empêcher toute fuite de valeurs sensibles vers le serveur. 
 
@@ -399,11 +415,11 @@ Pour contrôler le comportement d’Always Encrypted des requêtes, vous devez u
     - Définissez **SqlCommandColumnEncryptionSetting.Enabled** pour les requêtes qui ont des paramètres qui doivent être chiffrés. Cela active à la fois l’appel de sys.sp_describe_parameter_encryption et le déchiffrement des résultats de requête récupérés à partir des colonnes chiffrées.
     - Définissez **SqlCommandColumnEncryptionSetting.ResultSet** pour les requêtes qui n’ont aucun paramètre exigeant un chiffrement, mais qui récupèrent des données de colonnes chiffrées. Cela désactive l’appel de sys.sp_describe_parameter_encryption et le chiffrement des paramètres. La requête est alors en mesure de déchiffrer les résultats des colonnes de chiffrement.
 
-Dans l’exemple ci-dessous, Always Encrypted est désactivé pour la connexion de base de données. La requête envoyée par l’application comprend un paramètre qui cible la colonne LastName qui n’est pas chiffrée. La requête récupère les données des colonnes SSN et BirthDate qui sont toutes deux chiffrées. Dans ce cas, il n’est pas nécessaire d’appeler sys.sp_describe_parameter_encryption pour récupérer les métadonnées de chiffrement. Toutefois, le déchiffrement des résultats de requête doit être activé, afin que l’application puisse recevoir des valeurs de texte en clair à partir des deux colonnes chiffrées. Le paramètre SqlCommandColumnEncryptionSetting.ResultSet est utilisé à cette fin.
+Dans l’exemple ci-dessous, Always Encrypted est désactivé pour la connexion de base de données. La requête envoyée par l’application comprend un paramètre qui cible la colonne LastName qui n’est pas chiffrée. La requête récupère les données des colonnes SSN et BirthDate qui sont toutes deux chiffrées. Dans ce cas, il n’est pas nécessaire d’appeler sys.sp_describe_parameter_encryption pour récupérer les métadonnées de chiffrement. Toutefois, le déchiffrement des résultats de requête doit être activé, afin que l’application puisse recevoir des valeurs en texte clair à partir des deux colonnes chiffrées. Le paramètre SqlCommandColumnEncryptionSetting.ResultSet est utilisé à cette fin.
 
 
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
 using (SqlConnection connection = new SqlConnection(connectionString))
 {
@@ -445,7 +461,7 @@ Dans .NET Framework 4.6.2 et versions ultérieures, les entrées du cache sont s
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>Activation de la protection supplémentaire pour un serveur SQL Server compromis
 
-Par défaut, les *fournisseur de données .NET Framework pour SQL Server* repose sur le système de base de données (SQL Server ou Azure SQL Database) pour fournir des métadonnées indiquant les colonnes de la base de données à chiffrer et de quelle manière. Les métadonnées de chiffrement permettent au fournisseur de données .NET Framework pour SQL Server de chiffrer des paramètres de requête et de déchiffrer les résultats de requête sans aucune entrée de l’application, ce qui réduit considérablement la quantité de modifications requises dans l’application. Toutefois, si le processus SQL Server est compromis et qu’une personne malveillante falsifie les métadonnées envoyées par SQL Server au fournisseur de données .NET Framework pour SQL Server, cette dernière peut être en mesure de dérober des informations sensibles. Cette section décrit les API qui permettent d’offrir un niveau de protection supplémentaire contre ce type d’attaque au prix d’une réduction de la transparence. 
+Par défaut, les *fournisseur de données .NET Framework pour SQL Server* repose sur le système de base de données (SQL Server ou Azure SQL Database) pour fournir des métadonnées indiquant les colonnes de la base de données à chiffrer et de quelle manière. Les métadonnées de chiffrement permettent au fournisseur de données .NET Framework pour SQL Server de chiffrer des paramètres de requête et de déchiffrer les résultats de requête sans aucune entrée de l’application, ce qui réduit considérablement le nombre de changements nécessaires dans l’application. Toutefois, si le processus SQL Server est compromis et qu’une personne malveillante falsifie les métadonnées envoyées par SQL Server au fournisseur de données .NET Framework pour SQL Server, cette dernière peut être en mesure de dérober des informations sensibles. Cette section décrit les API qui permettent d’offrir un niveau de protection supplémentaire contre ce type d’attaque au prix d’une réduction de la transparence. 
 
 ### <a name="forcing-parameter-encryption"></a>Forcer le chiffrement de paramètre 
 
@@ -453,13 +469,13 @@ Avant que le fournisseur de données .NET Framework pour SQL Server n’envoie u
 
 Pour éviter ce type d’attaque, une application peut définir la propriété [SqlParameter.ForceColumnEncryption](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx) du paramètre sur true. Ainsi, le fournisseur de données .NET Framework pour SQL Server lève une exception, si les métadonnées reçues du serveur indiquent que le paramètre n’a pas besoin d’être chiffré.
 
-Notez que bien que l’utilisation de la propriété **SqlParameter.ForceColumnEncryption** contribue à améliorer la sécurité, cela réduit également la transparence du chiffrement sur l’application cliente. Si vous mettez à jour le schéma de base de données pour modifier le jeu de colonnes chiffrées, vous devrez apporter des modifications à l’application.
+Bien que l’utilisation de la **propriété SqlParameter.ForceColumnEncryption** contribue à durcir la sécurité, elle réduit également la transparence du chiffrement sur l’application cliente. Si vous mettez à jour le schéma de base de données pour modifier le jeu de colonnes chiffrées, vous devrez apporter des modifications à l’application.
 
 L’exemple de code suivant illustre l’utilisation de la propriété **SqlParameter.ForceColumnEncryption** afin d’éviter l’envoi de numéros de sécurité sociale sous forme de texte en clair. 
 
 
 
-```
+```cs
 SqlCommand cmd = _sqlconn.CreateCommand(); 
 
 // Use parameterized queries to access Always Encrypted data. 
@@ -485,12 +501,12 @@ Les métadonnées de chiffrement, renvoyées par SQL Server pour les paramètres
 
 Pour empêcher ces attaques, l’application peut spécifier la liste des chemins d’accès des clés approuvés pour un serveur donné en utilisant la propriété [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx). Si le.fournisseur de données .NET Framework pour SQL Server reçoit un chemin d’accès des clés ne figurant pas dans la liste des chemins d’accès de clé approuvés, il lève une exception. 
 
-Notez que bien que la définition de chemins d’accès des clé approuvés améliore la sécurité de votre application, vous devrez modifier le code ou/et la configuration de l’application, chaque fois que vous faites pivoter votre clé principale de colonne (à chaque modification du chemin d’accès des clés principales de colonne). 
+Bien que la définition de chemins de clé approuvés durcisse la sécurité de votre application, vous devez changer le code ou/et la configuration de l’application chaque fois que vous permutez votre clé principale de colonne (à chaque changement du chemin de la clé principale de colonne). 
 
 L’exemple suivant montre comment configurer les chemins d’accès des clés principales de colonne approuvés :
 
 
-```
+```cs
 // Configure trusted key paths to protect against fake key paths sent by a compromised SQL Server instance 
 // First, create a list of trusted key paths for your server 
 List<string> trustedKeyPathList = new List<string>(); 
@@ -512,12 +528,12 @@ Grâce à SqlBulkCopy, les données qui sont déjà chiffrées et stockées dans
 - Configurez les deux connexions de base de données, c’est-à-dire, celle vers la table source et celle vers la table cible, sans activer Always Encrypted. 
 - Définissez l’option AllowEncryptedValueModifications (voir [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)). Remarque : Faites attention lorsque vous spécifiez AllowEncryptedValueModifications, car cela peut endommager la base de données. En effet, le fournisseur de données .NET Framework pour SQL Server ne vérifie pas si les données sont chiffrées, ou si elles sont correctement chiffrées à l’aide du même type de chiffrement, du même algorithme et de la même clé que la colonne cible.
 
-Notez que l’option AllowEncryptedValueModifications est disponible dans .NET Framework 4.6.1 et versions ultérieures.
+L’option AllowEncryptedValueModifications est disponible dans .NET Framework 4.6.1 et versions ultérieures.
 
 Voici un exemple qui copie les données d’une table à une autre. Les colonnes SSN et BirthDate sont censées être chiffrées.
         
 
-```
+```cs
 static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 {
    string sourceConnectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
@@ -548,7 +564,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Créer une vue d’abonnement|Description|Introduit avec .NET
+|Nom|Description|Introduit avec .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Fournisseur de magasin de clés pour le magasin de certificats Windows.|  4.6
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Fournisseur de magasin de clés pour l’API de chiffrement Microsoft de la prochaine génération (CNG).|  4.6.1
@@ -568,7 +584,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog sur Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Didacticiel de SQL Database : Protéger les données à l’aide d’Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

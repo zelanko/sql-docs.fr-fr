@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064563"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593894"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Crée un objet de métadonnées de clé principale de colonne dans une base de données. Une entrée de métadonnées de clé principale de colonne représente une clé stockée dans un magasin de clés externes. Cette clé protège (chiffre) les clés de chiffrement de colonne lorsque vous utilisez la fonctionnalité [&#40;Moteur de base de données&#41; Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Plusieurs clés principales de colonne autorisent la rotation périodique de clés pour améliorer la sécurité. Créez une clé principale de colonne dans un magasin de clés et son objet de métadonnées associé dans la base de données en utilisant l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou PowerShell. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+Crée un objet de métadonnées de clé principale de colonne dans une base de données. Une entrée de métadonnées de clé principale de colonne représente une clé stockée dans un magasin de clés externes. Cette clé protège (chiffre) les clés de chiffrement de colonne lorsque vous utilisez [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Plusieurs clés principales de colonne autorisent la rotation périodique de clés pour améliorer la sécurité. Créez une clé principale de colonne dans un magasin de clés et son objet de métadonnées associé dans la base de données en utilisant l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou PowerShell. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ Crée un objet de métadonnées de clé principale de colonne dans une base de d
 
 ## <a name="syntax"></a>Syntaxe  
 
-```  
+``` sql 
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -72,9 +72,7 @@ Ensuite, le pilote utilise le fournisseur pour déchiffrer les clés de chiffrem
   
 Les bibliothèques de pilotes clients compatibles avec Always Encrypted incluent des fournisseurs de magasin de clés pour les magasins de clés les plus populaires.   
   
-Un ensemble de fournisseurs disponibles dépend du type et de la version du pilote client. Pour plus d’informations sur certains pilotes, consultez la documentation d’Always Encrypted :
-
-[Développer à l’aide d’Always Encrypted avec le Fournisseur de données .NET Framework pour SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+Un ensemble de fournisseurs disponibles dépend du type et de la version du pilote client. Pour plus d’informations sur certains pilotes, consultez la documentation d’Always Encrypted : [Développer des applications avec Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 
 La table suivante affiche le nom des fournisseurs de système :  
@@ -84,7 +82,8 @@ La table suivante affiche le nom des fournisseurs de système :
     |'MSSQL_CERTIFICATE_STORE'|Magasin de certificats Windows| 
     |'MSSQL_CSP_PROVIDER'|Un magasin, tel qu’un module de sécurité matériel (HSM), qui prend en charge Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|Un magasin, comme un module de sécurité matériel (HSM), qui prend en charge l’API Cryptography: Next Generation.|  
-    |'Azure_Key_Vault'|Voir [Prise en main du coffre de clés Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |'AZURE_KEY_VAULT'|Voir [Prise en main du coffre de clés Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |'MSSQL_JAVA_KEYSTORE'| Magasin de clés Java.}
   
 
 Dans votre pilote client compatible avec Always Encrypted, vous pouvez implémenter un fournisseur de magasin de clés personnalisé qui stocke les clés principales de colonne pour lesquelles il n’existe aucun fournisseur de magasin de clés intégré. Les noms des fournisseurs de magasin de clés personnalisé ne peuvent pas commencer par 'MSSQL_', qui est un préfixe réservé aux fournisseurs de magasin de clés [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
@@ -172,6 +171,7 @@ Un littéral binaire qui est un résultat du *chemin de clé* fournissant la sig
 
 Créez une entrée de métadonnées de clé principale de colonne avant de créer une entrée de métadonnées de clé de chiffrement de colonne dans la base de données et avant que toute colonne dans la base de données puisse être chiffrée à l’aide d’Always Encrypted. Une entrée de clé principale de colonne dans les métadonnées ne contient pas la clé principale de colonne réelle. La clé principale de colonne doit être stockée dans un magasin de clés de colonne externe (en dehors de SQL Server). Le nom du fournisseur de magasin de clés et le chemin de clé principale de colonne dans les métadonnées doivent être valides pour une application cliente. L’application cliente doit utiliser la clé principale de colonne pour déchiffrer une clé de chiffrement de colonne. La clé de chiffrement de colonne est chiffrée avec la clé principale de colonne. L’application cliente doit également interroger les colonnes chiffrées.
 
+Nous vous recommandons d’utiliser des outils, tels que SQL Server Management Studio (SSMS) ou PowerShell, pour gérer les clés principales de colonne. Ces outils génèrent des signatures (si vous utilisez Always Encrypted avec des enclaves sécurisées) et émettent automatiquement des instructions `CREATE COLUMN MASTER KEY` pour créer des objets de métadonnées de clé de chiffrement de colonne. Consultez [Provisionner des clés Always Encrypted avec SQL Server Management Studio](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) et [Provisionner des clés Always Encrypted avec PowerShell](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md). 
 
   
 ## <a name="permissions"></a>Autorisations  
@@ -182,7 +182,7 @@ Nécessite l’autorisation **ALTER ANY COLUMN MASTER KEY**.
 ### <a name="a-creating-a-column-master-key"></a>A. Création d’une clé principale de colonne  
 L’exemple suivant crée une entrée de métadonnées de clé principale de colonne avec pour une clé principale de colonne. La clé principale de colonne est stockée dans le magasin de certificats des applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE pour accéder à la clé principale de colonne :  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -247,6 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
