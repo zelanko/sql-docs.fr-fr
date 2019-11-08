@@ -1,5 +1,5 @@
 ---
-title: Base de données Master Data Services | Microsoft Docs
+title: Base de données Master Data Services
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062742"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729038"
 ---
 # <a name="master-data-services-database"></a>Base de données Master Data Services
 
@@ -38,7 +38,7 @@ ms.locfileid: "68062742"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Table de mise en lots des membres feuilles &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
 -   [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   

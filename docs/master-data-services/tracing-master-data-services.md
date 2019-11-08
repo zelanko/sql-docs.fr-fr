@@ -1,5 +1,5 @@
 ---
-title: Suivi (Master Data Services) | Microsoft Docs
+title: Suivi
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263985"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727848"
 ---
 # <a name="tracing-master-data-services"></a>Suivi (Master Data Services)
 
@@ -65,8 +65,8 @@ ms.locfileid: "68263985"
     |Time|Date de l’entrée de suivi.|  
     |CorrelationID|Un ID de corrélation est affecté à chaque demande. Tous les suivis déclenchés par la demande partagent le même ID de corrélation.<br /><br /> Lorsqu’une erreur se produit dans l’interface utilisateur, l’ID de corrélation apparaît dans le message d’erreur.|  
     |Opération|Nom de l’opération de demande. Si la demande est une demande de l’interface utilisateur Web, le nom de l’opération correspond à l’URL. Si la demande est une demande API, le nom de l’opération correspond au nom du service.|  
-    |Niveau|Niveau de cette entrée de suivi.|  
-    |`Message`|Corps du message de suivi.|  
+    |Level|Niveau de cette entrée de suivi.|  
+    |Message|Corps du message de suivi.|  
   
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog intitulé [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377)(en anglais) sur msdn.com.  

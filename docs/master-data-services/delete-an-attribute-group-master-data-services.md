@@ -1,5 +1,5 @@
 ---
-title: Supprimer un groupe d’attributs (Master Data Services) | Microsoft Docs
+title: Supprimer un groupe d'attributs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c86497b0a7231027d8b586147b372767f88b9605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906413"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729362"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Supprimer un groupe d'attributs (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "67906413"
   
 -   **Remarque** Lorsque les groupes d'attributs existent, les attributs qui n'appartiennent pas à un groupe d'attributs ne sont pas affichés dans l' **Explorateur**. Lorsqu'aucun groupe d'attributs n'existe, tous les attributs sont affichés.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -49,7 +49,7 @@ ms.locfileid: "67906413"
   
 6.  Cliquez sur le groupe d'attributs à supprimer.  
   
-7.  Cliquez sur **Delete**.  
+7.  Cliquez sur **Supprimer**.  
   
 8.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

@@ -1,6 +1,6 @@
 ---
-title: Propertyvaltype, propriété (classe ClientNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Propriété PropertyValType (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- PropertyValType Property (ClientNetworkProtocolProperty Class)
+- PropertyValType Property (ClientNetworkProtocolProperty
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1b503ea721aa83f9e9954a2181b1b252b211474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a4c6441cd2e6210575cfd30d28bf2cc2f385c18
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016140"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660763"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>Propriété PropertyValType (classe ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

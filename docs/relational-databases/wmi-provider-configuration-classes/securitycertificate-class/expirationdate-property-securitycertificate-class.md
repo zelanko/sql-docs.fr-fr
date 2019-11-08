@@ -1,6 +1,6 @@
 ---
-title: ExpirationDate, propriété (classe SecurityCertificate) | Microsoft Docs
-ms.custom: ''
+title: Propriété ExpirationDate (SecurityCertificate)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93c8af9ebd709896da945246dbbc120ef4bd60ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97d3de804e5edce5d25e1af3b832ebc4103a3815
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088994"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660182"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Propriété ExpirationDate (classe SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ object.ExpirationDate [= value]
  Objet de [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) qui représente un certificat de sécurité.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
- Un **uint32** valeur qui spécifie la date d’expiration du certificat de sécurité.  
+ Valeur **UInt32** qui spécifie la date d’expiration du certificat de sécurité.  
   
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des protocoles réseau du serveur et des bibliothèques Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

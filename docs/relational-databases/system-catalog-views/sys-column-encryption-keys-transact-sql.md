@@ -1,7 +1,7 @@
 ---
-title: Sys.column_encryption_keys (Transact-SQL) | Microsoft Docs
+title: sys. column_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: ''
@@ -17,30 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_encryption_keys catalog view
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8fd9177ad646a8086e00f9494e7e73488aace53d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140096"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593727"
 ---
-# <a name="syscolumnencryptionkeys--transact-sql"></a>Sys.column_encryption_keys (Transact-SQL)
+# <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  Retourne des informations sur les clés de chiffrement de colonne (clés cek) créé avec le [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) instruction. Chaque ligne représente une clé CEK.  
+  Retourne des informations sur les clés de chiffrement de colonne (clés CEK) créées à l’aide de l’instruction [Create Column ENcryption Key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) . Chaque ligne représente un clé CEK.  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Le nom de la clé CMK.|  
-|**column_encryption_key_id**|**Int**|ID de la clé CEK.|  
-|**create_date**|**datetime**|Date de que création de la clé CEK.|  
-|**modify_date**|**datetime**|Date de que dernière modification de la clé CEK.|  
+|**nom**|**sysname**|Nom du CMK.|  
+|**column_encryption_key_id**|**int**|ID du clé CEK.|  
+|**create_date**|**datetime**|Date à laquelle le clé CEK a été créé.|  
+|**modify_date**|**datetime**|Date de dernière modification du clé CEK.|  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite le **VIEW ANY COLUMN ENCRYPTION KEY** autorisation.  
+ Nécessite l’autorisation **afficher une clé de chiffrement de colonne** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -50,7 +50,11 @@ ms.locfileid: "68140096"
  [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Always Encrypted &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Gérer les clés de Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+
   
   

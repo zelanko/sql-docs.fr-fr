@@ -1,5 +1,5 @@
 ---
-title: Formats de vue d’abonnement (Master Data Services) | Microsoft Docs
+title: Formats de vue d'abonnement
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085612"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728889"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formats de vue d'abonnement (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68085612"
   
 ## <a name="subscription-view-formats"></a>Formats de vue d'abonnement  
   
-|Nom|Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |**Membres feuille**|Contient des membres feuille et leurs valeurs d'attribut associées.|  
 |**Historique des membres feuille**|Contient les données historiques des membres feuille et les valeurs d’attribut qui leur sont associées. Le format d’affichage est Dimension à variation lente Type 4.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68085612"
 |**Niveaux dérivés (vue Hiérarchie dérivée)**|Contient une structure de hiérarchie dérivée au format de niveau.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Créer une vue d’abonnement pour exporter des données &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Modifier et supprimer un index (Master Data Services) | Microsoft Docs
+title: Modifier et supprimer un index
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 106a496bd1bd7acb0895de2bc41438ef76cbea1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086430"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728217"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Modifier et supprimer un index (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68086430"
 
   Vous pouvez modifier et supprimer un index créé sur les attributs.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

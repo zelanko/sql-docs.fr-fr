@@ -1,6 +1,6 @@
 ---
-title: Setcurrentcertificate, méthode (classe ServerSettings) | Microsoft Docs
-ms.custom: ''
+title: Méthode SetCurrentCertificate (ServerSettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b0e71ad9bdd0bc4c0abb8c1ee0f57c08f818bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c9539157207e458f6a5d7d587709a94dfdc4912
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052845"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659099"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Méthode SetCurrentCertificate (classe ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ object.SetCurrentCertificate(SHA)
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*SHA*|Valeur de chaîne qui spécifie le certificat de sécurité actuel.|  
+|*Tcha*|Valeur de chaîne qui spécifie le certificat de sécurité actuel.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
@@ -51,6 +51,6 @@ object.SetCurrentCertificate(SHA)
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des protocoles réseau du serveur et des bibliothèques Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

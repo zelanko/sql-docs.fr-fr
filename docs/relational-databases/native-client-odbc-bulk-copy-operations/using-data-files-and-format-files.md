@@ -18,16 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ddd9e8d0fb8b5c22dc73d0a11b6257583be07a8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907521"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785280"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilisation de fichiers de données et de format
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Le programme de copie en bloc le plus simple permet d'effectuer les opérations suivantes :  
   
@@ -47,11 +46,11 @@ ms.locfileid: "72907521"
 
  L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] peut être n'importe quelle instruction qui génère un jeu de résultats. Le fichier de données contenant le premier jeu de résultats de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est créé. La copie en bloc ignore tous les jeux de résultats après le premier si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] génère plusieurs jeux de résultats.  
   
- Pour créer un fichier de données dans lequel les données de la colonne sont stockées dans un format différent de celui de la table, appelez [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) pour spécifier le nombre de colonnes qui seront modifiées, puis appelez [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) pour chaque colonne dont vous souhaitez modifier le format. Cette opération est effectuée après l’appel de **bcp_init** mais avant l’appel de **bcp_exec**. **bcp_colfmt** spécifie le format dans lequel les données de la colonne sont stockées dans le fichier de données. Il peut être utilisé lors de la copie en bloc dans ou vers l’extérieur. Vous pouvez également utiliser **bcp_colfmt** pour définir les indicateurs de fin de ligne et de colonne. Par exemple, si vos données ne contiennent pas de tabulations, vous pouvez créer un fichier délimité par des tabulations en utilisant **bcp_colfmt** pour définir le caractère de tabulation en tant que marque de fin pour chaque colonne.  
+ Pour créer un fichier de données dans lequel les données de la colonne sont stockées dans un format différent de celui de la table, appelez [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) pour spécifier le nombre de colonnes qui seront modifiées, puis appelez [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) pour chaque colonne dont vous souhaitez modifier le format. Cette opération est effectuée après l’appel de **bcp_init** mais avant l’appel de **bcp_exec**. **bcp_colfmt** spécifie le format dans lequel les données de la colonne sont stockées dans le fichier de données. Il peut être utilisé lors de la copie en bloc dans ou vers l’extérieur. Vous pouvez également utiliser **bcp_colfmt** pour définir les indicateurs de fin de ligne et de colonne. Par exemple, si vos données ne contiennent pas de caractères de tabulation, vous pouvez créer un fichier délimité par des tabulations à l’aide de **bcp_colfmt** pour définir la tabulation comme marque de fin de chaque colonne.  
   
- Lors d’une copie en bloc à l’aide de **bcp_colfmt**, vous pouvez facilement créer un fichier de format décrivant le fichier de données que vous avez créé en appelant [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) après le dernier appel à **bcp_colfmt**.  
+ Lors de la copie en bloc à partir de **bcp_colfmt**, vous pouvez facilement créer un fichier de format décrivant le fichier de données que vous avez créé en appelant [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) après le dernier appel à **bcp_colfmt**.  
   
- Lors d’une copie en bloc à partir d’un fichier de données décrit par un fichier de format, lisez le fichier de format en appelant [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) après **bcp_init** mais avant **bcp_exec**.  
+ Lors d’une copie en bloc à partir d’un fichier de données décrit par un fichier de format, lisez le fichier de format en appelant [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) après **bcp_init** mais avant d' **bcp_exec**.  
   
  La fonction **bcp_control** contrôle plusieurs options lors de la copie en bloc dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un fichier de données. **bcp_control** définit des options, telles que le nombre maximal d’erreurs avant l’arrêt, la ligne du fichier sur laquelle démarrer la copie en bloc, la ligne sur laquelle s’arrêter et la taille du lot.  
   
