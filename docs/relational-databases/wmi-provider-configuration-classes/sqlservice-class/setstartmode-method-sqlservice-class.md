@@ -1,6 +1,6 @@
 ---
-title: Setstartmode, méthode (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: Méthode setStartMode, (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08309cd2f53c39ec4a37dc1345a1788379dd7310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edd3b4a5fa4d787292f1978da80c5f7803242010
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006867"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660910"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>Méthode SetStartMode (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +40,12 @@ object.SetStartMode(StartMode)
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 #### <a name="parameters"></a>Paramètres  
- *StartMode*  
+ *Tour*  
  Valeur **uint32** qui spécifie le mode de démarrage de l'instance de service.  
   
  Les valeurs valides sont les suivantes :  
   
- Valeur = 0. Boot - Le pilote de périphérique est démarré par le chargeur du système d'exploitation. Cette valeur est uniquement valide pour les services de pilote.  
+ Valeur = 0. Boot - Le pilote de périphérique est démarré par le chargeur du système d'exploitation. Cette valeur est uniquement valide pour les services de pilote.  
   
  Valeur = 1. System - Le pilote de périphérique est démarré par la méthode **IoInitSystem** . Cette valeur est uniquement valide pour les services de pilote.  
   
@@ -61,6 +61,6 @@ object.SetStartMode(StartMode)
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage et arrêt des Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

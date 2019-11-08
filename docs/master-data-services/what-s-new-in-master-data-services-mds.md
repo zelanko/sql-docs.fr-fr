@@ -1,5 +1,5 @@
 ---
-title: Nouveautés de Master Data Services (MDS) | Microsoft Docs
+title: Nouveautés
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810504"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727792"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Nouveautés de Master Data Services (MDS)
 
@@ -31,13 +31,13 @@ ms.locfileid: "68810504"
   
 -   Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
--   Vous avez un compte Azure ?  Dans ce cas, allez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle avec [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] déjà installé.  
+-   Vous avez un compte Azure ?  Dans ce cas, cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle sur laquelle [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] est déjà installé.  
   
 ##  <a name="improved-performance"></a>Performances améliorées  
   
  L’amélioration des performances vous permet de créer des modèles plus volumineux, de charger les données de façon plus efficace et d’obtenir de meilleures performances globales. Cette amélioration des performances concerne aussi le complément pour Microsoft Excel, qui a été amélioré pour réduire le temps de chargement des données et traiter des entités plus volumineuses.  
   
- Pour plus d’informations sur le complément pour Microsoft Excel, consultez[Complément Master Data Services pour Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Pour plus d’informations sur le complément pour Microsoft Excel, consultez [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Les améliorations touchent également les fonctionnalités suivantes.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68810504"
   
  Un utilisateur peut désormais se voir attribuer explicitement l’autorisation d’administrateur au niveau du modèle. Cela signifie que si des autorisations sont attribuées par la suite à l’utilisateur dans la sous-arborescence de modèle, par exemple au niveau de l’entité, il ne perd pas cette autorisation d’administrateur.  
   
- Dans cette version de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], nous proposons d’autres niveaux d’autorisations en introduisant les nouvelles autorisations suivantes : Lire, Créer, Mettre à jour et Supprimer. Par exemple, un utilisateur qui dispose seulement de l’autorisation de mise à jour peut désormais mettre à jour les données de référence sans créer ni supprimer les données. Quand vous attribuez à un utilisateur l’autorisation de création, de mise à jour ou de suppression, il bénéficie automatiquement de l’autorisation de lecture. Vous pouvez aussi combiner les autorisations de lecture, de création, de mise à jour et de suppression.  
+ Dans cette version de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], nous proposons d’autres niveaux d’autorisations en introduisant de nouvelles autorisations (lecture, création, mise à jour et suppression). Par exemple, un utilisateur qui dispose seulement de l’autorisation de mise à jour peut désormais mettre à jour les données de référence sans créer ni supprimer les données. Quand vous attribuez à un utilisateur l’autorisation de création, de mise à jour ou de suppression, il bénéficie automatiquement de l’autorisation de lecture. Vous pouvez aussi combiner les autorisations de lecture, de création, de mise à jour et de suppression.  
   
  Quand vous procédez à une mise à niveau vers [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les anciennes autorisations sont transformées en nouvelles autorisations, comme indiqué dans le tableau suivant.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68810504"
 |L’utilisateur qui installe à l’origine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dispose de l’autorisation d’administrateur du serveur.|L’utilisateur dispose de l’autorisation de la fonction Super utilisateur.|  
 |L’utilisation dispose d’autorisations de mise à jour au niveau du modèle et aucune autorisation dans la sous-arborescence de modèle. Il est donc implicitement un administrateur de modèle.|L’utilisateur dispose d’autorisations d’administrateur explicites au niveau du modèle.|  
 |L’utilisateur dispose d’autorisations de lecture seule.|L’utilisateur dispose d’autorisations d’accès en lecture.|  
-|L’utilisateur dispose d’autorisations de mise à jour.|L’utilisateur dispose des quatre autorisations d’accès : Créer, Mettre à jour, Supprimer et Lire.|  
+|L’utilisateur dispose d’autorisations de mise à jour.|L’utilisateur dispose de l’ensemble des quatre autorisations d’accès : création, mise à jour, suppression et lecture.|  
 |L’utilisateur dispose d’autorisations de refus.|L’utilisateur dispose d’autorisations de refus.|  
   
  Pour plus d’informations sur les autorisations, consultez l’article [Sécurité (Master Data Services)](../master-data-services/security-master-data-services.md).  
@@ -124,11 +124,11 @@ ms.locfileid: "68810504"
   
  Pour plus d'informations, consultez les rubriques ci-dessous.  
   
--   [Modèles (Master Data Services)](../master-data-services/models-master-data-services.md)  
+-   [Modèles &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
--   [Entités (Master Data Services)](../master-data-services/entities-master-data-services.md)  
+-   [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [Transactions (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
+-   [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
 -   [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
 
@@ -225,7 +225,7 @@ ms.locfileid: "68810504"
    
  **Exemples de packages de déploiement de modèle mis à jour**  
   
- Les exemples de packages ont été mis à jour pour prendre en charge de nouveaux scénarios. Pour plus d’informations, consultez [Exemples SQL Server : Packages de déploiement de modèle (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Les exemples de packages ont été mis à jour pour prendre en charge de nouveaux scénarios. Pour plus d’informations, consultez l’article [Exemples : packages de déploiement de modèles (Master Data Services)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

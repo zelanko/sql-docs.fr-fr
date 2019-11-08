@@ -1,6 +1,6 @@
 ---
-title: Méthode SetFlag (classe ClientNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Méthode SetFlag (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c16ae47f80a9d349090684bf7e9c7faf1dca641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f5c4e9c6e153a548b00e4c273936eea018b316b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035311"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660716"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Méthode SetFlag (classe ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

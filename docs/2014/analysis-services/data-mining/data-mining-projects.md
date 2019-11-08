@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085057"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73705297"
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
   Un projet d'exploration de données fait partie d'une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  
@@ -24,12 +24,12 @@ ms.locfileid: "66085057"
   
  
 ##  <a name="bkmk_Overview"></a> Création de projets d'exploration de données  
- Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous créez des projets d'exploration de données à l'aide du modèle, **Projet OLAP et expl. de données**. Vous pouvez également créer des projets d'exploration de données par programmation en utilisant AMO. Les différents objets d'exploration de données peuvent faire l'objet d'un script à l'aide du langage ASSL (Analysis Services Scripting Language). Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+ Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous créez des projets d'exploration de données à l'aide du modèle, **Projet OLAP et expl. de données**. Vous pouvez également créer des projets d'exploration de données par programme, en utilisant AMO. Les différents objets d'exploration de données peuvent faire l'objet d'un script à l'aide du langage ASSL (Analysis Services Scripting Language). Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
  Si vous créez un projet d'exploration de données dans une solution existante, par défaut les objets d'exploration de données seront déployés vers une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec le même nom que le fichier solution. Vous pouvez modifier ce nom et le serveur cible à l'aide de la boîte de dialogue **Propriétés du projet** . Pour plus d’informations, consultez [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
->  Pour correctement générer et déployer votre projet, vous devez avoir accès à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode d'exploration de données OLAP/Data. Vous ne pouvez pas développer ou déployer des solutions d'exploration de données sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge les modèles tabulaires, vous ne pouvez pas non plus utiliser directement les données d'un classeur PowerPivot ou d'un modèle tabulaire qui utilise la banque de données en mémoire. Pour déterminer si l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez peut prendre en charge l’exploration de données, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+>  Pour correctement générer et déployer votre projet, vous devez avoir accès à une instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode d'exploration de données OLAP/Data. Vous ne pouvez pas développer ou déployer des solutions d'exploration de données sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge les modèles tabulaires, vous ne pouvez pas non plus utiliser directement les données d'un classeur PowerPivot ou d'un modèle tabulaire qui utilise la banque de données en mémoire. Pour déterminer si l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez peut prendre en charge l’exploration de données, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Dans chaque projet d'exploration de données que vous créez, suivez ces étapes :  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66085057"
   
  Par exemple, un projet d'exploration de données unique peut contenir une référence à plusieurs sources de données et chacune de ces sources de données prend en charge plusieurs vues de source de données. Ensuite, chaque vue de source de données peut prendre en charge plusieurs structures d'exploration de données, chacune avec de nombreux modèles d'exploration de données associés.  
   
- En outre, votre projet peut inclure des algorithmes de plug-in, des assemblys personnalisés ou des procédures stockées personnalisées ; toutefois, ces objets ne sont pas décrits ici. Pour plus d’informations, consultez [Guide du développeur &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ En outre, votre projet peut inclure des algorithmes de plug-in, des assemblys personnalisés ou des procédures stockées personnalisées ; toutefois, ces objets ne sont pas décrits ici. Pour plus d’informations, consultez le [Guide &#40;du&#41;développeur Analysis Services](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -70,7 +70,7 @@ ms.locfileid: "66085057"
   
  Un projet d'exploration de données unique peut référencer plusieurs sources de données. Bien qu'un modèle d'exploration de données puisse utiliser une seule source de données à la fois, le projet peut avoir plusieurs dessin de modèles sur différentes sources de données.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge des données de nombreux fournisseurs externes et l'exploration de données SQL Server peut utiliser des données relationnelles et des données du cube comme source de données. Toutefois, si vous développez les deux types de projets-modèles basés sur des sources relationnelles et les modèles basés sur des cubes OLAP-vous pouvez développer et gérer ces derniers dans des projets distincts.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge des données de nombreux fournisseurs externes et l'exploration de données SQL Server peut utiliser des données relationnelles et des données du cube comme source de données. Toutefois, si vous développez les deux types de projets : des modèles basés sur des sources relationnelles et des modèles basés sur des cubes OLAP, vous souhaiterez peut-être les développer et les gérer dans des projets distincts.  
   
 -   En général, les modèles basés sur un cube OLAP doivent être développés dans la solution de conception OLAP. En effet, les modèles basés sur un cube doivent traiter le cube pour mettre à jour les données. En règle générale, vous devez utiliser des données de cube uniquement lorsqu'il s'agit du moyen principal de stockage et d'accès aux données, ou lorsque vous avez besoin des agrégations, des dimensions et des attributs créés par le projet multidimensionnel.  
   
@@ -160,9 +160,7 @@ ms.locfileid: "66085057"
   
  Ces visualisations sont temporaires et sont fermées sans enregistrement lorsque vous fermez la session avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par conséquent, si vous devez exporter les visualisations vers une autre application pour les présenter ou les analyser plus en détails, utilisez la commande **Copier** à disposition dans chaque onglet ou volet de l'interface de la visionneuse.  
   
- Les Compléments d'exploration de données pour Excel fournissent également un modèle Visio que vous pouvez utiliser pour représenter vos modèles dans un diagramme Visio et pour annoter et modifier le diagramme à l'aide des outils Visio. Pour plus d’informations, consultez [Compléments d’exploration de données Microsoft SQL Server 2008 SP2 pour Microsoft Office 2007](https://go.microsoft.com/fwlink/?LinkID=123146).  
-  
-
+ Les Compléments d'exploration de données pour Excel fournissent également un modèle Visio que vous pouvez utiliser pour représenter vos modèles dans un diagramme Visio et pour annoter et modifier le diagramme à l'aide des outils Visio. Pour plus d’informations, consultez [Compléments d’exploration de données Microsoft SQL Server 2008 SP2 pour Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
   
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  Une fois un modèle créé, vous pouvez étudier les résultats et déterminer quels sont les modèles les plus efficaces.  
@@ -173,7 +171,7 @@ ms.locfileid: "66085057"
   
  Notez que ces rapports et graphiques ne sont pas stockés avec le projet ou dans la base de données ssASnoversion, par conséquent si vous devez conserver ou dupliquer les résultats, vous devez les enregistrer ou créer un script à partir des objets en utilisant DMX ou AMO. Vous pouvez également utiliser des procédures stockées pour la validation croisée.  
   
- Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](testing-and-validation-data-mining.md).  
+ Pour plus d’informations, consultez [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
 
   
@@ -196,16 +194,16 @@ ms.locfileid: "66085057"
   
 |Tâches|Rubriques|  
 |-----------|------------|  
-|Décrit la façon d'utiliser des colonnes de structure d'exploration de données|[Créer une structure d’exploration de données relationnelle](create-a-relational-mining-structure.md)|  
+|Décrit la façon d'utiliser des colonnes de structure d'exploration de données|[Créer une structure d’exploration de données relationnelles](create-a-relational-mining-structure.md)|  
 |Fournit des informations sur l'ajout de nouveaux modèles d'exploration de données et le traitement d'une structure et de modèles|[Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services - Exploration de données&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
-|Fournit des liens vers des ressources qui vous permettent de personnaliser les algorithmes qui génèrent des modèles d'exploration de données|[Personnaliser les modèles et les structures d’exploration de données](customize-mining-models-and-structure.md)|  
+|Fournit des liens vers des ressources qui vous permettent de personnaliser les algorithmes qui génèrent des modèles d'exploration de données|[Personnaliser les modèles et les structures d'exploration de données](customize-mining-models-and-structure.md)|  
 |Fournit des liens vers des informations sur chacune des visionneuses de modèles d'exploration de données|[Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)|  
 |En savoir plus sur la création d'un graphique de courbes d'élévation, d'un graphique des bénéfices ou d'une matrice de classification, ou sur le test d'une structure d'exploration de données|[Test et validation &#40;Exploration des données&#41;](testing-and-validation-data-mining.md)|  
-|En savoir plus sur les options de traitement et les autorisations|[Traitement des objets d'exploration de données](processing-data-mining-objects.md)|  
+|En savoir plus sur les options de traitement et les autorisations|[Traitement des objets d’exploration de données](processing-data-mining-objects.md)|  
 |Fournit des informations supplémentaires sur Analysis Services|[Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Designer](data-mining-designer.md)   
+ [Concepteur d'exploration de données](data-mining-designer.md)   
  [Création de modèles multidimensionnels à l’aide des Outils de données SQL Server &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Base de données d’espace de travail &#40;SSAS Tabulaire&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   

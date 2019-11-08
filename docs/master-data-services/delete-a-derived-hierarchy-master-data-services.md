@@ -1,5 +1,5 @@
 ---
-title: Supprimer une hiérarchie dérivée (Master Data Services) | Microsoft Docs
+title: Supprimer une hiérarchie dérivée
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 437342af4f0aa188fb898bd951249629ee44be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906465"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728367"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Supprimer une hiérarchie dérivée (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "67906465"
 > [!NOTE]  
 >  La suppression d'une hiérarchie dérivée n'a aucun effet sur les relations d'attributs sur lesquelles la hiérarchie est basée.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -46,7 +46,7 @@ ms.locfileid: "67906465"
   
 4.  Sélectionnez la ligne de la hiérarchie dérivée à supprimer.  
   
-5.  Cliquez sur **Delete**.  
+5.  Cliquez sur **Supprimer**.  
   
 6.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

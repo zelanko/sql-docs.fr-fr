@@ -1,5 +1,5 @@
 ---
-title: Envoi de données comme un paramètre table à l’aide de Data-At-Execution (ODBC) | Microsoft Docs
+title: Envoi de données en tant que paramètre table à l’aide de données en cours d’exécution (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,26 +13,25 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3989c7543361be8dfc6807d11ccdc3e97b78e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129194"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73775905"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Ceci est similaire à la [tous en mémoire](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procédure, mais utilise data-at-execution pour le paramètre table.  
+  Cela est similaire à la procédure [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mais utilise des données en cours d’exécution pour le paramètre table.  
   
- Pour un autre exemple illustrant des paramètres table, consultez [utiliser les paramètres &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser les paramètres &#40;table ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
- Dans cet exemple, lorsque SQLExecute ou SQLExecDirect est appelée, le pilote retourne SQL_NEED_DATA. L’application appelle ensuite SQLParamData à plusieurs reprises jusqu'à ce que le pilote retourne une valeur autre que SQL_NEED_DATA. Le pilote retourne *ParameterValuePtr* pour informer l’application le paramètre auquel il demande des données. L’application appelle SQLPutData pour fournir des données de paramètre avant l’appel suivant à SQLParamData. Pour un paramètre table, l’appel à SQLPutData indique le nombre de lignes qu’il a préparé pour le pilote (dans cet exemple, toujours 1). Lorsque toutes les lignes de la valeur de la table ont été passées au pilote, SQLPutData est appelée pour indiquer que 0 ligne est disponibles.  
+ Dans cet exemple, lorsque SQLExecute ou SQLExecDirect est appelé, le pilote retourne SQL_NEED_DATA. L’application appelle ensuite SQLParamData à plusieurs reprises jusqu’à ce que le pilote retourne une valeur autre que SQL_NEED_DATA. Le pilote retourne *ParameterValuePtr* pour informer l’application du paramètre pour lequel il demande des données. L’application appelle SQLPutData pour fournir les données de paramètre avant l’appel suivant à SQLParamData. Pour un paramètre table, l’appel à SQLPutData indique le nombre de lignes préparées pour le pilote (dans cet exemple, toujours 1). Lorsque toutes les lignes de la table ont été passées au pilote, SQLPutData est appelé pour indiquer qu’aucune ligne n’est disponible.  
   
- Il est possible d'utiliser les valeurs de données en cours d'exécution dans les lignes d'une valeur de table. La valeur retournée par SQLParamData informe l’application dont la valeur du pilote requiert. Comme avec les valeurs de paramètre normales, SQLPutData peut être appelée par valeur de colonne d’une ou plusieurs fois pour une valeur de table binaire ou caractère. Cela permet à une application de passer de grandes valeurs en plusieurs parties.  
+ Il est possible d'utiliser les valeurs de données en cours d'exécution dans les lignes d'une valeur de table. La valeur retournée par SQLParamData informe l’application de la valeur requise par le pilote. Comme pour les valeurs de paramètres standard, SQLPutData peut être appelé une ou plusieurs fois pour une valeur de colonne de valeur de table de caractères ou binaires. Cela permet à une application de passer de grandes valeurs en plusieurs parties.  
   
- Lorsque SQLPutData est appelée pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être 0. Lorsque toutes les lignes de la valeur de la table ont été passées, SQLPutData est appelée avec un *DataPtr* la valeur 0.  
+ Lorsque SQLPutData est appelé pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être égal à 0. Lorsque toutes les lignes de la valeur de table ont été passées, SQLPutData est appelé avec une valeur *DataPtr* de 0.  
   
 ## <a name="prerequisite"></a>Condition préalable  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
@@ -71,7 +70,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  Liez les paramètres. *ColumnSize* est 1, ce qui signifie qu’une ligne au plus est passée à la fois.  
+2.  Liez les paramètres. *Column* est 1, ce qui signifie qu’une ligne au plus est passée à la fois.  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -126,14 +125,14 @@ from @Items
     strcpy_s((char *) CustCode ,sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
     ```  
   
-5.  Appelez la procédure. SQLExecDirect retourne SQL_NEED_DATA parce que le paramètre table est un paramètre data-at-execution.  
+5.  Appelez la procédure. SQLExecDirect retourne SQL_NEED_DATA, car le paramètre table est un paramètre de données en cours d’exécution.  
   
     ```  
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  Fournissez des données de paramètre de données en cours d'exécution. Lorsque SQLParamData retourne le *ParameterValuePtr* pour un paramètre table, l’application doit préparer les colonnes pour l’ou les lignes de la valeur de la table suivante. L’application appelle ensuite SQLPutData avec *DataPtr* défini sur le nombre de lignes disponibles (dans cet exemple, 1) et *StrLen_or_IndPtr* définie sur 0.  
+6.  Fournissez des données de paramètre de données en cours d'exécution. Lorsque SQLParamData retourne le *ParameterValuePtr* pour un paramètre table, l’application doit préparer les colonnes pour la ou les lignes suivantes de la valeur de table. L’application appelle SQLPutData avec *DataPtr* défini sur le nombre de lignes disponibles (dans cet exemple, 1) et *StrLen_or_IndPtr* définie sur 0.  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -188,7 +187,7 @@ from @Items
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre que vous pouvez utiliser des lignes en continu, une ligne par appel à SQLPutData, avec ODBC TVP, similaire à la façon dont vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
+ Cet exemple montre que vous pouvez utiliser la diffusion en continu de ligne, une ligne par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP. exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
   
@@ -376,7 +375,7 @@ EXIT:
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre que vous pouvez utiliser des lignes en continu, plusieurs lignes par appel à SQLPutData, avec ODBC TVP, similaire à la façon dont vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
+ Cet exemple montre que vous pouvez utiliser la diffusion en continu de lignes, plusieurs lignes par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP. exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
   

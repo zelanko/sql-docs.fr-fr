@@ -1,6 +1,6 @@
 ---
-title: Haute disponibilité et récupération d’urgence pour Master Data Services | Microsoft Docs
-ms.custom: ''
+title: Haute disponibilité et récupération d’urgence
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874776"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728093"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -23,7 +23,7 @@ ms.locfileid: "70874776"
 
 Cet article décrit une solution pour le service de données de référence (MDS) hébergé sur Always On configuration de groupe de disponibilité. Cet article explique comment installer et configurer SQL 2016 Master Data Services sur un groupe de disponibilité SQL 2016 Always On (AG). L’objectif principal de cette solution est d’améliorer la haute disponibilité et la récupération d’urgence des données du serveur principal MDS hébergées sur une base de données SQL Server.
 
-## <a name="introduction"></a>Présentation
+## <a name="introduction"></a>Introduction
 
 Cet article décrit une solution pour le service de données de référence (MDS) hébergé sur une configuration de groupe de disponibilité Always On. Cet article explique comment installer et configurer SQL 2016 MDS sur un groupe de disponibilité SQL 2016 Always On. L’objectif principal de cette solution est d’améliorer la haute disponibilité et la récupération d’urgence des données du serveur principal MDS hébergées sur une base de données SQL Server.
 
@@ -68,7 +68,7 @@ La figure 1 illustre une configuration classique utilisée principalement dans u
 
 Dans le centre de données de récupération d’urgence, il existe un réplica secondaire lié au réplica principal par une relation de validation asynchrone. Ce centre de données se trouve généralement dans une région géographique différente de celle du centre de données principal. Le réplica secondaire ne dispose pas du privilège VOTE.
 
-Cette configuration permet d’effectuer une récupération si le centre de données principal est victime d’un incident, tel qu’un incendie ou un tremblement de terre. La configuration autorise à la fois la haute disponibilité et la récupération d’urgence à relativement peu de frais.
+Cette configuration est utilisée pour effectuer la récupération au cas où le centre de données principal se trouve dans un incident, tel qu’un incendie, un tremblement de tremblement, etc. La configuration atteint la haute disponibilité et la récupération d’urgence avec un coût relativement faible.
 
 ![Configuration classique d’un groupe de disponibilité Always On](media/Fig1_TypicalConfig.png)
 
@@ -90,7 +90,7 @@ Comme l’indique la figure 1 de la section précédente, la solution décrite 
 
 Le cluster WSFC est une fonctionnalité destinée à améliorer la haute disponibilité des applications et des services. Il se compose d’un groupe d’instances de Windows Server indépendantes sur lesquelles s’exécute le service de cluster de basculement Microsoft. Les instances de Windows Server (parfois appelées « nœuds ») sont connectées afin qu’elles puissent communiquer entre elles, rendant ainsi possible la détection de défaillance. Le cluster WSFC fournit des fonctionnalités de détection de défaillance et de basculement. Si un nœud ou un service échoue dans le cluster, la défaillance est détectée, puis un autre nœud commence automatiquement ou manuellement à fournir les services hébergés sur le nœud défaillant. Ainsi, les utilisateurs ne connaissent que des interruptions minimales des services, dont la disponibilité se trouve améliorée.  
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 Le système d’exploitation Windows Server est installé sur toutes les instances et toutes les mises à jour sont corrigées.
 
@@ -183,7 +183,7 @@ Remarques :
 
 - La fonctionnalité WSFC n’est peut-être pas disponible dans toutes les éditions de Windows Server. Vérifiez que votre édition a cette fonctionnalité.
 
-- Vérifiez que vous disposez des autorisations appropriées pour configurer le cluster WSFC dans Active Directory. En cas de problème, consultez [Guide pas à pas des clusters de basculement : Configuration des comptes dans Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx).
+- Vérifiez que vous disposez des autorisations appropriées pour configurer le cluster WSFC dans Active Directory. Pour plus d’informations, consultez [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guide pas à pas des clusters de basculement : configurer des comptes dans Active Directory).
 
 Pour plus d’informations sur le cluster WSFC, consultez [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (Clusters de basculement).
 
@@ -207,7 +207,7 @@ Un groupe de disponibilité offre une disponibilité au niveau de la base de don
 
 Instances FCI fournissent une haute disponibilité au niveau de l’instance. Le service SQL Server et ses services associés sont inscrits en tant que ressources dans WSFC. De plus, la solution des instances de cluster de basculement requiert un stockage sur disque partagé symétrique, tel que des partages de fichiers SAN ou SMB, qui soit disponible pour tous les nœuds du cluster WFC.
    
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 - Installez SQL Server sur tous les nœuds. Pour plus d’informations, consultez [Installer SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
@@ -304,7 +304,7 @@ En règle générale, vous ne devez activer la validation synchrone que si les d
 
 **Basculement automatique** : quand le réplica principal est arrêté et que le basculement automatique est activé, le groupe de disponibilité bascule automatiquement vers son réplica secondaire. Cette option ne peut être activée que sur les réplicas avec validations synchrones.
 
-**Secondaire accessible en lecture :** par défaut, les utilisateurs ne peuvent se connecter à aucun réplica secondaire. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
+**Secondaire accessible en lecture** : par défaut, les utilisateurs ne peuvent se connecter à aucun réplica secondaire. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
 
 8. Dans la page **Spécifier les réplicas**, cliquez sur l’onglet **Écouteur**, puis effectuez la procédure suivante. Voir figure 18.
 

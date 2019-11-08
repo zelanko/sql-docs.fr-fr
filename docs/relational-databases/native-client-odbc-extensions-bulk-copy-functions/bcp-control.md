@@ -18,16 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbaf0029e5c2f7595591fb635c5eb43cc4b2a157
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707865"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782877"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Modifie les paramètres par défaut pour différents paramètres de contrôle pour une copie en bloc entre un fichier et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,9 +54,9 @@ RETCODE bcp_control (
  Nombre de lignes par lot. La valeur par défaut est 0, ce qui indique soit que toutes les lignes sont dans une table, lorsque les données sont extraites, soit que toutes les lignes sont dans le fichier des données utilisateur, lorsque les données sont copiées vers un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une valeur inférieure à 1 rétablit la valeur par défaut de BCPBATCH.  
   
  BCPDELAYREADFMT  
- Une valeur booléenne, si elle est définie sur true, entraîne la lecture de [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) au moment de l’exécution. Si la valeur est false (valeur par défaut), bcp_readfmt lit immédiatement le fichier de format. Une erreur de séquence se produit si BCPDELAYREADFMT a la valeur true et que vous appelez bcp_columns ou bcp_setcolfmt.  
+ Une valeur booléenne, si la valeur est true, provoque la lecture de [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) lors de l’exécution. Si la valeur est false (valeur par défaut), bcp_readfmt lit immédiatement le fichier de format. Une erreur de séquence se produit si BCPDELAYREADFMT a la valeur true et que vous appelez bcp_columns ou bcp_setcolfmt.  
   
- Une erreur de séquence se produira également si vous appelez `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-1 après avoir appelé `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-3 et bcp_writefmt.  
+ Une erreur de séquence se produira également si vous appelez `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` après avoir appelé `bcp_control(hdbc,``, (void *)TRUE)` BCPDELAYREADFMT et bcp_writefmt.  
   
  Pour plus d’informations, consultez [Découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
   
@@ -71,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW : les données dans le fichier figurent dans la page de codes du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Numéro de version du format de fichier de données. Il peut s’agir de 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 est la valeur par défaut. Cela s'avère utile pour exporter et importer des données dans des formats pris en charge par une version antérieure du serveur. Par exemple, pour importer des données obtenues à partir d’une colonne de texte d’un serveur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] dans une colonne **varchar (max)** dans un serveur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieur, vous devez spécifier 80. De même, si vous spécifiez 80 lors de l’exportation de données à partir d’une colonne **varchar (max)** , celles-ci sont enregistrées de la même façon que les colonnes de texte sont enregistrées au format [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] et peuvent être importées dans une colonne de texte d’un serveur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+ Numéro de version du format de fichier de données. Il peut s’agir de 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 est la valeur par défaut. Cela s'avère utile pour exporter et importer des données dans des formats pris en charge par une version antérieure du serveur. Par exemple, pour importer des données obtenues à partir d’une colonne de texte dans un serveur de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] dans une colonne **varchar (max)** dans un serveur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieur, vous devez spécifier 80. De même, si vous spécifiez 80 lors de l’exportation de données à partir d’une colonne **varchar (max)** , celles-ci sont enregistrées de la même façon que les colonnes de texte sont enregistrées au format [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] et peuvent être importées dans une colonne de texte d’un serveur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
  BCPFIRST  
  Première ligne du fichier de données ou de la table à copier. La valeur par défaut est 1 ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option.  
@@ -95,7 +94,7 @@ RETCODE bcp_control (
  *iValue* contient un pointeur de chaîne de caractères SQLTCHAR. La chaîne adressée spécifie des indicateurs de traitement de copie en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une instruction Transact-SQL qui retourne un jeu de résultats. Si une instruction Transact-SQL est spécifiée qui retourne plusieurs jeux de résultats, tous les jeux de résultats après le premier sont ignorés. Pour plus d’informations sur les indicateurs de traitement de copie en bloc, consultez [BCP Utility](../../tools/bcp-utility.md).  
   
  BCPKEEPIDENTITY  
- Quand *iValue* a la valeur true, spécifie que les fonctions de copie en bloc insèrent des valeurs de données fournies pour les colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définies avec une contrainte d’identité. Le fichier d'entrée doit fournir des valeurs pour les colonnes d'identité. Si cela n'est pas défini, de nouvelles valeurs d'identités sont générées pour les lignes insérées. Toutes les données présentes dans le fichier pour les colonnes d'identité sont ignorées.  
+ Quand *iValue* a la valeur true, spécifie que les fonctions de copie en bloc insèrent des valeurs de données fournies pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonnes définies avec une contrainte d’identité. Le fichier d'entrée doit fournir des valeurs pour les colonnes d'identité. Si cela n'est pas défini, de nouvelles valeurs d'identités sont générées pour les lignes insérées. Toutes les données présentes dans le fichier pour les colonnes d'identité sont ignorées.  
   
  BCPKEEPNULLS  
  Spécifie si les valeurs de données vides dans le fichier sont converties en valeurs NULL dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand *iValue* a la valeur true, les valeurs vides sont converties en valeurs NULL dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'option par défaut consiste à convertir les valeurs vides en une valeur par défaut pour la colonne dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si une valeur par défaut existe.  
@@ -114,7 +113,7 @@ RETCODE bcp_control (
  Nombre d’erreurs autorisées avant l’échec de l’opération de copie en bloc. La valeur par défaut est 10 ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option. La copie en bloc impose 65 535 erreurs au maximum. Toute tentative d'attribution d'une valeur supérieure à 65 535 à cette option entraîne l'attribution de la valeur 65 535 à l'option.  
   
  BCPODBC  
- Si la valeur est TRUE, spécifie que les valeurs **DateTime** et **smalldatetime** enregistrées au format caractère utilisent le préfixe et le suffixe de séquence d’échappement d’horodateur ODBC. L’option BCPODBC s’applique uniquement à DB_OUT.  
+ Si la valeur est TRUE, spécifie que les valeurs **DateTime** et **smalldatetime** enregistrées au format caractère utilisent le préfixe et le suffixe de séquence d’échappement d’horodateur ODBC. L’option BCPODBC s’applique uniquement aux DB_OUT.  
   
  Quand la valeur est FALSe, une valeur **DateTime** représentant le 1er janvier 1997 est convertie en chaîne de caractères : 1997-01-01 00:00:00.000. Si la valeur est TRUE, la même valeur **DateTime** est représentée comme suit : {ts' 1997-01-01 00:00:00.000 '}.  
   
@@ -138,7 +137,7 @@ RETCODE bcp_control (
   
  Cette fonction est également utilisée pour spécifier l'instruction SELECT lors de la copie en bloc à partir du jeu de résultats [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'une instruction SELECT. Affectez à *eOption* la valeur valeur BCPHINTS et à *iValue* la valeur d’un pointeur vers une chaîne SQLTCHAR contenant l’instruction SELECT.  
   
- Ces paramètres de contrôle ne sont explicites qu'en cas de copie entre un fichier utilisateur et une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les paramètres de contrôle n’ont aucun effet sur les lignes copiées sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Ces paramètres de contrôle ne sont explicites qu'en cas de copie entre un fichier utilisateur et une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les paramètres de contrôle n’ont aucun effet sur les lignes copiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
 ## <a name="example"></a>Exemple  
   

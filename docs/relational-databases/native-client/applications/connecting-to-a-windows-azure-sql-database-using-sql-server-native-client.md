@@ -10,18 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b7360fdb5cc5e36a9d21b4821a2bf1e176ad97
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 4aa573374b02b193e6b1dcf94f9ae86c1c232a00
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176316"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761565"
 ---
-# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connexion à un Azure SQL Database à l’aide de SQL Server Native Client
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connexion à une base de données Azure SQL à l’aide de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Pour obtenir un exemple qui montre comment se connecter à [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’aide de Native [client, consultez développement: Rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  Pour obtenir un exemple qui montre comment se connecter à un [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] à l’aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [développement : rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problèmes connus lors de la connexion à une base de données SQL  
  Voici les problèmes connus liés à la connexion à une [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] à l'aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  
@@ -33,6 +32,6 @@ ms.locfileid: "70176316"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Génération d'applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -16,16 +16,15 @@ ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efbe1a19decf969917fe2622311a76c84674a9f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: be81642fc0ce903e51c1ecc7c6e322125765569f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059550"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73763806"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Écrit les informations de format pour chaque colonne dans le fichier de format.  
   
@@ -49,7 +48,7 @@ HRESULT BCPWriteFmt(
  Chemin d'accès et nom du fichier contenant les valeurs de format du fichier de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- S_OK  
+ Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
  S_OK  
   
  E_FAIL  
@@ -59,10 +58,10 @@ HRESULT BCPWriteFmt(
  Erreur de mémoire insuffisante.  
   
  E_UNEXPECTED  
- L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n’a pas été appelée avant d’appeler cette méthode.  
+ L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n'a pas été appelée avant d'appeler cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Exécution d'opérations de copie en bloc](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

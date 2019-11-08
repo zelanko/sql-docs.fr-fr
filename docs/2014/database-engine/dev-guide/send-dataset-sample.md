@@ -1,5 +1,5 @@
 ---
-title: Exemple Send DataSet | Microsoft Docs
+title: Exemple d’envoi de jeu de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a75160826fad9df3e6a401e72cc85b5a8c8c6e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780956"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637736"
 ---
 # <a name="send-dataset-sample"></a>Exemple Send DataSet
-  L'exemple Send `DataSet` montre comment retourner un `DataSet` basé sur ADO.NET dans une procédure stockée CLR (Common Language Runtime) côté serveur en tant que jeu de résultats au client. Cette opération est utile lorsque, par exemple, ce type de procédure stockée remplit un `DataSet` à l'aide des résultats d'une requête, puis manipule les données contenues dans ce `DataSet`. C'est également utile si la procédure stockée crée et remplit un `DataSet` de toutes pièces. L'exemple est composé de deux classes, `DataSetUtilities` et `TestSendDataSet`. La méthode `SendDataSet` sur la classe `DataSetUtilities` implémente une méthode globale pour transmettre le contenu d'une instance de `DataSet` au client. La méthode `DoTest` définie sur la classe `TestSendDataSet` s'assure que la méthode `SendDataSet` fonctionne en créant un `DataSet` et en le remplissant de données provenant de la procédure stockée `uspGetTwoBOMTestData` Transact-SQL. `uspGetTwoBOMTestData` exécute la procédure stockée Transact-SQL exécute la procédure stockée `uspGetBillOfMaterials` à deux reprises pour interroger de manière récursive la nomenclature de deux produits spécifiés en tant que paramètres pour la procédure stockée `usp_GetTwoBOMTestData` . Généralement, après avoir rempli le jeu de données, les données sont modifiées avant d'appeler `SendDataSet` pour remettre les données dans le jeu de données, sous la forme d'un jeu de résultats au client. Mais, à des fins de simplicité, cet exemple retourne les données sans modification.  
+  L'exemple Send `DataSet` montre comment retourner un `DataSet` basé sur ADO.NET dans une procédure stockée CLR (Common Language Runtime) côté serveur en tant que jeu de résultats au client. Cette opération est utile lorsque, par exemple, ce type de procédure stockée remplit un `DataSet` à l'aide des résultats d'une requête, puis manipule les données contenues dans ce `DataSet`. C'est également utile si la procédure stockée crée et remplit un `DataSet` de toutes pièces. L'exemple est composé de deux classes, `DataSetUtilities` et `TestSendDataSet`. La méthode `SendDataSet` sur la classe `DataSetUtilities` implémente une méthode globale pour transmettre le contenu d'une instance de `DataSet` au client. La méthode `DoTest` définie sur la classe `TestSendDataSet` s'assure que la méthode `SendDataSet` fonctionne en créant un `DataSet` et en le remplissant de données provenant de la procédure stockée `uspGetTwoBOMTestData` Transact-SQL. `uspGetTwoBOMTestData` exécute la procédure stockée Transact-SQL exécute la procédure stockée `uspGetBillOfMaterials` à deux reprises pour interroger de manière récursive la nomenclature de deux produits spécifiés en tant que paramètres pour la procédure stockée `usp_GetTwoBOMTestData`. Généralement, après avoir rempli le jeu de données, les données sont modifiées avant d'appeler `SendDataSet` pour remettre les données dans le jeu de données, sous la forme d'un jeu de résultats au client. Mais, à des fins de simplicité, cet exemple retourne les données sans modification.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62780956"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `SendDataSet.vb` (pour l'exemple Visual Basic) ou `SendDataSet.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `SendDataSet.vb` (pour l'exemple Visual Basic) ou `SendDataSet.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Compilez l'exemple de code dans l'assembly requis à partir de l'invite de ligne de commande en exécutant l'un des éléments suivants, selon le langage choisi.  
   

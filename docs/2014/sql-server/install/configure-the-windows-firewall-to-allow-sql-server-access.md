@@ -23,14 +23,14 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63058105"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637857"
 ---
-# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server
+# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l'accès à SQL Server
   Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Si un pare-feu est activé alors qu'il n'est pas configuré correctement, les tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être bloquées.  
   
  Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un pare-feu, vous devez configurer le pare-feu sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour autoriser l'accès. Le pare-feu est un composant de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Vous pouvez également installer un pare-feu d'une autre société. Cette rubrique explique comment configurer le Pare-feu Windows, mais les principes de base s'appliquent à d'autres programmes de pare-feu.  
@@ -38,7 +38,7 @@ ms.locfileid: "63058105"
 > [!NOTE]  
 >  Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et résume les informations présentant un intérêt pour un administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur le pare-feu et pour des informations rigoureuses sur le pare-feu, consultez la documentation de pare-feu, par exemple [Pare-feu Windows avec fonctions avancées de sécurité et IPsec](https://go.microsoft.com/fwlink/?LinkID=116904).  
   
- Les utilisateurs familiarisés avec l’élément **Pare-feu Windows** dans le Panneau de configuration et avec le composant logiciel enfichable MMC (Microsoft Management Console) du Pare-feu Windows avec fonctions avancées de sécurité et qui savent quels paramètres de pare-feu ils veulent configurer peuvent passer directement aux rubriques de la liste suivante :  
+ Les utilisateurs familiarisés avec l'élément **Pare-feu Windows** dans le Panneau de configuration et avec le composant logiciel enfichable MMC (Microsoft Management Console) du Pare-feu Windows avec fonctions avancées de sécurité et qui savent quels paramètres de pare-feu ils veulent configurer peuvent passer directement aux rubriques de la liste suivante :  
   
 -   [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "63058105"
   
     -   Définition de restrictions d'étendue  
   
-     L'option **Pare-feu Windows** du Panneau de configuration est très appropriée pour les utilisateurs qui ne sont pas familiarisés avec la configuration du pare-feu, et qui configurent les options de base du pare-feu de base pour les ordinateurs qui ne sont pas mobiles. Vous pouvez également ouvrir le **Windows Firewall** élément dans le panneau de configuration à partir de la `run` commande à l’aide de la procédure suivante :  
+     L'option **Pare-feu Windows** du Panneau de configuration est très appropriée pour les utilisateurs qui ne sont pas familiarisés avec la configuration du pare-feu, et qui configurent les options de base du pare-feu de base pour les ordinateurs qui ne sont pas mobiles. Vous pouvez également ouvrir l’élément **pare-feu Windows** dans le panneau de configuration à partir de la commande `run` à l’aide de la procédure suivante :  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Pour ouvrir le Pare-feu Windows  
   
@@ -131,7 +131,7 @@ ms.locfileid: "63058105"
 ###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  Le tableau suivant répertorie les ports qui sont fréquemment utilisés par le [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-|Scénario|d’|Commentaires|  
+|Scénario|Port|Commentaires|  
 |--------------|----------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut qui s'exécute via TCP|Port TCP 1433|C'est le port le plus commun autorisé via le pare-feu. Il s'applique aux connexions de routine de l'installation par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou une instance nommée qui est la seule instance qui s'exécute sur l'ordinateur. (Les instances nommées ont des considérations spéciales. Consultez ultérieurement [Ports dynamiques](#BKMK_dynamic_ports) dans cette rubrique.)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la configuration par défaut|Le port TCP est un port dynamique déterminé au moment des démarrages du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|Consultez l'exposé ci-dessous dans la section [Ports dynamiques](#BKMK_dynamic_ports). Le port UDP 1434 peut être requis pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser lorsque vous utilisez des instances nommées.|  
@@ -141,7 +141,7 @@ ms.locfileid: "63058105"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un point de terminaison HTTP.|Peut être spécifié lors de la création d'un point de terminaison HTTP. La valeur par défaut est le port TCP 80 pour le trafic CLEAR_PORT et le port 443 pour le trafic SSL_PORT.|Utilisé pour une connexion HTTP via une URL.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un point de terminaison HTTPS.|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Port TCP 4022. Pour vérifier le port utilisé, exécutez la requête suivante :<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Il n’existe aucun port par défaut pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], mais il s’agit de la configuration classique utilisée dans les exemples de la documentation en ligne.|  
-|Mise en miroir de bases de données|Port choisi par l'administrateur. Pour déterminer le port, exécutez la requête suivante :<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Il n'y a aucun port par défaut pour la mise en miroir de bases de données ; cependant, les exemples de la documentation en ligne utilisent le port TCP 7022. Il est très important d'éviter d'interrompre un point de terminaison de mise en miroir en cours d'utilisation, en particulier en mode haute sécurité avec basculement automatique. Votre configuration du pare-feu doit éviter de rompre le quorum. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Mise en miroir de bases de données|Port choisi par l'administrateur. Pour déterminer le port, exécutez la requête suivante :<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Il n'y a aucun port par défaut pour la mise en miroir de bases de données ; cependant, les exemples de la documentation en ligne utilisent le port TCP 7022. Il est très important d'éviter d'interrompre un point de terminaison de mise en miroir en cours d'utilisation, en particulier en mode haute sécurité avec basculement automatique. Votre configuration du pare-feu doit éviter de rompre le quorum. Pour plus d’informations, consultez [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Réplication|Les connexions de réplication à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les ports standard type du [!INCLUDE[ssDE](../../includes/ssde-md.md)] (port TCP 1433 pour l'instance par défaut, etc.)<br /><br /> La synchronisation Web et l'accès de FTP/UNC pour l'instantané de réplication requièrent l'ouverture de ports supplémentaires sur le pare-feu. Pour transférer des données initiales et le schéma d'un emplacement à un autre, la réplication peut utiliser FTP (port TCP 21), ou la synchronisation via HTTP (port TCP 80) ou le partage de fichiers. Le partage de fichiers utilise les ports UDP 137 et 138, et le port TCP 139 avec NetBIOS. Le partage de fichiers utilise le port TCP 445.|Pour la synchronisation via HTTP, la réplication utilise le point de terminaison IIS (dont les ports sont configurables, mais qui a par défaut le port 80), mais le processus IIS se connecte au système principal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via les ports standard (1433 pour l'instance par défaut).<br /><br /> Pendant la synchronisation Web via FTP, le transfert FTP s'effectue entre IIS et le serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pas entre l'abonné et IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] Débogueur|Port TCP 135<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)<br /><br /> L'exception [IPsec](#BKMK_additional_ports) peut également être requise.|Si vous utilisez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], sur l'ordinateur hôte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , vous devez également ajouter **Devenv.exe** à la liste Exceptions et ouvrir le port TCP 135.<br /><br /> Si vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], sur l'ordinateur hôte [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous devez également ajouter **ssms.exe** à la liste Exceptions et ouvrir le port TCP 135. Pour plus d’informations, consultez [configurer le débogueur Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
@@ -150,7 +150,7 @@ ms.locfileid: "63058105"
 ####  <a name="BKMK_dynamic_ports"></a> Ports dynamiques  
  Par défaut, les instances nommées (y compris [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) utilisent des ports dynamiques. Cela signifie que chaque fois que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il identifie un port disponible et utilise ce numéro de port. Si l'instance nommée est la seule instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] installée, elle utilisera probablement le port TCP 1433. Si d'autres instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont installées, le port utilisé sera probablement un port TCP différent. Dans la mesure où le port sélectionné peut changer chaque fois que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est démarré, il est difficile de configurer le pare-feu pour qu'il active l'accès au numéro de port correct. Par conséquent, si un pare-feu est utilisé, nous vous recommandons de reconfigurer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour qu'il utilise le même numéro de port à chaque fois. Cela s'appelle port fixe ou port statique. Pour plus d’informations, consultez [Configurer un serveur pour écouter un port TCP spécifique &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- L’alternative à la configuration d’une instance nommée pour l’écoute sur un port fixe est de créer une exception dans le pare-feu pour un programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tel que **sqlservr.exe** (pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Cette approche peut être pratique, mais le numéro de port n’apparaît pas dans la colonne **Port local** de la page **Règles de trafic entrant** quand vous utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Cela peut rendre plus difficile le fait d'auditer quels ports sont ouverts. Un autre élément à prendre en compte est qu’un Service Pack ou une mise à jour cumulative peut modifier le chemin vers le fichier exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui risque d’invalider la règle de pare-feu.  
+ L’alternative à la configuration d’une instance nommée pour l’écoute sur un port fixe est de créer une exception dans le pare-feu pour un programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tel que **sqlservr.exe** (pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Cette approche peut être pratique, mais le numéro de port n’apparaît pas dans la colonne **Port local** de la page **Règles de trafic entrant** quand vous utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Cela peut rendre plus difficile le fait d'auditer quels ports sont ouverts. Un autre élément à prendre en compte est qu’un Service Pack ou une mise à jour cumulative peut modifier le chemin vers le fichier exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui risque d’invalider la règle de pare-feu.  
   
 > [!NOTE]  
 >  La procédure suivante utilise l'élément **Pare-feu Windows** dans le Panneau de configuration. Le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité peut configurer une règle plus complexe. Cela inclut la configuration d'une exception de service qui peut être utile pour assurer une défense en profondeur. Consultez ci-dessous [Utilisation du composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité](#BKMK_WF_msc) .  
@@ -159,7 +159,7 @@ ms.locfileid: "63058105"
   
 1.  Sous l'onglet **Exceptions** de l'élément du **Pare-feu Windows** dans Panneau de configuration, cliquez sur **Ajouter un programme**.  
   
-2.  Accédez à l’emplacement de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez autoriser via le pare-feu, par exemple **C:\Program Files\Microsoft SQL Server\MSSQL12. < nom_instance > \MSSQL\Binn**, sélectionnez  **sqlservr.exe**, puis cliquez sur **Open**.  
+2.  Accédez à l’emplacement de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez autoriser par le biais du pare-feu, par exemple **C:\Program Files\Microsoft SQL Server\MSSQL12. < instance_name > \MSSQL\Binn**, sélectionnez **sqlservr. exe**, puis cliquez sur **Ouvrir.** .  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -168,12 +168,12 @@ ms.locfileid: "63058105"
 ###  <a name="BKMK_ssas"></a> Ports utilisés par Analysis Services  
  Le tableau suivant répertorie les ports qui sont fréquemment utilisés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Fonctionnalité|d’|Commentaires|  
+|Fonctionnalité|Port|Commentaires|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Port TCP 238 pour l'instance par défaut|Port standard pour l'instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Browser|Port TCP 2382 uniquement exigé pour une instance nommée [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Les demandes de connexion des clients à une instance nommée de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui ne définissent pas un numéro de port sont dirigées vers le port 2382, qui est le port écouté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser redirige ensuite la demande vers le port utilisé par l'instance nommée.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuré pour une utilisation via IIS/HTTP<br /><br /> (Le tableau croisé dynamique ?? Le service utilise HTTP ou HTTPS)|Port TCP 80|Utilisé pour une connexion HTTP via une URL.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuré pour une utilisation via IIS/HTTPS<br /><br /> (Le tableau croisé dynamique ?? Le service utilise HTTP ou HTTPS)|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuré pour une utilisation via IIS/HTTP<br /><br /> (Tableau croisé dynamique ? Le service utilise HTTP ou HTTPs)|Port TCP 80|Utilisé pour une connexion HTTP via une URL.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuré pour une utilisation via IIS/HTTPS<br /><br /> (Tableau croisé dynamique ? Le service utilise HTTP ou HTTPs)|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer).|  
   
  Si des utilisateurs accèdent à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] via IIS et Internet, vous devez ouvrir le port sur lequel IIS écoute et spécifier ce port dans la chaîne de connexion cliente. Dans ce cas, aucun port ne doit être ouvert pour l'accès direct à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le port par défaut 2389 et le port 2382, ainsi que tous les ports qui ne sont pas nécessaires, doivent être soumis à des restrictions.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "63058105"
 ###  <a name="BKMK_ssrs"></a> Ports utilisés par Reporting Services  
  Le tableau suivant répertorie les ports qui sont fréquemment utilisés par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Fonctionnalité|d’|Commentaires|  
+|Fonctionnalité|Port|Commentaires|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Services Web|Port TCP 80|Utilisé pour une connexion HTTP à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] via une URL. Nous vous recommandons de ne pas utiliser la règle préconfigurée **Services World Wide Web (HTTP)** . Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour une utilisation via HTTPS|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer). Nous vous recommandons de ne pas utiliser la règle préconfigurée **Services World Wide Web sécurisés (HTTPS)** . Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
@@ -192,7 +192,7 @@ ms.locfileid: "63058105"
 ###  <a name="BKMK_ssis"></a> Ports utilisés par Integration Services  
  Le tableau suivant répertorie les ports qui sont utilisés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Fonctionnalité|d’|Commentaires|  
+|Fonctionnalité|Port|Commentaires|  
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Appels de procédure distante (MS RPC)<br /><br /> Utilisé par le runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Port TCP 135<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)|Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise DCOM sur le port 135. Le Gestionnaire de contrôle des services utilise le port 135 pour effectuer des tâches telles que le démarrage et l'arrêt du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ainsi que la transmission des demandes de contrôle au service en exécution. Le numéro de port ne peut pas être modifié.<br /><br /> Ce port ne doit être ouvert que si vous vous connectez à une instance distante du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou d'une application personnalisée.|  
   
@@ -201,7 +201,7 @@ ms.locfileid: "63058105"
 ###  <a name="BKMK_additional_ports"></a> Ports et services supplémentaires  
  Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut dépendre.  
   
-|Scénario|d’|Commentaires|  
+|Scénario|Port|Commentaires|  
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> Pour plus d'informations sur WMI, consultez [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI s'exécute dans le cadre d'un hôte de service partagé avec les ports attribués via DCOM. WMI peut utiliser le port TCP 135.<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise WMI pour lister et gérer des services. Nous vous recommandons d’utiliser la règle préconfigurée **Windows Management Instrumentation (WMI)** . Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|Port TCP 135<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)|Si votre application utilise des transactions distribuées, vous devez éventuellement configurer le pare-feu pour autoriser le trafic MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) entre des instances MS DTC distinctes, et entre MS DTC et les gestionnaires de ressources tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons d'utiliser le groupe de règles préconfigurées **Distributed Transaction Coordinator** .<br /><br /> Lorsqu'un MS DTC partagé unique est configuré pour l'intégralité du cluster dans un groupe de ressources distinct, vous devez ajouter sqlservr.exe comme exception au pare-feu.|  
@@ -320,7 +320,7 @@ ms.locfileid: "63058105"
   
          Le commutateur **-n** demande à **netstat** d’afficher l’adresse numérique et le numéro de port des connexions TCP actives. Le commutateur **-a** demande à **netstat** d’afficher les ports TCP et UDP écoutés par l’ordinateur.  
   
--   L’utilitaire **PortQry** peut être utilisé pour signaler l’état des ports TCP/IP comme à l’écoute, pas à l’écoute ou filtré. (Lorsque l'état est filtré, le port peut être à l'écoute ou non ; cet état indique que l'utilitaire n'a pas reçu de réponse du port.) l’utilitaire **PortQry** peut être téléchargé à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=28590).  
+-   L’utilitaire **PortQry** peut être utilisé pour signaler l’état des ports TCP/IP comme à l’écoute, pas à l’écoute ou filtré. (Lorsque l'état est filtré, le port peut être à l'écoute ou non ; cet état indique que l'utilitaire n'a pas reçu de réponse du port.) l’utilitaire **PortQry** peut être téléchargé à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/kb/832017)  

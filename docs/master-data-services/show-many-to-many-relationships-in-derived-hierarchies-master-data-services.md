@@ -1,6 +1,6 @@
 ---
-title: Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085655"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728950"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68085655"
   
  Dans la capture d’écran ci-dessus, notez que l’entité **employé** apparaît sous **Niveaux actuels** , au milieu, comme le seul niveau. L’ **aperçu** de la hiérarchie dérivée à droite affiche simplement la liste de tous les membres de l’entité **Employee** . La section **Entités et hiérarchies disponibles** à gauche montre les niveaux qui peuvent être ajoutés en plus du niveau supérieur en cours (**Employee**). La plupart d’entre eux sont des attributs basés sur un domaine (DBA) sur l’entité **Employee** , y compris le DBA **Department** .  
   
- À partir de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], un nouveau type de niveau modélise les relations plusieurs à plusieurs, par exemple : **Classe (mappé via ClassRegistration.Student)** . Le nom du niveau est plus détaillé que les autres afin de refléter les informations supplémentaires nécessaires pour décrire clairement la relation de mappage. Faites glisser ce niveau vers le niveau **Employee** dans la section **Niveaux actuels** :  
+ À partir de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], un nouveau type de niveau modélise les relations plusieurs à plusieurs, par exemple : **Class (mappé via ClassRegistration.Student)** . Le nom du niveau est plus détaillé que les autres afin de refléter les informations supplémentaires nécessaires pour décrire clairement la relation de mappage. Faites glisser ce niveau vers le niveau **Employee** dans la section **Niveaux actuels** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -91,7 +91,7 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Sécurité des membres  
- Une hiérarchie permettant une duplication des membres (permettant à un membre d’avoir plusieurs parents) ne peut pas être utilisée pour affecter des autorisations de sécurité de membre. Exemple :  
+ Une hiérarchie permettant une duplication des membres (permettant à un membre d’avoir plusieurs parents) ne peut pas être utilisée pour affecter des autorisations de sécurité de membre. Par exemple :  
   
 -   Une hiérarchie dérivée qui n’ancre pas les récursions Null (chaque membre au niveau récursif apparaît sous la racine et sous son parent récursif).  
   

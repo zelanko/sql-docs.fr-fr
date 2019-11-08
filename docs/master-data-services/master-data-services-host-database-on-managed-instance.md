@@ -1,5 +1,5 @@
 ---
-title: Héberger une base de données Master Data Services sur une instance gérée | Microsoft Docs
+title: Héberger une base de données sur une instance gérée
 description: Cet article explique comment configurer une base de données MDS (Master Data Service) sur une instance gérée.
 ms.custom: ''
 ms.date: 07/01/2019
@@ -13,12 +13,12 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 747711159c92c7194c0ca622a8e734cff2e6fa2b
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958388"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729018"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Héberger une base de données MDS sur une instance gérée
 
@@ -32,18 +32,18 @@ Pour vous préparer, vous devez créer et configurer une Azure SQL Database inst
 
 ### <a name="create-and-configure-the-database"></a>Créer et configurer la base de données
 
-1. Créer une Azure SQL Database instance gérée avec un réseau virtuel. Consultez [démarrage rapide: Pour plus d’informations,](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) créez une instance managée Azure SQL Database.
+1. Créer une Azure SQL Database instance gérée avec un réseau virtuel. Pour plus d’informations, consultez [démarrage rapide : créer une instance managée Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
 
-1. Configurez une connexion de point à site. Consultez [configurer une connexion de point à site à un réseau virtuel à l’aide de l’authentification par certificat Azure Native : Portail Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) pour obtenir des instructions.
+1. Configurez une connexion de point à site. Pour obtenir des instructions, consultez [configurer une connexion de point à site à un réseau virtuel à l’aide de l’authentification par certificat Azure Native : portail Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Configurez l’authentification Azure Active Directory avec SQL Database Managed instance. Pour plus d’informations [, consultez configurer et gérer l’authentification Azure Active Directory avec SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
 
 ### <a name="configure-web-application-machine"></a>Configurer un ordinateur d’application Web
 
-1. Installez un certificat de connexion de point à site et un VPN pour vous assurer que l’ordinateur peut accéder à l’instance gérée SQL Database. Reportez-vous à [configurer une connexion de point à site à un réseau virtuel à l’aide de l’authentification par certificat Azure Native : Portail Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) pour obtenir des instructions.
+1. Installez un certificat de connexion de point à site et un VPN pour vous assurer que l’ordinateur peut accéder à l’instance gérée SQL Database. Pour obtenir des instructions, consultez [configurer une connexion de point à site à un réseau virtuel à l’aide de l’authentification par certificat Azure Native : portail Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Installez les rôles et fonctionnalités suivants :
-   - Rôles :
+   - Rôles
      - Services Internet (IIS)
      - Outils de gestion Web
      - Console de gestion IIS
@@ -63,7 +63,7 @@ Pour vous préparer, vous devez créer et configurer une Azure SQL Database inst
      - Intégrité et diagnostics
      - Journalisation HTTP
      - Observateur de demandes
-     - Performances
+     - Performance
      - Compression du contenu statique
      - Sécurité
      - Filtrage des demandes
@@ -90,7 +90,7 @@ Ensuite, vous installez et configurez [!INCLUDE[ssMDSshort_md](../includes/ssmds
 
 ### <a name="install-sql-server-2019"></a>Installer SQL Server 2019
 
-Utilisez l’Assistant Installation de SQL Server ou une invite de commandes pour [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]installer.
+Utilisez l’Assistant Installation de SQL Server ou une invite de commandes pour installer [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].
 
 1. Ouvrez `Setup.exe`et suivez les étapes de l’Assistant installation.
 
@@ -101,84 +101,84 @@ Cette action installe :
    - Un composant logiciel enfichable Windows PowerShell
    - Dossiers et fichiers pour les applications et services Web.
 
-   ![MDS-SQLServer2019-config-mi-SQLFeatureSelection](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
+   ![MDS-SQLServer2019-config-MI-SQLFeatureSelection](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
 
 ### <a name="set-up-the-database-and-website"></a>Configurer la base de données et le site Web
 
 1. Connectez le réseau virtuel Azure pour vous assurer que vous pouvez vous connecter à l’instance gérée.
 
-   ![MDS-SQLServer2019-config-mi-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")
+   ![MDS-SQLServer2019-config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")
 
-1. Ouvrez la [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , puis sélectionnez **configuration de la base de données** dans le volet gauche.
+1. Ouvrez le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], puis sélectionnez **configuration de la base de données** dans le volet gauche.
 
 1. Sélectionnez **créer une base de données** pour ouvrir l' **Assistant Création d’une base de données**. Sélectionnez **Suivant**.
 
 1. Dans la page **serveur de base de données** , renseignez le champ **instance de SQL Server** , puis choisissez le **type d’authentification**. Sélectionnez **tester la connexion** pour confirmer que vous pouvez utiliser vos informations d’identification pour vous connecter à la base de données via le type d’authentification choisi. Sélectionnez **Suivant**.
 
    > [!NOTE]
-   > - Une instance de SQL Server se `xxxxxxx.xxxxxxx.database.windows.net`présente comme suit :.
+   > - Une instance de SQL Server se présente comme `xxxxxxx.xxxxxxx.database.windows.net`.
    > - Pour une instance gérée, choisissez parmi les types d’authentification **« compte SQL Server »** et **« utilisateur actuel-Active Directory intégré »** .
-   > - Si vous sélectionnez **utilisateur actuel – Active Directory intégré** comme type d’authentification, le champ **nom d’utilisateur** est en lecture seule et affiche le compte d’utilisateur Windows actuellement connecté. Si vous exécutez SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure, le champ nom d' **utilisateur** affiche le nom de la machine virtuelle et le nom d’utilisateur du compte d’administrateur local sur la machine virtuelle.
+   > - Si vous sélectionnez **utilisateur actuel – Active Directory intégré** comme type d’authentification, le champ **nom d’utilisateur** est en lecture seule et affiche le compte d’utilisateur Windows actuellement connecté. Si vous exécutez SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure, le champ **nom d’utilisateur** affiche le nom de la machine virtuelle et le nom d’utilisateur du compte d’administrateur local sur la machine virtuelle.
 
    Votre authentification doit contenir la règle **« sysadmin »** pour les instances gérées.
 
-   ![MDS-SQLServer2019-config-mi-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
+   ![MDS-SQLServer2019-config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
 
 1. Tapez un nom dans le champ **Nom de la base de données** . Si vous le souhaitez, pour sélectionner un classement Windows, désactivez la case à cocher **SQL Server classement par défaut** , puis sélectionnez une ou plusieurs des options disponibles. Par exemple, respect de la **casse**. Sélectionnez **Suivant**.
 
-   ![MDS-SQLServer2019-config-mi-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
+   ![MDS-SQLServer2019-config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
 
-1. Dans le champ **nom d’utilisateur** , spécifiez le compte Windows du super utilisateur par [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]défaut pour. Un super utilisateur a accès à toutes les zones fonctionnelles et peut ajouter, supprimer et mettre à jour tous les modèles.
+1. Dans le champ **nom d’utilisateur** , spécifiez le compte Windows du super utilisateur par défaut pour [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Un super utilisateur a accès à toutes les zones fonctionnelles et peut ajouter, supprimer et mettre à jour tous les modèles.
 
-   ![MDS-SQLServer2019-config-mi-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
+   ![MDS-SQLServer2019-config-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
 
-1. Sélectionnez **suivant** pour afficher un résumé des paramètres de la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de données. Sélectionnez de nouveau **suivant** pour créer la base de données. La page **progression et fin** s’affiche.
+1. Sélectionnez **suivant** pour afficher un résumé des paramètres de la base de données [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Sélectionnez de nouveau **suivant** pour créer la base de données. La page **progression et fin** s’affiche.
 
 1. Une fois la base de données créée et configurée, sélectionnez **Terminer**.
 
-   Pour plus d’informations sur les paramètres de l' **Assistant Création d’une base de données**, consultez [ &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Assistant Création d’une base de données Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   Pour plus d’informations sur les paramètres de l' **Assistant Création d’une base de données**, consultez [ &#40; Assistant Création d’une base de données[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
-1. Dans la page [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **configuration de la base de données** du, choisissez **Sélectionner une base de données**.
+1. Dans la page **configuration de la base de données** du [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], choisissez **Sélectionner une base de données**.
 
-1. Sélectionnez **se connecter**, choisissez [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] la base de données, puis cliquez sur **OK**.
+1. Sélectionnez **se connecter**, choisissez la base de données [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], puis sélectionnez **OK**.
 
-   ![MDS-SQLServer2019-config-mi-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
+   ![MDS-SQLServer2019-config-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
 1. Dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], sélectionnez **configuration Web** dans le volet gauche.
 
 1. Dans la zone de liste **site** Web, choisissez **site Web par défaut**, puis sélectionnez **créer** pour créer une application Web.
 
-   ![MDS-SQLServer2019-config-mi-Webconfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
+   ![MDS-SQLServer2019-config-MI-Webconfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
    > [!NOTE]
    > Si vous sélectionnez **site Web par défaut**, vous devez créer séparément une application Web. Si vous choisissez **créer un nouveau site Web** dans la zone de liste, l’application est automatiquement créée.
 
 1. Dans la section **pool d’applications** , entrez un autre nom d’utilisateur, entrez le mot de passe, puis sélectionnez **OK**.
 
-   ![MDS-SQLServer2019-config-mi-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
+   ![MDS-SQLServer2019-config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
 
    > [!NOTE]
-   > Assurez-vous que l’utilisateur peut accéder à la base de données avec l’authentification intégrée Active Directory que vous avez créée récemment. Vous pouvez également modifier la connexion dans `web.config` ultérieurement.
+   > Assurez-vous que l’utilisateur peut accéder à la base de données avec l’authentification intégrée Active Directory que vous avez créée récemment. Vous pouvez également modifier la connexion dans `web.config` version ultérieure.
 
-   Pour plus d’informations sur la boîte de dialogue **créer une application Web** , consultez boîte de [ &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] dialogue&#41;créer une application Web Configuration Manager](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
+   Pour plus d’informations sur la boîte de dialogue **créer une application Web** , consultez boîte de [dialogue créer une application &#40; Web[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 
 1. Dans le volet **configuration Web** de la fenêtre **application Web** , sélectionnez l’application que vous avez créée, puis choisissez **Sélectionner** dans la section **associer une application à une base de données** .
 
-1. Sélectionnez **se connecter** , puis [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] choisissez la base de données que vous souhaitez associer à l’application Web. Sélectionnez **OK**.
+1. Sélectionnez **se connecter** , puis choisissez la base de données [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] que vous souhaitez associer à l’application Web. Sélectionnez **OK**.
 
-   Vous avez terminé la configuration du site Web. La page **configuration Web** affiche maintenant le site Web que vous avez sélectionné, l’application Web que [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] vous avez créée et la base de données associée à l’application.
+   Vous avez terminé la configuration du site Web. La page **configuration Web** affiche maintenant le site Web que vous avez sélectionné, l’application Web que vous avez créée et la base de données de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] associée à l’application.
 
-   ![MDS-SQLServer2019-config-mi-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
+   ![MDS-SQLServer2019-config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
 
-1. Sélectionnez **Appliquer**. Le message **Configuration terminée** s’affiche. Sélectionnez **OK** dans la boîte de message pour lancer l’application Web. L’adresse du site `http://server name/web application/`Web est.
+1. Sélectionnez **Appliquer**. Le message **Configuration terminée** s’affiche. Sélectionnez **OK** dans la boîte de message pour lancer l’application Web. L’adresse du site Web est `http://server name/web application/`.
 
 ## <a name="configure-authentication"></a>Configurer l’authentification
 
 Pour connecter la base de données Managed instance à l’application Web, vous devez modifier l’autre type d’authentification.
 
-Recherchez le `web.config` fichier sous `C:\Program Files\Microsoft SQL Server\150\Master Data Services\WebApplication`. Modifiez la chaîne de connexion pour modifier l’autre type d’authentification pour la connexion à la base de données d’instance gérée.
+Recherchez le fichier `web.config` sous `C:\Program Files\Microsoft SQL Server\150\Master Data Services\WebApplication`. Modifiez la chaîne de connexion pour modifier l’autre type d’authentification pour la connexion à la base de données d’instance gérée.
 
-Le type d’authentification par `Active Directory Integrated` défaut est tel qu’indiqué dans l’exemple de chaîne de connexion suivant :
+Le type d’authentification par défaut est `Active Directory Integrated` comme indiqué dans l’exemple de chaîne de connexion suivant :
 
    ```xml
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Integrated&quot;" />
@@ -198,40 +198,40 @@ MDS prend également en charge l’authentification par mot de passe Active Dire
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Mettre [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] à niveau et SQL Database version
+## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Mettre à niveau [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] et la version de SQL Database
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Installation[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Mettre à niveau [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
-Installez la **mise à jour cumulative de SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]sera automatiquement mis à jour.
+Installez la **mise à jour cumulative de SQL Server 2019**. les [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] seront mis à jour automatiquement.
 
-### <a name="upgrade-sql-server"></a>Mettre à niveau SQL Server
+### <a name="upgrade-sql-server"></a>Mise à niveau vers SQL Server
 
-Vous pouvez recevoir l’erreur suivante `The client version is incompatible with the database version` : après l’installation de la **mise à jour cumulative de SQL Server 2019**.
-![MDS-SQLServer2019-config-mi-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")
+Vous pouvez recevoir l’erreur suivante : `The client version is incompatible with the database version` après l’installation de **SQL Server mise à jour Cumulative 2019**.
+![MDS-SQLServer2019-config-MI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "mDS-SQLServer2019-config-MI_UpgradeDBPage»)
 
 Pour résoudre ce problème, vous devez mettre à niveau la version de la base de données :
 
-1. Ouvrez la [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], puis sélectionnez **configuration de la base de données** dans le volet gauche.
+1. Ouvrez le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], puis sélectionnez **configuration de la base de données** dans le volet gauche.
 
-1. Dans la page [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **configuration de la base de données** du, choisissez **Sélectionner une base de données**.
+1. Dans la page **configuration de la base de données** du [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], choisissez **Sélectionner une base de données**.
 
-1. Choisissez la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de données que vous avez associée à l’application Web. Sélectionnez **se connecter**, puis cliquez sur **OK**.
+1. Choisissez la base de données [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] que vous avez associée à l’application Web. Sélectionnez **se connecter**, puis cliquez sur **OK**.
 
-   ![MDS-SQLServer2019-config-mi-ConnectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
+   ![MDS-SQLServer2019-config-MI-ConnectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
 
 1. Sélectionnez **mettre à niveau la base de données...** .
 
-   ![MDS-SQLServer2019-config-mi-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
+   ![MDS-SQLServer2019-config-MI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
 
 1. Dans l’Assistant Mise à niveau de la base de données, sélectionnez **suivant** sur la page d' **Accueil** et sur la page révision de la **mise à niveau** .
 
-   ![MDS-SQLServer2019-config-mi-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
+   ![MDS-SQLServer2019-config-MI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
 
 1. Sélectionnez **Terminer** une fois toutes les tâches terminées.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Base de données Master Data Services](../master-data-services/master-data-services-database.md)
-- [Application web Master Data Manager](../master-data-services/master-data-manager-web-application.md)
+- [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)
 - [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
 - [Nouveautés de Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)

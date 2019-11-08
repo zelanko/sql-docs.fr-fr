@@ -1,6 +1,6 @@
 ---
-title: Utilisation du fournisseur WMI pour la gestion de Configuration | Microsoft Docs
-ms.custom: ''
+title: Utiliser le fournisseur WMI pour la gestion de la configuration
+ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,33 +19,33 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e6736c73f7cda435d91e3ec9c9f523bdc08f1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139269"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657376"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilisation du fournisseur WMI pour la gestion de la configuration
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Cet article fournit des conseils sur la programmation avec le fournisseur WMI pour gestion de l’ordinateur.
+Cet article fournit des conseils sur la façon de programmer avec le fournisseur WMI pour la gestion de l’ordinateur.
 
-## <a name="binding"></a>Liaison  
+## <a name="binding"></a>Binding  
  Le fournisseur WMI pour la gestion de la configuration est un modèle objet COM qui prend en charge les liaisons anticipées et tardives. Avec la liaison tardive, vous pouvez utiliser des langages de script, tels que VBScript, pour manipuler par programme les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les paramètres réseau et les alias.  
   
 ## <a name="specifying-a-connection-string"></a>Spécification d'une chaîne de connexion
 
 Les applications dirigent le fournisseur WMI pour la gestion de la configuration vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL du fournisseur et charge la DLL en mémoire. Toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont représentées avec un espace de noms WMI unique.
 
-L’espace de noms par défaut est le format suivant. Dans le format, `VV` est le numéro de version majeure de SQL Server. Le nombre est détectable en exécutant `SELECT @@VERSION;`.
+L’espace de noms est par défaut au format suivant. Dans le format, `VV` est le numéro de version principale de SQL Server. Le nombre peut être découvert en exécutant `SELECT @@VERSION;`.
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-Lorsque vous vous connectez à l’aide de PowerShell, le caractère de début `\\.\` doivent être supprimés. Par exemple, le code PowerShell suivant répertorie toutes les classes WMI pour un serveur SQL Server 2016, qui est la version principale 13.
+Lorsque vous vous connectez à l’aide de PowerShell, le `\\.\` de début doit être supprimé. Par exemple, le code PowerShell suivant répertorie toutes les classes WMI pour une SQL Server 2016, qui est la version majeure de la version 13.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -63,13 +63,13 @@ Thus from here I (GeneMi = MightyPen) removed the following text about 'instance
 where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 -->
 
-Vous pouvez utiliser de code PowerShell suivant pour interroger tous les espaces de noms WMI ComputerManagement disponibles.
+Vous pouvez utiliser le code PowerShell suivant pour interroger tous les espaces de noms WMI ComputerManagement disponibles.
 
 ```powershell
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Remarque :** Si vous vous connectez via le pare-feu de Windows, vous devrez vous assurer que vos ordinateurs sont correctement configurés. Consultez l’article « Connecting Through Windows Firewall » dans la documentation Windows Management Instrumentation sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site Web](https://go.microsoft.com/fwlink/?linkid=15426).  
+ **Remarque :** Si vous vous connectez par le biais du pare-feu Windows, vous devez vous assurer que vos ordinateurs sont correctement configurés. Consultez l’article « connexion via le pare-feu Windows » dans la documentation Windows Management Instrumentation sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [site Web](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Autorisations et authentification serveur  
  Pour accéder au fournisseur WMI pour la gestion de la configuration, le script de gestion WMI client doit s'exécuter dans le contexte d'un administrateur sur l'ordinateur cible. Vous devez être membre du groupe Administrateurs Windows local sur l'ordinateur à gérer.  

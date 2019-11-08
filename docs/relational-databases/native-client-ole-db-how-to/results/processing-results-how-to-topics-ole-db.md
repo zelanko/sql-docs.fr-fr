@@ -1,5 +1,5 @@
 ---
-title: Traitement des rubriques de procédures de résultats (OLE DB) | Microsoft Docs
+title: Rubriques de procédures relatives au traitement des résultats (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b25dda01866157b66c5bdac62207e968ea6bb165
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bc0494bc85111f2220f95f83850a625e817e891
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908183"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789847"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Rubriques des procédures relatives au traitement des résultats (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Le traitement des résultats dans une application OLE DB implique tout d'abord la détermination des caractéristiques du jeu de résultats, puis l'extraction des données dans des variables de programme. Si la commande exécute une procédure stockée, vous devez également savoir comment traiter les codes de retour et les paramètres de sortie des procédures stockées.  
   

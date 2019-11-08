@@ -16,18 +16,17 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 620b285a0c21865ff5155377cb446b3267d328da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128496"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770755"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Afin d’exécuter [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et traiter les résultats à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, vous devez savoir comment la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps du fournisseur OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données aux types de données OLE DB lors de la liaison paramètres ou colonnes dans un ensemble de lignes, et lorsqu’il utilise le **ITableDefinition** interface pour créer une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Pour exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et traiter les résultats à l’aide du fournisseur de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vous devez savoir comment le fournisseur OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données aux types de données OLE DB lors de la liaison de paramètres ou de colonnes dans un Rowset, et lorsqu’il utilise l’interface **ITableDefinition** pour créer une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

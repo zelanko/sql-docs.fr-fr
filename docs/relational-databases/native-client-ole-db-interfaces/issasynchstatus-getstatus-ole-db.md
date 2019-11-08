@@ -16,16 +16,15 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 855bc71e1a7ad7c0d462d16e266f392128b04519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a123717631084a61a33bbd8b106f95a51a831b9e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051018"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73763024"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Retourne l'état d'une opération s'exécutant de manière asynchrone.  
   
@@ -62,7 +61,7 @@ HRESULT GetStatus(
  Si *pulProgressMax* est un pointeur null, aucune valeur maximale attendue n'est retournée.  
   
  *peAsynchPhase*[out]  
- Pointeur vers la mémoire dans lequel des informations supplémentaires concernant la progression de l'opération asynchrone sont retournées. Les valeurs valides incluent :  
+ Pointeur vers la mémoire dans lequel des informations supplémentaires concernant la progression de l'opération asynchrone sont retournées. Les valeurs valides sont les suivantes :  
   
  DBASYNCHPHASE_INITIALIZATION : l'objet est dans une phase d'initialisation. Les arguments *pulProgress* et *pulProgressMax* indiquent un taux d'achèvement estimé. L'objet n'est pas encore entièrement matérialisé. Toute tentative d'appel d'autres interfaces peut échouer, et le jeu complet d'interfaces peut ne pas être disponible sur l'objet. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, et que *cParamSets* est supérieur à 1, *pulProgress* et *pulProgressMax* peuvent indiquer la progression pour un jeu unique de paramètres ou pour le tableau complet de jeux de paramètres.  
   
@@ -82,7 +81,7 @@ HRESULT GetStatus(
  Si *ppwszStatusText* a la valeur Null en entrée, aucune chaîne d'état n'est retournée et le fournisseur retourne des informations sur n'importe quel élément de l'opération ou sur l'opération en général.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- S_OK  
+ Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
  Retour réussi de la méthode.  
   
 -   Si *peAsynchPhase* est égal à DBASYNCHPHASE_INITIALIZATION, l'objet n'est pas encore entièrement initialisé ; toute tentative d'appel à d'autres interfaces peut échouer, et le jeu complet d'interfaces peut ne pas être disponible sur l'objet.  

@@ -14,16 +14,15 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42e0135513fc84d96061864207d63487b5e65566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131310"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786300"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **SQLMoreResults** permet à l'application de récupérer plusieurs jeux de lignes de résultat. Une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenant une clause COMPUTE, ou un lot soumis d'instructions ODBC ou [!INCLUDE[tsql](../../includes/tsql-md.md)] , entraîne la génération de plusieurs jeux de résultats par le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas la création d'un curseur côté serveur pour traiter les résultats. Par conséquent, le développeur doit s'assurer que l'instruction ODBC bloque. Il doit consommer les données retournées ou annuler l'instruction ODBC avant de traiter les données des autres instructions actives sur la connexion.  
   
@@ -164,7 +163,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLMoreResults, fonction](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [Fonction SQLMoreResults](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -14,16 +14,15 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fd2ff0c2dae01c10b720ed31fee88430a82cbe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898517"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781388"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Préparer et exécuter une instruction (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Pour préparer une instruction une fois, puis l'exécuter plusieurs fois  
@@ -62,7 +61,7 @@ ms.locfileid: "67898517"
   
 3.  Éventuellement, appelez [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) pour déterminer le nombre de paramètres dans l'instruction préparée.  
   
-4.  Si vous le souhaitez, pour chaque paramètre dans l’instruction préparée, vous devez appeler SQLDescribeParam pour obtenir des informations sur les paramètres.  
+4.  Si vous le souhaitez, pour chaque paramètre de l’instruction préparée, appelez SQLDescribeParam pour obtenir des informations sur les paramètres.  
   
 5.  Pour chaque marqueur de paramètre :  
   
@@ -70,7 +69,7 @@ ms.locfileid: "67898517"
   
     -   Allouez un tableau de S mémoires tampons de paramètres pour stocker les longueurs de données.  
   
-    -   Appelez SQLBindParameter pour lier les tableaux de longueur paramètre données valeur et les données au paramètre d’instruction.  
+    -   Appelez SQLBindParameter pour lier les tableaux de valeur de données et de longueur de données de paramètre au paramètre d’instruction.  
   
     -   Si le paramètre est un paramètre d'image ou de texte de données en cours d'exécution, installez-le.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "67898517"
   
     -   Appelez SQLExecute pour exécuter l’instruction préparée.  
   
-    -   Si les paramètres d’entrée data-at-execution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyer les données dans des segments à l’aide de SQLParamData et SQLPutData.  
+    -   Si des paramètres d’entrée de données en cours d’exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l’aide de SQLParamData et SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Pour préparer une instruction avec des paramètres liés selon les lignes  
   
@@ -104,7 +103,7 @@ ms.locfileid: "67898517"
   
 3.  Appelez SQLPrepare pour préparer l’instruction.  
   
-4.  Pour chaque marqueur de paramètre, appelez SQLBindParameter pour diriger le pointeur de longueur paramètre données valeur et les données vers leurs variables dans le premier élément du tableau de structures alloué à l’étape 1. Si le paramètre est un paramètre de données en cours d'exécution, installez-le.  
+4.  Pour chaque marqueur de paramètre, appelez SQLBindParameter pour pointer la valeur des données de paramètre et le pointeur de longueur des données vers leurs variables dans le premier élément du tableau de structures alloué à l’étape 1. Si le paramètre est un paramètre de données en cours d'exécution, installez-le.  
   
 5.  Pour chaque exécution d'une instruction préparée :  
   
@@ -112,9 +111,9 @@ ms.locfileid: "67898517"
   
     -   Appelez SQLExecute pour exécuter l’instruction préparée. Le pilote exécute efficacement l'instruction SQL S fois, une fois pour chaque jeu de paramètres.  
   
-    -   Si les paramètres d’entrée data-at-execution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyer les données dans des segments à l’aide de SQLParamData et SQLPutData.  
+    -   Si des paramètres d’entrée de données en cours d’exécution sont utilisés, SQLExecute retourne SQL_NEED_DATA. Envoyez les données par segments à l’aide de SQLParamData et SQLPutData.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives &#40;à l’exécution de requêtes ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

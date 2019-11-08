@@ -1,5 +1,5 @@
 ---
-title: Administrateurs (Master Data Services) | Microsoft Docs
+title: Administrateurs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047811"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729795"
 ---
 # <a name="administrators-master-data-services"></a>Administrateurs (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047811"
   Cet article décrit les types d’administrateurs dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administrateurs de modèle, administrateurs d’entité et super utilisateur.  
   
 ## <a name="model-administrators"></a>Administrateurs de modèle  
- Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur de modèle est un utilisateur qui a l’autorisation **d’administrateur** sur l’objet modèle de niveau supérieur sous l’onglet **Objets de modèle** . Quand un utilisateur a une autorisation d’administrateur sur un modèle particulier, toutes les autres autorisations sur les objets enfants du modèle (à la fois les autorisations de membre et d’objet de modèle) sont ignorées et remplacées par l’autorisation d’**administrateur** du modèle.  
+ Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur de modèle est un utilisateur qui dispose d’une autorisation d' **administrateur** affectée à l’objet modèle de niveau supérieur sous l’onglet **objets de modèle** . Lorsqu’un utilisateur dispose d’une autorisation d’administrateur sur un modèle particulier, toutes les autres autorisations sur les objets enfants du modèle (à la fois l’objet de modèle et les autorisations de membre) sont découpées par l’autorisation d' **administrateur** de modèle et sont effectivement ignorées.  
   
 -   Si l'utilisateur a accès à la zone fonctionnelle **Explorateur** , il peut ajouter, supprimer et mettre à jour toutes les données de référence dans cette zone.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68047811"
   
  Chaque modèle peut avoir plusieurs administrateurs. Chaque utilisateur peut être un administrateur de modèle pour un, plusieurs ou tous les modèles du déploiement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Un utilisateur peut être configuré en tant qu'administrateur de modèle dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou par programme. Pour plus d’informations, consultez [Créer un administrateur de modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Un utilisateur peut être configuré en tant qu'administrateur de modèle dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou par programme. Pour plus d’informations, consultez [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Administrateurs d’entité  
- Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur d’entité est un utilisateur qui a des autorisations d’administrateur sur l’objet entité, sous l’onglet Objets de modèle. Quand un utilisateur a des autorisations d’administrateur sur une entité, toutes les autres autorisations sur les objets enfants de l’entité (à la fois les autorisations de membre et d’objet de modèle) sont ignorées et remplacées par les autorisations d’administrateur.  
+ Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur d’entité est un utilisateur disposant d’autorisations d’administrateur attribuées à l’objet entité sous l’onglet objets de modèle. Lorsqu’un utilisateur dispose des autorisations d’administrateur pour une entité, toutes les autres autorisations sur les objets enfants de l’entité (à la fois l’objet de modèle et les autorisations de membre) sont remplacées par les autorisations d’administrateur et sont ignorées.  
   
 -   Si l'utilisateur a accès à la zone fonctionnelle **Explorateur** , il peut ajouter, supprimer et mettre à jour toutes les données de référence dans cette zone.  
   

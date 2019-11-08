@@ -1,5 +1,5 @@
 ---
-title: Ajouter un utilisateur (Master Data Services) | Microsoft Docs
+title: Ajouter un utilisateur
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047944"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729819"
 ---
 # <a name="add-a-user-master-data-services"></a>Ajouter un utilisateur (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68047944"
 
   Ajoutez un utilisateur à la liste **Utilisateurs** dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour commencer la procédure d’affectation d’une autorisation d’accès à l’application web. Avant qu’un utilisateur de la liste puisse accéder à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez lui accorder une autorisation d’accès à un ou plusieurs objets de modèle et zones fonctionnelles.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  

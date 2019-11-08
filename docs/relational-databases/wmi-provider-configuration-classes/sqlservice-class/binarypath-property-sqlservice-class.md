@@ -1,5 +1,5 @@
 ---
-title: Binarypath, propriété (classe SqlService) | Microsoft Docs
+title: Propriété BinaryPath (classe SqlService)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd5e74f67e43293f797ea18ecf8e6d5fe0a926d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 682c8cde8fcb03d7660edddaee82a0f00ce505dd
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929728"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659310"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>Propriété BinaryPath (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +44,6 @@ object.BinaryPath [= value]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage et arrêt des Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

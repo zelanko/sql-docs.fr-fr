@@ -1,5 +1,5 @@
 ---
-title: Erreurs du processus de site (Master Data Services) | Microsoft Docs
+title: Erreurs du processus de site
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce64900270fd1092320a12a6cc58a744eaadae7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e719a0a96545bdc69134e42facca9bb4ad79069c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085628"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728923"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erreurs du processus de site (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68085628"
 
   Lorsque le processus de mise en lots est terminé, tous les enregistrements traités dans les tables intermédiaires ont une valeur dans la colonne ErrorCode. Ces valeurs sont répertoriées dans le tableau suivant.  
   
-|Code|Error|Se produit lorsque/détails|S'applique à la table|  
+|Code|Erreur|Se produit lorsque/détails|S'applique à la table|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|Le même code de membre existe plusieurs fois dans la table de mise en lots.|Votre lot intermédiaire comporte plusieurs occurrences du même code de membre. Aucun membre n'est créé ou mis à jour.|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210003|La valeur d'attribut fait référence à un membre qui n'existe pas ou qui est inactif.|Lorsque vous mettez en lots des attributs basés sur un domaine, vous devez utiliser le code, au lieu du nom. S’applique à **ImportType0**, **1**et **2**.|Feuille<br /><br /> Consolidé|  
@@ -36,7 +36,7 @@ ms.locfileid: "68085628"
 |210041|« ROOT » n’est pas un code de membre valide.|La valeur **MemberCode** contient le mot « ROOT ».|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210042|« MDMUNUSED » n’est pas un code de membre valide.|La valeur **MemberCode** contient le mot « MDMUNUSED ».|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210052|MemberCode ne peut pas être désactivé, car il est utilisé comme valeur d'attribut basée sur un domaine.|Lorsque **ImportType** = **3** ou **4**, la mise en lots échoue si le membre est utilisé comme valeur d’attribut pour d’autres membres. Utilisez **ImportType5** ou **6** pour définir la valeur sur NULL ou modifiez les valeurs avant d’exécuter le processus de mise en lots.|Feuille<br /><br /> Consolidé|  
-|300002|Le code de membre n'est pas valide.|Relations : Le code de membre parent ou enfant n’existe pas.<br /><br /> Feuille ou Consolidé : **ImportType** = **3** ou **4** et le code de membre n’existe pas.|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
+|300002|Le code de membre n'est pas valide.|Relations - Le code de membre parent ou enfant n'existe pas.<br /><br /> Feuille ou Consolidé – **ImportType** = **3** ou **4** et le code de membre n’existe pas.|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |300004|Le code de membre existe déjà.|**ImportType** = **1** et vous avez utilisé un code de membre qui existe déjà dans l’entité.|Feuille<br /><br /> Consolidé|  
 |210011|Lorsque **RelationshipType** a la valeur **1**, **ParentCode** ne peut pas être un membre feuille.|Vérifiez que la valeur **ParentCode** est un code de membre consolidé.|Relation|  
 |210015|Le code de membre est présent plusieurs fois dans la table de mise en lots pour une hiérarchie et un lot.|Pour une hiérarchie explicite, vous avez spécifié l'emplacement du même membre plusieurs fois dans le même lot.|Relation|  
@@ -47,6 +47,6 @@ ms.locfileid: "68085628"
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher les erreurs rencontrées lors de la mise en lots &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

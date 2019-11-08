@@ -19,16 +19,15 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10c8d721b44fc372ee5a17a39c653797925dd46
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707566"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782688"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
 Initialise l'opération de copie en bloc.  
 
@@ -71,11 +70,11 @@ Noms Unicode et ANSI :
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Appelez **bcp_init** avant d’appeler toute autre fonction de copie en bloc. **bcp_init** effectue les initialisations nécessaires pour une copie en bloc de données entre la station de travail et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Appelez **bcp_init** avant d’appeler une autre fonction de copie en bloc. **bcp_init** effectue les initialisations nécessaires pour une copie en bloc de données entre la station de travail et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La fonction **bcp_init** doit être fournie avec un handle de connexion ODBC activé pour une utilisation avec des fonctions de copie en bloc. Pour activer le descripteur, utilisez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_BCP défini sur SQL_BCP_ON sur un handle de connexion alloué, mais non connecté. La tentative d'assigner l'attribut sur un handle connecté provoque une erreur.  
   
- Lorsqu’un fichier de données est spécifié, **bcp_init** examine la structure de la source de base de données ou de la table cible, et non le fichier de données. **bcp_init** spécifie les valeurs de format de données pour le fichier de données en fonction de chaque colonne de la table de base de données, de la vue ou du jeu de résultats Select. Cette spécification inclut le type de données de chaque colonne, la présence ou l'absence d'un indicateur de longueur ou null et des chaînes d'octet de terminateur dans les données, et la largeur des types de données de longueur fixe. **bcp_init** définit ces valeurs comme suit :  
+ Lorsqu’un fichier de données est spécifié, **bcp_init** examine la structure de la source de la base de données ou de la table cible, et non pas le fichier de données. **bcp_init** spécifie des valeurs de format de données pour le fichier de données en fonction de chaque colonne de la table de base de données, de la vue ou du jeu de résultats Select. Cette spécification inclut le type de données de chaque colonne, la présence ou l'absence d'un indicateur de longueur ou null et des chaînes d'octet de terminateur dans les données, et la largeur des types de données de longueur fixe. **bcp_init** définit ces valeurs comme suit :  
   
 -   Le type de données spécifié est le type de données de la colonne dans la table de base de données, la vue ou le jeu de résultats SELECT. Le type de données est énuméré par les types de données natifs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiés dans sqlncli.h. Les données elles-mêmes sont représentées dans leur forme informatique. Autrement dit, les données d’une colonne de type de données **Integer** sont représentées par une séquence de quatre octets qui est Big-endian ou Little-endian, en fonction de l’ordinateur qui a créé le fichier de données.  
   
@@ -93,7 +92,7 @@ Noms Unicode et ANSI :
   
  Les copies en bloc vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être optimisées pour les tables qui ne contiennent pas d'index en définissant le mode de récupération de base de données avec la valeur SIMPLE ou BULK_LOGGED. Pour plus d’informations, consultez [Configuration requise pour la journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) et [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Si aucun fichier de données n’est utilisé, vous devez appeler [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour spécifier le format et l’emplacement en mémoire des données pour chaque colonne, puis copier les lignes de données vers le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Si aucun fichier de données n’est utilisé, vous devez appeler [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour spécifier le format et l’emplacement en mémoire des données pour chaque colonne, puis copier les lignes de données dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser la fonction ODBC bcp_init avec un fichier de format.  

@@ -18,20 +18,19 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80255b80ffe05e2c89a0929c8f83999d1cb32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 706559859c48fd61b7223793fc9421fdefc4798b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937304"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779966"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construction d'instructions SQL pour les curseurs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise des curseurs côté serveur pour implémenter les fonctionnalités de curseur définie dans la spécification ODBC. Une application ODBC contrôle le comportement du curseur à l’aide de [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir les attributs d’instruction différent. Voici les attributs et leurs valeurs par défaut.  
+  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilise des curseurs de serveur pour implémenter la fonctionnalité de curseur définie dans la spécification ODBC. Une application ODBC contrôle le comportement des curseurs à l’aide de [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir différents attributs d’instruction. Voici les attributs et leurs valeurs par défaut.  
   
-|Attribute|Par défaut|  
+|Attribut|Par défaut|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -39,7 +38,7 @@ ms.locfileid: "67937304"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Lorsque ces options sont définies à leurs valeurs par défaut à la fois une instruction SQL est exécutée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’utilise pas un curseur côté serveur pour implémenter le jeu de résultats ; au lieu de cela, il utilise un jeu de résultats par défaut. Si un de ces options est modifié à partir de leurs valeurs par défaut à la fois une instruction SQL est exécutée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
+ Lorsque ces options sont définies sur leurs valeurs par défaut au moment de l’exécution d’une instruction SQL, le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client n’utilise pas de curseur côté serveur pour implémenter le jeu de résultats ; au lieu de cela, il utilise un jeu de résultats par défaut. Si l’une de ces options est modifiée par rapport aux valeurs par défaut au moment de l’exécution d’une instruction SQL, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
   
  Les jeux de résultats par défaut prennent en charge toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il n'y a pas de restrictions concernant les types d'instructions SQL qui peuvent être exécutés lors de l'utilisation d'un jeu de résultats par défaut.  
   
@@ -63,11 +62,11 @@ ms.locfileid: "67937304"
   
      Instructions SQL contenant les mots clés FOR BROWSE ou INTO.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si une instruction SQL qui remplit l'une de ces conditions est exécutée avec un curseur côté serveur, celui-ci est converti implicitement en un jeu de résultats par défaut. Après avoir **SQLExecDirect** ou **SQLExecute** retourne SQL_SUCCESS_WITH_INFO, le curseur d’attributs reprendront leurs paramètres par défaut.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si une instruction SQL qui remplit l'une de ces conditions est exécutée avec un curseur côté serveur, celui-ci est converti implicitement en un jeu de résultats par défaut. Une fois que **SQLExecDirect** ou **SQLExecute** a renvoyé SQL_SUCCESS_WITH_INFO, les paramètres par défaut des attributs de curseur sont redéfinis.  
   
  Les instructions SQL qui n'appartiennent à aucune des catégories précitées peuvent être exécutées avec tout paramètre d'attribut d'instruction ; elles fonctionnent aussi bien avec un jeu de résultats par défaut qu'avec un curseur côté serveur.  
   
-## <a name="errors"></a>Errors  
+## <a name="errors"></a>Erreurs  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et versions ultérieures, toute tentative d'exécution d'une instruction qui produit plusieurs jeux de résultats génère SQL_SUCCESS_WITH INFO et le message suivant :  
   
 ```  
@@ -77,7 +76,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- Applications ODBC qui reçoivent ce message peuvent appeler [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) pour déterminer les paramètres de curseur actuels.  
+ Les applications ODBC qui reçoivent ce message peuvent appeler [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) pour déterminer les paramètres de curseur actuels.  
   
  Toute tentative d'exécution d'une procédure avec plusieurs instructions SELECT lors de l'utilisation de curseurs côté serveur génère l'erreur suivante :  
   
@@ -104,6 +103,6 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
  Les applications ODBC qui reçoivent ces erreurs doivent réinitialiser tous les attributs d'instructions de curseur à leurs valeurs par défaut avant d'essayer d'exécuter l'instruction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

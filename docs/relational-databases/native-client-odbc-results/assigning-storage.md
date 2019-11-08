@@ -1,5 +1,5 @@
 ---
-title: Assignation du stockage | Microsoft Docs
+title: Affectation du stockage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,19 @@ ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03c22e5a98f97aee9d73496bcd75c88837e6e9e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9afee1aa24f5f3cd15791038d12f5ac0bc842fe
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937162"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779364"
 ---
 # <a name="assigning-storage"></a>Assignation du stockage
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Une application peut assigner le stockage pour les résultats avant ou après avoir exécuté une instruction SQL. Si une application prépare ou exécute en premier l'instruction SQL, elle peut se renseigner à propos du jeu de résultats avant d'assigner le stockage pour les résultats. Par exemple, si le jeu de résultats est inconnu, l'application doit extraire le nombre de colonnes avant de pouvoir lui assigner du stockage.  
   
- Pour associer du stockage pour une colonne de données, une application appelle [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)et lui passe :  
+ Pour associer le stockage pour une colonne de données, une application appelle [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)et la transmet :  
   
 -   Le type de données vers lequel les données doivent être converties.  
   
@@ -53,15 +52,15 @@ ms.locfileid: "67937162"
   
 -   La liaison basée sur les colonnes est finie lorsque chaque colonne est liée à son propre tableau de variables.  
   
-     La liaison est spécifiée en appelant [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) avec *attribut* défini à SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini à SQL_BIND_BY_COLUMN. Tous les tableaux doivent contenir le même nombre d'éléments.  
+     La liaison selon les colonnes est spécifiée en appelant [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) avec l' *attribut* défini sur SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini sur SQL_BIND_BY_COLUMN. Tous les tableaux doivent contenir le même nombre d'éléments.  
   
 -   La liaison basée sur les lignes est finie lorsque tous les paramètres dans l'instruction SQL sont liés en tant qu'unité à un tableau de structures qui contiennent les variables individuelles pour les paramètres.  
   
-     La liaison est spécifiée en appelant **SQLSetStmtAttr** avec *attribut* défini à SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini avec la taille de l’exploitation de la structure du colonnes du jeu de variables qui recevront le résultat.  
+     La liaison selon les lignes est spécifiée en appelant **SQLSetStmtAttr** avec l' *attribut* défini sur SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini sur la taille de la structure contenant les variables qui recevront les colonnes du jeu de résultats.  
   
  L'application définit également SQL_ATTR_ROW_ARRAY_SIZE au nombre d'éléments dans les tableaux de colonnes ou de lignes et définit SQL_ATTR_ROW_STATUS_PTR et SQL_ATTR_ROWS_FETCHED_PTR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement des résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Traitement des &#40;résultats ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

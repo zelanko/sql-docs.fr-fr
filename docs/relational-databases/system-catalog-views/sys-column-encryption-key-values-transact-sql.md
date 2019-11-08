@@ -1,7 +1,7 @@
 ---
-title: Sys.column_encryption_key_values (Transact-SQL) | Microsoft Docs
+title: sys. column_encryption_key_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,30 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_encryption_key_values catalog view
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c4a9f214ca9a947e8f488dd347f69b487b963e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140118"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593805"
 ---
-# <a name="syscolumnencryptionkeyvalues-transact-sql"></a>Sys.column_encryption_key_values (Transact-SQL)
+# <a name="syscolumn_encryption_key_values-transact-sql"></a>sys. column_encryption_key_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les valeurs chiffrées de la colonne clés de chiffrement (clés cek) créés avec le [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) ou [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)instruction. Chaque ligne représente une valeur d’une clé CEK, chiffrée avec une clé principale de colonne (CMK).  
+  Retourne des informations sur les valeurs chiffrées des clés de chiffrement de colonne (clés CEK) créées à l’aide de la commande [Create Column](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Encryption Key ou de l’instruction [ &#40;Transact-SQL&#41; ALTER COLUMN Encryption Key](../../t-sql/statements/alter-column-encryption-key-transact-sql.md) . Chaque ligne représente une valeur d’un clé CEK, chiffrée avec une clé principale de colonne (CMK).  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_id**|**int**|ID de la clé CEK dans la base de données.|  
-|**column_master_key_id**|**int**|ID de la clé principale de colonne qui a été utilisée pour chiffrer la valeur de clé CEK.|  
-|**encrypted_value**|**varbinary(8000)**|Valeur de clé CEK chiffré avec la clé principale de colonne spécifié dans column_master_key_id.|  
-|**encryption_algorithm_name**|**sysname**|Nom de l’algorithme utilisé pour chiffrer la valeur de clé CEK.<br /><br /> Nom de l’algorithme de chiffrement utilisé pour chiffrer la valeur. L’algorithme pour les fournisseurs de système doit être **RSA_OAEP**.|  
+|**column_encryption_key_id**|**int**|ID du clé CEK dans la base de données.|  
+|**column_master_key_id**|**int**|ID de la clé principale de colonne qui a été utilisée pour chiffrer la valeur clé CEK.|  
+|**encrypted_value**|**varbinary(8000)**|Valeur clé CEK chiffrée avec le CMK spécifié dans column_master_key_id.|  
+|**encryption_algorithm_name**|**sysname**|Nom d’un algorithme utilisé pour chiffrer la valeur clé CEK.<br /><br /> Nom de l’algorithme de chiffrement utilisé pour chiffrer la valeur. L’algorithme pour les fournisseurs système doit être **RSA_OAEP**.|  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite le **VIEW ANY COLUMN ENCRYPTION KEY** autorisation.  
+ Nécessite l’autorisation **afficher une clé de chiffrement de colonne** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -53,6 +53,10 @@ ms.locfileid: "68140118"
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Always Encrypted &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Gérer les clés de Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+
   
   

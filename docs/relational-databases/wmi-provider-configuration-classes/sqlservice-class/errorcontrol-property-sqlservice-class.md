@@ -1,6 +1,6 @@
 ---
-title: ErrorControl, propriété (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: ErrorControl, propriété (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad022b2c0a4b2dda7a5de2265c67dd3608b5389
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929682"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659661"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Propriété ErrorControl (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ object.ErrorControl [= value]
  Critique  
  Le système tente de redémarrer avec une bonne configuration.  
   
- Inconnu  
+ Unknown  
  La gravité est inconnue.  
   
 ## <a name="remarks"></a>Notes  
  La valeur indique l'action prise par le programme de démarrage en cas d'échec. Toutes les erreurs sont journalisées par le système informatique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage et arrêt des Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -14,24 +14,23 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131449"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786473"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client spécifie les champs de diagnostic supplémentaires suivants pour **SQLGetDiagField**. Ces champs prennent en charge la création de rapports d'erreurs riches pour les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sont disponibles dans tous les enregistrements de diagnostic générés sur les handles de connexion ODBC et les handles d'instructions ODBC connectés. Les champs sont définis dans sqlncli.h.  
+  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client spécifie les champs de diagnostic supplémentaires suivants pour **SQLGetDiagField**. Ces champs prennent en charge la création de rapports d'erreurs riches pour les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sont disponibles dans tous les enregistrements de diagnostic générés sur les handles de connexion ODBC et les handles d'instructions ODBC connectés. Les champs sont définis dans sqlncli.h.  
   
 |Champ d'enregistrement de diagnostic|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Signale le numéro de ligne d'une procédure stockée qui génère une erreur. La valeur de SQL_DIAG_SS_LINE est explicite uniquement si SQL_DIAG_SS_PROCNAME retourne une valeur. La valeur est retournée en tant qu'entier 16 bits non signé.|  
-|SQL_DIAG_SS_MSGSTATE|État d'un message d'erreur. Pour plus d’informations sur l’état de message d’erreur, consultez [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). La valeur est retournée en tant qu'entier 32 bits signé.|  
-|SQL_DIAG_SS_PROCNAME|Nom de la procédure stockée qui génère une erreur, le cas échéant. La valeur est retournée en tant que chaîne de caractères. La longueur de la chaîne, en caractères, dépend de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il peut être déterminé en appelant [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) demandant la valeur pour SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_MSGSTATE|État d'un message d'erreur. Pour plus d’informations sur l’état du message d’erreur, consultez [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). La valeur est retournée en tant qu'entier 32 bits signé.|  
+|SQL_DIAG_SS_PROCNAME|Nom de la procédure stockée qui génère une erreur, le cas échéant. La valeur est retournée en tant que chaîne de caractères. La longueur de la chaîne, en caractères, dépend de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il peut être déterminé en appelant [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) en demandant la valeur pour SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|Niveau de gravité du message d'erreur associé. La valeur est retournée en tant qu'entier 32 bits signé.|  
 |SQL_DIAG_SS_SRVNAME|Nom du serveur sur lequel l'erreur s'est produite. La valeur est retournée en tant que chaîne de caractères. La longueur de la chaîne (en caractères) est définie par la macro SQL_MAX_SQLSERVERNAME dans sqlncli.h.|  
   
@@ -39,12 +38,12 @@ ms.locfileid: "68131449"
   
  Le pilote ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client signale les codes de fonction dynamique supplémentaires suivants qui identifient la dernière instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentée. Le code de fonction dynamique est retourné dans l'en-tête (enregistrement 0) du jeu d'enregistrements de diagnostic. Il est par conséquent disponible sur chaque exécution (réussi ou pas).  
   
-|Code de fonction dynamique|`Source`|  
+|Code de fonction dynamique|Source|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|Instruction ALTER DATABASE|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, instruction|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT (instruction)|  
 |SQL_DIAG_DFC_SS_CONDITION|Une erreur est survenue dans les clauses WHERE ou HAVING d'une instruction.|  
-|SQL_DIAG_DFC_SS_CREATE_DATABASE|Instruction CREATE DATABASE|  
+|SQL_DIAG_DFC_SS_CREATE_DATABASE|CREATE DATABASE, instruction|  
 |SQL_DIAG_DFC_SS_CREATE_DEFAULT|CREATE DEFAULT (instruction)|  
 |SQL_DIAG_DFC_SS_CREATE_PROCEDURE|CREATE PROCEDURE (instruction)|  
 |SQL_DIAG_DFC_SS_CREATE_RULE|CREATE RULE (instruction)|  
@@ -63,7 +62,7 @@ ms.locfileid: "68131449"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER (instruction)|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP ou DUMP DATABASE (instruction)|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE (instruction)|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP ou DUMP TRANSACTION (instruction) Également retourné pour une instruction CHECKPOINT si le **trunc. log sur chkpt.** option de base de données est activée.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP ou DUMP TRANSACTION (instruction) Également retourné pour une instruction CHECKPOINT si **trunc. log on chkpt.** l’option de base de données est activée.|  
 |SQL_DIAG_DFC_SS_GOTO|Instruction de contrôle de flux GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK (instruction)|  
 |SQL_DIAG_DFC_SS_KILL|KILL (instruction)|  
@@ -98,9 +97,9 @@ ms.locfileid: "68131449"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT (instruction)|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField et paramètres table  
- SQLGetDiagField peut être utilisé pour récupérer les deux champs de diagnostic : SQL_DIAG_SS_TABLE_COLUMN_NUMBER et SQL_DIAG_SS_TABLE_ROW_NUMBER. Ces champs vous aident à déterminer la valeur ayant provoqué l'erreur ou l'avertissement associé à l'enregistrement de diagnostic.  
+ SQLGetDiagField peut être utilisé pour récupérer deux champs de diagnostic : SQL_DIAG_SS_TABLE_COLUMN_NUMBER et SQL_DIAG_SS_TABLE_ROW_NUMBER. Ces champs vous aident à déterminer la valeur ayant provoqué l'erreur ou l'avertissement associé à l'enregistrement de diagnostic.  
   
- Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Pour plus d’informations sur les paramètres table, consultez [ &#40;&#41;ODBC Table-valued Parameters](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetDiagField, fonction](https://go.microsoft.com/fwlink/?LinkId=59352)   

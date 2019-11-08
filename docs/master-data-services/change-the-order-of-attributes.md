@@ -1,5 +1,5 @@
 ---
-title: Changer l’ordre des attributs | Microsoft Docs
+title: Changer l'ordre des attributs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2b95e3200a797ccd078731618ea9da643afacaad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052088"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728611"
 ---
 # <a name="change-the-order-of-attributes"></a>Changer l'ordre des attributs
 
@@ -23,7 +23,7 @@ ms.locfileid: "68052088"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez changer l'ordre des attributs.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -42,7 +42,7 @@ ms.locfileid: "68052088"
   
 5.  Sur la page **Gérer les attributs** , effectuez l’une des opérations suivantes.  
   
-    -   Si l’attribut concerne les membres feuille, sélectionnez **Feuille** dans la zone de liste **Types de membres** .  
+    -   Si l’attribut concerne les membres feuille, sélectionnez **Feuille** dans la zone de liste **Types de membre** .  
   
     -   Si l’attribut concerne les membres consolidés, sélectionnez **Consolidé** dans la zone de liste **Types de membre** .  
   

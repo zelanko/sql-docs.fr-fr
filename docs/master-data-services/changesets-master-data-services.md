@@ -1,5 +1,5 @@
 ---
-title: Ensembles de modifications (Master Data Services) | Microsoft Docs
+title: Ensembles de modifications
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5136be23e428e670e5f6928944203c446c120ba1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d8c277796f743b31dfb5df349352bb6c7470421
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913639"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728622"
 ---
 # <a name="changesets-master-data-services"></a>Ensembles de modifications (Master Data Services)
 
@@ -29,13 +29,13 @@ ms.locfileid: "67913639"
   
      Vous devez suivre ce flux de travail.  
   
-    1.  Vous créez un ensemble de modifications. L’ensemble de modifications est dans l’état Ouvert. Consultez [Créer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  Vous créez un ensemble de modifications. L’ensemble de modifications est dans l’état Ouvert. Consultez [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  Vous appliquez l’ensemble de modifications et ajoutez des modifications à l’ensemble de modifications. Consultez [Appliquer et mettre à jour un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  Vous soumettez l’ensemble de modifications à l’administrateur d’entité pour approbation. L’ensemble de modifications est dans l’état En attente. Consultez [Valider ou envoyer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-    4.  L’administrateur d’entité reçoit une notification par e-mail l’informant qu’un ensemble de modifications est en attente d’approbation. Si l’administrateur d’entité approuve l’ensemble de modifications, celui-ci est dans l’état Approuvé. Consultez [Approuver ou rejeter un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+    4.  L’administrateur d’entité reçoit une notification par e-mail l’informant qu’un ensemble de modifications est en attente d’approbation. Si l’administrateur d’entité approuve l’ensemble de modifications, celui-ci est dans l’état Approuvé. Consultez [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
     5.  L’ensemble de modifications approuvé est validé automatiquement. Si la modification est validée avec succès, l’ensemble de modifications est dans l’état Validé.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67913639"
   
      Vous devez suivre ce flux de travail.  
   
-    1.  Vous créez un ensemble de modifications. L’ensemble de modifications est dans l’état Ouvert. Consultez [Créer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  Vous créez un ensemble de modifications. L’ensemble de modifications est dans l’état Ouvert. Consultez [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  Vous appliquez l’ensemble de modifications et ajoutez des modifications à l’ensemble de modifications. Consultez [Appliquer et mettre à jour un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   

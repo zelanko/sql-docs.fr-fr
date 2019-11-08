@@ -1,5 +1,5 @@
 ---
-title: sys. PDW _materialized_view_column_distribution_properties (Transact-SQL) | Microsoft Docs
+title: sys. pdw_materialized_view_column_distribution_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811427"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729855"
 ---
-# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys. PDW _materialized_view_column_distribution_properties (Transact-SQL) (version préliminaire)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -28,15 +28,16 @@ Affiche des informations de distribution pour les colonnes d’une vue matérial
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID de l’objet auquel la colonne appartient. |  
-|column_id|**Int**|ID de la colonne.|  
+|column_id|**int**|ID de la colonne.|  
 |distribution_ordinal|**tinyint**|0 = n’est pas une colonne de distribution.</br> 1 = SQL Data Warehouse utilise cette colonne pour distribuer la vue matérialisée.|
  
 ## <a name="permissions"></a>Autorisations 
 
 Requiert l'autorisation VIEW DATABASE STATE.
- 
+
 ## <a name="see-also"></a>Voir aussi
 
+[Réglage des performances avec la vue matérialisée](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

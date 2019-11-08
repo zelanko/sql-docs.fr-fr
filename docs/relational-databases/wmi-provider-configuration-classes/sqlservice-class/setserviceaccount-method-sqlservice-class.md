@@ -1,6 +1,6 @@
 ---
-title: SetServiceAccount, méthode (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: Méthode SetServiceAccount, (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cbd2e80a4d5484368a63e0d3c92c638e1a6294c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b500ca0f879430f0e5655348bdeebda0e0921292
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119926"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660896"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Méthode SetServiceAccount (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   si le compte appartient au domaine intégré, \Username peut être spécifié ;  
   
--   Si NULL est spécifié, le service s’être connecté en tant que le **LocalSystem** compte.  
+-   Si NULL est spécifié, le service est connecté en tant que compte **LocalSystem** .  
   
- Pour les pilotes du noyau ou au niveau du système, *StartName* contient le nom d’objet de pilote, \FileSystem\Rdr ou \Driver\Xns, que le système d’e/s utilise pour charger le pilote de périphérique. Si la valeur NULL est spécifiée, le pilote s'exécute avec un nom d'objet par défaut créé par le système d'E/S en fonction du nom du service, par exemple DWDOM\Admin.  
+ Pour les pilotes au niveau du noyau ou du système, *StartName* contient le nom d’objet du pilote, \FileSystem\Rdr ou \Driver\Xns, que le système d’e/s utilise pour charger le pilote de périphérique. Si la valeur NULL est spécifiée, le pilote s'exécute avec un nom d'objet par défaut créé par le système d'E/S en fonction du nom du service, par exemple DWDOM\Admin.  
   
  *ServiceStartPassword*  
- Valeur de chaîne qui spécifie le mot de passe pour le nom du compte dans le *StartName* paramètre. Spécifiez NULL si vous ne modifiez pas le mot de passe. Spécifiez une chaîne vide si le service ne possède pas de mot de passe.  
+ Valeur de chaîne qui spécifie le mot de passe pour le nom de compte dans le paramètre *StartName* . Spécifiez NULL si vous ne modifiez pas le mot de passe. Spécifiez une chaîne vide si le service ne possède pas de mot de passe.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** égale à 0 si le service a été correctement modifié ou égale à 1 si la demande n'est pas prise en charge. Tout autre nombre indique une erreur.  
@@ -58,6 +58,6 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage et arrêt des Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

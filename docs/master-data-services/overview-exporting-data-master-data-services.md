@@ -1,5 +1,5 @@
 ---
-title: 'Présentation : exportation de données (Master Data Services) | Microsoft Docs'
+title: Exporting Data
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904006"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728995"
 ---
-# <a name="overview-exporting-data-master-data-services"></a>Présentation : Exportation de données (Master Data Services)
+# <a name="overview-exporting-data-master-data-services"></a>Vue d’ensemble : exportation de données [Master Data Services]
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Cet article présente les types de formats de vue d’abonnement et indique comment déterminer quand les vues doivent être modifiées en raison de modifications apportées aux objets de modèle.  
   
- Vous créez une vue d’abonnement pour exporter les données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vers un système d’abonnement tel que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Vous utilisez le système d’abonnement pour afficher les données dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Pour plus d’informations sur la création de la vue d’abonnement, consultez [Créer une vue d’abonnement pour exporter des données &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ Vous créez une vue d’abonnement pour exporter les données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vers un système d’abonnement tel que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Vous utilisez le système d’abonnement pour afficher les données dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Pour plus d’informations sur la création de la vue d’abonnement, consultez [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
  Pour plus d’informations sur les vues, consultez [Vues](../relational-databases/views/views.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67904006"
 |Créer une vue d'abonnement de vos données de référence.|[Créer une vue d’abonnement pour exporter des données &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Supprimer une vue d'abonnement existante.|[Supprimer une vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
   
 -   [Formats de vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
   

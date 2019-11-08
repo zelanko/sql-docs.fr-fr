@@ -18,17 +18,16 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99da52886b15cf89b693fdfb5f1cc5d039e64905
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707747"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783221"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Lie les données d'une variable de programme à une colonne de table pour une copie en bloc dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -53,7 +52,7 @@ RETCODE bcp_bind (
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *pData*  
- Pointeur vers les données copiées. Si *eDataType* a la valeur SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR ou SQLIMAGE, *pData* peut être null. Un *pData* null indique que les valeurs de données de type long sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). L’utilisateur doit uniquement définir *pData* sur la valeur null si la colonne qui correspond au champ lié à l’utilisateur est une colonne de type BLOB, sinon, **bcp_bind** échoue.  
+ Pointeur vers les données copiées. Si *eDataType* a la valeur SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR ou SQLIMAGE, *pData* peut être null. Un *pData* null indique que des valeurs de données longues sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). L’utilisateur doit uniquement définir *pData* sur la valeur null si la colonne correspondant au champ lié à l’utilisateur est une colonne BLOB, sinon **bcp_bind** échoue.  
   
  Si les indicateurs sont présents dans les données, ils apparaissent directement en mémoire avant les données. Le paramètre *pData* pointe vers la variable indicateur dans ce cas, et la largeur de l’indicateur, le paramètre *cbIndicator* , est utilisée par la copie en bloc pour traiter correctement les données utilisateur.  
   
@@ -68,7 +67,7 @@ typedef struct tagBCPBOUNDINT
     } BCPBOUNDINT;  
 ```  
   
- Dans le cas de l’exemple, le paramètre *pData* est défini sur l’adresse d’une instance déclarée de la structure, l’adresse du membre de la structure BCPBOUNDINT *iIndicator* . Le paramètre *cbIndicator* est défini sur la taille d’un entier (sizeof (int)) et le paramètre *cbData* sur la valeur de la taille d’un entier (sizeof (int)). Pour copier en bloc une ligne vers le serveur contenant une valeur NULL pour la colonne liée, la valeur du membre *iIndicator* de l’instance doit être définie sur SQL_NULL_DATA.  
+ Dans le cas de l’exemple, le paramètre *pData* est défini sur l’adresse d’une instance déclarée de la structure, l’adresse du membre de la structure BCPBOUNDINT *iIndicator* . Le paramètre *cbIndicator* est défini sur la taille d’un entier (sizeof (int)) et le paramètre *cbData* sur la valeur de la taille d’un entier (sizeof (int)). Pour copier en bloc une ligne sur le serveur contenant une valeur NULL pour la colonne liée, la valeur du membre *iIndicator* de l’instance doit être définie sur SQL_NULL_DATA.  
   
  *cbData*  
  Nombre d'octets de données dans la variable de programme, à l'exclusion de tout indicateur de longueur ou indicateur null ou terminateur.  
@@ -79,7 +78,7 @@ typedef struct tagBCPBOUNDINT
   
  Pour les types de données de longueur fixe, tels que les entiers, le type de données indique la longueur des données au système. Par conséquent, pour les types de données de longueur fixe, *cbData* peut être SQL_VARLEN_DATA en toute sécurité ou la longueur des données.  
   
- Pour les types de données binaires et de caractères [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *cbData* peut être SQL_VARLEN_DATA, SQL_NULL_DATA, une valeur positive ou 0. Si *cbData* est SQL_VARLEN_DATA, le système utilise un indicateur de longueur/null (le cas échéant) ou une séquence de marque de fin pour déterminer la longueur des données. Si les deux sont fournis, le système utilise celui qui se traduit par la quantité de données à copier la moins élevée. Si *cbData* est SQL_VARLEN_DATA, le type de données de la colonne est un caractère [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un type binaire, et ni un indicateur de longueur ni une séquence de marque de fin n’est spécifié, le système retourne un message d’erreur.  
+ Pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les types de données binaires et de caractères, *cbData* peut être SQL_VARLEN_DATA, SQL_NULL_DATA, une valeur positive ou 0. Si *cbData* est SQL_VARLEN_DATA, le système utilise un indicateur de longueur/null (le cas échéant) ou une séquence de marque de fin pour déterminer la longueur des données. Si les deux sont fournis, le système utilise celui qui se traduit par la quantité de données à copier la moins élevée. Si *cbData* est SQL_VARLEN_DATA, le type de données de la colonne est un caractère [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un type binaire, et ni un indicateur de longueur ni une séquence de marque de fin n’est spécifié, le système retourne un message d’erreur.  
   
  Si *cbData* est égal à 0 ou à une valeur positive, le système utilise *cbData* comme longueur de données. Toutefois, si, en plus d’une valeur *cbData* positive, un indicateur de longueur ou une séquence de terminaison est fourni, le système détermine la longueur des données à l’aide de la méthode qui produit le moins de données copiées.  
   
@@ -113,16 +112,16 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- Si la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liée est un caractère élargi, aucune conversion n’est effectuée sur [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Si la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède MBCS comme type de caractère, la conversion des caractères larges en caractères multioctets s'effectue quand les données sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si la colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liée est un caractère élargi, aucune conversion n’est effectuée sur [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Si la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède MBCS comme type de caractère, la conversion des caractères larges en caractères multioctets s'effectue quand les données sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *cbTerm*  
+ *cbTerm avec*  
  Nombre d'octets présents dans le terminateur de la variable de programme, s'il existe. Si aucune marque de fin n’est définie pour la variable, affectez la valeur 0 à *cbTerm avec* .  
 
 *eDataType* Type de données C de la variable de programme. Les données de la variable de programme sont converties dans le type de la colonne de base de données. Si ce paramètre est égal à 0, aucune conversion n'est effectuée.  
 
-Le paramètre *eDataType* est énuméré par les jetons de type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans sqlncli. h, et non par les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier un entier à deux octets, type ODBC SQL_C_SHORT, à l'aide du type SQLINT2 propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Le paramètre *eDataType* est énuméré par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les jetons de type de données dans sqlncli. h, et non les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier un entier à deux octets, type ODBC SQL_C_SHORT, à l'aide du type SQLINT2 propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le paramètre **_eDataType_** .  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le paramètre **_eDataType_** .  
 
 Le tableau suivant répertorie les types de données énumérées valides et les types de données ODBC C correspondants.
 
@@ -146,20 +145,20 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 |SQLINT2|short int|  
 |SQLINT4|int|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1 : SQLINT1<br /> 2 : SQLINT2<br /> 4 : SQLINT4<br /> version8 SQLINT8|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
 |SQLFLT4|float|  
 |SQLFLT8|float|  
-|SQLFLTN|*cbIndicator*<br /> 4 : SQLFLT4<br /> version8 SQLFLT8|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|*cbIndicator*<br /> 4 : SQLMONEY4<br /> version8 SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|*cbIndicator*<br /> 4 : SQLDATETIM4<br /> version8 SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
@@ -176,19 +175,19 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 
 ## <a name="remarks"></a>Notes
 
-Utilisez **bcp_bind** pour une méthode rapide et efficace pour copier des données à partir d’une variable de programme dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme dans une table de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L’appel de **bcp_init** définit la table cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, est défini sur null. le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
+Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L’appel de **bcp_init** définit la table cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
 
-Créez un appel **bcp_bind** distinct pour chaque colonne de la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous souhaitez effectuer la copie. Une fois les appels de **bcp_bind** nécessaires effectués, appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de programme vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La reliaison des colonnes n'est pas prise en charge.
+Effectuez un appel de **bcp_bind** distinct pour chaque colonne de la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous souhaitez effectuer la copie. Une fois les appels de **bcp_bind** nécessaires effectués, appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de programme vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La reliaison des colonnes n'est pas prise en charge.
 
-Chaque fois que vous souhaitez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour valider les lignes déjà reçues, appelez [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Par exemple, appelez **bcp_batch** une fois pour chaque ligne de 1000 insérée ou à tout autre intervalle.  
+Chaque fois que vous souhaitez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valider les lignes déjà reçues, appelez [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Par exemple, appelez **bcp_batch** une fois pour chaque ligne de 1000 insérée ou à tout autre intervalle.  
 
 Lorsqu’il n’y a plus de lignes à insérer, appelez [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). L'échec de cette opération entraîne une erreur.
 
 Les paramètres de contrôle de paramètre, spécifiés avec [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), n’ont aucun effet sur les transferts de lignes **bcp_bind** .  
 
-Si *pData* pour une colonne a la valeur null, car sa valeur sera fournie par les appels à [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), toutes les colonnes suivantes avec *EDATATYPE* défini sur SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR, ou SQLIMAGE doivent également être liés avec *pData* défini sur null, et leurs valeurs doivent également être fournies par les appels à **bcp_moretext**.  
+Si *pData* pour une colonne a la valeur null, car sa valeur sera fournie par les appels à [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), toutes les colonnes suivantes avec *EDATATYPE* défini sur SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR, ou SQLIMAGE doit également être lié avec *pData* défini sur null, et leurs valeurs doivent également être fournies par des appels à **bcp_moretext**.  
 
 Pour les nouveaux types de valeur de grande taille, tels que **varchar (max)** , **varbinary (max)** ou **nvarchar (max)** , vous pouvez utiliser SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary et SQLNCHAR comme indicateurs de type dans le paramètre *eDataType* .  
 

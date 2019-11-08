@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de l’ensemble de lignes de schéma (OLE DB) | Microsoft Docs
+title: Prise en charge des ensembles de lignes de schéma (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +17,22 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7e0d5f2e0da418918141779e8bdce24f32f19d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913003"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759548"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Prise en charge des ensembles de lignes de schéma (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native prend également en charge le retour des informations de schéma à partir d’un serveur lié lors du traitement [!INCLUDE[tsql](../../../includes/tsql-md.md)] les requêtes distribuées.  
+  Le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB prend également en charge le retour des informations de schéma à partir d’un serveur lié lors du traitement des requêtes distribuées [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
 >  Bien que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prenne en charge les synonymes, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne retourne pas les métadonnées de ces derniers.  
   
- Les tableaux ci-après liste des ensembles de lignes de schéma et les colonnes de restriction prises en charge par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.  
+ Les tableaux suivants répertorient les ensembles de lignes de schéma et les colonnes de restriction prises en charge par le fournisseur de OLE DB Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 |Ensemble de lignes de schéma|Colonnes de restriction|  
 |-------------------|-------------------------|  
@@ -56,10 +55,10 @@ ms.locfileid: "67913003"
 ## <a name="in-this-section"></a>Dans cette section  
  [Prise en charge des requêtes distribuées dans les ensembles de lignes de schéma](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [Ensemble de lignes LINKEDSERVERS &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [OLE DB de &#40;l’ensemble de lignes LINKEDSERVERS&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Utilisation de types définis par l’utilisateur](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Méthode SetDefaults (classe CInstance) | Microsoft Docs
-ms.custom: ''
+title: Méthode SetDefaults (CInstance)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b89f082105b0723e3e9b725d2f7941502e16d04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044321"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659641"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance, classe (méthode SetDefaults)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ object.SetDefaults(OverwriteAll)
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|Valeur booléenne qui spécifie s’il faut remplacer les valeurs existantes sur l’instance de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client : **true** pour remplacer les données existantes ou **false** si les données existantes ne doivent ne pas être remplacées.|  
+|*OverwriteAll*|Valeur booléenne qui spécifie s’il faut remplacer les valeurs existantes sur l’instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **true** pour remplacer les données existantes, ou **false** si les données existantes ne doivent pas être remplacées.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

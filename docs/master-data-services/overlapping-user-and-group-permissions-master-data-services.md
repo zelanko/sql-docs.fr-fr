@@ -1,5 +1,5 @@
 ---
-title: Chevauchement des autorisations des utilisateurs et des groupes (Master Data Services) | Microsoft Docs
+title: Chevauchement des autorisations d'accès
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44c4374e2c1304f381775be5a37f42ec3c88afc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904009"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727938"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "67904009"
   
  Groupe 2 a l’autorisation **Lecture** sur l’entité Product.  
   
- Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur l’entité Product.  
+ Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur l'entité Product.  
   
 ## <a name="example-2"></a>Exemple 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -66,7 +66,7 @@ ms.locfileid: "67904009"
   
  Groupe 2 a l'autorisation **Refuser** sur l'entité Product.  
   
- Résultat : l’autorisation effective de l’utilisateur est **Refuser** sur l’entité Product.  
+ Résultat : l'autorisation effective de l'utilisateur est **Refuser** sur l'entité Product.  
   
 ## <a name="example-3"></a>Exemple 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -79,7 +79,7 @@ ms.locfileid: "67904009"
   
  Groupe 2 a l’autorisation **Lecture** sur un groupe de membres dans un nœud de la hiérarchie.  
   
- Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur les membres.  
+ Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur les membres.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   

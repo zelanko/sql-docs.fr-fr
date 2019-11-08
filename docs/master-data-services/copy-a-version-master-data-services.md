@@ -1,5 +1,5 @@
 ---
-title: Copier une version (Master Data Services) | Microsoft Docs
+title: Copier une version
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcdf2ee38e3b45a6495c0d6b3dbc643ce2b6ea38
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079746"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728541"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copier une version (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68079746"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], copiez une version du modèle pour en créer une nouvelle version.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -42,7 +42,7 @@ ms.locfileid: "68079746"
 2.  Dans la page **Gérer les versions** , sélectionnez la ligne de la version à copier.  
   
     > [!NOTE]  
-    >  En fonction d’un paramètre dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], vous pouvez copier seulement les versions dont l’état est **Validé**. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+    >  En fonction d’un paramètre dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], vous pouvez copier seulement les versions dont l’état est **Validé** . Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
   
 3.  Cliquez sur **Copier**.  
   

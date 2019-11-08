@@ -1,5 +1,5 @@
 ---
-title: Fusionner les conflits (Complément MDS pour Excel) | Microsoft Docs
+title: Fusionner les conflits
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 22c25126106c6b93d779b6c494af0bff7b5b08af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1062c7269c5afc0d6aecb781e7254e87c61bd65d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074564"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727993"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>Fusionner les conflits (complément MDS pour Excel)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68074564"
 
   Dans le complément [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour Excel, si les données ont été modifiées sur le serveur par un utilisateur, la publication échoue, avec une erreur de conflit. Pour résoudre cette erreur, vous pouvez exécuter la fonctionnalité Conflits de fusion et publier à nouveau les modifications.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
@@ -51,6 +51,6 @@ ms.locfileid: "68074564"
 4.  Après avoir cliqué sur **Appliquer**, vous pouvez apporter des modifications supplémentaires et réeffectuer la publication. Vous pouvez également cliquer sur **Annuler** si vous souhaitez annuler la mise à jour et recharger la dernière version à partir du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [Vue d’ensemble : importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

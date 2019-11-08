@@ -1,5 +1,5 @@
 ---
-title: À l’aide des rubriques de procédures de curseurs (ODBC) | Microsoft Docs
+title: Rubriques de procédures relatives à l’utilisation des curseurs (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ee1bc4f2789895ebb291449b337d2182223a116
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fa0411d322e3e16b8fe1bebf6f84fb626b0f82e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898546"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781502"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Utilisation des rubriques de procédures relatives aux curseurs (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Pour utiliser des curseurs, vous devez d'abord définir des attributs de connexion et d'instruction qui contrôlent le comportement du curseur ODBC. Les curseurs permettent à une application de récupérer plusieurs lignes sur chaque extraction et d' exécuter des instructions UPDATE, INSERT ou DELETE à l'emplacement actuel du curseur.  
   
@@ -30,9 +29,9 @@ ms.locfileid: "67898546"
   
 -   [Utiliser des curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Utiliser la liaison de l’ensemble de lignes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Utiliser la liaison &#40;d’ensemble de lignes ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [Extraire et mettre à jour des ensembles de lignes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [Extraire et mettre à &#40;jour les ensembles de lignes ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures liées à ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

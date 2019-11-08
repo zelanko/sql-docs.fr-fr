@@ -18,16 +18,15 @@ ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f26e0dfeab95d4ad524f888d8f68a5aa569d80b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707456"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782515"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Lit la définition du format du fichier de données à partir du fichier de format spécifié.  
   
@@ -44,7 +43,7 @@ RETCODE bcp_readfmt (
  *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
- *szFormatFile*  
+ *L’argument szFormatFile*  
  Chemin d'accès et nom du fichier contenant les valeurs de format du fichier de données.  
   
 ## <a name="returns"></a>Valeur renvoyée  

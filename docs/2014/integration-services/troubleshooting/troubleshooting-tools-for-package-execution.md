@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f2c5a0f655a258492866d934d20bd8573f38757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766236"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637805"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
@@ -38,7 +38,7 @@ ms.locfileid: "62766236"
   
 -   **Renforcez l'intégrité des données à l'aide de transactions**. Pour plus d’informations, consultez [Transactions Integration Services](../integration-services-transactions.md).  
   
--   **Utilisez des points de contrôle pour redémarrer les packages à compter du point de défaillance**. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../packages/restart-packages-by-using-checkpoints.md).  
+-   **Utilisez des points de contrôle pour redémarrer les packages à compter du point de défaillance**. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Détecter et traiter les erreurs liées aux packages par le biais de gestionnaires d'événements  
  Vous pouvez répondre aux nombreux événements engagés par le package et les objets de ce dernier par le biais de gestionnaires d'événements.  
@@ -52,21 +52,21 @@ ms.locfileid: "62766236"
   
 -   **Dotez les sorties d'erreur d'informations conviviales**. Vous pouvez faciliter le travail d'analyse de la sortie d'erreur en ajoutant des informations descriptives, en plus des deux identificateurs numériques fournis par la sortie d'erreur.  
   
-     **Ajouter la description de l’erreur**. Vous pouvez aisément rechercher une description de l'erreur à l'aide d'un composant Script. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur pour le composant Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Ajoutez la description de l’erreur**. Vous pouvez aisément rechercher une description de l'erreur à l'aide d'un composant Script. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur pour le composant script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Ajoutez le nom de la colonne d’erreur**. La recherche du nom de colonne correspondant à l'ID de colonne enregistré dans la sortie d'erreur n'est pas facile dans le composant Script et exige d'autres étapes. Chaque ID de colonne au sein d'un flux de données est unique dans la tâche de flux de données concernée et demeure dans le package au moment de la conception. L'approche suivante est une solution qui suggère l'ajout du nom de la colonne à la sortie d'erreur. Pour obtenir un exemple montrant comment utiliser cette approche, consultez [Ajout du nom de colonne d’erreur à une sortie d’erreur](https://go.microsoft.com/fwlink/?LinkId=261546) sur dougbert.com.  
+     **Ajoutez le nom de la colonne d’erreur**. La recherche du nom de colonne correspondant à l'ID de colonne enregistré dans la sortie d'erreur n'est pas facile dans le composant Script et exige d'autres étapes. Chaque ID de colonne au sein d'un flux de données est unique dans la tâche de flux de données concernée et demeure dans le package au moment de la conception. L'approche suivante est une solution qui suggère l'ajout du nom de la colonne à la sortie d'erreur. Pour obtenir un exemple d’utilisation de cette approche, consultez [Ajout du nom de la colonne d’erreur à une sortie d’erreur](https://go.microsoft.com/fwlink/?LinkId=261546) sur dougbert.com.  
   
-    1.  **Créer une table de correspondance de noms de colonnes**. Créez une application qui utilise l'API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour intervenir de manière itérative dans chaque package enregistré, chaque flux de données au sein du package, chaque objet au sein du flux de données, puis chaque entrée ou sortie dans l'objet du flux de données. L'application doit conserver l'ID de colonne et le nom de chaque colonne dans une table de recherche, ainsi que l'ID de la tâche de flux de données parent et celui du package.  
+    1.  **Créez une table de recherche de noms de colonnes**. Créez une application qui utilise l'API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour intervenir de manière itérative dans chaque package enregistré, chaque flux de données au sein du package, chaque objet au sein du flux de données, puis chaque entrée ou sortie dans l'objet du flux de données. L'application doit conserver l'ID de colonne et le nom de chaque colonne dans une table de recherche, ainsi que l'ID de la tâche de flux de données parent et celui du package.  
   
-    2.  **Ajouter le nom de colonne à la sortie**. Ajoutez une transformation de recherche à la sortie d'erreur chargée de rechercher le nom de colonne dans la table de recherche créée à l'étape précédente. La recherche peut se servir de l'ID de colonne dans la sortie d'erreur, de l'ID du package (disponible dans la variable système System::PackageID) et de l'ID de la tâche de flux de données (disponible dans la variable système System::TaskID).  
+    2.  **Ajoutez le nom de colonne à la sortie**. Ajoutez une transformation de recherche à la sortie d'erreur chargée de rechercher le nom de colonne dans la table de recherche créée à l'étape précédente. La recherche peut se servir de l'ID de colonne dans la sortie d'erreur, de l'ID du package (disponible dans la variable système System::PackageID) et de l'ID de la tâche de flux de données (disponible dans la variable système System::TaskID).  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de rapports d'opérations  
  Des rapports d'opérations standard sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à contrôler les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ces rapports de package vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs.  
   
- Pour plus d’informations, voir [Troubleshooting Reports for Package Execution](troubleshooting-reports-for-package-execution.md).  
+ Pour plus d’informations, voir [Rapports de dépannage pour l’exécution des packages](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de vues SSISDB  
- Vous pouvez interroger plusieurs vues de base de données SSISDB pour contrôler les informations relatives à l'exécution des packages et à d'autres opérations. Pour plus d’informations, consultez [surveillance des exécutions de Package et d’autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
+ Vous pouvez interroger plusieurs vues de base de données SSISDB pour contrôler les informations relatives à l'exécution des packages et à d'autres opérations. Pour plus d’informations, consultez [surveillance des exécutions de packages et d’autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de la journalisation  
  Vous pouvez contrôler la plupart des opérations réalisées dans vos packages en cours d'exécution en activant la fonction de journalisation. Les modules fournisseur d'informations permettent de capturer des informations sur des événements spécifiques à des fins d'analyse ultérieure, puis d'enregistrer ces informations dans une table de base de données, un fichier plat, un fichier XML ou un autre format de sortie pris en charge.  
@@ -81,11 +81,11 @@ ms.locfileid: "62766236"
   
     1.  **Créez une table parent chargée de consigner chaque exécution d'un package**. Cette table parent dispose d'une seule ligne pour chaque exécution d'un package et utilise l'ExecutionID pour établir un lien avec les enregistrements enfants de la table de journalisation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez exécuter une tâche d'exécution SQL au début de chaque package pour créer cette nouvelle ligne et enregistrer l'heure de début. Vous pouvez ensuite utiliser une autre tâche d'exécution SQL à la fin du package pour mettre à jour la ligne avec l'heure de fin, la durée et l'état.  
   
-    2.  **Ajoutez des informations d'audit au flux de données**. Vous pouvez utiliser la transformation d'audit pour ajouter aux lignes du flux de données des informations sur l'exécution de package ayant entraîné la création ou la modification de chaque ligne. La transformation d'audit met neuf éléments d'information à disposition, notamment les variables PackageName et ExecutionInstanceGUID. Pour plus d’informations, voir [Audit Transformation](../data-flow/transformations/audit-transformation.md). Si vous disposez d'informations personnalisées que vous aimeriez inclure dans chaque ligne à des fins d'audit, vous pouvez les ajouter aux lignes dans le flux de données à l'aide d'une transformation de colonne dérivée. Pour plus d'informations, consultez [Transformation de colonne dérivée](../data-flow/transformations/derived-column-transformation.md).  
+    2.  **Ajoutez des informations d'audit au flux de données**. Vous pouvez utiliser la transformation d'audit pour ajouter aux lignes du flux de données des informations sur l'exécution de package ayant entraîné la création ou la modification de chaque ligne. La transformation d'audit met neuf éléments d'information à disposition, notamment les variables PackageName et ExecutionInstanceGUID. Pour plus d’informations, voir [Audit Transformation](../data-flow/transformations/audit-transformation.md). Si vous disposez d'informations personnalisées que vous aimeriez inclure dans chaque ligne à des fins d'audit, vous pouvez les ajouter aux lignes dans le flux de données à l'aide d'une transformation de colonne dérivée. Pour plus d'informations, consultez [Derived Column Transformation](../data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Si possible, capturez les données sur le nombre de lignes**. Si possible, créez une table séparée pour les informations concernant le nombre de lignes dans laquelle chaque instance d'exécution de package est identifiée par son ExecutionID. Utilisez la transformation de calcul du nombre de lignes pour enregistrer le nombre de lignes dans une série de variables à des étapes critiques du flux de données. À la fin du flux de données, utilisez une tâche d'exécution SQL pour insérer la série de valeurs dans une ligne de la table en vue d'une analyse et d'un rapport ultérieurs.  
   
-     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (en anglais).  
+     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(en anglais).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de fichiers de vidage du débogage  
  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
@@ -110,9 +110,9 @@ ms.locfileid: "62766236"
  Si vous rencontrez une erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sans description qui l'accompagne, vous pouvez localiser cette dernière dans le [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md) en recherchant l'erreur d'après son numéro. La liste ne comporte actuellement aucune information de dépannage.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Configurer une sortie d'erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
+ [Configurer une sortie d’erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
  Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](https://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  
   
   

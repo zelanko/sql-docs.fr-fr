@@ -1,5 +1,5 @@
 ---
-title: Modèles (services de données de référence) | Microsoft Docs
+title: Modèles
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079615"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727950"
 ---
 # <a name="models-master-data-services"></a>Modèles (services de données de référence)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68079615"
   
  Cette image montre les relations entre les objets dans un modèle.  
   
- ![Objets dans un modèle Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Objets dans un modèle Master Data Services")  
+ ![Objets dans un modèle de Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Objets dans un modèle de Master Data Services")  
   
 > [!NOTE]  
 >  Les hiérarchies dérivées sont également des objets de modèle, mais ils ne figurent pas dans l'image. Les hiérarchies dérivées sont dérivées des relations d'attributs basés sur un domaine qui existent entre les entités. Consultez [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md) pour plus d’informations.  
@@ -59,7 +59,7 @@ ms.locfileid: "68079615"
 ## <a name="model-example"></a>Exemple de modèle  
  Dans l'exemple suivant, les objets dans le modèle Product regroupent logiquement les données relatives au produit.  
   
- ![Exemple de données de référence du modèle Product](../master-data-services/media/mds-conc-model.gif "Exemple de données de référence du modèle Product")  
+ ![Exemple de données de référence de modèle de produit](../master-data-services/media/mds-conc-model.gif "Exemple de données de référence de modèle de produit")  
   
  D'autres modèles courants figurent ci-dessous :  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68079615"
 |Modifier le nom d'un modèle existant.|[Modifier un modèle &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
 |Supprimer un modèle existant.|[Supprimer un modèle &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
   
 -   [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
