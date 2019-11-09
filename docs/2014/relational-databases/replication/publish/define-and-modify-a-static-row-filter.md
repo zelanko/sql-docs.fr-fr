@@ -14,14 +14,14 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199478"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882309"
 ---
-# <a name="define-and-modify-a-static-row-filter"></a>Définir et modifier un filtre de lignes statique
+# <a name="define-and-modify-a-static-row-filter"></a>Définir et modifier un filtre de lignes statiques
   Cette rubrique explique comment définir et modifier un filtre de lignes statique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
@@ -48,7 +48,7 @@ ms.locfileid: "68199478"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Comme ces filtres sont statiques, tous les abonnés recevront le même sous-ensemble des données. Si vous devez filtrer dynamiquement des lignes dans un article de table qui appartient à une publication de fusion afin que chaque abonné reçoive une partition différente des données, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La réplication de fusion vous permet également de filtrer des lignes connexes en fonction d'un filtre de lignes existant. Pour plus d’informations, consultez [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Comme ces filtres sont statiques, tous les abonnés recevront le même sous-ensemble des données. Si vous devez filtrer dynamiquement des lignes dans un article de table qui appartient à une publication de fusion afin que chaque abonné reçoive une partition différente des données, consultez [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La réplication de fusion vous permet également de filtrer des lignes connexes en fonction d'un filtre de lignes existant. Pour plus d'informations, voir [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Définissez, modifiez et supprimez des filtres de lignes statiques dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "68199478"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 #### <a name="to-modify-a-static-row-filter"></a>Pour modifier un filtre de lignes statiques  
   
@@ -107,41 +107,41 @@ ms.locfileid: "68199478"
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Pour définir un filtre de lignes statique pour une publication transactionnelle ou d'instantané  
   
-1.  Définissez l'article à filtrer. Pour plus d'informations, voir [définir un Article](define-an-article.md).  
+1.  Définissez l'article à filtrer. Pour plus d’informations, consultez [Define an Article](define-an-article.md).  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Spécifiez le nom de l'article pour **@article** , le nom de la publication pour **@publication** , un nom pour le filtre pour **@filter_name** et la clause de filtre pour **@filter_clause** ( `WHERE`non compris).  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Spécifiez le nom de l’article pour **\@article**, le nom de la publication pour **\@publication**, un nom de filtre pour **\@filter_name** et la clause de filtre pour **\@filter_clause** (`WHERE` non compris).  
   
-3.  Si un filtre de colonne doit encore être défini, consultez [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md). Sinon, exécutez [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Spécifiez le nom de la publication pour **@publication** , le nom de l’article filtré pour **@article** et la clause de filtre spécifiée à l’étape 2 pour **@filter_clause** . Les objets de synchronisation pour l'article filtré sont alors créés.  
+3.  Si un filtre de colonne doit encore être défini, consultez [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md). Sinon, exécutez [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Spécifiez le nom de la publication pour **\@publication**, le nom de l’article filtré pour **\@article** et la clause de filtre spécifiée à l’étape 2 pour **\@filter_clause**. Les objets de synchronisation pour l'article filtré sont alors créés.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Pour modifier un filtre de lignes statique pour une publication transactionnelle ou d'instantané  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Spécifiez le nom de l'article pour **@article** , le nom de la publication pour **@publication** , un nom pour le nouveau filtre pour **@filter_name** et la nouvelle clause de filtre pour **@filter_clause** ( `WHERE`non compris). Comme cette modification invalidera des données dans les abonnements existants, spécifiez la valeur **1** pour **@force_reinit_subscription** .  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Spécifiez le nom de l’article pour **\@article**, le nom de la publication pour **\@publication**, un nom pour le nouveau filtre pour **\@filter_name** et la nouvelle clause de filtre pour **\@filter_clause** (`WHERE` non compris). Comme cette modification invalide des données dans les abonnements existants, spécifiez la valeur **1** pour **\@force_reinit_subscription**.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Spécifiez le nom de la publication pour **@publication** , le nom de l’article filtré pour **@article** et la clause de filtre spécifiée à l'étape 1 pour **@filter_clause** . Cela recrée la vue qui définit l'article filtré.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Spécifiez le nom de la publication pour **\@publication**, le nom de l’article filtré pour **\@article** et la clause de filtre spécifiée à l’étape 1 pour **\@filter_clause**. Cela recrée la vue qui définit l'article filtré.  
   
-3.  Exécutez de nouveau le travail de l'Agent d'instantané pour la publication afin de générer un instantané mis à jour. Pour plus d’informations, consultez [Créer et appliquer l'instantané initial](../create-and-apply-the-initial-snapshot.md).  
+3.  Exécutez de nouveau le travail de l'Agent d'instantané pour la publication afin de générer un instantané mis à jour. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 4.  Réinitialiser les abonnements. Pour plus d’informations, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Pour supprimer un filtre de lignes statique pour une publication transactionnelle ou d'instantané  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Spécifiez le nom de l'article pour **@article** , le nom de la publication pour **@publication** , la valeur NULL pour **@filter_name** et la valeur NULL pour **@filter_clause** . Comme cette modification invalidera des données dans les abonnements existants, spécifiez la valeur **1** pour **@force_reinit_subscription** .  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Spécifiez le nom de l’article pour **\@article**, le nom de la publication pour **\@publication**, la valeur NULL pour **\@filter_name** et la valeur NULL pour **\@filter_clause**. Comme cette modification invalide des données dans les abonnements existants, spécifiez la valeur **1** pour **\@force_reinit_subscription**.  
   
-2.  Exécutez de nouveau le travail de l'Agent d'instantané pour la publication afin de générer un instantané mis à jour. Pour plus d’informations, consultez [Créer et appliquer l'instantané initial](../create-and-apply-the-initial-snapshot.md).  
+2.  Exécutez de nouveau le travail de l'Agent d'instantané pour la publication afin de générer un instantané mis à jour. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 3.  Réinitialiser les abonnements. Pour plus d’informations, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>Pour définir un filtre de lignes statique pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez la clause de filtre pour **@subset_filterclause** ( `WHERE`non compris). Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez la clause de filtre pour **\@subset_filterclause** (`WHERE` non compris). Pour plus d’informations, consultez [Define an Article](define-an-article.md).  
   
 2.  Si un filtre de colonne doit encore être défini, consultez [Définir et modifier un filtre de colonne](define-and-modify-a-column-filter.md).  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>Pour modifier un filtre de lignes statique pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez le nom de la publication pour **@publication** , le nom de l’article filtré pour **@article** , une valeur de **subset_filterclause** pour **@property** et la nouvelle clause de filtre pour **@value** ( `WHERE`non compris). Comme cette modification invalidera des données dans les abonnements existants, spécifiez la valeur 1 pour **@force_reinit_subscription** .  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez le nom de la publication pour **\@publication**, le nom de l’article filtré pour **\@article**, une valeur de **subset_filterclause** pour **\@property** et la nouvelle clause de filtre pour **\@value** (`WHERE` non compris). Comme cette modification invalidera des données dans les abonnements existants, spécifiez la valeur 1 pour **\@force_reinit_subscription**.  
   
-2.  Exécutez de nouveau le travail de l'Agent d'instantané pour la publication afin de générer un instantané mis à jour. Pour plus d’informations, consultez [Créer et appliquer l'instantané initial](../create-and-apply-the-initial-snapshot.md).  
+2.  Exécutez de nouveau le travail de l'Agent d'instantané pour la publication afin de générer un instantané mis à jour. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 3.  Réinitialiser les abonnements. Pour plus d’informations, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68199478"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- Dans cet exemple de réplication de fusion, les articles sont filtrés horizontalement pour que seules les lignes qui appartiennent au vendeur spécifié soient retournées. Un filtre de jointure est également utilisé. Pour plus d’informations, consultez [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md).  
+ Dans cet exemple de réplication de fusion, les articles sont filtrés horizontalement pour que seules les lignes qui appartiennent au vendeur spécifié soient retournées. Un filtre de jointure est également utilisé. Pour plus d'informations, voir [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   

@@ -15,14 +15,14 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022504"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882321"
 ---
-# <a name="create-a-publication"></a>Créer une publication
+# <a name="create-a-publication"></a>Create a Publication
   Cette rubrique explique comment créer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
  **Dans cette rubrique**  
@@ -45,7 +45,7 @@ ms.locfileid: "63022504"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les noms de publications et d’articles ne peuvent pas contenir les caractères suivants : % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Si les objets de la base de données contiennent l’un de ces caractères, et si vous voulez les répliquer, vous devez spécifier un nom d’article différent du nom de l’objet dans la boîte de dialogue **Propriétés de l’article - \<Article>** , qui est disponible dans la page **Articles** de l’Assistant.  
+-   Les noms de publications et d’articles ne peuvent pas contenir les caractères suivants : % , \* , [ , ] , | , : , " , ? , ', \,/, \<, >. Si les objets de la base de données contiennent l’un de ces caractères, et si vous voulez les répliquer, vous devez spécifier un nom d’article différent du nom de l’objet dans la boîte de dialogue **Propriétés de l’article - \<Article>** , qui est disponible dans la page **Articles** de l’Assistant.  
   
 ###  <a name="Security"></a> Sécurité  
  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -108,21 +108,21 @@ ms.locfileid: "63022504"
   
     -   Si vous ne savez pas si un travail de l’Agent de lecture du journal existe pour une base de données publiée, exécutez [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) au niveau du serveur de publication dans la base de données de publication.  
   
-    -   Si le jeu de résultats est vide, créez un travail de l'Agent de lecture du journal. Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Indiquez les informations d'identification [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows sous lesquelles l'agent s'exécute pour **@job_name** et **@password** . Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password** . Passez à l'étape 3.  
+    -   Si le jeu de résultats est vide, créez un travail de l'Agent de lecture du journal. Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Indiquez les informations d’identification Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sous lesquelles l’agent s’exécute pour **\@job_login** et **\@job_password**. Si l’agent doit utiliser l’authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **\@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Passez à l'étape 3.  
   
-3.  Sur le serveur de publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Spécifiez un nom de publication pour **@publication** et, pour le **@repl_freq** paramètre, affectez la valeur `snapshot` pour une publication d’instantané ou une valeur de `continuous` pour un publication transactionnelle. Spécifiez d'autres options de publication éventuelles. Cela définit la publication.  
+3.  Sur le serveur de publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Spécifiez un nom de publication pour **\@publication**et, pour le paramètre **\@repl_freq** , spécifiez la valeur `snapshot` pour une publication d’instantané ou la valeur `continuous` pour une publication transactionnelle. Spécifiez d'autres options de publication éventuelles. Cela définit la publication.  
   
     > [!NOTE]  
     >  Un nom de publication ne doit pas contenir les caractères suivants :  
     >   
-    >  % * [ ] | : " ? \ / \< >  
+    >  % * [ ] | : " ? \/\< >  
   
-4.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de publication utilisé à l'étape 3 pour **@publication** et les informations d’identification Windows sous lesquelles l’Agent d’instantané s’exécute pour **@snapshot_job_name** et **@password** . Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password** . Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
+4.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de publication utilisé à l’étape 3 pour **\@publication** et les informations d’identification Windows sous lesquelles l’Agent d’instantané s’exécute pour **\@snapshot_job_name** et **\@password**. Si l’agent doit utiliser l’authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **\@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
     > [!IMPORTANT]  
     >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-5.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+5.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [Define an Article](define-an-article.md).  
   
 6.  Démarrez le travail de l'Agent d'instantané pour générer l'instantané initial pour cette publication. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -130,19 +130,19 @@ ms.locfileid: "63022504"
   
 1.  Sur le serveur de publication, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) pour activer la publication de la base de données actuelle à l’aide de la réplication de fusion.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Spécifiez le nom de la publication pour **@publication** et d'autres options de publication éventuelles. Cela définit la publication.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Spécifiez le nom de la publication pour **\@publication** et d’autres options de publication éventuelles. Cela définit la publication.  
   
     > [!NOTE]  
     >  Un nom de publication ne doit pas contenir les caractères suivants :  
     >   
-    >  % * [ ] | : " ? \ / \< >  
+    >  % * [ ] | : " ? \/\< >  
   
-3.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de publication utilisé à l’étape 2 pour **@publication** et les informations d’identification Windows sous lesquelles l’Agent d’instantané s’exécute pour **@snapshot_job_name** et **@password** . Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password** . Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
+3.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de publication utilisé à l’étape 2 pour **\@publication** et les informations d’identification Windows sous lesquelles l’Agent d’instantané s’exécute pour **\@snapshot_job_name** et **\@password**. Si l’agent doit utiliser l’authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **\@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
     > [!IMPORTANT]  
     >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-4.  Ajoutez des articles à la publication. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+4.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [Define an Article](define-an-article.md).  
   
 5.  Démarrez le travail de l'Agent d'instantané pour générer l'instantané initial pour cette publication. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -160,11 +160,11 @@ ms.locfileid: "63022504"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>Pour créer une publication d'instantané ou une publication transactionnelle  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> pour la base de données de publication, affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1, puis appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retourne `false`, vérifiez que la base de données existe.  
   
-3.  Si le <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> propriété est `false`, affectez-lui la valeur `true`.  
+3.  Si la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> est `false`, affectez-lui la valeur `true`.  
   
 4.  Pour une publication transactionnelle, vérifiez la valeur de la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> . Si elle a la valeur `true`, un travail de l'Agent de lecture du journal existe déjà pour cette base de données. Si elle a la valeur `false`, procédez comme suit :  
   
@@ -179,7 +179,7 @@ ms.locfileid: "63022504"
   
 5.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> et définissez les propriétés suivantes pour cet objet :  
   
-    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Le nom de la base de données publiée pour <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "63022504"
 6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> pour créer la publication.  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 7.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l'Agent d'instantané pour le serveur de publication.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "63022504"
   
 4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> et définissez les propriétés suivantes pour cet objet :  
   
-    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Le nom de la base de données publiée pour <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "63022504"
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> pour créer la publication.  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l'Agent d'instantané pour le serveur de publication.  
   
@@ -251,8 +251,8 @@ ms.locfileid: "63022504"
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser sqlcmd avec des variables de script](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)   
- [Concepts liés à RMO (Replication Management Objects)](../concepts/replication-management-objects-concepts.md)   
- [Define an Article](define-an-article.md)   
+ [Concepts liés à Replication Management Objects](../concepts/replication-management-objects-concepts.md)   
+ [Définir un article](define-an-article.md)   
  [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md)   
  [Configurer la distribution](../configure-distribution.md)   
  [Protéger le serveur de distribution](../security/secure-the-distributor.md)   

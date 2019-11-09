@@ -21,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704761"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882354"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
   Après avoir tenu compte des conseils de performances générales décrites dans [Amélioration des performances générales de la réplication](enhance-general-replication-performance.md), envisagez ces domaines supplémentaires spécifiques à la réplication transactionnelle.  
@@ -63,9 +63,9 @@ ms.locfileid: "62704761"
   
 -   Exécutez les agents en mode continu et non par l'intermédiaire de planifications très fréquentes.  
   
-     Le fait de configurer les agents afin qu'ils s'exécutent en mode continu au lieu de planifier de fréquentes exécutions (par exemple, toutes les minutes) permet d'améliorer les performances de la réplication, car l'Agent n'a pas besoin de démarrer et de s'arrêter. Lorsque vous configurez l'Agent de distribution pour qu'il s'exécute en mode continu, les modifications sont diffusées avec une faible latence aux autres serveurs de la topologie qui sont connectés. Pour plus d'informations, consultez :  
+     Le fait de configurer les agents afin qu'ils s'exécutent en mode continu au lieu de planifier de fréquentes exécutions (par exemple, toutes les minutes) permet d'améliorer les performances de la réplication, car l'Agent n'a pas besoin de démarrer et de s'arrêter. Lorsque vous configurez l'Agent de distribution pour qu'il s'exécute en mode continu, les modifications sont diffusées avec une faible latence aux autres serveurs de la topologie qui sont connectés. Pour plus d'informations, consultez :  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Spécifier des planifications de synchronisation](../specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Spécifier des planifications de synchronisation](../specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Paramètres de l'Agent de distribution et de l'Agent de lecture du journal  
   
@@ -76,11 +76,11 @@ ms.locfileid: "62704761"
     > [!WARNING]  
     >  `MaxCmdsInTran` n'a pas été conçu pour rester toujours activé. Il permet de contourner le problème lorsqu'un utilisateur a accidentellement exécuté un grand nombre d'opérations DML dans une seule transaction (provoquant un retard dans la distribution des commandes jusqu'à ce que la transaction entière soit dans la base de données de distribution, le maintien de verrous, etc.). Si vous rencontrez régulièrement ce problème, vous devriez vérifier vos applications et trouver un moyen de réduire la taille des transactions.  
   
--   Utilisez le **- SubscriptionStreams** paramètre pour l’Agent de Distribution.  
+-   Utilisez le paramètre **-SubscriptionStreams** pour l’agent de distribution.  
   
      Le paramètre **-SubscriptionStreams** permet d’améliorer sensiblement le débit de la réplication d’agrégation. Il autorise plusieurs connexions à l'Abonné pour appliquer des traitements de modifications en parallèle, tout en conservant la plupart des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. Si l'une des connexions ne réussit pas à s'exécuter ou n'est pas validée, toutes les connexions abandonneront le lot actuel, et l'Agent utilisera un flux unique pour une nouvelle tentative sur les lots ayant échoué. Avant que cette phase de nouvelle tentative ne se termine, il peut se produire des incohérences transactionnelles temporaires sur l'Abonné. Une fois que les lots ayant échoué sont validés avec succès, l'Abonné retrouve un état de cohérence transactionnelle.  
   
-     Il est possible d’indiquer une valeur pour le paramètre de cet agent à l’aide du **@subscriptionstreams** de [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     Vous pouvez spécifier une valeur pour ce paramètre d’agent à l’aide de la **\@SubscriptionStreams** de [SP_ADDSUBSCRIPTION &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Augmentez la valeur du paramètre **-ReadBatchSize** pour l’Agent de lecture du journal.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62704761"
   
      Le paramètre **-PollingInterval** indique la fréquence d’interrogation du journal des transactions d’une base de données publiée pour que les transactions soient répliquées. La valeur par défaut est 5 secondes. Si vous réduisez cette valeur, le journal est interrogé plus fréquemment, ce qui peut entraîner une latence plus faible pour la remise des transactions de la base de données de publication sur la base de données de distribution. Cependant, vous devriez équilibrer les besoins d'une latence plus faible en fonction de l'augmentation de la charge sur le serveur causée par une interrogation plus fréquente.  
   
- Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+ Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   
 -   [Utiliser des profils d’agent de réplication](../agents/replication-agent-profiles.md)  
   

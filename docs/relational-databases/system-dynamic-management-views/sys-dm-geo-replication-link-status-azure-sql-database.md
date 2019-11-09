@@ -1,6 +1,6 @@
 ---
-title: Sys.dm_geo_replication_link_status (base de données Azure SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. dm_geo_replication_link_status
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
@@ -17,42 +17,43 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8302de76b45ca09e86c87c29ab99c30898168de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e642fada95ddf20e81f9fcb7da8b6267469ef0c9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900889"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843887"
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
+# <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cela inclut les bases de données primaires et secondaire. S’il existe plusieurs liens de réplication continue pour une base de données primaire donnée, cette table contient une ligne pour chacune des relations. La vue est créée dans toutes les bases de données, y compris la logique principale. Cependant, l'interrogation de cette vue dans la base de données master logique retourne un ensemble vide.  
+  Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cela comprend à la fois les bases de données primaires et secondaires. S’il existe plus d’un lien de réplication continue pour une base de données primaire donnée, cette table contient une ligne pour chacune des relations. La vue est créée dans toutes les bases de données, y compris la base de données Master logique. Cependant, l'interrogation de cette vue dans la base de données master logique retourne un ensemble vide.  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID unique du lien de réplication.|  
-|partner_server|**sysname**|Nom du serveur de base de données SQL contenant la base de données lié.|  
+|partner_server|**sysname**|Nom du serveur de SQL Database qui contient la base de données liée.|  
 |partner_database|**sysname**|Nom de la base de données liée sur le serveur SQL Database lié.|  
-|last_replication|**datetimeoffset**|Horodatage de l’accusé de réception de la dernière transaction par la base de données secondaire en fonction de l’horloge de la base de données primaire. Cette valeur est disponible sur la base de données primaire.|  
-|replication_lag_sec|**int**|Différence de temps en secondes entre la valeur last_replication et l’horodateur de validation de cette transaction sur le serveur principal basé sur l’horloge de la base de données primaire.  Cette valeur est disponible sur la base de données primaire.|  
-|replication_state|**tinyint**|L’état de géo-réplication pour cette base de données :.<br /><br /> 1 = Seeding. La cible de géo-réplication est en cours d’amorçage, mais les deux bases de données ne sont pas encore synchronisés. Jusqu'à ce que l’amorçage terminé, vous ne peut pas se connecter à la base de données secondaire. Suppression de base de données secondaire du site principal annulera l’opération d’amorçage.<br /><br /> 2 = mise à jour. La base de données secondaire est dans un état transactionnellement cohérent et est constamment synchronisé avec la base de données primaire.<br /><br /> 4 = messages interrompus. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
+|last_replication|**datetimeoffset**|Horodateur de l’accusé de réception de la dernière transaction par la base de données secondaire en fonction de l’horloge de la base de données primaire. Cette valeur est disponible uniquement sur la base de données primaire.|  
+|replication_lag_sec|**int**|Différence de temps en secondes entre la valeur de last_replication et l’horodateur de la validation de cette transaction sur la base de données primaire en fonction de l’horloge de la base de données primaire.  Cette valeur est disponible uniquement sur la base de données primaire.|  
+|replication_state|**tinyint**|État de la géo-réplication pour cette base de données, un des suivants :.<br /><br /> 1 = amorçage. La cible de géo-réplication est amorcée, mais les deux bases de données ne sont pas encore synchronisées. Tant que l’amorçage n’est pas terminé, vous ne pouvez pas vous connecter à la base de données secondaire. La suppression de la base de données secondaire du réplica principal annule l’opération d’amorçage.<br /><br /> 2 = rattrapage. La base de données secondaire est dans un état cohérent au niveau transactionnel et est constamment synchronisée avec la base de données primaire.<br /><br /> 4 = suspendu. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
 |replication_state_desc|**nvarchar (256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|role|**tinyint**|Rôle de géo-réplication, une des :<br /><br /> 0 = primary. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = la base de données secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
+|rôle|**tinyint**|Rôle de géo-réplication, parmi les suivants :<br /><br /> 0 = principal. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
 |role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|Le type secondaire, un des suivants :<br /><br /> 0 ne = aucune direct connexions sont autorisées pour la base de données secondaire et la base de données n’est pas disponible pour un accès en lecture.<br /><br /> 2 = toutes les connexions sont autorisées pour la base de données dans la boucle repl secondaire ; application pour l’accès en lecture seule.|  
+|secondary_allow_connections|**tinyint**|Le type secondaire, parmi les suivants :<br /><br /> 0 = aucune connexion directe n’est autorisée dans la base de données secondaire et la base de données n’est pas disponible pour l’accès en lecture.<br /><br /> 2 = toutes les connexions sont autorisées à la base de données dans le réplica secondaire REPL ; ication pour l’accès en lecture seule.|  
 |secondary_allow_connections_desc|**nvarchar (256)**|Non<br /><br /> Tous|  
-|last_commit|**datetimeoffset**|L’heure de la dernière transaction validée dans la base de données. Si récupéré sur la base de données primaire, il indique la dernière heure de validation sur la base de données primaire. Si récupéré sur la base de données secondaire, cette propriété indique l’heure de la dernière validation sur la base de données secondaire. Si récupéré sur la base de données secondaire lorsque le réplica principal du lien de réplication est arrêté, il indique jusqu'à quel point la base de données secondaire a rattrapé.|
+|last_commit|**datetimeoffset**|Heure de la dernière transaction validée dans la base de données. S’il est récupéré sur la base de données primaire, il indique l’heure de la dernière validation sur la base de données primaire. S’il est récupéré sur la base de données secondaire, il indique l’heure de la dernière validation sur la base de données secondaire. En cas de récupération sur la base de données secondaire lorsque le réplica principal du lien de réplication est arrêté, il indique jusqu’à quel point la base de données secondaire a été capturée.|
   
 > [!NOTE]  
->  Si la relation de réplication est arrêtée en supprimant la base de données secondaire (section 4.2), la ligne pour cette base de données dans le **sys.dm_geo_replication_link_status** disparaît de la vue.  
+>  Si la relation de réplication se termine en supprimant la base de données secondaire (section 4,2), la ligne de cette base de données dans la vue **sys. dm_geo_replication_link_status** disparaît.  
   
 ## <a name="permissions"></a>Autorisations  
- N’importe quel compte avec l’autorisation de view_database_state peut interroger **sys.dm_geo_replication_link_status**.  
+ Tout compte avec view_database_state autorisation peut interroger **sys. dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Exemple  
- Afficher les retards de réplication et l’heure de la dernière réplication de mes bases de données secondaire.  
+ Affichez les retards de réplication et l’heure de la dernière réplication de mes bases de données secondaires.  
   
 ```  
 SELECT   
@@ -64,8 +65,8 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER DATABASE &#40;base de données SQL Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [Sys.geo_replication_links &#40;base de données SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [Sys.dm_operation_status &#40;base de données SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+   [de &#40;Azure SQL Database&#41; ALTER DATABASE](../../t-sql/statements/alter-database-azure-sql-database.md)  
+ [sys. geo_replication_links &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys. dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

@@ -16,19 +16,19 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d8698ef84d74c98d02f0a8df0d59077fe0c7ac7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212037"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882238"
 ---
 # <a name="validate-replicated-data"></a>Valider des données répliquées
   Cette rubrique décrit comment valider les données sur l'abonné dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou des objets RMO (Replication Management Objects).  
 
   La réplication transactionnelle et de fusion vous permet de vérifier que les données sur l'Abonné correspondent aux données sur le serveur de publication. La validation peut être réalisée pour des abonnements spécifiques ou pour tous les abonnements à une publication. Spécifiez un des types de validation suivants et l'Agent de distribution ou l'Agent de fusion validera les données lors de sa prochaine exécution :  
   
--   **Uniquement le nombre de lignes**. Ceci vérifie si la table sur l'Abonné a le même nombre de lignes que la table sur le serveur de publication, mais ne vérifie pas que le contenu des lignes correspond. La validation du nombre de lignes fournit une approche allégée de la validation qui vous permet de savoir qu'il existe des problèmes au niveau des données.    
+-   **Nombre de lignes uniquement**. Ceci vérifie si la table sur l'Abonné a le même nombre de lignes que la table sur le serveur de publication, mais ne vérifie pas que le contenu des lignes correspond. La validation du nombre de lignes fournit une approche allégée de la validation qui vous permet de savoir qu'il existe des problèmes au niveau des données.    
 -   **Calculer le nombre de lignes et comparer les sommes de contrôle binaires**. Outre le comptage des lignes sur le serveur de publication et sur l'Abonné, une somme de contrôle de toutes les données est calculée à l'aide de l'algorithme de somme de contrôle. Si le nombre de lignes est erroné, la somme de contrôle n'est pas effectuée.  
   
  En plus de vérifier que les données sur l'Abonné et sur le serveur de publication correspondent, la réplication de fusion donne la possibilité de vérifier que les données sont partitionnées correctement pour chaque Abonné. Pour plus d’informations, consultez [Valider des informations de partition pour un Abonné de fusion](validate-partition-information-for-a-merge-subscriber.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "68212037"
   
  La validation des données est en processus comptant trois parties :  
   
-1.  Un abonnement unique ou tous les abonnements à une publication sont *marqués* pour la validation. Marquez des abonnements pour validation dans les boîtes de dialogue **Valider l’abonnement**, **Valider les abonnements** et **Valider tous les abonnements**, disponibles dans les dossiers **Publications locales** et **Abonnements locaux** de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez aussi marquer des abonnements à partir de l'onglet **Tous les abonnements** , de l'onglet **Liste de suivi des abonnements** et du nœud des publications dans le Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md).  
+1.  Un abonnement unique ou tous les abonnements à une publication sont *marqués* pour la validation. Marquez des abonnements pour validation dans les boîtes de dialogue **Valider l’abonnement**, **Valider les abonnements** et **Valider tous les abonnements**, disponibles dans les dossiers **Publications locales** et **Abonnements locaux** de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez aussi marquer des abonnements à partir de l'onglet **Tous les abonnements** , de l'onglet **Liste de suivi des abonnements** et du nœud des publications dans le Moniteur de réplication. Pour plus d’informations sur le démarrage du moniteur de réplication, consultez [Démarrer le moniteur de réplication](monitor/start-the-replication-monitor.md).  
   
 2.  Un abonnement est validé lors de sa prochaine synchronisation par l'Agent de distribution (réplication transactionnelle) ou l'Agent de fusion (réplication de fusion). L'Agent de distribution s'exécute généralement en continu, auquel cas la validation se produit immédiatement ; l'Agent de fusion s'exécute généralement à la demande, auquel cas la validation se produit après l'exécution de l'agent.  
   
@@ -65,7 +65,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 -   Dans la mesure où les sommes de contrôle et les sommes de contrôle binaires peuvent nécessiter des ressources processeur importantes lors de la validation d'un jeu de données de grande taille, il est préférable de planifier la validation au moment où l'activité est la plus faible sur les serveurs utilisés dans la réplication.    
 -   La réplication valide seulement des tables ; elle ne vérifie pas si des articles de schéma uniquement (tels que des procédures stockées) sont identiques sur le serveur de publication et sur l'Abonné.    
 -   La somme de contrôle binaire peut être utilisée avec toutes les tables publiées. La somme de contrôle valide les tables avec des filtres de colonnes, ou des structures de table logique où les décalages des colonnes diffèrent (à cause d'instructions ALTER TABLE qui suppriment ou ajoutent des colonnes).    
--   Validation de réplication utilise le `checksum` et **binary_checksum** fonctions. Pour plus d’informations sur leur comportement, consultez [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) et [BINARY_CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
+-   La validation de réplication utilise les fonctions `checksum` et **BINARY_CHECKSUM** . Pour plus d’informations sur leur comportement, consultez [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) et [BINARY_CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
 -   Une validation utilisant la somme de contrôle binaire ou la somme de contrôle peut signaler de façon incorrecte un échec si les types de données sont différents entre l'Abonné et le serveur de publication. Cela peut se produire si vous effectuez l'une des opérations suivantes :    
     -   Vous définissez explicitement les options de schéma pour qu'elles correspondent aux types de données des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -79,7 +79,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
   
  Pour gérer les échecs de validation, considérez les points suivants :  
   
--   Configurez l’alerte de réplication nommée **Réplication : l’Abonné n’a pas réussi la validation des données** pour recevoir une notification de l’échec. Pour plus d’informations, consultez [configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configurez l'alerte de réplication nommée **Réplication : l'Abonné n'a pas réussi la validation des données** pour recevoir une notification de l'échec. Pour plus d’informations, consultez [configurer des alertes &#40;de réplication prédéfinies SQL Server Management Studio & #41 (administration/configuration-prédéfinie-réplication-alertes-SQL-Server-Management-Studio. MD).  
   
 -   Le fait que la validation a échoué est-il un problème pour votre application ? Si l'échec de la validation constitue un problème, mettez à jour manuellement les données pour qu'elles soient synchronisées, ou bien réinitialisez l'abonnement :  
   
@@ -90,7 +90,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
   
 ## <a name="articles-in-transactional-replication"></a>Articles de la réplication transactionnelle 
 
-### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
   
   
 1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur.    
@@ -112,7 +112,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 
 #### <a name="all-articles"></a>Tous les articles
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Spécifiez **@publication** et l'une des valeurs suivantes pour **@rowcount_only** :    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Spécifiez **\@publication** et l’une des valeurs suivantes pour **\@rowcount_only**:    
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** - nombre de lignes et somme de contrôle binaire.  
   
@@ -124,7 +124,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
   
 #### <a name="single-article"></a>Article unique 
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez **@publication** , le nom de l'article pour **@article** et l'une des valeurs suivantes pour **@rowcount_only** :    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez **\@publication**, le nom de l’article pour **\@article**et l’une des valeurs suivantes pour **\@rowcount_only**:    
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** - nombre de lignes et somme de contrôle binaire.  
   
@@ -137,9 +137,9 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 #### <a name="single-subscriber"></a>Abonné unique
   
 1.  Dans la base de données de publication sur le serveur de publication, ouvrez une transaction explicite en utilisant [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  Dans la base de données de publication du serveur de publication, exécutez [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Spécifiez la publication pour **@publication** , le nom de l'Abonné pour **@subscriber** et le nom de la base de données d'abonnement pour **@destination_db** .    
+2.  Dans la base de données de publication du serveur de publication, exécutez [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Spécifiez la publication pour **\@publication**, le nom de l’abonné pour **\@abonné**et le nom de la base de données d’abonnement pour **\@destination_db**.    
 3.  (Facultatif) Répétez l'étape 2 pour chaque abonnement en cours de validation.    
-4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez **@publication** , le nom de l'article pour **@article** et l'une des valeurs suivantes pour **@rowcount_only** :    
+4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez **\@publication**, le nom de l’article pour **\@article**et l’une des valeurs suivantes pour **\@rowcount_only**:    
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** - nombre de lignes et somme de contrôle binaire.  
   
@@ -149,9 +149,9 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 5.  Dans la base de données de publication sur le serveur de publication, validez la transaction en utilisant [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql).    
 6.  (Facultatif) Répétez les étapes 1 à 5 pour chaque article en cours de validation.    
 7.  (Facultatif) Démarrez l'Agent de distribution s'il n'est pas déjà en cours d'exécution. Pour plus d'informations, consultez [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) et [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
-8.  Vérifiez la sortie de l'agent pour le résultat de la validation. Pour plus d'informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+8.  Vérifiez la sortie de l'agent pour le résultat de la validation. Pour plus d’informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
 
-##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>Tous les abonnements à une Publication transactionnelle 
+##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>Tous les abonnements par envoi de notification à une publication transactionnelle 
 
 ### <a name="using-replication-monitor"></a>Utilisation du moniteur de réplication
   
@@ -171,7 +171,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>Pour un abonnement unique à une publication de fusion
   
-### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio
   
 1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur.    
 2.  Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .    
@@ -187,7 +187,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 
 ### <a name="using-transact-sql-t-sql"></a>Utilisation de Transact-SQL (T-SQL)
 
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Spécifiez **@publication** , le nom de l'Abonné pour **@subscriber** , le nom de la base de données d'abonnement pour **@subscriber_db** et l'une des valeurs suivantes pour **@level** :   
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Spécifiez **\@publication**, le nom de l’abonné pour **\@abonné**, le nom de la base de données d’abonnement pour **\@subscriber_db**et l’une des valeurs suivantes pour **\@niveau**:   
     -   **1** - validation du nombre de lignes uniquement.    
     -   **3** - validation de la somme de contrôle binaire du nombre de lignes.  
   
@@ -203,7 +203,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
   
 ## <a name="for-all-subscriptions-to-a-merge-publication"></a>Pour tous les abonnements à une publication de fusion
 
-### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio 
+### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio 
   
 1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur.    
 2.  Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .    
@@ -218,14 +218,14 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 
 ### <a name="using-transact-sql-t-sql"></a>Utilisation de Transact-SQL (T-SQL)
 
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Spécifiez **@publication** et l'une des valeurs suivantes pour **@level** :    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Spécifiez **\@publication** et l’une des valeurs suivantes pour **\@niveau**:    
     -   **1** - validation du nombre de lignes uniquement.    
     -   **3** - validation de la somme de contrôle binaire du nombre de lignes.  
   
      Tous les abonnements sont ainsi marqués pour la validation.  
   
 2.  Démarrez l'agent de fusion pour chaque abonnement. Pour plus d'informations, consultez [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) et [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
-3.  Vérifiez la sortie de l'agent pour le résultat de la validation. Pour plus d'informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+3.  Vérifiez la sortie de l'agent pour le résultat de la validation. Pour plus d’informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
 
 
 ## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>Pour un abonnement par émission de données unique à une publication de fusion 
@@ -259,7 +259,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
     3.  Affichez les informations dans l'onglet **Historique de synchronisation** de la zone de texte **Dernier message de la session sélectionnée** .  
   
   
-## <a name="validate-data-using-merge-agent-parameters"></a>Valider des données à l’aide des paramètres d’Agent de fusion
+## <a name="validate-data-using-merge-agent-parameters"></a>Valider des données à l’aide de paramètres de Agent de fusion
   
 1.  Démarrez l'Agent de fusion sur l'Abonné (abonnement par extraction) ou sur le serveur de distribution (abonnement par émission de données) à partir de l'invite de commandes de l'une des façons suivantes.    
     -   Spécifiez une valeur de **1** (nombre de lignes) ou **3** (nombre de lignes et somme de contrôle de binaire) pour le paramètre **-Validate** .   
@@ -278,30 +278,30 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication. Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en spécifiant la connexion créée à l'étape 1.   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés restantes de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.    
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Passez les éléments suivants :    
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Passez les éléments suivants :    
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>    
     -   <xref:Microsoft.SqlServer.Replication.ValidationMethod>    
     -   Une valeur booléenne qui indique s'il faut arrêter l'Agent de distribution une fois la validation terminée.  
   
      Cela marque les articles pour la validation.  
   
-5.  S'il n'est pas déjà en cours d'exécution, démarrez l'Agent de distribution pour synchroniser chaque abonnement. Pour plus d'informations, consultez [Synchronize a Push Subscription](synchronize-a-push-subscription.md) ou [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). Le résultat de l'opération de validation est écrit dans l'historique de l'agent. Pour plus d'informations, voir [Monitoring Replication](monitoring-replication.md).  
+5.  S'il n'est pas déjà en cours d'exécution, démarrez l'Agent de distribution pour synchroniser chaque abonnement. Pour plus d'informations, consultez [Synchronize a Push Subscription](synchronize-a-push-subscription.md) ou [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). Le résultat de l'opération de validation est écrit dans l'historique de l'agent. Pour plus d’informations, voir [Monitoring Replication](monitoring-replication.md).  
   
 #### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>Pour valider les données de tous les abonnements à une publication de fusion  
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication. Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en spécifiant la connexion créée à l'étape 1.   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés restantes de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.    
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Passez le <xref:Microsoft.SqlServer.Replication.ValidationOption>souhaité.    
-5.  Exécutez l'Agent de fusion pour chaque abonnement pour démarrer la validation ou attendez que l'agent planifié suivant ne s'exécute. Pour plus d'informations, consultez [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) et [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Le résultat de l'opération de validation est écrit dans l'historique de l'agent, que vous affichez en utilisant le moniteur de réplication. Pour plus d'informations, voir [Monitoring Replication](monitoring-replication.md).  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Passez le <xref:Microsoft.SqlServer.Replication.ValidationOption>souhaité.    
+5.  Exécutez l'Agent de fusion pour chaque abonnement pour démarrer la validation ou attendez que l'agent planifié suivant ne s'exécute. Pour plus d'informations, consultez [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) et [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Le résultat de l'opération de validation est écrit dans l'historique de l'agent, que vous affichez en utilisant le moniteur de réplication. Pour plus d’informations, voir [Monitoring Replication](monitoring-replication.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>Pour valider les données d'un seul abonnement à une publication de fusion  
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication. Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en spécifiant la connexion créée à l'étape 1.    
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés restantes de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.    
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Passez le nom de l'Abonné et de la base de données d'abonnement en cours de validation, ainsi que le <xref:Microsoft.SqlServer.Replication.ValidationOption>souhaité.    
-5.  Exécutez l'Agent de fusion de l'abonnement pour démarrer la validation ou attendez que l'agent planifié suivant ne s'exécute. Pour plus d'informations, consultez [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) et [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Le résultat de l'opération de validation est écrit dans l'historique de l'agent, que vous affichez en utilisant le moniteur de réplication. Pour plus d'informations, voir [Monitoring Replication](monitoring-replication.md).  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Passez le nom de l'Abonné et de la base de données d'abonnement en cours de validation, ainsi que le <xref:Microsoft.SqlServer.Replication.ValidationOption>souhaité.    
+5.  Exécutez l'Agent de fusion de l'abonnement pour démarrer la validation ou attendez que l'agent planifié suivant ne s'exécute. Pour plus d'informations, consultez [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) et [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Le résultat de l'opération de validation est écrit dans l'historique de l'agent, que vous affichez en utilisant le moniteur de réplication. Pour plus d’informations, voir [Monitoring Replication](monitoring-replication.md).  
   
 ###  <a name="RMOExample"></a> Exemple (RMO)  
  Cet exemple marque tous les abonnements à une publication transactionnelle pour une validation du nombre de lignes.  

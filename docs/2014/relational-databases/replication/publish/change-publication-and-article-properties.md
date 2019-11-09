@@ -16,19 +16,19 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021318"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882348"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
   Quand une publication a été créée, la plupart des propriétés de la publication et des articles peuvent être modifiées, mais certaines nécessitent que l'instantané soit régénéré et/ou que les abonnements soient réinitialisés. Cette rubrique contient des informations sur toutes les propriétés qui requièrent l'une de ces actions ou les deux si elles sont modifiées.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propriétés de la publication pour la réplication d'instantané et transactionnelle  
   
-|Description|Procédure stockée|Properties|Configuration requise|  
+|Description|Procédure stockée|Propriétés|Spécifications|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifier le format d'instantané.|**sp_changepublication**|**sync_method**|Nouvel instantané.|  
 |Modifier l'emplacement de l'instantané.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nouvel instantané.|  
@@ -42,13 +42,13 @@ ms.locfileid: "63021318"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Propriétés des articles pour la réplication d'instantané et transactionnelle  
   
-|Description|Procédure stockée|Properties|Configuration requise|  
+|Description|Procédure stockée|Propriétés|Spécifications|  
 |-----------------|----------------------|----------------|------------------|  
 |Supprimer un article|**sp_droparticle**|Tous les paramètres.|Les articles peuvent être supprimés avant que des abonnements soient créés. À l'aide de procédures stockées, il est possible de supprimer un abonnement à un article ; à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], l'abonnement tout entier peut être supprimé, recréé et synchronisé. Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).|  
-|Modifier un filtre de colonne.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Modifier un filtre de colonne.|**sp_articlecolumn**|**\@colonne**<br /><br /> **opération de \@**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Ajouter un filtre de lignes.|**sp_articlefilter**|Tous les paramètres.|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Supprimer un filtre de lignes.|**sp_articlefilter**|**@article**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier un filtre de lignes.|**sp_articlefilter**|**@filter_clause**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Supprimer un filtre de lignes.|**sp_articlefilter**|**\@article**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Modifier un filtre de lignes.|**sp_articlefilter**|**\@filter_clause**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier un filtre de lignes.|**sp_changearticle**|**Filter**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier des options de schéma.|**sp_changearticle**|**schema_option**|Nouvel instantané.|  
 |Modifier comment les tables sont gérées sur l'Abonné avant d'appliquer l'instantané.|**sp_changearticle**|**pre_creation_cmd**|Nouvel instantané.|  
@@ -56,11 +56,11 @@ ms.locfileid: "63021318"
 |Modifier des commandes INSERT, UPDATE ou DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le nom de la table de destination|**sp_changearticle**|**dest_table**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le propriétaire de la table de destination (schéma).|**sp_changearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier les mappages des types de données (s'applique seulement à la publication Oracle).|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Modifier les mappages des types de données (s'applique seulement à la publication Oracle).|**sp_changearticlecolumndatatype**|**type de \@**<br /><br /> **longueur de \@**<br /><br /> **précision \@**<br /><br /> **échelle de \@**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriétés de la publication pour la réplication de fusion  
   
-|Description|Procédure stockée|Properties|Configuration requise|  
+|Description|Procédure stockée|Propriétés|Spécifications|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifier le format d'instantané|**sp_changemergepublication**|**sync_mode**|Nouvel instantané.|  
 |Modifier l'emplacement de l'instantané.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nouvel instantané.|  
@@ -70,7 +70,7 @@ ms.locfileid: "63021318"
 |Modifier les scripts de pré- ou de post-instantané.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nouvel instantané (également requis si vous modifiez le contenu du script).<br /><br /> La réinitialisation est requise pour appliquer le nouveau script à l'Abonné.|  
 |Ajouter un filtre de jointure ou un enregistrement logique.|**sp_addmergefilter**|Tous les paramètres.|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Supprimer un filtre de jointure ou un enregistrement logique.|**sp_dropmergefilter**|Tous les paramètres.|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier un filtre de jointure ou un enregistrement logique.|**sp_changemergefilter**|**@property**<br /><br /> **@value**|Nouvel instantané<br /><br /> Réinitialiser les abonnements.|  
+|Modifier un filtre de jointure ou un enregistrement logique.|**sp_changemergefilter**|**\@, propriété**<br /><br /> **\@value**|Nouvel instantané<br /><br /> Réinitialiser les abonnements.|  
 |Désactiver l'utilisation de filtres paramétrés (l'activation de filtres paramétrés ne nécessite pas d'actions particulières).|**sp_changemergepublication**|Une valeur **false** pour **dynamic_filters**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Activer ou désactiver l'utilisation de partitions précalculées.|**sp_changemergepublication**|**use_partition_groups**|Nouvel instantané.|  
 |Activer ou désactiver l'optimisation de partition [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] .|**sp_changemergepublication**|**keep_partition_changes**|Réinitialiser les abonnements.|  
@@ -79,12 +79,12 @@ ms.locfileid: "63021318"
   
 ## <a name="article-properties-for-merge-replication"></a>Propriétés d'un article pour la réplication de fusion  
   
-|Description|Procédure stockée|Properties|Configuration requise|  
+|Description|Procédure stockée|Propriétés|Spécifications|  
 |-----------------|----------------------|----------------|------------------|  
 |Supprimer un article, où l'article a le dernier filtre paramétré dans la publication.|**sp_dropmergearticle**|Tous les paramètres|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Supprimer un article, où l'article est un parent dans un filtre de jointure ou dans un enregistrement logique (ceci a comme effet de bord de supprimer la jointure).|**sp_dropmergearticle**|Tous les paramètres|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Supprimer un article, toutes les autres circonstances.|**sp_dropmergearticle**|Tous les paramètres|Nouvel instantané.|  
-|Inclure un filtre de colonne qui était auparavant non publié.|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Inclure un filtre de colonne qui était auparavant non publié.|**sp_mergearticlecolumn**|**\@colonne**<br /><br /> **opération de \@**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Ajouter, supprimer ou modifier un filtre de lignes.|**sp_changemergearticle**|**subset_filterclause**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.<br /><br /> Si vous ajoutez, supprimez ou modifiez un filtre paramétré, les modifications en attente chez l'abonné ne peuvent pas être chargées sur le serveur de publication pendant la réinitialisation. Si vous voulez télécharger les modifications en attente, synchronisez tous les abonnements avant de modifier le filtre.<br /><br /> Si un article n'est impliqué dans aucun des filtres de jointure, vous pouvez supprimer l'article et l'ajouter à nouveau avec un autre filtre de lignes, ce qui ne nécessite pas la réinitialisation de la totalité de l'abonnement. Pour plus d’informations sur l’ajout et la suppression d’articles, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Modifier des options de schéma.|**sp_changemergearticle**|**schema_option**|Nouvel instantané.|  
 |Modifier le suivi de niveau colonne en niveau ligne (changer le suivi de niveau ligne pour un suivi de niveau colonne ne nécessite aucune action particulière).|**sp_changemergearticle**|Une valeur **false** pour **column_tracking**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
@@ -94,7 +94,7 @@ ms.locfileid: "63021318"
   
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](../administration/frequently-asked-questions-for-replication-administrators.md)   
- [Créer et appliquer un instantané](../create-and-apply-the-snapshot.md)   
+ [Créer et appliquer l’instantané](../create-and-apply-the-snapshot.md)   
  [Réinitialiser des abonnements](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)   

@@ -18,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721447"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882376"
 ---
 # <a name="disable-publishing-and-distribution"></a>Désactiver la publication et la distribution
   Cette rubrique explique comment désactiver la publication et la distribution dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -40,7 +40,7 @@ ms.locfileid: "62721447"
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
+     [Prérequis](#Prerequisites)  
   
 -   **Pour désactiver la publication et la distribution à l'aide de :**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62721447"
 7.  Sur le serveur de distribution, exécutez [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) pour supprimer la désignation de serveur de distribution du serveur.  
   
     > [!NOTE]  
-    >  Si tous les objets de publication et de distribution de la réplication ne sont pas supprimés avant l'exécution de [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) et [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), ces procédures retourneront une erreur. Pour supprimer tous les objets liés à la réplication lorsqu'un serveur de publication ou un serveur de distribution est supprimé, le paramètre **@no_checks** doit avoir la valeur **1**. Si un serveur de publication ou un serveur de distribution est hors connexion ou inaccessible, la valeur **@ignore_distributor** peut être affectée au paramètre **1** afin qu'ils puissent être supprimés ; toutefois, tous les objets de publication et de distribution restants doivent être supprimés manuellement.  
+    >  Si tous les objets de publication et de distribution de la réplication ne sont pas supprimés avant l'exécution de [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) et [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), ces procédures retourneront une erreur. Pour supprimer tous les objets liés à la réplication lorsqu’un serveur de publication ou un serveur de distribution est supprimé, le paramètre **\@no_checks** doit avoir la valeur **1**. Si un serveur de publication ou un serveur de distribution est hors connexion ou inaccessible, le paramètre **\@ignore_distributor** peut avoir la valeur **1** pour pouvoir être supprimé. Toutefois, tous les objets de publication et de distribution restants doivent être supprimés manuellement.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple de script supprime des objets de réplication de la base de données d'abonnement.  
@@ -112,11 +112,11 @@ ms.locfileid: "62721447"
   
 5.  (Facultatif) Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet et vérifier que le serveur de publication existe. Si cette méthode retourne `false`, le nom du serveur de publication défini à l'étape 4 est incorrect ou le serveur de publication n'est pas utilisé par ce serveur de distribution.  
   
-6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passez la valeur `true` pour *forcer* si le serveur de publication et le serveur de distribution se trouvent sur des serveurs différents, et lorsque le serveur de publication doit être désinstallé du serveur de distribution sans commencer par vérifier que les publications n’existent plus sur le Serveur de publication.  
+6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Transmettez une valeur de `true` pour *force* si le serveur de publication et le serveur de distribution se trouvent sur des serveurs différents, et lorsque le serveur de publication doit être désinstallé au niveau du serveur de distribution sans commencer par vérifier que les publications n’existent plus sur le serveur de publication.  
   
 7.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 3.  
   
-8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Passez la valeur `true` pour *forcer* pour supprimer tous les objets de réplication sur le serveur de distribution sans commencer par vérifier que toutes les bases de données de publication locales ont été désactivées et les bases de données de distribution ont été désinstallés.  
+8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Transmettez la valeur `true` pour *forcer* à supprimer tous les objets de réplication sur le serveur de distribution sans vérifier d’abord que toutes les bases de données de publication locales ont été désactivées et que les bases de données de distribution ont été désinstallées.  
   
 ###  <a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple supprime l'inscription du serveur de publication au niveau du serveur de distribution, supprime la base de données de distribution et désinstalle le serveur de distribution.  
@@ -132,7 +132,7 @@ ms.locfileid: "62721447"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts liés à RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
- [Concepts liés aux procédures stockées système de réplication](concepts/replication-system-stored-procedures-concepts.md)  
+ [Concepts liés à Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

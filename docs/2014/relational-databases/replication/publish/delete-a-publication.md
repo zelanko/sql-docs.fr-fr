@@ -15,14 +15,14 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865019"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882290"
 ---
-# <a name="delete-a-publication"></a>Supprimer une publication
+# <a name="delete-a-publication"></a>Delete a Publication
   Cette rubrique explique comment supprimer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
  **Dans cette rubrique**  
@@ -58,10 +58,10 @@ ms.locfileid: "62865019"
   
     -   Pour supprimer une publication unique, exécutez [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) sur la base de données de publication du serveur de publication.  
   
-    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez la valeur `tran` pour **@type** . (Facultatif) Si le serveur de distribution est inaccessible ou si l'état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **@force** . (Facultatif) Spécifiez le nom de la base de données pour **@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n'est pas exécuté sur la base de données de publication.  
+    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez une valeur de `tran` pour **\@type**. (Facultatif) Si le serveur de distribution est inaccessible ou si l’état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **\@force**. (Facultatif) Spécifiez le nom de la base de données pour **\@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n’est pas exécuté sur la base de données de publication.  
   
         > [!NOTE]  
-        >  Spécifier la valeur **1** pour **@force** peut laisser des objets de publication liés à la réplication dans la base de données.  
+        >  Spécifier la valeur **1** pour **\@force** peut laisser des objets de publication liés à la réplication dans la base de données.  
   
 2.  (Facultatif) Si cette base de données n’a pas d’autres publications, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) pour désactiver la publication de la base de données actuelle à l’aide de la réplication transactionnelle ou d’instantané.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "62865019"
   
     -   Pour supprimer une publication unique, exécutez [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) sur la base de données de publication du serveur de publication.  
   
-    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez la valeur `merge` pour **@type** . (Facultatif) Si le serveur de distribution est inaccessible ou si l'état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **@force** . (Facultatif) Spécifiez le nom de la base de données pour **@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n'est pas exécuté sur la base de données de publication.  
+    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez une valeur de `merge` pour **\@type**. (Facultatif) Si le serveur de distribution est inaccessible ou si l’état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **\@force**. (Facultatif) Spécifiez le nom de la base de données pour **\@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n’est pas exécuté sur la base de données de publication.  
   
         > [!NOTE]  
-        >  Spécifier la valeur **1** pour **@force** peut laisser des objets de publication liés à la réplication dans la base de données.  
+        >  Spécifier la valeur **1** pour **\@force** peut laisser des objets de publication liés à la réplication dans la base de données.  
   
 2.  (Facultatif) Si cette base de données n’a pas d’autres publications, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) pour désactiver la publication de la base de données actuelle à l’aide de la réplication de fusion.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62865019"
   
     2.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si cette méthode retourne `false`, confirmez que la base de données existe.  
   
-    3.  Affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> la valeur `false`.  
+    3.  Attribuez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> la valeur `false`.  
   
     4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62865019"
   
     2.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si cette méthode retourne `false`, vérifiez que la base de données existe.  
   
-    3.  Affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> la valeur `false`.  
+    3.  Attribuez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> la valeur `false`.  
   
     4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
