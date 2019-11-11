@@ -1,6 +1,5 @@
 ---
-title: Installer SQL Server Machine Learning Services (Python, R) sur Windows
-titleSuffix: ''
+title: Installer sur Windows
 description: Cet article explique comment installer SQL Server Machine Learning Services sur Windows. Vous pouvez utiliser Machine Learning Services pour exécuter des scripts Python et R en base de données.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 448bb460d3cb3d041fd44b582a383037fecb98d4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8d51c147cfe5895356f8af270f62443643caa8f1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532625"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727645"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installer SQL Server Machine Learning Services (Python et R) sur Windows
 
@@ -133,7 +133,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
    + Machine Learning Services (en base de données)
    + R, Python ou les deux
 
-   Notez l’emplacement du dossier sous le chemin `..\Setup Bootstrap\Log` où sont stockés les fichiers de configuration. Une fois l’installation terminée, vous pouvez passer en revue les composants installés dans le fichier de résumé.
+   Notez l’emplacement du dossier sous le chemin `..\Setup Bootstrap\Log` où sont stockés les fichiers de configuration. Une fois l’installation terminée, vous pouvez passer en revue les composants installés dans le fichier de synthèse.
 
 1. Si vous êtes invité redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
@@ -303,9 +303,9 @@ Si une erreur s’est produite lors de l’exécution de la commande, passez en 
 
 Au niveau de l’instance, ces configurations supplémentaires peuvent inclure :
 
-* [Configuration du pare-feu pour SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
-* [Activation de protocoles réseau supplémentaires](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
-* [Activation des connexions à distance](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [Configurer le pare-feu pour SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
+* [Activer des protocoles réseau supplémentaires](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
+* [Activer des connexions à distance](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Création d’un nom de connexion pour SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [Gestion des quotas de disque](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) pour éviter que les scripts externes n’exécutent des tâches qui saturent l’espace disque
 

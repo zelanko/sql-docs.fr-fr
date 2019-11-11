@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4cda96435d1b6f3732446295d17b360033e4a17f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594486"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659366"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -438,6 +438,9 @@ Par défaut, les autorisations standard accordées à une connexion Azure AD nou
 - Doit être un membre d’Azure AD dans le même répertoire que celui utilisé pour l’instance managée Azure SQL.
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
+
+> [!NOTE]
+> L’administrateur Azure AD pour la fonctionnalité d’instance managée après la création a changé. Pour plus d’informations, consultez [Nouvelle fonctionnalité de l’administrateur Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 Après la création d’une connexion, celle-ci peut se connecter à une instance managée SQL Database, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 

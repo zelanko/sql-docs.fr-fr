@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082813"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638057"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68082813"
   
  Exécutez **filtdump.exe** à partir de l’invite de commandes et fournissez un argument unique. Cet argument est le nom d'un fichier individuel dont le type de fichier correspond à un IFilter installé. L'utilitaire affiche une liste de toutes les propriétés identifiées par l'IFilter dans le document, avec leurs GUID de jeu de propriétés, leurs ID d'entier et des informations supplémentaires.  
   
- Pour plus d’informations sur l’installation de ce logiciel, consultez [Kit de développement logiciel (SDK) Microsoft Windows pour Windows 7 et .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Après avoir téléchargé et installé le Kit de développement logiciel (SDK), recherchez l'utilitaire filtdump.exe dans les dossiers suivants.  
+ Pour plus d’informations sur l’installation de ce logiciel, consultez [Kit de développement logiciel (SDK) Microsoft Windows pour Windows 7 et .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). Après avoir téléchargé et installé le Kit de développement logiciel (SDK), recherchez l'utilitaire filtdump.exe dans les dossiers suivants.  
   
 -   Pour la version 64 bits, recherchez dans `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

@@ -15,12 +15,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f28eeedaa731a504390f5c636fe485ec4676f1f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000287"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844350"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Référence Transact-SQL (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ Pour rechercher des tables, vues, fonctions et procédures système, consultez l
 - [Vues de catalogue système](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [Vues de compatibilité système](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
 - [Vues de gestion dynamique système](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Fonctions système](../relational-databases/system-functions/system-functions-for-transact-sql.md)
+- [Fonctions système](../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [Vues de schémas d’information système](../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [Procédures stockées système](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
 - [Tables système](../relational-databases/system-tables/system-tables-transact-sql.md)

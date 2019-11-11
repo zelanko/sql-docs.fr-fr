@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62514418"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594076"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les URL permettent d’accéder au service Web Report Server et au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Avant de pouvoir utiliser l’une ou l’autre de ces applications, vous devez configurer au moins une URL pour le service web et une pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des valeurs par défaut pour les URL des deux applications qui s’accommodent bien à la plupart des scénarios de déploiement, dont les déploiements côte à côte avec d’autres applications et services web.  
@@ -33,7 +33,7 @@ ms.locfileid: "62514418"
 |Nom d'hôte|Un réseau TCP/IP utilise une adresse IP pour identifier de manière unique un périphérique sur le réseau. Il existe une adresse IP physique pour chaque carte réseau installée dans un ordinateur. Si l'adresse IP est résolue en en-tête d'hôte, vous pouvez spécifier l'en-tête de l'hôte. Si vous déployez le serveur de rapports sur un réseau d'entreprise, vous pouvez utiliser le nom réseau de l'ordinateur.|  
 |d’|Un port TCP est un point de terminaison sur le périphérique. Le serveur de rapports écoute les demandes sur un port désigné.|  
 |Répertoire virtuel|Un port est souvent partagé par plusieurs applications ou services Web. Pour cette raison, une URL de serveur de rapports inclut toujours un répertoire virtuel qui correspond à l'application obtenant la demande. Vous devez spécifier des noms de répertoire virtuel uniques pour chaque application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui écoute sur les mêmes port et adresse IP.|  
-|Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
 ## <a name="default-urls"></a>URL par défaut  
  Quand vous accédez à un serveur de rapports ou au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] avec son URL, celle-ci doit inclure le nom d’hôte et pas l’adresse IP. Sur un réseau TCP/IP, l'adresse IP se résout en un nom d'hôte (ou le nom de réseau de l'ordinateur). Si vous avez utilisé les valeurs par défaut pour configurer les URL, vous devez être en mesure d'accéder au service Web Report Server à l'aide d'URL qui spécifient le nom d'ordinateur ou localhost comme nom d'hôte :  
@@ -57,7 +57,7 @@ ms.locfileid: "62514418"
  Les autorisations sur chaque point de terminaison d'une URL sont accordées exclusivement au compte de service Report Server. Seul ce compte possède les droits pour accepter les demandes dirigées vers les URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les listes de contrôle d'accès discrétionnaire (DACL) sont créées et maintenues pour le compte lorsque vous configurez l'identité de service à travers le programme d'installation ou l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si vous modifiez le compte de service, l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] met à jour toutes les réservations d'URL que vous avez créées pour recueillir les nouvelles informations sur le compte. Pour plus d’informations, consultez [Syntaxe de réservation d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>Authentification des demandes de clients envoyées à une URL de serveur de rapports  
- Par défaut, le type d'authentification pris en charge sur les points de terminaison d'URL est l'authentification Windows. Il s'agit de l'extension de sécurité par défaut. Si vous implémentez un fournisseur d'authentifications personnalisé ou par formulaire, vous devez modifier les paramètres d'authentification sur le serveur de rapports. Le cas échéant, vous pouvez aussi modifier les paramètres d'authentification Windows afin qu'ils correspondent au sous-système d'authentification utilisé dans votre réseau. Pour plus d’informations, consultez [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Par défaut, le type d'authentification pris en charge sur les points de terminaison d'URL est l'authentification Windows. Il s'agit de l'extension de sécurité par défaut. Si vous implémentez un fournisseur d'authentifications personnalisé ou par formulaire, vous devez modifier les paramètres d'authentification sur le serveur de rapports. Le cas échéant, vous pouvez aussi modifier les paramètres d'authentification Windows afin qu'ils correspondent au sous-système d'authentification utilisé dans votre réseau. Pour plus d’informations, consultez [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

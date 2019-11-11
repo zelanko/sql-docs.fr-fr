@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574479"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594497"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS)
   Vous pouvez rencontrer des problèmes quand vous ajoutez une carte ou une couche à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , quand vous personnalisez une carte ou une couche existante de votre rapport, quand vous affichez l’aperçu d’une carte dans un rapport ou quand vous publiez un rapport contenant une carte. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.  
@@ -187,7 +187,7 @@ ms.locfileid: "65574479"
   
 -   La projection cartographique doit être **Mercator**.  
   
--   Pour l'aperçu local, vous devez avoir accès à Internet. Pour un rapport exécuté à partir du serveur de rapports, celui-ci doit être configuré pour prendre en charge l'arrière-plan de mosaïques. Pour plus d'informations, consultez « Planification de la prise en charge des cartes » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
+-   Pour l'aperçu local, vous devez avoir accès à Internet. Pour un rapport exécuté à partir du serveur de rapports, celui-ci doit être configuré pour prendre en charge l'arrière-plan de mosaïques. Pour plus d’informations, consultez [planifier un rapport cartographique](plan-a-map-report-report-builder-and-ssrs.md).  
   
  Pour plus d’informations sur l’ajout d’une couche de vignettes, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -206,6 +206,6 @@ ms.locfileid: "65574479"
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Résolution des problèmes liés au Générateur de rapports](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Résolution des problèmes liés au Générateur de rapports](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652337"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593556"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Créer une base de données du serveur de rapports en mode natif
 
@@ -67,7 +67,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
   
 6.  Redémarrage du service.  
   
-7.  Ouvrez votre logiciel de pare-feu, ainsi que le port sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute. Pour l'instance par défaut, il s'agit généralement du port 1433 pour les connexions TCP/IP. Pour plus d’informations, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+7.  Ouvrez votre logiciel de pare-feu, ainsi que le port sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute. Pour l'instance par défaut, il s'agit généralement du port 1433 pour les connexions TCP/IP. Pour plus d’informations, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>Pour créer une base de données locale du serveur de rapports  
   
@@ -111,7 +111,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
   
 7.  Examinez les informations de la page Résumé pour vérifier que les paramètres sont corrects, puis cliquez sur **Suivant**.  
   
-8.  Vérifiez la connexion en sélectionnant une URL de la page URL de Report Server. Les URL doivent être définies dans l'ordre pour que ce test fonctionne. Si la connexion à la base de données du serveur de rapports est valide, vous pouvez voir la hiérarchie des dossiers du serveur de rapports. Pour plus d’informations, consultez [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Vérifiez la connexion en sélectionnant une URL de la page URL de Report Server. Les URL doivent être définies dans l'ordre pour que ce test fonctionne. Si la connexion à la base de données du serveur de rapports est valide, vous pouvez voir la hiérarchie des dossiers du serveur de rapports. Pour plus d’informations, consultez [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## <a name="change-database-credentials"></a>Modifier les informations d’identification d’une base de données
 

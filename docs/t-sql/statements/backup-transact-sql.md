@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142858"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659095"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY spécifie que la sauvegarde est une *sauvegarde en copie seule* qui n�
 
 Le comportement par défaut exclut toute compression des sauvegardes. Toutefois, ce paramétrage par défaut peut être modifié en définissant l’option de configuration du serveur [Compression par défaut des sauvegardes](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Pour plus d’informations sur l’affichage de la valeur actuelle de cette option, consultez l’article [Afficher ou modifier des propriétés de serveur](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-Pour plus d’informations sur l’utilisation de la compression de sauvegarde avec des bases de données où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, consultez la section [Remarques](#general-remarks).
-
 COMPRESSION Active explicitement la compression des sauvegardes.
 
 NO_COMPRESSION Désactive explicitement la compression des sauvegardes.
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > Pour les bases de données comprenant un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, la valeur `MAXTRANSFERSIZE` par défaut est 65 536 (64 Ko). Pour les bases de données non chiffrées à l’aide de TDE, la valeur `MAXTRANSFERSIZE` par défaut est 1 048 576 (1 Mo) lors d’une sauvegarde vers DISK, et 65 536 (64 Ko) lors d’une sauvegarde vers VDI ou TAPE.
-> Pour plus d’informations sur l’utilisation de la compression de sauvegarde avec des bases de données chiffrées avec TDE, consultez la section [Remarques](#general-remarks).
 
 **Options de gestion des erreurs**
 

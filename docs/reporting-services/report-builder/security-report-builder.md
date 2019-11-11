@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c21af6661a3854db731cbab82a8623c6e3e19855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500531"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593841"
 ---
 # <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
   Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "66500531"
   
      Pour permettre l'affichage et la publication des éléments sur un serveur de rapports, les ensembles d'autorisations qui s'appliquent aux éléments et opérations liés aux rapports sont organisés en rôles. Un administrateur de serveur de rapports vous attribue un ou plusieurs rôles. Par exemple, le rôle prédéfini Navigateur vous permet d'afficher les rapports, dossiers, modèles et ressources.  
   
-     Si vous ne pouvez pas vous connecter ou accéder à un serveur de rapports, contactez l'administrateur du serveur de rapports. Pour plus d’informations, consultez [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
+     Si vous ne pouvez pas vous connecter ou accéder à un serveur de rapports, contactez l'administrateur du serveur de rapports. Pour plus d’informations, consultez [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
   
 -   Serveur de rapports configuré en mode intégré SharePoint  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66500531"
   
  Pour permettre aux autres utilisateurs de rechercher et de trouver des éléments que vous avez publiés pour les partager, vous devez collaborer avec l'administrateur du serveur de rapports afin d'organiser les dossiers de manière à les rendre accessibles à vos utilisateurs. L'accès est nécessaire pour la création de rapports et l'exécution des rapports publiés.  
   
- Pour plus d'informations, consultez les rubriques suivantes dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au sein de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312):  
+ Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,11 +88,10 @@ ms.locfileid: "66500531"
   
  Les informations d'identification ne sont pas enregistrées dans la définition de rapport. Elles sont gérées indépendamment du rapport sur le serveur de rapports ou le site SharePoint, ainsi que sur le client de création de rapports.  
   
- Au moment de la conception du rapport, les informations d'identification sont utilisées pour exécuter les requêtes de dataset et afficher l'aperçu du rapport. Au moment de l'exécution, les informations d'identification sont utilisées pour exécuter le rapport et mettre en cache les résultats des requêtes. Vous pouvez également mettre en cache les résultats des requêtes de dataset partagé de manière indépendante. Les informations d'identification peuvent différer au moment de la conception et au moment de l'exécution. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Au moment de la conception du rapport, les informations d'identification sont utilisées pour exécuter les requêtes de dataset et afficher l'aperçu du rapport. Au moment de l'exécution, les informations d'identification sont utilisées pour exécuter le rapport et mettre en cache les résultats des requêtes. Vous pouvez également mettre en cache les résultats des requêtes de dataset partagé de manière indépendante. Les informations d'identification peuvent différer au moment de la conception et au moment de l'exécution. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- Pour plus d'informations sur la sécurisation des données, consultez la rubrique suivante dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312):  
+ Pour plus d’informations sur la sécurisation des données, consultez [Security Center pour SQL Server moteur de base de données et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
--   [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  Pour plus d’informations sur les sources de données, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
@@ -108,9 +107,9 @@ ms.locfileid: "66500531"
   
 -   N'utilisez pas de paramètres basés sur des paramètres de requête et qui sont de type **Texte** , à moins que vous ne fournissiez des valeurs valides. Une liste de valeurs disponibles aide l'utilisateur à choisir uniquement des valeurs valides. Sans une liste de valeurs disponibles, vous ne pouvez pas restreindre les valeurs qu'un utilisateur peut entrer.  
   
--   N'utilisez pas la valeur globale [&UserID] pour sécuriser des données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [Référence de paramètre d’accès URL](../../reporting-services/url-access-parameter-reference.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
+-   N'utilisez pas la valeur globale [&UserID] pour sécuriser des données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [référence de paramètre d’accès URL](../../reporting-services/url-access-parameter-reference.md).  
   
- Une fois les éléments publiés sur un serveur de rapports, l'administrateur du serveur de rapports peut contribuer à les sécuriser à l'aide d'une sécurité basée sur les rôles ou d'une sécurité au niveau des éléments et des dossiers. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Une fois les éléments publiés sur un serveur de rapports, l'administrateur du serveur de rapports peut contribuer à les sécuriser à l'aide d'une sécurité basée sur les rôles ou d'une sécurité au niveau des éléments et des dossiers. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
   
   
 ## <a name="see-also"></a>Voir aussi  

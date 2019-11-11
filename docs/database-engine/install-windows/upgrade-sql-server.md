@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ea3d65d8ceaf06fc04efea138b3133fdeb0f335
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 26caf279506d3f5120a97f3801ba6c69bc46ad94
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714657"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637965"
 ---
 # <a name="upgrade-sql-server"></a>Mettre à niveau SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ Cette section contient les articles suivants :
  [Mettre à niveau Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Mettre à niveau des bases de données répliquées](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Mettre à niveau Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
- [SQL Server 2008 R2 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197135)   
+ [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15289)   
  [Compatibilité descendante](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

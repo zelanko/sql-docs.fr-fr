@@ -5,16 +5,16 @@ description: Cet article explique comment configurer la hiérarchisation HDFS po
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c2c2a6510688f8adf74e50ae76a626a00955019d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531900"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632781"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment monter ADLS Gen2 pour la hiérarchisation HDFS dans un cluster Big Data
 
@@ -76,11 +76,8 @@ Ouvrez une invite de commandes sur une machine client pouvant accéder à votre 
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
     fs.azure.account.oauth2.client.endpoint=[token endpoint],
     fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret],
-    fs.abfs.impl.disable.cache=true
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
-   
-Le comportement par défaut dans le pilote ADLS consiste à mettre en cache les informations d’identification. Cela signifie que des informations d’identification incorrectes seront également mises en cache et pourront générer des problèmes si votre première tentative de montage fournit des informations d’identification incorrectes. La dernière partie (fs.abfs.impl.disable.cache=true) des informations d’identification ci-dessus désactive cette mise en cache.
 
 ## <a name="use-access-keys-to-mount"></a>Utiliser des clés d’accès pour le montage
 
@@ -99,11 +96,8 @@ Vous pouvez également monter à l’aide des clés d’accès que vous pouvez o
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
-   fs.abfs.impl.disable.cache=true
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
-   
-Le comportement par défaut dans le pilote ADLS consiste à mettre en cache les informations d’identification. Cela signifie que des informations d’identification incorrectes seront également mises en cache et pourront générer des problèmes si votre première tentative de montage fournit des informations d’identification incorrectes. La dernière partie (fs.abfs.impl.disable.cache=true) des informations d’identification ci-dessus désactive cette mise en cache.
 
 ## <a id="mount"></a> Monter le stockage HDFS distant
 
