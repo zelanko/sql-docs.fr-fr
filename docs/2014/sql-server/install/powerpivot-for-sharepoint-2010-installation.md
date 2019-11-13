@@ -17,7 +17,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952053"
 ---
-# <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 Installation
+# <a name="powerpivot-for-sharepoint-2010-installation"></a>Installation de PowerPivot pour SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est une collection de composants serveur qui fournissent le traitement des requêtes et le contrôle de gestion pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous publiez sur SharePoint. Les services incluent le moteur Analysis Services et le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
@@ -29,7 +29,7 @@ ms.locfileid: "71952053"
   
  Pour installer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisez le support d'installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Pour obtenir des instructions sur les scénarios de déploiement avancés, consultez la liste de vérification [Deployment : Reporting Services, Power View et PowerPivot pour SharePoint @ no__t-0 et [Deployment Checklist : Montée en puissance parallèle en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010 @ no__t-0.  
+ Pour obtenir des instructions sur les scénarios de déploiement avancés, consultez [liste de vérification du déploiement : Reporting Services, Power View et PowerPivot pour SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) et liste de vérification du [déploiement : montée en puissance parallèle en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Installer PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

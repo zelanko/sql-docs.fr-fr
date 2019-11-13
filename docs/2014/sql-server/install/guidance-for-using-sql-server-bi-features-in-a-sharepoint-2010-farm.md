@@ -20,7 +20,7 @@ ms.locfileid: "71952257"
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Instructions d'utilisation des fonctionnalités BI de SQL Server dans une batterie de serveurs SharePoint 2010
   Cette rubrique récapitule la disponibilité des fonctionnalités selon les versions et les éditions du logiciel utilisé. Elle décrit également la configuration requise pour l'installation de SharePoint 2010 avec des fonctionnalités spécifiques de SQL Server. Pour plus d’informations sur SharePoint 2013, consultez [topologies de déploiement pour SQL Server fonctionnalités bi dans SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Configuration générale requise pour SharePoint 2010](#bkmk_generalsharepoint)  
   
@@ -45,8 +45,8 @@ ms.locfileid: "71952257"
   
 |Fonctionnalités prises en charge|Produit SharePoint|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité du complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @ no__t-2 pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-4 Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alertes de données.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|  
-|Affichage du rapport général [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et intégration des fonctionnalités avec SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Éditions Standard et Enterprise.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité du complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alertes de données.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|  
+|Affichage du rapport général [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et intégration des fonctionnalités avec SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Éditions Standard et Enterprise.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
   
  Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71952257"
   
 -   Vous souhaitez utiliser [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
- L’une des principales raisons pour lesquelles SP1 est requis pour les installations SharePoint en cours d’exécution avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] est la fonctionnalité du moteur de base de données **sp_dboption**, qui était dépréciée dans une version antérieure, n’est plus disponible dans la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Pour plus d’informations, consultez [fonctionnalité abandonnée moteur de base de données dans SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+ L’une des principales raisons pour lesquelles SP1 est requis pour les installations SharePoint s’exécutant avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] est que la fonctionnalité du moteur de base de données **sp_dboption**, qui était dépréciée dans une version antérieure, n’est plus disponible dans la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Pour plus d’informations, consultez [fonctionnalité abandonnée moteur de base de données dans SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Aide à l'installation de SharePoint 2010 SP1  
  [Téléchargez SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) et appliquez-le sur tous les serveurs de la batterie.  
@@ -69,7 +69,7 @@ ms.locfileid: "71952257"
   
 -   **Effectuez la mise à niveau avec psconfig :** Exécutez la commande `psconfig -upgrade` pour terminer la mise à niveau de SP1  
   
- Pour plus d’informations, consultez la section « mise à niveau » de [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) et [Resource Center : Mises à jour pour les produits SharePoint 2010 @ no__t-0  
+ Pour plus d’informations, consultez la section « mise à niveau » de [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) et [Centre de ressources : mises à jour pour les produits SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>Installation de SharePoint avec les fonctionnalités SQL Server BI  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71952257"
   
 |Composant|Action|  
 |---------------|------------|  
-|composant logiciel enfichable Reporting Services|L'Outil de préparation des produits SharePoint 2010 installe la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du complément Reporting Services. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] intègre une nouvelle version du complément qui est requise pour les fonctionnalités [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le complément peut être téléchargé et installé à l'aide de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de MSDN. Pour plus d’informations sur l’emplacement de la version actuelle du complément et sur son installation, consultez [où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) et [installer ou désinstaller le complément Reporting Services pour SharePoint &#40; SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
+|composant logiciel enfichable Reporting Services|L'Outil de préparation des produits SharePoint 2010 installe la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du complément Reporting Services. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] intègre une nouvelle version du complément qui est requise pour les fonctionnalités [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le complément peut être téléchargé et installé à l'aide de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de MSDN. Pour plus d’informations sur l’emplacement de la version actuelle du complément et son installation, consultez [où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) et [installer ou désinstaller le complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
 |Fournisseur OLE DB pour Analysis Services (MSOLAP)|SharePoint 2010 installe la version SQL Server 2008 du fournisseur OLE DB dans le cadre d'un déploiement Excel Services. Cette version ne prend pas en charge l'accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Vous devez installer les versions ultérieures du fournisseur sur les serveurs SharePoint qui prennent en charge les connexions de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Pour plus d’informations, consultez [installer le fournisseur Analysis Services OLE DB sur des serveurs SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|  
 |Services ADO.NET|SharePoint 2010 répertorie les services ADO.NET dans la liste des composants requis, mais le programme d'installation préalable ne procède pas à l'installation. Pour ajouter des services ADO.NET, vous devez procéder à l'installation manuelle. L'installation des services ADO.NET est obligatoire si vous souhaitez utiliser des listes SharePoint en tant que flux de données entrant de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou de rapports Reporting Services. Pour obtenir des instructions, consultez [installer ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).|  
   
