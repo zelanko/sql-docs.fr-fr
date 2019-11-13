@@ -23,32 +23,32 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47e332d8dfda76bbf2702335b72793c112c15d75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a31236d24a2490e693d35dd799b4f4abe1ce2d99
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102325"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982125"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contient une ligne pour chaque objet défini par l’utilisateur, la portée de schéma qui est créée au sein d’une base de données, y compris la fonction scalaire définie par l’utilisateur compilée en mode natif.  
+  Contient une ligne pour chaque objet de portée de schéma défini par l’utilisateur et créé dans une base de données, y compris la fonction scalaire définie par l’utilisateur compilée en mode natif.  
   
  Pour plus d’informations, consultez [Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 > [!NOTE]  
->  sys.objects n'affiche pas les déclencheurs DDL car ceux-ci ne sont pas définis avec une étendue de schéma. Tous les déclencheurs, DML et DDL, se trouvent dans [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). Sys.Triggers prend en charge un mélange de règles de portée de nom pour les différents types de déclencheurs.  
+>  sys.objects n'affiche pas les déclencheurs DDL car ceux-ci ne sont pas définis avec une étendue de schéma. Tous les déclencheurs, DML et DDL, se trouvent dans [sys. Triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). sys. Triggers prend en charge une combinaison de règles de portée de nom pour les différents types de déclencheurs.  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Nom de l'objet.|  
-|object_id|**Int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
-|principal_id|**int**|ID du propriétaire, si celui-ci est différent du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Cependant, il est possible de spécifier un autre propriétaire à l'aide de l'instruction ALTER AUTHORIZATION qui permet de changer de propriétaire.<br /><br /> Prend la valeur NULL en l'absence d'un autre propriétaire.<br /><br /> Prend la valeur NULL si le type de l'objet est un des types suivants :<br /><br /> C = contrainte CHECK<br /><br /> D = DEFAULT (contrainte ou autonome)<br /><br /> F = Contrainte FOREIGN KEY<br /><br /> PK = Contrainte PRIMARY KEY<br /><br /> R = Règle (ancienne, autonome)<br /><br /> TA = Déclencheur d'assembly (intégration CLR)<br /><br /> TR = Déclencheur SQL<br /><br /> UQ = Contrainte UNIQUE<br /><br /> EC = contrainte d’arête |  
+|object_id|**int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
+|principal_id|**int**|ID du propriétaire, si celui-ci est différent du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Cependant, il est possible de spécifier un autre propriétaire à l'aide de l'instruction ALTER AUTHORIZATION qui permet de changer de propriétaire.<br /><br /> Prend la valeur NULL en l'absence d'un autre propriétaire.<br /><br /> Prend la valeur NULL si le type de l'objet est un des types suivants :<br /><br /> C = contrainte CHECK<br /><br /> D = DEFAULT (contrainte ou autonome)<br /><br /> F = Contrainte FOREIGN KEY<br /><br /> PK = Contrainte PRIMARY KEY<br /><br /> R = Règle (ancienne, autonome)<br /><br /> TA = Déclencheur d'assembly (intégration CLR)<br /><br /> TR = Déclencheur SQL<br /><br /> UQ = Contrainte UNIQUE<br /><br /> EC = contrainte Edge |  
 |schema_id|**int**|ID du schéma dans lequel se trouve l'objet.<br /><br /> Les objets système compris dans l'étendue du schéma sont toujours contenus dans les schémas sys ou INFORMATION_SCHEMA.|  
 |parent_object_id|**int**|Identificateur de l'objet auquel appartient cet objet.<br /><br /> 0 = Il ne s'agit pas d'un objet enfant.|  
-|type|**char(2)**|Type d’objet :<br /><br /> AF = Fonction d'agrégation (CLR)<br /><br /> C = contrainte CHECK<br /><br /> D = DEFAULT (contrainte ou autonome)<br /><br /> F = Contrainte FOREIGN KEY<br /><br /> FN = Fonction scalaire SQL<br /><br /> FS = Fonction scalaire d'assembly (CLR)<br /><br /> FT = Fonction table d'assembly (CLR)<br /><br /> IF = Fonction table en ligne SQL<br /><br /> IT = table interne<br /><br /> P = Procédure stockée SQL<br /><br /> PC = procédure stockée d’Assembly (CLR)<br /><br /> PG = Repère de plan<br /><br /> PK = Contrainte PRIMARY KEY<br /><br /> R = Règle (ancienne, autonome)<br /><br /> RF = Procédure de filtre de réplication<br /><br /> S = Table de base système<br /><br /> SN = Synonyme<br /><br /> SO = Objet séquence<br /><br /> U = Table (définie par l'utilisateur)<br /><br /> V = Vue<br /><br /> EC = contrainte d’arête <br /><br /> <br /><br /> **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> SQ = File d'attente du service<br /><br /> TA = Déclencheur d'assembly DML (CLR)<br /><br /> TF = SQL-fonction table<br /><br /> TR = Déclencheur DML SQL<br /><br /> TT = Type de table<br /><br /> UQ = Contrainte UNIQUE<br /><br /> X = Procédure stockée étendue<br /><br /> <br /><br /> **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].<br /><br /> <br /><br /> ET = la Table externe|  
-|type_desc|**nvarchar(60)**|Description du type d'objet :<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
+|Type|**char(2)**|Type d’objet :<br /><br /> AF = Fonction d'agrégation (CLR)<br /><br /> C = contrainte CHECK<br /><br /> D = DEFAULT (contrainte ou autonome)<br /><br /> F = Contrainte FOREIGN KEY<br /><br /> FN = Fonction scalaire SQL<br /><br /> FS = Fonction scalaire d'assembly (CLR)<br /><br /> FT = Fonction table d'assembly (CLR)<br /><br /> IF = Fonction table en ligne SQL<br /><br /> IT = table interne<br /><br /> P = Procédure stockée SQL<br /><br /> PC = procédure stockée d’assembly (CLR)<br /><br /> PG = Repère de plan<br /><br /> PK = Contrainte PRIMARY KEY<br /><br /> R = Règle (ancienne, autonome)<br /><br /> RF = Procédure de filtre de réplication<br /><br /> S = Table de base système<br /><br /> SN = Synonyme<br /><br /> SO = Objet séquence<br /><br /> U = Table (définie par l'utilisateur)<br /><br /> V = Vue<br /><br /> EC = contrainte Edge <br /><br /> <br /><br /> **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> <br /><br /> SQ = File d'attente du service<br /><br /> TA = Déclencheur d'assembly DML (CLR)<br /><br /> TF = fonction table SQL<br /><br /> TR = Déclencheur DML SQL<br /><br /> TT = Type de table<br /><br /> UQ = Contrainte UNIQUE<br /><br /> X = Procédure stockée étendue<br /><br /> <br /><br /> **S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].<br /><br /> <br /><br /> ET = table externe|  
+|type_desc|**nvarchar(60)**|Description du type d'objet :<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|Date de création de l'objet.|  
 |modify_date|**datetime**|Date de la dernière modification de l'objet avec l'instruction ALTER. Si l'objet est une table ou une vue, modify_date change également lorsqu'un index cluster sur la table ou la vue est créé ou modifié.|  
 |is_ms_shipped|**bit**|Un composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interne a créé l'objet.|  
@@ -56,9 +56,9 @@ ms.locfileid: "68102325"
 |is_schema_published|**bit**|Seul le schéma de l'objet est publié.|  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez appliquer le [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md), [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md), et [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)() des fonctions intégrées pour les objets affichés dans sys.objects.  
+ Vous pouvez appliquer les fonctions intégrées [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)et [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)() aux objets affichés dans sys. Objects.  
   
- Il existe une version de cette vue avec le même schéma, appelé [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), qui affiche les objets système. Il existe une autre vue appelée [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) qui affiche les objets système et utilisateur. Ces trois affichages catalogue ont la même structure.  
+ Il existe une version de cette vue avec le même schéma, appelé [sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), qui affiche des objets système. Il existe une autre vue appelée [sys. ALL_OBJECTS](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) qui affiche les objets système et utilisateur. Ces trois affichages catalogue ont la même structure.  
   
  Dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un index étendu, tel qu'un index XML ou un index spatial, est considéré comme une table interne dans sys.objects (type = IT et type_desc = INTERNAL_TABLE). Pour un index étendu :  
   
@@ -68,8 +68,8 @@ ms.locfileid: "68102325"
   
 -   Les colonnes is_ms_shipped, is_published et is_schema_published ont la valeur 0.  
 
-**Vues système utile connexes**  
-Des sous-ensembles des objets peuvent être affichés à l’aide de vues système pour un type spécifique d’objet, tel que :  
+**Vues système utiles associées**  
+Les sous-ensembles des objets peuvent être affichés à l’aide des vues système pour un type d’objet spécifique, par exemple :  
 - [sys.tables](sys-tables-transact-sql.md)  
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
@@ -79,7 +79,7 @@ Des sous-ensembles des objets peuvent être affichés à l’aide de vues systè
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-all-the-objects-that-have-been-modified-in-the-last-n-days"></a>R. Retour de tous les objets modifiés au cours des N derniers jours  
+### <a name="a-returning-all-the-objects-that-have-been-modified-in-the-last-n-days"></a>A. Retour de tous les objets modifiés au cours des N derniers jours  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<n_days>` par des valeurs valides.  
   
 ```sql  
@@ -166,7 +166,7 @@ GO
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Interrogation des catalogues système SQL Server FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

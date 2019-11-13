@@ -21,22 +21,22 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006935"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983072"
 ---
-# <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
+# <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Modifie le nom d'un objet créé par l'utilisateur dans la base de données actuelle. Cet objet peut être une table, l’index, la colonne de type de données alias ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] type common language runtime (CLR) défini par l’utilisateur.  
+  Modifie le nom d'un objet créé par l'utilisateur dans la base de données actuelle. Cet objet peut être une table, un index, une colonne, un type de données alias ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] type défini par l’utilisateur common language runtime (CLR).  
   
 > [!CAUTION]  
 >  La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Nous vous recommandons de ne pas utiliser cette instruction pour renommer des procédures stockées, des déclencheurs, des fonctions définies par l'utilisateur ou des vues ; supprimez plutôt l'objet et recréez-le avec le nouveau nom.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,28 +47,28 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @objname =] '*object_name*'  
- Nom actuel, complet ou non, de l'objet utilisateur ou du type de données. Si l’objet à renommer est une colonne dans une table, *object_name* doit être sous la forme *table.column* ou *configuration : schéma.table.colonne*. Si l’objet à renommer est un index, *object_name* doit être sous la forme *table.index* ou *schema.table.index*. Si l’objet à renommer est une contrainte, *object_name* doit être sous la forme *schema.constraint*.  
+ [@objname =] '*object_name*'  
+ Nom actuel, complet ou non, de l'objet utilisateur ou du type de données. Si l’objet à renommer est une colonne dans une table, *object_name* doit se présenter sous la forme *table. Column* ou *Schema. table. Column*. Si l’objet à renommer est un index, *object_name* doit se présenter sous la forme *table. index* ou *Schema. table. index*. Si l’objet à renommer est une contrainte, *object_name* doit se présenter sous la forme *Schema. Constraint*.  
   
- Les guillemets ne sont nécessaires que si un nom complet d'objet est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *object_name* est **nvarchar(776)** , sans valeur par défaut.  
+ Les guillemets ne sont nécessaires que si un nom complet d'objet est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *object_name* est de type **nvarchar (776)** , sans valeur par défaut.  
   
- [ @newname =] '*nouveau_nom*'  
- Nouveau nom de l'objet spécifié. *new_name* doit être un nom en une partie et doit respecter les règles des identificateurs. *NewName* est **sysname**, sans valeur par défaut.  
+ [@newname =] '*new_name*'  
+ Nouveau nom de l'objet spécifié. *new_name* doit être un nom en une partie et doit respecter les règles applicables aux identificateurs. *NewName* est de **type sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  Les noms de déclencheurs ne peuvent pas commencer par # ou par ##.  
   
- [ @objtype =] '*object_type*'  
- Type d'objet renommé. *object_type* est **varchar(13)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+ [@objtype =] '*object_type*'  
+ Type d'objet renommé. *object_type* est de type **varchar (13)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |COLUMN|Colonne à renommer.|  
 |DATABASE|Base de données définie par l'utilisateur. Ce type d'objet est nécessaire pour renommer une base de données.|  
 |INDEX|Index défini par l'utilisateur. Renommer un index avec des statistiques, renomme également automatiquement les statistiques.|  
-|OBJECT|Un élément d’un type de suivi dans [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Par exemple, OBJECT peut être utilisé pour renommer des objets, y compris des contraintes (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), des tables utilisateur et des règles.|  
-|STATISTICS|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiques créées explicitement par un utilisateur ou créées implicitement avec un index. Renommer les statistiques d'un index renomme également automatiquement l'index.|  
-|USERDATATYPE|Un [Types définis par l’utilisateur CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) ajouté en exécutant [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) ou [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
+|OBJECT|Élément d’un type suivi dans [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Par exemple, OBJECT peut être utilisé pour renommer des objets, y compris des contraintes (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), des tables utilisateur et des règles.|  
+|STATISTICS|**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiques créées explicitement par un utilisateur ou créées implicitement avec un index. Renommer les statistiques d'un index renomme également automatiquement l'index.|  
+|USERDATATYPE|[Types CLR définis](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) par l’utilisateur ajoutés en exécutant [Create type](../../t-sql/statements/create-type-transact-sql.md) ou [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
@@ -80,7 +80,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  Vous pouvez utiliser sp_rename pour renommer des index XML primaires et secondaires.  
   
- Renommer une procédure stockée, fonction, vue ou déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vue de catalogue ou obtenu à l’aide de la [valeur DÉFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction intégrée. Par conséquent, il est déconseillé d'utiliser sp_rename pour renommer ces types d'objets. Supprimez, puis recréez plutôt l'objet avec son nouveau nom.  
+ Le changement du nom d’une procédure stockée, d’une fonction, d’une vue ou d’un déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ou obtenu à l’aide de la fonction intégrée [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) . Par conséquent, il est déconseillé d'utiliser sp_rename pour renommer ces types d'objets. Supprimez, puis recréez plutôt l'objet avec son nouveau nom.  
   
  Le fait de renommer un objet tel qu'une table ou une colonne ne renomme pas automatiquement les références à cet objet. Vous devez modifier manuellement tout objet qui référence l'objet renommé. Par exemple, si vous renommez une colonne de table et si cette colonne est référencée dans un déclencheur, vous devez modifier le déclencheur pour refléter le nouveau nom de colonne. Utilisez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) pour obtenir la liste des dépendances de l’objet avant de le renommer.  
   
@@ -89,7 +89,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-renaming-a-table"></a>R. Modification du nom d'une table  
+### <a name="a-renaming-a-table"></a>A. Modification du nom d'une table  
  L'exemple suivant renomme la table `SalesTerritory` en `SalesTerr` dans le schéma `Sales` .  
   
 ```  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Modification du nom d'une colonne  
- L’exemple suivant renomme la `TerritoryID` colonne dans le `SalesTerritory` table `TerrID`.  
+ L’exemple suivant renomme la colonne `TerritoryID` de la table `SalesTerritory` en `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>F. Renommer des statistiques  
- L’exemple suivant crée un objet de statistiques nommé contactMail1 et renomme la statistique à NewContact à l’aide de sp_rename. Lorsque vous renommez des statistiques, l'objet doit être spécifié en respectant le format schema.table.statistics_name.  
+ L’exemple suivant crée un objet de statistiques nommé contactMail1, puis renomme les statistiques en NewContact à l’aide de sp_rename. Lorsque vous renommez des statistiques, l'objet doit être spécifié en respectant le format schema.table.statistics_name.  
   
 ```  
 CREATE STATISTICS ContactMail1  
@@ -207,6 +207,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Procédures &#40;stockées moteur de base de données Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

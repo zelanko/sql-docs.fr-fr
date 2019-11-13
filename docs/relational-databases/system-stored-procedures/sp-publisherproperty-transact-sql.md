@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 185ad0ad33419b20fffae9bff3e5562761ea7b31
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771170"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962377"
 ---
-# <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
+# <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Affiche ou modifie les propriétés du serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] publication qui ne sont pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des serveurs de publication. Cette procédure stockée est exécutée sur le serveur de distribution.  
+  Affiche ou modifie les propriétés du serveur de publication non [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette procédure stockée est exécutée sur le serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,26 +39,24 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publisher** =] **«***éditeur***»**  
- Nom du serveur de publication hétérogène. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` est le nom du serveur de publication hétérogène. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
- [ **@propertyname** =] **'***PropertyName***'**  
- Nom de la propriété qui est définie. *PropertyName* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
+`[ @propertyname = ] 'propertyname'` est le nom de la propriété qui est définie. *PropertyName* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**xactsetbatching**|Si les transactions sur le serveur de publication sont regroupées en ensembles cohérents sur le plan transactionnel pour un traitement ultérieur, elles sont nommées Xactsets. La valeur **Enabled** signifie que Xactsets peut être créé, ce qui correspond à la valeur par défaut. La valeur Disabled signifie que les Xactsets existants sont traités par aucun nouveau Xactsets n’est créé.|  
-|**xactsetjob**|Indique si le travail Xactset est activé pour la création des Xactsets. La valeur **Enabled** signifie que la tâche Xactset s’exécute régulièrement pour créer des Xactsets sur le serveur de publication. La valeur Disabled signifie que les Xactsets sont créés uniquement par l’agent de lecture du journal lorsqu’il interroge le serveur de publication pour y rechercher des modifications.|  
+|**xactsetbatching**|Si les transactions sur le serveur de publication sont regroupées en ensembles cohérents sur le plan transactionnel pour un traitement ultérieur, elles sont nommées Xactsets. La valeur **Enabled** signifie que Xactsets peut être créé, ce qui correspond à la valeur par défaut. La valeur **Disabled** signifie que les Xactsets existants sont traités par aucun nouveau Xactsets n’est créé.|  
+|**xactsetjob**|Indique si le travail Xactset est activé pour la création des Xactsets. La valeur **Enabled** signifie que la tâche Xactset s’exécute régulièrement pour créer des Xactsets sur le serveur de publication. La valeur **Disabled** signifie que les Xactsets sont créés uniquement par l’agent de lecture du journal lorsqu’il interroge le serveur de publication pour y rechercher des modifications.|  
 |**xactsetjobinterval**|Intervalle entre les exécutions du travail Xactset, en minutes.|  
   
  Lorsque *PropertyName* est omis, toutes les propriétés définissables sont retournées.  
   
- [ **@propertyvalue** =] **'***PropertyValue***'**  
+ `[ @propertyvalue = ] 'propertyvalue'`  
  Nouvelle valeur du paramètre de la propriété. *PropertyValue* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *PropertyValue* est omis, le paramètre actuel de la propriété est retourné.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Retourne les propriétés de publication suivantes qui peuvent être définies :<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**Balis**|**sysname**|Est le paramètre actuel de la propriété dans la colonne **PropertyName** .|  
@@ -67,7 +65,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_publisherproperty** est utilisé dans la réplication transactionnelle pour les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-.  
+ **sp_publisherproperty** est utilisé dans la réplication transactionnelle pour les serveurs de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Lorsque seul le serveur de *publication* est spécifié, le jeu de résultats comprend les paramètres actuels de toutes les propriétés qui peuvent être définies.  
   

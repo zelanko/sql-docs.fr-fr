@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056295"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982116"
 ---
-# <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
+# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Capture des données de diagnostics et des informations d'intégrité à propos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour détecter des échecs potentiels. La procédure fonctionne en mode de répétition et envoie régulièrement des résultats. Elle peut être appelée depuis une connexion DAC ou ordinaire.  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +40,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indique l’intervalle de temps à laquelle la procédure stockée sera exécutée à plusieurs reprises pour envoyer des informations d’intégrité.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indique l’intervalle de temps pendant lequel la procédure stockée s’exécutera à plusieurs reprises pour envoyer des informations d’intégrité.  
   
- *repeat_interval_in_seconds* est **int** avec la valeur par défaut de 0. Les valeurs de paramètre valides sont 0, ou toute valeur égale à ou supérieure à 5. La procédure stockée doit s'exécuter au moins 5 secondes pour retourner des données complètes. La valeur minimale pour que la procédure stockée s'exécute en mode de répétition est de 5 secondes.  
+ *repeat_interval_in_seconds* est de **type int** avec 0 comme valeur par défaut. Les valeurs de paramètre valides sont 0, ou toute valeur égale à ou supérieure à 5. La procédure stockée doit s'exécuter au moins 5 secondes pour retourner des données complètes. La valeur minimale pour que la procédure stockée s'exécute en mode de répétition est de 5 secondes.  
   
  Si ce paramètre n'est pas spécifié, ou si la valeur spécifiée est 0, la procédure stockée retournera des données une fois puis s'arrêtera.  
   
@@ -54,48 +54,48 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
-**sp_server_diagnostics** renvoie les informations suivantes  
+**sp_server_diagnostics** retourne les informations suivantes :  
   
-|colonne|Data type|Description|  
+|Colonne|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
-|**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau du composant, ou pour un groupe de disponibilité Always On de l’instance :<br /><br /> instance<br /><br /> Always On : groupe de disponibilité|  
-|**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité >*|  
-|**state**|**Int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : Inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : avertissement<br /><br /> 3 : erreur|  
+|**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composant au niveau de l’instance ou pour un groupe de disponibilité Always On :<br /><br /> instance<br /><br /> Always On : AvailabilityGroup|  
+|**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> ressource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> Des événements.<br /><br /> *\<le nom du groupe de disponibilité >*|  
+|**state**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : AVERTISSEMENT<br /><br /> 3 : erreur|  
 |**data**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
   
  Voici les descriptions des cinq composants :  
   
--   **système**: Collecte les données à partir d’un point de vue du système sur les verrouillages spinlock, conditions de traitement sévères, tâches improductives, défauts de page et l’utilisation du processeur. Ces informations permettent d'obtenir une recommandation de l'état d'intégrité global.  
+-   **System**: collecte les données d’un point de vue du système sur les verrouillages spinlock, les conditions de traitement graves, les tâches improductives, les défauts de page et l’utilisation de l’UC. Ces informations permettent d'obtenir une recommandation de l'état d'intégrité global.  
   
--   **ressource**:  Collecte les données à partir d’un point de vue des ressources sur les pages de mémoire physique et virtuelle, les pools de mémoires tampons, le cache et autres objets de mémoire. Ces informations produit une recommandation d’état d’intégrité globale.  
+-   **ressource**: collecte les données du point de vue des ressources sur la mémoire physique et virtuelle, les pools de mémoires tampons, les pages, le cache et d’autres objets mémoire. Ces informations produisent une recommandation générale de l’état d’intégrité.  
   
--   **query_processing**: Collecte les données à partir d’un point de vue du traitement des requêtes sur les threads de travail, des tâches, des types d’attente, des sessions sollicitant beaucoup l’UC et des tâches de blocage. Ces informations produit une recommandation d’état d’intégrité globale.  
+-   **query_processing**: collecte les données à partir d’une perspective de traitement des requêtes sur les threads de travail, les tâches, les types d’attente, les sessions gourmandes en ressources processeur et les tâches de blocage. Ces informations produisent une recommandation générale de l’état d’intégrité.  
   
--   **io_subsystem**: Collecte les données d’e/s. En plus des données de diagnostics, ce composant produit un état d'intégrité sain ou un état d'intégrité d'avertissement uniquement pour un sous-système d'E/S.  
+-   **io_subsystem**: collecte les données sur les e/s. En plus des données de diagnostics, ce composant produit un état d'intégrité sain ou un état d'intégrité d'avertissement uniquement pour un sous-système d'E/S.  
   
--   **événements**: Collecte des données et des surfaces via la procédure stockée sur les erreurs et les événements d’intérêt enregistrés par le serveur, notamment des détails sur les exceptions de mémoire tampon en anneau, les événements de mémoire tampon en anneau sur l’allocation de mémoire, en dehors de la mémoire, le Moniteur du planificateur, pool de mémoires tampons, les verrouillages spinlock, sécurité et connectivité. Les événements afficheront toujours 0 comme état.  
+-   **événements**: collecte des données et des surfaces via la procédure stockée sur les erreurs et événements d’intérêt enregistrés par le serveur, y compris des détails sur les exceptions de mémoire tampon en anneau, les événements de mémoire tampon en anneau sur le répartiteur de mémoire, la mémoire insuffisante, le moniteur du planificateur, le pool de mémoires tampons, les verrouillages spinlock et la connectivité. Les événements afficheront toujours 0 comme état.  
   
--   **\<nom du groupe de disponibilité >** : Collecte les données de groupe de disponibilité spécifié (si component_type = « toujours sur : AvailabilityGroup »).  
+-   **\<nom du groupe de disponibilité >** : collecte les données du groupe de disponibilité spécifié (si component_type = "Always On : AvailabilityGroup").  
   
 ## <a name="remarks"></a>Notes  
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
   
 Le tableau suivant mappe les composants à leurs états d'intégrité associés.  
   
-|Composants|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
+|Components|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |système|x|x|x||  
-|resource|x|x|x||  
+|ressource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|événements||||x|  
+|Des événements.||||x|  
   
 Le (x) dans chaque ligne représente des états d'intégrité valides pour le composant. Par exemple, io_subsystem indiquera un bon état ou un avertissement. Il n'affichera pas les états d'erreur.  
  
 > [!NOTE]
-> L’exécution de procédure interne sp_server_diagnostics est implémentée sur un thread préemptif en haute priorité.
+> L’exécution de sp_server_diagnostics procédure interne est implémentée sur un thread préemptif à haute priorité.
   
 ## <a name="permissions"></a>Autorisations  
 requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

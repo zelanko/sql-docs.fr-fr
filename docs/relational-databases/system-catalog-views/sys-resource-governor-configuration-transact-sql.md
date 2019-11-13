@@ -1,5 +1,5 @@
 ---
-title: Sys.resource_governor_configuration (Transact-SQL) | Microsoft Docs
+title: sys. resource_governor_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c85332cb1c26f81cdbbaa7bffa5410cf29e711e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e4068d9763460995335fe5adbd6684ecb70d8b7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904551"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982616"
 ---
-# <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
+# <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne l'état du gouverneur de ressources stocké.  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**Int**|ID de la fonction classifieur tel qu'il est stocké dans les métadonnées. N'accepte pas la valeur NULL.<br /><br /> **Remarque** cette fonction est utilisée pour classer les nouvelles sessions et utilise des règles pour router la charge de travail vers le groupe de charges de travail approprié. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
-|is_enabled|**bit**|Indique l'état actuel du gouverneur de ressources :<br /><br /> 0 = le gouverneur de ressources n’est pas activé.<br /><br /> 1 = resource Governor est activé.<br /><br /> N'accepte pas la valeur NULL.|  
-|max_outstanding_io_per_volume|**int**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre maximal d'E/S en attente par volume.|  
+|classifier_function_id|**int**|ID de la fonction classifieur tel qu'il est stocké dans les métadonnées. N'accepte pas la valeur NULL.<br /><br /> **Remarque** Cette fonction est utilisée pour classer de nouvelles sessions et utilise des règles pour acheminer la charge de travail vers le groupe de charge de travail approprié. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
+|is_enabled|**bit**|Indique l'état actuel du gouverneur de ressources :<br /><br /> 0 = Resource Governor n’est pas activé.<br /><br /> 1 = Resource Governor est activé.<br /><br /> N'accepte pas la valeur NULL.|  
+|max_outstanding_io_per_volume|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Nombre maximal d'E/S en attente par volume.|  
   
 ## <a name="remarks"></a>Notes  
  L'affichage catalogue affiche la configuration du gouverneur de ressources telle qu'elle est stockée dans les métadonnées. Pour consulter la configuration en mémoire, utilisez la vue de gestion dynamique correspondante.  
@@ -66,9 +66,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue du gouverneur de ressources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Resource Governor des affichages &#40;catalogue Transact&#41; -SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
- [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)  
+ [sys. dm_resource_governor_configuration &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

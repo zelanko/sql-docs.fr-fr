@@ -1,5 +1,5 @@
 ---
-title: Sys.system_columns (Transact-SQL) | Microsoft Docs
+title: sys. system_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,26 +20,26 @@ ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd94f90a823ba57910809a54aed470ddd0bb0010
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdb28d10d04c21f0d377777b41c332eb20d1ee9c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108860"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981916"
 ---
-# <a name="syssystemcolumns-transact-sql"></a>sys.system_columns (Transact-SQL)
+# <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque colonne des objets système ayant des colonnes.  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificateur de l'objet auquel appartient cette colonne.|  
-|**name**|**sysname**|Nom de la colonne. Unique dans l'objet.|  
+|**nom**|**sysname**|Nom de la colonne. Unique dans l'objet.|  
 |**column_id**|**int**|ID de la colonne. Unique dans l'objet.<br /><br /> Les ID de colonnes peuvent ne pas être séquentiels.|  
 |**system_type_id**|**tinyint**|ID du type de système de la colonne|  
-|**user_type_id**|**int**|ID du type de colonne tel que défini par l'utilisateur.<br /><br /> Pour retourner le nom du type, joindre à la [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) vue sur cette colonne de catalogue.|  
-|**max_length**|**smallint**|Longueur maximale (en octets) de colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16 ou la valeur définie par **sp_tableoption** 'text in row'.|  
+|**user_type_id**|**int**|ID du type de colonne tel que défini par l'utilisateur.<br /><br /> Pour retourner le nom du type, Joignez-vous à l’affichage catalogue [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) sur cette colonne.|  
+|**max_length**|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = le type de données de la colonne est **varchar (max)** , **nvarchar (max)** , **varbinary (max)** ou **XML**.<br /><br /> Pour les colonnes de **texte** , la valeur **max_length** sera 16 ou la valeur définie par **sp_tableoption** 'texte dans la ligne'.|  
 |**precision**|**tinyint**|Précision de la colonne si elle est numérique ; Sinon, 0.|  
 |**scale**|**tinyint**|Échelle de la colonne si numérique ; sinon, 0.|  
 |**collation_name**|**sysname**|Nom du classement de la colonne si elle est basée sur des caractères ; Sinon, NULL.|  
@@ -53,14 +53,14 @@ ms.locfileid: "68108860"
 |**is_non_sql_subscribed**|**bit**|1 = La colonne possède un abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**is_merge_published**|**bit**|1 = La colonne est associée à une publication fusionnée.|  
 |**is_dts_replicated**|**bit**|1 = La colonne est répliquée à l'aide de [!INCLUDE[ssIS](../../includes/ssis-md.md)].|  
-|**is_xml_document**|**bit**|1 = Le contenu est un document XML complet.<br /><br /> 0 = le contenu est un fragment de document ou le type de données de colonne n’est pas **xml**.|  
-|**xml_collection_id**|**Int**|Valeur différente de zéro si le type de données de colonne est **xml** et le code XML est tapé. La valeur correspondra à l'ID de la collection qui contient l'espace de noms de schéma XML de validation de la colonne.<br /><br /> 0 = Aucune collection de schéma XML.|  
-|**default_object_id**|**Int**|ID de l’objet par défaut, qu’il s’agisse autonome [sys.sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md), ou une ligne, la contrainte de valeur par défaut au niveau des colonnes. Le **parent_object_id** colonne d’un objet de valeur par défaut au niveau des colonnes inline est une référence à la table elle-même. Il aura la valeur 0 en l'absence de valeur par défaut.|  
-|**rule_object_id**|**int**|ID de la règle autonome liée à la colonne à l’aide de **sys.sp_bindrule**.<br /><br /> 0 = Aucune règle autonome.<br /><br /> Pour les contraintes de validation au niveau des colonnes, consultez [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|**is_xml_document**|**bit**|1 = Le contenu est un document XML complet.<br /><br /> 0 = le contenu est un fragment de document ou le type de données de la colonne n’est pas **XML**.|  
+|**xml_collection_id**|**int**|Valeur différente de zéro si le type de données de la colonne est **XML** et que le XML est typé. La valeur correspondra à l'ID de la collection qui contient l'espace de noms de schéma XML de validation de la colonne.<br /><br /> 0 = Aucune collection de schéma XML.|  
+|**default_object_id**|**int**|ID de l’objet par défaut, qu’il s’agisse d’un [sys. sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)autonome ou d’une contrainte par défaut en ligne, au niveau des colonnes. La **parent_object_id** colonne d’un objet par défaut au niveau de la colonne Inline fait référence à la table elle-même. Il aura la valeur 0 en l'absence de valeur par défaut.|  
+|**rule_object_id**|**int**|ID de la règle autonome liée à la colonne à l’aide de **sys. sp_bindrule**.<br /><br /> 0 = Aucune règle autonome.<br /><br /> Pour les contraintes de vérification au niveau des colonnes, consultez [sys. &#40;CHECK_CONSTRAINTS&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = La colonne est éparse. Pour plus d’informations, consultez [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = La colonne est un jeu de colonnes. Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|  
-|generated_always_type|**tinyint**|La valeur numérique représentant le type de colonne :<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
-|generated_always_type_desc|**nvarchar(60)**|La description textuelle du type de colonne :<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|generated_always_type|**tinyint**|Valeur numérique représentant le type de colonne :<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
+|generated_always_type_desc|**nvarchar(60)**|Description textuelle du type de colonne :<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -68,9 +68,9 @@ ms.locfileid: "68108860"
 ## <a name="see-also"></a>Voir aussi  
  [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Interrogation des catalogues système SQL Server FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [Sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   
