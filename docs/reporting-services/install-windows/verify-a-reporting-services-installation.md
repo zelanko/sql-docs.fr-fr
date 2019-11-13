@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503292"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593926"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés au choix dans l'un des deux modes, natif ou SharePoint. Les étapes que vous devez suivre pour vérifier l'installation dépendent du mode de serveur de rapports.  
@@ -100,11 +100,11 @@ ms.locfileid: "65503292"
   
 2.  Utilisez le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] pour créer un dossier ou chargez un fichier pour vérifier si les définitions sont transmises à la base de données du serveur de rapports. Si ces opérations réussissent, cela signifie que la connexion fonctionne.  
   
-     Pour plus d’informations, consultez [Portail web &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Pour plus d’informations, consultez [Portail web &#40;SSRS en mode natif&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Pour vérifier que le Générateur de rapports est installé et s'exécute correctement  
   
-1.  Ouvrez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]et créez un projet basé sur un type de projet Report Server. Pour plus d’informations sur l’utilisation de l’Assistant Projet Report Server, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) dans la documentation en ligne de SQL Server.  
+1.  Ouvrez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]et créez un projet basé sur un type de projet Report Server. Pour plus d’informations sur l’utilisation de l’Assistant Projet Report Server, consultez [Reporting Services dans SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 2.  Si vous avez installé des exemples de rapports, ouvrez les exemples de fichiers de projet de rapport et publiez les rapports sur un serveur de rapport.  
   

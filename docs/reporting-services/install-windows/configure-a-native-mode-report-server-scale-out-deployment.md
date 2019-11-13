@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500579"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593868"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
@@ -93,9 +93,9 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
   
 2.  Démarrez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configurez l’URL de service web Report Server, l’URL du portail web et la base de données du serveur de rapports. Pour plus d’informations, consultez [Configurer un serveur de rapports &#40;mode natif de Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configurez l’URL de service web Report Server, l’URL du portail web et la base de données du serveur de rapports. Pour plus d’informations, consultez [Configurer un serveur de rapports &#40;mode natif de Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
   
-4.  Vérifiez le fonctionnement du serveur de rapports. Pour plus d’informations, consultez [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  Vérifiez le fonctionnement du serveur de rapports. Pour plus d'informations, consultez [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>Pour installer et configurer la deuxième instance du serveur de rapports  
   
@@ -131,7 +131,7 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
   
 2.  Cliquez sur **Déploiement avec montée en puissance parallèle** pour ouvrir la page du même nom. Vous devez voir deux entrées, l'une pour chaque instance de serveur de rapports connectée à la base de données du serveur de rapports. La première instance de serveur de rapports doit être jointe. Le deuxième serveur de rapports doit être en attente de rattachement. Si vous ne voyez pas de telles entrées pour votre déploiement, vérifiez que vous êtes connecté au premier serveur de rapports qui est déjà configuré et initialisé pour utiliser la base de données du serveur de rapports.  
   
-     ![Capture d’écran partielle de la page de déploiement avec montée en puissance parallèle](../../reporting-services/install-windows/media/scaloutscreen.gif "Capture d’écran partielle de la page de déploiement avec montée en puissance parallèle")  
+     ![Capture d’écran partielle de la page Déploiement avec montée en puissance parallèle](../../reporting-services/install-windows/media/scaloutscreen.gif "Capture d’écran partielle de la page Déploiement avec montée en puissance parallèle")  
   
 3.  Dans la page Déploiement avec montée en puissance parallèle, sélectionnez l’instance de serveur de rapports qui doit joindre le déploiement, puis sélectionnez **Ajouter le serveur**.  
   

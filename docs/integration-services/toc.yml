@@ -1466,7 +1466,7 @@
     - name: Gestionnaire de connexions Oracle
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Source Oracle
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Destination Oracle
       href: ../integration-services/data-flow/oracle-destination.md
     - name: Prise en charge des types de données

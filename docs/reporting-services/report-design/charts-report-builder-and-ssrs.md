@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581615"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593793"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
 Apprenez à utiliser les régions de données de graphique pour aider les lecteurs de vos rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] à comprendre en un coup d’œil des volumes importants de données agrégées.  
@@ -32,7 +32,7 @@ Plus vous passerez du temps à préparer avec soin vos données et à les compre
   
  L'illustration suivante affiche un grand nombre des différents éléments utilisés dans le graphique.  
   
- ![Schéma des éléments du graphique](../../reporting-services/report-design/media/rs-chartelementsc.gif "Schéma des éléments du graphique")  
+ ![Diagramme d’éléments de graphique](../../reporting-services/report-design/media/rs-chartelementsc.gif "Diagramme d’éléments de graphique")  
   
  Vous pouvez publier des graphiques indépendamment d’un rapport en tant que *parties de rapport*. Pour plus d’informations, consultez [Parties de rapport](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
   
@@ -80,7 +80,7 @@ Plus vous passerez du temps à préparer avec soin vos données et à les compre
 ##  <a name="DatasetConsiderations"></a> Considérations sur les datasets avant de créer un graphique  
  Les graphiques fournissent une vue de résumé de vos données. Toutefois, avec les datasets très volumineux, les informations affichées sur un graphique peuvent être masquées ou illisibles. Des points de données manquants ou Null, des types de données inadaptés au type de graphique et des applications avancées telles que la combinaison de graphiques à des tables peuvent affecter la lisibilité d'un graphique. Avant de concevoir un graphique, vous devez vous préparer avec soin et comprendre vos données afin de pouvoir concevoir vos graphiques rapidement et efficacement.  
   
- Votre rapport peut contenir autant de graphiques que nécessaire. Un graphique, à l'instar de toute autre région de données telle qu'une matrice ou une table, est lié à un seul dataset. Si vous voulez afficher plusieurs datasets sur le même graphique, vous pouvez créer un dataset supplémentaire qui utilise une instruction JOIN ou UNION dans votre requête SQL avant d'ajouter des données au graphique. Pour plus d'informations sur l'instruction JOIN et UNION, consultez la documentation en ligne ou une autre référence sur SQL.  
+ Votre rapport peut contenir autant de graphiques que nécessaire. Un graphique, à l'instar de toute autre région de données telle qu'une matrice ou une table, est lié à un seul dataset. Si vous voulez afficher plusieurs datasets sur le même graphique, vous pouvez créer un dataset supplémentaire qui utilise une instruction JOIN ou UNION dans votre requête SQL avant d'ajouter des données au graphique.  
   
  Pensez à préagréger les données dans la requête de dataset si des données de détail ne sont pas nécessaires ou utiles. Pour afficher plus clairement chaque point de données, réduisez le nombre de catégories dans votre dataset. Vous pouvez filtrer le dataset ou ajouter à votre requête une condition qui réduit le nombre de lignes retournées. 
   
@@ -141,6 +141,6 @@ Plus vous passerez du temps à préparer avec soin vos données et à les compre
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

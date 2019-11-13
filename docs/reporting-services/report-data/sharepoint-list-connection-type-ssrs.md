@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499981"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593958"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
 
@@ -90,7 +90,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  La sélection de champs dans plusieurs listes n'est pas prise en charge. Vous pouvez créer un dataset pour chaque liste et sélectionner des champs dans chaque dataset. Si les listes ont un champ en commun, vous pouvez utiliser la fonction de recherche dans une région de données de tableau matriciel liée à l'un des deux dataset pour extraire une valeur de l'autre dataset qui n'est pas lié à la région de données. Pour plus d’informations, consultez [Fonction de recherche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 -   **Filtres appliqués**  Limite les données retournées à partir de la liste SharePoint, avant que les données ne soient retournées vers le rapport. Sélectionnez le nom de champ, l'opérateur et la valeur à utiliser pour limiter les données récupérées dans la liste. Les opérateurs varient selon le type de données de la valeur que vous sélectionnez.  
   
@@ -98,7 +98,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
 -   **Résultats de la requête**  Affiche des lignes exemples qui sont retournées lors de l'exécution de la requête. Si les valeurs de liste SharePoint changent fréquemment sur le site SharePoint, les valeurs que vous voyez dans le volet des résultats de la requête peuvent différer de celles que vous voyez dans le rapport.  
   
--   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 -   **Filtres appliqués**  Limite les données retournées à partir de la liste SharePoint, avant que les données ne soient retournées vers le rapport. Sélectionnez le nom de champ, l'opérateur et la valeur à utiliser pour limiter les données récupérées dans la liste. Les opérateurs varient selon le type de données de la valeur que vous sélectionnez.  
   
@@ -178,7 +178,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
 
 ## <a name="see-also"></a>Voir aussi

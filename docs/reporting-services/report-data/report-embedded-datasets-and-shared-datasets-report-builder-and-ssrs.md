@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500289"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592312"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports et SSRS)
   Un dataset spécifie les données que vous souhaitez utiliser à partir d'une connexion de données. Un dataset est basé sur une connexion de données enregistrée dans le rapport en tant que source de données incorporée ou référence à une source de données partagée sur un serveur de rapports. Le dataset inclut une requête qui spécifie un ensemble de champs. Lorsque vous faites glisser ces champs vers l'aire de conception, vous créez des expressions qui correspondent aux données effectives lorsque le rapport s'exécute.  
@@ -73,7 +73,7 @@ ms.locfileid: "66500289"
   
 -   Jeu de résultats extrait de tous les fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] enregistrés et configurés.  
   
--   Données d'un modèle de rapport qui a été conçu pour une source de données spécifique, avec des entités, des relations d'entités et des champs prédéfinis. Pour plus d’informations, consultez « Utilisation de modèles de rapport comme sources de données » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , dans la documentation en ligne de SQL Server.  
+-   Données d'un modèle de rapport qui a été conçu pour une source de données spécifique, avec des entités, des relations d'entités et des champs prédéfinis. Pour plus d’informations, consultez « datasets du rapport » dans la [documentation de Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  Lorsque le rapport est traité au moment de l'exécution, le jeu de résultats réel retourné pour une requête peut comporter aucune ou plusieurs lignes. Les colonnes définies dans la requête peuvent également être manquantes dans la source de données. Les valeurs Null de la source de données sont mappées à la valeur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **System.DBNull.Value**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66500289"
 |Champs|Champs de la commande de requête<br /><br /> Les champs calculés ne font pas partie de la définition de dataset|Possibilité de consulter les champs, mais pas de les modifier<br /><br /> La collection de champs est statique selon la requête au moment où vous avez ajouté le dataset partagé au rapport. Pour mettre à jour, cliquez sur **Actualiser les champs** dans la boîte de dialogue **Propriétés du dataset** . La collection de champs réelle est tout élément retourné par la requête actuelle dans la définition.<br /><br /> Ajouter des champs calculés|  
 |Dataset|Options de données telles que le respect de la casse|Remplacer des options de données dans l'instance|  
   
- Pour plus d’informations sur la création de datasets, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) et [Outils Reporting Services](../../reporting-services/tools/reporting-services-tools.md) dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312), dans la documentation en ligne de SQL Server.  
+ Pour plus d’informations sur la création de jeux de données, consultez [Créer un jeu de données partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) et [Outils Reporting Services](../../reporting-services/tools/reporting-services-tools.md) dans la [documentation de Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="SortGroupFilter"></a> Tri, regroupement et filtrage des données dans un dataset  
  Les données dans un dataset proviennent de l'exécution d'une commande de requête sur une source de données externe. La syntaxe de commande de requête pour une extension de données détermine si les données peuvent être triées ou regroupées. Le tri et le regroupement ont lieu dans la requête avant que les données ne soient récupérées pour un rapport. Le filtrage se déroule une fois que les données ont été récupérées pour un rapport.  

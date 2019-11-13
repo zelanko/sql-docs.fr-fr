@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502928"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593315"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
   
--   Envoyez les demandes de connexion sur le réseau pour les rapports qui utilisent l'authentification de base de données ou connectez-vous aux sources de données de rapport externes qui ne requièrent pas ou n'utilisent pas l'authentification. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) dans la documentation en ligne de SQL Server.  
-  
+-   Envoyez les demandes de connexion sur le réseau pour les rapports qui utilisent l'authentification de base de données ou connectez-vous aux sources de données de rapport externes qui ne requièrent pas ou n'utilisent pas l'authentification. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
+
 -   Extraire des fichiers image externes qui sont utilisés dans un rapport. Si vous souhaitez utiliser un fichier image et que le fichier est inaccessible par le biais de l'accès Anonyme, vous pouvez configurer le compte de traitement de rapport sans surveillance et accorder au compte l'autorisation d'accéder au fichier.  
   
  Le traitement sans surveillance des rapports désigne tout processus d'exécution de rapport déclenché par un événement, d'actualisation de données ou piloté par planification, plutôt que par une demande d'utilisateur. Le serveur de rapports utilise le compte de traitement sans surveillance des rapports pour se connecter à l'ordinateur qui héberge la source de données externe. Ce compte est nécessaire car les informations d'identification du compte de service Report Server ne sont jamais utilisées pour la connexion à d'autres ordinateurs.  
@@ -56,8 +56,8 @@ ms.locfileid: "65502928"
   
      **rsconfig -e -u\<domaine/nom utilisateur> -p\<mot de passe>**  
   
- **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
-  
+ **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ 
 ### <a name="how-account-information-is-stored"></a>Comment les informations sur le compte sont stockées  
  Lorsque vous définissez le compte, les paramètres suivants sont spécifiés comme valeurs chiffrées dans le fichier RSreportserver.config sur une instance de serveur de rapports locale ou distante :  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502928"
  Les informations de compte sont supprimées du fichier RSReportServer.config.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de configurations de Reporting Services (SSRS en mode natif)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Gestionnaire de configurations de Reporting Services (SSRS en mode natif)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

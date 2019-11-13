@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575498"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593766"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrer une base de données du serveur de rapports (SSRS en mode natif)
   Un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise deux bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le stockage interne. Par défaut, les bases de données ont pour nom respectif Reportserver et ReportServerTempdb. La base de données ReportServerTempdb est créée à l'aide de la base de données du serveur de rapports primaire et sert à stocker les données temporaires, les informations de session et les rapports mis en mémoire cache.  
@@ -29,7 +29,7 @@ ms.locfileid: "65575498"
   
  Pour administrer les bases de données du serveur de rapports, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met une série d’outils à votre disposition.  
   
--   Pour sauvegarder ou restaurer la base de données du serveur de rapports ou encore la déplacer ou la récupérer, vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou les utilitaires d’invite de commandes de base de données. Pour obtenir des instructions, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) dans la documentation en ligne de SQL Server.  
+-   Pour sauvegarder ou restaurer la base de données du serveur de rapports ou encore la déplacer ou la récupérer, vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou les utilitaires d’invite de commandes de base de données. Pour obtenir des instructions, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Pour copier le contenu d'une base de données dans une autre base de données du serveur de rapports, vous pouvez attacher une copie d'une base de données du serveur de rapports et l'utiliser avec une autre instance du serveur de rapports. Ou encore, vous pouvez créer et exécuter un script qui utilise des appels SOAP pour recréer le contenu du serveur de rapports dans une nouvelle base de données. Vous pouvez utiliser l’utilitaire **rs** pour exécuter le script.  
   

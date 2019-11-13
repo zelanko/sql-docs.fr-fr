@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65d4566a7337d25a16f23eb8411e4338dabf7af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581571"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593677"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
 
@@ -108,9 +108,9 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
 4.  Collez l’URL dans le portail web, puis appuyez sur Entrée. Le rapport est exécuté et l'explorateur de documents est masqué.  
   
 > [!NOTE]  
->  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
 >   
->  Pour plus d'informations, consultez « Accès URL » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
+  >  Pour plus d’informations, consultez [Accès URL](../url-access-ssrs.md). 
 
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

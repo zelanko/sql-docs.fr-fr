@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702702"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594374"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -59,7 +59,7 @@ Notez que l’activation d’Always Encrypted ne suffit pas à la réussite du c
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Activation d’Always Encrypted avec les enclaves sécurisées
 
-À partir de la version 17,4, le pilote prend en charge Always Encrypted avec les enclaves sécurisées. Pour permettre l’utilisation de l’enclave lors de la connexion à SQL Server 2019 ou version `ColumnEncryption` ultérieure, définissez le nom de source de données, la chaîne de connexion ou l’attribut de connexion sur le nom du type d’enclave et le protocole d’attestation, ainsi que les données d’attestation associées, séparées par une virgule. Dans la version 17,4, seuls le type d’enclave de [sécurité basée sur la virtualisation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) et le protocole d’attestation du [service Guardian hôte](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indiqué par `VBS-HGS`, sont pris en charge; pour l’utiliser, spécifiez l’URL du serveur d’attestations, par exemple:
+À partir de la version 17.4, le pilote prend en charge Always Encrypted avec enclaves sécurisées. Pour permettre l’utilisation de l’enclave lors de la connexion à SQL Server 2019 ou version ultérieure, définissez le `ColumnEncryption` DSN, la chaîne de connexion ou l’attribut de connexion sur le nom du type d’enclave et le protocole d’attestation, ainsi que les données d’attestation associées, séparées par une virgule. Dans la version 17,4, seuls le type d’enclave de [sécurité basée sur la virtualisation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) et le protocole d’attestation du [service Guardian hôte](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indiqué par `VBS-HGS`, sont pris en charge ; pour l’utiliser, spécifiez l’URL du serveur d’attestations, par exemple :
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -70,7 +70,7 @@ Si le serveur et le service d’attestation sont configurés correctement, ainsi
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
-Une fois que vous avez activé Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard. Les API ODBC peuvent récupérer ou modifier des données dans des colonnes de base de données chiffrées. Les éléments de documentation suivants peuvent vous aider:
+Une fois que vous avez activé Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard. Les API ODBC peuvent récupérer ou modifier des données dans des colonnes de base de données chiffrées. Les éléments de documentation suivants peuvent vous aider :
 
 - [Exemple de code ODBC](cpp-code-example-app-connect-access-sql-db.md)
 - [Guide de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
@@ -364,7 +364,7 @@ Pour obtenir la valeur de texte en clair d’une clé ECEK, le pilote obtient d�
 
 ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés intégrés suivants :
 
-| Créer une vue d’abonnement | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
+| Nom | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
 |:---|:---|:---|:---|
 |Coffre de clé Azure |Stocke les clés CMK dans un coffre de clés Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Magasin de certificats Windows|Stocke les clés CMK localement dans le magasin de clés Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -590,7 +590,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-string-keywords"></a>Mots clés de chaîne de connexion
 
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |`ColumnEncryption`|Les valeurs acceptées sont `Enabled`/`Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion.<br>*type*,*Data* --(version 17,4 et ultérieure) active Always Encrypted avec l’enclave et le *type*de protocole d’attestation sécurisés, ainsi que les *données*d’attestation associées. <br><br>La valeur par défaut est `Disabled`.|
 |`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
@@ -600,7 +600,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-attributes"></a>Attributs de connexion
 
-|Créer une vue d’abonnement|Type|Description|  
+|Nom|Type|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Avant la connexion|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Désactiver Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Activer Always Encrypted<br> pointeur vers *type*, chaîne de*données* --(version 17,4 et ultérieure) activer avec l’enclave sécurisée|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Après la connexion|[Set] Tenter de charger CEKeystoreProvider<br>[Get] Retourner un nom CEKeystoreProvider|
@@ -610,7 +610,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="statement-attributes"></a>Attributs d'instruction
 
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- Always Encrypted est désactivé pour l’instruction <br>`SQL_CE_RESULTSETONLY` (1) -- Déchiffrement uniquement. Les jeux de résultats et les valeurs de retour sont déchiffrés, et les paramètres ne sont pas chiffrés <br>`SQL_CE_ENABLED` (3) -- Always Encrypted est activé et utilisé pour les paramètres et les résultats|
 
@@ -631,4 +631,3 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 - [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Blog sur Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

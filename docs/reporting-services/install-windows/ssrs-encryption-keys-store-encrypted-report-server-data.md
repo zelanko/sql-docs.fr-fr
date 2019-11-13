@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988421"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593476"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Clés de chiffrement SSRS - Stocker des données chiffrées du serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  
@@ -33,7 +33,7 @@ ms.locfileid: "72988421"
   
 -   Informations d'identification stockées, utilisées par un serveur de rapports pour se connecter à des sources de données externes qui fournissent des données à un rapport.  
   
-     Ces valeurs sont définies lorsque vous configurez les informations d'une source de données pour un rapport, puis elles sont stockées sous la forme de valeurs chiffrées dans une base de données du serveur de rapports. Le serveur de rapports utilise une clé symétrique pour chiffrer et déchiffrer ces données. Pour plus d’informations sur les informations d’identification stockées, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Ces valeurs sont définies lorsque vous configurez les informations d'une source de données pour un rapport, puis elles sont stockées sous la forme de valeurs chiffrées dans une base de données du serveur de rapports. Le serveur de rapports utilise une clé symétrique pour chiffrer et déchiffrer ces données. Pour plus d’informations sur les informations d’identification stockées, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 -   Un compte d'utilisateur sans assistance utilisé par le serveur de rapports pour se connecter à d'autres ordinateurs afin d'extraire des fichiers images externes ou des données externes utilisées dans un rapport.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1f021382556c13a20b0a8988b8b5199c21c9de7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225669"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593859"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif
   Vous pouvez exécuter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un modèle de déploiement avec montée en puissance parallèle si vous configurez plusieurs serveurs de rapports pour qu'ils utilisent une base de données de serveur de rapports partagée. L'appartenance d'un serveur de rapports au déploiement évolutif dépend si ce serveur a déposé ou non une clé de chiffrement dans la base de données de serveurs de rapports. Vous pouvez contrôler un déploiement évolutif en ajoutant et en supprimant des clés de chiffrement pour des instances de serveurs de rapports spécifiques. Si vous supprimez des nœuds du déploiement, vous pouvez les supprimer dans n'importe quel ordre. Si vous ajoutez des nœuds à un déploiement, vous devez joindre toutes les nouvelles instances à partir d'un serveur de rapports faisant déjà partie du déploiement.  
@@ -58,7 +58,7 @@ ms.locfileid: "63225669"
     ```  
 4. Redémarrez le service Windows Reporting Services.
   
- Ces étapes suppriment le serveur de rapports d'un déploiement avec montée en puissance parallèle, mais ne désinstallent pas l'instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur de rapports. Après avoir supprimé le serveur de rapports du déploiement avec montée en puissance parallèle, vous pouvez désinstaller [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] du serveur si vous n'avez plus besoin de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur ce serveur. Pour plus d’informations, consultez [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ces étapes suppriment le serveur de rapports d'un déploiement avec montée en puissance parallèle, mais ne désinstallent pas l'instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur de rapports. Après avoir supprimé le serveur de rapports du déploiement avec montée en puissance parallèle, vous pouvez désinstaller [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] du serveur si vous n'avez plus besoin de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur ce serveur. Pour plus d’informations, consultez [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
