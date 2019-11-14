@@ -1,41 +1,41 @@
 ---
-title: Base de données OLAP de WideWorldImporters - utilisation de SQL Server | Microsoft Docs
+title: Principales fonctionnalités de la base de données DW WideWorldImporters
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ''
 ms.date: 08/04/2018
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 313f85c5d5ec3590e231bdac4a746318c927a33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104223"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056291"
 ---
-# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Utilisation de WideWorldImportersDW de fonctionnalités de SQL Server
+# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW l’utilisation des fonctionnalités et des fonctionnalités de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-WideWorldImportersDW est conçue pour présenter la plupart des principales fonctionnalités de SQL Server qui conviennent pour l’entreposage des données et d’analytique. Voici une liste des fonctionnalités de SQL Server et fonctionnalités et une description de la façon dont ils sont utilisés dans WideWorldImportersDW.
+WideWorldImportersDW est conçu pour présenter un grand nombre des principales fonctionnalités de SQL Server qui conviennent à l’entreposage et à l’analyse des données. La liste suivante répertorie les fonctionnalités et fonctionnalités de SQL Server, ainsi qu’une description de leur utilisation dans WideWorldImportersDW.
 
 ## <a name="polybase"></a>PolyBase
 
 [S’applique à SQL Server (2016 et versions ultérieures)]
 
-PolyBase est utilisé pour combiner les informations de vente à partir de WideWorldImportersDW avec un jeu de données publiques sur les données démographiques pour comprendre les villes peuvent présenter un intérêt pour l’expansion supplémentaire des ventes.
+Polybase est utilisé pour combiner les informations de ventes de WideWorldImportersDW avec un jeu de données public sur les données démographiques afin de comprendre les villes susceptibles d’intéresser l’augmentation des ventes.
 
-Pour activer l’utilisation de PolyBase dans la base de données, vérifiez qu’il est installé et exécutez la procédure stockée suivante dans la base de données :
+Pour activer l’utilisation de Polybase dans l’exemple de base de données, assurez-vous qu’il est installé, puis exécutez la procédure stockée suivante dans la base de données :
 
     EXEC [Application].[Configuration_ApplyPolyBase]
 
-Cela créera une table externe `dbo.CityPopulationStatistics` qui fait référence à un jeu de données publiques qui contient les données de la population des villes aux États-Unis, hébergé dans le stockage blob Azure. Il est conseillé d’examiner le code dans la procédure stockée pour comprendre le processus de configuration. Si vous souhaitez héberger vos propres données dans stockage blob Azure et conservez-la en lieu sûr à partir de l’accès public général, vous devez effectuer les étapes de configuration supplémentaires. La requête suivante retourne les données à partir de ce jeu de données externe :
+Cette opération crée une table externe `dbo.CityPopulationStatistics` qui fait référence à un jeu de données public qui contient les données de remplissage des villes du États-Unis, hébergées dans le stockage d’objets BLOB Azure. Il est recommandé d’examiner le code de la procédure stockée pour comprendre le processus de configuration. Si vous souhaitez héberger vos propres données dans le stockage d’objets BLOB Azure et maintenir la sécurité d’un accès public général, vous devrez effectuer des étapes de configuration supplémentaires. La requête suivante retourne les données de ce jeu de données externe :
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-Pour comprendre les villes peuvent présenter un intérêt pour l’expansion supplémentaire, la requête suivante examine le taux de croissance de villes et retourne les villes de plus grande des 100 premiers avec une croissance importante, et où Wide World Importers ne dispose pas d’une présence commerciale. La requête implique une jointure entre la table distante `dbo.CityPopulationStatistics` et la table locale `Dimension.City`et un filtre de la table locale `Fact.Sales`.
+Pour comprendre les villes qui peuvent présenter un intérêt pour une expansion supplémentaire, la requête suivante examine le taux de croissance des villes et retourne les plus grandes villes 100 les plus importantes avec une croissance significative, et où les importateurs étendus n’ont pas de présence de ventes. La requête implique une jointure entre la table distante `dbo.CityPopulationStatistics` et la table locale `Dimension.City`et un filtre impliquant la table locale `Fact.Sales`.
 
     WITH PotentialCities
     AS
@@ -71,21 +71,21 @@ Pour comprendre les villes peuvent présenter un intérêt pour l’expansion su
 
 (Version complète de l’exemple)
 
-Index de Columnstore en cluster (ICC) sont utilisés avec toutes les tables de faits, pour réduire l’encombrement du stockage et améliorer les performances de requête. À l’aide de la CCI, le stockage de base pour les tables de faits utilise la compression de la colonne.
+Les index ColumnStore cluster (ICC) sont utilisés avec toutes les tables de faits, afin de réduire l’encombrement du stockage et d’améliorer les performances des requêtes. Avec l’ICC, le stockage de base pour les tables de faits utilise la compression de colonne.
 
-Index non cluster sont utilisés en haut de l’index columnstore en cluster, afin de faciliter la clé primaire et les contraintes de clé étrangère. Ces contraintes ont été ajoutées en dehors d’une multitude de précaution : le processus ETL des sources de données à partir de la base de données WideWorldImporters, qui a des contraintes pour appliquer l’intégrité. Suppression des contraintes de clé primaires et étrangères et leurs index prise en charge, réduit l’encombrement de stockage des tables de faits.
+Les index non cluster sont utilisés en plus de l’index ColumnStore cluster pour faciliter les contraintes de clé primaire et de clé étrangère. Ces contraintes ont été ajoutées par prudence : le processus ETL sourcete les données de la base de données WideWorldImporters, qui a des contraintes pour appliquer l’intégrité. La suppression des contraintes de clé primaire et étrangère, et de leurs index de prise en charge, réduirait l’encombrement de stockage des tables de faits.
 
 **Taille des données**
 
-La base de données a limité la taille des données, afin de faciliter télécharger et installer l’exemple. Toutefois, pour voir les avantages de performances réelles des index columnstore, vous pouvez utiliser un plus grand jeu de données.
+L’exemple de base de données a une taille de données limitée, pour faciliter le téléchargement et l’installation de l’exemple. Toutefois, pour voir les véritables avantages en matière de performances des index ColumnStore, vous pouvez utiliser un plus grand jeu de données.
 
-Vous pouvez exécuter l’instruction suivante pour augmenter la taille de la `Fact.Sales` table en insérant un autre 12 millions de lignes d’exemples de données. Ces lignes sont toutes insérées pour l’année 2012, qu’il n’y ait aucune interférence avec le processus ETL.
+Vous pouvez exécuter l’instruction suivante pour augmenter la taille de la table `Fact.Sales` en insérant d’autres lignes 12 millions d’exemples de données. Ces lignes sont toutes insérées pour l’année 2012, de sorte qu’il n’y a aucune interférence avec le processus ETL.
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
-Cette instruction prendra environ 5 minutes pour s’exécuter. Pour insérer plus de 12 millions de lignes, passez le nombre souhaité de lignes à insérer en tant que paramètre à cette procédure stockée.
+L’exécution de cette instruction prendra environ 5 minutes. Pour insérer plus de 12 millions lignes, transmettez le nombre de lignes souhaité à insérer en tant que paramètre à cette procédure stockée.
 
-Pour comparer les performances des requêtes avec et sans columnstore, vous pouvez supprimer ou recréez l’index columnstore en cluster.
+Pour comparer les performances des requêtes avec et sans ColumnStore, vous pouvez supprimer et/ou recréer l’index cluster ColumnStore.
 
 Pour supprimer l’index :
 
@@ -99,16 +99,16 @@ Pour recréer :
 
 (Version complète de l’exemple)
 
-Taille des données dans un entrepôt de données peut devenir très volumineux. Par conséquent, il est recommandé d’utiliser le partitionnement pour gérer le stockage des grandes tables dans la base de données.
+La taille des données dans une Data Warehouse peut devenir très importante. Par conséquent, il est recommandé d’utiliser le partitionnement pour gérer le stockage des tables volumineuses dans la base de données.
 
-Toutes les tables de faits plus volumineux sont partitionnés par année. La seule exception est `Fact.Stock Holdings`, qui n’est pas basée sur la date et a taille des données limitées par rapport à d’autres tables de faits.
+Toutes les tables de faits plus volumineuses sont partitionnées par année. La seule exception est `Fact.Stock Holdings`, qui n’est pas basée sur la date et a une taille de données limitée par rapport aux autres tables de faits.
 
-La fonction de partition utilisée pour les tables partitionnées tout est `PF_Date`, et le schéma de partition utilisé est `PS_Date`.
+La fonction de partition utilisée pour toutes les tables partitionnées est `PF_Date`, et le schéma de partition utilisé est `PS_Date`.
 
 ## <a name="in-memory-oltp"></a>OLTP en mémoire
 
 (Version complète de l’exemple)
 
-WideWorldImportersDW utilise les tables optimisées en mémoire SCHEMA_ONLY pour les tables intermédiaires. Tous les `Integration.` * `_Staging` tables sont des tables optimisées en mémoire SCHEMA_ONLY.
+WideWorldImportersDW utilise SCHEMA_ONLY tables optimisées en mémoire pour les tables de mise en lots. Toutes les tables `Integration.`*`_Staging` sont SCHEMA_ONLY des tables mémoire optimisées.
 
-L’avantage de tables SCHEMA_ONLY est qu’ils ne sont pas enregistrés et ne nécessitent pas d’accès disque. Cela améliore les performances du processus ETL. Étant donné que ces tables ne sont pas enregistrés, leur contenu est perdu en cas de panne. Toutefois, la source de données étant toujours disponible, le processus ETL peut simplement être redémarré si une défaillance se produit.
+L’avantage des tables SCHEMA_ONLY est qu’elles ne sont pas journalisées et ne nécessitent pas d’accès au disque. Cela améliore les performances du processus ETL. Étant donné que ces tables ne sont pas journalisées, leur contenu est perdu en cas de défaillance. Toutefois, la source de données est toujours disponible, de sorte que le processus ETL peut simplement être redémarré en cas de défaillance.

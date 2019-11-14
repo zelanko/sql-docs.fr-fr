@@ -10,22 +10,22 @@ ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 860d2f03018abae2b27367a1f41f87268affb328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779833"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054842"
 ---
 # <a name="user-defined-type"></a>Type défini par l’utilisateur
   L'exemple de type de données défini par l'utilisateur montre la création et l'utilisation d'un type de données simple défini par l'utilisateur à partir de Transact-SQL et d'une application cliente à l'aide de `System.Data.SqlClient`.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/download/details.aspx?id=42299)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://archive.codeplex.com/?p=SqlServerSamples)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62779833"
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
+-   Si vous n’êtes pas un administrateur de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez, demandez à un administrateur de vous accorder l’autorisation **CreateAssembly** pour effectuer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62779833"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `ComplexNumber.vb` (pour l'exemple Visual Basic) ou `ComplexNumber.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `ComplexNumber.vb` (pour l'exemple Visual Basic) ou `ComplexNumber.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Compilez l'exemple de code à partir de l'invite de ligne de commande en exécutant l'un des éléments suivants, selon le langage choisi.  
   

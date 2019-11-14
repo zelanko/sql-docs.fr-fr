@@ -1,7 +1,7 @@
 ---
-title: Évaluer la préparation d’un SQL Server la migration d’un patrimoine de données vers Azure SQL Database | Microsoft Docs
+title: Évaluer SQL Server préparation à migrer vers Azure SQL Database
+titleSuffix: Data Migration Assistant
 description: Découvrez comment utiliser Assistant Migration de données pour migrer un SQL Server de données pour la migration vers Azure SQL Database
-ms.custom: ''
 ms.date: 07/16/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -15,12 +15,13 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: b3f47cee5cc091c52faa98438d22b88a18a06f03
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8261b38d57502584efbeee8d6bbcd0b1823d3786
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702825"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056693"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Évaluer la préparation d’un SQL Server de données qui migrent vers Azure SQL Database à l’aide de la Assistant Migration de données
 
@@ -50,7 +51,7 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
    ![Azure Migrate-ajouter des outils](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
-5. Sous l’onglet migrer un **projet** , sélectionnez votre abonnement Azure et votre groupe de ressources (si vous ne disposez pas déjà d’un groupe de ressources, créez-en un).
+5. Sous l’onglet **migrer un projet** , sélectionnez votre abonnement Azure et votre groupe de ressources (si vous ne disposez pas déjà d’un groupe de ressources, créez-en un).
 6. Sous **Détails du projet**, spécifiez le nom du projet et la géographie dans laquelle vous souhaitez créer le projet.
 
     ![Azure Migrate boîte de dialogue Ajouter un outil](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)
@@ -59,10 +60,10 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
     | **Geography**  | **Région de l’emplacement de stockage** |
     | ------------- | ------------- |
-    | Asie | Asie du sud-est ou Asie Est |
+    | Asia | Asie du sud-est ou Asie Est |
     | Europe | Europe du Sud ou Europe de l’ouest |
-    | Royaume-Uni | Royaume-Uni Sud ou Royaume-Uni Ouest |
-    | États-Unis | Centre des États-Unis ou ouest des États-Unis 2 |
+    | United Kingdom | Royaume-Uni Sud ou Royaume-Uni Ouest |
+    | United States | Centre des États-Unis ou ouest des États-Unis 2 |
 
     La géographie spécifiée pour le projet est utilisée uniquement pour stocker les métadonnées collectées à partir des machines virtuelles locales. Vous pouvez sélectionner n’importe quelle région cible pour la migration réelle.
 
@@ -71,11 +72,11 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
    > [!NOTE]
    > Lorsque vous créez un projet, vous devez ajouter au moins un outil d’évaluation ou de migration.
 
-8. Dans l’onglet **Sélectionner l’outil** d' **évaluation, Azure Migrate: L’évaluation** de la base de données s’affiche comme outil d’évaluation à ajouter. Si vous n’avez pas besoin d’un outil d’évaluation, activez la case à cocher **ignorer l’ajout d’un outil d’évaluation pour l’instant** . Sélectionnez **Suivant**.
+8. Dans l’onglet **Sélectionner l’outil d’évaluation** , **Azure Migrate : l’évaluation de la base de données** s’affiche comme outil d’évaluation à ajouter. Si vous n’avez pas besoin d’un outil d’évaluation, activez la case à cocher **ignorer l’ajout d’un outil d’évaluation pour l’instant** . Sélectionnez **Suivant**.
 
     ![Azure Migrate-sélectionner l’onglet outil d’évaluation](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. Dans l’onglet **Sélectionner l’outil** de **migration, Azure Migrate: La migration** de base de données apparaît en tant qu’outil de migration à ajouter. Si vous n’avez pas besoin d’un outil de migration, sélectionnez l’option **ignorer l’ajout d’un outil de migration pour l’instant**. Sélectionnez **Suivant**.
+9. Dans l’onglet **Sélectionner l’outil de migration** , **Azure Migrate : la migration de base de données** apparaît en tant qu’outil de migration à ajouter. Si vous n’avez pas besoin d’un outil de migration, sélectionnez l’option **ignorer l’ajout d’un outil de migration pour l’instant**. Sélectionnez **Suivant**.
 
     ![Azure Migrate-sélectionner l’onglet outil de migration](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -87,7 +88,7 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
 ## <a name="assess-and-upload-assessment-results"></a>Évaluer et télécharger les résultats de l’évaluation
 
-Après avoir créé un projet de migration, sous **Outils d’évaluation**, dans **la Azure Migrate: Zone d'** évaluation de la base de données, instructions de téléchargement et d’utilisation de l’outil Assistant Migration de données.
+Une fois que vous avez créé un projet de migration, sous **Outils d’évaluation**, dans la zone **Azure Migrate : évaluation de la base de données** , vous trouverez des instructions pour télécharger et utiliser l’outil Assistant Migration de données.
 
    ![Outil d’évaluation de Azure Migrate ajouté](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
@@ -96,7 +97,7 @@ Après avoir créé un projet de migration, sous **Outils d’évaluation**, dan
 
 ### <a name="create-an-assessment"></a>Créer une évaluation
 
-1. Sur la gauche, sélectionnez l' **+** icône, puis sélectionnez le type de **projet** évaluation.
+1. Sur la gauche, sélectionnez l’icône **+** , puis sélectionnez le type de **projet** évaluation.
 2. Spécifiez le nom du projet, puis sélectionnez les types serveur source et serveur cible.
 
     Si vous effectuez la mise à niveau de votre instance locale de SQL Server vers une version ultérieure de SQL Server ou vers SQL Server hébergé sur une machine virtuelle Azure, définissez le type de serveur source et cible sur **SQL Server**. Définissez le type de serveur cible sur **Azure SQL Database Managed instance** pour une évaluation de la disponibilité cible du Azure SQL Database (PaaS).
@@ -109,7 +110,7 @@ Après avoir créé un projet de migration, sous **Outils d’évaluation**, dan
 
 1. Sélectionnez le type de rapport.
 
-    Vous pouvez choisir l’un des types de rapports suivants ou les deux:
+    Vous pouvez choisir l’un des types de rapports suivants ou les deux :
     * Vérifier la compatibilité de la base de données
     * Vérifier la parité des fonctionnalités
 
@@ -158,9 +159,9 @@ Après avoir créé un projet de migration, sous **Outils d’évaluation**, dan
 
    ![Azure Migrate-vérifier les résultats de la préparation](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
-    **Instances de base de données évaluées**:  Nombre d’instances de SQL Server évaluées jusqu’à présent.
-    **Bases de données évaluées**: Nombre total de bases de données évaluées sur une ou plusieurs instances SQL Server **les bases de données prêtes pour**la base de données SQL:  Nombre de bases de données prêtes à migrer vers Azure SQL Database (PaaS).
-    **Bases de données prêtes pour la machine virtuelle SQL Azure**:  Le nombre de bases de données est constitué d’un ou de plusieurs bloqueurs de migration vers Azure SQL Database (PaaS), mais prêt à migrer vers des machines virtuelles Azure SQL Server.
+    **Instances de base de données évaluées**: nombre d’instances de SQL Server évaluées jusqu’à présent.
+    **Bases de données évaluées**: nombre total de bases de données évaluées sur une ou plusieurs instances SQL Server **les bases de données prêtes pour**la base de données SQL : nombre de bases de données prêtes à migrer vers Azure SQL Database (PaaS).
+    **Bases de données prêtes pour la machine virtuelle SQL Azure**: le nombre de bases de données est constitué d’un ou de plusieurs bloqueurs de migration vers Azure SQL Database (PaaS), mais prêt à migrer vers des machines virtuelles Azure SQL Server.
 
 3. Sélectionnez **instances de base de données évaluées** pour accéder à SQL Server affichage au niveau de l’instance.
 
@@ -181,5 +182,5 @@ Après avoir créé un projet de migration, sous **Outils d’évaluation**, dan
 ## <a name="see-also"></a>Voir aussi
 
 * [Assistant Migration de données (DMA)](../dma/dma-overview.md)
-* [Assistant Migration de données: Paramètres de configuration](../dma/dma-configurationsettings.md)
-* [Assistant Migration de données: Meilleures pratiques](../dma/dma-bestpractices.md)
+* [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
+* [Assistant Migration de données : meilleures pratiques](../dma/dma-bestpractices.md)

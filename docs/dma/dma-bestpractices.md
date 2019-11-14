@@ -1,7 +1,7 @@
 ---
-title: Meilleures pratiques pour Data Migration Assistant (SQL Server) | Microsoft Docs
-description: Découvrez les meilleures pratiques pour la migration des bases de données de SQL Server avec Data Migration Assistant
-ms.custom: ''
+title: Bonnes pratiques pour Data Migration Assistant
+description: Découvrez les meilleures pratiques pour la migration de bases de données SQL Server avec Assistant Migration de données
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061782"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056555"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Meilleures pratiques pour l’exécution de Data Migration Assistant
-Cet article fournit certaines des recommandations pour l’installation, évaluation et la migration.
+# <a name="best-practices-for-running-data-migration-assistant"></a>Meilleures pratiques pour l’exécution de Assistant Migration de données
+Cet article fournit des informations sur les meilleures pratiques pour l’installation, l’évaluation et la migration.
 
 ## <a name="installation"></a>Installation
-Ne pas installer et exécuter l’Assistant Migration des données directement sur l’ordinateur hôte de SQL Server.
+N’installez pas et n’exécutez pas le Assistant Migration de données directement sur l’ordinateur hôte SQL Server.
 
 ## <a name="assessment"></a>Évaluation
-- Exécuter les évaluations sur les bases de données de production pendant les heures creuses.
-- Effectuer la **les problèmes de compatibilité** et **recommandation de nouvelle fonctionnalité** évaluations séparément pour réduire la durée de l’évaluation.
+- Exécuter des évaluations sur les bases de données de production pendant les heures creuses.
+- Pour réduire la durée de l’évaluation, vous pouvez effectuer des analyses de **compatibilité** et de **nouvelles recommandations** sur les fonctionnalités séparément.
 
 ## <a name="migration"></a>Migration
-- Migrer un serveur pendant les heures creuses.
+- Migrez un serveur en dehors des heures de pointe.
 
-- Lorsque vous migrez une base de données, indiquez un emplacement de partage unique accessible par le serveur source et le serveur cible et si possible, évitez une opération de copie. Une opération de copie peut se traduire en fonction de la taille du fichier de sauvegarde. L’opération de copie augmente également le risque qu’une migration échoue en raison d’une étape supplémentaire. Lorsqu’un seul emplacement est fourni, Data Migration Assistant ignore l’opération de copie.
+- Lors de la migration d’une base de données, fournissez un emplacement de partage unique accessible par le serveur source et le serveur cible, et évitez une opération de copie si possible. Une opération de copie peut introduire un délai en fonction de la taille du fichier de sauvegarde. L’opération de copie augmente également les risques d’échec d’une migration en raison d’une étape supplémentaire. Lorsqu’un emplacement unique est fourni, Assistant Migration de données ignore l’opération de copie.
  
-    En outre, veillez à ce que pour fournir les autorisations appropriées au dossier partagé pour éviter les échecs de migration. Les autorisations appropriées sont spécifiées dans l’outil. Si une instance de SQL Server s’exécute sous les informations d’identification de Service réseau, vous pouvez accorder les autorisations appropriées sur le dossier partagé pour le compte d’ordinateur pour l’instance de SQL Server.
+    En outre, assurez-vous que pour fournir les autorisations appropriées au dossier partagé afin d’éviter les échecs de migration. Les autorisations appropriées sont spécifiées dans l’outil. Si une instance de SQL Server s’exécute sous informations d’identification de service réseau, attribuez les autorisations appropriées sur le dossier partagé au compte d’ordinateur pour l’instance de SQL Server.
 
-- Activer chiffrer la connexion lors de la connexion aux serveurs source et cible. À l’aide de SSL chiffrement augmente la sécurité des données transmises sur les réseaux entre Data Migration Assistant et l’instance de SQL Server, ce qui est utile surtout lors de la migration des comptes de connexion SQL. Si le chiffrement SSL n’est pas utilisé et le réseau est compromis par un attaquant, les connexions SQL en cours de migration pourraient intercepter et/ou modifiés à la volée par l’attaquant.
+- Activez le chiffrement de la connexion lors de la connexion aux serveurs source et cible. L’utilisation du chiffrement SSL augmente la sécurité des données transmises sur les réseaux entre Assistant Migration de données et l’instance de SQL Server, ce qui est particulièrement utile lors de la migration de connexions SQL. Si le chiffrement SSL n’est pas utilisé et que le réseau est compromis par une personne malveillante, les connexions SQL en cours de migration peuvent être interceptées et/ou modifiées à la volée par l’attaquant.
 
-    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire qui est nécessaire pour chiffrer et déchiffrer des paquets. Pour plus d’informations, reportez-vous à [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire requise pour chiffrer et déchiffrer les paquets. Pour plus d’informations, consultez [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).

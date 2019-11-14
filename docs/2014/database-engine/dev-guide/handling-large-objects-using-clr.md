@@ -1,5 +1,5 @@
 ---
-title: Gestion d’objets volumineux à l’aide de CLR | Microsoft Docs
+title: Gestion d’objets volumineux à l’aide du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781534"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054829"
 ---
 # <a name="handling-large-objects-using-clr"></a>Gestion d'objets volumineux à l'aide de CLR
   L'exemple `HandlingLOBUsingCLR` pour SQL Server illustre le transfert d'objets LOB (Large Objects) entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un système de fichiers qui est disponible pour le serveur au moyen de procédures stockées CLR (Common Language Runtime). Cet exemple montre comment accéder à des fichiers dans du code côté serveur et comment appeler ensuite des requêtes dynamiques et des procédures stockées à partir de procédures stockées CLR. Il montre également comment inscrire et désinscrire des méthodes et des assemblys CLR à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/download/details.aspx?id=42299)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://archive.codeplex.com/?p=SqlServerSamples)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62781534"
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
+-   Si vous n’êtes pas un administrateur de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez, demandez à un administrateur de vous accorder l’autorisation **CreateAssembly** pour effectuer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -573,7 +573,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) teste l’exemple en exerçant les procédures stockées.  
+ La [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante (`test.sql`) teste l’exemple en exerçant les procédures stockées.  
   
 ```  
 USE AdventureWorks  

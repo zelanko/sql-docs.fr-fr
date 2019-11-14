@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304747"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056163"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche les paramètres de configuration pour la messagerie de base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,26 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@parameter_name** =] **'***nom_de_paramètre***'**  
- Nom du paramètre de configuration à extraire. Lorsqu’il est spécifié, la valeur du paramètre de configuration est retournée dans le paramètre de sortie **\@parameter_value** . Quand aucun **\@parameter_name** n’est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration Database mail de l’instance.  
+`[ @parameter_name = ] 'parameter_name'` le nom du paramètre de configuration à récupérer. Lorsqu’il est spécifié, la valeur du paramètre de configuration est retournée dans le paramètre de sortie **\@parameter_value** . Quand aucun **\@parameter_name** n’est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration Database mail dans l’instance.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Quand aucun **\@parameter_name** n’est spécifié, retourne un jeu de résultats avec les colonnes suivantes.  
+ Si aucun **\@parameter_name** n’est spécifié, retourne un jeu de résultats avec les colonnes suivantes.  
   
 ||||  
 |-|-|-|  
-|Nom de la colonne|Type de données|Description|  
+|Nom de colonne|Data type|Description|  
 |**paramname**|**nvarchar (256)**|Nom du paramètre de configuration.|  
 |**paramvalue**|**nvarchar (256)**|Valeur du paramètre de configuration.|  
 |**description**|**nvarchar (256)**|Description du paramètre de configuration.|  
   
 ## <a name="remarks"></a>Notes  
- La procédure stockée **sysmail_help_configure_sp** répertorie les paramètres de configuration Database mail actuels pour l’instance.  
+ La procédure stockée **sysmail_help_configure_sp** répertorie les paramètres de configuration de Database mail actuels pour l’instance.  
   
- Quand un **\@parameter_name** est spécifié, mais qu’aucun paramètre de sortie n’est fourni pour **\@parameter_value**, cette procédure stockée ne produit aucune sortie.  
+ Lorsqu’un **\@parameter_name** est spécifié, mais qu’aucun paramètre de sortie n’est fourni pour **\@parameter_value**, cette procédure stockée ne produit aucune sortie.  
   
  La procédure stockée **sysmail_help_configure_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être appelée avec un nom en trois parties si la base de données active n’est pas **msdb**.  
   

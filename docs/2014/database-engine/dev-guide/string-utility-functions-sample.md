@@ -1,5 +1,5 @@
 ---
-title: Exemple de fonctions utilitaires de chaîne | Microsoft Docs
+title: Exemple de fonctions d’utilitaire de chaîne | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,24 +10,24 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780584"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054847"
 ---
 # <a name="string-utility-functions-sample"></a>Exemple de fonctions d'utilitaire de chaîne
   L'exemple String Utilities contient une fonction table en continu écrite en Visual C# et Visual Basic qui fractionne une chaîne séparée par des virgules en une table avec une colonne. Il contient également une fonction d'agrégation qui convertit une colonne de chaîne en une chaîne séparée par des virgules.  Une fonction scalaire et une fonction table sont également implémentées ; elles fournissent des fonctionnalités de recherche et de remplacement d'expressions régulières.  
   
  Pour implémenter une fonction table en continu, créez une méthode qui retourne un objet mettant en œuvre l'interface `IEnumerable`. Cette méthode `IEnumerable` doit être liée par un attribut à une autre méthode qui remplit les lignes de la fonction table.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/download/details.aspx?id=42299)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://archive.codeplex.com/?p=SqlServerSamples)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "62780584"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer l’intégration du CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l’intégration du CLR, vous devez disposer d' `ALTER SETTINGS` autorisation au niveau du serveur, qui est implicitement détenue par les membres du `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
+-   Si vous n’êtes pas un administrateur de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez, demandez à un administrateur de vous accorder l’autorisation **CreateAssembly** pour effectuer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62780584"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `StringUtils.vb` (pour l'exemple Visual Basic) ou `StringUtils.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `StringUtils.vb` (pour l'exemple Visual Basic) ou `StringUtils.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Compilez l'exemple de code à partir de l'invite de ligne de commande en exécutant l'un des éléments suivants, selon le langage choisi.  
   

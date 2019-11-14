@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2a465e03c3b77b8d05437fa0cfaf3354434ce973
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843851"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055090"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **[@name** =] [N] '*nom*'  
- Le nom utilisé pour décrire et distinguer le paramètre de pare-feu au niveau base de données. *Name* est de type **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour les [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+`[ @name = ] [N]'name'` le nom utilisé pour décrire et distinguer le paramètre de pare-feu au niveau de la base de données. *Name* est de type **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour les [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address** =] '*start_ip_address*'  
- Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`. *start_ip_address* est de type **varchar (50)** sans valeur par défaut.  
+`[ @start_ip_address = ] 'start_ip_address'` l’adresse IP la plus basse dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`. *start_ip_address* est de type **varchar (50)** sans valeur par défaut.  
   
- [ **@end_ip_address** =] '*end_ip_address*'  
- Adresse IP la plus élevée dans la plage de paramètres de pare-feu au niveau base de données. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`. *end_ip_address* est de type **varchar (50)** sans valeur par défaut.  
+`[ @end_ip_address = ] 'end_ip_address'` l’adresse IP la plus élevée dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`. *end_ip_address* est de type **varchar (50)** sans valeur par défaut.  
   
  Le tableau suivant montre les arguments et options pris en charge dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

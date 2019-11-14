@@ -1,7 +1,7 @@
 ---
-title: Capturer une trace dans Assistant Expérimentation de base de données pour les mises à niveau SQL Server
-description: Capturer une trace dans Assistant Expérimentation de base de données
-ms.custom: ''
+title: Capturer une trace pour les mises à niveau de SQL Server
+description: Capturer une trace dans Assistant Expérimentation de base de données pour les mises à niveau SQL Server
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653814"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056602"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturer une trace dans Assistant Expérimentation de base de données
 
@@ -33,14 +33,14 @@ La mise en cache des requêtes dans SQL Server peut affecter les résultats de l
 
     ![Sélectionnez capturer les traces dans le menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
 
-1. Sous **nouvelle capture**, entrez ou sélectionnez les informations suivantes:
+1. Sous **nouvelle capture**, entrez ou sélectionnez les informations suivantes :
 
-    - **SQL Server nom**de l’instance: Entrez un nom pour l’ordinateur exécutant SQL Server sur lequel vous souhaitez capturer une trace de serveur.
-    - **Nom de la base de données**: Entrez le nom d’une base de données sur laquelle démarrer une trace de base de données. Si vous ne spécifiez pas de base de données, la trace est capturée sur toutes les bases de données sur le serveur.
-    - **Nom du fichier de trace**: Entrez un nom pour le fichier de trace de votre capture.
-    - **Taille de fichier maximale (Mo)** : Sélectionnez la taille de substitution des fichiers. Un nouveau fichier est créé si nécessaire, à la taille de fichier que vous sélectionnez. La taille de substitution recommandée est de 200 Mo.
-    - **Durée (en minutes)** : Sélectionnez la durée (en minutes) pendant laquelle vous souhaitez que la capture de trace s’exécute.
-    - **Chemin de stockage du fichier de trace de sortie**: Sélectionnez le chemin d’accès de destination pour le fichier de trace. 
+    - **SQL Server nom**de l’instance : entrez un nom pour l’ordinateur exécutant SQL Server sur lequel vous souhaitez capturer une trace de serveur.
+    - **Nom de la base de données**: entrez le nom d’une base de données sur laquelle démarrer une trace de base de données. Si vous ne spécifiez pas de base de données, la trace est capturée sur toutes les bases de données sur le serveur.
+    - **Nom du fichier de trace**: entrez un nom pour le fichier de trace de votre capture.
+    - **Taille de fichier maximale (Mo)** : sélectionnez la taille de substitution des fichiers. Un nouveau fichier est créé si nécessaire, à la taille de fichier que vous sélectionnez. La taille de substitution recommandée est de 200 Mo.
+    - **Durée (min)** : sélectionnez la durée (en minutes) pendant laquelle vous souhaitez que la capture de trace s’exécute.
+    - **Chemin de stockage du fichier de trace de sortie**: sélectionnez le chemin de destination du fichier de trace. 
 
     > [!NOTE]
     > Le chemin d’accès au fichier de trace doit se trouver sur l’ordinateur qui exécute SQL Server. Si le service SQL Server n’est pas défini pour un compte spécifique, le service peut avoir besoin d’autorisations en écriture sur le dossier spécifié pour le fichier de trace à écrire.
@@ -67,13 +67,13 @@ La capture de trace écrit un fichier. trc à l’emplacement spécifié. Le fic
 
 Voici quelques questions fréquemment posées sur la capture de trace dans la DEA.
 
-### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>Quels sont les événements capturés lors de l’exécution d’une capture de trace sur une base de données de production?
+### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>Quels sont les événements capturés lors de l’exécution d’une capture de trace sur une base de données de production ?
 
-Le tableau suivant fournit la liste des événements et les données de colonnes correspondantes que nous recueillons pour les traces:
+Le tableau suivant fournit la liste des événements et les données de colonnes correspondantes que nous recueillons pour les traces :
   
 |Nom d'événement|Données texte (1)|Données binaires (2)|ID de base de données (3)|Nom d’hôte (8)|Nom de l’application (10)|Nom de connexion (11)|SPID (12)|Heure de début (14)|Heure de fin (15)|Nom de la base de données (35)|Séquence d’événements (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
-|**RPC: terminé (10)**||*|*|*|*|*|*|*|*|*|*|*|  
+|**RPC : terminé (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC:Starting (11)**||*|*|*|*|*|*|*||*|*|*|  
 |**Paramètre de sortie RPC (100)**|*||*|*|*|*|*|*||*|*|*|  
 |**SQL:BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
@@ -89,45 +89,45 @@ Le tableau suivant fournit la liste des événements et les données de colonnes
 |**CursorUnprepare (77)**|*||*|*|*|*|*|*||*|*|*|  
 |**CursorClose (78)**|*||*|*|*|*|*|*||*|*|*|  
 
-### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>Y a-t-il un effet sur les performances sur mon serveur de production lorsque la capture de trace est en cours d’exécution?
+### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>Y a-t-il un effet sur les performances sur mon serveur de production lorsque la capture de trace est en cours d’exécution ?
     
 Oui, il y a un impact minime sur les performances lors de la collecte des traces. Dans nos tests, nous avons constaté une sollicitation de mémoire de 3%.
     
-### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>Quels sont les types d’autorisations nécessaires pour capturer des suivis sur une charge de travail de production?
+### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>Quels sont les types d’autorisations nécessaires pour capturer des suivis sur une charge de travail de production ?
     
 - L’utilisateur Windows qui exécute l’opération de suivi dans l’application de DEA doit disposer de droits d’administrateur système sur l’ordinateur qui exécute SQL Server.
 - Le compte de service utilisé sur l’ordinateur exécutant SQL Server doit avoir un accès en écriture au chemin d’accès au fichier de trace spécifié.
 
-### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>Puis-je capturer des traces pour l’ensemble du serveur ou uniquement sur une base de données unique?
+### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>Puis-je capturer des traces pour l’ensemble du serveur ou uniquement sur une base de données unique ?
     
 Vous pouvez utiliser la DEA pour capturer les traces de toutes les bases de données du serveur ou d’une base de données unique.
     
-### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>Je dispose d’un serveur lié configuré dans mon environnement de production. Ces requêtes apparaissent-elles dans les traces?
+### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>Je dispose d’un serveur lié configuré dans mon environnement de production. Ces requêtes apparaissent-elles dans les traces ?
     
 Si vous exécutez une capture de trace pour l’ensemble du serveur, la trace capture toutes les requêtes, y compris les requêtes de serveur lié. Pour exécuter une capture de trace pour l’ensemble du serveur, laissez la zone **nom de la base de données** vide sous **nouvelle capture** vide.
     
-### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>Quelle est la durée minimale recommandée pour les traces de charge de travail de production?
+### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>Quelle est la durée minimale recommandée pour les traces de charge de travail de production ?
     
 Nous vous recommandons de choisir une heure qui représente le mieux l’intégralité de votre charge de travail. De cette façon, l’analyse s’exécute sur toutes les requêtes dans votre charge de travail.
     
-### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>Quelle est la procédure à suivre pour effectuer une sauvegarde de base de données juste avant de démarrer une capture de trace?
+### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>Quelle est la procédure à suivre pour effectuer une sauvegarde de base de données juste avant de démarrer une capture de trace ?
     
 Avant de démarrer une capture de trace, assurez-vous de sauvegarder toutes vos bases de données cibles. La trace capturée dans cible 1 et cible 2 est relue. Si l’état de la base de données n’est pas le même, les résultats de l’expérimentation sont faussés.
 
-### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>Puis-je collecter des XEvents au lieu de traces, puis-je relire XEvents?
+### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>Puis-je collecter des XEvents au lieu de traces, puis-je relire XEvents ?
     
 Oui. La DEA prend en charge XEvents. Téléchargez la dernière version de DEA et essayez-la.
 
 ## <a name="troubleshoot-trace-captures"></a>Résoudre les problèmes de captures de trace
 
-Si vous voyez une erreur lors de l’exécution d’une capture de trace, passez en revue les conditions préalables suivantes:
+Si vous voyez une erreur lors de l’exécution d’une capture de trace, passez en revue les conditions préalables suivantes :
 
 - Confirmez que le nom de l’ordinateur exécutant SQL Server est valide. Pour confirmer, essayez de vous connecter à l’ordinateur qui exécute SQL Server à l’aide de SQL Server Management Studio (SSMS).
 - Vérifiez que la configuration de votre pare-feu ne bloque pas les connexions à l’ordinateur exécutant SQL Server.
-- Vérifiez que l’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)la relecture du blog.
-- Confirmez que le nom de la trace ne respecte pas la convention\_de substitution standard (capture 1). Essayez plutôt les noms de trace comme\_capture 1a ou Capture1.
+- Vérifiez que l’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)du blog.
+- Confirmez que le nom de la trace ne respecte pas la Convention de substitution standard (capture\_1). Essayez plutôt des noms de trace comme capture\_1A ou Capture1.
 
-Voici quelques-unes des erreurs possibles et des solutions pour les résoudre:
+Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :
 
 |Erreurs possibles|Solution|  
 |---|---|  
@@ -140,8 +140,8 @@ Si vous voyez d’autres erreurs libellées *code d’erreur SQL*, consultez [mo
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Pour savoir comment configurer les outils de Distributed Replay dans SQL Server avant de relire une trace capturée, consultez [configurer](database-experimentation-assistant-configure-replay.md)la relecture.
+- Pour savoir comment configurer les outils de Distributed Replay dans SQL Server avant de relire une trace capturée, consultez [configurer la relecture](database-experimentation-assistant-configure-replay.md).
 
-- Pour une présentation de la DEA et de la démonstration de 19 minutes, regardez la vidéo suivante:
+- Pour une présentation de la DEA et de la démonstration de 19 minutes, regardez la vidéo suivante :
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

@@ -1,7 +1,7 @@
 ---
-title: Configurer les paramètres de Assistant Migration de données (SQL Server) | Microsoft Docs
+title: Configurer les paramètres de Assistant Migration de données
 description: Découvrez comment configurer les paramètres du Assistant Migration de données en mettant à jour les valeurs dans le fichier de configuration.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345240"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056539"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de Assistant Migration de données
 
@@ -82,7 +82,7 @@ Assistant Migration de données migre plusieurs bases de données en parallèle 
 Pendant l’évaluation, Assistant Migration de données extrait l’application de la couche données (dacpac) pour comprendre le schéma de la base de données. Cette opération peut échouer avec des délais d’attente pour les bases de données très volumineuses, ou si le serveur est en cours de chargement. À partir de la migration de données v 1.0, vous pouvez modifier les valeurs de configuration suivantes pour éviter les erreurs. 
 
 > [!NOTE]
-> La totalité &lt;de&gt; l’entrée dacfx est commentée par défaut. Supprimez les commentaires, puis modifiez la valeur si nécessaire.
+> La totalité de l’entrée &lt;dacfx&gt; est commentée par défaut. Supprimez les commentaires, puis modifiez la valeur si nécessaire.
 
 - commandTimeout
 
@@ -90,11 +90,11 @@ Pendant l’évaluation, Assistant Migration de données extrait l’application
 
 - databaseLockTimeout
 
-   Ce paramètre équivaut à définir le délai d’expiration du délai d’attente du [verrou\_\_](../t-sql/statements/set-lock-timeout-transact-sql.md) en *millisecondes*. (Valeur par défaut = 5000)
+   Ce paramètre équivaut à définir la durée du délai d’expiration\_délai d’expiration [\_période](../t-sql/statements/set-lock-timeout-transact-sql.md) en *millisecondes*. (Valeur par défaut = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Ce paramètre définit le nombre de connexions du pool de connexions SQL à utiliser. (Default=8)
+  Ce paramètre définit le nombre de connexions du pool de connexions SQL à utiliser. (Valeur par défaut = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Seuil de recommandation
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database : seuil de recommandation
 
 Avec [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), vous pouvez étendre dynamiquement les données transactionnelles à chaud et à froid de Microsoft SQL Server 2016 vers Azure. Stretch Database cible les bases de données transactionnelles avec de grandes quantités de données à froid. La recommandation Stretch Database, sous recommandation relative aux fonctionnalités de stockage, identifie d’abord les tables qu’elle estime tirera parti de cette fonctionnalité, puis identifie les modifications qui doivent être apportées pour activer la table pour cette fonctionnalité.
 
@@ -142,7 +142,7 @@ Vous pouvez contrôler le délai d’expiration de la [connexion SQL](https://ms
 
 ## <a name="ignore-error-codes"></a>Ignorer les codes d’erreur
 
-Chaque règle contient un code d’erreur dans son titre. Si vous n’avez pas besoin de règles et que vous souhaitez les ignorer, utilisez la propriété ignoreErrorCodes. Vous pouvez spécifier qu’il faut ignorer une seule erreur ou plusieurs erreurs. Pour ignorer plusieurs erreurs, utilisez un point-virgule, par exemple ignoreErrorCodes = "46010; 71501". La valeur par défaut est 71501, qui est associée à des références non résolues identifiées lorsqu’un objet fait référence à des objets système tels que des procédures, des vues, etc.
+Chaque règle contient un code d’erreur dans son titre. Si vous n’avez pas besoin de règles et que vous souhaitez les ignorer, utilisez la propriété ignoreErrorCodes. Vous pouvez spécifier qu’il faut ignorer une seule erreur ou plusieurs erreurs. Pour ignorer plusieurs erreurs, utilisez un point-virgule, par exemple ignoreErrorCodes = "46010 ; 71501". La valeur par défaut est 71501, qui est associée à des références non résolues identifiées lorsqu’un objet fait référence à des objets système tels que des procédures, des vues, etc.
 
 ```
 <workflowSettings>

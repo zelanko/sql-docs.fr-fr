@@ -1,7 +1,6 @@
 ---
-title: Effectuer une évaluation de la migration du service d’intégration de SQL Server (Assistant Migration de données) | Microsoft Docs
-description: Découvrez comment utiliser Assistant Migration de données pour évaluer un service d’intégration de SQL Server local avant de migrer vers Azure SQL Database ou Azure SQL Database Managed instance
-ms.custom: ''
+title: Créer une évaluation de la migration SSIS avec la Assistant Migration de données
+description: Découvrez comment utiliser Assistant Migration de données pour évaluer un service SSIS (SQL Server Integration Service) local avant de migrer vers Azure SQL Database ou Azure SQL Database Managed instance
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632860"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056644"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de la migration du service d’intégration SQL Server avec Assistant Migration de données
 
@@ -33,7 +33,7 @@ Les instructions pas à pas suivantes vous aident à effectuer la première éva
 
     Sélectionnez la source en tant que **SQL Server**, puis définissez le type de serveur cible sur **Azure SQL Database** ou **Azure SQL Database Managed instance**.
 
-1. Cliquez sur **Créer**.
+1. Cliquez sur **Créer**.
 
     ![créer une évaluation](media/dma-assess-ssis/dma-assess-ssis-create.png)
 

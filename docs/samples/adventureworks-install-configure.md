@@ -1,40 +1,40 @@
 ---
-title: Installer et configurer la base de données AdventureWorks - SQL | Microsoft Docs
+title: Installer & configurer l’exemple de base de données AdventureWorks
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ''
 ms.date: 06/19/2018
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 0d9f6842ebe5e7d6ee923eef17f491f0cb7ef6ec
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894928"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056740"
 ---
-# <a name="adventureworks-installation-and-configuration"></a>Installation d’AdventureWorks et la configuration
+# <a name="adventureworks-installation-and-configuration"></a>Installation et configuration d’AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-AdventureWorks télécharger des liens et des instructions d’installation. 
+Liens de téléchargement AdventureWorks et instructions d’installation. 
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) ou [base de données SQL Azure](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez SQL Server Evaluation/développeur/Enterprise Edition.
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour de meilleurs résultats, utilisez la version de juin 2016 ou version ultérieure.
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez l’édition Évaluation SQL Server/Developer/Enterprise.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour obtenir les meilleurs résultats, utilisez la version du 2016 juin ou une version ultérieure.
  
-## <a name="github-links"></a>Liens Github
+## <a name="github-links"></a>Liens GitHub
 
 - [Tous les fichiers AdventureWorks pour SQL 2014-2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 - [Tous les fichiers AdventureWorks pour SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
-- [Tous les fichiers AdventureWorks pour SQL 2008 et 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
+- [Tous les fichiers AdventureWorks pour SQL 2008 et 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
 ## <a name="oltp-downloads"></a>Téléchargements OLTP
 
-Vous trouverez des liens directs vers les versions OLTP d’AdventureWorks ci-dessous :
+Vous trouverez ci-dessous des liens directs vers les versions OLTP d’AdventureWorks :
 
 - [AdventureWorks2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)
 - [AdventureWorks2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)
@@ -43,9 +43,9 @@ Vous trouverez des liens directs vers les versions OLTP d’AdventureWorks ci-de
 - [AdventureWorks2008R2.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)
 
 
-## <a name="data-warehouse-downloads"></a>Téléchargements de l’entrepôt de données
+## <a name="data-warehouse-downloads"></a>Téléchargements de Data Warehouse
 
-Vous trouverez des liens directs vers les versions de l’entrepôt de données d’AdventureWorks ci-dessous :
+Vous trouverez ci-dessous des liens directs vers les versions Data Warehouse d’AdventureWorks :
 
 - [AdventureWorksDW2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)
 - [AdventureWorksDW2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)
@@ -54,50 +54,50 @@ Vous trouverez des liens directs vers les versions de l’entrepôt de données 
 - [AdventureWorksDW2008R2.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008-dw.bak)
 
 ## <a name="creation-scripts"></a>Scripts de création
-Les scripts ci-dessous peut être utilisé pour créer la base de données AdventureWorks entière, quelle que soit la version. 
+Les scripts ci-dessous peuvent être utilisés pour créer l’intégralité de la base de données AdventureWorks, quelle que soit la version. 
 
-- [Zip des Scripts OLTP d’AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
-- [Zip des Scripts AdventureWorks DW](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
+- [Zip des scripts OLTP AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
+- [Zip des scripts AdventureWorks DW](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
-## <a name="install-to-sql-server"></a>Installation de SQL Server
+## <a name="install-to-sql-server"></a>Installer sur SQL Server
 
 ### <a name="restore-backup"></a>Restaurer la sauvegarde
 Suivez les étapes ci-dessous pour restaurer une sauvegarde de votre base de données à l’aide de SQL Server Management Studio. 
 
 1. Ouvrez SQL Server Management Studio et connectez-vous à l’instance de SQL Server cible.
-2. Avec le bouton droit sur le **bases de données** nœud, puis sélectionnez **Restore Database**.
-3. Sélectionnez **appareil** et cliquez sur le bouton de sélection ( **...** )
-4. Dans la boîte de dialogue **sélectionner les unités de sauvegarde**, cliquez sur **ajouter**, accédez à la sauvegarde de base de données dans le système de fichiers du serveur et sélectionnez la sauvegarde. Cliquez sur **OK**.
-5. Si nécessaire, modifiez l’emplacement cible pour les données et fichiers journaux, dans le **fichiers** volet. Notez qu’il est recommandé de placer des données et fichiers journaux sur des lecteurs différents.
-6. Cliquez sur **OK**. Ceci lancera la restauration de base de données. Une fois terminé, vous aurez la base de données AdventureWorks installée sur votre instance de SQL Server.
+2. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **restaurer la base de données**.
+3. Sélectionnez l' **appareil** et cliquez sur les points de suspension ( **...** )
+4. Dans la boîte de dialogue **Sélectionner les unités de sauvegarde**, cliquez sur **Ajouter**, accédez à la sauvegarde de la base de données dans le système de fichiers du serveur, puis sélectionnez la sauvegarde. Cliquez sur **OK**.
+5. Si nécessaire, modifiez l’emplacement cible pour les fichiers de données et les fichiers journaux dans le volet **fichiers** . Notez qu’il est recommandé de placer les fichiers de données et les fichiers journaux sur des lecteurs différents.
+6. Cliquez sur **OK**. La restauration de la base de données est lancée. Une fois l’opération terminée, la base de données AdventureWorks est installée sur votre instance SQL Server.
 
 Pour plus d’informations sur la restauration d’une base de données SQL Server, consultez [restaurer une sauvegarde de base de données à l’aide de SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
 
-### <a name="attach-a-datafile"></a>Attacher un fichier de données
-Suivez les étapes ci-dessous pour attacher le fichier de données pour votre base de données à l’aide de SQL Server Management Studio.
+### <a name="attach-a-datafile"></a>Attacher un fichier de fichier
+Suivez les étapes ci-dessous pour attacher le fichier de données de votre base de données à l’aide de SQL Server Management Studio.
 
 1. Ouvrez SQL Server Management Studio et connectez-vous à l’instance de SQL Server cible.
-2. Avec le bouton droit sur le **bases de données** nœud, puis sélectionnez **attacher**.
-3. Sélectionnez **ajouter** et accédez à la. Vous souhaitez joindre un fichier MDF. 
-1. Sélectionnez le fichier et cliquez sur **OK**. 
-    1. La base de données que vous avez sélectionné doit être affiché dans la fenêtre inférieure. Si le fichier est répertorié comme « not found », sélectionnez les points de suspension ( **...** ) en regard du nom de fichier et mise à jour le chemin d’accès pour le chemin correct. 
-    1. Si vous avez uniquement le fichier de données (.mdf) et pas le fichier journal (.ldf), puis mettez en surbrillance le .ldf dans la fenêtre du bas et sélectionnez **supprimer**. Cela créera un nouveau fichier journal. 
-1. Sélectionnez **OK** pour joindre le fichier. Une fois que le fichier est attaché, vous aurez la base de données AdventureWorks installée sur votre instance de SQL Server.  
+2. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **attacher**.
+3. Sélectionnez **Ajouter** et accédez à. Fichier MDF que vous souhaitez attacher. 
+1. Sélectionnez le fichier, puis cliquez sur **OK**. 
+    1. La base de données que vous avez sélectionnée doit s’afficher dans la fenêtre inférieure. Si le fichier est listé comme « introuvable », sélectionnez les points de suspension ( **...** ) en regard du nom de fichier et mettez à jour le chemin d’accès vers le chemin d’accès correct. 
+    1. Si vous ne disposez que du fichier de données (. mdf) et non du fichier journal (. ldf), mettez en surbrillance le fichier. ldf dans la fenêtre inférieure, puis sélectionnez **supprimer**. Un nouveau fichier journal est créé. 
+1. Sélectionnez **OK** pour joindre le fichier. Une fois le fichier joint, la base de données AdventureWorks est installée sur votre instance SQL Server.  
 
 Pour plus d’informations sur l’attachement de fichiers de base de données, consultez [attacher une base de données](../relational-databases/databases/attach-a-database.md). 
 
-## <a name="install-to-azure-sql-database"></a>Installer à la base de données SQL Azure
+## <a name="install-to-azure-sql-database"></a>Installer sur Azure SQL Database
 
 
-Si vous n’avez pas encore d’un serveur SQL Server dans Azure, accédez à la [Azure portal](https://portal.azure.com/) et créer une base de données SQL. En cours de créer une base de données, vous allez créer un serveur. Prenez note du serveur. Consultez [ce didacticiel](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) pour créer une base de données en quelques minutes.
+Si vous n’avez pas encore de SQL Server dans Azure, accédez au [portail Azure](https://portal.azure.com/) et créez un SQL Database. Dans le processus de création d’une base de données, vous allez créer un serveur. Notez le serveur. Consultez [ce didacticiel](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) pour créer une base de données en quelques minutes.
 
-1. Se connecter à votre portail Azure.
+1. Connectez-vous à votre Portail Azure.
 1. Sélectionnez **créer une ressource** dans le coin supérieur gauche du volet de navigation. 
-1. Sélectionnez **bases de données** , puis sélectionnez **base de données SQL**. 
+1. Sélectionnez **bases de données** , puis **SQL Database**. 
 1. Renseignez les informations demandées.
-1. Dans le **sélectionner une Source** champ, sélectionnez **exemple (AdventureWorksLT)** pour restaurer une sauvegarde de la dernière sauvegarde AdventureWorksLT.
-1. Sélectionnez **créer** pour créer votre nouvelle base de données SQL, qui est la copie restaurée de la base de données AdventureWorksLT. 
+1. Dans le champ **Sélectionner une source** , sélectionnez **exemple (AdventureWorksLT)** pour restaurer une sauvegarde de la dernière sauvegarde AdventureWorksLT.
+1. Sélectionnez **créer** pour créer votre SQL Database, qui est la copie restaurée de la base de données AdventureWorksLT. 
 
 
 ## <a name="see-also"></a>Voir aussi

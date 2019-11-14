@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: Basculement et modes de basculement
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: Stratégie de basculement flexible pour le basculement automatique
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: Échelle lecture uniquement
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: Redirection de connexion en lecture/écriture
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Notes de publication
       items:
-        - name: Compatibilité descendante
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: Fonctionnalités supprimées dans SQL Server
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: "Déprécié dans SQL Server\_2019"
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: "Déprécié dans SQL Server\_2017"
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: "Déprécié dans SQL Server\_2016"
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: Fonctionnalités supprimées dans SQL Server
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: "Changements cassants dans SQL Server\_2019"
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: "Changements cassants dans SQL Server\_2017"
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: "Changements cassants dans SQL Server\_2016"
@@ -4779,11 +4779,11 @@
         - name: Vue d’ensemble
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: Compatibilité descendante
               href: relational-databases/replication/replication-backward-compatibility.md
-            - name: Fonctionnalités déconseillées
+            - name: Fonctionnalités dépréciées
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
-            - name: Dernières modifications
+            - name: Changements cassants
               href: relational-databases/replication/breaking-changes-in-sql-server-replication.md
             - name: Meilleures pratiques
               href: relational-databases/replication/administration/best-practices-for-replication-administration.md

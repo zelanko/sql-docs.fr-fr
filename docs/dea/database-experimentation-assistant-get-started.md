@@ -1,7 +1,6 @@
 ---
-title: Prise en main de Assistant Expérimentation de base de données pour les mises à niveau SQL Server
-description: Prise en main de Assistant Expérimentation de base de données
-ms.custom: ''
+title: Prise en main de Assistant Expérimentation de base de données
+description: Assistant Expérimentation de base de données (DEA) est une solution de test A/B permettant de modifier des environnements SQL Server, tels que des mises à niveau ou de nouveaux index.
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381771"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056712"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Prise en main de Assistant Expérimentation de base de données
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>Prise en main de Assistant Expérimentation de base de données (SQL Server)
 
 Assistant Expérimentation de base de données (DEA) est une solution de test A/B permettant de modifier des environnements SQL Server, tels que des mises à niveau ou de nouveaux index. La DEA vous aide à évaluer la façon dont la charge de travail sur votre serveur source (dans votre environnement actuel) sera exécutée dans votre nouvel environnement. La DEA vous guide tout au long de l’exécution d’un test A/B en effectuant trois étapes : 
 
@@ -48,7 +48,7 @@ Pour capturer une trace sur votre serveur source :
 
 1. Entrez ou sélectionnez les informations suivantes :
 
-   - **Nom**de la trace : nom de fichier du nouveau fichier de trace que vous êtes en train de créer. Évitez un nom de trace qui utilise la Convention d’affectation de noms de fichiers de substitution, par exemple, CaptureName @ no__t-0NNN.
+   - **Nom**de la trace : nom de fichier du nouveau fichier de trace que vous êtes en train de créer. Évitez un nom de trace qui utilise la Convention d’affectation de noms de fichiers de substitution, par exemple, CaptureName\_NNN.
    - **Duration**: durée de la capture.
    - **SQL Server nom**de l’instance : SQL Server instance à partir de laquelle vous souhaitez capturer une trace.
    - **Nom de la base de données**: nom de la base de données sur l’ordinateur exécutant SQL Server dont vous souhaitez capturer une trace. Si le champ n’est pas renseigné, la trace est capturée à partir de toutes les bases de données sur le serveur.
@@ -152,7 +152,7 @@ La page Résumé de la **comparaison** affiche des statistiques récapitulatives
 
 Si la requête est une requête d’erreur, l’onglet informations sur l' **erreur** affiche plus d’informations sur l’erreur. L’onglet informations sur le **plan de requête** affiche des informations sur les plans de requête utilisés pour la requête sur les cibles 1 et 2.
 
-![Plan de requête](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
+![Plan de la requête](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
 
 Sur n’importe quelle page du rapport d’analyse, sélectionnez le bouton **Imprimer** en haut à droite pour imprimer tout ce qui est visible.
 
