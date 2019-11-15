@@ -1,5 +1,5 @@
 ---
-title: Architecture d’extensibilité pour les scripts externes
+title: Architecture d’extensibilité
 description: Cet article décrit l’architecture du framework d’extensibilité pour l’exécution d’un script externe (p.ex., en R ou Python) sur un serveur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,14 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f2f61208f9c43ce827cb65a4f7107ced62b9219
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532728"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727690"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,15 +114,15 @@ Les protocoles de communication entre les composants et les plateformes de donn�
 
 + **ODBC**
 
-  Les communications entre les clients de science des données externes et une instance SQL Server distante utilisent ODBC. Le compte utilisé pour l’envoi des travaux de script à SQL Server doit avoir l’autorisation de se connecter à l’instance et l’autorisation d’exécuter des scripts externes.
+  Les communications entre les clients de science des données externes et une instance de SQL Server distante utilisent ODBC. Le compte qui envoie les travaux de script à SQL Server doit avoir l’autorisation de se connecter à l’instance et l’autorisation d’exécuter des scripts externes.
 
-  De plus, selon la tâche, le compte peut avoir besoin des autorisations suivantes :
+  De plus, en fonction de la tâche, le compte peut avoir besoin des autorisations suivantes :
 
-  + Lecture des données utilisées par le travail
-  + Écriture de données dans des tables : par exemple, quand il s’agit d’enregistrer des résultats dans une table
-  + Création d’objets de base de données : par exemple, si vous enregistrez un script externe dans une nouvelle procédure stockée.
+  + Lire les données utilisées par le travail
+  + Écrire les données dans des tables : par exemple, durant l’enregistrement des résultats dans une table
+  + Créer des objets de base de données : par exemple, si vous enregistrez un script externe dans le cadre d’une nouvelle procédure stockée
 
-  Quand SQL Server sert de contexte de calcul pour un script exécuté à partir d’un client distant et que l’exécutable doit récupérer des données à partir d’une source externe, ODBC est utilisé pour l’écriture différée. SQL Server mappe l’identité de l’utilisateur qui émet la commande à distance à l’identité de l’utilisateur de l’instance actuelle, puis exécute la commande ODBC en utilisant les informations d’identification de cet utilisateur. La chaîne de connexion nécessaire pour effectuer cet appel ODBC est obtenue à partir du code client.
+  Quand SQL Server sert de contexte de calcul pour un script exécuté à partir d’un client distant et que l’exécutable doit récupérer des données à partir d’une source externe, ODBC est utilisé pour l’écriture différée. SQL Server mappe l’identité de l’utilisateur qui émet la commande distante à l’identité de l’utilisateur sur l’instance actuelle, puis exécute la commande ODBC à l’aide des informations d’identification de cet utilisateur. La chaîne de connexion nécessaire pour effectuer cet appel ODBC est obtenue à partir du code client.
 
 + **RODBC (R uniquement)** 
 
