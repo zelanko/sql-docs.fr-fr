@@ -1,7 +1,7 @@
 ---
 title: sys.databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981853"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095865"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ Si une base de données n’est pas `ONLINE`ou `AUTO_CLOSE` a la valeur `ON` et 
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT est activé<br /> 0 = CURSOR_CLOSE_ON_COMMIT est désactivé|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT est local<br /> 0 = CURSOR_DEFAULT est global|  
 |**is_fulltext_enabled**|**bit**|1 = Le texte intégral est activé pour la base de données<br /> 0 = Le texte intégral est désactivé pour la base de données|  
-|**is_trustworthy_on**|**bit**|1 = La base de données est marquée comme digne de confiance<br /> 0 = La base de données n'est pas marquée comme digne de confiance|  
+|**is_trustworthy_on**|**bit**|1 = La base de données est marquée comme digne de confiance<br /> 0 = La base de données n'est pas marquée comme digne de confiance<br /> Le Service Broker des bases de données restaurées ou attachées est par défaut désactivé. L'exception à cette règle repose sur la mise en miroir de bases de données lorsque Service Broker est activé après un basculement.|  
 |**is_db_chaining_on**|**bit**|1 = Le chaînage des propriétés des bases de données croisées est activé<br /> 0 = Le chaînage des propriétés des bases de données croisées est désactivé|  
 |**is_parameterization_forced**|**bit**|1 = Le paramétrage est forcé<br /> 0 = Le paramétrage est simple|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = La base de données a une clé principale chiffrée<br /> 0 = La base de données n'a aucune clé principale chiffrée|  
@@ -93,7 +93,7 @@ Si une base de données n’est pas `ONLINE`ou `AUTO_CLOSE` a la valeur `ON` et 
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION est activé<br /> 0 = DATE_CORRELATION_OPTIMIZATION est désactivé|  
 |**is_cdc_enabled**|**bit**|1 = La base de données est activée pour la capture des données modifiées. Pour plus d’informations, consultez [sys. &#40;SP_CDC_ENABLE_DB Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**bit**|Indique si la base de données est chiffrée (reflète le dernier état défini à l’aide de la clause `ALTER DATABASE SET ENCRYPTION`). Il peut s'agir de l'une des valeurs suivantes :<br /> 1 = Chiffrée<br /> 0 = Non chiffré<br /> Pour plus d’informations sur le chiffrement des bases de données, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Si la base de données est en cours de déchiffrement, `is_encrypted` affiche la valeur 0. Vous pouvez voir l’état du processus de chiffrement à l’aide de la vue de gestion dynamique [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**bit**|Indique si la base de données respecte les priorités de conversation (reflète le dernier état défini à l’aide de la clause `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Il peut s'agir de l'une des valeurs suivantes :<br /> 1 = HONOR_BROKER_PRIORITY a la valeur ON<br /> 0 = HONOR_BROKER_PRIORITY a la valeur OFF|  
+|**is_honor_broker_priority_on**|**bit**|Indique si la base de données respecte les priorités de conversation (reflète le dernier état défini à l’aide de la clause `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Il peut s'agir de l'une des valeurs suivantes :<br /> 1 = HONOR_BROKER_PRIORITY a la valeur ON<br /> 0 = HONOR_BROKER_PRIORITY a la valeur OFF<br /> Le Service Broker des bases de données restaurées ou attachées est par défaut désactivé. L'exception à cette règle repose sur la mise en miroir de bases de données lorsque Service Broker est activé après un basculement.|  
 |**replica_id**|**uniqueidentifier**|Identificateur unique du réplica de disponibilité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] local du groupe de disponibilité, le cas échéant, auquel la base de données participe.<br /> NULL = la base de données ne fait pas partie d’un réplica de disponibilité de dans le groupe de disponibilité.<br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Identificateur unique de la base de données au sein d’un groupe de disponibilité Always On, le cas échéant, auquel la base de données participe. **group_database_id** est identique pour cette base de données sur le réplica principal et sur chaque réplica secondaire sur lequel la base de données a été jointe au groupe de disponibilité.<br /> NULL = La base de données ne fait pas partie d'un réplica de disponibilité dans un groupe de disponibilité.<br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|ID du pool de ressources qui est mappé à cette base de données. Ce pool de ressources contrôle la mémoire totale qui est disponible pour les tables optimisées en mémoire dans cette base de données.<br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur|  

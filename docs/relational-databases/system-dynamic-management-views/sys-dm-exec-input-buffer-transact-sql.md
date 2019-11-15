@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/13/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,76 +20,85 @@ ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 735173b6812093293c1473ee9d4bc8a7378be2c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097723"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097874"
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>Sys.dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les instructions envoyées à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+Retourne des informations sur les instructions soumises à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+## <a name="syntax"></a>Syntaxe
+
+```
 sys.dm_exec_input_buffer ( session_id , request_id )
-```  
-  
-## <a name="arguments"></a>Arguments  
-*session_id*  
-L’id de session exécute le lot à rechercher. *session_id* est **smallint**. *session_id* peut être obtenu à partir d’objets de gestion dynamique suivants :  
-  
--   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
-  
--   [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
-  
--   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
-  
-*request_id*  
-(Request_id) à partir de [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* est **int**.  
-  
-## <a name="table-returned"></a>Table retournée  
-  
-|Nom de la colonne|Type de données|Description|  
-|-----------------|---------------|-----------------|  
-|**event_type**|**nvarchar (256)**|Le type d’événement dans le tampon d’entrée pour le spid donné.|  
-|**parameters**|**smallint**|Tous les paramètres fournis pour l’instruction.|  
-|**event_info**|**nvarchar(max)**|Le texte de l’instruction dans la mémoire tampon d’entrée pour le spid donné.|  
-  
-## <a name="permissions"></a>Autorisations  
- Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l’utilisateur a l’autorisation VIEW SERVER STATE, l’utilisateur verra en cours d’exécution toutes les sessions sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
-  
- Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si l’utilisateur est le propriétaire de la base de données, l’utilisateur verra en cours d’exécution toutes les sessions sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
-  
-## <a name="remarks"></a>Notes  
- Cette fonction de gestion dynamique peut être utilisée conjointement avec sys.dm_exec_sessions ou sys.dm_exec_requests en effectuant les **CROSS APPLY**.  
-  
-## <a name="examples"></a>Exemples  
-  
-### <a name="a-simple-example"></a>A. Exemple simple  
- L’exemple suivant illustre le passage d’un id de session (SPID) et un id de demande à la fonction.  
-  
-```sql  
+```
+
+## <a name="arguments"></a>Arguments
+
+*session_id* ID de session exécutant le lot à rechercher. *session_id* est de type **smallint**. *session_id* peut être obtenu à partir des objets de gestion dynamique suivants :
+
+- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
+
+*request_id* Request_id à partir de [sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* est de **type int**.
+
+## <a name="table-returned"></a>Table retournée
+
+|Nom de colonne|Data type|Description|
+|-----------------|---------------|-----------------|
+|**event_type**|**nvarchar (256)**|Type d’événement dans la mémoire tampon d’entrée pour le SPID donné.|
+|**parameters**|**smallint**|Tous les paramètres fournis pour l’instruction.|
+|**event_info**|**nvarchar(max)**|Texte de l’instruction dans la mémoire tampon d’entrée pour le SPID donné.|
+
+## <a name="permissions"></a>Autorisations
+
+Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l’utilisateur dispose de l’autorisation VIEW SERVER STATE, l’utilisateur verra toutes les sessions en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; dans le cas contraire, l’utilisateur verra uniquement la session active.
+
+> [!IMPORTANT]
+> L’exécution de cette DMV en dehors de SQL Server Management Studio par rapport SQL Server sans les autorisations VIEW SERVER STATE (comme dans un déclencheur, une procédure stockée ou une fonction) lève une erreur d’autorisation sur la base de données Master.
+
+Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si l’utilisateur est le propriétaire de la base de données, l’utilisateur verra toutes les sessions en cours d’exécution sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; dans le cas contraire, l’utilisateur verra uniquement la session active.
+
+> [!IMPORTANT]
+> L’exécution de cette DMV en dehors de SQL Server Management Studio par rapport Azure SQL Database sans autorisations de propriétaire (comme dans un déclencheur, une procédure stockée ou une fonction) lève une erreur d’autorisation sur la base de données Master.
+
+## <a name="remarks"></a>Notes
+
+Cette fonction de gestion dynamique peut être utilisée conjointement avec sys. dm_exec_sessions ou sys. dm_exec_requests à l’aide de **Cross Apply**.
+
+## <a name="examples"></a>Exemples
+
+### <a name="a-simple-example"></a>A. Exemple simple
+
+L’exemple suivant illustre le passage d’un ID de session (SPID) et d’un ID de demande à la fonction.
+
+```sql
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
-```  
-  
-### <a name="b-using-cross-apply-to-additional-information"></a>B. À l’aide de s’appliquent à des informations supplémentaires  
- L’exemple suivant répertorie le tampon d’entrée pour les sessions avec l’id de session supérieur à 50.  
-  
-```sql  
-SELECT es.session_id, ib.event_info   
-FROM sys.dm_exec_sessions AS es  
-CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  
+```
+
+### <a name="b-using-cross-apply-to-additional-information"></a>B. Utilisation de Cross Apply pour obtenir des informations supplémentaires
+
+L’exemple suivant répertorie la mémoire tampon d’entrée pour les sessions avec l’ID de session supérieur à 50.
+
+```sql
+SELECT es.session_id, ib.event_info
+FROM sys.dm_exec_sessions AS es
+CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib
 WHERE es.session_id > 50;
 GO
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
+```
+
+## <a name="see-also"></a>Voir aussi
+
+- [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

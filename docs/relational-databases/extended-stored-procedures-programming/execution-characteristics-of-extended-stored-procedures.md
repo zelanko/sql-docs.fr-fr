@@ -1,6 +1,5 @@
 ---
-title: Caractéristiques d’exécution des procédures stockées étendues | Microsoft Docs
-ms.custom: ''
+title: Caractéristiques d’exécution des procédures stockées étendues
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26a5653610f0c950c2d73af603bd95ccfeda4b76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064347"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095989"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Caractéristiques d'exécution des procédures stockées étendues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68064347"
   
  L'exécution d'une procédure stockée étendue présente les caractéristiques suivantes :  
   
--   La fonction de procédure stockée étendue est exécutée sous le contexte de sécurité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   La fonction de procédure stockée étendue est exécutée dans le contexte de sécurité de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   La fonction de procédure stockée étendue s'exécute dans l'espace de processus de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68064347"
   
 -  
   
- Une fois la procédure stockée étendue DLL est chargée, la DLL reste chargée dans l’espace d’adressage du serveur jusqu'à ce que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté ou l’administrateur décharge explicitement la DLL à l’aide de DBCC *nom_dll* (gratuit).  
+ Une fois la DLL de procédure stockée étendue chargée, la DLL reste chargée dans l’espace d’adressage du serveur jusqu’à ce que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soit arrêtée ou que l’administrateur décharge explicitement la DLL à l’aide de DBCC *DLL_name* (Free).  
   
  La procédure stockée étendue peut être exécutée à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] comme procédure stockée à l'aide de l'instruction EXECUTE :  
   
@@ -49,7 +49,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
   
 ## <a name="parameters"></a>Paramètres  
  \@ *retval*  
- Est une valeur de retour.  
+ Valeur de retour.  
   
  \@ *param1*  
  Paramètre d'entrée.  

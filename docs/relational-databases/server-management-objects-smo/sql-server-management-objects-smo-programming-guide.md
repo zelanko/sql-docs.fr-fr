@@ -1,6 +1,6 @@
 ---
-title: Guide de programmation SQL Server Management Objects (SMO) | Microsoft Docs
-ms.custom: ''
+title: Guide de programmation SMO (SQL Server Management Objects)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,25 +15,25 @@ ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd5a5e2aa8c9003c06ae80f1cf077a0f54f4e21
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148559"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095384"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guide de programmation SMO (SQL Server Management Objects)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les objets SMO (Management Objects) sont une collection d’objets conçus pour la programmation de tous [!INCLUDE[msCoName](../../includes/msconame-md.md)] les aspects de la gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. La collection d'objets RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) encapsule la gestion de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) est une collection d’objets conçus pour la programmation de tous les aspects de la gestion des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La collection d'objets RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) encapsule la gestion de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Rubrique|Description|  
 |-----------|-----------------|
 |[Prise en main dans SMO](getting-started-in-smo.md)|Fournit des informations sur la façon de commencer à développer une application SMO
 |[Création de programmes SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)<br /><br /> [Programmation de tâches spécifiques](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)|Fournit des informations sur la programmation des objets SMO dans les espaces de noms Microsoft.SqlServer.management, Microsoft.SqlServer.Management.NotificationServices, Microsoft.SqlServer.Management.Smo, Microsoft.SqlServer.Management.Smo.Agent, Microsoft.SqlServer.Management.Smo.Broker, Microsoft.SqlServer.Management.Smo.Mail, Microsoft.SqlServer.Management.Smo.RegisteredServers, Microsoft.SqlServer.Management.Smo.Wmi et Microsoft.SqlServer.Management.Trace.<br /><br /> Vous trouverez notamment des instructions pour écrire des programmes qui définissent des bases de données et qui gèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser les objets SMO pour créer des bases de données, effectuer des sauvegardes, créer des travaux, configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], affecter des autorisations et effectuer bien d'autres tâches d'administration.|  
-|[Documentation de la réplication pour les développeurs](../../relational-databases/replication/concepts/replication-developer-documentation.md)|Fournit des informations sur la programmation des objets RMO dans l'espace de noms Microsoft.SqlServer.Replication.|  
+|[Documentation pour le développeur de réplication](../../relational-databases/replication/concepts/replication-developer-documentation.md)|Fournit des informations sur la programmation des objets RMO dans l'espace de noms Microsoft.SqlServer.Replication.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Documentation de la réplication pour les développeurs](../../relational-databases/replication/concepts/replication-developer-documentation.md)  
+ [Documentation pour le développeur de réplication](../../relational-databases/replication/concepts/replication-developer-documentation.md)  
   
   
