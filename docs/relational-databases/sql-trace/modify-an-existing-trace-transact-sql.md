@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909462"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632995"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modifier une trace existante (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "72909462"
   
 2.  Pour modifier des événements de trace, exécutez **sp_trace_setevent** en spécifiant les modifications à l’aide des paramètres. Dans l'ordre, les paramètres sont les suivants :  
 
-    -   **@traceid** (ID de la trace)  
+    -   **\@traceid** (ID de trace)  
   
-    -   **@eventid** (ID d’événement)  
+    -   **\@eventid** (ID d’événement)  
   
-    -   **@columnid** (ID de la colonne)  
+    -   **\@columnid** (ID de la colonne)  
   
-    -   **@on** (ON)  
+    -   **\@on** (ACTIVÉ)  
   
-     Lorsque vous modifiez le paramètre **@on** , pensez à son interaction avec le paramètre **@columnid** :  
+     Lorsque vous modifiez le paramètre **\@on**, pensez à son interaction avec le paramètre **\@columnid** :  
   
     |ON|ID de la colonne|Résultats|  
     |--------|---------------|------------|  

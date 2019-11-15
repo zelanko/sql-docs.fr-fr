@@ -2,20 +2,20 @@
 title: Extension de virtualisation de données
 titleSuffix: Azure Data Studio
 description: Extension de virtualisation de données pour Azure Data Studio
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532548"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801131"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Extension de virtualisation de données pour Azure Data Studio
 
@@ -70,13 +70,13 @@ Pour installer l’extension de virtualisation de données, ouvrez Azure Data St
 
 ## <a name="release-notes-v0102"></a>Notes de publication (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Prise en charge de SQL Server 2019
-La prise en charge de SQL Server 2019 a été mise à jour. Après la connexion à une instance de cluster Big Data SQL Server, un nouveau dossier _Data Services_ s’affiche dans l’arborescence de l’explorateur. Ce dossier présente des points de lancement pour des actions telles que l’ouverture d’un nouveau notebook sur la connexion, l’envoi de travaux Spark et l’utilisation de HDFS. Certaines actions, telles que la _Création de données externes_ à partir d’un fichier/dossier HDFS, l’extension _SQL Server 2019 (préversion)_ doit être installée.
+La prise en charge de SQL Server 2019 a été mise à jour. Après la connexion à une instance de cluster Big Data SQL Server, un nouveau dossier _Data Services_ s’affiche dans l’arborescence de l’explorateur. Ce dossier présente des points de lancement pour des actions telles que l’ouverture d’un nouveau notebook sur la connexion, l’envoi de travaux Spark et l’utilisation de HDFS. Pour certaines actions, telles que la _Création de données externes_ à partir d’un fichier/dossier HDFS, l’extension _SQL Server 2019_ doit être installée.
 
 ### <a name="notebook-support"></a>Prise en charge des notebooks
 Nous avons apporté des mises à jour significatives à l’interface utilisateur du notebook dans cette version. Notre objectif était de faciliter la lecture des notebooks partagés avec vous. Cela signifiait la suppression de toutes les zones de contour autour des cellules, sauf si elles sont sélectionnées ou survolées, l’ajout de la prise en charge du pointage pour les actions sur des cellules uniques sans avoir besoin de sélectionner une cellule, la clarification de l’état d’exécution en ajoutant le nombre d’exécutions, un bouton _arrêter l’exécution_ animé et bien plus encore. Nous avons également ajouté des raccourcis clavier pour _Nouveau notebook_ (`Ctrl+Shift+N`), _Exécuter la cellule_ (`F5`),_Nouvelle cellule de code_ (`Ctrl+Shift+C`), _Nouvelle cellule de texte_ (`Ctrl+Shift+T`). Par la suite, nous allons faire en sorte que toutes les actions clés puissent être lancées par raccourci.
 
 Parmi les autres améliorations et correctifs figurent les suivants :
-* Maintenant, l’extension _SQL Server 2019 (préversion)_ invite les utilisateurs à choisir un répertoire d’installation pour les dépendances Python. En outre, Python n’est plus inclus dans le `.vsix file`, ce qui réduit la taille globale de l’extension. Les dépendances Python prennent en charge les noyaux Spark et Python3.
+* Maintenant, l’extension _SQL Server 2019_ invite les utilisateurs à choisir un répertoire d’installation pour les dépendances Python. En outre, Python n’est plus inclus dans le `.vsix file`, ce qui réduit la taille globale de l’extension. Les dépendances Python prennent en charge les noyaux Spark et Python3.
 * La prise en charge du lancement d’un nouveau notebook à partir de la ligne de commande a été ajoutée. Le lancement avec les arguments `--command=notebook.command.new --server=myservername` doit ouvrir un nouveau notebook et se connecter à ce serveur.
 * Correctifs de performances pour les notebooks avec une longueur de code conséquente dans les cellules. Si les cellules de code se trouvent sur plus de 250 lignes, une barre de défilement est ajoutée.
 * Prise en charge améliorée des fichiers .ipynb. Les versions 3 et ultérieures sont désormais prises en charge. Notez que, lors de l’enregistrement des fichiers, ces derniers sont mis à jour vers la version 4 ou ultérieure.

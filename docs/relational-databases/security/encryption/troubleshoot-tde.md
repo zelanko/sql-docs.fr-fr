@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903624"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727768"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903624"
 Cet article explique comment identifier et résoudre les problèmes d’accès à la clé Azure Key Vault ayant configuré une base de données pour utiliser [Transparent Data Encryption (TDE) avec les clés managées par le client dans Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) pour devenir inaccessible.
 
 ## <a name="introduction"></a>Introduction
-Lorsque TDE est configuré pour utiliser une clé managée par le client dans Azure Key Vault, l’accès en continu à ce protecteur TDE est requis pour que la base de données reste en ligne.  Si le serveur SQL logique perd l’accès au protecteur TDE managé par le client dans Azure Key Vault, une base de données rejette toutes les connexions et ne s’affiche pas dans le Portail Azure.
+Lorsque TDE est configuré pour utiliser une clé managée par le client dans Azure Key Vault, l’accès en continu à ce protecteur TDE est nécessaire pour que la base de données reste en ligne.  Si le serveur SQL logique perd l’accès au protecteur TDE managé par le client dans Azure Key Vault, une base de données se mettra à rejeter toutes les connexions en affichant le message d’erreur associé, et son état passera à *Inaccessible* dans le portail Azure.
 
-Pour les 48 premières heures, si le problème d’accès à la clé Azure Key Vault sous-jacent est résolu, la base de données est automatiquement corrigée et mise en ligne.  Cela signifie que pour tous les scénarios de panne réseau intermittente et temporaire, aucune action de l’utilisateur n’est requise et la base de données est automatiquement mise en ligne.  Dans la plupart des cas, l’action de l’utilisateur est nécessaire pour résoudre le problème d’accès à la clé du coffre de clés sous-jacent. 
+Dans les 8 premières heures, si le problème d’accès à la clé Azure Key Vault sous-jacent est résolu, la base de données est automatiquement corrigée et mise en ligne. Cela signifie que pour tous les scénarios de panne réseau intermittente et temporaire, aucune action de l’utilisateur n’est requise et la base de données est automatiquement mise en ligne. Dans la plupart des cas, l’action de l’utilisateur est nécessaire pour résoudre le problème d’accès à la clé du coffre de clés sous-jacent. 
 
-Si une base de données inaccessible n’est plus nécessaire, elle peut être supprimée immédiatement pour arrêter les coûts.  Toutes les autres actions sur la base de données ne sont pas autorisées tant que l’accès à la clé Azure Key Vault n’a pas été restauré et que la base de données est de nouveau en ligne.   La modification de l’option TDE à partir des clés managées par le client sur le serveur n’est pas non plus prise en charge lorsqu’une base de données chiffrée avec des clés managées par le client est inaccessible. Cela est nécessaire pour protéger les données contre tout accès non autorisé, tandis que les autorisations sur le protecteur TDE ont été révoquées. 
+Si une base de données inaccessible n’est plus nécessaire, elle peut être supprimée immédiatement pour arrêter les coûts. Toutes les autres actions sur la base de données ne sont pas autorisées tant que l’accès à la clé Azure Key Vault n’a pas été restauré et que la base de données est de nouveau en ligne. La modification de l’option TDE à partir des clés managées par le client sur le serveur n’est pas non plus possible lorsqu’une base de données chiffrée avec des clés managées par le client est inaccessible. Cela est nécessaire pour protéger les données contre tout accès non autorisé, tandis que les autorisations sur le protecteur TDE ont été révoquées. 
 
-Une fois qu’une base de données est inaccessible depuis plus de 48 heures, elle n’est plus automatiquement corrigée.  Si l’accès requis pour la clé Azure Key Vault a été restauré, vous devez revalider l’accès manuellement pour remettre la base de données en ligne.  Remettre la base de données en ligne après une période d’inaccessibilité de 48 heures peut prendre beaucoup de temps en fonction de la taille de la base de données et nécessite actuellement un ticket de support. Une fois la base de données de nouveau en ligne, des paramètres précédemment configurés tels que le géolien si la récupération d’urgence géographique a été configurée, l’historique de récupération jusqu’à une date et heure et les étiquettes seront perdus.  Par conséquent, nous vous recommandons d’implémenter un système de notification à l’aide de [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) qui permettent de traiter les problèmes de coffre de clés sous-jacents dans un délai de 48 heures. 
-
+Lorsqu’une base de données est inaccessible pendant plus de 8 heures, elle ne peut plus être corrigée automatiquement. Si l’accès à la clé Azure Key Vault a été restauré après cette période, vous devez revalider l’accès manuellement pour remettre la base de données en ligne. Dans ce cas, la remise en ligne de la base de données peut être très longue, selon la taille de la base de données. En outre, cela nécessite la création d’un ticket de support. Une fois la base de données de nouveau en ligne, des paramètres précédemment configurés tels que le géolien si la récupération d’urgence géographique a été configurée, l’historique de récupération jusqu’à une date et heure et les étiquettes seront perdus. Par conséquent, nous vous recommandons d’implémenter un système de notifications à l’aide de [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) qui permettent d’être informé et de traiter les problèmes sous-jacents d’accès aux clés dès que possible. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erreurs courantes provoquant l’inaccessibilité des bases de données
 
@@ -176,13 +175,13 @@ Description : La base de données a perdu l’accès à la clé du coffre de cl
 
  
 
-**Événement lorsque le délai d’attente de 48 heures pour la correction automatique commence** 
+**Événement lorsque le délai d’attente de 8 heures pour la réparation spontanée commence** 
 
 EventName : MakeDatabaseInaccessible 
 
 État : InProgress 
 
-Description : La base de données attend que l’accès à la clé du coffre de clés Azure soit rétabli par l’utilisateur dans un délai de 48 heures.   
+Description : La base de données attend que l’accès à la clé du coffre de clés Azure soit rétabli par l’utilisateur dans un délai de 8 heures.   
 
  
 
@@ -196,7 +195,7 @@ Description : L’accès de la base de données à la clé du coffre de clés A
 
  
 
-**Événement lorsque le problème n’a pas été résolu dans le délai de 48 heures et que l’accès à la clé Azure Key Vault doit être validé manuellement** 
+**Événement lorsque le problème n’a pas été résolu dans le délai de 8 heures et que l’accès à la clé Azure Key Vault doit être validé manuellement** 
 
 EventName : MakeDatabaseInaccessible 
 

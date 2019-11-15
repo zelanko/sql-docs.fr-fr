@@ -1,7 +1,7 @@
 ---
 title: Déployer avec un script Python
-titleSuffix: SQL Server big data clusters
-description: Découvrez comment utiliser un script de déploiement pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (préversion) sur AKS (Azure Kubernetes Service).
+titleSuffix: SQL Server Big Data Clusters
+description: Découvrez comment utiliser un script de déploiement pour déployer des clusters Big Data SQL Server sur Azure Kubernetes Service (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531931"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706354"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Utiliser un script Python pour déployer un cluster Big Data SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -80,8 +80,6 @@ Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce scri
    | **Nom du cluster** | Nom du cluster AKS et du cluster Big Data. Le nom de votre cluster Big Data ne doit contenir que des caractères alphanumériques minuscules et aucun espace. (**sqlbigdata** par défaut). |
    | **Mot de passe** | Mot de passe pour le contrôleur, la passerelle HDFS/Spark et l’instance principale (**MySQLBigData2019** par défaut). |
    | **Nom d’utilisateur** | Nom d’utilisateur de l’utilisateur du contrôleur (**admin** par défaut). |
-
-Les paramètres suivants étaient obligatoires pour les participants au programme Utilisateur précoce du cluster Big Data SQL Server 2019 : **Nom d’utilisateur Docker** et **Mot de passe Docker**. À partir de CTP 3.2, ils ne sont plus nécessaires.
 
    > [!IMPORTANT]
    > La taille de machine **Standard_L8s** par défaut peut ne pas être disponible dans toutes les régions Azure. Si vous sélectionnez une autre taille de machine, veillez à ce que le nombre total de disques pouvant être attachés sur les nœuds du cluster soit supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, le cluster Big Data nécessite 24 revendications de volumes persistants. Par exemple, la taille de machine [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) prend en charge 32 disques attachés : vous pouvez donc évaluer les clusters Big Data avec un seul nœud de cette taille de machine.

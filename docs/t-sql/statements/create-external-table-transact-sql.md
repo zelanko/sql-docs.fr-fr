@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227149"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882385"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -105,7 +105,7 @@ Si vous spécifiez LOCATION comme étant un dossier, une requête PolyBase qui s
 
 Dans cet exemple, si LOCATION='/webdata/', une requête PolyBase retourne des lignes à partir de mydata.txt et mydata2.txt. Il ne retourne pas les données de mydata3.txt, car il se trouve dans un sous-dossier d’un dossier masqué. Il ne retourne pas non plus _hidden.txt car il s’agit d’un fichier masqué.
 
-![Données récursives pour tables externes](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Données récursives pour tables externes")
+![Données récursives pour les tables externes](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Données récursives pour les tables externes")
 
 Pour modifier la valeur par défaut et uniquement lire les données du dossier racine, définissez l’attribut \<polybase.recursive.traversal> sur 'false' dans le fichier de configuration core-site.xml. Ce fichier se trouve sous `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Par exemple, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>Présentation : Azure SQL Database
 
-Dans Azure SQL Database, une table externe est créée pour les [requêtes élastiques](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) en vue d’une utilisation avec Azure SQL Database.
-
-Utilisez une table externe pour créer une table externe à utiliser avec une requête élastique.
+Dans Azure SQL Database, une table externe est créée pour les [requêtes élastiques (en préversion)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
 Voir également [CRÉER UNE SOURCE DE DONNÉES EXTERNES](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -661,7 +659,7 @@ Vous pouvez créer plusieurs tables externes qui référencent les mêmes source
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 
-Dans la mesure où les données d’une table externe se situent dans une autre SQL Database, elles peuvent être modifiées ou supprimées à tout moment. Par conséquent, il n’est pas garanti que les résultats d’une requête exécutée sur une table externe soient déterministes. La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
+L’accès aux données par le biais d’une table externe n’est pas conforme à la sémantique d’isolation dans SQL Server. Cela signifie que l’interrogation d’une table externe n’impose pas de verrouillage ni d’isolation des instantanés et que, par conséquent, les données retournées peuvent changer si les données dans la source de données externe sont modifiées.  La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
 
 Vous pouvez créer plusieurs tables externes qui référencent chacune des sources de données externes différentes.
 
@@ -674,6 +672,24 @@ Les constructions et les opérations suivantes ne sont pas prises en charge :
 
 - La contrainte DEFAULT sur les colonnes de table externe
 - Les opérations DML delete, insert et update
+
+Seuls les prédicats littéraux définis dans une requête peuvent être envoyés (push down) vers la source de données externe. Cela diffère des serveurs liés et de l’accès où les prédicats définis au moment de l’exécution de la requête peuvent être utilisés, par exemple, en combinaison avec une boucle imbriquée dans un plan de requête. Le plus souvent, il en résulte que toute la table externe est copiée localement avant d’être jointe.    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+Avec les tables externes, vous ne pouvez pas utiliser le parallélisme dans le plan de requête.
+
+Les tables externes étant implémentées sous forme de requête sur source distante, le nombre estimé de lignes retournées est généralement de 1 000, et d’autres règles basées sur le type de prédicat sont utilisées pour filtrer la table externe. Il s’agit d’estimations basées sur des règles au lieu d’estimations basées sur les données réelles contenues dans la table externe. L’optimiseur n’accède pas à la source de données distante pour obtenir une estimation plus précise.
 
 ## <a name="locking"></a>Verrouillage
 
@@ -761,7 +777,7 @@ Si vous spécifiez LOCATION comme étant un dossier, une requête PolyBase qui s
 
 Dans cet exemple, si LOCATION='/webdata/', une requête PolyBase retourne des lignes à partir de mydata.txt et mydata2.txt. Il ne retourne pas les données de mydata3.txt, car il se trouve dans un sous-dossier d’un dossier masqué. Il ne retourne pas non plus _hidden.txt car il s’agit d’un fichier masqué.
 
-![Données récursives pour tables externes](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Données récursives pour tables externes")
+![Données récursives pour les tables externes](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Données récursives pour les tables externes")
 
 Pour modifier la valeur par défaut et uniquement lire les données du dossier racine, définissez l’attribut \<polybase.recursive.traversal> sur 'false' dans le fichier de configuration core-site.xml. Ce fichier se trouve sous `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Par exemple, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -986,7 +1002,7 @@ Si vous spécifiez LOCATION comme étant un dossier, une requête PolyBase qui s
 
 Dans cet exemple, si LOCATION='/webdata/', une requête PolyBase retourne des lignes à partir de mydata.txt et mydata2.txt. Il ne retourne pas les données de mydata3.txt, car il se trouve dans un sous-dossier d’un dossier masqué. Il ne retourne pas non plus _hidden.txt car il s’agit d’un fichier masqué.
 
-![Données récursives pour tables externes](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Données récursives pour tables externes")
+![Données récursives pour les tables externes](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Données récursives pour les tables externes")
 
 Pour modifier la valeur par défaut et uniquement lire les données du dossier racine, définissez l’attribut \<polybase.recursive.traversal> sur 'false' dans le fichier de configuration core-site.xml. Ce fichier se trouve sous `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Par exemple, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 

@@ -1,7 +1,7 @@
 ---
 title: Extension de déploiement d’application
 titleSuffix: SQL Server big data clusters
-description: Déployez un script Python ou R en tant qu' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] application sur (version préliminaire).
+description: Déployez un script Python ou R en tant qu’application sur des clusters Big Data SQL Server.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49a59650c406e3b48394da45ad0eeb4589fc4374
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653595"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707142"
 ---
-# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Comment utiliser Visual Studio Code pour déployer des applications sur[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Comment utiliser Visual Studio Code pour déployer des applications sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment déployer des applications sur un cluster SQL Server Big Data à l’aide d’Microsoft Visual Studio code avec l’extension de déploiement d’application. Cette fonctionnalité a été introduite dans CTP 2.3. 
+Cet article explique comment déployer des applications sur un cluster Big Data SQL Server en utilisant Microsoft Visual Studio Code avec l’extension de déploiement d’application.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Cluster SQL Server Big Data](big-data-cluster-overview.md) CTP 2,3 ou version ultérieure
+- [Cluster Big Data SQL Server](big-data-cluster-overview.md)
 
-## <a name="capabilities"></a>Fonctionnalités
+## <a name="capabilities"></a>Fonctions
 
 Cette extension prend en charge les tâches suivantes dans Visual Studio Code :
 
@@ -44,11 +44,11 @@ Les sections suivantes vous guident tout au long du processus d’installation e
 
 ### <a name="install"></a>Installation
 
-Installez d’abord l’extension de déploiement d’application dans Visual Studio Code:
+Installez d’abord l’extension de déploiement d’application dans Visual Studio Code :
 
-1. Téléchargez l' [extension de déploiement d’application](https://aka.ms/app-deploy-vscode) pour installer l’extension dans le cadre de Visual Studio code.
+1. Téléchargez l’[extension de déploiement d’application](https://aka.ms/app-deploy-vscode) pour installer l’extension comme composant de Visual Studio Code.
 
-1. Lancez Visual Studio Code et accédez au volet extensions.
+1. Lancez Visual Studio Code et accédez à la barre latérale Extensions.
 
 1. Cliquez sur le `…`menu contextuel en haut de la barre latérale et sélectionnez `Install from vsix`.
 
@@ -56,7 +56,7 @@ Installez d’abord l’extension de déploiement d’application dans Visual St
 
 1. Recherchez le fichier `sqlservbdc-app-deploy.vsix` que vous avez téléchargé et choisissez-le pour l’installer.
 
-Une fois que le SQL Server Big Data extension du déploiement de l’application de cluster a été installé, il vous invite à recharger Visual Studio Code. Vous devez maintenant voir le SQL Server l’Explorateur d’applications BDC dans la barre latérale Visual Studio Code.
+Une fois que l’extension de déploiement d’application du cluster Big Data SQL Server a été installée, elle vous invite à recharger Visual Studio Code. Vous devez maintenant voir l’Explorateur d’applications du cluster Big Data SQL Server dans la barre latérale de Visual Studio Code.
 
 ### <a name="app-explorer"></a>Explorateur d’applications
 
@@ -73,7 +73,7 @@ Pour vous connecter au point de terminaison du cluster, utilisez une des méthod
 
 Visual Studio Code demande le point de terminaison, le nom d’utilisateur et le mot de passe appropriés.
 
-Le point de terminaison à connecter `Cluster Management Service` est le point de terminaison avec le port 30080.
+Le point de terminaison auquel se connecter est le point de terminaison de `Cluster Management Service` avec le port 30080.
 
 Vous pouvez également trouver ce point de terminaison à partir de la ligne de commande via 
 
@@ -81,23 +81,23 @@ Vous pouvez également trouver ce point de terminaison à partir de la ligne de 
 azdata bdc endpoint list
 ```
 
-L’une des autres méthodes permettant d’obtenir ces informations consiste à cliquer avec le bouton droit sur **gérer** sur le serveur dans Azure Data Studio où vous trouverez les points de terminaison des services listés.
+Une des autres méthodes permettant d’obtenir ces informations est de cliquer avec le bouton droit sur **Gérer** sur le serveur dans Azure Data Studio où se trouvent les points de terminaison des services listés.
 
-![Point de terminaison ADS](media/vs-extension/ads_end_point.png)
+![Point de terminaison Azure Data Studio](media/vs-extension/ads_end_point.png)
 
 Une fois que vous avez trouvé le point de terminaison à utiliser, connectez-vous au cluster.
 
 ![Nouvelle connexion](media/vs-extension/connect_to_cluster.png)
 
- Si vous avez spécifié les informations d’identification et le point de terminaison d’application corrects, Visual Studio Code vous avertit que vous êtes connecté au cluster et que toutes les applications déployées sont renseignées dans la barre latérale. Si vous avez réussi à vous connecter, votre point de terminaison et votre nom d’utilisateur sont enregistrés dans `./sqldbc` dans le cadre de votre profil utilisateur. Aucun mot de passe ou jeton ne sera jamais enregistré. Quand vous vous reconnectez, l’invite est préremplie avec votre hôte et votre nom d’utilisateur enregistrés, mais vous devez toujours entrer un mot de passe. Si vous voulez vous connecter à un autre point de terminaison du cluster, recliquez simplement sur `New Connection`. La connexion se fermera automatiquement si vous fermez Visual Studio Code ou si vous ouvrez un autre espace de travail et que vous devrez vous reconnecter.
+ Si vous avez spécifié les informations d’identification et le point de terminaison d’application corrects, Visual Studio Code vous indique que vous êtes connecté au cluster : vous voyez alors les applications déployées dans la barre latérale. Si vous avez réussi à vous connecter, votre point de terminaison et votre nom d’utilisateur sont enregistrés dans `./sqldbc` dans le cadre de votre profil utilisateur. Aucun mot de passe ou jeton ne sera jamais enregistré. Quand vous vous reconnectez, l’invite est préremplie avec votre hôte et votre nom d’utilisateur enregistrés, mais vous devez toujours entrer un mot de passe. Si vous voulez vous connecter à un autre point de terminaison du cluster, recliquez simplement sur `New Connection`. La connexion se ferme automatiquement si vous fermez Visual Studio Code ou si vous ouvrez un autre espace de travail : vous devrez alors vous reconnecter.
 
 ### <a name="app-template"></a>Modèle d’application
 
-Vous devez *ouvrir l’espace de travail* dans Visual Studio code où vous allez enregistrer les artefacts de l’application.
+Vous devez *ouvrir l’espace de travail* dans Visual Studio Code là où vous allez enregistrer les artefacts de l’application.
 
-Pour déployer une nouvelle application à partir d’un de nos modèles, cliquez sur le bouton `New App Template` dans le volet `App Specifications`, où vous serez invité à entrer le nom, le runtime et l’emplacement où vous voulez placer la nouvelle application sur votre machine locale. Le nom et la version que vous fournissez doivent être une étiquette DNS-1035 et doivent comporter des caractères alphanumériques minuscules ou'-', commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
+Pour déployer une nouvelle application à partir d’un de nos modèles, cliquez sur le bouton `New App Template` dans le volet `App Specifications`, où vous serez invité à entrer le nom, le runtime et l’emplacement où vous voulez placer la nouvelle application sur votre machine locale. Le nom et la version que vous spécifiez doivent être une étiquette DNS-1035 et contenir des caractères alphanumériques minuscules ou « - », commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
 
-Il est recommandé de le placer dans votre espace de travail Visual Studio Code actuel afin que vous puissiez utiliser toutes les fonctionnalités de l’extension, mais vous pouvez le placer n’importe où dans votre système de fichiers local.
+Il est recommandé de les placer dans votre espace de travail Visual Studio Code actuel pour pouvoir utiliser toutes les fonctionnalités de l’extension, mais vous pouvez les placer n’importe où dans votre système de fichiers local.
 
 ![Modèle de nouvelle application](media/vs-extension/new_app_template.png)
 
@@ -105,7 +105,7 @@ Une fois l’opération terminée, un modèle de nouvelle application est struct
 
 ![Modèle d’application chargé](media/vs-extension/loading_app_template.png)
 
-Le modèle est une application `helloworld` simple présentée comme suit dans le volet spécifications de l’application:
+Le modèle est une application `helloworld` simple que se présente comme suit dans le volet Spécifications de l’application :
 
 - **spec.yaml**
    - Indique au cluster comment déployer votre application
@@ -114,7 +114,7 @@ Le modèle est une application `helloworld` simple présentée comme suit dans l
 
 Le code source de l’application se trouve dans le dossier de l’espace de travail.
 
-- **nom du fichier source**
+- **Nom du fichier source**
    - Il s’agit de votre fichier de code source tel que spécifié par `src` dans `spec.yaml`
    - Il a une seule fonction appelée `handler`, qui est considérée comme `entrypoint` de l’application, comme montré dans `spec.yaml`. Elle prend une entrée de chaîne appelée `msg` et retourne une sortie de chaîne appelée `out`. Celles-ci sont spécifiées dans `inputs` et `outputs` du fichier `spec.yaml`.
 
@@ -151,7 +151,7 @@ Vous pouvez voir dans la barre latérale toutes les applications que vous avez d
   - fichier Swagger
   - détails
 
-Si vous cliquez `Links`sur, vous verrez que vous pouvez accéder `swagger.json` à l’de votre application déployée, afin de pouvoir écrire vos propres clients qui appellent votre application:
+Si vous cliquez sur `Links`, vous voyez que vous pouvez accéder au fichier `swagger.json` de votre application déployée, ce qui vous permet d’écrire vos propres clients qui appellent votre application :
 
 ![Fichier Swagger](media/vs-extension/swagger.png)
 
@@ -167,7 +167,7 @@ Spécifiez une chaîne que vous voulez à la place de `hello`, puis réexécutez
 
 ![Obtenir une spécification d’exécution](media/vs-extension/get_run_spec.png)
 
-Une fois que vous en avez une et que vous l’avez modifiée à votre convenance, exécutez-la. Visual Studio Code retourne les commentaires appropriés lorsque l’exécution de l’application est terminée:
+Une fois que vous en avez une et que vous l’avez modifiée à votre convenance, exécutez-la. Visual Studio Code retourne le feedback approprié quand l’exécution de l’application est terminée :
 
 ![Sortie de l’application](media/vs-extension/app_output.png)
 
@@ -184,7 +184,7 @@ Lors de l’appel d’une application déployée, si des paramètres d’entrée
 - Vecteur
     - `inputs:`
         - `x: [1, 2, 3]`
-- Matrix
+- Matrice
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
 - Object
@@ -199,9 +199,9 @@ Pour supprimer une application, cliquez simplement sur le bouton Corbeille en re
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Découvrez comment intégrer des applications déployées [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans vos propres applications pour [utiliser des applications sur des clusters Big Data](big-data-cluster-consume-apps.md) pour plus d’informations. Vous pouvez également vous reporter aux exemples supplémentaires de [Exemples de déploiement d’applications](https://aka.ms/sql-app-deploy) pour essayer l’extension.
+Pour plus d’informations, découvrez comment intégrer des applications déployées sur des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans vos propres applications en consultant [Consommer des applications sur des clusters Big Data](big-data-cluster-consume-apps.md). Vous pouvez également vous reporter aux exemples supplémentaires de [Exemples de déploiement d’applications](https://aka.ms/sql-app-deploy) pour essayer l’extension.
 
-Pour plus d’informations [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sur, consultez [que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sont?](big-data-cluster-overview.md).
+Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md).
 
 
 Notre objectif est de rendre cette extension pratique à utiliser : nous apprécions donc votre feedback. Envoyez-le à l’[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]équipe](https://aka.ms/sqlfeedback).

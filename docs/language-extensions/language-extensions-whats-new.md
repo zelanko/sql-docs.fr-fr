@@ -1,22 +1,22 @@
 ---
-title: Nouveautés concernant les extensions de langage
-titleSuffix: SQL Server Language Extensions
-description: Découvrez les nouveautés concernant les extensions de langage SQL Server 2019.
+title: Nouveautés des extensions de langage SQL Server
+titleSuffix: ''
+description: Découvrez les nouveautés des extensions de langage SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13a6a0181297fcb05274ba4be726c4e10a445064
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589013"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658801"
 ---
-# <a name="what-new-in-sql-server-language-extensions"></a>Nouveautés concernant les extensions de langage SQL Server
+# <a name="whats-new-in-sql-server-language-extensions"></a>Nouveautés des extensions de langage SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Des fonctionnalités propres aux [extensions de langage](language-extensions-overview.md) sont ajoutées à chaque version de SQL Server, car nous continuons à développer, étendre et approfondir l’intégration entre les langages externes et la plateforme de données. 

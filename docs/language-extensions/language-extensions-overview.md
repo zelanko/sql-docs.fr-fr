@@ -1,22 +1,22 @@
 ---
-title: Que sont les extensions de langage ?
-titleSuffix: SQL Server Language Extensions
-description: Découvrez les extensions de langage SQL Server 2019 (préversion) et apprenez à exécuter des scripts externes dans SQL Server.
+title: Présentation des extensions de langage SQL Server
+titleSuffix: ''
+description: Les extensions de langage sont une fonctionnalité de SQL Server utilisée pour l’exécution de code externe. Dans SQL Server 2019, Java est pris en charge. Les données relationnelles peuvent être utilisées dans le code externe avec le framework d’extensibilité.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589023"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658827"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>Que sont les extensions de langage SQL Server (préversion) ?
+# <a name="what-is-sql-server-language-extensions"></a>Présentation des extensions de langage SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Les extensions de langage sont une fonctionnalité de SQL Server utilisée pour l’exécution de code externe. Les données relationnelles peuvent être utilisées dans le code externe à l’aide du [framework d’extensibilité](concepts/extensibility-framework.md).

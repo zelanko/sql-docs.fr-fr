@@ -1,7 +1,7 @@
 ---
 title: DROP WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -16,24 +16,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP WORKLOAD CLASSIFIER statement
-ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 92e853a1d54c91b43d166555162f77030e07b9e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5db3c50e4b0a21e2e1acf9512995870b62375dd8
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072030"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632830"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Supprime un classifieur de gestion des charges de travail défini par l’utilisateur existant.  
+Supprime un classifieur de gestion des charges de travail défini par l’utilisateur existant.  Si des requêtes sont en cours d’exécution ou se trouvent dans la file d’attente des requêtes dans l’état suspendu, elles conserveront leur classification et le classifieur peut être supprimé immédiatement. La suppression et la recréation du classifieur avec une importance différente n’affectent pas une requête déjà classifiée.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe  
 
@@ -44,14 +43,8 @@ DROP WORKLOAD CLASSIFIER classifier_name;
 ## <a name="arguments"></a>Arguments
 
 *classifier_name*  
-Spécifie le nom qui identifie le classifieur de charge de travail.  classifier_name est de type sysname.  Il peut comporter jusqu’à 128 caractères et doit être unique dans l’instance.
+Spécifie le nom qui identifie le classifieur de charge de travail.
   
-## <a name="remarks"></a>Notes
-
-L’instruction DROP WORKLOAD CLASSIFIER n’est pas autorisée sur les classifieurs de charge de travail système.
-
-Si des requêtes sont en cours d’exécution ou se trouvent dans la file d’attente des requêtes dans l’état suspendu, elles conserveront leur classification et le classifieur peut être supprimé immédiatement.  La suppression et la recréation du classifieur avec une importance différente n’affectent pas une requête déjà classifiée.
-
 ## <a name="permissions"></a>Autorisations
 
 Exige l’autorisation CONTROL DATABASE.  

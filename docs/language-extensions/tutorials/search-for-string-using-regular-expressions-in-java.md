@@ -1,29 +1,28 @@
 ---
-title: 'Tutoriel : Rechercher une chaîne à l’aide d’expressions régulières (regex) dans Java'
-titleSuffix: SQL Server Language Extensions
-description: Ce tutoriel vous montre comment utiliser des extensions de langage SQL Server et exécuter du code Java qui recherche une chaîne avec des expressions régulières.
+title: 'Tutoriel : Recherche de chaînes d’expressions régulières dans Java'
+description: Ce tutoriel vous montre comment utiliser les extensions de langage SQL Server et comment exécuter du code Java qui recherche une chaîne avec des expressions régulières (regex).
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589003"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658789"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Tutoriel : Rechercher une chaîne à l’aide d’expressions régulières (regex) dans Java
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Ce tutoriel vous montre comment utiliser les [extensions de langage SQL Server](../language-extensions-overview.md) pour créer une classe Java qui reçoit deux colonnes (ID et text) de SQL Server et une expression régulière comme paramètre d’entrée. La classe retourne deux colonnes à SQL Server (ID et text).
+Ce tutoriel vous montre comment utiliser les [extensions de langage SQL Server](../language-extensions-overview.md) pour créer une classe Java qui reçoit deux colonnes (ID et text) de SQL Server et une expression régulière (regex) comme paramètre d’entrée. La classe retourne deux colonnes à SQL Server (ID et text).
 
 Pour un texte donné dans la colonne de texte envoyée à la classe Java, le code vérifie si l’expression régulière donnée est satisfaite, puis retourne ce texte avec l’ID d’origine.
 
-Cet exemple utilise une expression régulière qui vérifie si un texte contient le mot « Java » ou « java ».
+Cet exemple de code utilise une expression régulière qui vérifie si un texte contient le mot « Java » ou « java ».
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 

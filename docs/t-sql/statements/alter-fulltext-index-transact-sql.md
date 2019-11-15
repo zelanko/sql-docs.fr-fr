@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067532"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049960"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Modifie les propriétés d’un index de recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ ALTER FULLTEXT INDEX ON table_name
  Spécifie si les modifications (mises à jour, suppressions ou insertions) apportées aux colonnes de table couvertes par l’index de recherche en texte intégral seront propagées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’index de recherche en texte intégral. Les modifications apportées aux données via WRITETEXT et UPDATETEXT ne sont pas répercutées dans l'index de recherche en texte intégral et ne sont pas prises en compte par le suivi des modifications.  
   
 > [!NOTE]  
->  Pour plus d'informations sur l'interaction entre le suivi des modifications et WITH NO POPULATION, consultez la section « Remarques », plus loin dans cette rubrique.  
+>  Pour plus d’informations, consultez [Interactions entre le suivi des modifications et le paramètre NO POPULATION](#change-tracking-no-population).
   
  MANUAL  
  Spécifie que les modifications suivies sont propagées manuellement en appelant l’instruction ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] (*alimentation manuelle*). Vous pouvez utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour appeler régulièrement cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON table_name
  Utilisez TYPE COLUMN et LANGUAGE avec la clause ADD pour définir ces propriétés sur *column_name*. Lorsqu'une colonne est ajoutée, l'index de texte intégral de la table doit être à nouveau rempli pour que les requêtes de texte intégral fonctionnent dans la colonne en question.  
   
 > [!NOTE]  
->  Le remplissage de l'index de recherche en texte intégral après l'ajout ou la suppression d'une colonne dans un index de recherche en texte intégral dépend de l'activation du suivi des modifications et si WITH NO POPULATION est spécifié. Pour plus d'informations, consultez la section « Remarques » plus loin dans cette rubrique.  
+>  Le remplissage de l'index de recherche en texte intégral après l'ajout ou la suppression d'une colonne dans un index de recherche en texte intégral dépend de l'activation du suivi des modifications et si WITH NO POPULATION est spécifié. Pour plus d’informations, consultez [Interactions entre le suivi des modifications et le paramètre NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
  Spécifie le nom d’une colonne de table, *type_column_name*, utilisée pour contenir le type de document d’un document **varbinary**, **varbinary(max)** ou **image**. Cette colonne,appelée colonne de type, contient une extension de fichier fourni par l'utilisateur (.doc, .pdf, .xls, et ainsi de suite). La colonne doit être de type **char**, **nchar**, **varchar**ou **nvarchar**.  
@@ -138,7 +138,7 @@ ALTER FULLTEXT INDEX ON table_name
  Si vous spécifiez WITH NO POPULATION alors que CHANGE_TRACKING est activé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie une erreur. Si vous ne spécifiez pas WITH NO POPULATION et que CHANGE_TRACKING est activé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procède à un remplissage complet de l’index.  
   
 > [!NOTE]  
->  Pour plus d'informations sur l'interaction entre le suivi des modifications et WITH NO POPULATION, consultez la section « Remarques », plus loin dans cette rubrique.  
+>  Pour plus d’informations, consultez [Interactions entre le suivi des modifications et le paramètre NO POPULATION](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -194,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  L'ajout d'une liste de propriétés de recherche à un index de recherche en texte intégral nécessite le remplissage de l'index pour indexer les propriétés de recherche inscrites pour la liste de propriétés de recherche associée. Si vous spécifiez WITH NO POPULATION lorsque vous ajoutez la liste des propriétés de recherche, vous devrez effectuer un remplissage sur l'index, à un moment approprié.  
   
 > [!IMPORTANT]  
->  Si l'index de recherche en texte intégral était associé précédemment à une recherche différente, il doit être reconstruit suite au changement de la liste de propriétés pour remettre l'index dans un état cohérent. L'index est immédiatement tronqué et reste vide jusqu'à ce qu'à l'exécution du remplissage complet. Pour plus d'informations sur les circonstances dans lesquelles la modification de la liste des propriétés de recherche provoque une reconstruction, consultez la section « Notes » dans la suite de cette rubrique.  
+>  Si l'index de recherche en texte intégral était associé précédemment à une recherche différente, il doit être reconstruit suite au changement de la liste de propriétés pour remettre l'index dans un état cohérent. L'index est immédiatement tronqué et reste vide jusqu'à ce qu'à l'exécution du remplissage complet. Pour plus d’informations, consultez [La modification de la liste des propriétés de recherche provoque la reconstruction de l’index](#change-search-property-rebuild-index). 
   
 > [!NOTE]  
 >  Vous pouvez associer une liste de propriétés de recherche donnée à plusieurs index de recherche en texte intégral dans la même base de données.  
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Pour plus d’informations sur les listes de propriétés de recherche, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interactions entre le suivi des modifications et le paramètre NO POPULATION  
+## <a name="change-tracking-no-population"></a> Interactions entre le suivi des modifications et le paramètre NO POPULATION  
  Le remplissage de l'index de recherche en texte intégral dépend de l'activation du suivi des modifications et varie selon que WITH NO POPULATION est spécifié ou non dans l'instruction ALTER FULLTEXT INDEX. Le tableau suivant résume le résultat de leur interaction.  
   
 |Suivi des modifications|WITH NO POPULATION|Résultats|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Pour plus d’informations sur l’alimentation d’index les index de recherche en texte intégral, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>La modification de la liste des propriétés de recherche provoque la reconstruction de l'index  
+## <a name="change-search-property-rebuild-index"></a> La modification de la liste des propriétés de recherche provoque la reconstruction de l’index  
  La première fois qu'un index de recherche en texte intégral est associé à une liste de propriétés de recherche, l'index doit faire l'objet d'un nouveau remplissage afin d'indexer des termes de recherche spécifiques aux propriétés. Les données d'index existantes ne sont pas tronquées.  
   
  Toutefois, si vous associez l'index de recherche en texte intégral à une liste de propriétés différente, l'index est reconstruit. La reconstruction tronque immédiatement l'index de recherche en texte intégral, en supprimant toutes les données existantes, et l'index doit être de nouveau rempli. Pendant le remplissage, les requêtes de texte intégral sur la table de base recherchent uniquement les lignes de table qui ont déjà été indexées par le remplissage. Les données d'index remplies incluront des métadonnées des propriétés inscrites de la liste de propriétés de recherche récemment ajoutée.  

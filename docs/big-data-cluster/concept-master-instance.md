@@ -1,7 +1,7 @@
 ---
 title: Qu’est-ce que l’instance principale ?
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit l’instance SQL Server Master dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Cet article décrit l’instance principale SQL Server dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652275"
@@ -20,7 +20,7 @@ ms.locfileid: "69652275"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit le rôle de l' *instance maître SQL Server* dans un cluster Big Data pour SQL Server 2019. L’instance principale est une instance SQL Server s’exécutant dans un cluster Big Data pour gérer la connectivité, les requêtes avec montée en puissance parallèle, les métadonnées et les bases de données utilisateur et les services de Machine Learning.
+Cet article décrit le rôle de l’*instance principale SQL Server* dans un cluster Big Data pour SQL Server 2019. L’instance principale est une instance SQL Server s’exécutant dans un cluster Big Data pour gérer la connectivité, les requêtes avec scale-out, les métadonnées et les bases de données utilisateur, et les services Machine Learning.
 
 L’instance principale SQL Server fournit les fonctionnalités suivantes :
 
@@ -53,7 +53,7 @@ Dans le cadre d’un cluster Big Data SQL Server, les services Machine Learning 
 
 SQL Server 2019 permet de joindre facilement des données Big Data aux données dimensionnelles généralement stockées dans la base de données des entreprises. La valeur des données Big Data augmente considérablement quand elles ne sont pas seulement dans les mains de certaines parties d’une organisation, mais sont également incluses dans les rapports, les tableaux de bord et les applications. En même temps, les scientifiques des données peuvent continuer à utiliser les outils de l’écosystème Spark/HDFS, et disposer d’un accès facile et en temps réel aux données de l’instance principale SQL Server et dans des sources de données externes accessibles _via_ l’instance principale SQL Server.
 
-Avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vous pouvez faire plus avec vos lacs de données d’entreprise. Les développeurs et les analystes SQL Server peuvent :
+Avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vous pouvez en faire plus avec vos lacs de données d’entreprise. Les développeurs et les analystes SQL Server peuvent :
 
 * Créer des applications qui utilisent des données provenant de lacs de données d’entreprise.
 * Travailler sur l’ensemble des données avec des requêtes Transact-SQL.
@@ -67,7 +67,7 @@ Avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)],
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]le, consultez les ressources suivantes:
+Pour en savoir plus sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez les ressources suivantes :
 
-- [Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Atelier : Architecture [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
+- [Atelier : Architecture des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

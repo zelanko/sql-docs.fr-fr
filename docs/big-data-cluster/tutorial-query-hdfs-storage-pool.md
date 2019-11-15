@@ -1,7 +1,7 @@
 ---
 title: Interroger les données HDFS dans le pool de stockage
 titleSuffix: SQL Server big data clusters
-description: Ce didacticiel montre comment interroger des données HDFS dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
+description: Ce tutoriel montre comment interroger des données HDFS dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652446"
@@ -20,9 +20,9 @@ ms.locfileid: "69652446"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ce didacticiel montre comment interroger des données HDFS dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
+Ce tutoriel montre comment interroger des données HDFS dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-Ce tutoriel vous montre comment effectuer les opérations suivantes :
+Dans ce tutoriel, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Créer une table externe pointant vers des données HDFS dans un cluster Big Data.

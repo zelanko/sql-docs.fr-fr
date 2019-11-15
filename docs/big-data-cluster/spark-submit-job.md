@@ -1,7 +1,7 @@
 ---
 title: Envoyer des travaux Spark sur des clusters Big Data SQL Server dans Azure Data Studio
 titleSuffix: SQL Server big data clusters
-description: Envoyer des travaux Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur dans Azure Data Studio.
+description: Envoyer des travaux Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccaa9fbb10359791eb1d07ef8392a11977ae31db
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 3c7d346148d7967543e334af07d6f06402d72a0d
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653335"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844251"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Envoyer des travaux Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur dans Azure Data Studio
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Envoyer des travaux Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L’un des principaux scénarios impliquant les clusters Big Data est l’envoi de travaux Spark pour SQL Server 2019 (préversion). La fonctionnalité d’envoi de travaux Spark vous permet d’envoyer un fichier jar ou py local avec des références au cluster Big Data SQL Server 2019. Elle vous permet également d’exécuter des fichiers jar ou py, qui se trouvent déjà sur le système de fichiers HDFS. 
+Un des principaux scénarios impliquant les clusters Big Data est l’envoi de travaux Spark pour SQL Server. La fonctionnalité d’envoi de travaux Spark vous permet d’envoyer un fichier jar ou py local avec des références au cluster Big Data SQL Server 2019. Elle vous permet également d’exécuter des fichiers jar ou py, qui se trouvent déjà sur le système de fichiers HDFS. 
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Outils de Big Data SQL Server 2019](deploy-big-data-tools.md) :
    - **Azure Data Studio**

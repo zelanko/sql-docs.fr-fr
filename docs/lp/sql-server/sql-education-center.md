@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentation de Microsoft Azure
-description: Découvrez comment générer et gérer des applications puissantes à l’aide des services cloud Microsoft Azure. Obtenez de la documentation, des exemples de code, des tutoriels et bien plus encore.
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: Centre de formation SQL Server
+description: Récapitulatif des ressources que vous pouvez utiliser pour découvrir SQL Server et Azure SQL Database. Ces ressources vont de guides de démarrage rapide et de tutoriels à Microsoft Learn et LinkedIn Learning.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176273"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637922"
 ---
 <div id="main" class="v2">
     <div class="container">

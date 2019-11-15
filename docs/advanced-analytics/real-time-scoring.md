@@ -1,60 +1,61 @@
 ---
-title: Notation en temps réel à l’aide de la procédure stockée sp_rxPredict
-description: Générer des prédictions à l’aide de sp_rxPredict, notation des entrées de données par rapport à un modèle pré-formé écrit en R sur SQL Server.
+title: Scoring en temps réel à l’aide de sp_rxPredict
+description: Générez des prédictions à l’aide de sp_rxPredict, une procédure stockée utilisée pour le scoring des entrées de données par rapport à un modèle préentraîné écrit en R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 26701ac6e538d195a5a85ad66af9578848889d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 746a9cadfca28aae3bd2781a3daf71aabb8d6e5b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715644"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727328"
 ---
-# <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Notation en temps réel avec sp_rxPredict dans SQL Server Machine Learning
+# <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Scoring en temps réel avec sp_rxPredict dans SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-La notation en temps réel utilise la procédure stockée système [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) et les fonctionnalités d’extension CLR dans SQL Server pour les prédictions hautes performances ou les scores dans les charges de travail de prévision. La notation en temps réel est indépendante du langage et s’exécute sans dépendances sur les temps d’exécution R ou python. En supposant qu’un modèle a été créé et formé à l’aide des fonctions Microsoft, puis sérialisé au format binaire dans SQL Server, vous pouvez utiliser le score en temps réel pour générer des résultats prédits sur de nouvelles entrées de données sur des instances de SQL Server qui n’ont pas le module complémentaire R ou python ordinateur.
+Le scoring en temps réel utilise la procédure stockée système [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) et les fonctionnalités d’extension du CLR dans SQL Server pour générer des scores ou des prédictions hautes performances dans les charges de travail de prévision. Le scoring en temps réel est indépendant du langage et s’exécute indépendamment des runtimes R ou Python. Supposons que vous disposiez d’un modèle qui a été créé et entraîné à l’aide de fonctions Microsoft, puis sérialisé au format binaire dans SQL Server. Vous pouvez alors utiliser le scoring en temps réel pour générer des résultats prédits sur de nouvelles entrées de données sur des instances SQL Server où le module complémentaire R ou Python n’est pas installé.
 
-## <a name="how-real-time-scoring-works"></a>Fonctionnement de la notation en temps réel
+## <a name="how-real-time-scoring-works"></a>Fonctionnement du scoring en temps réel
 
-La notation en temps réel est prise en charge sur des types de modèles spécifiques basés sur des fonctions RevoScaleR ou MicrosoftML, telles que [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Il utilise des C++ bibliothèques natives pour générer des scores en fonction de l’entrée utilisateur fournie à un modèle de machine learning stocké dans un format binaire spécial.
+Le scoring en temps réel est pris en charge sur des types de modèles spécifiques basés sur des fonctions RevoScaleR ou MicrosoftML, notamment [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) et [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Il utilise des bibliothèques C++ natives pour générer des scores en fonction de l’entrée utilisateur fournie à un modèle de machine learning stocké dans un format binaire spécial.
 
-Étant donné qu’un modèle formé peut être utilisé pour le calcul de score sans avoir à appeler un Runtime de langage externe, la charge de traitement de plusieurs processus est réduite. Cela prend en charge des performances de prédiction beaucoup plus rapides pour les scénarios de calcul de score de production. Étant donné que les données ne quittent jamais SQL Server, les résultats peuvent être générés et insérés dans une nouvelle table sans aucune traduction de données entre R et SQL.
+Le fait de pouvoir utiliser un modèle entraîné pour le scoring sans devoir appeler un runtime de langage externe permet de réduire la charge associée à plusieurs processus. Cela permet de générer beaucoup plus rapidement des prédictions dans les scénarios de scoring de production. Les données ne quittant jamais SQL Server, les résultats peuvent être générés et insérés dans une nouvelle table sans aucune traduction des données entre R et SQL.
 
-La notation en temps réel est un processus à plusieurs étapes:
+Le scoring en temps réel est un processus qui comprend plusieurs étapes :
 
-1. La procédure stockée qui effectue un calcul de score doit être activée pour chaque base de données.
-2. Vous chargez le modèle pré-formé au format binaire.
-3. Vous fournissez de nouvelles données d’entrée à noter, qu’il s’agisse de lignes tabulaires ou uniques, en tant qu’entrée dans le modèle.
-4. Pour générer des scores, appelez la procédure stockée [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) .
+1. La procédure stockée qui effectue le scoring doit être activée pour chaque base de données.
+2. Vous chargez le modèle préentraîné au format binaire.
+3. Vous fournissez au modèle de nouvelles données d’entrée, au format tabulaire ou ligne unique, en vue de leur attribuer un score.
+4. Pour générer des scores, appelez la procédure stockée [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-+ [Activez SQL Server l’intégration du CLR](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
++ [Activer l’intégration du CLR dans SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
-+ [Activez la notation en temps réel](#bkmk_enableRtScoring).
++ [Activer le scoring en temps réel](#bkmk_enableRtScoring).
 
-+ Le modèle doit être formé à l’avance à l’aide de l’un des algorithmes **RX** pris en charge. Pour R, la notation en temps réel `sp_rxPredict` avec fonctionne avec les [algorithmes pris en charge par RevoScaleR et MicrosoftML](#bkmk_rt_supported_algos). Pour Python, consultez [algorithmes pris en charge par revoscalepy et microsoftml](#bkmk_py_supported_algos)
++ Le modèle doit être entraîné à l’avance à l’aide de l’un des algorithmes **rx** pris en charge. Pour R, le scoring en temps réel avec `sp_rxPredict` fonctionne avec les [algorithmes RevoScaleR et MicrosoftML pris en charge](#bkmk_rt_supported_algos). Pour Python, consultez les [algorithmes revoscalepy et microsoftml pris en charge](#bkmk_py_supported_algos).
 
-+ Sérialisez le modèle à l’aide de [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) pour R et [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour Python. Ces fonctions de sérialisation ont été optimisées pour prendre en charge la notation rapide.
++ Sérialisez le modèle avec [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) pour R et [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour Python. Ces fonctions de sérialisation ont été optimisées pour prendre en charge le scoring rapide.
 
-+ Enregistrez le modèle dans l’instance du moteur de base de données à partir de laquelle vous souhaitez l’appeler. Cette instance ne doit pas obligatoirement avoir l’extension de Runtime R ou python.
++ Enregistrez le modèle dans l’instance du moteur de base de données à partir de laquelle vous souhaitez l’appeler. Cette instance ne doit pas nécessairement avoir l’extension de runtime R ou Python.
 
 > [!Note]
-> La notation en temps réel est actuellement optimisée pour des prédictions rapides sur des jeux de données plus petits, allant de quelques lignes à des centaines de milliers de lignes. Sur les jeux de données volumineux, l’utilisation de [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) peut être plus rapide.
+> Le scoring en temps réel est actuellement optimisé pour générer rapidement des prédictions sur de petits jeux de données, ceux-ci allant de quelques lignes à des centaines de milliers de lignes. Sur les jeux de données volumineux, [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) peut être plus rapide.
 
 <a name="bkmk_py_supported_algos"></a>
 
 ## <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-### <a name="python-algorithms-using-real-time-scoring"></a>Algorithmes python utilisant le score en temps réel
+### <a name="python-algorithms-using-real-time-scoring"></a>Algorithmes Python utilisant le scoring en temps réel
 
-+ modèles revoscalepy
++ Modèles revoscalepy
 
   + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
   + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
@@ -62,9 +63,9 @@ La notation en temps réel est un processus à plusieurs étapes:
   + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
   + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
   
-  Les modèles marqués \* avec prennent également en charge la notation native avec la fonction Predict.
+  Les modèles signalés par \* prennent également en charge le scoring natif avec la fonction PREDICT.
 
-+ modèles microsoftml
++ Modèles microsoftml
 
   + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
@@ -83,17 +84,17 @@ La notation en temps réel est un processus à plusieurs étapes:
 
 <a name="bkmk_rt_supported_algos"></a>
 
-### <a name="r-algorithms-using-real-time-scoring"></a>Algorithmes R utilisant le score en temps réel
+### <a name="r-algorithms-using-real-time-scoring"></a>Algorithmes R utilisant le scoring en temps réel
 
 + Modèles RevoScaleR
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
-  Les modèles marqués \* avec prennent également en charge la notation native avec la fonction Predict.
+  Les modèles signalés par \* prennent également en charge le scoring natif avec la fonction PREDICT.
 
 + Modèles MicrosoftML
 
@@ -114,63 +115,63 @@ La notation en temps réel est un processus à plusieurs étapes:
 
 ### <a name="unsupported-model-types"></a>Types de modèles non pris en charge
 
-La notation en temps réel n’utilise pas d’interpréteur; par conséquent, toute fonctionnalité qui peut nécessiter un interpréteur n’est pas prise en charge pendant l’étape de notation.  Il peut s’agir des éléments suivants:
+Le scoring en temps réel n’utilisant pas d’interpréteur, toute fonctionnalité susceptible de nécessiter un interpréteur n’est pas prise en charge durant l’étape de scoring.  Par exemple :
 
-  + Les modèles utilisant `rxGlm` les `rxNaiveBayes` algorithmes ou ne sont pas pris en charge.
+  + Les modèles utilisant les algorithmes `rxGlm` ou `rxNaiveBayes` ne sont pas pris en charge.
 
-  + Les modèles qui utilisent une fonction de transformation ou une formule contenant une <code>A ~ log(B)</code> transformation, tels que, ne sont pas pris en charge dans le calcul de score en temps réel. Pour utiliser un modèle de ce type, nous vous recommandons d’effectuer la transformation sur les données d’entrée avant de passer les données à la notation en temps réel.
+  + Les modèles utilisant une fonction de transformation ou une formule contenant une transformation, comme <code>A ~ log(B)</code>, ne sont pas pris en charge dans le scoring en temps réel. Pour utiliser un modèle de ce type, nous vous recommandons d’effectuer la transformation sur les données d’entrée avant de passer les données au scoring en temps réel.
 
 
-## <a name="example-sprxpredict"></a>Exemple: sp_rxPredict
+## <a name="example-sp_rxpredict"></a>Exemple : sp_rxPredict
 
-Cette section décrit les étapes requises pour configurer la prédiction **en temps réel** et fournit un exemple dans R sur la façon d’appeler la fonction à partir de T-SQL.
+Cette section décrit les étapes à effectuer pour configurer la prédiction **en temps réel** et montre comment appeler la fonction à partir de T-SQL à travers un exemple dans R.
 
 <a name ="bkmk_enableRtScoring"></a> 
 
-### <a name="step-1-enable-the-real-time-scoring-procedure"></a>Étape 1. Activer la procédure de notation en temps réel
+### <a name="step-1-enable-the-real-time-scoring-procedure"></a>Étape 1. Activer la procédure de scoring en temps réel
 
-Vous devez activer cette fonctionnalité pour chaque base de données que vous souhaitez utiliser pour la notation. L’administrateur du serveur doit exécuter l’utilitaire de ligne de commande, RegisterRExt. exe, qui est inclus dans le package RevoScaleR.
+Vous devez activer cette fonctionnalité pour chaque base de données que vous souhaitez utiliser pour le scoring. L’administrateur du serveur doit exécuter l’utilitaire de ligne de commande, RegisterRExt.exe, qui est inclus dans le package RevoScaleR.
 
 > [!NOTE]
-> Pour que le calcul des scores en temps réel fonctionne, la fonctionnalité CLR SQL doit être activée dans l’instance de. en outre, la base de données doit être marquée comme digne de confiance. Lorsque vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, tenez compte des implications de sécurité supplémentaires.
+> Pour que le scoring en temps réel fonctionne, la fonctionnalité CLR SQL doit être activée dans l’instance. De plus, la base de données doit être marquée comme étant digne de confiance. Quand vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, tenez compte des implications supplémentaires en matière de sécurité avant de procéder.
 
-1. Ouvrez une invite de commandes avec élévation de privilèges, puis accédez au dossier où se trouve RegisterRExt. exe. Le chemin d’accès suivant peut être utilisé dans une installation par défaut:
+1. Ouvrez une invite de commandes avec élévation de privilèges, puis accédez au dossier contenant RegisterRExt.exe. Le chemin suivant peut être utilisé dans une installation par défaut :
     
     `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
 
-2. Exécutez la commande suivante, en remplaçant le nom de votre instance et la base de données cible dans laquelle vous souhaitez activer les procédures stockées étendues:
+2. Exécutez la commande suivante en indiquant le nom de votre instance et la base de données cible où vous souhaitez activer les procédures stockées étendues :
 
     `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
 
-    Par exemple, pour ajouter la procédure stockée étendue à la base de données CLRPredict sur l’instance par défaut, tapez:
+    Par exemple, pour ajouter la procédure stockée étendue à la base de données CLRPredict sur l’instance par défaut, tapez :
 
     `RegisterRExt.exe /installRts /database:CLRPRedict`
 
     Le nom de l’instance est facultatif si la base de données se trouve sur l’instance par défaut. Si vous utilisez une instance nommée, vous devez spécifier le nom de l’instance.
 
-3. RegisterRExt. exe crée les objets suivants:
+3. RegisterRExt.exe crée les objets suivants :
 
-    + Assemblys approuvés
-    + Procédure stockée`sp_rxPredict`
-    + Nouveau rôle de base de `rxpredict_users`données,. L’administrateur de base de données peut utiliser ce rôle pour accorder des autorisations aux utilisateurs qui utilisent la fonctionnalité de notation en temps réel.
+    + Assemblys approuvés.
+    + `sp_rxPredict` (procédure stockée).
+    + `rxpredict_users` (nouveau rôle de base de données). L’administrateur de base de données peut utiliser ce rôle pour accorder des autorisations aux utilisateurs qui utilisent la fonctionnalité de scoring en temps réel.
 
-4. Ajoutez tous les utilisateurs qui doivent s' `sp_rxPredict` exécuter sur le nouveau rôle.
+4. Ajoutez tous les utilisateurs qui doivent exécuter `sp_rxPredict` au nouveau rôle.
 
 > [!NOTE]
 > 
-> Dans SQL Server 2017, des mesures de sécurité supplémentaires sont en place pour éviter les problèmes liés à l’intégration du CLR. Ces mesures imposent également des restrictions supplémentaires sur l’utilisation de cette procédure stockée. 
+> Dans SQL Server 2017, des mesures de sécurité supplémentaires sont en place pour éviter les problèmes liés à l’intégration du CLR. Ces mesures imposent également des restrictions supplémentaires sur l’utilisation de cette procédure stockée. 
 
-### <a name="step-2-prepare-and-save-the-model"></a>Étape 2. Préparer et enregistrer le modèle
+### <a name="step-2-prepare-and-save-the-model"></a>Étape 2. Préparer et enregistrer le modèle
 
-Le format binaire requis par SP\_rxPredict est le même que celui requis pour utiliser la fonction Predict. Par conséquent, dans votre code R, incluez un appel à [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)et veillez à `realtimeScoringOnly = TRUE`spécifier, comme dans cet exemple:
+Le format binaire exigé par sp\_rxPredict est le même que celui exigé pour utiliser la fonction PREDICT. Par conséquent, dans votre code R, incluez un appel à [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) en veillant à spécifier `realtimeScoringOnly = TRUE`, comme dans cet exemple :
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>Étape 3. Appeler sp_rxPredict
+### <a name="step-3-call-sp_rxpredict"></a>Étape 3. Appeler sp_rxPredict
 
-Vous appelez SP\_rxPredict comme vous le feriez pour toute autre procédure stockée. Dans la version actuelle, la procédure stockée ne prend que deux paramètres:  _\@Model_ pour le modèle au format binaire, et  _\@inputData_ pour les données à utiliser dans le calcul de score, défini en tant que requête SQL valide.
+Vous appelez sp\_rxPredict comme n’importe quelle autre procédure stockée. Dans la version actuelle, la procédure stockée n’accepte que deux paramètres : _\@model_ pour le modèle au format binaire et _\@inputData_ pour les données à utiliser dans le scoring (données définies en tant que requête SQL valide).
 
 Étant donné que le format binaire est le même que celui utilisé par la fonction PREDICT, vous pouvez utiliser les modèles et la table de données de l’exemple précédent.
 
@@ -187,16 +188,16 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> L’appel à SP\_rxPredict échoue si les données d’entrée pour le score n’incluent pas les colonnes qui correspondent aux exigences du modèle. Actuellement, seuls les types de données .NET suivants sont pris en charge: double, float, Short, ushort, long, ULONG et String.
+> L’appel à sp\_rxPredict échoue si les données d’entrée pour le scoring n’incluent aucune colonne conforme aux exigences du modèle. Actuellement, seuls les types de données .NET suivants sont pris en charge : double, float, short, ushort, long, ulong et string.
 > 
-> Par conséquent, vous devrez peut-être filtrer les types non pris en charge dans vos données d’entrée avant de les utiliser pour une notation en temps réel.
+> Vous devrez donc peut-être exclure par filtrage les types non pris en charge dans vos données d’entrée avant de les utiliser pour le scoring en temps réel.
 > 
-> Pour plus d’informations sur les types SQL correspondants, consultez [mappage de type SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) ou [mappage de données de paramètres CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
+> Pour plus d’informations sur les types SQL correspondants, consultez [Mappage de type SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) ou [Mappage des données de paramètres CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-## <a name="disable-real-time-scoring"></a>Désactiver la notation en temps réel
+## <a name="disable-real-time-scoring"></a>Désactiver le scoring en temps réel
 
-Pour désactiver la fonctionnalité de notation en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+Pour désactiver la fonctionnalité de scoring en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante : `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur le calcul des scores dans SQL Server, consultez [Comment générer des prédictions dans SQL Server machine learning](r/how-to-do-realtime-scoring.md).
+Pour plus d’informations sur le scoring dans SQL Server, consultez le [guide pratique pour générer des prédictions dans SQL Server Machine Learning](r/how-to-do-realtime-scoring.md).

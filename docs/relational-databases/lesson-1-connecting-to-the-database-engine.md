@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909762"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032998"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Au moins un compte d’administrateur a été sélectionné pendant l’installa
 Une fois que vous êtes connecté à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'administrateur, l'une de vos premières tâches consiste à autoriser d'autres utilisateurs à se connecter. Pour cela, vous pouvez créer une connexion et l'autoriser à accéder à une base de données en tant qu'utilisateur. Les connexions peuvent désigner des connexions d'authentification Windows qui exploitent les informations d'identification Windows, ou bien des connexions d'authentification SQL Server qui stockent les données d'authentification dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et qui n'ont aucun lien avec vos informations d'identification Windows. Utilisez l'authentification Windows chaque fois que cela est possible.
 
 > [!TIP]
-> La plupart des organisations ont des utilisateurs de domaine et utilisent l’authentification Windows. Vous pouvez essayer vous-même, en créant des utilisateurs locaux supplémentaires sur votre ordinateur. Les utilisateurs locaux étant authentifiés par votre ordinateur, le domaine est le nom de l’ordinateur. Par exemple, si votre ordinateur est nommé `MyComputer` et que vous créez un utilisateur nommé `Test`, la description Windows de l’utilisateur est `Mycomputer\Test`.  
+> La plupart des organisations ont des utilisateurs de domaine et utilisent l’authentification Windows. Vous pouvez essayer vous-même, en créant des utilisateurs locaux supplémentaires sur votre ordinateur. Les utilisateurs locaux étant authentifiés par votre ordinateur, le domaine est le nom de l’ordinateur. Par exemple, si votre ordinateur se nomme `MyComputer` et si vous créez un utilisateur nommé `Test`, la description Windows de l’utilisateur sera `Mycomputer\Test`.  
 
 ##### <a name="create-a-windows-authentication-login"></a>Créer une connexion d'authentification Windows 
 

@@ -1,25 +1,25 @@
 ---
-title: Kit SDK d’extensibilité Microsoft pour Java pour SQL Server
-description: Guide pratique pour implémenter un programme Java pour SQL Server à l’aide du kit SDK d’extensibilité Microsoft pour Java.
+title: SDK d’extensibilité Microsoft pour Java
+description: Découvrez comment vous pouvez implémenter un programme Java pour SQL Server avec le SDK d’extensibilité Microsoft pour Java. Le kit SDK est une interface pour l’extension de langage Java, qui permet d’échanger des données avec SQL Server et d’exécuter du code Java à partir de SQL Server.
 ms.prod: sql
 ms.technology: language-extensions
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f2c1e7eb5b5410ad0c12b8dec6f451b7572f0e36
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588793"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658856"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>Kit SDK d’extensibilité Microsoft pour Java pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article explique comment implémenter un programme Java pour SQL Server à l’aide du kit SDK d’extensibilité Microsoft pour Java. Le kit SDK est une interface pour l’extension de langage Java, qui permet d’échanger des données avec SQL Server et d’exécuter du code Java à partir de SQL Server.
+Découvrez comment vous pouvez implémenter un programme Java pour SQL Server avec le SDK d’extensibilité Microsoft pour Java. Le kit SDK est une interface pour l’extension de langage Java, qui permet d’échanger des données avec SQL Server et d’exécuter du code Java à partir de SQL Server.
 
 Le kit SDK est installé dans le cadre de SQL Server 2019 version Release Candidate 1 sur Windows et Linux :
 

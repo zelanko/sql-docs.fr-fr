@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/23/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -16,23 +16,36 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
-ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 6fda5419756689df6b9be1fda9a792c14229c1ce
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72260332"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632846"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+## <a name="click-a-product"></a>Cliquez sur un produit !
+
+Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le clic affiche un contenu différent ici dans cette page web, approprié pour le produit sur lequel vous cliquez.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**\* _SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server et instance managée SQL Database
 
 Crée un groupe de charges de travail du gouverneur de ressources et l'associe à un pool de ressources du gouverneur de ressources. Resource Governor n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -134,7 +147,7 @@ Associe le groupe de charge de travail au pool de ressources défini par l’uti
 EXTERNAL external_pool_name | "default"     
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Le groupe de charge de travail peut spécifier un pool de ressources externes. Vous pouvez définir un groupe de charge de travail et l’associer à 2 pools :
+Le groupe de charge de travail peut spécifier un pool de ressources externes. Vous pouvez définir un groupe de charge de travail et l’associer à deux pools :
 
 - Un pool de ressources pour les charges de travail et les requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 - Un pool de ressources externes pour les processus externes. Pour plus d’informations, consultez [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
@@ -171,3 +184,121 @@ GO
 - [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
 - [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
 - [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[Instance managée<br />SQL Database](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="sql-data-warehouse"></a>SQL Data Warehouse 
+
+CREATE WORKLOAD GROUP (Transact-SQL) (préversion) crée un groupe de charge de travail.  Les groupes de charge de travail sont les conteneurs d’un ensemble de requêtes. Ils déterminent la façon dont la gestion des charges de travail est configurée sur un système.  Les groupes de charge de travail permettent de réserver des ressources pour l’isolation de la charge de travail. Ils contiennent des ressources, définissent les ressources par requête et adhèrent aux règles d’exécution.  Une fois l’instruction exécutée, les paramètres sont activés.
+
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+
+```
+CREATE WORKLOAD GROUP group_name  
+ WITH  
+ (        MIN_PERCENTAGE_RESOURCE = value  
+      ,   CAP_PERCENTAGE_RESOURCE = value 
+      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value   
+  [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]  
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )  
+  [ ; ]
+```
+
+*group_name*</br>
+Spécifie le nom qui identifie le groupe de charge de travail.  group_name est un sysname.  Il peut comporter jusqu’à 128 caractères et doit être unique dans l’instance.
+
+*MIN_PERCENTAGE_RESOURCE* = valeur</br>
+Pour ce groupe de charge de travail, spécifie une allocation de ressources minimale garantie qui n’est pas partagée avec d’autres groupes de charge de travail.  La valeur est une plage d’entiers comprise entre 0 et 100.  La somme des min_percentage_resource de tous les groupes de charge de travail ne peut pas dépasser 100.  La valeur de min_percentage_resource ne peut pas être supérieure à cap_percentage_resource.  Il existe des valeurs minimales effectives autorisées pour chaque niveau de service.  Pour plus d’informations, consultez <link>Valeurs effectives.
+
+*CAP_PERCENTAGE_RESOURCE* = valeur</br>
+Spécifie l’utilisation maximale des ressources pour toutes les requêtes d’un groupe de charge de travail.  La plage autorisée pour la valeur est comprise entre 1 et 100.  La valeur de cap_percentage_resource ne peut pas être supérieure à min_percentage_resource.  La valeur effective de cap_percentage_resource peut être réduite si min_percentage_resource est supérieur à zéro dans d’autres groupes de charge de travail.
+
+*REQUEST_MIN_RESOURCE_GRANT_PERCENT* = valeur</br>
+Définit le nombre minimal de ressources allouées par requête.  La valeur est un paramètre obligatoire avec une plage décimale comprise entre 0,75 et 100,00.  La valeur de request_min_resource_grant_percent doit être un multiple de 0,25, être un facteur de min_percentage_resource et être inférieur à cap_percentage_resource.  Il existe des valeurs minimales effectives autorisées pour chaque niveau de service.  Pour plus d’informations, consultez <link>Valeurs effectives.
+
+Par exemple :
+
+```sql
+CREATE WORKLOAD GROUP wgSample WITH  
+( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
+ ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
+ ,CAP_PERCENTAGE_RESOURCE = 100 )
+```
+
+Aidez-vous des valeurs utilisées avec les classes de ressources pour request_min_resource_grant_percent.  Le tableau ci-dessous contient les allocations des ressources pour Gen2.
+
+|Classe de ressource|Pourcentage de ressources|
+|---|---|
+|Smallrc|3 %|
+|Mediumrc|10 %|
+|Largerc|22 %|
+|Xlargerc|70|
+|||
+
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = valeur</br>
+Définit le nombre maximal de ressources allouées par requête.  La valeur est un paramètre facultatif avec une valeur par défaut égale à celle de request_min_resource_grant_percent.  La valeur doit être supérieure ou égale à request_min_resource_grant_percent.  Lorsque la valeur de request_max_resource_grant_percent est supérieure à request_min_resource_grant_percent et que des ressources système sont disponibles, des ressources supplémentaires sont allouées à une requête.
+
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+Spécifie l’importance par défaut d’une requête pour le groupe de charge de travail.  Le paramètre Importance peut avoir les valeurs suivantes, NORMAL étant la valeur par défaut :
+- LOW
+- BELOW_NORMAL
+- NORMAL (valeur par défaut)
+- ABOVE_NORMAL
+- HIGH  
+
+L’importance définie pour le groupe de charge de travail est l’importance par défaut de toutes les requêtes du groupe de charge de travail.  Un utilisateur peut également définir l’importance au niveau du classifieur, ce qui peut remplacer le paramètre d’importance du groupe de charge de travail.  Cela permet de différencier l’importance des requêtes au sein d’un groupe de charge de travail afin d’accéder plus rapidement aux ressources non réservées.  Lorsque la somme des min_percentage_resource des différents groupes de charge de travail est inférieure à 100, des ressources non réservées sont affectées selon l’importance.
+
+*QUERY_EXECUTION_TIMEOUT_SEC* = valeur</br>
+Spécifie la durée maximale (en secondes) pendant laquelle une requête peut s’exécuter avant d’être annulée.  La valeur doit être égale à 0 ou être un entier positif.  La valeur par défaut est 0, ce qui signifie qu’elle est illimitée.  Le temps passé à attendre dans la file d’attente des requêtes n’est pas comptabilisé dans le temps d’exécution de la requête.
+
+## <a name="remarks"></a>Notes
+Les groupes de charge de travail correspondant aux classes de ressources sont créés automatiquement pour permettre une compatibilité descendante.  Ces groupes de charge de travail définis par le système ne peuvent pas être supprimés.  Il est possible de créer 8 autres groupes de charge de travail définis par l’utilisateur.
+
+## <a name="effective-values"></a>Valeurs effectives
+
+Les paramètres min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent et request_max_resource_grant_percent ont des valeurs effectives qui sont ajustées dans le contexte du niveau de service actuel et de la configuration des autres groupes de charge de travail.
+
+La concurrence prise en charge par chaque niveau de service est la même que lorsque les classes de ressources ont été utilisées pour définir des allocations de ressources par requête. Par conséquent, les valeurs prises en charge pour request_min_resource_grant_percent dépendent du niveau de service qui a été défini pour l’instance.  Le niveau de service le plus bas (DW100c) permet de définir la concurrence sur 4.  Le request_min_resource_grant_percent effectif pour un groupe de charge de travail configuré peut être de 25 % ou plus.  Consultez le tableau ci-dessous pour plus d’informations.
+
+|Niveau de service|Nombre maximal de requêtes simultanées|% min. pris en charge pour REQUEST_MIN_RESOURCE_GRANT_PERCENT et MIN_PERCENTAGE_RESOURCE|
+|---|---|---|
+|DW100c|4|25 %|
+|DW200c|8|12,5 %|
+|DW300c|12|8 %|
+|DW400c|16|6,25 %|
+|DW500c|20|5%|
+|DW1000c|32|3 %|
+|DW1500c|32|3 %|
+|DW2000c|48|2 %|
+|DW2500c|48|2 %|
+|DW3000c|64|1,5 %|
+|DW5000c|64|1,5 %|
+|DW6000c|128|0,75 %|
+|DW7500c|128|0,75 %|
+|DW10000c|128|0,75 %|
+|DW15000c|128|0,75 %|
+|DW30000c|128|0,75 %|
+||||
+
+De même, request_min_resource_grant_percent et min_percentage_resource doivent être supérieurs ou égaux à la valeur effective de request_min_resource_grant_percent.  Un groupe de charge de travail avec un min_percentage_resource inférieur à la valeur effective de min_percentage_resource voit sa valeur définie sur zéro au moment de l’exécution.  Dans ce cas, les ressources configurées pour min_percentage_resource peuvent être partagées entre tous les groupes de charge de travail.  Par exemple, le groupe de charge de travail wgAdHoc avec un min_percentage_resource de 10 % exécuté avec DW1000c aura un min_percentage_resource effectif de 10 % (3,25 % est la valeur minimale prise en charge par DW1000c).  wgAdhoc avec DW100c aura un min_percentage_resource effectif de 0 %.  Les 10 % configurés pour wgAdhoc seront partagés entre tous les groupes de charge de travail.
+
+Cap_percentage_resource a également une valeur effective.  Si un groupe de charge de travail wgAdhoc est configuré avec un cap_percentage_resource de 100 %, et si un autre groupe de charge de travail wgDashboards est créé avec un min_percentage_resource de 25 %, la valeur effective de cap_percentage_resource pour wgAdhoc devient 75 %.
+
+Le moyen le plus simple de comprendre les valeurs d’exécution de vos groupes de charge de travail consiste à interroger la vue système [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
+
+## <a name="permissions"></a>Autorisations
+
+Exige l’autorisation CONTROL DATABASE
+
+## <a name="see-also"></a>Voir aussi
+[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+
+::: moniker-end

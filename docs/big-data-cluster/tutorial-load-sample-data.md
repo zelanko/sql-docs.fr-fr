@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653285"
@@ -20,12 +20,12 @@ ms.locfileid: "69653285"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ce didacticiel explique comment utiliser un script pour charger des exemples de données dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. La plupart des autres tutoriels de la documentation utilisent cet exemple de données.
+Ce tutoriel explique comment utiliser un script pour charger un exemple de données dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. La plupart des autres tutoriels de la documentation utilisent cet exemple de données.
 
 > [!TIP]
-> Vous trouverez des exemples supplémentaires pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] dans le référentiel GitHub [SQL-Server-Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Le chemin de ce dépôt est le suivant : **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Vous trouverez d’autres exemples pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] dans le dépôt GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Le chemin de ce dépôt est le suivant : **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Cluster Big Data déployé](deployment-guidance.md)
 - [Outils Big Data](deploy-big-data-tools.md)
@@ -120,14 +120,14 @@ Après l’exécution du script d’amorçage., votre cluster Big Data contient 
 
 Virtualisation de données :
 
-- [Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server](tutorial-query-hdfs-storage-pool.md)
-- [Tutoriel : Interroger Oracle à partir d’un cluster Big Data SQL Server](tutorial-query-oracle.md)
+- [Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Tutoriel : Interroger Oracle à partir d’un cluster Big Data SQL Server](tutorial-query-oracle.md)
 
 Ingestion des données :
 
-- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
-- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
+- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutoriel : Ingérer des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
 
 Notebooks :
 
-- [Tutoriel : Exécuter un exemple de notebook sur un cluster Big Data SQL Server 2019](tutorial-notebook-spark.md)
+- [Tutoriel : Exécuter un exemple de notebook sur un cluster Big Data SQL Server 2019](tutorial-notebook-spark.md)

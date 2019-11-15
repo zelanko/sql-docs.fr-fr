@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab49b1f0323e8582f573db1d611b7114cba6dcaf
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589756"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729927"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -106,7 +106,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
-    [ORDER (column [,...n] ) ] -- in preview
+    [ORDER (column [,...n] ) ]  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 
@@ -296,7 +296,9 @@ Le terme « default », dans ce contexte, n'est pas un mot clé. Il s’agit d
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="GenRemarks"></a> Remarques d’ordre général  
- Créez un index columnstore sur une table temporaire. Lorsque la table est supprimée ou que la session prend fin, l'index est également supprimé.  
+Créez un index columnstore sur une table temporaire. Lorsque la table est supprimée ou que la session prend fin, l'index est également supprimé.  
+
+Un index columnstore cluster ordonné peut être créé sur les colonnes de tout type de données pris en charge dans Azure SQL Data Warehouse à l’exception des colonnes de type chaîne.  
  
 ## <a name="filtered-indexes"></a>Index filtrés  
 Un index filtré est un index non cluster optimisé, approprié pour les requêtes qui sélectionnent un faible pourcentage de lignes d'une table. Il utilise un prédicat de filtre pour indexer une partie des données de la table. Un index filtré bien conçu peut améliorer les performances des requêtes, réduire les coûts de stockage et réduire les coûts de maintenance.  

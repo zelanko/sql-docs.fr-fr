@@ -1,36 +1,37 @@
 ---
-title: Leçon 4 prédire les résultats potentiels à l’aide de modèles R
-description: Didacticiel illustrant comment faire fonctionner un script R incorporé dans des procédures stockées SQL Server avec des fonctions T-SQL
+title: 'Tutoriel R + T-SQL : Exécuter des prédictions'
+description: Tutoriel montrant comment rendre opérationnel un script R incorporé dans des procédures stockées SQL Server avec des fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abacf3c384430417dbf0630f2f8dcd8adff68259
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4b8e516d2e96c1cc4812a36800fd22371729445d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714734"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724868"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Leçon 4 : Exécuter des prédictions à l’aide de R Embedded dans une procédure stockée
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Leçon 4 : Exécuter des prédictions avec un script R incorporé dans une procédure stockée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
+Cet article fait partie d’un tutoriel pour développeurs SQL qui montre comment utiliser R dans SQL Server.
 
-Au cours de cette étape, vous allez apprendre à utiliser le modèle par rapport à de nouvelles observations afin de prédire les résultats potentiels. Le modèle est encapsulé dans une procédure stockée qui peut être appelée directement par d’autres applications. La procédure pas à pas illustre plusieurs façons d’effectuer une notation:
+Dans cette étape, vous allez apprendre à utiliser le modèle pour prédire des résultats potentiels à partir de nouvelles observations. Le modèle est encapsulé dans une procédure stockée qui peut être appelée directement par d’autres applications. La procédure pas à pas montre plusieurs façons d’effectuer le scoring :
 
-- Mode de calcul de **score par lot**: Utilisez une requête SELECT comme entrée de la procédure stockée. La procédure stockée retourne une table d’observations correspondant aux cas d’entrée.
+- **Mode de scoring par lot** : utilisez une requête SELECT comme entrée de la procédure stockée. La procédure stockée retourne une table d’observations correspondant aux cas d’entrée.
 
-- **Mode de calcul des scores individuels**: Transmettez un ensemble de valeurs de paramètres individuelles comme entrée.  La procédure stockée retourne une seule ligne ou valeur.
+- **Mode de scoring individuel** : transmettez un ensemble de valeurs de paramètres individuels comme entrée.  La procédure stockée retourne une seule ligne ou valeur.
 
 Tout d’abord, examinons le fonctionnement du calcul de score en général.
 
-## <a name="basic-scoring"></a>Score de base
+## <a name="basic-scoring"></a>Scoring de base
 
-La procédure stockée **RxPredict** illustre la syntaxe de base pour l’encapsulation d’un appel RxPredict RevoScaleR dans une procédure stockée.
+La procédure stockée **RxPredict** illustre la syntaxe de base pour l’encapsulation d’un appel RevoScaleR rxPredict dans une procédure stockée.
 
 ```sql
 CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
@@ -54,21 +55,21 @@ END
 GO
 ```
 
-+ L’instruction SELECT obtient le modèle sérialisé de la base de données et stocke le modèle dans la variable `mod` r pour un traitement ultérieur à l’aide de R.
++ L’instruction SELECT obtient le modèle sérialisé à partir de la base de données et stocke le modèle dans la variable R `mod` pour un traitement ultérieur en utilisant R.
 
-+ Les nouveaux cas de notation sont obtenus à partir [!INCLUDE[tsql](../../includes/tsql-md.md)] de la requête `@inquery`spécifiée dans, le premier paramètre de la procédure stockée. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`. Cette trame de données est transmise à la fonction [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), qui génère les scores.
++ Les nouveaux cas de scoring sont obtenus à partir de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiée dans `@inquery`, premier paramètre de la procédure stockée. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`. Cette trame de données est transmise à la fonction [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), qui génère les scores.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     Une trame de données ne pouvant contenir qu’une seule ligne, vous pouvez utiliser le même code pour le calcul de score unique ou de lot.
   
-+ La valeur retournée par `rxPredict` la fonction est un **float** qui représente la probabilité que le pilote obtient une info-bulle d’une quantité quelconque.
++ La valeur retournée par la fonction `rxPredict` est une valeur flottante (**float**) qui représente la probabilité que le chauffeur recevra un pourboire, quel qu’en soit le montant.
 
-## <a name="batch-scoring-a-list-of-predictions"></a>Notation par lots (une liste de prédictions)
+## <a name="batch-scoring-a-list-of-predictions"></a>Scoring par lot (liste de prédictions)
 
-Un scénario plus courant consiste à générer des prédictions pour plusieurs observations en mode batch. Dans cette étape, voyons comment fonctionne la notation par lot.
+Un scénario plus courant est celui où des prédictions sont générées pour plusieurs observations en mode batch. Dans cette étape, nous allons voir comment fonctionne le scoring par lot.
 
-1.  Commencez par obtenir un plus petit ensemble de données d’entrée à utiliser. Cette requête crée une liste « top 10 » des trajets avec le nombre de passagers et d’autres caractéristiques nécessaires pour établir une prédiction.
+1.  Commençons par nous procurer un jeu de données d’entrée plus petit sur lequel travailler. Cette requête crée une liste « top 10 » des trajets avec le nombre de passagers et d’autres caractéristiques nécessaires pour établir une prédiction.
   
     ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -93,7 +94,7 @@ Un scénario plus courant consiste à générer des prédictions pour plusieurs 
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-2. Créez une procédure stockée appelée RxPredictBatchOutput [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]dans.
+2. Créez une procédure stockée appelée **RxPredictBatchOutput** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
@@ -116,7 +117,7 @@ Un scénario plus courant consiste à générer des prédictions pour plusieurs 
     END
     ```
 
-3.  Fournissez le texte de la requête dans une variable et transmettez-le en tant que paramètre à la procédure stockée:
+3.  Fournissez le texte de requête dans une variable et transmettez-le en tant que paramètre à la procédure stockée :
 
     ```sql
     -- Define the input data
@@ -127,20 +128,20 @@ Un scénario plus courant consiste à générer des prédictions pour plusieurs 
     EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
-La procédure stockée retourne une série de valeurs représentant la prédiction de chacun des 10 meilleurs voyages. Toutefois, les trajets les plus importants sont également des voyages à passagers uniques avec une distance de trajet relativement brève, pour laquelle le pilote est peu susceptible d’obtenir un pourboire.
+La procédure stockée retourne une série de valeurs représentant la prédiction pour chacun des 10 principaux trajets. Cependant, les principaux trajets sont aussi des trajets à passager unique relativement courts, pour lesquels le chauffeur a peu de chances de recevoir un pourboire.
   
 
 > [!TIP]
 > 
-> Au lieu de renvoyer uniquement les résultats «Oui-Conseil» et «sans pourboire», vous pouvez également renvoyer le score de probabilité pour la prédiction, puis appliquer une clause WHERE aux valeurs de la colonne _score_ pour classer le score comme «susceptible d’être noté» ou «improbable», à l’aide d’un valeur de seuil telle que 0,5 ou 0,7. Cette étape n’est pas incluse dans la procédure stockée, mais elle est facile à implémenter.
+> Au lieu de retourner simplement les résultats « pourboire/pas de pourboire », vous pouvez aussi retourner le score de probabilité pour la prédiction, puis appliquer une clause WHERE aux valeurs de la colonne _Score_ pour classer le score dans la catégorie « pourboire probable » ou « pourboire peu probable », en utilisant une valeur de seuil, par exemple 0,5 ou 0,7. Cette étape n’est pas incluse dans la procédure stockée, mais elle est facile à implémenter.
 
-## <a name="single-row-scoring-of-multiple-inputs"></a>Notation sur une seule ligne de plusieurs entrées
+## <a name="single-row-scoring-of-multiple-inputs"></a>Scoring sur une ligne de plusieurs entrées
 
-Parfois, vous souhaitez transmettre plusieurs valeurs d’entrée et obtenir une seule prédiction basée sur ces valeurs. Par exemple, vous pouvez configurer une feuille de calcul Excel, une application Web ou un rapport de Reporting Services pour appeler la procédure stockée et fournir des entrées tapées ou sélectionnées par les utilisateurs à partir de ces applications.
+Parfois, vous souhaitez transmettre plusieurs valeurs d’entrée et obtenir une seule prédiction à partir de ces valeurs. Par exemple, vous pouvez configurer une feuille de calcul Excel, une application web ou un rapport Reporting Services pour appeler la procédure stockée et fournir des entrées tapées ou sélectionnées par les utilisateurs de ces applications.
 
-Dans cette section, vous allez apprendre à créer des prédictions uniques à l’aide d’une procédure stockée qui prend plusieurs entrées, telles que le nombre de passagers, la distance du trajet, etc. La procédure stockée crée un score basé sur le modèle R stocké précédemment.
+Dans cette section, vous allez créer des prédictions uniques en utilisant une procédure stockée qui prend plusieurs entrées, comme le nombre de passagers, la distance du trajet, etc. La procédure stockée crée un score basé sur le modèle R stocké précédemment.
   
-Si vous appelez la procédure stockée à partir d’une application externe, assurez-vous que les données correspondent aux exigences du modèle R. Vous pourriez par exemple vérifier que les données d’entrée peuvent être transtypées ou converties en un type de données R, ou valider le type de données et la longueur des données. 
+Si vous appelez la procédure stockée à partir d’une application externe, vérifiez que les données correspondent aux critères du modèle R. Vous pourriez par exemple vérifier que les données d’entrée peuvent être transtypées ou converties en un type de données R, ou valider le type de données et la longueur des données. 
 
 1. Créez une procédure stockée **RxPredictSingleRow**.
   
@@ -167,7 +168,7 @@ Si vous appelez la procédure stockée à partir d’une application externe, as
 
 2. Essayez-la en fournissant les valeurs manuellement.
   
-    Ouvrez une nouvelle fenêtre de **requête** et appelez la procédure stockée, en fournissant des valeurs pour chacun des paramètres. Les paramètres représentent les colonnes de fonctionnalités utilisées par le modèle et sont requises.
+    Ouvrez une nouvelle fenêtre **Requête** et appelez la procédure stockée en fournissant des valeurs pour chacun des paramètres. Les paramètres représentent les colonnes des caractéristiques utilisées par le modèle et sont obligatoires.
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
@@ -180,18 +181,18 @@ Si vous appelez la procédure stockée à partir d’une application externe, as
     @dropoff_longitude = -73.977303
     ```
 
-    Vous pouvez utiliser cette forme plus petite prise en charge pour les [paramètres d’une procédure stockée](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+    Vous pouvez aussi utiliser cette forme abrégée pour les [paramètres d’une procédure stockée](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters) :
   
     ```sql
     EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. Les résultats indiquent que la probabilité d’obtention d’une info-bulle est faible (zéro) sur ces 10 voyages les plus importants, car tous sont des trajets de passagers uniques sur une distance relativement courte.
+3. Les résultats indiquent que la probabilité de recevoir un pourboire est faible (zéro) sur ces 10 principaux trajets, qui sont tous des trajets à passager unique sur une distance relativement courte.
 
 ## <a name="conclusions"></a>Conclusions
 
-Cela conclut le didacticiel. Maintenant que vous avez appris à incorporer du code R dans des procédures stockées, vous pouvez étendre ces pratiques pour créer vos propres modèles. L’intégration à [!INCLUDE[tsql](../../includes/tsql-md.md)] simplifie grandement le déploiement de modèles R pour la prédiction et l’incorporation de la reformation de modèle dans le cadre d’un workflow de données d’entreprise.
+Cela conclut le didacticiel. Maintenant que vous savez comment incorporer du code R dans les procédures stockées, vous pouvez étendre ces pratiques pour créer vos propres modèles. L’intégration à [!INCLUDE[tsql](../../includes/tsql-md.md)] simplifie grandement le déploiement de modèles R pour la prédiction et l’incorporation de la reformation de modèle dans le cadre d’un workflow de données d’entreprise.
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 3 : Former et enregistrer un modèle R à l’aide de T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Leçon 3 : Entraîner et enregistrer un modèle R en utilisant T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

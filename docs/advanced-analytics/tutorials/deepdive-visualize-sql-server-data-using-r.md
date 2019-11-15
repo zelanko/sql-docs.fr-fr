@@ -1,37 +1,38 @@
 ---
-title: Visualiser les données de SQL Server à l’aide de RevoScaleR rxHistogram
-description: Didacticiel procédure pas à pas sur la visualisation des données à l’aide du langage R sur SQL Server.
+title: Visualiser des données à l’aide de RevoScaleR
+description: Didacticiel pas à pas sur la visualisation des données à l’aide du langage R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7e837f9ed4392a8ecfc9e7c237b95f3fdde3d3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714852"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727120"
 ---
-#  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualiser les données de SQL Server à l’aide de R (didacticiel SQL Server et RevoScaleR)
+#  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualiser des données SQL Server à l’aide de R (didacticiel sur SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des fonctions [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Dans cette leçon, utilisez les fonctions R pour afficher la distribution des valeurs dans la colonne *creditLine* par sexe.
+Dans cette leçon, vous allez utiliser les fonctions de R pour afficher la distribution des valeurs dans la colonne *creditLine* par sexe.
 
 > [!div class="checklist"]
 > * Créer des variables min-max pour les entrées d’histogramme
-> * Visualiser des données dans un histogramme à l’aide de **rxHistogram** à partir de **RevoScaleR**
-> * Visualisez les nuages de points à l’aide de **levelplot** à partir d’un **treillis** inclus dans la distribution R de base
+> * Représenter des données dans un histogramme à l’aide de **rxHistogram** à partir de **RevoScaleR**
+> * Créer une visualisation avec des nuages de points à l’aide de la fonction **levelplot** de **lattice** inclus dans la distribution R de base
 
-Comme le montre cette leçon, vous pouvez combiner des fonctions Open source et spécifiques à Microsoft dans le même script.
+Comme cette leçon le montre, vous pouvez associer les fonctions Microsoft et open source dans le même script.
 
 ## <a name="add-maximum-and-minimum-values"></a>Ajouter des valeurs maximales et minimales
 
-En fonction des statistiques de résumé calculées de la leçon précédente, vous avez découvert des informations utiles sur les données que vous pouvez insérer dans la source de données pour d’autres calculs. Par exemple, les valeurs minimales et maximales peuvent être utilisées pour calculer des histogrammes. Dans cet exercice, ajoutez les valeurs haute et basse à la source de données **RxSqlServerData** .
+D’après les statistiques de synthèse calculées de la leçon précédente, vous avez trouvé des informations utiles sur les données que vous pouvez placer dans la source de données pour effecteur d’autres calculs. Par exemple, les valeurs minimales et maximales peuvent être utilisées pour créer des histogrammes. Dans cet exercice, ajoutez les valeurs haute et basse de la source de données **RxSqlServerData**.
 
 1. Commencez par configurer des variables temporaires.
   
@@ -40,9 +41,9 @@ En fonction des statistiques de résumé calculées de la leçon précédente, v
     var <- sumDF$Name
     ```
   
-2. Utilisez la variable *ccColInfo* que vous avez créée dans la leçon précédente pour définir les colonnes dans la source de données.
+2. Utilisez la variable *ccColInfo* créée dans la leçon précédente pour définir les colonnes de la source de données.
   
-   Ajoutez de nouvelles colonnes calculées (*numTrans*, *numIntlTrans*et *creditLine*) à la collection de colonnes qui remplace la définition d’origine. Le script ci-dessous ajoute des facteurs basés sur des valeurs minimales et maximales, obtenus à partir de sumOut, qui stocke la sortie en mémoire à partir de **rxSummary**. 
+   Ajoutez de nouvelles colonnes calculées (*numTrans*, *numIntlTrans*et *creditLine*) à la collection de colonnes qui remplacent la définition d’origine. Le script ci-dessous ajoute des facteurs basés sur les valeurs minimales et maximales, obtenus à partir de sumOut, qui stocke la sortie en mémoire de **rxSummary**. 
   
     ```R 
     ccColInfo <- list(
@@ -64,7 +65,7 @@ En fonction des statistiques de résumé calculées de la leçon précédente, v
             )
     ```
   
-3. Après avoir mis à jour la collection de colonnes, appliquez l’instruction suivante pour créer une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version mise à jour de la source de données que vous avez définie précédemment.
+3. Après avoir mis à jour la collection de colonnes, appliquez l’instruction suivante pour créer une version mise à jour de la source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déjà définie.
   
     ```R
     sqlFraudDS <- RxSqlServerData(
@@ -74,14 +75,14 @@ En fonction des statistiques de résumé calculées de la leçon précédente, v
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    La source de données sqlFraudDS comprend désormais les nouvelles colonnes ajoutées à l’aide de *ccColInfo*.
+    La source de données sqlFraudDS inclut désormais les nouvelles colonnes ajoutées à l’aide de *ccColInfo*.
   
-À ce stade, les modifications affectent uniquement l’objet de source de données dans R; aucune nouvelle donnée n’a encore été écrite dans la table de base de données. Toutefois, vous pouvez utiliser les données capturées dans la variable sumOut pour créer des visualisations et des synthèses. 
+À ce stade, les modifications affectent uniquement l’objet de source de données dans R. Aucune nouvelle donnée n’a encore été écrite dans la table de base de données. Toutefois, vous pouvez utiliser les données capturées dans la variable sumOut pour créer des visualisations et des synthèses. 
 
 > [!TIP]
-> Si vous oubliez le contexte de calcul que vous utilisez, exécutez **rxGetComputeContext ()** . Une valeur de retour «RxLocalSeq Compute Context» indique que vous exécutez dans le contexte de calcul local.
+> Si vous avez oublié le contexte de calcul que vous utilisez, exécutez **rxGetComputeContext()** . Une valeur renvoyée « RxLocalSeq Compute Context » indique que l’exécution a lieu dans le contexte de calcul local.
 
-## <a name="visualize-data-using-rxhistogram"></a>Visualiser les données à l’aide de rxHistogram
+## <a name="visualize-data-using-rxhistogram"></a>Visualiser des données à l’aide de rxHistogram
 
 1. Le code R suivant permet d’appeler la fonction [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) et de passer une formule et une source de données. Le code peut être exécuté localement dans un premier temps, afin de voir les résultats attendus et combien de temps peut durer son exécution.
   
@@ -89,47 +90,47 @@ En fonction des statistiques de résumé calculées de la leçon précédente, v
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    En interne, **rxHistogram** appelle la fonction [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , qui est incluse dans le package **RevoScaleR** . **rxCube** génère une liste unique (ou trame de données) contenant une colonne pour chaque variable spécifiée dans la formule, plus une colonne de nombres.
+    En interne, **rxHistogram** appelle la fonction [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , qui est incluse dans le package **RevoScaleR** . **rxCube** génère une liste unique (ou trame de données) qui contient une colonne pour chaque variable spécifiée dans la formule, plus une colonne de nombres.
     
-2. Maintenant, définissez le contexte de calcul sur l’ordinateur distant SQL Server, puis réexécutez **rxHistogram** .
+2. À présent, définissez le contexte de calcul sur l’ordinateur SQL Server distant, puis réexécutez **rxHistogram**.
   
     ```R
     rxSetComputeContext(sqlCompute)
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-3. Les résultats sont exactement les mêmes car vous utilisez la même source de données, mais à la deuxième étape, les calculs sont effectués sur le serveur distant. Les résultats sont ensuite renvoyés à votre station de travail locale à des fins de traçage.
+3. Les résultats sont exactement les mêmes, puisque vous utilisez la même source de données. Cependant, dans la deuxième étape, les calculs sont effectués sur l’ordinateur distant. Les résultats sont ensuite renvoyés à votre station de travail locale à des fins de traçage.
    
-  ![Résultats de l’histogramme](media/rsql-sue-histogramresults.jpg "Résultats de l’histogramme")
+  ![résultats de l’histogramme](media/rsql-sue-histogramresults.jpg "résultats de l’histogramme")
 
 
-## <a name="visualize-with-scatter-plots"></a>Visualiser avec les nuages de points
+## <a name="visualize-with-scatter-plots"></a>Créer une visualisation avec des nuages de points
 
-Les nuages de points sont souvent utilisés lors de l’exploration des données pour comparer la relation entre deux variables. Vous pouvez utiliser des packages R intégrés à cet effet, avec les entrées fournies par les fonctions **RevoScaleR** .
+Les nuages de points sont souvent utilisés lors de l’exploration des données pour comparer la relation entre deux variables. Vous pouvez utiliser des packages R intégrés avec les entrées fournies par les fonctions **RevoScaleR**.
 
-1. Appelez la fonction [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) pour calculer la moyenne de *fraudRisk* pour chaque combinaison de *numTrans* et *numIntlTrans*:
+1. Appelez la fonction [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) pour calculer la moyenne de *fraudRisk* pour chaque combinaison de *numTrans* et *numIntlTrans* :
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    Pour spécifier les groupes utilisés pour calculer les moyennes de groupe, utilisez la notation `F()` . Dans cet exemple, `F(numTrans):F(numIntlTrans)` indique que les entiers dans les variables `numTrans` et `numIntlTrans` doivent être traités comme des variables catégoriques, avec un niveau pour chaque valeur entière.
+    Pour spécifier les groupes utilisés pour calculer les moyennes de groupe, utilisez la notation `F()` . Dans cet exemple, `F(numTrans):F(numIntlTrans)` indique que les entiers dans les variables `numTrans` et `numIntlTrans` doivent être traités comme des variables catégorielles, avec un niveau pour chaque valeur d’entier.
   
-    La valeur de retour par défaut de **rxCube** est un *objet rxCube*, qui représente un tableau croisé. 
+    La valeur renvoyée par défaut de **rxCube** est un *objet rxCube*qui représente un tableau croisé. 
   
-2. Appelez la fonction [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) pour convertir les résultats en une trame de données qui peut facilement être utilisée dans l’une des fonctions de traçage standard de R.
+2. Appelez la fonction [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) pour convertir les résultats en une trame de données facilement exploitable dans l’une des fonctions de traçage standard de R.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    La fonction **rxCube** comprend un argument facultatif, *returnDataFrame* = **true**, que vous pouvez utiliser pour convertir les résultats en une trame de données directement. Exemple :
+    La fonction **rxCube** inclut un argument facultatif, *returnDataFrame* = **TRUE**, que vous pouvez utiliser pour convertir les résultats en une trame de données directement. Par exemple :
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        
-    Toutefois, la sortie de **rxResultsDF** est plus propre et préserve les noms des colonnes sources. Vous pouvez exécuter `head(cube1)` `head(cubePlot)` suivi de pour comparer la sortie.
+    Toutefois, la sortie de **rxResultsDF** est plus propre et préserve le nom des colonnes sources. Vous pouvez exécuter `head(cube1)` suivi par `head(cubePlot)` pour comparer la sortie.
   
-3. Créez une carte thermique à l’aide de la fonction **levelplot** du package de **treillis** , incluse dans toutes les distributions de R.
+3. Créez une carte thermique en utilisant la fonction **levelplot** du package **lattice** inclus dans toutes les distributions de R.
   
     ```R
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
@@ -137,11 +138,11 @@ Les nuages de points sont souvent utilisés lors de l’exploration des données
   
     **Résultats**
   
-    ![Résultats du nuage de points](media/rsql-sue-scatterplotresults.jpg "Résultats de nuage de points")
+    ![résultats de nuage de points](media/rsql-sue-scatterplotresults.jpg "résultats du nuage de points")
   
-À partir de cette analyse rapide, vous pouvez constater que le risque de fraude augmente avec le nombre de transactions et le nombre de transactions internationales.
+À partir de cette analyse rapide, vous pouvez voir que le risque de fraude augmente avec le nombre de transactions et le nombre de transactions internationales.
 
-Pour plus d’informations sur la fonction **rxCube** et analyses croisées en général, consultez synthèses de [données à l’aide de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+Pour plus d’informations sur la fonction **rxCube** et sur les analyses croisées en général, consultez [How to summarize data using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries) (Comment synthétiser des données à l’aide de RevoScaleR).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

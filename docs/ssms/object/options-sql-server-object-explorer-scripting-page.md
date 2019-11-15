@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264058"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844532"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Options (Explorateur d’objets SQL Server - Page Script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,10 @@ Utilisez cette page pour définir les options de script qui s’appliquent aux c
 Les commandes **Edition** et **Modifier** et peuvent produire des résultats qui sont différents de ceux de la commande **Script <object> en tant** que pour le même paramètre d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. La commande **Script <object> en tant que** est conçue pour générer un script pour qu’il puisse être utilisé ultérieurement pour créer des objets.  
   
 ## <a name="options"></a>Options  
-Spécifiez les options de script en les sélectionnant parmi les paramètres disponibles dans la liste située à droite de chaque option.  
+Spécifiez les options de script en les sélectionnant parmi les paramètres disponibles dans la liste située à droite de chaque option.
+
+> [!NOTE]
+> Les paramètres par défaut listés s’appliquent seulement à l’option **Générer un script de la base de données entière et de tous les objets de base de données** et peuvent varier en cas d’utilisation de l’option **Sélectionner des objets de base de données spécifiques**.
   
 ### <a name="general-scripting-options"></a>Options de script générales  
 **Délimiter des instructions individuelles**  

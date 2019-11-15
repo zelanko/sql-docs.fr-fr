@@ -1,7 +1,7 @@
 ---
 title: Présentation des clusters Big Data
 titleSuffix: SQL Server Big Data Clusters
-description: Découvrez les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (préversion) qui s’exécutent sur Kubernetes et fournissent des options de scale-out pour les données relationnelles et HDFS.
+description: Découvrez des informations sur les clusters Big Data SQL Server qui s’exécutent sur Kubernetes et fournissent des options de scale-out pour les données relationnelles et HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532512"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706667"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -56,7 +56,7 @@ Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 
 La gestion et la supervision sont fournies par le biais d’une combinaison d’outils en ligne de commande, d’API, de portails et de vues de gestion dynamique.
 
-Vous pouvez utiliser Azure Data Studio pour effectuer diverses tâches sur le cluster Big Data. La nouvelle **extension SQL Server 2019 (préversion)** le permet. Cette extension offre :
+Vous pouvez utiliser Azure Data Studio pour effectuer diverses tâches sur le cluster Big Data. La nouvelle **extension SQL Server 2019** le permet. Cette extension offre :
 
 - Des extraits de code intégrés pour les tâches de gestion courantes
 - La possibilité de parcourir le système HDFS, de charger des fichiers, de prévisualiser des fichiers et de créer des répertoires

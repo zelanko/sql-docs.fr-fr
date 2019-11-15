@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Documentation SQL Server Machine Learning Services (Python et R)
-summary: Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts Python et R sur des données relationnelles. Des didacticiels, des exemples de code, des guides d’installation et d’autres documents vous montrent comment procéder.
+title: Documentation sur SQL Server Machine Learning Services (Python et R)
+summary: Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts Python et R sur des données relationnelles. Des tutoriels, des exemples de code, des guides d’installation et d’autres documents vous expliquent comment faire.
 metadata:
-  title: Documentation SQL Server Machine Learning Services (Python, R)-didacticiels, Démarrages rapides et guides d’installation
-  description: Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts Python et R sur des données relationnelles. Des didacticiels, des exemples de code, des guides d’installation et d’autres documents vous montrent comment procéder.
+  title: Documentation sur SQL Server Machine Learning Services (Python, R) - Tutoriels, guides de démarrage rapide et guides d’installation
+  description: Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts Python et R sur des données relationnelles. Des tutoriels, des exemples de code, des guides d’installation et d’autres documents vous expliquent comment faire.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
@@ -12,7 +12,7 @@ metadata:
   ms.date: 09/12/2019
   ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
   ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 09/23/2019
   ms.locfileid: "71199392"
@@ -25,13 +25,13 @@ landingContent:
       url: what-is-sql-server-machine-learning.md
   - linkListType: whats-new
     links:
-    - text: Quelles sont les nouveautés de Machine Learning Services ?
+    - text: Nouveautés de Machine Learning Services
       url: what-s-new-in-sql-server-machine-learning-services.md
   - linkListType: video
     links:
-    - text: Comment exécuter R/python dans SQL Server avec Machine Learning Services
+    - text: Comment exécuter R/Python dans SQL Server avec Machine Learning Services
       url: https://www.youtube.com/watch?v=ACejZ9optCQ
-- title: Prise en main de Python
+- title: Bien démarrer avec Python
   linkLists:
   - linkListType: quickstart
     links:
@@ -39,17 +39,17 @@ landingContent:
       url: tutorials/quickstart-python-create-script.md
     - text: Gérer les entrées et les sorties
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
-    - text: Utiliser des structures de données python dans SQL Server
+    - text: Utiliser des structures de données Python dans SQL Server
       url: tutorials/quickstart-python-data-structures.md
     - text: Entraîner et utiliser votre premier modèle
       url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Prédire la location de ski avec régression linéaire
+    - text: Prédire la location de skis avec la régression linéaire
       url: tutorials/python-ski-rental-linear-regression.md
-    - text: Catégorisation des clients à l’aide du clustering k-signifiant
+    - text: Catégorisation des clients à l’aide du clustering k-moyennes
       url: tutorials/python-clustering-model.md
-- title: Prise en main de R
+- title: Bien démarrer avec R
   linkLists:
   - linkListType: quickstart
     links:
@@ -93,7 +93,7 @@ landingContent:
       url: concepts/extension-r.md
   - linkListType: concept
     links:
-    - text: Sécurité de l’infrastructure d’extensibilité
+    - text: Sécurité du framework d’extensibilité
       url: concepts/security.md
 - title: Gérer les packages Python et R
   linkLists:

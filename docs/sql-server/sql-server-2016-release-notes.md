@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874924"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632917"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70874924"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 inclut toutes les mises à jour cumulatives publiées après 2016 SP1, jusqu’à CU8 inclus.
 
-- [![Centre de téléchargement Microsoft](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Télécharger SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- [![Centre de téléchargement Microsoft](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Télécharger SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
 - Pour une liste complète des mises à jour, consultez [Informations de version de SQL Server 2016 Service Pack 2](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 Il peut s’avérer nécessaire de redémarrer le système après l’installation de SQL Server 2016 SP2. Nous vous recommandons de planifier et d’effectuer un redémarrage après l’installation de SQL Server 2016 SP2.

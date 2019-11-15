@@ -1,26 +1,26 @@
 ---
 title: Installer les extensions de langage SQL Server sur Windows
-titleSuffix: SQL Server Language Extensions
-description: Étapes d’installation des extensions de langage pour SQL Server 2019 dans Windows.
+titleSuffix: ''
+description: Découvrez comment installer des extensions de langage SQL Server sur Windows.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589063"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658847"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Installer les extensions de langage SQL Server sur Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 2019 introduit la prise en charge des extensions de langage et de Java. Cet article explique comment installer le composant Extensions de langage en exécutant l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Découvrez comment installer le composant Extensions de langage sur SQL Server en exécutant l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Cet article concerne l’installation des extensions de langage SQL Server sur Windows. Pour Linux, consultez [Installer les extensions de langage SQL Server 2019 (Java) sur Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions).
@@ -61,11 +61,8 @@ Dans SQL Server 2019 version Release Candidate 1, vous pouvez installer et uti
     
 ## <a name="get-the-installation-media"></a>Obtenir le média d’installation
 
-La préversion de SQL Server 2019 est disponible sur le [site d’installation de SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019#Install).
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>Exécuter le programme d’installation
 
 Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.
@@ -110,7 +107,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
     Notez l’emplacement du dossier sous le chemin `..\Setup Bootstrap\Log` où sont stockés les fichiers config. Une fois l’installation terminée, vous pouvez passer en revue les composants installés dans le fichier de synthèse.
 
-6. Redémarrez l’ordinateur après l’installation si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+6. Si vous êtes invité redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 ## <a name="add-the-jre_home-variable"></a>Ajouter la variable JRE_HOME
 
@@ -256,7 +253,7 @@ Les paramètres par défaut pour la configuration de [!INCLUDE[ssNoVersion](../.
 
 Pour vous assurer que les travaux d’extensions de langage sont classés par ordre de priorité et correctement ressourcées, nous vous recommandons d’utiliser la fonctionnalité Resource Governor de SQL Server pour configurer un pool de ressources externes. Vous pouvez aussi modifier la quantité de mémoire allouée au moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou augmenter le nombre de comptes s’exécutant sous le service [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)].
 
-- Pour configurer un pool de ressources pour la gestion des ressources externes, consultez [Créer un pool de ressources externes](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
+- Pour configurer un pool de ressources afin de gérer des ressources externes, consultez [Créer un pool de ressources externes](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
   
 - Pour modifier la quantité de mémoire réservée à la base de données, consultez [Options de configuration de la mémoire du serveur](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   

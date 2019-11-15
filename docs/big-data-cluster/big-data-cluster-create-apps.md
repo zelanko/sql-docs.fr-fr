@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532520"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706693"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Guide pratique pour déployer une application sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,7 +26,7 @@ Cet article explique comment déployer et gérer des scripts R et Python en tant
 
 - Un même utilitaire de ligne de commande pour la gestion du cluster et de l’application
 - Simplification du déploiement des applications et contrôle granulaire à l’aide de fichiers de spécifications
-- Prise en charge de l’hébergement de types d’application supplémentaires - SSIS et MLeap (nouveauté de CTP 2.3)
+- Prise en charge de l’hébergement de types d’application supplémentaires - SSIS et MLeap
 - [Extension Visual Studio Code](app-deployment-extension.md) pour gérer le déploiement des applications
 
 Les applications sont déployées et gérées à l’aide de l’utilitaire de ligne de commande `azdata`. Cet article fournit des exemples de déploiement d’applications à partir de la ligne de commande. Pour savoir comment l’utiliser dans Visual Studio Code, consultez la section [Extension Visual Studio Code](app-deployment-extension.md).
@@ -43,7 +43,7 @@ Les types d’applications suivants sont pris en charge :
 
 ## <a name="capabilities"></a>Fonctions
 
-Dans SQL Server 2019 (préversion), vous pouvez créer, supprimer, décrire, initialiser, lister et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **azdata**.
+Dans SQL Server 2019, vous pouvez créer, supprimer, décrire, initialiser, exécuter et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **azdata**.
 
 |Command |Description |
 |:---|:---|

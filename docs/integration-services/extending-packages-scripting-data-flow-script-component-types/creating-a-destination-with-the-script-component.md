@@ -105,7 +105,7 @@ ms.locfileid: "71296485"
  Les exemples suivants présentent le code requis dans la classe **ScriptMain** pour créer un composant de destination.  
   
 > [!NOTE]
->  Ces exemples utilisent la table **Person.Address** de l’exemple de base de données **AdventureWorks** et passent ses première et quatrième colonnes (à savoir les colonnes **int*AddressID*** et **nvarchar(30)City**) dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
+>  Ces exemples utilisent la table **Person.Address** de l’exemple de base de données **AdventureWorks** et passent ses première et quatrième colonnes (à savoir les colonnes **int*AddressID** et* **nvarchar(30)City**) dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
   
 ### <a name="adonet-destination-example"></a>Exemple de destination ADO.NET  
  Cet exemple montre un composant de destination qui utilise un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant pour enregistrer des données du flux de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

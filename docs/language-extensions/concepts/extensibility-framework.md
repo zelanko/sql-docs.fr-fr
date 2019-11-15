@@ -1,26 +1,26 @@
 ---
 title: Architecture d’extensibilité dans les extensions de langage SQL Server
-titleSuffix: SQL Server Language Extensions
-description: Prise en charge du code externe pour le moteur de base de données SQL Server, avec une architecture double pour l’exécution d’un langage externe sur les données relationnelles.
+titleSuffix: ''
+description: Découvrez des informations sur l’architecture d’extensibilité utilisée pour les extensions de langage SQL Server, qui vous permet d’exécuter du code externe dans SQL Server. Dans SQL Server 2019, Java est pris en charge. Le code s’exécute dans un environnement d’exécution de langage en tant qu’extension du moteur de base de données principal.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589083"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658870"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Architecture d’extensibilité dans les extensions de langage SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Les extensions de langage SQL Server ont un framework d’extensibilité pour l’exécution du code externe tel que Java sur le serveur. Le code s’exécute dans un environnement d’exécution de langage en tant qu’extension du moteur de base de données principal.
+Découvrez des informations sur l’architecture d’extensibilité utilisée pour les extensions de langage SQL Server, qui vous permet d’exécuter du code externe dans SQL Server. Dans SQL Server 2019, Java est pris en charge. Le code s’exécute dans un environnement d’exécution de langage en tant qu’extension du moteur de base de données principal.
 
 ## <a name="background"></a>Arrière-plan
 
@@ -82,11 +82,11 @@ Les protocoles de communication entre les composants et les plateformes de donn�
   + Écrire les données dans des tables : par exemple, durant l’enregistrement des résultats dans une table
   + Créer des objets de base de données : par exemple, si vous enregistrez un script externe dans le cadre d’une nouvelle procédure stockée
 
-  Quand SQL Server est utilisé comme contexte de calcul pour un script exécuté à partir d’un client distant, et que l’exécutable doit récupérer des données à partir d’une source externe, ODBC est utilisé pour la réécriture. SQL Server mappe l’identité de l’utilisateur qui émet la commande distante à l’identité de l’utilisateur sur l’instance actuelle, puis exécute la commande ODBC à l’aide des informations d’identification de cet utilisateur. La chaîne de connexion nécessaire pour effectuer cet appel ODBC est obtenue à partir du code client.
+  Quand SQL Server sert de contexte de calcul pour un script exécuté à partir d’un client distant et que l’exécutable doit récupérer des données à partir d’une source externe, ODBC est utilisé pour l’écriture différée. SQL Server mappe l’identité de l’utilisateur qui émet la commande distante à l’identité de l’utilisateur sur l’instance actuelle, puis exécute la commande ODBC à l’aide des informations d’identification de cet utilisateur. La chaîne de connexion nécessaire pour effectuer cet appel ODBC est obtenue à partir du code client.
 
 + **Autres protocoles**
 
-  Les processus qui ont besoin de fonctionner en « blocs » ou de retransférer des données à un client distant peuvent également utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données proprement dit s’effectue via des objets blob encodés.
+  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données proprement dit s’effectue via des objets blob encodés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958282"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844274"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Comment gérer des notebooks dans Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment ouvrir et enregistrer des fichiers de notebooks dans Azure Data Studio avec la préversion de SQL Server 2019. Il montre également comment modifier la connexion à votre cluster Big Data SQL Server.
+Cet article vous explique comment ouvrir et enregistrer des fichiers de notebooks dans Azure Data Studio avec SQL Server. Il montre également comment modifier la connexion à votre cluster Big Data SQL Server.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-Cet article part du principe que vous disposez déjà d’un notebook à utiliser dans Azure Data Studio. Si vous souhaitez créer un notebook, consultez [Guide pratique pour utiliser des notebooks dans SQL Server 2019 (préversion)](notebooks-guidance.md). Pour utiliser des notebooks dans Azure Data Studio, vous devez respecter les prérequis suivants :
+Cet article part du principe que vous disposez déjà d’un notebook à utiliser dans Azure Data Studio. Si vous voulez créer un notebook, consultez [Guide pratique pour utiliser des notebooks dans SQL Server](notebooks-guidance.md). Pour utiliser des notebooks dans Azure Data Studio, vous devez respecter les prérequis suivants :
 
 - [Déployer un cluster Big Data](quickstart-big-data-cluster-deploy.md)
 - [Outils de Big Data SQL Server 2019](deploy-big-data-tools.md) :
@@ -80,4 +80,4 @@ Pour modifier le cluster Big Data SQL Server d’un notebook :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’utilisation des notebooks dans Azure Data Studio, consultez [Guide pratique pour utiliser des notebooks dans SQL Server 2019 (préversion)](notebooks-guidance.md).
+Pour plus d’informations sur l’utilisation des notebooks dans Azure Data Studio, consultez [Guide pratique pour utiliser des notebooks dans SQL Server 2019](notebooks-guidance.md).

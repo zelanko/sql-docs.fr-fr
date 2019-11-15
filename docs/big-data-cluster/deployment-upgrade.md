@@ -1,7 +1,7 @@
 ---
 title: Effectuer une mise à niveau vers une nouvelle version
-titleSuffix: SQL Server big data clusters
-description: Découvrez comment effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (préversion) vers une nouvelle version release.
+titleSuffix: SQL Server Big Data Clusters
+description: Découvrez comment mettre à niveau des clusters Big Data SQL Server vers une nouvelle version.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90bfaaa1a8cb6fd42081d8afa5feff13f9aec37c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f44ef17a712d0d5a19707cf94e7d3e4196a2aba3
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531958"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706309"
 ---
 # <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -77,4 +77,4 @@ Après avoir supprimé le cluster Big Data précédent et installé la dernière
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ?](big-data-cluster-overview.md)
+Pour plus d’informations sur les clusters Big Data, consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ?](big-data-cluster-overview.md).

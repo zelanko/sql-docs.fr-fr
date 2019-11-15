@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
 ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/23/2019
 ms.locfileid: "70009331"
 ---
-# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Qu’est-ce que le[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]pool de stockage ()?
+# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Qu’est-ce que le pool de stockage ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]) ?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,12 +33,12 @@ Le pool de stockage est constitué de nœuds de stockage constitués de SQL Serv
 Les nœuds de stockage sont responsables des opérations suivantes :
 
 - Ingestion des données par le biais de Spark.
-- Stockage des données dans HDFS (format texte parquet et délimité). HDFS assure également la persistance des données, car les données HDFS sont réparties sur tous les nœuds de stockage du cluster Big Data SQL.
+- Stockage des données dans HDFS (format Parquet et texte délimité). HDFS assure également la persistance des données, car les données HDFS sont réparties sur tous les nœuds de stockage du cluster Big Data SQL.
 - Accès aux données par le biais des points de terminaison HDFS et SQL Server.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]le, consultez les ressources suivantes:
+Pour en savoir plus sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez les ressources suivantes :
 
-- [Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Atelier : Architecture [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
+- [Atelier : Architecture des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

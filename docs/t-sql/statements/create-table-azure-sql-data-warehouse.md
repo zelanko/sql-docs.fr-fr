@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961790"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729865"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -29,7 +29,7 @@ Pour comprendre les tables et savoir comment les utiliser, consultez [Les tables
 > [!NOTE]
 >  Sauf indication contraire, les informations relatives à SQL Data Warehouse contenues dans cet article s’appliquent à SQL Data Warehouse et à Parallel Data Warehouse.
 
- ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>
 
@@ -162,11 +162,15 @@ Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de ta
 
  Consultez [Créer une table partitionnée](#PartitionedTable) dans la section Exemples.
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Option d’index columnstore en cluster ordonné (préversion pour Azure SQL Data Warehouse)
+### <a name="ordered-clustered-columnstore-index-option"></a>Option Index columnstore cluster ordonné 
 
-L’index columnstore cluster est l’index par défaut pour la création de tables dans Azure SQL Data Warehouse.  Les données d’un index columnstore cluster ne sont pas triées avant d’être compressées dans des segments columnstore.  Lors de la création d’un index columnstore cluster avec ORDER, les données sont triées avant d’être ajoutées aux segments d’index et les performances des requêtes peuvent être améliorées. Pour plus d’informations, consultez [Optimisation des performances avec un index columnstore cluster trié](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci).  
+L’index columnstore cluster est l’index par défaut pour la création de tables dans Azure SQL Data Warehouse.  Les données d’un index columnstore cluster ne sont pas triées avant d’être compressées dans des segments columnstore.  Lors de la création d’un index columnstore cluster avec ORDER, les données sont triées avant d’être ajoutées aux segments d’index et les performances des requêtes peuvent être améliorées. Pour plus d’informations, consultez [Réglage des performances avec un index columstore cluster ordonné](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest).  
 
-Les utilisateurs peuvent interroger la colonne column_store_order_ordinal dans sys. index_columns pour la ou les colonnes dans lesquelles une table est ordonnée et la séquence dans le classement.  
+Un index columnstore cluster ordonné peut être créé sur les colonnes de tout type de données pris en charge dans Azure SQL Data Warehouse à l’exception des colonnes de type chaîne.  
+
+Les utilisateurs peuvent interroger la colonne **column_store_order_ordinal** dans **sys.index_columns** pour obtenir la ou les colonnes sur lesquelles une table est ordonnée et la séquence dans le classement.  
+
+Pour plus d’informations, consultez [Optimisation des performances avec un index columnstore cluster trié](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
 
 ### <a name="DataTypes"></a> Type de données
 

@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 047dc16f8eeebe2547aef453a9a86e08be714ff6
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122982"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240675"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 
@@ -68,10 +68,10 @@ Version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquel
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|10.5|100|100, 90, 80|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|10|100|100, 90, 80|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
-|SQL Server 2000|8|80|80|
+|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
 ## <a name="remarks"></a>Notes
-Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est défini sur la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ce niveau est attribué aux nouvelles bases de données, sauf si la base de données **model** a un niveau de compatibilité inférieur. Pour les bases de données attachées ou restaurées à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données conserve son niveau de compatibilité existant si celui-ci correspond au moins à la valeur minimale autorisée pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le déplacement d’une base de données ayant un niveau de compatibilité inférieur à celui autorisé par le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] a pour effet de lui attribuer automatiquement le niveau de compatibilité autorisé le plus bas. Cela s'applique aussi bien aux bases de données système qu'aux bases de données utilisateur.
+Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est associé à la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ce niveau est attribué aux nouvelles bases de données, sauf si la base de données **model** a un niveau de compatibilité inférieur. Pour les bases de données attachées ou restaurées à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données conserve son niveau de compatibilité existant si celui-ci correspond au moins à la valeur minimale autorisée pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le déplacement d’une base de données ayant un niveau de compatibilité inférieur à celui autorisé par le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] a pour effet de lui attribuer automatiquement le niveau de compatibilité autorisé le plus bas. Cela s'applique aussi bien aux bases de données système qu'aux bases de données utilisateur.
 
 Voici les comportements auxquels vous pouvez vous attendre avec [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] quand une base de données est attachée ou restaurée et après une mise à niveau sur place :
 
@@ -90,7 +90,7 @@ Pour afficher le niveau de compatibilité actuel d’une base de données, inter
 > À partir de **janvier 2018**, dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le niveau de compatibilité par défaut est 140 pour les bases de données nouvellement créées. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne met pas à jour le niveau de compatibilité pour les bases de données existantes. Il incombe aux clients de le faire à leur convenance.        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande vivement aux clients d’envisager de passer au dernier niveau de compatibilité afin de tirer parti des dernières améliorations apportées à l’optimisation des requêtes.        
 
-Pour tirer parti du niveau de compatibilité de base de données 140 pour une base de données dans son ensemble, mais en préférant le modèle d’[**estimation de la cardinalité**](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], avec un mappage au niveau de compatibilité de base de données 110, consultez [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) et en particulier son mot clé `LEGACY_CARDINALITY_ESTIMATION = ON`.
+Si vous souhaitez utiliser un niveau de compatibilité de base de données de 120 (ou supérieur) pour l’intégralité d’une base de données, et adhérer au modèle d’[**estimation de la cardinalité**](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], qui correspond au niveau de compatibilité de base de données 110, consultez [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), et en particulier son mot clé `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
 Pour plus d’informations sur la façon d’évaluer les différences de performances de vos requêtes les plus importantes entre deux niveaux de compatibilité différents sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consultez [Meilleures performances des requêtes avec le niveau de compatibilité 130 dans Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Notez que cet article fait référence au niveau de compatibilité 130 et à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la même méthodologie s’applique pour passer au niveau 140 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -110,20 +110,20 @@ SELECT name, compatibility_level FROM sys.databases;
 ```
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>Niveaux de compatibilité et mises à niveau du moteur de base de données
-Le niveau de compatibilité de base de données est un outil précieux quand il s’agit de moderniser une base de données. Il permet en effet de mettre à niveau [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tout en continuant de connecter l’état opérationnel des applications en conservant le niveau de compatibilité de base de données antérieur à la mise à niveau. Cela signifie qu’il est possible de procéder à une mise à niveau à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (telle que [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (avec instance managée) sans aucune modification de l’application (à l’exception de la connectivité de base de données). Pour plus d’informations, consultez [Certification de compatibilité](../../database-engine/install-windows/compatibility-certification.md).
+Le niveau de compatibilité de base de données est un outil précieux quand il s’agit de moderniser une base de données. Il permet en effet de mettre à niveau le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tout en continuant de connecter l’état opérationnel des applications en conservant le niveau de compatibilité de base de données antérieur à la mise à niveau. Cela signifie qu’il est possible de procéder à une mise à niveau à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (telle que [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (avec instance managée) sans aucune modification de l’application (à l’exception de la connectivité de base de données). Pour plus d’informations, consultez [Certification de compatibilité](../../database-engine/install-windows/compatibility-certification.md).
 
-Tant que l’application n’a pas besoin de tirer part des améliorations disponibles uniquement dans un niveau de compatibilité de base de données plus élevé, il est judicieux de mettre à niveau le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et de conserver le niveau de compatibilité de base de données précédent. Pour plus d’informations sur l’utilisation du niveau de compatibilité pour la compatibilité descendante, consultez [Certification de compatibilité](../../database-engine/install-windows/compatibility-certification.md).
+Tant que l’application n’a pas besoin d’utiliser des améliorations disponibles uniquement dans un niveau de compatibilité de base de données plus élevé, il est préférable de mettre à niveau le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et de conserver le niveau de compatibilité de base de données précédent. Pour plus d’informations sur l’utilisation du niveau de compatibilité pour la compatibilité descendante, consultez [Certification de compatibilité](../../database-engine/install-windows/compatibility-certification.md).
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Bonnes pratiques pour la mise à niveau du niveau de compatibilité de base de données
-Pour connaître le workflow recommandé pour la mise à niveau du niveau de compatibilité, consultez [Changer le mode de compatibilité de la base de données et utiliser le magasin des requêtes](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). En outre, pour une expérience assistée avec la mise à niveau du niveau de compatibilité de base de données, consultez [Mise à niveau de bases de données à l’aide de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
+Pour connaître le workflow recommandé pour la mise à niveau du niveau de compatibilité, consultez [Changer le mode de compatibilité de la base de données et utiliser le magasin des requêtes](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). En outre, pour obtenir de l’aide concernant la mise à niveau du niveau de compatibilité de base de données, consultez [Mise à niveau de bases de données à l’aide de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>Niveaux de compatibilité et procédures stockées
 Lors de l'exécution d'une procédure stockée, elle utilise le niveau de compatibilité en cours de la base de données dans laquelle elle est définie. Lors de la modification du paramètre de compatibilité d'une base de données, l'ensemble de ses procédures stockées sont automatiquement recompilées en conséquence.
 
-## <a name="using-compatibility-level-for-backward-compatibility"></a>Utilisation du niveau de compatibilité pour la compatibilité descendante
-Le paramètre de [niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) fournit une compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ce qui concerne [!INCLUDE[tsql](../../includes/tsql-md.md)] et les comportements d’optimisation des requêtes uniquement pour la base de données spécifiée, et non pour l’ensemble du serveur.  
+## <a name="backwardCompat"></a> Utilisation du niveau de compatibilité pour la compatibilité descendante
+Le paramètre [Niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) fournit une compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ce qui concerne [!INCLUDE[tsql](../../includes/tsql-md.md)] et les comportements d’optimisation des requêtes, uniquement pour la base de données spécifiée, et non pour l’ensemble du serveur.  
 
-À partir du mode de compatibilité 130, tout nouveau plan de requête affectant les fonctionnalités n’est ajouté intentionnellement qu’au nouveau niveau de compatibilité. Lors des mises à niveau, cela permet de réduire les risques liés à la dégradation des performances en raison des modifications du plan de requête potentiellement introduites par de nouveaux comportements d’optimisation des requêtes.      
+À partir du mode de compatibilité 130, les nouveaux plans de requête affectant les correctifs et les fonctionnalités ne sont ajoutés intentionnellement qu’au nouveau niveau de compatibilité. Lors des mises à niveau, cela permet de réduire les risques liés à la dégradation des performances en raison des modifications du plan de requête potentiellement introduites par de nouveaux comportements d’optimisation des requêtes.      
 
 Du point de vue de l’application, utilisez le niveau de compatibilité le plus bas comme chemin de migration plus sûr pour contourner les problèmes liés aux différences de versions dans les comportements qui sont contrôlés par le paramètre de niveau de compatibilité approprié. L’objectif doit toujours être de procéder à une mise à niveau vers le niveau de compatibilité le plus récent à un moment donné, de façon à hériter de certaines nouvelles fonctionnalités comme le [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md), mais cette opération doit être effectuée de façon contrôlée. 
 
@@ -131,14 +131,14 @@ Pour plus d’informations, notamment sur le workflow recommandé pour la mise �
 
 > [!IMPORTANT]
 > Les fonctionnalités **obsolètes** obtenues précédemment via une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont **pas** protégées par le niveau de compatibilité. Il s’agit des fonctionnalités qui ont été supprimées du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
-> Par exemple, l’indicateur `FASTFIRSTROW` a été abandonné dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], et remplacé par l’indicateur `OPTION (FAST n )`. Le fait de définir le niveau de compatibilité de la base de données sur 110 ne permet pas de restaurer l’indicateur obsolète.  
+> Par exemple, l’indicateur `FASTFIRSTROW` a été abandonné dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], et remplacé par l’indicateur `OPTION (FAST n )`. Le fait de définir le niveau de compatibilité de la base de données sur 110 ne permet pas de restaurer l’indicateur obsolète.  
 >  
 > Pour plus d’informations sur la fonctionnalité discontinue, consultez [Fonctionnalité de moteur de base de données discontinue dans SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Fonctionnalité de moteur de base de données dans SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) et [Fonctionnalité de moteur de base de données dans SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
 
 > [!IMPORTANT]
 > Les **changements importants** introduits par une version donnée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent ne **pas** être protégés par le niveau de compatibilité. Il s’agit des changements de comportement entre les versions du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Le comportement [!INCLUDE[tsql](../../includes/tsql-md.md)] est généralement protégé par le niveau de compatibilité. Toutefois, les objets système modifiés ou supprimés **ne sont pas** protégés par le niveau de compatibilité.
 >
-> Parmi les changements importants **protégés** par le niveau de compatibilité figure la conversion implicite du type de données datetime en type de données datetime2. Avec le niveau de compatibilité de base de données 130, il offre une meilleure précision en prenant en compte les fractions de milliseconde, ce qui génère différentes valeurs converties. Pour restaurer l’ancien comportement de conversion, définissez le niveau de compatibilité de la base de données sur 120 ou sur une valeur inférieure.
+> Parmi les changements importants **protégés** par le niveau de compatibilité figure la conversion implicite du type de données datetime en type de données datetime2. Le niveau de compatibilité de base de données de 130 permet une plus grande précision en prenant en compte les fractions de milliseconde, ce qui génère différentes valeurs converties. Pour restaurer l’ancien comportement de conversion, définissez le niveau de compatibilité de la base de données sur 120 ou sur une valeur inférieure.
 >
 > Parmi les changements importants **non protégés** par le niveau de compatibilité figurent :
 >
@@ -147,10 +147,62 @@ Pour plus d’informations, notamment sur le workflow recommandé pour la mise �
 >
 > Pour plus d’informations sur les changements importants, consultez [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) et [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).
 
-## <a name="differences-between-compatibility-level-140-and-level-150"></a>Différences entre les niveaux de compatibilité 140 et 150
+## <a name="differences-between-compatibility-levels"></a>Comparaison des différents niveaux de compatibilité
+Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est associé à la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)], comme vous pouvez le voir dans [ce tableau](#supported-dbcompats). Pour chaque nouvelle tâche de développement, prévoyez toujours de certifier les applications avec le niveau de compatibilité de base de données le plus récent.
+
+Le niveau de compatibilité de base de données offre également une compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], car les bases de données attachées ou restaurées à partir de n’importe quelle version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conservent leur niveau de compatibilité existant (si celui-ci est identique ou supérieur au niveau de compatibilité minimal autorisé). Ceci a été abordé dans la section [Utilisation du niveau de compatibilité pour la compatibilité descendante](#backwardCompat) de cet article.
+
+À partir du niveau de compatibilité de base de données 130, les nouveaux correctifs et nouvelles fonctionnalités qui affectent les plans de requête sont ajoutés uniquement au niveau de compatibilité le plus récent, également appelé « niveau de compatibilité par défaut ». Lors des mises à niveau, cela permet de réduire les risques liés à la dégradation des performances en raison des modifications du plan de requête potentiellement apportées par de nouveaux comportements d’optimisation des requêtes. 
+
+Les principales modifications qui affectent le plan et qui sont ajoutées uniquement au niveau de compatibilité par défaut d’une nouvelle version du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont les suivantes :
+
+1.  **Les correctifs de l’optimiseur de requête publiés pour les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous l’indicateur de trace 4199 sont automatiquement activés avec le niveau de compatibilité par défaut d’une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+    Par exemple, lorsque [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] est sorti, tous les correctifs de l’optimiseur de requête publiés pour les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (et les niveaux de compatibilité de 100 à 120) étaient activés automatiquement pour les bases de données qui utilisaient le niveau de compatibilité par défaut (130) de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Seuls les correctifs post-RTM de l’optimiseur de requête doivent être activés explicitement.
+    
+    > [!NOTE]
+    > Pour activer les correctifs de l’optimiseur de requête, vous pouvez utiliser les méthodes suivantes :    
+    >
+    > - Au niveau du serveur, avec l’[indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
+    > - Au niveau de la base de données, avec l’option `QUERY_OPTIMIZER_HOTFIXES` dans [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+    > - Au niveau de la requête, avec l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'`.
+    
+    Plus tard, lorsque [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] est sorti, tous les correctifs de l’optimiseur de requête publiés après la version RTM de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] étaient automatiquement activés pour les bases de données utilisant le niveau de compatibilité par défaut (140) de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Il s’agit d’un comportement cumulatif qui inclut tous les correctifs des versions précédentes. Pour rappel, seuls les correctifs post-RTM de l’optimiseur de requête doivent être activés explicitement.  
+    
+    Le tableau suivant récapitule ce comportement :
+    
+    |Version du moteur de base de données|Niveau de compatibilité de la base de données|TF 4199|Modifications de l’optimiseur de requête de tous les précédents niveaux de compatibilité de base de données|Modifications de l’optimiseur de requête pour la version post-RTM du moteur de base de données|
+    |----------|----------|---|------------|--------|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 à 120<br /><br /><br />130|Inactif<br />Actif<br /><br />Inactif<br />Actif|**Désactivé**<br />Activé<br /><br />**Activé**<br />Activé|Désactivé<br />Activé<br /><br />Désactivé<br />Activé|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 à 120<br /><br /><br />130<br /><br /><br />140|Inactif<br />Actif<br /><br />Inactif<br />Actif<br /><br />Inactif<br />Actif|**Désactivé**<br />Activé<br /><br />**Activé**<br />Activé<br /><br />**Activé**<br />Activé|Désactivé<br />Activé<br /><br />Désactivé<br />Activé<br /><br />Désactivé<br />Activé|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 à 120<br /><br /><br />130 à 140<br /><br /><br />150|Inactif<br />Actif<br /><br />Inactif<br />Actif<br /><br />Inactif<br />Actif|**Désactivé**<br />Activé<br /><br />**Activé**<br />Activé<br /><br />**Activé**<br />Activé|Désactivé<br />Activé<br /><br />Désactivé<br />Activé<br /><br />Désactivé<br />Activé|
+    
+    > [!IMPORTANT]
+    > Les correctifs de l’optimiseur de requête qui résolvent les erreurs relatives à des résultats erronés ou à des violations d’accès ne sont pas protégés par l’indicateur de trace 4199. Ces correctifs ne sont pas considérés comme facultatifs.
+ 
+2.  **Les modifications apportées à l’[estimateur de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sont activées uniquement pour le niveau de compatibilité par défaut d’une nouvelle version du [!INCLUDE[ssDE](../../includes/ssde-md.md)]** , mais pas pour les niveaux de compatibilité précédents. 
+
+    Par exemple, lorsque [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] est sorti, les modifications apportées au processus d’estimation de la cardinalité étaient uniquement disponibles pour les bases de données utilisant le niveau de compatibilité par défaut (130) de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Les niveaux de compatibilité précédents ont conservé le comportement d’estimation de la cardinalité qui était disponible avant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
+    
+    Plus tard, lorsque [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] est sorti, les nouvelles modifications apportées au processus d’estimation de la cardinalité étaient uniquement disponibles pour les bases de données utilisant le niveau de compatibilité par défaut (140) de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Le niveau de compatibilité de base de données 130 a conservé le comportement d’estimation de la cardinalité de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
+    
+    Le tableau suivant récapitule ce comportement :
+    
+    |Version du moteur de base de données|Niveau de compatibilité de la base de données|Nouvelles modifications apportées à la version CE|
+    |----------|--------|-------------|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|Désactivé<br />Activé|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|Désactivé<br />Activé|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|Désactivé<br />Activé|
+    
+    <sup>1</sup> Également applicable à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+    
+> [!IMPORTANT]
+> Les sections suivantes de cet article abordent d’autres différences qui existent entre certains niveaux de compatibilité.
+
+## <a name="differences-between-compatibility-level-140-and-level-150"></a>Différences entre le niveau de compatibilité 140 et le niveau 150
 Cette section décrit les nouveaux comportements introduits avec le niveau de compatibilité 150.
 
-Le niveau 150 de compatibilité de la base de données est actuellement en préversion publique pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Il sera associé à la prochaine génération d’amélioration du traitement des requêtes, au-delà de ce qui a été introduit dans le niveau 140 de compatibilité de la base de données.
+Le niveau 150 de compatibilité de la base de données est actuellement en préversion publique pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Il sera associé à la prochaine génération d’amélioration du traitement des requêtes, au-delà de ce qui a été introduit dans le niveau 140 de compatibilité de la base de données.
 
 |Paramètre de niveau de compatibilité inférieur ou égal à 140|Paramètre de niveau de compatibilité égal à 150|
 |--------------------------------------------------|-----------------------------------------|
@@ -162,7 +214,7 @@ Le niveau 150 de compatibilité de la base de données est actuellement en prév
 
 Pour plus d’informations sur les fonctionnalités de traitement des requêtes activées dans le niveau de compatibilité de base de données 150, consultez [Nouveautés de SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) et [Traitement de requêtes intelligent dans les bases de données SQL](../../relational-databases/performance/intelligent-query-processing.md).
 
-## <a name="differences-between-compatibility-level-130-and-level-140"></a>Différences entre le niveau de compatibilité 130 et le niveau 140
+## <a name="differences-between-compatibility-level-130-and-level-140"></a>Différences entre le niveau de compatibilité 130 et le niveau 140
 
 Cette section décrit les nouveaux comportements introduits avec le niveau de compatibilité 140.
 
@@ -178,11 +230,11 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 
 Les correctifs qui se trouvaient sous l’indicateur de trace 4199 dans les versions de SQL Server antérieures à SQL Server 2017 sont maintenant activés par défaut avec le niveau de compatibilité 140. L’indicateur de trace 4199 est toujours applicable aux correctifs de l’optimiseur de requête qui ont été publiés après la publication de SQL Server 2017. Pour plus d’informations sur l’indicateur de trace 4199, consultez [Indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
 
-## <a name="differences-between-compatibility-level-120-and-level-130"></a>Différences entre le niveau de compatibilité 120 et le niveau 130
+## <a name="differences-between-compatibility-level-120-and-level-130"></a>Différences entre le niveau de compatibilité 120 et le niveau 130
 
 Cette section décrit les nouveaux comportements introduits avec le niveau de compatibilité 130.
 
-|Paramètre de niveau de compatibilité inférieur ou égal à 120|Paramètre de niveau de compatibilité égal à 130|
+|Paramètre de niveau de compatibilité inférieur ou égal à 120|Paramètre de niveau de compatibilité égal à 130|
 |--------------------------------------------------|-----------------------------------------|
 |Dans une instruction INSERT-SELECT, INSERT est monothread.|Dans une instruction INSERT-SELECT, INSERT est multithread ou peut présenter un plan parallèle.|
 |Les requêtes d’une table à mémoire optimisée sont exécutées en monothread.|Les requêtes d’une table à mémoire optimisée peuvent désormais avoir des plans parallèles.|
@@ -190,11 +242,11 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 |Changements au niveau du mode batch et du mode ligne avec les index columnstore :<br /><ul><li>Le tri du contenu d’une table avec un index columnstore s’effectue en mode ligne <li>Les agrégats de fonction de fenêtrage fonctionnent en mode ligne (par exemple, `LAG` ou `LEAD`) <li>Les requêtes exécutées sur des tables Columnstore avec plusieurs clauses distinctes sont exécutées en mode ligne <li>Les requêtes s’exécutant sous MAXDOP 1 ou avec un plan en série sont exécutées en mode ligne</li></ul>| Changements au niveau du mode batch et du mode ligne avec les index columnstore :<br /><ul><li>Le tri du contenu d’une table avec un index columnstore s’effectue désormais en mode batch <li>Les agrégats de fenêtrage fonctionnent désormais en mode batch (par exemple, `LAG` ou `LEAD`) <li>Les requêtes exécutées sur des tables Columnstore avec plusieurs clauses distinctes sont exécutées en mode batch <li>Les requêtes exécutées sous MAXDOP 1 ou avec un plan en série sont exécutées en mode batch</li></ul>|
 |Les statistiques peuvent être automatiquement mises à jour. | La logique qui met à jour automatiquement les statistiques est plus agressive sur les tables volumineuses. Dans la pratique, cela doit réduire les problèmes de performances des requêtes, lorsque des lignes nouvellement insérées sont interrogées fréquemment, mais que les statistiques n’ont pas été mises à jour pour inclure ces valeurs. |
 |La trace 2371 est désactivée par défaut dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | La [trace 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) est activée par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. L’indicateur de trace 2371 demande au programme de mise à jour automatique des statistiques d’échantillonner un sous-ensemble de lignes plus petit mais plus raisonnable, dans une table qui comporte un grand nombre de lignes. <br/> <br/> L’une des améliorations est qu’il est désormais possible d’inclure dans l’échantillon plus de lignes que ce qui a été inséré récemment. <br/> <br/> Une autre amélioration est que vous pouvez laisser les requêtes s’exécuter pendant que le processus de mise à jour des statistiques s’exécute, plutôt que de bloquer les requêtes. |
-|Pour le niveau 120, les statistiques sont échantillonnées par un processus *monothread*.|Pour le niveau 130, les statistiques sont échantillonnées par un processus *multithread*. |
+|Pour le niveau 120, les statistiques sont échantillonnées par un processus monothread.|Pour le niveau 130, les statistiques sont échantillonnées par un processus multithread (parallèle). |
 |Le nombre de clés étrangères entrantes est limité à 253.| Une table peut être référencée par un nombre maximal de 10 000 clés étrangères entrantes (ou types de références similaires). Pour connaître les restrictions associées, consultez [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md). |
 |Les algorithmes de hachage dépréciés MD2, MD4, MD5, SHA et SHA1 sont autorisés.|Seuls les algorithmes de hachage SHA2_256 et SHA2_512 sont autorisés.|
 ||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] comprend des améliorations au niveau de certaines conversions de types de données et de certaines opérations (dont la plupart sont peu courantes). Pour plus d’informations, consultez [Améliorations de SQL Server 2016 dans le traitement de certains types de données et des opérations peu courantes](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
-|La fonction STRING_SPLIT n’est pas disponible.|La fonction STRING_SPLIT est disponible sous le niveau de compatibilité 130 ou supérieur. Si votre niveau de compatibilité de base de données est inférieur à 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas trouver et exécuter la fonction STRING_SPLIT.|
+|La fonction `STRING_SPLIT` n’est pas disponible.|La fonction `STRING_SPLIT` est disponible avec le niveau de compatibilité 130 ou supérieur. Si votre niveau de compatibilité de base de données est inférieur à 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas trouver ni exécuter la fonction `STRING_SPLIT`.|
 
 Les correctifs qui se trouvaient sous l’indicateur de trace 4199 dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] sont maintenant activés par défaut avec le niveau de compatibilité 130. L’indicateur de trace 4199 est toujours applicable aux correctifs de l’optimiseur de requête qui ont été publiés après la publication de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Pour utiliser l’ancien optimiseur de requête de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous devez sélectionner le niveau de compatibilité 110. Pour plus d’informations sur l’indicateur de trace 4199, consultez [Indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
 
@@ -204,7 +256,7 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 
 |Paramètre de niveau de compatibilité inférieur ou égal à 110|Paramètre de niveau de compatibilité égal à 120|
 |--------------------------------------------------|-----------------------------------------|
-|L'ancien optimiseur de requête est utilisé.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] comprend d’importantes améliorations au niveau du composant qui crée et optimise les plans de requête. Cette nouvelle fonctionnalité de l'optimiseur de requête dépend de l'utilisation du niveau de compatibilité 120 de la base de données. Pour bénéficier de ces améliorations, vous devez développer des applications de base de données à l'aide d'un niveau de compatibilité de base de données 120. Les applications qui sont migrées des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être soigneusement testées pour vérifier que de bonnes performances sont conservées ou améliorées. Si les performances se dégradent, définissez le niveau de compatibilité 110 ou inférieur de base de données pour utiliser la méthodologie de l'ancien optimiseur de requête.<br /><br /> Le niveau de compatibilité 120 de la base de données utilise un nouvel estimateur de cardinalité qui est réglé pour le stockage des données et les charges de travail OLTP modernes. Avant de définir le niveau de compatibilité de la base de données sur 110 en raison de problèmes de performances, consultez les recommandations de la section Plans de requête, dans la rubrique [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Nouveautés du moteur de base de données](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).|
+|L'ancien optimiseur de requête est utilisé.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] comprend d’importantes améliorations au niveau du composant qui crée et optimise les plans de requête. Cette nouvelle fonctionnalité de l’optimiseur de requête dépend de l’utilisation du niveau de compatibilité 120 de la base de données. Pour bénéficier de ces améliorations, vous devez développer des applications de base de données à l’aide d’un niveau de compatibilité de base de données 120. Les applications qui sont migrées des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être soigneusement testées pour vérifier que de bonnes performances sont conservées ou améliorées. Si les performances se dégradent, définissez le niveau de compatibilité 110 ou inférieur de base de données pour utiliser la méthodologie de l’ancien optimiseur de requête.<br /><br /> Le niveau de compatibilité 120 de la base de données utilise un nouvel estimateur de cardinalité qui est réglé pour le stockage des données et les charges de travail OLTP modernes. Avant de définir le niveau de compatibilité de la base de données sur 110 en raison de problèmes de performances, consultez les recommandations de la section *Plans de requête* dans la rubrique [Nouveautés du moteur de base de données](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|
 |Dans les niveaux de compatibilité inférieurs à 120, le paramètre de langue est ignoré lors de la conversion d’une valeur de **date** en une valeur de chaîne. Notez que ce comportement ne s’applique qu’au type **date**. Consultez l’exemple B dans la section Exemples ci-dessous.|Le paramètre de langue est pris en compte lors de la conversion d’une valeur de **date** en une valeur de chaîne.|
 |Les références récursives à droite d’une clause `EXCEPT` créent une boucle infinie. L’exemple C de la section Exemples ci-dessous illustre ce comportement.|Les références récursives d’une clause `EXCEPT` génèrent une erreur, conformément à la norme SQL ANSI.|
 |L’expression de table commune récursive permet les noms de colonnes en double.|Les expressions CTE récursives n'autorisent pas les noms de colonnes en double.|
@@ -217,7 +269,7 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 
 Cette section décrit les nouveaux comportements introduits avec le niveau de compatibilité 110. Cette section s’applique également aux niveaux de compatibilité au-dessus de 110.
 
-|Paramètre de niveau de compatibilité inférieur ou égal à 100|Paramètre de niveau de compatibilité d'au moins 110|
+|Paramètre de niveau de compatibilité inférieur ou égal à 100|Paramètre de niveau de compatibilité d’au moins 110|
 |--------------------------------------------------|--------------------------------------------------|
 |Les objets de base de données CLR (Common Language Runtime) sont exécutés avec la version 4 du CLR. Toutefois, quelques changements de comportement introduits dans la version 4 du CLR sont évités. Pour plus d’informations, consultez [Intégration du CLR - Nouveautés](../../relational-databases/clr-integration/clr-integration-what-s-new.md).|Les objets de base de données CLR sont exécutés avec la version 4 du CLR.|
 |Les fonctions XQuery **string-length** et **substring** comptent chaque caractère de substitution comme deux caractères.|Les fonctions XQuery **string-length** et **substring** comptent chaque caractère de substitution comme un seul caractère.|
@@ -263,15 +315,15 @@ Le paramètre de compatibilité détermine aussi les mots clés réservés par l
 |----------------------------------|-----------------------|
 |130|À déterminer.|
 |120|Aucun.|
-|110|WITHIN GROUP, TRY_CONVERT, SEMANTICKEYPHRASETABLE, SEMANTICSIMILARITYDETAILSTABLE, SEMANTICSIMILARITYTABLE|
-|100|CUBE, MERGE, ROLLUP|
-|90|EXTERNAL, PIVOT, UNPIVOT, REVERT, TABLESAMPLE|
+|110|`WITHIN GROUP`, `TRY_CONVERT`, `SEMANTICKEYPHRASETABLE`, `SEMANTICSIMILARITYDETAILSTABLE`, `SEMANTICSIMILARITYTABLE`|
+|100|`CUBE`, `MERGE`, `ROLLUP`|
+|90|`EXTERNAL`, `PIVOT`, `UNPIVOT`, `REVERT`, `TABLESAMPLE`|
 
 À un niveau de compatibilité spécifique, les mots clés réservés incluent l'ensemble des mots clés introduits à partir de ce niveau ou sous celui-ci. Ainsi, pour les applications au niveau 110, par exemple, l'ensemble des mots clés répertoriés dans le tableau précédent sont réservés. À des niveaux de compatibilité inférieurs, les mots clés de niveau 100 demeurent des noms d'objet valides, mais les fonctions de langage de niveau 110 correspondant à ces mots clés sont indisponibles.
 
 Une fois introduit, un mot clé demeure réservé. Le mot clé réservé PIVOT, par exemple, introduit au niveau de compatibilité 90, est également réservé aux niveaux 100 et 110 et 120.
 
-Si une application utilise un identificateur réservé en tant que mot clé pour son niveau de compatibilité, l'application échoue. Pour contourner ce problème, placez l’identificateur entre crochets ( **[]** ) ou entre guillemets ( **""** ). Par exemple, pour effectuer la mise à niveau d’une application qui utilise l’identificateur **EXTERNAL** vers le niveau de compatibilité 90, vous pouvez remplacer l’identificateur par **[EXTERNAL]** ou **"EXTERNAL"** .
+Si une application utilise un identificateur réservé en tant que mot clé pour son niveau de compatibilité, l'application échoue. Pour contourner ce problème, placez l’identificateur entre crochets ( **[]** ) ou entre guillemets ( **""** ). Par exemple, pour effectuer la mise à niveau d’une application qui utilise l’identificateur `EXTERNAL` vers le niveau de compatibilité 90, vous pouvez remplacer l’identificateur par `[EXTERNAL]` ou `"EXTERNAL"`.
 
 Pour plus d’informations, consultez [Mots clés réservés](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 
@@ -283,7 +335,7 @@ Requiert l'autorisation `ALTER` sur la base de données.
 
 ### <a name="a-changing-the-compatibility-level"></a>A. Modification du niveau de compatibilité
 
-L’exemple suivant remplace le niveau de compatibilité de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] par `110,`[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+L’exemple suivant remplace le niveau de compatibilité de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] par 110, c’est-à-dire, le niveau par défaut pour [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
 ```sql
 ALTER DATABASE AdventureWorks2012
@@ -301,7 +353,7 @@ WHERE name = db_name();
 
 ### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>B. Instruction SET LANGUAGE non prise en compte, sauf avec le niveau de compatibilité 120
 
-La requête suivante ignore l’instruction SET LANGUAGE, sauf avec le niveau de compatibilité 120.
+La requête suivante ignore l’instruction `SET LANGUAGE`, sauf avec le niveau de compatibilité 120.
 
 ```sql
 SET DATEFORMAT dmy;
@@ -355,7 +407,6 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ```
 
 ### <a name="e-variable-assignment---top-level-union-operator"></a>E. Attribution de variable - opérateur UNION de niveau supérieur
-
 L'attribution de variable est autorisée dans une instruction contenant un opérateur UNION de niveau supérieur, celle-ci produit néanmoins des résultats inattendus. Par exemple, dans les instructions suivantes, la variable locale `@v` reçoit la valeur de la colonne `BusinessEntityID` issue de l'union de deux tables. Par définition, lorsque l'instruction SELECT retourne plusieurs valeurs, la dernière valeur retournée est affectée à la variable. Dans ce cas, la dernière valeur est attribuée correctement à la variable, toutefois, le jeu de résultats de l'instruction SELECT UNION est également retourné.
 
 ```sql

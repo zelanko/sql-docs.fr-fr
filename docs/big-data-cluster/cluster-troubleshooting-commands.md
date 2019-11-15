@@ -1,7 +1,7 @@
 ---
-title: Surveiller et résoudre des problèmes
+title: Superviser et dépanner
 titleSuffix: SQL Server big data clusters
-description: Cet article fournit des commandes utiles pour la surveillance et [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]le dépannage d’un.
+description: Cet article fournit des commandes pratiques pour la supervision et la résolution des problèmes d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,19 +11,19 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70153632"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Surveillance et résolution des problèmes[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Superviser et dépanner [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit plusieurs commandes Kubernetes utiles que vous pouvez utiliser pour analyser et dépanner un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Il montre comment visualiser les informations détaillées d’un pod ou d’autres artefacts Kubernetes situés dans le cluster Big Data. Cet article traite également de tâches courantes, comme la copie de fichiers vers ou depuis un conteneur exécutant un des services du cluster Big Data SQL Server.
+Cet article décrit plusieurs commandes Kubernetes utiles que vous pouvez utiliser pour superviser et dépanner un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Il montre comment visualiser les informations détaillées d’un pod ou d’autres artefacts Kubernetes situés dans le cluster Big Data. Cet article traite également de tâches courantes, comme la copie de fichiers vers ou depuis un conteneur exécutant un des services du cluster Big Data SQL Server.
 
 > [!TIP]
-> Pour l’analyse de l’état des composants Big Data clusters, vous pouvez utiliser les commandes d' [**État azdata BDC**](deployment-guidance.md#status) ou les [blocs-notes de résolution des problèmes](manage-notebooks.md) intégrés fournis avec Azure Data Studio.
+> Pour la supervision des composants des clusters Big Data, vous pouvez utiliser les commandes [**azdata bdc status**](deployment-guidance.md#status) ou les [notebooks de résolution des problèmes intégrés](manage-notebooks.md) fournis avec Azure Data Studio.
 
 > [!TIP]
 > Exécutez les commandes **kubectl** suivantes sur une machine cliente Windows (cmd ou PS) ou Linux (bash). Elles nécessitent une authentification antérieure dans le cluster et un contexte de cluster pour s’exécuter. Par exemple, pour un cluster AKS créé précédemment, vous pouvez exécuter `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` pour télécharger le fichier de configuration de cluster Kubernetes et définir le contexte de cluster.
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 Les services suivants prennent en charge les connexions externes au cluster Big Data :
 
-| de diffusion en continu | Description |
+| Service | Description |
 |---|---|
 | **master-svc-external** | Fournit l’accès à l’instance principale.<br/>(**EXTERNAL-IP,31433** et l’utilisateur **SA**) |
 | **controller-svc-external** | Prend en charge les outils et les clients qui gèrent le cluster. |
@@ -227,4 +227,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]que sont les ](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters Big Data, consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ?](big-data-cluster-overview.md).

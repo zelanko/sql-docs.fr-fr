@@ -1,7 +1,7 @@
 ---
-title: Restauration d’une base de données
+title: Restaurer une base de données
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment restaurer une base de données dans l’instance principale d' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un.
+description: Cet article explique comment restaurer une base de données dans l’instance principale d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652239"
@@ -20,7 +20,7 @@ ms.locfileid: "69652239"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment restaurer une base de données existante dans l’instance principale d' [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. La méthode recommandée consiste à utiliser une approche de sauvegarde, de copie et de restauration.
+Cet article explique comment restaurer une base de données existante dans l’instance principale d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. La méthode recommandée consiste à utiliser une approche de sauvegarde, de copie et de restauration.
 
 ## <a name="backup-your-existing-database"></a>Sauvegarder votre base de données existante
 
@@ -39,7 +39,7 @@ Copiez le fichier de sauvegarde vers le conteneur SQL Server dans le pod de l’
 kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
-Exemple :
+Exemple :
 
 ```bash
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
@@ -54,7 +54,7 @@ ls /tmp
 exit
 ```
 
-Exemple :
+Exemple :
 
 ```bash
 kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
@@ -70,7 +70,7 @@ Ensuite, restaurez la sauvegarde de la base de données sur l’instance princip
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 ```
 
-Exemple :
+Exemple :
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]l', consultez la vue d’ensemble suivante:
+Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez la vue d’ensemble suivante :
 
-- [Que sont [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md)

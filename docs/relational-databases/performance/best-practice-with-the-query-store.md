@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142774"
 ---
 # <a name="best-practices-with-query-store"></a>Bonnes pratiques relatives au Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Intervalle de vidange des données (minutes)**  : définit la fréquence en secondes de conservation sur le disque des statistiques d’exécution collectées. La valeur par défaut est de 900 secondes, soit 15 minutes. Utilisez une valeur plus élevée si votre charge de travail ne génère pas de grandes quantités de requêtes et de plans différents, ou si vous pouvez supporter une durée de conservation des données plus élevée avant un arrêt de la base de données.
+ **Intervalle de vidange des données (minutes)**  : définit à quelle fréquence les statistiques d’exécution doivent être collectées sur le disque. La fréquence est exprimée en minutes dans l’interface graphique utilisateur (GUI), mais dans [!INCLUDE[tsql](../../includes/tsql-md.md)], elle est exprimée en secondes. La valeur par défaut est de 900 secondes, ce qui correspond à 15 minutes dans l’interface utilisateur graphique. Utilisez une valeur plus élevée si votre charge de travail ne génère pas de grandes quantités de requêtes et de plans différents, ou si vous pouvez supporter une durée de conservation des données plus élevée avant un arrêt de la base de données.
  
 > [!NOTE]
 > L’indicateur de trace 7745 empêche l’écriture sur le disque des données du Magasin des requêtes en cas de commande d’arrêt ou de basculement. Pour plus d’informations, consultez la section [Utiliser des indicateurs de trace sur des serveurs critiques pour améliorer la récupération d’urgence](#Recovery).
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Intervalle de collecte des statistiques** : définit le niveau de précision des statistiques d’exécution collectées. La valeur par défaut est de 60 minutes. Envisagez d’utiliser une valeur inférieure si vous avez besoin d’une précision plus fine ou de moins de temps pour détecter et atténuer les problèmes. Gardez à l’esprit que la valeur affecte directement la taille des données du Magasin des requêtes. Utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir une autre valeur pour **Intervalle de collecte des statistiques** :  
+ **Intervalle de collecte des statistiques** : définit le niveau de précision des statistiques d’exécution collectées, exprimé en minutes. La valeur par défaut est de 60 minutes. Envisagez d’utiliser une valeur inférieure si vous avez besoin d’une précision plus fine ou de moins de temps pour détecter et atténuer les problèmes. Gardez à l’esprit que la valeur affecte directement la taille des données du Magasin des requêtes. Utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir une autre valeur pour **Intervalle de collecte des statistiques** :  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Seuil de requêtes périmées (jours)**  : stratégie de nettoyage basée sur la durée qui permet de contrôler la période de conservation des statistiques d’exécution persistantes et des requêtes inactives. Par défaut, le Magasin des requêtes est configuré pour conserver les données pendant 30 jours, ce qui est peut-être inutilement long pour votre scénario.  
+ **Seuil de requêtes périmées (jours)**  : stratégie de nettoyage basée sur la durée qui permet de contrôler la période de conservation des statistiques d’exécution persistantes et des requêtes inactives, exprimée en jours. Par défaut, le Magasin des requêtes est configuré pour conserver les données pendant 30 jours, ce qui est peut-être inutilement long pour votre scénario.  
   
  Évitez de conserver les données d’historique que vous ne prévoyez pas d’utiliser. Cette pratique réduit les passages à l’état lecture seule. La taille des données du Magasin des requêtes et le temps de détection et d’atténuation des problèmes seront plus prévisibles. Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le script suivant pour configurer la stratégie de nettoyage basée sur la durée :  
   
@@ -180,7 +180,7 @@ SET QUERY_STORE = ON
 ## <a name="start-with-query-performance-troubleshooting"></a>Démarrer la résolution des problèmes de performances des requêtes  
  La résolution des problèmes liés au Magasin des requêtes est un flux de travail simple, comme l’illustre le diagramme suivant :  
   
- ![Résolution des problèmes liés au Magasin des requêtes](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
+ ![Résolution des problèmes relatifs au magasin des requêtes](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
  Activez le Magasin des requêtes à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], comme cela est décrit dans la section précédente ou exécutez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
@@ -199,7 +199,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
   
  Le graphique suivant montre comment trouver les vues du magasin de requêtes :  
   
-   ![Vues du Magasin des requêtes](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Vues du Magasin des requêtes")  
+   ![Vues du magasin des requêtes](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Vues du magasin des requêtes")  
   
  Le tableau suivant explique quand utiliser chaque vue du magasin de requêtes :  
   
@@ -220,7 +220,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
   
 -   Si la requête a été exécutée avec plusieurs plans et que le dernier est nettement plus mauvais que le précédent, vous pouvez utiliser le mécanisme permettant de forcer le plan. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de forcer le plan de l’optimiseur. Si le forçage de plan échoue, un XEvent est déclenché et l’optimiseur est tenu d’optimiser de façon normale.
   
-       ![Plan forcé du Magasin des requêtes](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
+       ![Magasin des requêtes - Forcer le plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
        > [!NOTE]
        > Le graphique précédent peut présenter des formes différentes pour des plans de requête spécifiques, avec les significations suivantes pour chaque état possible :<br />  
@@ -235,7 +235,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 
 -   Vous pouvez en déduire qu’il manque un index à votre requête pour qu’elle s’exécute de façon optimale. Ces informations apparaissent dans le plan d’exécution de requête. Créez l’index manquant et vérifiez les performances de requête en utilisant le Magasin des requêtes.  
   
-       ![Plan d’affichage du Magasin des requêtes](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+       ![Magasin des requêtes - Afficher le plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
  Si vous exécutez votre charge de travail sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], inscrivez-vous à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor pour recevoir automatiquement des recommandations d’index.
   

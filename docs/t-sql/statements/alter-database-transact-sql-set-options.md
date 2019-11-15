@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890468"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729911"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -3049,16 +3049,20 @@ Exécutez cette commande pour vérifier si une requête a été exécutée avec 
 
 ```sql
 
-SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests 
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+> [!IMPORTANT]
+> Les opérations de création du cache des jeux de résultats et de récupération des données à partir du cache ont lieu sur le nœud de contrôle d’une instance Data Warehouse. Quand la mise en cache des jeux de résultats est activée (ON), l’exécution de requêtes qui retournent un jeu de résultats volumineux (par exemple, > 1 million de lignes) peut entraîner une utilisation intensive du processeur sur le nœud de contrôle et allonger ainsi le temps de réponse de toutes les requêtes sur l’instance. Ces requêtes sont couramment utilisées lors de l’exploration de données ou des opérations ETL. Pour éviter une utilisation trop intensive du nœud de contrôle et les problèmes de performances qui en découlent, les utilisateurs doivent désactiver (OFF) la mise en cache des jeux de résultats sur la base de données avant d’exécuter ces types de requêtes.  
+
+Pour plus d’informations sur le réglage des performances avec la mise en cache des jeux de résultats, consultez [Conseils de réglage des performances](/azure/sql-data-warehouse/performance-tuning-result-set-caching).
+
 ### <a name="permissions"></a>Autorisations
 Pour définir l’option RESULT_SET_CACHING, un utilisateur a besoin d’une connexion du principal au niveau du serveur (celle créée par le processus de provisionnement) ou doit être membre du rôle de base de données `dbmanager`.  
 
-
 **<snapshot_option> ::=**         
-**S’applique à** : Azure SQL Data Warehouse (préversion)
+**S’applique à** : Azure SQL Data Warehouse. 
 
 Contrôle le niveau d’isolation des transactions d’une base de données.
 
@@ -3115,7 +3119,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Réglage des performances avec mise en cache du jeu de résultats](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

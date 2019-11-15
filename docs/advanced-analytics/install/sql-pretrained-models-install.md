@@ -1,83 +1,84 @@
 ---
-title: Installer des modèles de Machine Learning pré-formés
-description: Ajoutez des modèles préformés pour l’analyse des sentiments et l’image caractérisation pour SQL Server Machine Learning Services (R ou python) ou SQL Server R Services.
+title: Installer des modèles pré-entraînés
+description: Ajoutez des modèles préformés pour l’analyse des sentiments et la génération de fonctionnalités d’images à SQL Server Machine Learning Services (R ou Python) ou SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 87f75b8ef8f9f151eb548787da4c9791eb1437b9
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715161"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727562"
 ---
-# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer des modèles de Machine Learning pré-formés sur SQL Server
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer des modèles Machine Learning préformés sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article explique comment utiliser PowerShell pour ajouter des modèles de Machine Learning pré-formés gratuits pour l' *analyse des sentiments* et des *caractérisation d’images* à une instance SQL Server avec intégration de R ou python. Les modèles préformés sont générés par Microsoft et prêts à être utilisés, ajoutés à une instance en tant que tâche après l’installation. Pour plus d’informations sur ces modèles, consultez la section [ressources](#bkmk_resources) de cet article.
+Cet article explique comment utiliser PowerShell pour ajouter des modèles Machine Learning préformés gratuits pour *l’analyse des sentiments* et la *génération de fonctionnalités d’images* à une instance SQL Server avec l’intégration R ou Python. Les modèles préformés sont générés par Microsoft et prêts à être utilisés. Ils sont d’ailleurs ajoutés à une instance suite à l’installation. Pour plus d’informations sur ces modèles, consultez la section [Ressources](#bkmk_resources) de cet article.
 
-Une fois installés, les modèles préformés sont considérés comme des détails d’implémentation qui alimentent des fonctions spécifiques dans les bibliothèques MicrosoftML (R) et MicrosoftML (Python). Vous ne devez pas (et ne pouvez pas) afficher, personnaliser ou reformer les modèles. vous ne pouvez pas non plus les traiter en tant que ressource indépendante dans du code personnalisé ou dans d’autres fonctions couplées. 
+Une fois installés, les modèles préformés sont considérés comme des détails d’implémentation qui alimentent des fonctions spécifiques dans les bibliothèques MicrosoftML (R) et microsoftml (Python). Vous ne devez pas (et ne pouvez pas) afficher, personnaliser ou reformer les modèles. Vous ne pouvez pas non plus les traiter en tant que ressource indépendante dans du code personnalisé ou dans d’autres fonctions couplées. 
 
 Pour utiliser les modèles préformés, appelez les fonctions indiquées dans le tableau suivant.
 
-| Fonction R (MicrosoftML) | Fonction Python (microsoftml) | Utilisation |
+| Fonction R (MicrosoftML) | Fonction Python (MicrosoftML) | Utilisation |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Génère un score de sentiment positif positif sur les entrées de texte. |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Génère un score de sentiment positif-négatif sur les entrées de texte. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrait des informations de texte à partir des entrées du fichier image. |
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Les algorithmes d’apprentissage automatique nécessitent beaucoup de ressources de calcul. Nous vous recommandons 16 Go de RAM pour les charges de travail de faible à modéré, y compris l’achèvement des procédures pas à pas du didacticiel utilisant tous les exemples de données.
+Les algorithmes d’apprentissage automatique nécessitent beaucoup de ressources de calcul. Nous vous recommandons 16 Go de RAM pour les charges de travail de taille petite à modérée, y compris l’exécution des procédures pas à pas du didacticiel à l’aide de tous les exemples de données.
 
 Vous devez disposer de droits d’administrateur sur l’ordinateur et SQL Server pour ajouter des modèles préformés.
 
-Les scripts externes doivent être activés et SQL Server Service LaunchPad doit être en cours d’exécution. Les instructions d’installation fournissent les étapes nécessaires à l’activation et à la vérification de ces fonctionnalités. 
+Les scripts externes doivent être activés, et le service SQL Server LaunchPad doit être en cours d’exécution. Les instructions d’installation fournissent les étapes nécessaires à l’activation et à la vérification de ces fonctionnalités. 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Le package [MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) ou le [package Python MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) contiennent les modèles préformés.
+Le [package MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) ou le [package MicrosoftML Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) contiennent les modèles préformés.
 
-[SQL Server machine learning services](sql-machine-learning-services-windows-install.md) contient les deux versions linguistiques de la bibliothèque machine learning, cette condition préalable est remplie sans aucune autre action de votre part. Étant donné que les bibliothèques sont présentes, vous pouvez utiliser le script PowerShell décrit dans cet article pour ajouter les modèles préformés à ces bibliothèques.
+[SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) contient les deux versions de langage de la bibliothèque Machine Learning ; cette condition préalable est donc remplie sans aucune autre action de votre part. Étant donné que les bibliothèques sont présentes, vous pouvez utiliser le script PowerShell décrit dans cet article pour ajouter les modèles préformés à ces bibliothèques.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Le [package R MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) contient les modèles préformés.
+Le [package MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) contient les modèles préformés.
 
-[SQL Server R services](sql-r-services-windows-install.md), qui est R uniquement, n’inclut pas le [package MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) prêt à l’emploi. Pour ajouter MicrosoftML, vous devez effectuer une [mise à niveau de composant](../install/upgrade-r-and-python.md). L’un des avantages de la mise à niveau des composants est que vous pouvez ajouter simultanément les modèles préformés, ce qui rend l’exécution du script PowerShell inutile. Toutefois, si vous avez déjà effectué la mise à niveau, mais que vous n’avez pas ajouté les modèles préformés pour la première fois, vous pouvez exécuter le script PowerShell comme décrit dans cet article. Il fonctionne pour les deux versions de SQL Server. Avant cela, vérifiez que la bibliothèque MicrosoftML existe à l' `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`adresse.
+[SQL Server R Services](sql-r-services-windows-install.md), qui est R uniquement, n’inclut pas le [package MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) prêt à l’emploi. Pour ajouter MicrosoftML, vous devez effectuer une [mise à niveau du composant](../install/upgrade-r-and-python.md). L’un des avantages de la mise à niveau des composants est que vous pouvez ajouter simultanément les modèles préformés, ce qui rend l’exécution du script PowerShell inutile. Toutefois, si vous avez déjà effectué la mise à niveau, mais que vous avez omis d’ajouter les modèles préformés, vous pouvez exécuter le script PowerShell comme décrit dans cet article. Il fonctionne pour les deux versions de SQL Server. Avant cela, vérifiez que la bibliothèque MicrosoftML existe dans `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
 ::: moniker-end
 
 <a name="file-location"></a>
 
 ## <a name="check-whether-pre-trained-models-are-installed"></a>Vérifier si des modèles préformés sont installés
 
-Les chemins d’installation des modèles R et Python sont les suivants:
+Les chemins d’installation des modèles R et Python sont les suivants :
 
-+ Pour R:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
++ Pour R : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Pour Python:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
++ Pour Python : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-Les noms de fichiers de modèles sont répertoriés ci-dessous:
+Les noms de fichiers de modèles sont répertoriés ci-dessous :
 
-+ AlexNet\_mis à jour. Model
++ AlexNet\_Updated.model
 + ImageNet1K\_mean.xml
-+ préformation. modèle
-+ ResNet\_101\_mis à jour. Model
-+ ResNet\_18\_mis à jour. modèle
-+ ResNet\_50\_mis à jour. Model
++ pretrained.model
++ ResNet\_101\_Updated.model
++ ResNet\_18\_Updated.model
++ ResNet\_50\_Updated.model
 
-Si les modèles sont déjà installés, passez directement à l' [étape de validation](#verify) pour confirmer la disponibilité.
+Si les modèles sont déjà installés, passez directement à [l’étape de validation](#verify) pour confirmer la disponibilité.
 
 ## <a name="download-the-installation-script"></a>Télécharger le script d’installation
 
-Cliquez [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) pour télécharger le fichier **install-MLModels. ps1**.
+Cliquez sur [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) pour télécharger le fichier **Install-MLModels.ps1**.
 
 ## <a name="execute-with-elevated-privileges"></a>Exécuter avec des privilèges élevés
 
-1. Démarrez PowerShell. Dans la barre des tâches, cliquez avec le bouton droit sur l’icône du programme PowerShell et sélectionnez **exécuter en tant qu’administrateur**.
-2. Entrez un chemin d’accès complet au fichier de script d’installation et incluez le nom de l’instance. En supposant que le dossier téléchargements et une instance par défaut, la commande peut se présenter comme suit:
+1. Démarrez PowerShell. Dans la barre des tâches, cliquez avec le bouton droit sur l’icône de programme PowerShell, puis sélectionnez **Exécuter en tant qu’administrateur**.
+2. Entrez un chemin d’accès complet au fichier de script de script d’installation et incluez le nom de l’instance. En partant du principe que vous utilisez le dossier Téléchargements et une instance par défaut, la commande peut ressembler à ce qui suit :
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
@@ -85,7 +86,7 @@ Cliquez [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) pour télécharger le f
 
 **Sortie**
 
-Sur un SQL Server connecté à Internet Machine Learning Services instance par défaut avec R et Python, vous devez voir des messages similaires à ce qui suit.
+Sur une instance par défaut SQL Server Machine Learning Services connectée à Internet avec R et Python, vous devez voir des messages identiques à ce qui suit.
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -101,11 +102,11 @@ Sur un SQL Server connecté à Internet Machine Learning Services instance par d
 
 ## <a name="verify-installation"></a>Vérifier l'installation
 
-Commencez par Rechercher les nouveaux fichiers dans le [dossier mxlibs](#file-location). Ensuite, exécutez le code de démonstration pour confirmer que les modèles sont installés et fonctionnels. 
+Tout d’abord, recherchez les nouveaux fichiers dans le [dossier mxlibs](#file-location). Ensuite, exécutez le code de démonstration pour confirmer que les modèles sont installés et fonctionnels. 
 
-### <a name="r-verification-steps"></a>Étapes de vérification R
+### <a name="r-verification-steps"></a>Étapes de vérification pour R
 
-1. Démarrez **RGUI. EXE** dans C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\bin\x64.
+1. Démarrez **RGUI. EXE** dans C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64.
 
 2. Collez le script R suivant à l’invite de commandes.
 
@@ -129,7 +130,7 @@ Commencez par Rechercher les nouveaux fichiers dans le [dossier mxlibs](#file-lo
     sentimentScores
     ```
 
-3. Appuyez sur entrée pour afficher les scores de sentiment. La sortie doit être la suivante:
+3. Appuyez sur Entrée pour afficher les scores de sentiment. La sortie doit ressembler à ce qui suit :
 
     ```R
     > sentimentScores
@@ -143,11 +144,11 @@ Commencez par Rechercher les nouveaux fichiers dans le [dossier mxlibs](#file-lo
     3            BLAH
     ```
 
-### <a name="python-verification-steps"></a>Étapes de vérification de Python
+### <a name="python-verification-steps"></a>Étapes de vérification pour Python
 
-1. Démarrez **Python. exe** à l’emplacement C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES.
+1. Démarrez **Python.exe** dans C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.
 
-2. Collez le script Python suivant à l’invite de commandes.
+2. Collez le script Python suivant à l’invite de commandes
 
     ```python
     import numpy
@@ -171,7 +172,7 @@ Commencez par Rechercher les nouveaux fichiers dans le [dossier mxlibs](#file-lo
     print(sentiment_scores)
     ```
 
-3. Appuyez sur entrée pour imprimer les scores. La sortie doit être la suivante:
+3. Appuyez sur Entrée pour imprimer les scores. La sortie doit ressembler à ce qui suit :
 
     ```python
     >>> print(sentiment_scores)
@@ -183,36 +184,36 @@ Commencez par Rechercher les nouveaux fichiers dans le [dossier mxlibs](#file-lo
     ```
 
 > [!NOTE]
-> Si les scripts de démonstration échouent, vérifiez d’abord l’emplacement du fichier. Sur les systèmes dotés de plusieurs instances de SQL Server, ou pour les instances qui s’exécutent côte à côte avec des versions autonomes, il est possible pour le script d’installation de mal lire l’environnement et de placer les fichiers à un emplacement incorrect. En général, la copie manuelle des fichiers dans le dossier mxlib correct résout le problème.
+> Si les scripts de démonstration échouent, vérifiez d’abord l’emplacement du fichier. Sur les systèmes dotés de plusieurs instances de SQL Server, ou pour les instances qui s’exécutent côte à côte avec des versions autonomes, il est possible que le script d’installation ne lise pas correctement l’environnement et place les fichiers au mauvais emplacement. En général, la copie manuelle des fichiers dans le dossier mxlib approprié résout le problème.
 
 ## <a name="examples-using-pre-trained-models"></a>Exemples utilisant des modèles préformés
 
 Le lien suivant inclut un exemple de code appelant les modèles préformés.
 
-+ [Exemple de code: Analyse des sentiments à l’aide de Caractériseur comptage de texte](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [Exemple de code : Analyse des sentiments à l’aide d’un générateur de fonctionnalités de texte](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 
 ## <a name="research-and-resources"></a>Recherche et ressources
 
-Actuellement, les modèles qui sont disponibles sont les modèles DNN (Deep Neural Network) pour l’analyse des sentiments et la classification des images. Tous les modèles préformés ont été formés à l’aide de la [boîte à outils Network Computing](https://cntk.ai/Features/Index.html)de Microsoft, ou **CNTK**.
+Actuellement, les modèles qui sont disponibles sont les modèles de réseau neuronal profond pour l’analyse des sentiments et la classification des images. Tous les modèles préformés ont été formés à l’aide du Microsoft [Computation Network Toolkit](https://cntk.ai/Features/Index.html) ou **CNTK**.
 
-La configuration de chaque réseau repose sur les implémentations de référence suivantes:
+La configuration de chaque réseau reposait sur les implémentations de référence suivantes :
 
 + ResNet-18
 + ResNet-50
 + ResNet-101
 + AlexNet
 
-Pour plus d’informations sur les algorithmes utilisés dans ces modèles d’apprentissage profond et sur la façon dont ils sont implémentés et formés à l’aide de CNTK, consultez les articles suivants:
+Pour plus d’informations sur les algorithmes utilisés dans ces modèles Deep Learning et sur la façon dont ils sont implémentés et formés à l’aide de CNTK, consultez les articles suivants :
 
-+ [Étape majeure du Challenge des ImageNet Microsoft chercheurs](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [Microsoft Researchers’ Algorithm Sets ImageNet Challenge Milestone](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/) (L’algorithme des chercheurs de Microsoft établit le jalon du challenge ImageNet)
 
-+ [Microsoft calculation Network Toolkit offre des performances de calcul d’apprentissage profond distribuées les plus efficaces](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
++ [Microsoft Computational Network Toolkit offers most efficient distributed deep learning computational performance](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/) (Microsoft Computational Network Toolkit offre des performances de calcul Deep Learning distribuées optimisées)
 
 ## <a name="see-also"></a>Voir aussi
 
 + [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
-+ [Mettre à niveau les composants R et Python dans des instances SQL Server](../install/upgrade-r-and-python.md)
-+ [Package MicrosoftML pour R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ [package microsoftml pour Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ [Mettre à niveau les composants Machine Learning (R et Python) dans les instances de SQL Server](../install/upgrade-r-and-python.md)
++ [MicrosoftML package for R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) (Package MicrosoftML pour R)
++ [microsoftml package for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) (Package microsoftml pour Python)

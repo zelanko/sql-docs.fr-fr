@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a24d5e25bfbeb7aed32257b22dd3dac5d1c53f7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593884"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844559"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -37,7 +37,7 @@ Aujourd’hui, les entreprises règnent souvent sur de vastes patrimoines de don
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-| Solution de Big Data scalable | [Déployez des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. <br/><br/> Lisez, écrivez et traitez des Big Data à partir de Transact-SQL ou de Spark.<br/><br/> Combinez et analysez facilement des données relationnelles à valeur élevée et un volume important de Big Data.<br/><br/>Interrogez des sources de données externes.<br/><br/>Stockez les Big Data dans un système HDFS géré par SQL Server.<br/><br/>Interrogez les données de plusieurs sources de données externes par le biais du cluster.<br/><br/> Utilisez les données pour l’IA, le machine learning et d’autres tâches d’analyse.<br/><br/> [Déployez et exécutez des applications](../big-data-cluster/concept-application-deployment.md) dans des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]. <br/><br/> L’instance maître SQL Server fournit la haute disponibilité et la reprise d’activité après sinistre pour toutes les bases de données à l’aide de la technologie des groupes de disponibilité Always On.<br/>|
+| Solution de Big Data scalable | [Déployez des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. <br/><br/> Lire, écrire et traiter les données du Big Data à partir de Transact-SQL ou de Spark.<br/><br/> Combiner et analyser facilement des données relationnelles à valeur élevée et un volume important de données du Big Data.<br/><br/>Interroger des sources de données externes.<br/><br/>Stocker les données du Big Data dans un système HDFS géré par SQL Server.<br/><br/>Interroger les données de plusieurs sources de données externes via le cluster.<br/><br/> Utiliser les données pour l’IA, le machine learning et d’autres tâches d’analyse.<br/><br/> [Déployez et exécutez des applications](../big-data-cluster/concept-application-deployment.md) dans des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]. <br/><br/> L’instance maître SQL Server fournit la haute disponibilité et la reprise d’activité après sinistre pour toutes les bases de données à l’aide de la technologie des groupes de disponibilité Always On.<br/>|
 |Virtualisation de données avec Polybase | Interrogez des données à partir de sources de données SQL Server, Oracle, Teradata, MongoDB et ODBC externes avec des tables externes, désormais à l’aide de la [prise en charge de l’encodage UTF-8](../relational-databases/collations/collation-and-unicode-support.md). Pour plus d’informations, consultez [Qu’est-ce que PolyBase ?](../relational-databases/polybase/polybase-guide.md)|
 | &nbsp; | &nbsp; |
 
@@ -153,6 +153,7 @@ Quand un processus ETL (extraction, transformation et chargement) échouait en r
 |:---|:---|
 |Always Encrypted avec enclaves sécurisées|S’étend sur Always Encrypted avec un chiffrement sur place et des calculs enrichis en activant des calculs sur les données de texte en clair à l’intérieur d’une enclave sécurisée côté serveur. Le chiffrement sur place améliore les performances et la fiabilité des opérations de chiffrement (chiffrement des colonnes, rotation des clés de chiffrement des colonnes, etc.), car il évite de déplacer des données en dehors de la base de données.<br><br> La prise en charge des calculs enrichis (correspondance à des modèles et opérations de comparaison) ouvre Always Encrypted à un ensemble beaucoup plus large de scénarios et d’applications qui demandent une protection des données sensibles tout en nécessitant des fonctionnalités plus riches dans les requêtes Transact-SQL. Consultez [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Gestion des certificats dans le Gestionnaire de configuration SQL Server|Consultez [Gestion des certificats (Gestionnaire de configuration SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
+|Découverte et classification des données|La découverte et la classification des données fournit des fonctionnalités avancées intégrées en natif dans SQL Server pour la classification, l’étiquetage et la protection des données sensibles dans vos bases de données. La classification de vos données les plus sensibles (professionnelles, financières, médicales, PII, etc.) peuvent jouer un rôle essentiel dans la protection des informations de votre organisation. Cette fonctionnalité peut servir d’infrastructure pour :<ul><li>Aider à répondre aux standards de confidentialité des données et aux exigences de conformité réglementaires</li><li>Différents scénarios de sécurité, comme la supervision (audit) et les alertes en cas d’accès anormal à des données sensibles</li><li>Faciliter l’identification des emplacements des données sensibles dans l’entreprise, afin que les administrateurs puissent prendre les bonnes mesures pour sécuriser la base de données</li></ul>[L’audit](../relational-databases/security/auditing/sql-server-audit-database-engine.md) a également été amélioré pour inclure un nouveau champ dans le journal d’audit appelé `data_sensitivity_information`, qui journalise les classifications de sensibilité (étiquettes) des données réelles retournées par la requête. Pour plus d’informations et des exemples, consultez [ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>Haute disponibilité
@@ -226,14 +227,6 @@ Pour commencer à travailler avec [!INCLUDE[ssNoVersion](../includes/ssnoversion
 |Cluster de basculement Windows Server| Vous pouvez configurer la haute disponibilité pour Machine Learning Services sur un cluster de basculement Windows Server.|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| Nouvelle fonctionnalité ou mise à jour | Détails |
-|:---|:---|
-|Prise en charge des bases de données d’instances managées Azure SQL Database| Hébergement de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] sur une instance managée. Consultez [Installation et configuration de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
-|Nouveaux contrôles HTML| Les contrôles HTML remplacent tous les anciens composants Silverlight. La dépendance à Silverlight a été supprimée.|
-| &nbsp; | &nbsp; |
-
 ## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services
 
 Cette version introduit de nouvelles fonctionnalités et améliorations en matière de performances, de gouvernance des ressources et de prise en charge des clients.
@@ -246,6 +239,23 @@ Cette version introduit de nouvelles fonctionnalités et améliorations en mati�
 |Paramètres de propriété pour la gouvernance des ressources| Cette version comprend de nouveaux paramètres de mémoire : Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit, et OLAP\Query\RowsetSerializationLimit pour la gouvernance des ressources. Pour plus d’informations, consultez [Paramètres de mémoire](/analysis-services/server-properties/memory-properties).|
 |Paramètre de gouvernance pour les actualisations du cache Power BI | Cette version introduit la propriété ClientCacheRefreshPolicy qui remplace la mise en cache des données de vignette de tableau de bord et des données de rapport pour la charge initiale des rapports Live Connect par le service Power BI. Pour plus d’informations, consultez [Propriétés générales](/analysis-services/server-properties/general-properties). |
 | Attachement en ligne  | L’attachement en ligne peut être utilisé pour la synchronisation des réplicas en lecture seule dans les environnements locaux de scale-out des requêtes. Pour en savoir plus, consultez [Attachement en ligne](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach). |
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+Cette version introduit de nouvelles fonctionnalités pour améliorer les opérations sur les fichiers.
+
+| Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Tâche flexible sur les fichiers |Effectuez des opérations sur des fichiers dans le système de fichiers local, Stockage Blob Azure et Azure Data Lake Storage Gen2. Consultez [Tâche flexible sur les fichiers](../integration-services/control-flow/flexible-file-task.md).|
+|Source et destination des fichiers flexibles |Lisez et écrivez des données pour Stockage Blob Azure et Azure Data Lake Storage Gen2. Consultez [Source de fichier flexible](../integration-services/data-flow/flexible-file-source.md) et [Destination de fichier flexible](../integration-services/data-flow/flexible-file-destination.md). |
+
+## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Prise en charge des bases de données d’instances managées Azure SQL Database| Hébergement de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] sur une instance managée. Consultez [Installation et configuration de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Nouveaux contrôles HTML| Les contrôles HTML remplacent tous les anciens composants Silverlight. La dépendance à Silverlight a été supprimée.|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services

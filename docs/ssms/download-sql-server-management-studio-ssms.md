@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 7597b0ef624958010981844969889b1c589c4883
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594326"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843738"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS est gratuit !
 
 SSMS 18.4 est la dernière version en disponibilité générale de SSMS. Si une version précédente de SSMS 18 en disponibilité générale est déjà installée, l’installation de SSMS 18.4 la met à niveau vers 18.4. Si vous disposez d’une *préversion* antérieure à SSMS 18.x, vous devez la désinstaller avant d’installer SSMS 18.4.
 
-**Informations sur la version**
+### <a name="version-information"></a>Informations sur la version
 
 - Numéro de version : 18.4  
 - Numéro de build : 15.0.18206.0  
@@ -57,7 +57,7 @@ L’installation de SSMS 18.x ne met pas à niveau ni ne remplace les versions�
 Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version correcte adaptée à vos besoins spécifiques. La version la plus récente s’intitule **Microsoft SQL Server Management Studio 18**
 
 > [!Note]
-> Si vous accédez à cette page à partir d’une version autre que l’anglais et que vous souhaitez voir le contenu le plus à jour, consultez la [version anglaise (États-Unis) du site](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms). Vous pouvez télécharger différentes langues à partir du site en version anglaise (États-Unis) en sélectionnant [Langues disponibles](#available-languages).
+> Si vous accédez à cette page à partir d’une version autre que l’anglais et que vous souhaitez voir le contenu le plus à jour, consultez la [version anglaise (États-Unis) du site](https://aka.ms/downloadssmsusenglish). Vous pouvez télécharger différentes langues à partir du site en version anglaise (États-Unis) en sélectionnant [Langues disponibles](#available-languages).
 
 ## <a name="available-languages"></a>Langues disponibles
 
@@ -114,7 +114,7 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 
 ## <a name="release-notes-ssms-184"></a>Notes de publication (SSMS 18.4)
 
-Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-1831) dans cette version.
+Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-184) dans cette version.
 
 Pour plus d’informations sur cette version, voir les [notes de publication de SSMS](release-notes-ssms.md).
 

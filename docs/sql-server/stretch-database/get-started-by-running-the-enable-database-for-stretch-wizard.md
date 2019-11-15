@@ -1,5 +1,5 @@
 ---
-title: Mise en route en exécutant l’Assistant Activer la base de données pour Stretch | Microsoft Docs
+title: Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -20,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b4239a8f6aefc9160171c1a700aa37733a66de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136129"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843801"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68136129"
  -   Vous devez disposer d’un abonnement Microsoft Azure.
  -   Votre serveur SQL Server doit être en mesure de communiquer avec le serveur Azure distant.
   
- ![Page d’introduction de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Page d’introduction de l’Assistant Stretch Database")  
+ ![Page Introduction de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Page Introduction de l’Assistant Stretch Database")  
   
 ##  <a name="Tables"></a> Sélectionner des tables  
  Sélectionnez les tables à activer pour Stretch.  
@@ -76,7 +77,7 @@ Les tables qui contiennent un grand nombre de lignes apparaissent en haut de la 
   
 1.  Dans la liste **Sélectionnez les tables à étendre** , cliquez sur **Table entière** sur la ligne correspondant à la table. La boîte de dialogue **Sélectionner les lignes à étendre** s’ouvre.  
   
-     ![Définir un prédicat de filtre date](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Définir un prédicat de filtre date")  
+     ![Définir un prédicat de filtre basé sur une date](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Définir un prédicat de filtre basé sur une date")  
   
 2.  Dans la boîte de dialogue **Sélectionner les lignes à étendre** , sélectionnez **Sélectionner des lignes**.  
   
@@ -93,7 +94,7 @@ Les tables qui contiennent un grand nombre de lignes apparaissent en haut de la 
 
 La fonction de filtre n’est créée dans SQL Server qu’une fois l’Assistant terminé. Avant cela, vous pouvez revenir à la page **Sélectionner des tables** pour modifier ou renommer la fonction de filtre.
 
-![Page Sélectionner des tables après avoir défini un prédicat de filtre](../../sql-server/stretch-database/media/stretch-wizard-2b.png "Page Sélectionner des tables après avoir défini un prédicat de filtre")
+![Page Sélectionner des tables après la définition d’un prédicat de filtre](../../sql-server/stretch-database/media/stretch-wizard-2b.png "Page Sélectionner des tables après la définition d’un prédicat de filtre")
 
 Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionner les lignes à migrer, effectuez l’une des opérations suivantes.  
   
@@ -105,7 +106,7 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
 1.  Connectez-vous à Microsoft Azure avec un compte Microsoft.  
   
-     ![Connexion à Azure - Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-3.png "Connexion à Azure - Assistant Stretch Database")  
+     ![Se connecter à Azure - Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-3.png "Se connecter à Azure - Assistant Stretch Database")  
   
 2.  Sélectionnez l’abonnement Azure existant à utiliser pour Stretch Database. 
 
@@ -147,11 +148,11 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
  Si une clé principale de base de données existe déjà, entrez son mot de passe.  
   
- ![Page Informations d’identification sécurisées de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Page Informations d’identification sécurisées de l’Assistant Stretch Database")  
+ ![Page d’informations d’identification sécurisées de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")  
   
  Si la base de données ne dispose pas d’une clé principale existante, entrez un mot de passe fort pour créer une clé principale de base de données.  
   
- ![Page Informations d’identification sécurisées de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Page Informations d’identification sécurisées de l’Assistant Stretch Database")  
+ ![Page d’informations d’identification sécurisées de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")  
   
  Pour plus d’informations sur la clé principale de base de données, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) et [Créer une clé principale de base de données](../../relational-databases/security/encryption/create-a-database-master-key.md). Pour plus d’informations sur les informations d’identification créées par l’Assistant, consultez [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
@@ -160,12 +161,12 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
  La ou les adresses IP que vous fournissez sur cette page indiquent au serveur Azure qu’il doit autoriser les données entrantes, les requêtes et les opérations de gestion générées par SQL Server à franchir le pare-feu Azure. L'Assistant ne modifie en rien les paramètres du pare-feu sur le serveur SQL Server.  
   
- ![Page Sélectionner une adresse IP de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Page Sélectionner une adresse IP de l’Assistant Stretch Database")  
+ ![Page de sélection de l’adresse IP de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Page de sélection de l’adresse IP de l’Assistant Stretch Database")  
   
 ##  <a name="Summary"></a> Résumé  
  Passez en revue les valeurs que vous avez entrées et les options que vous avez sélectionnées dans l'Assistant, ainsi que les coûts estimés sur Azure. Puis sélectionnez **Terminer** pour activer Stretch.  
   
- ![Page Résumé de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Page Résumé de l’Assistant Stretch Database")  
+ ![Page Récapitulatif de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Page Récapitulatif de l’Assistant Stretch Database")  
   
 ##  <a name="Results"></a> Résultats  
  Examinez les résultats.  

@@ -23,39 +23,44 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+- rank
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712359"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882410"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Ajoute des métadonnées relatives à la classification de sensibilité à une ou plusieurs colonnes de base de données. La classification peut inclure une étiquette de sensibilité et un type d’information.  
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+
+Ajoute des métadonnées relatives à la classification de sensibilité à une ou plusieurs colonnes de base de données. La classification peut inclure une étiquette de sensibilité et un type d’information.
+
+Pour SQL Server, cela a été introduit dans SQL Server 2019.
 
 Classifier des données sensibles dans votre environnement de base de données permet d’étendre la visibilité et d’améliorer la protection. Vous trouverez des informations supplémentaires dans [Mise en route avec SQL Information Protection](https://aka.ms/sqlip)
 
 ## <a name="syntax"></a>Syntaxe  
 
-```sql
+```
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_label_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )     
 
 <object_name> ::=
 {
     [schema_name.]table_name.column_name
 }
 
-<sensitivity_label_option> ::=  
+<sensitivity_option> ::=  
 {   
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString  
+    INFORMATION_TYPE_ID = guidOrString | 
+    RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```  
 
@@ -83,6 +88,10 @@ Nom explicite du type d’information. Les types d’informations sont utilisés
 *INFORMATION_TYPE_ID*
 
 Il s’agit d’un identificateur associé au type d’information. Il est souvent utilisé par les plateformes de protection des informations centralisées pour identifier les types d’informations dans le système.
+
+*RANK*
+
+Identificateur basé sur un ensemble prédéfini de valeurs qui définissent le rang de sensibilité. Il est utilisé par d’autres services tels que le service Advanced Threat Protection pour détecter les anomalies en fonction de leur rang.
 
 
 ## <a name="remarks"></a>Notes  

@@ -1,7 +1,7 @@
 ---
 title: Configurer Kubernetes avec kubeadm
-titleSuffix: SQL Server big data clusters
-description: Découvrez comment configurer Kubernetes sur plusieurs ordinateurs Ubuntu 16,04 ou 18,04 (physiques ou virtuels) pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] déploiements.
+titleSuffix: SQL Server Big Data Clusters
+description: Découvrez comment configurer Kubernetes sur plusieurs machines (physiques ou virtuelles) Ubuntu 16.04 ou 18.04 pour les déploiements [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,24 +9,24 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688300"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706374"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs machines pour les déploiements de cluster Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article fournit un exemple d’utilisation de **kubeadm** pour configurer Kubernetes sur plusieurs ordinateurs pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] déploiements. Dans cet exemple, plusieurs machines Ubuntu 16.04 ou 18.04 LTS (physiques ou virtuelles) représentent la cible. Si vous effectuez le déploiement sur une autre plateforme Linux, vous devez changer certaines commandes pour qu’elles correspondent à votre système.  
+Cet article fournit un exemple d’utilisation de **kubeadm** permettant de configurer Kubernetes sur plusieurs machines pour des déploiements [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Dans cet exemple, plusieurs machines Ubuntu 16.04 ou 18.04 LTS (physiques ou virtuelles) représentent la cible. Si vous effectuez le déploiement sur une autre plateforme Linux, vous devez changer certaines commandes pour qu’elles correspondent à votre système.  
 
 > [!TIP] 
 > Pour obtenir des exemples de scripts de configuration de Kubernetes, consultez [Créer un cluster Kubernetes à l’aide de Kubeadm sur Ubuntu 16.04 LTS ou 18.04 LTS.](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)
 Consultez également [cette](deployment-script-single-node-kubeadm.md) rubrique pour obtenir un exemple de script qui automatise le déploiement d’un seul nœud kubeadm sur une machine virtuelle, puis déploie une configuration par défaut du cluster Big Data par-dessus.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Au minimum, 3 machines physiques ou machines virtuelles Linux
 - Configuration recommandée par machine :
@@ -35,7 +35,7 @@ Consultez également [cette](deployment-script-single-node-kubeadm.md) rubrique 
    - 100 Go de stockage
  
 > [!Important] 
-> Avant de commencer le déploiement du cluster Big Data, assurez-vous que les horloges sont synchronisées entre tous les nœuds Kubernetes ciblés par le déploiement. Le cluster Big Data possède des propriétés d’intégrité intégrées pour différents services qui sont sensibles au temps et les décalages d’horloge peuvent entraîner un état incorrect.
+> Avant de démarrer le déploiement du cluster Big Data, vérifiez que les horloges sont synchronisées entre tous les nœuds Kubernetes ciblés par le déploiement. Le cluster Big Data intègre des propriétés d’intégrité temporaires pour différents services et des décalages d’horloge peuvent entraîner un état incorrect.
 
 ## <a name="prepare-the-machines"></a>Préparer les machines
 

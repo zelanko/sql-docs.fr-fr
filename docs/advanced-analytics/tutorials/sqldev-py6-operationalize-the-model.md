@@ -1,52 +1,53 @@
 ---
-title: Prédire les résultats potentiels à l’aide de modèles python
-description: Didacticiel illustrant comment mettre en œuvre le script PYthon incorporé dans SQL Server procédures stockées avec des fonctions T-SQL
+title: 'Python + T-SQL : Exécuter des prédictions'
+description: Tutoriel montrant comment rendre opérationnel un script Python incorporé dans des procédures stockées SQL Server avec des fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 6ac6abe2ea0f04ee0778b80b98bf28f3f12c2f6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715350"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724714"
 ---
-# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Exécuter des prédictions à l’aide de Python Embedded dans une procédure stockée
+# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Exécuter des prédictions avec un script Python incorporé dans une procédure stockée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article fait partie d’un didacticiel, [l’analytique Python en base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
+Cet article fait partie d’un tutoriel, [Analytique Python en base de données pour développeur SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-Au cours de cette étape, vous allez apprendre à faire *fonctionner* les modèles que vous avez formés et enregistrés à l’étape précédente.
+Dans cette étape, vous allez apprendre à *rendre opérationnels* les modèles que vous avez entraînés et enregistrés à l’étape précédente.
 
-Dans ce scénario, l’exploitation implique le déploiement du modèle en production pour la notation. L’intégration avec SQL Server facilite ce processus, car vous pouvez incorporer du code python dans une procédure stockée. Pour faire des prédictions à partir du modèle en fonction de nouvelles entrées, il vous suffit d’appeler la procédure stockée à partir d’une application et de transmettre les nouvelles données.
+Dans ce scénario, rendre opérationnel signifie déployer le modèle en production pour le scoring. L’intégration avec SQL Server facilite ce processus, car vous pouvez incorporer du code Python dans une procédure stockée. Pour obtenir des prédictions du modèle sur la base de nouvelles entrées, il vous suffit d’appeler la procédure stockée à partir d’une application et de transmettre les nouvelles données.
 
-Cette leçon présente deux méthodes de création de prédictions basées sur un modèle Python: notation par lots et notation ligne par ligne.
+Cette leçon présente deux méthodes de création de prédictions sur la base d’un modèle Python : le scoring par lot et le scoring ligne par ligne.
 
-- **Notation par lot:** Pour fournir plusieurs lignes de données d’entrée, transmettez une requête SELECT en tant qu’argument à la procédure stockée. Le résultat est une table d’observations correspondant aux cas d’entrée.
-- **Notation individuelle:** Transmettez un ensemble de valeurs de paramètres individuelles comme entrée.  La procédure stockée retourne une seule ligne ou valeur.
+- **Scoring par lot :** pour fournir plusieurs lignes de données d’entrée, transmettez une requête SELECT sous forme d’argument à la procédure stockée. Il en résulte une table d’observations correspondant aux cas d’entrée.
+- **Scoring individuel :** transmettez un ensemble de valeurs de paramètres individuels sous forme d’entrée.  La procédure stockée retourne une seule ligne ou valeur.
 
-Tout le code python nécessaire pour le calcul des scores est fourni dans le cadre des procédures stockées.
+Tout le code Python nécessaire au scoring est fourni dans les procédures stockées.
 
-## <a name="batch-scoring"></a>Notation par lot
+## <a name="batch-scoring"></a>Scoring par lot
 
-Les deux premières procédures stockées illustrent la syntaxe de base pour l’encapsulation d’un appel de prédiction python dans une procédure stockée. Les deux procédures stockées requièrent une table de données en tant qu’entrées.
+Les deux premières procédures stockées illustrent la syntaxe de base pour l’encapsulation d’un appel de prédiction Python dans une procédure stockée. Les deux procédures stockées nécessitent une table de données sous forme d’entrées.
 
-- Le nom du modèle exact à utiliser est fourni en tant que paramètre d’entrée à la procédure stockée. La procédure stockée charge le modèle sérialisé à partir de la `nyc_taxi_models`table de base de données. table, à l’aide de l’instruction SELECT de la procédure stockée.
-- Le modèle sérialisé est stocké dans la variable `mod` Python pour un traitement ultérieur à l’aide de Python.
-- Les nouveaux cas qui doivent être notés sont obtenus à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] la requête spécifiée `@input_data_1`dans. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`.
-- Les deux procédures stockées utilisent des `sklearn` fonctions de pour calculer une mesure de précision, AUC (zone sous la courbe). Les mesures de précision telles que AUC peuvent être générées uniquement si vous fournissez également l’étiquette cible (colonne de _pourboire_ ). Les prédictions n’ont pas besoin de l' `y`étiquette cible (variable), contrairement au calcul de la métrique de précision.
+- Le nom du modèle exact à utiliser est fourni sous forme de paramètre d’entrée à la procédure stockée. La procédure stockée charge le modèle sérialisé à partir de la table de base de données `nyc_taxi_models`.table, en utilisant l’instruction SELECT de la procédure stockée.
+- Le modèle sérialisé est stocké dans la variable Python `mod` pour un traitement plus poussé avec Python.
+- Les nouveaux cas qui doivent être scorés sont obtenus à partir de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiée dans `@input_data_1`. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`.
+- Les deux procédures stockées utilisent des fonctions de `sklearn` pour calculer une métrique d’exactitude, AUC (Area Under Curve, zone en dessous de la courbe). Les métriques d’exactitude comme AUC peuvent être générées uniquement si vous fournissez aussi l’étiquette cible (la colonne _tipped_). Les prédictions n’ont pas besoin de l’étiquette cible (variable `y`), contrairement au calcul des métriques d’exactitude.
 
-    Par conséquent, si vous n’avez pas d’étiquette cible pour les données à noter, vous pouvez modifier la procédure stockée pour supprimer les calculs AUC et retourner uniquement les probabilités de l’info-bulle `X` à partir des fonctionnalités (variable dans la procédure stockée).
+    Par conséquent, si vous n’avez pas d’étiquettes cibles pour les données à scorer, vous pouvez modifier la procédure stockée de façon à supprimer les calculs AUC et retourner uniquement les probabilités de pourboire à partir des caractéristiques (variable `X` dans la procédure stockée).
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-Rrun les instructions T-SQL suivantes pour créer les procédures stockées. Cette procédure stockée requiert un modèle basé sur le package scikit-Learn, car elle utilise des fonctions spécifiques à ce package:
+Exécutez les instructions T-SQL suivantes pour créer les procédures stockées. Cette procédure stockée a besoin d’un modèle basé sur le package scikit-learn, car elle utilise des fonctions propres à ce package :
 
-+ La trame de données contenant des entrées est `predict_proba` transmise à la fonction du modèle de `mod`régression logistique,. La `predict_proba` fonction (`probArray = mod.predict_proba(X)`) retourne une valeur **float** qui représente la probabilité qu’une info-bulle soit donnée.
++ La trame de données contenant les entrées est transmise à la fonction `predict_proba` du modèle de régression logistique, `mod`. La fonction `predict_proba` (`probArray = mod.predict_proba(X)`) retourne une valeur flottante (**float**) qui représente la probabilité qu’un pourboire (d’un montant quelconque) sera donné.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
@@ -90,7 +91,7 @@ GO
 
 ### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-Cette procédure stockée utilise les mêmes entrées et crée le même type de score que la procédure stockée précédente, mais utilise des fonctions du package **revoscalepy** fourni avec SQL Server machine learning.
+Cette procédure stockée utilise les mêmes entrées et crée le même type de score que la procédure stockée précédente, sauf qu’elle utilise des fonctions du package **revoscalepy** fourni avec SQL Server Machine Learning.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
@@ -131,16 +132,16 @@ END
 GO
 ```
 
-## <a name="run-batch-scoring-using-a-select-query"></a>Exécuter le calcul de score par lot à l’aide d’une requête SELECT
+## <a name="run-batch-scoring-using-a-select-query"></a>Exécuter un scoring par lot à l’aide d’une requête SELECT
 
-Les procédures stockées **PredictTipSciKitPy** et **PredictTipRxPy** requièrent deux paramètres d’entrée: 
+Les procédures stockées **PredictTipSciKitPy** et **PredictTipRxPy** ont besoin de deux paramètres d’entrée : 
 
-- Requête qui récupère les données pour la notation
-- Nom d’un modèle formé
+- Requête qui récupère les données pour le scoring
+- Nom d’un modèle entraîné
 
-En passant ces arguments à la procédure stockée, vous pouvez sélectionner un modèle particulier ou modifier les données utilisées pour le calcul de score.
+En transmettant ces arguments à la procédure stockée, vous pouvez sélectionner un modèle particulier ou modifier les données utilisées pour le scoring.
 
-1. Pour utiliser le modèle **scikit-Learn** pour la notation, appelez la procédure stockée **PredictTipSciKitPy**, en passant le nom du modèle et la chaîne de requête en tant qu’entrées.
+1. Pour utiliser le modèle **scikit-learn** pour le scroring, appelez la procédure stockée **PredictTipSciKitPy**, en transmettant le nom du modèle et la chaîne de requête sous forme d’entrées.
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -151,11 +152,11 @@ En passant ces arguments à la procédure stockée, vous pouvez sélectionner un
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    La procédure stockée retourne des probabilités prédites pour chaque voyage passé dans le cadre de la requête d’entrée. 
+    La procédure stockée retourne les probabilités prédites pour chaque trajet qui a été transmis avec la requête d’entrée. 
     
-    Si vous utilisez SSMS (SQL Server Management Studio) pour exécuter des requêtes, les probabilités s’affichent sous la forme d’une table dans le volet **résultats** . Le volet **messages** génère la mesure de précision (AUC ou zone sous courbe) avec une valeur de environ 0,56.
+    Si vous utilisez SSMS (SQL Server Management Studio) pour exécuter les requêtes, les probabilités s’affichent sous forme de tableau dans le volet **Résultats**. Le volet **Messages** sort la métrique d’exactitude (AUC ou zone en dessous de la courbe) avec une valeur d’environ 0,56.
 
-2. Pour utiliser le modèle **revoscalepy** pour la notation, appelez la procédure stockée **PredictTipRxPy**, en passant le nom du modèle et la chaîne de requête en tant qu’entrées.
+2. Pour utiliser le modèle **revoscalepy** pour le scroring, appelez la procédure stockée **PredictTipRxPy**, en transmettant le nom du modèle et la chaîne de requête sous forme d’entrées.
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -166,27 +167,27 @@ En passant ces arguments à la procédure stockée, vous pouvez sélectionner un
     EXEC [dbo].[PredictTipRxPy] 'revoscalepy_model', @query_string;
     ```
 
-## <a name="single-row-scoring"></a>Notation sur une seule ligne
+## <a name="single-row-scoring"></a>Scoring sur une ligne
 
-Parfois, au lieu de la notation par lot, vous souhaiterez peut-être passer un seul cas, obtenir des valeurs d’une application et retourner un résultat unique en fonction de ces valeurs. Par exemple, vous pouvez configurer une feuille de calcul Excel, une application Web ou un rapport pour appeler la procédure stockée et lui transmettre des entrées tapées ou sélectionnées par les utilisateurs.
+Parfois, à la place du scoring par lot, vous souhaiterez peut-être transmettre un seul cas pour obtenir les valeurs d’une application et retourner un seul résultat basé sur ces valeurs. Par exemple, vous pouvez configurer une feuille de calcul Excel, une application web ou un rapport pour appeler la procédure stockée et lui transmettre les entrées tapées ou sélectionnées par les utilisateurs.
 
-Dans cette section, vous allez apprendre à créer des prédictions uniques en appelant deux procédures stockées:
+Dans cette section, vous allez créer des prédictions uniques en appelant deux procédures stockées :
 
-+ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) est conçu pour un score à une seule ligne à l’aide du modèle scikit-Learn.
-+ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) est conçu pour un score à une seule ligne à l’aide du modèle revoscalepy.
-+ Si vous n’avez pas encore formé un modèle, revenez à l' [étape 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) est conçu pour un scoring sur une seule ligne utilisant le modèle scikit-learn.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) est conçu pour un scoring sur une seule ligne utilisant le modèle revoscalepy.
++ Si vous n’avez pas encore entraîné un modèle, revenez à l’[étape 5](sqldev-py5-train-and-save-a-model-using-t-sql.md).
 
-Les deux modèles prennent comme entrée une série de valeurs uniques, telles que le nombre de passagers, la distance de trajet, etc. Une fonction table, `fnEngineerFeatures`, est utilisée pour convertir les valeurs de latitude et de longitude des entrées en une nouvelle fonctionnalité, distance directe. La [leçon 4](sqldev-py4-create-data-features-using-t-sql.md) contient une description de cette fonction table.
+Les deux modèles acceptent en entrée une série de valeurs uniques, comme le nombre de passagers, la distance du trajet, etc. Les valeurs de latitude et de longitude des entrées sont converties par une fonction table (`fnEngineerFeatures`) pour former une nouvelle caractéristique : distance directe. La [leçon 4](sqldev-py4-create-data-features-using-t-sql.md) contient une description de cette fonction table.
 
 Les deux procédures stockées créent un score basé sur le modèle Python.
 
 > [!NOTE]
 > 
-> Il est important de fournir toutes les fonctionnalités d’entrée requises par le modèle python quand vous appelez la procédure stockée à partir d’une application externe. Pour éviter les erreurs, vous devrez peut-être effectuer un cast ou une conversion des données d’entrée en un type de données python, en plus de la validation du type de données et de la longueur des données.
+> Quand vous appelez la procédure stockée à partir d’une application externe, il est important de fournir toutes les caractéristiques d’entrée dont a besoin le modèle Python. Pour éviter les erreurs, vous devrez peut-être effectuer un cast ou une conversion des données d’entrée vers un type de données Python, en plus de valider le type de données et la longueur des données.
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-Prenez une minute pour examiner le code de la procédure stockée qui effectue le calcul de score à l’aide du modèle **scikit-Learn** .
+Prenez une minute pour examiner le code de la procédure stockée qui effectue le scoring à l’aide du modèle **scikit-learn**.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
@@ -253,7 +254,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-La procédure stockée suivante effectue un calcul de score à l’aide du modèle **revoscalepy** .
+La procédure stockée suivante effectue le scoring à l’aide du modèle **revoscalepy**.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
@@ -324,7 +325,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>Générer des scores à partir de modèles
 
-Une fois les procédures stockées créées, il est facile de générer un score basé sur l’un ou l’autre modèle. Ouvrez simplement une nouvelle fenêtre de **requête** , puis tapez ou collez des paramètres pour chacune des colonnes de fonctionnalité. Les sept valeurs requises sont pour ces colonnes de fonctionnalités, dans l’ordre:
+Une fois que les procédures stockées ont été créées, il est facile de générer un score basé sur l’un ou l’autre des modèles. Ouvrez simplement une nouvelle fenêtre **Requête**, puis tapez ou collez les paramètres pour chacune des colonnes de caractéristiques. Les sept valeurs obligatoires sont destinées à des colonnes de caractéristiques, dans l’ordre :
     
 + *passenger_count*
 + *trip_distance* v*trip_time_in_secs*
@@ -333,27 +334,27 @@ Une fois les procédures stockées créées, il est facile de générer un score
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. Pour générer une prédiction à l’aide du modèle **revoscalepy** , exécutez l’instruction suivante:
+1. Pour générer une prédiction à l’aide du modèle **revoscalepy**, exécutez l’instruction suivante :
   
     ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-2. Pour générer un score à l’aide du modèle **scikit-Learn** , exécutez l’instruction suivante:
+2. Pour générer un score à l’aide du modèle **scikit-learn**, exécutez l’instruction suivante :
 
     ```sql
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-La sortie des deux procédures est une probabilité qu’un pourboire soit payé pour le trajet de taxi avec les paramètres ou les fonctionnalités spécifiés.
+La sortie des deux procédures est une probabilité de versement de pourboire pour la course du taxi à partir des paramètres ou des caractéristiques spécifiés.
 
 ## <a name="conclusions"></a>Conclusions
 
-Dans ce didacticiel, vous avez appris à utiliser du code python incorporé dans des procédures stockées. Grâce [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’intégration, il est beaucoup plus facile de déployer des modèles Python pour la prédiction et d’incorporer la reformation de modèle dans le cadre d’un flux de travail de données d’entreprise.
+Dans ce tutoriel, vous avez découvert comment utiliser du code Python incorporé dans des procédures stockées. Du fait de l’intégration avec [!INCLUDE[tsql](../../includes/tsql-md.md)], il est beaucoup plus facile de déployer des modèles Python pour la prédiction et d’incorporer le réentraînement de modèle dans un workflow de données d’entreprise.
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Former et enregistrer un modèle python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Entraîner et enregistrer un modèle Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>Voir aussi
 
