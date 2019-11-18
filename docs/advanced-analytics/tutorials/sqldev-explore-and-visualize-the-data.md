@@ -1,46 +1,47 @@
 ---
-title: Leçon 1 Explorer et visualiser les données à l’aide de R et de T-SQL
-description: Didacticiel illustrant l’exploration et la visualisation des données SQL Server à l’aide de fonctions R.
+title: 'Tutoriel R + T-SQL : Explorer les données'
+description: Tutoriel illustrant l’exploration et la visualisation des données SQL Server à l’aide de fonctions R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68715371"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725224"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
+Cet article fait partie d’un tutoriel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
 
-Dans cette étape, vous allez examiner les exemples de données, puis générer des tracés à l’aide de [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) à partir de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et de la fonction [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) générique dans base R. Ces fonctions R sont déjà incluses dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+Dans cette étape, vous allez examiner les exemples de données, puis générer des tracés à l’aide de [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) à partir de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et de la fonction générique [hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) en base R. Ces fonctions R sont déjà incluses dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 L’objectif principal de cette leçon est d’illustrer comment appeler des fonctions R à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] dans des procédures stockées et enregistrer les résultats dans des formats de fichiers d’application :
 
-+ Créez une procédure stockée à l’aide de **RxHistogram** pour générer un tracé R sous forme de données varbinary. Utilisez **BCP** pour exporter le flux binaire vers un fichier image.
-+ Créez une procédure stockée à l’aide de la fonction **Hist** pour générer un tracé, en enregistrant les résultats au format jpg et PDF.
++ Créez une procédure stockée à l’aide de **RxHistogram** pour générer un tracé R en tant que données varbinary. Utilisez **bcp** pour exporter le flux binaire vers un fichier image.
++ Créez une procédure stockée à l’aide de **Hist** pour générer un tracé, en enregistrant les résultats au format JPG et PDF.
 
 > [!NOTE]
-> Étant donné que la visualisation est un outil puissant pour la compréhension de la forme et de la distribution des données, R propose une gamme de fonctions et de packages pour générer des histogrammes, des nuages de points, des surfaces et d’autres graphiques d’exploration de données. R crée généralement des images à l’aide d’un appareil R pour la sortie graphique, que vous pouvez capturer et stocker en tant que type de données **varbinary** pour le rendu dans l’application. Vous pouvez également enregistrer les images dans l’un des formats de fichiers de prise en charge (. JPG,. PDF, etc.).
+> Étant donné que la visualisation est un outil puissant pour la compréhension de la forme et de la distribution des données, R propose une gamme de fonctions et de packages pour générer des histogrammes, des nuages de points, des surfaces et d’autres graphs d’exploration de données. R crée généralement des images à l’aide d’un appareil R pour la sortie graphique, que vous pouvez capturer et stocker en tant que type de données **varbinary** pour le rendu dans l’application. Vous pouvez également enregistrer les images dans l’un des formats de fichiers de prise en charge (.JPG,.PDF, etc.).
 
 ## <a name="review-the-data"></a>Examiner les données
 
-Le développement d’une solution de science des données comprend généralement l’exploration et la visualisation des données. Par conséquent, prenez une minute pour examiner les exemples de données, si vous ne l’avez pas déjà fait.
+Le développement d’une solution de science des données comprend généralement l’exploration et la visualisation des données. Tout d’abord, prenez une minute pour examiner les exemples de données, si ce n’est déjà fait.
 
-Dans le jeu de données public d’origine, les identificateurs et les enregistrements de trajet des taxis ont été fournis dans des fichiers distincts. Toutefois, pour faciliter l’utilisation des exemples de données, les deux jeux de données d’origine ont été joints sur les colonnes _Medallion_, _hack \_license_et _Pickup \_datetime_.  Les enregistrements ont aussi été échantillonnés pour obtenir seulement 1 % du nombre d’enregistrements d’origine. Le dataset échantillonné obtenu compte 1 703 957 lignes et 23 colonnes.
+Dans le jeu de données public d’origine, les identificateurs de taxis et les enregistrements de trajets ont été fournis dans des fichiers distincts. Toutefois, pour simplifier l’utilisation des exemples de données, les deux jeux de données d’origine ont été joints sur les colonnes _medallion_, _hack\_license_ et _pickup\_datetime_.  Les enregistrements ont aussi été échantillonnés pour obtenir seulement 1 % du nombre d’enregistrements d’origine. Le dataset échantillonné obtenu compte 1 703 957 lignes et 23 colonnes.
 
 **Identificateurs de taxis**
   
--   La colonne _Medallion_ représente le numéro d’identification unique du taxi.
+-   La colonne _medallion_ représente le numéro d’ID unique du taxi.
   
--   La colonne _hack \_license_ contient le numéro de licence du pilote taxi (rendu anonyme).
+-   La colonne _hack\_license_ contient le numéro de licence du conducteur du taxi (anonyme).
   
 **Enregistrements de trajets et de prix**
   
@@ -48,11 +49,11 @@ Dans le jeu de données public d’origine, les identificateurs et les enregistr
   
 -   Chaque enregistrement de prix inclut des informations telles que le type de paiement, le montant total du paiement et le montant du pourboire.
   
--   Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique. L' _info-bulle \_amount_ colonne contient des valeurs numériques continues et peut être utilisée comme colonne d' **étiquette** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. Le _conseil \_class_ colonne a plusieurs **étiquettes de classe** et peut donc être utilisé comme étiquette pour les tâches de classification multiclasse.
+-   Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique. La colonne _tip\_amount_ contient des valeurs numériques continues et peut être utilisée comme colonne **label** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. La colonne _tip\_class_ a plusieurs **étiquettes de classes**, et peut donc être utilisée comme étiquette pour les tâches de classification multiclasse.
   
     Cette procédure pas à pas ne montre que la tâche de classification binaire. Si vous le souhaitez, vous pouvez essayer de créer des modèles pour les autres deux tâches d’apprentissage automatique, la régression et la classification multiclasse.
   
--   Les valeurs utilisées pour les colonnes d’étiquette sont toutes basées sur l' _info-bulle \_amount_ colonne, à l’aide des règles d’entreprise suivantes :
+-   Les valeurs utilisées pour les colonnes d’étiquettes sont basées sur la colonne _tip\_amount_, à l’aide de ces règles d’entreprise :
   
     |Nom de la colonne dérivée|Règle|
     |-|-|
@@ -61,9 +62,9 @@ Dans le jeu de données public d’origine, les identificateurs et les enregistr
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>Créer une procédure stockée à l’aide de rxHistogram pour tracer les données
 
-Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), l’une des fonctions R améliorées fournies dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Cette étape trace un histogramme basé sur les données d’une requête de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez encapsuler cette fonction dans une procédure stockée, **PlotRxHistogram**.
+Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), l’une des fonctions R améliorées fournies dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Cette étape trace un histogramme basé sur les données d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez envelopper cette fonction dans une procédure stockée, **PlotRxHistogram**.
 
-1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample** et sélectionnez **nouvelle requête**.
+1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample**, et sélectionnez **Nouvelle requête**.
 
 2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple est nommé **RPlotRxHistogram*.
 
@@ -90,19 +91,19 @@ Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine
     GO
     ```
 
-Les points clés à comprendre dans ce script sont les suivants : 
+Les points clés à retenir dans ce script sont les suivants : 
   
-+ La variable `@query` définit le texte de requête (`'SELECT tipped FROM nyctaxi_sample'`), qui est transmis au script R comme argument de la variable d’entrée du script, `@input_data_1`. Pour les scripts R qui s’exécutent en tant que processus externes, vous devez disposer d’un mappage un-à-un entre les entrées de votre script et les entrées de la procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) qui démarre la session R sur SQL Server.
++ La variable `@query` définit le texte de requête (`'SELECT tipped FROM nyctaxi_sample'`), qui est transmis au script R comme argument de la variable d’entrée du script, `@input_data_1`. Pour les scripts R qui s’exécutent en tant que processus externes, vous devez disposer d’un mappage un-à-un entre les entrées de votre script, et les entrées de la procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) qui démarre la session R sur SQL Server.
   
 + Dans le script R, une variable (`image_file`) est définie pour stocker l’image. 
 
 + La fonction **rxHistogram** de la bibliothèque RevoScaleR est appelée pour générer le tracé.
   
-+ L’appareil R a la valeur **off** , car vous exécutez cette commande en tant que script externe dans SQL Server. En général, dans R, lorsque vous émettez une commande de traçage de haut niveau, R ouvre une fenêtre graphique, appelée *appareil*. Vous pouvez désactiver l’appareil si vous écrivez dans un fichier ou si vous gérez la sortie d’une autre façon.
++ L’appareil R est défini sur **off** (désactivé), car vous exécutez cette commande en tant que script externe dans SQL Server. Généralement, en R, quand vous émettez une commande principale de traçage, R ouvre une fenêtre graphique appelée *device* (périphérique). Vous pouvez désactiver l’appareil si vous écrivez dans un fichier ou si vous gérez la sortie d’une autre façon.
   
 + L’objet graphique R est sérialisé en data.frame R pour la sortie.
 
-### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>Exécuter la procédure stockée et utiliser BCP pour exporter des données binaires dans un fichier image
+### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>Exécuter la procédure stockée et utiliser bcp pour exporter des données binaires dans un fichier image
 
 La procédure stockée retourne l’image sous forme de flux de données varbinary qui, évidemment, ne peut pas être affiché directement. Toutefois, vous pouvez utiliser l’utilitaire **bcp** pour obtenir les données varbinary et les enregistrer en tant que fichier image sur un ordinateur client.
   
@@ -114,16 +115,16 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
     **Résultats**
     
-    *tracer* le *0xFFD8FFE000104A4649...*
+    *tracer* *0xFFD8FFE000104A4649...*
   
-2. Ouvrez une invite de commandes PowerShell et exécutez la commande suivante, en indiquant le nom de l’instance, le nom de la base de données, le nom d’utilisateur et les informations d’identification appropriés comme arguments. Pour ceux qui utilisent des identités Windows, vous pouvez remplacer **-U** et **-P** par **-T**.
+2. Ouvrez une invite de commandes PowerShell et exécutez la commande suivante, en fournissant le nom d’instance, le nom de base de données, le nom d’utilisateur et les informations d’identification appropriés en tant qu’arguments. Pour ceux qui utilisent des identités Windows, vous pouvez remplacer **-U** et **-P** par **-T**.
   
     ```powershell
     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
     ```
 
     > [!NOTE]
-    > Les commutateurs de commande pour BCP respectent la casse.
+    > Les commutateurs de commande bcp respectent la casse.
   
 3. Si la connexion réussit, vous serez invité à entrer davantage d’informations sur le format du fichier graphique. 
 
@@ -157,17 +158,17 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
 4.  Le fichier de sortie est créé dans le même répertoire que celui où vous avez exécuté la commande PowerShell. Pour afficher le tracé, il suffit d’ouvrir le fichier plot.jpg.
   
-    ![voyages de taxi avec et sans conseils](media/rsql-devtut-tippedornot.jpg "voyages de taxi avec et sans conseils")  
+    ![voyages en taxi avec et sans conseils](media/rsql-devtut-tippedornot.jpg "voyages en taxi avec et sans conseils")  
   
-## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Créer une procédure stockée à l’aide de l’historique et de plusieurs formats de sortie
+## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Créer une procédure stockée à l’aide de Hist et de plusieurs formats de sortie
 
-En règle générale, les scientifiques des données génèrent plusieurs visualisations de données pour obtenir des informations sur les données à partir de différentes perspectives. Dans cet exemple, vous allez créer une procédure stockée appelée **RPlotHist** pour écrire des histogrammes, des nuages et d’autres graphiques R. JPG et. Format PDF.
+En général, les scientifiques des données génèrent plusieurs visualisations de données, pour obtenir des informations sur les données de différentes perspectives. Dans cet exemple, vous allez créer une procédure stockée appelée **RPlotHist** pour écrire des histogrammes, des nuages de points et d’autres graphiques R au format .JPG et .PDF.
 
-Cette procédure stockée utilise la fonction **Hist** pour créer l’histogramme, en exportant les données binaires dans des formats populaires tels que. JPG,. PDF et. Format. 
+Cette procédure stockée utilise la fonction **Hist** pour créer l’histogramme, en exportant les données binaires dans des formats populaires tels que .JPG, .PDF et .PNG. 
 
-1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample** et sélectionnez **nouvelle requête**.
+1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample**, et sélectionnez **Nouvelle requête**.
 
-2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple est appelé **RPlotHist** .
+2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple est nommé **RPlotHist**.
   
     ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
@@ -260,26 +261,26 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 Les nombres dans les noms de fichiers sont générés de manière aléatoire pour s’assurer que vous ne recevez pas d’erreur lors de la tentative d’écriture dans un fichier existant.
 
-### <a name="view-output"></a>Afficher la sortie 
+### <a name="view-output"></a>Voir la sortie 
 
-Pour afficher le tracé, ouvrez le dossier de destination et passez en revue les fichiers qui ont été créés par le code R dans la procédure stockée.
+Pour voir le tracé, ouvrez le dossier de destination et examinez les fichiers qui ont été créés par le code R dans la procédure stockée.Ouvrez le dossier de destination et examinez les fichiers qui ont été créés par le code R dans la procédure stockée.
 
-1. Accédez au dossier indiqué dans le message STDOUT (dans l’exemple, il s’agit de C:\temp\plots \)
+1. Accédez au dossier indiqué dans le message STDOUT (dans cet exemple, il s’agit de C:\temp\plots\)
 
-2. Ouvrez `rHistogram_Tipped.jpg` pour afficher le nombre de voyages qui ont reçu un Conseil et les voyages qui n’ont pas eu de Conseil. (Cet histogramme est semblable à celui que vous avez généré à l’étape précédente.)
+2. Ouvrez `rHistogram_Tipped.jpg` pour afficher le nombre de trajets avec pourboire par rapport au nombre de trajets sans pourboire. (Cet histogramme ressemble beaucoup à celui que vous avez généré à l’étape précédente.)
 
 3. Ouvrez `rHistograms_Tip_and_Fare_Amount.pdf` pour afficher la répartition des montants des pourboires, en fonction des montants des prix.
     
-  ![histogramme présentant tip_amount et fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogramme présentant tip_amount et fare_amount")
+  ![histogramme qui indique tip_amount et fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogramme qui indique tip_amount et fare_amount")
 
-4. Ouvrez `rXYPlots_Tip_vs_Fare_Amount.pdf` pour afficher un nuage avec le montant du prix sur l’axe des abscisses et le montant du pourboire sur l’axe des y.
+4. Ouvrez `rXYPlots_Tip_vs_Fare_Amount.pdf` pour afficher un nuage de points avec les prix sur l’axe des abscisses et le montant des pourboires sur l’axe y.
 
-   ![montant du pourboire tracé sur le montant du tarif](media/rsql-devtut-tipamtbyfareamt.PNG "montant du pourboire tracé sur le montant du tarif")
+   ![montant des pourboires tracé par rapport au montant des prix](media/rsql-devtut-tipamtbyfareamt.PNG "montant des pourboires tracé par rapport au montant des prix")
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 2 : créer des fonctionnalités de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Leçon 2 : Créer des caractéristiques de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Configurer les données de démonstration des taxis de New York](demo-data-nyctaxi-in-sql.md)
+[Configurer les données de démonstration Taxis de New York](demo-data-nyctaxi-in-sql.md)

@@ -1,26 +1,27 @@
 ---
-title: Créer des fonctionnalités de données à l’aide des fonctions T-SQL et Python
-description: Didacticiel expliquant comment ajouter des calculs aux procédures stockées à utiliser dans les modèles python Machine Learning.
+title: 'Python + T-SQL : Caractéristiques de données'
+description: Didacticiel expliquant comment ajouter des calculs aux procédures stockées à utiliser dans les modèles Machine Learning Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715493"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725198"
 ---
-# <a name="create-data-features-using-t-sql"></a>Créer des fonctionnalités de données à l’aide de T-SQL
+# <a name="create-data-features-using-t-sql"></a>Créer des caractéristiques de données à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Après l’exploration des données, vous avez collecté des Insights à partir des données et vous êtes prêt à passer à l' *ingénierie des caractéristiques*. Ce processus de création de fonctionnalités à partir des données brutes peut être une étape critique dans la modélisation avancée des analyses.
+Après l’exploration de données, vous avez recueilli des insights grâce aux données et vous êtes prêt à passer à *l’ingénierie des caractéristiques*. Ce processus de création de caractéristiques à partir des données brutes peut être une étape essentielle pour la modélisation de l’analytique avancée.
 
-Cet article fait partie d’un didacticiel, [l’analytique Python en base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
+Cet article fait partie d’un tutoriel, [Analytique Python en base de données pour développeur SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Lors de cette étape, vous allez découvrir comment créer des caractéristiques à partir de données brutes en utilisant une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ensuite, vous appellerez cette fonction à partir d’une procédure stockée pour créer une table qui contient les valeurs des caractéristiques.
 
@@ -30,9 +31,9 @@ Les valeurs de distance indiquées dans les données d’origine sont basées su
 
 Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, pour calculer la distance à l’aide de la formule de Haversine, et utiliser une seconde fonction T-SQL personnalisée, _fnEngineerFeatures_, pour créer une table contenant toutes les caractéristiques.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance du trajet à l’aide de fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcul de la distance des trajets à l’aide de fnCalculateDistance
 
-1.  La fonction _fnCalculateDistance_ doit avoir été téléchargée et inscrite auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de cette procédure pas à pas. Prenez une minute pour examiner le code.
+1.  La fonction _fnCalculateDistance_ doit avoir été téléchargée et inscrite auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de cette procédure pas à pas. Prenez le temps de passer le code en revue.
   
     Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], développez **Programmabilité**, **Fonctions** puis **Fonctions scalaires**.
     Cliquez avec le bouton droit sur _fnCalculateDistance_, puis sélectionnez **Modifier** pour ouvrir le script [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une nouvelle fenêtre de requête.
@@ -67,7 +68,7 @@ Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, po
 
 Pour ajouter la valeur calculée à une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Enregistrer les fonctionnalités à l’aide de _fnEngineerFeatures_
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>Enregistrer les caractéristiques à l’aide de _fnEngineerFeatures_
 
 1.  Prenez une minute pour examiner le code de la fonction T-SQL personnalisée, _fnEngineerFeatures_, qui doit avoir été créé pour vous dans le cadre de la préparation de cette procédure pas à pas.
   
@@ -107,16 +108,16 @@ Pour ajouter la valeur calculée à une table qui peut être utilisée pour l’
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie des fonctionnalités est importante.
+    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie des caractéristiques est importante.
 
-À l’étape suivante, vous apprendrez à utiliser ces fonctionnalités de données pour créer et effectuer l’apprentissage d’un modèle de Machine Learning à l’aide de Python.
+À l’étape suivante, vous découvrirez comment utiliser ces caractéristiques de données pour créer et entraîner un modèle Machine Learning avec Python.
 
 ## <a name="next-step"></a>Étape suivante
 
-[Former et enregistrer un modèle Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Entraîner et enregistrer un modèle Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Explorez et Visualisez les données](sqldev-py3-explore-and-visualize-the-data.md)
+[Explorer et visualiser les données](sqldev-py3-explore-and-visualize-the-data.md)
 
 

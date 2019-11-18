@@ -1,39 +1,40 @@
 ---
-title: Surveiller T-SQL avec événements étendus
-description: Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes des instructions T-SQL de prédiction dans SQL Server Machine Learning Services.
+title: Surveiller T-SQL avec des événements étendus
+description: Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes liés aux instructions PREDICT T-SQL dans SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 958ac3e24a9deec231e7fd4d5da14477d693f4de
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MT
+ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714303"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727729"
 ---
-# <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Surveiller les instructions T-SQL de prédiction avec des événements étendus dans SQL Server Machine Learning Services
+# <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Surveiller les instructions PREDICT T-SQL avec des événements étendus dans SQL Server Machine Learning Services
 
-Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes des instructions T-SQL de [prédiction](../../t-sql/queries/predict-transact-sql.md) dans SQL Server machine learning services.
+Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes liés aux instructions [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL dans SQL Server Machine Learning Services.
 
 ## <a name="table-of-extended-events"></a>Tableau des événements étendus
 
-Les événements étendus suivants sont disponibles dans toutes les versions de SQL Server qui prennent en charge l’instruction T-SQL [Predict](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) . 
+Les événements étendus suivants sont disponibles dans toutes les versions de SQL Server prenant en charge l’instruction [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL. 
 
-|name |object_type|description| 
+|NAME |object_type|description| 
 |----|----|----|
-|predict_function_completed |événement  |Répartition du temps d’exécution builtin|
-|predict_model_cache_hit |événement|Se produit lorsqu’un modèle est récupéré à partir du cache de modèle de fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache du modèle de fonction PREDICT.|
-|predict_model_cache_insert |événement  |   Se produit lorsqu’un modèle est inséré dans le cache du modèle de fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache du modèle de fonction PREDICT.    |
-|predict_model_cache_miss   |événement|Se produit lorsqu’un modèle est introuvable dans le cache du modèle de fonction PREDICT. Des occurrences fréquentes de cet événement peuvent indiquer que SQL Server a besoin de davantage de mémoire. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache du modèle de fonction PREDICT.|
-|predict_model_cache_remove |événement| Se produit lorsqu’un modèle est supprimé du cache de modèle pour la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache du modèle de fonction PREDICT.|
+|predict_function_completed |événement  |Décomposition intégrée du temps d’exécution|
+|predict_model_cache_hit |événement|Se produit quand un modèle est récupéré auprès du cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
+|predict_model_cache_insert |événement  |   Se produit quand un modèle est inséré dans le cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.    |
+|predict_model_cache_miss   |événement|Se produit quand un modèle est introuvable dans le cache des modèles de la fonction PREDICT. De fréquentes occurrences de cet événement peuvent indiquer que SQL Server nécessite davantage de mémoire. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
+|predict_model_cache_remove |événement| Se produit quand un modèle est supprimé du cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
 
-## <a name="query-for-related-events"></a>Requête pour les événements connexes
+## <a name="query-for-related-events"></a>Requêtes pour les événements connexes
 
-Pour afficher la liste de toutes les colonnes retournées pour ces événements, exécutez la requête suivante dans SQL Server Management Studio:
+Pour afficher la liste de toutes les colonnes retournées pour ces événements, exécutez la requête suivante dans SQL Server Management Studio :
 
 ```sql
 SELECT * 
@@ -43,23 +44,23 @@ WHERE object_name LIKE `predict%'
 
 ## <a name="examples"></a>Exemples
 
-Pour capturer des informations sur les performances d’une session de notation à l’aide de PREDICT:
+Pour collecter des informations sur les performances d’une session de scoring à l’aide de PREDICT :
 
-1. Créez une nouvelle session d’événements étendus à l’aide d’Management Studio ou d’un autre [outil](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)pris en charge.
+1. Créez une session d’événements étendus à l’aide de Management Studio ou d’un autre [outil](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools) pris en charge.
 2. Ajoutez les événements `predict_function_completed` et `predict_model_cache_hit` à la session.
-3. Démarrez la session d’événements étendus.
-4. Exécutez la requête qui utilise PREDICT.
+3. Lancez la session d’événements étendus.
+4. Exécutez la requête utilisant PREDICT.
 
-Dans les résultats, passez en revue les colonnes suivantes:
+Dans les résultats, examinez les colonnes suivantes :
 
-+ La valeur pour `predict_function_completed` indique le temps passé par la requête lors du chargement du modèle et de la notation.
-+ La valeur booléenne pour `predict_model_cache_hit` indique si la requête a utilisé ou non un modèle mis en cache. 
++ La valeur de `predict_function_completed` indique le temps que la requête a consacré au chargement du modèle et au scoring.
++ La valeur booléenne de `predict_model_cache_hit` indique si la requête a utilisé un modèle mis en cache. 
 
-### <a name="native-scoring-model-cache"></a>Cache du modèle de notation natif
+### <a name="native-scoring-model-cache"></a>Cache du modèle de scoring natif
 
-Outre les événements spécifiques à prédire, vous pouvez utiliser les requêtes suivantes pour obtenir plus d’informations sur le modèle mis en cache et l’utilisation du cache:
+En plus des événements spécifiques de PREDICT, vous pouvez utiliser les requêtes suivantes pour obtenir plus d’informations sur le modèle mis en cache et l’utilisation du cache :
 
-Afficher le cache du modèle de calcul de score natif:
+Afficher le cache du modèle de scoring natif :
 
 ```sql
 SELECT *
@@ -67,7 +68,7 @@ FROM sys.dm_os_memory_clerks
 WHERE type = 'CACHESTORE_NATIVESCORING';
 ```
 
-Affichez les objets dans le cache du modèle:
+Affichez les objets dans le cache du modèle :
 
 ```sql
 SELECT *
@@ -77,9 +78,9 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les événements étendus (parfois appelés XEvents) et sur le suivi des événements dans une session, consultez les articles suivants :
+Pour en savoir plus sur les événements étendus (parfois appelés XEvents) et sur les méthodes permettant de suivre les événements dans une session, consultez les articles suivants :
 
 + [Surveiller les scripts Python et R avec des événements étendus dans SQL Server Machine Learning Services](extended-events.md)
-+ [Architecture et concepts des événements étendus](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Configurer la capture d’événements dans SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
++ [Extended Events concepts and architecture](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events) (Architecture et concepts des événements étendus)
++ [Set up event capture in SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server) (Configurer la capture d’événements dans SSMS)
 + [Gérer les sessions d’événements dans l’Explorateur d’objets](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)

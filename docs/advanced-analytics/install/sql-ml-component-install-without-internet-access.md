@@ -1,19 +1,20 @@
 ---
-title: Installer les composants de langage R et Python sans accès à Internet
-description: Installation des composants de machine learning R et Python hors connexion sur une instance SQL Server isolée derrière un pare-feu réseau.
+title: Installer sans accès à Internet
+description: Installer les composants de machine learning SQL Server R et Python sur un ordinateur isolé derrière un pare-feu réseau.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd1db578d6f1b4900f559c51521d807d7e1ec271
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 9b37851e2becaeddb754339ed6fe850007e97a19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594346"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727545"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer les composants de machine learning SQL Server R et Python sur un ordinateur sans accès à Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

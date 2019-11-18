@@ -1,65 +1,66 @@
 ---
-title: Créer des fonctionnalités de données à l’aide des fonctions R et SQL Server
-description: Didacticiel expliquant comment créer des fonctionnalités de données à l’aide de fonctions de SQL Server pour l’analyse dans la base de données.
+title: 'Tutoriel R : Ingénierie des caractéristiques'
+description: Tutoriel expliquant comment créer des fonctionnalités de données à l’aide de fonctions SQL Server pour l’analyse dans la base de données.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714697"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73723860"
 ---
-# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Créer des fonctionnalités de données à l’aide de R et SQL Server (procédure pas à pas)
+# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Créer des caractéristiques de données à l’aide de R et SQL Server (guide pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-L’ingénierie des données est un aspect important du Machine Learning. Les données doivent souvent être transformées avant de pouvoir être utilisées pour la modélisation prédictive. Si les données n’ont pas les caractéristiques dont vous avez besoin, vous pouvez les créer à partir de valeurs existantes.
+L’ingénierie des données est un aspect important du Machine Learning. Souvent, les données doivent être transformées avant de pouvoir être utilisées pour la modélisation prédictive. Si les données n’ont pas les caractéristiques dont vous avez besoin, vous pouvez les créer à partir de valeurs existantes.
 
-Pour cette tâche de modélisation, plutôt que d’utiliser les valeurs brutes de longitude et de latitude des lieux de prise en charge et de dépose, vous souhaitez avoir la distance en miles entre les deux emplacements. Pour créer cette fonctionnalité, vous calculez la distance linéaire directe entre deux points, à l’aide de la [formule Haversine](https://en.wikipedia.org/wiki/Haversine_formula).
+Pour cette tâche de modélisation, plutôt que d’utiliser les valeurs brutes de longitude et de latitude des lieux de prise en charge et de dépose, vous souhaitez avoir la distance en miles entre les deux emplacements. Pour créer cette caractéristique, vous devez calculer la distance directe linéaire entre deux points à l’aide de la [formule de haversine](https://en.wikipedia.org/wiki/Haversine_formula).
 
-Au cours de cette étape, vous allez découvrir deux méthodes différentes pour créer une fonctionnalité à partir de données:
+Dans cette étape, vous allez découvrir deux différentes méthodes de création d’une caractéristique à partir des données :
 
 > [!div class="checklist"]
 > * Utilisation d’une fonction R personnalisée
-> * Utilisation d’une fonction T-SQL personnalisée dans[!INCLUDE[tsql](../../includes/tsql-md.md)]
+> * Utilisation d’une fonction T-SQL personnalisée dans [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
-L’objectif est de créer un nouvel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de données qui comprend les colonnes d’origine, ainsi que la nouvelle fonctionnalité numérique, *direct_distance*.
+L’objectif est de créer un nouveau jeu de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui comprend les colonnes d’origine, ainsi que la nouvelle fonctionnalité numérique, *direct_distance*.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Cette étape suppose une session R en cours basée sur les étapes précédentes de cette procédure pas à pas. Elle utilise les chaînes de connexion et les objets de source de données créés dans ces étapes. Les outils et les packages suivants sont utilisés pour exécuter le script.
+Cette étape suppose que vous utilisez une session R ouverte basée sur les étapes précédentes de cette procédure pas à pas. Elle utilise les chaînes de connexion et les objets de source de données créés dans ces étapes. Les outils et les packages suivants sont utilisés pour exécuter le script.
 
-+ RGUI. exe pour exécuter des commandes R
++ RGUI.exe pour exécuter des commandes R
 + Management Studio pour exécuter T-SQL
 
-## <a name="featurization-using-r"></a>Caractérisation à l’aide de R
+## <a name="featurization-using-r"></a>Personnalisation à l’aide de R
 
 Le langage R est connu pour ses bibliothèques statistiques riches et variées, mais vous devrez peut-être créer des transformations de données personnalisées.
 
-Tout d’abord, examinons la façon dont les utilisateurs R sont habitués à: obtenir les données sur votre ordinateur portable, puis exécuter une fonction R personnalisée, *ComputeDist*, qui calcule la distance linéaire entre deux points spécifiés par les valeurs de latitude et de longitude.
+Tout d’abord, procédons comme les utilisateurs R ont l’habitude de faire : obtenir les données sur votre ordinateur portable, puis exécuter une fonction R personnalisée, *ComputeDist*, qui calcule la distance linéaire entre deux points spécifiés par les valeurs de latitude et de longitude.
 
-1. N’oubliez pas que l’objet de source de données que vous avez créé précédemment obtient uniquement les 1000 premières lignes. Nous allons donc définir une requête qui obtient toutes les données.
+1. N’oubliez pas que l’objet de source de données que vous avez créé précédemment obtient uniquement les 1 000 premières lignes. Nous allons donc définir une requête qui obtient toutes les données.
 
     ```R
     bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
-2. Créez un objet de source de données à l’aide de la requête.
+2. Créez un nouvel objet de source de données en utilisant la requête.
 
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) peut accepter une requête composée d’une requête SELECT valide, fournie en tant qu’argument au paramètre _SQLQuery_ ou le nom d’un objet table, fourni en tant que paramètre _table_ .
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) peut accepter une requête composée d’une requête SELECT valide, fournie en tant qu’argument au paramètre _sqlQuery_, ou le nom d’un objet table, fourni en tant que paramètre _table_.
     
-    - Si vous souhaitez échantillonner des données à partir d’une table, vous devez utiliser le paramètre _SQLQuery_ , définir des paramètres d’échantillonnage à l’aide de la clause T-SQL TABLESAMPLE et affecter à l’argument _ROWBUFFERING_ la valeur false.
+    - Si vous souhaitez échantillonner des données à partir d’une table, vous devez utiliser le paramètre _sqlQuery_, définir des paramètres d’échantillonnage à l’aide de la clause T-SQL TABLESAMPLE et définir l’argument _rowBuffering_ sur FALSE.
 
-3. Exécutez le code suivant pour créer la fonction R personnalisée. ComputeDist accepte deux paires de valeurs de latitude et de longitude, et calcule la distance linéaire entre elles, en retournant la distance en miles.
+3. Exécutez le code suivant pour créer la fonction R personnalisée. ComputeDist prend deux paires de valeurs de latitude et de longitude, et calcule la distance linéaire entre elles, pour retourner la distance en miles.
 
     ```R
     env <- new.env();
@@ -84,13 +85,13 @@ Tout d’abord, examinons la façon dont les utilisateurs R sont habitués à: o
     + La première ligne définit un nouvel environnement. En R, un environnement peut être utilisé pour encapsuler des espaces de noms dans des packages et autres. Vous pouvez utiliser la fonction `search()` pour afficher les environnements dans votre espace de travail. Pour afficher les objets dans un environnement spécifique, tapez `ls(<envname>)`.
     + Les lignes commençant par `$env.ComputeDist` contiennent le code qui définit la formule de haversine, qui calcule la *distance orthodromique* entre deux points sur une sphère.
 
-4. Une fois la fonction définie, vous devez l’appliquer aux données pour créer une colonne de fonctionnalité, *direct_distance*. mais avant d’exécuter la transformation, définissez le contexte de calcul sur local.
+4. Ayant défini la fonction, vous l’appliquez aux données pour créer une colonne de caractéristique, *direct_distance*. Avant d’exécuter la transformation, définissez le contexte de calcul sur local.
 
     ```R
     rxSetComputeContext("local");
     ```
 
-5. Appelez la fonction [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) pour récupérer les données d’ingénierie des fonctionnalités et appliquez `env$ComputeDist` la fonction aux données en mémoire.
+5. Appelez la fonction [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) pour recevoir les données d’ingénierie des caractéristiques et appliquez la fonction `env$ComputeDist` aux données en mémoire.
 
     ```R
     start.time <- proc.time();
@@ -108,15 +109,15 @@ Tout d’abord, examinons la façon dont les utilisateurs R sont habitués à: o
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + La fonction rxDataStep prend en charge différentes méthodes pour modifier les données sur place. Pour plus d’informations, consultez cet article:  [Comment transformer et dégrouper des données dans votre jeu de recherche](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + La fonction rxDataStep prend en charge différentes méthodes pour modifier les données sur place. Pour plus d'informations, consultez cet article :  [Transformer et dégrouper des données dans Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
     
-    Toutefois, quelques points méritent une attention particulière concernant rxDataStep: 
+    Toutefois, quelques points méritent une attention particulière concernant rxDataStep : 
     
-    Dans d’autres sources de données, vous pouvez utiliser les arguments *varsToKeep* et *varsToDrop*, mais ceux-ci ne sont pas pris en charge pour les sources de données SQL Server. Par conséquent, dans cet exemple, nous avons utilisé l’argument Transforms pour spécifier les colonnes directes et les colonnes transformées. En outre, lors de l’exécution dans un contexte de calcul SQL Server, l’argument inData peut uniquement prendre une source de données SQL Server.
+    Dans d’autres sources de données, vous pouvez utiliser les arguments *varsToKeep* et *varsToDrop*, mais ils ne sont pas pris en charge pour les sources de données SQL Server. Par conséquent, dans cet exemple, nous avons utilisé l’argument _transforms_ pour spécifier les colonnes directes et les colonnes transformées. En outre, lors de l’exécution dans un contexte de calcul SQL Server, l’argument _inData_ peut uniquement accepter une source de données SQL Server.
 
-    Le code précédent peut également générer un message d’avertissement lorsqu’il est exécuté sur des jeux de données plus grands. Lorsque le nombre de lignes multiplié par le nombre de colonnes créées dépasse une valeur définie (la valeur par défaut est 3 millions), rxDataStep renvoie un avertissement et le nombre de lignes dans la trame de données retournée est tronqué. Pour supprimer l’avertissement, vous pouvez modifier l’argument _maxRowsByCols_ dans la fonction rxDataStep. Toutefois, si _maxRowsByCols_ est trop volumineux, vous risquez de rencontrer des problèmes lors du chargement de la trame de données en mémoire.
+    Le code précédent peut également générer un message d’avertissement lorsqu’il est exécuté sur des jeux de données plus grands. Lorsque le nombre de lignes multiplié par le nombre de colonnes créées dépasse une valeur définie (la valeur par défaut est 3 millions), rxDataStep renvoie un avertissement et le nombre de lignes dans la trame de données retournée est tronqué. Pour supprimer l’avertissement, vous pouvez modifier l’argument _maxRowsByCols_ dans la fonction rxDataStep. Toutefois, si _maxRowsByCols_ est trop volumineux, vous risquez de rencontrer des problèmes lors du chargement de la trame de données dans la mémoire.
 
-7. Si vous le souhaitez, vous pouvez appeler [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) pour inspecter le schéma de la source de données transformée.
+7. Vous pouvez appeler [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) pour inspecter le schéma de la source de données transformée :
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -124,13 +125,13 @@ Tout d’abord, examinons la façon dont les utilisateurs R sont habitués à: o
 
 ## <a name="featurization-using-transact-sql"></a>Personnalisation à l’aide de Transact-SQL
 
-Dans cet exercice, Découvrez comment accomplir la même tâche à l’aide de fonctions SQL plutôt que de fonctions R personnalisées. 
+Dans cet exercice, découvrez comment accomplir la même tâche à l’aide de fonctions SQL plutôt que de fonctions R personnalisées. 
 
-Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou un autre éditeur de requête pour exécuter le script T-SQL.
+Passez à [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou à un autre éditeur de requête pour exécuter le script T-SQL.
 
-1. Utilisez une fonction SQL, nommée *fnCalculateDistance*. La fonction doit déjà exister dans la base de données NYCTaxi_Sample. Dans l’Explorateur d’objets, vérifiez que la fonction existe, en accédant à ce chemin d’accès: Les bases de données > NYCTaxi_Sample > programmabilité > fonctions > fonctions scalaires > dbo. fnCalculateDistance.
+1. Utilisez une fonction SQL, nommée *fnCalculateDistance*. La fonction doit déjà exister dans la base de données NYCTaxi_Sample. Dans l’Explorateur d’objets, vérifiez que la fonction existe, en accédant à ce chemin d’accès : Bases de données > NYCTaxi_Sample > Programmabilité > Fonctions > Fonctions scalaires > dbo.fnCalculateDistance.
 
-    Si la fonction n’existe pas, utilisez SQL Server Management Studio pour générer la fonction dans la base de données NYCTaxi_Sample.
+    Si elle n’existe pas, utilisez SQL Server Management Studio pour générer la fonction dans la base de données NYCTaxi_Sample.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -155,7 +156,7 @@ Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms
     END
     ```
 
-2. Dans Management Studio, dans une nouvelle fenêtre de requête, exécutez l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction suivante à partir de n' [!INCLUDE[tsql](../../includes/tsql-md.md)] importe quelle application qui prend en charge pour voir le fonctionnement de la fonction.
+2. Dans Management Studio, dans une nouvelle fenêtre de requête, exécutez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante à partir de toute application prenant en charge [!INCLUDE[tsql](../../includes/tsql-md.md)] pour voir comment la fonction se comporte.
 
     ```sql
     USE nyctaxi_sample
@@ -165,7 +166,7 @@ Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms
     dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude 
     FROM nyctaxi_sample
     ```
-3. Pour insérer des valeurs directement dans une nouvelle table (vous devez d’abord la créer), vous pouvez ajouter une clause **into en** spécifiant le nom de la table.
+3. Pour insérer des valeurs directement dans une nouvelle table (vous devez d’abord la créer), vous pouvez ajouter une **clause** en spécifiant le nom de la table.
 
     ```sql
     USE nyctaxi_sample
@@ -177,7 +178,7 @@ Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms
     FROM nyctaxi_sample
     ```
 
-4. Vous pouvez également appeler la fonction SQL à partir du code R. Revenez à l’RGUI et stockez la requête SQL caractérisation dans une variable R.
+4. Vous pouvez aussi appeler la fonction SQL à partir du code R. Repassez à Rgui et stockez la requête de caractérisation SQL dans une variable R.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -189,7 +190,7 @@ Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms
     ```
   
     > [!TIP]
-    > Cette requête a été modifiée pour obtenir un échantillon de données plus petit, afin de rendre cette procédure pas à pas plus rapide. Vous pouvez supprimer la clause TABLESAMPLE si vous souhaitez obtenir toutes les données; Toutefois, en fonction de votre environnement, il est possible qu’il ne soit pas possible de charger le DataSet complet dans R, ce qui génère une erreur.
+    > Elle a été modifiée pour obtenir un plus petit échantillon de données, afin d’accélérer cette procédure pas à pas. Vous pouvez supprimer la clause TABLESAMPLE si vous souhaitez obtenir toutes les données ; toutefois, en fonction de votre environnement, il est possible que vous ne puissiez pas charger le jeu de données complet dans R, ce qui génère une erreur.
   
 5. Utilisez les lignes de code suivantes pour appeler la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir de votre environnement R et l’appliquer aux données définies dans *featureEngineeringQuery*.
   
@@ -202,7 +203,7 @@ Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms
       connectionString = connStr)
     ```
   
-6.  Maintenant que la nouvelle fonctionnalité est créée, appelez **rxGetVarsInfo** pour créer un résumé des données dans la table des fonctionnalités.
+6.  Une fois la caractéristique créée, appelez **rxGetVarsInfo** pour créer un récapitulatif des données dans la table des caractéristiques.
   
     ```R
     rxGetVarInfo(data = featureDataSource)
@@ -226,12 +227,12 @@ Basculez vers [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms
     ```
 
     > [!NOTE]
-    > Dans certains cas, vous pouvez recevoir une erreur semblable à celle-ci: *L’autorisation EXECUTE a été refusée sur l’objet’fnCalculateDistance'* Dans ce cas, assurez-vous que la connexion que vous utilisez dispose des autorisations nécessaires pour exécuter des scripts et créer des objets sur la base de données, et pas seulement sur l’instance.
+    > Dans certains cas, vous pouvez recevoir une erreur semblable à celle-ci : *L’autorisation EXECUTE a été refusée sur l’objet « fnCalculateDistance »* . Dans ce cas, assurez-vous que la connexion que vous utilisez dispose des autorisations nécessaires pour exécuter des scripts et créer des objets sur la base de données, et pas seulement sur l’instance.
     > Vérifiez le schéma de l’objet, fnCalculateDistance. Si l’objet a été créé par le propriétaire de la base de données et que votre connexion appartient au rôle db_datareader, vous devez accorder à la connexion des autorisations explicites pour exécuter le script.
 
 ## <a name="comparing-r-functions-and-sql-functions"></a>Comparaison des fonctions R et des fonctions SQL
 
-Vous vous souvenez de ce morceau de code utilisé pour le code R?
+Vous vous souvenez de ce morceau de code utilisé pour le code R ?
 
 ```R
 start.time <- proc.time()
@@ -242,10 +243,10 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 
 Vous pouvez essayer de l’utiliser avec l’exemple de fonction personnalisée SQL pour voir le temps que prend la transformation de données lors de l’appel d’une fonction SQL. Essayez également de basculer les contextes de calcul avec rxSetComputeContext et comparez les minutages.
 
-Vos horaires peuvent varier considérablement, en fonction de la vitesse de votre réseau et de votre configuration matérielle. Dans les configurations que nous avons testées [!INCLUDE[tsql](../../includes/tsql-md.md)] , l’approche de la fonction était plus rapide que l’utilisation d’une fonction R personnalisée. Par conséquent, nous utilisons la [!INCLUDE[tsql](../../includes/tsql-md.md)] fonction pour ces calculs dans les étapes suivantes.
+Vos temps peuvent varier considérablement, en fonction de la vitesse de votre réseau et de votre configuration matérielle. Dans les configurations que nous avons testées, l’approche de la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] était plus rapide que l’utilisation d’une fonction R personnalisée. Nous avons donc utilisé la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] pour ces calculs lors des étapes suivantes.
 
 > [!TIP]
-> Très souvent, l’ingénierie des [!INCLUDE[tsql](../../includes/tsql-md.md)] caractéristiques à l’aide de sera plus rapide que R. Par exemple, T-SQL comprend des fonctions de fenêtrage et de classement rapides qui peuvent être appliquées à des calculs de science des données courants, tels que des moyennes *mobiles et des*vignettes. Choisissez la méthode la plus efficace en fonction de vos données et de vos tâches.
+> Très souvent, l’ingénierie des caractéristiques en [!INCLUDE[tsql](../../includes/tsql-md.md)] est plus rapide qu’en R. Par exemple, T-SQL propose des fonctions de classement et de fenêtrage rapides pouvant être appliquées à des calculs de science des données courants, comme le calcul de la moyenne mobile et l’utilisation de la fonction *n*-tile. Choisissez la méthode la plus efficace en fonction de vos données et de vos tâches.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
