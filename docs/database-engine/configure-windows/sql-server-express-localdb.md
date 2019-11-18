@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a50b7834f8efb7165b8ae53d11add9504d0fc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026037"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926037"
 ---
 # <a name="sql-server-express-localdb"></a>Base de données locale SQL Server Express
 
@@ -33,7 +33,7 @@ L'installation de LocalDB copie l'ensemble minimal des fichiers nécessaires pou
 
 ## <a name="try-it-out"></a>Essayez-le. 
 
-- Pour télécharger et installer SQL Server Express LocalDB, accédez à **[Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB est une fonctionnalité que vous sélectionnez lors de l’installation et qui est disponible quand vous téléchargez le média. Si vous téléchargez le média, choisissez le package **Express Advanced** ou LocalDB. Dans **Visual Studio Installer**, vous pouvez installer SQL Server Express LocalDB dans le cadre de la charge de travail **Développement .NET Desktop**, ou l’installer comme un composant seul.
+- Pour télécharger et installer SQL Server Express LocalDB, accédez à **[Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB est une fonctionnalité que vous sélectionnez lors de l’installation et qui est disponible quand vous téléchargez le média. Si vous téléchargez le média, choisissez le package **Express Advanced** ou LocalDB. Dans **Visual Studio Installer**, vous pouvez installer SQL Server Express LocalDB dans le cadre de la charge de travail **Développement .NET Desktop**, ou l’installer comme un composant seul.
 
  >[!TIP]
  > Vous pouvez également installer LocalDB dans le cadre de l’installation de Visual Studio. Pendant l’installation de Visual Studio, sélectionnez la charge de travail **Développement .NET Desktop**, qui comprend SQL Server Express LocalDB.
@@ -112,7 +112,7 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|Créer une vue d’abonnement|`LocalDBApp1`|
+|Nom|`LocalDBApp1`|
 |Options de version|\<Version actuelle>|
 |Nom partagé|""|
 |Propriétaire|"\<votre utilisateur Windows>"|

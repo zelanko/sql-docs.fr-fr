@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064674"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983024"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Cette fonction retourne des informations de colonne ou de paramètre.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,13 +54,13 @@ Pour l’argument *id*, l’argument *property* spécifie le type des informatio
 |**AllowsNull**|Autorise les valeurs NULL|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**ColumnId**|Valeur d’identificateur de colonne correspondant à **sys.columns.column_id**.|ID de la colonne<br /><br /> **Remarque :** Lors de requêtes sur plusieurs colonnes, des écarts peuvent apparaître dans l’ordre des valeurs d’identificateur de colonne.|  
 |**FullTextTypeColumn**|TYPE COLUMN de la table qui contient les informations sur le type de document de la *colonne*.|Identificateur de TYPE COLUMN en texte intégral pour l’expression du nom de colonne passée comme second paramètre de cette fonction.|  
-|**GeneratedAlwaysType**|Valeur de la colonne générée par le système. Correspond à **sys.columns.generated_always_type**|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 : Toujours non générée<br /><br /> 1 : Toujours générée en début de ligne<br /><br /> 2 : Toujours générée en fin de ligne|  
+|**GeneratedAlwaysType**|Valeur de la colonne générée par le système. Correspond à **sys.columns.generated_always_type**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.<br /><br /> 0 : Toujours non générée<br /><br /> 1 : Toujours générée en début de ligne<br /><br /> 2 : Toujours générée en fin de ligne|  
 |**IsColumnSet**|La colonne est un jeu de colonnes. Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsComputed**|Est une colonne calculée.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsCursorType**|Le paramètre de la procédure est de type CURSOR.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsDeterministic**|La colonne est déterministe. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de la vue.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte. Aucune colonne calculée ou colonne de la vue.|  
 |**IsFulltextIndexed**|Colonne inscrite pour l’indexation en texte intégral.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsHidden**|Valeur de la colonne générée par le système. Correspond à **sys.columns.is_hidden**|**S'applique à**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 : Non masquée<br /><br /> 1 : Hidden|  
+|**IsHidden**|Valeur de la colonne générée par le système. Correspond à **sys.columns.is_hidden**|**S’applique à** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] et versions ultérieures.<br /><br /> 0 : Non masquée<br /><br /> 1 : Hidden|  
 |**IsIdentity**|La colonne utilise la propriété IDENTITY.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsIdNotForRepl**|La colonne vérifie le paramètre IDENTITY_INSERT.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsIndexable**|La colonne peut être indexée.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  

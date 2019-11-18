@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948326"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981703"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - Clause OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67948326"
   
 -   [Fonction NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Spécifie que les valeurs dans la colonne spécifiée doivent être triées par ordre croissant ou décroissant. ASC correspond à l'ordre de tri par défaut. Les valeurs NULL sont traitées comme les plus petites valeurs possibles.  
   
  ROWS | RANGE  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. 
   
  Limite davantage les lignes dans la partition en spécifiant les points de départ et de terminaison dans la partition. Cette opération s'effectue en spécifiant une plage de lignes par rapport à la ligne actuelle par association logique ou association physique. L'association physique est réalisée en utilisant la clause ROWS.  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS ou RANGE requièrent que la clause ORDER BY soit spécifiée. Si ORDER BY contient plusieurs expressions d'ordre, CURRENT ROW FOR RANGE prend en compte toutes les colonnes dans la liste ORDER BY lors de la détermination de la ligne actuelle.  
   
  UNBOUNDED PRECEDING  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  Spécifie que la fenêtre commence à la première ligne de la partition. UNBOUNDED PRECEDING peut être spécifié comme point de départ de la fenêtre.  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Spécifié avec \<unsigned value specification> pour indiquer le nombre de lignes ou de valeurs qui précèdent la ligne actuelle. Cette spécification n'est pas autorisée pour RANGE.  
   
  CURRENT ROW  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. 
   
  Spécifie que la fenêtre commence ou se termine à la ligne actuelle en cas d'utilisation avec ROWS ou à la valeur actuelle en cas de utilisation avec RANGE. CURRENT ROW peut être spécifié comme point de départ et de fin.  
   
  BETWEEN \<window frame bound > AND \<window frame bound >  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. 
   
  Utilisé avec ROWS ou RANGE pour spécifier les points limite inférieurs (départ) et supérieurs (fin) de la fenêtre. \<window frame bound> définit le point de départ limite et \<window frame bound> définit le point de fin limite. La limite supérieure ne peut pas être inférieure à la limite inférieure.  
   
  UNBOUNDED FOLLOWING  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. 
   
  Spécifie que la fenêtre se termine à la dernière ligne de la partition. FOLLOWING UNBOUNDED peut être spécifié comme point de fin de fenêtre. Par exemple RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING définit une fenêtre qui commence par la ligne actuelle et se termine à la dernière ligne de la partition.  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Spécifié avec \<unsigned value specification> pour indiquer le nombre de lignes ou de valeurs qui suivent la ligne actuelle. Quand \<unsigned value specification> FOLLOWING est spécifié comme point de départ de la fenêtre, le point de fin doit être \<unsigned value specification> FOLLOWING. Par exemple, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING définit une fenêtre qui commence avec la deuxième ligne qui suit la ligne actuelle et se termine par la dixième ligne qui suit la ligne actuelle. Cette spécification n'est pas autorisée pour RANGE.  
   
  littéral entier non signé  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  Est un littéral entier positif (comprenant 0) qui spécifie le nombre de lignes ou de valeurs qui précèdent ou suivent la ligne ou la valeur actuelle. Cette condition est valide uniquement pour ROWS.  
   
@@ -188,7 +188,7 @@ Si ROWS/RANGE est spécifié et que \<window frame preceding> est utilisé pour 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
  L'exemple suivant montre comment utiliser la clause OVER avec la fonction ROW_NUMBER pour afficher un numéro de ligne pour chaque ligne dans une partition. La clause ORDER BY spécifiée dans la clause OVER trie les lignes dans chaque partition par la colonne `SalesYTD`. La clause ORDER BY dans l'instruction SELECT détermine l'ordre dans lequel la totalité du jeu de résultats de la requête est retournée.  
   
 ```sql  
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. Spécification de la clause ROWS  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  L’exemple suivant utilise la clause ROWS pour définir une fenêtre de calcul des lignes comprenant la ligne actuelle et les *N* lignes qui suivent (une seule ligne dans cet exemple).  
   
@@ -455,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
  L’exemple suivant retourne le ROW_NUMBER des représentants commerciaux en fonction de leur quota de ventes assigné.  
   
 ```sql  

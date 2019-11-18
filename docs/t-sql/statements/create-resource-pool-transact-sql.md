@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117333"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982688"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Crée un pool de ressources du gouverneur de ressources dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un gouverneur de ressources représente un sous-ensemble des ressources physiques (mémoire, UC et E/S) d'une instance du moteur de base de données. Le Gouverneur de ressources permet à un administrateur de base de données de répartir des ressources serveur entre plusieurs pools de ressources (64 pools au maximum). Le gouverneur de ressources n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe  
 ```  
@@ -72,12 +72,12 @@ MAX_CPU_PERCENT =*value*
 Spécifie la bande passante de l’UC moyenne maximale que toutes les demandes du pool de ressources recevront en cas de contention de l’UC. *value* est un entier dont la valeur par défaut est 100. La plage autorisée pour *value* est comprise entre 1 et 100.  
   
 CAP_CPU_PERCENT =*value*   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
 Spécifie une limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite le niveau de la bande passante maximum de l'UC pour qu'il soit identique à la valeur spécifiée. *value* est un entier dont la valeur par défaut est 100. La plage autorisée pour *value* est comprise entre 1 et 100.  
   
 AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
 Attache le pool de ressources aux planificateurs spécifiques. La valeur par défaut est AUTO.  
   
@@ -100,12 +100,12 @@ MAX_MEMORY_PERCENT =*value*
 Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. *value* est un entier dont la valeur par défaut est 100. La plage autorisée pour *value* est comprise entre 1 et 100.  
   
 MIN_IOPS_PER_VOLUME =*value*    
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
 Spécifie les opérations d'E/S minimales par seconde (IOPS) par volume disque à réserver au pool de ressources. La plage autorisée pour *value* est comprise entre 0 et 2^31-1 (2 147 483 647). Spécifiez 0 pour indiquer l'absence de seuil minimal pour le pool. La valeur par défaut est 0.  
   
 MAX_IOPS_PER_VOLUME =*value*    
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
 Spécifie les opérations d'E/S maximales par seconde (IOPS) par volume disque à autoriser pour le pool de ressources. La plage autorisée pour *value* est comprise entre 0 et 2^31-1 (2 147 483 647). Spécifiez 0 pour définir un seuil illimité pour le pool. La valeur par défaut est 0.  
   
@@ -135,11 +135,11 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### <a name="2-set-the-capcpupercent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. Définir CAP_CPU_PERCENT sur une limite inconditionnelle et définir AFFINITY SCHEDULER
+### <a name="2-set-the-cap_cpu_percent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. Définir CAP_CPU_PERCENT sur une limite inconditionnelle et définir AFFINITY SCHEDULER
 
 Définissez CAP_CPU_PERCENT sur la limite inconditionnelle de 30 % et définissez AFFINITY SCHEDULER sur les plages 0-63 et 128-191. 
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  
@@ -153,11 +153,11 @@ WITH (
       );  
 ```  
   
-### <a name="3-set-miniopspervolume-and-maxiopspervolume"></a>3. Définir MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME   
+### <a name="3-set-min_iops_per_volume-and-max_iops_per_volume"></a>3. Définir MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME   
 
 Définissez MIN_IOPS_PER_VOLUME sur 20 et MAX_IOPS_PER_VOLUME sur 100. Ces valeurs déterminent les opérations de lecture et d'écriture d'E/S physiques disponibles pour le pool de ressources.  
   
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  

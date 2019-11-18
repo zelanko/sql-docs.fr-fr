@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049960"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981815"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ALTER FULLTEXT INDEX ON table_name
  Pour les colonnes de type non-BLOB et non-XML contenant des données texte dans plusieurs langues, ou lorsque la langue du texte stocké dans la colonne est inconnue, utilisez la ressource de langue neutre (0x0). Pour les documents stockés dans des colonnes de type XML ou BLOB, l'encodage linguistique du document est utilisé lors de l'indexation. Par exemple, dans les colonnes de type XML, l'attribut xml:lang des documents XML identifie la langue. Au moment de la requête, la valeur précédemment spécifiée dans *language_term* devient la langue par défaut utilisée pour les requêtes de texte intégral, sauf si *language_term* est spécifié dans le cadre d’une requête de texte intégral.  
   
  STATISTICAL_SEMANTICS  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  Crée les index de ressemblance de documents et d'expressions clés supplémentaires qui font partie de l'indexation sémantique statistique. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -141,7 +141,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Pour plus d’informations, consultez [Interactions entre le suivi des modifications et le paramètre NO POPULATION](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  Active ou désactive l'indexation sémantique statistique pour les colonnes spécifiées. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -179,7 +179,7 @@ ALTER FULLTEXT INDEX ON table_name
  Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  Modifie la liste de propriétés de recherche associée à l'index, le cas échéant.  
   
@@ -307,7 +307,7 @@ GO
   
 ### <a name="b-associating-a-property-list-with-a-full-text-index"></a>B. Association d'une liste de propriétés à un index de recherche en texte intégral  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  L’exemple suivant associe la liste de propriétés `DocumentPropertyList` à l’index de recherche en texte intégral sur la table `Production.Document`. Cette instruction ALTER FULLTEXT INDEX entraîne un remplissage complet, ce qui correspond au comportement par défaut de la clause SET SEARCH PROPERTY LIST.  
   
@@ -324,7 +324,7 @@ GO
   
 ### <a name="c-removing-a-search-property-list"></a>C. Suppression d'une liste de propriétés de recherche  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  L'exemple suivant supprime la liste de propriétés `DocumentPropertyList` de l'index de recherche en texte intégral sur le `Production.Document`. Dans cet exemple, il n'est pas urgent de supprimer les propriétés de l'index. Par conséquent, l'option WITH NO POPULATION est spécifiée. Toutefois, la recherche au niveau de propriété est autorisée plus longtemps par rapport à cet index de recherche en texte intégral.  
   
