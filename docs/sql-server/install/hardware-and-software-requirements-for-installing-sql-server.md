@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 79818fa5cb41b27a15d531f22a21b86c10cb018a
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: 553c01ea02c83a57370e596d67ad077b43328d9b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008469"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056803"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Configurations matérielle et logicielle requises pour l'installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -144,9 +144,7 @@ L’installation de SQL Server 2016 et 2017 en mode Server Core est prise en ch
 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
 | Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
-| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
-   | &nbsp; | &nbsp; |
+| &nbsp; | &nbsp; |
 ::: moniker-end
 
 Pour plus d’informations sur l’installation de SQL Server en mode Server Core, consultez [Installer SQL Server sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  

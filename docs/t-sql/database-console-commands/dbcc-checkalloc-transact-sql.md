@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102136"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056353"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Vérifie la cohérence des structures d'allocation de l'espace disque pour une base de données spécifiée.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -94,7 +94,7 @@ Les noms de base de données doivent suivre les règles applicables aux [identif
  TABLOCK  
  Permet à la commande DBCC d'obtenir un verrou de base de données exclusif.
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  Affiche une estimation de la quantité d’espace tempdb nécessaire pour exécuter DBCC CHECKALLOC quand toutes les autres options sont spécifiées.
   
 ## <a name="remarks"></a>Notes  

@@ -1,10 +1,7 @@
 ---
-title: Exécuter le débogueur Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Exécuter le débogueur Transact-SQL
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -21,59 +18,68 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8b517e1de4a7b2908d10e2fc486ce7ab263dfd5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264256"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097891"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] après avoir ouvert une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez ensuite exécuter votre code [!INCLUDE[tsql](../../includes/tsql-md.md)] en mode débogage jusqu'à ce que vous arrêtiez le débogueur. Vous pouvez définir des options permettant de personnaliser la façon dont le débogueur s'exécute.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] après avoir ouvert une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez ensuite exécuter votre code [!INCLUDE[tsql](../../includes/tsql-md.md)] en mode débogage jusqu'à ce que vous arrêtiez le débogueur. Vous pouvez définir des options permettant de personnaliser la façon dont le débogueur s'exécute.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="starting-and-stopping-the-debugger"></a>Démarrage et arrêt du débogueur
+
+La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est la suivante :
+
+- Si votre éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est connecté à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un autre ordinateur, vous avez dû configurer le débogueur de façon qu’il accepte le débogage distant. Pour plus d’informations, consultez [Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
   
-## <a name="starting-and-stopping-the-debugger"></a>Démarrage et arrêt du débogueur  
- La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est la suivante :  
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.
+
+- La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est un membre du rôle serveur fixe sysadmin.
   
--   Si votre éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est connecté à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un autre ordinateur, vous avez dû configurer le débogueur de façon qu’il accepte le débogage distant. Pour plus d’informations, consultez [Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+- La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
+ Nous vous recommandons de déboguer le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sur un serveur test, et non sur un serveur de production, pour les raisons suivantes :
   
--   La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est un membre du rôle serveur fixe sysadmin.  
+- Le débogage est une opération hautement privilégiée. Par conséquent, seuls les membres du rôle serveur fixe sysadmin sont autorisés à déboguer dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
--   La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.  
-  
- Nous vous recommandons de déboguer le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sur un serveur test, et non sur un serveur de production, pour les raisons suivantes :  
-  
--   Le débogage est une opération hautement privilégiée. Par conséquent, seuls les membres du rôle serveur fixe sysadmin sont autorisés à déboguer dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
--   Les sessions de débogage s'exécutent en général assez longtemps lorsque vous étudiez les opérations de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les verrous, tels que les verrous de mise à jour, qui sont acquis par la session peuvent être appliqués pendant des périodes prolongées, jusqu'à ce que la session soit terminée ou jusqu'à ce que la transaction soit validée ou restaurée.  
+- Les sessions de débogage s'exécutent en général assez longtemps lorsque vous étudiez les opérations de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les verrous, tels que les verrous de mise à jour, qui sont acquis par la session peuvent être appliqués pendant des périodes prolongées, jusqu'à ce que la session soit terminée ou jusqu'à ce que la transaction soit validée ou restaurée.  
   
  Au démarrage du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] , la fenêtre de l'éditeur de requête passe en mode débogage. Lorsque la fenêtre de l'éditeur de requête entre en mode débogage, le débogueur s'arrête à la première ligne de code. Vous pouvez ensuite parcourir le code, suspendre l'exécution au niveau d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiques et utiliser les fenêtres du débogueur pour examiner l'état d'exécution actuel. Vous pouvez démarrer le débogueur en cliquant sur le bouton **Déboguer** dans la barre d'outils **Requête** ou en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** .  
   
  La fenêtre de l'éditeur de requête reste en mode débogage jusqu'à la fin de la dernière instruction dans la fenêtre de l'éditeur de requête ou jusqu'à l'arrêt du mode débogage. Vous pouvez arrêter le mode débogage et l'exécution d'instructions en utilisant l'une des méthodes suivantes :  
   
--   Dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
+- Dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
--   Dans la barre d'outils **Déboguer** , cliquez sur le bouton **Arrêter le débogage** .  
+- Dans la barre d'outils **Déboguer** , cliquez sur le bouton **Arrêter le débogage** .  
   
--   Dans le menu **Requête** , cliquez sur **Annuler l'exécution de la requête**.  
+- Dans le menu **Requête** , cliquez sur **Annuler l'exécution de la requête**.  
   
--   Dans la barre d'outils **Requête** , cliquez sur le bouton **Annuler l'exécution de la requête** .  
+- Dans la barre d'outils **Requête** , cliquez sur le bouton **Annuler l'exécution de la requête** .  
   
  Vous pouvez également arrêter le mode débogage et laisser l'exécution des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] restantes se terminer en cliquant sur **Détacher tout** dans le menu **Déboguer** .  
   
-## <a name="controlling-the-debugger"></a>Contrôle du débogueur  
+## <a name="controlling-the-debugger"></a>Contrôle du débogueur
+
  Vous pouvez contrôler le mode de fonctionnement du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] à l'aide des commandes de menu, des barres d'outils et des raccourcis suivants :  
   
--   Menu **Déboguer** et barre d'outils **Déboguer** . Le menu **Déboguer** et la barre d'outils **Déboguer** sont inactifs tant que le focus ne se trouve pas sur une fenêtre ouverte de l'éditeur de requête. Ils restent actifs jusqu'à la fermeture du projet actif.  
+- Menu **Déboguer** et barre d'outils **Déboguer** . Le menu **Déboguer** et la barre d'outils **Déboguer** sont inactifs tant que le focus ne se trouve pas sur une fenêtre ouverte de l'éditeur de requête. Ils restent actifs jusqu'à la fermeture du projet actif.  
   
--   Raccourcis clavier du débogueur.  
+- Raccourcis clavier du débogueur.  
   
--   Menu contextuel Éditeur de requête. Le menu contextuel s'affiche lorsque vous cliquez avec le bouton droit sur une ligne dans une fenêtre de l'éditeur de requête. Lorsque la fenêtre de l'éditeur de requête est en mode débogage, le menu contextuel affiche les commandes du débogueur qui s'appliquent à la ligne ou à la chaîne sélectionnée.  
+- Menu contextuel Éditeur de requête. Le menu contextuel s'affiche lorsque vous cliquez avec le bouton droit sur une ligne dans une fenêtre de l'éditeur de requête. Lorsque la fenêtre de l'éditeur de requête est en mode débogage, le menu contextuel affiche les commandes du débogueur qui s'appliquent à la ligne ou à la chaîne sélectionnée.  
   
--   Éléments de menu et commandes contextuelles dans les fenêtres ouvertes par le débogueur, telles que les fenêtres **Espion** ou **Points d'arrêt** .  
+- Éléments de menu et commandes contextuelles dans les fenêtres ouvertes par le débogueur, telles que les fenêtres **Espion** ou **Points d'arrêt** .  
   
  Le tableau suivant répertorie les commandes de menu, les boutons de barre d'outils et les raccourcis clavier du débogueur.  
   
@@ -105,11 +111,10 @@ ms.locfileid: "68264256"
 |**Désactiver tous les points d'arrêt**|Non disponible|Non disponible|Non disponible|Désactive tous les points d'arrêt.|  
 |Non disponible|**Ajouter un espion**|Non disponible|Non disponible|Ajoute l'expression sélectionnée à la fenêtre **Espion** .|  
   
-## <a name="see-also"></a>Voir aussi  
- [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
- [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
- [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+- [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
+- [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)

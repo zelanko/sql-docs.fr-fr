@@ -27,12 +27,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81beacc9a78800c288964fcfc4a186b921a27608
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064600"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982784"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -127,7 +127,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY =*asn_encoded_certificate*  
  Bits de certificat encodés par ASN spécifiés comme constante binaire.  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  WITH PRIVATE KEY  
  Spécifie que la clé privée du certificat est chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette clause est invalide lorsque le certificat est créé à partir d’un assembly. Pour charger la clé privée d’un certificat créé à partir d’un assembly, utilisez [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
@@ -139,7 +139,7 @@ CREATE CERTIFICATE certificate_name
 >  Cette option n’est pas disponible dans une base de données autonome, ni dans Azure SQL Database.  
   
  BINARY =*private_key_bits*  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  Bits de clé privée spécifiés comme constante binaire. Ces bits peuvent être sous forme chiffrée. Si chiffrés, l'utilisateur doit fournir un mot de passe de déchiffrement. Les contrôles de stratégie de mot de passe ne sont pas exécutés sur ce mot de passe. Les bits de clé privée doivent être dans un format de fichier PVK.  
   

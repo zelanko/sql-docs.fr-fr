@@ -1,6 +1,5 @@
 ---
-title: Résoudre des problèmes courants JSON dans SQL Server | Microsoft Docs
-ms.custom: ''
+title: Résoudre des problèmes courants JSON dans SQL Server
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 268ec12e297d6c8a3e5dd869d0d143877a81e505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131461"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096106"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Résoudre des problèmes courants JSON dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR JSON PATH
   
  JSON_QUERY sans son deuxième paramètre facultatif retourne uniquement le premier argument comme résultat. Étant donné que JSON_QUERY retourne toujours un JSON valide, FOR JSON sait que ce résultat ne doit pas être placé dans une séquence d’échappement.
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>Un JSON généré avec la clause WITHOUT_ARRAY_WRAPPER est placé dans une séquence d’échappement dans la sortie JSON  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>Un JSON généré avec la clause WITHOUT_ARRAY_WRAPPER est placé dans une séquence d’échappement dans la sortie JSON  
  **Question.** J’essaie de mettre en forme une expression de colonne à l’aide de FOR JSON et de l’option WITHOUT_ARRAY_WRAPPER.  
   
 ```sql  
@@ -110,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>Retourner une valeur texte longue avec OPENJSON à la place de JSON_VALUE
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>Retourner une valeur texte longue avec OPENJSON à la place de JSON_VALUE
  **Question.** J’ai une clé description dans un texte JSON qui contient du texte long. `JSON_VALUE(@json, '$.description')` retourne la valeur NULL au lieu d’une valeur.  
   
  **Réponse.** JSON_VALUE est conçue pour retourner des valeurs scalaires courtes. En règle générale, la fonction retourne NULL au lieu d’une erreur de dépassement. Si vous voulez retourner des valeurs plus longues, utilisez OPENJSON, qui prend en charge les valeurs de NVARCHAR (MAX), comme dans l’exemple suivant.  
@@ -119,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>Gérer des clés dupliquées avec OPENJSON à la place de JSON_VALUE
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>Gérer des clés dupliquées avec OPENJSON à la place de JSON_VALUE
  **Question.** J’ai des clés en double dans le texte JSON. JSON_VALUE retourne uniquement la première clé trouvée dans le chemin d’accès. Comment puis-je retrouver toutes les clés portant le même nom ?  
   
  **Réponse.** Les fonctions scalaires JSON intégrées retournent uniquement la première occurrence de l’objet référencé. Si vous avez besoin de plus d’une clé, utilisez la fonction table incluse OPENJSON, comme dans l’exemple suivant.  
