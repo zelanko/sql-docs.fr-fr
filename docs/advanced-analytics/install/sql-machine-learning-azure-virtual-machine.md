@@ -1,5 +1,5 @@
 ---
-title: Installer les fonctionnalités de langage R et Python sur une machine virtuelle Azure
+title: Installation sur une machine virtuelle Azure
 description: Exécutez les solutions de science des données R et Python et de Machine Learning sur une machine virtuelle SQL Server dans le Cloud Azure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,32 +7,33 @@ ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7aa37c3ec72390d76ecf9e939916f9641187956
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715885"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727614"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installer SQL Server Machine Learning Services avec R et Python sur une machine virtuelle Azure
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installation de SQL Server Machine Learning Services sur une machine virtuelle Azure avec R et Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Vous pouvez installer l’intégration R et Python avec Machine Learning Services sur une machine virtuelle SQL Server dans Azure, en éliminant les tâches d’installation et de configuration. Une fois l’ordinateur virtuel déployé, les fonctionnalités sont prêtes à l’emploi.
+Vous pouvez installer l’intégration R et Python avec Machine Learning Services sur une machine virtuelle SQL Server dans Azure, en éliminant les tâches d’installation et de configuration. Une fois la machine virtuelle déployée, les fonctionnalités sont prêtes à l’emploi.
  
-Pour obtenir des instructions pas à pas, consultez [Comment configurer une machine virtuelle Windows SQL Server dans le portail Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
+Pour obtenir des instructions pas à pas, consultez [Provisionnement d’une machine virtuelle Windows SQL Server dans le Portail Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-L’étape [configurer les paramètres SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) est l’endroit où vous ajoutez des machine learning à votre instance.
+L’étape [Configurer les paramètres SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) est le moment où vous ajoutez Machine Learning à votre instance.
 
 <a name="firewall"></a>
 
-## <a name="unblock-the-firewall"></a>Débloquer le pare-feu
+## <a name="unblock-the-firewall"></a>Désactiver une règle du pare-feu
 
-Par défaut, le pare-feu sur la machine virtuelle Azure comprend une règle qui bloque l’accès réseau pour les comptes d’utilisateurs locaux.
+Par défaut, le pare-feu de la machine virtuelle Azure comprend une règle qui bloque l’accès réseau pour les comptes d’utilisateur locaux.
 
-Vous devez désactiver cette règle pour vous assurer que vous pouvez accéder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’instance à partir d’un client de science des données distant.  Sinon, votre code Machine Learning ne peut pas s’exécuter dans des contextes de calcul qui utilisent l’espace de travail de la machine virtuelle.
+Vous devez désactiver cette règle pour permettre l’accès à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un client de science des données distant.  Sinon, votre code de Machine Learning ne peut pas s’exécuter dans des contextes de calcul utilisant l’espace de travail de la machine virtuelle.
 
-Pour activer l’accès à partir de clients de science des données distants:
+Pour autoriser l’accès à partir des clients de science des données distants :
 
 1. Sur la machine virtuelle, ouvrez le Pare-feu Windows avec fonctions avancées de sécurité.
 2. Sélectionnez **Règles sortantes**.
@@ -42,9 +43,9 @@ Pour activer l’accès à partir de clients de science des données distants:
   
 ## <a name="enable-odbc-callbacks-for-remote-clients"></a>Autoriser les rappels ODBC pour les clients distants
 
-Si vous vous attendez à ce que les clients qui appellent le serveur doivent émettre des requêtes ODBC dans le cadre de leurs solutions Machine Learning, vous devez vous assurer que le Launchpad peut effectuer des appels ODBC pour le compte du client distant. 
+Si vous pensez que les clients qui appellent le serveur auront besoin d’envoyer des requêtes ODBC dans leurs solutions de Machine Learning, vous devez vous assurer que Launchpad peut effectuer des appels ODBC pour le compte du client distant. 
 
-Pour cela, vous devez autoriser les comptes de travail SQL utilisés par Launchpad à se connecter à l’instance. Pour plus d’informations, consultez [Ajouter SQLRUserGroup en tant qu’utilisateur de base de données](../security/create-a-login-for-sqlrusergroup.md).
+Pour cela, vous devez autoriser les comptes de travail SQL utilisés par Launchpad à se connecter à l’instance. Pour plus d’informations, consultez [Créer un nom de connexion pour SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 
@@ -54,6 +55,6 @@ Pour cela, vous devez autoriser les comptes de travail SQL utilisés par Launchp
   
   [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise le protocole des canaux nommés pour les connexions entre les ordinateurs client et serveur, ainsi que pour certaines connexions internes. Si ce protocole n’est pas activé, vous devez l’installer et l’activer sur la machine virtuelle Azure et sur tous les clients de science des données susceptibles de se connecter au serveur.
   
-+ Activation de TCP/IP
++ Activer TCP/IP
 
-  TCP/IP est requis pour les connexions de bouclage. Si vous recevez l’erreur «DBNETLIB; SQL Server n’existe pas ou l’accès est refusé», activez TCP/IP sur la machine virtuelle qui prend en charge l’instance.
+  Vous devez utiliser le protocole TCP/IP pour les connexions de bouclage. Si vous obtenez l’erreur « DBNETLIB, SQL Server n’existe pas ou n’est pas accessible », activez TCP/IP sur la machine virtuelle prenant en charge l’instance.
