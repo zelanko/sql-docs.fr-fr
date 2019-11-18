@@ -1,6 +1,5 @@
 ---
-title: Créer des serveurs liés (moteur de base de données SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Créer des serveurs liés
 ms.date: 11/20/2015
 ms.prod: sql
 ms.technology: ''
@@ -17,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdbf53aae89ee6beb8e06fef9c51e1b72e34ab0e
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211338"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095883"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ ms.locfileid: "70211338"
   
      Lorsque NULL est retourné pour la connexion au serveur lié, cela indique que la connexion n'existe pas sur le serveur lié. Ces connexions ne seront pas en mesure d'utiliser le serveur lié, à moins que le serveur lié ne soit configuré pour passer un contexte de sécurité différent ou que le serveur lié accepte des connexions anonymes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  

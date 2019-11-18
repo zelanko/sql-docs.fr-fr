@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843586"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981748"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>Arguments  
  **'** *login* **'**  
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
  Nom de connexion de l'utilisateur. *login* est de type **sysname**. Cet argument facultatif *login* peut correspondre à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à un groupe ou utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Si *login* n’est pas spécifié, des informations sur le contexte de sécurité actuel sont retournées. Si le paramètre contient le mot NULL, retourne NULL.  
   
  *Param2*  
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
   
  Indique si le nom de connexion est validé. *Param2* est de type **int** et est facultatif. Lorsque *Param2* a la valeur 0, le nom de connexion n’est pas validé. Lorsque *Param2* n’est pas spécifié avec la valeur 0, une vérification est effectuée pour s’assurer que le nom de connexion Windows est exactement le même que le nom de connexion stocké dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. Utilisation de SUSER_SID avec une connexion spécifique  
  L’exemple suivant retourne le numéro d’identification de sécurité du compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Utilisation de SUSER_SID avec un nom d'utilisateur Windows  
  L'exemple suivant renvoie le numéro d'identification de sécurité du `London\Workstation1` de l'utilisateur Windows.  
   
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Comparaison du nom de connexion Windows et du nom de connexion stocké dans SQL Server  
  L’exemple suivant montre comment utiliser *Param2* pour obtenir le SID de Windows et utilise ce SID comme entrée de la fonction `SUSER_SNAME`. Il indique la connexion au format dans lequel elle est stockée dans Windows (`TestComputer\User`), et retourne la connexion au format dans lequel elle est stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
   
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

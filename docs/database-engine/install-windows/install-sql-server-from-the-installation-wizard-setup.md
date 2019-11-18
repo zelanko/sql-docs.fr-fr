@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149973"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962376"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -317,12 +317,6 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
      Pour plus d’informations, consultez la [page Configuration du moteur de base de données – Répertoires de données](../../sql-server/install/instance-configuration.md#datadir).
 
      Utilisez la page **Configuration du moteur de base de données - TempDB** pour configurer la taille des fichiers, le nombre de fichiers, les répertoires d’installation autres que par défaut et les paramètres de croissance des fichiers pour **tempDB**. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - TempDB](../../sql-server/install/instance-configuration.md#tempdb).
-<<<<<<< HEAD
-  
-     Utilisez la page de **configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)] - MaxDOP** pour spécifier votre degré maximal de parallélisme. Ce paramètre détermine le nombre de processeurs une seule instruction peut utiliser pendant l’exécution. La valeur recommandée est calculée automatiquement lors de l’installation. Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
-
-     Utilisez la page de **configuration du moteur de base de données - Mémoire** pour spécifier les valeurs **min server memory** and **max server memory** utilisées par cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après le démarrage. Vous pouvez utiliser les valeurs par défaut, les valeurs recommandées calculées ou spécifiez manuellement vos propres valeurs une fois que vous avez choisi l’option **Recommandé**. Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
-=======
 
      Utilisez la page de **configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)] - MaxDOP** pour spécifier votre degré maximal de parallélisme. Ce paramètre détermine le nombre de processeurs une seule instruction peut utiliser pendant l’exécution. La valeur recommandée est calculée automatiquement lors de l’installation. 
      
@@ -337,9 +331,8 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
     > Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
     Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
->>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
-     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     Utilisez la page **Configuration du moteur de base de données - FILESTREAM** pour activer FILESTREAM pour votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. Utilisez la page **Configuration de Analysis Services - Approvisionnement du compte** pour spécifier le mode serveur et les utilisateurs ou comptes qui ont les autorisations d’administrateur pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le mode serveur détermine quel sous-systèmes de mémoire et de stockage sont utilisés sur le serveur. Différents types de solution s'exécutent dans différents modes serveur. Si vous envisagez d'exécuter les bases de données multidimensionnelles de cube sur le serveur, choisissez l'option par défaut du mode serveur **Exploration multidimensionnelle et de données**.
 

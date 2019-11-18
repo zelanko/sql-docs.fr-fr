@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742972"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983029"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instructions RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -38,7 +38,7 @@ ms.locfileid: "68742972"
 > [!NOTE]  
 >  Pour une description des arguments, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +77,7 @@ FROM <backup_device>
   
 ```  
 > [!NOTE] 
-> Pour spécifier l’emplacement et le nom de fichier du Stockage Blob Microsoft Azure, utilisez le format de l’URL qui est pris en charge à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Cu2. Bien que le stockage Microsoft Azure soit un service, son implémentation est similaire à celle d’un disque ou d’une bande afin d’offrir une expérience de restauration cohérente et fluide pour les trois appareils.
+> Pour spécifier l’emplacement et le nom de fichier du Stockage Blob Microsoft Azure, utilisez le format URL pris en charge à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Cu2. Bien que le stockage Microsoft Azure soit un service, son implémentation est similaire à celle d’un disque ou d’une bande afin d’offrir une expérience de restauration cohérente et fluide pour les trois appareils.
 
 ## <a name="arguments"></a>Arguments  
  Pour une description des arguments RESTORE HEADERONLY, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Type de sauvegarde en tant que chaîne, parmi :<br /><br /> DATABASE<br /><br /> JOURNAL DES TRANSACTIONS<br /><br /> FICHIER OU GROUPE DE FICHIERS<br /><br /> BASE DE DONNÉES DIFFÉRENTIELLE<br /><br /> FICHIER DIFFÉRENTIEL PARTIEL<br /><br /> DIFFÉRENTIEL PARTIEL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Numéro d'identification unique du jeu de sauvegardes, par lequel s'effectue l'identification sur le support.|  
 |**CompressedBackupSize**|**bigint**|Nombre d'octets du jeu de sauvegarde. Pour les sauvegardes non compressées, il s’agit de la même valeur que **BackupSize**.<br /><br /> Pour calculer le taux de compression, utilisez **CompressedBackupSize** et **BackupSize**.<br /><br /> Pendant une mise à niveau de **msdb**, cette valeur est configurée pour correspondre à la valeur de la colonne **BackupSize**.|  
-|**containment**|**tinyint** non NULL|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique l'état de la relation contenant-contenu de la base de données.<br /><br /> 0 = La relation contenant-contenu de base de données est désactivée<br /><br /> 1 = La base de données est dans une relation contenant-contenu partielle|  
+|**containment**|**tinyint** non NULL|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Indique l'état de la relation contenant-contenu de la base de données.<br /><br /> 0 = La relation contenant-contenu de base de données est désactivée<br /><br /> 1 = La base de données est dans une relation contenant-contenu partielle|  
 |**KeyAlgorithm**|**nvarchar(32)**|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) via la version actuelle.<br /><br /> Algorithme de chiffrement utilisé pour chiffrer la sauvegarde. La valeur NO_Encryption indique que la sauvegarde n'est pas chiffrée. Lorsque la valeur correcte ne peut pas être déterminée, la valeur doit être NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) via la version actuelle.<br /><br /> Empreinte numérique du chiffreur pouvant être utilisé pour rechercher un certificat ou la clé asymétrique dans la base de données. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) via la version actuelle.<br /><br /> Type de chiffreur utilisé : certificat ou clé asymétrique. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
