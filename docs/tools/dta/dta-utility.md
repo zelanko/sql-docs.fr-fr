@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809712"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981804"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [Recommandations relatives aux index columnstore dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  Spécifie que l’Magasin des requêtes être utilisé comme charge de travail. Les 1 000 premiers événements du Magasin des requêtes pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  Pour plus d’informations, consultez [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
      
   
  **-if** _workload_file_  
@@ -273,7 +273,7 @@ dta -iq -I 48
 Dans ce cas, DTA utilise Magasin des requêtes comme source de la charge de travail et ne tient compte que des requêtes qui ont été exécutées au cours des 48 dernières heures.  
   ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
 
 
   
