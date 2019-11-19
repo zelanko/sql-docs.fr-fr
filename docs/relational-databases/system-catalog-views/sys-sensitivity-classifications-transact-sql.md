@@ -1,5 +1,5 @@
 ---
-title: sys. sensitivity_classifications (Transact-SQL) | Microsoft Docs
+title: sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73757475"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164934"
 ---
-# <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
+# <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Retourne une ligne pour chaque élément classifié dans la base de données.
 
-|Nom de colonne|Type de données|Description|
+|Nom de colonne|Data type|Description|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Identifie la classe de l’élément sur lequel la classification existe|  
-|**class_desc**|**varchar (16)**|Description de la classe de l’élément sur lequel la classification existe|  
-|**major_id**|**int**|ID de l’élément sur lequel la classification existe.<br><br>Si la valeur de class est 0, major_id est toujours 0.<br>Si la valeur de class est 1, 2 ou 7, major_id est object_id.|  
-|**minor_id**|**int**|ID secondaire de l’élément sur lequel la classification existe, interprétée en fonction de sa classe.<br><br>Si Class = 1, minor_id est le column_id (si colonne), sinon 0 (If Object).<br>Si class = 2, minor_id est parameter_id.<br>Si Class = 7, minor_id est le index_id. |  
+|**class**|**int**|Identifie la classe de l’élément sur lequel la classification existe. Aura toujours la valeur 1 (représentant une colonne)|  
+|**class_desc**|**varchar(16)**|Description de la classe de l’élément sur lequel la classification existe. aura toujours la valeur *OBJECT_OR_COLUMN*|  
+|**major_id**|**int**|Représente l’ID de la table contenant la colonne classifiée, correspondant à sys. all_objects. object_id|  
+|**minor_id**|**int**|Représente l’ID de la colonne sur laquelle la classification existe, correspondant à sys. all_columns. column_id|   
 |**label**|**sysname**|Étiquette (lisible) affectée à la classification de sensibilité|  
 |**label_id**|**sysname**|ID associé à l’étiquette, qui peut être utilisé par un système de protection des informations tel que Azure Information Protection (AIP)|  
 |**information_type**|**sysname**|Type d’information (lisible) affecté à la classification de sensibilité|  
@@ -52,12 +52,8 @@ Retourne une ligne pour chaque élément classifié dans la base de données.
 ## <a name="remarks"></a>Notes  
 
 - Cette vue fournit une visibilité de l’état de classification de la base de données. Il peut être utilisé pour gérer les classifications de base de données, ainsi que pour générer des rapports.
-- Actuellement, seule la classification des colonnes de base de données est prise en charge. Entrav
-    - **Class** : aura toujours la valeur 1 (représentant une colonne)
-    - **class_desc** , aura toujours la valeur *OBJECT_OR_COLUMN*
-    - **major_id** : représente l’ID de la table contenant la colonne classifiée, correspondant à sys. all_objects. object_id
-    - **minor_id** : représente l’ID de la colonne sur laquelle la classification existe, correspondant à sys. all_columns. column_id
-
+- Actuellement, seule la classification des colonnes de base de données est prise en charge.
+ 
 ## <a name="examples"></a>Exemples
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Affichage de la liste de toutes les colonnes classées et de leur classification correspondante

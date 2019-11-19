@@ -5808,7 +5808,7 @@
     - name: Assistant Expérimentation de base de données (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: Bien démarrer
+        - name: Vue d’ensemble du comparatif des charges de travail
           href: dea/database-experimentation-assistant-get-started.md
         - name: Capturer la trace
           href: dea/database-experimentation-assistant-capture-trace.md

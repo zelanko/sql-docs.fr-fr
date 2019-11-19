@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127368"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165549"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Vue d’ensemble de Assistant Expérimentation de base de données
 
@@ -102,13 +102,13 @@ Les données de télémétrie peuvent être collectées sur quatre types d’év
 La collecte et l’envoi de données de télémétrie sont facultatifs. Pour spécifier les événements qui sont collectés et si les événements collectés sont envoyés à Microsoft, procédez comme suit :
 
 1. Accédez à l’emplacement dans lequel la DEA est installée (par exemple, C :\\Program Files (x86)\\Microsoft Corporation\\Assistant Expérimentation de base de données).
-2. Ouvrez et modifiez les deux fichiers. config de **DEA. exe. config** (pour l’application) et **DEACmd. exe. config** (pour l’interface CLI) comme suit :
+2. Ouvrez et modifiez les fichiers. config de **DEA. exe. config** (pour l’application) et **DEACmd. exe. config** (pour l’interface CLI) afin de résoudre votre scénario en fonction des besoins :
     - Pour arrêter la collecte d’un type d’événement, définissez la valeur de l' *événement* (par exemple, **TraceEvent**) sur **false**. Pour recommencer la collecte de l’événement, définissez la valeur sur **true**.
     - Pour arrêter l’enregistrement des copies locales des événements, affectez la valeur **false**à **TraceLoggerEnabled** . Pour recommencer à enregistrer les copies locales, définissez la valeur sur **true**.
     - Pour arrêter l’envoi d’événements à Microsoft, affectez la valeur **false**à **AppInsightsLoggerEnabled** . Pour commencer à envoyer des événements à Microsoft, définissez la valeur sur **true**.
 
 La DEA est régie par la [déclaration de confidentialité de Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="see-also"></a>Voir aussi
 
-La section [prise en main](database-experimentation-assistant-get-started.md) vous guide tout au long des étapes nécessaires à la capture, à la relecture et à l’analyse d’une trace.
+[Vue d’ensemble du processus de comparaison de charge de travail](database-experimentation-assistant-get-started.md), qui explique le processus impliqué dans la comparaison des charges de travail dans deux environnements.

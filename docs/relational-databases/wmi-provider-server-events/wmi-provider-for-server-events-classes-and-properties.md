@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3db7139105b331c1e9fac831330a04cd2a0939a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660504"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164909"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Fournisseur WMI pour les classes et propriétés d'événements serveur
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73660504"
  Par exemple, en faisant référence à l’événement ALTER_DATABASE, vous allez apprendre que son événement parent est DDL_SERVER_LEVEL_EVENTS et que ses propriétés sont **TSQLCommand** et **DatabaseName**. L’événement hérite également des propriétés **SqlInstance**, **PostTime**, **ComputerName**, **SPID**et **LoginName**. Il ne possède pas d'événements enfants.  
   
 > [!NOTE]  
->  Les procédures stockées système qui exécutent des opérations de type DDL peuvent également déclencher des notifications d'événements. Testez vos notifications d'événements pour déterminer leur réponse aux procédures stockées du système qui sont exécutées. Par exemple, l’instruction CREATe TYPE et la procédure stockée **sp_addtype** déclenchent toutes deux une notification d’événement qui est créée sur un événement CREATE_TYPE. Pour plus d’informations, consultez[événements DDL](../../relational-databases/triggers/ddl-events.md).  
+>  Les procédures stockées système qui exécutent des opérations de type DDL peuvent également déclencher des notifications d'événements. Testez vos notifications d'événements pour déterminer leur réponse aux procédures stockées du système qui sont exécutées. Par exemple, l’instruction CREATe TYPE et la procédure stockée **sp_addtype** déclenchent toutes deux une notification d’événement qui est créée sur un événement CREATE_TYPE. Pour plus d’informations, consultez [événements DDL](../../relational-databases/triggers/ddl-events.md).  
   
  **Événements du langage de définition de données et groupes d’événements**  
   
