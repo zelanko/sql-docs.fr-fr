@@ -1,6 +1,5 @@
 ---
-title: Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Conserver les valeurs NULL ou les valeurs par défaut lors de l’importation en bloc
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +20,15 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896670"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055958"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc (SQL Server)
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou les valeurs par défaut lors de l’importation en bloc (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Par défaut, quand des données sont importées dans une table, la commande [bcp](../../tools/bcp-utility.md) et l’instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) inspectent toutes les valeurs par défaut définies pour les colonnes de la table.  Par exemple, si un fichier de données contient un champ NULL, la valeur par défaut de la colonne est chargée à la place.  La commande [bcp](../../tools/bcp-utility.md) et l’instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) vous permettent de spécifier que les valeurs NULL doivent être conservées.

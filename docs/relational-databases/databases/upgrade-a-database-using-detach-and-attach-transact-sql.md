@@ -1,6 +1,6 @@
 ---
-title: Mettre à niveau une base de données avec Detach et Attach (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Mettre à niveau une base de données avec la méthode d’attachement et de détachement (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 11/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127130"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095539"
 ---
-# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Mettre à niveau une base de données avec Detach et Attach (Transact-SQL)
+# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Mettre à niveau une base de données avec la méthode d’attachement et de détachement (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Cette rubrique explique comment utiliser les opérations d'attachement et de détachement pour mettre à niveau une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Une fois attachée à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Ainsi, la base de données ne peut pas être utilisée avec une version antérieure du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Toutefois, la mise à niveau des métadonnées n’affecte pas la définition du [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) d’une base de données. Pour plus d’informations, consultez [Niveau de compatibilité des bases de données après une mise à niveau](#dbcompat) plus loin dans cette rubrique.  
   

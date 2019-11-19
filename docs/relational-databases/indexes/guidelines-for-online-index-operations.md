@@ -1,7 +1,7 @@
 ---
 title: Instructions pour les opérations d’index en ligne | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909791"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981798"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d’index en ligne
 
@@ -93,7 +93,7 @@ Les opérations d'index à grande échelle, réalisées hors connexion ou en lig
 ## <a name="resumable-index-considerations"></a>Considérations relatives aux index pouvant être repris
 
 > [!NOTE]
-> L’option d’index pouvant être repris s’applique à SQL Server (à partir de SQL Server 2017) (reconstruction d’index uniquement) et à SQL Database (création d’index et reconstruction d’index). Consultez [Création d’index](../../t-sql/statements/create-index-transact-sql.md) (actuellement en préversion publique pour [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) et [Modification d’index](../../t-sql/statements/alter-index-transact-sql.md).
+> L’option d’index pouvant être repris pour la création et la regénération d’index s’applique à SQL Server (regénération d’index à partir de SQL Server 2017, avec création d’index également prise en charge dans SQL Server 2019) et SQL Database. Consultez [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) et [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 
 Lors de la création ou de la reconstruction d’un index en ligne pouvant être repris, les recommandations suivantes s’appliquent :
 

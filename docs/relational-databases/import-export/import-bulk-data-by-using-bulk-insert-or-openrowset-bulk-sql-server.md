@@ -1,5 +1,5 @@
 ---
-title: Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET(BULK...) (SQL Server) | Microsoft Docs
+title: Utiliser BULK INSERT ou OPENROWSET(BULK...) pour importer des données dans SQL Server
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,17 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30eb6969c480cb4e3c326da01c3cb0cc2f96c682
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708274"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056396"
 ---
-# <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
+# <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Utiliser BULK INSERT ou OPENROWSET(BULK...) pour importer des données dans SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -142,7 +142,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 
 ### <a name="using-openrowset"></a>Utilisation de OPENROWSET
 
-L’exemple suivant montre comment utiliser la commande OPENROWSET pour charger des données à partir d’un fichier CSV dans un emplacement de stockage Blob Azure sur lequel vous avez créé une clé SAS. L’emplacement de stockage d’objets blob Azure est configuré comme source de données externe. Ceci nécessite des informations d’identification délimitées à la base de données avec une signature d’accès partagé chiffrée à l’aide d’une clé principale dans la base de données utilisateur.
+L’exemple suivant montre comment utiliser la commande OPENROWSET pour charger des données à partir d’un fichier CSV dans un emplacement de stockage Blob Azure sur lequel vous avez créé une clé SAS. L’emplacement du stockage Blob Azure est configuré comme source de données externe. Ceci nécessite des informations d’identification délimitées à la base de données avec une signature d’accès partagé chiffrée à l’aide d’une clé principale dans la base de données utilisateur.
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5bda485ba8cec4d3302a4998f60048aa9a43ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100973"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981942"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Modifie une vue précédemment créée. Inclut une vue indexée. ALTER VIEW n'affecte pas les procédures stockées ou déclencheurs dépendants et ne modifie pas les autorisations.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ AS select_statement
 >  Dans les colonnes de la vue, les autorisations pour un nom de colonne s'appliquent d'un bout à l'autre d'une instruction CREATE VIEW ou ALTER VIEW, quelle que soit la source des données sous-jacentes. Par exemple, si des autorisations sont accordées sur la colonne **SalesOrderID** dans une instruction CREATE VIEW, une instruction ALTER VIEW peut renommer la colonne **SalesOrderID**, en **OrderRef** par exemple, et continuer de disposer des autorisations associées à la vue en utilisant **SalesOrderID**.  
   
  ENCRYPTION  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Chiffre les entrées dans des [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenant le texte de l’instruction ALTER VIEW. L'utilisation de WITH ENCRYPTION évite la publication de la vue dans le cadre de la réplication SQL Server.  
   

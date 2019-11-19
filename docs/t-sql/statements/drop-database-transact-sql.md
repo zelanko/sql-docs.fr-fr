@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898095"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982192"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "67898095"
 
 Supprime un ou plusieurs bases de données utilisateur ou instantanés de base de données à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,7 +62,7 @@ Supprime, de manière conditionnelle, la base de données uniquement si elle exi
 *database_name* Spécifie le nom de la base de données à supprimer. Pour afficher une liste de bases de données, utilisez la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 *database_snapshot_name*
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 Spécifie le nom d'un instantané de base de données à supprimer.
 
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>B. Suppression de plusieurs bases de données
 
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 L'exemple suivant supprime chacune des bases de données répertoriées.
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>C. Suppression d'un instantané de base de données
 
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 L’exemple suivant supprime un instantané de base de données, nommé `sales_snapshot0600`, sans affecter la base de données source.
 

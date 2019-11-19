@@ -1,6 +1,5 @@
 ---
-title: Serveurs liés (Moteur de base de données) | Microsoft Docs
-ms.custom: ''
+title: Serveurs liés
 ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
@@ -19,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a7dc1d67e45bb8d67cebff9deb3a694b09038154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073666"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094778"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
 
@@ -64,7 +64,7 @@ Le fournisseur OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!
 ## <a name="linked-server-details"></a>Détails des serveurs liés  
  L'illustration suivante montre les aspects fondamentaux d'une configuration de serveurs liés.  
   
- ![Niveau client, niveau serveur et niveau serveur de bases de données](../../relational-databases/linked-servers/media/lsvr.gif "Niveau client, niveau serveur et niveau serveur de bases de données")  
+ ![Niveau client, niveau serveur et niveau serveur de base de données](../../relational-databases/linked-servers/media/lsvr.gif "Niveau client, niveau serveur et niveau serveur de base de données")  
   
 Généralement, les serveurs liés sont utilisés pour le traitement des requêtes distribuées. Lorsqu'une application cliente exécute une requête distribuée via un serveur lié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyse la commande et envoie des demandes à OLE°DB. La requête d'ensemble de lignes peut se présenter sous la forme d'une exécution de requête vers le fournisseur, ou par l'ouverture d'une table de base à partir du fournisseur.  
   

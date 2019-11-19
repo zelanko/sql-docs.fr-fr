@@ -53,7 +53,7 @@ ms.locfileid: "71952642"
 ##  <a name="bkmk_example_deployments_2013"></a>Exemples de topologies de déploiement SharePoint 2013  
  L'option d'installation SQL Server **PowerPivot pour SharePoint** ne présente aucune dépendance par rapport à SharePoint. Elle n'utilise pas le modèle d'objet ou les interfaces SharePoint pour prendre en charge l'intégration. Par conséquent, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut être installé sur n'importe quel ordinateur exécutant Windows Server 2008 R2 ou une version ultérieure. Il peut s'agir, mais sans obligation, d'un serveur d'applications dans une batterie de serveurs SharePoint. L'une des étapes de configuration consiste à renvoyer Excel Services vers le serveur exécutant [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour l'équilibrage de charge et la tolérance de panne, il est recommandé d'installer et d'inscrire plusieurs serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécutés en mode SharePoint.  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le mode SharePoint** requiert sharepoint server 2013 et utilise l’architecture de l’application de service SharePoint.  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint** requiert sharepoint server 2013 et utilise l’architecture de l’application de service SharePoint.  
   
  Les sections suivantes présentent les topologies de déploiement courantes :  
   
@@ -91,9 +91,9 @@ ms.locfileid: "71952642"
 ###  <a name="bkmk_powerpivot_sharepoint2013_2server"></a>Déploiement du serveur PowerPivot pour SharePoint 2013 2  
  Dans le déploiement à deux serveurs suivant, le moteur de base de données SQL Server et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint s'exécutent sur un serveur autre que celui sur lequel SharePoint est exécuté. Pour SharePoint 2013, le package d'installation [!INCLUDE[ssGeminiLongvnext](../../includes/ssgeminilongvnext-md.md)] (**spPowerPivot.msi**) est installé sur le serveur SharePoint.  
   
- [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] étend SharePoint Server 2013 pour ajouter le traitement de l’actualisation des données côté serveur, les fournisseurs de données, la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et la prise en charge de la gestion des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et des classeurs Excel avec des modèles de données avancés.  
+ [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] étend SharePoint Server 2013 pour ajouter le traitement de l’actualisation des données côté serveur, les fournisseurs de données, la Galerie des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]s et la prise en charge de la gestion des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et des classeurs Excel avec des modèles de données avancés.  
   
- Le package d'installation est disponible dans le cadre du Feature Pack [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Le Feature Pack peut être téléchargé à partir du centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] à l’adresse [microsoft® SQL Server® 2014 PowerPivot® pour microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_ blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
+ Le package d'installation est disponible dans le cadre du Feature Pack [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Le Feature Pack peut être téléchargé à partir du centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] à l’adresse [microsoft® SQL Server® 2014 PowerPivot® pour microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
   
  ![Déploiement de serveur en mode 2 SSAS](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "Déploiement de serveur en mode 2 SSAS")  
   
@@ -173,8 +173,8 @@ ms.locfileid: "71952642"
  ![5-serveur topologie](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-serveur topologie")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Reporting Services de l’installation &#40;en mode SharePoint de SharePoint&#41;2010 et SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
- @No__t [installation de PowerPivot pour SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)-1  
+ [Reporting Services de l’installation &#40;en mode SharePoint de SharePoint&#41; 2010 et de SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+   d' [Installation PowerPivot pour SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
  [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

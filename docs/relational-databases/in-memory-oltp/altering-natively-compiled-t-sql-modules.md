@@ -11,17 +11,17 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03f7e4fd87068e31674e74dc81dd33dadba323cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951265"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983012"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez effectuer des opérations `ALTER` sur les procédures stockées compilées en mode natif et d’autres modules [!INCLUDE[tsql](../../includes/tsql-md.md)] compilés en mode natif tels que des fonctions scalaires définies par l’utilisateur et des déclencheurs à l’aide de l’instruction `ALTER`.  
+Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez effectuer des opérations `ALTER` sur les procédures stockées compilées en mode natif et d’autres modules [!INCLUDE[tsql](../../includes/tsql-md.md)] compilés en mode natif comme des fonctions scalaires définies par l’utilisateur et des déclencheurs à l’aide de l’instruction `ALTER`.  
   
 Lors de l’exécution de l’instruction `ALTER` sur un module [!INCLUDE[tsql](../../includes/tsql-md.md)] compilé en mode natif, le module est recompilé à l’aide d’une nouvelle définition. Quand la recompilation est en cours, l’ancienne version du module reste disponible pour l’exécution. Une fois la compilation terminée, les exécutions de module sont purgées et la nouvelle version du module est installée. Quand vous modifiez un module [!INCLUDE[tsql](../../includes/tsql-md.md)] compilé en mode natif, vous pouvez modifier les options suivantes.  
   

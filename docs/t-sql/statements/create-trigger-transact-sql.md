@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73168758"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982701"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -179,12 +179,12 @@ DATABASE
 Applique l'étendue d'un déclencheur DDL à la base de données active. S’il est spécifié, le déclencheur est activé chaque fois qu’*event_type* ou *event_group* se produit dans la base de données active.  
   
 ALL SERVER  
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 Applique l'étendue d'un déclencheur DDL ou de connexion au serveur actif. S’il est spécifié, le déclencheur est activé chaque fois qu’*event_type* ou *event_group* se produit à un endroit quelconque sur le serveur actif.  
   
 WITH ENCRYPTION  
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 Masque le texte de l'instruction CREATE TRIGGER. L'utilisation de l'argument WITH ENCRYPTION évite la publication du déclencheur dans le cadre de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas possible de spécifier WITH ENCRYPTION pour les déclencheurs CLR.  
   
@@ -236,7 +236,7 @@ Nom d'un regroupement prédéfini d'événements de langage [!INCLUDE[tsql](../.
 Une fois l’exécution de CREATE TRIGGER terminée, *event_group* fait aussi office de macro en ajoutant les types d’événements qu’il couvre à la vue de catalogue sys.trigger_events.  
   
 NOT FOR REPLICATION  
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 Indique que le déclencheur ne doit pas être exécuté lorsqu'un aent de réplication modifie la table impliquée dans le déclencheur.  
   
@@ -264,7 +264,7 @@ Les déclencheurs DDL et de connexion capturent des informations sur l’événe
   
 Pour les déclencheurs sur les tables optimisées en mémoire, la seule instruction *sql_statement* autorisée au niveau supérieur est un bloc ATOMIC. Le code T-SQL autorisé dans le bloc ATOMIC est limité par le code T-SQL autorisé dans les procédures natives.  
   
-\< method_specifier > **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+\< method_specifier > **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 Pour un déclencheur CLR, spécifie la méthode de liaison d'un assembly avec le déclencheur. La méthode ne doit prendre aucun argument et retourner une valeur vide. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister comme classe dans l’assembly avec une visibilité de l’assembly. Si la classe a un nom qualifié par un espace de noms qui utilise '.' pour séparer les parties de l'espace de noms, le nom de la classe doit être délimité par des crochets ([ ]) ou des guillemets doubles (" "). La classe ne peut pas être imbriquée.  
   
@@ -512,7 +512,7 @@ GO
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. Utilisation d'un déclencheur DDL avec une étendue de serveur  
 L'exemple suivant utilise un déclencheur DDL pour imprimer un message si un événement CREATE DATABASE se produit sur l'instance de serveur active. Il utilise la fonction `EVENTDATA` pour récupérer le texte de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondante. Pour obtenir d’autres exemples d’utilisation d’EVENTDATA dans des déclencheurs DDL, consultez [Utiliser la fonction EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```sql  
 CREATE TRIGGER ddl_trig_database   
@@ -530,7 +530,7 @@ GO
 ### <a name="f-using-a-logon-trigger"></a>F. Utilisation d'un déclencheur de connexion  
 L’exemple de déclencheur de connexion suivant refuse une tentative de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que membre de la connexion *login_test* si trois sessions utilisateur sont déjà en cours d’exécution sous cette connexion.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```sql  
 USE master;  

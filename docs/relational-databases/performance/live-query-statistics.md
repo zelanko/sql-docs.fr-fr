@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051881"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983250"
 ---
 # <a name="live-query-statistics"></a>Statistiques des requêtes dynamiques
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68051881"
 > [!NOTE]
 > En interne, les statistiques des requêtes actives utilisent la vue de gestion dynamique [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures).  
   
 > [!WARNING]  
 > Cette fonctionnalité est principalement utilisée à des fins de dépannage. Son utilisation peut légèrement ralentir les performances globales des requêtes, en particulier dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "68051881"
   
 1.  Pour afficher le plan d’exécution des requêtes actives, accédez au menu Outils et cliquez sur l’icône **Inclure les statistiques des requêtes actives**.  
   
-     ![Bouton statistiques des requêtes actives sur la barre d’outils](../../relational-databases/performance/media/livequerystatstoolbar.png "Bouton statistiques des requêtes actives sur la barre d’outils")  
+     ![Bouton Statistiques des requêtes actives de la barre d’outils](../../relational-databases/performance/media/livequerystatstoolbar.png "Bouton Statistiques des requêtes actives de la barre d’outils")  
   
      Vous pouvez également accéder au plan d’exécution des requêtes actives en cliquant avec le bouton droit sur une requête sélectionnée dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et en cliquant sur **Inclure les statistiques des requêtes actives**.  
   

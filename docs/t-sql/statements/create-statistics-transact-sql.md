@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798379"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982568"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,7 +168,7 @@ CREATE STATISTICS statistics_name
  > [!NOTE]
  > Si la table est tronquée, toutes les statistiques générées sur le HoBT tronqué sont rétablies à l’aide du pourcentage d’échantillonnage par défaut.
 
- **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
+ **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) et versions ultérieures (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -196,7 +196,7 @@ CREATE STATISTICS statistics_name
 -   statistiques créées sur les tables internes ;  
 -   Statistiques créées avec les index spatiaux ou les index XML.  
   
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
 MAXDOP = *max_degree_of_parallelism*  
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  

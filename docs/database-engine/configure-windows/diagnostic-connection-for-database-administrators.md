@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670471"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983040"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connexion de diagnostic pour les administrateurs de base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68670471"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue chaque tentative pour établir la connexion DAC, mais cela peut échouer dans des situations extrêmes.  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="connecting-with-dac"></a>Connexion avec DAC  
  Par défaut, la connexion est uniquement autorisée à partir d'un client s'exécutant sur le serveur. Les connexions réseau sont autorisées uniquement si elles sont configurées en utilisant la procédure stockée sp_configure avec [l’option remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  

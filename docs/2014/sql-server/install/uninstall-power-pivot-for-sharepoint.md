@@ -38,7 +38,7 @@ ms.locfileid: "72798133"
   
 -   [Étape 6 : Liste de vérification post-désinstallation](#bkmk_post)  
   
-##  <a name="prereq"></a> Prérequis  
+##  <a name="prereq"></a> Conditions préalables requises  
   
 -   Vous devez être administrateur de batterie de serveurs SharePoint ou administrateur d'application de service pour désinstaller des fonctionnalités et des solutions de la batterie.  
   
@@ -114,13 +114,13 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, consultez [configurer et afficher les fichiers journaux SharePoint et &#40;la&#41;journalisation des diagnostics PowerPivot pour SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
-2.  Démarrez SharePoint Management Shell en tant qu'administrateur, puis exécutez la commande suivante pour afficher les travaux dans la file d'attente :  
+2.  Démarrez SharePoint Management Shell en tant qu'administrateur, puis exécutez la commande suivante pour afficher les travaux dans la file d'attente :  
   
     ```cmd
     stsadm -o enumdeployments  
     ```  
   
-3.  Passez en revue les déploiements existants pour les informations suivantes : **Type** est déploiement ou rétraction **Fichier** est powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+3.  Consultez les informations suivantes pour les déploiements existants : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou à powerpivotfarm.wsp.  
   
 4.  Pour les déploiements ou les rétractions liés aux solutions PowerPivot, copiez la valeur GUID de **JobID** , puis collez-la dans la commande suivante (utilisez les commandes marquer, copier et coller dans le menu Edition de l’interpréteur de commandes pour copier le GUID) :  
   

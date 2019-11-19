@@ -23,12 +23,12 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f6edc9ffcc723f2900b06ca658cb1633bfa9fbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70e3fbfe0ed0d255cbe6f27c410af96061ab7432
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927247"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982059"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'utilise pas le cache pour le plan de cette procédure et que la procédure est recompilée à l'exécution.  
   
  ENCRYPTION  
- **S’applique à** : SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  Indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] se charge de convertir le texte d'origine provenant de l'instruction ALTER PROCEDURE dans un format d'obfuscation. La sortie générée par l'obfuscation n'est pas visible directement dans les affichages catalogue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les utilisateurs n'ayant pas accès aux tables système ou aux fichiers de base de données ne peuvent pas récupérer le texte d'obfuscation. Le texte est cependant à la disposition des utilisateurs disposant de privilèges et qui peuvent accéder aux tables système par le biais du [port DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou qui accèdent directement aux fichiers de bases de données. Les utilisateurs qui peuvent associer un débogueur au processus serveur peuvent également récupérer la procédure d'origine de la mémoire au moment de l'exécution. Pour plus d’informations sur l’accès aux métadonnées système, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -143,7 +143,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] comprenant le corps de la procédure. Vous pouvez utiliser les mots clés facultatifs BEGIN et END pour délimiter les instructions. Pour plus d’informations, consultez les sections Recommandations, Remarques d’ordre général et Limitations et restrictions dans [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Précise la méthode d’un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour créer une référence à une procédure stockée CLR. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister en tant que classe dans l’assembly. Si la classe a un nom qualifié par un espace de noms, utilisez un point ( **.** ) pour séparer les parties de l’espace de noms. Le nom de la classe doit figurer entre crochets ( **[]** ) ou entre guillemets doubles ( **""** ). La méthode spécifiée doit être une méthode statique de la classe.  
   

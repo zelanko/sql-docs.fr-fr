@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532392"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063974"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster Big Data SQL Server sur Kubernetes
 
@@ -87,8 +87,10 @@ AKS est fourni avec [deux classes de stockage intégrées](/azure/aks/azure-disk
 
 Les clusters Kubernetes déployés à l’aide de `kubeadm` n’ont pas de classe de stockage intégrée. Vous devez créer vos propres classes de stockage et vos propres volumes persistants en utilisant un stockage local ou votre provisionneur préféré, par exemple [Rook](https://github.com/rook/rook). Dans ce cas, vous définissez `className` sur la classe de stockage que vous avez configurée. 
 
-> [!NOTE]
->  Dans les fichiers de configuration de déploiement intégré pour kubeadm (`kubeadm-dev-test` ou `kubeadm-prod`), aucun nom de classe de stockage n’est spécifié pour le stockage des données et des journaux. Avant le déploiement, vous devez personnaliser le fichier de configuration et définir la valeur de className, sans quoi les validations préalables au déploiement échouent. Le déploiement comporte également une étape de validation qui vérifie l’existence de la classe de stockage, mais pas pour les volumes persistants nécessaires. Vous devez vérifier que vous créez suffisamment de volumes en fonction de l’échelle de votre cluster. Pour la taille de cluster minimale par défaut (échelle par défaut, pas de haute disponibilité), vous devez créer au moins 24 volumes persistants. [Voici](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) un exemple de création de volumes persistants avec le provisionneur local.
+> [!IMPORTANT]
+>  Dans les fichiers de configuration de déploiement intégré pour kubeadm (`kubeadm-dev-test` ou `kubeadm-prod`), aucun nom de classe de stockage n’est spécifié pour le stockage des données et des journaux. Avant le déploiement, vous devez personnaliser le fichier de configuration et définir la valeur de `className`, sans quoi les validations préalables au déploiement échouent. Le déploiement comporte également une étape de validation qui vérifie l’existence de la classe de stockage, mais pas pour les volumes persistants nécessaires. Vous devez vérifier que vous créez suffisamment de volumes en fonction de l’échelle de votre cluster. Pour la taille de cluster minimale par défaut (échelle par défaut, pas de haute disponibilité), vous devez créer au moins 24 volumes persistants.
+>
+>[Créer un cluster Kubernetes](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) présente un exemple de la façon dont vous pouvez créer des volumes persistants à l’aide du provisionneur local. Cet exemple présente le stockage Kubernetes.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Personnaliser les configurations de stockage pour chaque pool

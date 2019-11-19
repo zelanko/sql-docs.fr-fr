@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909496"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095706"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909496"
  Permet d'afficher ou de modifier la description du compte. Cette description est facultative.  
   
  **Adresse de messagerie**  
- Affichez ou modifiez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service SQL Server Agent Microsoft peut envoyer du courrier électronique à partir de l’adresse **SqlAgent@Adventure-Works.com** .  
+ Affichez ou modifiez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service Microsoft SQL Server Agent peut envoyer des e-mails à partir de l’adresse **SqlAgent\@Adventure-Works.com**.  
   
  **Nom complet**  
  Affichez ou modifiez le nom qui apparaîtra sur le courrier électronique envoyé à partir de ce compte. Le nom affiché est facultatif. C'est le nom qui sera affiché dans les messages envoyés à partir de ce compte. Par exemple, un compte du service SQL Server Agent peut afficher le nom **SQL Server Agent Automated Mailer** sur les messages électroniques.  
   
  **Répondre au courrier**  
- Affichez ou modifiez l'adresse de messagerie qui sera utilisée pour répondre au courrier électronique envoyé à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service SQL Server Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est **danw@Adventure-Works.com** .  
+ Affichez ou modifiez l'adresse de messagerie qui sera utilisée pour répondre au courrier électronique envoyé à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service SQL Server Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est **danw\@Adventure-Works.com**.  
   
  **Nom du serveur**  
  Affichez ou modifiez le nom du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.<votre_société>.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  

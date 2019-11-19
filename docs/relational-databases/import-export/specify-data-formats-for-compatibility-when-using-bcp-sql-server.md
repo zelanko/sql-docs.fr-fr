@@ -1,6 +1,5 @@
 ---
-title: Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Spécifier des formats de données pour la compatibilité avec bcp
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5e56c9013afbfce762f35edb41d0b411c426028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062537"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055924"
 ---
-# <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp (SQL Server)
+# <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Cette rubrique décrit les attributs de format de données, les invites spécifiques aux champs et le stockage des données champ par champ dans un fichier de format non-XML de la commande [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** . La compréhension de ces notions peut être utile lorsque vous exportez des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en bloc à des fins d'importation en bloc dans un autre programme, tel qu'un autre programme de base de données. Les formats de données par défaut (natif, caractère ou Unicode) dans la table source peuvent être incompatibles avec la disposition des données attendue par l'autre programme. S'il existe une discordance lorsque vous exportez les données, vous devez décrire la disposition des données.  
   

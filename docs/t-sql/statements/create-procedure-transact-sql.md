@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000828"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982756"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ Crée une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR
 
 Passez à la section [Exemples simples](#Simple) pour ignorer les détails de la syntaxe et obtenir un exemple rapide de procédure stockée de base.
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -161,7 +161,7 @@ OR ALTER
  Le nom complet d'une procédure ou d'une procédure temporaire globale, y compris les signes ##, ne peut dépasser 128 caractères. Le nom complet d'une procédure temporaire locale, y compris le signe #, ne peut dépasser 116 caractères.  
   
  **;** *number*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Entier facultatif utilisé pour regrouper des procédures de même nom. Ces procédures groupées peuvent être supprimées en même temps par le biais d'une seule instruction DROP PROCEDURE.  
   
@@ -216,7 +216,7 @@ RECOMPILE
  Pour ordonner au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’annuler les plans de requête relatifs à des requêtes individuelles au sein d’une procédure, utilisez l’indicateur de requête RECOMPILE dans la définition de la requête. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ENCRYPTION  
- **S’applique à** : SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit le texte d’origine de l’instruction CREATE PROCEDURE dans un format d’obfuscation. La sortie générée par l'obfuscation n'est pas visible directement dans les affichages catalogue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les utilisateurs n'ayant pas accès aux tables système ou aux fichiers de base de données ne peuvent pas récupérer le texte obscurci. Le texte est cependant à la disposition des utilisateurs disposant de privilèges et qui peuvent accéder aux tables système par le biais du [port DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou qui accèdent directement aux fichiers de bases de données. Les utilisateurs qui peuvent attacher un débogueur au processus serveur peuvent également récupérer la procédure déchiffrée de la mémoire à l'exécution. Pour plus d’informations sur l’accès aux métadonnées système, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -232,7 +232,7 @@ EXECUTE AS *clause*
  Pour plus d’informations, consultez [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 FOR REPLICATION  
- **S’applique à** : SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Spécifie que la procédure est créée en vue d'une réplication. Par conséquent, elle ne peut pas être exécutée sur l'Abonné. Une procédure créée avec l'option FOR REPLICATION est utilisée comme filtre de procédure et n'est exécutée que lors de la réplication. Il n'est pas possible de déclarer des paramètres si FOR REPLICATION est spécifié. FOR REPLICATION ne peut pas être précisé pour une utilisation avec des procédures CLR. L'option RECOMPILE est ignorée pour les procédures créées avec l'option FOR REPLICATION.  
   
@@ -242,7 +242,7 @@ FOR REPLICATION
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] comprenant le corps de la procédure. Vous pouvez utiliser les mots clés facultatifs BEGIN et END pour délimiter les instructions. Pour plus d'informations, consultez les sections suivantes intitulées Meilleures pratiques, Remarques d'ordre général et Limitations et restrictions.  
   
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie la méthode d'un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour une procédure CLR à référencer. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister comme classe dans l’assembly. Si la classe possède un nom qualifié par un espace de noms qui utilise un point ( **.** ) pour séparer les parties constituant l’espace de noms, le nom de la classe doit être délimité à l’aide de crochets ( **[]** ) ou de guillemets droits ( **""** ). La méthode spécifiée doit être une méthode statique de la classe.  
   
@@ -252,7 +252,7 @@ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 >  Les procédures CLR ne sont pas prises en charge dans une base de données autonome.  
   
 ATOMIC WITH  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indique l'exécution automatique d'une procédure stockée Atomic. Les modifications sont validées ou bien tous les changements sont restaurés en levant une exception. Le bloc ATOMIC WITH est requis pour les procédures stockées compilées en mode natif.  
   
@@ -277,22 +277,22 @@ Les opérations BEGIN, ROLLBACK et COMMIT ne peuvent pas être utilisées dans u
  Détermine si les valeurs Null sont autorisées dans un paramètre. NULL est l'argument par défaut.  
   
 NATIVE_COMPILATION  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indique que la procédure est compilée en mode natif. NATIVE_COMPILATION, SCHEMABINDING et EXECUTE AS peuvent être spécifiés dans n'importe quel ordre. Pour plus d’informations, consultez [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 SCHEMABINDING  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Garantit que les tables référencées par une procédure ne peuvent pas être supprimées ou modifiées. SCHEMABINDING est requis dans les procédures stockées compilées en mode natif. (Pour plus d’informations, consultez [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).) Les restrictions SCHEMABINDING sont les mêmes que pour les fonctions définies par l’utilisateur. Pour plus d’informations, consultez la section SCHEMABINDING dans [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 LANGUAGE = [N] 'language'  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Équivalent à l’option de session [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'language' est requis.  
   
 TRANSACTION ISOLATION LEVEL  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Requis pour les procédures stockées compilées en mode natif. Spécifie le niveau d'isolation de la transaction pour la procédure stockée. Les options disponibles sont les suivantes :  
   
@@ -311,21 +311,21 @@ SNAPSHOT
  Spécifie que les données lues par n’importe quelle instruction d’une transaction représentent la version cohérente d’un point de vue transactionnel des données qui existaient au début de la transaction.  
   
 DATEFIRST = *number*  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Spécifie un nombre compris entre 1 et 7 pour le premier jour de la semaine. DATEFIRST est facultatif. Si cela n'est pas spécifié, le paramètre est déduit en fonction du langage spécifié.  
   
  Pour plus d’informations, consultez [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).  
   
 DATEFORMAT = *format*  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Spécifie le classement des parties de date mois, jour et année pour interpréter les chaînes de caractères date, smalldatetime, datetime, datetime2 et datetimeoffset. DATEFORMAT est facultatif. Si cela n'est pas spécifié, le paramètre est déduit en fonction du langage spécifié.  
   
  Pour plus d’informations, consultez [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Les validations de transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir une durabilité complète, la durabilité par défaut ou une durabilité retardée.  
   
@@ -542,7 +542,7 @@ GO
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. Création d'une procédure stockée CLR  
  L’exemple suivant crée la procédure `GetPhotoFromDB` qui fait référence à la méthode `GetPhotoFromDB` de la classe `LargeObjectBinary` se trouvant dans l’assembly `HandlingLOBUsingCLR`. Avant la création de la procédure, l’assembly `HandlingLOBUsingCLR` est inscrit dans la base de données locale.  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (en cas d’utilisation d’un assembly créé à partir d’*assembly_bits*).  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (en cas d’utilisation d’un assembly créé à partir d’*assembly_bits*).  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -871,7 +871,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 #### <a name="k-using-the-with-encryption-option"></a>K. Utilisation de l'option WITH ENCRYPTION  
  L'exemple suivant crée la procédure `HumanResources.uspEncryptThis`.  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SQL Database.  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, SQL Database.  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113516"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962404"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Outils d'analyse et de paramétrage des performances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68113516"
   
 |Outil|Description|  
 |----------|-----------------|  
-|[Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Les fonctions intégrées affichent des statistiques d'instantané sur l'activité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis le démarrage du serveur ; ces statistiques sont stockées dans des compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prédéfinis. Par exemple, **@@CPU_BUSY** indique pendant combien de temps l’UC a exécuté du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; **@@CONNECTIONS** indique le nombre de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de tentatives de connexion ; enfin, **@@PACKET_ERRORS** indique le nombre de paquets réseau sur des connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Les fonctions intégrées affichent des statistiques d'instantané sur l'activité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis le démarrage du serveur ; ces statistiques sont stockées dans des compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prédéfinis. Par exemple, **\@\@CPU_BUSY** indique pendant combien de temps l’UC a exécuté du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **\@\@CONNECTIONS** indique le nombre de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de tentatives de connexion. Enfin, **\@\@PACKET_ERRORS** indique le nombre de paquets réseau sur des connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|Les instructions DBCC (Database Console Command) vous permettent de contrôler les statistiques de performances et la cohérence logique et physique d'une base de données.|  
 |[Assistant Paramétrage du moteur de base de données (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|L'Assistant de Paramétrage du moteur de base de données analyse les effets des performances des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutées sur des bases de données à paramétrer. Il fournit des recommandations pour ajouter, supprimer ou modifier des index, des vues indexées et un partitionnement.|  
 |[Assistant Expérimentation de base de données (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|L’Assistant Expérimentation de base de données (DEA) est une nouvelle solution de test A/B pour SQL Server. Elle vous aidera à évaluer une version ciblée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour une charge de travail donnée. Lors de la mise à niveau à partir d’une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], DEA sera en mesure de fournir des métriques d’analyse comparative.|

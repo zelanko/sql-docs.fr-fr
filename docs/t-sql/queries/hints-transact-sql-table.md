@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901961"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981762"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "67901961"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -221,7 +221,7 @@ Lorsque FORCESEEK est spécifié avec des paramètres d’index, les instruction
 > [!CAUTION]  
 > Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur `Plan cannot be generated` dans plusieurs cas. Dans une version ultérieure, il se peut que des modifications internes de l’optimiseur de requête autorisent la prise en considération de davantage de plans.  
   
-FORCESCAN **S’applique à** : [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **S’applique à** : [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 et versions ultérieures.
 Indique que l’optimiseur de requête doit utiliser uniquement une opération d’analyse d’index comme chemin d’accès à la table ou la vue référencée. L'indicateur FORCESCAN peut être utile pour les requêtes dans lesquelles l'optimiseur sous-estime le nombre de lignes affectées et choisit une opération de recherche plutôt qu'une opération d'analyse. Dans ce cas, la quantité de mémoire allouée pour l'opération est trop faible, ce qui nuit aux performances des requêtes.  
   
 FORCESCAN peut être spécifié avec ou sans indicateur INDEX. Lorsqu'il est associé à un indicateur d'index (`INDEX = index_name, FORCESCAN`), l'optimiseur de requête considère uniquement les chemins d'accès d'analyse dans l'index spécifié lors de l'accès à la table référencée. FORCESCAN peut être spécifié avec l'indicateur d'index INDEX(0) pour forcer une opération d'analyse de table sur la table de base.  
@@ -317,7 +317,7 @@ SERIALIZABLE
 Équivalent à HOLDLOCK. Étend les restrictions associées aux verrous partagés en les maintenant jusqu'à l'achèvement de la transaction, au lieu de les relâcher dès que la table ou la page de données n'est plus utilisée, que la transaction soit achevée ou non. Effectue une recherche avec la même sémantique de verrouillage qu'une transaction à un niveau d'isolation SERIALIZABLE. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 SNAPSHOT  
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures. 
   
 La table optimisée en mémoire est accédée selon l'isolement SNAPSHOT. SNAPSHOT peut être utilisé uniquement avec les tables optimisées en mémoire (et non avec les tables sur disque). Pour plus d’informations, consultez [Introduction aux tables à mémoire optimisée](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
 Spécifie le nombre maximal de cellules à utiliser pour le pavage d'un objet géométrique ou géographique. *number* est une valeur comprise entre 1 et 8192.  
   
 Cette option permet de paramétrer précisément l'heure d'exécution de la requête en ajustant le compromis entre la durée d'exécution du filtre primaire et du filtre secondaire. Un nombre élevé réduit la durée d'exécution du filtre secondaire, mais augmente celle du filtre de l'exécution primaire, tandis qu'un nombre plus petit décroît la durée d'exécution du filtre primaire, mais augmente celle de l'exécution du filtre secondaire. Avec des données spatiales plus denses, un nombre élevé doit aboutir à une durée d'exécution plus rapide en donnant une meilleure approximation avec le filtre primaire et en réduisant la durée d'exécution du filtre secondaire. Avec des données éparses, un nombre inférieur décroît la durée d'exécution du filtre primaire.  

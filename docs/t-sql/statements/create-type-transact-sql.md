@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809822"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982716"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68809822"
 > [!NOTE]  
 >  L’intégration du CLR .NET Framework dans SQL Server est décrite dans cette rubrique. L’intégration du CLR ne s’applique pas à Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -197,7 +197,7 @@ column_name <data_type>
  Précise si le type accepte les valeurs NULL. S'il n'est pas spécifié, la valeur par défaut est NULL.  
   
  *assembly_name*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie l’assembly [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui référence l’implémentation du type défini par l’utilisateur dans le CLR. *assembly_name* doit correspondre à un assembly existant dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la base de données actuelle.  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  EXTERNAL_NAME n'est pas disponible dans une base de données autonome.  
   
  **[.** *class_name*  **]**  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie la classe au sein de l'assembly qui implémente le type défini par l'utilisateur. *class_name* doit être un identificateur valide et doit exister en tant que classe dans l’assembly avec une visibilité d’assembly. *class_name* respecte la casse, quel que soit le classement de base de données, et doit correspondre exactement au nom de la classe dans l’assembly correspondant. Le nom de la classe peut être un nom qualifié par un espace de noms entouré de crochets ( **[ ]** ) si le langage de programmation utilisé pour écrire la classe utilise le concept des espaces de noms (par exemple C#). Si *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *type_name*.  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index cluster ou non-cluster. L’index contiendra les colonnes répertoriées et triera les données dans l’ordre croissant ou décroissant.
   
@@ -237,17 +237,17 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
  Vous devez spécifier les index de table et de colonne dans le cadre de l'instruction CREATE TABLE. CREATE INDEX et DROP INDEX ne sont pas pris en charge pour les tables optimisées en mémoire.  
   
  MEMORY_OPTIMIZED  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indique si le type de table est optimisé en mémoire. Cette option est désactivée par défaut ; la table (type) n'est pas une table optimisée en mémoire (type). Les types de tables optimisées en mémoire sont des tables utilisateur optimisées en mémoire dont le schéma est rendu persistant sur disque similairement à d'autres tables utilisateur.  
   
  BUCKET_COUNT  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indique le nombre de compartiments qui doivent être créés dans l'index de hachage. La valeur maximale de BUCKET_COUNT dans les index de hachage est de 1 073 741 824. Pour plus d’informations sur le nombre de compartiments, consultez [Index sur des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* est un argument obligatoire.  
   
  HASH  
- **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indique qu'un index HASH est créé. Les index de hachage sont pris en charge uniquement sur les tables optimisées en mémoire.  
   
@@ -297,7 +297,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. Création d'un type défini par l'utilisateur  
  L’exemple suivant crée un type `Utf8String` qui référence la classe `utf8string` dans l’assembly `utf8string`. Avant de créer le type, l'assembly `utf8string` est enregistré dans la base de données locale. Remplacez la partie binaire de l'instruction CREATE ASSEMBLY par une description valide.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```  
 CREATE ASSEMBLY utf8string  

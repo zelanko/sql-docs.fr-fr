@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907079"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982808"
 ---
 # <a name="statistics"></a>Statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ ORDER BY s.name;
 * À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et avec un [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) de 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un seuil dynamique décroissant de mise à jour des statistiques qui s’ajuste en fonction du nombre de lignes contenues de la table. Il est obtenu en calculant la racine carrée du produit de 1 000 et de la cardinalité de la table actuelle. Par exemple, si votre table contient 2 millions de lignes, le calcul est le suivant : sqrt (1 000 * 2 000 000) = 44 721,359. Du fait de cette modification, les statistiques sur des tables volumineuses sont mises à jour plus fréquemment. Toutefois, si une base de données affiche un niveau de compatibilité inférieur à 130, le seuil [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s’applique. ?
 
 > [!IMPORTANT]
-> À compter de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], ou dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et avec un [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inférieur à 130, utilisez [l’indicateur de suivi 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un seuil dynamique décroissant de mise à jour des statistiques qui s’ajuste en fonction du nombre de lignes de la table.
+> À compter de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], ou dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, avec un [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inférieur à 130, utilisez l’[indicateur de suivi 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un seuil dynamique décroissant de mise à jour des statistiques qui s’ajuste en fonction du nombre de lignes de la table.
   
 L'optimiseur de requête vérifie s'il existe des statistiques obsolètes avant de compiler une requête et avant d'exécuter un plan de requête mis en cache. Avant de compiler une requête, l'optimiseur de requête utilise les colonnes, les tables et les vues indexées du prédicat de requête pour identifier les statistiques susceptibles d'être obsolètes. Avant d'exécuter un plan de requête mis en cache, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vérifie que le plan de requête fait référence à des statistiques à jour.  
   
@@ -153,7 +153,7 @@ Pour plus d’informations sur le contrôle de AUTO_UPDATE_STATISTICS, voir [Con
 * statistiques créées sur les tables internes ;  
 * Statistiques créées avec les index spatiaux ou les index XML.  
   
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures. 
   
 ## <a name="CreateStatistics"></a> Quand créer des statistiques  
  L'optimiseur de requête crée déjà des statistiques selon les méthodes suivantes :  

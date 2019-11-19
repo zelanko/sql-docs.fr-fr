@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019735"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982950"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Évalue l'autorisation effective de l'utilisateur actuel sur un élément sécurisable. Une fonction associée est [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expression scalaire facultative de type **sysname** qui représente le nom de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
   
 > [!NOTE]  
->  Dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les éléments sécurisables sub ne peuvent pas utiliser des crochets sous la forme **'[** _sub name_ **]'** . Utilisez **'** _sub name_ **'** à la place.  
+>  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et versions ultérieures, les éléments sub-securable ne peuvent pas utiliser de crochets sous la forme **'[** _nom sub_ **]'** . Utilisez **'** _sub name_ **'** à la place.  
   
  *sub-securable_class*  
  Expression scalaire facultative de type **nvarchar(60)** qui représente la classe de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Ai-je l'autorisation VIEW SERVER STATE au niveau serveur ?  
   
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Puis-je emprunter l'identité du principal du serveur Ps ?  
   
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

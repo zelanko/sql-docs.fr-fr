@@ -1,5 +1,5 @@
 ---
-title: Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche | Microsoft Docs
+title: Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,14 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638057"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056520"
 ---
-# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique explique comment extraire les valeurs requises avant d'ajouter une propriété à une liste de propriétés de recherche et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
   

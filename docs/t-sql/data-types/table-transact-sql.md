@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e431b51db33f889acd9bcce5e93222b451ad3237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000463"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981729"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "68000463"
 Type de données spécial utilisé pour stocker un jeu de résultats afin de le traiter ultérieurement. **table** est principalement utilisé pour stocker temporairement un ensemble de lignes retournées comme un jeu de résultats d’une fonction table. Les fonctions et les variables peuvent être déclarées comme étant de type **table**. Les variables de **table** peuvent être utilisées dans les fonctions, les procédures stockées et les lots. Pour déclarer des variables de type **table**, utilisez [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

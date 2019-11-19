@@ -23,29 +23,34 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 195e9d549ab85a8abe1a38cfb8fd0f4d8473b559
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 18aad5811c34eadfda4a2a7fabfdd7a9997311b5
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149866"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127390"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne des informations de propriété relatives à l'instance du serveur.  
+Retourne des informations de propriété relatives à l'instance du serveur.  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
 SERVERPROPERTY ( 'propertyname' )  
 ```  
-  
+
+> [!IMPORTANT]
+> Les numéros de version du moteur de base de données pour SQL Server et Azure SQL Database ne sont pas comparables les uns aux autres. Il s’agit plutôt de numéros de build internes pour ces produits distincts. Le moteur de base de données pour Azure SQL Database repose sur la même base de code que le moteur de base de données SQL Server. Plus important encore, le moteur de base de données dans Azure SQL Database a toujours les bits les plus récents du moteur de base de données SQL. La version 12 d’Azure SQL Database est plus récente que la version 15 de SQL Server.
+
 ## <a name="arguments"></a>Arguments  
- *propertyname*  
- Expression contenant les informations de propriétés à retourner pour le serveur. *propertyname* peut avoir l’une des valeurs suivantes.  
+
+*propertyname*  
+Expression contenant les informations de propriétés à retourner pour le serveur. *propertyname* peut avoir l’une des valeurs suivantes.  
   
 |Propriété|Valeurs retournées|  
 |--------------|---------------------|  
@@ -57,19 +62,19 @@ SERVERPROPERTY ( 'propertyname' )
 |Édition|Édition du produit installée de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez la valeur de cette propriété pour déterminer des fonctionnalités et des limites, telles que les [limites de capacité de calcul des éditions SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Les versions 64 bits du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ajoutent la mention (64 bits) à la version.<br /><br /> Retourne les informations suivantes :<br /><br /> « Enterprise Edition »<br /><br /> « Enterprise Edition : Licence par cœur »<br /><br /> « Enterprise Evaluation Edition »<br /><br /> « Business Intelligence Edition »<br /><br /> « Developer Edition »<br /><br /> « Express Edition »<br /><br /> « Express Edition with Advanced Services »<br /><br /> « Standard Edition »<br /><br /> « Web Edition »<br /><br /> « SQL Azure » indique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Type de données de base : **nvarchar(128)**|  
 |EditionID|EditionID représente l'édition de produit installée de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez la valeur de cette propriété pour déterminer des fonctionnalités et des limites, telles que les [limites de capacité de calcul des éditions SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Licence par cœur<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database et SQL Data Warehouse<br /><br /> Type de données de base : **bigint**|  
 |EngineEdition|Édition du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur le serveur.<br /><br /> 1 = Personal ou Desktop Engine (non disponible dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures)<br /><br /> 2 = Standard (valeur retournée pour Standard, Web et Business Intelligence)<br /><br /> 3 = Enterprise (valeur retournée pour les éditions Evaluation, Developer et Enterprise.)<br /><br /> 4 = Express (valeur retournée pour Express, Express with Tools et Express with Advanced Services)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = Managed Instance<br /><br /> Type de données de base : **int**|  
-|HadrManagerStatus|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si le gestionnaire [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a démarré.<br /><br /> 0 = Non démarré, en attente de communication<br /><br /> 1 = Démarré et en cours d'exécution<br /><br /> 2 = Non démarré et en état d'échec<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.|  
+|HadrManagerStatus|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Indique si le gestionnaire [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a démarré.<br /><br /> 0 = Non démarré, en attente de communication<br /><br /> 1 = Démarré et en cours d'exécution<br /><br /> 2 = Non démarré et en état d'échec<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.|  
 |InstanceDefaultDataPath|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Nom du chemin par défaut jusqu’aux fichiers de données d’instance.|  
 |InstanceDefaultLogPath|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Nom du chemin par défaut jusqu’aux fichiers journaux d’instance.|  
 |InstanceName|Nom de l'instance à laquelle l'utilisateur est connecté.<br /><br /> Retourne la valeur NULL si le nom de l'instance est celui de l'instance par défaut, et en cas d'entrée incorrecte ou d'erreur.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Retourne 1 si la fonctionnalité Analyse avancée a été installée pendant l’installation ; 0 si la fonctionnalité Analyse avancée n’a pas été installée.|  
 |IsClustered|L'instance de serveur est configurée dans un cluster de basculement.<br /><br /> 1 = Ordonné en clusters<br /><br /> 0 = Non cluster<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
 |IsFullTextInstalled|Les composants d'indexation sémantique et de texte intégral sont installés sur l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Les composants d'indexation sémantique et de texte intégral sont installés.<br /><br /> 0 = Les composants d'indexation sémantique et de texte intégral ne sont pas installés.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
-|IsHadrEnabled|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activé sur cette instance de serveur.<br /><br /> 0 = La fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est désactivée.<br /><br /> 1 = La fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activée.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**<br /><br /> Pour les réplicas de disponibilité à créer et exécuter sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le service [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] doit être activé sur l'instance de serveur. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Remarque :** La propriété IsHadrEnabled se rapporte uniquement aux [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. D'autres fonctionnalités haute disponibilité ou de récupération d'urgence, telles que la mise en miroir de bases de données ou la copie des journaux de transaction, ne sont pas affectées par cette propriété du serveur.|  
+|IsHadrEnabled|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activé sur cette instance de serveur.<br /><br /> 0 = La fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est désactivée.<br /><br /> 1 = La fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activée.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**<br /><br /> Pour les réplicas de disponibilité à créer et exécuter sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le service [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] doit être activé sur l'instance de serveur. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Remarque :** La propriété IsHadrEnabled se rapporte uniquement aux [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. D'autres fonctionnalités haute disponibilité ou de récupération d'urgence, telles que la mise en miroir de bases de données ou la copie des journaux de transaction, ne sont pas affectées par cette propriété du serveur.|  
 |IsIntegratedSecurityOnly|Le serveur fonctionne en mode de sécurité intégrée.<br /><br /> 1 = Sécurité intégrée (authentification Windows)<br /><br /> 0 = Sécurité non intégrée. (Authentification Windows et authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
-|IsLocalDB|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le serveur est une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.|  
+|IsLocalDB|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Le serveur est une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.|  
 |IsPolyBaseInstalled|**S'applique à**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si la fonctionnalité PolyBase est installée sur l’instance de serveur.<br /><br /> 0 = Polybase n’est pas installée.<br /><br /> 1 = Polybase est installée.<br /><br /> Type de données de base : **int**|  
 |IsSingleUser|Le serveur est en mode mono-utilisateur.<br /><br /> 1 = Utilisateur unique<br /><br /> 0 = Utilisateur non unique<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
-|IsXTPSupported|**S’applique à** : SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Le serveur prend en charge OLTP en mémoire.<br /><br /> 1 = Le serveur prend en charge OLTP en mémoire.<br /><br /> 0 = Le serveur ne prend pas en charge OLTP en mémoire.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
+|IsXTPSupported|**S’applique à** : SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Le serveur prend en charge OLTP en mémoire.<br /><br /> 1 = Le serveur prend en charge OLTP en mémoire.<br /><br /> 0 = Le serveur ne prend pas en charge OLTP en mémoire.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
 |LCID|Identificateur des paramètres régionaux (LCID) Windows du classement.<br /><br /> Type de données de base : **int**|  
 |LicenseType|Inutilisé. Les informations de licence ne sont pas conservées ou ne sont pas gérées par le produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retourne toujours DISABLED.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |MachineName|Nom de l'ordinateur Windows sur lequel s'exécute l'instance du serveur.<br /><br /> Dans le cas d'une instance en cluster, instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un serveur virtuel sous Microsoft Cluster Service, le nom du serveur virtuel est retourné.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
@@ -95,34 +100,39 @@ SERVERPROPERTY ( 'propertyname' )
 |FilestreamEffectiveLevel|Niveau effectif d'accès de FILESTREAM. Cette valeur peut être différente de FilestreamConfiguredLevel si le niveau a changé ou si un redémarrage de l'instance ou de l'ordinateur est en attente. Pour plus d’informations, consultez [Niveau d’accès filestream](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).|  
   
 ## <a name="return-types"></a>Types de retour  
- **sql_variant**  
+
+**sql_variant**
   
 ## <a name="remarks"></a>Notes  
   
-### <a name="servername-property"></a>Propriété ServerName  
- La propriété `ServerName` de la fonction `SERVERPROPERTY` et [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) retournent des informations similaires. La propriété `ServerName` fournit le serveur et le nom de l'instance Windows qui constituent ensemble l'instance de serveur unique. [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) fournit le nom du serveur local actuellement configuré.  
+### <a name="servername-property"></a>Propriété ServerName
+
+La propriété `ServerName` de la fonction `SERVERPROPERTY` et [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) retournent des informations similaires. La propriété `ServerName` fournit le serveur et le nom de l'instance Windows qui constituent ensemble l'instance de serveur unique. [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) fournit le nom du serveur local actuellement configuré.  
   
- La propriété `ServerName` et [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) retournent les mêmes informations si le nom de serveur par défaut au moment de l’installation n’a pas été changé. Le nom de serveur local peut être configuré en exécutant la commande suivante :  
+La propriété `ServerName` et [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) retournent les mêmes informations si le nom de serveur par défaut au moment de l’installation n’a pas été changé. Le nom de serveur local peut être configuré en exécutant la commande suivante :  
   
-```  
+```sql
 EXEC sp_dropserver 'current_server_name';  
 GO  
 EXEC sp_addserver 'new_server_name', 'local';  
 GO  
 ```  
   
- Si le nom par défaut du serveur local a été modifié lors de l’installation, [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) retourne le nouveau nom.  
+Si le nom par défaut du serveur local a été modifié lors de l’installation, [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) retourne le nouveau nom.  
   
-### <a name="version-properties"></a>Propriétés de version  
- La fonction `SERVERPROPERTY` retourne des propriétés individuelles qui sont en rapport avec les informations de version, alors que la fonction [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) combine la sortie en une seule chaîne. Si votre application requiert des chaînes de propriété individuelles, vous pouvez utiliser la fonction `SERVERPROPERTY` pour les retourner au lieu d’analyser les résultats de [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md).  
+### <a name="version-properties"></a>Propriétés de version
+
+La fonction `SERVERPROPERTY` retourne des propriétés individuelles qui sont en rapport avec les informations de version, alors que la fonction [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) combine la sortie en une seule chaîne. Si votre application requiert des chaînes de propriété individuelles, vous pouvez utiliser la fonction `SERVERPROPERTY` pour les retourner au lieu d’analyser les résultats de [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md).  
 
 ## <a name="permissions"></a>Autorisations
-Tous les utilisateurs peuvent interroger les propriétés du serveur. 
+
+Tous les utilisateurs peuvent interroger les propriétés du serveur.
   
-## <a name="examples"></a>Exemples  
- L’exemple suivant utilise la fonction `SERVERPROPERTY` dans une instruction `SELECT` pour retourner des informations sur l’instance actuelle de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
+## <a name="examples"></a>Exemples
+
+L’exemple suivant utilise la fonction `SERVERPROPERTY` dans une instruction `SELECT` pour retourner des informations sur l’instance actuelle de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
-```  
+```sql
 SELECT  
   SERVERPROPERTY('MachineName') AS ComputerName,
   SERVERPROPERTY('ServerName') AS InstanceName,  
@@ -132,7 +142,6 @@ SELECT
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+[Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  

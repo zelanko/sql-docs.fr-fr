@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1732f099dcdf9ab5119ba288d625ad45384bd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066050"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982879"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "68066050"
 
   Change la propriété d'un élément sécurisable.    
     
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntaxe    
     
@@ -126,27 +126,27 @@ ALTER AUTHORIZATION ON
     
 |||    
 |-|-|    
-|OBJECT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|ASSEMBLY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ASYMMETRIC KEY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|AVAILABILITY GROUP |**S’APPLIQUE À** : SQL Server 2012 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
-|CERTIFICATE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|CONTRACT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|DATABASE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Pour plus d’informations, consultez la section [ALTER AUTHORIZATION pour les bases de données](#AlterDB), ci-dessous.|    
-|ENDPOINT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|FULLTEXT CATALOG|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|FULLTEXT STOPLIST|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|MESSAGE TYPE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|REMOTE SERVICE BINDING|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|ROLE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ROUTE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SCHEMA|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|SEARCH PROPERTY LIST|**S’APPLIQUE À** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|SERVER ROLE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SERVICE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SYMMETRIC KEY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|TYPE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|XML SCHEMA COLLECTION|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|OBJECT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|ASSEMBLY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ASYMMETRIC KEY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|AVAILABILITY GROUP |**S’APPLIQUE À** : SQL Server 2012 et versions ultérieures.|
+|CERTIFICATE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|CONTRACT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
+|DATABASE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Pour plus d’informations, consultez la section [ALTER AUTHORIZATION pour les bases de données](#AlterDB), ci-dessous.|    
+|ENDPOINT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
+|FULLTEXT CATALOG|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|FULLTEXT STOPLIST|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|MESSAGE TYPE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
+|REMOTE SERVICE BINDING|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
+|ROLE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ROUTE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
+|SCHEMA|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|SEARCH PROPERTY LIST|**S’APPLIQUE À** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|SERVER ROLE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
+|SERVICE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
+|SYMMETRIC KEY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|TYPE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|XML SCHEMA COLLECTION|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
     
  *entity_name*    
  Nom de l'entité.    
@@ -328,7 +328,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. Transfert de la propriété d'un point de terminaison à un compte de connexion SQL Server    
  L'exemple suivant transfère la propriété du point de terminaison `CantabSalesServer1` à `JaePak`. Comme le point de terminaison est un élément sécurisable au niveau serveur, il ne peut être transféré qu'à un principal au niveau du serveur.    
     
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.    
     
 ```    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -345,7 +345,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. Changement du propriétaire d’une base de données    
- **S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
+ **S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
     
  L’exemple suivant remplace le propriétaire de la base de données `Parts` par le compte de connexion `MichikoOsada`.    
     

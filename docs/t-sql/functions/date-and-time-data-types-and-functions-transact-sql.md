@@ -21,12 +21,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a823ffd693e770f97811124d77f39763680fb658
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999271"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982956"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Types de données et fonctions de date et d'heure (Transact-SQL)
 
@@ -124,10 +124,10 @@ Les tableaux suivants répertorient les fonctions de date et d’heure [!INCLUDE
 |Fonction|Syntaxe|Valeur retournée|Type de données de retour|Propriété de déterminisme|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Retourne la valeur actuelle, pour la session, de SET DATEFIRST.|**tinyint**|Non déterministe|  
-|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; * *@***number_var* }|Affecte au premier jour de la semaine un nombre allant de 1 à 7.|Non applicable|Non applicable|  
+|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **\@** _number_var_ }|Affecte au premier jour de la semaine un nombre allant de 1 à 7.|Non applicable|Non applicable|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@** _format_var_ }|Définit l’ordre des éléments de date (jour/mois/année) pour enregistrer des données de type **datetime** ou **smalldatetime**.|Non applicable|Non applicable|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Retourne le nom de la langue actuellement utilisée. @@LANGUAGE n’est pas une fonction de date ou d’heure. Toutefois, le paramètre de langue peut affecter la sortie de fonctions de date.|Non applicable|Non applicable|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; * *@***language_var* }|Définit l'environnement de la langue pour la session et les messages système. SET LANGUAGE n'est pas une fonction de date ou d'heure. Toutefois, le paramètre de langue affecte la sortie de fonctions de date.|Non applicable|Non applicable|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; **\@** _language_var_ }|Définit l'environnement de la langue pour la session et les messages système. SET LANGUAGE n'est pas une fonction de date ou d'heure. Toutefois, le paramètre de langue affecte la sortie de fonctions de date.|Non applicable|Non applicable|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _language_ **'** ]|Retourne des informations sur les formats de date de toutes les langues prises en charge. **sp_helplanguage** n’est pas une procédure stockée de date ou d’heure. Toutefois, le paramètre de langue affecte la sortie de fonctions de date.|Non applicable|Non applicable|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Fonctions permettant de valider les valeurs de date et d’heure

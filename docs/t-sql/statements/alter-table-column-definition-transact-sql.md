@@ -21,19 +21,19 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232154"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982076"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Spécifie les propriétés d’une colonne ajoutées à une table à l’aide de l’instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -119,7 +119,7 @@ DOCUMENT
  Spécifie que chaque instance du type de données **xml** dans *column_name* ne peut comprendre qu’un seul élément de niveau supérieur. DOCUMENT s’applique uniquement au type de données **xml** et ne peut être spécifié que si *xml_schema_collection* l’est également.  
   
  *xml_schema_collection*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  S’applique uniquement au type de données **xml** pour l’association d’une collection de schémas XML au type. Avant d’inclure une colonne **xml** dans un schéma, vous devez d’abord créer ce dernier dans la base de données à l’aide de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
@@ -178,12 +178,12 @@ IDENTITY
  Valeur d'incrément ajoutée à la valeur d'identité de la ligne précédemment chargée.  
   
 NOT FOR REPLICATION  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Peut être spécifié pour la propriété IDENTITY. Si cette clause est spécifiée pour la propriété IDENTITY, les valeurs ne sont pas incrémentées dans les colonnes d'identité lorsque les Agents de réplication effectuent des opérations d'insertion.  
   
 ROWGUIDCOL  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie que la colonne est une colonne d'identificateur unique global de ligne. ROWGUIDCOL eut uniquement être affecté à une colonne **uniqueidentifier**, et une seule colonne **uniqueidentifier** par table peut être désignée comme colonne ROWGUIDCOL. ROWGUIDCOL ne peut pas être affecté aux colonnes de types de données définis par l'utilisateur.  
   
@@ -213,14 +213,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Les colonnes doivent être d’un type de données qualifié.  
   
 ALGORITHM  
-**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 Doit être **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Pour plus d’informations, notamment sur les contraintes de fonctionnalité, consultez [Always Encrypted &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie un masque dynamique des données. *mask_function* est le nom de la fonction de masquage avec les paramètres appropriés. Les options suivantes sont disponibles :  
   

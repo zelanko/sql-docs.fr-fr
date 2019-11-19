@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4be7c1494f6f63a87591038265c6b0e63edc83b7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344821"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982215"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT – octroi d'autorisations de base de données (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "68344821"
 
 Permet d'accorder des autorisations sur une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,27 +74,27 @@ AS \<database_principal> Spécifie un principal dont le principal qui exécute c
 *Database_role* Spécifie un rôle de base de données.
 
 *Application_role*
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 Spécifie un rôle d'application.
 
 *Database_user_mapped_to_Windows_User*
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures
 
 Spécifie un utilisateur de base de données mappé sur un utilisateur Windows.
 
 *Database_user_mapped_to_Windows_Group*
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures
 
 Spécifie un utilisateur de base de données mappé à un groupe Windows.
 
 *Database_user_mapped_to_certificate*
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures
 
 Spécifie un utilisateur de base de données mappé sur un certificat.
 
 *Database_user_mapped_to_asymmetric_key*
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures
 
 Spécifie un utilisateur de base de données mappé à une clé asymétrique.
 
@@ -122,7 +122,7 @@ Une base de données est un élément sécurisable contenu par le serveur qui es
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**S'applique à**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -226,7 +226,7 @@ GO
 
  Dans l'exemple ci-dessous, l'autorisation `SHOWPLAN` sur la base de données `AdventureWorks2012` est accordée au rôle d'application `AuditMonitor`.
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 ```sql
 USE AdventureWorks2012;

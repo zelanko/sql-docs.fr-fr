@@ -1,7 +1,7 @@
 ---
 title: Ingérer des données avec des travaux Spark
 titleSuffix: SQL Server big data clusters
-description: Ce didacticiel montre comment ingérer des données dans le pool de données d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] à l’aide de travaux Spark dans Azure Data Studio.
+description: Ce tutoriel montre comment ingérer des données dans le pool de données d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] à l’aide de travaux Spark dans Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
-ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182631"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119199"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Didacticiel : réception de données dans un pool de données SQL Server avec des travaux Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutoriel : Ingérer des données dans un pool de données SQL Server avec des travaux Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ce didacticiel montre comment utiliser des travaux Spark pour charger des données dans le [pool de données](concept-data-pool.md) d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
+Ce tutoriel montre comment utiliser des travaux Spark pour charger des données dans le [pool de données](concept-data-pool.md) d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
 Dans ce tutoriel, vous allez apprendre à :
 
@@ -32,7 +32,7 @@ Dans ce tutoriel, vous allez apprendre à :
 > [!TIP]
 > Si vous préférez, vous pouvez télécharger et exécuter un script pour les commandes de ce tutoriel. Pour obtenir des instructions, consultez les [exemples de pools de données](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) sur GitHub.
 
-## <a id="prereqs"></a> Prérequis
+## <a id="prereqs"></a> Conditions préalables
 
 - [Outils Big Data](deploy-big-data-tools.md)
    - **kubectl**
@@ -79,11 +79,11 @@ Les étapes suivantes permettent de créer une table externe nommée **web_click
 
 ## <a name="start-a-spark-streaming-job"></a>Démarrer un travail de streaming Spark
 
-L’étape suivante consiste à créer un travail de streaming Spark afin de charger des données de parcours web issues du pool de stockage (HDFS) dans la table externe que vous avez créée dans le pool de données. Ces données ont été ajoutées à/clickstream_data dans [charger des exemples de données dans votre cluster Big Data](tutorial-load-sample-data.md).
+L’étape suivante consiste à créer un travail de streaming Spark afin de charger des données de parcours web issues du pool de stockage (HDFS) dans la table externe que vous avez créée dans le pool de données. Ces données ont été ajoutées à /clickstream_data dans [Charger des exemples de données dans votre cluster Big Data](tutorial-load-sample-data.md).
 
 1. Dans Azure Data Studio, connectez-vous à l’instance maître de votre cluster Big Data. Pour plus d’informations, consultez [Se connecter à un cluster Big Data](connect-to-big-data-cluster.md).
 
-2. Créer un nouveau bloc-notes et sélectionner Spark | Scala comme noyau.
+2. Créez un notebook et sélectionnez Spark | Scala comme noyau.
 
 3. Exécuter le travail d’ingestion Spark
    1. Configurer les paramètres du connecteur Spark-SQL
@@ -99,8 +99,9 @@ L’étape suivante consiste à créer un travail de streaming Spark afin de cha
       val datapool_table = "web_clickstreams_spark_results"
       val datasource_name = "SqlDataPool"
       val schema = StructType(Seq(
-      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
-      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      StructField("wcs_click_date_sk",LongType,true), StructField("wcs_click_time_sk",LongType,true), 
+      StructField("wcs_sales_sk",LongType,true), StructField("wcs_item_sk",LongType,true),
+      StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
       val hostname = "master-0.master-svc"
@@ -108,7 +109,7 @@ L’étape suivante consiste à créer un travail de streaming Spark afin de cha
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```
    2. Définir et exécuter le travail Spark
-      * Chaque travail se compose de deux parties : readStream et writeStream. Ci-dessous, nous créons une trame de données à l’aide du schéma défini ci-dessus, puis nous écrivons dans la table externe du pool de données.
+      * Chaque travail comporte deux parties : readStream et writeStream. Ci-dessous, nous créons une trame de données à l’aide du schéma défini ci-dessus, puis nous écrivons dans la table externe du pool de données.
       ```
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
       
@@ -131,9 +132,9 @@ L’étape suivante consiste à créer un travail de streaming Spark afin de cha
 
 Les étapes suivantes montrent que le travail de streaming Spark a chargé les données HDFS dans le pool de données.
 
-1. Avant d’interroger les données ingérées, examinez l’état d’exécution Spark, y compris l’ID d’application de fil, l’interface utilisateur Spark et les journaux de pilote.
+1. Avant d’interroger les données ingérées, examinez l’état d’exécution Spark, y compris l’ID d’application Yarn, l’interface utilisateur Spark et les journaux de pilote.
 
-   ![Détails de l’exécution Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
+   ![Détails de l’exécution du travail](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Revenez à la fenêtre de la requête de l’instance maître SQL Server que vous avez ouverte au début de ce tutoriel.
 
@@ -145,7 +146,7 @@ Les étapes suivantes montrent que le travail de streaming Spark a chargé les d
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
-1. Les données peuvent également être interrogées dans Spark. Par exemple, le code ci-dessous affiche le nombre d’enregistrements dans la table :
+1. Les données peuvent également être interrogées dans Spark. Par exemple, le code ci-dessous imprime le nombre d’enregistrements dans la table :
    ```
    def df_read(dbtable: String,
                 url: String,

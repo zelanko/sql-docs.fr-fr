@@ -1,6 +1,5 @@
 ---
-title: Vérifier l’état des messages électroniques envoyés avec la messagerie de base de données | Microsoft Docs
-ms.custom: ''
+title: État des e-mails envoyés avec Database Mail
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11b8160bd47061d226ecd6da01353da718b53dea
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4d3fc240c155632a764025dbd8519385a9d4c6c2
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228448"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095726"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Vérifier l'état des messages électroniques envoyés avec la messagerie de base de données
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Journal et audits de la messagerie de base de données](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   

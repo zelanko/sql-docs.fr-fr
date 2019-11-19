@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fda5419756689df6b9be1fda9a792c14229c1ce
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 50c5edee93747c98060d664f1edd2d42036aa9b2
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632846"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982664"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -145,7 +145,7 @@ Associe le groupe de charge de travail au pool de ressources défini par l’uti
 > Les groupes de charges de travail et les pools de ressources prédéfinis utilisent tous des noms minuscules, tels que "default". Ce facteur doit être pris en considération pour les serveurs qui utilisent un classement qui respecte la casse. Les serveurs avec un classement qui ne respecte pas la casse, tel que SQL_Latin1_General_CP1_CI_AS, traitent "default" et "Default" comme identiques.
 
 EXTERNAL external_pool_name | "default"     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
 
 Le groupe de charge de travail peut spécifier un pool de ressources externes. Vous pouvez définir un groupe de charge de travail et l’associer à deux pools :
 

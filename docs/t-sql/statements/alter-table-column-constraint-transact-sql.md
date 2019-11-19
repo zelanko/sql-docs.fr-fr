@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 25d7cc42f65e762ad0a83546aeeb5621c094636c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070460"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982008"
 ---
-# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
+# <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Spécifie les propriétés d’une contrainte PRIMARY KEY, FOREIGN KEY, UNIQUE ou CHECK qui fait partie d’une nouvelle définition de colonne ajoutée à une table à l’aide d’[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68070460"
 > [!IMPORTANT]  
 >  Dans la documentation, l’indication que WITH FILLFACTOR = *fillfactor* constitue l’unique option d’indexation s’appliquant aux contraintes PRIMARY KEY ou UNIQUE est maintenue dans un but de compatibilité ascendante, mais ne sera plus indiquée ainsi dans les versions à venir. D’autres options d’indexation peuvent être spécifiées dans la clause [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) d’ALTER TABLE.  
   
- ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie le lieu de stockage de l'index créé pour la contrainte. Si *partition_scheme_name* est spécifié, l’index est partitionné et les partitions qui en découlent sont mappées aux groupes de fichiers indiqués par *partition_scheme_name*. Si *filegroup* est spécifié, l’index est créé dans le groupe de fichiers nommé. Si **"** default **"** est spécifié ou si l’option ON n’est pas du tout définie, l’index est créé dans le même groupe de fichiers que celui de la table. Si l'option ON est spécifiée lors de l'ajout d'un index cluster pour une contrainte PRIMARY KEY ou UNIQUE, la table dans son intégralité est déplacée dans le groupe de fichiers spécifié lorsque l'index cluster est créé.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "68070460"
  Par contre, si la valeur NO ACTION est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] déclenche une erreur et annule l’action de mise à jour de chaque ligne dans la table **Vendor** si au moins une ligne fait référence à chaque ligne dans la table **ProductVendor**.  
   
  NOT FOR REPLICATION  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Peut être indiqué aussi bien pour les contraintes FOREIGN KEY que CHECK. Si cette clause est spécifiée pour une contrainte, la contrainte n'est pas appliquée lorsque les agents de réplication effectuent des opérations d'insertion, de mise à jour ou de suppression.  
   

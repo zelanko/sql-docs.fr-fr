@@ -24,24 +24,24 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c65d0a8f7e435bb82bcbce43aa1fc27523e006cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094972"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981935"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Cette rubrique décrit comment créer les types courants d'utilisateurs de base de données. On dénombre onze types d'utilisateurs. La liste complète est fournie dans la rubrique [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Tous les types de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les utilisateurs de base de données, mais pas nécessairement tous les types d'utilisateurs.  
+  Cette rubrique décrit comment créer les types courants d'utilisateurs de base de données. Il existe onze types d’utilisateurs. La liste complète est fournie dans la rubrique [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Tous les types de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les utilisateurs de base de données, mais pas nécessairement tous les types d'utilisateurs.  
   
  Vous pouvez créer un utilisateur de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ##  <a name="Understanding"></a> Présentation des types d'utilisateurs  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] présente 6 options de création d'un utilisateur de base de données. L’image suivante montre les 6 options dans la zone verte et indique ce qu'elles représentent.  
   
- ![Types_utilisateurs](../../../relational-databases/security/authentication-access/media/typesofusers.png "Types_utilisateurs")  
+ ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### <a name="selecting-the-type-of-user"></a>Sélectionnez le type d'utilisateur  
  **Connexion ou utilisateur non mappé à une connexion**  

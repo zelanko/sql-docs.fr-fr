@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149991"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056751"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Choisir une méthode de mise à niveau du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.m
   
 -   Pour télécharger [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   Vous avez un compte Azure ?  Cliquez **[ici](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** pour lancer une machine virtuelle avec [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition déjà installé.  
+-   Vous avez un compte Azure ?  Cliquez **[ici](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** pour lancer une machine virtuelle avec [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition déjà installé.  
   
 > [!NOTE]  
 >  Vous pouvez également envisager de mettre à niveau la Base de données SQL Azure ou de virtualiser votre environnement SQL Server dans le cadre de votre plan de mise à niveau. Bien que ces sujets ne soient pas abordés dans cet article, voici quelques liens :
@@ -57,7 +57,7 @@ Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.m
   
  Le diagramme suivant fournit une vue d’ensemble des étapes requises pour une mise à niveau sur place du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- ![Mise à niveau du moteur de base de données - Mise à niveau sur place sans configuration à haute disponibilité](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Mise à niveau du moteur de base de données - Mise à niveau sur place sans configuration à haute disponibilité")  
+ ![Mise à niveau du moteur de base de données - Mise à niveau sur place sans configuration à haute disponibilité](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Mise à niveau du moteur de base de données - Mise à niveau sur place sans configuration à haute disponibilité")  
   
  Pour obtenir des instructions détaillées, consultez [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -95,11 +95,11 @@ Les étapes requises pour une nouvelle mise à niveau d’installation varient l
   
 -   **Environnement de stockage connecté :** Si vous avez un environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant un stockage connecté, le diagramme suivant et les liens qu’il contient vous guident dans les étapes nécessaires à la mise à niveau de la nouvelle installation vers [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Nouvelle méthode de mise à niveau de l’installation utilisant la sauvegarde et la restauration pour le stockage connecté](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Nouvelle méthode de mise à niveau de l’installation utilisant la sauvegarde et la restauration pour le stockage connecté")  
+     ![Nouvelle méthode de mise à niveau d’installation utilisant la sauvegarde et la restauration pour le stockage attaché](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Nouvelle méthode de mise à niveau d’installation utilisant la sauvegarde et la restauration pour le stockage attaché")  
   
 -   **Environnement de stockage SAN :**  Si vous avez un environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant un stockage SAN, le diagramme suivant et les liens qu’il contient vous guident dans les étapes nécessaires à la mise à niveau de la nouvelle installation vers [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Nouvelle méthode de mise à niveau de l’installation utilisant le détachement et l’attachement pour le stockage SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nouvelle méthode de mise à niveau de l’installation utilisant le détachement et l’attachement pour le stockage SAN")  
+     ![Nouvelle méthode de mise à niveau d’installation utilisant le détachement et l’attachement pour le stockage SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nouvelle méthode de mise à niveau d’installation utilisant le détachement et l’attachement pour le stockage SAN")  
   
 ## <a name="rolling-upgrade"></a>Mise à niveau propagée  
  Une mise à niveau propagée est requise dans les environnements de solution SQL Server impliquant plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doivent être mises à niveau dans un certain ordre afin d’optimiser le temps de fonctionnement, de minimiser les risques et de préserver la fonctionnalité. Une mise à niveau propagée est essentiellement la mise à niveau de plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un ordre spécifique, soit en effectuant une mise à niveau sur place sur chaque instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existante, soit en effectuant une mise à niveau via une nouvelle installation pour faciliter la mise à niveau du matériel et/ou du système d’exploitation dans le cadre du projet de mise à niveau. Il existe plusieurs scénarios dans lesquels vous devez utiliser l’approche de mise à niveau propagée. Ces résultats sont décrits dans les articles suivants :  

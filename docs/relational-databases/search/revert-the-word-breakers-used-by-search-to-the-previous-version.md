@@ -1,5 +1,5 @@
 ---
-title: Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche | Microsoft Docs
+title: Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -10,14 +10,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf635c951c4705fcb726d4122414740b5293cc47
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903811"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055186"
 ---
-# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
+# <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche (Recherche SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe et active une version des analyseurs lexicaux et des générateurs de formes dérivées pour toutes les langues prises en charge par la recherche en texte intégral à l’exception du coréen. Cet article décrit comment passer de cette version de ces composants à la version précédente, ou de la version précédente à la nouvelle version.  
   

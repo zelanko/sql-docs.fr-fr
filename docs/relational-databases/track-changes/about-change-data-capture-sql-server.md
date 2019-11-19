@@ -1,5 +1,6 @@
 ---
-title: À propos de la capture de données modifiées (SQL Server) | Microsoft Docs
+title: À propos de la capture de données modifiées
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd94fae8b2e66cec1d82e8548f00c27455e4e737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058108"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095330"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68058108"
 ## <a name="change-data-capture-data-flow"></a>Flux de données de capture de données modifiées  
  L'illustration suivante décrit le flux de données principal pour la capture de données modifiées.  
   
- ![Change data capture data flow](../../relational-databases/track-changes/media/cdcdataflow.gif "Change data capture data flow")  
+ ![Flux de données de capture des changements de données](../../relational-databases/track-changes/media/cdcdataflow.gif "Flux de données de capture de données modifiées")  
   
  La source des données modifiées pour la capture de données modifiées est le journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . À mesure que des insertions, des mises à jour et des suppressions sont appliquées aux tables sources suivies, les entrées qui décrivent ces modifications sont ajoutées au journal. Le journal sert d’entrée au processus de capture. Le journal est lu et les informations relatives aux modifications sont ajoutées à la table de modifications associée de la table faisant l’objet d’un suivi. Des fonctions sont fournies afin d'énumérer les modifications qui apparaissent dans les tables de modifications sur une plage spécifiée ; ces fonctions retournent les informations sous la forme d'un jeu de résultats filtré. Le jeu de résultats filtré est utilisé en général par un processus d'application pour mettre à jour une représentation de la source dans un environnement externe.  
   

@@ -1,6 +1,5 @@
 ---
-title: Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Spécifier une longueur de préfixe dans des fichiers de données avec bcp
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,14 +15,15 @@ ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a3aa4fba82638e262800f458f4b7d73298ddfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062463"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056370"
 ---
-# <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
+# <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
   

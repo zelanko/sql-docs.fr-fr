@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713190"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982279"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ KEEPFIXED PLAN
 Force l’optimiseur de requête à ne pas recompiler une requête en raison de modifications enregistrées au niveau des statistiques. KEEPFIXED PLAN permet de garantir qu’une requête n’est recompilée que si le schéma des tables sous-jacentes est modifié ou si **sp_recompile** s’exécute sur ces tables.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
   
 Empêche la requête d’utiliser un index columnstore non-cluster à mémoire optimisée. Si la requête contient l’indicateur de requête pour éviter l’utilisation de l’index columnstore et un indicateur d’index pour utiliser un index columnstore, les indicateurs sont en conflit et la requête retourne une erreur.  
   

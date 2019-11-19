@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909077"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982447"
 ---
 # <a name="database-file-initialization"></a>Initialisation des fichiers de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Pour accorder l'autorisation `Perform volume maintenance tasks` à un compte
 > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez accorder cette autorisation au compte de service au moment de l’installation. Si vous effectuez [l’installation depuis une invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), ajoutez l’argument /SQLSVCINSTANTFILEINIT ou cochez la case *Accorder le privilège Effectuer une tâche de maintenance en volume au service Moteur de base de données SQL Server* dans [l’Assistant Installation](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
 
 > [!NOTE]
-> À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, et de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez utiliser la colonne *instant_file_initialization_enabled* dans la vue de gestion dynamique [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) pour déterminer si l’initialisation instantanée de fichiers est activée.
+> À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 et de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures, vous pouvez utiliser la colonne *instant_file_initialization_enabled* dans la vue de gestion dynamique [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) pour déterminer si l’initialisation instantanée de fichiers est activée.
 
 ## <a name="remarks"></a>Notes
 Si le compte de démarrage de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispose de l’autorisation *SE_MANAGE_VOLUME_NAME*, un message d’information similaire au suivant est journalisé dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au démarrage : 
@@ -78,7 +78,7 @@ Si le compte de démarrage de service [!INCLUDE[ssNoVersion](../../includes/ssno
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 et de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 et de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
 
 ## <a name="security-considerations"></a>Considérations relatives à la sécurité  
 Quand vous utilisez l’initialisation instantanée de fichiers (IFI), comme le contenu du disque supprimé n’est remplacé qu’au moment où de nouvelles données sont écrites dans les fichiers, il est éventuellement accessible à un principal non autorisé jusqu’à ce que d’autres données soient écrites sur cette zone spécifique du fichier de données. Même si le fichier de base de données est attaché à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le risque de divulgation de ces informations est limité par la liste de contrôle d’accès discrétionnaire (DACL, Discretionary Access Control List) du fichier. Cette liste DACL n'autorise l'accès au fichier qu'à l'administrateur local et au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cependant, quand le fichier est détaché, un utilisateur ou un service ne bénéficiant pas de l’autorisation *SE_MANAGE_VOLUME_NAME* peut y accéder. Cette situation se présente aussi quand la base de données est sauvegardée : si le fichier de sauvegarde n’est pas protégé par une liste DACL appropriée, le contenu supprimé peut devenir accessible à un utilisateur ou à un service non autorisé.  

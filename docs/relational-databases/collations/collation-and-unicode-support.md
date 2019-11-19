@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680778"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982822"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et des classements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Quand vous utilisez seulement des colonnes de caractères et des pages de codes,
 Il est difficile de sélectionner une page de codes pour des types de données caractères qui va prendre en charge tous les caractères requis pour une audience internationale. Le moyen le plus simple de gérer les données de type caractère dans les bases de données internationales est de toujours utiliser un type de données qui prend en charge Unicode. 
 
 ### <a name="unicode-data-types"></a>Types de données Unicode
-Si vous stockez des données caractères qui reflètent plusieurs langues dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), utilisez des types de données Unicode (**nchar**, **nvarchar** et **ntext**) au lieu de types de données non-Unicode (**char**, **varchar** et **text**). 
+Si vous stockez des données caractères qui reflètent plusieurs langues dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures ), utilisez des types de données Unicode (**nchar**, **nvarchar** et **ntext**) au lieu de types de données non-Unicode (**char**, **varchar** et **text**). 
 
 > [!NOTE]
 > Pour les types de données Unicode, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] peut représenter jusqu'à 65 535 caractères à l’aide de UCS-2 ou la plage Unicode complète (1 114 111 caractères) si les caractères supplémentaires sont utilisés. Pour plus d’informations sur l’activation de caractères supplémentaires, consultez [Caractères supplémentaires](#Supplementary_Characters).
@@ -473,7 +473,7 @@ Lorsque vous déplacez des données d'un serveur vers un client, votre classemen
 > [!TIP]
 > Vous pouvez également essayer d'utiliser un autre classement pour les données du serveur. Choisissez un classement qui établit un mappage à une page de codes du client.    
 >
-> Pour utiliser les classements UTF-16 disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) afin d’améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous pouvez sélectionner un des classements (\_SC) de caractères supplémentaires ou un des classements de la version 140.    
+> Pour utiliser les classements UTF-16 disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) afin d’améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous pouvez sélectionner un des classements (\_SC) de caractères supplémentaires ou un des classements de la version 140.    
  
 Pour utiliser les classements UTF-8 disponibles dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous devez sélectionner des classements compatibles avec l’encodage UTF-8 (\_UTF8).
  

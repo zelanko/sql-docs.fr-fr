@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882425"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926048"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article présente l’incorporation (inlining) des fonctions UDF scalaires. Il s’agit d’une fonctionnalité qui est prise en charge dans la suite de fonctionnalités de [traitement intelligent des requêtes](../../relational-databases/performance/intelligent-query-processing.md). Cette fonctionnalité améliore les performances des requêtes qui appellent des fonctions UDF scalaires dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+Cet article présente l’incorporation (inlining) des fonctions UDF scalaires. Il s’agit d’une fonctionnalité qui est prise en charge dans la suite de fonctionnalités de [traitement intelligent des requêtes](../../relational-databases/performance/intelligent-query-processing.md). Cette fonctionnalité améliore les performances des requêtes qui appellent des fonctions UDF scalaires dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Fonctions UDF (définies par l’utilisateur) scalaires T-SQL
 Les fonctions définies par l’utilisateur (UDF) qui sont implémentées dans [!INCLUDE[tsql](../../includes/tsql-md.md)] et qui retournent une valeur de données unique sont appelées fonctions UDF (définies par l’utilisateur) scalaires T-SQL. Les fonctions UDF T-SQL offrent une façon élégante de réutiliser le code et d’assurer la modularité entre les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Certains calculs (tels que des règles métier complexes) sont plus faciles à exprimer sous forme de fonctions UDF impératives. Les fonctions UDF favorisent la création d’une logique complexe sans devoir savoir écrire des requêtes SQL complexes.
@@ -134,7 +134,7 @@ Comme mentionné précédemment, le plan de requête n’a plus d’opérateur d
 Selon la complexité de la logique dans la fonction UDF, le plan de requête obtenu peut également grandir et se complexifier. Comme nous pouvons le constater, les opérations au sein de la fonction UDF ne sont plus une boîte noire et, par conséquent, l’optimiseur de requête est en mesure d’évaluer le coût de ces opérations et de les optimiser. En outre, comme la fonction UDF n’est plus dans le plan, l’appel itératif de la fonction UDF est remplacé par un plan qui permet d’éviter toute surcharge d’appel de fonction.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Exigences des fonctions UDF scalaires incorporables
-Une fonction UDF T-SQL scalaire peut être incorporée si toutes les conditions suivantes sont remplies :
+<a name="requirements"></a> Une fonction UDF T-SQL scalaire peut être incorporée si toutes les conditions suivantes sont remplies :
 
 - La fonction UDF est écrite à l’aide des constructions suivantes :
     - `DECLARE`, `SET` : déclaration et affectations des variables.
@@ -165,7 +165,7 @@ Une fonction UDF T-SQL scalaire peut être incorporée si toutes les conditions 
 Pour chaque fonction UDF scalaire T-SQL, la vue de catalogue [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) inclut une propriété appelée `is_inlineable`, qui indique si une fonction UDF est incorporable ou non. 
 
 > [!NOTE]
-> La propriété `is_inlineable` est dérivée des constructions trouvées dans la définition UDF. Elle ne vérifie pas si la fonction définie par l’utilisateur est incorporable au moment de la compilation. Pour plus d’informations, consultez les conditions d’incorporation ci-dessous.
+> La propriété `is_inlineable` est dérivée des constructions trouvées dans la définition UDF. Elle ne vérifie pas si la fonction définie par l’utilisateur est incorporable au moment de la compilation. Pour plus d’informations, consultez les [conditions d’incorporation](#requirements).
 
 La valeur 1 indique qu’elle est incorporable, et 0 indique le contraire. Cette propriété a également la valeur 1 pour toutes les fonctions table inline. Pour tous les autres modules, la valeur est 0.
 
@@ -258,7 +258,7 @@ Comme cela est décrit dans cet article, l’incorporation des fonctions UDF sca
 1. Les indicateurs de jointure au niveau des requêtes ne sont peut-être plus valides, car l’incorporation peut introduire de nouvelles jointures. Les indicateurs de jointure locaux doivent être utilisés à la place.
 1. Les vues qui référencent des fonctions UDF scalaires inline ne peuvent pas être indexées. Si vous avez besoin de créer un index sur ces vues, désactivez l’incorporation pour les fonctions UDF référencées.
 1. Il peut y avoir des différences de comportement de [Dynamic Data Masking](../security/dynamic-data-masking.md) avec l’incorporation des données UDF. Dans certaines situations (selon la logique utilisée dans la fonction UDF), l’incorporation peut être plus conservatrice que le masquage des colonnes de sortie. Dans les scénarios où les colonnes référencées dans une fonction UDF ne sont pas les colonnes de sortie, elles ne sont pas masquées. 
-1. Si une fonction UDF référence des fonctions intégrées telles que `SCOPE_IDENTITY()`, la valeur retournée par la fonction intégrée change avec l’incorporation. Ce changement de comportement est dû au fait que l’incorporation modifie l’étendue des instructions au sein de la fonction UDF.
+1. Si une fonction UDF référence des fonctions intégrées telles que `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, la valeur retournée par la fonction intégrée change avec l’incorporation. Ce changement de comportement est dû au fait que l’incorporation modifie l’étendue des instructions au sein de la fonction UDF.
 
 ## <a name="see-also"></a>Voir aussi
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

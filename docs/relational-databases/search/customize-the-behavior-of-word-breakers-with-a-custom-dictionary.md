@@ -1,6 +1,6 @@
 ---
-title: Personnaliser le comportement des analyseurs lexicaux avec un dictionnaire personnalisé | Microsoft Docs
-ms.custom: ''
+title: Personnaliser le comportement des analyseurs lexicaux avec un dictionnaire personnalisé
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,14 +11,14 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 548072483f4a6c8ea0669fce13aaab0595ec4c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 806d2f7aa35fc3299f22dbd1c3423834aaa8936f
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082940"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056244"
 ---
-# <a name="customize-the-behavior-of-word-breakers-with-a-custom-dictionary"></a>Personnaliser le comportement des analyseurs lexicaux avec un dictionnaire personnalisé
+# <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>Personnaliser le comportement des analyseurs lexicaux avec un dictionnaire personnalisé (Recherche SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vous pouvez personnaliser le comportement de l'analyseur lexical pour une langue particulière en créant un fichier de dictionnaire personnalisé propre à une langue. Par exemple, vous pouvez empêcher l'analyseur lexical de séparer certains termes ou modèles.  
   

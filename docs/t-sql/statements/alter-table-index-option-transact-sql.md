@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f40e6713c80c0f340303d0b62b629f53285c2e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070224"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982017"
 ---
-# <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
+# <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Spécifie un ensemble d’options applicables à un index qui fait partie d’une définition de contrainte créée à l’aide d’[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68070224"
   
 ## <a name="arguments"></a>Arguments  
  PAD_INDEX **=** { ON | **OFF** }  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie le remplissage de l'index. La valeur par défaut est OFF.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68070224"
  Les pages de niveau intermédiaire sont remplies jusqu'à la presque totalité de la capacité, laissant suffisamment d'espace pour au moins une ligne de la taille maximale possible de l'index, compte tenu du jeu de clés des pages intermédiaires.  
   
  FILLFACTOR **=** _fillfactor_  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie un pourcentage indiquant le taux de remplissage appliqué par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au niveau feuille de chaque page d'index lors de la création ou de la modification de l'index. La valeur spécifiée doit être un entier compris entre 1 et 100. La valeur par défaut est 0.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68070224"
  La mise à jour automatique des statistiques est activée.  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Indique si les verrous de ligne sont autorisés ou non. La valeur par défaut est ON.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68070224"
  Les verrous de ligne ne sont pas utilisés.  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Indique si les verrous de page sont autorisés. La valeur par défaut est ON.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68070224"
 Spécifie s’il faut optimiser ou pas la contention d’insertion de la dernière page. La valeur par défaut est OFF. Consultez la section [clés séquentielles](./create-index-transact-sql.md#sequential-keys) de la page CREATE INDEX pour plus d’informations.
  
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Indique si les résultats du tri doivent être stockés dans **tempdb**. La valeur par défaut est OFF.  
   
@@ -150,7 +150,7 @@ Spécifie s’il faut optimiser ou pas la contention d’insertion de la derniè
  Les résultats de tri intermédiaires sont stockés dans la même base de données que l'index.  
   
  ONLINE **=** { ON | **OFF** }  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Indique si les tables sous-jacentes et les index associés sont disponibles pour les requêtes et la modification de données pendant l'opération d'index. La valeur par défaut est OFF. REBUILD peut être effectué en tant qu'opération ONLINE.  
   
@@ -172,7 +172,7 @@ Spécifie s’il faut optimiser ou pas la contention d’insertion de la derniè
 >  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MAXDOP **=** _max_degree_of_parallelism_  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Remplace l’option de configuration **max degree of parallelism** pendant la durée de l’opération d’index. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
@@ -188,7 +188,7 @@ Spécifie s’il faut optimiser ou pas la contention d’insertion de la derniè
 >  Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  DATA_COMPRESSION  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie l'option de compression de données pour la table, le numéro de partition ou la plage de partitions spécifiés. Les options disponibles sont les suivantes :  
   
@@ -202,18 +202,18 @@ Spécifie s’il faut optimiser ou pas la contention d’insertion de la derniè
  La table ou les partitions spécifiées sont compressées au moyen de la compression de page. S'applique uniquement aux tables rowstore ; ne s'applique pas aux tables columnstore.  
   
  COLUMNSTORE  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
  S'applique uniquement aux tables columnstore. COLUMNSTORE spécifie qu'il faut décompresser une partition compressée à l'aide de l'option COLUMNSTORE_ARCHIVE. Quand les données sont restaurées, l’index COLUMNSTORE continue à être compressé à l’aide de la compression de columnstore utilisée pour toutes les tables columnstore.  
   
  COLUMNSTORE_ARCHIVE  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
  S'applique uniquement aux tables columnstore, qui sont des tables stockées avec un index cluster columnstore. COLUMNSTORE_ARCHIVE compresse davantage la partition spécifiée en une plus petite taille. Peut être utilisé pour l'archivage, ou d'autres situations qui nécessitent moins de stockage et supportent plus de temps pour le stockage et la récupération.  
   
  Pour plus d’informations sur la compression, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie les partitions auxquelles le paramètre DATA_COMPRESSION s'applique. Si la table n’est pas partitionnée, l’argument ON PARTITIONS génère une erreur. Si la clause ON PARTITIONS n’est pas fournie, l’option DATA_COMPRESSION s’applique à toutes les partitions d’une table partitionnée.  
   
@@ -252,7 +252,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
 -   DATA_COMPRESSION  
   
 **low_priority_lock_wait**  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
  Un **SWITCH** ou une reconstruction d’index en ligne se termine dès qu’il n’y a aucune opération bloquante pour cette table. *WAIT_AT_LOW_PRIORITY* indique que si l’opération **SWITCH** ou l’opération de reconstruction d’index en ligne ne peut pas être fermée immédiatement, elle attend. L’opération contient des verrous de faible priorité, ce qui permet à d’autres opérations qui contiennent des verrous en conflit avec les instructions DDL de continuer. Omettre l’option **WAIT AT LOW PRIORITY** équivaut à `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   

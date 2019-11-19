@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017607"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119205"
 ---
 # <a name="select-examples-transact-sql"></a>Exemples SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017607"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. Utilisation de sous-requêtes corrélées  
+## <a name="e-using-correlated-subqueries"></a>E. Utilisation de sous-requêtes corrélées
+Une sous-requête corrélée est une requête dont les valeurs dépendent de la requête externe. Cette requête peut être exécutée de manière répétitive, une fois pour chaque ligne que la requête externe pourrait sélectionner.
+
  L'exemple suivant montre des requêtes sémantiquement équivalentes et illustre la différence entre l'utilisation du mot clé `EXISTS` et celle du mot clé `IN`. Les deux exemples illustrent une sous-requête valide qui extrait une instance de chaque nom de produit dont le modèle est un pull-over à manches longues (« long sleeve logo jersey »), et dont le numéro `ProductModelID` se trouve dans les tables `Product` et `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- L'exemple suivant utilise `IN` dans une sous-requête en corrélation ou répétitive. Il s'agit d'une requête dont les valeurs dépendent de la requête externe. La requête est exécutée de manière répétitive, une fois pour chaque ligne que la requête externe pourrait sélectionner. Cette requête extrait une instance du prénom et du nom de chaque employé dont la prime dans la table `SalesPerson` est égale à `5000.00` et dont le numéro d'identification d'employé se trouve dans les tables `Employee` et `SalesPerson`.  
+ L’exemple suivant utilise `IN` et extrait une instance du prénom et du nom de chaque employé dont la prime dans la table `SalesPerson` est égale à `5000.00` et dont le numéro d’identification d’employé se trouve dans les tables `Employee` et `SalesPerson`.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

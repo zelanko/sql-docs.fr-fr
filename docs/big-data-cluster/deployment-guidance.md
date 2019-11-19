@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532048"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127376"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -68,6 +68,12 @@ kubectl config view
 > Si vous déployez sur un cluster Kubernetes à plusieurs nœuds que vous avez démarré à l’aide de `kubeadm`, avant de démarrer le déploiement du cluster Big Data, assurez-vous que les horloges sont synchronisées entre tous les nœuds Kubernetes ciblés par le déploiement. Le cluster Big Data intègre des propriétés d’intégrité temporaires pour différents services et des décalages d’horloge peuvent entraîner un état incorrect.
 
 Après avoir configuré votre cluster Kubernetes, vous pouvez passer au déploiement d’un nouveau cluster Big Data SQL Server. Si vous effectuez une mise à niveau à partir d’une version précédente, consultez [Guide pratique pour mettre à niveau des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="ensure-you-have-storage-configured"></a>Vérifier que le stockage est configuré
+
+pour que la plupart des déploiements de cluster Big Data disposent d’un stockage persistant. À ce stade, vous devez vous assurer de disposer d’un plan pour la façon dont vous allez fournir un stockage persistant sur le cluster Kubernetes avant de déployer le cluster Big Data.
+
+Si vous déployez dans AKS, aucune configuration de stockage n’est nécessaire. AKS fournit des classes de stockage intégrées au provisionnement dynamique. Vous pouvez personnaliser la classe de stockage (`default` ou `managed-premium`) dans le fichier de configuration de déploiement. Les profils intégrés utilisent une classe de stockage `default`. Si vous déployez sur un cluster Kubernetes que vous avez déployé à l’aide de `kubeadm`, vous devez vous veiller à disposer d’un espace de stockage suffisant pour qu’un cluster de l’échelle souhaitée soit disponible et son utilisation configurée. Si vous souhaitez personnaliser la façon dont votre stockage est utilisé, vous devez le faire avant de continuer. Consultez [Persistance des données avec un cluster Big Data SQL Server sur Kubernetes](concept-data-persistence.md).
 
 ## <a id="deploy"></a> Vue d’ensemble du déploiement
 

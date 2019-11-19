@@ -1,6 +1,5 @@
 ---
-title: Conserver des valeurs d’identité lors de l’importation de données en bloc (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Conserver des valeurs d’identité lors de l’importation de données en bloc
 ms.date: 09/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,14 +14,15 @@ ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60ca98e5e0e00239293de34f90f015028464d1bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896683"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055971"
 ---
-# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d'identité lors de l'importation de données en bloc (SQL Server)
+# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d’identité lors de l’importation de données en bloc (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Les fichiers de données contenant des valeurs d’identité peuvent être importés en bloc dans une instance de Microsoft SQL Server.  Par défaut, les valeurs de la colonne d'identité du fichier de données importé sont ignorées et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte automatiquement des valeurs uniques.  Ces valeurs uniques reposent sur les valeurs de départ et d'incrément spécifiées lors de la création de la table.
 

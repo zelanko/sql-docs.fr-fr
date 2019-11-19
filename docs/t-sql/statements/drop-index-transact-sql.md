@@ -32,12 +32,12 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba3db3dae69f7b8353fd4f6a00e333b0e28be7f9
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155429"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982163"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "70155429"
 > [!IMPORTANT]
 >  La syntaxe définie dans `<drop_backward_compatible_index>` sera supprimée dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette syntaxe dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt la syntaxe spécifiée sous `<drop_relational_or_xml_index>`. Les index XML ne peuvent pas être supprimés à l'aide d'une syntaxe à compatibilité descendante.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -129,12 +129,12 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  Azure SQL Database prend en charge le format de nom en trois parties nom_bd.[nom_schéma].nom_objet lorsque nom_bd correspond à la base de données active ou lorsque nom_bd est tempdb et nom_objet commence par #.  
   
  \<drop_clustered_index_option>  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Contrôle les options d'index cluster. Ces options ne peuvent pas être utilisées avec d'autres types d'index.  
   
  MAXDOP = *max_degree_of_parallelism*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (niveaux de performance P2 et P3 uniquement).  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (niveaux de performance P2 et P3 uniquement).  
   
  Remplace l’option de configuration **max degree of parallelism** pendant la durée de l’opération d’index. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
@@ -158,7 +158,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  Les opérations d'index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ONLINE = ON | **OFF**  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indique si les tables sous-jacentes et les index associés sont disponibles pour les requêtes et la modification de données pendant l'opération d'index. La valeur par défaut est OFF.  
   
@@ -174,21 +174,21 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] prend en charge « default » comme nom de groupe de fichiers.  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] prend en charge « default » comme nom de groupe de fichiers.  
   
  Spécifie un emplacement pour déplacer les lignes de données qui se trouvent actuellement au niveau feuille de l'index cluster. Les données sont déplacées vers le nouvel emplacement sous la forme d'un segment de mémoire. Vous pouvez spécifier un schéma de partition ou un groupe de fichiers déjà existants comme nouvel emplacement. MOVE TO n'est pas valide pour les vues non indexées ou les index non cluster. Si aucun schéma de partition ou groupe de fichiers n'est spécifié, la table résultante sera située sur le même schéma de partition ou groupe de fichiers que celui défini pour l'index cluster.  
   
  Si un index cluster est supprimé à l'aide de MOVE TO, tous les index non cluster sur la table de base sont recréés, mais ils restent dans leur schéma de partition ou groupe de fichiers d'origine. Si la table de base est déplacée vers un schéma de partition ou groupe de fichiers différent, les index non cluster ne sont pas déplacés pour coïncider avec le nouvel emplacement de la table de base (segment de mémoire). Par conséquent, même si les index non cluster étaient précédemment alignés avec l'index cluster, ils peuvent ne plus être alignés avec le segment de mémoire. Pour plus d’informations sur les index partitionnés, consultez [Index et tables partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  _partition_scheme_name_ **(** _column_name_ **)**  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie un schéma de partition comme emplacement de la table résultante. Le schéma de partition doit déjà avoir été créé en exécutant soit [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md), soit [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Si aucun emplacement n'est spécifié et que la table est partitionnée, la table est incluse dans le même schéma de partition que l'index cluster existant.  
   
  Le nom de la colonne dans le schéma n'est pas limité aux colonnes dans la définition d'index. Toute colonne dans la table de base peut être spécifiée.  
   
  *filegroup_name*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie un groupe de fichiers comme emplacement de la table résultante. Si aucun emplacement n'est spécifié et que la table n'est pas partitionnée, la table résultante est incluse dans le même groupe de fichiers que l'index cluster. Le groupe de fichiers doit déjà exister.  
   
@@ -199,7 +199,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit d’un identificateur du groupe de fichiers par défaut qui doit être délimité, comme dans MOVE TO **"** default **"** or MOVE TO **[** default **]** . Si **"** default **"** est spécifié, l’option QUOTED_IDENTIFIER doit être ON pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie un emplacement pour déplacer la table FILESTREAM qui se trouve actuellement au niveau feuille de l'index cluster. Les données sont déplacées vers le nouvel emplacement sous la forme d'un segment de mémoire. Vous pouvez spécifier un schéma de partition ou un groupe de fichiers déjà existants comme nouvel emplacement. FILESTREAM ON n'est pas valide pour les vues indexées ou les index non cluster. Si aucun schéma de partition n'est spécifié, les données sont placées dans le même schéma de partition que celui qui a été défini pour l'index cluster.  
   
@@ -290,7 +290,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. Suppression d'un index cluster en ligne et configuration de l'option MAXDOP  
  L'exemple suivant supprime un index cluster en affectant à l'option `ONLINE` la valeur `ON` et à `MAXDOP` la valeur `8`. L'option MOVE TO n'étant pas spécifiée, la table résultante est stockée dans le même groupe de fichiers que l'index. Cet exemple utilise la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -301,7 +301,7 @@ GO
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. Suppression d'un index cluster en ligne et déplacement de la table vers un nouveau groupe de fichiers  
  L'exemple suivant supprime un index cluster en ligne et déplace la table résultante (segment de mémoire) vers le groupe de fichiers `NewGroup` en utilisant la clause `MOVE TO` . Les affichages catalogue `sys.indexes`, `sys.tables`et `sys.filegroups` sont interrogés pour vérifier le placement de l'index et de la table dans les groupes de fichiers avant et après l'opération de déplacement. (Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez utiliser la syntaxe DROP INDEX IF EXISTS.)  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -374,7 +374,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
 ### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>G. Suppression d'un index cluster sur une table FILESTREAM  
  L'exemple suivant supprime un index cluster en ligne et déplace la table résultante (segment de mémoire) et les données FILESTREAM vers le schéma de partitionnement `MyPartitionScheme` en utilisant les clauses `MOVE TO` et `FILESTREAM ON`.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```  
 DROP INDEX PK_MyClusteredIndex   

@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659095"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982850"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -244,9 +244,9 @@ Spécifie un fichier sur disque ou support à bandes, ou un service de stockage 
 > [!NOTE]
 > L’unité de disque NUL supprime toutes les informations qui lui sont envoyées et ne devrait être utilisée qu’à des fins de test. À ne pas utiliser en production.
 > [!IMPORTANT]
-> De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouvez sauvegarder que sur une seule unité de disque lorsque vous effectuez une sauvegarde vers une URL. Pour effectuer une sauvegarde sur plusieurs unités lorsque vous sauvegardez vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ainsi que des jetons de signature d’accès partagé. Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+> De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouvez sauvegarder que sur une seule unité de disque lorsque vous effectuez une sauvegarde vers une URL. Pour effectuer une sauvegarde sur plusieurs unités lorsque vous sauvegardez vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, ainsi que des jetons de signature d’accès partagé. Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
 
-**URL s’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**URL s’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et versions ultérieures).
 
 Une unité de disque n'est pas tenue d'exister pour pouvoir être spécifiée dans une instruction BACKUP. Si l'unité physique existe et si l'option INIT n'est pas spécifiée dans l'instruction BACKUP, la sauvegarde est ajoutée à l'unité.
 
@@ -279,10 +279,10 @@ Pour plus d’informations, consultez « Familles de supports de sauvegarde miro
 
 Spécifie les options à utiliser avec une opération de sauvegarde.
 
-CREDENTIAL **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+CREDENTIAL **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et versions ultérieures).
 S’utilise uniquement lors de la création d’une sauvegarde dans le service de stockage Blob Microsoft Azure.
 
-FILE_SNAPSHOT **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+FILE_SNAPSHOT **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
 
 Utilisé pour créer un instantané Azure des fichiers de base de données lorsque tous les fichiers de base de données SQL Server sont stockés à l’aide du service Azure Blob Storage. Pour plus d’informations, consultez [Fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). La sauvegarde d’instantanés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des instantanés Azure des fichiers de base de données (données et fichiers journaux) dont l’état est cohérent. Un ensemble cohérent d’instantanés Azure constitue une sauvegarde, qui est enregistrée dans le fichier de sauvegarde. La seule différence entre `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` et `BACKUP LOG TO URL WITH FILE_SNAPSHOT` est que ce dernier tronque le journal des transactions. Avec la sauvegarde d’instantanés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une fois effectuée la sauvegarde complète initiale dont a besoin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la chaîne de sauvegarde, seule une sauvegarde de fichier journal est nécessaire pour restaurer une base de données vers le point dans le temps correspondant à la sauvegarde de fichier journal. En outre, seules deux sauvegardes de fichier journal sont nécessaires pour restaurer une base de données vers un point dans le temps situé entre les deux sauvegardes de fichier journal.
 

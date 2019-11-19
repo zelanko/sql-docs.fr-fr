@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8204471504e254c33d70adcce52490e0f5609985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117106"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982589"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crée un index spatial sur une table et une colonne spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un index peut être créé avant que la table soit remplie de données. Les index peuvent être créés sur des tables ou des vues d'une autre base de données en spécifiant un nom de base de données qualifié. Les index spatiaux exigent que la table ait une clé primaire cluster. Pour plus d’informations sur les index spatiaux, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -172,12 +172,12 @@ CREATE SPATIAL INDEX index_name
  Pour plus d’informations sur la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente le pavage, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  ON *filegroup_name*      
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Crée l'index spécifié dans le groupe de fichiers spécifié. Si aucun emplacement n'est défini et que la table n'est pas partitionnée, l'index utilise le même groupe de fichiers que la table sous-jacente. Le groupe de fichiers doit déjà exister.  
   
  ON "default"     
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Crée l'index spécifié sur le groupe de fichiers par défaut.  
   
@@ -203,7 +203,7 @@ CREATE SPATIAL INDEX index_name
  Spécifie le schéma de pavage de la grille **geometry** que vous utilisez. GEOMETRY_GRID peut être spécifié uniquement sur une colonne du type de données **geometry**.  GEOMETRY_GRID permet la mise au point manuelle du schéma de pavage.  
   
  GEOMETRY_AUTO_GRID      
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Peut être spécifié uniquement sur une colonne du type de données geometry. Il s'agit de l'option par défaut pour ce type de données et il n'est pas nécessaire de la spécifier.  
   
@@ -211,7 +211,7 @@ CREATE SPATIAL INDEX index_name
  Spécifie le schéma de pavage de la grille géographique. GEOGRAPHY_GRID peut être spécifié uniquement sur une colonne du type de données **geography**.  
   
  GEOGRAPHY_AUTO_GRID      
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Peut être spécifié uniquement sur une colonne du type de données geography.  Il s'agit de l'option par défaut pour ce type de données et il n'est pas nécessaire de la spécifier.  
   
@@ -310,7 +310,7 @@ Au niveau supérieur, si un objet couvre plus de cellules que le nombre spécifi
 La valeur CELLS_PER_OBJECT est utilisée par la règle de pavage de cellules par objet. Pour plus d’informations sur les règles de pavage, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 PAD_INDEX = { ON | **OFF** }     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 Spécifie le remplissage de l'index. La valeur par défaut est OFF.  
   
@@ -323,7 +323,7 @@ Indique que les pages de niveau intermédiaire sont presque entièrement remplie
 L'option PAD_INDEX est utile seulement si FILLFACTOR est spécifié, car PAD_INDEX utilise le pourcentage spécifié par FILLFACTOR. Si le pourcentage défini pour FILLFACTOR n'est pas suffisamment élevé pour autoriser une ligne, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] remplace en interne le pourcentage de façon à ce qu'il autorise le minimum. Le nombre de lignes dans une page d’index intermédiaire n’est jamais inférieur à deux, quelle que soit la faiblesse de la valeur de *fillfactor*.  
   
 FILLFACTOR =*fillfactor*     
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Spécifie un pourcentage indiquant le taux de remplissage appliqué par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au niveau feuille de chaque page d'index lors de la création ou de la reconstruction de l'index. *fillfactor* doit être une valeur entière comprise entre 1 et 100. La valeur par défaut est 0. Si *fillfactor* a pour valeur 100 ou 0, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée des index avec des pages de niveau feuille intégralement remplies.  
   
@@ -338,7 +338,7 @@ FILLFACTOR =*fillfactor*
  Pour plus d’informations, consultez [Spécifier un facteur de remplissage pour un index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
 SORT_IN_TEMPDB = { ON | **OFF** }       
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Spécifie si les résultats temporaires du tri doivent être stockés dans tempdb. La valeur par défaut est OFF.  
   
@@ -368,7 +368,7 @@ Spécifie si les statistiques de distribution sont recalculées. La valeur par d
 > La désactivation du recalcul automatique des statistiques de distribution peut empêcher l'optimiseur de requête de sélectionner des plans d'exécution optimaux pour les requêtes qui impliquent la table.  
   
 DROP_EXISTING = { ON | **OFF** }     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Spécifie que l'index spatial nommé préexistant est supprimé et reconstruit. La valeur par défaut est OFF.  
   
@@ -389,7 +389,7 @@ Indique que les tables sous-jacentes et les index associés ne sont pas disponib
 > Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ALLOW_ROW_LOCKS = { **ON** | OFF }     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Indique si les verrous de ligne sont autorisés ou non. La valeur par défaut est ON.  
   
@@ -400,7 +400,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
  Les verrous de ligne ne sont pas utilisés.  
   
 ALLOW_PAGE_LOCKS = { **ON** | OFF }     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Indique si les verrous de page sont autorisés. La valeur par défaut est ON.  
   
@@ -411,7 +411,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
  Les verrous de page ne sont pas utilisés.  
   
 MAXDOP =*max_degree_of_parallelism*      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Remplace l'option de configuration `max degree of parallelism` pendant la durée de l'opération d'index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
@@ -435,7 +435,7 @@ MAXDOP =*max_degree_of_parallelism*
 > Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Détermine le niveau de compression de données utilisé par l'index.  
   

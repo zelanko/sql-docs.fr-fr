@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798409"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982562"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,11 +131,11 @@ Si vous spécifiez **ON**, les statistiques conserveront le pourcentage d’éch
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) et [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) exposent la valeur de pourcentage d’échantillonnage persistante pour la statistique sélectionnée.
  
- **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) et versions ultérieures (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] Force le recalcul des statistiques au niveau feuille couvrant les partitions spécifiées dans la clause ON PARTITIONS, puis leur fusion afin de générer les statistiques globales. WITH RESAMPLE est nécessaire car les statistiques de partitions créées avec différents taux d'échantillonnage ne peuvent pas être fusionnées ensemble.  
   
-**S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur
   
  ALL | COLUMNS | INDEX  
  Met à jour toutes les statistiques existantes, les statistiques créées sur une ou plusieurs colonnes, ou les statistiques créées pour les index. Si aucune option n'est spécifiée, l'instruction UPDATE STATISTICS met à jour toutes les statistiques de la table ou vue indexée.  
@@ -163,7 +163,7 @@ Si vous spécifiez **ON**, les statistiques conserveront le pourcentage d’éch
 -   statistiques créées sur les tables internes ;  
 -   Statistiques créées avec les index spatiaux ou les index XML.  
   
-**S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur
 
 MAXDOP = *max_degree_of_parallelism*  
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  

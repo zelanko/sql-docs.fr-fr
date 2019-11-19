@@ -1,5 +1,5 @@
 ---
-title: Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche | Microsoft Docs
+title: Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -20,14 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388338"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056263"
 ---
-# <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche
+# <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Ils effectuent une analyse linguistique de l'ensemble des données indexées en texte intégral. L’analyse linguistique effectue les deux opérations suivantes :
 
@@ -92,7 +93,7 @@ Pour plus d’informations et pour obtenir des options supplémentaires, consult
 ##  <a name="tshoot"></a> Dépanner les erreurs de délai d’attente de l’analyse lexicale  
  Une erreur de délai d’attente lors de l’analyse lexicale peut se produire dans un grand nombre de situations. Pour plus d’informations sur ces situations et sur la façon de résoudre le problème correspondant, consultez [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
-### <a name="info-about-the-mssqlserver30053-error"></a>Informations sur l’erreur MSSQLSERVER_30053
+### <a name="info-about-the-mssqlserver_30053-error"></a>Informations sur l’erreur MSSQLSERVER_30053
   
 |Propriété|Valeur|
 |-|-|

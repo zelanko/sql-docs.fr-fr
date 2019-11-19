@@ -2,7 +2,7 @@
 title: Traitement de requêtes intelligent dans les bases de données Microsoft SQL | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes intelligent pour améliorer les performances des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 07/22/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be17617a400f760d0c5cd5eaa98124d066f19a4c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713225"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962421"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
@@ -38,13 +38,13 @@ Le tableau suivant détaille toutes les fonctionnalités du traitement de requê
 | **Fonctionnalité IQP** | **Pris en charge dans Azure SQL Database** | **Pris en charge dans SQL Server** |**Description** |
 | --- | --- | --- |--- |
 | [Jointures adaptatives (mode batch)](#batch-mode-adaptive-joins) | Oui, avec le niveau de compatibilité 140| Oui, à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sous le niveau de compatibilité 140|Les jointures adaptatives sélectionnent dynamiquement un type de jointure lors de l’exécution en fonction des lignes d’entrée réelles.|
-| [Nombre approximatif distinct](#approximate-query-processing) | Oui, préversion publique| Oui, à partir de la version [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Fournit un comptage distinct (COUNT DISTINCT) approximatif pour les scénarios Big Data avec les avantages de performances élevées et d’une faible empreinte mémoire. |
-| [Mode Batch sur Rowstore](#batch-mode-on-rowstore) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 sous un niveau de compatibilité de 150, préversion publique|Fournit un mode batch pour les charges de travail DW relationnelles utilisant le processeur de manière intensive sans nécessiter d’index columnstore.  | 
+| [Nombre approximatif distinct](#approximate-query-processing) | Oui| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Fournit un comptage distinct (COUNT DISTINCT) approximatif pour les scénarios Big Data avec les avantages de performances élevées et d’une faible empreinte mémoire. |
+| [Mode Batch sur Rowstore](#batch-mode-on-rowstore) | Oui, avec le niveau de compatibilité 150| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] avec le niveau de compatibilité 150|Fournit un mode batch pour les charges de travail DW relationnelles utilisant le processeur de manière intensive sans nécessiter d’index columnstore.  | 
 | [Exécution entrelacée](#interleaved-execution-for-mstvfs) | Oui, avec le niveau de compatibilité 140| Oui, à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sous le niveau de compatibilité 140|Utilise la cardinalité réelle de la fonction table à instructions multiples rencontrée à la première compilation, au lieu d’une estimation fixe.|
 | [Retour d’allocation de mémoire (mode batch)](#batch-mode-memory-grant-feedback) | Oui, avec le niveau de compatibilité 140| Oui, à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sous le niveau de compatibilité 140|Si une requête en mode batch a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
-| [Retour d’allocation de mémoire (mode ligne)](#row-mode-memory-grant-feedback) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 sous un niveau de compatibilité de 150, préversion publique|Si une requête en mode ligne a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
-| [Incorporation (inlining) des fonctions UDF scalaires](#scalar-udf-inlining) | Non | Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 sous un niveau de compatibilité de 150, préversion publique|Les fonctions UDF scalaires sont transformées en expressions relationnelles équivalentes qui sont incluses dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
-| [Compilation différée de variable de table](#table-variable-deferred-compilation) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 sous un niveau de compatibilité de 150, préversion publique|Utilise la cardinalité réelle de la variable de table rencontrée à la première compilation, au lieu d’une estimation fixe.|
+| [Retour d’allocation de mémoire (mode ligne)](#row-mode-memory-grant-feedback) | Oui, avec le niveau de compatibilité 150| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] avec le niveau de compatibilité 150|Si une requête en mode ligne a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
+| [Incorporation (inlining) des fonctions UDF scalaires](#scalar-udf-inlining) | Non | Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] avec le niveau de compatibilité 150|Les fonctions UDF scalaires sont transformées en expressions relationnelles équivalentes qui sont incluses dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
+| [Compilation différée de variable de table](#table-variable-deferred-compilation) | Oui, avec le niveau de compatibilité 150| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] avec le niveau de compatibilité 150|Utilise la cardinalité réelle de la variable de table rencontrée à la première compilation, au lieu d’une estimation fixe.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
 La fonctionnalité des jointures adaptatives en mode batch, permet de choisir de différer une méthode [Jointure hachée ou jointure de boucles imbriquées](../../relational-databases/performance/joins.md) tant **que** la première entrée n’a pas été analysée, à l’aide d’un plan de mise en cache unique. L’opérateur de jointure adaptative définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Votre plan peut, par conséquent, passer dynamiquement à une meilleure stratégie de jointure pendant l’exécution.
@@ -123,14 +123,11 @@ Un indicateur de requête USE HINT est prioritaire par rapport à une configurat
 
 ## <a name="row-mode-memory-grant-feedback"></a>Rétroaction d’allocation de mémoire en mode ligne
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (préversion publique)
-
-> [!NOTE]
-> La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité en préversion publique.  
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 La rétroaction d’allocation de mémoire en mode ligne étend la fonctionnalité de rétroaction d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne.  
 
-Pour activer la préversion publique de la rétroaction d’allocation de mémoire en mode ligne dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
+Pour activer la rétroaction d’allocation de mémoire en mode ligne dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
 
 L’activité de la rétroaction d’allocation de mémoire en mode ligne sera visible par le biais du XEvent **memory_grant_updated_by_feedback**. 
 
@@ -145,9 +142,6 @@ Dans la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux att
 | Non : rétroaction désactivée | Si la rétroaction d’allocation de mémoire est déclenchée en permanence et varie entre des opérations d’augmentation et de diminution de la mémoire, nous la désactivons pour l’instruction. |
 | Oui : ajustement | La rétroaction d’allocation de mémoire a été appliquée et peut encore être ajustée pour l’exécution suivante. |
 | Oui : Stable | La rétroaction d’allocation de mémoire a été appliquée et la mémoire allouée est maintenant stable ; en d’autres termes, ce qui a été alloué pour l’exécution précédente est identique à ce qui a été alloué pour l’exécution actuelle. |
-
-> [!NOTE]
-> Les attributs du plan de rétroaction d’allocation de mémoire en mode ligne en préversion publique sont visibles dans les plans d’exécution de requêtes graphique [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans les versions 17.9 et ultérieures. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Désactivation du retour d’allocation de mémoire en mode ligne sans modification du niveau de compatibilité
 Le retour d’allocation de mémoire en mode ligne peut être désactivé dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de la base de données à au moins 150. Pour le retour d’allocation de mémoire en mode ligne pour toutes les exécutions de requêtes provenant de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
@@ -280,19 +274,19 @@ Un indicateur de requête USE HINT est prioritaire par rapport à une configurat
 
 ## <a name="table-variable-deferred-compilation"></a>Compilation différée de variable de table
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (préversion publique)
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 La compilation différée de variable de table améliore la qualité du plan et les performances globales pour les requêtes faisant référence à des variables de table. Pendant l’optimisation et la compilation initiale, cette fonctionnalité propage les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Ces informations précises sur le nombre de lignes optimisent les opérations de plan en aval.
 
-Avec la compilation différée de la variable de table, la compilation d’une instruction qui fait référence à une variable de table est différée jusqu'à la première exécution réelle de l’instruction. Ce comportement de compilation différée est identique à celui des tables temporaires. Cette modification entraîne l’utilisation de la cardinalité réelle au lieu de l’estimation d’une ligne d’origine. 
+Avec la compilation différée de la variable de table, la compilation d’une instruction qui fait référence à une variable de table est différée jusqu'à la première exécution réelle de l’instruction. Ce comportement de compilation différée est identique à celui des tables temporaires. Cette modification entraîne l’utilisation de la cardinalité réelle au lieu de l’estimation d’origine sur une ligne. 
 
-Vous pouvez activer la préversion publique de la compilation différée de variable de table dans Azure SQL Database. Pour ce faire, activez le niveau de compatibilité 150 pour la base de données à laquelle vous êtes connecté lorsque vous exécutez la requête.
+Vous pouvez activer la compilation différée de variable de table dans Azure SQL Database. Pour ce faire, activez le niveau de compatibilité 150 pour la base de données à laquelle vous êtes connecté lorsque vous exécutez la requête.
 
 Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 
 ## <a name="scalar-udf-inlining"></a>Incorporation (inlining) des fonctions UDF scalaires
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (préversion publique)
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 La fonctionnalité d’incorporation des fonctions UDF scalaires transforme automatiquement les [fonctions UDF scalaires](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) en expressions relationnelles. Elle les incorpore dans la requête SQL appelante. Cette transformation améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. La fonctionnalité d’incorporation des fonctions UDF scalaires facilite l’optimisation basée sur le coût des opérations à l’intérieur des fonctions UDF. Les résultats sont des plans efficaces, axés sur les ensembles et parallèles au lieu de plans d’exécution inefficaces, itératifs, en série. Cette fonctionnalité est activée par défaut sous le niveau de compatibilité de base de données 150.
 
@@ -300,7 +294,7 @@ Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires
 
 ## <a name="approximate-query-processing"></a>Traitement des requêtes approximatif
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (préversion publique)
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Le traitement des requêtes approximatif est une nouvelle famille de fonctionnalités. Il fournit des agrégations dans de vastes jeux de données où la réactivité est plus importante que la précision absolue. Un exemple est le calcul d’un **COUNT(DISTINCT())** dans 10 milliards de lignes pour l’affichage sur un tableau de bord. Dans ce cas, la précision absolue n’est pas importante, mais la réactivité est essentielle. La nouvelle fonction d’agrégation **APPROX_COUNT_DISTINCT** retourne le nombre approximatif de valeurs non null uniques dans un groupe.
 
@@ -308,7 +302,7 @@ Pour plus d’informations, consultez [APPROX_COUNT_DISTINCT (Transact-SQL)](../
 
 ## <a name="batch-mode-on-rowstore"></a>Mode Batch sur rowstore 
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (préversion publique) 
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Le mode batch sur rowstore permet l’exécution en mode batch des charges de travail analytiques sans avoir besoin d’index columnstore.  Cette fonctionnalité prend en charge les filtres bitmap et l’exécution du mode batch des segments de mémoire sur disque et des index B-tree. Le mode batch sur rowstore permet de prendre en charge tous les opérateurs existants compatibles avec le mode batch.
 

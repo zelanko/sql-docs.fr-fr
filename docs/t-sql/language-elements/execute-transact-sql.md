@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122317"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981956"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ Exécute une chaîne de commande ou de caractères dans un lot [!INCLUDE[tsql](.
 > [!IMPORTANT]  
 >  Avant d'appeler EXECUTE avec une chaîne de caractères, validez cette dernière. N'exécutez jamais une commande construite par une entrée utilisateur qui n'a pas été validée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -208,7 +208,7 @@ Execute a character string
  Un module créé dans une autre base de données peut être exécuté si l'utilisateur est propriétaire du module ou possède l'autorisation nécessaire pour l'exécuter dans la base de données en question. Un module peut être exécuté sur un autre serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si l'utilisateur qui l'exécute a l'autorisation nécessaire pour utiliser ce serveur (accès à distance) et pour exécuter le module dans la base de données. Si le nom d'un serveur est spécifié mais qu'aucun nom de base de données n'est spécifié, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] recherche le module dans la base de données par défaut de l'utilisateur.  
   
  ;*number*  
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
  Entier facultatif qui regroupe les procédures de même nom. Ce paramètre n'est pas utilisé pour les procédures stockées étendues.  
   
@@ -267,7 +267,7 @@ Si vous passez un seul mot qui ne commence pas par `@` et qui n’est pas entour
  Spécifie le contexte dans lequel l'instruction est exécutée.  
   
  Connexion  
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
  Spécifie que le contexte dont l'identité doit être empruntée est une connexion. L'étendue de l'emprunt d'identité est le serveur.  
   
@@ -291,7 +291,7 @@ Si vous passez un seul mot qui ne commence pas par `@` et qui n’est pas entour
  Indique des paramètres dont les valeurs sont fournies dans la liste \<arg-list> des commandes directes utilisées dans une instruction EXEC(’...’, \<arg-list>) AT \<linkedsrv>.  
   
  AT *linked_server_name*  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
  Spécifie l’exécution de *command_string* sur *linked_server_name*. Les résultats, le cas échéant, sont renvoyés au client. *linked_server_name* doit faire référence à une définition de serveur lié existante sur le serveur local. Les serveurs liés sont définis au moyen de [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -301,11 +301,11 @@ Si vous passez un seul mot qui ne commence pas par `@` et qui n’est pas entour
 |Terme|Définition|  
 |----------|----------------|  
 |RECOMPILE|Impose la compilation, l'utilisation et la suppression d'un nouveau plan après l'exécution du module. S'il existe un plan de requêtes pour le module, ce plan reste en mémoire cache.<br /><br /> Utilisez cette option si le paramètre que vous fournissez est atypique ou si les données ont changé de manière significative. Cette option n'est pas utilisée pour les procédures stockées étendues. Nous recommandons d'utiliser cette option modérément car elle est coûteuse.<br /><br /> **Remarque :** Vous ne pouvez pas utiliser l’option WITH RECOMPILE lors de l’appel d’une procédure stockée qui utilise la syntaxe OPENDATASOURCE. L'option WITH RECOMPILE est ignorée lorsqu'un nom d'objet en quatre parties est spécifié.<br /><br /> **Remarque :** RECOMPILE n’est pas pris en charge avec les fonctions scalaires définies par l’utilisateur et compilées en mode natif. Si vous devez recompiler, utilisez [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**RESULT SETS UNDEFINED**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Cette option ne fournit aucune garantie quant aux résultats retournés, le cas échéant, et aucune définition n'est fournie. L'instruction s'exécute sans erreur si des résultats sont retournés ou aucun résultat n'est retourné. RESULT SETS UNDEFINED correspond au comportement par défaut si aucun result_sets_option n'est fourni.<br /><br /> Pour interpréter des fonctions scalaires définies par l’utilisateur et des fonctions scalaires définies par l’utilisateur et compilées en mode natif, cette option ne fonctionne pas, car les fonctions ne retournent jamais un jeu de résultats.|  
-|RESULT SETS NONE|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantit que l'instruction d'exécution ne retournera pas de résultats. Si des résultats sont retournés, le traitement est abandonné.<br /><br /> Pour interpréter des fonctions scalaires définies par l’utilisateur et des fonctions scalaires définies par l’utilisateur et compilées en mode natif, cette option ne fonctionne pas, car les fonctions ne retournent jamais un jeu de résultats.|  
-|*\<result_sets_definition>*|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Offre une garantie selon laquelle le résultat reviendra comme spécifié dans result_sets_definition. Pour les instructions qui retournent plusieurs jeux de résultats, fournissez plusieurs sections *result_sets_definition*. Placez chaque *result_sets_definition* entre parenthèses, séparées par des virgules. Pour plus d’informations, consultez \<result_sets_definition> plus loin dans cette rubrique.<br /><br /> Cette option génère toujours une erreur pour les fonctions scalaires définies par l’utilisateur et compilées en mode natif, car les fonctions ne retournent jamais un jeu de résultats.|
+|**RESULT SETS UNDEFINED**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Cette option ne fournit aucune garantie quant aux résultats retournés, le cas échéant, et aucune définition n'est fournie. L'instruction s'exécute sans erreur si des résultats sont retournés ou aucun résultat n'est retourné. RESULT SETS UNDEFINED correspond au comportement par défaut si aucun result_sets_option n'est fourni.<br /><br /> Pour interpréter des fonctions scalaires définies par l’utilisateur et des fonctions scalaires définies par l’utilisateur et compilées en mode natif, cette option ne fonctionne pas, car les fonctions ne retournent jamais un jeu de résultats.|  
+|RESULT SETS NONE|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantit que l'instruction d'exécution ne retournera pas de résultats. Si des résultats sont retournés, le traitement est abandonné.<br /><br /> Pour interpréter des fonctions scalaires définies par l’utilisateur et des fonctions scalaires définies par l’utilisateur et compilées en mode natif, cette option ne fonctionne pas, car les fonctions ne retournent jamais un jeu de résultats.|  
+|*\<result_sets_definition>*|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Offre une garantie selon laquelle le résultat reviendra comme spécifié dans result_sets_definition. Pour les instructions qui retournent plusieurs jeux de résultats, fournissez plusieurs sections *result_sets_definition*. Placez chaque *result_sets_definition* entre parenthèses, séparées par des virgules. Pour plus d’informations, consultez \<result_sets_definition> plus loin dans cette rubrique.<br /><br /> Cette option génère toujours une erreur pour les fonctions scalaires définies par l’utilisateur et compilées en mode natif, car les fonctions ne retournent jamais un jeu de résultats.|
   
-\<result_sets_definition > **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition> **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Décrit les jeux de résultats retournés par les instructions exécutées. Les clauses de result_sets_definition ont la signification suivante  
   
@@ -426,7 +426,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. Utilisation de l'instruction EXECUTE 'tsql_string' avec une variable  
+### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. Utilisation de l'instruction EXECUTE 'tsql_string' avec une variable  
  Le code exemple suivant montre comment `EXECUTE` manipule les chaînes construites dynamiquement qui contiennent des variables. Cet exemple crée le curseur `tables_cursor` pour contenir la liste de toutes les tables définies par l'utilisateur dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], puis utilise cette liste pour reconstruire tous les index des tables.  
   
 ```  
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. Utilisation de l'instruction EXECUTE avec une procédure stockée distante  
  Le code exemple suivant exécute la procédure stockée `uspGetEmployeeManagers` sur le serveur distant `SQLSERVER1` et stocke dans `@retstat` l'état du résultat qui indique la réussite ou l'échec.  
   
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
 ```  
 DECLARE @retstat int;  
@@ -511,10 +511,10 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>G. Utilisation de l'instruction EXECUTE avec AT linked_server_name  
+### <a name="g-using-execute-with-at-linked_server_name"></a>G. Utilisation de l'instruction EXECUTE avec AT linked_server_name  
  Le code exemple suivant passe une chaîne de commandes à un serveur distant. Il crée un serveur lié `SeattleSales` qui pointe vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécute une instruction DDL (`CREATE TABLE`) sur ce serveur lié.  
   
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. Utilisation de l'instruction EXECUTE pour interroger une base de données Oracle sur un serveur lié  
  Le code exemple suivant exécute plusieurs instructions `SELECT` sur le serveur Oracle distant. Il commence par ajouter le serveur Oracle comme serveur lié puis crée ensuite la connexion au serveur lié.  
   
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
 ```  
 -- Setup the linked server.  
@@ -586,10 +586,10 @@ AS USER = 'User1';
 GO  
 ```  
   
-### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. Utilisation d'un paramètre avec l'instruction EXECUTE et AT linked_server_name  
+### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. Utilisation d'un paramètre avec l'instruction EXECUTE et AT linked_server_name  
  L'exemple suivant passe une chaîne de commande à un serveur distant en utilisant un point d'interrogation (`?`) comme espace réservé pour un paramètre. Cet exemple crée un serveur lié `SeattleSales` qui pointe vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécute une instruction `SELECT` sur ce serveur lié. L'instruction `SELECT` utilise le point d'interrogation comme espace réservé pour le paramètre `ProductID` (`952`) qui est fourni après l'instruction.  
   
-**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
 ```  
 -- Setup the linked server.  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>M. Utilisation de l'instruction EXECUTE pour redéfinir un jeu de résultats unique  
  Certains des exemples précédents ont exécuté `EXEC dbo.uspGetEmployeeManagers 6;` qui a retourné 7 colonnes. L'exemple suivant montre l'utilisation de la syntaxe `WITH RESULT SET` pour modifier les noms et types de données du jeu de résultats retourné.  
   
-**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. Utilisation de l'instruction EXECUTE pour redéfinir deux jeux de résultats  
  Lorsque vous exécutez une instruction qui retourne plusieurs jeux de résultats, définissez chaque jeu de résultats attendu. L'exemple suivant dans [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] crée une procédure qui retourne deux jeux de résultats. Ensuite, la procédure est exécutée à l’aide de la clause **WITH RESULT SETS** et la spécification de deux définitions de jeu de résultats.  
   
-**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  

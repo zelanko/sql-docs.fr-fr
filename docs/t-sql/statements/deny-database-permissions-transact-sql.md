@@ -18,12 +18,12 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 721cc221643ed1e315566f32fde5a24752083738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114906"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983227"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY – refus d'autorisations de base de données (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68114906"
 
 Permet de refuser des autorisations sur une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,10 +68,10 @@ AS \<database_principal> spécifie un principal dont le principal qui exécute c
 
 *Database_user* spécifie un utilisateur de base de données.
 
-*Database_role* spécifie un rôle de base de données.
+*Database_role* Spécifie un rôle de base de données.
 
 *Application_role*
-**s’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 Spécifie un rôle d'application.
 
@@ -104,7 +104,7 @@ Une base de données est un élément sécurisable contenu par le serveur qui es
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br /> **S'applique à**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -115,7 +115,7 @@ Une base de données est un élément sécurisable contenu par le serveur qui es
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
-|MODIFIER UNE STRATÉGIE DE SÉCURITÉ<br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|MODIFIER UNE STRATÉGIE DE SÉCURITÉ<br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -191,7 +191,7 @@ GO
 
 Dans l'exemple ci-dessous, l'autorisation `REFERENCES` sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est refusée au rôle d'application `AuditMonitor`.
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ```sql
 USE AdventureWorks2012;

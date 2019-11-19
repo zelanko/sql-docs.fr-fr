@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c456a4693b32a1f66b021b1dc8767a02a447d06
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 85ebb4419cd81786fcfc58f7c7342e353c90d1f1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844255"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981867"
 ---
 # <a name="server-configuration-options-sql-server"></a>Options de configuration du serveur (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[Sécurité CLR stricte](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
+    |[Sécurité CLR stricte](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] et versions ultérieures).|0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[authentification de la base de données autonome](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -105,7 +105,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |ft crawl bandwidth (min), consultez [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |ft notify bandwidth (max), consultez [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft notify bandwidth (min), consultez [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
-    |[Connexion Hadoop](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
+    |[Connexion Hadoop](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).|0|7|0|   
     |[index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
     |[in-doubt xact resolution](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
     |[lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  

@@ -1,29 +1,31 @@
 ---
-title: Débogueur Transact-SQL | Microsoft Docs
+title: Débogueur Transact-SQL
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
+ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56f44c53591472279f23b8c3d9d68f67ec30fb6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637995"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097928"
 ---
 # <a name="transact-sql-debugger"></a>Débogueur Transact-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permet de détecter les erreurs dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] en étudiant le comportement du code au moment de l'exécution. Après avoir défini la fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en mode débogage, vous pouvez suspendre l'exécution du code au niveau de lignes spécifiques et inspecter les informations et les données qui sont utilisées ou retournées par ces instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="stepping-through-transact-sql-code"></a>Exécution pas à pas du code Transact-SQL
 

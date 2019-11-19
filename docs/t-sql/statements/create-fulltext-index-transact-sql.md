@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912772"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981896"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crée un index de recherche en texte intégral sur une table ou une vue indexée dans une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un seul index de recherche en texte intégral est autorisé par table ou vue indexée et chaque index de recherche en texte intégral s'applique à une seule table ou vue indexée. Un index de recherche en texte intégral peut contenir jusqu'à 1 024 colonnes.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -103,7 +103,7 @@ Pour les colonnes de type non-BLOB et non-XML contenant des données texte dans 
 Pour les documents stockés dans des colonnes de type XML ou BLOB, l'encodage linguistique du document est utilisé lors de l'indexation. Par exemple, dans les colonnes XML, l’attribut **xml:lang** dans les documents XML identifie la langue. Au moment de la requête, la valeur précédemment spécifiée dans *language_term* devient la langue par défaut utilisée pour les requêtes de texte intégral, sauf si *language_term* est spécifié dans le cadre d’une requête de texte intégral.  
   
 STATISTICAL_SEMANTICS       
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) 
   
 Crée les index de ressemblance de documents et d'expressions clés supplémentaires qui font partie de l'indexation sémantique statistique. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -143,7 +143,7 @@ Indique que la liste de mots vides de texte intégral système par défaut doit 
 Spécifie le nom de la liste de mots vides à associer à l'index de recherche en texte intégral.  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)  
   
 Associe une liste de propriétés de recherche à l'index.  
  

@@ -14,18 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034515"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982133"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], certaines modifications sont activées uniquement une fois que le [niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) a été changé. Cette opération a été effectuée pour plusieurs raisons :  
+Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, certaines modifications sont activées uniquement une fois que le [niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) a changé. Cette opération a été effectuée pour plusieurs raisons :  
   
 - Étant donné que la mise à niveau est une opération unidirectionnelle (il est impossible de faire passer le format de fichier à une version antérieure), le fait de séparer l’activation de nouvelles fonctionnalités pour en faire une opération distincte dans la base de données, comporte un intérêt. Il est possible de rétablir un paramètre à un niveau de compatibilité de la base de données antérieur.  Le nouveau modèle réduit le nombre d’éléments devant se produire lors de l’interruption d’une fenêtre.  
   
@@ -45,7 +45,7 @@ Le processus de mise à niveau permettant d’activer la nouvelle fonctionnalit�
   
 Le flux de travail recommandé pour mettre à niveau le processeur de requêtes vers la dernière version du code est documenté dans la [section Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server de la rubrique Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) et est illustré ci-dessous.  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![requête-magasin-utilisation-5](../../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5") 
 
 Depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, les utilisateurs peuvent être guidés tout au long du workflow recommandé en utilisant l’Assistant Paramétrage de requêtes. Pour plus d’informations, consultez [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

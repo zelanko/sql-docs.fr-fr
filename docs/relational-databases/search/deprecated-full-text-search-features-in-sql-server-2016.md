@@ -1,6 +1,6 @@
 ---
-title: Fonctionnalités de recherche en texte intégral dépréciées dans SQL Server 2016 | Microsoft Docs
-ms.custom: ''
+title: Fonctionnalités de recherche en texte intégral dépréciées dans SQL Server 2016
+ms.custom: seo-lt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -15,14 +15,14 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea901179d5011744f1b44609ccb9c19c27c514e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: daf20c621f00529313498c4802cd1d7dfce0fd8b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082915"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056224"
 ---
-# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2016
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Fonctionnalités de recherche en texte intégral dépréciées dans SQL Server 2016
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique décrit les fonctionnalités de la recherche en texte intégral qui sont dépréciées et toujours disponibles dans SQL Server. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version. N’utilisez pas de fonctions déconseillées dans les nouvelles applications.  
   

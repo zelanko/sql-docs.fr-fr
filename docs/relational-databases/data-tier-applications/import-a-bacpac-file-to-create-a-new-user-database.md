@@ -1,6 +1,6 @@
 ---
-title: Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur | Microsoft Docs
-ms.custom: ''
+title: Importer un fichier BACPAC pour créer une base de données utilisateur
+ms.custom: seo-dt-2019
 ms.date: 01/31/2017
 ms.prod: sql
 ms.technology: ''
@@ -25,16 +25,16 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908491"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094562"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Importez un fichier d’application de couche Données (DAC), fichier portant l’extension .bacpac, pour créer une copie de la base de données d’origine, avec ses données, sur une nouvelle instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou vers [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC ou une base de données entre différentes instances, ou pour créer une sauvegarde logique, telles qu'une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Importez un fichier d’application de couche Données (DAC), fichier portant l’extension .bacpac, pour créer une copie de la base de données d’origine, avec ses données, sur une nouvelle instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou vers [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Les opérations d’exportation-importation peuvent être combinées pour migrer une DAC ou une base de données entre différentes instances, ou pour créer une sauvegarde logique, telles qu’une copie sur site d’une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  L'importation génère une nouvelle DAC en deux étapes.  
@@ -66,7 +66,7 @@ ms.locfileid: "72908491"
 ## <a name="using-the-import-data-tier-application-wizard"></a>Utilisation de l'Assistant Importation d'application de la couche Données  
  **Pour lancer l'Assistant, suivez les étapes suivantes :**  
   
-1.  Connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sur site ou dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+1.  Connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sur site ou dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 2.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur **Bases de données**, puis sélectionnez l’option de menu **Importer une application de la couche Données** pour lancer l’Assistant.  
   

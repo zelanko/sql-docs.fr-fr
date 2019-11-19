@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882416"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055133"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -131,7 +131,7 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
 
 - Authentification avec la signature d’accès partagé (SAS) *IDENTITY : constante avec une valeur « Shared Access Signature »* 
-  *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature) *fournit un accès délégué aux ressources dans votre compte de stockage.*
+  *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources dans votre compte de stockage.*
   Autorisations minimales requises : READ et LIST
 
 - Authentification avec des [*principaux de service*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Si ERRORFILE a le chemin complet du compte de stockage défini, ERRORFILE_CREDEN
   
 - Authentification avec la signature d’accès partagé (SAS)
   - *IDENTITY : constante avec une valeur « Shared Access Signature »*
-  - *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *fournit un accès délégué aux ressources dans votre compte de stockage.*
+  - *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources dans votre compte de stockage.*
   - Autorisations minimales requises : READ, LIST, WRITE, CREATE, DELETE
   
 - Authentification avec des [*principaux de service*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -277,7 +277,7 @@ Ces valeurs par défaut sont les suivantes :
 - ROWTERMINATOR = '\n'
 
 > [!IMPORTANT]
-> COPY traite '\n' comme '\r\n' en interne. Pour plus d’informations, consultez la section [ROWTERMINATOR]().
+> COPY traite '\n' comme '\r\n' en interne. Pour plus d’informations, consultez la section ROWTERMINATOR.
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>Voir aussi  
 
- [Vue d’ensemble du chargement avec SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [Vue d’ensemble du chargement avec SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)

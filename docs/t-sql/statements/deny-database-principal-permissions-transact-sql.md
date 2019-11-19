@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114892"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982523"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY – refus d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68114892"
   Permet de refuser des autorisations sur un utilisateur de base de données, un rôle de base de données ou un rôle d'application dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ DENY permission [ ,...n ]
  Spécifie la classe et le nom du rôle sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  APPLICATION ROLE ::*application_role*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
@@ -93,7 +93,7 @@ DENY permission [ ,...n ]
  Spécifie un rôle de base de données.  
   
  *Application_role*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie un rôle d'application.  
   
@@ -172,7 +172,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Refus de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
  Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est refusée au rôle d'application [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

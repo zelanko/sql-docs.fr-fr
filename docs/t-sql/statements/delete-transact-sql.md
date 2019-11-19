@@ -26,19 +26,19 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948059"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983238"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Supprime une ou plusieurs lignes d’une table ou d’une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Alias spécifié dans la clause FROM*table_source* représentant la table ou la vue de laquelle les lignes doivent être supprimées.  
   
  *server_name*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Nom du serveur (utilisant un nom de serveur lié ou la fonction [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) comme nom de serveur) sur lequel se trouve la table ou la vue. Si *server_name* est spécifié, *database_name* et *schema_name* sont obligatoires.  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  La vue référencée par *table_or_view_name* doit pouvoir être mise à jour et faire référence à une seule table de base dans la clause FROM de la définition de la vue. Pour plus d’informations sur les vues pouvant être mises à jour, consultez [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Fonction [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), selon les capacités du fournisseur.  
   
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- L'exemple suivant illustre une clause WHERE plus complexe. La clause WHERE définit deux conditions qui doivent être rencontrées pour déterminer les lignes à supprimer. La valeur dans la colonne `StandardCost` doit être comprise entre `12.00` et `14.00` , tandis que la valeur dans la colonne `SellEndDate` doit être Null. L’exemple imprime également la valeur de la fonction **@@ROWCOUNT** afin de retourner le nombre de lignes supprimées.  
+ L'exemple suivant illustre une clause WHERE plus complexe. La clause WHERE définit deux conditions qui doivent être rencontrées pour déterminer les lignes à supprimer. La valeur dans la colonne `StandardCost` doit être comprise entre `12.00` et `14.00` , tandis que la valeur dans la colonne `SellEndDate` doit être Null. L’exemple imprime également la valeur de la fonction **\@\@ROWCOUNT** afin de retourner le nombre de lignes supprimées.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> Suppression de lignes dans une table distante  
  Les exemples présentés dans cette section montrent comment supprimer des lignes dans une table distante en utilisant un [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou une [fonction d’ensemble de lignes](../../t-sql/functions/rowset-functions-transact-sql.md) pour référencer la table distante. Une table distante existe sur un serveur différent ou une instance différente de SQL Server.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Suppression de données dans une table distante en utilisant un serveur lié  
  L'exemple ci-dessous supprime des lignes dans une table distante. L’exemple commence par créer un lien vers la source de données distante en utilisant [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Le nom du serveur lié, `MyLinkServer`, est ensuite spécifié comme partie du nom d’objet en quatre parties qui se présente sous la forme *serveur.catalogue.schéma.objet*.  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Utilisation de la clause OUTPUT avec <from_table_name> dans une instruction DELETE  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. Utilisation de la clause OUTPUT avec <from_table_name> dans une instruction DELETE  
  L’exemple suivant supprime des lignes de la table `ProductProductPhoto` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en fonction de critères de recherche définis dans la clause `FROM` de l’instruction `DELETE`. La clause `OUTPUT` retourne les colonnes `DELETED.ProductID`, `DELETED.ProductPhotoID`de la table en cours de suppression et les colonnes de la table `Product` . Cette méthode s'utilise dans la clause `FROM` pour spécifier les lignes à supprimer.  
   
 ```sql

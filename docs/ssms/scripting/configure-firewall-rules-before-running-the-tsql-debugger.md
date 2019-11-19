@@ -1,11 +1,8 @@
 ---
-title: Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL | Microsoft Docs
-ms.custom: ''
-ms.date: 10/20/2016
+title: Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_accessdenied
@@ -21,28 +18,34 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 761c07a39d3f20c9686e33df95386602f8c55624
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: bd9d501f8acdbdbbc9a2942ef522714a445e62fb
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263562"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097953"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s'exécute sur un autre ordinateur que l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="configuring-the-transact-sql-debugger"></a>Configuration du débogueur Transact-SQL
 
 Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] inclut des composants côté serveur et côté client. Les composants du débogueur côté serveur sont installés avec chaque instance du moteur de base de données à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Les composants côté client du débogueur sont inclus :
 
--   Lorsque vous utilisez les outils côté client de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.
+- Lorsque vous utilisez les outils côté client de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.
 
--   Lorsque vous installez Microsoft Visual Studio 2010 ou version ultérieure.
+- Lorsque vous installez Microsoft Visual Studio 2010 ou version ultérieure.
 
--   Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à partir d'un téléchargement Web.
+- Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à partir d'un téléchargement Web.
 
 Aucune configuration particulière n'est requise pour exécuter le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] lorsque [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] s'exécute sur le même ordinateur que l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Toutefois, pour exécuter le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] lorsqu'il est connecté à une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez activer des règles de programme et de port dans le Pare-feu Windows sur les deux ordinateurs. Ces règles peuvent être créées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous obtenez des erreurs lors de la tentative d'ouverture d'une session de débogage distant, assurez-vous que les règles suivantes de pare-feu sont définis sur votre ordinateur.
 
@@ -54,47 +57,47 @@ Utilisez l'application **Pare-feu Windows avec fonctions avancées de sécurité
 ## <a name="firewall-rules-on-the-server"></a>Règles de pare-feu sur le serveur
 Sur l'ordinateur qui exécute l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], utilisez le **Pare-feu Windows avec fonctions avancées de sécurité** pour spécifier les informations suivantes :
 
--   Ajoutez une règle de programme entrante pour sqlservr.exe. Vous devez avoir une règle pour chaque instance qui doit prendre en charge les sessions de débogage distant.
+- Ajoutez une règle de programme entrante pour sqlservr.exe. Vous devez avoir une règle pour chaque instance qui doit prendre en charge les sessions de débogage distant.
 
-    1.  Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
+   1. Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
 
-    2.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
+   2. Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
 
-    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à sqlservr.exe pour cette instance. Par défaut, sqlservr.exe est installé dans C:\Program Files\Microsoft SQL Server\MSSQL13.*NomInstance*\MSSQL\Binn, où *NomInstance* représente MSSQLSERVER pour l’instance par défaut et le nom de l’instance pour toute instance nommée.
+   3. Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à sqlservr.exe pour cette instance. Par défaut, sqlservr.exe est installé dans C:\Program Files\Microsoft SQL Server\MSSQL13.*NomInstance*\MSSQL\Binn, où *NomInstance* représente MSSQLSERVER pour l’instance par défaut et le nom de l’instance pour toute instance nommée.
 
-    4.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
+   4. Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
 
-    5.  Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
+   5. Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
 
-    6.  Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
+   6. Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
 
-    7.  Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
+   7. Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
 
-    8.  Sélectionnez l'onglet **Protocoles et ports** .
+   8. Sélectionnez l'onglet **Protocoles et ports** .
 
-    9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Ports dynamiques RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
+   9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Ports dynamiques RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
 
--   Ajoutez une règle de programme entrante pour svchost.exe pour activer les communications DCOM des sessions de débogage distant.
+- Ajoutez une règle de programme entrante pour svchost.exe pour activer les communications DCOM des sessions de débogage distant.
 
-    1.  Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
+   1. Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
 
-    2.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
+   2. Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
 
-    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à scvhost.exe. Par défaut, svchost.exe est installé dans %systemroot%\System32\svchost.exe.
+   3. Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à scvhost.exe. Par défaut, svchost.exe est installé dans %systemroot%\System32\svchost.exe.
 
-    4.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
+   4. Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
 
-    5.  Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
+   5. Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
 
-    6.  Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
+   6. Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
 
-    7.  Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
+   7. Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
 
-    8.  Sélectionnez l'onglet **Protocoles et ports** .
+   8. Sélectionnez l'onglet **Protocoles et ports** .
 
-    9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Mappeur de point de terminaison RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
+   9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Mappeur de point de terminaison RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
 
--   Si la stratégie de domaine exige que les communications réseau s'effectuent par le biais du protocole IPsec, vous devez également ajouter des règles entrantes ouvrant les ports UDP 4500 et UDP 500.
+- Si la stratégie de domaine exige que les communications réseau s'effectuent par le biais du protocole IPsec, vous devez également ajouter des règles entrantes ouvrant les ports UDP 4500 et UDP 500.
 
 ## <a name="firewall-rules-on-the-client"></a>Règles de pare-feu sur le client
 
@@ -102,67 +105,67 @@ Sur l'ordinateur qui exécute l'Éditeur de requête du [!INCLUDE[ssDE](../../in
 
 Si vous obtenez des erreurs lors de la tentative d'ouverture d'une session de débogage distant, vous pouvez configurer manuellement les exceptions de port et programme à l'aide du **Pare-feu Windows avec fonctions avancées de sécurité** pour configurer des règles de pare-feu :
 
--   Ajouter une entrée de programme pour svchost :
+- Ajouter une entrée de programme pour svchost :
 
-    1.  Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
+   1. Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
 
-    2.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
+   2. Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
 
-    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à scvhost.exe. Par défaut, svchost.exe est installé dans %systemroot%\System32\svchost.exe.
+   3. Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à scvhost.exe. Par défaut, svchost.exe est installé dans %systemroot%\System32\svchost.exe.
 
-    4.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
+   4. Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
 
-    5.  Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
+   5. Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
 
-    6.  Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
+   6. Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
 
-    7.  Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
+   7. Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
 
-    8.  Sélectionnez l'onglet **Protocoles et ports** .
+   8. Sélectionnez l'onglet **Protocoles et ports** .
 
-    9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Mappeur de point de terminaison RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
+   9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Mappeur de point de terminaison RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
 
--   Ajoutez une entrée de programme pour l'application qui héberge l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si vous devez ouvrir des sessions de débogage distant depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sur le même ordinateur, vous devez ajouter une règle de programme pour les deux :
+- Ajoutez une entrée de programme pour l'application qui héberge l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si vous devez ouvrir des sessions de débogage distant depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sur le même ordinateur, vous devez ajouter une règle de programme pour les deux :
 
-    1.  Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
+   1. Dans **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle** dans le volet Action.
 
-    2.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
+   2. Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.
 
-    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez une de ces trois valeurs.
+   3. Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez une de ces trois valeurs.
 
-        -   Pour [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], entrez le chemin d'accès complet à ssms.exe. Par défaut, ssms.exe est installé dans C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\Management Studio.
+       - Pour [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], entrez le chemin d'accès complet à ssms.exe. Par défaut, ssms.exe est installé dans C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\Management Studio.
 
-        -   Pour [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , entrez le chemin d'accès complet à devenv.exe :
+       - Pour [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , entrez le chemin d'accès complet à devenv.exe :
 
-            1.  L'emplacement par défaut du fichier devenv.exe pour Visual Studio 2010 est C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE.
+            1. L'emplacement par défaut du fichier devenv.exe pour Visual Studio 2010 est C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE.
 
-            2.  L'emplacement par défaut du fichier devenv.exe pour Visual Studio 2012 est C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE.
+            2. L'emplacement par défaut du fichier devenv.exe pour Visual Studio 2012 est C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE.
 
-            3.  Vous pouvez trouver le chemin d'accès à ssms.exe dans le raccourci utilisé pour lancer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez trouver le chemin d'accès à devenv.exe dans le raccourci utilisé pour lancer [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Cliquez avec le bouton droit sur le raccourci et choisissez **Propriétés**. L'exécutable et le chemin d'accès sont répertoriés dans la zone **Cible** .
+            3. Vous pouvez trouver le chemin d'accès à ssms.exe dans le raccourci utilisé pour lancer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez trouver le chemin d'accès à devenv.exe dans le raccourci utilisé pour lancer [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Cliquez avec le bouton droit sur le raccourci et choisissez **Propriétés**. L'exécutable et le chemin d'accès sont répertoriés dans la zone **Cible** .
 
-    4.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
+   4. Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.
 
-    5.  Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
+   5. Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez ouvrir une session de débogage distant avec l'instance, puis cliquez sur **Suivant**.
 
-    6.  Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
+   6. Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.
 
-    7.  Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
+   7. Dans la liste **Règles de trafic entrant** , cliquez avec le bouton droit sur la règle que vous avez créée, puis sélectionnez **Propriétés** dans le volet Action.
 
-    8.  Sélectionnez l'onglet **Protocoles et ports** .
+   8. Sélectionnez l'onglet **Protocoles et ports** .
 
-    9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Ports dynamiques RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
+   9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Ports dynamiques RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.
 
 ## <a name="requirements-for-starting-the-debugger"></a>Configuration requise pour le démarrage du débogueur
 
 Toute tentative de démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] doit également respecter les conditions suivantes :
 
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.
 
-* La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est membre du rôle serveur fixe sysadmin.
+- La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est membre du rôle serveur fixe sysadmin.
 
-* La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.
+- La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.
 
-* Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service SQL Server est exécuté doit avoir des autorisations d’authentification pour le client
+- Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service SQL Server est exécuté doit avoir des autorisations d’accès authentifiées au client
 
 ## <a name="see-also"></a>Voir aussi
 

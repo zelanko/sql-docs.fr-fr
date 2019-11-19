@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688323"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127482"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Services SCM - Configurer les journaux des erreurs SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "71688323"
   
       **Nombre maximal de fichiers de journaux d'erreurs**
 
-      Spécifiez le nombre maximal de fichiers de journaux d'erreurs pouvant être créés avant le recyclage. La valeur par défaut est 6 : un journal de sauvegarde actuel et les 5 précédents journaux de sauvegarde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve avant de les recycler.
+      Spécifiez le nombre maximal de fichiers journaux des erreurs archivés pouvant être créés avant le recyclage. La valeur par défaut est 6, en plus du fichier journal actuel. Cette valeur détermine le nombre de journaux de sauvegarde précédents que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve avant de les recycler.
 
     B. Taille du fichier journal
 

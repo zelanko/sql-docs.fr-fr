@@ -1,6 +1,5 @@
 ---
-title: Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Utiliser le format caractère Unicode pour importer et exporter des données
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +13,13 @@ ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4598d636b570c04fa76931e416b3b24329b5da9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091470"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056311"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

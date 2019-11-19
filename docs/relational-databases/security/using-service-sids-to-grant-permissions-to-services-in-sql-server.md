@@ -1,17 +1,18 @@
 ---
-title: Utilisation des SID de service pour accorder des autorisations aux services dans SQL Server | Microsoft Docs
+title: Utilisation des SID de service pour accorder des autorisations aux services
+ms.custom: seo-dt-2019
 author: randomnote1
 ms.author: dareist
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888590"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095600"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Utilisation des SID de service pour accorder des autorisations aux services dans SQL Server
 

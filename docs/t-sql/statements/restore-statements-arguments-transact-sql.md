@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141243"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982460"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instructions RESTORE – Arguments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Cette rubrique documente les arguments qui sont décrits dans la section « Syntaxe » de l’instruction RESTORE {DATABASE|LOG} et du jeu associé d’instructions auxiliaires : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY. La plupart des arguments sont pris en charge seulement par un sous-ensemble de ces six instructions. Cette prise en charge est précisée dans la description de chacun des arguments.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
  Pour la syntaxe, consultez les rubriques suivantes :  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  Indique que l’opération de restauration charge les informations dans les tables d’historique **msdb**. Pour le jeu de sauvegarde unique faisant l’objet d’une vérification, l’option LOADHISTORY charge les informations sur les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockées sur le support de sauvegarde dans les tables d’historique de restauration et de sauvegarde de la base de données **msdb**. Pour plus d’informations sur les tables d’historique, consultez [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  Les options WITH générales sont toutes prises en charge dans les instructions RESTORE DATABASE et RESTORE LOG. Certaines de ces options sont aussi prises en charge par une ou plusieurs instructions auxiliaires, comme indiqué ci-dessous.  
   
 ##### <a name="restore-operation-options"></a>Options de l'opération de restauration  
@@ -247,7 +247,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et versions ultérieures
   
  Utilisé uniquement pour la restauration d’une sauvegarde à partir du service de stockage Microsoft Blob Azure.  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
   
  Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous les noms de répertoire FILESTREAM au niveau de la base de données dans cette instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparaison d'unicité s'effectue sans respect de la casse, quels que soient les paramètres de classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  Indique qu’après l’opération RESTORE, la bande reste chargée dans le lecteur de bande.  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  Cette option est utile seulement si la base de données a été répliquée lors de la création de la sauvegarde.  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ Utilisez KEEP_REPLICATION quand vous couplez la réplication à la copie des jou
   
 -   Le serveur en état de secours semi-automatique doit être renommé pour utiliser le même nom que le serveur primaire.  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  Cette option est utile seulement si la base de données a été activée pour la capture de données modifiées, lors de la création de la sauvegarde.  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ Utilisez KEEP_REPLICATION quand vous couplez la réplication à la copie des jou
   
  Pour plus d’informations sur l’utilisation de la capture de données modifiées avec la mise en miroir de bases de données, consultez [Capture de données modifiées et autres fonctionnalités de SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  Active ou désactive la remise de messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou définit un nouvel identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Cette option est utile seulement si [!INCLUDE[ssSB](../../includes/sssb-md.md)] a été activé pour la base de données lors de la création de la sauvegarde.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ Utilisez KEEP_REPLICATION quand vous couplez la réplication à la copie des jou
  NEW_BROKER  
  Spécifie qu'un nouvel identificateur Service Broker doit être assigné à la base de données. Dans la mesure où la base de données est considérée comme un nouveau Service Broker, toutes les conversations existantes dans la base de données sont immédiatement supprimées sans générer de message de fin de dialogue. Tout itinéraire faisant référence à l'ancien identificateur Service Broker doit être recréé avec le nouvel identificateur.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **Pris en charge par :**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) et uniquement pour le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
   
  Vous pouvez restaurer une base de donnés à un point dans le temps ou une transaction spécifique en spécifiant le point de récupération cible dans une clause STOPAT, STOPATMARK ou STOPBEFOREMARK. Un point dans le temps ou une transaction spécifié(e) est toujours restauré(e) à partir d'une sauvegarde du journal. Dans chaque instruction RESTORE LOG de la séquence de restauration, vous devez spécifier votre point dans le temps ou transaction cible dans une clause STOPAT, STOPATMARK ou STOPBEFOREMARK identique.  

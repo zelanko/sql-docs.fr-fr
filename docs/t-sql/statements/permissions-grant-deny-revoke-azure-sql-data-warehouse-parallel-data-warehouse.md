@@ -13,12 +13,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129365"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095586"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -243,7 +243,7 @@ REVOKE
   
  ![Schéma des autorisations de sécurité APS](../../t-sql/statements/media/aps-security-perms-poster.png "Schéma des autorisations de sécurité APS")  
   
- Pour télécharger une version en taille réelle de ce schéma, consultez [Autorisations de SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) dans la section de fichiers du site APS Yammer (ou envoyez une demande par e-mail à **apsdoc@microsoft.com** .  
+ Pour télécharger une version en taille réelle de ce schéma, consultez [Autorisations de SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) dans la section de fichiers du site APS Yammer (ou envoyez une demande par e-mail à **apsdoc\@microsoft.com**.  
   
 ## <a name="default-permissions"></a>Autorisations par défaut  
  La liste suivante décrit les autorisations par défaut :  
