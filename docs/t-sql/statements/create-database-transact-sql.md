@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a668b876e97f70ff0324f53689f0d5dfae8f225
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b1e761aded3b34942f5a49aa2b4c085fe1bd4225
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536265"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983216"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -172,7 +172,7 @@ Si le nom de fichier de données n’est pas spécifié, [!INCLUDE[ssNoVersion](
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
 Spécifie l'état de la relation contenant-contenu de la base de données. NONE = Base de données non autonome. PARTIAL = Base de données partiellement autonome.
 
@@ -202,7 +202,7 @@ Pour plus d’informations sur les noms de classements Windows et SQL, voir [COL
 WITH \<option>      
 **\<filestream_options>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
 
 Spécifie le niveau d'accès FILESTREAM non transactionnel à la base de données.
 
@@ -213,7 +213,7 @@ Spécifie le niveau d'accès FILESTREAM non transactionnel à la base de donnée
 |FULL|L'accès non transactionnel complet aux FileTables FILESTREAM est activé.|
 
 DIRECTORY_NAME = \<directory_name>     
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
 Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous les noms Database_Directory dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option doit être définie avant de créer un FileTable dans cette base de données.
 
@@ -221,25 +221,25 @@ Les options suivantes sont autorisées uniquement lorsque CONTAINMENT a été d�
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur default full-text language](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md).
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md).
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
@@ -428,7 +428,7 @@ Spécifie que le groupe de fichiers stocke des objets BLOB (binary large objects
 
 CONTAINS MEMORY_OPTIMIZED_DATA     
 
-**S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur
 
 Spécifie que le groupe de fichiers stocke des données optimisées en mémoire dans le système de fichiers. Pour plus d’informations, consultez [OLTP en mémoire - Optimisation en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers MEMORY_OPTIMIZED_DATA est autorisé par base de données. Pour obtenir des exemples de code qui créent un groupe de fichiers pour stocker des données à mémoire optimisée, consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 

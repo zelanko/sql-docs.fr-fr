@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298535"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096129"
 ---
 # <a name="hadoop-connection-manager"></a>Gestionnaire de connexions Hadoop
 
@@ -152,7 +152,7 @@ Sur le serveur du centre de distribution de clés Kerberos :
 
     Après la configuration, redémarrez le service du centre de distribution de clés Kerberos.
 
-2.  Préparez un principal nommé **krbtgt/REALM.COM@AD.COM**  sur le serveur du centre de distribution de clés Kerberos. Exécutez la commande suivante :
+2.  Préparez un principal nommé **krbtgt/REALM.COM\@AD.COM** sur le serveur KDC. Exécutez la commande suivante :
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ Sur le contrôleur de domaine :
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Établissez l’approbation du domaine Windows pour le domaine Kerberos. Dans l’exemple suivant, `[password]` est le mot de passe pour le principal **krbtgt/REALM.COM@AD.COM** .
+2.  Établissez l’approbation du domaine Windows pour le domaine Kerberos. Dans l’exemple suivant, `[password]` est le mot de passe du principal **krbtgt/REALM.COM\@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 
