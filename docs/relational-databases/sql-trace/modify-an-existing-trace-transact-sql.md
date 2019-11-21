@@ -26,7 +26,7 @@ ms.locfileid: "73632995"
   
 ### <a name="to-modify-an-existing-trace"></a>Pour modifier une trace existante  
   
-1.  Si la trace est déjà en cours d’exécution, exécutez **sp_trace_setstatus** en spécifiant **@status = 0** pour l’arrêter.  
+1.  Si la trace est déjà en cours d’exécution, exécutez **sp_trace_setstatus** en spécifiant **@status = 0**  pour l’arrêter.  
   
 2.  Pour modifier des événements de trace, exécutez **sp_trace_setevent** en spécifiant les modifications à l’aide des paramètres. Dans l'ordre, les paramètres sont les suivants :  
 

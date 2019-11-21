@@ -1757,7 +1757,7 @@
               href: relational-databases/tables/table-properties-ssms.md
             - name: Propriétés de colonne
               href: relational-databases/tables/column-properties-general-page.md
-    - name: Suivi des modifications
+    - name: Suivre les modifications
       href: relational-databases/track-changes/track-data-changes-sql-server.md
       items:
         - name: Capture des données modifiées

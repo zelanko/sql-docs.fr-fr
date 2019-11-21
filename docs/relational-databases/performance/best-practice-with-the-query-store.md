@@ -214,7 +214,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 |**Requêtes suivies**|Suivez l’exécution des requêtes les plus importantes en temps réel. En règle générale, vous utilisez cette vue quand certaines de vos requêtes sont soumises à des plans forcés et que vous voulez vérifier que les performances des requêtes sont stables.|
   
 > [!TIP]
-> Pour savoir comment identifier les principales requêtes consommatrices de ressources et corriger celles qui ont régressé en raison d’un changement de plan à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consultez les blogs @Azure relatifs au [Magasin des requêtes](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
+> Pour savoir comment identifier les principales requêtes consommatrices de ressources et corriger celles qui ont régressé en raison d’un changement de plan à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consultez les blogs \@Azure relatifs au [Magasin des requêtes](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
   
  Quand vous identifiez une requête dont les performances ne sont pas optimales, votre action dépend de la nature du problème.  
   
