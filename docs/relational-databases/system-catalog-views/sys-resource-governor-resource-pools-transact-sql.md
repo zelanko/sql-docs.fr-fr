@@ -31,7 +31,7 @@ ms.locfileid: "73982644"
 
   Retourne la configuration de pool de ressources stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne de la vue détermine la configuration d'un pool.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID unique du pool de ressources. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|  

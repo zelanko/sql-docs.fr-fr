@@ -44,7 +44,7 @@ ms.locfileid: "72797658"
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables requises  
   
 -   Le réplica principal du groupe de disponibilité doit être actuellement en ligne.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "72797658"
     ```  
   
     > [!NOTE]  
-    >  Pour voir l’utilisation en contexte de cette instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
+    >  Pour consulter cette instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] utilisée en contexte, consultez [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour joindre un réplica de disponibilité à un groupe de disponibilité**  
@@ -111,7 +111,7 @@ ms.locfileid: "72797658"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
@@ -120,11 +120,11 @@ ms.locfileid: "72797658"
 ##  <a name="FollowUp"></a> Suivi : configurer des bases de données secondaires  
  Pour chaque base de données dans le groupe de disponibilité, vous avez besoin d'une base de données secondaire sur l'instance de serveur qui héberge le réplica secondaire. Vous pouvez configurer des bases de données secondaires avant ou après avoir joint un réplica secondaire à un groupe de disponibilité, comme suit :  
   
-1.  Restaurez une base de données récente et les sauvegardes de fichier journal de chaque base de données primaire sur l'instance de serveur qui héberge le réplica secondaire, à l'aide de RESTORE WITH NORECOVERY pour chaque opération de restauration. Pour plus d’informations, consultez [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+1.  Restaurez une base de données récente et les sauvegardes de fichier journal de chaque base de données primaire sur l'instance de serveur qui héberge le réplica secondaire, à l'aide de RESTORE WITH NORECOVERY pour chaque opération de restauration. Pour plus d’informations, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-2.  Joignez chaque base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
+2.  Joignez chaque base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Résoudre les problèmes &#40;de&#41;configuration de groupes de disponibilité AlwaysOn SQL Server supprimés](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

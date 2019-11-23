@@ -115,7 +115,7 @@ ms.locfileid: "72783013"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
@@ -126,11 +126,11 @@ ms.locfileid: "72783013"
   
 1.  Connectez-vous à l'instance de serveur qui va héberger le nouveau réplica secondaire.  
   
-2.  Joignez le nouveau réplica secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+2.  Joignez le nouveau réplica secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-3.  Pour chaque base de données du groupe de disponibilité, créez une base de données secondaire sur l'instance de serveur qui héberge le réplica secondaire. Pour plus d’informations, consultez [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+3.  Pour chaque base de données du groupe de disponibilité, créez une base de données secondaire sur l'instance de serveur qui héberge le réplica secondaire. Pour plus d’informations, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-4.  Joignez chacune des nouvelles bases de données secondaires au groupe de disponibilité. Pour plus d’informations, consultez [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
+4.  Joignez chacune des nouvelles bases de données secondaires au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches connexes  
  **Pour gérer un réplica de disponibilité**  
@@ -151,9 +151,9 @@ ms.locfileid: "72783013"
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Utilisez le tableau de &#40;bord&#41; AlwaysOn SQL Server Management Studio](use-the-always-on-dashboard-sql-server-management-studio.md)    
+ [Utilisez le tableau de &#40;bord&#41; AlwaysOn SQL Server Management Studio](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

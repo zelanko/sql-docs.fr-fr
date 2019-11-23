@@ -23,9 +23,9 @@ ms.locfileid: "73728931"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les administrateurs peuvent inverser une transaction lorsqu'une action doit être annulée. Les exemples de transactions sont les suivants : modifications apportées aux valeurs d'attribut, déplacements de hiérarchie ou suppressions de membres. Cette rubrique s’applique seulement aux transactions des entités ayant le type de journal des transactions « Attribut ». Accédez à la page de l’explorateur d’entités pour afficher l’historique de transaction des entités avec le type de journal des transactions « Membre ».  
+  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les administrateurs peuvent inverser une transaction lorsqu'une action doit être annulée. Les exemples de transactions sont les suivants : modifications apportées aux valeurs d'attribut, déplacements de hiérarchie ou suppressions de membres. Cette rubrique s’applique seulement aux transactions des entités ayant le type de journal des transactions « Attribut ». Accédez à la page de l’explorateur d’entités pour afficher l’historique de transaction des entités avec le type de journal des transactions « Membre ».  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
   

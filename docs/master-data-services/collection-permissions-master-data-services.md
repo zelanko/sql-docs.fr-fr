@@ -31,13 +31,13 @@ ms.locfileid: "73729636"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
+|**Lire**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
 |**Créer**|L’utilisateur peut créer des membres de collection et affecter des valeurs d’attribut.|  
 |**Update**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
-|**Supprimer**|L’utilisateur peut supprimer les membres de collection.|  
+|**Delete**|L’utilisateur peut supprimer les membres de collection.|  
 |**Refuser**|Tous les accès aux membres de collection sont refusés.|  
   
- Vous pouvez combiner les autorisations d’accès en lecture, de création, de mise à jour et de suppression. Lorsque les autorisations Create, Update et Delete sont attribuées, l’autorisation Read est attribuée automatiquement.  
+ Vous pouvez combiner les autorisations d’accès en lecture, de création, de mise à jour et de suppression. Lorsque les autorisations de création, de mise à jour et de suppression sont affectées, l’autorisation d’accès en lecture est automatiquement affectée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

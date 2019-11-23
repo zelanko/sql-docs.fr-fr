@@ -44,7 +44,7 @@ ms.locfileid: "72797925"
 >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
 ####  <a name="Permissions"></a> Permissions  
- Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+ Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [GRANT – Octroi d’autorisations de point de terminaison &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72797925"
     > [!IMPORTANT]  
     >  S'il existe déjà un point de terminaison de mise en miroir de base de données pour l'instance de serveur, utilisez-le pour toutes les autres sessions établies sur l'instance de serveur.  
   
-4.  Pour utiliser Transact-SQL afin de créer un point de terminaison qui sera utilisé avec l'authentification Windows, utilisez une instruction CREATE ENDPOINT. L'instruction prend la forme générale suivante :  
+4.  Pour utiliser Transact-SQL afin de créer un point de terminaison qui sera utilisé avec l'authentification Windows, utilisez une instruction CREATE ENDPOINT. L'instruction prend la forme générale suivante :  
   
      CREATE ENDPOINT *\<nom_point_de_terminaison>*  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797925"
   
     -   STARTED spécifie que le point de terminaison doit être démarré et commencer à écouter les connexions. Un point de terminaison de mise en miroir de base de données est en général créé dans l'état STARTED. D'une autre manière, vous pouvez démarrer une session dans un état STOPPED (par défaut) ou DISABLED.  
   
-    -   *\<liste_ports_écoute>* est un numéro de port unique (*nnnn*) sur lequel le serveur doit écouter les messages de mise en miroir de bases de données. Seul le protocole TCP est autorisé ; la spécification d'un autre protocole produit une erreur.  
+    -   *\<liste_ports_écoute>* est un numéro de port unique (*nnnn*) sur lequel le serveur doit écouter les messages de mise en miroir de bases de données. Seul le protocole TCP est autorisé ; la spécification d'un autre protocole produit une erreur.  
   
          Un numéro de port peut servir une fois seulement pour chaque ordinateur. Un point de terminaison de mise en miroir de bases de données peut utiliser n'importe quel point disponible sur le système local lors de la création du point de terminaison. Pour identifier les ports en cours d'utilisation par les points de terminaison TCP, utilisez l'instruction Transact-SQL suivante :  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72797925"
   
     -   ENCRYPTION est défini sur REQUIRED par défaut. En d'autres termes, toutes les connexions à ce point de terminaison doivent utiliser le chiffrement. Toutefois, vous pouvez désactiver le chiffrement ou le rendre facultatif sur un point de terminaison. Les alternatives sont les suivantes :  
   
-        |Value|Définition|  
+        |Valeur|Définition|  
         |-----------|----------------|  
         |DISABLED|Spécifie que les données envoyées sur une connexion ne sont pas chiffrées.|  
         |SUPPORTED|Spécifie que les données sont chiffrées uniquement si le point de terminaison opposé spécifie SUPPORTED ou REQUIRED.|  

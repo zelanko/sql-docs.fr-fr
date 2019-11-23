@@ -37,9 +37,9 @@ ms.locfileid: "72797840"
   
  Un écouteur de groupe de disponibilité consiste en un nom d'écouteur DNS (Domain Name System), en une désignation de port d'écoute et en une ou plusieurs adresses IP. Seul le protocole TCP est pris en charge par l'écouteur de groupe de disponibilité.  Le nom DNS de l'écouteur doit également être unique dans le domaine et dans NetBIOS.  Lorsque vous créez un nouvel écouteur de groupe de disponibilité, il devient une ressource de cluster avec un nom de réseau virtuel (VNN) associé, une adresse IP virtuelle (VIP) et une dépendance de groupe de disponibilité. Un client utilise le nom DNS pour résoudre le nom VNN en plusieurs adresses IP et tente ensuite de se connecter à chaque adresse, jusqu'à ce qu'une demande de connexion réussisse ou jusqu'à ce que la requête de connexion expire.  
   
- Si le routage en lecture seule est configuré pour un ou plusieurs [réplicas secondaires accessibles en lecture](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), les connexions clientes d’intention de lecture du réplica principal sont redirigées vers un réplica secondaire accessible en lecture. Par ailleurs, si le réplica principal est mis hors connexion sur une instance de SQL Server et un nouveau réplica principal passe en ligne sur une autre instance de SQL Server, l'écouteur de groupe de disponibilité permet aux clients de se connecter au nouveau réplica principal.  
+ Si le routage en lecture seule est configuré pour un ou plusieurs[réplicas secondaires accessibles en lecture](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), les connexions clientes d’intention de lecture du réplica principal sont redirigées vers un réplica secondaire accessible en lecture. Par ailleurs, si le réplica principal est mis hors connexion sur une instance de SQL Server et un nouveau réplica principal passe en ligne sur une autre instance de SQL Server, l'écouteur de groupe de disponibilité permet aux clients de se connecter au nouveau réplica principal.  
   
- Pour obtenir des informations essentielles sur les écouteurs de groupe de disponibilité, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+ Pour obtenir des informations essentielles sur les écouteurs de groupe de disponibilité, consultez [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  
   
@@ -84,11 +84,11 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Vous pouvez néanmoins choisir de référencer directement l'instance du nom SQL Server des réplicas principaux ou secondaires au lieu d'utiliser le nom du serveur de l'écouteur du groupe de disponibilité ; toutefois, si vous choisissez d'agir ainsi, les nouvelles connexions ne seront plus dirigées automatiquement vers le réplica principal actuel.  Vous perdrez également l'avantage du routage en lecture seule.  
   
 ##  <a name="ConnectToSecondary"></a> Utilisation d'un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)  
- Le *routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’acheminer les connexions entrantes à un écouteur de groupe de disponibilité vers un réplica secondaire qui est configuré pour autoriser des charges de travail en lecture seule. Une connexion entrante faisant référence à un nom d'écouteur de groupe de disponibilité peut automatiquement être acheminée vers un réplica en lecture seule si les conditions suivantes sont réunies :  
+ Le*routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’acheminer les connexions entrantes à un écouteur de groupe de disponibilité vers un réplica secondaire qui est configuré pour autoriser des charges de travail en lecture seule. Une connexion entrante faisant référence à un nom d'écouteur de groupe de disponibilité peut automatiquement être acheminée vers un réplica en lecture seule si les conditions suivantes sont réunies :  
   
--   Au moins un réplica secondaire est défini sur l'accès en lecture seule, et chaque réplica secondaire en lecture seule et le réplica principal sont configurés pour prendre en charge le routage en lecture seule. Pour plus d’informations, consultez [Pour configurer des réplicas de disponibilité pour le routage en lecture seule](#ConfigureARsForROR), plus loin dans cette section.  
+-   Au moins un réplica secondaire est défini sur l'accès en lecture seule, et chaque réplica secondaire en lecture seule et le réplica principal sont configurés pour prendre en charge le routage en lecture seule. Pour plus d'informations, consultez [Pour configurer des réplicas de disponibilité pour le routage en lecture seule](#ConfigureARsForROR), plus loin dans cette section.  
   
--   La chaîne de connexion fait référence à un écouteur de groupe de disponibilité, et l’intention de l’application de la connexion entrante est définie en lecture seule (par exemple, à l’aide du mot clé **Application Intent=ReadOnly** dans les chaînes de connexion ODBC ou OLEDB, ou dans les attributs ou les propriétés de connexion). Pour plus d’informations, consultez [Intention de l’application en lecture seule et routage en lecture seule](#ReadOnlyAppIntent), plus loin dans cette section.  
+-   La chaîne de connexion fait référence à un écouteur de groupe de disponibilité, et l’intention de l’application de la connexion entrante est définie en lecture seule (par exemple, à l’aide du mot clé **Application Intent=ReadOnly** dans les chaînes de connexion ODBC ou OLEDB, ou dans les attributs ou les propriétés de connexion). Pour plus d'informations, consultez [Intention de l'application en lecture seule et routage en lecture seule](#ReadOnlyAppIntent), plus loin dans cette section.  
   
 ###  <a name="ConfigureARsForROR"></a> Pour configurer des réplicas de disponibilité pour le routage en lecture seule  
  Un administrateur de base de données doit configurer les réplicas de disponibilité comme suit :  
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Lors de l'utilisation de chaînes de connexion de mise en miroir de bases de données, le client peut soit utiliser [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La chaîne de connexion fournie par un client doit fournir au minimum le nom d'une instance de serveur, le *nom du partenaire initial*, pour identifier l'instance de serveur qui héberge initialement le réplica de disponibilité auquel vous envisagez de vous connecter. Éventuellement, la chaîne de connexion peut également fournir le nom d'une autre instance de serveur, le *nom du partenaire de basculement*, pour identifier l'instance de serveur qui héberge initialement le réplica secondaire comme nom de partenaire de basculement.  
   
- Pour plus d’informations sur les chaînes de connexion de mise en miroir de base de données, consultez [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Pour plus d’informations sur les chaînes de connexion de mise en miroir de base de données, consultez [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ##  <a name="CCBehaviorOnFailover"></a> Comportement des connexions clientes lors du basculement  
  Lorsqu'un basculement de groupe de disponibilité se produit, les connexions persistantes existantes au groupe de disponibilité prennent fin et le client doit établir une nouvelle connexion afin de continuer à utiliser la même base de données primaire ou base de données secondaire en lecture seule.  Lorsqu'un basculement se produit côté serveur, la connectivité au groupe de disponibilité peut échouer, forçant l'application cliente à réessayer une nouvelle connexion jusqu'à ce que le serveur principal soit entièrement remis en ligne.  
@@ -172,7 +172,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; Mult
   
  Un certificat X.509 doit être configuré pour chaque nœud serveur participant dans le cluster de basculement, avec une liste de tous les écouteurs de groupe de disponibilité définis dans le nom SAN du certificat.  
   
- Par exemple, si le WSFC dispose de trois écouteurs de groupe de disponibilité avec les noms `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com` et `AG3_listener.Adventure-Works.com`, le nom SAN du certificat doit être défini comme suit :  
+ Par exemple, si le WSFC dispose de trois écouteurs de groupe de disponibilité avec les noms `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`et `AG3_listener.Adventure-Works.com`, le nom SAN du certificat doit être défini comme suit :  
   
 ```  
 CN = ServerFQDN  
@@ -188,7 +188,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Pour plus d'informations sur l'inscription manuelle d'un SPN pour SQL Server, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Pour plus d'informations sur l'inscription manuelle d'un SPN pour SQL Server, consultez [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches connexes  
   
@@ -204,7 +204,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="RelatedContent"></a> Contenu connexe  
   
 -   [Microsoft SQL Server Guide de solutions AlwaysOn pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -213,7 +213,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 -   [Blog de l’équipe SQL Server AlwaysOn : blog officiel de l’équipe SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+ [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SQL Server de connectivité &#40;client AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  Secondaires [actifs : réplicas secondaires accessibles &#40;en&#41; lecture groupes de disponibilité AlwaysOn](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

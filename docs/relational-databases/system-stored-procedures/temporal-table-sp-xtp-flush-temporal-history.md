@@ -41,7 +41,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *@no__t 1schema_name*  
+ *\@schema_name*  
  Nom de schéma de la table actuelle ou temporelle  
   
  *\@object_name*  
@@ -51,7 +51,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  0 (succès) ou > 0 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert les autorisations db_owner.  
+ Requiert db_owner autorisations.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations relatives aux performances des tables temporelles avec contrôle de version par le système à mémoire optimisée](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  

@@ -30,17 +30,17 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176025"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
-  Cette rubrique décrit les avantages de la sauvegarde des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les termes de sauvegarde et de restauration de base, et présente les stratégies de sauvegarde et de restauration pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que les questions de sécurité pour la sauvegarde et la restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Cette rubrique décrit les avantages de la sauvegarde des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les termes de sauvegarde et de restauration de base, et présente les stratégies de sauvegarde et de restauration pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que les questions de sécurité pour la sauvegarde et la restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le composant de sauvegarde et restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apporte une sécurité essentielle pour la protection des données cruciales stockées dans vos bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour réduire le risque de perte catastrophique de données, vous devez sauvegarder régulièrement vos bases de données pour conserver les modifications apportées à vos données. Une stratégie de sauvegarde et de restauration correctement planifiée permet de protéger les bases de données contre toute perte de données provoquée par différentes défaillances. Vous pouvez tester votre stratégie en restaurant un ensemble de sauvegardes, puis en récupérant votre base de données pour vous préparer à réagir efficacement en cas de sinistre.  
   
- Outre le stockage local pour le stockage des sauvegardes, SQL Server prend également en charge la sauvegarde et la restauration à partir du service de stockage d’objets BLOB Azure. Pour plus d’informations, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ En plus du stockage local pour stocker les sauvegardes, SQL Server prend également en charge la sauvegarde et la restauration à partir du service Stockage Blob Azure. Pour plus d’informations, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
 ##  <a name="Benefits"></a> Avantages  
   
--   La sauvegarde de vos bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'exécution de procédures de restauration de test sur vos sauvegardes et le stockage des copies des sauvegardes à un emplacement sécurisé et hors site permettent de vous protéger contre une éventuelle perte catastrophique de données.  
+-   La sauvegarde de vos bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'exécution de procédures de restauration de test sur vos sauvegardes et le stockage des copies des sauvegardes à un emplacement sécurisé et hors site permettent de vous protéger contre une éventuelle perte catastrophique de données.  
   
     > [!IMPORTANT]  
     >  Il s'agit de la seule façon de protéger de manière fiable vos données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.locfileid: "70176025"
   
     -   défaillances matérielles, telles qu'un lecteur de disque endommagé ou la perte permanente d'un serveur ;  
   
-    -   catastrophes naturelles. En utilisant SQL Server sauvegarde dans le service de stockage d’objets BLOB Azure, vous pouvez créer une sauvegarde hors site dans une région différente de celle de votre emplacement local, afin de l’utiliser en cas de catastrophe naturelle affectant votre emplacement local.  
+    -   catastrophes naturelles. Utilisez Sauvegarde SQL Server dans le service Stockage Blob Azure pour créer une sauvegarde hors site dans une autre région que celle de votre emplacement local, qui sera disponible en cas de catastrophe naturelle affectant votre emplacement local.  
   
 -   Par ailleurs, il peut être utile d'effectuer des sauvegardes d'une base de données afin d'effectuer des tâches administratives de routine, telles que la copie d'une base de données d'un serveur vers un autre, la configuration de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou la mise en miroir de bases de données et l'archivage.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70176025"
  Copie de données qui peut être utilisée pour restaurer et récupérer les données après une défaillance. Les sauvegardes d'une base de données peuvent également être utilisées pour restaurer une copie de la base de données à un nouvel emplacement.  
   
  unité de sauvegarde  
- Unité de disque ou de bande sur laquelle les sauvegardes de SQL Server sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service de stockage d’objets BLOB Azure, et le format d' **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Unité de disque ou de bande sur laquelle les sauvegardes de SQL Server sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service de stockage d’objets blob Azure, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  support de sauvegarde  
  Une ou plusieurs bandes ou un ou plusieurs fichiers disque sur lesquels une ou plusieurs sauvegardes ont été écrites.  
@@ -109,7 +109,7 @@ ms.locfileid: "70176025"
   
  Une stratégie de sauvegarde et de restauration s'articule autour de deux pôles : la sauvegarde et la restauration. Le pôle sauvegarde définit le type et la fréquence des sauvegardes, la nature et la vitesse du matériel employé, la manière dont les sauvegardes seront testées, ainsi que les modalités et l'emplacement de stockage des supports de sauvegarde (sans oublier les considérations relatives à la sécurité). Le pôle restauration détermine le responsable des restaurations et leurs modalités d'exécution pour atteindre les objectifs de l'entreprise en termes de disponibilité de la base de données et de limitation des pertes de données. Nous vous recommandons de documenter vos procédures de sauvegarde et de restauration, sans oublier de conserver une copie de la documentation dans votre dossier d'exploitation.  
   
- La conception d'une stratégie de sauvegarde et de restauration efficace nécessite une planification, une mise en œuvre et des tests rigoureux. Il est nécessaire d'effectuer des tests. Vous ne disposez d'aucune stratégie de sauvegarde tant que vous n'avez pas restauré comme il se doit les sauvegardes dans toutes les combinaisons incluses dans votre stratégie de restauration. Vous devez prendre en compte différents facteurs. Notamment :  
+ La conception d'une stratégie de sauvegarde et de restauration efficace nécessite une planification, une mise en œuvre et des tests rigoureux. Il est nécessaire d'effectuer des tests. Vous ne disposez d'aucune stratégie de sauvegarde tant que vous n'avez pas restauré comme il se doit les sauvegardes dans toutes les combinaisons incluses dans votre stratégie de restauration. Vous devez prendre en compte différents facteurs. Ces options en question sont les suivantes :  
   
 -   les objectifs de production de votre entreprise en ce qui concerne les bases de données, en particulier les besoins de disponibilité et de protection des données contre les pertes ;  
   
@@ -146,9 +146,9 @@ ms.locfileid: "70176025"
   
      Dans le cas d'une base de données volumineuse dont les modifications sont concentrées dans une partie des fichiers ou des groupes de fichiers, des sauvegardes partielles et/ou des sauvegardes de fichiers peuvent s'avérer utiles. Pour plus d’informations, consultez [Sauvegardes partielles &#40;SQL Server&#41;](partial-backups-sql-server.md) et [Sauvegardes complètes de fichiers &#40;SQL Server&#41;](full-file-backups-sql-server.md).  
   
--   Quelle est la quantité d'espace disque nécessaire pour une sauvegarde complète de base de données ?  
+-   Quelle est la quantité d'espace disque nécessaire pour une sauvegarde complète de base de données ?  
   
-     Pour plus d'informations, consultez [Estimer la taille d'une sauvegarde complète de base de données](#EstimateDbBuSize)plus loin dans cette section.  
+     Pour plus d'informations, consultez [Estimer la taille d'une sauvegarde complète de base de données](#EstimateDbBuSize) plus loin dans cette section.  
   
 ####  <a name="EstimateDbBuSize"></a>Estimer la taille d’une sauvegarde complète de base de données  
  Avant de mettre en place une stratégie de sauvegarde et de restauration, vous devez estimer la quantité d'espace disque qu'utilisera une sauvegarde complète de base de données. L'opération de sauvegarde copie les données de la base de données dans un fichier de sauvegarde. La sauvegarde contient uniquement les données réelles de la base de données et aucun espace inutilisé. Ainsi, la sauvegarde est généralement moins volumineuse que la base de données elle-même. Vous pouvez estimer la taille d’une sauvegarde complète de base de données en utilisant la procédure stockée système **sp_spaceused**. Pour plus d’informations, consultez [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
@@ -166,7 +166,7 @@ ms.locfileid: "70176025"
   
  Nous vous recommandons la tenue d'un manuel des opérations pour chaque base de données. Ce manuel doit consigner l'emplacement des sauvegardes, les noms des unités de sauvegarde (le cas échéant) et le temps requis pour la restauration des sauvegardes de test.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches connexes  
   
 ### <a name="scheduling-backup-jobs"></a>Planification des travaux de sauvegarde  
   
@@ -203,7 +203,7 @@ ms.locfileid: "70176025"
   
  **Utilisation de SQL Server Management Studio**  
   
--   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
@@ -211,7 +211,7 @@ ms.locfileid: "70176025"
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
- **Avec Transact-SQL**  
+ **Utilisation de Transact-SQL**  
   
 -   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
@@ -234,7 +234,7 @@ ms.locfileid: "70176025"
   
 -   [Restaurer des fichiers et des groupes de fichiers &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
- **Avec Transact-SQL**  
+ **Utilisation de Transact-SQL**  
   
 -   [Restaurer une sauvegarde de base de données en mode de récupération simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -257,14 +257,14 @@ ms.locfileid: "70176025"
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- **Avec Transact-SQL**  
+ **Utilisation de Transact-SQL**  
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>Tâches de restauration supplémentaires  
- **Avec Transact-SQL**  
+ **Utilisation de Transact-SQL**  
   
 -   [Redémarrer une opération de restauration interrompue &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   

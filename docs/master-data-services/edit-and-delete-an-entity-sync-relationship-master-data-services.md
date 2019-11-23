@@ -21,9 +21,9 @@ ms.locfileid: "73728237"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  La synchronisation d’entités est une synchronisation unidirectionnelle et reproductible entre des versions d’entités. Elle fournit un moyen de partager des données d’entités entre différents modèles. Vous pouvez modifier et supprimer une relation de synchronisation que vous avez créée.  
+  La synchronisation d’entités est une synchronisation unidirectionnelle et reproductible entre des versions d'entités. Elle fournit un moyen de partager des données d’entités entre différents modèles. Vous pouvez modifier et supprimer une relation de synchronisation que vous avez créée.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Conditions préalables à la modification d’une relation de synchronisation d’entités.  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -40,13 +40,13 @@ ms.locfileid: "73728237"
   
  Considérez les éléments suivants lorsque vous modifiez une relation de synchronisation d’entités.  
   
--   Les entités source et cible doivent se trouver dans des modèles différents.  
+-   Les entités source et cible doivent être dans des modèles différents.  
   
 -   Le statut de la version de l’entité cible ne doit pas être validé.  
   
 -   Une fois une relation de synchronisation établie, la cible est immédiatement synchronisée avec la source.  
   
--   Une version de l’entité cible ne peut pas être une version de l’entité source d’une autre relation de synchronisation.  
+-   Une version de l'entité cible ne peut pas être une version de l'entité source d'une autre relation de synchronisation.  
   
  Considérez les éléments suivants lorsque vous exécutez une relation de synchronisation d’entités.  
   
