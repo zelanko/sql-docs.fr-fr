@@ -20,7 +20,7 @@ ms.locfileid: "72890525"
 
   Le tableau ci-dessous affiche la liste des instructions qui font partie du langage de définition de données (DDL) d'exploration de données dans le langage DMX (Data Mining Extensions).  
   
-|.|Description|  
+|Instruction|Description|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Crée une structure d'exploration de données dans la base de données.|  
 |[MODIFIER la STRUCTURE &#40;d’exploration de données DMX&#41;](../dmx/alter-mining-structure-dmx.md)|Ajoute un modèle d'exploration de données à une structure d'exploration de données existante.|  

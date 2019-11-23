@@ -34,7 +34,7 @@ ms.locfileid: "73981842"
   
  La vue retourne une ligne pour chaque fonction scalaire définie par l’utilisateur compilée en mode natif. Pour plus d’informations, consultez [Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID d'objet de l'objet conteneur. Unique dans une base de données.|  
 |**definition**|**nvarchar(max)**|Texte SQL qui définit ce module.<br /><br /> NULL = chiffré|  

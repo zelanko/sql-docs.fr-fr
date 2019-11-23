@@ -33,7 +33,7 @@ ms.locfileid: "73785736"
 |Paramètre|Attribut associé pour les types de paramètre non table, y compris les colonnes de paramètres table|Attribut associé pour les paramètres table|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*Sous-type*|Ignoré|Pour les enregistrements de type SQL_DATETIME ou SQL_INTERVAL, affectez la valeur SQL_DESC_DATETIME_INTERVAL_CODE.|  
+|*SubType*|Ignoré|Pour les enregistrements de type SQL_DATETIME ou SQL_INTERVAL, affectez la valeur SQL_DESC_DATETIME_INTERVAL_CODE.|  
 |*Longueur*|SQL_DESC_OCTET_LENGTH|Longueur du nom du type de paramètre table. Cela peut être SQL_NTS si le nom de type se termine par une valeur NULL ou zéro si le nom de type de paramètre table n'est pas requis.|  
 |*Précision*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*Échelle*|SQL_DESC_SCALE|Inutilisé. Ce paramètre doit être nul.|  
@@ -46,7 +46,7 @@ ms.locfileid: "73785736"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Prise en charge de SQLSetDescRec pour les fonctionnalités Date et Heure améliorées  
  Les valeurs autorisées pour les types date/heure sont les suivantes :  
   
-||*Type*|*Sous-type*|*Longueur*|*Précision*|*Échelle*|  
+||*Type*|*SubType*|*Longueur*|*Précision*|*Échelle*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

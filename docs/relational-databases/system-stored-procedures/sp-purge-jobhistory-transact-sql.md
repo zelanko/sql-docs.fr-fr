@@ -43,14 +43,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'` nom du travail pour lequel supprimer les enregistrements d’historique. *nom_du_travail*est de **type sysname**, avec NULL comme valeur par défaut. *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
+`[ @job_name = ] 'job_name'` le nom du travail pour lequel supprimer les enregistrements d’historique. *job_name*est de **type sysname**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
 > [!NOTE]  
->  Les membres du rôle serveur fixe **sysadmin** ou des membres du rôle de base de données fixe **SQLAgentOperatorRole** peuvent exécuter **sp_purge_jobhistory** sans spécifier de *nom_du_travail* ou de *job_id*. Lorsque les utilisateurs **sysadmin** ne spécifient pas ces arguments, l’historique des travaux pour tous les travaux locaux et multiserveurs est supprimé dans le délai spécifié par *oldest_date*. Lorsque les utilisateurs **SQLAgentOperatorRole** ne spécifient pas ces arguments, l’historique des travaux de tous les travaux locaux est supprimé dans le délai spécifié par *oldest_date*.  
+>  Les membres du rôle serveur fixe **sysadmin** ou des membres du rôle de base de données fixe **SQLAgentOperatorRole** peuvent exécuter **sp_purge_jobhistory** sans spécifier de *job_name* ou de *job_id*. Lorsque les utilisateurs **sysadmin** ne spécifient pas ces arguments, l’historique des travaux pour tous les travaux locaux et multiserveurs est supprimé dans le délai spécifié par *oldest_date*. Lorsque les utilisateurs **SQLAgentOperatorRole** ne spécifient pas ces arguments, l’historique des travaux de tous les travaux locaux est supprimé dans le délai spécifié par *oldest_date*.  
   
-`[ @job_id = ] job_id` Numéro d’identification du travail pour les enregistrements à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés. Pour plus d’informations sur la façon dont les utilisateurs **sysadmin** ou **SQLAgentOperatorRole** peuvent utiliser cet argument, consultez la remarque dans la description de **\@job_name** .  
+`[ @job_id = ] job_id` le numéro d’identification du travail pour les enregistrements à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Pour plus d’informations sur la façon dont les utilisateurs **sysadmin** ou **SQLAgentOperatorRole** peuvent utiliser cet argument, consultez la remarque dans la description de **\@job_name** .  
   
-`[ @oldest_date = ] oldest_date` l’enregistrement le plus ancien à conserver dans l’historique. *oldest_date* est de **type DateTime**, avec NULL comme valeur par défaut. Quand *oldest_date* est spécifié, **sp_purge_jobhistory** supprime uniquement les enregistrements antérieurs à la valeur spécifiée.  
+`[ @oldest_date = ] oldest_date` l’enregistrement le plus ancien à conserver dans l’historique. *oldest_date* est de **type DateTime**, avec NULL comme valeur par défaut. Lorsque *oldest_date* est spécifié, **sp_purge_jobhistory** supprime uniquement les enregistrements antérieurs à la valeur spécifiée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -59,18 +59,18 @@ sp_purge_jobhistory
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- Quand **sp_purge_jobhistory** se termine correctement, un message est retourné.  
+ Lorsque **sp_purge_jobhistory** se termine correctement, un message est retourné.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **SQLAgentOperatorRole** peuvent exécuter cette procédure stockée. Les membres de **sysadmin** peuvent purger l’historique des travaux pour tous les travaux locaux et multiserveurs. Les membres de **SQLAgentOperatorRole** peuvent purger l’historique des travaux pour tous les travaux locaux uniquement.  
   
- D’autres utilisateurs, y compris les membres de **SQLAgentUserRole** et des membres de **SQLAgentReaderRole**, doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory**. Une fois l'autorisation accordée sur cette procédure stockée, ces utilisateurs peuvent uniquement supprimer l'historique des travaux dont ils sont propriétaires.  
+ Les autres utilisateurs, y compris les membres de **SQLAgentUserRole** et des membres de **SQLAgentReaderRole**, doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory**. Une fois l'autorisation accordée sur cette procédure stockée, ces utilisateurs peuvent uniquement supprimer l'historique des travaux dont ils sont propriétaires.  
   
  Les rôles de base de données fixes **SQLAgentUserRole**, **SQLAgentReaderRole**et **SQLAgentOperatorRole** se trouvent dans la base de données **msdb** . Pour plus d’informations sur leurs autorisations, consultez [SQL Server Agent des rôles de base de données fixes](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-remove-history-for-a-specific-job"></a>R. Suppression de l'historique d'un travail spécifique  
+### <a name="a-remove-history-for-a-specific-job"></a>A. Suppression de l'historique d'un travail spécifique  
  L'exemple suivant supprime l'historique du travail `NightlyBackups`.  
   
 ```  

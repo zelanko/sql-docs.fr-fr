@@ -77,7 +77,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  la *rétention* est valide uniquement pour les travaux de nettoyage.  
   
-`[ @threshold = ] 'delete threshold'` nombre maximal d’entrées qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. le *seuil de suppression* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. le *seuil de suppression* est valide uniquement pour les travaux de nettoyage.  
+`[ @threshold = ] 'delete threshold'` nombre maximal d’entrées de suppression qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. le *seuil de suppression* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. le *seuil de suppression* est valide uniquement pour les travaux de nettoyage.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-a-capture-job"></a>A. Modification d'un travail de capture  
- L’exemple suivant met à jour les paramètres `@job_type`, `@maxscans` et `@maxtrans` d’un travail de capture dans la base de données `AdventureWorks2012`. Les autres paramètres valides pour un travail de capture, `@continuous` et `@pollinginterval`, sont omis ; leurs valeurs ne sont pas modifiées.  
+ L’exemple suivant met à jour les paramètres `@job_type`, `@maxscans`et `@maxtrans` d’un travail de capture dans la base de données `AdventureWorks2012`. Les autres paramètres valides pour un travail de capture, `@continuous` et `@pollinginterval`, sont omis ; leurs valeurs ne sont pas modifiées.  
   
 ```  
 USE AdventureWorks2012;  

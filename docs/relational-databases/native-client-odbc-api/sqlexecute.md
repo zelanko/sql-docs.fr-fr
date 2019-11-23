@@ -29,7 +29,7 @@ ms.locfileid: "73786932"
  Pour plus d’informations sur les paramètres table, consultez [ &#40;&#41;ODBC Table-valued Parameters](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-   [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=80708)  
+ [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=80708)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

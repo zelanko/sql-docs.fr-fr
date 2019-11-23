@@ -21,7 +21,7 @@ ms.locfileid: "73728913"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Utilisez **l’Assistant mise à niveau de base de données** pour mettre à niveau une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
+  Utilisez **l’Assistant mise à niveau de base de données** pour mettre à niveau une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="action"></a>Action  
  La page d'introduction de l'Assistant s'affiche. Cliquez sur **Suivant** pour lancer le processus de mise à niveau de la base de données.  

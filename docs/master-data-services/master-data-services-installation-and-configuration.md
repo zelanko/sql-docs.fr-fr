@@ -29,7 +29,7 @@ ms.locfileid: "73728065"
 
 Si vous souhaitez une vue d’ensemble de l’organisation des données dans [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consultez [Vue d’ensemble de Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
- Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consultez [Nouveautés de Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+ Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consultez [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
  
 Pour obtenir des liens vers des vidéos et d’autres ressources de formation concernant [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consultez [En savoir plus sur Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
@@ -53,7 +53,7 @@ L’étape suivante consiste à installer IIS (Internet Information Services). C
 Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], le fichier setup.exe est disponible à l’emplacement par défaut, `<drive>` : \SQLServer_13.0_Full.
   
 ## <a name="InstallMDS"></a> Installation de Master Data Services  
- Vous installez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’Assistant Installation du programme d’installation de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ou d’une invite de commandes.  
+ Vous installez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’Assistant Installation du programme d’installation de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ou d’une invite de commandes.  
   
  **Pour installer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] à l’aide du programme d’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur Windows Server 2012 R2**  
   
@@ -210,10 +210,10 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
- Vous pouvez également utiliser [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] pour spécifier d’autres paramètres pour les applications et services web associés à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Par exemple, vous pouvez spécifier la fréquence à laquelle les données sont chargées ou des e-mails de validation envoyés. Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
+ Vous pouvez également utiliser [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] pour spécifier d’autres paramètres pour les applications et services web associés à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Par exemple, vous pouvez spécifier la fréquence à laquelle les données sont chargées ou des messages électroniques de validation envoyés. Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
   
 ##  <a name="deploySample"></a> Déploiement des exemples de modèles et de données  
- Les trois packages d’exemples de modèles suivants sont inclus avec  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Ces exemples de modèles incluent des données. **L’emplacement par défaut de ces packages est %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
+ Les trois packages d’exemples de modèles suivants sont inclus avec [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Ces exemples de modèles incluent des données. **L’emplacement par défaut de ces packages est %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
   

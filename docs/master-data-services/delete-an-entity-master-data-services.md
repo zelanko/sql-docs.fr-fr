@@ -29,7 +29,7 @@ ms.locfileid: "73729474"
 > [!NOTE]  
 >  Les membres de l'entité de toutes les versions seront supprimés définitivement.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  

@@ -54,16 +54,16 @@ ms.locfileid: "70154791"
  Un jeu de supports est créé sur le support de sauvegarde en formatant le support au cours d'une opération de sauvegarde. Pour plus d'informations, consultez [Création d'un jeu de supports](#CreatingMediaSet), plus loin dans cette rubrique. Après le formatage, chaque fichier ou bande contient un en-tête de support pour le jeu de supports et est prêt à recevoir le contenu de la sauvegarde. Lorsque l'en-tête est en place, l'opération de sauvegarde se poursuit pour sauvegarder les données spécifiées sur le support de sauvegarde de toutes les unités de sauvegarde spécifiées pour l'opération.  
   
 > [!NOTE]  
->  Il est possible de mettre en miroir les supports de sauvegarde pour la protection contre les volumes de sauvegarde endommagés (bande ou fichier sur disque). Pour plus d'informations, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+>  Il est possible de mettre en miroir les supports de sauvegarde pour la protection contre les volumes de sauvegarde endommagés (bande ou fichier sur disque). Pour plus d’informations, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]ou version ultérieure peut lire les sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] ou version ultérieure peut lire les sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ### <a name="media-families"></a>Familles de supports  
  Les sauvegardes créées sur une seule unité qui n'est pas mise en miroir ou sur un ensemble d'unités en miroir dans un jeu de supports constituent une *famille de supports*. Le nombre d'unités de sauvegarde utilisées pour le support de sauvegarde détermine le nombre de familles de supports d'un support de sauvegarde. Si, par exemple, un support de sauvegarde utilise deux unités de sauvegarde qui ne sont pas mises en miroir, il contient deux familles de supports.  
   
 > [!NOTE]  
->  Dans un support de sauvegarde en miroir, chaque famille de support est mise en miroir. Par exemple, si six unités de sauvegarde sont utilisées pour formater un support de sauvegarde, il y a trois familles de supports contenant chacune deux copies équivalentes des données de sauvegarde. Pour plus d’informations sur les jeux de supports en miroir, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+>  Dans un support de sauvegarde en miroir, chaque famille de support est mise en miroir. Par exemple, si six unités de sauvegarde sont utilisées pour formater un support de sauvegarde, il y a trois familles de supports contenant chacune deux copies équivalentes des données de sauvegarde. Pour plus d’informations sur les jeux de supports en miroir, consultez [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
  Chaque bande ou disque d'une famille de supports est affecté à un *numéro de séquence de support*. Le numéro de séquence de support d'un disque est toujours 1. Dans une famille de supports sur bande, ce numéro de séquence est 1 pour la bande initiale, 2 pour la deuxième bande, etc. Pour plus d'informations, consultez [Utilisation des jeux et familles de supports](#ConsiderationsForMediaSetFamilies).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70154791"
 -   Si la description du support contient une étiquette de support MTF ou une description du support.  
   
     > [!NOTE]  
-    >  Tous les supports utilisés pour une opération de sauvegarde ou de restauration utilisent un format de sauvegarde [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] standard appelé préserve toute étiquette de support MTF écrite par une autre application, mais n’écrit pas d’étiquettes de support MTF.  
+    >  Tout le support utilisé pour une opération de sauvegarde ou de restauration utilise un format de sauvegarde standard appelé [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] conserve les étiquettes de support MTF écrites par une autre application, mais n’écrit pas d’étiquettes de support MTF.  
   
 -   Étiquette au format de bande [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou description du support au format texte libre.  
   
@@ -156,7 +156,7 @@ RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1',
 GO  
 ```  
   
- Pour plus d’informations sur les tables d’historique qui conservent les informations sur les jeux de supports, familles de supports et jeux de sauvegarde, consultez [Historique de sauvegarde et informations d’en-tête &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md).  
+ Pour plus d’informations sur les tables d’historique qui conservent les informations sur les jeux de supports, familles de supports et jeux de sauvegarde, consultez [Backup History and Header Information &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md).  
   
  Le nombre de supports de sauvegarde d'un support de sauvegarde dépend de plusieurs facteurs :  
   
@@ -210,7 +210,7 @@ GO
  Les sauvegardes Microsoft Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent partager le même support, mais elles ne sont pas interopérables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut sauvegarder les données Windows.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]ou les versions ultérieures peuvent lire des sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] ou versions ultérieures peuvent lire des sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ####  <a name="Overwriting"></a>Remplacement des jeux de sauvegarde  
@@ -221,11 +221,11 @@ GO
 > [!IMPORTANT]  
 >  À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'option MEDIAPASSWORD est suspendue pour la création de sauvegardes. Toutefois, vous pouvez toujours restaurer les sauvegardes créées avec les mots de passe.  
   
- Un support de sauvegarde n'est pas remplacé lorsque l'une des conditions ci-dessous est remplie :  
+ Un support de sauvegarde n'est pas remplacé lorsque l'une des conditions ci-dessous est remplie :  
   
 -   Toutes les sauvegardes présentes sur le support ne sont pas encore arrivées à expiration. (Si l'option SKIP est spécifiée, l'expiration n'est pas vérifiée.)  
   
-     La date d'expiration précise que la sauvegarde expire et qu'elle peut être remplacée par une autre sauvegarde. Vous pouvez préciser la date d'expiration lors de la création d'une sauvegarde. Par défaut, la date d’expiration est déterminée par la définition de l’option **media retention** avec **sp_configure**. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
+     La date d'expiration précise que la sauvegarde expire et qu'elle peut être remplacée par une autre sauvegarde. Vous pouvez préciser la date d'expiration lors de la création d'une sauvegarde. Par défaut, la date d'expiration est déterminée par la définition de l'option **media retention** avec **sp_configure**. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 -   Le nom du support, fourni le cas échéant, ne correspond pas au nom du support de sauvegarde.  
   
@@ -258,7 +258,7 @@ GO
   
      Pour une restauration à partir d'une sauvegarde de disque et pour une restauration en ligne, vous devez monter simultanément toutes les familles de supports. Pour une restauration hors connexion à partir d'une sauvegarde sur bande, vous pouvez traiter les familles de supports avec moins d'unités de sauvegarde. Chaque famille de supports doit être complètement traitée avant de démarrer le traitement d'une autre famille de supports. Les familles de supports sont toujours traitées en parallèle, sauf si la restauration a lieu sur une seule unité.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches connexes  
  **Pour créer un nouveau support de sauvegarde**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants**)  

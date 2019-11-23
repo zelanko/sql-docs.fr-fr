@@ -22,7 +22,7 @@ ms.locfileid: "63035061"
 # <a name="sqllogship-application"></a>Application sqllogship
   L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
   
- ![Icône de lien de rubrique](../../2014/database-engine/media/topic-link.gif "Icône de lien de rubrique") Pour connaître les conventions de syntaxe, consultez [référence &#40;de l'&#41;utilitaire d’invite de commandes moteur de base de données](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icône de lien de rubrique](../../2014/database-engine/media/topic-link.gif "Icône Lien de rubrique") Pour connaître les conventions de syntaxe, consultez [référence &#40;de l'&#41;utilitaire d’invite de commandes moteur de base de données](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |0|N'envoie en sortie aucun message de traçage et de débogage.|  
 |1|Envoie en sortie des messages de gestion des erreurs.|  
 |2|Envoie en sortie des messages de gestion des erreurs et d'avertissement.|  
-|**3**|Envoie en sortie des messages de gestion des erreurs, d'avertissement et d'information. Ceci est la valeur par défaut.|  
+|**3**|Envoie en sortie des messages de gestion des erreurs, d'avertissement et d'information. Valeur par défaut.|  
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
   
  **-logintimeout** _timeout_value_  
@@ -76,10 +76,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  L’application **sqllogship** , sqllogship. exe, est installée dans le répertoire X:\Program Files\Microsoft SQL Server\120\Tools\Binn  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  **sqllogship** utilise l'authentification Windows. Le compte d'authentification Windows où s'exécute la commande nécessite un accès au répertoire Windows et des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La configuration requise dépend de l’option spécifiée par la commande **sqllogship** : **-backup**, **-copy**ou **-restore** .  
   
-|Option|Accès au répertoire|Permissions|  
+|Option|Accès au répertoire|Autorisations|  
 |------------|----------------------|-----------------|  
 |**-backup**|Nécessite un accès en lecture/écriture au répertoire de sauvegarde.|Nécessite les mêmes autorisations que l'instruction BACKUP. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
 |**-copy**|Nécessite l'accès en lecture au répertoire de sauvegarde et l'accès en écriture au répertoire de copie.|Nécessite les mêmes autorisations que la procédure stockée [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  

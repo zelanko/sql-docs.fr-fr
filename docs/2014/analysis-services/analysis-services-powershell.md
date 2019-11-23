@@ -39,7 +39,7 @@ ms.locfileid: "72782650"
 
 Pour plus d’informations sur la syntaxe et des exemples, consultez [Analysis Services de référence PowerShell](/sql/analysis-services/powershell/analysis-services-powershell-reference).
 
-##  <a name="bkmk_prereq"></a> Prérequis  
+##  <a name="bkmk_prereq"></a> Conditions préalables requises  
  Windows PowerShell 2.0 doit être installé. Il est installé par défaut sur les versions plus récentes des systèmes d'exploitation Windows. Pour plus d’informations, consultez [installer Windows PowerShell 2,0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -61,7 +61,7 @@ Pour plus d’informations sur la syntaxe et des exemples, consultez [Analysis S
 |Bases de données et instances tabulaires|Prise en charge pour l'administration locale et à distance.<br /><br /> Pour plus d’informations, consultez le blog d’août 2011 sur la [gestion des modèles tabulaires à l’aide de PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Bases de données et instances PowerPivot pour SharePoint|Prise en charge limitée. Vous pouvez utiliser des connexions HTTP et le fournisseur SQLAS pour afficher des informations d'instance et de base de données.<br /><br /> Toutefois, l'utilisation des applets de commande n'est pas prise en charge. Vous ne devez pas utiliser Analysis Services PowerShell pour sauvegarder et restaurer la base de données PowerPivot en mémoire, et vous ne devez pas ajouter ou supprimer des rôles, des données de processus ni exécuter un script XMLA aléatoire.<br /><br /> À des fins de configuration, PowerPivot pour SharePoint a une prise en charge PowerShell intégrée qui est fournie séparément. Pour plus d’informations, consultez informations [de référence sur PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Connexions natives à des cubes locaux<br /><br /> « Data source = c:\backup\test.CUB »|Non pris en charge.|  
-|Connexions HTTP aux fichiers de connexion de modèle sémantique BI (.bism) dans SharePoint<br /><br /> « Data source = http://server/shared_docs/name.bism  »|Non pris en charge.|  
+|Connexions HTTP aux fichiers de connexion de modèle sémantique BI (.bism) dans SharePoint<br /><br /> « Data source =http://server/shared_docs/name.bism»|Non pris en charge.|  
 |Connexions incorporées aux bases de données PowerPivot<br /><br /> "Data source = $Embedded $"|Non pris en charge.|  
 |Contexte de serveur local dans les procédures stockées Analysis Services<br /><br /> « Source de données = * »|Non pris en charge.|  
   
@@ -76,7 +76,7 @@ Pour plus d’informations sur la syntaxe et des exemples, consultez [Analysis S
   
  Le paramètre-Credential prend un objet PSCredential qui spécifie un nom d’utilisateur et un mot de passe. Dans Analysis Services PowerShell, le paramètre-Credential est disponible pour les applets de commande qui font une demande de connexion à Analysis Services, par opposition aux cmdlets qui s’exécutent dans le contexte d’une connexion existante. Les applets de commande qui créent une requête de connexion incluent Invoke-ASCmd, Backup-ASDatabase et Restore-ASDatabase. Pour ces applets de commande, le paramètre-Credential peut être utilisé, en supposant que les critères suivants sont satisfaits :  
   
-1.  Le serveur est configuré pour l'accès HTTP, ce qui signifie qu'IIS gère la connexion, lit le nom d'utilisateur et le mot de passe et emprunte l'identité de l'utilisateur lors de la connexion à Analysis Services. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+1.  Le serveur est configuré pour l'accès HTTP, ce qui signifie qu'IIS gère la connexion, lit le nom d'utilisateur et le mot de passe et emprunte l'identité de l'utilisateur lors de la connexion à Analysis Services. Pour plus d’informations, voir [Configurer l’accès HTTP à Analysis Services sur Internet Information Services (IIS) 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 2.  Le répertoire virtuel IIS qui a été créé pour l'accès HTTP à Analysis Services est configuré pour l'authentification de base.  
   
@@ -148,7 +148,7 @@ Remove-Variable -Name pwd
   
 1.  Vérifiez que les ordinateurs local et distant ont tous deux les versions [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] des outils clients et serveur.  
   
-2.  Sur le serveur distant qui héberge une instance Analysis Services, ouvrez le port TCP 2383 dans le Pare-feu Windows. Si vous avez installé Analysis Services comme instance nommée ou utilisez un port personnalisé, le numéro de port sera différent. Pour plus d’informations, consultez [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+2.  Sur le serveur distant qui héberge une instance Analysis Services, ouvrez le port TCP 2383 dans le Pare-feu Windows. Si vous avez installé Analysis Services comme instance nommée ou utilisez un port personnalisé, le numéro de port sera différent. Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 3.  Sur le serveur distant, vérifiez que les services suivants sont démarrés : service d'appel de procédure distante (RPC), service d'assistance TCP/IP NetBIOS, service WMI (Windows Management Instrumentation), service Gestion à distance de Windows (Gestion WSM).  
   
@@ -201,7 +201,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Les connexions HTTP sont utiles si vous avez configuré votre serveur pour l’accès HTTP à l’aide des instructions de cette rubrique : [configurer l' &#40;accès&#41; http à Analysis Services sur Internet Information Services IIS 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- En supposant une URL de serveur de http://localhost/olap/msmdpump.dll , une connexion peut se présenter comme suit :  
+ En supposant une URL de serveur de http://localhost/olap/msmdpump.dll, une connexion peut se présenter comme suit :  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -275,7 +275,7 @@ Restart-Service mssqlserverolapservice
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
- [Gérer les modèles tabulaires à l’aide de PowerShell (blog)](https://go.microsoft.com/fwlink/?linkID=227685)    
+ [Gérer les modèles tabulaires à l’aide de PowerShell (blog)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

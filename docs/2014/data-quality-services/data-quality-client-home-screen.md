@@ -38,7 +38,7 @@ ms.locfileid: "70154483"
   
  Vous pouvez ouvrir une base de connaissances verrouillée et la modifier uniquement si vous êtes à l'origine de son verrouillage. Dans ce cas, la base de connaissances s'ouvre dans l'état dans lequel elle se trouvait lors de sa fermeture, qui est indiqué entre parenthèses. Si une base de connaissances est verrouillée et que vous n'êtes pas à l'origine du verrouillage, vous pouvez uniquement l'ouvrir en lecture seule.  
   
-### <a name="data-quality-projects"></a>Projets de qualité des données  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  Un projet de qualité des données désigne le processus dans lequel DQS procède au nettoyage et à la mise en correspondance des données par le biais d'une correction des données assistée par ordinateur et d'un nettoyage de données interactif.  
   
  **Nouveau projet de qualité des données**  

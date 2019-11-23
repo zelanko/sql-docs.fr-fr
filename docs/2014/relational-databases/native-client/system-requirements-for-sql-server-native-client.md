@@ -67,11 +67,11 @@ ms.locfileid: "73637796"
 |Type de données|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC et<br /><br /> applications OLE DB SQL Server Native Client avec DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 Ko)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Image|  
+|varbinary(max)|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|Texte|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |XML|XML|XML|Ntext|  
-|CLR UDT (> 8 Ko)|udt|varbinary|Image|  
+|CLR UDT (> 8 Ko)|udt|varbinary|image|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

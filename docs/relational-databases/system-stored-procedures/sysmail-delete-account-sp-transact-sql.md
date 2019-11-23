@@ -39,9 +39,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @account_id = ] account_id`Numéro d’identification du compte à supprimer. *account_id* est de **type int**, sans valeur par défaut. *Account_id* ou *nom_de_compte* doit être spécifié.  
+`[ @account_id = ] account_id` le numéro d’identification du compte à supprimer. *account_id* est de **type int**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
   
-`[ @account_name = ] 'account_name'`Nom du compte à supprimer. *nom_de_compte* est de **type sysname**, sans valeur par défaut. *Account_id* ou *nom_de_compte* doit être spécifié.  
+`[ @account_name = ] 'account_name'` le nom du compte à supprimer. *account_name* est de **type sysname**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -68,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
  [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database mail les objets de Configuration](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
  [sysmail_delete_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
  [sysmail_delete_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_compute_node_errors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,18 +29,18 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532789"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. DM _exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Retourne les erreurs qui se produisent sur les nœuds de calcul Polybase.  
   
-|Nom de la colonne|Type de données|Description|Plage|  
+|Column Name|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numérique unique associé à l’erreur.|Unique pour toutes les erreurs de requête dans le système|  
 |source|`nvarchar(255)`|Description du thread ou du processus source||  
-|type|`nvarchar(255)`|Type d'erreur||  
+|Type|`nvarchar(255)`|Type d'erreur||  
 |create_time|`datetime`|Heure de l’occurrence d’erreur||  
-|compute_node_id|`int`|Identificateur du nœud de calcul spécifique|Consultez compute_node_id de [sys. DM _exec_compute_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|`int`|Identificateur du nœud de calcul spécifique|Voir compute_node_id de [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificateur de la requête Polybase, le cas échéant.||  
 |spid|`int`|Identificateur de la session SQL Server||  
 |thread_id|`int`|Identificateur numérique du thread sur lequel l’erreur s’est produite.||  

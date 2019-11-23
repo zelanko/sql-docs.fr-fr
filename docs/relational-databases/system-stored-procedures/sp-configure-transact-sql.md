@@ -74,9 +74,9 @@ RECONFIGURE
 ## <a name="result-sets"></a>Jeux de résultats  
  En cas d’exécution sans paramètre, **sp_configure** retourne un jeu de résultats avec cinq colonnes et trie les options par ordre alphabétique dans l’ordre croissant, comme indiqué dans le tableau suivant.  
   
- Les valeurs de **config_value** et **run_value** ne sont pas équivalentes automatiquement. Après la mise à jour d’un paramètre de configuration à l’aide de **sp_configure**, l’administrateur système doit mettre à jour la valeur de configuration en cours d’exécution en utilisant RECONFIGURE ou RECONFIGURE WITH OVERRIDE. Pour plus d'informations, consultez la section Notes.  
+ Les valeurs de **config_value** et **run_value** ne sont pas équivalentes automatiquement. Après la mise à jour d’un paramètre de configuration à l’aide d' **sp_configure**, l’administrateur système doit mettre à jour la valeur de configuration en cours d’exécution en utilisant RECONFIGURE ou RECONFIGURE WITH OVERRIDE. Pour plus d'informations, consultez la section Notes.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**nvarchar(35)**|Nom de l'option de configuration.|  
 |**minimum**|**int**|Valeur minimale de l'option de configuration.|  
@@ -92,7 +92,7 @@ RECONFIGURE
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="updating-the-running-configuration-value"></a>Mise à jour de la valeur de configuration en cours d'exécution  
- Lorsque vous spécifiez une nouvelle *valeur* pour une *option*, le jeu de résultats affiche cette valeur dans la colonne **config_value** . Cette valeur est initialement différente de la valeur de la colonne **run_value** , qui affiche la valeur de configuration en cours d’exécution. Pour mettre à jour la valeur de configuration en cours d’exécution dans la colonne **run_value** , l’administrateur système doit exécuter RECONFIGURE ou RECONFIGURE WITH OVERRIDE.  
+ Lorsque vous spécifiez une nouvelle *valeur* pour une *option*, le jeu de résultats affiche cette valeur dans la colonne **config_value** . Cette valeur est initialement différente de la valeur dans la colonne **run_value** , qui affiche la valeur de configuration en cours d’exécution. Pour mettre à jour la valeur de configuration en cours d’exécution dans la colonne **run_value** , l’administrateur système doit exécuter RECONFIGURE ou RECONFIGURE WITH OVERRIDE.  
   
  Ces deux instructions fonctionnent avec toutes les options de configuration. Cependant, l'instruction de base RECONFIGURE rejette toute valeur d'option se trouvant en dehors d'une plage appropriée ou pouvant être à l'origine de conflits parmi les options. Par exemple, reconfigure génère une erreur si la valeur de l' **intervalle de récupération** est supérieure à 60 minutes ou si la valeur du **masque d’affinité** chevauche la valeur **Affinity I/O mask** . Par contre, RECONFIGURE WITH OVERRIDE accepte toutes les valeurs d'option présentant le bon type de données et force la reconfiguration avec la valeur spécifiée.  
   
@@ -101,12 +101,12 @@ RECONFIGURE
   
  Certaines options peuvent être mises à jour de façon dynamique par l'instruction RECONFIGURE, alors que d'autres nécessitent un arrêt et un redémarrage du serveur. Par exemple, les options **min Server Memory** et **Max Server** Memory Server sont mises à jour dynamiquement dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]; par conséquent, vous pouvez les modifier sans redémarrer le serveur. En revanche, la reconfiguration de la valeur d’exécution de l’option **facteur de remplissage** nécessite le redémarrage de l' [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Après l’exécution de RECONFIGURE sur une option de configuration, vous pouvez voir si l’option a été mise à jour de manière dynamique en exécutant **sp_configure'***option_name***'** . Les valeurs des colonnes **run_value** et **config_value** doivent correspondre pour une option mise à jour dynamiquement. Vous pouvez également vérifier quelles options sont dynamiques en examinant la colonne **is_dynamic** de l’affichage catalogue **sys. configurations** .  
+ Après l’exécution de RECONFIGURE sur une option de configuration, vous pouvez voir si l’option a été mise à jour de manière dynamique en exécutant **sp_configure «***option_name***»** . Les valeurs des colonnes **run_value** et **config_value** doivent correspondre pour une option mise à jour dynamiquement. Vous pouvez également vérifier les options dynamiques en examinant la **is_dynamic** colonne de l’affichage catalogue **sys. configurations** .  
  
  La modification est également écrite dans le journal des erreurs SQL Server.
   
 > [!NOTE]  
->  Si une *valeur* spécifiée est trop élevée pour une option, la colonne **run_value** reflète le fait que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a utilisé par défaut la mémoire dynamique au lieu d’utiliser un paramètre non valide.  
+>  Si une *valeur* spécifiée est trop élevée pour une option, la colonne **run_value** reflète le fait que la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a par défaut la mémoire dynamique plutôt que d’utiliser un paramètre non valide.  
   
  Pour plus d’informations, consultez [REconfigure &#40;Transact&#41;-SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -170,7 +170,7 @@ EXEC sp_configure @configname='hadoop connectivity';
   
 ## <a name="see-also"></a>Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

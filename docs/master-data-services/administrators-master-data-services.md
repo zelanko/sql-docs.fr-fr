@@ -25,7 +25,7 @@ ms.locfileid: "73729795"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Cet article décrit les types d’administrateurs dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administrateurs de modèle, administrateurs d’entité et super utilisateur.  
+  Cet article décrit les types d’administrateurs dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] : administrateurs de modèle, administrateurs d’entité et super utilisateur.  
   
 ## <a name="model-administrators"></a>Administrateurs de modèle  
  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur de modèle est un utilisateur qui dispose d’une autorisation d' **administrateur** affectée à l’objet modèle de niveau supérieur sous l’onglet **objets de modèle** . Lorsqu’un utilisateur dispose d’une autorisation d’administrateur sur un modèle particulier, toutes les autres autorisations sur les objets enfants du modèle (à la fois l’objet de modèle et les autorisations de membre) sont découpées par l’autorisation d' **administrateur** de modèle et sont effectivement ignorées.  

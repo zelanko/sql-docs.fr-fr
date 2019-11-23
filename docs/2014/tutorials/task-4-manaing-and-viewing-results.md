@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 4 : Gestion et affichage des résultats | Microsoft Docs'
+title: 'Tâche 4 : gestion et affichage des résultats | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313646"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
+# <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
   Dans cette tâche, vous allez examiner les résultats du nettoyage assisté par ordinateur, et vous allez également effectuer un nettoyage interactif des données du fournisseur. Pour plus d’informations, consultez [étape de nettoyage interactif](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) .  
   
 1.  Sélectionnez le domaine de **messagerie du contact** dans la liste des domaines.  
   
-2.  Basculez vers l’onglet **non valide** dans le volet droit. Notez que deux adresses de messagerie manquent de caractère» à la fin. Ces deux e-mails qui ont été détectés comme étant non valides par la règle de domaine qui requiert que toutes les adresses de messagerie se terminent par **\@adventure-Works.com** (avec'). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
+2.  Basculez vers l’onglet **non valide** dans le volet droit. Notez que deux adresses de messagerie manquent de caractère» à la fin. Ces deux e-mails qui ont été jugés non valides par la règle de domaine qui requièrent que toutes les adresses de messagerie se terminent par **\@Adventure-Works.com** (avec’s'). DQS utilise la règle de domaine lors du nettoyage afin de déterminer si une adresse électronique est valide ou non. Cet onglet affiche les valeurs de domaine qui ont été marquées comme non valides dans la base de connaissances, ou celles qui ne respectent pas une règle de domaine. Dans ce cas, ces valeurs ne respectent pas la règle de domaine (validation de l'adresse électronique).  
   
-3.  Dans la colonne **corriger vers** , tapez l’adresse de messagerie qui se termine par **\@adventure-Works.com** («»).  
+3.  Dans la colonne **corriger vers** , tapez l’adresse de messagerie appropriée qui se termine par **\@Adventure-Works.com** (avec’s').  
   
      ![Corrections des corrections de règle de validation d’adresse](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "de messagerie à partir de la règle de validation d’e-mail")  
   
@@ -32,7 +32,7 @@ ms.locfileid: "72313646"
   
 5.  Basculez vers le **nouvel** onglet dans le volet droit. Les valeurs de cet onglet sont les valeurs pour lesquelles DQS ne dispose pas encore de suffisamment d'informations dans la base de connaissances pour déterminer si elles sont correctes. Par conséquent, il ne peut pas modifier ou suggérer des modifications aux valeurs de domaine.  
   
-6.  Passez en revue les valeurs pour confirmer que tous les e-mails se terminent par **\@adventure-Works.com** et cliquez sur **approuver tous les termes** dans la barre d’outils. Les valeurs approuvées de cet onglet sont déplacées vers l’onglet **correct** .  
+6.  Passez en revue les valeurs pour confirmer que tous les e-mails se terminent par **\@Adventure-Works.com** et cliquez sur **approuver tous les termes** dans la barre d’outils. Les valeurs approuvées de cet onglet sont déplacées vers l’onglet **correct** .  
   
 7.  Sélectionnez le domaine **Country** dans la liste des domaines.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72313646"
   
      ![Correction]des noms de fournisseurs(../../2014/tutorials/media/et-managingandviewingresults-03.jpg "corrigés")  
   
-    1.  Notez qu' **un. Datum Corp.** est corrigé en **. Datum Corporation** et la **raison** est définie sur la relation @no__t 3Term. A. Datum Corporation @ no__t-0 est une valeur de domaine connue pour DQS, car elle a été détectée pendant le processus de découverte des connaissances. Par conséquent, DQS est **assuré de 100%** de cette correction.  
+    1.  Notez qu' **un. Datum Corp.** est corrigé en **. Datum Corporation** et la **raison** est définie sur la **relation à base de termes. A. Datum Corporation** est une valeur de domaine connue pour DQS, car elle a été détectée pendant le processus de découverte des connaissances. Par conséquent, DQS est **assuré de 100%** de cette correction.  
   
     2.  Notez que le **storex de pays paresseux** est corrigé vers le **magasin de pays paresseux**, le **niveau de confiance** est défini sur **100%** et la **raison** est définie sur la **valeur de domaine**. Pendant le processus de découverte des connaissances, vous définissez le **storex paresseux** en tant qu’erreur avec le **magasin de pays paresseux** comme **Correction**. par conséquent, DQS est **assuré de 100%** en toute confiance.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72313646"
   
 22. Notez que la case d’option **approuver** est déjà sélectionnée pour cet élément dans la liste. Il s’agit du comportement par défaut des éléments de l’onglet **corrigé** .  
   
-23. Basculez vers l’onglet **suggéré** . Passez en revue les modifications suggérées par le service de **vérification des adresses de données Melissa** .  
+23. Basculez vers l’onglet **suggéré** . passez en revue les modifications suggérées par le service de **vérification des adresses de données Melissa** .  
   
 24. **Cliquez sur approuver tous les termes** dans le bouton de la barre d’outils, puis cliquez sur **OK** dans la boîte de message de **confirmation** .  
   
@@ -87,6 +87,6 @@ ms.locfileid: "72313646"
 25. Cliquez sur **suivant** pour passer à la page **Exporter** .  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 5 : Exportation des résultats du nettoyage dans un fichier Excel @ no__t-0  
+ [Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

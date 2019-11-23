@@ -36,10 +36,10 @@ ms.locfileid: "71326144"
   
  Utilisez cette vue de gestion dynamique pour afficher la liste de tous les nœuds du cluster avec montée en puissance parallèle avec leur rôle, leur nom et leur adresse IP.  
   
-|Nom de la colonne|Type de données|Description|Plage|  
+|Column Name|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**Int**|ID numérique unique associé au nœud. Clé pour cette vue.|Unique sur un cluster avec montée en puissance parallèle, quel que soit le type.|  
-|type|**nvarchar(32)**|Type du nœud.|'COMPUTE', 'HEAD'|  
+|compute_node_id|**int**|ID numérique unique associé au nœud. Clé pour cette vue.|Unique sur un cluster avec montée en puissance parallèle, quel que soit le type.|  
+|Type|**nvarchar(32)**|Type du nœud.|'COMPUTE', 'HEAD'|  
 |name|**nvarchar(32)**|Nom logique du nœud.|Toute chaîne de longueur appropriée.|  
 |address|**nvarchar(32)**|Adresse IP de ce nœud.|Plage d’adresses IP|  
   

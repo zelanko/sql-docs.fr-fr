@@ -36,9 +36,9 @@ ms.locfileid: "72251314"
   
 1.  Appelez [catalog.deploy_project &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) pour déployer le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui contient le package sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Pour récupérer le contenu binaire du fichier de déploiement de projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], pour le paramètre *\@project_stream* , utilisez une instruction SELECT avec la fonction OPENROWSET et le fournisseur d’ensembles de lignes en bloc. Le fournisseur d'ensembles de lignes BULK vous permet de lire des données dans un fichier. L'argument SINGLE_BLOB du fournisseur d'ensembles de lignes BULK retourne le contenu du fichier de données sous la forme d'un ensemble de lignes à une seule ligne, une seule colonne de type varbinary (max). Pour plus d’informations, consultez [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Pour récupérer le contenu binaire du [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fichier de déploiement de projet, pour le paramètre *\@project_stream* , utilisez une instruction SELECT avec la fonction OPENROWSET et le fournisseur d’ensembles de lignes en bloc. Le fournisseur d'ensembles de lignes BULK vous permet de lire des données dans un fichier. L'argument SINGLE_BLOB du fournisseur d'ensembles de lignes BULK retourne le contenu du fichier de données sous la forme d'un ensemble de lignes à une seule ligne, une seule colonne de type varbinary (max). Pour plus d’informations, consultez [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     Dans l’exemple suivant, le projet SSISPackages_ProjectDeployment est déployé dans le dossier SSIS Packages sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Les données binaires sont lues à partir du fichier projet (SSISPackage_ProjectDeployment. ISPAC) et sont stockées dans le paramètre *\@ProjectBinary* de type varbinary (max). La valeur du paramètre *\@ProjectBinary* est assignée au paramètre *\@project_stream* .  
+     Dans l’exemple suivant, le projet SSISPackages_ProjectDeployment est déployé dans le dossier SSIS Packages sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les données binaires sont lues à partir du fichier projet (SSISPackage_ProjectDeployment. ISPAC) et sont stockées dans le paramètre *\@ProjectBinary* de type varbinary (max). La valeur du paramètre *\@ProjectBinary* est affectée au paramètre *\@project_stream*.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -97,7 +97,7 @@ ms.locfileid: "72251314"
   
 -   Créez un objet serveur lié. Pour plus d’informations, consultez [Créer des serveurs liés &#40;moteur de base de données SQL Server&#41;](../database-engine/sql-server-database-engine-overview.md).  
   
-     Dans la page **Options du serveur** de la boîte de dialogue **Propriétés du serveur lié**, attribuez à **RPC** et à **Sortie RPC** la valeur **True**. Par ailleurs, attribuez à **Activer la promotion des transactions distribuées pour RPC** la valeur **False**.  
+     Dans la page **Options du serveur** de la boîte de dialogue **Propriétés du serveur lié** , attribuez à **RPC** et à **Sortie RPC** la valeur **True**. Par ailleurs, attribuez à **Activer la promotion des transactions distribuées pour RPC** la valeur **False**.  
   
 -   Vérifiez les paramètres dynamiques du fournisseur que vous avez sélectionné pour le serveur lié : développez le nœud **Fournisseurs** sous **Serveurs liés** dans l’Explorateur d’objets, puis cliquez avec le bouton droit sur le fournisseur et cliquez sur **Propriétés**. Sélectionnez **Activer** en regard de **Paramètre dynamique**.  
   
@@ -125,6 +125,6 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ## <a name="see-also"></a>Voir aussi  
  [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Exécuter un package dans les outils de données SQL Server](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
- [Exécuter un package sur le serveur SSIS à l'aide de SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
+ [Exécuter un package sur le serveur SSIS à l’aide de SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
   

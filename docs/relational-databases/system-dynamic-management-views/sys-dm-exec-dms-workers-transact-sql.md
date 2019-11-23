@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,26 +29,26 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532940"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. DM _exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur tous les Workers effectuant les étapes DMS.  
   
  Cette vue affiche les données des 1000 dernières demandes et demandes actives. les demandes actives comportent toujours les données présentes dans cette vue.  
   
-|Nom de la colonne|Type de données|Description|Plage|  
+|Column Name|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Requête que ce Worker DMS fait partie de. request_id, step_index et dms_step_index constituent la clé de cette vue.||  
-|step_index|`int`|Étape de requête dont ce Worker DMS fait partie.|Consultez index Step dans [sys. DM _exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|`int`|Étape du plan DMS que ce processus de travail exécute.|Consultez [sys. DM _exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|Nœud sur lequel le processus de travail s’exécute.|Consultez [sys. DM _exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|`nvarchar(32)`|Requête qui fait partie de ce Worker DMS. request_id, step_index et dms_step_index constituent la clé de cette vue.||  
+|step_index|`int`|Étape de requête dont ce Worker DMS fait partie.|Consultez index d’étape dans [sys. &#40;DM_EXEC_DISTRIBUTED_REQUEST_STEPS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|`int`|Étape du plan DMS que ce processus de travail exécute.|Consultez [sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|Nœud sur lequel le processus de travail s’exécute.|Consultez [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|type|`nvarcha(32)`|||  
-|status|`nvarchar(32)`|État de cette étape|« Pending », « Running », « Complete », « failed », « UndoFailed », « PendingCancel », « Cancelled », « UNDONE », « Aborted »|  
+|Type|`nvarcha(32)`|||  
+|status|`nvarchar(32)`|État de cette étape|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  
-|start_time|`datetime`|Heure à laquelle l’étape a démarré l’exécution|Plus petite ou égale à l’heure actuelle et supérieure ou égale à end_compile_time de la requête à laquelle cette étape appartient.|  
+|start_time|`datetime`|Heure à laquelle l’étape a démarré l’exécution|Inférieure ou égale à l’heure actuelle et supérieure ou égale à end_compile_time de la requête à laquelle cette étape appartient.|  
 |end_time|`datetime`|Heure à laquelle cette étape s’est terminée, a été annulée ou a échoué.|La valeur est inférieure ou égale à l’heure actuelle et supérieure ou égale à start_time, définie sur la valeur NULL pour les étapes en cours d’exécution ou en attente.|  
 |total_elapsed_time|`int`|Durée totale d’exécution de l’étape de la requête, en millisecondes|Entre 0 et la différence entre end_time et start_time. 0 pour les étapes en file d’attente.|  
 |cpu_time|`bigint`|||  

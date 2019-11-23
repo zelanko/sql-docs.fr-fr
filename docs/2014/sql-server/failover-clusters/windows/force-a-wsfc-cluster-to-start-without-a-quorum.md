@@ -25,7 +25,7 @@ ms.locfileid: "72797474"
   
 -   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
   
--   **Pour forcer un cluster à démarrer sans quorum :**  [Utilisation du Gestionnaire du cluster de basculement](#FailoverClusterManagerProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Net.exe](#CommandPromptProcedure)  
+-   **Pour forcer un cluster à démarrer sans quorum :**  [Gestionnaire du Cluster de basculement à l’aide de](#FailoverClusterManagerProcedure), [à l’aide de Powershell](#PowerShellProcedure), [à l’aide de Net.exe](#CommandPromptProcedure)  
   
 -   **Suivi :**  [Suivi : après avoir forcé le cluster à démarrer sans quorum](#FollowUp)  
   
@@ -117,9 +117,9 @@ net.exe start clussvc /forcequorum
   
      [Forcer le service dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)  
   
-     [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+     [Basculer vers un serveur secondaire d’envoi de journaux &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="RelatedContent"></a> Contenu connexe  
   
 -   [Afficher les événements et journaux pour un cluster de basculement](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   

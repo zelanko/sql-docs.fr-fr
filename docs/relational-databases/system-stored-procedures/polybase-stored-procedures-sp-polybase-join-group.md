@@ -47,7 +47,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Port sur lequel le canal de contrôle pour le nœud principal Mouvement de données PolyBase service est en cours d’exécution. *\@dms_control_channel_port* est un __int16 non signé. La valeur par défaut est **16450**.  
   
  *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Nom du nœud principal SQL Server instance dans le groupe de montée en puissance parallèle Polybase. *@no__t 1head_node_sql_server_instance_name est de type* nvarchar (16).  
+ Nom du nœud principal SQL Server instance dans le groupe de montée en puissance parallèle Polybase. *\@head_node_sql_server_instance_name* est de type nvarchar (16).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -56,7 +56,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="remarks"></a>Notes  
- Après l’exécution de la procédure stockée, arrêtez le moteur Polybase et redémarrez le service Mouvement de données PolyBase sur l’ordinateur. Pour vérifier l’exécution de la DMV suivante sur le nœud principal : **sys. DM _exec_compute_nodes**.  
+ Après l’exécution de la procédure stockée, arrêtez le moteur Polybase et redémarrez le service Mouvement de données PolyBase sur l’ordinateur. Pour vérifier l’exécution de la DMV suivante sur le nœud principal : **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Exemple  
  L’exemple joint l’ordinateur actuel en tant que nœud de calcul à un groupe Polybase.  Le nom du nœud principal est **HST01** et le nom de l’instance SQL Server sur le nœud principal est **MSSQLSERVER**.  

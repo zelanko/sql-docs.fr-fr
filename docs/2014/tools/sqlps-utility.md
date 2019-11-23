@@ -20,7 +20,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798136"
 ---
-# <a name="sqlps-utility"></a>sqlps (utilitaire)
+# <a name="sqlps-utility"></a>Utilitaire sqlps
   L'utilitaire `sqlps` démarre une session Windows PowerShell 2.0 avec les applets de commande et le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell chargés et inscrits. Vous pouvez entrer des scripts ou des commandes PowerShell qui utilisent les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell pour travailler avec des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leurs objets.  
   
 > [!IMPORTANT]  
@@ -66,7 +66,7 @@ ms.locfileid: "72798136"
  **-Command :** spécifie que l’utilitaire de `sqlps` lit l’entrée à partir de l’entrée standard.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Spécifie un bloc de commandes PowerShell à exécuter ; le bloc doit être placé entre des accolades : {}. *Script_block* peut être spécifié uniquement quand l’utilitaire `sqlps` est appelé à partir de **PowerShell** ou d’une autre session de l’utilitaire `sqlps`. *argument_array* est un tableau de variables PowerShell contenant les arguments pour les commandes PowerShell de *script_block*.  
+ Spécifie un bloc de commandes PowerShell à exécuter ; le bloc doit être placé entre des accolades : {}. *Script_block* peut être spécifié uniquement quand l’utilitaire `sqlps` est appelé à partir de **PowerShell** ou d’une autre session de l’utilitaire de `sqlps`. *argument_array* est un tableau de variables PowerShell contenant les arguments pour les commandes PowerShell de *script_block*.  
   
  *string* [ *command_parameters* ]  
  Spécifie une chaîne qui contient les commandes PowerShell à exécuter. Utilisez le format **« & { *`command`* } »** . Les guillemets indiquent une chaîne, tandis que l’opérateur d’appel (&) entraîne l’exécution de la commande par l’utilitaire `sqlps`.  
@@ -93,7 +93,7 @@ ms.locfileid: "72798136"
   
 -   exécuter des applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
   
--   utiliser les chemins d'accès du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans la hiérarchie des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
+-   utiliser les chemins d'accès du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans la hiérarchie des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
   
  Par défaut, l’utilitaire `sqlps` s’exécute avec la stratégie d’exécution de script définie sur **restreint**. Cela empêche l'exécution de scripts PowerShell. Vous pouvez utiliser l’applet de commande **Set-ExecutionPolicy** pour activer l’exécution de scripts signés ou de tout type de script. Exécutez uniquement des scripts provenant de sources fiables et sécurisez tous les fichiers d'entrée et de sortie en utilisant les autorisations NTFS appropriées. Pour plus d'informations sur l'activation de scripts PowerShell, consultez [Exécution de scripts Windows PowerShell](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72798136"
 sqlps -NoLogo  
 ```  
   
-### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>b. Exécution d'un script SQL Server PowerShell à partir de l'invite de commandes
+### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>B. Exécution d'un script SQL Server PowerShell à partir de l'invite de commandes
   
 ```cmd
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  

@@ -17,7 +17,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797814"
 ---
-# <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins PowerShell SQL Server
+# <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins d'accès PowerShell SQL Server
   Le fournisseur PowerShell du [!INCLUDE[ssDE](../includes/ssde-md.md)] expose le jeu d'objets dans une instance de SQL Server dans une structure similaire à un chemin d'accès de fichier. Vous pouvez utiliser des applets de commande Windows PowerShell pour naviguer jusqu'au chemin d'accès du fournisseur et créer des lecteurs personnalisés pour raccourcir le chemin d'accès que vous devez taper.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
@@ -131,7 +131,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [Utiliser des chemins d'accès PowerShell SQL Server](work-with-sql-server-powershell-paths.md)   
  [Convertir des URN en chemins d'accès de fournisseur SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

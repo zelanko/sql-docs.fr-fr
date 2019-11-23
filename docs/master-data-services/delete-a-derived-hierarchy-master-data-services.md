@@ -29,7 +29,7 @@ ms.locfileid: "73728367"
 > [!NOTE]  
 >  La suppression d'une hiérarchie dérivée n'a aucun effet sur les relations d'attributs sur lesquelles la hiérarchie est basée.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  

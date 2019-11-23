@@ -31,7 +31,7 @@ ms.locfileid: "72304864"
   Ajoute un utilisateur à la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] utilisez à la place [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] utilisez plutôt [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login_ '` correspond au nom du groupe Windows, de la connexion Windows ou de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mapper au nouvel utilisateur de base de données. Les noms des groupes Windows et des connexions Windows doivent être qualifiés par un nom de domaine Windows sous la forme *domaine*\\*login*; par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *login* est de **type sysname**et n’a pas de valeur par défaut.  
+`[ @loginame = ] 'login_ '` est le nom du groupe Windows, de la connexion Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion à mapper au nouvel utilisateur de base de données. Les noms des groupes Windows et des connexions Windows doivent être qualifiés par un nom de domaine Windows sous la forme *domaine*\\*connexion*; par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *login* est de **type sysname**et n’a pas de valeur par défaut.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` est le nom du nouvel utilisateur de base de données. *name_in_db* est une variable de sortie avec un type de données **sysname**et une valeur par défaut null. S’il n’est pas spécifié, la *connexion* est utilisée. S’il est spécifié comme variable de sortie avec une valeur NULL, **\@name_in_db** est défini sur *login*. *name_in_db* ne doit pas déjà exister dans la base de données active.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` est le nom du nouvel utilisateur de base de données. *name_in_db* est une variable de sortie avec un type de données **sysname**et une valeur par défaut null. S’il n’est pas spécifié, la *connexion* est utilisée. S’il est spécifié comme variable de sortie avec une valeur NULL, **\@name_in_db** est définie sur *login*. *name_in_db* ne doit pas déjà exister dans la base de données active.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -56,10 +56,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
  **sp_grantdbaccess** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle de base de données fixe **db_owner** ou au rôle de base de données fixe **db_accessadmin** .  
+ Requiert l’appartenance au rôle de base de données fixe **db_owner** ou le rôle de base de données fixe **db_accessadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `CREATE USER` pour ajouter un utilisateur de base de données pour la connexion Windows `Edmonds\LolanSo` à la base de données actuelle. Le nouvel utilisateur se nomme `Lolan`. Il s'agit de la méthode recommandée pour la création d'un utilisateur de base de données.  
+ L’exemple suivant utilise `CREATE USER` pour ajouter un utilisateur de base de données pour le `Edmonds\LolanSo` de connexion Windows à la base de données actuelle. Le nouvel utilisateur se nomme `Lolan`. Il s'agit de la méthode recommandée pour la création d'un utilisateur de base de données.  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

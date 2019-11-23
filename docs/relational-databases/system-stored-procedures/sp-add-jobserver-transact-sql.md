@@ -40,14 +40,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id` Numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` le numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` nom du travail. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` le nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
+>  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @server_name = ] 'server'` nom du serveur sur lequel le travail doit être ciblé. *Server* est de type **nvarchar (30)** , avec N' (local) 'comme valeur par défaut. le *serveur* peut être **(local)** pour un serveur local ou le nom d’un serveur cible existant.  
+`[ @server_name = ] 'server'` le nom du serveur sur lequel le travail doit être ciblé. *Server* est de type **nvarchar (30)** , avec N' (local) 'comme valeur par défaut. le *serveur* peut être **(local)** pour un serveur local ou le nom d’un serveur cible existant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -69,17 +69,17 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_add_jobserver** pour les travaux impliquant plusieurs serveurs.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter des **sp_add_jobserver** pour les tâches qui impliquent plusieurs serveurs.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-assigning-a-job-to-the-local-server"></a>R. Affectation d'un travail au serveur local  
+### <a name="a-assigning-a-job-to-the-local-server"></a>A. Affectation d'un travail au serveur local  
  L'exemple suivant affecte le travail `NightlyBackups` pour une exécution sur le serveur local.  
   
 > [!NOTE]  
->  Cet exemple suppose que le travail `NightlyBackups` existe déjà.  
+>  Cet exemple suppose que le travail de `NightlyBackups` existe déjà.  
   
 ```  
 USE msdb ;  

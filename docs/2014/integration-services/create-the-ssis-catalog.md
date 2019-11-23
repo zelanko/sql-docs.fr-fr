@@ -24,7 +24,7 @@ ms.locfileid: "72798020"
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>Pour créer le catalogue SSISDB dans SQL Server Management Studio  
   
-1.  Ouvrir [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Connectez-vous au moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72798020"
   
 6.  Entrez un mot de passe, puis cliquez sur **OK**.  
   
-     Le mot de passe protège la clé principale de la base de données utilisée pour le chiffrement des données du catalogue. Enregistrez le mot de passe dans un emplacement sécurisé. Il est également recommandé de sauvegarder la clé principale de base de données. Pour plus d’informations, voir [Sauvegarder une clé primaire de base de données](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+     Le mot de passe protège la clé principale de la base de données utilisée pour le chiffrement des données du catalogue. Enregistrez le mot de passe dans un emplacement sécurisé. Il est également recommandé de sauvegarder la clé principale de base de données. Pour plus d'informations, consultez [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Pour créer le catalogue SSISDB par programmation  
   

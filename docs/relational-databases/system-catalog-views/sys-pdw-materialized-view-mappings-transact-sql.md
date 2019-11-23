@@ -1,5 +1,5 @@
 ---
-title: sys. pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
+title: sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -27,9 +27,9 @@ Lie la vue matérialisée aux noms d’objets internes en object_id.
 
 Les colonnes physical_name et object_id forment la clé de cet affichage catalogue.
   
-|Nom de la colonne|Type de données|Description|  
+|Column Name|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar (36)**|Nom physique de la vue matérialisée.|  
+|physical_name |**nvarchar(36)**|Nom physique de la vue matérialisée.|  
 |object_id  |**int**|ID d’objet de la vue matérialisée. Consultez [sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Autorisations
@@ -38,7 +38,7 @@ Requiert l'autorisation VIEW DATABASE STATE.
   
 ## <a name="see-also"></a>Voir aussi
 
-[Réglage des performances avec la vue matérialisée](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[Réglage des performances avec une vue matérialisée](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

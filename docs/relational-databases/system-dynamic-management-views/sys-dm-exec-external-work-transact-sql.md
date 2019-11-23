@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_external_work (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,20 +29,20 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532950"
 ---
-# <a name="sysdm_exec_external_work-transact-sql"></a>sys. DM _exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Retourne des informations sur la charge de travail par travail, sur chaque nœud de calcul.  
   
- Interrogez sys. DM _exec_external_work pour identifier le travail qui doit communiquer avec la source de données externe (par exemple, Hadoop ou SQL Server externe).  
+ Interrogez sys. dm_exec_external_work pour identifier le travail qui doit communiquer avec la source de données externe (par exemple, Hadoop ou SQL Server externe).  
   
-|Nom de la colonne|Type de données|Description|Plage|  
+|Column Name|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Identificateur unique de la requête Polybase associée.|Consultez *request_ID* dans [sys. DM _EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|`int`|Requête exécutée par ce processus de travail.|Consultez *step_index* dans [sys. DM _EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|`int`|Étape du plan DMS que ce processus de travail exécute.|Consultez [sys. DM _exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|`int`|Nœud sur lequel le processus de travail s’exécute.|Consultez [sys. DM _exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|`nvarchar(60)`|Type de travail externe.|'Fichier fractionné'|  
+|execution_id|`nvarchar(32)`|Identificateur unique de la requête Polybase associée.|Consultez *request_ID* dans [sys. DM_EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|Requête exécutée par ce processus de travail.|Consultez *step_index* dans [sys. DM_EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|`int`|Étape du plan DMS que ce processus de travail exécute.|Consultez [sys. dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|`int`|Nœud sur lequel le processus de travail s’exécute.|Consultez [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|Type|`nvarchar(60)`|Type de travail externe.|'Fichier fractionné'|  
 |work_id|`int`|ID du fractionnement réel.|Supérieur ou égal à 0.|  
 |input_name|`nvarchar(4000)`|Nom de l’entrée à lire|Nom de fichier lors de l’utilisation de Hadoop.|  
 |read_location|`bigint`|Emplacement de décalage ou de lecture.|Décalage du fichier à lire.|  

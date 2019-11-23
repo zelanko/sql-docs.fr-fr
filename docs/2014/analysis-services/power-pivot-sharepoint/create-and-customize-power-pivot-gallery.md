@@ -24,7 +24,7 @@ ms.locfileid: "70874398"
   
 -   [Prérequis](#prereq)  
   
--   [Vue d’ensemble](#overview)  
+-   [Vue d'ensemble](#overview)  
   
 -   [Créer la Galerie PowerPivot](#createlib)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70874398"
   
 -   [Passer à la vue Galerie ou Théâtre](#switch)  
   
-##  <a name="prereq"></a> Prérequis  
+##  <a name="prereq"></a> Conditions préalables requises  
   
 -   Vous devez disposer de Silverlight. Silverlight peut être téléchargé et installé via Microsoft Update. Si vous affichez une bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à l'aide d'un navigateur qui ne dispose pas de Silverlight, cliquez sur le lien dans la page pour l'installer. Vous devez fermer le navigateur puis le rouvrir une fois que vous avez installé Silverlight.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "70874398"
   
 2.  Tapez le nom de la bibliothèque. Veillez à inclure des informations descriptives qui permettent aux utilisateurs d'identifier cette bibliothèque en tant qu'aperçu complet pour les classeurs PowerPivot et les rapports Reporting Services.  
   
-3.  Cliquez sur **Créer**.  
+3.  Cliquez sur **Créer**.  
   
 4.  Demandez à un administrateur de service ou de batterie de serveurs d'ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comme emplacement approuvé pour Excel Services. Cette étape est nécessaire pour éviter des erreurs si un utilisateur configure un classeur pour l'actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations sur cette tâche, consultez [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
@@ -147,9 +147,9 @@ ms.locfileid: "70874398"
 3.  Dans Gérer les affichages, sous Affichage actuel, sélectionnez la vue que vous voulez utiliser dans la liste. Les vues prédéfinies sont les suivantes : Galerie, Théâtre et Carrousel. Vous pouvez également choisir Tous les documents si vous souhaitez déplacer, supprimer ou gérer des documents dans la bibliothèque.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résoudre les problèmes liés à une Installation PowerPivot pour SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
- [Utiliser la Galerie PowerPivot](use-power-pivot-gallery.md)    
- [Créer un emplacement approuvé pour les sites PowerPivot dans l’administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)    
+ [Résoudre les problèmes liés à une Installation PowerPivot pour SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [Utiliser la Galerie PowerPivot](use-power-pivot-gallery.md)   
+ [Créer un emplacement approuvé pour les sites PowerPivot dans l’administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Supprimer une Galerie PowerPivot](delete-power-pivot-gallery.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys. DM _os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71342514"
 ---
-# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. DM _os_enumerate_fixed_drives (Transact-SQL)
+# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -34,8 +34,8 @@ Introduite dans SQL Server 2019.
 |Nom de la colonne|Type de données|Description|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|Chemin d’accès au volume, par exemple `C:\`.|  
-|`drive_type`|`int`|Code pour le type de lecteur. Consultez [@no__t fonction-1](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
-|`drive_type_desc`|`nvarchar(512)`|Description du type de lecteur. Consultez [@no__t fonction-1](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type`|`int`|Code pour le type de lecteur. Consultez [`GetDriveTypeW` fonction](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type_desc`|`nvarchar(512)`|Description du type de lecteur. Consultez [`GetDriveTypeW` fonction](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Espace libre du disque en octets.|
 
 ## <a name="permissions"></a>Autorisations

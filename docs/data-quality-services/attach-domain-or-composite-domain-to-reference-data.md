@@ -34,11 +34,11 @@ ms.locfileid: "70152785"
   
  Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d’un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data - Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- Dans cette rubrique, nous allons créer quatre domaines : **Ligne d’adresse**, **Ville**, **État**, et **Code postal**, sous un domaine composite **Contrôle d’adresse**. Joignez le domaine composite au service de données de référence **Melissa Data - Contrôle d’adresse**, puis mappez les domaines dans le domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
+ Dans cette rubrique, nous allons créer quatre domaines : **Address Line**, **City**, **State**et **Zip**, sous un domaine composite **Address Verification**. Joignez le domaine composite au service de données de référence **Melissa Data - Address Check**, puis mappez les domaines dans le domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Conditions préalables requises  
  Vous devez avoir configuré [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) pour utiliser les services de données de référence. Consultez [Configurer DQS pour utiliser des données de référence](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 ###  <a name="Security"></a> Sécurité  
@@ -48,13 +48,13 @@ ms.locfileid: "70152785"
   
 ##  <a name="Map"></a> Mapper les domaines aux données de référence de Melissa Data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sous **Gestion des bases de connaissances**, cliquez sur **Nouvelle base de connaissances**.  
   
 3.  Dans l'écran **Nouvelle Base de connaissances** , tapez un nom pour la nouvelle base de connaissances, cliquez sur l'activité **Gestion de l'arborescence du domaine** , puis cliquez **Créer**.  
   
-4.  Dans l'écran **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** pour créer un domaine. Créez les quatre domaines suivants : **Ligne d’adresse**, **Ville**, **État**, et **Code postal**.  
+4.  Dans l'écran **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** pour créer un domaine. Créez les quatre domaines suivants : **Adresse**, **Ville**, **État**et **Code postal**.  
   
 5.  Cliquez sur l'icône **Créer un domaine composite** pour créer un domaine composite. Dans la boîte de dialogue **Créer un domaine composite** , tapez **Contrôle d'adresse** dans la zone **Nom du domaine composite** et incluez tous les domaines créés à l'étape 3 du domaine composite. Cliquez sur **OK**.  
   
@@ -75,19 +75,19 @@ ms.locfileid: "70152785"
         > [!NOTE]  
         >  -   Dans la boîte de dialogue **catalogue des fournisseurs de données de référence en ligne** , le nœud **DataMarket Data Quality Services** affiche tous les fournisseurs de services de données de référence auxquels vous vous êtes abonné dans la place de marché Azure. Si vous avez configuré des fournisseurs tiers directs en ligne de services de données de référence dans DQS, ils apparaîtront sous un autre nœud appelé **Fournisseurs tiers directs en ligne** (non disponible à présent car aucun tiers fournisseur tiers direct en ligne n'est configuré dans DQS).  
   
-9. Retournez à l'onglet **Données de référence** . Dans la zone **Paramètres des fournisseurs**, modifiez les valeurs dans les zones suivantes, si nécessaire :  
+9. Vous revenez à l’onglet **données de référence** . Dans la zone **paramètres du fournisseur** , modifiez les valeurs dans les zones suivantes, si nécessaire :  
   
-    -   **Seuil de correction automatique** : les corrections du service de données de référence avec un niveau de confiance supérieur aux valeurs de ce seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
+    -   **Seuil de correction automatique**: les corrections des services de données de référence avec un niveau de confiance supérieur à ces valeurs de seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
   
-    -   **Candidats suggérés** : nombre des candidats suggérés à afficher à partir du service de données de référence.  
+    -   **Candidats suggérés**: nombre des candidats suggérés à afficher à partir du service de données de référence.  
   
-    -   **Confiance minimale** : les suggestions du service de données de référence avec un niveau de confiance inférieur à cette valeur sont ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
+    -   **Confiance minimale**: les suggestions du service des données de référence avec un niveau de confiance inférieur à cette valeur sont ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
   
 10. Cliquez sur **Terminer** pour publier la base de connaissances. Un message de confirmation s'affiche après que la base de connaissances a été publiée avec succès.  
   
  Vous pouvez maintenant utiliser cette base de connaissances pour l’activité de nettoyage dans un projet de qualité des données afin de normaliser et nettoyer les adresses américaines de vos données sources en fonction des connaissances fournies par Melissa Data via la place de marché Azure.  
   
-##  <a name="FollowUp"></a> Suivi : Après le mappage d’un domaine aux données de référence  
+##  <a name="FollowUp"></a> Suivi : Après le mappage d'un domaine aux données de référence  
  Créez un projet de qualité des données et exécutez l'activité de nettoyage sur vos données sources contenant les adresses américaines en les comparant à la base de connaissances créée dans cette rubrique. Consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Voir aussi  

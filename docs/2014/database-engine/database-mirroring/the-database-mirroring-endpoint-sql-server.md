@@ -96,5 +96,5 @@ ms.locfileid: "72797900"
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité de transport pour la mise en miroir &#40;de&#41; bases de données et les groupes de disponibilité AlwaysOn SQL Server](transport-security-database-mirroring-always-on-availability.md)   
  [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys. DM _hadr_availability_replica_states &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys. DM _db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

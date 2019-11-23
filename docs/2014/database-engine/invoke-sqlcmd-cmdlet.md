@@ -47,7 +47,7 @@ $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
- L’exemple suivant utilise le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell pour naviguer jusqu’à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], puis utilise l’applet de commande **Get-Item** de Windows PowerShell pour récupérer l’objet serveur SMO pour l’instance et le transmettre à **Invoke-Sqlcmd**:  
+ L’exemple suivant utilise le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell pour naviguer jusqu’à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], puis utilise l’applet de commande **Get-Item** de Windows PowerShell pour récupérer l’objet serveur SMO pour l’instance et le transmettre à **Invoke-Sqlcmd** :  
   
 ```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
@@ -79,7 +79,7 @@ Set-Location SQLSERVER:\SQL
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
- Les commandes suivantes retournent [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] :  
+ Les commandes suivantes retournent [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]:  
   
 ```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
@@ -110,16 +110,16 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Exécuter la requête spécifiée et quitter.|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-p|-Password|  
-|Définition de variable.|-V|-Variable|  
+|Définition de variable.|-v|-Variable|  
 |Intervalle de délai de requête.|-T|-QueryTimeout|  
 |Arrêter l'exécution en cas d'erreur|-b|-AbortOnError|  
 |Connexion administrateur dédiée.|-a|-DedicatedAdministratorConnection|  
-|Désactiver les commandes interactives, le script de démarrage et les variables d'environnement.|-X|-DisableCommands|  
-|Désactiver la substitution de variable.|-X|-DisableVariables|  
+|Désactiver les commandes interactives, le script de démarrage et les variables d'environnement.|-x|-DisableCommands|  
+|Désactiver la substitution de variable.|-x|-DisableVariables|  
 |Niveau de gravité minimal pour le rapport.|-v|-SeverityLevel|  
-|Niveau d'erreur minimal pour le rapport.|-M|-ErrorLevel|  
+|Niveau d'erreur minimal pour le rapport.|-m|-ErrorLevel|  
 |Intervalle de délai de connexion.|-l|-ConnectionTimeout|  
-|Nom d'hôte.|-H|-HostName|  
+|Nom d'hôte.|-h|-HostName|  
 |Modifier le mot de passe et quitter.|-Z|-NewPassword|  
 |Fichier d'entrée contenant une requête|-i|-InputFile|  
 |Longueur maximale de la sortie de type caractère|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Afficher les erreurs|Aucun paramètre|-OutputSqlErrors|  
 |Sortie des messages vers stderr|-r|Aucun paramètre|  
 |Utiliser les paramètres régionaux du client|-r|Aucun paramètre|  
-|Exécuter la requête spécifiée et rester actif|-Q|Aucun paramètre|  
+|Exécuter la requête spécifiée et rester actif|-q|Aucun paramètre|  
 |Page de codes à utiliser pour les données de sortie|-f|Aucun paramètre|  
 |Modifier un mot de passe et rester actif|-Z|Aucun paramètre|  
-|Taille du paquet|-A|Aucun paramètre|  
-|Séparateur de colonnes|-S|Aucun paramètre|  
+|Taille du paquet|-a|Aucun paramètre|  
+|Séparateur de colonnes|-s|Aucun paramètre|  
 |En-têtes de sortie des contrôles|-H|Aucun paramètre|  
 |Spécifier des caractères de contrôle|-k|Aucun paramètre|  
-|Largeur d'écran de longueur fixe|-y|Aucun paramètre|  
-|Largeur d'écran de longueur variable|-y|Aucun paramètre|  
+|Largeur d'écran de longueur fixe|-Y|Aucun paramètre|  
+|Largeur d'écran de longueur variable|-Y|Aucun paramètre|  
 |Entrée d'écho|-E|Aucun paramètre|  
-|Activer les identificateurs entre guillemets|-i|Aucun paramètre|  
-|Supprimer des espaces de fin|-w|Aucun paramètre|  
-|Instances de liste|-l|Aucun paramètre|  
-|Mettre en forme la sortie en Unicode|-U|Aucun paramètre|  
-|Imprimer les statistiques|-P|Aucun paramètre|  
+|Activer les identificateurs entre guillemets|-I|Aucun paramètre|  
+|Supprimer des espaces de fin|-W|Aucun paramètre|  
+|Instances de liste|-L|Aucun paramètre|  
+|Mettre en forme la sortie en Unicode|-u|Aucun paramètre|  
+|Imprimer les statistiques|-p|Aucun paramètre|  
 |Fin de la commande|-c|Aucun paramètre|  
-|Connexion avec l'authentification Windows|-E|Aucun paramètre|  
+|Connexion avec l'authentification Windows|-e|Aucun paramètre|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser les applets de commande du Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
- [Utiliser l'utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ [Utilitaire sqlcmd](../tools/sqlcmd-utility.md)   
+ [Utiliser l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

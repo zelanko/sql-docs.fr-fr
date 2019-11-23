@@ -32,7 +32,7 @@ ms.locfileid: "73983113"
 
   Retourne des informations sur les remplissages d'index de recherche en texte intégral et d'expression de clé sémantique actuellement en cours dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID de la base de données qui contient l'index de texte intégral en cours de remplissage.|  
 |**catalog_id**|**int**|ID du catalogue de texte intégral qui contient cet index de texte intégral.|  

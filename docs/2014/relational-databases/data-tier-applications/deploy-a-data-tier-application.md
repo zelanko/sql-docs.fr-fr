@@ -40,7 +40,7 @@ ms.locfileid: "72783072"
  Un même package DAC peut être déployé plusieurs fois sur une instance unique du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , mais les déploiements doivent être exécutés un par un. Le nom d'instance DAC spécifié pour chaque déploiement doit être unique dans l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ###  <a name="SQLUtility"></a>Utilitaire SQL Server  
- Si vous déployez une DAC dans une instance gérée du moteur de base de données, la DAC déployée est incorporée dans l'utilitaire SQL Server lorsque le jeu d'éléments de collecte de l'utilitaire est envoyé de l'instance au point de contrôle de l'utilitaire. La DAC est ensuite présente dans le nœud **Applications de la couche Données déployées** de l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
+ Si vous déployez une DAC dans une instance gérée du moteur de base de données, la DAC déployée est incorporée dans l'utilitaire SQL Server lorsque le jeu d'éléments de collecte de l'utilitaire est envoyé de l'instance au point de contrôle de l'utilitaire. La DAC sera ensuite présente dans le nœud **Applications de la couche Données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **de** et signalée dans la page Détails **Applications de la couche Données déployées** .  
   
 ###  <a name="DBOptSettings"></a> Options et paramètres de bases de données  
  Par défaut, la base de données créée pendant le déploiement aura tous les paramètres par défaut de l'instruction CREATE DATABASE, sauf pour les exceptions suivantes :  
@@ -54,8 +54,8 @@ ms.locfileid: "72783072"
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Une DAC peut être déployée vers [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure. Si vous créez une DAC à l'aide d'une version ultérieure, elle peut contenir des objets non pris en charge par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vous ne pouvez pas déployer ces DAC vers les instances de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-###  <a name="Prerequisites"></a> Prérequis  
- Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. De tels packages peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un package provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur. Pour plus d’informations sur la façon de procéder à ces vérifications, consultez [Valider un package DAC](validate-a-dac-package.md).  
+###  <a name="Prerequisites"></a> Conditions préalables requises  
+ Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. De tels packages peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un package provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur. Pour plus d'informations sur la façon de procéder à ces vérifications, consultez [Validate a DAC Package](validate-a-dac-package.md).  
   
 ###  <a name="Security"></a> Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
@@ -87,7 +87,7 @@ ms.locfileid: "72783072"
 ##  <a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de déploiement d'une application de la couche Données.  
   
- **Ne plus afficher cette page** - Cochez la case pour ne plus afficher la page à l'avenir.  
+ **Ne plus afficher cette page** Cochez cette case pour ne plus afficher la page à l’avenir.  
   
  **Suivant >** : passe à la page **Sélectionner le package DAC**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "72783072"
   
  **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport de déploiement dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est le dossier SQL Server Management Studio\DAC Packages dans le dossier Documents de votre compte Windows.  
   
- **Terminer** : met fin à l’Assistant.  
+ **Terminer** - Met fin à l'Assistant.  
   
 ##  <a name="DeployDACPowerShell"></a> Utilisation de PowerShell  
  **Pour déployer une DAC à l’aide de la méthode Install () dans un script PowerShell**  
@@ -234,4 +234,4 @@ $fileStream.Close()
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](data-tier-applications.md)   
  [Extraire une DAC d'une base de données](extract-a-dac-from-a-database.md)   
- [Identificateurs de base de données](../databases/database-identifiers.md)  
+ [Identificateur de la base de données](../databases/database-identifiers.md)  

@@ -44,10 +44,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La demande du nom de chemin d’accès d’une colonne de tout autre type de données ou d’un columnthat **varbinary (max)** n’a pas l’attribut FILESTREAM Storage entraîne une erreur de compilation de requête.  
   
- *@no__t 1option*  
+ *option \@*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) entière qui définit comment le composant serveur du chemin d’accès doit être mis en forme. *\@option* peut prendre l’une des valeurs suivantes. La valeur par défaut est 0.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|Retourne le nom de serveur converti au format BIOS, par exemple : `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Retourne le nom de serveur non converti, par exemple : `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Lorsque la base de données appartient à un groupe de disponibilité Always On, la valeur de *use_replica_computer_name* a les effets suivants sur la sortie de la fonction **pathname** :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Non spécifié.|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
 |0|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
@@ -69,7 +69,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-type"></a>Type de retour  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
  La valeur retournée est le chemin d'accès logique complet ou NETBIOS de l'objet blob. PathName ne retourne pas d'adresse IP. Une valeur NULL est retournée lorsque l'objet blob FILESTREAM n'a pas été créé.  
   
 ## <a name="remarks"></a>Notes  
@@ -79,7 +79,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-reading-the-path-for-a-filestream-blob"></a>R. Lecture du chemin d'accès d'un objet BLOB FILESTREAM  
+### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. Lecture du chemin d'accès d'un objet BLOB FILESTREAM  
  L'exemple suivant attribue `PathName` à une variable `nvarchar(max)`.  
   
 ```sql  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;  Transact-&#41; SQL](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
  [Accéder à des données FILESTREAM avec OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

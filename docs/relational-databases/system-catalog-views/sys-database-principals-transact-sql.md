@@ -32,7 +32,7 @@ ms.locfileid: "73982714"
 
   Retourne une ligne pour chaque principal de sécurité d'une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom du principal, unique dans la base de données.|  
 |**principal_id**|**int**|ID du principal, unique dans la base de données.|  
@@ -48,7 +48,7 @@ ms.locfileid: "73982714"
 |**authentication_type_desc**|**nvarchar(60)**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Description du type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> NONE : aucune authentification<br />INSTANCE : authentification de l’instance<br />BASE de données : authentification de base de données<br />WINDOWS : authentification Windows|  
 |**default_language_name**|**sysname**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Signifie la langue par défaut de ce principal.|  
 |**default_language_lcid**|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Signifie le LCID par défaut de ce principal.|  
-|**allow_encrypted_value_modifications**|**bit**|**S’applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées à l’aide de Always Encrypted, entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées à l’aide de Always Encrypted, entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF. |      
   
 ## <a name="remarks"></a>Notes  
  Les propriétés *PasswordLastSetTime* sont disponibles sur toutes les configurations prises en charge de SQL Server, mais les autres propriétés sont uniquement disponibles lorsque SQL Server s’exécute sur Windows Server 2003 ou version ultérieure et que CHECK_POLICY et CHECK_EXPIRATION sont activés. Pour plus d’informations, consultez [stratégie de mot de passe](../../relational-databases/security/password-policy.md) .  

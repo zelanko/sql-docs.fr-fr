@@ -53,11 +53,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** n’est pas pris en charge pour la réplication transactionnelle d’égal à égal.  
   
- **sp_reinitpullsubscription** peut être appelé à partir de l’abonné pour réinitialiser l’abonnement lors de la prochaine exécution de la agent de distribution.  
+ **sp_reinitpullsubscription** peut être appelée à partir de l’abonné pour réinitialiser l’abonnement lors de la prochaine exécution du agent de distribution.  
   
  Les abonnements aux publications créées avec la valeur **false** pour **\@immediate_sync** ne peuvent pas être réinitialisés à partir de l’abonné.  
   
- Vous pouvez réinitialiser un abonnement par extraction en exécutant **sp_reinitpullsubscription** sur l’abonné ou **sp_reinitsubscription** sur le serveur de publication.  
+ Pour réinitialiser un abonnement par extraction, vous pouvez soit exécuter **sp_reinitpullsubscription** sur l’abonné, soit **sp_reinitsubscription** sur le serveur de publication.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  

@@ -51,7 +51,7 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @restore_delay = ] 'restore_delay'` la durée, en minutes, pendant laquelle le serveur secondaire attend avant de restaurer un fichier de sauvegarde donné. *restore_delay* est de **type int** et ne peut pas avoir la valeur null. La valeur par défaut est 0 :  
+`[ @restore_delay = ] 'restore_delay'` la durée, en minutes, pendant laquelle le serveur secondaire attend avant de restaurer un fichier de sauvegarde donné. *restore_delay* est de **type int** et ne peut pas avoir la valeur null. La valeur par défaut est 0.  
   
 `[ @restore_all = ] 'restore_all'` si la valeur est définie sur 1, le serveur secondaire restaure toutes les sauvegardes du journal des transactions disponibles lors de l’exécution du travail de restauration. Dans le cas contraire, le serveur s'arrête une fois qu'un fichier a été restauré. *restore_all* est de type **bit** et ne peut pas être null.  
   
@@ -88,11 +88,11 @@ sp_change_log_shipping_secondary_database
 ## <a name="remarks"></a>Notes  
  **sp_change_log_shipping_secondary_database** doit être exécuté à partir de la base de données **Master** sur le serveur secondaire. Elle effectue les actions suivantes :  
   
-1.  Modifie les paramètres dans les enregistrements **log_shipping_secondary_database** en fonction des besoins.  
+1.  Modifie les paramètres dans les enregistrements **log_shipping_secondary_database** si nécessaire.  
   
 2.  Modifie l’enregistrement du moniteur local dans **log_shipping_monitor_secondary** sur le serveur secondaire à l’aide des arguments fournis, si nécessaire.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

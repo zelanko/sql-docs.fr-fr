@@ -82,7 +82,7 @@ ms.locfileid: "73729331"
     </setting>  
     ```  
   
-3.  Sous le paramètre « ConnectionString » ajoutez un paramètre « WorkflowTypeExtenders » pour associer un nom de balise à votre assembly de gestionnaire de flux de travail. Par exemple :  
+3.  Sous le paramètre « ConnectionString » ajoutez un paramètre « WorkflowTypeExtenders » pour associer un nom de balise à votre assembly de gestionnaire de flux de travail. Par exemple:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

@@ -36,7 +36,7 @@ ms.locfileid: "73983149"
   
 > **Remarque :** Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_exec_sessions**.  
   
-|Nom de colonne|Data type|Description et informations spécifiques à la version|  
+|Nom de la colonne|Type de données|Description et informations spécifiques à la version|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session associée à chaque connexion principale active. N'accepte pas la valeur NULL.|  
 |login_time|**datetime**|Heure à laquelle la session a été établie. N'accepte pas la valeur NULL.|  
@@ -63,7 +63,7 @@ ms.locfileid: "73983149"
 |logical_reads|**bigint**|Nombre de lectures logiques qui ont été effectuées sur cette session. N'accepte pas la valeur NULL.|  
 |is_user_process|**bit**|0 si la session est une session système. Dans le cas contraire, il s’agit de 1. N'accepte pas la valeur NULL.|  
 |text_size|**int**|Paramètre TEXTSIZE pour la session. N'accepte pas la valeur NULL.|  
-|langue|**nvarchar(128)**|Paramètre LANGUAGE pour la session. Autorise la valeur NULL.|  
+|langage|**nvarchar(128)**|Paramètre LANGUAGE pour la session. Autorise la valeur NULL.|  
 |date_format|**nvarchar(3)**|Paramètre DATEFORMAT pour la session. Autorise la valeur NULL.|  
 |date_first|**smallint**|Paramètre DATEFIRST pour la session. N'accepte pas la valeur NULL.|  
 |quoted_identifier|**bit**|Paramètre QUOTED_IDENTIFIER pour la session. N'accepte pas la valeur NULL.|  

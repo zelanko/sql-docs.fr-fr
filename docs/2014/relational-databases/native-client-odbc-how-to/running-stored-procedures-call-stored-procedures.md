@@ -40,10 +40,10 @@ ms.locfileid: "72688665"
 >  Si une application soumet une procédure à l'aide de la syntaxe Transact-SQL EXECUTE (par opposition à la séquence d'échappement ODBC CALL), le pilote ODBC de SQL Server passe l'appel de procédure à SQL Server en tant qu'instruction SQL et non en tant qu'appel RPC. Par ailleurs, les paramètres de sortie ne sont pas retournés si l'instruction Transact-SQL EXECUTE est utilisée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques &#40;de procédures relatives à l’exécution de&#41; procédures stockées ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)    
- [Appels de procédure stockée par traitement par lot](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)    
- [Exécution de procédures stockées](../native-client-odbc-stored-procedures/running-stored-procedures.md)    
- [Appel d’une procédure stockée](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)    
+ [Rubriques &#40;de procédures relatives à l’exécution de&#41; procédures stockées ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Appels de procédure stockée par traitement par lot](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Exécution de procédures stockées](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [Appel d’une procédure stockée](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Procédures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

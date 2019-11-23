@@ -150,7 +150,7 @@ ms.locfileid: "72906101"
 
      Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -165,7 +165,7 @@ ms.locfileid: "72906101"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitation des résultats en fonction d'une valeur de remise de type de données real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitation des résultats en fonction d'une valeur de remise de type de données real  
  Dans cet exemple, une base de données contient deux tables :  
   
 -   Orders (OrderID)  
@@ -289,7 +289,7 @@ ms.locfileid: "72906101"
   
 5.  Exécutez le fichier TestQuery.vbs en cliquant dessus dans l'Explorateur Windows.  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```  
     <root>  
@@ -308,7 +308,7 @@ ms.locfileid: "72906101"
   
 ## <a name="see-also"></a>Voir aussi  
  [float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
-  [Transact- &#40;SQL&#41; nchar et nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+   [Transact- &#40;SQL&#41; nchar et nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
  [Installation de SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Utilisation de schémas XSD annotés dans &#40;les requêtes SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

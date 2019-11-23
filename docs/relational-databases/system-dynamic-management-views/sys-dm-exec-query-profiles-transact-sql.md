@@ -35,7 +35,7 @@ Contrôle la progression en temps réel lorsqu'une requête est en cours d'exéc
 ## <a name="table-returned"></a>Table retournée  
 Les compteurs retournés sont par opérateur par thread. Les résultats sont dynamiques et ne correspondent pas aux résultats des options existantes, telles que les `SET STATISTICS XML ON` qui créent uniquement une sortie quand la requête est terminée.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session dans laquelle cette requête s'exécute. Référence dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  

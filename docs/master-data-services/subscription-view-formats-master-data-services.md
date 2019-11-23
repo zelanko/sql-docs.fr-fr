@@ -25,7 +25,7 @@ ms.locfileid: "73728889"
   
 ## <a name="subscription-view-formats"></a>Formats de vue d'abonnement  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |**Membres feuille**|Contient des membres feuille et leurs valeurs d'attribut associées.|  
 |**Historique des membres feuille**|Contient les données historiques des membres feuille et les valeurs d’attribut qui leur sont associées. Le format d’affichage est Dimension à variation lente Type 4.|  

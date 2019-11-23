@@ -38,13 +38,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @no_checks = ] no_checks` indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est de valeur de **bit**, avec 0 comme valeur par défaut.  
+`[ @no_checks = ] no_checks` indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est de **bit**, avec 0 comme valeur par défaut.  
   
  Si la **valeur est 0**, **sp_dropdistributor** s’assure que tous les objets de publication et de distribution en plus du serveur de distribution ont été supprimés.  
   
  Si la valeur est **1**, **sp_dropdistributor** supprime tous les objets de publication et de distribution avant de désinstaller le serveur de distribution.  
   
-`[ @ignore_distributor = ] ignore_distributor` indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de valeur de **bit**, avec **0**comme valeur par défaut.  
+`[ @ignore_distributor = ] ignore_distributor` indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de **bit**, avec **0**comme valeur par défaut.  
   
  Si la **valeur est 0**, **sp_dropdistributor** se connecte au serveur de distribution et supprime tous les objets de réplication. Si **sp_dropdistributor** ne parvient pas à se connecter au serveur de distribution, la procédure stockée échoue.  
   
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>Notes  
  **sp_dropdistributor** est utilisé dans tous les types de réplications.  
   
- Si d’autres objets de publication ou de distribution existent sur le serveur, **sp_dropdistributor** échoue, sauf si **\@no_checks** a la valeur **1**.  
+ Si d’autres objets de publication ou de distribution existent sur le serveur, **sp_dropdistributor** échoue, sauf si **\@no_checks** est défini sur **1**.  
   
  Cette procédure stockée doit être exécutée après la suppression de la base de données de distribution en exécutant **sp_dropdistributiondb**.  
   
@@ -69,7 +69,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="see-also"></a>Voir aussi  
  [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_changedistributor_property &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

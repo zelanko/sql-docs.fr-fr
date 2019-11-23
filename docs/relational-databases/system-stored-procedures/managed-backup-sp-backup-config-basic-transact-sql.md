@@ -30,10 +30,10 @@ ms.locfileid: "72305262"
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup. sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Configure les paramètres de base [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données spécifique ou pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Configure les paramètres de base de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données spécifique ou pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Cette procédure peut être appelée seule pour créer une configuration de sauvegarde managée de base. Toutefois, si vous envisagez d’ajouter des fonctionnalités avancées ou un calendrier personnalisé, commencez par configurer ces paramètres à l’aide de [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) et de [managed_backup. sp_backup_config_schedule &#40; Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) avant d’activer la sauvegarde managée avec cette procédure.  
+>  Cette procédure peut être appelée seule pour créer une configuration de sauvegarde managée de base. Toutefois, si vous envisagez d’ajouter des fonctionnalités avancées ou un calendrier personnalisé, commencez par configurer ces paramètres à l’aide de [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) et [managed_backup. sp_backup_config_schedule &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) avant d’activer la sauvegarde managée avec cette procédure.  
    
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> Arguments  
  @enable_backup  
- Activez ou désactivez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données spécifiée. Le @enable_backup est un **bit**. Paramètre obligatoire lors de la configuration de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous modifiez une configuration [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] existante, ce paramètre est facultatif. Dans ce cas, toutes les valeurs de configuration non spécifiées conservent leurs valeurs existantes.  
+ Activez ou désactivez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données spécifiée. Le @enable_backup est un **bit**. Paramètre obligatoire lors de la configuration de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous modifiez une configuration de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] existante, ce paramètre est facultatif. Dans ce cas, toutes les valeurs de configuration non spécifiées conservent leurs valeurs existantes.  
   
  @database_name  
  Nom de la base de données pour activer la sauvegarde managée sur une base de données spécifique.  
@@ -59,7 +59,7 @@ EXEC managed_backup.sp_backup_config_basic
 >  Pour l’instant, seule une URL SAS est prise en charge pour ce paramètre.  
   
  @retention_days  
- Période de rétention en jours des fichiers de sauvegarde. Le @storage_url est INT. Il s’agit d’un paramètre obligatoire lors de la première configuration de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première fois sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lors de la modification de la configuration [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ce paramètre est facultatif. S'il n'est pas spécifié, les valeurs de configuration existantes sont retenues.  
+ Période de rétention en jours des fichiers de sauvegarde. @storage_url est de type INT. Il s’agit d’un paramètre obligatoire lorsque vous configurez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première fois sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lors de la modification de la configuration de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ce paramètre est facultatif. S'il n'est pas spécifié, les valeurs de configuration existantes sont retenues.  
   
  @credential_name  
  Nom des informations d’identification SQL utilisées pour l’authentification auprès du compte de stockage Azure. @credentail_name est de **type sysname**. Lorsque cette valeur est spécifiée, la sauvegarde est stockée dans un objet blob de pages. Si ce paramètre a la valeur NULL, la sauvegarde est stockée en tant qu’objet blob de blocs. La sauvegarde vers l’objet blob de pages est dépréciée. il est donc préférable d’utiliser la nouvelle fonctionnalité de sauvegarde des objets BLOB de blocs. Lorsqu'il est utilisé pour modifier la configuration de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ce paramètre est facultatif. S’il n’est pas spécifié, les valeurs de configuration existantes sont conservées.  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle de base de données **db_backupoperator** , avec les autorisations **ALTER ANY CREDENTIAL** et **Execute** sur la procédure stockée **sp_delete_backuphistory** .  
+ Requiert l’appartenance au rôle de base de données **db_backupoperator** , avec les autorisations **ALTER ANY CREDENTIAL** et **Execute** sur **sp_delete_backuphistory** procédure stockée.  
   
 ## <a name="examples"></a>Exemples  
  Vous pouvez créer le conteneur de compte de stockage et l’URL SAS à l’aide des commandes Azure PowerShell les plus récentes. L’exemple suivant crée un nouveau conteneur, mycontainer, dans le compte de stockage mystorageaccount, puis obtient une URL SAS pour celui-ci avec des autorisations complètes.  

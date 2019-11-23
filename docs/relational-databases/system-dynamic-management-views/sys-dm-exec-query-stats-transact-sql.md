@@ -37,7 +37,7 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 > - Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_exec_query_stats**.    
 
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête.<br /><br /> **sql_handle**, ainsi que **statement_start_offset** et **statement_end_offset**, peuvent être utilisés pour récupérer le texte SQL de la requête en appelant la fonction de gestion dynamique **sys. dm_exec_sql_text** .|  
 |**statement_start_offset**|**int**|Indique, en octets, la position de début (à partir de 0) de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant.|  

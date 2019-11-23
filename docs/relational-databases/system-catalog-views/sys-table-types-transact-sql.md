@@ -35,7 +35,7 @@ ms.locfileid: "73982101"
 
   Affiche les propriétés des types de tables définis par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un type de table est un type à partir duquel il est possible de déclarer des variables de table ou des paramètres table. Chaque type de table a une **type_table_object_id** qui est une clé étrangère dans l’affichage catalogue [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) . Vous pouvez utiliser cette colonne ID pour interroger différents affichages catalogue, de manière similaire à une **object_id** colonne d’une table normale, pour découvrir la structure du type de table, par exemple ses colonnes et contraintes.    
  
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |*\<les colonnes héritées >*||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. &#40;types Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Numéro d'identification de l'objet. Ce numéro est unique dans la base de données.|  

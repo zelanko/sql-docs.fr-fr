@@ -49,14 +49,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  **sp_mergecleanupmetadata** doit être utilisé uniquement dans les topologies de réplication qui incluent des serveurs exécutant des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Les topologies qui incluent uniquement [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou une version ultérieure doivent utiliser la rétention automatique basée sur le nettoyage des métadonnées. Lorsque vous exécutez cette procédure stockée, soyez conscient de l'importance de la croissance nécessaire et potentielle du fichier journal sur l'ordinateur sur lequel la procédure stockée est exécutée.  
   
 > [!CAUTION]
->  Après l’exécution de **sp_mergecleanupmetadata** , par défaut, tous les abonnements sur les abonnés des publications qui ont des métadonnées stockées dans **MSmerge_genhistory**, **MSmerge_contents** et **MSmerge_tombstone** sont marqués pour réinitialisation, les modifications en attente sur l’abonné sont perdues et l’instantané actuel est marqué comme obsolète.  
+>  Après l’exécution de **sp_mergecleanupmetadata** , par défaut, tous les abonnements sur les abonnés des publications qui ont des métadonnées stockées dans **MSmerge_genhistory**, **MSmerge_contents** et **MSmerge_tombstone** sont marqués pour la réinitialisation, les modifications en attente sur l’abonné sont perdues et l’instantané actuel est marqué comme obsolète.  
 > 
 > [!NOTE]
->  S’il existe plusieurs publications dans une base de données, et que l’une de ces publications utilise une période de rétention de publication infinie ( **\@rétention**=**0**), l’exécution de **sp_mergecleanupmetadata** ne nettoie pas la fusion métadonnées de suivi des modifications de réplication pour la base de données. C'est pour cette raison qu'il faut utiliser la période de rétention infinie avec prudence.  
+>  S’il existe plusieurs publications dans une base de données et que l’une de ces publications utilise une période de rétention de publication infinie ( **\@rétention**=**0**), l’exécution de **sp_mergecleanupmetadata** ne nettoie pas les métadonnées de suivi des modifications de réplication de fusion pour la base de données. C'est pour cette raison qu'il faut utiliser la période de rétention infinie avec prudence.  
   
- Lors de l’exécution de cette procédure stockée, vous pouvez choisir de réinitialiser les abonnés en définissant le paramètre **\@reinitialize_subscriber** sur **true** (valeur par défaut) ou **false**. Si **sp_mergecleanupmetadata** est exécuté avec le paramètre **\@reinitialize_subscriber** ayant la valeur **true**, un instantané est réappliqué sur l’abonné même si l’abonnement a été créé sans instantané initial (par exemple, si les données et le schéma de l’instantané ont été appliqués manuellement ou existent déjà sur l’abonné. L’affectation de la **valeur false** au paramètre doit être utilisée avec précaution, car si la publication n’est pas réinitialisée, vous devez vous assurer que les données sur le serveur de publication et l’abonné sont synchronisées.  
+ Lors de l’exécution de cette procédure stockée, vous pouvez choisir de réinitialiser les abonnés en définissant le paramètre **\@reinitialize_subscriber** sur **true** (valeur par défaut) ou **false**. Si **sp_mergecleanupmetadata** est exécutée avec le paramètre **\@Reinitialize_subscriber** défini sur **true**, un instantané est réappliqué sur l’abonné même si l’abonnement a été créé sans instantané initial (par exemple, si les données et le schéma de l’instantané ont été appliqués manuellement ou existent déjà sur l’abonné). L’affectation de la **valeur false** au paramètre doit être utilisée avec précaution, car si la publication n’est pas réinitialisée, vous devez vous assurer que les données sur le serveur de publication et l’abonné sont synchronisées.  
   
- Quelle que soit la valeur de **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** échoue s’il existe des processus de fusion en cours qui tentent de charger des modifications sur un serveur de publication ou sur un abonné de republication au moment de l’enregistrement la procédure est appelée.  
+ Quelle que soit la valeur de **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** échoue si des processus de fusion en cours tentent de charger des modifications sur un serveur de publication ou sur un abonné de republication au moment de l’appel de la procédure stockée.  
   
  **Exécution de sp_mergecleanupmetadata avec \@reinitialize_subscriber = TRUE :**  
   
@@ -110,14 +110,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_mergecleanupmetadata**.  
   
  Pour utiliser cette procédure stockée, le serveur de publication doit exécuter [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], Les abonnés doivent exécuter [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0, Service Pack 2.  
   
 ## <a name="see-also"></a>Voir aussi  
- [MSmerge_genhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
-  de [MSmerge_contents &#40;Transact&#41; -SQL](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
  [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

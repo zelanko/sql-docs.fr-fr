@@ -30,9 +30,9 @@ ms.locfileid: "72278200"
 ## <a name="Denali"></a>Changements de comportement dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Découverte des métadonnées  
- Les améliorations apportées à la [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permettent à SQLDescribeCol d’obtenir des descriptions plus précises des résultats attendus que ceux retournés par SQLDescribeCol dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Découverte des métadonnées](../relational-databases/native-client/features/metadata-discovery.md).  
+ Les améliorations apportées à la [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permettent à SQLDescribeCol d’obtenir des descriptions plus précises des résultats attendus que ceux retournés par SQLDescribeCol dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
   
- L’option [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) pour déterminer le format d’une réponse sans exécuter la requête est remplacée par [sp_describe_first_result_set &#40;Transact&#41;-SQL](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40; Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys. DM _exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)et [sys. DM _exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ L’option [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) pour déterminer le format d’une réponse sans exécuter la requête est remplacée par [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)et [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Modifications du comportement dans le script d'une tâche SQL Server Agent  
  Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], si vous créez un travail en copiant le script d'un travail existant, le nouveau travail peut affecter par inadvertance le travail existant. Pour créer un nouveau travail à l’aide du script d’un travail existant, supprimez manuellement le paramètre *\@schedule_uid* qui est généralement le dernier paramètre de la section qui crée la planification du travail dans le travail existant. Vous créez ainsi une planification indépendante pour le nouveau travail sans affecter les travaux existants.  
@@ -84,10 +84,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |Type de données XS source|Type de données SQL Server de destination|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> int<br /><br /> entier<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> UnsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> int<br /><br /> BIGINT<br /><br /> Décimal<br /><br /> numeric|  
-|Décimal|Décimal<br /><br /> numeric|  
-|float|REAL|  
-|Double|float|  
+|byte<br /><br /> short<br /><br /> int<br /><br /> entier<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> UnsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> int<br /><br /> bigint<br /><br /> DECIMAL<br /><br /> numeric|  
+|DECIMAL|DECIMAL<br /><br /> numeric|  
+|float|real|  
+|double|float|  
   
  Le nouveau comportement améliore les performances lorsque la conversion intermédiaire peut être ignorée. Toutefois, lorsque la conversion des types de données échoue, des messages d'erreur différents de ceux qui ont été générés lors de la conversion à partir de la valeur xs:string intermédiaire s'affichent. Par exemple, si la méthode value n'a pas réussi à convertir la valeur `int` 100 000 en `smallint`, le message d'erreur précédent était :  
   
@@ -101,9 +101,9 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Vous pouvez modifier le comportement si vous utilisez sqlcmd. exe avec le mode XML ( : XML ON) lors de l’exécution d’une commande SELECT * FROM T FOR XML....  
   
 ### <a name="dbcc-checkident-revised-message"></a>Message modifié par DBCC CHECKIDENT  
- Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le message retourné par la commande DBCC CHECKIDENT a changé uniquement lorsqu’il est utilisé avec RESEED *new_reseed_value* pour modifier la valeur d’identité actuelle. Le nouveau message est « vérification des informations d’identité : valeur d’identité actuelle » @no__t-valeur d’identité 0current >». Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »  
+ Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le message retourné par la commande DBCC CHECKIDENT a changé uniquement lorsqu’il est utilisé avec RESEED *new_reseed_value* pour modifier la valeur d’identité actuelle. Le nouveau message est « vérification des informations d’identité : valeur d’identité actuelle »\<valeur d’identité actuelle >». Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »  
   
- Dans les versions antérieures, le message est « vérification des informations d’identité : valeur d’identité actuelle » @no__t-valeur d’identité 0current >», valeur de colonne actuelle « \<current valeur de colonne > ». Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. » Le message est inchangé lorsque DBCC CHECKIDENT est spécifié avec NORESEED, sans deuxième paramètre, ou sans valeur reseed. Pour plus d’informations, consultez [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ Dans les versions antérieures, le message est « vérification des informations d’identité : valeur d’identité actuelle »\<valeur d’identité actuelle >», valeur de colonne actuelle «\<valeur de colonne actuelle > ». Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. » Le message est inchangé lorsque DBCC CHECKIDENT est spécifié avec NORESEED, sans deuxième paramètre, ou sans valeur reseed. Pour plus d’informations, consultez [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Le comportement de la fonction exist() la fonction sur le type de données XML a changé  
  Le comportement de la fonction **exist ()** a changé lors de la comparaison d’un type de données XML avec une valeur null à 0 (zéro). Prenons l'exemple suivant :  
@@ -126,9 +126,9 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifications importantes apportées aux fonctionnalités de moteur de base de données dans SQL Server @no__t 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)-1  
- [Fonctionnalités de moteur de base de données dépréciées dans SQL Server @no__t 2014](deprecated-database-engine-features-in-sql-server-2016.md)-1  
- [Fonctionnalités de moteur de base de données abandonnées dans SQL Server @no__t 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)-1  
+ [Modifications importantes apportées aux fonctionnalités de moteur de base de données dans SQL Server  2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
+ [Fonctionnalités de moteur de base de données dépréciées dans SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Fonctionnalités de moteur de base de données abandonnées dans SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

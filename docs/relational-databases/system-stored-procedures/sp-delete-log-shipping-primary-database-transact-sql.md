@@ -61,11 +61,11 @@ sp_delete_log_shipping_primary_database
   
 5.  Supprime les entrées correspondantes dans **log_shipping_monitor_history_detail** et **log_shipping_monitor_error_detail** sur le serveur moniteur.  
   
-6.  Supprime l’entrée dans **log_shipping_primary_databases** pour cette base de données primaire.  
+6.  Supprime l’entrée de **log_shipping_primary_databases** pour cette base de données primaire.  
   
 7.  Appelle **sp_delete_log_shipping_alert_job** sur le serveur moniteur.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

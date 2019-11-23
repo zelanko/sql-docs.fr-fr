@@ -23,7 +23,7 @@ ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882176"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Définir la période d'expiration des abonnements
-  Cette rubrique explique comment définir la période d'expiration des abonnements dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La période d'expiration des abonnements détermine le temps qui précède l'expiration et la suppression d'un abonnement. Pour plus d’informations, voir [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
+  Cette rubrique explique comment définir la période d'expiration des abonnements dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La période d'expiration des abonnements détermine le temps qui précède l'expiration et la suppression d'un abonnement. Pour plus d'informations, voir [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
   
  **Dans cette rubrique**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882176"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Pour définir la période d'expiration d'un abonnement à une publication transactionnelle ou d'instantané  
   
-1.  Sur le serveur de publication, exécutez [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Spécifiez la période de l’expiration de l’abonnement souhaitée, en heures, pour **\@retention**. La période d'expiration par défaut est de 336 heures. Pour plus d'informations, voir [Create a Publication](create-a-publication.md).  
+1.  Sur le serveur de publication, exécutez [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Spécifiez la période de l’expiration de l’abonnement souhaitée, en heures, pour **\@retention**. La période d'expiration par défaut est de 336 heures. Pour plus d’informations, consultez [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Pour définir la période d'expiration d'un abonnement à une publication de fusion  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73882176"
   
     -   **3** = année  
   
-     La période d'expiration par défaut est de 14 jours. Pour plus d'informations, voir [Create a Publication](create-a-publication.md).  
+     La période d'expiration par défaut est de 14 jours. Pour plus d’informations, consultez [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Pour modifier la période d'expiration d'un abonnement à une publication transactionnelle ou d'instantané  
   

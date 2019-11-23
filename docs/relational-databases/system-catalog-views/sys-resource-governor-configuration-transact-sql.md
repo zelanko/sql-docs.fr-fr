@@ -31,7 +31,7 @@ ms.locfileid: "73982616"
 
   Retourne l'état du gouverneur de ressources stocké.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|ID de la fonction classifieur tel qu'il est stocké dans les métadonnées. N'accepte pas la valeur NULL.<br /><br /> **Remarque** Cette fonction est utilisée pour classer de nouvelles sessions et utilise des règles pour acheminer la charge de travail vers le groupe de charge de travail approprié. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_enabled|**bit**|Indique l'état actuel du gouverneur de ressources :<br /><br /> 0 = Resource Governor n’est pas activé.<br /><br /> 1 = Resource Governor est activé.<br /><br /> N'accepte pas la valeur NULL.|  

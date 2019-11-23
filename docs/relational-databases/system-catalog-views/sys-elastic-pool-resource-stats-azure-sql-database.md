@@ -34,20 +34,20 @@ ms.locfileid: "73843872"
 |-|  
 |**S’applique à**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] v12.|  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|Heure UTC indiquant le début de l’intervalle de création de rapports de 15 secondes.|  
 |**end_time**|**datetime2**|Heure UTC indiquant la fin de l’intervalle de création de rapports de 15 secondes.|  
 |**elastic_pool_name**|**nvarchar(128)**|Nom du pool de bases de données élastiques.|  
-|**avg_cpu_percent**|**décimal (5, 2)**|Utilisation moyenne du calcul en pourcentage de la limite du pool.|  
-|**avg_data_io_percent**|**décimal (5, 2)**|Utilisation moyenne des e/s en pourcentage en fonction de la limite du pool.|  
-|**avg_log_write_percent**|**décimal (5, 2)**|Utilisation moyenne des ressources d’écriture en pourcentage de la limite du pool.|  
-|**avg_storage_percent**|**décimal (5, 2)**|Utilisation moyenne du stockage en pourcentage de la limite de stockage du pool.|  
-|**max_worker_percent**|**décimal (5, 2)**|Nombre maximal de threads de travail simultanés (demandes) en pourcentage en fonction de la limite du pool.|  
-|**max_session_percent**|**décimal (5, 2)**|Nombre maximal de sessions simultanées en pourcentage en fonction de la limite du pool.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Utilisation moyenne du calcul en pourcentage de la limite du pool.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Utilisation moyenne des e/s en pourcentage en fonction de la limite du pool.|  
+|**avg_log_write_percent**|**decimal(5,2)**|Utilisation moyenne des ressources d’écriture en pourcentage de la limite du pool.|  
+|**avg_storage_percent**|**decimal(5,2)**|Utilisation moyenne du stockage en pourcentage de la limite de stockage du pool.|  
+|**max_worker_percent**|**decimal(5,2)**|Nombre maximal de threads de travail simultanés (demandes) en pourcentage en fonction de la limite du pool.|  
+|**max_session_percent**|**decimal(5,2)**|Nombre maximal de sessions simultanées en pourcentage en fonction de la limite du pool.|  
 |**elastic_pool_dtu_limit**|**int**|Paramètre DTU du pool élastique maximal actuel pour ce pool élastique au cours de cet intervalle.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Paramètre de limite de stockage du pool élastique maximal actuel pour ce pool élastique en mégaoctets pendant cet intervalle.|
-|**avg_allocated_storage_percent**|**décimal (5, 2)**|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique.  Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique.  Pour plus d’informations [, consultez Gestion de l’espace de fichiers dans la base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique.  Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique.  Pour plus d’informations [, consultez Gestion de l’espace de fichiers dans la base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
 ## <a name="remarks"></a>Notes
 

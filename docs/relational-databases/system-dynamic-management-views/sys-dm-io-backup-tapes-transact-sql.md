@@ -1,5 +1,5 @@
 ---
-title: sys. DM _io_backup_tapes (Transact-SQL) | Microsoft Docs
+title: sys. dm_io_backup_tapes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -34,13 +34,13 @@ ms.locfileid: "70874152"
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|Nom du périphérique physique sur lequel une sauvegarde peut être effectuée. N'accepte pas la valeur NULL.|  
 |**logical_device_name**|**nvarchar (256)**|Nom spécifié par l’utilisateur pour le lecteur (à partir de **sys. backup_devices**). NULL si aucun nom spécifié par l'utilisateur n'est disponible. Autorise la valeur NULL.|  
-|**status**|**Int**|État de la bande :<br /><br /> 1 = Ouverte et disponible<br /><br /> 2 = En attente de montage<br /><br /> 3 = Utilisée<br /><br /> 4 = Chargement<br /><br /> **Remarque :** Pendant le chargement d’une bande (**Status = 4**), l’étiquette du support n’est pas encore lue. Les colonnes qui copient les valeurs d’étiquette de support, telles que **media_sequence_number**, affichent les valeurs anticipées, qui peuvent être différentes des valeurs réelles sur la bande. Une fois l’étiquette lue, l' **État** passe à **3** (en cours d’utilisation) et les colonnes de l’étiquette du support reflètent ensuite la bande qui est chargée.<br /><br /> N'accepte pas la valeur NULL.|  
+|**status**|**int**|État de la bande :<br /><br /> 1 = Ouverte et disponible<br /><br /> 2 = En attente de montage<br /><br /> 3 = Utilisée<br /><br /> 4 = Chargement<br /><br /> **Remarque :** Pendant le chargement d’une bande (**Status = 4**), l’étiquette du support n’est pas encore lue. Les colonnes qui copient les valeurs de l’étiquette de support, telles que **media_sequence_number**, affichent les valeurs anticipées, qui peuvent être différentes des valeurs réelles sur la bande. Une fois l’étiquette lue, l' **État** passe à **3** (en cours d’utilisation) et les colonnes de l’étiquette du support reflètent ensuite la bande qui est chargée.<br /><br /> N'accepte pas la valeur NULL.|  
 |**status_desc**|**nvarchar(520)**|Description de l'état de la bande :<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> N'accepte pas la valeur NULL.|  
 |**mount_request_time**|**datetime**|Heure de la demande de montage. NULL si aucun montage n’est en attente (**Status ! = 2**). Autorise la valeur NULL.|  
 |**mount_expiration_time**|**datetime**|Heure d'expiration de la demande de montage (dépassement de délai). NULL si aucun montage n’est en attente (**Status ! = 2**). Autorise la valeur NULL.|  
 |**database_name**|**nvarchar (256)**|Base de données à sauvegarder sur ce périphérique. Autorise la valeur NULL.|  
-|**spid**|**Int**|ID de la session. Il identifie l'utilisateur de la bande. Autorise la valeur NULL.|  
-|**commande**|**Int**|Commande qui effectue la sauvegarde. Autorise la valeur NULL.|  
+|**spid**|**int**|ID de la session. Il identifie l'utilisateur de la bande. Autorise la valeur NULL.|  
+|**commande**|**int**|Commande qui effectue la sauvegarde. Autorise la valeur NULL.|  
 |**command_desc**|**nvarchar(120)**|Description de la commande. Autorise la valeur NULL.|  
 |**media_family_id**|**int**|Index de la famille de supports (1... *n*), *n* est le nombre de familles de supports dans le support de sauvegarde. Autorise la valeur NULL.|  
 |**media_set_name**|**nvarchar (256)**|Nom du jeu de supports (s'il existe) tel qu'il a été spécifié par l'option MEDIANAME lors de la création du jeu de supports). Autorise la valeur NULL.|  
@@ -48,7 +48,7 @@ ms.locfileid: "70874152"
 |**media_sequence_number**|**int**|Index du volume au sein d’une famille de supports (1... *n*). Autorise la valeur NULL.|  
 |**tape_operation**|**int**|Opération sur bande en cours d’exécution :<br /><br /> 1 = Lecture<br /><br /> 2 = Formatage<br /><br /> 3 = Initialisation<br /><br /> 4 = Ajout<br /><br /> Autorise la valeur NULL.|  
 |**tape_operation_desc**|**nvarchar(120)**|Opération en cours sur la bande :<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND<br /><br /> Autorise la valeur NULL.|  
-|**mount_request_type**|**Int**|Type de la demande de montage :<br /><br /> 1 = Bande spécifique. La bande identifiée par les champs **media_\***  est requise.<br /><br /> 2 = Famille de supports suivante. Demande la famille de supports non encore restaurée suivante. S'utilise lorsque la restauration s'effectue à partir d'un nombre de périphériques inférieur au nombre de familles de supports.<br /><br /> 3 = Bandes magnétiques de sauvegarde consécutives. La famille de supports est étendue et il faut ajouter une bande consécutive.<br /><br /> Autorise la valeur NULL.|  
+|**mount_request_type**|**int**|Type de la demande de montage :<br /><br /> 1 = Bande spécifique. La bande identifiée par les champs de **\*media_** est requise.<br /><br /> 2 = Famille de supports suivante. Demande la famille de supports non encore restaurée suivante. S'utilise lorsque la restauration s'effectue à partir d'un nombre de périphériques inférieur au nombre de familles de supports.<br /><br /> 3 = Bandes magnétiques de sauvegarde consécutives. La famille de supports est étendue et il faut ajouter une bande consécutive.<br /><br /> Autorise la valeur NULL.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Type de la demande de montage :<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

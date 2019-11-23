@@ -57,9 +57,9 @@ sp_add_log_shipping_secondary_primary
   
 `[ @primary_database = ] 'primary_database'` est le nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` le répertoire où sont stockés les fichiers de sauvegarde du journal des transactions du serveur principal. *backup_source_directory* est de type **nvarchar (500)** et ne peut pas avoir la valeur null.  
+`[ @backup_source_directory = ] 'backup_source_directory'` le répertoire où sont stockés les fichiers de sauvegarde du journal des transactions du serveur principal. *backup_source_directory* est de type **nvarchar (500)** et ne peut pas être null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` le répertoire sur le serveur secondaire sur lequel les fichiers de sauvegarde sont copiés. *backup_destination_directory* est de type **nvarchar (500)** et ne peut pas avoir la valeur null.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` le répertoire sur le serveur secondaire sur lequel les fichiers de sauvegarde sont copiés. *backup_destination_directory* est de type **nvarchar (500)** et ne peut pas être null.  
   
 `[ @copy_job_name = ] 'copy_job_name'` le nom à utiliser pour le travail de l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours de création pour copier les sauvegardes du journal des transactions sur le serveur secondaire. *copy_job_name* est de **type sysname** et ne peut pas avoir la valeur null.  
   
@@ -110,7 +110,7 @@ sp_add_log_shipping_secondary_primary
   
     5.  Définissez l’ID de travail de restauration dans l’entrée **log_shipping_secondary** sur l’ID de travail du travail de restauration.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

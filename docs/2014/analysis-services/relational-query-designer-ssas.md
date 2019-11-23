@@ -20,7 +20,7 @@ ms.lasthandoff: 10/10/2019
 ms.locfileid: "72251216"
 ---
 # <a name="relational-query-designer-ssas"></a>Concepteur de requêtes relationnelles (SSAS)
-  Le Concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données à récupérer à partir de bases de données relationnelles [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], ainsi que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
+  Le Concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données à récupérer à partir de bases de données relationnelles [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] relational databases et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
  Si vous préférez, vous pouvez écrire la requête en langage SQL à l'aide de l'éditeur textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte**dans la barre d’outils. Une fois que vous modifiez une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes graphique.  
   
@@ -82,14 +82,14 @@ ms.locfileid: "72251216"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise [!INCLUDE[tsql](../includes/tsql-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilise [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
   
- Pour plus d’informations sur [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+ Pour plus d’informations sur [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]documentation en ligne[ de ](https://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.  
   
  Le tableau suivant répertorie les agrégats et fournit de brèves descriptions de ces derniers.  
   
 |Agrégat|Description|  
 |---------------|-----------------|  
 |Avg|Retourne la moyenne des valeurs d'un groupe. Implémente l'agrégat SQL AVG.|  
-|Compter|Retourne le nombre d'éléments figurant dans un groupe. Implémente l'agrégat SQL COUNT.|  
+|Count|Retourne le nombre d'éléments figurant dans un groupe. Implémente l'agrégat SQL COUNT.|  
 |Count Big|Retourne le nombre d'éléments figurant dans un groupe. Représente l'agrégat SQL COUNT_BIG. La différence entre COUNT et COUNT_BIG vient du fait que COUNT_BIG retourne toujours une valeur dont le type de données est `bigint`.|  
 |Min|Renvoie la valeur minimale figurant dans un groupe. Implémente l’agrégat SQL MIN.|  
 |Max|Renvoie la valeur maximale figurant dans un groupe. Implémente l'agrégat SQL MAX.|  
@@ -122,7 +122,7 @@ ms.locfileid: "72251216"
 -   **Détection automatique** : active/désactive la fonctionnalité de détection automatique qui crée automatiquement les relations entre les tables. Si la détection automatique est activée, le Concepteur de requêtes crée les relations à partir des clés étrangères des tables ; sinon, vous devez créer les relations manuellement. Lorsque vous sélectionnez des tables dans le volet **Vue de base de données** , la fonctionnalité de détection automatique tente de créer les relations. Si vous activez la détection automatique après avoir créé des jointures manuellement, ces jointures sont ignorées.  
   
     > [!IMPORTANT]  
-    >  Lors de l'utilisation de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , les métadonnées nécessaires à la création de jointures ne sont pas fournies ; en outre, les relations ne peuvent pas être détectées automatiquement. Si votre requête récupère les données à partir de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], toutes les jointures de table doivent être créées manuellement.  
+    >  Pendant l’utilisation de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , les métadonnées nécessaires à la création de jointures ne sont pas fournies ; en outre, les relations ne peuvent pas être détectées automatiquement. Si votre requête récupère les données à partir de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], toutes les jointures de table doivent être créées manuellement.  
   
 -   **Ajouter une relation** Ajoute une relation à la liste **Relation** .  
   
@@ -214,7 +214,7 @@ ms.locfileid: "72251216"
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Requête|Affiche le texte de la requête SQL. Ce volet permet d'écrire ou de modifier une requête SQL.|  
+|Query|Affiche le texte de la requête SQL. Ce volet permet d'écrire ou de modifier une requête SQL.|  
 |Résultat|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
@@ -237,8 +237,8 @@ SELECT Name FROM ContactType
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Requête|Affiche le nom de la procédure stockée et tout paramètres d'entrée.|  
-|Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
+|Query|Affiche le nom de la procédure stockée et tout paramètres d'entrée.|  
+|Résultat|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
  La requête suivante appelle une procédure stockée nommée `uspGetWhereUsedProductID`. Lorsque la procédure stockée a des paramètres d'entrée, vous devez fournir des valeurs de paramètres lorsque vous exécutez la requête.  
@@ -247,12 +247,12 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Cliquez sur le bouton **Exécuter** ( **!** ). Le tableau suivant fournit un exemple de paramètres `uspGetWhereUsedProductID` pour lesquels vous fournissez des valeurs dans la boîte de dialogue **définir le paramètre de requête** .  
+ Cliquez sur le bouton **Exécuter** ( **!** ). Le tableau suivant fournit un exemple de `uspGetWhereUsedProductID` paramètres pour lesquels vous fournissez des valeurs dans la boîte de dialogue **définir le paramètre de requête** .  
   
 |||  
 |-|-|  
-|*@no__t 1StartProductID*|820|  
-|*@no__t 1CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>Type de commande TableDirect  
  Quand vous sélectionnez le **Type de commande TableDirect**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Lorsque vous entrez une table et cliquez sur le bouton **Exécuter** , toutes les colonnes pour cette table sont retournées.  

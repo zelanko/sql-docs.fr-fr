@@ -42,10 +42,10 @@ ms.locfileid: "70154552"
   
  L'approche DLM commence par une discussion sur la conception et l'objectif du projet, se poursuit par les activités de développement, de test, de génération, de déploiement, de maintenance et de sauvegarde de la base de données, puis se termine par l'archivage des données. Cette rubrique présente une vue d'ensemble des étapes de l'approche DLM, en commençant par le développement d'une base de données, suivi des activités de génération, de déploiement et de surveillance (Illustration 1). Les activités de gestion des données, ainsi que les opérations de portabilité des données de type importation/exportation, sauvegarde, migration et synchronisation, sont également abordées.  
   
- Pour lire l’intégralité de la rubrique, consultez [Gestion du cycle de vie de la base de données (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
+ Pour lire l'intégralité de la rubrique, consultez [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page d’hébergement Azure](http://www.windowsazure.com/)   
+ [Page d’accueil Azure](http://www.windowsazure.com/)   
  [Centre de développement Azure](http://www.windowsazure.com/develop/overview/)   
  [Centre de gestion Azure](http://www.windowsazure.com/manage/overview/)   
  [Blog de l’équipe Azure](http://www.windowsazure.com/community/blog/)   

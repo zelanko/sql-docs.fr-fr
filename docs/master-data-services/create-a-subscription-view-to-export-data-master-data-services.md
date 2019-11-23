@@ -26,7 +26,7 @@ ms.locfileid: "73728473"
 
   Créez une vue d’abonnement pour exporter les données Master Data Services vers des systèmes d’abonnement. Vous créez une vue de vos données dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** . Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -63,19 +63,19 @@ ms.locfileid: "73728473"
 11. Cliquez sur **Enregistrer**.  
   
 ## <a name="view-information"></a>Visualiser les informations  
- Pour chaque vue créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.  
+ Pour chaque vue créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau ci-après décrit ces colonnes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
 |État|État de la vue.<br /><br /> Lorsque vous cliquez sur **Enregistrer**, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icon pour la mise à jour de l’État») s’affiche, indiquant que la vue est en mode de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’une vue, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icon pour l’état d’erreur») s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icon pour l’état OK») s’affiche.|  
-|Créer une vue d’abonnement|Nom de la vue d’abonnement.|  
+|Nom|Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Version|Nom de la version.|  
 |Version|Nom de l’indicateur de version.|  
 |Entité|Nom de la hiérarchie dérivée.|  
-|Entité|Nom de l’entité.|  
+|Sources de données|Nom de l’entité.|  
 |Format|Type des données figurant dans la vue.|  
-|Level|Spécifie le nombre de niveaux de la vue ; cette valeur est uniquement utilisée pour les formats de vue de niveau Explicite ou Dérivé.|  
+|level|Spécifie le nombre de niveaux de la vue ; cette valeur est uniquement utilisée pour les formats de vue de niveau Explicite ou Dérivé.|  
 |Inclure les membres supprimés|Indique si les membres supprimés de façon réversible sont inclus dans la vue.|  
   
  Lorsque vous cliquez sur une vue, les informations ci-après s’affichent.  

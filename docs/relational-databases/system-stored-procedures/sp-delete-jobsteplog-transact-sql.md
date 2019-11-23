@@ -43,21 +43,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] 'job_id'` Numéro d’identification du travail qui contient le journal d’étapes de travail à supprimer. *job_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] 'job_id'` le numéro d’identification du travail qui contient le journal d’étapes de travail à supprimer. *job_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` nom du travail. *nom_du_travail* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` le nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** *Job_id* ou *nom_du_travail* doivent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
+> **Remarque :** *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id` Numéro d’identification de l’étape du travail pour lequel le journal d’étapes de travail doit être supprimé. S’il n’est pas inclus, tous les journaux d’étapes de travail du travail sont supprimés, sauf si **\@older_than** ou **\@larger_than** sont spécifiés. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` le numéro d’identification de l’étape du travail pour lequel le journal d’étapes de travail doit être supprimé. Si ce n’est pas le cas, tous les journaux d’étapes de travail du travail sont supprimés, sauf si **\@older_than** ou **\@larger_than** sont spécifiés. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @step_name = ] 'step_name'` nom de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'` le nom de l’étape du travail pour lequel le journal d’étapes de travail doit être supprimé. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** *Step_id* ou *step_name* peuvent être spécifiés, mais les deux ne peuvent pas être spécifiés.  
+> **Remarque :** *Step_id* ou *step_name* peuvent être spécifiés, mais ils ne peuvent pas être spécifiés.  
   
-`[ @older_than = ] 'date'` la date et l’heure du journal d’étapes de travail le plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *Date* est de **type DateTime**, avec NULL comme valeur par défaut. **@No__t-1older_than** et **\@larger_than** peuvent être spécifiés.  
+`[ @older_than = ] 'date'` la date et l’heure du journal d’étapes de travail le plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *Date* est de **type DateTime**, avec NULL comme valeur par défaut. **\@older_than** et **\@larger_than** peuvent être spécifiés.  
   
-`[ @larger_than = ] 'size_in_bytes'` taille en octets du journal d’étapes de travail le plus volumineux que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. **@No__t-1larger_than** et **\@older_than** peuvent être spécifiés.  
+`[ @larger_than = ] 'size_in_bytes'` la taille en octets du journal d’étapes de travail le plus volumineux que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. **\@larger_than** et **\@older_than** peuvent être spécifiés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Notes  
  **sp_delete_jobsteplog** se trouve dans la base de données **msdb** .  
   
- Si aucun argument n’est spécifié, à l’exception de **\@job_id** ou **\@job_name** , tous les journaux d’étapes de travail du travail spécifié sont supprimés.  
+ Si aucun argument, à l’exception de **\@job_id** ou **\@job_name** n’est spécifié, tous les journaux d’étapes de travail pour le travail spécifié sont supprimés.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -79,13 +79,13 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres de **sysadmin** peuvent supprimer un journal d’étapes de travail appartenant à un autre utilisateur.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-removing-all-job-step-logs-from-a-job"></a>R. Suppression de tous les journaux d'étapes d'un travail particulier  
+### <a name="a-removing-all-job-step-logs-from-a-job"></a>A. Suppression de tous les journaux d'étapes d'un travail particulier  
  L'exemple suivant montre la suppression de tous les journaux d'étapes du travail `Weekly Sales Data Backup`.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_compute_node_status (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,12 +28,12 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532764"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. DM _exec_compute_node_status (Transact-SQL)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contient des informations supplémentaires sur les performances et l’état de tous les nœuds Polybase. Répertorie une ligne par nœud.  
   
-|Nom de la colonne|Type de données|Description|Plage|  
+|Column Name|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|ID numérique unique associé au nœud.|Unique sur un cluster avec montée en puissance parallèle, quel que soit le type.|  
 |process_id|`int`|||  

@@ -47,7 +47,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797947"
 ---
-# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser
+# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service
   Cette rubrique explique comment démarrer, des commandes arrêter, des commandes interrompre, des commandes reprendre, des commandes ou redémarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], des commandes l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , des commandes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des commandes **net** à partir d'une invite de commandes, de des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)], des commandes or PowerShell.  
   
 -   **Avant de commencer :**  
@@ -149,7 +149,7 @@ ms.locfileid: "72797947"
 5.  Cliquez sur **OK** pour fermer le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’Agent ne peut pas être suspendu.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être suspendu.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
@@ -172,7 +172,7 @@ ms.locfileid: "72797947"
 3.  Lorsque vous y êtes invité, et si vous souhaitez exécuter l'action, cliquez sur **Oui**.  
   
 ##  <a name="CommandPrompt"></a> À partir de la fenêtre d'invite de commandes en utilisant les commandes net  
- Les services [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être démarrés, arrêtés ou suspendus à l’aide des commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] **net** Windows.  
+ Les services [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être démarrés, arrêtés ou suspendus à l’aide des commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ###  <a name="dbDefault"></a> Pour démarrer l'instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -180,7 +180,7 @@ ms.locfileid: "72797947"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     \- ou -  
+     - ou -  
   
      **net start MSSQLSERVER**  
   
@@ -190,7 +190,7 @@ ms.locfileid: "72797947"
   
      **net start "SQL Server (** *nom_instance* **)"**  
   
-     \- ou -  
+     - ou -  
   
      **net start MSSQL$** *nom_instance*  
   
@@ -200,7 +200,7 @@ ms.locfileid: "72797947"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     \- ou -  
+     - ou -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -213,7 +213,7 @@ ms.locfileid: "72797947"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     \- ou -  
+     - ou -  
   
      **net start SQLSERVERAGENT**  
   
@@ -223,7 +223,7 @@ ms.locfileid: "72797947"
   
      **net start "SQL Server Agent (** *nom_instance* **)"**  
   
-     \- ou -  
+     - ou -  
   
      **net start SQLAgent$** *nom_instance*  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72797947"
   
      **net start "SQL Server Browser"**  
   
-     \- ou -  
+     - ou -  
   
      **net start SQLBrowser**  
   
@@ -245,7 +245,7 @@ ms.locfileid: "72797947"
   
     -   Pour suspendre un service, remplacez **net start** par **net pause**.  
   
-    -   Pour arrêter un service, remplacez **net start** par **net stop**.  
+    -   Pour arrêter un service, remplacez **net start** par **net stop**  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être arrêté à l'aide de l'instruction `SHUTDOWN`.  

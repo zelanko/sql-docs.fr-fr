@@ -26,7 +26,7 @@ ms.locfileid: "73729442"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une règle d'entreprise pour garantir l'exactitude de vos données de référence. Après avoir créé une règle, vous devez la publier avant de pouvoir l'appliquer aux données.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -69,7 +69,7 @@ ms.locfileid: "73729442"
     > [!TIP]  
     >  Vous pouvez supprimer des éléments de votre règle d’entreprise en cliquant avec le bouton droit et en choisissant **Supprimer**.  
   
-15. Éventuellement, ajoutez plusieurs conditions à la règle. Pour plus d’informations, consultez [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+15. Éventuellement, ajoutez plusieurs conditions à la règle. Pour plus d’informations, consultez [Ajouter plusieurs conditions à une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 16. Sous le bloc **Then** , cliquez sur le bouton **Ajouter** . Un panneau s’affiche.  
   
@@ -100,18 +100,18 @@ ms.locfileid: "73729442"
 24. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur de la colonne **État de la règle d’entreprise** est **Active**.  
   
 ## <a name="grid-columns"></a>Colonnes de la grille  
- Pour chaque règle d’entreprise créée, une ligne comportant six colonnes est ajoutée dans la grille. Les différentes colonnes sont décrites ci-après.  
+ Pour chaque règle d’entreprise créée, une ligne comportant six colonnes est ajoutée dans la grille. Les colonnes sont décrites ci-après.  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |État|Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que la règle d’entreprise est en cours de mise à jour.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh»)<br /><br /> En cas d’erreur lors de la création ou de la modification d’une règle d’entreprise, l’image suivante apparaît.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error»)<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success»)|  
-|Créer une vue d’abonnement|Le nom de la règle d’entreprise.|  
+|Nom|Le nom de la règle d’entreprise.|  
 |Description|La description de la règle d’entreprise.|  
 |État de la règle d’entreprise|L’un des états de règle d’entreprise suivants : Règle non définie, Active, Exclue, Modifications en attente, Exclusion en attente et Suppression en attente.|  
 |Exclu|Indique si la règle d’entreprise est exclue.|  
 |Notification|Spécifie l’utilisateur ou le groupe sélectionné auquel envoyer la notification par courrier électronique.|  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
   
 -   Appliquez des règles d'entreprise aux données en suivant l'une de ces procédures :  
   

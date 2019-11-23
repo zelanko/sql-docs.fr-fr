@@ -22,12 +22,12 @@ ms.locfileid: "73637670"
   
  L'option d'installation de Server Core pour le système d'exploitation [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre l'environnement minimal requis pour l'exécution de certains rôles de serveurs spécifiques. Cela permet de réduire les besoins en maintenance et gestion et l'exposition aux attaques de ces rôles de serveur. Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], consultez [Server Core pour Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439). Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
   
 |Condition requise|Procédure d'installation|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|Inclus dans l'installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 et de [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. S'il n'est pas activé, le programme d'installation l'active par défaut.<br /><br /> Il n'est pas possible d'exécuter les versions 2.0, 3.0 et 3.5 côte à côte sur un ordinateur. Lorsque vous installez le .NET Framework 3.5 SP1, vous obtenez les couches 2.0 et 3.0 automatiquement.|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Profil 3.5 SP1 complet|Inclus dans l'installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. S'il n'est pas activé, le programme d'installation l'active par défaut.<br /><br /> Sur un ordinateur disposant du système d'exploitation Windows Server, vous devez télécharger et installer le .NET Framework 3.5 SP1 avant d'exécuter le programme d'installation, pour installer les composants qui dépendent du NET 3.5 SP1.<br /><br /> Pour plus d’informations sur les recommandations et des conseils sur l’acquisition et l’activation de .NET Framework 3,5 dans [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez Considérations sur le [déploiement de Microsoft .NET Framework 3,5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Profil 3.5 SP1 complet|Inclus dans l'installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. S'il n'est pas activé, le programme d'installation l'active par défaut.<br /><br /> Sur un ordinateur disposant du système d'exploitation Windows Server, vous devez télécharger et installer le .NET Framework 3.5 SP1 avant d'exécuter le programme d'installation, pour installer les composants qui dépendent du NET 3.5 SP1.<br /><br /> Pour plus d’informations sur les recommandations et des conseils sur l’acquisition et l’activation de .NET Framework 3,5 dans [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez Considérations sur le [déploiement de Microsoft .NET Framework 3,5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Profil 4 Server Core|Pour toutes les éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sauf [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], le programme d'installation installe le profil 4 Server Core [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] comme condition préalable.<br /><br /> Pour [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], téléchargez le profil [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core à partir de [Microsoft .NET Framework 4 (programme d’installation autonome) pour Server Core](https://www.microsoft.com/download/details.aspx?id=17718) (https://www.microsoft.com/download/details.aspx?id=17718), puis installez-le avant de procéder à l’installation.|  
 |Windows Installer 4.5|Inclus dans l'installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 et de [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell 2.0|Inclus dans l'installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 et de [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
@@ -38,7 +38,7 @@ ms.locfileid: "73637670"
 |Fonctionnalité|Pris en charge|  
 |-------------|---------------|  
 |du[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Oui|  
-|Réplication[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Oui|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Réplication|Oui|  
 |Recherche en texte intégral|Oui|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Oui|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Non|  
@@ -53,7 +53,7 @@ ms.locfileid: "73637670"
 |Distributed Replay Controller|Non|  
 |Distributed Replay Client|Distant uniquement<sup>[2]</sup>|  
 |Kit de développement logiciel (SDK) de l'option Connectivité client de SQL|Oui|  
-|Microsoft Sync Framework|Oui<sup>[3]</sup>|  
+|Microsoft Sync Framework|Oui<sup>[3]</sup>|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Non|  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Non|  
   
@@ -104,7 +104,7 @@ ms.locfileid: "73637670"
 |IS|Installe tous les composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |CONN|Installe les composants de connectivité.|  
   
- Consultez les exemples suivants de l'utilisation de paramètres de fonctionnalités :  
+ Consultez les exemples suivants de l'utilisation de paramètres de fonctionnalités :  
   
 |Paramètre et valeurs|Description|  
 |--------------------------|-----------------|  
@@ -167,7 +167,7 @@ ms.locfileid: "73637670"
   
     -   Installation des composants de connectivité  
   
-         L'exemple suivant montre comment installer les composants de connectivité :  
+         L'exemple suivant montre comment installer les composants de connectivité :  
   
         ```  
         ; ssNoVersion Configuration File  
@@ -258,14 +258,14 @@ ms.locfileid: "73637670"
   
     -   DefaultSetup.ini  
   
-         Si vous le fichier DefaultSetup.ini figure dans les dossiers \x86 et \x64 au niveau de la racine du média source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ouvrez le fichier DefaultSetup.ini, puis ajoutez le paramètre *Features* au fichier.  
+         Si vous le fichier DefaultSetup.ini figure dans les dossiers \x86 et \x64 au niveau de la racine du média source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ouvrez le fichier DefaultSetup.ini, puis ajoutez le paramètre *Features* au fichier.  
   
-         Si le fichier DefaultSetup.ini n'existe pas, vous pouvez le créer et le copier dans les dossiers \x86 et \x64 au niveau de la racine du média source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+         Si le fichier DefaultSetup.ini n'existe pas, vous pouvez le créer et le copier dans les dossiers \x86 et \x64 au niveau de la racine du média source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Configuration de l'accès à distance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur Server Core  
  Effectuez les actions décrites ci-dessous pour configurer l'accès à distance d'une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui s'exécute sur une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer les connexions distantes sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer les connexions distantes sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -295,7 +295,7 @@ ms.locfileid: "73637670"
   
 2.  Dans l'onglet **Applications** , cliquez sur **Nouvelle tâche**.  
   
-3.  Dans la boîte de dialogue **Créer une nouvelle tâche** , tapez **sqlps.exe** dans le champ **Ouvrir** , puis cliquez sur **OK**. Cela ouvre la fenêtre **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
+3.  Dans la boîte de dialogue **Créer une nouvelle tâche** , tapez **sqlps.exe** dans le champ **Ouvrir** , puis cliquez sur **OK**. Cela ouvre la fenêtre **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** .  
   
 4.  Dans la fenêtre **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, exécutez le script suivant pour activer le protocole TCP/IP :  
   

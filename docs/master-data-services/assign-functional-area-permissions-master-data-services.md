@@ -26,7 +26,7 @@ ms.locfileid: "73728761"
 
   Affectez des autorisations de zone fonctionnelle pour accorder aux utilisateurs ou groupes l'accès aux zones fonctionnelles de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  
@@ -47,7 +47,7 @@ ms.locfileid: "73728761"
   
 7.  Lorsque vous avez terminé, cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
