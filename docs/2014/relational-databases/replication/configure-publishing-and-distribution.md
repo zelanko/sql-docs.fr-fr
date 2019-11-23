@@ -22,7 +22,7 @@ ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882255"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurer la publication et la distribution
-  Cette rubrique explique comment configurer la publication et la distribution dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
+  Cette rubrique explique comment configurer la publication et la distribution dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d’objets RMO (Replication Management Objects).  
   
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
@@ -31,7 +31,7 @@ ms.locfileid: "73882255"
  Pour plus d’informations, consultez [sécuriser le déploiement de la réplication](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** . Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes **db_owner** puissent créer des publications, ou parce que vous voulez configurer un serveur distant de distribution qui ne soit pas serveur de publication.  
+ Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** . Utilisez l’Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes **db_owner** puissent créer des publications, ou parce que vous voulez configurer un serveur distant de distribution qui ne soit pas serveur de publication.  
   
 #### <a name="to-configure-distribution"></a>Pour configurer la distribution  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73882255"
   
     -   Permettre en option aux autres serveurs de publication d'utiliser le serveur de distribution. Si d'autres serveurs de publication sont activés pour utiliser le serveur de distribution, vous devez entrer un mot de passe dans la page **Mot de passe du serveur de distribution** pour les connexions effectuées à partir de ces serveurs de publication sur le serveur de distribution.  
   
-    -   Scripter en option les paramètres de configuration. Pour plus d'informations, voir [Scripting Replication](scripting-replication.md).  
+    -   Scripter en option les paramètres de configuration. Pour plus d’informations, consultez [Scripting Replication](scripting-replication.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  La publication et la distribution de réplication peuvent être configurées par programme à l'aide de procédures stockées de réplication.  
@@ -99,7 +99,7 @@ ms.locfileid: "73882255"
   
 4.  Affectez le nom de la base de données à la propriété <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> et le <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> créé à l'étape 1 à la propriété <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-5.  Installez le serveur de distribution en appelant la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passez l'objet <xref:Microsoft.SqlServer.Replication.DistributionDatabase> créé à l'étape 3.  
+5.  Installez le serveur de distribution en appelant la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passez l’objet <xref:Microsoft.SqlServer.Replication.DistributionDatabase> créé à l’étape 3.  
   
 6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .  
   

@@ -33,16 +33,16 @@ ms.locfileid: "72782904"
     > [!NOTE]  
     >  Vous pouvez démarrer PowerShell à partir de n'importe quel nœud sous **Événements étendus**. Par exemple, vous pouvez cliquer avec le bouton droit sur **Sessions**, puis cliquer sur **Démarrer PowerShell**. Cela démarre PowerShell à un niveau plus profond, au niveau du dossier Sessions.  
   
- Vous pouvez parcourir l'arborescence des dossiers XEvent pour consulter les sessions Événements étendus existantes, ainsi que leurs événements, cibles et prédicats associés. Par exemple, à partir du chemin d’accès PS SQLSERVER : \ XEvent \\*ServerName* \\*nom_instance*>, si vous tapez `cd sessions`, appuyez sur entrée, tapez `dir`, puis appuyez sur entrée. vous pouvez voir la liste des sessions stockées sur cette instance. Vous pouvez également voir si la session est en cours (et si c'est le cas, pour combien de temps), et savoir si elle est configurée pour démarrer en même temps que l'instance.  
+ Vous pouvez parcourir l'arborescence des dossiers XEvent pour consulter les sessions Événements étendus existantes, ainsi que leurs événements, cibles et prédicats associés. Par exemple, à partir du chemin d’accès PS SQLSERVER : \ XEvent\\*ServerName*\\*nom_instance*>, si vous tapez `cd sessions`, appuyez sur entrée, tapez `dir`, puis appuyez sur entrée. vous pouvez voir la liste des sessions stockées sur cette instance. Vous pouvez également voir si la session est en cours (et si c'est le cas, pour combien de temps), et savoir si elle est configurée pour démarrer en même temps que l'instance.  
   
- Pour consulter les événements, leurs prédicats et les cibles associés à une session, vous pouvez attribuer le nom de la session aux répertoires, puis voir le dossier des événements ou des cibles. Par exemple, pour afficher les événements et leurs prédicats associés à la session d’intégrité système par défaut, à partir du chemin d’accès PS SQLSERVER : \ XEvent \\*ServerName* \\*nom_instance*\Sessions >, tapez `cd system_health\events,` Appuyez sur entrée, tapez @no __t_5, puis appuyez sur entrée.  
+ Pour consulter les événements, leurs prédicats et les cibles associés à une session, vous pouvez attribuer le nom de la session aux répertoires, puis voir le dossier des événements ou des cibles. Par exemple, pour afficher les événements et leurs prédicats associés à la session d’intégrité système par défaut, à partir du chemin d’accès PS SQLSERVER : \ XEvent\\*ServerName*\\*nom_instance*\Sessions >, tapez `cd system_health\events,` Appuyez sur entrée, tapez `dir`, puis appuyez sur entrée.  
   
  Le fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un outil puissant que vous pouvez utiliser pour créer, modifier et gérer des sessions Événements étendus. La section suivante fournit quelques exemples simples d'utilisation de scripts PowerShell avec des Événements étendus.  
   
 ## <a name="examples"></a>Exemples  
- Dans les exemples ci-après, notez les éléments suivants :  
+ Dans les exemples ci-après, notez les éléments suivants :  
   
--   Les scripts doivent être exécutés à partir de l’invite PS SQLSERVER : \\ > (disponible en tapant `sqlps` à une invite de commandes).  
+-   Les scripts doivent être exécutés à partir de l’invite PS SQLSERVER :\\> (disponible en tapant `sqlps` à une invite de commandes).  
   
 -   Les scripts utilisent l'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

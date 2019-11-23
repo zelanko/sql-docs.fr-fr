@@ -35,7 +35,7 @@ ms.locfileid: "73660748"
 object.GetNextOrderValue()  
 ```  
   
-## <a name="parts"></a>Éléments  
+## <a name="parts"></a>Composants  
  *object*  
  A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

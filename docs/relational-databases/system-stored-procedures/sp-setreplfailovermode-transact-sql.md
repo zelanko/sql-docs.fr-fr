@@ -49,7 +49,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode'` est le mode de basculement de l’abonnement. *failover_mode* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**exécution** ou **synchronisation**|Les modifications de données effectuées sur l'Abonné sont instantanément copiées en bloc sur le serveur de publication.|  
 |**en attente**|Les modifications de données sont stockées dans une file d’attente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -57,19 +57,19 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing est déconseillé et n’est plus pris en charge.  
   
-`[ @override = ] override` à usage interne uniquement.  
+`[ @override = ] override` usage interne uniquement.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_setreplfailovermode** est utilisé dans la réplication d’instantané ou dans la réplication transactionnelle pour laquelle les abonnements sont activés, soit pour la mise à jour en attente avec basculement vers la mise à jour immédiate, soit pour la mise à jour immédiate avec basculement vers la mise à jour en attente.  
+ **sp_setreplfailovermode** est utilisé dans la réplication d’instantané ou dans la réplication transactionnelle pour laquelle les abonnements sont activés, que ce soit pour la mise à jour en attente avec basculement vers une mise à jour immédiate, ou pour une mise à jour immédiate avec basculement vers la mise à jour en attente.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)jour    
+ [Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md) jour   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

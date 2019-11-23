@@ -78,7 +78,7 @@ ms.locfileid: "73787422"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduit des champs de descripteur spécifiques au pilote pour fournir des informations supplémentaires pour indiquer respectivement le nom de la collection de schémas XML, le nom du schéma et le nom du catalogue. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nom du catalogue dans lequel un nom de collection de schémas XML est défini. Si le nom du catalogue est introuvable, cette variable contient une chaîne vide.<br /><br /> Ces informations sont retournées à partir du champ d'enregistrement SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME de l'IRD qui est un champ en lecture-écriture.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Nom du schéma dans lequel un nom de collection de schémas XML est défini. Si le nom du schéma est introuvable, cette variable contient une chaîne vide.<br /><br /> Ces informations sont retournées à partir du champ d'enregistrement SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME du champ de descripteur de ligne d'implémentation (IRD) en lecture-écriture.|  
@@ -86,7 +86,7 @@ ms.locfileid: "73787422"
   
  De même, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] inclut des champs de descripteur inhérents au pilote qui fournissent des informations supplémentaires pour une colonne de type défini par l'utilisateur (UDT) d'un jeu de résultats ou un paramètre UDT d'une procédure stockée ou d'une requête paramétrable. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
   
-|Nom de la colonne|Type|Description|  
+|Column Name|type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nom du catalogue contenant le type défini par l'utilisateur (UDT).|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Nom du schéma contenant le type défini par l’utilisateur.|  

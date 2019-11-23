@@ -102,7 +102,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>b. Déclaration et instanciation d'une instance geometry à l'aide d'un CompoundCurve dans la même instruction  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>B. Déclaration et instanciation d'une instance geometry à l'aide d'un CompoundCurve dans la même instruction  
  L’exemple suivant indique comment déclarer et initialiser une instance `geometry` avec `CompoundCurve`dans la même instruction :  
   
 ```sql  
@@ -187,7 +187,7 @@ Circle Two12.566370...
   
 ## <a name="see-also"></a>Voir aussi  
  [STIsValid &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
- [STLength &#40;Type de données geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
+ [STLength &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
  [STEndPoint &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
  [LineString](linestring.md)   

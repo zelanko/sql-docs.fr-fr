@@ -35,7 +35,7 @@ ms.locfileid: "73983100"
 > [!NOTE]  
 >  Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_os_memory_clerks**.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|Spécifie l'adresse mémoire unique du régisseur de mémoire. Il s'agit de la colonne clé primaire. N'accepte pas la valeur NULL.|  
 |**type**|**nvarchar(60)**|Spécifie le type de régisseur de mémoire. Chaque régisseur de mémoire a un type spécifique, par exemple les régisseurs de mémoire CLR MEMORYCLERK_SQLCLR. N'accepte pas la valeur NULL.|  

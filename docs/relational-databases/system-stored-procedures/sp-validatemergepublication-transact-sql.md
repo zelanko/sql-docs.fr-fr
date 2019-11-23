@@ -46,7 +46,7 @@ sp_validatemergepublication [@publication=] 'publication'
 |Valeur de level (niveau)|Description|  
 |-----------------|-----------------|  
 |**1**|Validation du décompte de lignes uniquement.|  
-|**2**|Validation du nombre de lignes et de la somme de contrôle. Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers, cette valeur est automatiquement définie sur **3**.|  
+|**2**|Validation du nombre de lignes et de la somme de contrôle. Pour les abonnés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cette valeur est automatiquement définie sur **3**.|  
 |**3**|Il s'agit de la valeur recommandée.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

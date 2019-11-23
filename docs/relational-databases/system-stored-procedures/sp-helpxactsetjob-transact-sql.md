@@ -41,7 +41,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Numéro de travail Oracle.|  
 |**lastdate**|**varchar(22)**|Dernière date d'exécution du travail.|  

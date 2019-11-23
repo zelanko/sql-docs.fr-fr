@@ -31,7 +31,7 @@ ms.locfileid: "73983298"
   Retourne une ligne qui contient l'état de configuration en mémoire actuel du gouverneur de ressources.  
   
 
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|ID de la fonction classifieur utilisée actuellement par le gouverneur de ressources. Retourne la valeur 0 si aucune fonction n'est utilisée. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** Cette fonction est utilisée pour classer de nouvelles demandes et utilise des règles pour acheminer ces demandes vers le groupe de charge de travail approprié. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_reconfiguration_pending|**bit**|Indique si des modifications ont été apportées ou non à un groupe ou un pool à l'aide de l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE mais qu'elles n'ont pas été appliquées à la configuration en mémoire. L'une des valeurs suivantes est retournée :<br /><br /> 0 - Une instruction de reconfiguration n'est pas requise.<br /><br /> 1 - Une instruction de reconfiguration ou un redémarrage du serveur est requis pour que les modifications de configuration en attente soient appliquées.<br /><br /> **Remarque :** La valeur retournée est toujours 0 lorsque Resource Governor est désactivé.<br /><br /> N'accepte pas la valeur NULL.|  

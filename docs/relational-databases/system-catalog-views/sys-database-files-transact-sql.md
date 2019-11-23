@@ -32,7 +32,7 @@ ms.locfileid: "73983177"
 
   Contient une ligne par fichier d'une base de données telle qu'elle est stockée dans la base de données. C'est une vue par base de données.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID du fichier dans la base de données.|  
 |**file_guid**|**uniqueidentifier**|GUID du fichier<br /><br /> NULL = la base de données a été mise à niveau à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valide pour SQL Server 2005 et versions antérieures).|  

@@ -35,7 +35,7 @@ ms.locfileid: "73982312"
 > [!NOTE]  
 >  Pour appeler cette DMV à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_tran_database_transactions**.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|ID de la transaction au niveau de l'instance, et non au niveau de la base de données. Il n'est unique que dans les bases de données d'une instance, pas dans toutes les instances du serveur.|  
 |database_id|**int**|ID de la base de données associée à la transaction.|  

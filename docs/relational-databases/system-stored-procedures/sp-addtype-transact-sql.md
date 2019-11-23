@@ -52,11 +52,11 @@ sp_addtype [ @typename = ] type,
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
-|**float**|**image**|**Int**|  
+|**float**|**image**|**int**|  
 |**money**|**nchar(n)**|**ntext**|  
 |**numeric**|**nvarchar(n)**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
-|**sql_variant**|**texte**|**tinyint**|  
+|**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
  Les guillemets sont obligatoires pour tous les paramètres comportant des espaces ou des signes de ponctuation. Pour plus d’informations sur les types de données disponibles, consultez [types &#40;de&#41;données Transact-SQL](../../t-sql/data-types/data-types-transact-sql.md).  
@@ -70,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Entier non négatif qui indique le nombre maximal de décimales qui peuvent figurer à droite d'une virgule décimale ; il doit être inférieur ou égal à la précision. Pour plus d’informations, consultez [decimal et numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` indique la manière dont le type de données de l’alias gère les valeurs NULL. *null_type* est de type **varchar (** 8 **)** , avec NULL comme valeur par défaut et doit être placé entre guillemets simples ('null', 'not null’ou’NONULL'). Si *null_type* n’est pas défini explicitement par **sp_addtype**, il est défini avec la valeur NULL par défaut actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **\@phystype** est de type **bit**et **\@nulltype** n’est pas spécifié, la valeur par défaut n’est pas null.  
+`[ @nulltype = ] 'null_type'` indique la manière dont le type de données alias gère les valeurs NULL. *null_type* est de type **varchar (** 8 **)** , avec NULL comme valeur par défaut et doit être placé entre guillemets simples ('null', 'not null’ou’NONULL'). Si *null_type* n’est pas définie explicitement par **sp_addtype**, elle est définie avec la valeur NULL par défaut actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **\@phystype** est de type **bit**et **\@NULLtype** n’est pas spécifié, la valeur par défaut n’est pas null.  
   
 > [!NOTE]  
 >  Le paramètre *null_type* définit uniquement la possibilité de valeur NULL par défaut pour ce type de données. Si la possibilité d'utiliser des valeurs NULL est explicitement définie quand le type de données alias est utilisé lors de la création de la table, elle est prioritaire sur la possibilité de valeurs NULL actuellement définie. Pour plus d’informations, consultez [ALTER &#40;table Transact-&#41; SQL](../../t-sql/statements/alter-table-transact-sql.md) et [Create table &#40;Transact-&#41;SQL](../../t-sql/statements/create-table-transact-sql.md).  
@@ -89,17 +89,17 @@ sp_addtype [ @typename = ] type,
  Tous les types de données alias héritent du classement par défaut de la base de données. Les classements des colonnes et des variables de types d’alias sont définis dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE et DECLARE @*local_variable* . La modification du classement par défaut de la base de données s'applique seulement aux nouvelles colonnes et variables de ce type ; elle ne modifie pas le classement des colonnes et des variables existantes.  
   
 > [!IMPORTANT]  
->  À des fins de compatibilité descendante, le rôle de base de données **public** reçoit automatiquement l’autorisation REFERENCES sur les types de données d’alias créés à l’aide de **sp_addtype**. Remarque Lorsque les types de données alias sont créés à l’aide de l’instruction CREATe TYPE au lieu de **sp_addtype**, aucune attribution automatique de ce type n’est effectuée.  
+>  À des fins de compatibilité descendante, le rôle de base de données **public** reçoit automatiquement l’autorisation REFERENCES sur les types de données d’alias créés à l’aide de **sp_addtype**. Notez que lorsque vous créez des types de données d’alias à l’aide de l’instruction CREATe TYPE au lieu de **sp_addtype**, cette attribution automatique n’est pas effectuée.  
   
- Les types de données alias ne peuvent pas être définis à l’aide des types de données **timestamp**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **table**, **XML**, **varchar (max)** , **nvarchar (max)** ou **varbinary (max)** .  
+ Les types de données alias ne peuvent pas être définis à l’aide des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **table**, **XML**, **varchar (max)** , **nvarchar (max)** ou **varbinary (max)** .  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l’appartenance au rôle de base de données fixe **db_owner** ou **db_ddladmin** .  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>R. Création d'un type de données alias qui n'accepte pas les valeurs NULL  
- L’exemple suivant crée un type de données alias nommé `ssn` (numéro de sécurité sociale) basé sur le type de données **varchar** @no__t 1 -1. Le type de données `ssn` est utilisé pour les colonnes comportant des numéros de sécurité sociale à 11 chiffres (999-99-9999). Cette colonne ne peut pas avoir la valeur NULL.  
+### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Création d'un type de données alias qui n'accepte pas les valeurs NULL  
+ L’exemple suivant crée un type de données alias nommé `ssn` (numéro de sécurité sociale) basé sur le type de données **varchar** fourni par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le type de données `ssn` est utilisé pour les colonnes comportant des numéros de sécurité sociale à 11 chiffres (999-99-9999). Cette colonne ne peut pas avoir la valeur NULL.  
   
  Notez que `varchar(11)` est spécifié entre guillemets car il contient des signes de ponctuation (parenthèses).  
   
@@ -132,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures &#40;stockées moteur de base de données Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procédures &#40;stockées moteur de base de données Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

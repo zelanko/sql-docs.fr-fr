@@ -56,7 +56,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Retourne les propriétés de publication suivantes qui peuvent être définies :<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**Balis**|**sysname**|Est le paramètre actuel de la propriété dans la colonne **PropertyName** .|  

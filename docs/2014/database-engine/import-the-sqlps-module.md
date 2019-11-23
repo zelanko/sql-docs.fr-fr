@@ -12,15 +12,15 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797867"
 ---
 # <a name="import-the-sqlps-module"></a>Importer le module SQLPS
-  La méthode recommandée pour gérer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de PowerShell consiste à importer le module `sqlps` dans un environnement Windows PowerShell 2.0. Le module charge et inscrit les assemblys de facilité de gestion et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  La méthode recommandée pour gérer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de PowerShell consiste à importer le module `sqlps` dans un environnement Windows PowerShell 2.0. Le module charge et inscrit les assemblys de facilité de gestion et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **Avant de commencer :**  [Sécurité](#Security)  
   
 2.  **Pour charger le module :**  [Charger le module sqlps](#LoadSqlps)  
   
@@ -33,9 +33,9 @@ ms.locfileid: "72797867"
   
 -   exécuter des applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
   
--   utiliser les chemins d'accès du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans la hiérarchie des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
+-   utiliser les chemins d'accès du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans la hiérarchie des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
   
--   utiliser les modèles objets de la facilité de gestion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (tels que Microsoft.SqlServer.Management.Smo) pour gérer des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+-   utiliser les modèles objets de la facilité de gestion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (tels que Microsoft.SqlServer.Management.Smo) pour gérer des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Les verbes utilisés dans les noms de deux applets de commande SQL Server (`Encode-Sqlname` et `Decode-Sqlname`) ne correspondent pas aux verbes approuvés pour Windows PowerShell 2.0. Cela n'a aucun effet sur leur opération, mais Windows PowerShell déclenche un avertissement lorsque le module `sqlps` est importé dans une session.  
@@ -62,5 +62,5 @@ Import-Module "sqlps" -DisableNameChecking
 
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md)   
- [Utiliser les applets de commande du moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [Utiliser les applets de commande du Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

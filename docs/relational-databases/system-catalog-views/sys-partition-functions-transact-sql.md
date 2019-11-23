@@ -32,7 +32,7 @@ ms.locfileid: "73981755"
 
   Contient une ligne par fonction de partition dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la fonction de partition Unique dans la base de données.|  
 |**function_id**|**int**|ID de la fonction de partition. Unique dans la base de données.|  

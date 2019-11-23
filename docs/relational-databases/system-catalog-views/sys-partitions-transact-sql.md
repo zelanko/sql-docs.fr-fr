@@ -32,7 +32,7 @@ ms.locfileid: "73982801"
 
   Contient une ligne pour chaque partition de toutes les tables et la plupart des types d'index de la base de données. Les types d'index spéciaux comme Texte intégral, Spatial et XML ne sont pas inclus dans cette vue. Tous les index et tables de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiennent au moins une partition, qu'ils soient ou non explicitement partitionnés.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|Indique l'ID de partition. Unique dans une base de données.|  
 |object_id|**int**|Indique l’ID de l’objet auquel cette partition appartient. Chaque table ou vue comporte au moins une partition.|  

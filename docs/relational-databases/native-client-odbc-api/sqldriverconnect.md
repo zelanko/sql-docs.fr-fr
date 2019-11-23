@@ -42,7 +42,7 @@ ms.locfileid: "73787097"
   
  Si la valeur du paramètre *DriverCompletion* est SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED et que la langue ou la base de données provient de la chaîne de connexion et que l’une ou l’autre n’est pas valide, **SQLDriverConnect** retourne SQL_ERROR.  
   
- Si la valeur du paramètre *DriverCompletion* est SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED et que la langue ou la base de données provient des définitions de source de données ODBC et que l’une ou l’autre n’est pas valide, **SQLDriverConnect** utilise la langue par défaut ou base de données pour l’ID d’utilisateur spécifié et retourne SQL_SUCCESS_WITH_INFO.  
+ Si la valeur du paramètre *DriverCompletion* est SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED et que la langue ou la base de données provient des définitions de source de données ODBC et que l’une ou l’autre n’est pas valide, **SQLDriverConnect** utilise la langue ou la base de données par défaut pour l’ID utilisateur spécifié et retourne SQL_SUCCESS_WITH_INFO.  
   
  Si la valeur du paramètre *DriverCompletion* est SQL_DRIVER_COMPLETE ou SQL_DRIVER_PROMPT et si la langue ou la base de données n’est pas valide, **SQLDriverConnect** réaffiche la boîte de dialogue.  
   
@@ -84,6 +84,6 @@ SQLDriverConnect(hdbc, hwnd,
  Détails de l’implémentation de l' [API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [DÉFINIR ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

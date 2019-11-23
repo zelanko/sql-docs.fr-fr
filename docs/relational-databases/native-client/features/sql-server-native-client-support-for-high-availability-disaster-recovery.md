@@ -123,7 +123,7 @@ ms.locfileid: "73788034"
  **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** accepte une chaîne de connexion d’entrée qui peut contenir le mot clé **Application Intent**.  
   
- **IDBProperties :: GetProperties**  
+ **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties** récupère la valeur de la propriété définie actuellement sur la source de données.  Vous pouvez récupérer la valeur **Application Intent** au moyen des propriétés DBPROP_INIT_PROVIDERSTRING et SSPROP_INIT_APPLICATIONINTENT.  
   
  **IDBProperties::SetProperties**  

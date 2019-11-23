@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952531"
@@ -49,7 +49,7 @@ ms.locfileid: "71952531"
 ##  <a name="bkmk_why"></a>Raisons pour lesquelles vous devez installer le fournisseur OLE DB  
  Il existe deux scénarios qui nécessitent l'installation manuelle du fournisseur OLE DB sur les serveurs de la batterie.  
   
- **Le scénario le plus courant** est lorsque vous avez des versions plus anciennes et plus récentes des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont enregistrés dans les bibliothèques de documents de la batterie. Si les analystes de votre entreprise utilisent la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel et qu'ils enregistrent ces classeurs dans une installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le classeur plus ancien ne fonctionne pas. Sa chaîne de connexion fait référence à une version antérieure du fournisseur, qui ne se trouve pas sur le serveur, sauf si vous l’installez. L'installation de ces deux versions activera l'accès aux données pour les classeurs PowerPivot créés dans des versions plus anciennes et plus récentes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel. Le programme d'installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] n'installe pas la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du fournisseur. Vous devez donc l'installer manuellement si vous utilisez des classeurs provenant d'une version antérieure.  
+ **Le scénario le plus courant est celui** où vous disposez de versions plus anciennes et plus récentes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs enregistrés dans les bibliothèques de documents de la batterie. Si les analystes de votre entreprise utilisent la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel et qu'ils enregistrent ces classeurs dans une installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le classeur plus ancien ne fonctionne pas. Sa chaîne de connexion fait référence à une version antérieure du fournisseur, qui ne se trouve pas sur le serveur, sauf si vous l’installez. L'installation de ces deux versions activera l'accès aux données pour les classeurs PowerPivot créés dans des versions plus anciennes et plus récentes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel. Le programme d'installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] n'installe pas la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du fournisseur. Vous devez donc l'installer manuellement si vous utilisez des classeurs provenant d'une version antérieure.  
   
  **Le deuxième scénario** est lorsque vous avez un serveur dans une batterie de serveurs SharePoint qui exécute Excel Services, mais pas [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Dans ce cas, le serveur d'applications qui exécute Excel Services doit être mis à jour manuellement pour utiliser une version plus récente du fournisseur. Cela est nécessaire pour se connecter à une instance de PowerPivot pour SharePoint. Si Excel Services utilise une version antérieure du fournisseur, la demande de connexion échoue. Notez que le fournisseur doit être installé à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou du package d'installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) afin de vous assurer que tous les composants nécessaires pour prendre en charge [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont installés.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "71952531"
   
 3.  Cliquez sur **Détails**.  
   
-4.  Consultez les informations de version du fichier. La version doit inclure 11,00. \<buildnumber >.  
+4.  Consultez les informations de version du fichier. La version doit inclure 11,00.\<BuildNumber >.  
   
 5.  Dans le dossier Windows\assembly, vérifiez les Microsoft.AnalysisServices.Xmla.dll, version 11.0.0.0, est répertorié.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71952531"
 ##  <a name="bkmk_kj"></a>Installer le fournisseur de OLE DB SQL Server 2008 R2 pour héberger des classeurs de version antérieure  
  Suivez les instructions suivantes pour installer la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du fournisseur MSOLAP.4 et inscrire le fichier Microsoft.AnalysisServices.ChannelTransport.dll. ChannelTransport est un sous-composant du fournisseur OLE DB Analysis Services. La version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du fournisseur lit le Registre lors de l'utilisation de ChannelTransport pour établir une connexion. L'inscription de ce fichier est une étape postérieure à l'installation requise uniquement pour les connexions gérées par le fournisseur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] sur un serveur [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>Étape 1 : Télécharger et installer la bibliothèque cliente  
+#### <a name="step-1-download-and-install-the-client-library"></a>Étape 1 : télécharger et installer la bibliothèque cliente  
   
 1.  Sur la [page SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570), recherchez fournisseur Microsoft Analysis Services OLE DB pour Microsoft SQL Server 2008 R2.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952531"
   
 4.  Si d'autres serveurs de la batterie de serveurs exécutent uniquement Excel Services, sans [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sur le même serveur, répétez les étapes précédentes afin d'installer la version 2008 R2 du fournisseur sur l'ordinateur Excel Services.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Étape 2 : Inscrire le fichier Microsoft. AnalysisServices. ChannelTransport. dll  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Étape 2 : inscrire le fichier Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Servez-vous de l'utilitaire regasm.exe pour inscrire le fichier. Si vous n’avez pas exécuté Regasm. exe auparavant, ajoutez son dossier parent, C:\Windows\Microsoft.NET\Framework64\v4.0.30319 @ no__t-0, à la variable de chemin d’accès système.  
+1.  Servez-vous de l'utilitaire regasm.exe pour inscrire le fichier. Si vous n’avez pas exécuté Regasm. exe auparavant, ajoutez son dossier parent, C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\, à la variable de chemin d’accès système.  
   
 2.  Ouvrez une invite de commandes avec des autorisations d'administrateur.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "71952531"
   
      Atteindre `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Cliquez avec le bouton droit sur **msolap100. dll** et sélectionnez **Propriétés**. Cliquez sur **Détails**.  
   
-     Consultez les informations de version du fichier. La version doit inclure 10,50. \<buildnumber >.  
+     Consultez les informations de version du fichier. La version doit inclure 10,50.\<BuildNumber >.  
   
   
 ## <a name="see-also"></a>Voir aussi  

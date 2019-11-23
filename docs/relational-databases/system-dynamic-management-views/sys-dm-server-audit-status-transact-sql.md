@@ -28,16 +28,16 @@ ms.locfileid: "72313691"
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**Int**|ID de l'audit. Correspond au champ **audit_id** de l’affichage catalogue **sys. audits** .|  
-|**name**|**sysname**|Nom de l’audit. Identique au champ **nom** de l’affichage catalogue **sys. server_audits** .|  
+|**audit_id**|**int**|ID de l'audit. Correspond au champ **audit_id** dans l’affichage catalogue **sys. audits** .|  
+|**nom**|**sysname**|Nom de l’audit. Identique au champ **nom** de l’affichage catalogue **sys. server_audits** .|  
 |**status**|**smallint**|État numérique de l'audit du serveur :<br /><br /> 0 = non démarré<br /><br /> 1 =<br />        Démarré<br /><br /> 2 =<br />      Échec du Runtime<br /><br /> 3 = échec de la création de la cible<br /><br /> 4 = arrêt en cours|  
 |**status_desc**|**nvarchar (256)**|Chaîne qui indique l'état de l'audit du serveur :<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Horodateur (en temps UTC) de la dernière modification d'état de l'audit.|  
-|**event_session_address**|**varbinary(8)**|Adresse de la session d'événements étendus associée à l'audit. En rapport avec l’affichage catalogue **sys. DM _xe_sessions. Address** .|  
+|**event_session_address**|**varbinary(8)**|Adresse de la session d'événements étendus associée à l'audit. En rapport avec l’affichage catalogue **sys. dm_xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar (256)**|Chemin d'accès complet et nom de fichier de la cible de fichier d'audit utilisée actuellement. Rempli uniquement pour les fichiers d'audit.|  
 |**audit_file_size**|**bigint**|Taille approximative du fichier d'audit, en octets. Rempli uniquement pour les fichiers d'audit.|  
   
@@ -67,6 +67,6 @@ ms.locfileid: "72313691"
  [sys.dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
- [Créer un audit du serveur et une spécification d’audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [Créer un audit du serveur et une spécification d'audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

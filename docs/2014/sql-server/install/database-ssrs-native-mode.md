@@ -34,7 +34,7 @@ ms.locfileid: "71952311"
  **Nom de l’SQL Server**  
  Dans la base de données en cours du serveur de rapports, **Nom du serveur SQL** spécifie le nom du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute la base de données du serveur de rapports. Vous pouvez utiliser une instance par défaut ou nommée sur un ordinateur local ou distant.  
   
- **Nom de la base de données**  
+ **Database Name**  
  Spécifie le nom de la base de données du serveur de rapports qui stocke les données du serveur.  
   
  **Mode du serveur de rapports**  
@@ -46,8 +46,8 @@ ms.locfileid: "71952311"
  **Type d’informations d’identification**  
  Détermine les informations d'identification utilisées par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les types d'informations d'identification que vous pouvez spécifier incluent le compte de service, un utilisateur de domaine Windows, un utilisateur local Windows ou une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la sélection des informations d’identification, consultez [configurer une &#40;connexion de&#41;base de données du serveur de rapports Configuration Manager SSRS](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
- **Nom d’utilisateur**  
- Spécifie un compte d'utilisateur du domaine si vous utilisez les informations d'identification Windows ou une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez des informations d’identification Windows, spécifiez-les au format suivant : *\<domain > \\ < compte @ no__t-3*.  
+ **Nom d'utilisateur**  
+ Spécifie un compte d'utilisateur du domaine si vous utilisez les informations d'identification Windows ou une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez des informations d’identification Windows, spécifiez-les au format suivant : *\<domaine >\\< compte\>* .  
   
  **Mot de passe**  
  Spécifie le mot de passe du compte.  
@@ -57,7 +57,7 @@ ms.locfileid: "71952311"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41;mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41; mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   

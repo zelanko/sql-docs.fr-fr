@@ -23,7 +23,7 @@ ms.locfileid: "73728778"
 
   Un ensemble de modifications est un ensemble de modifications en attente portant sur les données de référence. Vous pouvez appliquer cet ensemble en local, afin d’afficher, d’ajouter, de mettre à jour et de supprimer les modifications en attente dans cet ensemble.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** . Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73728778"
   
 5.  Pour rétablir les modifications en attente, accédez au volet **Ensembles de modifications** , cliquez avec le bouton droit dans la grille, puis sélectionnez **Rétablir**.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
  [Valider ou envoyer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  

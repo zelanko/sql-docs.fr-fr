@@ -109,7 +109,7 @@ HRESULT GetStatus(
  Une erreur spécifique au fournisseur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
- La méthode **ISSAsynchStatus::GetStatus** se comporte exactement comme la méthode **IDBAsynchStatus::GetStatus**, à la différence près que si l’initialisation d’un objet source de données est abandonnée, E_UNEXPECTED est retourné au lieu de DB_E_CANCELED (pourtant, [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
+ La méthode **ISSAsynchStatus::GetStatus** se comporte exactement comme la méthode **IDBAsynchStatus::GetStatus** , à la différence près que si l'initialisation d'un objet source de données est abandonnée, E_UNEXPECTED est retourné au lieu de DB_E_CANCELED (pourtant, [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
   
  Si l'ensemble de lignes est initialisé ou rempli de manière asynchrone, il doit prendre en charge cette méthode.  
   

@@ -25,7 +25,7 @@ ms.locfileid: "71952320"
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>Assistant Modification des informations d'identification (SSRS en mode natif)
   Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit l'Assistant Modification des informations d'identification pour vous guider à travers les étapes de reconfiguration du compte que le serveur de rapports utilise pour se connecter à la base de données du serveur de rapports. Lorsque vous modifiez les informations d'identification, le Gestionnaire de configuration met à jour toutes les autorisations et informations de connexion de base de données sur le serveur de base de données pour la base de données du serveur de rapports en cours d'utilisation par le serveur de rapports.  
   
- Pour démarrer l'Assistant, cliquez sur **Modifier les informations d'identification** dans la page Base de données du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour obtenir des instructions sur la façon de démarrer le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consultez [ &#40;gestionnaire de configuration de Reporting Services mode&#41;natif](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour démarrer l'Assistant, cliquez sur **Modifier les informations d'identification** dans la page Base de données du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour obtenir des instructions sur le démarrage du Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [consultez &#40;gestionnaire de configuration de Reporting Services mode&#41;natif](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "71952320"
   
  Vous ne pouvez pas spécifier d'autres informations d'identification Windows. Si vous souhaitez vous connecter en tant qu'utilisateur Windows différent, connectez-vous comme cet utilisateur et démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- **Informations d’identification**  
- Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local ( *\<computername > \\ < nom d’utilisateur @ no__t-3*) si le serveur de rapports et la base de données se trouvent sur le même ordinateur, ou un compte d’utilisateur de domaine ( *\<domain > \\ < nom d’utilisateur @ no__t-7*) s’ils se trouvent sur des ordinateurs différents du même domaine.  
+ **Informations d'identification**  
+ Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local ( *\<computername >\\< nom d’utilisateur\>* ) si le serveur de rapports et la base de données se trouvent sur le même ordinateur, ou un compte d’utilisateur de domaine (\<domaine >\\< *nom d’utilisateur\>* ) s’ils se trouvent sur des ordinateurs différents du même domaine.  
   
  Le serveur de rapports crée alors une connexion de base de données et attribue les autorisations de base de données au compte que vous spécifiez.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "71952320"
  Surveillez la progression de chaque tâche.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Base &#40;de données SSRS&#41;en mode natif](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [Assistant &#40;modification de base de données&#41;SSRS en mode natif](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [  &#40;de base de&#41; données SSRS en mode natif](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
+ [Assistant &#40;modification de base de données&#41; SSRS en mode natif](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41;mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41; mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

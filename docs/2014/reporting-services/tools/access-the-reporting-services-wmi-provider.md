@@ -26,7 +26,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783207"
 ---
-# <a name="access-the-reporting-services-wmi-provider"></a>Accéder au fournisseur WMI de Reporting Services
+# <a name="access-the-reporting-services-wmi-provider"></a>Accédez au fournisseur WMI de Reporting Services
   Le fournisseur WMI de Reporting Services présente deux classes WMI pour l'administration des instances de serveur de rapports en mode natif par script :  
   
 > [!IMPORTANT]  
@@ -34,8 +34,8 @@ ms.locfileid: "72783207"
   
 |Classe|Espace de noms|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* \v11|Fournit les informations de base nécessaires à un client pour établir la connexion à un serveur de rapports installé.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* \v11\Admin|Représente les paramètres d'installation et d'exécution d'une instance de serveur de rapports. Ces paramètres sont stockés dans le fichier de configuration du serveur de rapports.<br /><br /> **\*\* Important \*\*** Cette classe est accessible uniquement avec des privilèges d’administrateur.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\ RS_ *\<EncodedInstanceName >* \v11|Fournit les informations de base nécessaires à un client pour établir la connexion à un serveur de rapports installé.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\ RS_ *\<EncodedInstanceName >* \v11\Admin|Représente les paramètres d'installation et d'exécution d'une instance de serveur de rapports. Ces paramètres sont stockés dans le fichier de configuration du serveur de rapports.<br /><br /> **\*\* Important \*\*** Cette classe est accessible uniquement avec des privilèges d’administrateur.|  
   
  Une instance de chaque classe ci-dessus est créée pour chaque instance du serveur de rapports. Vous pouvez utiliser tous les outils Microsoft ou tiers pour accéder aux objets WMI exposés par le serveur de rapports, notamment les interfaces de programmation WMI exposées par .NET framework lui-même. Cette rubrique décrit comment accéder aux instances de classes WMI, et les utiliser, avec la commande PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   

@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested` spécifie le type de somme de contrôle ou de RowCount à effectuer. *type_of_check_requested* est de type **smallint**, avec **1**comme valeur par défaut.  
   
- Si la **valeur est 0**, effectuez un comptage de lignes et une somme de contrôle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.  
+ Si la **valeur est 0**, effectuez un comptage de lignes et un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] somme de contrôle compatible 7,0.  
   
  Si **1**, effectuez une vérification du ROWCOUNT uniquement.  
   
@@ -63,17 +63,17 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast` est la méthode utilisée pour calculer le RowCount. *full_or_fast* est de **type tinyint**, avec **2**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Effectue un comptage total à l'aide de COUNT(*).|  
 |**1**|Effectue un comptage rapide à partir de **sysindexes. Rows**. Le comptage des lignes dans **sysindexes** est beaucoup plus rapide que le comptage des lignes dans la table réelle. Toutefois, étant donné que **sysindexes** est mis à jour tardivement, le ROWCOUNT peut ne pas être précis.|  
 |**2** (par défaut)|Exécute un décompte rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur NULL et la procédure stockée est en cours d’utilisation pour obtenir la valeur, un Count (\*) complète est toujours utilisée.|  
   
-`[ @shutdown_agent = ] shutdown_agent` si le Agent de distribution exécute **sp_table_validation**, spécifie si le agent de distribution doit s’arrêter immédiatement à la fin de la validation. *shutdown_agent* est de valeur de **bit**, avec **0**comme valeur par défaut. Si la **valeur est 0**, l’agent de réplication ne s’arrête pas. Si la valeur est **1**, l’erreur 20578 est déclenchée et l’agent de réplication est signalé pour s’arrêter. Ce paramètre est ignoré lorsque la **sp_table_validation** est exécutée directement par un utilisateur.  
+`[ @shutdown_agent = ] shutdown_agent` si le Agent de distribution exécute **sp_table_validation**, spécifie si le agent de distribution doit s’arrêter immédiatement à la fin de la validation. *shutdown_agent* est de **bit**, avec **0**comme valeur par défaut. Si la **valeur est 0**, l’agent de réplication ne s’arrête pas. Si la valeur est **1**, l’erreur 20578 est déclenchée et l’agent de réplication est signalé pour s’arrêter. Ce paramètre est ignoré lorsque **sp_table_validation** est exécutée directement par un utilisateur.  
   
-`[ @table_name = ] table_name` est le nom de la table de la vue utilisée pour les messages de sortie. *table_name* est de **type sysname**, avec **\@table**comme valeur par défaut.  
+`[ @table_name = ] table_name` est le nom de la table de la vue utilisée pour les messages de sortie. *table_name* est de **type sysname**, avec la valeur par défaut **\@table**.  
   
-`[ @column_list = ] 'column_list'` est la liste des colonnes à utiliser dans la fonction de somme de contrôle. *liste_de_colonnes* est de type **nvarchar (4000)** , avec NULL comme valeur par défaut. Active la validation d'articles de fusion pour spécifier une liste de colonnes excluant les colonnes calculées et les colonnes timestamp.  
+`[ @column_list = ] 'column_list'` est la liste des colonnes à utiliser dans la fonction checksum. *column_list* est de type **nvarchar (4000)** , avec NULL comme valeur par défaut. Active la validation d'articles de fusion pour spécifier une liste de colonnes excluant les colonnes calculées et les colonnes timestamp.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Si vous effectuez une validation de la somme de contrôle et que la somme de contrôle attendue est égale à la somme de contrôle de la table, **sp_table_validation** retourne un message indiquant que la validation de la somme de contrôle a réussi. Sinon, elle retourne un message indiquant que la table peut ne plus être synchronisée et indique la différence entre le nombre de lignes attendu et le nombre réel.  
@@ -81,7 +81,7 @@ sp_table_validation [ @table = ] 'table'
  Si vous effectuez une validation du nombre de lignes et que le nombre de lignes attendu est égal au nombre de la table, **sp_table_validation** retourne un message indiquant que la table a réussi la validation du nombre de lignes. Sinon, elle retourne un message indiquant que la table peut ne plus être synchronisée et indique la différence entre le nombre de lignes attendu et le nombre réel.  
   
 ## <a name="remarks"></a>Notes  
- la **sp_table_validation** est utilisée dans tous les types de réplications. la solution **sp_table_validation** n’est pas prise en charge pour les serveurs de publication Oracle.  
+ **sp_table_validation** est utilisé dans tous les types de réplications. **sp_table_validation** n’est pas pris en charge pour les serveurs de publication Oracle.  
   
  La somme de contrôle calcule une vérification de redondance cyclique de 32 bits (CRC) sur l'image de la ligne entière de la page. La somme de contrôle ne vérifie pas les colonnes de manière sélective et ne peut pas s'exécuter sur une vue ou une partition verticale de la table. En outre, la somme de contrôle ignore le contenu des colonnes de **texte** et d' **image** (par conception).  
   

@@ -32,7 +32,7 @@ ms.locfileid: "73981916"
 
   Contient une ligne pour chaque colonne des objets système ayant des colonnes.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificateur de l'objet auquel appartient cette colonne.|  
 |**nom**|**sysname**|Nom de la colonne. Unique dans l'objet.|  

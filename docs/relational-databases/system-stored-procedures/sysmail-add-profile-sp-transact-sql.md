@@ -41,14 +41,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_name = ] 'profile\_name'`Nom du nouveau profil. *profile_name* est de **type sysname**, sans valeur par défaut.  
+`[ @profile_name = ] 'profile\_name'` le nom du nouveau profil. *profile_name* est de **type sysname**, sans valeur par défaut.  
  
    > [!NOTE]
-   > Le nom de profil qui utilise Azure SQL Managed Instance SQL Agent doit être appelé **AzureManagedInstance_dbmail_profile**
+   > Le nom de profil qui utilise l’agent SQL Azure SQL Managed Instance doit être appelé **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`Description facultative du nouveau profil. *Description* est de type **nvarchar (256)** , sans valeur par défaut.  
+`[ @description = ] 'description'` la description facultative du nouveau profil. *Description* est de type **nvarchar (256)** , sans valeur par défaut.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`Retourne l’ID du nouveau profil. *new_profile_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` retourne l’ID du nouveau profil. *new_profile_id* est de **type int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -58,7 +58,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
  Le nom et la description du profil peuvent être modifiés à l’aide de la procédure stockée **sysmail_update_profile_sp**, tandis que l’ID de profil reste constant pendant toute la durée de vie du profil.  
   
- Le nom du profil doit être unique pour Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou la procédure stockée retourne une erreur.  
+ Le nom du profil doit être unique pour le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Microsoft ou la procédure stockée renvoie une erreur.  
   
  La procédure stockée **sysmail_add_profile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
@@ -66,7 +66,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Création d’un nouveau profil**  
+ **A. création d’un nouveau profil**  
   
  L'exemple ci-dessous crée un profil de messagerie de base de données nommé `AdventureWorks Administrator`.  
   
@@ -76,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B. Création d’un nouveau profil, enregistrement de l’ID de profil dans une variable**  
+ **B. création d’un nouveau profil, enregistrement de l’ID de profil dans une variable**  
   
  L'exemple ci-dessous crée un profil de messagerie de base de données nommé `AdventureWorks Administrator`. L'exemple stocke l'ID du profil dans la variable `@profileId` et retourne un jeu de résultats contenant l'ID du nouveau profil.  
   
@@ -94,7 +94,7 @@ SELECT @profileId ;
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
  [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database mail les objets de Configuration](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Procédures &#40;stockées Database mail Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

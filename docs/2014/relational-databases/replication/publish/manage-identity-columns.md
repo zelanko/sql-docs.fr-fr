@@ -56,7 +56,7 @@ ms.locfileid: "73882294"
   
 5.  Si vous avez sélectionné la valeur **Automatique** ou **Vrai** dans l'étape 4, entrez des valeurs pour les options du tableau suivant. Pour plus d’informations sur l’utilisation de ces paramètres, consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).  
   
-    |Option|Value|Description|  
+    |Option|Valeur|Description|  
     |------------|-----------|-----------------|  
     |**Taille de la plage sur le serveur de publication**|Valeur entière représentant la taille de la plage (par exemple, 20000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).|  
     |**Taille de la plage sur l'Abonné**|Valeur entière représentant la taille de la plage (par exemple, 10000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).|  

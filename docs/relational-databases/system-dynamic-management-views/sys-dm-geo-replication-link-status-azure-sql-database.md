@@ -31,7 +31,7 @@ ms.locfileid: "73843887"
 
   Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cela comprend à la fois les bases de données primaires et secondaires. S’il existe plus d’un lien de réplication continue pour une base de données primaire donnée, cette table contient une ligne pour chacune des relations. La vue est créée dans toutes les bases de données, y compris la base de données Master logique. Cependant, l'interrogation de cette vue dans la base de données master logique retourne un ensemble vide.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID unique du lien de réplication.|  
 |partner_server|**sysname**|Nom du serveur de SQL Database qui contient la base de données liée.|  
@@ -43,7 +43,7 @@ ms.locfileid: "73843887"
 |rôle|**tinyint**|Rôle de géo-réplication, parmi les suivants :<br /><br /> 0 = principal. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
 |role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Le type secondaire, parmi les suivants :<br /><br /> 0 = aucune connexion directe n’est autorisée dans la base de données secondaire et la base de données n’est pas disponible pour l’accès en lecture.<br /><br /> 2 = toutes les connexions sont autorisées à la base de données dans le réplica secondaire REPL ; ication pour l’accès en lecture seule.|  
-|secondary_allow_connections_desc|**nvarchar (256)**|Non<br /><br /> Tous|  
+|secondary_allow_connections_desc|**nvarchar (256)**|Non<br /><br /> Tout|  
 |last_commit|**datetimeoffset**|Heure de la dernière transaction validée dans la base de données. S’il est récupéré sur la base de données primaire, il indique l’heure de la dernière validation sur la base de données primaire. S’il est récupéré sur la base de données secondaire, il indique l’heure de la dernière validation sur la base de données secondaire. En cas de récupération sur la base de données secondaire lorsque le réplica principal du lien de réplication est arrêté, il indique jusqu’à quel point la base de données secondaire a été capturée.|
   
 > [!NOTE]  

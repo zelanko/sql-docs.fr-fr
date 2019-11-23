@@ -52,7 +52,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Valeur par défaut. Désactive les curseurs avant uniquement et en lecture seule et l’auto-extraction, active **SQLGetData** sur les curseurs avant uniquement et en lecture seule. Lorsque SQL_SOPT_SS_CURSOR_OPTIONS a la valeur SQL_CO_OFF, le type de curseur ne change pas. Autrement dit, le curseur avant uniquement rapide demeure un curseur avant uniquement rapide. Pour modifier le type de curseur, l’application doit maintenant définir un type de curseur différent à l’aide de **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|Par défaut Désactive les curseurs avant uniquement et en lecture seule et l’auto-extraction, active **SQLGetData** sur les curseurs avant uniquement et en lecture seule. Lorsque SQL_SOPT_SS_CURSOR_OPTIONS a la valeur SQL_CO_OFF, le type de curseur ne change pas. Autrement dit, le curseur avant uniquement rapide demeure un curseur avant uniquement rapide. Pour modifier le type de curseur, l’application doit maintenant définir un type de curseur différent à l’aide de **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Active les curseurs avant uniquement et en lecture seule, désactive **SQLGetData** sur les curseurs avant uniquement et en lecture seule.|  
 |SQL_CO_AF|Active l'option d'auto-extraction sur tout type de curseur. Lorsque cette option est définie pour un descripteur d’instruction, **SQLExecute** ou **SQLExecDirect** génère une **SQLFetchScroll** implicite (SQL_FIRST). Le curseur est ouvert et le premier lot de lignes est retourné en un seul aller-retour au serveur.|  
 |SQL_CO_FFO_AF|Active les curseurs avant uniquement rapides avec l'option d'auto-extraction. La situation est la même que si SQL_CO_AF et SQL_CO_FFO étaient spécifiés.|  
@@ -66,7 +66,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Valeur par défaut. Après l’appel de la [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu’à ce que **SQLExecute** soit appelé ou que l’opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) soit exécutée.|  
+|SQL_DP_ON|Par défaut Après l’appel de la [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu’à ce que **SQLExecute** soit appelé ou que l’opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) soit exécutée.|  
 |SQL_DP_OFF|L’instruction est préparée dès que **SQLPrepare** est exécuté.|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -76,7 +76,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_RE_OFF|Valeur par défaut. Le pilote ne convertit pas les valeurs date, heure et devise monétaire en données de chaînes de caractères à l'aide des paramètres régionaux du client.|  
+|SQL_RE_OFF|Par défaut Le pilote ne convertit pas les valeurs date, heure et devise monétaire en données de chaînes de caractères à l'aide des paramètres régionaux du client.|  
 |SQL_RE_ON|Le pilote utilise les paramètres régionaux du client lors de la conversion des données date, heure et devise monétaire en données de chaînes de caractères.|  
   
  Les paramètres de conversion régionaux s'appliquent aux types de données monétaire, numérique, date et heure. Le paramètre de conversion est applicable uniquement aux conversions sortantes lorsque des valeurs monétaire, numérique, de date ou d'heure sont converties en chaînes de caractères.  
@@ -92,14 +92,14 @@ ms.locfileid: "73785528"
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Désactive la journalisation des opérations effectuées sur des données de **texte** et d' **image** .|  
-|SQL_TL_ON|Valeur par défaut. Active la journalisation des opérations effectuées sur les données de **texte** et d' **image** .|  
+|SQL_TL_ON|Par défaut Active la journalisation des opérations effectuées sur les données de **texte** et d' **image** .|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  L'attribut SQL_SOPT_SS_HIDDEN_COLUMNS expose dans le jeu de résultats les colonnes masquées dans une instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE. Le pilote n'expose pas ces colonnes par défaut. La valeur de *ValuePtr* est de type SQLLEN.  
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_HC_OFF|Valeur par défaut. Les colonnes FOR BROWSE sont masquées dans le jeu de résultats.|  
+|SQL_HC_OFF|Par défaut Les colonnes FOR BROWSE sont masquées dans le jeu de résultats.|  
 |SQL_HC_ON|Expose les colonnes FOR BROWSE.|  
   
 ### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
@@ -112,7 +112,7 @@ ms.locfileid: "73785528"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Par exemple :  
+ Par exemple:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -133,7 +133,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Valeur par défaut.<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns ne retourne que les colonnes qui ne sont pas membres du **column_set**épars.|  
+|SQL_SS_NAME_SCOPE_TABLE|Par défaut<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns ne retourne que les colonnes qui ne sont pas membres du **column_set**épars.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indique que l'application requiert les métadonnées pour un type de table, plutôt qu'une table réelle (les fonctions de catalogue doivent retourner les métadonnées pour les types de table). L’application passe ensuite la TYPE_NAME du paramètre table comme paramètre *TableName* .|  
 |SQL_SS_NAME_SCOPE_EXTENDED|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne toutes les colonnes, indépendamment de l’appartenance **column_set** .|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui sont membres du **column_set**épars.|  

@@ -32,7 +32,7 @@ ms.locfileid: "73981823"
 
   Affiche l'union de toutes les colonnes appartenant aux objets définis par l'utilisateur et aux objets système.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificateur de l'objet auquel appartient cette colonne.|  
 |name|**sysname**|Nom de la colonne. Unique dans l'objet.|  

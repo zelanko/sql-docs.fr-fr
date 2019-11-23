@@ -33,7 +33,7 @@ ms.locfileid: "73981773"
 
   Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque des analyseurs lexicaux sont inscrits pour une langue, ses autres ressources linguistiques (générateurs de formes dérivées, mots parasites (mots vides) et fichiers de dictionnaire des synonymes) sont disponibles pour les opérations d’indexation et d’interrogation de texte intégral. La valeur du **nom** ou du **LCID** peut être spécifiée dans les requêtes de texte intégral et l’index de recherche en texte intégral [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions.  
    
-|Colonne|Data type|Description|  
+|Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
 |**nom**|**sysname**|Valeur de l’alias dans [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) qui correspond à la valeur de **LCID** ou à la représentation sous forme de chaîne du LCID numérique.|  
@@ -41,7 +41,7 @@ ms.locfileid: "73981773"
 ## <a name="values-returned-for-default-languages"></a>Valeurs retournées pour les langues par défaut  
  Le tableau suivant présente uniquement les valeurs des langues dont les analyseurs lexicaux sont inscrits par défaut.  
   
-|Language|LCID|  
+|Langue|LCID|  
 |--------------|----------|  
 |Arabic|1025|  
 |Bengali (India)|1093|  

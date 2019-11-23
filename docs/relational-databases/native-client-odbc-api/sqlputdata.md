@@ -24,7 +24,7 @@ ms.locfileid: "73785746"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Les restrictions suivantes s’appliquent lors de l’utilisation de SQLPutData pour envoyer plus de 65 535 octets de données (par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 4.21 a) ou de 400 Ko de données (pour SQL Server version 6,0 et ultérieure) pour un SQL_LONGVARCHAR (**texte**), SQL_WLONGVARCHAR (**ntext**) ou SQL_ LONGVARBINARY (**image**), colonne :  
+  Les restrictions suivantes s’appliquent lors de l’utilisation de SQLPutData pour envoyer plus de 65 535 octets de données (par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 4.21 a) ou de 400 Ko de données (pour SQL Server version 6,0 et ultérieure) pour une colonne SQL_LONGVARCHAR (**texte**), SQL_WLONGVARCHAR (**ntext**) ou SQL_LONGVARBINARY (**image**) :  
   
 -   Le paramètre référencé peut être le *insert_Value* dans une instruction INSERT.  
   

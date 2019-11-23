@@ -31,13 +31,13 @@ ms.locfileid: "72305013"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**artid**|**Int**|ID unique d'un article|  
+|**artid**|**int**|ID unique d'un article|  
 |**srvid**|**smallint**|ID de serveur de l’abonné.|  
 |**dest_db**|**sysname**|Nom de la base de données de destination|  
 |**status**|**tinyint**|État de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
 |**sync_type**|**tinyint**|Type de synchronisation initiale :<br /><br /> **1** = automatique.<br /><br /> **2** = aucun|  
 |**login_name**|**sysname**|Nom d’accès utilisé lors de l’ajout de l’abonnement|  
-|**subscription_type**|**Int**|Type d’abonnement :<br /><br /> 0 = Par envoi de données (push) - l'agent de distribution s'exécute sur le serveur de distribution.<br /><br /> 1 = Par extraction de données (pull) - l'agent de distribution s'exécute sur l'Abonné.|  
+|**subscription_type**|**int**|Type d’abonnement :<br /><br /> 0 = Par envoi de données (push) - l'agent de distribution s'exécute sur le serveur de distribution.<br /><br /> 1 = Par extraction de données (pull) - l'agent de distribution s'exécute sur l'Abonné.|  
 |**distribution_jobid**|**binary(16)**|ID du travail de l'Agent de distribution|  
 |**timestamp**|**timestamp**|Cachet temporel|  
 |**update_mode**|**tinyint**|Mode de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.|  
@@ -47,7 +47,7 @@ ms.locfileid: "72305013"
 |**srvname**|**sysname**|Nom de l'Abonné.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables &#40;de réplication Transact&#41;-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables &#40;de réplication Transact&#41; -SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

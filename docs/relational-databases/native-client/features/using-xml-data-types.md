@@ -40,7 +40,7 @@ ms.locfileid: "73761284"
 # <a name="using-xml-data-types"></a>Utilisation de types de données XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un type de données **xml** qui vous permet de stocker des documents et des fragments XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le type de données **xml** est intégré dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s’apparente à certains égards à d’autres types intégrés, comme **int** et **varchar**. Tout comme les autres types intégrés, vous pouvez utiliser le type de données **xml** en tant que type de colonne quand vous créez une table ou en tant que type de variable, type de paramètre ou type de retour de fonction ou bien dans des fonctions CAST et CONVERT.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un type de données **xml** qui vous permet de stocker des documents et des fragments XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le type de données **xml** est intégré dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s’apparente à certains égards à d’autres types intégrés, tels que **int** et **varchar**. Tout comme les autres types intégrés, vous pouvez utiliser le type de données **xml** en tant que type de colonne quand vous créez une table ou en tant que type de variable, type de paramètre ou type de retour de fonction ou bien dans des fonctions CAST et CONVERT.  
   
 ## <a name="programming-considerations"></a>Éléments de programmation à prendre en considération  
  XML peut être autodescriptif dans ce sens où il peut inclure un en-tête XML (facultatif) qui spécifie l'encodage du document. Par exemple :  
@@ -137,7 +137,7 @@ ms.locfileid: "73761284"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS  
  Les ajouts réalisés dans les ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS incluent les colonnes suivantes.  
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nom d'un catalogue dans lequel une collection de schémas XML est définie. Possède la valeur NULL pour une colonne non XML ou une colonne XML non typée.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nom d'un schéma dans lequel une collection de schémas XML est définie. Possède la valeur NULL pour une colonne non XML ou une colonne XML non typée.|  
@@ -149,7 +149,7 @@ ms.locfileid: "73761284"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Ensemble de lignes de schéma SS_XMLSCHEMA  
  Un nouvel ensemble de lignes de schéma SS_XMLSCHEMA permettant d'extraire des informations de schéma XML est proposé pour les clients. L'ensemble de lignes SS_XMLSCHEMA contient les colonnes suivantes.  
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogue auquel une collection XML appartient.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schéma auquel une collection XML appartient.|  
@@ -169,7 +169,7 @@ ms.locfileid: "73761284"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Afin de prendre en charge le type de données **XML** via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER, qui contient les valeurs suivantes.  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Nom|type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nom d'un catalogue (base de données) dans lequel une collection de schémas XML est définie. Une des trois parties qui composent l’identificateur de nom SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nom d'un schéma XML dans la collection de schémas. Une des trois parties qui composent l'identificateur de nom SQL.|  
@@ -178,7 +178,7 @@ ms.locfileid: "73761284"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERCOLUMN  
  Pour prendre en charge la création de tables dans l’interface **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute trois nouvelles colonnes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Nom|type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom du catalogue où le schéma XML est stocké. Pour d'autres types de colonnes, cette propriété retourne une chaîne vide.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom de schéma XML qui définit cette colonne.|  
@@ -198,7 +198,7 @@ ms.locfileid: "73761284"
 #### <a name="the-icolumnsrowset-interface"></a>Interface IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les colonnes suivantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]spécifiques à l’ensemble de lignes retourné par la méthode **ColumnRowset :: GetColumnsRowset** . Ces colonnes contiennent le nom en trois parties d'une collection de schémas XML. Dans le cas des colonnes non XML ou des colonnes XML non typées, ces trois colonnes possèdent toutes la valeur NULL par défaut.  
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogue auquel une collection de schémas XML appartient.<br /><br /> Possède la valeur NULL sinon.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schéma auquel une collection de schémas XML appartient. Possède la valeur NULL sinon.|  
@@ -218,7 +218,7 @@ ms.locfileid: "73761284"
   
  Dans le cas du type DBTYPE_BSTR, DBTYPE_WSTR ou DBTYPE_VARIANT, le fournisseur stocke l'instance XML résidant dans la mémoire tampon du consommateur à l'intérieur de la colonne appropriée.  
   
- Dans le cas de DBTYPE_IUNKNOWN/ISequentialStream, si le consommateur ne spécifie pas d’objet de stockage, le consommateur doit créer un objet **ISequentialStream** à l’avance, lier le document XML à l’objet, puis passer l’objet au fournisseur. à l’aide de la méthode **IRowsetChange :: SetData** . Le consommateur peut également créer un objet de stockage, affecter IID_ISequentialStream à l’argument pObject, créer un objet **ISequentialStream**, puis passer l’objet **ISequentialStream** à la méthode **IRowsetChange::SetData**. Dans les deux cas, le fournisseur peut récupérer l’objet XML via l’objet **ISequentialStream** et l’insérer dans une colonne appropriée.  
+ Dans le cas de DBTYPE_IUNKNOWN/ISequentialStream, si le consommateur ne spécifie pas d’objet de stockage, le consommateur doit créer un objet **ISequentialStream** à l’avance, lier le document XML à l’objet, puis passer l’objet au fournisseur par le biais de la méthode **IRowsetChange :: SetData** . Le consommateur peut également créer un objet de stockage, affecter IID_ISequentialStream à l’argument pObject, créer un objet **ISequentialStream**, puis passer l’objet **ISequentialStream** à la méthode **IRowsetChange::SetData**. Dans les deux cas, le fournisseur peut récupérer l’objet XML via l’objet **ISequentialStream** et l’insérer dans une colonne appropriée.  
   
 #### <a name="the-irowsetupdate-interface"></a>Interface IRowsetUpdate  
  L’interface **IRowsetUpdate** fournit les fonctionnalités nécessaires dans le cas de mises à jour différées. Les données mises à disposition pour les ensembles de lignes ne sont pas mises à la disposition d’autres transactions tant que le consommateur n’a pas appelé la méthode **IRowsetUpdate : Update** .  

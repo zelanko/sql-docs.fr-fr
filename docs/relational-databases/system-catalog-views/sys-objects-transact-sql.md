@@ -40,7 +40,7 @@ ms.locfileid: "73982125"
 > [!NOTE]  
 >  sys.objects n'affiche pas les déclencheurs DDL car ceux-ci ne sont pas définis avec une étendue de schéma. Tous les déclencheurs, DML et DDL, se trouvent dans [sys. Triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). sys. Triggers prend en charge une combinaison de règles de portée de nom pour les différents types de déclencheurs.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Nom de l'objet.|  
 |object_id|**int**|Numéro d'identification de l'objet. Unique dans une base de données.|  

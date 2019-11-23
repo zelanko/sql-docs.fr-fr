@@ -49,7 +49,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |**paramname**|**nvarchar (256)**|Nom du paramètre de configuration.|  
 |**paramvalue**|**nvarchar (256)**|Valeur du paramètre de configuration.|  
 |**description**|**nvarchar (256)**|Description du paramètre de configuration.|  

@@ -40,7 +40,7 @@ ms.locfileid: "71952417"
  **Nom de l’SQL Server**  
  Spécifiez le nom de l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports.  
   
- **Nom de la base de données**  
+ **Database Name**  
  Spécifie le nom de la base de données à laquelle l'instance de serveur de rapports est connectée.  
   
  **Mode serveur**  

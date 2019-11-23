@@ -45,23 +45,23 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'`Classe de la catégorie à ajouter. la classe est de *type* **varchar (8)** avec une valeur par défaut Job et peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` la classe de la catégorie à ajouter. la classe est de *type* **varchar (8)** avec une valeur par défaut Job et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |JOB|Ajoute une catégorie de travail.|  
 |ALERT|Ajoute une catégorie d'alertes.|  
 |OPERATOR|Ajoute une catégorie d'opérateurs.|  
   
-`[ @type = ] 'type'`Type de catégorie à ajouter. le *type* est **varchar (12)** , avec une valeur par défaut **locale**, et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` le type de catégorie à ajouter. le *type* est **varchar (12)** , avec une valeur par défaut **locale**, et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |LOCAL|Catégorie de travaux locaux.|  
 |MULTI-SERVEUR|Catégorie de travaux multiserveurs.|  
-|Aucune|Catégorie d’une classe autre que JOB **.**|  
+|NONE|Catégorie d’une classe autre que JOB **.**|  
   
-`[ @name = ] 'name'`Nom de la catégorie à ajouter. Le nom doit être unique dans la classe spécifiée. *Name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` le nom de la catégorie à ajouter. Le nom doit être unique dans la classe spécifiée. *Name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  

@@ -37,7 +37,7 @@ ms.locfileid: "70874444"
 -   Pour un basculement manuel, seul le temps nécessaire au basculement de la base de données après la commande de basculement est pris en compte.  
   
 ## <a name="error-detection"></a>Détection d'erreurs  
- Le temps nécessaire au système pour remarquer une erreur dépend du type d’erreur ; par exemple, une erreur réseau est détectée presque instantanément, tandis que la détection d’un serveur qui ne répond pas prend 10 secondes (avec le délai d’expiration par défaut).  
+ Le temps nécessaire au système pour remarquer une erreur dépend du type d’erreur ; par exemple, une erreur réseau est détectée quasiment instantanément, alors que la détection d’un serveur qui ne répond pas prend 10 secondes (avec le délai d’attente par défaut).  
   
  Pour plus d’informations sur les erreurs susceptibles d’entraîner une défaillance lors d’une session de mise en miroir de bases de données et sur la détection du dépassement d’un délai d’attente en mode haute sécurité avec basculement automatique, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](possible-failures-during-database-mirroring.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70874444"
  Le temps de basculement est principalement constitué du temps nécessaire au serveur miroir précédent pour restaurer par progression tout journal restant dans sa file d’attente de restauration par progression, plus un court temps supplémentaire. Pour plus d’informations sur la manière dont le serveur miroir traite les enregistrements de journal, consultez [Mise en miroir de base de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)). Pour plus d'informations sur l'estimation du temps de basculement, consultez la section Estimation du taux de restauration par progression du basculement, plus loin dans cette rubrique.  
   
 > [!IMPORTANT]  
->  Si le basculement se produit au cours d'une transaction dans laquelle un index ou une table sont créés puis modifiés, le basculement peut prendre plus de temps qu'habituellement.  Par exemple, un basculement effectué au cours des opérations ci-dessous peut prendre plus de temps :  BEGIN TRANSACTION, CREATE INDEX sur une table et SELECT INTO dans la table. La possibilité d'augmentation de la durée de basculement au cours d'une telle transaction demeure jusqu'à ce que la transaction soit terminée par une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
+>  Si le basculement se produit au cours d'une transaction dans laquelle un index ou une table sont créés puis modifiés, le basculement peut prendre plus de temps qu'habituellement.  Par exemple, un basculement effectué au cours des opérations ci-dessous peut prendre plus de temps : BEGIN TRANSACTION, CREATE INDEX sur une table et SELECT INTO dans la table. La possibilité d'augmentation de la durée de basculement au cours d'une telle transaction demeure jusqu'à ce que la transaction soit terminée par une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>File d'attente de restauration par progression  
  La restauration par progression de la base de données implique l'application de tous les enregistrements de journal figurant actuellement dans la file d'attente de restauration par progression sur le serveur miroir. La *file d’attente de restauration par progression* est constituée des enregistrements de journal écrits sur le disque du serveur miroir, mais qui ne sont pas encore restaurés par progression dans la base de données miroir.  
@@ -75,7 +75,7 @@ ms.locfileid: "70874444"
  ![Détection d’erreur et temps de basculement](../media/dbm-failovauto-time.gif "Détection d’erreur et temps de basculement")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   

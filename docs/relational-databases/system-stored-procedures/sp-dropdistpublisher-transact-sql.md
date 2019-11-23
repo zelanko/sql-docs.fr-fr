@@ -41,7 +41,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="arguments"></a>Arguments  
 `[ @publisher = ] 'publisher'` est le serveur de publication à supprimer. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @no_checks = ] no_checks` spécifie si **sp_dropdistpublisher** vérifie que le serveur de publication a désinstallé le serveur en tant que serveur de distribution. *no_checks* est de valeur de **bit**, avec **0**comme valeur par défaut.  
+`[ @no_checks = ] no_checks` spécifie si **sp_dropdistpublisher** vérifie que le serveur de publication a désinstallé le serveur en tant que serveur de distribution. *no_checks* est de **bit**, avec **0**comme valeur par défaut.  
   
  Si la **valeur est 0**, la réplication vérifie que le serveur de publication distant a désinstallé le serveur local en tant que serveur de distribution. Si le serveur de publication est local, la réplication vérifie qu'il ne reste aucun objet de publication ou de distribution sur le serveur local.  
   
@@ -59,7 +59,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_dropdistpublisher** est utilisé dans tous les types de réplications.  
   
- Lors de la suppression d’un serveur de publication Oracle, si vous ne parvenez pas à supprimer le serveur de publication **sp_dropdistpublisher** retourne une erreur et les objets de serveur de distribution du serveur de publication sont supprimés.  
+ Lors de la suppression d’un serveur de publication Oracle, si vous ne parvenez pas à supprimer le serveur de publication **sp_dropdistpublisher** retourne une erreur et les objets du serveur de distribution pour le serveur de publication sont supprimés.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  

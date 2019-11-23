@@ -29,7 +29,7 @@ ms.locfileid: "71952431"
  Pour plus d’informations, consultez [mettre à niveau et migrer des Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et lire les fichiers journaux d’installation de SQL Server](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
+ [Afficher et lire les fichiers journaux d'installation de SQL Server](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
  [Installation via l’invite de commandes en mode natif et en mode SharePoint de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

@@ -94,7 +94,7 @@ ms.locfileid: "73882348"
   
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](../administration/frequently-asked-questions-for-replication-administrators.md)   
- [Créer et appliquer l’instantané](../create-and-apply-the-snapshot.md)   
+ [Créer et appliquer un instantané](../create-and-apply-the-snapshot.md)   
  [Réinitialiser des abonnements](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)   

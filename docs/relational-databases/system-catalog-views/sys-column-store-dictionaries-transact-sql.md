@@ -34,17 +34,17 @@ ms.locfileid: "72304753"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|ID de l’index de segment de mémoire ou arbre B (B-tree) (HoBT) pour la table qui contient cet index ColumnStore.|  
-|**column_id**|**Int**|ID de la colonne ColumnStore à partir de 1. La première colonne a l’ID = 1, la seconde la colonne ID = 2, etc.|  
-|**dictionary_id**|**Int**|Il peut y avoir deux types de dictionnaires, globaux et locaux, associés à un segment de colonne. Un dictionary_id de 0 représente le dictionnaire global qui est partagé entre tous les segments de colonne (un pour chaque groupe de lignes) de cette colonne.|  
-|**version**|**Int**|Version du format de dictionnaire.|  
-|**type**|**Int**|Type de dictionnaire :<br /><br /> 1-dictionnaire de hachage contenant des valeurs **int**<br /><br /> 2-non utilisé<br /><br /> 3-dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4-dictionnaire de hachage contenant des valeurs **float**<br /><br /> Pour plus d’informations sur les dictionnaires, consultez le [Guide des index ColumnStore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
-|**last_id**|**Int**|Dernier ID de données dans le dictionnaire.|  
+|**column_id**|**int**|ID de la colonne ColumnStore à partir de 1. La première colonne a l’ID = 1, la seconde la colonne ID = 2, etc.|  
+|**dictionary_id**|**int**|Il peut y avoir deux types de dictionnaires, globaux et locaux, associés à un segment de colonne. Une dictionary_id de 0 représente le dictionnaire global qui est partagé par tous les segments de colonne (un pour chaque groupe de lignes) de cette colonne.|  
+|**version**|**int**|Version du format de dictionnaire.|  
+|**type**|**int**|Type de dictionnaire :<br /><br /> 1-dictionnaire de hachage contenant des valeurs **int**<br /><br /> 2-non utilisé<br /><br /> 3-dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4-dictionnaire de hachage contenant des valeurs **float**<br /><br /> Pour plus d’informations sur les dictionnaires, consultez le [Guide des index ColumnStore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**last_id**|**int**|Dernier ID de données dans le dictionnaire.|  
 |**entry_count**|**bigint**|Nombre d'entrées dans le dictionnaire.|  
 |**on_disc_size**|**bigint**|Taille du dictionnaire en octets.|  
 |**partition_id**|**bigint**|Indique l'ID de partition. Unique dans une base de données.|  
   
 ## <a name="permissions"></a>Autorisations  
-Nécessite l'autorisation `VIEW DEFINITION` sur la table. Les colonnes suivantes retournent la valeur null, sauf si l’utilisateur dispose également de l’autorisation `SELECT` : Last_id, entry_count, data_ptr.  
+Nécessite l'autorisation `VIEW DEFINITION` sur la table. Les colonnes suivantes retournent la valeur null, sauf si l’utilisateur dispose également de l’autorisation `SELECT` : last_id, entry_count, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

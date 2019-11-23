@@ -64,7 +64,7 @@ ms.locfileid: "72797961"
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  Une commande SUSPEND retourne dès qu'elle est acceptée par le réplica qui héberge la base de données cible, mais en réalité, l'interruption de la base de données se produit de façon asynchrone.  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables requises  
  Vous devez être connecté à l'instance de serveur qui héberge la base de données que vous souhaitez interrompre. Pour interrompre une base de données primaire et les bases de données secondaires correspondantes, connectez-vous à l'instance de serveur qui héberge le réplica principal. Pour interrompre une base de données secondaire tout en laissant la base de données primaire disponible, connectez-vous au réplica secondaire.  
   
 ###  <a name="Recommendations"></a> Recommandations  
@@ -118,7 +118,7 @@ ms.locfileid: "72797961"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "72797961"
   
 -   Ajoutez davantage d'espace de journal pour la base de données primaire.  
   
--   Reprenez la base de données secondaire avant que le journal ne soit saturé. Pour plus d'informations, consultez [Reprendre une base de données de disponibilité &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
+-   Reprenez la base de données secondaire avant que le journal ne soit saturé. Pour plus d'informations, consultez [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
   
 -   Supprimez la base de données secondaire. Pour plus d’informations, consultez [Supprimer une base de données secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
@@ -144,5 +144,5 @@ ms.locfileid: "72797961"
 -   [Reprendre une base de données de disponibilité &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Reprendre une base de données de disponibilité &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

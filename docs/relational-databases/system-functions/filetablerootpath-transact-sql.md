@@ -40,10 +40,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  Nom du FileTable. *FileTable_name* est de type **nvarchar**. Il s'agit d'un paramètre facultatif. La valeur par défaut est la base de données actuelle. La spécification de *schema_name* est également facultative. Vous pouvez passer NULL pour que *FileTable_name* utilise la valeur de paramètre par défaut  
   
- *@no__t 1option*  
- Expression entière qui définit comment le composant serveur du chemin d'accès doit être mis en forme. *\@option* peut avoir l’une des valeurs suivantes :  
+ *option \@*  
+ Expression entière qui définit comment le composant serveur du chemin d'accès doit être mis en forme. *\@option* peut prendre l’une des valeurs suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Retourne le nom de serveur converti au format NetBIOS, par exemple :<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Valeur par défaut.|  
 |**1**|Retourne le nom de serveur non converti, par exemple :<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -61,11 +61,11 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 -   L'appelant ne dispose pas d'autorisations suffisantes pour référencer la table spécifiée ou la base de données actuelle.  
   
--   L’option FILESTREAM de *database_directory* n’est pas définie pour la base de données active.  
+-   L’option FILESTREAM de *database_directory* n’est pas définie pour la base de données actuelle.  
   
  Pour plus d'informations, consultez [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant conjointement les fonctions **FileTableRootPath** et **GetFileNamespacePath** , comme indiqué dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
   
 ```sql  
@@ -87,7 +87,7 @@ WHERE Name = N'document.docx';
   
 -   Autorisation SELECT sur le FileTable pour obtenir le chemin d'accès racine d'un FileTable spécifique.  
   
--   autorisation **db_datareader** ou supérieure pour obtenir le chemin d’accès racine de la base de données actuelle.  
+-   **db_datareader** ou une autorisation plus élevée pour obtenir le chemin d’accès racine de la base de données actuelle.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment appeler la fonction **FileTableRootPath** .  
@@ -105,6 +105,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Travailler avec des répertoires et des chemins d’accès dans des FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

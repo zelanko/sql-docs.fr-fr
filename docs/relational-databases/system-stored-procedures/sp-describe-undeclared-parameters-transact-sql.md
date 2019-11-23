@@ -44,7 +44,7 @@ sp_describe_undeclared_parameters
 ## <a name="arguments"></a>Arguments  
 `[ \@tsql = ] 'Transact-SQL\_batch'` une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* peut être de type **nvarchar (** _n_ **)** ou **nvarchar (max)** .  
   
-`[ \@params = ] N'parameters'` \@params fournit une chaîne de déclaration pour les paramètres du lot [!INCLUDE[tsql](../../includes/tsql-md.md)], de la même façon que sp_executesql. Les *paramètres* peuvent être de type **nvarchar (** _n_ **)** ou **nvarchar (max)** .  
+`[ \@params = ] N'parameters'` \@params fournit une chaîne de déclaration pour les paramètres du lot [!INCLUDE[tsql](../../includes/tsql-md.md)], de la même façon que sp_executesql fonctionne. Les *paramètres* peuvent être de type **nvarchar (** _n_ **)** ou **nvarchar (max)** .  
   
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans *Transact-SQL_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. n correspond à un espace réservé pour d'autres définitions de paramètres. Si l’instruction ou le lot Transact-SQL dans l’instruction ne contient pas de paramètres, \@paramètres n’est pas requis. La valeur par défaut de ce paramètre est NULL.  
   
@@ -52,18 +52,18 @@ sp_describe_undeclared_parameters
  Type de données du paramètre.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- **sp_describe_undeclared_parameters** retourne toujours le statut de retour de zéro en cas de réussite. Si la procédure génère une erreur et que la procédure est appelée comme un RPC, l’état de retour est rempli par le type d’erreur, comme décrit dans la colonne ERROR_TYPE de sys. DM _exec_describe_first_result_set. Si la procédure est appelée depuis [!INCLUDE[tsql](../../includes/tsql-md.md)], la valeur de retour est toujours égale à zéro, même en cas d'erreur.  
+ **sp_describe_undeclared_parameters** retourne toujours le statut de retour de zéro en cas de réussite. Si la procédure génère une erreur et que la procédure est appelée comme un RPC, l’état de retour est rempli par le type d’erreur, comme décrit dans la colonne error_type de sys. dm_exec_describe_first_result_set. Si la procédure est appelée depuis [!INCLUDE[tsql](../../includes/tsql-md.md)], la valeur de retour est toujours égale à zéro, même en cas d'erreur.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_describe_undeclared_parameters** retourne le jeu de résultats suivant.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int non NULL**|Contient la position ordinale du paramètre dans le jeu de résultats. La position du premier paramètre sera spécifiée comme 1.|  
 |**nom**|**sysname non NULL**|Contient le nom du paramètre.|  
-|**suggested_system_type_id**|**int non NULL**|Contient le **system_type_id** du type de données du paramètre tel que spécifié dans sys. types.<br /><br /> Pour les types CLR, bien que la colonne **system_type_name** retourne la valeur null, cette colonne retourne la valeur 240.|  
+|**suggested_system_type_id**|**int non NULL**|Contient le **system_type_id** du type de données du paramètre tel que spécifié dans sys. types.<br /><br /> Pour les types CLR, même si la colonne **system_type_name** retourne la valeur null, cette colonne retourne la valeur 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contient le nom du type de données. Inclut des arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données du paramètre. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type de données CLR défini par l'utilisateur, NULL est retourné dans cette colonne. Si le type du paramètre ne peut pas être déduit, NULL est retourné.|  
-|**suggested_max_length**|**smallint n’est pas NULL**|Consultez sys. Columns. Description de la colonne **max_length** .|  
+|**suggested_max_length**|**smallint n’est pas NULL**|Consultez sys. Columns. pour **max_length** Description de la colonne.|  
 |**suggested_precision**|**tinyint non NULL**|Consultez sys. Columns. pour la description de la colonne de précision.|  
 |**suggested_scale**|**tinyint non NULL**|Consultez sys. Columns. pour la description de la colonne d'échelle.|  
 |**suggested_user_type_id**|**int NULL**|Pour les types d'alias et CLR, contient l'information user_type_id du type de données de la colonne comme spécifié dans sys.types. Sinon, a la valeur NULL.|  
@@ -71,7 +71,7 @@ sp_describe_undeclared_parameters
 |**suggested_user_type_schema**|**sysname NULL**|Pour les types d'alias et CLR, contient le nom du schéma dans lequel le type est défini. Sinon, a la valeur NULL.|  
 |**suggested_user_type_name**|**sysname NULL**|Pour les types d'alias et CLR, contient le nom du type. Sinon, a la valeur NULL.|  
 |**suggested_assembly_qualified_type_name**|**nvarchar (4000) NULL**|Pour les types CLR, retourne le nom de l'assembly et de la classe qui définit le type. Sinon, a la valeur NULL.|  
-|**suggested_xml_collection_id**|**int NULL**|Contient le xml_collection_id du type de données du paramètre tel que spécifié dans sys. Columns. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
+|**suggested_xml_collection_id**|**int NULL**|Contient la xml_collection_id du type de données du paramètre tel que spécifié dans sys. Columns. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
 |**suggested_xml_collection_database**|**sysname NULL**|Contient la base de données dans laquelle la collection de schémas XML associée à ce type est définie. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
 |**suggested_xml_collection_schema**|**sysname NULL**|Contient le schéma dans lequel la collection de schémas XML associée à ce type est définie. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
 |**suggested_xml_collection_name**|**sysname NULL**|Contient le nom de la collection de schémas XML associé à ce type. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Par exemple, envisagez la requête `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. E (\@P1) = \@P1, E (\@P2) = \@P2 + C1, TT (\@P1) est le type de données de retour déclaré de dbo. tbl, et TT (\@P2) est le type de données de paramètre déclaré pour dbo. tbl.  
   
- Si \@p n’est contenu dans aucune expression indiquée au début de l’étape 2, l’algorithme de déduction du type détermine que E (\@p) est la plus grande expression scalaire qui contient \@p, et que l’algorithme de déduction du type ne calcule pas de données cibles. tapez TT (\@p) pour E (\@p). Par exemple, si la requête est SELECT `@p + 2` puis E (\@p) = \@p + 2 et qu’il n’y a aucun TT (\@p).  
+ Si \@p n’est contenu dans aucune expression indiquée au début de l’étape 2, l’algorithme de déduction du type détermine que E (\@p) est la plus grande expression scalaire qui contient \@p, et l’algorithme de déduction du type ne calcule pas le type de données cible TT (\@p) pour E (\@p). Par exemple, si la requête est SELECT `@p + 2` puis E (\@p) = \@p + 2 et qu’il n’y a aucun TT (\@p).  
   
  **Étape 3**  
   
@@ -166,7 +166,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Déduction simple  
   
-     Si E (\@p) = \@p et TT (\@p) existe, autrement dit, si \@p est directement un argument de l’une des expressions listées au début de l’étape 2, l’algorithme de déduction du type déduit le type de données de \@p comme TT (\@p). Par exemple:  
+     Si E (\@p) = \@p et TT (\@p) existe, autrement dit, si \@p est directement un argument de l’une des expressions listées au début de l’étape 2, l’algorithme de déduction du type déduit le type de données de \@p sur TT (\@p). Par exemple:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -220,7 +220,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     Dans ce cas, E (\@p) est Col_Int + \@p et TT (\@p) est **int**. **int** est choisi pour \@p, car il ne produit pas de conversions implicites. Tout autre choix de type de données produit au moins une conversion implicite.  
+     Dans ce cas, E (\@p) est Col_Int + \@p et TT (\@p) est de **type int**. **int** est choisi pour \@p, car il ne produit pas de conversions implicites. Tout autre choix de type de données produit au moins une conversion implicite.  
   
 2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Par exemple  
   
@@ -248,7 +248,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  En guise d’exemple final, étant donné une requête `SELECT NULL + @p`, **int** est choisi pour \@p, car cela entraîne une conversion de type (c).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation d’exécuter le \@argument TSQL.  
   
 ## <a name="examples"></a>Exemples  
@@ -274,6 +274,6 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ &#40;Transact-SQL&#41; sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)  
- [sys. DM _exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. DM _exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

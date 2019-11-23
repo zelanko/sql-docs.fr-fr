@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : Utilisation d’OPENXML | Microsoft Docs'
+title: 'Exemples : Utilisation de OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,7 +33,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874691"
 ---
-# <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
+# <a name="examples-using-openxml"></a>Exemples : utilisation de OPENXML
   Les exemples de cette rubrique montrent comment utiliser OPENXML pour créer une vue d'un ensemble de lignes d'un document XML. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Les exemples montrent tous les aspects de OPENXML, sauf la spécification des métapropriétés. Pour plus d’informations sur la spécification de métapropriétés dans OPENXML, consultez [Spécifier des métapropriétés dans OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -41,7 +41,7 @@ ms.locfileid: "70874691"
   
  La valeur *flags* fournit le mappage par défaut. Si aucun *ColPattern* n’est spécifié dans *SchemaDeclaration*, le mappage défini par la valeur *flags* est appliqué. La valeur *flags* est ignorée si *ColPattern* est spécifié dans *SchemaDeclaration*. Le paramètre *ColPattern* spécifié détermine le mappage (centré sur l’attribut ou sur l’élément), ainsi que la façon dont les données en excès ou non consommées sont traitées.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>R. Exécution d'une instruction SELECT simple avec OPENXML  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Exécution d'une instruction SELECT simple avec OPENXML  
  Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients dans un ensemble de lignes à deux colonnes (**CustomerID** et **ContactName**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
@@ -147,7 +147,7 @@ LILAS      Carlos Gonzlez
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/ROOT/Customer/Order/OrderDetail) identifie les nœuds <`OrderDetail`> à traiter.  
   
@@ -288,7 +288,7 @@ LILAS      Carlos Gonzlez
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/root/Customer/Order) identifie les nœuds <`Order`> à traiter.  
   
@@ -347,7 +347,7 @@ O4    10000.0       NULL
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/root/Customer/Order) identifie les nœuds <`Order`> à traiter.  
   
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Le résultat est renvoyé sous la forme de table edge. Vous pouvez écrire des requêtes sur la table edge afin d'obtenir des informations. Exemple :  
+ Le résultat est renvoyé sous la forme de table edge. Vous pouvez écrire des requêtes sur la table edge afin d'obtenir des informations. Par exemple:  
   
 -   La requête suivante renvoie le nombre de nœuds **Customer** dans le document. Comme la clause WITH n'est pas spécifiée, OPENXML renvoie une table edge. L'instruction SELECT interroge la table edge.  
   
@@ -466,7 +466,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) se termine par un attribut XML, **ProductID**. Dans l'ensemble de lignes obtenu, une ligne est créée pour chaque nœud d'attribut sélectionné dans le document XML.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Spécification d'un document XML comprenant plusieurs nœuds de texte  
- Si vous disposez d’un document XML comprenant plusieurs nœuds de texte, une instruction SELECT avec un paramètre *ColPattern* **text()** renvoie uniquement le premier nœud de texte, et non la totalité. Exemple :  
+ Si vous disposez d’un document XML comprenant plusieurs nœuds de texte, une instruction SELECT avec un paramètre *ColPattern* **text()** renvoie uniquement le premier nœud de texte, et non la totalité. Par exemple:  
   
 ```  
 DECLARE @h int  
@@ -606,19 +606,19 @@ id  lname   xmlname                   OverFlow
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. Extraction de valeurs individuelles à partir d'attributs à plusieurs valeurs  
  Un document XML peut avoir des attributs qui ont plusieurs valeurs. Par exemple, l’attribut **IDREFS** peut avoir plusieurs valeurs. Dans un document XML, les valeurs des attributs à plusieurs valeurs sont spécifiées sous la forme d'une chaîne qui contient les valeurs séparées par un espace. Dans le document XML suivant, les attributs **attends** de l’élément \<Student> et **attendedBy** de l’élément \<Class> ont plusieurs valeurs. L'extraction de valeurs individuelles d'un attribut XML à plusieurs valeurs et le stockage de chacune d'entre elles dans une ligne distincte de la base de données demandent un travail supplémentaire. Cet exemple illustre le processus.  
   
- Cet exemple de document XML est constitué des éléments suivants :  
+ Cet exemple de document XML est constitué des éléments suivants :  
   
 -   \<Student>  
   
-     Attributs **id** (ID étudiant), **name**et **attends** . L’attribut **attends** est un attribut à plusieurs valeurs.  
+     Attributs **id** (ID étudiant), **name** et **attends**. L’attribut **attends** est un attribut à plusieurs valeurs.  
   
 -   \<Class>  
   
-     Attributs **id** (ID cours), **name**et **attendedBy** . L’attribut **attendedBy** est un attribut à plusieurs valeurs.  
+     Attributs **id** (ID cours), **name** et **attendedBy**. L’attribut **attendedBy** est un attribut à plusieurs valeurs.  
   
  L’attribut **attends** de \<Student> et l’attribut **attendedBy** de \<Class> représentent une relation **m:n** entre les tables Student et Class. Un étudiant peut faire partie de plusieurs cours et un cours peut avoir plusieurs étudiants.  
   
- Supposons que vous vouliez fragmenter ce document et l'enregistrer dans la base de données comme suit :  
+ Supposons que vous vouliez fragmenter ce document et l'enregistrer dans la base de données comme suit :  
   
 -   Enregistrez les données \<Student> dans la table Students.  
   

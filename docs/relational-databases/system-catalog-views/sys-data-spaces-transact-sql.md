@@ -32,7 +32,7 @@ ms.locfileid: "73983194"
 
   Contient une ligne pour espace de données. Il peut s'agir d'un groupe de fichiers, d'un schéma de partition ou d'un groupe de fichiers de données FILESTREAM.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Nom de l'espace de données, unique dans la base de données.|  
 |data_space_id|**int**|Numéro d'identification de l'espace de données, unique dans la base de données.|  

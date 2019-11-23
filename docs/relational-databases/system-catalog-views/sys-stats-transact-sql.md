@@ -34,7 +34,7 @@ ms.locfileid: "73982147"
   
  L’affichage catalogue [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) fournit des informations statistiques pour chaque colonne de la base de données. Pour plus d’informations sur les statistiques, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID de l'objet auquel ces statistiques appartiennent.|  
 |**nom**|**sysname**|Nom des statistiques. Unique dans l'objet.|  

@@ -44,15 +44,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @login_name = ] 'login_name'` nom de connexion auquel accorder l’accès. *Login_name* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** doit être spécifiée, sinon la procédure stockée échoue.  
+`[ @login_name = ] 'login_name'` le nom de connexion auquel accorder l’accès. Le *login_name* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@login_name**, **\@fixed_server_role**ou **\@** doit être spécifiée, sinon la procédure stockée échoue.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` le rôle serveur fixe auquel accorder l’accès. *Fixed_server_role* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** doit être spécifiée, sinon la procédure stockée échoue.  
+`[ @fixed_server_role = ] 'fixed_server_role'` le rôle serveur fixe auquel accorder l’accès. Le *fixed_server_role* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@login_name**, **\@fixed_server_role**ou **\@** doit être spécifiée, sinon la procédure stockée échoue.  
   
-`[ @msdb_role = ] 'msdb_role'` le rôle de base de données dans la base de données **msdb** à laquelle accorder l’accès. *Msdb_role* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** doit être spécifiée, sinon la procédure stockée échoue.  
+`[ @msdb_role = ] 'msdb_role'` le rôle de base de données dans la base de données **msdb** pour accorder l’accès à. Le *msdb_role* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@login_name**, **\@fixed_server_role**ou **\@** doit être spécifiée, sinon la procédure stockée échoue.  
   
-`[ @proxy_id = ] id` identificateur du proxy auquel accorder l’accès. L' *ID* est de **type int**, avec NULL comme valeur par défaut. L’une des **\@proxy_id** ou **\@proxy_name** doit être spécifiée, sinon la procédure stockée échoue.  
+`[ @proxy_id = ] id` l’identificateur du proxy pour lequel l’accès doit être accordé. L' *ID* est de **type int**, avec NULL comme valeur par défaut. L’une des **\@proxy_id** ou **\@proxy_name** doit être spécifiée, sinon la procédure stockée échoue.  
   
-`[ @proxy_name = ] 'proxy_name'` nom du proxy auquel accorder l’accès. *Proxy_name* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@proxy_id** ou **\@proxy_name** doit être spécifiée, sinon la procédure stockée échoue.  
+`[ @proxy_name = ] 'proxy_name'` le nom du proxy pour lequel l’accès doit être accordé. Le *proxy_name* est de type **nvarchar (256)** , avec NULL comme valeur par défaut. L’une des **\@proxy_id** ou **\@proxy_name** doit être spécifiée, sinon la procédure stockée échoue.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -64,7 +64,7 @@ sp_grant_login_to_proxy
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_grant_login_to_proxy**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant permet à la connexion `adventure-works\terrid` d’utiliser le proxy `Catalog application proxy`.  
+ L’exemple suivant permet à l' `adventure-works\terrid` de connexion d’utiliser le `Catalog application proxy`de proxy.  
   
 ```sql
 USE msdb ;  

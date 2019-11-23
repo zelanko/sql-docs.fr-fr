@@ -22,7 +22,7 @@ ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 88ce0a3899bc637de6d94cce7dad71e47247a67f
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73982628"
@@ -33,7 +33,7 @@ ms.locfileid: "73982628"
 
 Retourne des informations sur chaque demande en cours d’exécution dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les demandes, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
    
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID de la session à laquelle cette demande est liée. N'accepte pas la valeur NULL.|  
 |request_id|**int**|ID de la demande. Unique dans le contexte de la session. N'accepte pas la valeur NULL.|  
@@ -66,7 +66,7 @@ Retourne des informations sur chaque demande en cours d’exécution dans [!INCL
 |writes|**bigint**|Nombre d'écritures effectuées par la demande. N'accepte pas la valeur NULL.|  
 |logical_reads|**bigint**|Nombre de lectures logiques effectuées par la demande. N'accepte pas la valeur NULL.|  
 |text_size|**int**|Valeur du paramètre TEXTSIZE pour la demande. N'accepte pas la valeur NULL.|  
-|langue|**nvarchar(128)**|Valeur du paramètre de langue pour la demande. Autorise la valeur NULL.|  
+|langage|**nvarchar(128)**|Valeur du paramètre de langue pour la demande. Autorise la valeur NULL.|  
 |date_format|**nvarchar(3)**|Valeur du paramètre DATEFORMAT pour la demande. Autorise la valeur NULL.|  
 |date_first|**smallint**|Valeur du paramètre DATEFIRST pour la demande. N'accepte pas la valeur NULL.|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  

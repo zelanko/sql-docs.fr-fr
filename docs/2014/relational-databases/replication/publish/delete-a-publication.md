@@ -54,7 +54,7 @@ ms.locfileid: "73882290"
   
 #### <a name="to-delete-a-snapshot-or-transactional-publication"></a>Pour supprimer une publication d'instantané ou une publication transactionnelle  
   
-1.  Procédez de l'une des manières suivantes :  
+1.  Effectuez l’une des opérations suivantes :  
   
     -   Pour supprimer une publication unique, exécutez [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) sur la base de données de publication du serveur de publication.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73882290"
   
 #### <a name="to-delete-a-merge-publication"></a>Pour supprimer une publication de fusion  
   
-1.  Procédez de l'une des manières suivantes :  
+1.  Effectuez l’une des opérations suivantes :  
   
     -   Pour supprimer une publication unique, exécutez [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) sur la base de données de publication du serveur de publication.  
   

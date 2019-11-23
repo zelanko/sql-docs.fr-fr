@@ -31,7 +31,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797980"
 ---
-# <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
+# <a name="upgrade-a-data-tier-application"></a>Mettre à niveau une application de la couche Données
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
   
 -   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Conditions préalables](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
@@ -55,10 +55,10 @@ ms.locfileid: "72797980"
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Les mises à niveau d'une DAC ne peuvent être effectuées que dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables requises  
  Par mesure de prudence, il est recommandé d'effectuer une sauvegarde complète de la base de données avant de la mettre à niveau. Si une erreur se produit lors d'une mise à niveau et que toutes ses modifications ne peuvent pas être restaurées, vous devrez peut-être restaurer la sauvegarde.  
   
- Avant de démarrer la mise à niveau, plusieurs actions peuvent être entreprises pour valider le package DAC et les actions de mise à niveau. Pour plus d’informations sur la façon de procéder à ces vérifications, consultez [Valider un package DAC](validate-a-dac-package.md).  
+ Avant de démarrer la mise à niveau, plusieurs actions peuvent être entreprises pour valider le package DAC et les actions de mise à niveau. Pour plus d'informations sur la façon de procéder à ces vérifications, consultez [Validate a DAC Package](validate-a-dac-package.md).  
   
 -   Nous vous recommandons de pas effectuer de mise à niveau en utilisant un package DAC provenant de sources inconnues ou non approuvées. De tels packages peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un package provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72797980"
 ##  <a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de mise à niveau d'une application de couche Données.  
   
- **Ne plus afficher cette page** - Cochez la case pour ne plus afficher la page à l'avenir.  
+ **Ne plus afficher cette page** Cochez cette case pour ne plus afficher la page à l’avenir.  
   
  **Suivant >** : passe à la page **Sélectionner un package**.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "72797980"
   
  **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport de mise à niveau dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier SQL Server Management Studio\DAC Packages dans le dossier Documents de votre compte Windows.  
   
- **Terminer** : met fin à l’Assistant.  
+ **Terminer** - Met fin à l'Assistant.  
   
 ##  <a name="UpgradeDACPowerShell"></a> Utilisation de PowerShell  
  **Pour mettre à niveau une DAC à l’aide de la méthode IncrementalUpgrade() dans un script PowerShell**  

@@ -39,7 +39,7 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@no__t 1cookie**  
+ **cookie \@**  
  Spécifie le cookie créé lors de l'activation du rôle d'application. Le cookie est créé par [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
   
 > [!NOTE]  

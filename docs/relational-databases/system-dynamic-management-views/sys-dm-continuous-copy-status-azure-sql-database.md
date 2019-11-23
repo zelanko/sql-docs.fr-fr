@@ -35,7 +35,7 @@ ms.locfileid: "73844499"
 Si vous utilisez SQL Database V12, vous devez utiliser [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (car *sys. dm_continuous_copy_status* s’applique uniquement à v11).
 
   
-|Nom de la colonne|Type de données|Description|  
+|Column Name|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|ID unique de la base de données réplica.|  
 |**partner_server**|**sysname**|Nom du serveur SQL Database lié.|  

@@ -39,29 +39,29 @@ ms.locfileid: "73728077"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture**|L’utilisateur peut lire les membres feuille et les attributs.|  
+|**Lire**|L’utilisateur peut lire les membres feuille et les attributs.|  
 |**Créer**|L’utilisateur peut créer des membres feuille et affecter des valeurs d’attribut lors de la création.|  
 |**Update**|L’utilisateur peut mettre à jour les membres feuille et les attributs.|  
-|**Supprimer**|L’utilisateur peut supprimer des membres feuille.|  
+|**Delete**|L’utilisateur peut supprimer des membres feuille.|  
 |**Refuser**|Refusez tout accès aux membres feuille.|  
   
- Vous pouvez combiner les autorisations d’accès en lecture, de création, de mise à jour et de suppression. Lorsque les autorisations Create, Update et Delete sont attribuées, l’autorisation Read est attribuée automatiquement.  
+ Vous pouvez combiner les autorisations d’accès en lecture, de création, de mise à jour et de suppression. Lorsque les autorisations de création, de mise à jour et de suppression sont affectées, l’autorisation d’accès en lecture est automatiquement affectée.  
   
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
  Les autorisations d’attribut s’appliquent aux valeurs de l’attribut pour l’entité spécifique. Les utilisateurs avec des autorisations d'attribut uniquement ne peuvent pas ajouter ni supprimer des membres.  
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture**|L’utilisateur peut lire des attributs.|  
+|**Lire**|L’utilisateur peut lire des attributs.|  
 |**Créer**|L’utilisateur peut attribuer des valeurs lorsqu’il crée des membres.|  
 |**Update**|L’utilisateur peut mettre à jour des attributs.|  
-|**Supprimer**|Aucun effet.|  
+|**Delete**|Aucun effet.|  
 |**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
 ### <a name="example"></a>Exemple  
  Pour l'entité Product, affectez l'autorisation **Mise à jour** à l'attribut Subcategory. Autorisation refuser à tous les autres attributs.  
   
-|Créer une vue d’abonnement|Code|Subcategory (Mise à jour)|  
+|Nom|Code|Subcategory (Mise à jour)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  

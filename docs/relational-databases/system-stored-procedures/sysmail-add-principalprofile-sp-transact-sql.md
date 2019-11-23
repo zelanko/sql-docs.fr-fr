@@ -41,13 +41,13 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @principal_id = ] principal_id` ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_id* est de **type int**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doit être spécifié. Un *principal_id* de **0** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
+`[ @principal_id = ] principal_id` l’ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_id* est de **type int**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés. Une *principal_id* de **0** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
   
-`[ @principal_name = ] 'principal_name'` nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doit être spécifié. Un *principal_name* **« public »** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
+`[ @principal_name = ] 'principal_name'` le nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés. Une *principal_name* de **« public »** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
   
-`[ @profile_id = ] profile_id` ID du profil pour l’Association. l’option par *défaut est de* **type int**, avec NULL comme valeur par défaut. L' *un* des deux, ou *profile_name* , doit être spécifié.  
+`[ @profile_id = ] profile_id` l’ID du profil pour l’Association. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @profile_name = ] 'profile_name'` nom du profil pour l’Association. *profile_name* est de **type sysname**, sans valeur par défaut. L' *un* des deux, ou *profile_name* , doit être spécifié.  
+`[ @profile_name = ] 'profile_name'` le nom du profil pour l’Association. *profile_name* est de **type sysname**, sans valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
 `[ @is_default = ] is_default` spécifie si ce profil est le profil par défaut pour le principal. Un principal ne peut avoir qu'un seul profil par défaut. *is_default* est de **bits**, sans valeur par défaut.  
   
@@ -55,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Pour rendre un profil public, spécifiez un **\@principal_id** de **0** ou un **\@principal_name** de **public**. Un profil public est disponible pour tous les utilisateurs de la base de données **msdb** , bien que les utilisateurs doivent également être membres de **DatabaseMailUserRole** pour exécuter **sp_send_dbmail**.  
+ Pour rendre un profil public, spécifiez un **\@principal_id** de **0** ou un **principal_name de\@** **public**. Un profil public est disponible pour tous les utilisateurs de la base de données **msdb** , bien que les utilisateurs doivent également être membres de **DatabaseMailUserRole** pour exécuter **sp_send_dbmail**.  
   
  Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. Lorsque **\@is_default** est «**1**» et que l’utilisateur est déjà associé à un ou plusieurs profils, le profil spécifié devient le profil par défaut de l’utilisateur. L'ancien profil par défaut est toujours associé à l'utilisateur, mais n'est plus le profil par défaut.  
   
- Lorsque **\@is_default** a la**valeur « 0**» et qu’aucune autre association n’existe, la procédure stockée retourne une erreur.  
+ Lorsque **\@is_default** a la**valeur' 0**'et qu’aucune autre association n’existe, la procédure stockée retourne une erreur.  
   
  La procédure stockée **sysmail_add_principalprofile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
@@ -67,7 +67,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Création d’une association, définition du profil par défaut @ no__t-0  
+ **A. création d’une association, définition du profil par défaut**  
   
  L’exemple suivant crée une association entre le profil nommé `AdventureWorks Administrator Profile` et l’utilisateur de la base de données **msdb** `ApplicationUser`. Le profil est le profil par défaut de l'utilisateur.  
   
@@ -78,9 +78,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
- **B. Définition d’un profil pour le profil public par défaut @ no__t-0  
+ **B. création d’un profil en tant que profil public par défaut**  
   
- L’exemple suivant convertit le profil `AdventureWorks Public Profile` en profil public par défaut pour les utilisateurs de la base de données **msdb** .  
+ L’exemple suivant convertit le profil `AdventureWorks Public Profile` le profil public par défaut pour les utilisateurs dans la base de données **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -91,7 +91,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Objets de Configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database mail les objets de Configuration](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Procédures &#40;stockées Database mail Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -38,23 +38,23 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @credential = *\@credential*  
+ @credential = *informations d’identification\@*  
  Informations d’identification délimitées à la base de données associées à la base de données Stretch locale.  
   
  @with_copy = *\@with_copy*  
- Spécifie s’il faut effectuer une copie des données distantes et se connecter à la copie (recommandé). *\@with_copy est de* bits.  
+ Spécifie s’il faut effectuer une copie des données distantes et se connecter à la copie (recommandé). *\@with_copy* est un bit.  
   
  @azure_servername = *\@azure_servername*  
- Spécifie le nom du serveur Azure qui contient les données distantes. *\@azure_servername est de* type sysname.  
+ Spécifie le nom du serveur Azure qui contient les données distantes. *\@azure_servername* est de type sysname.  
   
  @azure_databasename = *\@azure_databasename*  
- Spécifie le nom de la base de données Azure qui contient les données distantes. *\@azure_databasename est de* type sysname.  
+ Spécifie le nom de la base de données Azure qui contient les données distantes. *\@azure_databasename* est de type sysname.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou > 0 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert les autorisations db_owner.  
+ Requiert db_owner autorisations.  
   
 ## <a name="remarks"></a>Notes  
  Lorsque vous exécutez [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) pour vous reconnecter à la base de données Azure distante, cette opération réinitialise automatiquement le mode de requête sur LOCAL_AND_REMOTE, qui est le comportement par défaut pour Stretch Database. Autrement dit, les requêtes retournent des résultats à partir de données locales et distantes.  

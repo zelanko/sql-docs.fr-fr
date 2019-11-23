@@ -21,11 +21,11 @@ ms.lasthandoff: 08/29/2019
 ms.locfileid: "70154839"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
-  Utilisez la page  **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
+  Utilisez la page **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
   
  **Pour créer une sauvegarde à l'aide de SQL Server Management Studio**  
   
--   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
@@ -33,12 +33,12 @@ ms.locfileid: "70154839"
 >  Vous pouvez définir un plan de maintenance de base de données pour créer des sauvegardes de base de données. Pour plus d’informations, consultez [Plans de maintenance](../maintenance-plans/maintenance-plans.md) et [Utiliser l’Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Quand vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination pour le script.  
+>  Lorsque vous spécifiez une tâche de sauvegarde à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondant en cliquant sur le bouton **Script** puis en sélectionnant une destination pour le script.  
   
 ## <a name="options"></a>Options  
   
 ### <a name="overwrite-media"></a>Remplacer le support  
- Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné URL (stockage Azure) comme destination de la sauvegarde dans la page général de la boîte de dialogue sauvegarder la base de données, les options sous la section remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l'instruction Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Pour plus d’informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l’URL (Stockage Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options figurant sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l'instruction Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Pour plus d'informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Seule l’option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants** est prise en charge avec les options de chiffrement. Si vous sélectionnez les options sous la section **Sauvegarder sur le support de sauvegarde existant**, les options de chiffrements sur la page **Options de sauvegarde** sont désactivées.  
   

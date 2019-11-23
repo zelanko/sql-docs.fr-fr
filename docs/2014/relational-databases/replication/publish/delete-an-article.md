@@ -26,7 +26,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882272"
 ---
-# <a name="delete-an-article"></a>Supprimer un article
+# <a name="delete-an-article"></a>Delete an Article
   Cette rubrique explique comment supprimer un article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou des objets RMO (Replication Management Objects). Pour plus d’informations sur les conditions dans lesquelles un article peut être supprimé et pour savoir si la suppression d’un article requiert un nouvel instantané ou la réinitialisation des abonnements, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
@@ -92,6 +92,6 @@ ms.locfileid: "73882272"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Concepts liés aux procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

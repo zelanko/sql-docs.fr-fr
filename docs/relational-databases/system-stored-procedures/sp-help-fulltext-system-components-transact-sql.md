@@ -49,7 +49,7 @@ sp_help_fulltext_system_components
   
 -   **wordbreaker**  
   
--   **filter**  
+-   **Filter**  
   
 -   **Gestionnaire de protocole**  
   
@@ -67,7 +67,7 @@ sp_help_fulltext_system_components
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Type de composant. Il peut s'agir :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componenttype**|**sysname**|Type de composant. Il peut s'agir :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**ComponentName**|**sysname**|Nom du composant.|  
 |**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
 |**fullpath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
@@ -78,8 +78,8 @@ sp_help_fulltext_system_components
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**Int**|ID de la base de données.|  
-|**ftcatid**|**Int**|Identificateur du catalogue de texte intégral.|  
+|**dbid**|**int**|ID de la base de données.|  
+|**ftcatid**|**int**|Identificateur du catalogue de texte intégral.|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l’appartenance au rôle **public** ; Toutefois, les utilisateurs peuvent uniquement afficher des informations sur les catalogues de texte intégral pour lesquels ils disposent de l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
@@ -89,7 +89,7 @@ sp_help_fulltext_system_components
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-full-text-system-components"></a>R. Liste de tous les composants système de texte intégral  
+### <a name="a-listing-all-full-text-system-components"></a>A. Liste de tous les composants système de texte intégral  
  L'exemple suivant répertorie tous les composants systèmes de texte intégral enregistrés sur l'instance de serveur.  
   
 ```  

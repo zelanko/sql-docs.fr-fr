@@ -31,7 +31,7 @@ ms.locfileid: "73982973"
 
   Retourne la configuration de groupe de charge de travail stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque groupe de charges de travail peut s'abonner à un seul et unique pool de ressources.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID unique du groupe de charges de travail. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom du groupe de charges de travail. N'accepte pas la valeur NULL.|  

@@ -37,7 +37,7 @@ ms.locfileid: "73912810"
 |Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Gestionnaire de configuration|  
 |Application indépendante|L'Agent de fusion est exécuté dans le contexte de l'utilisateur Windows qui exécute l'application.|  
   
-## <a name="b-connection-to-the-subscriber"></a>b. Connexion à l'Abonné  
+## <a name="b-connection-to-the-subscriber"></a>B. Connexion à l'Abonné  
  L'Agent de fusion se connecte à l'Abonné à l'aide de l'authentification Windows ou de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utilisateur Windows ou la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifié doit être associé à un utilisateur de base de données membre du rôle de base de données fixe **dbowner** dans la base de données d'abonnement.  
   
 > [!NOTE]  

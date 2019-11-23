@@ -35,7 +35,7 @@ ms.locfileid: "73982543"
 > [!NOTE]  
 >  Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_os_threads**.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |thread_address|**varbinary(8)**|Adresse mémoire (clé primaire) du thread.|  
 |started_by_sqlservr|**bit**|Indique l'initiateur du thread.<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a démarré le thread.<br /><br /> 0 = un autre composant a démarré le thread, par exemple une procédure stockée étendue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

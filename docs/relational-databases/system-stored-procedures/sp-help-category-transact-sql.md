@@ -44,43 +44,43 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Arguments  
 `[ @class = ] 'class'` la classe sur laquelle les informations sont demandées. la classe est de *type* **varchar (8)** , avec **Job**comme valeur par défaut. la *classe* peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**JOB**|Fournit des informations sur une catégorie de travaux.|  
 |**NOTIFICATION**|Fournit des informations sur une catégorie d'alertes.|  
 |**AND**|Fournit des informations sur une catégorie d'opérateurs.|  
   
-`[ @type = ] 'type'` type de catégorie pour laquelle des informations sont demandées. le *type* est **varchar (12)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` le type de catégorie pour lequel des informations sont demandées. le *type* est **varchar (12)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Catégorie de travaux locale.|  
 |**MULTI-SERVEUR**|Catégorie de travaux multiserveur.|  
 |**NONE**|Catégorie pour une classe autre que **Job**.|  
   
-`[ @name = ] 'name'` nom de la catégorie pour laquelle les informations sont demandées. *Name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'` le nom de la catégorie pour laquelle les informations sont demandées. *Name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @suffix = ] suffix` spécifie si la colonne **category_type** du jeu de résultats est un ID ou un nom. le *suffixe* est de **bit**, avec **0**comme valeur par défaut. **1** affiche **category_type** comme nom et **0** l’affiche comme ID.  
+`[ @suffix = ] suffix` spécifie si la colonne **category_type** dans le jeu de résultats est un ID ou un nom. le *suffixe* est de **bit**, avec **0**comme valeur par défaut. **1** affiche la **category_type** sous la forme d’un nom et **0** l’affiche comme ID.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Lorsque **\@suffix** a la valeur **0**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque **\@suffixe** a la valeur **0**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**Int**|ID de la catégorie|  
+|**category_id**|**int**|ID de la catégorie|  
 |**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = aucun|  
-|**name**|**sysname**|Nom de la catégorie|  
+|**nom**|**sysname**|Nom de la catégorie|  
   
- Lorsque **\@suffix** a la valeur **1**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque **\@suffixe** a la valeur **1**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**Int**|ID de la catégorie|  
+|**category_id**|**int**|ID de la catégorie|  
 |**category_type**|**sysname**|Type de catégorie : Un serveur **local**, **plusieurs serveurs**ou **aucun**|  
-|**name**|**sysname**|Nom de la catégorie|  
+|**nom**|**sysname**|Nom de la catégorie|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_category** doit être exécuté à partir de la base de données **msdb** .  
@@ -96,11 +96,11 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-local-job-information"></a>R. Renvoi d'informations sur les travaux en local  
+### <a name="a-returning-local-job-information"></a>A. Renvoi d'informations sur les travaux en local  
  L'exemple suivant renvoie des informations sur les travaux qui sont administrés localement.  
   
 ```  

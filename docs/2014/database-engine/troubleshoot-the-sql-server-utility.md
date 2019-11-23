@@ -17,7 +17,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797779"
 ---
-# <a name="troubleshoot-the-sql-server-utility"></a>Résolution des problèmes liés à l’utilitaire SQL Server
+# <a name="troubleshoot-the-sql-server-utility"></a>Résolution des problèmes liés à l'utilitaire SQL Server
   Les problèmes à résoudre liés à l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure la résolution d'une opération ayant échoué d'inscription d'une instance de SQL Server avec un UCP, de l'échec de la collecte de données qui grise des icônes dans le mode Liste de l'instance gérée sur un UCP, l'atténuation des goulots d'étranglement des performances, ou la résolution des problèmes d'intégrité des ressources. Pour plus d’informations sur l’atténuation des problèmes d’intégrité des ressources identifiés par un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consultez [Troubleshoot SQL Server Resource Health &#40;&#41;utilitaire SQL Server](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Opération d'inscription d'une instance de SQL Server dans un utilitaire SQL Server ayant échoué  
@@ -25,7 +25,7 @@ ms.locfileid: "72797779"
   
  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
   
- Informations supplémentaires : Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT « \<Nom_Domaine\Nom_Compte> », code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
+ Informations supplémentaires : Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT « \<Nom_Domaine\Nom_Compte> », code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
   
  Dans ce scénario d'exemple, vous pouvez rencontrer le problème suivant :  
   
@@ -116,7 +116,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Cliquez avec le bouton droit sur **UtilityAgentProxyCredential_\<GUID >** et sélectionnez **Propriétés**.  
   
-    3.  Dans la boîte de dialogue Propriétés des informations d’identification, mettez à jour les informations d’identification nécessaires pour le **GUID UtilityAgentProxyCredential_\<** informations d’identification.  
+    3.  Dans la boîte de dialogue Propriétés des informations d’identification, mettez à jour les informations d’identification nécessaires pour le **UtilityAgentProxyCredential_\<GUID >** informations d’identification.  
   
     4.  Cliquez sur **OK** pour confirmer la modification.  
   
@@ -165,5 +165,5 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
     5.  Si l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a déjà été inscrite avec l'UCP avant d'ajouter l'utilisateur à ce groupe, redémarrez le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités et tâches de l'utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Résoudre les problèmes de contrôle d’intégrité de SQL Server &#40;utilitaire SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

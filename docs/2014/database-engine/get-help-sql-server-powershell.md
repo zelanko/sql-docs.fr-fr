@@ -21,7 +21,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797876"
 ---
-# <a name="get-help-sql-server-powershell"></a>Obtenir de l'aide sur SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>Obtenir de l'aide sur SQL Server PowerShell
   Il existe plusieurs sources d'informations sur l'utilisation du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell et des applets de commande. Cela inclut l'aide qui est disponible dans l'environnement Windows PowerShell.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
@@ -44,11 +44,11 @@ ms.locfileid: "72797876"
   
 -   Variables et commandes**sqlcmd** . Pour plus d'informations sur ces variables et commandes, consultez la section Notes de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] Des instructions Pour plus d’informations sur le langage [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference).  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] . Pour plus d’informations sur le langage [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference).  
   
 -   Instructions XQuery. Pour plus d’informations sur le langage XQuery pris en charge par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Références relatives au langage Xquery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
-## <a name="get-help-for-a-sql-server-cmdlet"></a>Obtenir de l'aide pour une applet de commande SQL Server  
+## <a name="get-help-for-a-sql-server-cmdlet"></a>Obtenir de l'aide pour une applet de commande SQL Server  
  **Pour obtenir de l'aide pour une applet de commande**  
   
 -   Exécutez Get-Help en spécifiant le nom de l'applet de commande et le niveau de l'aide à retourner.  
@@ -123,5 +123,5 @@ $MyVar | Get-Member -Type Properties
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md)   
- [Utiliser les applets de commande du moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [Utiliser les applets de commande du Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

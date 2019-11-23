@@ -83,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tables retournées  
  Le tableau suivant décrit le contenu de fichier d'audit qui peut être retourné par cette fonction.  
   
-| Nom de colonne | type | Description |  
+| Nom de la colonne | type | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID de l'action. N'accepte pas la valeur NULL. |  
 | additional_information | **nvarchar(4000)** | Les informations uniques qui s'appliquent seulement à un événement unique sont retournées au format XML. Un petit nombre d'actions pouvant être auditées contient ce type d'informations.<br /><br /> Un niveau de pile TSQL est affiché au format XML pour les actions auxquelles la pile TSQL est associée. Le format XML est le suivant :<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Niveau_imbrication_cadre indique le niveau d'imbrication actuel du cadre. Le nom du module est représenté dans un format en trois parties (nom_base_de_données, nom_schéma et nom_objet).  Le nom du module sera analysé pour échapper les caractères XML non valides, comme `'\<'`, `'>'``'/'`, `'_x'`. Elles seront placées dans une séquence d’échappement en tant que `_xHHHH\_`. HHHH représente le code UCS-2 hexadécimal à quatre chiffres du caractère.<br /><br /> Autorise la valeur NULL. Retourne NULL lorsqu'il n'y a pas d'informations supplémentaires signalées par l'événement. |

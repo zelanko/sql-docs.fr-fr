@@ -1,5 +1,5 @@
 ---
-title: sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -30,7 +30,7 @@ ms.locfileid: "72909329"
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime des lignes de la table de modifications dans la base de données actuelle en fonction de la valeur *low_water_mark* spécifiée. Cette procédure stockée est fournie aux utilisateurs qui souhaitent gérer le processus du nettoyage de la table de modifications directement. Toutefois, soyez vigilant, car la procédure affecte tous les consommateurs des données de la table de modifications.  
+  Supprime des lignes de la table de modifications dans la base de données actuelle en fonction de la valeur de *low_water_mark* spécifiée. Cette procédure stockée est fournie aux utilisateurs qui souhaitent gérer le processus du nettoyage de la table de modifications directement. Toutefois, soyez vigilant, car la procédure affecte tous les consommateurs des données de la table de modifications.  
   
  ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,15 +45,15 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [@capture_instance =] «*capture_instance*»  
+ [@capture_instance =] '*capture_instance*'  
  Est le nom de l'instance de capture associée à la table de modifications. *capture_instance* est de **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
   
- *capture_instance* doit nommer une instance de capture qui existe dans la base de données actuelle.  
+ *capture_instance* devez nommer une instance de capture qui existe dans la base de données actuelle.  
   
- [@low_water_mark =] *low_water_mark*  
+ [ @low_water_mark = ] *low_water_mark*  
  Numéro séquentiel dans le journal (LSN) qui doit être utilisé comme nouvelle limite inférieure pour l’instance de *capture*. *low_water_mark* est de **type Binary (10)** , sans valeur par défaut.  
   
- Si la valeur n’est pas null, elle doit apparaître comme valeur start_lsn d’une entrée actuelle dans la table [CDC. LSN _time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Si d'autres entrées dans cdc.lsn_time_mapping partagent la même heure de validation que l'entrée identifiée par la nouvelle borne inférieure, le plus petit numéro séquentiel dans le journal associé à ce groupe d'entrées est choisi comme borne inférieure.  
+ Si la valeur n’est pas null, elle doit apparaître comme valeur start_lsn d’une entrée actuelle dans la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Si d'autres entrées dans cdc.lsn_time_mapping partagent la même heure de validation que l'entrée identifiée par la nouvelle borne inférieure, le plus petit numéro séquentiel dans le journal associé à ce groupe d'entrées est choisi comme borne inférieure.  
   
  Si la valeur est définie explicitement sur NULL, la limite *inférieure* actuelle de l' *instance de capture* est utilisée pour définir la limite supérieure pour l’opération de nettoyage.  
   
@@ -86,7 +86,7 @@ sys.sp_cdc_cleanup_change_table
   
      Cette procédure stockée effectuant le nettoyage pour une instance de capture unique, elle peut être utilisée pour générer une stratégie de nettoyage personnalisée qui adapte les règles de nettoyage à l'instance de capture individuelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  

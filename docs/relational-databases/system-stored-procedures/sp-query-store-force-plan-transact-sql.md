@@ -33,7 +33,7 @@ ms.locfileid: "71207725"
 
   Active le forçage d’un plan particulier pour une requête particulière.  
   
- Lorsqu’un plan est forcé pour une requête donnée, chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu’il rencontre une requête, il tente de forcer le plan dans l’optimiseur de requête. Si le forçage de plan échoue, un événement étendu est déclenché et l’optimiseur de requête est invité à optimiser de manière normale.  
+ Lorsqu’un plan est forcé pour une requête donnée, chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rencontre la requête, il tente de forcer le plan dans l’optimiseur de requête. Si le forçage de plan échoue, un événement étendu est déclenché et l’optimiseur de requête est invité à optimiser de manière normale.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @query_id = ] query_id`ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
+`[ @query_id = ] query_id` est l’ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
   
-`[ @plan_id = ] plan_id`ID du plan de requête à forcer. *plan_id* est de type **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id` est l’ID du plan de requête à forcer. *plan_id* est de type **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -68,7 +68,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Après avoir identifié les query_id et plan_id que vous souhaitez forcer, utilisez l’exemple suivant pour forcer la requête à utiliser un plan.  
+ Après avoir identifié les query_id et les plan_id que vous souhaitez imposer, utilisez l’exemple suivant pour forcer la requête à utiliser un plan.  
   
 ```sql  
 EXEC sp_query_store_force_plan 3, 3;  
@@ -78,10 +78,10 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [Affichages catalogue du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Query Store Catalog Views &#40;Transact-SQL&#41; [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;]](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Analyse des performances à l’aide de l’Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
- [Bonnes pratiques relatives au Magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
+ [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   
   

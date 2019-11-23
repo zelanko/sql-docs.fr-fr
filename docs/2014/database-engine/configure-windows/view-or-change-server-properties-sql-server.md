@@ -57,7 +57,7 @@ ms.locfileid: "72783125"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  
- Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).  
+ Pour plus d’informations, consultez [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  Les autorisations d’exécution sur `sp_configure` sans paramètre ou avec uniquement le premier paramètre sont accordées par défaut à tous les utilisateurs. Pour exécuter `sp_configure` avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation ALTER SETTINGs au niveau du serveur. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
@@ -137,7 +137,7 @@ RECONFIGURE;
 GO  
 ```  
   
- Pour plus d’informations, consultez [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
+ Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
  Certaines propriétés du serveur peuvent être affichées ou modifiées à l'aide du gestionnaire de configuration SQL Server. Par exemple, vous pouvez afficher la version et l'édition de l'instance de SQL Server, ou modifier l'emplacement où les fichiers des journaux d'erreurs sont stockés. Vous pouvez aussi afficher ces propriétés en interrogeant les [fonctions et vues de gestion dynamique relatives au serveur](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql).  

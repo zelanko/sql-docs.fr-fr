@@ -33,23 +33,23 @@ ms.lasthandoff: 08/29/2019
 ms.locfileid: "70155045"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
-  Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
+  Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
   
  **Dans cette rubrique :**  
   
 -   [Termes et définitions](#TermsAndDefinitions)  
   
--   [Utilisation des unités de sauvegarde sur disque](#DiskBackups)  
+-   [Utilisation d'unités de sauvegarde sur disque](#DiskBackups)  
   
 -   [Utilisation de périphériques à bandes](#TapeDevices)  
   
--   [Utilisation d’une unité de sauvegarde logique](#LogicalBackupDevice)  
+-   [Utilisation d'une unité de sauvegarde logique](#LogicalBackupDevice)  
   
--   [Jeux de supports de sauvegarde en miroir](#MirroredMediaSets)  
+-   [Supports de sauvegarde en miroir](#MirroredMediaSets)  
   
--   [Archivage SQL Server sauvegardes](#Archiving)  
+-   [Archivage des sauvegardes SQL Server](#Archiving)  
   
--   [Tâches associées](#RelatedTasks)  
+-   [Tâches connexes](#RelatedTasks)  
   
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
  disque de sauvegarde  
@@ -61,14 +61,14 @@ ms.locfileid: "70155045"
  unité de sauvegarde physique  
  Soit un lecteur de bande, soit un fichier disque fourni par le système d'exploitation. Vous pouvez réaliser une sauvegarde sur 1 à 64 unités de sauvegarde. Si une sauvegarde nécessite plusieurs unités de sauvegarde, les unités doivent toutes correspondre à un seul type d'unité (disque ou bande).  
   
- Les sauvegardes SQL Server peuvent également être écrites dans le service de stockage d’objets BLOB Azure en plus d’un disque ou d’une bande.  
+ Les sauvegardes SQL Server peuvent également être écrites dans le service de stockage d’objets blob Azure, en plus d’un disque ou d’une bande.  
   
 ##  <a name="DiskBackups"></a>Utilisation des unités de sauvegarde sur disque  
  **Dans cette section :**  
   
--   [Spécification d’un fichier de sauvegarde à l’aide de son nom physique (Transact-SQL)](#BackupFileUsingPhysicalName)  
+-   [Définition d'un fichier de sauvegarde selon son nom physique (Transact-SQL)](#BackupFileUsingPhysicalName)  
   
--   [Spécification du chemin d’accès d’un fichier de sauvegarde sur disque](#BackupFileDiskPath)  
+-   [Spécification du chemin d'accès d'un fichier de sauvegarde sur disque](#BackupFileDiskPath)  
   
 -   [Sauvegarde dans un fichier sur un partage réseau](#NetworkShare)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "70155045"
   
  TO DISK **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
- Exemple :  
+ Par exemple:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -102,7 +102,7 @@ GO
   
  FROM DISK **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
- Par exemple,  
+ Par exemple :  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
@@ -110,7 +110,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a>Spécification du chemin d’accès d’un fichier de sauvegarde sur disque  
- Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le numéro de l’instance du serveur. Par conséquent, pour l'instance du serveur par défaut, le répertoire de sauvegarde par défaut est le suivant : C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup.  
+ Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le nombre de l'instance du serveur. Par conséquent, pour l'instance de serveur par défaut, le répertoire de sauvegarde par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  Pour éviter toute ambiguïté, en particulier dans les scripts, il est recommandé de spécifier explicitement le chemin d'accès du répertoire de sauvegarde dans chaque clause DISK. Cependant, cette exigence prend moins d'importance si vous utilisez l'Éditeur de requête. Dans ce cas, si vous êtes certain que le fichier de sauvegarde réside dans le répertoire de sauvegarde par défaut, vous pouvez omettre le chemin d'accès d'une clause DISK. Par exemple, l'instruction `BACKUP` suivante sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans le répertoire de sauvegarde par défaut.  
   
@@ -133,12 +133,12 @@ GO
 -   Il est possible de se connecter au compte de service réseau à l'aide du compte d'ordinateur plutôt qu'avec un compte d'utilisateur de domaine. Pour autoriser des sauvegardes sur un lecteur partagé à partir d'ordinateurs spécifiques, accordez l'accès aux comptes de ces ordinateurs. Tant que le processus Sqlservr.exe chargé d'écrire la sauvegarde bénéficie d'un accès, peu importe si l'utilisateur exécutant la commande BACKUP dispose d'un accès ou non.  
   
     > [!IMPORTANT]  
-    >  La sauvegarde de données sur un réseau peut être sujette à des erreurs du réseau ; c'est pourquoi nous vous conseillons de vérifier l'opération de sauvegarde après l'avoir menée à terme si vous utilisez un disque distant. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
+    >  La sauvegarde de données sur un réseau peut être sujette à des erreurs du réseau ; c'est pourquoi nous vous conseillons de vérifier l'opération de sauvegarde après l'avoir menée à terme si vous utilisez un disque distant. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
-#### <a name="specifying-a-universal-naming-convention-unc-name"></a>Définition d'un nom UNC (Universal Naming Convention)  
+#### <a name="specifying-a-universal-naming-convention-unc-name"></a>Définition d'un nom UNC (Universal Naming Convention)  
  Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, vous devez utiliser le nom UNC (Universal Naming Convention) complet du fichier de l'unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\** _nom_système_ **\\** _nom_partage_ **\\** _chemin_ **\\** _nom_fichier_.  
   
- Exemple :  
+ Par exemple:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -149,11 +149,11 @@ GO
 ##  <a name="TapeDevices"></a>Utilisation de périphériques à bandes  
   
 > [!NOTE]  
->  La prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
+>  La prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
   
  **Dans cette section :**  
   
--   [Spécification d’une bande de sauvegarde à l’aide de son nom physique (Transact-SQL)](#BackupTapeUsingPhysicalName)  
+-   [Définition d'une bande de sauvegarde selon son nom physique (Transact-SQL)](#BackupTapeUsingPhysicalName)  
   
 -   [Options de sauvegarde et de restauration propres aux bandes (Transact-SQL)](#TapeOptions)  
   
@@ -176,7 +176,7 @@ GO
   
  TO TAPE **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
- Exemple :  
+ Par exemple:  
   
 ```  
 BACKUP LOG AdventureWorks2012   
@@ -188,10 +188,10 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- FROM TAPE **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_ }  
+ FROM TAPE **=** { **'** _nom_unité_sauvegarde_physique_ **'**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
 ###  <a name="TapeOptions"></a>Options de sauvegarde et de restauration propres aux bandes (Transact-SQL)  
- Pour faciliter la gestion des bandes, l'instruction BACKUP fournit les options de bande suivantes :  
+ Pour faciliter la gestion des bandes, l'instruction BACKUP fournit les options de bande suivantes :  
   
 -   { NOUNLOAD | **UNLOAD** }  
   
@@ -205,19 +205,19 @@ GO
 >  Pour plus d’informations sur la syntaxe et les arguments de BACKUP, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Pour plus d’informations sur la syntaxe et les arguments de RESTORE, consultez respectivement [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) et [RESTORE, arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
 ###  <a name="OpenTapes"></a>Gestion des bandes ouvertes  
- Pour afficher une liste des périphériques à bandes ouverts et l’état des demandes de montage, interrogez la vue de gestion dynamique [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Cette vue affiche toutes les bandes ouvertes. Elle inclut les bandes en cours d'utilisation provisoirement inactives et en attente de la prochaine opération BACKUP ou RESTORE.  
+ Pour afficher une liste des périphériques à bandes ouverts et l'état des demandes de montage, interrogez la vue de gestion dynamique [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Cette vue affiche toutes les bandes ouvertes. Elle inclut les bandes en cours d'utilisation provisoirement inactives et en attente de la prochaine opération BACKUP ou RESTORE.  
   
- Si une bande a, accidentellement, été laissée ouverte, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
+ Si une bande a été laissée ouverte par erreur, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _nom_unité_sauvegarde_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Utilisation du service de stockage d’objets BLOB Azure  
- SQL Server sauvegardes peuvent être écrites dans le service de stockage d’objets BLOB Azure.  Pour plus d’informations sur l’utilisation du service de stockage d’objets BLOB Azure pour vos sauvegardes, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Les sauvegardes SQL Server peuvent être écrites dans le service Stockage Blob Azure.  Pour plus d’informations sur l’utilisation du service de stockage d’objets BLOB Azure pour vos sauvegardes, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a>Utilisation d’une unité de sauvegarde logique  
- Une *unité de sauvegarde logique* est un nom facultatif défini par l’utilisateur qui pointe vers une unité de sauvegarde physique spécifique (un fichier disque ou un lecteur de bande). Une unité de sauvegarde logique vous permet d'utiliser l'indirection au moment de référencer l'unité de sauvegarde physique correspondante.  
+ Une *unité de sauvegarde logique* est un nom facultatif défini par l'utilisateur qui pointe vers une unité de sauvegarde physique spécifique (un fichier disque ou un lecteur de bande). Une unité de sauvegarde logique vous permet d'utiliser l'indirection au moment de référencer l'unité de sauvegarde physique correspondante.  
   
  La définition d'une unité de sauvegarde logique implique d'affecter un nom logique à une unité physique. Par exemple, vous pouvez définir une unité logique, AdventureWorksBackups, pour qu’elle pointe vers le fichier Z:\SQLServerBackups\AdventureWorks2012.bak ou le lecteur de bande \\\\.\tape0. Les commandes de sauvegarde et de restauration peuvent ensuite spécifier AdventureWorksBackups comme unité de sauvegarde au lieu de DISK = ’Z:\SQLServerBackups\AdventureWorks2012.bak’ ou TAPE = ’\\\\.\tape0’.  
   
- Le nom d'unité logique doit être unique parmi toutes les unités de sauvegarde logiques résidant sur l'instance de serveur. Pour afficher les noms d'unités logiques existantes, interrogez l'affichage catalogue [sys.backup_devices](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql) . Cet affichage affiche le nom de chaque unité de sauvegarde logique et décrit le type et le nom de fichier physique ou le chemin d'accès de l'unité de sauvegarde physique correspondante.  
+ Le nom d'unité logique doit être unique parmi toutes les unités de sauvegarde logiques résidant sur l'instance de serveur. Pour afficher les noms d’unités logiques existantes, interrogez l’affichage catalogue [sys.backup_devices](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql) . Cet affichage affiche le nom de chaque unité de sauvegarde logique et décrit le type et le nom de fichier physique ou le chemin d'accès de l'unité de sauvegarde physique correspondante.  
   
  Une fois définie une unité de sauvegarde logique, dans une commande BACKUP ou RESTORE, spécifiez l'unité de sauvegarde logique à la place du nom physique de l'unité. Par exemple, l'instruction suivante sauvegarde la base de données `AdventureWorks2012` dans l'unité de sauvegarde logique `AdventureWorksBackups` .  
   
@@ -245,11 +245,11 @@ GO
 >  Les jeux de supports de sauvegarde en miroir sont uniquement pris en charge dans [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] et versions ultérieures.  
   
 ##  <a name="Archiving"></a>Archivage SQL Server sauvegardes  
- Nous vous recommandons de recourir à un utilitaire de sauvegarde système des fichiers pour archiver les sauvegardes sur disque et stocker les archives hors site. L'avantage du disque est que vous pouvez utiliser le réseau pour écrire les sauvegardes archivées sur un disque hors site. Le service de stockage d’objets BLOB Azure peut être utilisé comme option d’archivage hors site.  Vous pouvez soit télécharger vos sauvegardes sur disque, soit écrire directement les sauvegardes dans le service de stockage d’objets BLOB Azure.  
+ Nous vous recommandons de recourir à un utilitaire de sauvegarde système des fichiers pour archiver les sauvegardes sur disque et stocker les archives hors site. L'avantage du disque est que vous pouvez utiliser le réseau pour écrire les sauvegardes archivées sur un disque hors site. Le service Stockage Blob Azure peut être utilisé comme option d’archivage hors site.  Chargez les sauvegardes sur disque ou écrivez directement les sauvegardes dans le service Stockage Blob Azure.  
   
  Une autre approche d'archivage courante consiste à écrire des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un disque de sauvegarde local, à les archiver sur des bandes, puis à stocker les bandes hors site.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Tâches connexes  
  **Pour spécifier une unité de disque (SQL Server Management Studio)**  
   
 -   [Spécifier un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  

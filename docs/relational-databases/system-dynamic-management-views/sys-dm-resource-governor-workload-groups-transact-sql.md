@@ -35,7 +35,7 @@ ms.locfileid: "73982295"
 > [!NOTE]  
 >  Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_resource_governor_workload_groups**.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID du groupe de charges de travail. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom du groupe de charges de travail. N'accepte pas la valeur NULL.|  

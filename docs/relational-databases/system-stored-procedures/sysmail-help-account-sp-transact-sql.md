@@ -39,9 +39,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @account_id = ] account_id` ID du compte pour lequel répertorier les informations. *account_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @account_id = ] account_id` l’ID du compte pour lequel répertorier les informations. *account_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @account_name = ] 'account_name'` nom du compte pour lequel répertorier les informations. *nom_de_compte* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @account_name = ] 'account_name'` le nom du compte pour lequel répertorier les informations. *account_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (succès) ou **1** (échec)  
@@ -52,21 +52,21 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ||||  
 |-|-|-|  
 |Nom de la colonne|Type de données|Description|  
-|**account_id**|**Int**|Identificateur du compte.|  
-|**name**|**sysname**|Nom du compte|  
+|**account_id**|**int**|Identificateur du compte.|  
+|**nom**|**sysname**|Nom du compte|  
 |**description**|**nvarchar (256)**|Description du compte.|  
 |**email_address**|**nvarchar(128)**|Adresse électronique à partir de laquelle les messages sont envoyés.|  
 |**display_name**|**nvarchar(128)**|Nom d'affichage du compte|  
 |**replyto_address**|**nvarchar(128)**|Adresse à laquelle les réponses aux messages de ce compte sont envoyées.|  
 |**servertype**|**sysname**|Type de serveur de messagerie pour le compte.|  
 |**servername**|**sysname**|Nom du serveur de messagerie pour le compte.|  
-|**port**|**Int**|Numéro de port utilisé par le serveur de messagerie.|  
+|**port**|**int**|Numéro de port utilisé par le serveur de messagerie.|  
 |**username**|**nvarchar(128)**|Nom d'utilisateur à utiliser pour se connecter au serveur de messagerie, si ce serveur utilise l'authentification. Lorsque **username** a la valeur NULL, Database mail n’utilise pas l’authentification pour ce compte.|  
-|**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque ce paramètre a la valeur 1, Database Mail utilise les informations d’identification du service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Lorsque ce paramètre a la valeur 0, Database Mail utilise les **\@username** et **\@password** pour l’authentification sur le serveur SMTP. Si **\@username** et **\@password** sont NULL, Database mail utilise l’authentification anonyme. Consultez l’administrateur SMTP avant de spécifier ce paramètre.|  
+|**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque ce paramètre est 1, Database Mail utilise les informations d’identification du service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Lorsque ce paramètre a la valeur 0, Database Mail utilise le **nom d’utilisateur\@** et le **mot de passe\@** pour l’authentification sur le serveur SMTP. Si **\@nom d’utilisateur** et **\@mot de passe** sont NULL, Database mail utilise l’authentification anonyme. Consultez l’administrateur SMTP avant de spécifier ce paramètre.|  
 |**enable_ssl**|**bit**|Spécifie si la messagerie de base de données chiffre les communications à l'aide de la technologie SSL (Secure Sockets Layer). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de bits, sans valeur par défaut. 1 indique que la messagerie de base de données chiffre les communications au moyen de SSL tandis que la valeur 0 indique qu'elle envoie le courrier sans le chiffrement SSL.|  
   
 ## <a name="remarks"></a>Notes  
- Quand aucun *account_id* ou *nom_de_compte* n’est fourni, **sysmail_help_account** répertorie des informations sur tous les comptes de Database mail dans l’instance Microsoft SQL Server.  
+ Quand aucun *account_id* ou *account_name* n’est fourni, **sysmail_help_account** répertorie des informations sur tous les comptes de Database mail de l’instance Microsoft SQL Server.  
   
  La procédure stockée **sysmail_help_account_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
@@ -74,7 +74,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
  Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Affichage des informations pour tous les comptes @ no__t-0  
+ **A. liste des informations pour tous les comptes**  
   
  L'exemple suivant illustre comment répertorier les informations relatives à tous les comptes de l'instance.  
   
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **B. Affichage des informations relatives à un compte spécifique @ no__t-0  
+ **B. affichage des informations relatives à un compte spécifique**  
   
  L'exemple suivant illustre comment répertorier les informations relatives au compte nommé `AdventureWorks Administrator`.  
   

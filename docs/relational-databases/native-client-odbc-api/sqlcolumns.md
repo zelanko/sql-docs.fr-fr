@@ -37,7 +37,7 @@ ms.locfileid: "73787411"
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par le jeu de résultats :  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les types de données **varchar (max)** .|  
 |TYPE_NAME|Retourne "varchar", "varbinary" ou "nvarchar" pour les types de données **varchar (max)** , **varbinary (max)** et **nvarchar (max)** .|  
@@ -61,7 +61,7 @@ ms.locfileid: "73787411"
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns et paramètres table  
  Le jeu de résultats retourné par SQLColumns dépend du paramètre de SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Les colonnes suivantes ont été ajoutées pour les paramètres table :  
   
-|Nom de colonne|Type de données|Sommaire|  
+|Nom de la colonne|Type de données|Sommaire|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Pour une colonne d'un TABLE_TYPE, SQL_TRUE si la colonne est une colonne calculée ; sinon, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE si la colonne est une colonne d'identité ; sinon, SQL_FALSE.|  
@@ -79,7 +79,7 @@ ms.locfileid: "73787411"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Prise en charge SQLColumns pour les colonnes éparses  
  Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des colonnes spécifiques ont été ajoutées au jeu de résultats pour SQLColumns :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Si la colonne est une colonne éparse, SQL_TRUE ; sinon, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Si la colonne est la colonne **column_set** , il s’agit de SQL_TRUE ; Sinon, SQL_FALSE.|  

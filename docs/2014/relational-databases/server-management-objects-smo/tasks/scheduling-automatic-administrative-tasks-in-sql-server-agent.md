@@ -281,5 +281,5 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)    
+ [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
  [Implémenter des travaux](../../../ssms/agent/implement-jobs.md)  

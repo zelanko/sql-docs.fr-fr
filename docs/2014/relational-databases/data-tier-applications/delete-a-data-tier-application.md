@@ -27,10 +27,10 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72782734"
 ---
-# <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
+# <a name="delete-a-data-tier-application"></a>Supprimer une application de couche Données
   Vous pouvez supprimer une application de la couche Données à l'aide de l'Assistant Supprimer l'application de la couche Données ou d'un script Windows PowerShell. Vous pouvez spécifier si la base de données associée doit être conservée, détachée ou supprimée.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
   
 -   **Pour mettre à niveau une DAC, en utilisant :**  [L’Assistant Inscrire l’application de la couche Données](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
@@ -82,11 +82,11 @@ ms.locfileid: "72782734"
 ##  <a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de la suppression d'une application de couche Données.  
   
- **Ne plus afficher cette page** - Cochez la case pour ne plus afficher la page à l'avenir.  
+ **Ne plus afficher cette page** Cochez cette case pour ne plus afficher la page à l’avenir.  
   
  **Suivant >** : passe à la page **Choisir une méthode**.  
   
- **Annuler** - Termine l'Assistant sans supprimer une application de couche Données ni une base de données.  
+ **Annuler** : termine l’Assistant sans supprimer une application de couche Données ni une base de données.  
   
 ##  <a name="Choose_method"></a> Page Choisir une méthode  
  Utilisez cette page pour spécifier l'option pour gérer la base de données associée à la DAC à supprimer.  
@@ -105,7 +105,7 @@ ms.locfileid: "72782734"
   
  **Suivant >** : passe à la page **Résumé**.  
   
- **Annuler** : termine l’Assistant sans supprimer la DAC ni la base de données.  
+ **Annuler** - Termine l'Assistant sans supprimer la DAC ni la base de données.  
   
 ##  <a name="Summary"></a> Page Résumé  
  Utilisez cette page pour examiner les mesures prises par l'Assistant lors de la suppression de l'instance de la DAC.  
@@ -116,7 +116,7 @@ ms.locfileid: "72782734"
   
  **Suivant >** : supprime l’instance de la DAC en utilisant la méthode que vous avez choisie à la page précédente, puis passe à la page **Supprimer une application de couche Données**.  
   
- **Annuler** - Termine l'Assistant sans supprimer l'instance de la DAC.  
+ **Annuler** : termine l’Assistant sans supprimer l’instance de la DAC.  
   
 ##  <a name="Delete_datatier_application"></a> Page Supprimer une application de couche Données  
  Cette page signale la réussite ou l'échec de l'opération de suppression.  
@@ -125,7 +125,7 @@ ms.locfileid: "72782734"
   
  **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport de suppression dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier SQL Server Management Studio\DAC Packages dans le dossier Documents de votre compte Windows.  
   
- **Terminer** : termine l’Assistant.  
+ **Terminer** - Termine l'Assistant.  
   
 ##  <a name="DeleteDACPowerShell"></a> Supprimer une DAC à l'aide de PowerShell  
  **Pour supprimer une DAC à l'aide d'un script PowerShell**  
@@ -224,4 +224,4 @@ $dacName  = "MyApplication"
  [Déployer une application de la couche Données](deploy-a-data-tier-application.md)   
  [Inscrire une base de données en tant que DAC](register-a-database-as-a-dac.md)   
  [Sauvegarde et restauration des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Attacher et détacher une base de données &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
+ [Attacher et détacher une base de données &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

@@ -34,7 +34,7 @@ ms.locfileid: "73760335"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les requêtes distribuées dans lesquelles l'accès aux données de plusieurs sources de données OLE DB hétérogènes s'effectue via une requête unique. L'une des méthodes d'accès à une source de données OLE DB distante consiste à définir la source de données comme serveur lié. Pour ce faire, vous pouvez utiliser [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Une fois que le serveur lié a été défini, les objets de ce serveur peuvent être référencés dans les instructions Transact-SQL en utilisant un nom en quatre parties :  
   
- *linked_server_name. Catalog. Schema. object_name*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  Le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge deux fonctions spécifiques au pilote qui aident à obtenir les informations de catalogue des serveurs liés :  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73760335"
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
-   [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)  
+ [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
  [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
  [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
  [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)   

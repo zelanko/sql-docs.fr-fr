@@ -47,7 +47,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="arguments"></a>Arguments  
  Consultez [les arguments et les propriétés des procédures stockées d’index spatial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
  Consultez [les arguments et les propriétés des procédures stockées d’index spatial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -69,18 +69,18 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Semblable à [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), cette procédure stockée fournit un accès par programme plus simple aux propriétés d’un index spatial **Geography** et signale le jeu de résultats en XML.  
+ Comme pour [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), cette procédure stockée fournit un accès par programme plus simple aux propriétés d’un index spatial **Geography** et signale le jeu de résultats en XML.  
   
  Le cadre englobant d’une **géographie** est l’ensemble de la terre.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées d’index Spatial](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Notions de base sur XQuery](../../xquery/xquery-basics.md)   
+ [Notions de base de XQuery](../../xquery/xquery-basics.md)   
  [Informations de référence sur le langage XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

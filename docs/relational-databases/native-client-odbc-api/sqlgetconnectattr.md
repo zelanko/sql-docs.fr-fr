@@ -34,7 +34,7 @@ ms.locfileid: "73786726"
 > [!NOTE]  
 >  L'attribut de connexion ODBC standard SQL_ATTR_CONNECTION_DEAD retourne l'état le plus récent de la connexion. Cela peut ne pas être l'état actuel de la connexion.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|La connexion au serveur a été perdue.|  
 |SQL_CD_FALSE|La connexion est ouverte et disponible pour le traitement d'instruction.|  
@@ -50,7 +50,7 @@ ms.locfileid: "73786726"
   
  Pour plus d’informations, consultez [accès aux informations de diagnostic dans le journal des événements étendus](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|La connexion a échoué.|  
 |SQL_SUCCESS|La connexion a abouti. L'ID de connexion client se trouve dans le tampon de sortie.|  
@@ -58,7 +58,7 @@ ms.locfileid: "73786726"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  L'attribut SQL_COPT_SS_PERF_DATA retourne un pointeur vers une structure SQLPERF contenant les statistiques actuelles de performances de pilote. **SQLGetConnectAttr** retourne NULL si l'enregistrement de performance n'est pas activé. Les statistiques dans la structure SQLPERF ne sont pas mises à jour de manière dynamique par le pilote. Appelez **SQLGetConnectAttr** chaque fois que les statistiques de performances doivent être actualisées.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |NULL|L'enregistrement des performances n'est pas activé.|  
 |Toute autre valeur|Pointeur vers une structure SQLPERF.|  
@@ -69,7 +69,7 @@ ms.locfileid: "73786726"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  L'attribut SQL_COPT_SS_USER_DATA extrait le pointeur de données utilisateur. Les données utilisateur sont stockées dans la mémoire détenue par le client et enregistrées par connexion. Si le pointeur de données utilisateur n'a pas été défini, SQL_UD_NOTSET, un pointeur NULL, est retourné.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Aucun pointeur de données utilisateur n'est défini.|  
 |Toute autre valeur|Pointeur vers les données utilisateur.|  
@@ -89,6 +89,6 @@ ms.locfileid: "73786726"
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [DÉFINIR ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

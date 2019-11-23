@@ -32,8 +32,8 @@ ms.locfileid: "73784067"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DateTime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Date|SQLDATE|de|  
-|Time|SQLTIME|te|  
+|date|SQLDATE|de|  
+|time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -92,12 +92,12 @@ ms.locfileid: "73784067"
 ## <a name="bcp-types-in-sqlnclih"></a>Types BCP dans sqlncli.h  
  Les types suivants sont définis dans sqlncli.h pour être utilisés avec les extensions d'API BCP d'ODBC. Ces types sont passés avec le paramètre *eUserDataType* de IBCPSession :: BCPColFmt dans OLE DB.  
   
-|Type de stockage de fichier|Type de données du fichier hôte|Tapez sqlncli. h pour l’utiliser avec IBCPSession :: BCPColFmt|Value|  
+|Type de stockage de fichier|Type de données du fichier hôte|Tapez sqlncli. h pour l’utiliser avec IBCPSession :: BCPColFmt|Valeur|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -106,10 +106,10 @@ ms.locfileid: "73784067"
   
  **Remarque pour OLE DB** : Les conversions suivantes sont effectuées par IBCPSession. IRowsetFastLoad utilise OLE DB conversions telles que définies dans les [conversions effectuées du client au serveur](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Notez que les valeurs datetime sont arrondies au 1/300e de seconde et que les secondes des valeurs smalldatetime sont mises à zéro après l'exécution des conversions clientes décrites ci-dessous. L'arrondi des valeurs datetime est propagé aux heures et aux minutes, mais pas à la date.  
   
-|À--><br /><br /> De|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|À--><br /><br /> De|date|time|smalldatetime|datetime|datetime2|datetimeoffset|CHAR|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|Néant|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|time|Néant|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

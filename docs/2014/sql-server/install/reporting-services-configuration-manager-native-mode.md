@@ -56,7 +56,7 @@ ms.locfileid: "71952495"
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
  Explique comment utiliser et gérer les clés de chiffrement utilisées pour le stockage de données sensibles.  
   
- [Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Fournit des instructions, étape par étape, pour les tâches les plus courantes.  
   
  [Gestionnaire de configuration de Reporting Services les rubriques &#40;d’aide F1 en mode natif SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "71952495"
   
 -   [Scénarios à utiliser Gestionnaire de configuration de Reporting Services](#bkmk_scenarios)  
   
--   [Spécifications](#bkmk_requirements)  
+-   [Conditions requises](#bkmk_requirements)  
   
 -   [Pour démarrer le Gestionnaire de configuration de Reporting Services](#bkmk_start_configuration_manager)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71952495"
   
          Cliquez sur **Gestionnaire de configuration de Reporting Services**.  
   
-2.  La boîte de dialogue **Connexion de la configuration de Report Server** s'affiche pour que vous spécifiiez l'instance de serveur de rapports à configurer. Cliquer sur **Se connecter**.  
+2.  La boîte de dialogue **Connexion de la configuration de Report Server** s'affiche pour que vous spécifiiez l'instance de serveur de rapports à configurer. Cliquez sur **Se connecter**.  
   
 3.  Dans **Nom du serveur**, spécifiez le nom de l'ordinateur sur lequel est installée l'instance de serveur de rapports. Le nom de l'ordinateur local apparaît par défaut, mais vous pouvez taper le nom d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante si vous souhaitez vous connecter à un serveur de rapports installé sur un ordinateur distant.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71952495"
   
 5.  Dans **Report Server Dansstance**, sélectionnez l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Seules les instances de serveur de rapports pour cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-6.  Cliquer sur **Se connecter**.  
+6.  Cliquez sur **Se connecter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

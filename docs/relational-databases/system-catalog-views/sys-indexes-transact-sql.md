@@ -32,7 +32,7 @@ ms.locfileid: "73980229"
 
   Contient une ligne par index ou segment d'un objet tabulaire, comme une table, une vue, ou une fonction table.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID de l'objet auquel appartient cet index.|  
 |**nom**|**sysname**|Nom de l’index. le **nom** est unique dans l’objet.<br /><br /> NULL = Segment|  

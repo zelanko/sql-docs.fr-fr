@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983094"
@@ -35,7 +35,7 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 > [!NOTE] 
 > Pour l’appeler à partir de **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , utilisez le nom **sys. dm_pdw_nodes_os_wait_stats**.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d’informations, consultez [types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
@@ -944,7 +944,7 @@ Cette commande remet tous les compteurs à 0.
 |WAIT_XTP_CKPT_CLOSE |Se produit lors de l’attente de la fin d’un point de contrôle. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_CKPT_ENABLED |Se produit lorsque les points de contrôle sont désactivés et en attente d’activation des points de contrôle. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Se produit lors de la synchronisation de la vérification de l’état du point de contrôle. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
-|WAIT_XTP_COMPILE_WAIT |À usage interne uniquement <br /> **S’applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et versions ultérieures.| 
+|WAIT_XTP_COMPILE_WAIT |À usage interne uniquement <br /> **S’APPLIQUE À** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_GUEST |Se produit lorsque l’allocateur de mémoire de la base de données doit cesser de recevoir des notifications de mémoire insuffisante. <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |WAIT_XTP_HOST_WAIT |Se produit lorsque des attentes sont déclenchées par le moteur de base de données et implémentées par l’hôte. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 

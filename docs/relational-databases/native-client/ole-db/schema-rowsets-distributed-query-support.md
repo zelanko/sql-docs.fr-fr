@@ -25,7 +25,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73759713"
 ---
-# <a name="schema-rowsets---distributed-query-support"></a>Ensembles de lignes de schéma - Prise en charge des requêtes distribuées
+# <a name="schema-rowsets---distributed-query-support"></a>Ensembles de lignes de schéma - Prise en charge des requêtes distribuées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Pour prendre en charge les requêtes distribuées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’interface [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur **IDBSchemaRowset** retourne des métadonnées sur les serveurs liés.  

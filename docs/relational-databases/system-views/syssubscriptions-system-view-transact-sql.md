@@ -31,13 +31,13 @@ ms.locfileid: "72304790"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**artid**|**Int**|ID unique d'un article ayant fait l'objet de l'abonnement.|  
+|**artid**|**int**|ID unique d'un article ayant fait l'objet de l'abonnement.|  
 |**srvid**|**smallint**|ID de serveur de l’abonné.|  
 |**dest_db**|**sysname**|Nom de la base de données d’abonnement.|  
 |**status**|**tinyint**|État de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
 |**sync_type**|**tinyint**|Type de synchronisation initiale :<br /><br /> **1** = automatique.<br /><br /> **2** = aucune.|  
 |**login_name**|**sysname**|Spécifie le nom de connexion utilisé lors de la connexion au serveur de publication pour ajouter l'abonnement.|  
-|**subscription_type**|**Int**|Type d’abonnement :<br /><br /> **0** = Push : l’agent de distribution s’exécute sur le serveur de distribution.<br /><br /> **1** = pull-l’agent de distribution s’exécute sur l’abonné.|  
+|**subscription_type**|**int**|Type d’abonnement :<br /><br /> **0** = Push : l’agent de distribution s’exécute sur le serveur de distribution.<br /><br /> **1** = pull-l’agent de distribution s’exécute sur l’abonné.|  
 |**distribution_jobid**|**binary(16)**|Identifie la tâche de l'Agent de distribution utilisée pour synchroniser l'abonnement.|  
 |**timestmap**|**timestamp**|Date et heure de création de l'abonnement.|  
 |**update_mode**|**tinyint**|Mode de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.|  
@@ -47,8 +47,8 @@ ms.locfileid: "72304790"
 |**srvname**|**sysname**|Nom de l'Abonné.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables &#40;de réplication Transact&#41;-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vues &#40;de réplication Transact&#41;-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tables &#40;de réplication Transact&#41; -SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+   [Transact &#40;-SQL&#41; des vues de réplication](../../relational-databases/system-views/replication-views-transact-sql.md)  
  [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
   

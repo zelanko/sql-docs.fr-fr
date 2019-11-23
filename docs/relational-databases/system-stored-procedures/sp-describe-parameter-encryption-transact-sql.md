@@ -60,13 +60,13 @@ sp_describe_parameter_encryption
   
  Chaque ligne du premier jeu de résultats décrit une paire de clés ; clé de chiffrement de colonne chiffrée et clé principale de colonne correspondante.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
 |**database_id**|**int**|ID de la base de données.|  
 |**column_encryption_key_id**|**int**|ID de la clé de chiffrement de colonne. Remarque : cet ID désigne une ligne dans la vue de catalogue [sys. &#40;column_encryption_keys Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Réservé pour un usage ultérieur. Actuellement, contient toujours 1.|  
-|**column_encryption_key_metadata_version**|**Binary(8**|Horodateur représentant l’heure de création de la clé de chiffrement de colonne.|  
+|**column_encryption_key_version**|**int**|Réservé à un usage ultérieur. Actuellement, contient toujours 1.|  
+|**column_encryption_key_metadata_version**|**binary(8)**|Horodateur représentant l’heure de création de la clé de chiffrement de colonne.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_master_key_store_provider_name**|**sysname**|Nom du fournisseur du magasin de clés qui contient la clé principale de colonne, qui a été utilisé pour produire la valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_master_key_path**|**nvarchar(4000)**|Chemin d’accès de clé de la clé principale de colonne, qui a été utilisé pour produire la valeur chiffrée de la clé de chiffrement de colonne.|  
@@ -74,7 +74,7 @@ sp_describe_parameter_encryption
   
  Chaque ligne du deuxième jeu de résultats contient des métadonnées de chiffrement pour un paramètre.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
 |**parameter_name**|**sysname**|Nom de l’un des paramètres spécifiés dans l’argument *\@params* .|  

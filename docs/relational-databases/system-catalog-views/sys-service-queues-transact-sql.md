@@ -31,7 +31,7 @@ ms.locfileid: "73982602"
 
   Contient une ligne pour chaque objet de la base de données qui est une file d’attente de service, avec **sys. Objects. type** = sq.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<les colonnes héritées >**||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. &#40;Objects Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**max_readers**|**smallint**|Nombre maximum de lecteurs simultanés autorisés dans la file d'attente.|  

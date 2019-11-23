@@ -24,7 +24,7 @@ ms.locfileid: "72782830"
   
  Avant de déployer ces solutions, vous devez d'abord installer PowerPivot pour SharePoint à l'aide du support d'installation de SQL Server 2012. Le programme d'installation de SQL Server installe les packages de solution que vous êtes sur le point de déployer.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Condition préalable : vérifier que l'application Web utilise l'authentification en mode classique](#bkmk_classic)  
   
@@ -148,6 +148,6 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
 |powerpivotwebapp.wsp|Ajoute les fichiers de ressources Microsoft.AnalysisServices.SharePoint.Integration.dll au dossier des extensions du serveur Web sur le Web frontal.<br /><br /> Ajoute le service Web PowerPivot sur le Web frontal.<br /><br /> Ajoute la génération de miniatures pour la bibliothèque Galerie PowerPivot.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mettre à niveau PowerPivot pour SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)    
- [Administration et configuration du serveur PowerPivot dans l’administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)    
+ [Mettre à niveau PowerPivot pour SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [Administration et configuration du serveur PowerPivot dans l’administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configuration de PowerPivot à l’aide de Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

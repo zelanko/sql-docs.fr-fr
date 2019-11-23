@@ -60,7 +60,7 @@ ms.locfileid: "72278218"
   
 2.  Supprimez les connexions.  
   
-3.  Utilisez la procédure système **sp_addlogin** pour créer de nouvelles connexions. Spécifiez le SID retourné à l’étape 1 dans le paramètre **\@sid** pour chaque connexion correspondante.  
+3.  Utilisez la procédure système **sp_addlogin** pour créer des connexions. Spécifiez le SID retourné à l’étape 1 dans le paramètre **\@sid** pour chaque connexion correspondante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau de Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

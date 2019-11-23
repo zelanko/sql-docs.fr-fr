@@ -48,7 +48,7 @@ ms.locfileid: "73786317"
  **SQLGetTypeInfo** prend en charge les types CLR volumineux définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types &#40;CLR volumineux définis par l'&#41;utilisateur ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLGetTypeInfo](https://go.microsoft.com/fwlink/?LinkId=59356)   
+ [SQLGetTypeInfo Function](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

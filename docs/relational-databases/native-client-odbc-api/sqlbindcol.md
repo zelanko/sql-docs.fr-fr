@@ -35,7 +35,7 @@ ms.locfileid: "73787794"
  Pour les types de données de valeur élevée, si la mémoire tampon fournie par l’utilisateur n’est pas suffisamment grande pour contenir la valeur entière de la colonne, **SQL_SUCCESS_WITH_INFO** est retourné et «données de chaîne ; la troncation à droite» est émise. L’argument **StrLen_or_IndPtr** contient le nombre de caractères/octets stockés dans la mémoire tampon.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>Prise en charge par SQLBindCol des fonctionnalités de date et heure améliorées  
- Les valeurs de colonne de résultats de types date/heure sont converties comme décrit dans [conversions de SQL en C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Notez que pour récupérer des colonnes time et DateTimeOffset en tant que structures correspondantes (**SQL_SS_TIME2_STRUCT** et **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* doit être spécifié en tant que **SQL_C_DEFAULT** ou **SQL_C_BINARY** .  
+ Les valeurs de colonne de résultats de types date/heure sont converties comme décrit dans [conversions de SQL en C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Notez que pour récupérer des colonnes time et DateTimeOffset en tant que structures correspondantes (**SQL_SS_TIME2_STRUCT** et **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* doit être spécifié en tant que **SQL_C_DEFAULT** ou **SQL_C_BINARY**.  
   
  Pour plus d’informations, consultez [améliorations &#40;de la date&#41;et de l’heure ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

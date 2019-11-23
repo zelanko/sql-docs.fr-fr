@@ -135,7 +135,7 @@ ms.locfileid: "69493893"
  [Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)    
+ [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Créer des jeux nommés](multidimensional-models/create-named-sets.md)  
   
   

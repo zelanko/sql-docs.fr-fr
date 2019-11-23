@@ -42,7 +42,7 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @database_name = N'*db_name*'  
+ @database_name = N «*db_name*»  
  Nom de la base de données SQL Server avec Stretch. Ce paramètre est facultatif.  
   
  @server_address = N «*azure_server_fully_qualified_address*»  
@@ -64,7 +64,7 @@ EXECUTE sys.sp_rda_test_connection
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  En cas de **réussite**, sp_rda_test_connection retourne l’erreur 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) avec la gravité EX_INFO et un code de retour de réussite.  
   
- En cas de **défaillance**, sp_rda_test_connection retourne l’erreur 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) avec la gravité EX_USER et un code de retour d’erreur.  
+ En cas de **défaillance**, sp_rda_test_connection renvoie l’erreur 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) avec une gravité EX_USER et un code de retour d’erreur.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -76,7 +76,7 @@ EXECUTE sys.sp_rda_test_connection
 |error_message|nvarchar(1024)|Message d’erreur. S’il n’y a pas d’erreur, ce champ a la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert les autorisations db_owner.  
+ Requiert db_owner autorisations.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -92,7 +92,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<connection-numéro d’erreur associé >*|*message d’erreur relatif à @no__t 1connection >*|  
+|2|ERROR_NO_CONNECTION|*\<numéro d’erreur lié à la connexion >*|*\<message d’erreur lié à la connexion >*|  
   
 ### <a name="check-the-azure-firewall"></a>Vérifier le pare-feu Azure  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<firewall-numéro d’erreur associé >*|*message d’erreur relatif à @no__t 1firewall >*|  
+|1|ERROR_AZURE_FIREWALL|*\<le numéro d’erreur associé au pare-feu >*|*\<message d’erreur relatif au pare-feu >*|  
   
 ### <a name="check-authentication-credentials"></a>Vérifier les informations d’identification d’authentification  
   
@@ -124,7 +124,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<authentication-numéro d’erreur associé >*|*message d’erreur relatif à @no__t 1authentication >*|  
+|3|ERROR_AUTH_FAILURE|*\<numéro d’erreur lié à l’authentification >*|*\<message d’erreur relatif à l’authentification >*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Vérifier l’état du serveur Azure distant  
   

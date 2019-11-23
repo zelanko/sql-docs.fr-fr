@@ -38,8 +38,8 @@ ms.locfileid: "72783171"
   
 
   
-##  <a name="bkmk_prereq"></a> Prérequis  
- **Permissions**  
+##  <a name="bkmk_prereq"></a> Conditions préalables requises  
+ **Autorisations**  
   
 -   Vous devez être administrateur de la batterie de serveurs pour mettre à niveau une installation PowerPivot pour SharePoint. Vous devez être administrateur local pour exécuter le programme d'installation de SQL Server.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72783171"
   
          ![deux outils configuration PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "deux outils configuration PowerPivot")  
   
-         ou  
+         Ou  
   
          Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **Outil de configuration de PowerPivot pour SharePoint 2013**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72783171"
   
     5.  Consultez éventuellement les informations détaillées figurant sous l'onglet **Script** ou l'onglet **Sortie** .  
   
-         L'onglet Sortie est un résumé des actions qui seront effectuées par l'outil. Ces informations sont enregistrées dans les fichiers journaux à l’emplacement `C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\SPAddinConfiguration\Log`.  
+         L'onglet Sortie est un résumé des actions qui seront effectuées par l'outil. Ces informations sont enregistrées dans les fichiers journaux à l'emplacement `C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\SPAddinConfiguration\Log`.  
   
          L'onglet Script affiche les applets de commande PowerShell ou référence les fichiers de script PowerShell qui seront exécutés par l'outil.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "72783171"
   
     6.  Consultez éventuellement les informations détaillées figurant sous l'onglet **Sortie** ou l'onglet **Script** .  
   
-         L'onglet Sortie est un résumé des actions qui seront effectuées par l'outil. Ces informations sont enregistrées dans les fichiers journaux à l’emplacement `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Log`.  
+         L'onglet Sortie est un résumé des actions qui seront effectuées par l'outil. Ces informations sont enregistrées dans les fichiers journaux à l'emplacement `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Log`.  
   
          L'onglet Script affiche les applets de commande PowerShell ou référence les fichiers de script PowerShell qui seront exécutés par l'outil.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72783171"
         stsadm -o enumdeployments  
         ```  
   
-    2.  Passez en revue les déploiements existants pour les informations suivantes : **Type** est déploiement ou rétraction **Fichier** est powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+    2.  Consultez les informations suivantes pour les déploiements existants : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou à powerpivotfarm.wsp.  
   
     3.  Pour les déploiements ou les rétractions liés aux solutions PowerPivot, copiez la valeur GUID de **JobID** , puis collez-la dans la commande suivante (utilisez les commandes marquer, copier et coller dans le menu Edition de l’interpréteur de commandes pour copier le GUID) :  
   
@@ -237,7 +237,7 @@ ms.locfileid: "72783171"
 Get-PowerPivotSystemService  
 ```  
   
- Vérifiez **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est la version 12,0. \<major > de Build. \<minor > de build  
+ Vérifiez **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est la version 12,0.\<> de build majeure.\<> de build mineure  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Vérifier la version du service Windows Analysis Services  
  Si vous n'avez mis à niveau que certains de vos serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dans une batterie SharePoint 2010, l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur les serveurs qui n'ont pas été mis à niveau est plus ancienne que la version attendue dans la batterie. Vous devrez effectuer une mise à niveau de tous vos serveurs vers la même version pour permettre leur utilisation. Utilisez l’une des méthodes suivantes pour vérifier la version du service Windows SQL Server Analysis Services (PowerPivot) sur chaque ordinateur.  
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  Cliquez sur **Détails**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version du fichier doit être 12,00. \<major > de Build. \<minor > de Build.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version du fichier doit être 12,00.\<> de build majeure.\<> de build mineure.  
   
 5.  Vérifiez que ce numéro est identique à la version de solution PowerPivot et du service système.  
   
@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  Cliquez sur **Fournisseurs de données approuvés**. Vous devez voir MSOLAP.5 (Fournisseur Microsoft OLE DB pour OLAP Services 11.0). Si vous avez effectué la mise à niveau de votre installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , vous verrez également MSOLAP.4 de la version antérieure.  
   
-4.  Pour plus d'informations, consultez [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Pour plus d'informations, consultez [Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 est décrit comme Fournisseur Microsoft OLE DB pour OLAP Services 10.0. Cette version peut être la version par défaut de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] installée avec Excel Services, ou ce peut être la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . La version par défaut que SharePoint installe ne prend pas en charge l'accès aux données PowerPivot. La version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou ultérieure doit se connecter aux classeurs PowerPivot sur SharePoint. Pour vérifier que vous disposez de la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , suivez les instructions de la section précédente qui expliquent comment vérifier la version en consultant les propriétés du fichier.  
   
@@ -300,7 +300,7 @@ Get-PowerPivotSystemService
   
 2.  Triez par nom d'assembly et recherchez **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Vérifiez que vous disposez de la version 12,0. nombre de \<build >.  
+3.  Vérifiez que vous disposez de la version 12,0.\<numéro de build >.  
   
 
 ##  <a name="geminifarm"></a>Mise à niveau de plusieurs serveurs PowerPivot pour SharePoint dans une batterie de serveurs SharePoint  
@@ -350,5 +350,5 @@ Get-PowerPivotSystemService
  Pour obtenir des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [ &#40;configuration initiale PowerPivot pour SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
 
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)    
+ [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

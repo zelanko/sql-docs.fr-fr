@@ -33,9 +33,9 @@ ms.locfileid: "73983170"
 
   Retourne les options de Magasin des requêtes pour cette base de données.  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**desired_state**|**smallint**|Indique le mode d’opération souhaité de Magasin des requêtes, défini explicitement par l’utilisateur.<br /> 0 = désactivé <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
 |**desired_state_desc**|**nvarchar(60)**|Description textuelle du mode d’opération souhaité de Magasin des requêtes :<br />OFF<br />READ_ONLY<br />READ_WRITE|  

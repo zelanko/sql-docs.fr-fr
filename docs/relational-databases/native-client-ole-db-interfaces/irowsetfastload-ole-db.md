@@ -24,7 +24,7 @@ ms.locfileid: "73789397"
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  L’interface **IRowsetFastLoad** expose la prise en charge des opérations de copie en bloc basées sur mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. les consommateurs de fournisseurs OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l’interface pour ajouter rapidement des données à une table de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existante.  
+  L'interface **IRowsetFastLoad** expose la prise en charge des opérations de copie en bloc basées sur mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . les consommateurs de fournisseurs OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l’interface pour ajouter rapidement des données à une table de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existante.  
   
  Si vous affectez la valeur VARIANT_TRUE à SSPROP_ENABLEFASTLOAD pour une session, vous ne pouvez pas lire les données des ensembles de lignes retournés ultérieurement à partir de cette session. Lorsque SSPROP_ENABLEFASTLOAD a la valeur VARIANT_TRUE, tous les ensembles de lignes créés sur la session sont du type IRowsetFastLoad. Les ensembles de lignes IRowsetFastLoad ne prennent pas en charge la fonctionnalité de récupération (fetch) des ensembles de lignes. Par conséquent, les données issues de ces ensembles de lignes ne peuvent pas être lues.  
   

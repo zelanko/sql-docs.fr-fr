@@ -35,7 +35,7 @@ ms.locfileid: "73982308"
 > [!NOTE]  
 >  Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID du pool de ressources. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|  

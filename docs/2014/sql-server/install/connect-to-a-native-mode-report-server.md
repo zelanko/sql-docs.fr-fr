@@ -30,7 +30,7 @@ ms.locfileid: "71952288"
 >  Le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas nécessaire pour configurer et administrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Vous utilisez l'Administration centrale de SharePoint et les scripts PowerShell pour configurer un serveur de rapports en mode SharePoint. Pour plus d’informations, voir [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 > [!TIP]  
->  Le Configuration Manager @ no__t-0 (RSConfigTool. exe) est installé avec le niveau de privilège « highestAvailable ». Ce comportement est par défaut. Le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a besoin de la communication avec des API WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une partie de la communication WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiert un niveau supérieur ou d'administration des privilèges.  
+>  Le Configuration Manager[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RSConfigTool. exe) est installé avec le niveau de privilège « highestAvailable ». Ce comportement est par défaut. Le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a besoin de la communication avec des API WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une partie de la communication WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiert un niveau supérieur ou d'administration des privilèges.  
   
 -   Pour vous connecter à une instance locale du serveur de rapports, utilisez les valeurs par défaut et cliquez sur **Se connecter**. Le gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit le nom du serveur local et détecte l'instance par défaut. Dans la plupart des cas, vous pouvez cliquer sur **Se connecter** sans avoir à modifier les valeurs. Si vous avez installé plusieurs instances, vous devez sélectionner celle que vous souhaitez utiliser.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952288"
  **Instance du serveur de rapports**  
  Sélectionnez l'instance à laquelle se connecter si plusieurs instances de serveur de rapports sont installées. Seules les instances valides sont disponibles pour la sélection. Si vous exécutez côte à côte des versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ces instances n'apparaîtront pas dans la liste.  
   
- **Se connecter**  
+ **Connecter**  
  Connectez-vous au serveur et à l'instance que vous avez spécifiés.  
   
 ## <a name="see-also"></a>Voir aussi  

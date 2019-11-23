@@ -40,9 +40,9 @@ ms.locfileid: "72252051"
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @original_publisher = ] 'original_publisher'` nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @original_publisher = ] 'original_publisher'` le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` le nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
 `[ @redirected_publisher = ] 'redirected_publisher'` la cible de redirection spécifiée lors de l’appel de **sp_redirect_publisher** pour la paire serveur de publication/base de données. *redirected_publisher* est de **type sysname**, sans valeur par défaut.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "72252051"
 ## <a name="remarks"></a>Notes  
  Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null dans le paramètre de sortie *\@redirected_publisher*. Si une entrée existe, elle est retournée dans le paramètre de sortie dans les deux cas (réussite et échec).  
   
- Si la validation réussit, **sp_validate_redirected_publisher** retourne un indicateur de réussite.  
+ Si la validation réussit, **sp_validate_redirected_publisher** retourne une indication de réussite.  
   
  Si la validation échoue, des erreurs sont générées, qui décrivent l'échec.  
   
 ## <a name="permissions"></a>Autorisations  
- L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution ou d’un membre d’une liste d’accès à la publication pour une publication définie associée à la base de données du serveur de publication.  
+ L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution, ou être membre d’une liste d’accès à une publication pour une publication définie associée à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

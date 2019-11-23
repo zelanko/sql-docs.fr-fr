@@ -32,7 +32,7 @@ ms.locfileid: "73983078"
 
   Retourne des objets mémoire qui sont actuellement alloués par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser **sys. dm_os_memory_objects** pour analyser l’utilisation de la mémoire et identifier d’éventuelles fuites de mémoire.  
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|Adresse de l'objet mémoire. N'accepte pas la valeur NULL.|  
 |**parent_address**|**varbinary(8)**|Adresse de l'objet mémoire parent. Autorise la valeur NULL.|  
