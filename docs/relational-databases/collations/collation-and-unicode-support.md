@@ -192,7 +192,8 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Catalan (Catalogne)|0x0403|0x0409|Latin1_General_CI_AS|
 |Chinois (Hong Kong R.A.S., RPC)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
 |Chinese (Macao (R.A.S.))|0x1404|0x1404|Latin1_General_CI_AI|
-|Chinois (Macao)|0x21404|0x21404|Latin1_General_CI_AI|
+|Chinois (Macao (R.A.S.)
+)|0x21404|0x21404|Latin1_General_CI_AI|
 |Chinois (RPC)|0x0804|0x0804|Chinese_PRC_CI_AS|
 |Chinois (RPC)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
 |Chinese (Singapore)|0x1004|0x0804|Chinese_PRC_CI_AS|
