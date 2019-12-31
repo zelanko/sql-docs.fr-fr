@@ -1,6 +1,5 @@
 ---
-title: Gestion d’un domaine | Microsoft Docs
-ms.custom: ''
+title: Gestion d'un domaine
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991925"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258441"
 ---
 # <a name="managing-a-domain"></a>Gestion d'un domaine
 
@@ -53,14 +52,14 @@ ms.locfileid: "67991925"
 |Modifier ou augmenter les valeurs dans une base de connaissances|[Modifier les valeurs de domaine](../data-quality-services/change-domain-values.md)|  
 |Utiliser les règles de validation et de normalisation|[Créer une règle de domaine](../data-quality-services/create-a-domain-rule.md)|  
 |Utiliser des relations pour corriger un terme qui fait partie d'une valeur dans un domaine|[Créer des relations à base de termes](../data-quality-services/create-term-based-relations.md)|  
-|Effectuer, fermer ou annuler l'activité de gestion de l'arborescence du domaine|[Terminer l’activité de gestion de l’arborescence du domaine](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Effectuer, fermer ou annuler l'activité de gestion de l'arborescence du domaine|[Mettre fin à l’activité de gestion des domaines](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d’une base de connaissances](../data-quality-services/building-a-knowledge-base.md)|  
+|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d'une base de connaissances](../data-quality-services/building-a-knowledge-base.md)|  
 |Importation ou exportation de la connaissance depuis ou vers une base de connaissances.|[Importation et exportation de connaissances](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|Création d'un domaine composite et ajout de connaissances au domaine.|[Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md)|  
+|Création d'un domaine composite et ajout de connaissances au domaine.|[Gestion d'un domaine composite](../data-quality-services/managing-a-composite-domain.md)|  
   
   

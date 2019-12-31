@@ -1,6 +1,5 @@
 ---
-title: En bloc charge des considérations de sécurité (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Considérations sur la sécurité du chargement en masse (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026998"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252526"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considérations de sécurité relatives au chargement en masse (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Vous trouverez ci-après des instructions de sécurité relatives au chargement en masse XML :  
   
--   Lorsque vous spécifiez que le chargement en masse opération doit être effectuée comme une transaction, vous utilisez le **TempFilePath** propriété pour spécifier un dossier dans lequel créer les fichiers temporaires.  
+-   Lorsque vous spécifiez que l’opération de chargement en masse doit être exécutée en tant que transaction, vous utilisez la propriété **TempFilePath** pour spécifier un dossier dans lequel créer les fichiers temporaires.  
   
      Le processus de chargement en masse crée ces fichiers temporaires avec les autorisations suivantes :  
   
@@ -56,6 +56,6 @@ ms.locfileid: "68026998"
 -   Si l'utilisateur définit un fichier journal des erreurs pour SQLXML, chaque fois que le chargement en masse est exécuté, le fichier est écrasé avec les données du dernier processus de chargement en masse.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chargement en masse des données XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Exécution du chargement en masse de données XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

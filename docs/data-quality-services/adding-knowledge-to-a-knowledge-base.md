@@ -1,6 +1,5 @@
 ---
-title: Ajout de connaissances à une base de connaissances | Microsoft Docs
-ms.custom: ''
+title: Ajout de connaissances à une base de connaissances
 ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 13a4345ba72f323aa49e250c8bc946d2d62f7799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b10dcb5c3f959612323e960c471a710e0b94b8dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992451"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258866"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Ajout de connaissances à une base de connaissances
 
@@ -31,44 +30,44 @@ ms.locfileid: "67992451"
   
 -   [Gérer des valeurs de données dans un domaine](#ManageDomain)  
   
--   [Importer des connaissances à partir d'un fichier .dqs](#DQSFile)  
+-   [Importer des connaissances à partir d’un fichier. DQS](#DQSFile)  
   
--   [Importer des connaissances à partir d'un fichier Excel](#Excel)  
+-   [Importer des connaissances à partir d’un fichier Excel](#Excel)  
   
--   [Réimporter des connaissances d'un projet dans la base de connaissances](#Project)  
+-   [Réimporter les connaissances d’un projet dans la base de connaissances](#Project)  
   
 -   [Utiliser la base de connaissances DQS par défaut](#Default)  
   
-##  <a name="Discovery"></a> Effectuer une découverte des connaissances  
+##  <a name="Discovery"></a>Effectuer une découverte des connaissances  
  La découverte des connaissances analyse un exemple des données en fonction de critères de qualité des données, puis ajoute les connaissances qu'il a acquises à la base de connaissances. Il s'agit d'un processus assisté par ordinateur qui identifie les incohérences et les erreurs de syntaxe dans les données, et qui suggère des modifications à apporter aux données. L'activité de découverte des connaissances est un Assistant qui comprend une page vous permettant de gérer de façon interactive les valeurs de domaine.  
   
 -   Pour plus d'informations dans la documentation, consultez [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
 -   Pour obtenir une vidéo qui montre comment effectuer une découverte des connaissances, cliquez [ici](https://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
-##  <a name="ManageDomain"></a> Gérer des valeurs de données dans un domaine  
+##  <a name="ManageDomain"></a>Gérer des valeurs de données dans un domaine  
  DQS vous permet de modifier et d'augmenter de façon interactive les métadonnées qui sont générées par l'activité de découverte des connaissances assistée par ordinateur. Vous effectuez ces opérations dans l'activité Gestion de l'arborescence du domaine, où vous pouvez appliquer une modification à une valeur de données spécifique.  
   
 -   Pour plus d'informations dans la documentation, consultez [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
 -   Pour obtenir une vidéo qui montre comment effectuer la gestion de l'arborescence du domaine, cliquez [ici](https://msdn.microsoft.com/sqlserver/hh323825.aspx). Notez que dans cette vidéo, vous modifiez des valeurs de domaine dans la page Gestion de l'arborescence du domaine de l'Assistant de découverte des connaissances. Vous pouvez également effectuer ces étapes dans la page Valeurs du domaine de l'activité Gestion de l'arborescence du domaine.  
   
-##  <a name="DQSFile"></a> Importer des connaissances à partir d'un fichier .dqs  
+##  <a name="DQSFile"></a>Importer des connaissances à partir d’un fichier. DQS  
  Vous pouvez importer un domaine à partir d'un fichier de données .dqs vers une base de connaissances existante, ou importer la totalité d'une base de connaissances d'un fichier .dqs vers une nouvelle base de connaissances. Pour ce faire, vous devez d'abord exporter un domaine ou une base de connaissances existant vers un fichier .dqs. Un fichier .dqs contenant un domaine inclut toutes les données du domaine ; un fichier .dqs contenant une base de connaissances contient toutes les informations de la base de connaissances, y compris les domaines et la stratégie de correspondance.  
   
 -   Pour plus d’informations dans la documentation, consultez [Importer un domaine à partir d’un fichier .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md) ou [Importer une base de connaissances à partir d’un fichier .dqs](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md).  
   
-##  <a name="Excel"></a> Importer des connaissances à partir d'un fichier Excel  
+##  <a name="Excel"></a>Importer des connaissances à partir d’un fichier Excel  
  Vous pouvez importer des valeurs de domaine à partir d'un fichier de feuille de calcul Excel vers un domaine ou une base de connaissances existant. Pour ce faire, vous devez d'abord créer une feuille de calcul Excel avec les valeurs du domaine que vous voulez importer, puis vérifier qu'Excel est installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] afin de pouvoir importer les valeurs à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Vous ne pouvez pas exporter des valeurs de domaine d'un domaine ou d'une base de connaissances vers un fichier Excel.  
   
 -   Pour plus d’informations dans la documentation, consultez [Importer les valeurs d’un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) ou [Importer les domaines d’un fichier Excel dans la découverte des connaissances](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).  
   
-##  <a name="Project"></a> Réimporter des connaissances d'un projet dans la base de connaissances  
+##  <a name="Project"></a>Réimporter les connaissances d’un projet dans la base de connaissances  
  Après avoir exécuté un projet de nettoyage ou de qualité des données de correspondance à l'aide d'une base de connaissances, vous pouvez réimporter les connaissances créées pendant le nettoyage ou la correspondance dans cette base de connaissances. Cela vous permet de conserver les connaissances générées pendant le projet, et de générer en permanence les connaissances dans la base de connaissances.  
   
 -   Pour plus d’informations dans la documentation, consultez [Importer des valeurs de projet de nettoyage dans un domaine](../data-quality-services/import-cleansing-project-values-into-a-domain.md).  
   
-##  <a name="Default"></a> Utiliser la base de connaissances DQS par défaut  
+##  <a name="Default"></a>Utiliser la base de connaissances DQS par défaut  
  DQS est fourni avec une base de connaissances prégénérée appelée Données DQS, qui contient des domaines pour des données relatives à des sociétés et adresses des États-Unis. Cette base de connaissances peut être utilisée pour démarrer rapidement un projet sans créer une nouvelle base de connaissances. La base de connaissances Données DQS est en lecture seule, mais le gestionnaire de données peut créer une base de connaissances à partir de celle-ci.  
   
 -   Pour plus d'informations dans la documentation, consultez [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  

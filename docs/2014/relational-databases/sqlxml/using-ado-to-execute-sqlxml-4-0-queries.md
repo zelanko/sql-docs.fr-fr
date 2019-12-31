@@ -1,7 +1,7 @@
 ---
-title: Utilisation d’ADO pour exécuter SQLXML 4.0 requêtes | Microsoft Docs
+title: Utilisation d'ADO pour exécuter des requêtes SQLXML 4.0
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -16,12 +16,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012151"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251419"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilisation d'ADO pour exécuter des requêtes SQLXML 4.0
   Dans les versions antérieures de SQLXML, l'exécution de requêtes basées sur le protocole HTTP était prise en charge à l'aide de répertoires virtuels IIS SQLXML et du filtre ISAPI SQLXML. Dans SQLXML 4.0, ces composants ont été supprimés du fait que des fonctionnalités semblables et se chevauchant sont fournies avec les services Web XML natifs à compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -35,9 +35,9 @@ ms.locfileid: "66012151"
   
 #### <a name="to-create-the-sqlxml-40-query-tester-using-ado-vbscript"></a>Pour créer le testeur de requêtes SQLXML 4.0 à l'aide d'ADO (VBScript)  
   
-1.  Copiez le code ci-dessous et collez-le dans un fichier texte. Enregistrez le fichier sous Sqlxml4test.vbs.  
+1.  Copiez le code VBScript ci-dessous, puis collez-le dans un fichier texte. Enregistrez le fichier sous Sqlxml4test.vbs.  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -112,16 +112,16 @@ ms.locfileid: "66012151"
   
 1.  Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est installé, comme suit :  
   
-    1.  À partir de la **Démarrer** menu, pointez sur **paramètres**, puis cliquez sur **le panneau de configuration**.  
+    1.  Dans le menu **Démarrer** , pointez sur **paramètres**, puis cliquez sur **panneau**de configuration.  
   
-    2.  Dans le panneau de configuration, ouvrez **Ajout / Suppression de programmes**  
+    2.  Dans le panneau de configuration, ouvrez **Ajout/suppression de programmes** .  
   
     3.  Dans la liste des programmes actuellement installés, vérifiez que **Microsoft SQL Server Native Client** apparaît dans la liste.  
   
         > [!NOTE]  
-        >  Si vous devez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consultez [l’installation de SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
+        >  Si vous devez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consultez installation de [SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Vérifiez que MDAC 2.6 ou version ultérieure est installée sur l'ordinateur client. Si vous avez besoin de vérifier les informations de version de MDAC, vous pouvez télécharger gratuitement l'outil MDAC Component Checker sur le site Web de Microsoft (www.microsoft.com). Pour plus d'informations, recherchez « MDAC Component Checker » sur le site Web de Microsoft.  
+2.  Vérifiez que MDAC 2.6 ou version ultérieure est installée sur l'ordinateur client. Si vous avez besoin de vérifier les informations de version MDAC, vous pouvez utiliser l’outil de vérification de composant MDAC, fourni en téléchargement gratuit à partir [https://www.microsoft.com/](https://www.microsoft.com/)du site Web de Microsoft. Pour plus d’informations, recherchez « MDAC Component Checker » sur le site Web de Microsoft.  
   
 3.  Exécutez le script.  
   

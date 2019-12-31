@@ -1,6 +1,5 @@
 ---
-title: Traitement du code XML côté client (classes managées SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Traitement du XML côté client (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 54063c371489aaf8928a4c3cad290e4a0961c229
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909169"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251486"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>traitement du XML côté client (classes managées SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Cette C# application exécute la procédure stockée et spécifie l’option for XML auto dans la spécification de la valeur CommandText. Dans l’application, la propriété ClientSideXml de l’objet SqlXmlCommand a la valeur true. Cela vous permet d'exécuter les procédures stockées préexistantes qui retournent un ensemble de lignes et lui appliquent une transformation XML.  
+ Cette application C# exécute la procédure stockée et spécifie l’option FOR XML AUTO dans la spécification de la valeur CommandText. Dans l’application, la propriété ClientSideXml de l’objet SqlXmlCommand a la valeur true. Cela vous permet d'exécuter les procédures stockées préexistantes qui retournent un ensemble de lignes et lui appliquent une transformation XML.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  

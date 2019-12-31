@@ -1,6 +1,6 @@
 ---
-title: Supprimer un groupe de serveurs (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Supprimer un groupe de serveurs
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deleting server groups
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 446705799f117c23786799789657e9fa89f9fa39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956051"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251806"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Supprimer un groupe de serveurs (SQL Server Management Studio)
   Cette rubrique explique comment supprimer un groupe de serveurs dans les serveurs inscrits dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez supprimer un groupe de serveurs à tout moment. Si le groupe de serveurs n'est pas vide, tous les serveurs ou les groupes de serveurs contenus dans le groupe de serveurs supprimé sont également supprimés. Avant de supprimer un groupe de serveurs, déplacez les serveurs ou les groupes de serveurs que vous voulez conserver dans un nouveau groupe de serveurs.  

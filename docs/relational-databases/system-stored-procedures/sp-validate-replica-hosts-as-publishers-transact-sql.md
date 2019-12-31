@@ -1,6 +1,7 @@
 ---
-title: sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sp_validate_replica_hosts_as_publishers (T-SQL)
+description: Décrit la procédure stockée sp_validate_replica_hosts_as_publishers qui autorise la validation de tous les réplicas secondaires.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df9c4fcc88f568c920f0a5959338f195d79d925
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252108"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320000"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **sp_validate_replica_hosts_as_publishers** est une extension de **sp_validate_redirected_publisher** qui permet à tous les réplicas secondaires d’être validés, et non pas seulement le réplica principal actuel. **sp_validate_replicat_hosts_as_publisher** valide l’intégralité d’une topologie de réplication Always on. les **sp_validate_replica_hosts_as_publishers** doivent être exécutées directement sur le serveur de distribution à l’aide d’une session Bureau à distance pour éviter une erreur de sécurité de double saut (21892).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +41,27 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @original_publisher = ] 'original_publisher'` le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @original_publisher = ] 'original_publisher'`Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` le nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` la cible de la redirection lorsque **sp_redirect_publisher** a été appelé pour la paire serveur de publication/base de données publiée d’origine. *redirected_publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @redirected_publisher = ] 'redirected_publisher'`Cible de la redirection lorsque **sp_redirect_publisher** a été appelé pour la paire serveur de publication/base de données publiée d’origine. *redirected_publisher* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
-## <a name="remarks"></a>Notes  
- Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null pour le paramètre de sortie *\@redirected_publisher*. Sinon, le serveur de publication redirigé associé est retourné, à la fois en cas de réussite et d'échec.  
+## <a name="remarks"></a>Remarques  
+ Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null pour le paramètre * \@* de sortie redirected_publisher. Sinon, le serveur de publication redirigé associé est retourné, à la fois en cas de réussite et d'échec.  
   
  Si la validation réussit, **sp_validate_redirected_publisher** retourne une indication de réussite.  
   
  Si la validation échoue, les erreurs appropriées sont générées.  **sp_validate_redirected_publisher** fait le meilleur effort pour signaler tous les problèmes et pas seulement le premier rencontré.  
   
 > [!NOTE]  
->  **sp_validate_replica_hosts_as_publishers** échoue avec l’erreur suivante lors de la validation des hôtes de réplica secondaire qui n’autorisent pas l’accès en lecture, ou requièrent la spécification de l’intention de lecture.  
+>  **sp_validate_replica_hosts_as_publishers** échoue avec l’erreur suivante lors de la validation des hôtes de réplica secondaire qui n’autorisent pas l’accès en lecture ou qui nécessitent la spécification d’une intention de lecture.  
 >   
 >  Msg 21899, Niveau 11, État 1, Procédure **sp_hadr_verify_subscribers_at_publisher**, Ligne 109  
 >   
@@ -72,7 +73,7 @@ sp_validate_replica_hosts_as_publishers
  L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution, ou être membre d’une liste d’accès à une publication pour une publication définie associée à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  

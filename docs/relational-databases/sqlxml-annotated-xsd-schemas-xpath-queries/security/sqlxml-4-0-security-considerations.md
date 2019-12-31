@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 et la sécurité | Microsoft Docs
+title: Considérations relatives à la sécurité SQLXML 4.0
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9580aaa9bad8285f6cf61300a84cf6362dc12774
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bacd3ecf628d6f79eb1bd74e7159b0e158175743
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896608"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252457"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Considérations relatives à la sécurité SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "67896608"
  [Considérations de base relatives à la sécurité SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md)  
  Fournit des indications de sécurité sur l'utilisation de SQLXML pour accéder aux données.  
   
- [Considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité mise à jour &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation des codes de mise à jour (updategrams) avec SQLXML 4.0.  
   
- [Annoté considérations de sécurité de schéma &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité des schémas annotés &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation des schémas annotés avec SQLXML 4.0.  
   
- [XML en matière de sécurité &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)  
+ [Considérations relatives à la sécurité XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation de FOR XML avec SQLXML 4.0.  
   
- [En bloc charge les considérations de sécurité &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité du chargement en masse &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md)  
  Fournit des indications de sécurité sur l'utilisation du chargement en masse XML avec SQLXML 4.0.  
   
   

@@ -1,6 +1,5 @@
 ---
-title: Gestion d’un domaine composite | Microsoft Docs
-ms.custom: ''
+title: Gestion d'un domaine composite
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: fac57f53242fa7445820aaed5a39694a7277653c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935080"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258456"
 ---
 # <a name="managing-a-composite-domain"></a>Gestion d'un domaine composite
 
@@ -42,8 +41,8 @@ ms.locfileid: "67935080"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d’une base de connaissances](../data-quality-services/building-a-knowledge-base.md)|  
+|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d'une base de connaissances](../data-quality-services/building-a-knowledge-base.md)|  
 |Importation ou exportation de la connaissance depuis ou vers une base de connaissances.|[Importation et exportation de connaissances](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|Création d'un seul domaine et ajout de connaissances au domaine.|[Gestion d’un domaine](../data-quality-services/managing-a-domain.md)|  
+|Création d'un seul domaine et ajout de connaissances au domaine.|[Gestion d'un domaine](../data-quality-services/managing-a-domain.md)|  
   
   

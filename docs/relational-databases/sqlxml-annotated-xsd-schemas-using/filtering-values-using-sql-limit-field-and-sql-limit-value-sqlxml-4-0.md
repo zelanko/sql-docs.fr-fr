@@ -1,6 +1,5 @@
 ---
-title: 'Filtrage de valeurs à l’aide de SQL : Limit-Field et SQL : Limit-Value (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Filtrer avec SQL : Limit-Field et SQL : Limit-Value (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906101"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257410"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "72906101"
   
  Dans ces exemples, les modèles sont utilisés pour spécifier des requêtes XPath par rapport au schéma de mappage XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitation des adresses de clients retournées à un type d'adresse spécifique  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitation des adresses de clients retournées à un type d'adresse spécifique  
  Dans cet exemple, une base de données contient deux tables :  
   
 -   Customer (CustomerID, CompanyName)  
@@ -150,7 +150,7 @@ ms.locfileid: "72906101"
 
      Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -289,7 +289,7 @@ ms.locfileid: "72906101"
   
 5.  Exécutez le fichier TestQuery.vbs en cliquant dessus dans l'Explorateur Windows.  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```  
     <root>  
@@ -307,9 +307,9 @@ ms.locfileid: "72906101"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
-   [Transact- &#40;SQL&#41; nchar et nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+ [&#41;Transact-SQL &#40;float et Real](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar et nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installation de SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Utilisation de schémas XSD annotés dans &#40;les requêtes SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Utilisation de schémas XSD annotés dans les requêtes &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

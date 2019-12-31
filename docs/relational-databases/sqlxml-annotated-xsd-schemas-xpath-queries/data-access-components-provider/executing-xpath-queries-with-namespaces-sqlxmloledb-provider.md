@@ -1,6 +1,5 @@
 ---
-title: Exécution de requêtes XPath avec des espaces de noms (fournisseur SQLXMLOLEDB) | Microsoft Docs
-ms.custom: ''
+title: Exécuter des requêtes XPath avec des espaces de noms (SQLXMLOLEDB)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,13 +16,14 @@ helpviewer_keywords:
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a77fc2ee8dd70b8ef8956b99d7412232cbcae0c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b1559beee9838920c5e219c4e13e5a8b0c130b51
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909339"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257304"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Exécution de requêtes XPath avec des espaces de noms (fournisseur SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "72909339"
   
  L'utilisation du caractère générique (*) n'étant pas prise en charge dans SQLXML 4.0, vous devez spécifier la requête XPath en utilisant un préfixe d'espace de noms. Pour résoudre ce préfixe, utilisez la propriété Namespaces pour spécifier la liaison d’espace de noms.  
   
- Dans l’exemple suivant, la requête XPath spécifie des espaces de noms à l’aide du caractère générique (\*) et des fonctions XPath de nom local () et d’URI (). Cette requête XPath retourne tous les éléments dont le nom local est **contact** et l’URI de l’espace de noms est **urn : MySchema : contacts**.  
+ Dans l’exemple suivant, la requête XPath spécifie des espaces de noms à l’aide\*du caractère générique () et des fonctions XPath local name () et namespace-URI (). Cette requête XPath retourne tous les éléments dont le nom local est **contact** et l’URI de l’espace de noms est **urn : MySchema : contacts**.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

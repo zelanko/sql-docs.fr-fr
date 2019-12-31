@@ -1,6 +1,7 @@
 ---
-title: sp_MSchange_snapshot_agent_properties (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sp_MSchange_snapshot_agent_properties (T-SQL)
+description: Décrit la procédure stockée sp_MSchange_snapshot_agent_properties utilisée pour modifier les propriétés du Agent d’instantané utilisé pour Réplication SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9c4dcd79945644f0bc44d9ca3e948fa4f85d4e40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905184"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321798"
 ---
-# <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
+# <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie les propriétés d’un travail d’Agent d’instantané s’exécute sur un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure du serveur de distribution. Cette procédure stockée est utilisée pour modifier les propriétés lorsque le serveur de publication s’exécute sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
+  Modifie les propriétés d’un travail de agent d’instantané qui s’exécute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sur un serveur de distribution ou version ultérieure. Cette procédure stockée est utilisée pour modifier des propriétés lorsque le serveur de publication s'exécute sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,89 +57,89 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @frequency_type = ] frequency_type` Est la fréquence d’exécution de l’Agent d’instantané. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_type = ] frequency_type`Fréquence à laquelle l’Agent d’instantané est exécutée. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**1**|Une fois|  
+|**1,0**|Une fois|  
 |**2**|À la demande|  
-|**4**|Tous les jours|  
-|**8**|Semaine|  
-|**10**|Mois|  
+|**4**|Quotidienne|  
+|**version8**|Hebdomadaire|  
+|**10**|Mensuelle|  
 |**20**|Mensuellement, en fonction de l'intervalle de fréquence|  
 |**40**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
-`[ @frequency_interval = ] frequency_interval` Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, sans valeur par défaut.  
+`[ @frequency_interval = ] frequency_interval`Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est de **type int**, sans valeur par défaut.  
   
-`[ @frequency_subday = ] frequency_subday` Unités pour *freq_subday_interval*. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday`Est l’unité pour *freq_subday_interval*. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**1**|Une fois|  
+|**1,0**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**8**|Heure|  
+|**version8**|Hour|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, sans valeur par défaut.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, sans valeur par défaut.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Est la date de que l’Agent d’instantané s’exécute. *frequency_relative_interval* est **int**, sans valeur par défaut.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Date à laquelle le Agent d’instantané s’exécute. *frequency_relative_interval* est de **type int**, sans valeur par défaut.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, sans valeur par défaut.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, sans valeur par défaut.  
   
-`[ @active_start_date = ] active_start_date` Est la date à laquelle l’Agent d’instantané est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, sans valeur par défaut.  
+`[ @active_start_date = ] active_start_date`Date à laquelle le Agent d’instantané est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, sans valeur par défaut.  
   
-`[ @active_end_date = ] active_end_date` Date à laquelle l’Agent d’instantané cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, sans valeur par défaut.  
+`[ @active_end_date = ] active_end_date`Date à laquelle le Agent d’instantané cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, sans valeur par défaut.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Est l’heure de la journée à laquelle l’Agent d’instantané est la première planifié, au format HHMMSS. *active_start_time_of_day* est **int**, sans valeur par défaut.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Heure de la journée à laquelle le Agent d’instantané est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, sans valeur par défaut.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle l’Agent d’instantané cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, sans valeur par défaut.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Heure de la journée à laquelle le Agent d’instantané cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, sans valeur par défaut.  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'` Est le nom d’un nom de travail d’Agent d’instantané existant si un travail existant est utilisé. *snapshot_agent_name* est **nvarchar (100)** , sans valeur par défaut.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'`Nom d’un Agent d’instantané nom de tâche existant si un travail existant est utilisé. *snapshot_agent_name* est de type **nvarchar (100)**, sans valeur par défaut.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` Le mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est **int**, sans valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, et **1** Spécifie l’authentification Windows. La valeur **0** doit être spécifié pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est de **type int**, sans valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification et **1** spécifie l’authentification Windows. La valeur **0** doit être spécifiée pour les serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non-. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` Est le nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est **sysname**, sans valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **0**. Si *publisher_login* est NULL et le serveur de publication *_ ** security_mode* est **1**, le compte Windows spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
+`[ @publisher_login = ] 'publisher_login'`Nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est de **type sysname**, sans valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* a la **valeur 0**. Si *publisher_login* a la valeur null et que Publisher *_ * * security_mode* a la valeur **1**, le compte Windows spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
   
-`[ @publisher_password = ] 'publisher_password'` Est le mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est **nvarchar (524)** , sans valeur par défaut.  
-  
-> [!IMPORTANT]  
->  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
-  
-`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *serveur de publication.*  
-  
-`[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
+`[ @publisher_password = ] 'publisher_password'`Mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est de type **nvarchar (524)**, sans valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
-`[ @publisher_type = ] 'publisher_type'` Spécifie le type de serveur de publication lorsque le serveur de publication n’est pas en cours d’exécution dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* est **sysname**, et peut prendre l’une des valeurs suivantes.  
+`[ @job_login = ] 'job_login'`Nom de connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour un serveur de publication non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*  
   
-|Value|Description|  
+`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
+  
+> [!IMPORTANT]  
+>  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
+  
+`[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque le serveur de publication n' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est pas en cours d’exécution dans une instance de. *publisher_type* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
+  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Spécifie un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**ORACLE**|Spécifie un serveur de publication Oracle standard.|  
+|**SOLUTION**|Spécifie un serveur de publication Oracle standard.|  
 |**ORACLE GATEWAY**|Spécifie un serveur de publication Oracle Gateway.|  
   
  Pour plus d’informations sur les différences entre un serveur de publication Oracle et un serveur de publication Oracle Gateway, consultez [vue d’ensemble de la publication Oracle](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
- **sp_MSchange_snapshot_agent_properties** est utilisé dans la réplication de capture instantanée, la réplication transactionnelle et la réplication de fusion.  
+## <a name="remarks"></a>Remarques  
+ **sp_MSchange_snapshot_agent_properties** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
- Vous devez spécifier tous les paramètres lors de l’exécution **sp_MSchange_snapshot_agent_properties**. Exécutez [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) pour retourner les propriétés actuelles de la tâche de l’Agent d’instantané.  
+ Vous devez spécifier tous les paramètres lors de l’exécution de **sp_MSchange_snapshot_agent_properties**. Exécutez [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) pour retourner les propriétés actuelles du travail agent d’instantané.  
   
- Lorsque le serveur de publication s’exécute sur une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, vous devez utiliser [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) pour modifier les propriétés d’un travail d’Agent d’instantané.  
+ Quand le serveur de publication s’exécute sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] une instance de ou version ultérieure, vous devez utiliser [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) pour modifier les propriétés d’un travail de agent d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe sur le serveur de distribution peuvent exécuter **sp_MSchange_snapshot_agent_properties**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de distribution peuvent exécuter **sp_MSchange_snapshot_agent_properties**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  

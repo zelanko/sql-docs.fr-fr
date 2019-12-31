@@ -1,6 +1,5 @@
 ---
-title: Importation et exportation de connaissances | Microsoft Docs
-ms.custom: ''
+title: Importation et exportation de connaissances
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935256"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254808"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importation et exportation de connaissances
 
@@ -32,19 +31,19 @@ ms.locfileid: "67935256"
 |||  
 |-|-|  
 |Exporter un domaine d'une base de connaissances vers un fichier de données .dqs|[Exporter un domaine vers un fichier .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|Importer un domaine à partir d'un fichier de données .dqs vers une base de connaissances existante|[Importer un domaine à partir d’un fichier .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Exporter une base de connaissances entière vers un fichier de données .dqs|[Exporter une base de connaissances vers un fichier .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Importer une base de connaissances entière vers un fichier de données .dqs|[Importer une base de connaissances à partir d’un fichier .dqs](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
-|Importer les valeurs d'un fichier Excel dans un domaine|[Importer les valeurs d’un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
-|Importer les domaines d'un fichier Excel vers une base de connaissances|[Importer les domaines d’un fichier Excel dans la découverte des connaissances](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
+|Importer un domaine à partir d'un fichier de données .dqs vers une base de connaissances existante|[Importer un domaine à partir d'un fichier .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|Exporter une base de connaissances entière vers un fichier de données .dqs|[Exporter une base de connaissances dans un fichier .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Importer une base de connaissances entière vers un fichier de données .dqs|[Importer une base de connaissances à partir d'un fichier .dqs](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Importer les valeurs d'un fichier Excel dans un domaine|[Importer les valeurs d'un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
+|Importer les domaines d'un fichier Excel vers une base de connaissances|[Importer les domaines d'un fichier Excel dans la découverte des connaissances](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Importer les connaissance recueillies pendant le nettoyage vers une base de connaissances|[Importer des valeurs de projet de nettoyage dans un domaine](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d’une base de connaissances](../data-quality-services/building-a-knowledge-base.md)|  
-|Création d'un seul domaine et ajout de connaissances au domaine.|[Gestion d’un domaine](../data-quality-services/managing-a-domain.md)|  
-|Création d'un domaine composite et ajout de connaissances au domaine.|[Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md)|  
+|Construction d'une base de connaissances par la découverte de la connaissance et la gestion interactive de la connaissance|[Construction d'une base de connaissances](../data-quality-services/building-a-knowledge-base.md)|  
+|Création d'un seul domaine et ajout de connaissances au domaine.|[Gestion d'un domaine](../data-quality-services/managing-a-domain.md)|  
+|Création d'un domaine composite et ajout de connaissances au domaine.|[Gestion d'un domaine composite](../data-quality-services/managing-a-composite-domain.md)|  
   
   

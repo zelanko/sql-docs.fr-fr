@@ -1,6 +1,5 @@
 ---
-title: Configurer les paramètres avancés pour les fichiers journaux DQS | Microsoft Docs
-ms.custom: ''
+title: Configurer les paramètres avancés pour les fichiers journaux DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4e01be5f013beeaed58b5f851063524950c338c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935593"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255611"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurer les paramètres avancés pour les fichiers journaux DQS
 
@@ -29,17 +28,17 @@ ms.locfileid: "67935593"
 > [!NOTE]  
 >  Ces activités ne peuvent pas être effectuées à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et sont réservées aux utilisateurs expérimentés uniquement.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
   
 -   Votre compte d'utilisateur Windows doit être membre du rôle serveur fixe sysadmin dans l'instance SQL Server afin de pouvoir modifier les paramètres de configuration dans la table A_CONFIGURATION de la base de données DQS_MAIN.  
   
 -   Vous devez être connecté en tant que membre du groupe Administrateurs sur l'ordinateur où vous modifiez le fichier DQLog.Client.xml pour configurer les paramètres de journalisation [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="DQSServer"></a> Configurer les paramètres des journaux du serveur de qualité des données  
+##  <a name="DQSServer"></a>Configurer les paramètres du journal du serveur de qualité des données  
  Les paramètres des journaux [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sont présents au format XML dans la colonne **VALUE** de la ligne **ServerLogging** de la table A_CONFIGURATION de la base de données DQS_MAIN. Vous pouvez exécuter la requête SQL suivante pour afficher les informations de configuration :  
   
 ```  
@@ -115,8 +114,8 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 > [!NOTE]  
 >  La configuration des paramètres de journalisation [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est générée dynamiquement et stockée dans le fichier DQS_MAIN.Log, généralement disponible dans C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log si vous avez installé l’instance par défaut de SQL Server. Toutefois, les modifications apportées directement dans ce fichier ne se conservent pas et sont remplacées par les paramètres de configuration de la table A_CONFIGURATION de la base de données DQS_MAIN.  
   
-##  <a name="DQSClient"></a> Configurer les paramètres des journaux du client de qualité des données  
- Le fichier de configuration des paramètres des journaux [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , DQLog.Client.xml, est généralement disponible dans C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. Le contenu du fichier XML est semblable au fichier XML que vous avez modifié précédemment pour les paramètres de configuration du journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Pour configurer les paramètres des journaux [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
+##  <a name="DQSClient"></a>Configurer les paramètres du journal Data Quality Client  
+ Le [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fichier de configuration du paramètre de journal, DQLog. client. xml, est généralement disponible dans C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. Le contenu du fichier XML est semblable au fichier XML que vous avez modifié précédemment pour les paramètres [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de configuration du journal. Pour configurer les paramètres des journaux [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Exécutez l'outil d'édition XML ou le Bloc-notes en tant qu'administrateur.  
   

@@ -1,6 +1,5 @@
 ---
-title: Exécution de fichiers modèles à l’aide de la propriété CommandStream | Microsoft Docs
-ms.custom: ''
+title: Exécuter des fichiers de modèle avec la propriété CommandStream
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6d5dbcbbb1fa7d4a71fb6f808bc7b4facac862c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934265"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251481"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cet exemple illustre la façon dont les fichiers de modèle qui se composent de requêtes SQL ou XPath peuvent être spécifiés à l’aide de la propriété CommandStream de l’objet SqlXmlCommand. Dans cette application, un FileStreamobject est ouvert pour un fichier de commandes, et le flux de fichier est affecté comme CommandStream qui est exécutée.  
+  Cet exemple montre comment vous pouvez spécifier les fichiers modèles qui se composent de requêtes SQL ou XPath à l’aide de la propriété CommandStream de l’objet SqlXmlCommand. Dans cette application, un FileStreamobject est ouvert pour un fichier de commandes, et le flux de fichier est affecté en tant que CommandStream exécuté.  
   
- Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType.Template (et non comme TemplateFile).  
+ Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType. Template (et non pas en tant que TemplateFile).  
   
  Il s'agit de l'exemple de modèle XML :  
   
@@ -84,7 +84,7 @@ class Test
   
 1.  Enregistrez le modèle XML (TemplateFile.xml) fourni dans cet exemple dans un dossier.  
   
-2.  Enregistrez le code c# (DocSample.cs) fourni dans cet exemple dans le même dossier dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
+2.  Enregistrez le code C# (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
   
 3.  Compilez le code. Pour compiler le code à l'invite de commandes, utilisez :  
   

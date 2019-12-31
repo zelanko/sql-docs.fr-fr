@@ -1,6 +1,5 @@
 ---
-title: Accès aux fonctionnalités SQLXML dans l’environnement .NET | Microsoft Docs
-ms.custom: ''
+title: Accéder aux fonctionnalités SQLXML dans l’environnement .NET
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 848d37521d786173e595cf3616a25530c80c77a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a5edd3555c2d57cf9d615b7158d034571987cb5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073265"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251518"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Accès aux fonctionnalités SQLXML dans l'environnement .NET
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cet exemple montre :  
   
--   Comment utiliser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Classes managées SQLXML (Microsoft.Data.SqlXml) pour accéder à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] environnement .NET Framework.  
+-   Comment utiliser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les classes managées SQLXML (Microsoft. Data. SQLXML) pour accéder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à Microsoft [!INCLUDE[msCoName](../../../includes/msconame-md.md)] dans l’environnement .NET Framework.  
   
 -   Comment les DiffGrams générés dans l'environnement .NET Framework peuvent appliquer les mises à jour des données aux tables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Dans cette application, une requête XPath est exécutée sur un schéma XSD. L’exécution de la requête XPath retourne un document XML qui se compose de données de contact (**FirstName**, **LastName**). L'application charge le document XML dans le dataset de l'environnement .NET Framework. Les données du dataset sont modifiées : le prénom du contact est changé en « Susan » pour le premier contact du dataset. Le DiffGram est généré à partir du dataset, puis la mise à jour spécifiée dans le DiffGram (modification du prénom de l'employé) est appliquée à la table Person.Contact.  
+ Dans cette application, une requête XPath est exécutée sur un schéma XSD. L’exécution de la requête XPath retourne un document XML constitué de données de contact (**FirstName**, **LastName**). L'application charge le document XML dans le dataset de l'environnement .NET Framework. Les données du dataset sont modifiées : le prénom du contact est changé en « Susan » pour le premier contact du dataset. Le DiffGram est généré à partir du dataset, puis la mise à jour spécifiée dans le DiffGram (modification du prénom de l'employé) est appliquée à la table Person.Contact.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  
@@ -72,7 +72,7 @@ class Test
 }  
 ```  
   
- **Pour tester l’exemple :**  
+ **Pour tester l'exemple :**  
   
  Pour tester cet exemple, le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework doit être installé sur votre ordinateur.  
   

@@ -1,6 +1,5 @@
 ---
-title: Correspondance de données | Microsoft Docs
-ms.custom: ''
+title: Correspondance de données
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c2aede1654f993feba951d2053d9a0ae5e31011b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992239"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251761"
 ---
 # <a name="data-matching"></a>Correspondance de données
 
@@ -39,16 +38,16 @@ ms.locfileid: "67992239"
   
  L'illustration suivante montre le processus de correspondance des données dans DQS :  
   
- ![Processus de correspondance dans DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processus de correspondance dans DQS")  
+ ![Processus de mise en correspondance dans DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processus de mise en correspondance dans DQS")  
   
-##  <a name="How"></a> Comment effectuer une correspondance des données  
+##  <a name="How"></a>Comment effectuer la correspondance de données  
  Comme avec d'autres processus de qualité des données dans DQS, vous effectuez une correspondance en créant une base de connaissances et en exécutant une activité de correspondance dans un projet de qualité des données en procédant comme suit :  
   
 1.  Créez une stratégie de correspondance dans la base de connaissances.  
   
 2.  Exécutez un processus de déduplication dans une activité de correspondance qui fait partie d'un projet de qualité des données.  
   
-###  <a name="Policy"></a> Création d'une stratégie de correspondance  
+###  <a name="Policy"></a>Création d’une stratégie de correspondance  
  Pour préparer la base de connaissances afin d'effectuer une correspondance, vous devez créer une stratégie de correspondance dans la base de connaissances pour définir la façon dont DQS affecte la probabilité de correspondance. Une stratégie de correspondance se compose d'une ou de plusieurs règles de correspondance qui identifient les domaines qui sont utilisés quand DQS évalue le degré de correspondance d'un enregistrement avec un autre, et spécifient le poids de chaque valeur de domaine dans l'estimation de correspondance. Vous spécifiez dans la règle si des valeurs de domaine doivent être une correspondance exacte ou si elles peuvent juste être semblables, et avec quel degré de similarité. Vous pouvez également spécifier si une correspondance de domaine est requise.  
   
  Dans l'Assistant de gestion des bases de connaissances, l'activité de stratégie de correspondance analyse des exemples de données en appliquant chaque règle de correspondance pour comparer deux enregistrements à la fois dans la plage des enregistrements. Les enregistrements dont les scores de correspondance sont supérieurs à un minimum spécifié sont regroupés dans des clusters dans les résultats de correspondance. Ces résultats de correspondance ne sont pas ajoutés à la base de connaissances ; vous les utilisez pour affiner les règles de correspondance. La création d'une stratégie de correspondance peut être un processus itératif dans lequel vous modifiez des règles de correspondance basées sur les résultats de correspondance ou les statistiques de profilage.  
@@ -62,7 +61,7 @@ ms.locfileid: "67992239"
   
  Chaque règle de correspondance est enregistrée dans la base de connaissances lors de sa création. Toutefois, une base de connaissances peut être utilisée dans un projet de qualité des données uniquement lorsqu'elle est publiée. En outre, tant que la base de connaissances n'est pas publiée, les règles de correspondance qu'elle contient ne peuvent pas être modifiées par un utilisateur autre que celui qui l'a créée.  
   
-###  <a name="Project"></a> Exécution d'un projet de correspondance  
+###  <a name="Project"></a>Exécution d’un projet de correspondance  
  DQS effectue la déduplication des données en comparant chaque ligne des données sources à chaque autre ligne, en utilisant la stratégie de correspondance définie dans la base de connaissances, et en générant une probabilité de correspondance des lignes. Cette opération s'effectue dans un projet de qualité des données avec le type Correspondance. La correspondance est l'une des principales étapes dans un projet de qualité des données. Elle s'effectue mieux après un nettoyage des données, car les données à mettre en correspondance sont alors exemptes d'erreur. Avant d'exécuter un processus de correspondance, vous pouvez exporter les résultats du projet de nettoyage vers une table de données ou un fichier .csv, puis créer un projet de correspondance dans lequel vous mappez les résultats du nettoyage aux domaines qu'il contient.  
   
  Un projet de correspondance des données se compose d'un processus assisté par ordinateur et d'un processus interactif. Le projet de correspondance applique les règles de correspondance de la stratégie de correspondance à la source de données à évaluer. Ce processus évalue la probabilité que deux lignes soient des correspondances dans un score de correspondance. Seuls les enregistrements ayant une probabilité de correspondance supérieure à une valeur définie par le gestionnaire de données dans la stratégie de correspondance sont considérés comme une correspondance.  

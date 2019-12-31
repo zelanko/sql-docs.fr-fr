@@ -1,6 +1,5 @@
 ---
-title: Projets de qualité des données (DQS) | Microsoft Docs
-ms.custom: ''
+title: Projets de qualité des données (DQS)
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: ba706c62aff34dca72db032fdb09a0d8f5dea4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992228"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251706"
 ---
 # <a name="data-quality-projects-dqs"></a>Projets de qualité des données (DQS)
 
@@ -31,7 +30,7 @@ ms.locfileid: "67992228"
   
 -   Il fournit un Assistant pour vous guider au cours des activités de nettoyage et de correspondance, et exporte les données selon votre sélection dans une base de données SQL Server ou un fichier .csv. Le gestionnaire de données peut utiliser le projet de qualité des données pour exécuter et contrôler les étapes de correspondance de données et de nettoyage interactives/assistées par ordinateur.  
   
-##  <a name="Cleansing"></a> Projet de qualité des données : activité de nettoyage  
+##  <a name="Cleansing"></a>Projet de qualité des données : activité de nettoyage  
  Un projet de qualité des données de nettoyage vous permet de nettoyer vos données sources selon une base de connaissances. L'activité de nettoyage des données dans DQS est un processus en deux étapes :  
   
 1.  Un processus de nettoyage des données *assisté par ordinateur* qui analyse les données sources par rapport à la connaissance dans la base de connaissances, et propose des modifications. Les données traitées sont classées (suggéré, nouveau, non valide, corrigé et correct) par DQS, puis affichées à l'intention de l'utilisateur pour un traitement ultérieur.  
@@ -40,7 +39,7 @@ ms.locfileid: "67992228"
   
  Pour plus d'informations sur l'activité de nettoyage dans un projet de qualité des données, consultez [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a> Projet de qualité des données : activité de correspondance  
+##  <a name="Matching"></a>Projet de qualité des données : activité de correspondance  
  Un projet de qualité des données de correspondance vous permet d'effectuer l'activité de correspondance en fonction de la stratégie de correspondance dans une base de connaissances pour éviter la duplication de données en identifiant les correspondances exactes et approximatives, et en vous permettant ainsi de supprimer des données en double. Il est recommandé de nettoyer vos données avant d'exécuter la correspondance sur celles-ci. Pour ce faire :  
   
 1.  Créez un projet de qualité des données, sélectionnez l'activité **Nettoyage** , effectuez l'activité de nettoyage de données sur vos données sources, puis exportez-les vers une table dans une base de données SQL Server.  
@@ -51,7 +50,7 @@ ms.locfileid: "67992228"
   
  Pour plus d'informations sur l'activité de correspondance dans un projet de qualité des données, consultez [Data Matching](../data-quality-services/data-matching.md).  
   
-##  <a name="ProfilingNotification"></a> Profilage des données et notifications  
+##  <a name="ProfilingNotification"></a>Profilage des données et notifications  
  Tout en exécutant les activités de nettoyage et de correspondance dans un projet de qualité de données, vous pouvez afficher des statistiques et des informations en temps réel sur les données que DQS est en train de traiter. Le profilage des données vous permet d'évaluer l'efficacité des processus de nettoyage et de correspondance, et vous pouvez éventuellement déterminer jusqu'à quel point le nettoyage ou la correspondance des données peuvent améliorer la qualité des données. Le profilage DQS fournit deux dimensions de qualité des données : l' *exhaustivité* (dans quelle mesure les données sont présentes) et la *précision* (dans quelle mesure les données peuvent être utilisées pour l'usage prévu). De plus, selon les informations de profilage des données, les notifications sont affichées à l'utilisateur sur les mesures qui peuvent être prises pour améliorer les opérations de nettoyage et de correspondance des données. Pour plus d'informations sur le profilage des données et les notifications, consultez [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  

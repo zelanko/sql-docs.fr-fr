@@ -1,5 +1,5 @@
 ---
-title: Exécution d’un DiffGram à l’aide de SQLXML des Classes managées | Microsoft Docs
+title: Exécution d'un DiffGram à l'aide des classes managées SQLXML
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 429538b93bc4b25b68dc8867c90462e9c43a164e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c92072290b8f0115470bccae46ab0e5fe111a0b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073463"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257276"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Exécution d'un DiffGram à l'aide des classes managées SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cet exemple montre comment exécuter un fichier DiffGram dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] mises à jour de l’environnement .NET Framework pour appliquer des données à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables à l’aide des Classes managées SQLXML (Microsoft.Data.SqlXml).  
+  Cet exemple montre comment exécuter un fichier DiffGram dans l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] environnement .NET Framework pour appliquer des mises à jour de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des tables à l’aide de classes managées SQLXML (Microsoft. Data. SQLXML).  
   
  Dans cet exemple, le DiffGram met à jour les informations sur les clients (CompanyName et ContactName) pour le client ALFKI.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68073463"
 </ROOT>  
 ```  
   
- Le  **\<avant >** bloc inclut un  **\<client >** élément (**diffgr : ID = « Customer1 »** ). Le  **\<DataInstance >** bloc inclut le correspondantes  **\<client >** élément avec même **id**. Le  **\<client >** élément dans le  **\<NewDataSet >** spécifie également **diffgr : HasChanges = « modified »** . Cela indique une opération de mise à jour et l'enregistrement de client de la table Cust est mis à jour en conséquence. Notez que si le **diffgr : HasChanges** attribut n’est pas spécifié, la logique de traitement DiffGram ignore cet élément et aucune mise à jour n’est effectuées.  
+ Le ** \<bloc Before>** comprend un ** \<élément Customer>** (**diffgr : ID = "Customer1"**). Le ** \<bloc>DataInstance** comprend l’élément ** \<Customer>** correspondant avec le même **ID**. L' ** \<élément Customer>** de l' ** \<>NewDataSet** spécifie également **diffgr : hasChanges = "modified"**. Cela indique une opération de mise à jour et l'enregistrement de client de la table Cust est mis à jour en conséquence. Notez que si l’attribut **diffgr : hasChanges** n’est pas spécifié, la logique de traitement DiffGram ignore cet élément et aucune mise à jour n’est effectuée.  
   
- Voici le code pour un didacticiel application c# qui montre comment utiliser les Classes managées SQLXML pour exécuter le DiffGram précité et mettre à jour deux tables (Cust, Ord) vous créerez également dans le **tempdb** base de données.  
+ Voici le code d’une application didacticiel C# qui montre comment utiliser les classes managées SQLXML pour exécuter le DiffGram ci-dessus et mettre à jour deux tables (cust, ORD) que vous allez également créer dans la base de données **tempdb** .  
   
 ```  
 using System;  
@@ -130,7 +130,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  Créez ces tables dans le **tempdb** base de données.  
+3.  Créez ces tables dans la base de données **tempdb** .  
   
     ```  
     CREATE TABLE Cust(  
@@ -165,7 +165,7 @@ class Test
 6.  Enregistrez le code C# (DiffgramSample.cs) fourni ci-dessus dans le même dossier que celui dans lequel DiffGramSchema.xml et MyDiffGram.xml ont été stockés dans les étapes précédentes.  
   
     > [!NOTE]  
-    >  Vous devrez remplacer le nom '`MyServer`' de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la chaîne de connexion par le nom réel de votre instance installée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    >  Vous devrez remplacer le nom '[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]' de l'instance `MyServer` de la chaîne de connexion par le nom réel de votre instance installée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
      Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.  
   
@@ -180,6 +180,6 @@ class Test
 8.  À l'invite de commandes, exécutez DiffgramSample.exe.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de DiffGrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Exemples DiffGram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

@@ -10,48 +10,49 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e28c32f0d73d5ff06927e7629cd76f56eaa65d8
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8b9cbd080a138b939224d6bb88218b46e52a23f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72796409"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255450"
 ---
-# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
-  À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], les serveurs d' [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en mode SharePoint peuvent écrire des événements [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans le journal des traces su service de journalisation unifiée SharePoint (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont disponibles sur la page de supervision de l'Administration centrale de SharePoint.  
+# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
+  À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], les serveurs d' [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en mode SharePoint peuvent écrire des événements [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans le journal des traces su service de journalisation unifiée SharePoint (ULS). 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont disponibles sur la page de supervision de l'Administration centrale de SharePoint.  
   
  Dans cette rubrique :  
   
--   [Recommandations générales du journal ULS](#bkmk_general)  
+-   [Recommandations générales du Journal ULS](#bkmk_general)  
   
--   [Pour activer et désactiver des événements Reporting Services dans la catégorie Reporting Services](#bkmk_turnon)  
+-   [Pour activer et désactiver les événements Reporting Services dans la catégorie Reporting Services](#bkmk_turnon)  
   
 -   [Configuration recommandée](#bkmk_recommended)  
   
--   [Lecture des entrées de journal](#bkmk_readentries)  
+-   [Lecture des entrées de journaux](#bkmk_readentries)  
   
--   [Liste des événements SQL Server Reporting Services](#bkmk_list)  
+-   [Liste des événements de SQL Server Reporting Services](#bkmk_list)  
   
--   [Afficher un journal avec PowerShell](#bkmk_powershell)  
+-   [Afficher un fichier journal avec PowerShell](#bkmk_powershell)  
   
 -   [Emplacement du journal des traces](#bkmk_trace)  
   
-##  <a name="bkmk_general"></a> Recommandations générales du journal ULS  
+##  <a name="bkmk_general"></a>Recommandations générales du Journal ULS  
  Le tableau suivant répertorie les catégories et niveaux d'événements recommandés pour l'analyse d'un environnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Lorsqu'un événement est journalisé, chaque entrée inclut l'heure à laquelle l'événement a été enregistré, le nom du processus et l'ID du thread.  
   
-|Catégorie|level|Description|  
+|Category|Niveau|Description|  
 |--------------|-----------|-----------------|  
-|base de données|Commentaires|Journalise les événements ayant trait à l'accès aux bases de données.|  
-|Général|Commentaires|Journalise les événements ayant trait à l'accès aux éléments suivants :<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pages Web<br /><br /> Gestionnaire HTTP de la visionneuse de rapports<br /><br /> Accès aux rapports (fichiers .rdl)<br /><br /> Sources de données (fichiers .rsds)<br /><br /> URL sur le site SharePoint (fichiers .smdl)|  
+|Base de données|Verbose|Journalise les événements ayant trait à l'accès aux bases de données.|  
+|Général|Verbose|Journalise les événements ayant trait à l'accès aux éléments suivants :<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Pages Web<br /><br /> Gestionnaire HTTP de la visionneuse de rapports<br /><br /> Accès aux rapports (fichiers .rdl)<br /><br /> Sources de données (fichiers .rsds)<br /><br /> URL sur le site SharePoint (fichiers .smdl)|  
 |Généralités sur Office Server|Exception|Journalise les échecs d'ouverture de session.|  
-|Topologie|Commentaires|Journalise des informations sur l'utilisateur actuel.|  
-|composants WebPart|Commentaires|Journalise les événements ayant trait à l'accès au composant WebPart Visionneuse de rapports.|  
+|Topologie|Verbose|Journalise des informations sur l'utilisateur actuel.|  
+|composants WebPart|Verbose|Journalise les événements ayant trait à l'accès au composant WebPart Visionneuse de rapports.|  
   
-##  <a name="bkmk_turnon"></a> Pour activer et désactiver des événements Reporting Services dans la catégorie Reporting Services  
+##  <a name="bkmk_turnon"></a>Pour activer et désactiver les événements Reporting Services dans la catégorie Reporting Services  
   
 1.  Dans l'Administration centrale de SharePoint  
   
-2.  Cliquez sur **Supervision**.  
+2.  Cliquez sur **Analyse**.  
   
 3.  Cliquez sur **Configurer la journalisation des diagnostics** dans le groupe **Création de rapports** .  
   
@@ -66,7 +67,7 @@ ms.locfileid: "72796409"
 > [!NOTE]  
 >  L'option **Événement le moins critique à enregistrer dans le journal d'événements** n'est pas prise en charge par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. L'option est ignorée.  
   
-##  <a name="bkmk_recommended"></a> Configuration recommandée  
+##  <a name="bkmk_recommended"></a>Configuration recommandée  
  Les options de journalisation suivantes sont recommandées comme configuration standard :  
   
 -   **Redirecteur HTTP**  
@@ -81,16 +82,16 @@ ms.locfileid: "72796409"
 Get-SPDiagnosticConfig  
 ```  
   
-##  <a name="bkmk_readentries"></a> Lecture des entrées de journal  
+##  <a name="bkmk_readentries"></a>Lecture des entrées de journaux  
  Les entrées de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans le journal sont mises en forme de la manière suivante.  
   
-1.  **Produit : SQL Server Reporting Services**  
+1.  **Produit : SQL Server Reporting Services**  
   
-2.  **Catégorie :** les noms d’événements associés au serveur sont précédés de « Report Server ». Par exemple les événements « Report Server Alerting Runtime » sont aussi enregistrés dans les fichiers journaux du serveur de rapports.  
+2.  **Catégorie :** Les événements liés au serveur comporteront les caractères « Report Server », au début du nom. Par exemple les événements « Report Server Alerting Runtime » sont aussi enregistrés dans les fichiers journaux du serveur de rapports.  
   
-3.  **Catégorie :** les événements liés à ou communiqués à partir d’un composant front-end web ne contiennent pas « Report Server ». Par exemple « Service Application Proxy Report Server Alerting Runtime ». Les entrées WFE contiennent un CorrelationID contrairement aux entrées de serveur.  
+3.  **Catégorie :** Les événements liés à ou communiqués à partir d’un composant Web frontal ne contiennent pas « Report Server ». Par exemple « Service Application Proxy Report Server Alerting Runtime ». Les entrées WFE contiennent un CorrelationID contrairement aux entrées de serveur.  
   
-##  <a name="bkmk_list"></a> Liste des événements SQL Server Reporting Services  
+##  <a name="bkmk_list"></a>Liste des événements de SQL Server Reporting Services  
  Le tableau suivant contient la liste des événements de la catégorie SQL Server Reporting Services :  
   
 |Nom de zone|Entrées de description ou témoin|  
@@ -101,7 +102,7 @@ Get-SPDiagnosticConfig
 |Rendu en mode local||  
 |Proxy de client SOAP||  
 |Pages d'interface utilisateur||  
-|Power View|Entrées de journal écrites dans l'API **LogClientTraceEvents** . Ces entrées proviennent d’applications clientes, notamment de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité du complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Toutes les entrées de journal provenant de l’API LogClientTraceEvents sont enregistrées sous la **catégorie** « SQL Server Reporting Services » et la **zone** « Power View ».<br /><br /> Le contenu des entrées enregistrées avec la zone « Power View » est déterminé par l’application cliente.|  
+|Power View|Entrées de journal écrites dans l'API **LogClientTraceEvents** . Ces entrées proviennent des applications [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]clientes, notamment de, une fonctionnalité du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] complément pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Toutes les entrées de journal provenant de l’API LogClientTraceEvents sont enregistrées sous la **catégorie** « SQL Server Reporting Services » et la **zone** « Power View ».<br /><br /> Le contenu des entrées enregistrées avec la zone « Power View » est déterminé par l’application cliente.|  
 |Runtime d'alerte de Report Server||  
 |Gestionnaire d'applications de domaine du service Web Report Server||  
 |Réponse mise en mémoire tampon service Web Report Server||  
@@ -138,18 +139,17 @@ Get-SPDiagnosticConfig
 |Proxy d'application de service||  
 |Service partagé|Entrées témoin :<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Accès de MediumGranting aux bases de données de contenu.<br /><br /> Instances de MediumProvisioning pour ReportingWebServiceApplication<br /><br /> Modification du compte de service MediumProcessing pour ReportingWebServiceApplication<br /><br /> Autorisations de base de données de MediumSetting.|  
   
-##  <a name="bkmk_powershell"></a> Afficher un journal avec PowerShell  
- ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Vous pouvez utiliser PowerShell pour retourner une liste des événements associés [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] à partir d’un fichier Journal ULS. Tapez la commande suivante à partir de SharePoint 2010 Management Shell pour obtenir la liste filtrée des lignes du fichier journal ULS nommé UESQL11SPOINT-20110606-1530.log, qui contient « **sql server reporting services** » :  
+##  <a name="bkmk_powershell"></a>Afficher un fichier journal avec PowerShell  
+ ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Vous pouvez utiliser PowerShell pour retourner une liste des événements [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] associés à partir d’un fichier Journal ULS. Tapez la commande suivante à partir de SharePoint 2010 Management Shell pour obtenir la liste filtrée des lignes du fichier journal ULS nommé UESQL11SPOINT-20110606-1530.log, qui contient « **sql server reporting services** » :  
   
 ```powershell
 Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | Select-String "sql server reporting services"  
 ```  
   
- Il existe également de nombreux outils que vous pouvez télécharger pour lire des journaux ULS. Par exemple, [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) ou [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Ils sont tous deux disponibles sur CodePlex.  
+ Il existe également de nombreux outils que vous pouvez télécharger pour lire des journaux ULS. Par exemple, [SharePoint LogViewer](https://sharepointlogviewer.codeplex.com/) ou [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Ils sont tous deux disponibles sur CodePlex.  
   
  Pour plus d’informations sur l’utilisation de PowerShell pour afficher les données du journal, consultez [Afficher les journaux de diagnostic (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
   
-##  <a name="bkmk_trace"></a> Emplacement du journal des traces  
+##  <a name="bkmk_trace"></a>Emplacement du journal des traces  
  Les fichiers journaux des traces se trouvent généralement dans le dossier **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** , mais vous pouvez vérifier ou modifier le chemin d’accès à partir de la page **Journalisation des diagnostics** dans l’Administration centrale de SharePoint.  
   
- Pour plus d’informations et pour connaître les étapes permettant de configurer la journalisation des diagnostics sur un serveur SharePoint dans l’Administration centrale de SharePoint 2010, consultez [Configurer les paramètres de journalisation des diagnostics (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  

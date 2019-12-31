@@ -1,6 +1,5 @@
 ---
-title: Activer ou désactiver les notifications de profilage dans DQS | Microsoft Docs
-ms.custom: ''
+title: Activer ou désactiver les notifications de profilage dans DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,14 +11,14 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 55a276a6ade36169df25e46f826420f77d57b13f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d5d58777c4fe358f8536cc07b4eb1067487ab588
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935305"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251628"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Activer ou désactiver les notifications de profilage dans DQS
 
@@ -27,16 +26,16 @@ ms.locfileid: "67935305"
 
   Cette rubrique explique comment activer ou désactiver les notifications de profilage dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Par défaut, les notifications de profilage sont activées dans DQS. Les notifications de profilage vous indiquent des faits importants sur la source de données et l'efficacité de l'activité actuelle effectuée sur les données. Pour plus d’informations, consultez [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour activer les notifications.  
   
-##  <a name="Enable"></a> Activer ou désactiver les notifications de profilage  
+##  <a name="Enable"></a>Activer ou désactiver les notifications de profilage  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Configuration**.  
   

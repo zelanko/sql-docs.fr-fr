@@ -1,6 +1,5 @@
 ---
-title: Nettoyer des données à l’aide de la base de connaissances DQS (interne) | Microsoft Docs
-ms.custom: ''
+title: Nettoyer des données à l'aide de la base de connaissances DQS (interne)
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,14 +12,14 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: a826d0f526a12e75a113375ec8f2398331dc4775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935606"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255688"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
 
@@ -32,7 +31,7 @@ ms.locfileid: "67935606"
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Vous devez avoir spécifié les valeurs de seuil appropriées pour l'activité de nettoyage. Pour plus d'informations sur cette opération, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -40,12 +39,12 @@ ms.locfileid: "67935606"
   
 -   Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources à nettoyer se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour effectuer le nettoyage des données.  
   
-##  <a name="Create"></a> Créer un projet de qualité des données pour le nettoyage  
+##  <a name="Create"></a>Créer un projet de qualité des données de nettoyage  
  Vous devez utiliser un projet de qualité des données pour effectuer une opération de nettoyage des données. Pour créer un projet de qualité des données pour le nettoyage :  
   
 1.  Suivez les étapes 1 à 3 dans la rubrique [Créer un projet de qualité des données](../data-quality-services/create-a-data-quality-project.md).  
@@ -56,14 +55,14 @@ ms.locfileid: "67935606"
   
  Cela entraîne la création d'un projet de qualité des données pour le nettoyage, et ouvrez la page **Mapper** de l'Assistant de qualité des données pour le nettoyage.  
   
-##  <a name="Mapping"></a> Étape de mappage  
+##  <a name="Mapping"></a>Étape de mappage  
  Au cours de l'étape de mappage, vous spécifiez la connexion aux données sources à nettoyer, et mappez les colonnes des données sources avec les domaines appropriés dans la base de connaissances sélectionnée.  
   
-1.  Dans la page **Mapper** de l’Assistant de qualité des données pour le nettoyage, sélectionnez vos données sources à nettoyer : **SQL Server** ou **Fichier Excel** :  
+1.  Dans la page **Mapper** de l'Assistant de qualité des données pour le nettoyage, sélectionnez vos données sources à nettoyer : **SQL Server** ou **Fichier Excel**:  
   
-    1.  **SQL Server** : sélectionnez **DQS_STAGING_DATA** comme base de données source si vous avez copié vos données sources dans cette base de données, puis sélectionnez la table/vue appropriée qui contient vos données sources. Sinon, sélectionnez votre base de données source et la table/vue appropriée. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données source doit être présente dans la même instance de SQL Server que** .  
+    1.  **SQL Server**: sélectionnez **DQS_STAGING_DATA** comme base de données source si vous avez copié vos données sources dans cette base de données, puis sélectionnez la table/vue appropriée qui contient vos données sources. Sinon, sélectionnez votre base de données source et la table/vue appropriée. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données source doit être présente dans la même instance de SQL Server que** .  
   
-    2.  **Fichier Excel** : cliquez sur **Parcourir**, puis sélectionnez le fichier Excel qui contient les données à nettoyer. Pour pouvoir sélectionner un fichier Excel, Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Dans le cas contraire, le bouton **Parcourir** n'est pas disponible, et un message sous cette zone de texte vous indique que Microsoft Excel n'est pas installé. De plus, laissez la case à cocher **Utiliser la première ligne comme en-tête** activée si la première ligne du fichier Excel contient des données d'en-tête.  
+    2.  **Fichier Excel**: cliquez sur **Parcourir**, puis sélectionnez le fichier Excel qui contient les données à nettoyer. Pour pouvoir sélectionner un fichier Excel, Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Dans le cas contraire, le bouton **Parcourir** n’est pas disponible et vous êtes averti sous cette zone de texte que Microsoft Excel n’est pas installé. De plus, laissez la case à cocher **Utiliser la première ligne comme en-tête** activée si la première ligne du fichier Excel contient des données d'en-tête.  
   
 2.  Sous **Mappages**, mappez les colonnes de données de vos données sources avec les domaines appropriés dans la base de connaissances en sélectionnant une colonne source dans la liste déroulante de la colonne **Colonne source** , puis en sélectionnant un domaine dans la liste déroulante de la colonne **Domaine** de la même ligne. Répétez cette étape pour mapper toutes les colonnes de vos données sources avec les domaines appropriés dans la base de connaissances. Si nécessaire, vous pouvez cliquer sur l'icône **Ajouter un mappage de colonnes** pour ajouter des lignes à la table de mappage.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "67935606"
   
 5.  Cliquez sur **Suivant** pour passer à l'étape de nettoyage assisté par ordinateur (page**Nettoyer** ).  
   
-##  <a name="ComputerAssisted"></a> Étape de nettoyage assisté par ordinateur  
+##  <a name="ComputerAssisted"></a>Étape de nettoyage assisté par ordinateur  
  Au cours de l'étape de nettoyage assisté par ordinateur, vous exécutez un processus de nettoyage des données automatisé qui analyse les données sources par rapport aux domaines mappés de la base de connaissances, puis apporte/propose des modifications des données.  
   
 1.  Dans la page **Nettoyer** de l'Assistant de qualité des données, cliquez sur **Démarrer** pour exécuter le processus de nettoyage assisté par ordinateur. DQS utilise des algorithmes avancés et des niveaux de confiance basés sur les niveaux de seuil spécifiés pour analyser vos données par rapport à la base de connaissances sélectionnée, puis les nettoyer. Pour plus d’informations sur le processus de nettoyage assisté par ordinateur dans DQS, consultez [Nettoyage assisté par ordinateur](../data-quality-services/data-cleansing.md#ComputerAssisted) dans [Nettoyage des données](../data-quality-services/data-cleansing.md).  
@@ -95,23 +94,23 @@ ms.locfileid: "67935606"
   
 4.  Une fois le processus de nettoyage assisté par ordinateur terminé, cliquez sur **Suivant** pour passer à l'étape de nettoyage interactif (page**Gérer et afficher les résultats** ).  
   
-##  <a name="Interactive"></a> Étape de nettoyage interactif  
+##  <a name="Interactive"></a>Étape de nettoyage interactif  
  Au cours de l'étape de nettoyage interactif, vous pouvez voir les modifications que DQS a proposées, et décider de les implémenter, ou non, en les approuvant ou en les refusant. Dans le volet gauche de la page **Gérer et afficher les résultats** , DQS affiche la liste de tous les domaines que vous avez mappés précédemment au cours de l'étape de mappage, avec le nombre de valeurs des données sources analysées dans chaque domaine pendant l'étape de nettoyage assistée par ordinateur. Dans le volet droit de la page **Gérer et afficher les résultats** , en fonction du respect des règles de domaine, les règles de syntaxe et les algorithmes avancés, DQS classe les données sous cinq onglets avec un *niveau de confiance*. Le niveau de confiance indique le degré de certitude de DQS quant à la correction ou à la suggestion, et est basé sur les valeurs de seuil suivantes :  
   
--   **Seuil de correction automatique** : toute valeur dont le niveau de confiance est au-dessus de ce seuil est automatiquement corrigée par DQS. Toutefois, le gestionnaire de données peut remplacer la modification au cours du nettoyage interactif. Vous pouvez spécifier la valeur de seuil de correction automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Seuil de correction automatique**: toute valeur qui a un niveau de confiance au-dessus de ce seuil est automatiquement corrigée par DQS. Toutefois, le gestionnaire de données peut remplacer la modification au cours du nettoyage interactif. Vous pouvez spécifier la valeur de seuil de correction automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Seuil de suggestion automatique** :  toute valeur dont le niveau de confiance est au-dessus de ce seuil, mais en dessous du seuil de correction automatique, est suggérée comme valeur de remplacement. DQS apportera la modification uniquement si le gestionnaire de données l'approuve. Vous pouvez spécifier la valeur de seuil de suggestion automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Seuil de suggestion automatique**: toute valeur qui a un niveau de confiance au-dessus de ce seuil, mais en dessous du seuil de correction automatique, est suggérée comme valeur de remplacement. DQS apportera la modification uniquement si le gestionnaire de données l'approuve. Vous pouvez spécifier la valeur de seuil de suggestion automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Autre** :  toute valeur en dessous de la valeur de seuil de suggestion automatique n’est pas modifiée par DQS.  
+-   **Autre**: toute valeur en dessous de la valeur de seuil de suggestion automatique n’est pas modifiée par DQS.  
   
  En fonction du niveau de confiance, les valeurs sont affichée sous les cinq onglets suivants :  
   
-|Onglet|Description|  
+|Tab|Description|  
 |---------|-----------------|  
-|**Suggérés**|Affiche les valeurs de domaine pour lesquelles DQS a identifié les valeurs suggérées dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique* .<br /><br /> Les valeurs suggérées sont affichées dans la colonne **Corriger vers** de la valeur d'origine. Vous pouvez cliquer sur la case d'option dans la colonne **Approuver** ou **Refuser** d'une valeur de la grille supérieure pour accepter ou refuser la suggestion pour toutes les instances de la valeur. Dans ce cas, la valeur acceptée se déplace vers l'onglet **Corrigés** et la valeur refusée se déplace vers l'onglet **Non valide** .|  
-|**Nouveau**|Affiche les valeurs de domaine valides pour lesquelles DQS ne dispose pas de suffisamment d'informations et qui ne peuvent donc pas être mappées à aucun autre onglet. En outre, cet onglet contient également les valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être considéré comme valide.<br /><br /> Si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . Sinon, cliquez sur la case d'option située dans la colonne **Refuser** . La valeur acceptée se déplace vers l'onglet **Correct** et la valeur refusée se déplace vers l'onglet **Non valide** . Vous pouvez également taper la valeur correcte à la place de la valeur d’origine dans la colonne **Corriger vers** de la valeur, puis cliquer sur la case d’option située dans la colonne **Approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  
-|**Non valide**|Affiche les valeurs de domaine qui ont été marquées comme non valides dans le domaine de la base de connaissances ou les valeurs qui n'ont pas respecté une règle de domaine. Cet onglet contient également les valeurs qui ont été refusées par l'utilisateur sous l'un des quatre autres onglets.<br /><br /> Toutefois, si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . La valeur acceptée se déplace vers l'onglet **Correct** . Vous pouvez également taper la valeur correcte à la place de la valeur d’origine dans la colonne **Corriger vers** de la valeur, puis cliquer sur la case d’option située dans la colonne **Approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  
-|**Corrigés**|Affiche les valeurs de domaine corrigées par DQS pendant le processus de nettoyage automatisé lorsque DQS a trouvé une correction pour la valeur dont le niveau de confiance est supérieur à la valeur du seuil de correction automatique.<br /><br /> Les valeurs corrigées sont affichées dans la colonne **Corriger vers** de la valeur d'origine. Par défaut, la case d'option située dans la colonne **Approuver** de la valeur est sélectionnée. Si nécessaire, vous pouvez refuser la correction proposée en cliquant sur la case d'option située dans la colonne **Refuser** pour la déplacer vers l'onglet **Non valide** , ou tapez manuellement la valeur correcte dans la colonne **Corriger vers** puis cliquez sur la case d'option de la colonne **Approuver** pour accepter la modification et la déplacer vers l'onglet **Corrigés** .|  
+|**Recommandée**|Affiche les valeurs de domaine pour lesquelles DQS a identifié les valeurs suggérées dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique* .<br /><br /> Les valeurs suggérées sont affichées dans la colonne **Corriger vers** de la valeur d'origine. Vous pouvez cliquer sur la case d'option dans la colonne **Approuver** ou **Refuser** d'une valeur de la grille supérieure pour accepter ou refuser la suggestion pour toutes les instances de la valeur. Dans ce cas, la valeur acceptée se déplace vers l'onglet **Corrigés** et la valeur refusée se déplace vers l'onglet **Non valide** .|  
+|**Nouveau**|Affiche le domaine valide pour lequel DQS ne dispose pas de suffisamment d’informations et, par conséquent, ne peut pas être mappé à un autre onglet. En outre, cet onglet contient également des valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être marqué comme valide.<br /><br /> Si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . Sinon, cliquez sur la case d'option située dans la colonne **Refuser** . La valeur acceptée se déplace vers l’onglet **correct** et la valeur rejetée se déplace vers l’onglet **non valide** . Vous pouvez également taper manuellement la valeur correcte en remplacement de la valeur d’origine dans la colonne **corriger vers** de la valeur, puis cliquer sur la case d’option dans la colonne **approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  
+|**Non valide**|Affiche les valeurs de domaine qui ont été marquées comme non valides dans le domaine de la base de connaissances ou les valeurs qui n'ont pas respecté une règle de domaine. Cet onglet contient également les valeurs qui ont été refusées par l'utilisateur sous l'un des quatre autres onglets.<br /><br /> Toutefois, si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . La valeur acceptée se déplace vers l’onglet **correct** . Vous pouvez également taper manuellement la valeur correcte en remplacement de la valeur d’origine dans la colonne **corriger vers** de la valeur, puis cliquer sur la case d’option dans la colonne **approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  
+|**Passé**|Affiche les valeurs de domaine corrigées par DQS pendant le processus de nettoyage automatisé lorsque DQS a trouvé une correction pour la valeur dont le niveau de confiance est supérieur à la valeur du seuil de correction automatique.<br /><br /> Les valeurs corrigées sont affichées dans la colonne **Corriger vers** de la valeur d'origine. Par défaut, la case d'option située dans la colonne **Approuver** de la valeur est sélectionnée. Si nécessaire, vous pouvez refuser la correction proposée en cliquant sur la case d'option située dans la colonne **Refuser** pour la déplacer vers l'onglet **Non valide** , ou tapez manuellement la valeur correcte dans la colonne **Corriger vers** puis cliquez sur la case d'option de la colonne **Approuver** pour accepter la modification et la déplacer vers l'onglet **Corrigés** .|  
 |**Correct**|Affiche les valeurs de domaine qui ont été signalés comme étant correctes. Par exemple, la valeur correspond à une valeur de domaine. Cet onglet contient également des valeurs qui ont été approuvées par l'utilisateur en cliquant sur la case d'option de la colonne **Approuver** sous les onglets **Nouveau** et **Non valide** .<br /><br /> Par défaut, la case d'option située dans la colonne **Approuver** est sélectionnée pour chaque valeur. Toutefois, si vous pensez qu'une valeur de cet onglet est incorrecte, vous pouvez soit cliquer sur la case d'option située dans la colonne **Refuser** de la valeur pour la déplacer vers l'onglet **Non valide** , soit taper manuellement la valeur correcte en remplacement de la valeur affichée dans la colonne **Corriger vers** de la valeur, puis cliquer sur la case d'option de la colonne **Approuver** pour accepter la modification et la déplacer vers l'onglet **Corrigés** .|  
   
  Pour nettoyer les données de manière interactive :  
@@ -138,39 +137,39 @@ ms.locfileid: "67935606"
   
 5.  Après avoir examiné toutes les valeurs de domaine, cliquez sur **Suivant** à passer à l'étape d'exportation.  
   
-##  <a name="Export"></a> Étape d'exportation  
+##  <a name="Export"></a>Étape d’exportation  
  Au cours de l'étape d'exportation, vous spécifiez des paramètres d'exportation de vos données nettoyées : ce qui doit être exporté et où.  
   
-1.  Dans la page **Exporter** de l’Assistant de qualité des données pour le nettoyage, sélectionnez le type de destination pour l’exportation de vos données nettoyées : **SQL Server**, **Fichier CSV** ou **Fichier Excel**.  
+1.  Dans la page **Exporter** de l'Assistant de qualité des données pour le nettoyage, sélectionnez le type de destination pour l'exportation de vos données nettoyées : **SQL Server**, **Fichier CSV**ou **Fichier Excel**.  
   
     > [!IMPORTANT]  
     >  Si vous utilisez une version 64 bits d'Excel, vous ne pouvez pas exporter les données nettoyées vers un fichier Excel : vous ne pouvez exporter que vers une base de données SQL Server ou un fichier .csv.  
   
-    1.  **SQL Server** : sélectionnez **DQS_STAGING_DATA** comme base de données de destination si vous voulez exporter vos données ici, puis indiquez le nom de la table qui sera créée pour stocker vos données exportées. Sinon, sélectionnez une autre base de données si vous voulez exporter des données vers une base de données différente, puis spécifiez le nom de la table qui sera créée pour stocker vos données exportées. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données de destination doit être présente dans la même instance de SQL Server que** .  
+    1.  **SQL Server**: sélectionnez **DQS_STAGING_DATA** comme base de données de destination si vous souhaitez exporter vos données ici, puis spécifiez le nom de la table qui sera créée pour stocker vos données exportées. Sinon, sélectionnez une autre base de données si vous voulez exporter des données vers une base de données différente, puis spécifiez le nom de la table qui sera créée pour stocker vos données exportées. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données de destination doit être présente dans la même instance de SQL Server que** .  
   
-    2.  **Fichier CSV** : cliquez sur **Parcourir**, puis indiquez le nom et l’emplacement du fichier .csv dans lequel vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier .csv avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.csv ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
+    2.  **Fichier CSV**: cliquez sur **Parcourir**, puis spécifiez le nom et l’emplacement du fichier. csv où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier .csv avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.csv ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
-    3.  **Fichier Excel** : cliquez sur **Parcourir**, puis indiquez le nom et l’emplacement du fichier Excel dans lequel vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier Excel avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.xlsx ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
+    3.  **Fichier Excel**: cliquez sur **Parcourir**, puis spécifiez le nom et l’emplacement du fichier Excel dans lequel vous souhaitez exporter les données nettoyées. Vous pouvez également taper le nom du fichier Excel avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.xlsx ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
 2.  Activez la case à cocher **Normaliser la sortie** pour normaliser la sortie en fonction du format de sortie sélectionné pour le domaine. Par exemple, mettez la valeur de chaîne en majuscules ou mettez une majuscule à la première lettre du mot. Pour plus d'informations sur la spécification du format de sortie d'un domaine, consultez la liste **Mettre en forme la sortie vers** de la rubrique [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
   
 3.  Ensuite, sélectionnez la sortie de données : exportez uniquement les données nettoyées ou exportez les données nettoyées ainsi que les informations relatives au nettoyage.  
   
-    -   **Données seulement** : cliquez sur la case d’option pour exporter uniquement les données nettoyées.  
+    -   **Données uniquement**: cliquez sur la case d’option pour exporter uniquement les données nettoyées.  
   
-    -   **Informations sur les données et le nettoyage** : cliquez sur la case d’option pour exporter les données suivantes pour chaque domaine :  
+    -   **Informations sur les données et le nettoyage**: cliquez sur la case d’option pour exporter les données suivantes pour chaque domaine :  
   
-        -   **\<Domaine>_Source** : valeur d’origine dans le domaine.  
+        -   >_Source de domaine : valeur d’origine dans le domaine. ** \<**  
   
-        -   **\<Domaine>_Sortie** : valeurs nettoyées dans le domaine.  
+        -   >_Output de domaine : valeurs nettoyées dans le domaine. ** \<**  
   
-        -   **\<Domaine>_Raison** : raison spécifiée pour la correction de la valeur.  
+        -   >_Reason de domaine : raison spécifiée pour la correction de la valeur. ** \<**  
   
-        -   **\<Domaine>_Confiance** : le niveau de confiance pour tous les termes qui ont été corrigés. Il est affiché en tant que valeur décimale équivalente à la valeur en pourcentage correspondante. Par exemple, un niveau de confiance de 95 % est affiché sous la forme 0,9500000.  
+        -   >_Confidence de domaine : niveau de confiance pour tous les termes qui ont été corrigés. ** \<** Il est affiché en tant que valeur décimale équivalente à la valeur en pourcentage correspondante. Par exemple, un niveau de confiance de 95 % est affiché sous la forme 0,9500000.  
   
-        -   **\<Domaine>_État** : état de la valeur de domaine après le nettoyage des données. Par exemple, **Suggérés**, **Nouveau**, **Non valide**, **Corrigés**ou **Correct**.  
+        -   >_Status de domaine : état de la valeur de domaine après le nettoyage des données. ** \<** Par exemple, **Suggérés**, **Nouveau**, **Non valide**, **Corrigés**ou **Correct**.  
   
-        -   **État de l’enregistrement** : en plus d’avoir un champ d’état pour chaque domaine mappé **(\<Nom_domaine>_État**), le champ **État de l’enregistrement** affiche l’état d’un enregistrement. Si l’état d’un des domaines dans l’enregistrement est *Nouveau* ou *Correct*, l’**État de l’enregistrement** est défini sur *Correct*. Si l’état d’un des domaines dans l’enregistrement est *Suggéré*, *Non valide*, ou *Corrigé*, l’**État de l’enregistrement** a la valeur correspondante. Par exemple, si l’état d’un des domaines dans l’enregistrement est *Suggéré*, l’**État de l’enregistrement** est défini sur *Suggéré*.  
+        -   **État**de l’enregistrement : en plus d’avoir un champ d’État pour chaque domaine mappé **(\<DomainName>_Status**), le champ État de l' **enregistrement** affiche l’état d’un enregistrement. Si l’état d’un des domaines dans l’enregistrement est *Nouveau* ou *Correct*, l’**État de l’enregistrement** est défini sur *Correct*. Si l’état d’un des domaines dans l’enregistrement est *Suggéré*, *Non valide*, ou *Corrigé*, l’**État de l’enregistrement** a la valeur correspondante. Par exemple, si l’état d’un des domaines dans l’enregistrement est *Suggéré*, l’**État de l’enregistrement** est défini sur *Suggéré*.  
   
             > [!NOTE]  
             >  Si vous utilisez le service de données de référence pour l'opération de nettoyage, certaines informations supplémentaires sur la valeur de domaine peuvent également être exportées. Pour plus d’informations, consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
@@ -179,40 +178,40 @@ ms.locfileid: "67935606"
   
     -   **SQL Server** comme destination des données, une nouvelle table portant le nom spécifié sera créée dans la base de données sélectionnée.  
   
-    -   **Fichier CSV** comme destination de données, un fichier .csv sera créé à l'emplacement de l'ordinateur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] avec le nom de fichier que vous avez spécifié précédemment dans la zone **Nom du fichier CSV** .  
+    -   **Fichier CSV** comme destination de données, un fichier. csv sera créé à l’emplacement sur l' [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ordinateur avec le nom de fichier que vous avez spécifié précédemment dans la zone Nom du **fichier CSV** .  
   
-    -   **Fichier Excel** comme destination de données, un fichier Excel sera créé à l'emplacement de l'ordinateur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] avec le nom de fichier que vous avez spécifié précédemment dans la zone **Nom du fichier Excel** .  
+    -   **Fichier Excel** comme destination des données, un fichier Excel sera créé à l’emplacement sur l' [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ordinateur avec le nom de fichier que vous avez spécifié précédemment dans la zone Nom du **fichier Excel** .  
   
 5.  Cliquez sur **Terminer** pour fermer le projet de qualité des données.  
   
-##  <a name="Profiler"></a> Profiler Statistics  
+##  <a name="Profiler"></a>Statistiques du profileur  
  L'onglet **Générateur de profils** fournit des statistiques qui indiquent la qualité des données sources. Le profilage vous permet d'évaluer l'efficacité de l'activité de nettoyage des données, et vous pouvez éventuellement déterminer jusqu'à quel point le nettoyage des données a permis d'améliorer la qualité des données.  
   
  L'onglet **Générateur de profils** fournit les statistiques suivantes pour les données sources, par le champ et par domaine :  
   
--   **Enregistrements** : nombre d’enregistrements dans l’exemple de données qui ont été analysés pour l’activité de nettoyage des données  
+-   **Enregistrements**: nombre d’enregistrements dans l’échantillon de données qui ont été analysés pour l’activité de nettoyage des données  
   
--   **Enregistrements corrects** : nombre d’enregistrements identifiés comme étant corrects  
+-   **Enregistrements corrects**: nombre d’enregistrements corrects  
   
--   **Enregistrements corrigés** : nombre d’enregistrements qui ont été corrigés  
+-   **Enregistrements corrigés**: nombre d’enregistrements corrigés  
   
--   **Enregistrements suggérés** : nombre d’enregistrements qui ont été suggérés  
+-   **Enregistrements suggérés**: nombre d’enregistrements suggérés  
   
--   **Enregistrements non valides** : nombre d’enregistrements qui n’étaient pas valides  
+-   **Enregistrements non valides**: nombre d’enregistrements non valides  
   
  Les statistiques de champ sont les suivantes :  
   
--   **Champ** : nom du champ dans les données sources  
+-   **Champ**: nom du champ dans les données sources  
   
--   **Domaine** : nom du domaine mappé au champ  
+-   **Domaine**: nom du domaine mappé au champ  
   
--   **Valeurs corrigées** : nombre de valeurs de domaine qui ont été corrigées  
+-   **Valeurs corrigées**: nombre de valeurs de domaine qui ont été corrigées  
   
--   **Valeurs suggérées** : nombre de valeurs de domaine qui ont été suggérées  
+-   **Valeurs suggérées**: nombre de valeurs de domaine qui ont été suggérées  
   
--   **Exhaustivité** : exhaustivité de chaque champ source qui est mappé pour l’activité de nettoyage  
+-   **Exhaustivité**: exhaustivité de chaque champ source mappé pour l’activité de nettoyage  
   
--   **Précision** : précision de chaque champ source qui est mappé pour l’activité de nettoyage  
+-   **Précision**: précision de chaque champ source mappé pour l’activité de nettoyage  
   
  Le profilage DQS fournit deux dimensions de qualité des données : l' *exhaustivité* (dans quelle mesure des données sont présentes) et la *précision* (dans quelle mesure des données peuvent être utilisées pour l'usage prévu). Si le profilage vous informe qu'un champ est relativement incomplet, vous pouvez le supprimer de la base de connaissances d'un projet de qualité des données. Le profilage peut ne pas fournir des statistiques d'exhaustivité fiables pour les domaines composites. Si vous avez besoin des statistiques d'exhaustivité, utilisez des domaines simples plutôt que des domaines composites. Si vous souhaitez utiliser des domaines composites, vous pouvez créer une base de connaissances avec des domaines simples pour le profilage, afin de déterminer l'exhaustivité, et créer un autre domaine avec un domaine composite pour le processus de nettoyage. Par exemple, le profilage peut afficher une exhaustivité de 95 % pour les enregistrements d'adresse à l'aide d'un domaine composite, mais il peut y avoir un niveau bien supérieur de non-exhaustivité pour l'une des colonnes, par exemple, une colonne de code postal. Dans cet exemple, vous pouvez mesurer l'exhaustivité de la colonne de code postal avec un domaine unique. Le profilage fournira probablement des statistiques de précision fiables pour les domaines composites, car vous pouvez mesurer la précision de plusieurs colonnes ensemble. Comme la valeur de ces données se trouve dans l'agrégation composite, vous pouvez mesurer la précision avec un domaine composite.  
   

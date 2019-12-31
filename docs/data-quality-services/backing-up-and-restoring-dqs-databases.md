@@ -1,6 +1,5 @@
 ---
-title: Sauvegarde et restauration de bases de données DQS | Microsoft Docs
-ms.custom: ''
+title: Sauvegarde et restauration de bases de données DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992430"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258850"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sauvegarde et restauration de bases de données DQS
 
@@ -23,9 +22,9 @@ ms.locfileid: "67992430"
 
   Cette rubrique explique comment sauvegarder et restaurer les bases de données DQS.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Vous devez connaître ou mémoriser le mot de passe de la clé principale de base de données que vous avez fournie pendant l'installation du serveur DQS.  
   
@@ -33,15 +32,15 @@ ms.locfileid: "67992430"
   
 -   Assurez-vous qu'aucun utilisateur n'est connecté au serveur DQS.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
   
 -   Votre compte d'utilisateur Windows doit être membre du rôle serveur fixe sysadmin dans l'instance de SQL Server pour effectuer les opérations de sauvegarde et de restauration.  
   
 -   Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour mettre fin à toutes les activités en cours d'exécution ou arrêter tous les processus en cours d'exécution dans DQS.  
   
-##  <a name="BackupRestore"></a> Sauvegarder et restaurer des bases de données DQS  
+##  <a name="BackupRestore"></a>Sauvegarder et restaurer des bases de données DQS  
   
 1.  Démarrez Microsoft SQL Server Management Studio et connectez-vous à l'instance de SQL Server appropriée.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "67992430"
   
 10. Dans l'Explorateur d'objets, cliquez avec le bouton droit sur le serveur, puis cliquez sur **Nouvelle requête**.  
   
-11. Dans la fenêtre de l’éditeur de requête, copiez les instructions SQL suivantes et remplacez *\<PASSWORD>* par le mot de passe que vous avez fourni pendant l’installation de DQS pour la clé principale de base de données :  
+11. Dans la fenêtre de l’éditeur de requête, copiez les instructions SQL suivantes et remplacez * \<le mot de passe>* par le mot de passe que vous avez fourni lors de l’installation de DQS pour la clé principale de base de données :  
   
     ```  
     USE [DQS_MAIN]  

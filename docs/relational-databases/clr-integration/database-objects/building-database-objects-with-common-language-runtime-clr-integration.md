@@ -1,6 +1,7 @@
 ---
-title: Création d’objets de base de données avec l’intégration du Common Language Runtime (CLR) | Microsoft Docs
-ms.custom: ''
+title: Objets de base de données de build CLR (Common Language Runtime)
+description: Créez des objets de base de données à l’aide de l’intégration SQL Server avec le common language runtime .NET Framework (CLR).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7037105391425632dba0af3646635305e510f207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138668"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258354"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Génération d'objets de base de données à l'aide de l'intégration du CLR (Common Language Runtime)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Vous pouvez générer des objets de base de données à l'aide de l'intégration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le CLR (Common Language Runtime) .NET Framework. Code managé qui s’exécute à l’intérieur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé « routine CLR ». Ces routines incluent :  
+  Vous pouvez générer des objets de base de données à l'aide de l'intégration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le CLR (Common Language Runtime) .NET Framework. Le code managé qui s’exécute [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans est appelé « routine CLR ». Ces routines incluent :  
   
 -   Fonctions scalaires définies par l'utilisateur (fonctions UDF scalaires)  
   
@@ -44,34 +45,34 @@ ms.locfileid: "68138668"
   
  Le tableau ci-dessous répertorie les rubriques traitées dans cette section.  
   
- [Prise en main de l’intégration du CLR](../../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
+ [Mise en route avec l'intégration du CLR](../../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
  Fournit une brève vue d'ensemble des bibliothèques et des espaces de noms requis pour compiler l'objet en utilisant l'intégration du CLR avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Inclut un exemple de procédure stockée CLR "Hello World".  
   
  [Bibliothèques .NET Framework prises en charge](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)  
  Fournit des informations sur les bibliothèques .NET Framework prises en charge par l'intégration du CLR.  
   
- [Restrictions du modèle de programmation de l’intégration du CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
+ [Restrictions du modèle de programmation de l'intégration du CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
  Fournit des informations sur les restrictions du modèle de programmation de l'intégration du CLR.  
   
- [Types de données SQL Server dans .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [Types de données SQL Server dans le .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Vue d'ensemble de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et de leurs équivalents .NET Framework.  
   
- [Vue d’ensemble des attributs personnalisés de l’intégration du CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [Vue d'ensemble des attributs personnalisés de l'intégration du CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  Fournit des informations sur les attributs personnalisés de l'intégration du CLR.  
   
- [Fonctions CLR définies par l’utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [Fonctions CLR définies par l'utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Explique comment implémenter et utiliser les différents types de fonctions CLR : fonctions table, scalaires et d'agrégation définies par l'utilisateur.  
   
- [Types CLR définis par l’utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Types CLR définis par l'utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Explique comment implémenter et utiliser les types CLR définis par l'utilisateur.  
   
- [Procédures stockées du CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [Procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
  Explique comment implémenter et utiliser les procédures stockées CLR.  
   
  [Déclencheurs CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  Explique comment implémenter et utiliser les déclencheurs CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Common Language Runtime &#40;CLR&#41; présentation de l’intégration](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Vue d’ensemble de l’intégration du Common Language Runtime &#40;CLR&#41;](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

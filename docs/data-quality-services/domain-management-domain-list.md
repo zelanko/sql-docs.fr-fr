@@ -1,6 +1,5 @@
 ---
-title: 'Gestion de l’arborescence du domaine : Liste des domaines | Microsoft Docs'
-ms.custom: ''
+title: "Gestion de l'arborescence du domaine : Liste des domaines"
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,16 +9,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935330"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251655"
 ---
-# <a name="domain-management-domain-list"></a>Gestion de l’arborescence du domaine : Liste des domaines
+# <a name="domain-management-domain-list"></a>Gestion de l'arborescence du domaine : Liste des domaines
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -28,8 +27,8 @@ ms.locfileid: "67935330"
 ## <a name="options"></a>Options  
   
 ### <a name="domains-list"></a>Liste des domaines  
- **Domaine**  
- Cette liste affiche tous les domaines dans la base de connaissances. Les opérations que vous effectuez dans les pages à onglets dans le volet droit sont exécutées sur le domaine sélectionné dans la liste. Pour plus d'informations, consultez  
+ **Domain**  
+ Cette liste affiche tous les domaines dans la base de connaissances. Les opérations que vous effectuez dans les pages à onglets dans le volet droit sont exécutées sur le domaine sélectionné dans la liste. Pour plus d'informations, consultez la page sur les  
   
  **Créer un domaine composite**  
  Créez un nouveau domaine composite dans la base de connaissances. Cette commande affiche la boîte de dialogue **Créer un domaine composite** . Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Créer un domaine composite](../data-quality-services/create-a-composite-domain.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "67935330"
  **Créer une copie du domaine sélectionné**  
  Créez une copie exacte du domaine sélectionné, puis ajoutez-la à la base de connaissances. Son nom est le nom du domaine à partir duquel elle a été créée, avec « - Copie » ajouté à la fin du nom. Cette commande est disponible en cliquant avec le bouton droit sur un domaine, puis en cliquant sur **Créer une copie**, ou en cliquant sur l'icône au-dessus de la liste des domaines. Elle n'est pas disponible pour un domaine composite.  
   
- **Importer un domaine à partir d'un fichier de données**  
+ **Importer un domaine à partir d’un fichier de données**  
  Importez un domaine à partir d'un fichier .dqs. Cette commande affiche la boîte de dialogue **Importer à partir d'un fichier de données** qui vous permet de parcourir le système de fichiers et de sélectionner un fichier .dqs pour un seul domaine ou un domaine composite. Cette commande est disponible en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Importez un domaine à partir d'un fichier .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md).  
   
  **Supprimer le domaine**  

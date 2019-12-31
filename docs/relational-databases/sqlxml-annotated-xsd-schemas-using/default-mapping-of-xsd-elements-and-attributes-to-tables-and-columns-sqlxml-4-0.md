@@ -1,6 +1,5 @@
 ---
-title: Par défaut des éléments de mappage XSD-attributs aux colonnes de Tables (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Mappage XSD par défaut vers les tables/colonnes (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,23 +25,24 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74823924864d15324b6e4f2183609fa6e761d6f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067185"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257450"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Par défaut, un élément de type complexe dans un schéma annoté XSD est mappé à la table (vue) du même nom dans la base de données spécifiée ; par ailleurs, un élément ou attribut de type simple est mappé à la colonne du même nom dans la table.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>R. Spécification du mappage par défaut  
- Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. Le  **\<Person.Contact >** élément est de type complexe et, par conséquent, est mappé par défaut à la table Person.Contact dans la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de la  **\<Person.Contact >** élément sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person.Contact.  
+ Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. L' ** \<élément person. contact>** est de type complexe et, par conséquent, est mappé par défaut à la table Person. contact de la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de l' ** \<élément person. contact>** sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -79,7 +79,7 @@ ms.locfileid: "68067185"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel :  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68067185"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mappage d'un élément XML à une colonne de base de données  
- Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Person.Contact >** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Les éléments  **\<FirstName >** et  **\<LastName >** et **EmployeeID** attribut sont de type simple et, par conséquent, sont mappés à la colonnes portant le même nom. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
+ Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. L' ** \<élément person. contact>** est de type complexe et est mappé à la table portant le même nom dans la base de données. Les éléments ** \<FirstName>** et ** \<LastName>** et l’attribut **EmployeeID** sont de type simple et, par conséquent, sont mappés aux colonnes portant le même nom. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -132,7 +132,7 @@ ms.locfileid: "68067185"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel :  
   
@@ -147,7 +147,7 @@ ms.locfileid: "68067185"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mappage d'un élément XML à une colonne de type de données XML  
- Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Production.ProductModel >** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Le **ProductModelID** attribut est de type simple et, par conséquent, sont mappés aux colonnes portant le même nom. La seule différence entre ceci et les exemples précédents est que le  **\<Instructions >** élément est mappé à une colonne qui utilise le **xml** type de données à l’aide de la **xsd : anyType** type.  
+ Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. L' ** \<élément>production. ProductModel** est de type complexe et est mappé à la table portant le même nom dans la base de données. L’attribut **ProductModelID** est de type simple et, par conséquent, est mappé aux colonnes portant le même nom. La seule différence entre cet exemple et les exemples précédents est que les ** \<instructions>** élément est mappé à une colonne qui utilise le type de données **XML** à l’aide du type **xsd : anyType** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -163,7 +163,7 @@ ms.locfileid: "68067185"
 </xsd:schema>  
 ```  
   
- Le **xml** type de données a été introduit dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Le type de données **XML** a été [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduit dans.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Pour tester un exemple de requête XPath sur le schéma  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68067185"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel :  
   
@@ -206,8 +206,8 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Annoté considérations de sécurité de schéma &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
- [Prise en charge du type de données XML dans SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
+ [Considérations sur la sécurité des schémas annotés &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [SQL Server de &#40;de données XML&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
+ [Prise en charge du type de données xml dans SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

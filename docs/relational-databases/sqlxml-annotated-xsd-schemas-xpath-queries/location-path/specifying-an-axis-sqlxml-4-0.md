@@ -1,6 +1,5 @@
 ---
-title: Spécification d’un axe (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Spécification d’un axe (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,13 +19,14 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29d97b92f6979a7e5bbc67185f6e5a47ff82af68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073283"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253062"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Spécification d'un axe (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,41 +35,43 @@ ms.locfileid: "68073283"
   
      Contient l'enfant du nœud du contexte.  
   
-     L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les  **\<client >** enfants :  
+     L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tout le ** \<client>** enfants :  
   
     ```  
     child::Customer  
     ```  
   
-     Dans la requête XPath suivante, `child` est l'axe. `Customer` est le test de nœud.  
+     Dans la requête XPath suivante, `child` est l'axe. 
+  `Customer` est le test de nœud.  
   
 -   **parent**  
   
      Contient le parent du nœud du contexte.  
   
-     L’expression XPath suivante sélectionne tous les  **\<client >** parents de la  **\<ordre >** enfants :  
+     L’expression XPath suivante sélectionne tous les ** \<clients>** parents de l' ** \<ordre>** enfants :  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Cette option est équivalente à la spécification de `child::Customer`. Dans cette requête XPath, `child` et `parent` sont les axes. `Customer` et `Order` sont les tests de nœud.  
+     Cette option est équivalente à la spécification de `child::Customer`. Dans cette requête XPath, `child` et `parent` sont les axes. 
+  `Customer` et `Order` sont les tests de nœud.  
   
--   **attribute**  
+-   **attribut**  
   
      Contient l'attribut du nœud du contexte.  
   
-     L’expression XPath suivante sélectionne le **CustomerID** attribut du nœud de contexte :  
+     L’expression XPath suivante sélectionne l’attribut **CustomerID** du nœud de contexte :  
   
     ```  
     attribute::CustomerID  
     ```  
   
--   **self**  
+-   **rythme**  
   
      Contient le nœud du contexte lui-même.  
   
-     L’expression XPath suivante sélectionne le nœud actuel, s’il s’agit du  **\<ordre >** nœud :  
+     L’expression XPath suivante sélectionne le nœud actuel s’il s’agit de l' ** \<ordre>** nœud :  
   
     ```  
     self::Order  

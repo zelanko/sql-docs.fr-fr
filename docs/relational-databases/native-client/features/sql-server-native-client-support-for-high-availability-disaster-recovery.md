@@ -1,5 +1,5 @@
 ---
-title: Prise en charge SQL Server Native Client pour la haute disponibilité et la récupération d’urgence | Microsoft Docs
+title: Native Client, haute disponibilité, récupération
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf7313c127be38e72131c604c4880963242ed3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788034"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247414"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "73788034"
   
  Utilisez les instructions suivantes pour la connexion à un serveur dans un groupe de disponibilité ou dans une instance de cluster de basculement :  
   
--   Utilisez la propriété de connexion**MultiSubnetFailover** quand vous vous connectez à un sous-réseau unique ou à des sous-réseaux multiples pour améliorer leurs performances.  
+-   Utilisez la propriété de connexion **MultiSubnetFailover** lors de la connexion à un sous-réseau unique ou à plusieurs sous-réseaux ; Cela permet d’améliorer les performances pour les deux.  
   
 -   Pour vous connecter à un groupe de disponibilité, spécifiez l'écouteur du groupe de disponibilité en tant que serveur dans votre chaîne de connexion.  
   
 -   La connexion à une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurée avec plus de 64 adresses IP provoque un échec de connexion.  
   
--   Le comportement d’une application qui utilise la propriété de connexion **MultiSubnetFailover** peut ne pas être affecté en fonction du type d’authentification : authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], authentification Kerberos ou authentification Windows.  
+-   Le comportement d’une application qui utilise la propriété de connexion **MultiSubnetFailover** n’est pas affecté selon le type d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentification : authentification, authentification Kerberos ou authentification Windows.  
   
 -   Vous pouvez augmenter la valeur de **loginTimeout** pour tenir compte du temps de basculement et réduire les nouvelles tentatives de connexion de l’application.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73788034"
   
 1.  Si l'emplacement du réplica secondaire n'est pas configuré pour accepter des connexions.  
   
-2.  Si une application utilise **ApplicationIntent=ReadWrite**(voir ci-dessous) et si l’emplacement de réplica secondaire est configuré pour un accès en lecture seule.  
+2.  Si une application utilise **ApplicationIntent = ReadWrite** (décrite ci-dessous) et que l’emplacement du réplica secondaire est configuré pour un accès en lecture seule.  
   
  Une connexion échoue si un réplica principal est configuré pour rejeter des charges de travail en lecture seule et si la chaîne de connexion contient **ApplicationIntent=ReadOnly**.  
   
@@ -95,10 +95,10 @@ ms.locfileid: "73788034"
 |Fonction|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|La liste de serveurs retournée par **SQLBrowseConnect** n’inclut pas de VNN. Vous verrez seulement une liste de serveurs sans indication si ces derniers sont des serveurs autonomes, ou un serveur principal ou secondaire dans un cluster de Clustering de basculement Windows Server (WSFC) qui contient deux instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si la connexion à un serveur se solde par un échec, c’est peut-être parce que le paramètre **ApplicationIntent** n’est pas compatible avec la configuration de ce serveur.<br /><br /> Étant donné que **SQLBrowseConnect** ne reconnaît pas de serveurs dans un cluster Clustering de basculement Windows Server (WSFC) qui contient deux d’instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** ignore le mot clé de chaîne de connexion **MultiSubnetFailover**.|  
-|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** par le biais d’un nom de source de données ou de propriétés de connexion.|  
-|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** par le biais de mots clés de chaîne de connexion, de propriétés de connexion ou d’un nom de source de données.|  
+|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** prend en charge à la fois **ApplicationIntent** et **MultiSubnetFailover** via un nom de source de données (DSN) ou des propriétés de connexion.|  
+|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** par le biais de mots clés de chaîne de connexion, de propriétés de connexion ou de DSN.|  
   
-## <a name="ole-db"></a>OLE DB  
+## <a name="ole-db"></a>OLE DB  
  OLE DB dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne prend pas en charge le mot clé **MultiSubnetFailover**.  
   
  OLE DB dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prendra en charge l'intention de l'application. L'intention de l'application se comporte de manière identique pour les applications OLE DB et les applications ODBC (voir ci-dessus).  
@@ -117,16 +117,16 @@ ms.locfileid: "73788034"
   
  Une application OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client peut utiliser l'une de ces méthodes pour spécifier l'intention de l'application :  
   
- **IDBInitialize::Initialize**  
- **IDBInitialize::Initialize** utilise le jeu de propriétés configuré précédemment pour initialiser la source de données et créer l’objet source de données. Spécifiez l'intention de l'application en tant que propriété de fournisseur ou dans le cadre de la chaîne de propriétés étendues.  
+ **IDBInitialize :: Initialize**  
+ **IDBInitialize :: Initialize** utilise le jeu de propriétés configuré précédemment pour initialiser la source de données et créer l’objet de source de données. Spécifiez l'intention de l'application en tant que propriété de fournisseur ou dans le cadre de la chaîne de propriétés étendues.  
   
- **IDataInitialize::GetDataSource**  
- **IDataInitialize::GetDataSource** accepte une chaîne de connexion d’entrée qui peut contenir le mot clé **Application Intent**.  
+ **IDataInitialize :: GetDataSource**  
+ **IDataInitialize :: GetDataSource** prend une chaîne de connexion d’entrée qui peut contenir le mot clé d’intention de l' **application** .  
   
  **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** récupère la valeur de la propriété définie actuellement sur la source de données.  Vous pouvez récupérer la valeur **Application Intent** au moyen des propriétés DBPROP_INIT_PROVIDERSTRING et SSPROP_INIT_APPLICATIONINTENT.  
+ **IDBProperties :: GetProperties** récupère la valeur de la propriété actuellement définie sur la source de données.  Vous pouvez récupérer la valeur **Application Intent** au moyen des propriétés DBPROP_INIT_PROVIDERSTRING et SSPROP_INIT_APPLICATIONINTENT.  
   
- **IDBProperties::SetProperties**  
+ **IDBProperties :: SetProperties**  
  Pour définir la valeur de propriété **ApplicationIntent**, appelez **IDBProperties::SetProperties** qui passe la propriété **SSPROP_INIT_APPLICATIONINTENT** avec la valeur « **ReadWrite** » ou « **ReadOnly** » ou **DBPROP_INIT_PROVIDERSTRING** avec la valeur qui contient « **ApplicationIntent=ReadOnly** » ou « **ApplicationIntent=ReadWrite** ».  
   
  Vous pouvez spécifier l’intention de l’application dans le champ Propriétés de l’intention de l’application de l’onglet Tous de la boîte de dialogue **Propriétés de liaison de données**.  

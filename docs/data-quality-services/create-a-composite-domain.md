@@ -1,6 +1,5 @@
 ---
-title: Créer un domaine composite | Microsoft Docs
-ms.custom: ''
+title: Créer un domaine composite
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: f6c146146a039958937a74cbdbd072dfb482bf4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935555"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255594"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
 
@@ -30,19 +29,19 @@ ms.locfileid: "67935555"
   
  Après la création d'un domaine composite, vous pouvez modifier les propriétés du domaine composite, joindre un service de données de référence au domaine, créer des règles inter-domaines ou créer des relations de valeur. Pour ce faire, sélectionnez le domaine composite dans la liste **Domaine** de la page **Gestion de l'arborescence du domaine** , puis sélectionnez l'onglet approprié.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Pour créer un domaine composite, vous devez avoir créé et ouvert une base de connaissances, et vous devez avoir créé au moins deux domaines uniques à ajouter au domaine composite.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine composite.  
   
-##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Créer un domaine composite dans l'activité de découverte des connaissances  
+##  <a name="ParsingKnowledgeDiscoveryActivity"></a>Créer un domaine composite dans l’activité de découverte des connaissances  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir la base de connaissances** , puis sélectionnez une base de connaissances ou cliquez sur **Nouvelle Base de connaissances** et entrez les propriétés de la base de connaissances.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "67935555"
   
 7.  Cliquez sur l'icône **Créer un domaine composite** .  
   
-##  <a name="DomainManagementActivity"></a> Créer un domaine composite dans l'activité de gestion de l'arborescence du domaine  
+##  <a name="DomainManagementActivity"></a>Créer un domaine composite dans l’activité de gestion des domaines  
   
 1.  Dans la page d'accueil du client Data Quality Services, cliquez sur **Ouvrir la base de connaissances** , puis sélectionnez une base de connaissances, ou cliquez sur **Nouvelle Base de connaissances** et entrez les propriétés de la base de connaissances.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "67935555"
   
 7.  Cliquez sur **OK**.  
   
-##  <a name="CompositeDomainProperties"></a> Définir les propriétés de domaine composite  
+##  <a name="CompositeDomainProperties"></a>Définir les propriétés du domaine composite  
   
 1.  Dans la boîte de dialogue **Créer un domaine composite** , entrez un nom qui est unique dans la base de connaissances et une description limitée à 256 caractères.  
   
@@ -82,20 +81,20 @@ ms.locfileid: "67935555"
   
 4.  Sélectionnez l'une des valeurs suivantes pour l'option **Méthode d'analyse**:  
   
-    -   **Données de référence** : analysez les valeurs du champ selon la façon dont les données sont mises en forme par le service de données de référence (RDS). Data Quality Services envoie les valeurs du domaine composite au service RDS et celui-ci retourne les données corrigées et analysées en fonction du domaine dans le domaine composite.  
+    -   **Données de référence**: analysez les valeurs du champ en fonction de la façon dont les données sont mises en forme par le service de données de référence (RDS). Data Quality Services envoie les valeurs du domaine composite au service RDS et celui-ci retourne les données corrigées et analysées en fonction du domaine dans le domaine composite.  
   
-    -   **Dans l’ordre** : analysez les valeurs du champ en fonction de l’ordre des domaines dans le domaine composite. La première valeur sera incluse dans le premier domaine, la deuxième valeur dans le deuxième domaine, et ainsi de suite.  
+    -   **Dans l’ordre**: analysez les valeurs du champ en fonction de l’ordre des domaines dans le domaine composite. La première valeur sera incluse dans le premier domaine, la deuxième valeur dans le deuxième domaine, et ainsi de suite.  
   
-    -   **Délimiteurs** : analysez les valeurs du champ en fonction du délimiteur sélectionné à partir des cases d’option affichées quand Délimiteurs est sélectionné. Il peut s'agir de **Tabulation**, **Point-virgule**, **Virgule**, **Espace**ou **Autre**. Si la valeur est **Autre**, entrez la valeur qui servira de délimiteur.  
+    -   **Délimiteurs**: analysez les valeurs du champ en fonction du délimiteur sélectionné à partir des cases d’option affichées lorsque délimiteurs est sélectionné. Il peut s'agir de **Tabulation**, **Point-virgule**, **Virgule**, **Espace**ou **Autre**. Si la valeur est **Autre**, entrez la valeur qui servira de délimiteur.  
   
 5.  Si vous avez sélectionné **Délimiteurs** pour la méthode d'analyse, vous pouvez également sélectionner **Utiliser l'analyse de Base de connaissances**. Pour plus d’informations, consultez [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Suivi : après la création d’un domaine composite  
+##  <a name="FollowUp"></a>Suivi : après la création d’un domaine composite  
  Après avoir créé un domaine composite, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
+##  <a name="KnowledgeBaseParsing"></a>Analyse basée sur les connaissances  
  Data Quality Services vous permet d'analyser les données selon les connaissances, et pas simplement en fonction du délimiteur ou de l'ordre. L'analyse basée sur les connaissances est utilisée lorsque des données sources complexes sont mappées à un domaine composite et que vous n'utilisez pas les services de données de référence. Vous pouvez utiliser l'analyse basée sur les connaissances pour analyser les données de la source de données dans les domaines uniques appropriés. Avec l'analyse basée sur les connaissances, DQS tente d'abord d'utiliser les connaissances pour analyser des données complexes dans des domaines uniques. Si possible, il identifiera certaines parties de la chaîne comme étant dans un ou plusieurs domaines, et analysera la chaîne dans ses différents domaines. Par exemple, supposons que vous ayez « John B.Doe » comme valeurs complexes dans un champ de nom complet représenté par un domaine composite Nom complet. Si DQS identifie « John » comme étant dans le domaine Prénom et « Doe » comme étant dans le domaine Nom, DQS ajoute alors « B. » au domaine Deuxième prénom selon la connaissance de domaine.  
   
  Vous pouvez utiliser l'analyse basée sur les connaissances uniquement si vous sélectionnez également l'analyse en fonction du délimiteur. L'analyse basée sur les connaissances ne remplace pas l'analyse de délimiteur, mais l'améliore. DQS utilisera un délimiteur pour effectuer l'analyse uniquement s'il n'existe aucune connaissance pour exécuter l'opération. Dans certains cas, DQS peut établir une analyse avec l'analyse basée sur les connaissances, puis une autre analyse avec l'analyse en fonction du délimiteur.  

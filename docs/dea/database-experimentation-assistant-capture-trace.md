@@ -2,7 +2,7 @@
 title: Capturer une trace pour les mises à niveau de SQL Server
 description: Capturer une trace dans Assistant Expérimentation de base de données pour les mises à niveau SQL Server
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,74 +10,83 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056602"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258534"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturer une trace dans Assistant Expérimentation de base de données
 
-Vous pouvez utiliser une capture de trace dans Assistant Expérimentation de base de données (DEA) pour créer un fichier de trace qui contient un journal des événements de serveur capturés. Un événement de serveur capturé est un événement qui se produit sur un serveur spécifique pendant une période de temps spécifique. Une capture de trace doit être exécutée une fois par serveur.
+Vous pouvez utiliser Assistant Expérimentation de base de données (DEA) pour créer un fichier de trace contenant un journal des événements de serveur capturés. Un événement de serveur capturé est un événement qui se produit sur un serveur spécifique pendant une période de temps spécifique. Une capture de trace doit être exécutée une fois par serveur.
 
 Avant de démarrer une capture de trace, assurez-vous de sauvegarder toutes les bases de données cibles.
 
 La mise en cache des requêtes dans SQL Server peut affecter les résultats de l’évaluation. Nous vous recommandons de redémarrer le service de SQL Server (MSSQLSERVER) dans l’application des services pour améliorer la cohérence des résultats de l’évaluation.
 
-## <a name="create-a-trace-capture"></a>Créer une capture de trace
+## <a name="configure-a-trace-capture"></a>Configurer une capture de trace
 
-1. Dans DEA, sélectionnez l’icône de menu dans le menu de gauche. Dans le menu développé, sélectionnez **capturer les traces** en regard de l’icône de l’appareil photo.
+1. Dans la barre de navigation de gauche, sélectionnez l’icône de l’appareil photo, puis dans la page **toutes les captures** , sélectionnez **nouvelle capture**.
 
-    ![Sélectionnez capturer les traces dans le menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
+    ![Créer une capture dans la DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-1. Sous **nouvelle capture**, entrez ou sélectionnez les informations suivantes :
+2. Dans la page **nouvelle capture** , sous **Détails**de la capture, entrez ou sélectionnez les informations suivantes :
 
-    - **SQL Server nom**de l’instance : entrez un nom pour l’ordinateur exécutant SQL Server sur lequel vous souhaitez capturer une trace de serveur.
+    - **Nom**de la capture : entrez un nom pour le fichier de trace de votre capture.
+    - **Format**: spécifiez le format (trace ou XEvents) pour la capture.
+    - **Durée**: sélectionnez la durée (en minutes) pendant laquelle vous souhaitez que la capture de trace s’exécute.
+    - **Emplacement de capture**: sélectionnez le chemin d’accès de destination pour le fichier de trace.
+
+        > [!NOTE]
+        > Le chemin d’accès au fichier de trace doit se trouver sur l’ordinateur qui exécute SQL Server. Si le service SQL Server n’est pas défini pour un compte spécifique, le service peut avoir besoin d’autorisations en écriture sur le dossier spécifié pour le fichier de trace à écrire.
+
+3. Vérifiez que vous avez effectué une sauvegarde en sélectionnant **Oui, j’ai manuellement suivi la sauvegarde...** .
+
+4. Sous **Détails**de la capture, entrez ou sélectionnez les informations suivantes :
+
+    - **Type de serveur**: spécifiez le type de SQL Server **(SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
+    - **Nom du serveur**: spécifiez le nom du serveur ou l’adresse IP de votre SQL Server.
+    - **Type d’authentification**: pour le type d’authentification, sélectionnez **Windows**.
     - **Nom de la base de données**: entrez le nom d’une base de données sur laquelle démarrer une trace de base de données. Si vous ne spécifiez pas de base de données, la trace est capturée sur toutes les bases de données sur le serveur.
-    - **Nom du fichier de trace**: entrez un nom pour le fichier de trace de votre capture.
-    - **Taille de fichier maximale (Mo)** : sélectionnez la taille de substitution des fichiers. Un nouveau fichier est créé si nécessaire, à la taille de fichier que vous sélectionnez. La taille de substitution recommandée est de 200 Mo.
-    - **Durée (min)** : sélectionnez la durée (en minutes) pendant laquelle vous souhaitez que la capture de trace s’exécute.
-    - **Chemin de stockage du fichier de trace de sortie**: sélectionnez le chemin de destination du fichier de trace. 
 
-    > [!NOTE]
-    > Le chemin d’accès au fichier de trace doit se trouver sur l’ordinateur qui exécute SQL Server. Si le service SQL Server n’est pas défini pour un compte spécifique, le service peut avoir besoin d’autorisations en écriture sur le dossier spécifié pour le fichier de trace à écrire.
-    >
-    >
+5. Activez ou désactivez les cases à cocher **chiffrer la connexion** et **approuver le certificat du serveur** en fonction de votre scénario.
 
-    ![Nouvelle page de capture](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
+    ![Nouvelle page de capture](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 
 ## <a name="start-the-trace-capture"></a>Démarrer la capture de trace
 
-Une fois que vous avez entré ou sélectionné les informations requises, sélectionnez **Démarrer** pour démarrer la capture des traces. Si les informations que vous avez entrées sont valides, le processus de capture de trace commence. Sinon, les zones de texte qui comportent des entrées non valides sont mises en surbrillance en rouge. 
+1. Une fois que vous avez entré ou sélectionné les informations requises, sélectionnez **Démarrer** pour lancer la capture de trace.
 
-Assurez-vous que les valeurs que vous avez sélectionnées ou entrées sont correctes, puis sélectionnez **Démarrer**.
+    Si les informations que vous avez entrées sont valides, le processus de capture de trace commence. Sinon, les zones de texte avec des entrées non valides sont mises en surbrillance en rouge. Si vous rencontrez des erreurs, corrigez les entrées nécessaires, puis sélectionnez **Démarrer** à nouveau.
 
-Une fois l’exécution de la capture de trace terminée, localisez votre nouveau fichier de trace à l’emplacement de fichier que vous avez spécifié dans **chemin d’accès au stockage du fichier de trace de sortie**. Sélectionnez l’icône représentant une cloche au bas du menu de gauche pour surveiller la progression de la capture.
+    Pendant l’exécution de la capture de trace, sous détails de la **capture**, l’État et la progression du processus de capture de trace s’affichent.
 
-![Progression de la capture des traces](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
+    ![Surveiller la progression de la capture](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-### <a name="trace-file"></a>Fichier de suivi
+2. Une fois l’exécution de la capture de trace terminée, le nouveau fichier de trace (. trc) est enregistré dans l' **emplacement de capture** que vous avez spécifique lors de la configuration initiale.
 
-La capture de trace écrit un fichier. trc à l’emplacement spécifié. Le fichier de trace comprend les résultats de trace de l’activité d’une base de données SQL Server. Les fichiers TRC sont conçus pour fournir plus d’informations sur les erreurs détectées et signalées par SQL Server.
+    ![Capture de trace terminée](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
+
+    Le fichier de trace comprend les résultats de trace de l’activité d’une base de données SQL Server. les fichiers. trc sont conçus pour fournir plus d’informations sur les erreurs détectées et signalées par SQL Server.
 
 ## <a name="frequently-asked-questions-about-trace-capture"></a>Forum aux questions sur la capture de trace
 
 Voici quelques questions fréquemment posées sur la capture de trace dans la DEA.
 
-### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>Quels sont les événements capturés lors de l’exécution d’une capture de trace sur une base de données de production ?
+**Q : quels événements sont capturés lors de l’exécution d’une capture de trace sur une base de données de production ?**
 
-Le tableau suivant fournit la liste des événements et les données de colonnes correspondantes que nous recueillons pour les traces :
+Le tableau suivant répertorie les événements et les données de colonnes correspondantes que la DEA collecte pour les traces :
   
-|Nom d'événement|Données texte (1)|Données binaires (2)|ID de base de données (3)|Nom d’hôte (8)|Nom de l’application (10)|Nom de connexion (11)|SPID (12)|Heure de début (14)|Heure de fin (15)|Nom de la base de données (35)|Séquence d’événements (51)|IsSystem (60)|  
+|Nom de l'événement|Données texte (1)|Données binaires (2)|ID de base de données (3)|Nom d’hôte (8)|Nom de l’application (10)|Nom de connexion (11)|SPID (12)|Heure de début (14)|Heure de fin (15)|Nom de la base de données (35)|Séquence d’événements (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC : terminé (10)**||*|*|*|*|*|*|*|*|*|*|*|  
-|**RPC:Starting (11)**||*|*|*|*|*|*|*||*|*|*|  
+|**RPC : démarrage (11)**||*|*|*|*|*|*|*||*|*|*|  
 |**Paramètre de sortie RPC (100)**|*||*|*|*|*|*|*||*|*|*|  
-|**SQL:BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
-|**SQL:BatchStarting (13)**|*||*|*|*|*|*|*||*|*|*|  
+|**SQL : BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
+|**SQL : BatchStarting (13)**|*||*|*|*|*|*|*||*|*|*|  
 |**Auditer la connexion (14)**|*|*|*|*|*|*|*|*||*|*|*|  
 |**Audit de déconnexion (15)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**ExistingConnection (17)**|*|*|*|*|*|*|*|*||*|*|*|  
@@ -89,43 +98,43 @@ Le tableau suivant fournit la liste des événements et les données de colonnes
 |**CursorUnprepare (77)**|*||*|*|*|*|*|*||*|*|*|  
 |**CursorClose (78)**|*||*|*|*|*|*|*||*|*|*|  
 
-### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>Y a-t-il un effet sur les performances sur mon serveur de production lorsque la capture de trace est en cours d’exécution ?
-    
+**Q : y a-t-il un effet sur les performances sur mon serveur de production lorsque la capture de trace est en cours d’exécution ?**
+
 Oui, il y a un impact minime sur les performances lors de la collecte des traces. Dans nos tests, nous avons constaté une sollicitation de mémoire de 3%.
-    
-### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>Quels sont les types d’autorisations nécessaires pour capturer des suivis sur une charge de travail de production ?
-    
+
+**Q : Quels sont les types d’autorisations nécessaires pour capturer des suivis sur une charge de travail de production ?**
+
 - L’utilisateur Windows qui exécute l’opération de suivi dans l’application de DEA doit disposer de droits d’administrateur système sur l’ordinateur qui exécute SQL Server.
 - Le compte de service utilisé sur l’ordinateur exécutant SQL Server doit avoir un accès en écriture au chemin d’accès au fichier de trace spécifié.
 
-### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>Puis-je capturer des traces pour l’ensemble du serveur ou uniquement sur une base de données unique ?
-    
+**Q : puis-je capturer des traces pour l’ensemble du serveur ou uniquement sur une base de données unique ?**
+
 Vous pouvez utiliser la DEA pour capturer les traces de toutes les bases de données du serveur ou d’une base de données unique.
-    
-### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>Je dispose d’un serveur lié configuré dans mon environnement de production. Ces requêtes apparaissent-elles dans les traces ?
-    
+
+**Q : J’ai un serveur lié configuré dans mon environnement de production. Ces requêtes apparaissent-elles dans les traces ?**
+
 Si vous exécutez une capture de trace pour l’ensemble du serveur, la trace capture toutes les requêtes, y compris les requêtes de serveur lié. Pour exécuter une capture de trace pour l’ensemble du serveur, laissez la zone **nom de la base de données** vide sous **nouvelle capture** vide.
-    
-### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>Quelle est la durée minimale recommandée pour les traces de charge de travail de production ?
-    
+
+**Q : quelle est la durée minimale recommandée pour les traces de la charge de travail de production ?**
+
 Nous vous recommandons de choisir une heure qui représente le mieux l’intégralité de votre charge de travail. De cette façon, l’analyse s’exécute sur toutes les requêtes dans votre charge de travail.
-    
-### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>Quelle est la procédure à suivre pour effectuer une sauvegarde de base de données juste avant de démarrer une capture de trace ?
-    
+
+**Q : quelle est la procédure à suivre pour effectuer une sauvegarde de base de données juste avant de démarrer une capture de trace ?**
+
 Avant de démarrer une capture de trace, assurez-vous de sauvegarder toutes vos bases de données cibles. La trace capturée dans cible 1 et cible 2 est relue. Si l’état de la base de données n’est pas le même, les résultats de l’expérimentation sont faussés.
 
-### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>Puis-je collecter des XEvents au lieu de traces, puis-je relire XEvents ?
-    
+**Q : puis-je collecter des XEvents au lieu de traces, puis-je relire XEvents ?**
+
 Oui. La DEA prend en charge XEvents. Téléchargez la dernière version de DEA et essayez-la.
 
 ## <a name="troubleshoot-trace-captures"></a>Résoudre les problèmes de captures de trace
 
-Si vous voyez une erreur lors de l’exécution d’une capture de trace, passez en revue les conditions préalables suivantes :
+Si une erreur s’affiche lorsque vous exécutez une capture de trace, vérifiez que :
 
-- Confirmez que le nom de l’ordinateur exécutant SQL Server est valide. Pour confirmer, essayez de vous connecter à l’ordinateur qui exécute SQL Server à l’aide de SQL Server Management Studio (SSMS).
-- Vérifiez que la configuration de votre pare-feu ne bloque pas les connexions à l’ordinateur exécutant SQL Server.
-- Vérifiez que l’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)du blog.
-- Confirmez que le nom de la trace ne respecte pas la Convention de substitution standard (capture\_1). Essayez plutôt des noms de trace comme capture\_1A ou Capture1.
+- Le nom de l’ordinateur exécutant SQL Server est valide. Pour confirmer, essayez de vous connecter à l’ordinateur qui exécute SQL Server à l’aide de SQL Server Management Studio (SSMS).
+- La configuration de votre pare-feu ne bloque pas les connexions à l’ordinateur exécutant SQL Server.
+- L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)du blog.
+- Le nom de la trace ne suit pas la Convention de\_substitution standard (capture 1). Essayez plutôt les noms de trace comme\_capture 1a ou Capture1.
 
 Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :
 
@@ -138,10 +147,6 @@ Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :
 
 Si vous voyez d’autres erreurs libellées *code d’erreur SQL*, consultez [moteur de base de données des erreurs](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) pour obtenir des descriptions détaillées.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="see-also"></a>Voir aussi
 
-- Pour savoir comment configurer les outils de Distributed Replay dans SQL Server avant de relire une trace capturée, consultez [configurer la relecture](database-experimentation-assistant-configure-replay.md).
-
-- Pour une présentation de la DEA et de la démonstration de 19 minutes, regardez la vidéo suivante :
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- Pour savoir comment configurer les outils de Distributed Replay dans SQL Server avant de relire une trace capturée, consultez [configurer Distributed Replay pour Assistant expérimentation de base de données](database-experimentation-assistant-configure-replay.md).
