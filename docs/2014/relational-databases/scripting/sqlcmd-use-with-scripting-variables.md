@@ -1,6 +1,6 @@
 ---
-title: Utiliser sqlcmd avec des variables de script | Microsoft Docs
-ms.custom: ''
+title: Utiliser sqlcmd avec des variables de script
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090059"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243166"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utiliser sqlcmd avec des variables de script
   Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  
@@ -44,9 +44,9 @@ ms.locfileid: "66090059"
   
 3.  Interface de commande (**SET X=Y**) définie dans l’invite de commandes avant le démarrage de **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v** X = Y  
   
-5.  **:Setvar** X Y  
+5.  **: Setvar** X Y  
   
 > [!NOTE]  
 >  Pour afficher les variables d’environnement, dans le **Panneau de configuration**, ouvrez **Système**, puis cliquez sur l’onglet **Avancé** .  
@@ -64,7 +64,8 @@ ms.locfileid: "66090059"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ 
+  `WHERE c.`BusinessEntityID `< 5;`  
   
  Vous pouvez ensuite spécifier le nom de la colonne à retourner à l'aide de l'option `-v` :  
   
@@ -93,7 +94,7 @@ ms.locfileid: "66090059"
 -   Si la valeur de variable contient des guillemets, ceux-ci doivent être placés dans une séquence d'échappement. Par exemple :`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Instructions pour utiliser Cmd.exe SET avec les noms et valeurs de variables  
- Les variables définies à l’aide de SET appartiennent à l’environnement Cmd.exe et peuvent être référencées par **sqlcmd**. Respectez les consignes suivantes :  
+ Les variables définies à l’aide de SET appartiennent à l’environnement Cmd.exe et peuvent être référencées par **sqlcmd**. Tenez compte des recommandations suivantes :  
   
 -   Les noms de variables ne doivent pas contenir d'espaces blancs ou de guillemets.  
   
@@ -110,18 +111,18 @@ ms.locfileid: "66090059"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W (Lecture/écriture)|"8" (secondes)|  
-|SQLCMDSTATTIMEOUT|-T|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
-|SQLCMDHEADERS|-H|R/W (Lecture/écriture)|"0"|  
-|SQLCMDCOLSEP|-S|R/W (Lecture/écriture)|« »|  
+|SQLCMDSTATTIMEOUT|-t|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
+|SQLCMDHEADERS|-h|R/W (Lecture/écriture)|"0"|  
+|SQLCMDCOLSEP|-s|R/W (Lecture/écriture)|" "|  
 |SQLCMDCOLWIDTH|-w|R/W (Lecture/écriture)|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W (Lecture/écriture)|"0"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|R/W (Lecture/écriture)|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W (Lecture/écriture)|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W (Lecture/écriture)|"0" = illimitée|  
 |SQLCMDEDITOR||R/W (Lecture/écriture)|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \* Les variables SQLCMDUSER, SQLCMDPASSWORD et SQLCMDSERVER sont définies lorsque la commande **:Connect** est utilisée.  
+ \*SQLCMDUSER, SQLCMDPASSWORD et SQLCMDSERVER sont définis lorsque **: Connect** est utilisé.  
   
  R indique que la valeur ne peut être définie qu'une seule fois lors de l'initialisation du programme.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "66090059"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>A. Utilisation de la commande setvar dans un script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>R. Utilisation de la commande setvar dans un script  
  De nombreuses options de **sqlcmd** peuvent être contrôlées dans un script à l’aide de la commande **setvar** . Dans l'exemple suivant, le script `test.sql` est créé ; dans ce dernier, la variable `SQLCMDLOGINTIMEOUT` a la valeur `60` secondes et une variable de script, `server`, a la valeur `testserver`. Le code suivant figure dans le fichier `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -341,8 +342,8 @@ ms.locfileid: "66090059"
  `>2 GO`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser l'utilitaire sqlcmd](sqlcmd-use-the-utility.md)   
+ [Utiliser l’utilitaire sqlcmd](sqlcmd-use-the-utility.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
- [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Informations de référence sur l’utilitaire d’invite de commandes &#40;Moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

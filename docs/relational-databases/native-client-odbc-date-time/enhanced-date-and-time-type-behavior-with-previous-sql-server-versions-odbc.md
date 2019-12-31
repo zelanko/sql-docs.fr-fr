@@ -1,7 +1,7 @@
 ---
-title: Comportement du type de date et d’heure amélioré avec les versions antérieures de SQL Server (ODBC) | Microsoft Docs
+title: Date et heure dans les versions SQL (ODBC)
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 500771f384d65f1181dc5a34efccafb677ba2183
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7c25269ccf82749bd3b9260ff1fea6eec48361a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73783734"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243819"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportement des types de date et d'heure améliorés avec les versions SQL Server antérieures (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "73783734"
   
  Les métadonnées d’instruction retournées par SQLDescribeCol, SQLDescribeParam, SQGetDescField et SQLColAttribute retournent des métadonnées cohérentes avec le type de niveau de détail à tous égards, y compris le nom de type. **Nvarchar**est un exemple de type de niveau inférieure.  
   
- Quand une application cliente de bas niveau s’exécute sur un serveur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) sur lequel des modifications de schéma ont été apportées aux types de date/heure, le comportement attendu est le suivant :  
+ Quand une application cliente de bas niveau s’exécute [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sur un serveur (ou version ultérieure) sur lequel des modifications de schéma ont été apportées aux types de date/heure, le comportement attendu est le suivant :  
   
-|Type SQL Server 2005|Type [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure)|Type de client ODBC|Conversion des résultats (de SQL vers C)|Conversion des paramètres (de C vers SQL)|  
+|Type SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Type  (ou version ultérieure)|Type de client ODBC|Conversion des résultats (de SQL vers C)|Conversion des paramètres (de C vers SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
+|Datetime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Champs d'heure définis à zéro.|OK (2)<br /><br /> Échoue si le champ d'heure n'est pas nul. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Champs de date définis à la date actuelle.|OK (2)<br /><br /> La date est ignorée. Échoue si les fractions de seconde ne sont pas égales à zéro. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -49,14 +49,16 @@ ms.locfileid: "73783734"
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Champs de date définis à la date actuelle.|OK (2)<br /><br /> La date est ignorée. Échoue si les fractions de seconde ne sont pas nulles.<br /><br /> Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
-  
+|||||
+
 ## <a name="key-to-symbols"></a>Liste des symboles  
   
 |Symbole|Signification|  
 |------------|-------------|  
 |1|Si cela a fonctionné avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] cela doit continuer à fonctionner avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|Une application qui fonctionnait avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pourrait échouer avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-  
+|||
+
  Notez que seules les modifications de schéma courantes ont été considérées. Les modifications courantes sont les suivantes :  
   
 -   Utilisation d'un nouveau type alors qu'en toute logique une application requiert uniquement une valeur de date ou d'heure. Toutefois, l'application a été forcée d'utiliser des données datetime ou smalldatetime en raison du manque de types de date et d'heure distincts.  
@@ -79,7 +81,8 @@ ms.locfileid: "73783734"
 |SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
-  
+||||||||
+
  SQLSpecialColumns ne retourne pas SQL_DATA_TYPE, SQL_DATETIME_SUB, CHAR_OCTET_LENGTH ni SS_DATA_TYPE.  
   
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Métadonnées de type de données retournées par SQLGetTypeInfo  
@@ -107,11 +110,10 @@ ms.locfileid: "73783734"
 |NUM_PREC_RADIX|NULL|NULL|NULL|NULL|NULL|NULL|  
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
-  
+||||||||
+
 ## <a name="down-level-server-behavior"></a>Comportement de serveur de bas niveau  
  En cas de connexion à une instance de serveur d'une version antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], toute tentative d'utiliser les nouveaux types de serveur ou les codes de métadonnées et les champs de descripteur associés provoquera le renvoi d'une erreur SQL_ERROR. Un enregistrement de diagnostic sera généré avec SQLSTATE HY004 et le message « Type de données SQL non valide pour la version du serveur lors de la connexion », ou avec 07006 et « Violation de l'attribut de type de données restreint ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations &#40;de la date et de l’heure ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+ [Améliorations de la date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

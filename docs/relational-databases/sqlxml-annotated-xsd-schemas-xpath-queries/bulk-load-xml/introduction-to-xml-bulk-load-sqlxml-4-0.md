@@ -1,6 +1,5 @@
 ---
-title: Présentation de chargement en masse XML (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Introduction au chargement en masse XML (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +15,22 @@ helpviewer_keywords:
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c00dc0f155ed79cddd715aad96238cfe8723a10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4116bef21a70e6de699046019fd404798826bf18
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046554"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246736"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Présentation du chargement en masse XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables.  
+  Le chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des tables Microsoft.  
   
  Vous pouvez insérer les données XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide d'une instruction INSERT et de la fonction OPENXML ; toutefois, l'utilitaire de chargement en masse fournit de meilleures performances lorsque vous avez besoin d'insérer des quantités importantes de données XML.  
   
- La méthode Execute du modèle d’objet de chargement en masse XML accepte deux paramètres :  
+ La méthode Execute du modèle objet de chargement en masse XML accepte deux paramètres :  
   
 -   Un schéma XSD (XML Schema Definition)) ou XDR (XML-Data Reduced) annoté. L'utilitaire de chargement en masse XML interprète ce schéma de mappage et les annotations spécifiées dans le schéma pour identifier les tables SQL Server dans lesquelles les données XML doivent être insérées.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "68046554"
   
  Cette rubrique suppose que vous connaissez bien les fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivantes :  
   
--   Schémas XSD et XDR annotés. Pour plus d’informations sur les schémas XSD annotés, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour plus d’informations sur les schémas XDR annotés, consultez [des schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+-   Schémas XSD et XDR annotés. Pour plus d’informations sur les schémas XSD annotés, consultez [Présentation des schémas XSD Annotés &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour plus d’informations sur les schémas XDR annotés, consultez [schémas XDR Annotés &#40;dépréciés dans SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   Mécanismes d'insertion en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tels que l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT et l'utilitaire bcp. Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) et [utilitaire bcp](../../../tools/bcp-utility.md).  
+-   Mécanismes d'insertion en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tels que l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT et l'utilitaire bcp. Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../../t-sql/statements/bulk-insert-transact-sql.md) et [utilitaire bcp](../../../tools/bcp-utility.md).  
   
 ## <a name="streaming-of-xml-data"></a>Diffusion en continu de données XML  
  Le document XML source pouvant être volumineux, le document n'est pas lu intégralement en mémoire au cours du traitement de chargement en masse. Au lieu de cela, le chargement en masse XML interprète les données XML en tant que flux et lit ce flux. À mesure que l'utilitaire lit les données, il identifie la ou les tables de base de données, génère le ou les enregistrements appropriés à partir de la source de données XML, puis envoie le ou les enregistrements à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des fins d'insertion.  
   
- Par exemple, le document XML source suivant se compose de  **\<client >** éléments et  **\<ordre >** éléments enfants :  
+ Par exemple, le document XML source suivant se compose des ** \<éléments Customer>** et ** \<de l’ordre>** éléments enfants :  
   
 ```  
 <Customer ...>  
@@ -58,10 +58,10 @@ ms.locfileid: "68046554"
 ...  
 ```  
   
- Comme le chargement en masse XML lit le  **\<client >** élément, il génère un enregistrement pour Customertable. Lorsqu’il lit le  **\</Customer >** balise, les insertions de chargement en masse XML qui enregistrent dans la table de fin [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dans la même façon, lorsqu’il lit le  **\<ordre >** élément, le chargement en masse XML génère un enregistrement pour le Ordertable, puis insère cet enregistrement dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table lisant le  **\< / Commander >** balise de fin.  
+ À mesure que le chargement en masse XML lit l' ** \<élément Customer>** , il génère un enregistrement pour CustomerTable. Lors de la lecture de la balise de fin ** \</Customer>** , le chargement en masse XML insère cet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enregistrement dans la table de. De la même façon, lors de la lecture de l’élément ** \<Order>** , le chargement en masse XML génère un enregistrement pour Ordertable, puis insère cet enregistrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la table lors de la lecture de la balise de fin de la ** \<>/Order** .  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Opérations de chargement en masse XML transactionnelles et non transactionnelles  
- Le chargement en masse XML peut fonctionner en mode transactionnel ou non transactionnel. Les performances sont généralement optimales si vous effectuez un chargement en bloc dans un mode non transactionnel : autrement dit, la propriété de Transaction est définie sur FALSE) et une des conditions suivantes est vraie :  
+ Le chargement en masse XML peut fonctionner en mode transactionnel ou non transactionnel. Les performances sont généralement optimales si vous effectuez un chargement en masse en mode non-. autrement dit, la propriété transaction est définie sur FALSe et l’une ou l’autre des conditions suivantes est vraie :  
   
 -   Les tables dans lesquelles les données sont chargées en masse sont vides et ne comprennent pas d'index.  
   
@@ -70,16 +70,16 @@ ms.locfileid: "68046554"
  L'approche non transactionnelle ne garantit pas de restauration en cas de problème dans le processus de chargement en masse (bien que des restaurations partielles puissent se produire). Le chargement en masse non transactionnel est approprié lorsque la base de données est vide. Par conséquent, en cas de problème, vous pouvez nettoyer la base de données et redémarrer le chargement en masse XML.  
   
 > [!NOTE]  
->  En mode non transactionnel, le chargement en masse XML utilise une transaction interne par défaut et la valide. Lorsque la propriété de Transaction est définie sur TRUE, le chargement en masse XML n’appelle pas de validation sur cette transaction.  
+>  En mode non transactionnel, le chargement en masse XML utilise une transaction interne par défaut et la valide. Lorsque la propriété transaction a la valeur TRUE, le chargement en masse XML n’appelle pas la validation sur cette transaction.  
   
- Si la propriété de Transaction est définie sur TRUE, le chargement en masse XML crée des fichiers temporaires, un pour chaque table qui est identifiée dans le schéma de mappage. Le chargement en masse XML commence par stocker les enregistrements du document XML source dans ces fichiers temporaires. Ensuite, une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT récupère ces enregistrements des fichiers et les stocke dans les tables correspondantes. Vous pouvez spécifier l’emplacement de ces fichiers temporaires à l’aide de la propriété TempFilePath. Vous devez vous assurer que le compte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé avec le chargement en masse XML a accès à ce chemin d'accès. Si la propriété TempFilePath n’est pas spécifiée, le chemin d’accès de fichier par défaut qui est spécifié dans la variable d’environnement TEMP est utilisé pour créer les fichiers temporaires.  
+ Si la propriété transaction est définie sur TRUE, le chargement en masse XML crée des fichiers temporaires, un pour chaque table identifiée dans le schéma de mappage. Le chargement en masse XML commence par stocker les enregistrements du document XML source dans ces fichiers temporaires. Ensuite, une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT récupère ces enregistrements des fichiers et les stocke dans les tables correspondantes. Vous pouvez spécifier l’emplacement de ces fichiers temporaires à l’aide de la propriété TempFilePath. Vous devez vous assurer que le compte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé avec le chargement en masse XML a accès à ce chemin d'accès. Si la propriété TempFilePath n’est pas spécifiée, le chemin d’accès au fichier par défaut qui est spécifié dans la variable d’environnement TEMP est utilisé pour créer les fichiers temporaires.  
   
- Si la propriété de Transaction est définie sur FALSE (paramètre par défaut), le chargement en masse XML utilise l’interface OLE DB IRowsetFastLoad pour le chargement en masse les données.  
+ Si la propriété transaction est définie sur FALSe (paramètre par défaut), le chargement en masse XML utilise l’interface OLE DB IRowsetFastLoad pour charger en masse les données.  
   
- Si la propriété ConnectionString définit la chaîne de connexion et la propriété de Transaction est définie sur TRUE, le chargement en masse XML fonctionne dans son propre contexte de transaction. (Par exemple, le chargement en masse XML démarre sa propre transaction, puis effectue une validation ou une restauration comme il convient.)  
+ Si la propriété ConnectionString définit la chaîne de connexion et que la propriété transaction a la valeur TRUE, le chargement en masse XML opère dans son propre contexte de transaction. (Par exemple, le chargement en masse XML démarre sa propre transaction, puis effectue une validation ou une restauration comme il convient.)  
   
- Si la propriété ConnectionCommand définit la connexion avec un objet de connexion existant et la propriété de Transaction est définie sur TRUE, le chargement en masse XML n’émet pas une instruction COMMIT ou ROLLBACK dans le cas d’une réussite ou d’échec, respectivement. En cas d'erreur, le chargement en masse XML retourne le message d'erreur approprié. La décision d'émettre une instruction COMMIT ou ROLLBACK appartient au client qui a initialisé le chargement en masse. L’objet de connexion qui est utilisé pour le chargement en masse XML doit être de type ICommand ou être un objet command ADO.  
+ Si la propriété ConnectionCommand définit la connexion avec un objet de connexion existant et que la propriété transaction a la valeur TRUE, le chargement en masse XML n’émet pas d’instruction COMMIT ou ROLLBACK en cas de succès ou d’échec, respectivement. En cas d'erreur, le chargement en masse XML retourne le message d'erreur approprié. La décision d'émettre une instruction COMMIT ou ROLLBACK appartient au client qui a initialisé le chargement en masse. L’objet de connexion utilisé pour le chargement en masse XML doit être de type ICommand ou d’un objet de commande ADO.  
   
- Dans SQLXML 4.0, un ConnectionObject ne peut pas être utilisé avec la propriété Transaction a la valeur FALSE. Le mode non transactionnel n’est pas pris en charge avec un ConnectionObject, car il est impossible d’ouvrir plus d’une interface IRowsetFastLoad sur une session dans le passé.  
+ Dans SQLXML 4,0, un ConnectionObject ne peut pas être utilisé avec la propriété transaction définie sur FALSe. Le mode non-Transact-1 n’est pas pris en charge avec un ConnectionObject, car il est impossible d’ouvrir plusieurs interfaces IRowsetFastLoad sur une session passée.  
   
   

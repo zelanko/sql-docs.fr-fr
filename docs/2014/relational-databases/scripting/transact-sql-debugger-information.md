@@ -1,6 +1,6 @@
 ---
-title: Informations du débogueur Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Informations du débogueur Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063427"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243072"
 ---
 # <a name="transact-sql-debugger-information"></a>Informations du débogueur Transact-SQL
   Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l'état d'exécution actuel.  
@@ -40,11 +40,11 @@ ms.locfileid: "66063427"
 -   Dans la barre d’outils **Déboguer** , cliquez sur **Points d’arrêt**, puis sélectionnez la fenêtre désirée.  
   
 ## <a name="transact-sql-expressions"></a>Expressions Transact-SQL  
- Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres : **Variables locales, Espion1**, **Espion2**, **Espion3** et **Espion4**.  
+ Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres au maximum : **Variables locales, Espion 1**, **Espion 2**, **Espion 3**et **Espion 4**.  
   
  La fenêtre **Variables locales** affiche des informations sur les variables locales dans l’étendue actuelle du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’ensemble d’expressions répertorié dans la fenêtre **Variables locales** change à mesure que le débogueur exécute les différentes parties du code.  
   
- Les expressions figurant dans **Espion Express** et les quatre fenêtres **Espion** ne servent pas uniquement à indiquer l’identificateur d’une variable. Vous pouvez spécifier une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prend une valeur unique, comme l'ajout d'un nombre à une variable, ou une instruction SELECT qui prend une valeur unique. Les exemples comprennent :  
+ Les expressions figurant dans **Espion Express** et les quatre fenêtres **Espion** ne servent pas uniquement à indiquer l’identificateur d’une variable. Vous pouvez spécifier une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prend une valeur unique, comme l'ajout d'un nombre à une variable, ou une instruction SELECT qui prend une valeur unique. Voici quelques exemples :  
   
 -   Nom d’une variable de type, comme @IntegerCounter.  
   
@@ -96,12 +96,12 @@ ms.locfileid: "66063427"
  En mode débogage, les onglets **Résultats** et **Messages** sont toujours actifs dans l’éditeur de requête. L’onglet **Résultats** continue à afficher les jeux de résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées au cours d’une session de débogage. L’onglet **Messages** continue à afficher des messages système, tels que *xx* lignes affectées et la sortie des instructions PRINT et RAISERROR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Variables locales (fenêtre)](transact-sql-debugger-locals-window.md)   
- [Espion (fenêtre)](transact-sql-debugger-watch-window.md)   
- [Boîte de dialogue Espion express](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Fenêtre Points d'arrêt](transact-sql-debugger-breakpoints-window.md)   
- [Fenêtre Pile des appels](transact-sql-debugger-call-stack-window.md)   
- [Fenêtre Threads](transact-sql-debugger-threads-window.md)   
+ [Fenêtre variables locales](transact-sql-debugger-locals-window.md)   
+ [Fenêtre Espion](transact-sql-debugger-watch-window.md)   
+ [Espion express (boîte de dialogue)](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Fenêtre points d’arrêt](transact-sql-debugger-breakpoints-window.md)   
+ [Fenêtre pile des appels](transact-sql-debugger-call-stack-window.md)   
+ [Fenêtre threads](transact-sql-debugger-threads-window.md)   
  [Fenêtre Sortie](transact-sql-debugger-output-window.md)   
  [Débogueur Transact-SQL](transact-sql-debugger.md)  
   

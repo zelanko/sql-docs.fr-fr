@@ -1,6 +1,6 @@
 ---
-title: Modifier un emplacement de point d’arrêt | Microsoft Docs
-ms.custom: ''
+title: Modifier un emplacement de point d'arrêt
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ade5926b8a63c3e5b5bf54dcb02c95260942264b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090469"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244886"
 ---
 # <a name="edit-a-breakpoint-location"></a>Modifier un emplacement de point d'arrêt
   L'emplacement du point d'arrêt spécifie la ligne et le caractère où réside ce point d'arrêt dans un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez modifier cet emplacement pour déplacer le point d'arrêt vers un autre emplacement du script ou vers un script différent.  
@@ -29,7 +29,7 @@ ms.locfileid: "66090469"
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Emplacement** dans le menu contextuel.  
   
-     -ou-  
+     - ou -  
   
      Dans la fenêtre **Points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Emplacement** dans le menu contextuel.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66090469"
      L’option **Permettre que le code source soit différent de la version d’origine** n’a aucun effet lors du débogage de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier un nombre d'accès](specify-a-hit-count.md)   
- [Spécifier une action de point d'arrêt](specify-a-breakpoint-action.md)   
- [Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)   
+ [Spécifier un nombre d’accès](specify-a-hit-count.md)   
+ [Spécifier une action de point d’arrêt](specify-a-breakpoint-action.md)   
+ [Spécifier une condition de point d’arrêt](specify-a-breakpoint-condition.md)   
  [Spécifier un filtre de point d'arrêt](specify-a-breakpoint-filter.md)  

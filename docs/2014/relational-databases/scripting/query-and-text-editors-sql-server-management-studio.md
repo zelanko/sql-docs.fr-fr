@@ -1,6 +1,6 @@
 ---
-title: Éditeurs de texte et de requête (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Éditeurs de texte et de requête
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891757"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243330"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
   Vous pouvez utiliser l'un des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour modifier et tester de manière interactive un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou pour modifier un fichier texte brut ou XML. Chaque éditeur est pris en charge par un service propre à un langage qui met en couleurs les mots clés et qui vérifie la syntaxe et les erreurs d'utilisation. L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprend un débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez utiliser pour résoudre les problèmes présents dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -61,13 +61,13 @@ ms.locfileid: "68891757"
 ## <a name="code-editor-components"></a>Composants de l'éditeur de code  
  Les éditeurs de code contiennent les fonctionnalités suivantes en plus de celles partagées avec les éditeurs de texte et XML :  
   
- **Résultats**  
+ **About**  
  Cette fenêtre permet d'afficher les résultats d'une requête. La fenêtre peut afficher les résultats dans une grille ou du texte, ou les résultats peuvent être dirigés vers un fichier. Les grilles de résultats peuvent être affichées comme des fenêtres avec onglets distinctes.  
   
- **IntelliSense**  
+ **Semi**  
  Dans les éditeurs, dans le menu **Edition** , pointez sur **IntelliSense**pour consulter les options [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense.  
   
- **codage en couleurs ;**  
+ **Codage en couleurs**  
  Affiche différentes couleurs pour chaque type d'élément syntaxique, qui améliore la lisibilité des instructions complexes.  
   
  **Mise en relief du code**  
@@ -79,7 +79,7 @@ ms.locfileid: "68891757"
  **Messages**  
  Affiche des erreurs, des avertissements et des messages d'information retournés par le serveur lors de l'exécution d'un script. La liste de messages ne change pas tant que le script n'est pas réexécuté.  
   
- **Barre d'état**  
+ **Barre d’état**  
  Affiche des informations système associées à la fenêtre de l'éditeur de requête, par exemple l'instance à laquelle l'éditeur de requête est connecté.  
   
 ## <a name="database-engine-query-editor-components"></a>Composants de l'éditeur de requête du moteur de base de données  
@@ -91,7 +91,7 @@ ms.locfileid: "68891757"
  **Liste d'erreurs**  
  Affiche les erreurs syntaxiques et sémantiques détectées par IntelliSense. La liste d'erreurs se met à jour de manière dynamique lors de la modification des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- **Plan d'exécution de requêtes graphique**  
+ **Showplan graphique**  
  Affiche les étapes logiques établies dans le plan d'exécution d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Statistiques du client**  
@@ -107,26 +107,26 @@ ms.locfileid: "68891757"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX.|[Éditeur de requête MDX &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX.|[Éditeur de requête DMX &#40;Analysis Services – Exploration de données&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Éditeur de requête Moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX.|[Éditeur de requête MDX &#40;Analysis Services-données multidimensionnelles&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX.|[Éditeur de requête DMX &#40;Analysis Services d’exploration de données&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur XML/A.|[Éditeur XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
-|Décrit comment configurer les options des différents éditeurs, tels que la numérotation des lignes et les options IntelliSense.|[Configurer des éditeurs &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
-|Décrit les différentes façons d'ouvrir les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Ouvrir un éditeur &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
-|Décrit comment gérer le mode d'affichage, tel que le retour automatique à la ligne, le fractionnement d'une fenêtre, ou les onglets.|[Gérer l'Éditeur et le mode d'affichage](manage-the-editor-and-view-mode.md)|  
+|Décrit comment configurer les options des différents éditeurs, tels que la numérotation des lignes et les options IntelliSense.|[Configurer les éditeurs &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
+|Décrit les différentes façons d'ouvrir les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Ouvrez un éditeur &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
+|Décrit comment gérer le mode d'affichage, tel que le retour automatique à la ligne, le fractionnement d'une fenêtre, ou les onglets.|[Gérer l’éditeur et le mode d’affichage](manage-the-editor-and-view-mode.md)|  
 |Explique comment définir les options de mise en forme, telles que le texte masqué ou la mise en retrait.|[Gérer la mise en forme du code](manage-code-formatting.md)|  
 |Décrit comment parcourir le texte dans une fenêtre d'éditeur à l'aide de fonctionnalités telles que la recherche incrémentielle ou Atteindre.|[Naviguer dans le code et le texte](navigate-code-and-text.md)|  
 |Explique comment définir les options de codage en couleurs pour différentes classes de syntaxe, ce qui facilite la lecture des instructions complexes.|[Codage en couleurs dans les éditeurs de requête](color-coding-in-query-editors.md)|  
 |Décrit comment utiliser la mise en relief du code pour masquer des parties de scripts complexes que vous n'utilisez pas actuellement.|[Mise en relief du code](code-outlining.md)|  
-|Explique comment faire glisser le texte d'un emplacement dans un script et le placer à un nouvel emplacement.|[Glisser et déplacer du texte](drag-and-drop-text.md)|  
-|Décrit comment effectuer une opération de recherche et de remplacement globale, par exemple lors de la modification des noms des colonnes.|[Recherche et remplacement](search-and-replace.md)|  
+|Explique comment faire glisser le texte d'un emplacement dans un script et le placer à un nouvel emplacement.|[Glisser-déplacer du texte](drag-and-drop-text.md)|  
+|Décrit comment effectuer une opération de recherche et de remplacement globale, par exemple lors de la modification des noms des colonnes.|[Rechercher et remplacer](search-and-replace.md)|  
 |Décrit comment définir des signets afin de rechercher plus facilement les segments de code importants.|[Gérer les signets](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Explique comment imprimer des scripts ou les résultats dans une fenêtre ou une grille.|[Imprimer le code et les résultats](print-code-and-results.md)|  
 |Décrit comment utiliser les fonctionnalités sqlcmd dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête](edit-sqlcmd-scripts-with-query-editor.md)|  
-|Décrit comment utiliser des fonctionnalités IntelliSense telles que la saisie semi-automatique des noms d'objets à mesure que vous les tapez, ou la garantie que les points d'arrêt sont placés dans des emplacements valides.|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
+|Décrit comment utiliser des fonctionnalités IntelliSense telles que la saisie semi-automatique des noms d'objets à mesure que vous les tapez, ou la garantie que les points d'arrêt sont placés dans des emplacements valides.|[SQL Server Management Studio de &#40;IntelliSense&#41;](intellisense-sql-server-management-studio.md)|  
 |Décrit comment utiliser les extraits de code dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Les extraits de code sont des modèles pour des instructions ou des blocs couramment utilisés, et peuvent être personnalisés ou étendus pour inclure les extraits de code spécifiques au site.|[Extraits de code Transact-SQL](transact-sql-code-snippets.md)|  
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code et afficher les informations de débogage telles que les valeurs des variables et des paramètres.|[Débogueur Transact-SQL](transact-sql-debugger.md)|  
-|Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’état &#40;éditeur de requête du moteur de base de données&#41;](status-bar-database-engine-query-editor.md)|  
+|Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’État &#40;Moteur de base de données éditeur de requête&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Raccourcis clavier SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

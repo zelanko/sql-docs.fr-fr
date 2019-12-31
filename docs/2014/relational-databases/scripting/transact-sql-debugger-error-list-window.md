@@ -1,6 +1,6 @@
 ---
-title: Liste d’erreurs, fenêtre (Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Fenêtre Liste d'erreurs
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063441"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243091"
 ---
 # <a name="error-list-window-management-studio"></a>Fenêtre Liste d'erreurs (Management Studio)
   La [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Liste d’erreurs** répertorie les erreurs syntaxiques et sémantiques générées par le code IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +56,8 @@ ms.locfileid: "66063441"
  La **Liste d'erreurs** ne contient pas de liens vers des informations supplémentaires sur des erreurs spécifiques.  
   
 ## <a name="transact-sql-errors-in-management-studio"></a>Erreurs Transact-SQL dans Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les erreurs pour les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] aux emplacements suivants :  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les erreurs pour les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] aux emplacements suivants :  
   
 -   La **Liste d’erreurs** contient toutes les erreurs syntaxiques et sémantiques détectées par IntelliSense dans l’éditeur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Cette liste d'erreurs est mise à jour dynamiquement au fur et à mesure que vous modifiez des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . La liste inclut toutes les erreurs que l’éditeur a identifiées dans chaque script [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'éditeur n'arrête pas l'analyse d'un fichier lorsque des erreurs ont été identifiées dans un script. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IntelliSense dans l’éditeur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne prend pas en charge tous les éléments syntaxiques [!INCLUDE[tsql](../../includes/tsql-md.md)] . La **Liste d'erreurs** contient uniquement les erreurs de la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] prise en charge par IntelliSense.  
   
@@ -76,7 +77,7 @@ ms.locfileid: "66063441"
  **Description**  
  Affiche le texte de l'entrée de l'erreur. Les descriptions longues s'étendent sur plusieurs lignes.  
   
- **Fichier**  
+ **Txt**  
  Affiche le nom du fichier de script qui a généré l'erreur.  
   
  **Ligne**  
@@ -85,5 +86,5 @@ ms.locfileid: "66063441"
  **Colonne**  
  Affiche un entier qui indique la position de l'erreur dans la ligne de code.  
   
- **Projet**  
+ **Projection**  
  Affiche le nom du projet qui comprend le fichier de script.  

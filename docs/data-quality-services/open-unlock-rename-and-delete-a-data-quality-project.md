@@ -1,6 +1,5 @@
 ---
-title: Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données | Microsoft Docs
-ms.custom: ''
+title: Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -15,14 +14,14 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 5054e2a14260bf16aafb4042fac39d191b8f5afa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d849ca48b5e4a1cc8d01eebc1649075251da3fd0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935087"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245970"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données
 
@@ -30,9 +29,9 @@ ms.locfileid: "67935087"
 
   Cette rubrique explique comment gérer un projet de qualité des données à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , par exemple ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="LimitationsRestrictions"></a>Limitations et restrictions  
   
 -   Vous ne pouvez pas ouvrir un projet verrouillé créé par un autre utilisateur.  
   
@@ -42,17 +41,17 @@ ms.locfileid: "67935087"
   
 -   Vous pouvez uniquement déverrouiller un projet de qualité des données que vous avez vous-même créé.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Vous devez disposer d'au moins un projet de qualité des données à gérer.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour gérer un projet de qualité des données.  
   
-##  <a name="Open"></a> Ouvrir un projet de qualité des données  
+##  <a name="Open"></a>Ouvrir un projet de qualité des données  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir le projet de qualité des données**. L'écran **Ouvrir le projet** s'affiche.  
   
@@ -62,22 +61,22 @@ ms.locfileid: "67935087"
   
 4.  Le projet de qualité des données s'ouvre dans le même état d'activité que celui dans lequel il se trouvait lorsqu'il a été fermé pour la dernière fois. Un projet de qualité des données peut prendre les états suivants :  
   
-    -   Pour l’activité **Nettoyage**, un projet de qualité des données peut avoir les états suivants : **Nettoyage - Mapper**, **Nettoyage - Nettoyer**, **Nettoyage - Gérer et afficher les résultats** et **Nettoyage - Exporter**.  
+    -   Pour l’activité **Nettoyage**, un projet de qualité des données peut prendre les états suivants : **Nettoyage - Mapper**, **Nettoyage - Nettoyer**, **Nettoyage - Gérer et afficher les résultats** et **Nettoyage - Exporter**.  
   
-    -   Pour l’activité **Correspondance**, un projet de qualité des données peut avoir les états suivants : **Correspondance - Mapper**, **Correspondance - Correspondance**, **Correspondance - Survivance** et **Correspondance - Exporter**.  
+    -   Pour l’activité **Correspondance**, un projet de qualité des données peut prendre les états suivants : **Correspondance - Mapper**, **Correspondance - Correspondance**, **Correspondance - Survivance** et **Correspondance - Exporter**.  
   
-##  <a name="Unlock"></a> Déverrouiller un projet de qualité des données  
+##  <a name="Unlock"></a>Déverrouiller un projet de qualité des données  
  Lorsque vous créez un projet de qualité des données, il se trouve dans un état verrouillé pour empêcher son utilisation ou sa modification par d'autres utilisateurs. Vous devez déverrouiller le projet de qualité des données une fois votre travail terminé si vous voulez que d'autres utilisateurs travaillent dessus. Un symbole de verrou est affiché pour les projets verrouillés.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir le projet de qualité des données**. L'écran **Ouvrir le projet** s'affiche.  
   
 3.  Dans l'écran **Ouvrir le projet** , cliquez avec le bouton droit sur un projet de qualité des données verrouillé que vous avez créé, puis cliquez sur **Déverrouiller** dans le menu contextuel. Une coche verte s'affiche pour le projet, indiquant qu'il est déverrouillé.  
   
-##  <a name="Rename"></a> Renommer un projet de qualité des données  
+##  <a name="Rename"></a>Renommer un projet de qualité des données  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir le projet de qualité des données**. L'écran **Ouvrir le projet** s'affiche.  
   
@@ -85,9 +84,9 @@ ms.locfileid: "67935087"
   
 4.  Le nom du projet de qualité des données peut être modifié dans la colonne **Nom** . Tapez un nouveau nom, puis appuyez sur Entrée.  
   
-##  <a name="Delete"></a> Supprimer un projet de qualité des données  
+##  <a name="Delete"></a>Supprimer un projet de qualité des données  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir le projet de qualité des données**. L'écran **Ouvrir le projet** s'affiche.  
   

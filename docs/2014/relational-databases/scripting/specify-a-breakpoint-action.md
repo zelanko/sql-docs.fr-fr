@@ -1,6 +1,6 @@
 ---
-title: Spécifier une action de point d’arrêt | Microsoft Docs
-ms.custom: ''
+title: Spécifier une action de point d'arrêt
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,17 +13,17 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97454a06f4b03b3148984697e0056aa87dff1200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090149"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243242"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
   L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Considérations sur l'action  
+##  <a name="BKMK_ActionConsiderations"></a>Considérations relatives aux actions  
  L'action par défaut pour un point d'arrêt consiste à arrêter l'exécution lorsque le nombre d'accès et la condition de point d'arrêt sont tous les deux satisfaits. L’action **Lorsqu’il est atteint** dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] sert, quant à elle, principalement à afficher des informations dans la fenêtre **Sortie** du débogueur en spécifiant un message à afficher.  
   
  Le message à afficher est indiqué dans l’option **Afficher un message** et spécifié comme une chaîne de texte qui inclut des expressions contenant des informations issues du [!INCLUDE[tsql](../../includes/tsql-md.md)] débogué. Ces expressions sont notamment les suivantes.  
@@ -50,7 +50,7 @@ ms.locfileid: "66090149"
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Lorsqu’il est atteint** dans le menu contextuel.  
   
-     -ou-  
+     - ou -  
   
      Dans la fenêtre des **points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Lorsqu’il est atteint** dans le menu contextuel.  
   
@@ -65,5 +65,5 @@ ms.locfileid: "66090149"
 3.  Cliquez sur **OK** pour implémenter les modifications ou sur **Annuler** pour fermer sans appliquer les modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)   
+ [Spécifier une condition de point d’arrêt](specify-a-breakpoint-condition.md)   
  [Spécifier un nombre d'accès](specify-a-hit-count.md)  

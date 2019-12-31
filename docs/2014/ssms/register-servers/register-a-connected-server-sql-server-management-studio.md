@@ -1,6 +1,6 @@
 ---
-title: Inscrire un serveur connecté (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Inscrire un serveur connecté
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80dbd927f0a1b008e48fda7fcbd4a7e75b7fbaf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191942"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241340"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Inscrire un serveur connecté (SQL Server Management Studio)
   Cette rubrique explique comment inscrire des serveurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Lors de l'inscription du serveur, vous pouvez enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment. Un serveur peut être inscrit avant la connexion ou au moment de la connexion depuis l'Explorateur d'objets.  
   
  **Dans cette rubrique**  
   
--   **Pour inscrire un serveur, utilisez :**  
+-   **Pour inscrire un serveur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>Pour inscrire un serveur connecté  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63191942"
      **Nouveau groupe**  
      Cliquez sur cette option pour ouvrir la boîte de dialogue **Nouveau groupe** et créer un nouveau groupe de serveurs pour le serveur inscrit.  
   
-     **Enregistrer**  
+     **Été**  
      Cliquez sur ce bouton pour enregistrer les informations entrées et créer un serveur inscrit.  
   
   

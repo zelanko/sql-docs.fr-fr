@@ -1,6 +1,6 @@
 ---
-title: Fenêtres Résultats de la recherche | Microsoft Docs
-ms.custom: ''
+title: Fenêtres Résultats de la recherche
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090494"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245127"
 ---
 # <a name="find-results-windows"></a>Fenêtres Résultats de la recherche
-  Les deux fenêtres Résultats de la recherche affichent les correspondances trouvées par une recherche effectuée à l'aide des onglets **Rechercher dans les fichiers** ou **Remplacer dans les fichiers** de la boîte de dialogue **Rechercher et remplacer** . La commande **Options de résultat** pour **Rechercher dans les fichiers** et **Remplacer dans les fichiers** vous permet de choisir la fenêtre Résultats de la recherche dans laquelle seront répertoriées, le cas échéant, les occurrences trouvées.  
+  Les deux fenêtres résultats de la recherche affichent les correspondances trouvées à l’aide des onglets **Rechercher dans les fichiers** ou **remplacer dans les fichiers** de la boîte de dialogue **Rechercher et remplacer** . La commande **Options de résultat** pour **Rechercher dans les fichiers** et **Remplacer dans les fichiers** vous permet de choisir la fenêtre Résultats de la recherche dans laquelle seront répertoriées, le cas échéant, les occurrences trouvées.  
   
  La fenêtre Résultats de la recherche sélectionnée s'ouvre automatiquement dès qu'une correspondance est trouvée. Pour afficher manuellement une fenêtre Résultats de la recherche, cliquez sur **Autres fenêtres** dans le menu **Affichage** , puis cliquez sur **Résultats de la recherche 1** ou **Résultats de la recherche 2**.  
   
@@ -31,10 +31,10 @@ ms.locfileid: "66090494"
 ## <a name="toolbar-buttons"></a>Boutons de barre d'outils  
  Vous pouvez utiliser les boutons de barre d'outils suivants pour parcourir la liste des résultats et accéder directement aux lignes de votre code qui contiennent les correspondances.  
   
- **indicateur de page + flèche vers le haut**  
+ **indicateur de page + flèche haut**  
  Pour atteindre la ligne où la correspondance sélectionnée a été trouvée.  
   
- **page + flèche vers la gauche**  
+ **page + flèche gauche**  
  Pour atteindre la ligne où se trouve la correspondance précédente.  
   
  **page + flèche vers la droite**  
@@ -46,10 +46,10 @@ ms.locfileid: "66090494"
 ## <a name="shortcut-keys"></a>Touches de raccourci  
  Vous pouvez utiliser les touches de raccourci suivantes pour naviguer rapidement dans les correspondances trouvées.  
   
- CTRL+ORIGINE  
+ Ctrl+Origine  
  Pour défiler vers le haut dans la fenêtre Résultats de la recherche.  
   
- CTRL+FIN  
+ Ctrl+Fin  
  Pour défiler vers le bas dans la fenêtre Résultats de la recherche.  
   
  Pg. préc  

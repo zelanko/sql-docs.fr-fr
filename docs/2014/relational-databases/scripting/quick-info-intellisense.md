@@ -1,6 +1,6 @@
 ---
-title: Infos express (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: Infos express (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 614f0f347327171c8ac4fbcb20f9a3d670255488
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f3c1e58fb99e23682df63903553b9167c74a82e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090245"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243725"
 ---
 # <a name="quick-info-intellisense"></a>Infos express (IntelliSense)
-  L’option [!INCLUDE[msCoName](../../includes/msconame-md.md)] Info express **de** IntelliSense affiche la déclaration complète de tout identificateur présent dans votre code. Lorsque vous déplacez le pointeur de la souris sur un identificateur, sa déclaration apparaît dans une fenêtre indépendante jaune. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **Info express** est disponible dans les éditeurs de requête XML et du moteur de base de données.  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] option **Info Express** de IntelliSense affiche la déclaration complète de tout identificateur dans votre code. Lorsque vous déplacez le pointeur de la souris sur un identificateur, sa déclaration apparaît dans une fenêtre indépendante jaune. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **Info express** est disponible dans les éditeurs de requête XML et du moteur de base de données.  
   
 ## <a name="transact-sql-quick-info"></a>Info express (Transact-SQL)  
- **Info express** affiche deux types d’informations dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Quand l’option **Info express** n’est pas en mode débogage, elle affiche la déclaration de l’expression. En revanche, en mode débogage, **Info express** affiche le nom de l’expression et sa valeur actuelle.  
+ **Info Express** affiche deux types d’informations dans l' [!INCLUDE[ssDE](../../includes/ssde-md.md)] éditeur de requête. Quand l’option **Info express** n’est pas en mode débogage, elle affiche la déclaration de l’expression. En revanche, en mode débogage, **Info express** affiche le nom de l’expression et sa valeur actuelle.  
   
  Dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , **Info express** n’est disponible que pour les parties de la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] prises en charge par IntelliSense. Par exemple, si vous déplacez le pointeur de la souris sur l’identificateur d’un objet dont le type de données n’est pas pris en charge par IntelliSense, la fenêtre indépendante **Info express** contient un message indiquant que le type de données n’est pas pris en charge.  
   

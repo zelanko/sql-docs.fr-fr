@@ -1,5 +1,5 @@
 ---
-title: 'À l’aide de le : Identity des Annotations et | Microsoft Docs'
+title: Utilisation des annotations sql:identity et sql:guid
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,27 +24,27 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a6c19e23fc886e15b8e116ca293c4560fded74e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50483d7f6f84371b42bf0c79fbc74a1f85a65eab
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066885"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246818"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilisation des annotations sql:identity et sql:guid
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Vous pouvez spécifier le **: Identity** et **sql:guid** annotations dans un schéma XSD pour n’importe quel nœud qui mappe à une colonne de base de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tandis que le format de la mise à jour prend en charge la **updg : à l’identité** et **updg : GUID** attributs, le format DiffGram est pas le cas. Le **updg : à l’identité** attribut définit le comportement de mise à jour d’une colonne de type IDENTITY. Le **updg : GUID** attribut vous permet d’obtenir une valeur GUID à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’utiliser dans la mise à jour. Pour plus d’informations et pour obtenir des exemples fonctionnels, consultez [insertion de données à l’aide de programmes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  Vous pouvez spécifier les annotations **SQL : Identity** et **SQL : GUID** dans un schéma XSD sur tout nœud mappé à une colonne de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de données dans. Tandis que le format mise à jour prend en charge les attributs **attribut updg : at-Identity** et **attribut updg : GUID** , le format DiffGram ne le fait pas. L’attribut **attribut updg : at-Identity** définit le comportement de la mise à jour d’une colonne de type Identity. L’attribut **attribut updg : GUID** vous permet d’obtenir une valeur GUID à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir de et de l’utiliser dans le mise à jour. Pour plus d’informations et pour obtenir des exemples fonctionnels, consultez [insertion de données à l’aide de XML codes &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
- Le **: Identity** et **sql:guid** annotations étendent cette fonctionnalité aux DiffGrams.  
+ Les annotations **SQL : Identity** et **SQL : GUID** étendent cette fonctionnalité aux DiffGrams.  
   
- Lorsque vous exécutez un DiffGram, il est d'abord converti en un code de mise à jour (updategram), puis le code de mise à jour (updategram) est exécuté. En spécifiant le **: Identity** et **sql:guid** annotations dans le schéma XSD, sont en fait définissant le comportement d’une mise à jour. Par conséquent, toutes les annotations sont décrites dans le contexte d'un code de mise à jour (updategram). Les annotations peuvent être utilisées à la fois pour les DiffGrams et les codes de mise à jour (updategram) ; toutefois, les codes de mise à jour (updategram) offrent déjà un moyen plus puissant pour gérer l'identité et les valeurs GUID.  
+ Lorsque vous exécutez un DiffGram, il est d'abord converti en un code de mise à jour (updategram), puis le code de mise à jour (updategram) est exécuté. En spécifiant les annotations **SQL : Identity** et **SQL : GUID** dans le schéma XSD, vous définissez en fait le comportement d’un mise à jour. Par conséquent, toutes les annotations sont décrites dans le contexte d'un code de mise à jour (updategram). Les annotations peuvent être utilisées à la fois pour les DiffGrams et les codes de mise à jour (updategram) ; toutefois, les codes de mise à jour (updategram) offrent déjà un moyen plus puissant pour gérer l'identité et les valeurs GUID.  
   
- Le **: Identity** et **sql:guid** annotations peuvent être définies sur un élément de contenu complexe.  
+ Les annotations **SQL : Identity** et **SQL : GUID** peuvent être définies sur un élément de contenu complexe.  
   
 ## <a name="sqlidentity-annotation"></a>Annotation sql:identity  
- Vous pouvez spécifier le **: Identity** annotation dans le schéma XSD sur n’importe quel nœud qui est mappé à une colonne de base de données de type IDENTITY. La valeur spécifiée pour cette annotation définit comment la mise à jour de la colonne de type d’identité (à l’aide de la valeur fournie dans la mise à jour pour modifier la colonne ou en ignorant la valeur, auquel cas un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-valeur générée est utilisée pour cette colonne).  
+ Vous pouvez spécifier l’annotation **SQL : Identity** dans le schéma XSD sur tout nœud mappé à une colonne de base de données de type Identity. La valeur spécifiée pour cette annotation définit le mode de mise à jour de la colonne de type IDENTity (à l’aide de la valeur fournie dans mise à jour pour modifier la colonne ou en ignorant la valeur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auquel cas une valeur générée est utilisée pour cette colonne).  
   
- Le **: Identity** annotation peut avoir deux valeurs :  
+ Deux valeurs peuvent être assignées à l’annotation **SQL : Identity** :  
   
  ignore  
  Ordonne au code de mise à jour (updategram) d'ignorer toute valeur fournie dans le code de mise à jour (updategram) pour cette colonne et de compter sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer la valeur d'identité.  
@@ -52,17 +52,17 @@ ms.locfileid: "68066885"
  useValue  
  Ordonne au code de mise à jour (updategram) d'utiliser la valeur fournie dans le code de mise à jour (updategram) pour mettre à jour la colonne de type IDENTITY. Un code de mise à jour (updategram) ne vérifie pas si la colonne est une valeur d'identité ou pas.  
   
- Si la mise à jour Spécifie une valeur pour la colonne de type IDENTITY, le **: Identity = « useValue »** doit être spécifié dans le schéma.  
+ Si le mise à jour spécifie une valeur pour la colonne de type IDENTity, **SQL : Identity = "useValue"** doit être spécifié dans le schéma.  
   
 ## <a name="sqlguid-annotation"></a>Annotation sql:guid  
- Un code de mise à jour (updategram) peut faire en sorte que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une valeur GUID, puis utiliser cette valeur dans le code de mise à jour (updategram). Dans le contexte de DiffGrams, vous pouvez utiliser la **sql:guid** annotation pour spécifier s’il faut utiliser une valeur GUID qui est générée par SQL Server ou utilisez la valeur qui est fournie dans la mise à jour pour cette colonne.  
+ Un code de mise à jour (updategram) peut faire en sorte que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une valeur GUID, puis utiliser cette valeur dans le code de mise à jour (updategram). Dans le contexte des DiffGrams, vous pouvez utiliser l’annotation **SQL : GUID** pour spécifier s’il faut utiliser une valeur GUID générée par SQL Server ou utiliser la valeur fournie dans mise à jour pour cette colonne.  
   
- Le **sql:guid** annotation peut avoir deux valeurs :  
+ Deux valeurs peuvent être assignées à l’annotation **SQL : GUID** :  
   
  generate  
  Spécifie que le GUID généré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être utilisé pour cette colonne de l'opération de mise à jour.  
   
  useValue  
- Spécifie que la valeur spécifiée dans le code de mise à jour (updategram) doit être utilisée pour la colonne. Valeur par défaut.  
+ Spécifie que la valeur spécifiée dans le code de mise à jour (updategram) doit être utilisée pour la colonne. Il s'agit de la valeur par défaut.  
   
   

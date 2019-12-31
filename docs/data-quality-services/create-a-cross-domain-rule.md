@@ -1,6 +1,5 @@
 ---
-title: Créer une règle inter-domaines | Microsoft Docs
-ms.custom: ''
+title: Créer une règle inter-domaines
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 45222a4ae99578c40ce14870433fb929c1127f51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992333"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245472"
 ---
 # <a name="create-a-cross-domain-rule"></a>Créer une règle inter-domaines
 
@@ -28,25 +27,25 @@ ms.locfileid: "67992333"
   
  La clause If et la clause Then d'une règle inter-domaines sont définies chacune pour l'un des domaines uniques du domaine composite. Chaque clause doit être définie pour un seul domaine. Une règle inter-domaines doit être en relation avec plusieurs domaines uniques ; vous ne pouvez pas définir une règle simple de domaine (pour un seul domaine) pour un domaine composite. Pour cela, définissez une règle de domaine pour un seul domaine. La clause If et la clause Then peuvent chacune contenir une ou plusieurs conditions.  
   
- Une règle inter-domaines ayant des conditions définitives applique la logique de règles aux synonymes de la valeur des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives pour les clauses If et Then sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, supposons que vous avez la règle interdomaine suivante pour un domaine composite : « Pour « Ville », si la valeur est égale à « Los Angeles », alors pour « État », la valeur est égale à « CA ». « Si « Los Angeles » et « LA » sont synonymes, cette règle retourne comme corrects « Los Angeles CA » et « LA CA », et comme erronés « Los Angeles WA » et « LA WA ».  
+ Une règle inter-domaines ayant des conditions définitives applique la logique de règles aux synonymes de la valeur des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives pour les clauses If et Then sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, imaginons que vous ayez la règle inter-domaines suivante pour un domaine composite : « Pour « Ville », si la valeur est égale à « Los Angeles », alors pour « État », la valeur est égale à « CA ». « Si « Los Angeles » et « LA » sont synonymes, cette règle retourne comme corrects « Los Angeles CA » et « LA CA », et comme erronés « Los Angeles WA » et « LA WA ».  
   
  En dehors de vous permettre de connaître la validité d'une règle inter-domaines, la clause finale *Then* d'une règle inter-domaines, **La valeur est égale à**, corrige également les données pendant l'activité de nettoyage. Pour plus d'informations, consultez [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) dans [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  Les règles inter-domaines sont prises en compte après toutes les règles simples qui affectent seulement un domaine. La règle inter-domaines n'est appliquée que si une valeur franchit les règles de domaine simple (si elles existent). Le domaine composite et les domaines uniques sur lesquels une règle s'exécute doivent tous être définis avant que la règle ne puisse être exécutée.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Pour créer une règle inter-domaines, vous devez avoir créé et ouvert un domaine composite.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une règle inter-domaines.  
   
-##  <a name="Create"></a> Créer les règles inter-domaines  
+##  <a name="Create"></a>Créer des règles inter-domaines  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d’informations, consultez [Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -79,7 +78,7 @@ ms.locfileid: "67992333"
   
 9. Poursuivez jusqu'à la procédure de test ci-dessous.  
   
-##  <a name="Test"></a> Tester les règles inter-domaines  
+##  <a name="Test"></a>Tester les règles inter-domaines  
   
 1.  Testez la règle interdomaines comme suit :  
   
@@ -97,7 +96,7 @@ ms.locfileid: "67992333"
   
 2.  Lorsque vous avez terminé vos règles inter-domaines, cliquez sur **Terminer** pour terminer l'activité de gestion de domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Suivi : après la création d’une règle inter-domaines  
+##  <a name="FollowUp"></a>Suivi : après avoir créé une règle inter-domaines  
  Après avoir créé une règle inter-domaines, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine, vous pouvez exécuter la découverte de connaissances pour ajouter des connaissances au domaine ou vous pouvez ajouter une stratégie correspondante au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   

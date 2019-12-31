@@ -1,6 +1,6 @@
 ---
-title: Exécuter le débogueur Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Exécuter le débogueur Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e53e2f756ad7161cc6df91b8146945e60b0c91c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090218"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243704"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
   Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] après avoir ouvert une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez ensuite exécuter votre code [!INCLUDE[tsql](../../includes/tsql-md.md)] en mode débogage jusqu'à ce que vous arrêtiez le débogueur. Vous pouvez définir des options permettant de personnaliser la façon dont le débogueur s'exécute.  
@@ -35,9 +35,10 @@ ms.locfileid: "66090218"
   
 -   Si votre éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est connecté à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un autre ordinateur, vous avez dû configurer le débogueur de façon qu’il accepte le débogage distant. Pour plus d’informations, consultez [configurer le débogueur Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
   
--   La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est un membre du rôle serveur fixe sysadmin.  
+-   La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est membre du rôle serveur fixe sysadmin.  
   
 -   La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.  
   
@@ -76,15 +77,15 @@ ms.locfileid: "66090218"
   
 |Commande du menu Déboguer|Commande de raccourci de l'éditeur|Bouton de la barre d'outils|Raccourci clavier|Action|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
-|**Fenêtres/Points d'arrêt**|Non disponible|**Points d'arrêt**|Ctrl+Alt+B|Affiche la fenêtre **Points d'arrêt** , dans laquelle vous pouvez afficher et gérer les points d'arrêt.|  
-|**Fenêtres/Espion/Espion 1**|Non disponible|**Points d'arrêt/Espion/Espion 1**|Ctrl+Alt+W, 1|Affiche la fenêtre **Espion 1** .|  
-|**Fenêtres/Espion/Espion 2**|Non disponible|**Points d'arrêt/Espion/Espion 2**|Ctrl+Alt+W, 2|Affiche la fenêtre **Espion 2** .|  
-|**Fenêtres/Espion/Espion 3**|Non disponible|**Points d'arrêt/Espion/Espion 3**|Ctrl+Alt+W, 3|Affiche la fenêtre **Espion 3** .|  
-|**Fenêtres/Espion/Espion 4**|Non disponible|**Points d'arrêt/Espion/Espion 4**|Ctrl+Alt+W, 4|Affiche la fenêtre **Espion 4** .|  
-|**Fenêtres/Variables locales**|Non disponible|**Points d'arrêt/Variables locales**|Ctrl+Alt+V, L|Affiche la fenêtre **Variables locales** .|  
-|**Fenêtres/Pile des appels**|Non disponible|**Points d'arrêt/Pile des appels**|Ctrl+Alt+C|Affiche la fenêtre **Pile des appels** .|  
-|**Fenêtres/Threads**|Non disponible|**Points d'arrêt/Threads**|Ctrl+Alt+H|Affiche la fenêtre **Threads** .|  
-|**Continuer**|Non disponible|**Continuer**|Alt+F5|Exécuter le code jusqu'au point d'arrêt suivant. **Continuer** est inactif tant que le focus ne se trouve pas sur une fenêtre de l'éditeur de requête en mode débogage.|  
+|**Fenêtres/points d’arrêt**|Non disponible|**Points d’arrêt**|Ctrl+Alt+B|Affiche la fenêtre **Points d'arrêt** , dans laquelle vous pouvez afficher et gérer les points d'arrêt.|  
+|**Fenêtres/espion/Espion1**|Non disponible|**Points d’arrêt/espion/Espion1**|Ctrl+Alt+W, 1|Affiche la fenêtre **Espion 1** .|  
+|**Fenêtres/espion/espion 2**|Non disponible|**Points d’arrêt/espion/espion 2**|Ctrl+Alt+W, 2|Affiche la fenêtre **Espion 2** .|  
+|**Fenêtres/espion/espion 3**|Non disponible|**Points d’arrêt/espion/espion 3**|Ctrl+Alt+W, 3|Affiche la fenêtre **Espion 3** .|  
+|**Windows/Watch/Espion4**|Non disponible|**Points d’arrêt/espion/Espion4**|Ctrl+Alt+W, 4|Affiche la fenêtre **Espion 4** .|  
+|**Fenêtres/variables locales**|Non disponible|**Points d’arrêt/variables locales**|Ctrl+Alt+V, L|Affichez la fenêtre **variables locales** .|  
+|**Windows/pile des appels**|Non disponible|**Points d’arrêt/pile des appels**|Ctrl+Alt+C|Affichez la fenêtre **pile des appels** .|  
+|**Windows/threads**|Non disponible|**Points d’arrêt/threads**|Ctrl+Alt+H|Affiche la fenêtre **Threads** .|  
+|**Pouvoir**|Non disponible|**Pouvoir**|Alt+F5|Exécuter le code jusqu'au point d'arrêt suivant. **Continuer** n’est pas actif tant que vous n’êtes pas concentré sur une fenêtre de l’éditeur de requête en mode débogage.|  
 |**Démarrer le débogage**|Non disponible|**Démarrer le débogage**|Alt+F5|Fait passer une fenêtre de l'éditeur de requête en mode débogage et exécute le code jusqu'au premier point d'arrêt. Si le focus se trouve sur une fenêtre de l'éditeur de requête en mode débogage, **Démarrer le débogage** est remplacé par **Continuer**.|  
 |**Interrompre tout**|Non disponible|**Interrompre tout**|Ctrl+Alt+Pause|Cette fonctionnalité n'est pas utilisée par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**Arrêter le débogage**|Non disponible|**Arrêter le débogage**|Maj+F5|Fait sortir une fenêtre de l'éditeur de requête du mode débogage et restaure le mode normal.|  
@@ -92,20 +93,20 @@ ms.locfileid: "66090218"
 |**Pas à pas détaillé**|Non disponible|**Pas à pas détaillé**|F11|Exécute l'instruction suivante et ouvre une nouvelle fenêtre de l'éditeur de requête en mode débogage si l'instruction suivante exécute une procédure stockée, un déclencheur ou une fonction.|  
 |**Pas à pas principal**|Non disponible|**Pas à pas principal**|F10|Identique à **Pas à pas détaillé**, à la différence près que les fonctions, les procédures stockées ou les déclencheurs ne font pas l'objet d'un débogage.|  
 |**Pas à pas sortant**|Non disponible|**Pas à pas sortant**|Maj+F11|Exécute le code restant dans un déclencheur, une fonction ou une procédure stockée sans stopper aux points d'arrêt. Le mode débogage normal reprend lorsque le contrôle est retourné au code ayant appelé le module.|  
-|Non disponible|**Exécuter jusqu'au curseur**|Non disponible|Ctrl+F10|Exécute la totalité du code du dernier emplacement d'arrêt à l'emplacement du curseur actuel sans stopper aux points d'arrêt.|  
-|**Espion express**|**Espion express**|Non disponible|Ctrl+Alt+Q|Affiche la fenêtre **Espion express** .|  
-|**Basculer le point d'arrêt**|**Point d'arrêt/Insérer un point d'arrêt**|Non disponible|F9|Positionne un point d'arrêt sur l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] actuelle ou sélectionnée.|  
-|Non disponible|**Point d'arrêt/Supprimer un point d'arrêt**|Non disponible|Non disponible|Supprime le point d'arrêt de la ligne sélectionnée.|  
-|Non disponible|**Point d'arrêt/Désactiver un point d'arrêt**|Non disponible|Non disponible|Désactive le point d'arrêt sur la ligne sélectionnée. Le point d'arrêt reste sur la ligne de code, mais il n'arrête pas l'exécution tant qu'il n'est pas réactivé.|  
-|Non disponible|**Point d'arrêt/Activer le point d'arrêt**|Non disponible|Non disponible|Active le point d'arrêt sur la ligne sélectionnée.|  
-|**Supprimer tous les points d'arrêt**|Non disponible|Non disponible|Ctrl+Maj+F9|Supprime tous les points d'arrêt.|  
-|**Désactiver tous les points d'arrêt**|Non disponible|Non disponible|Non disponible|Désactive tous les points d'arrêt.|  
+|Non disponible|**Exécuter jusqu’au** Mire|Non disponible|Ctrl+F10|Exécute la totalité du code du dernier emplacement d'arrêt à l'emplacement du curseur actuel sans stopper aux points d'arrêt.|  
+|**Rapide**|**Rapide**|Non disponible|Ctrl+Alt+Q|Affiche la fenêtre **Espion express** .|  
+|**Basculer le point d’arrêt**|**Point d’arrêt/insérer un point d’arrêt**|Non disponible|F9|Positionne un point d'arrêt sur l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] actuelle ou sélectionnée.|  
+|Non disponible|**Point d’arrêt/supprimer le point d’arrêt**|Non disponible|Non disponible|Supprime le point d'arrêt de la ligne sélectionnée.|  
+|Non disponible|**Point d’arrêt/désactiver le point d’arrêt**|Non disponible|Non disponible|Désactive le point d'arrêt sur la ligne sélectionnée. Le point d'arrêt reste sur la ligne de code, mais il n'arrête pas l'exécution tant qu'il n'est pas réactivé.|  
+|Non disponible|**Point d’arrêt/activer le point d’arrêt**|Non disponible|Non disponible|Active le point d'arrêt sur la ligne sélectionnée.|  
+|**Supprimer tous les points d’arrêt**|Non disponible|Non disponible|Ctrl+Maj+F9|Supprime tous les points d'arrêt.|  
+|**Désactiver tous les points d’arrêt**|Non disponible|Non disponible|Non disponible|Désactive tous les points d'arrêt.|  
 |Non disponible|**Ajouter un espion**|Non disponible|Non disponible|Ajoute l'expression sélectionnée à la fenêtre **Espion** .|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](step-through-transact-sql-code.md)   
- [Informations du débogueur Transact-SQL](transact-sql-debugger-information.md)   
- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Informations sur le débogueur Transact-SQL](transact-sql-debugger-information.md)   
+ [Éditeur de requête Moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

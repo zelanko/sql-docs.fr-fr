@@ -1,6 +1,6 @@
 ---
-title: Gérer les signets | Microsoft Docs
-ms.custom: ''
+title: Gérer les signets
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,31 +12,31 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6741660b7b7985356c59ffe47b53c376a55338e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4403e542125918bb5fd738077ebdcc6182201a12
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063911"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242048"
 ---
 # <a name="manage-bookmarks"></a>Gérer les signets
-  Lorsque vous travaillez dans un éditeur de code, la fenêtre **Signets** vous permet de créer des liens vers des lignes de code spécifiques au sein de votre document. Vous pouvez afficher cette fenêtre à partir du menu **Affichage** .  
+  Lorsque vous travaillez dans un éditeur de code, la fenêtre **signets** vous permet de créer des liens vers des lignes de code spécifiques dans votre document. Vous pouvez afficher cette fenêtre à partir du menu **Affichage** .  
   
  Pour créer des signets et naviguer parmi ceux-ci, cliquez sur les boutons situés dans la barre d’outils de l’ **Éditeur de texte** et en haut de la fenêtre **Signets** . Vous pouvez ajouter et supprimer des signets, activer ou désactiver des signets, ainsi qu'organiser les signets dans des dossiers. Certaines commandes sont également disponibles à partir du menu contextuel de la fenêtre **Signets** . Pour ajouter ou supprimer un signet, placez le point d’insertion sur la ligne de votre choix dans l’Éditeur, puis cliquez sur **Activer/Désactiver le signet**. Pour activer un signet, cochez la case correspondante dans la fenêtre **Signets** ; pour désactiver (sans supprimer) un signet, décochez sa case.  
   
 ## <a name="text-editor-toolbar"></a>Barre d'outils Éditeur de texte  
  Les boutons ci-dessous sont disponibles dans la barre d’outils **Éditeur de texte** quand un document texte est ouvert dans l’éditeur. Pour afficher la barre d’outils **Éditeur de texte** dans l’éditeur de requête, dans le menu **Affichage** , pointez sur **Barres d’outils**, puis cliquez sur **Éditeur de texte**.  
   
- **Activer/Désactiver un signet sur la ligne active**  
+ **Activer/désactiver un signet sur la ligne active**  
  Ajoute ou supprime un signet sur la ligne sélectionnée du document dans l'éditeur actif. Cela ne modifie pas la ligne de code contenant un signet.  
   
- **Placer le signe insertion sur le signet précédent**  
+ **Déplacer le signe insertion vers le signet précédent**  
  Sélectionne le signet précédent, activé dans la fenêtre **Signets** . Lorsque le premier signet est atteint, le signe insertion passe au dernier signet. Si nécessaire, ouvre le fichier où le signet sélectionné apparaît dans l'éditeur. Fait défiler ce document jusqu'à la ligne marquée par un signet et y place le point d'insertion.  
   
- **Placer le signe insertion sur le signet suivant**  
+ **Déplacer le signe insertion vers le signet suivant**  
  Sélectionne le signet suivant, activé dans la fenêtre **Signets** . Lorsque le dernier signet est atteint, le signe insertion passe au premier signet. Si nécessaire, ouvre le fichier où le signet sélectionné apparaît dans l'éditeur. Fait défiler ce document jusqu'à la ligne marquée par un signet et y place le point d'insertion.  
   
- **Efface tous les signets du document actif**  
+ **Effacer tous les signets du document actif**  
  Affiche un message de confirmation, puis supprime tous les signets du document actif. Ne supprime pas les lignes de code qui contenaient des signets.  
   
 > [!CAUTION]  
@@ -45,7 +45,7 @@ ms.locfileid: "66063911"
 ## <a name="bookmarks-window"></a>Fenêtre Signets  
  Pour organiser des signets, créez des dossiers de signets dans la fenêtre **Signets** . Faites glisser les signets dans les dossiers. Les boutons ci-dessous sont disponibles en haut de la fenêtre **Signets** .  
   
- **Activer/Désactiver un signet sur la ligne active**  
+ **Activer/désactiver un signet sur la ligne active.**  
  Ajoute ou supprime un signet sur la ligne sélectionnée du document dans l'éditeur actif. Cela ne modifie pas la ligne de code contenant un signet.  
   
  **Nouveau dossier**  
@@ -54,19 +54,19 @@ ms.locfileid: "66063911"
 > [!TIP]  
 >  Dans un fichier de code volumineux, il peut être utile d'organiser les signets en dossiers relatifs aux travaux. Sélectionner un dossier rend actif les boutons **Déplacer le signe d’insertion vers le signet précédent du dossier actif** et **Déplacer le signe d’insertion vers le signet suivant du dossier actif** .  
   
- **Placer le signe insertion sur le signet précédent**  
+ **Déplacer le signe insertion vers le signet précédent**  
  Sélectionne le signet précédent, activé dans la fenêtre **Signets** . Lorsque le premier signet est atteint, le signe insertion passe au dernier signet. Si nécessaire, ouvre le fichier où le signet sélectionné apparaît dans l'éditeur. Fait défiler ce document jusqu'à la ligne marquée par un signet et y place le point d'insertion.  
   
- **Placer le signe insertion sur le signet suivant**  
+ **Déplacer le signe insertion vers le signet suivant**  
  Sélectionne le signet suivant, activé dans la fenêtre **Signets** . Lorsque le dernier signet est atteint, le signe insertion passe au premier signet. Si nécessaire, ouvre le fichier où le signet sélectionné apparaît dans l'éditeur. Fait défiler ce document jusqu'à la ligne marquée par un signet et y place le point d'insertion.  
   
- **Déplacer le signe insertion vers le signet précédent du dossier actif**  
+ **Déplacer le signe insertion vers le signet précédent dans le dossier actif**  
  Sélectionne le signet précédent, activé au sein du même dossier dans la fenêtre **Signets** . Lorsque le premier signet est atteint, le signe insertion passe au dernier signet dans le dossier. Si nécessaire, ouvre le fichier où le signet sélectionné apparaît dans l'éditeur. Fait défiler ce document jusqu'à la ligne marquée par un signet et y place le point d'insertion.  
   
- **Déplacer le signe insertion vers le signet suivant du dossier actif**  
+ **Déplacer le signe insertion vers le signet suivant dans le dossier actif**  
  Sélectionne le signet suivant, activé au sein du même dossier dans la fenêtre **Signets** . Lorsque le dernier signet est atteint, le signe insertion passe au premier signet dans le dossier. Si nécessaire, ouvre le fichier où le signet sélectionné apparaît dans l'éditeur. Fait défiler ce document jusqu'à la ligne marquée par un signet et y place le point d'insertion.  
   
- **Désactiver/Activer tous les signets**  
+ **Désactiver/activer tous les signets**  
  Coche ou décoche les cases de tous les signets dans la fenêtre **Signets** . Ne supprime pas les signets et ne modifie pas les lignes de code qu'ils marquent.  
   
  **Supprimer**  
@@ -84,11 +84,11 @@ ms.locfileid: "66063911"
  **Renommer**  
  Vous permet d'affecter un nouveau nom complet à un signet ou un dossier.  
   
- **Désactiver/Activer le signet**  
+ **Désactiver/activer le signet**  
  Coche ou décoche la case du signet sélectionné dans la fenêtre **Signets** . Ne supprime pas le signet et ne modifie pas la ligne de code qu'il marque.  
   
- **Désactiver/Activer tous les signets**  
+ **Désactiver/activer tous les signets**  
  Coche ou décoche les cases de tous les signets dans la fenêtre **Signets** . Ne supprime pas les signets et ne modifie pas les lignes de code qu'ils marquent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Raccourcis clavier SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

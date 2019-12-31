@@ -1,6 +1,6 @@
 ---
-title: Afficher des données spatiales dans l’Explorateur d’objets | Microsoft Docs
-ms.custom: ''
+title: Afficher des données spatiales dans l'Explorateur d'objets
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c791c0c00681fcc28cfb025c8108443bbb9e12a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ac09bdbc05f406d8d7925af1c9a45346913151
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063204"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242952"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Afficher des données spatiales dans l'Explorateur d'objets
-  La fenêtre **Résultats spatiaux** de l'Éditeur de requête propose des outils de mappage visuel permettant d'afficher des résultats de données spatiales en plus des données affichées au format grille dans la fenêtre **Résultats** . Pour afficher des données spatiales dans la fenêtre **Résultats spatiaux** , vos résultats de requête doivent contenir au moins une colonne de données spatiales avec des données géométriques ou géographiques.  
+  La fenêtre **résultats spatiaux** de l’éditeur de requête fournit des outils de mappage visuel permettant d’afficher des résultats de données spatiales en plus des données affichées sous forme de grille dans la fenêtre **résultats** . Pour afficher des données spatiales dans la fenêtre **Résultats spatiaux** , vos résultats de requête doivent contenir au moins une colonne de données spatiales avec des données géométriques ou géographiques.  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>Pour afficher des données spatiales dans la fenêtre Résultats spatiaux  
   
@@ -39,8 +39,8 @@ ms.locfileid: "66063204"
 5.  Ajustez le curseur **Zoom** pour augmenter la taille visuelle des éléments mappés. Pour les formes polygonales, l'étiquette est visible uniquement lorsque la forme est suffisamment grande pour contenir le texte d'étiquette.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fenêtre Résultats spatiaux](spatial-results-window.md)   
- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Fenêtre résultats spatiaux](spatial-results-window.md)   
+ [Éditeur de requête Moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

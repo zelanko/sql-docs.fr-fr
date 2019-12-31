@@ -1,6 +1,6 @@
 ---
-title: Éditeur XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Éditeur XML
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063202"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242939"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Éditeur XML (SQL Server Management Studio)
   Fournit un ensemble d'outils visuels pour utiliser des schémas XML, des groupes de données ADO.NET et des documents XML. Le Concepteur XML prend en charge le langage de définition de schéma XML (XSD, XML Schema Definition) défini par le World Wide Web Consortium (WC3), mais pas les définitions de type de document (DTD) ni les autres langages de schéma XML, tel XDR (XML-Data Reduced).  
@@ -38,8 +38,8 @@ ms.locfileid: "66063202"
 |----------|-----------------|--------------------------|  
 |**Schéma**|Pour créer et modifier visuellement des schémas XML et des groupes de données ADO.NET.|.xsd|  
 |**Données**|Pour modifier visuellement des fichiers de données XML dans une grille de données structurée.|.xml|  
-|**XML**|Pour modifier XML ; l'éditeur de code source fournit un codage en couleurs et IntelliSense, y compris Compléter le mot et Liste des membres.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**ShowPlan**|Affiche les plans de requête XML créés à l'aide de l'option SET SHOWPLAN_XML ON.|.showplan|  
+|**LANGAGE**|Pour modifier XML ; l'éditeur de code source fournit un codage en couleurs et IntelliSense, y compris Compléter le mot et Liste des membres.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
+|**Plan**|Affiche les plans de requête XML créés à l'aide de l'option SET SHOWPLAN_XML ON.|.showplan|  
   
 ## <a name="schema-view"></a>Mode Schéma  
  Le mode Schéma fournit une représentation visuelle des éléments, attributs, types, etc., qui constituent les schémas XML et les groupes de données ADO.NET.  
@@ -81,10 +81,10 @@ ms.locfileid: "66063202"
 ## <a name="data-view"></a>Vue de données  
  Le mode Données affiche une grille de données dont vous pouvez vous servir pour modifier les fichiers .xml. Seul le contenu d'un fichier XML (pas les balises ni la structure) peut être modifié en mode Données.  
   
- Il y a deux zones séparées dans la Vue de données : **Tables de données** et **Données**. La zone **Tables de données** est une liste des relations définies à l’intérieur du fichier XML, dans l’ordre de leur imbrication (en allant de l’extérieur vers l’intérieur). La zone **Données** est une grille de données qui affiche les données en fonction de la sélection effectuée dans la zone Tables de données.  
+ Il y a deux zones séparées en mode Données : **Tables de données** et **Données**. La zone **Tables de données** est une liste des relations définies à l’intérieur du fichier XML, dans l’ordre de leur imbrication (en allant de l’extérieur vers l’intérieur). La zone **Données** est une grille de données qui affiche les données en fonction de la sélection effectuée dans la zone Tables de données.  
   
 > [!NOTE]  
->  Les fichiers XML nouvellement créés ne contiennent pas de données et ne peuvent donc pas être affichés en mode Données. Il existe également certaines instances de documents XML où il est impossible d'appeler le mode Données. Même si le document XML est considéré comme correct, si les données essayant de passer dans la Vue de données ne sont pas structurées, le message suivant s'affiche : « Bien que ce document soit correctement construit, il contient une structure impossible à afficher dans la Vue de données. »  
+>  Les fichiers XML nouvellement créés ne contiennent pas de données et ne peuvent donc pas être affichés en mode Données. Il existe également certaines instances de documents XML où il est impossible d'appeler le mode Données. Même si le document XML est considéré comme correct, si les données essayant de passer en mode Données ne sont pas structurées, le message suivant s'affiche : « Bien que ce document soit correctement construit, il contient une structure impossible à afficher en mode Données. »  
   
  En mode Données, vous pouvez :  
   
@@ -95,10 +95,11 @@ ms.locfileid: "66063202"
 -   générer un schéma XML à partir d'un document XML.  
   
 ## <a name="xml-view"></a>Mode XML  
- Le mode XML fournit un éditeur pour modifier le XML brut, IntelliSense et un codage en couleurs. La saisie semi-automatique des instructions est disponible lorsque vous travaillez sur des fichiers .xsd et .xml auxquels est associé un schéma. Type \< de procéder à une balise et vous obtenez une liste d’éléments qui sont valides à cet emplacement. Après avoir tapé le nom de l'élément et appuyé sur la barre d'espace, la liste des attributs pris en charge par l'élément s'affiche.  
+ Le mode XML fournit un éditeur pour modifier le XML brut, IntelliSense et un codage en couleurs. La saisie semi-automatique des instructions est disponible lorsque vous travaillez sur des fichiers .xsd et .xml auxquels est associé un schéma. Tapez \< pour initialiser une étiquette. une liste d’éléments valides à cet emplacement s’affiche. Après avoir tapé le nom de l'élément et appuyé sur la barre d'espace, la liste des attributs pris en charge par l'élément s'affiche.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense ne sont pas disponibles sur la barre d'outils. Pour accéder à ces options lorsque vous êtes dans l'Éditeur XML, dans le menu **Edition** , cliquez sur **IntelliSense**.  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense ne sont pas disponibles sur la barre d'outils. Pour accéder à ces options lorsque vous êtes dans l'Éditeur XML, dans le menu **Edition** , cliquez sur **IntelliSense**.  
   
 ## <a name="showplan-view"></a>Mode SHOWPLAN  
  Les plans de requête peuvent être enregistrés au format XML lorsqu'ils sont créés à l'aide de l'option SET SHOWPLAN_XML ON. Double-cliquez sur un fichier se terminant par l'extension .showplan pour ouvrir le plan de requête.  

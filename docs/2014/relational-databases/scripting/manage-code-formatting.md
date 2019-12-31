@@ -1,6 +1,6 @@
 ---
-title: Gérer la mise en forme du code | Microsoft Docs
-ms.custom: ''
+title: Gérer la mise en forme du code
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d93e72a3b7dabc05a6b34e4c671a8ce1da028e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e25a5438eb147cfe5e3c7e4df3d3fe504cfcda48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090397"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242022"
 ---
 # <a name="manage-code-formatting"></a>Gérer la mise en forme du code
   Dans l'éditeur, vous pouvez mettre en forme votre code avec des mises en retrait, du texte caché, des URL, etc. Vous pouvez également mettre en forme automatiquement votre code à l'aide de la fonction de mise en retrait intelligente.  
@@ -53,9 +53,9 @@ ms.locfileid: "66090397"
   
     -   **Aucune**. Le curseur se positionne au début de la ligne suivante.  
   
-    -   **Bloc**. Le curseur aligne la ligne suivante sur la ligne précédente.  
+    -   **Bloquer**. Le curseur aligne la ligne suivante sur la ligne précédente.  
   
-    -   **Intelligente** (par défaut). Le service du langage détermine le style de mise en retrait approprié à utiliser.  
+    -   **Intelligent** (par défaut). Le service du langage détermine le style de mise en retrait approprié à utiliser.  
   
     > [!NOTE]  
     >  Certains langages n'offrent pas toutes ces options de mise en retrait.  

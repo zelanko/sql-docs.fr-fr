@@ -1,5 +1,5 @@
 ---
-title: Récupération de données BLOB avec IRow::Open et ISequentialStream | Microsoft Docs
+title: 'BLOB, IRow :: Open, ISequentialStream'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5c76342349a0bb1831903c7abe5ab43d52a0580
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f9c887f74e9516702cdd04085483c5b583f10e18
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761714"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242635"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::Open et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **IRow::Open** prend uniquement en charge l’ouverture des types d’objets DBGUID_STREAM et DBGUID_NULL.  
+  **IRow :: Open** prend en charge uniquement DBGUID_STREAM et DBGUID_NULL type d’objets à ouvrir.  
   
  La fonction suivante utilise **IRow::Open** et **ISequentialStream** pour récupérer (fetch) des données volumineuses.  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  
@@ -82,6 +82,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Les données volumineuses peuvent être liées ou récupérées à l’aide de l’interface **ISequentialStream**. Pour les colonnes dépendantes, l'indicateur d'état indique si les données sont tronquées en définissant DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction de données Blob à l’aide d’IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [Extraction de données BLOB à l'aide d'IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

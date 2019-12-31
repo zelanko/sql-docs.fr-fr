@@ -1,6 +1,6 @@
 ---
-title: Générer des scripts (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Générer des scripts
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,31 +10,32 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aa65678c9604cac609ca1a914e542724d354872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9f97b1682fa8a2e04b5f1afcc2a552a326a9e43
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090363"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242104"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit deux mécanismes pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez créer des scripts pour plusieurs objets au moyen de l' **Assistant Générer et publier des scripts**. Vous pouvez également générer un script pour des objets individuels ou plusieurs objets à l'aide du menu **Script en tant que** dans l' **Explorateur d'objets**.  
   
-1.  **Choisissez une méthode :**  [Générer et publier des Scripts](#GenPubScriptWiz), [Script Explorer en tant que Menu d’objet](#OEScriptAsMenu)  
+1.  **Choisissez une méthode :**  [Assistant générer et publier des scripts](#GenPubScriptWiz), [menu script de l’Explorateur d’objets](#OEScriptAsMenu)  
   
-2.  **Pour utiliser le menu Script en tant que :**  [Un seul objet de script](#ScriptSingleObject), [deux objets à l’aide de l’Explorateur d’objets de Script](#ScriptTwoObjectsOE), [deux objets à l’aide des détails de l’Explorateur d’objets de Script](#ScriptTwoObjectsOED)  
+2.  **Pour utiliser le menu script en tant que :** générer un script pour[un objet unique](#ScriptSingleObject), générer un [script de deux objets à l’aide](#ScriptTwoObjectsOE)de l’Explorateur d’objets, générer un script de [deux objets à l’aide de détails](#ScriptTwoObjectsOED)    
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Choisissez le mécanisme qui correspond le mieux à vos besoins.  
   
-###  <a name="GenPubScriptWiz"></a> Assistant Générer et publier des scripts  
+###  <a name="GenPubScriptWiz"></a>Assistant générer et publier des scripts  
  Utilisez l' **Assistant Générer et publier des scripts** pour créer un script [!INCLUDE[tsql](../../includes/tsql-md.md)] pour plusieurs objets. L'Assistant génère un script de tous les objets d'une base de données, ou un sous-ensemble des objets que vous sélectionnez. L'Assistant propose de nombreuses options pour vos scripts et vous permet notamment d'inclure ou non des autorisations, un classement et des contraintes. Pour obtenir des instructions sur l'utilisation de l'Assistant, consultez [Generate and Publish Scripts Wizard](generate-and-publish-scripts-wizard.md).  
   
-###  <a name="OEScriptAsMenu"></a> Menu Script en tant que de l'Explorateur d'objets  
+###  <a name="OEScriptAsMenu"></a>Menu script de l’Explorateur d’objets  
  Vous pouvez utiliser le menu **Script en tant que de l'Explorateur d'objets** pour générer un script d'un objet unique, de plusieurs objets ou de plusieurs instructions pour des objets uniques. Vous pouvez choisir un type de scripts parmi plusieurs ; par exemple pour créer, modifier ou supprimer l'objet. Vous pouvez enregistrer le script dans une fenêtre Éditeur de requête, dans un fichier ou dans le Presse-papiers. Le script est créé au format Unicode.  
   
-##  <a name="ScriptSingleObject"></a> Pour générer un script d'un objet unique  
- **Pour générer un script d'un objet unique**  
+##  <a name="ScriptSingleObject"></a>Pour générer un script d’un objet unique  
+ **Pour générer un script d’un objet unique**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
@@ -48,8 +49,8 @@ ms.locfileid: "66090363"
   
 6.  Sélectionnez l'emplacement dans lequel vous voulez enregistrer le script, tel que **Nouvelle fenêtre d'éditeur de requête** ou **Presse-papiers**.  
   
-##  <a name="ScriptTwoObjectsOE"></a> Pour générer un script de deux objets à l'aide de l'Explorateur d'objets  
- **Pour générer un script de deux objets à l'aide de l'Explorateur d'objets**  
+##  <a name="ScriptTwoObjectsOE"></a>Pour générer un script de deux objets à l’aide de l’Explorateur d’objets  
+ **Pour générer un script de deux objets à l’aide de l’Explorateur d’objets**  
   
  Vous pouvez parfois avoir besoin d'utiliser un script avec plusieurs options permettant, par exemple, de supprimer et de créer une procédure ou bien de créer une table puis de la modifier. Les processus ci-dessous de génération de scripts pour plusieurs objets fonctionnent également si vous devez créer un script qui référence différents types d'objets, tels que les tables, les vues et les procédures stockées.  
   
@@ -65,8 +66,8 @@ ms.locfileid: "66090363"
   
 6.  Dans la fenêtre de l'Éditeur de requête ouverte pour le premier objet, collez le script pour le deuxième objet du presse-papiers.  
   
-##  <a name="ScriptTwoObjectsOED"></a> Pour générer un script de deux objets à l'aide de la page Détails de l'Explorateur d'objets  
- **Pour générer un script de deux objets à l'aide de la page Détails de l'Explorateur d'objets**  
+##  <a name="ScriptTwoObjectsOED"></a>Pour générer un script de deux objets à l’aide des détails de l’Explorateur d’objets  
+ **Pour générer un script de deux objets à l’aide des détails de l’Explorateur d’objets**  
   
  Vous pouvez utiliser le volet **Détails de l'Explorateur d'objets** pour générer un script pour plusieurs objets de la même catégorie.  
   

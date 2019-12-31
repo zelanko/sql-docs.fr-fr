@@ -1,6 +1,6 @@
 ---
-title: Utiliser l’utilitaire sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Utiliser l'utilitaire sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6e25cc54718ab0db547efc6e9b6af857fe01e4e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155355"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243180"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utiliser l'utilitaire sqlcmd
   L'utilitaire `sqlcmd` est un utilitaire de ligne de commande destiné à l'exécution ad hoc et interactive des instructions et des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] et à l'automatisation des tâches de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour utiliser `sqlcmd` de façon interactive ou pour créer des fichiers de script destinés à être exécutés avec `sqlcmd`, les utilisateurs doivent connaître [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilitaire `sqlcmd` est généralement utilisé des façons suivantes :  
@@ -31,7 +31,7 @@ ms.locfileid: "70155355"
   
 -   Les utilisateurs soumettent un travail `sqlcmd` soit en spécifiant une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] unique à exécuter, soit en indiquant à l'utilitaire un fichier texte contenant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à exécuter. Le résultat est généralement généré dans un fichier texte, mais il peut aussi être affiché dans l'invite de commandes.  
   
--   [Mode SQLCMD](edit-sqlcmd-scripts-with-query-editor.md) dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+-   [Mode SQLCMD](edit-sqlcmd-scripts-with-query-editor.md) dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’éditeur de requête.  
   
 -   SMO (SQL Server Management Objects)  
   
@@ -40,16 +40,16 @@ ms.locfileid: "70155355"
 ## <a name="typically-used-sqlcmd-options"></a>Options sqlcmd courantes  
  Les options suivantes sont les plus fréquemment utilisées :  
   
--   L’option de serveur ( **-S**) qui identifie l’instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle `sqlcmd` se connecte.  
+-   L’option de serveur (**-S**) qui identifie l’instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de à `sqlcmd` laquelle se connecte.  
   
--   Les options d’authentification ( **-E**, **-U**et **-P**) qui spécifient les informations d’identification que `sqlcmd` utilise pour se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Options d’authentification (**-E**, **-U**et **-P**) qui spécifient les informations d' `sqlcmd` identification utilisées par pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance de.  
   
     > [!NOTE]  
     >  L’option **-E** est l’option par défaut et il n’est pas nécessaire de la définir.  
   
--   Options d’entrée ( **-q**, **-q**et **-i**) qui identifient l’emplacement de l’entrée à `sqlcmd`.  
+-   Options d’entrée (**-q**, **-q**et **-i**) qui identifient l’emplacement de l’entrée `sqlcmd`dans.  
   
--   Option de sortie ( **-o**) qui spécifie le fichier dans lequel `sqlcmd` doit placer sa sortie.  
+-   Option de sortie (**-o**) qui spécifie le fichier dans `sqlcmd` lequel la sortie doit être placée.  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>Connexion à l'utilitaire sqlcmd  
  Ci-dessous figurent quelques utilisations courantes de l'utilitaire `sqlcmd` :  
@@ -61,7 +61,7 @@ ms.locfileid: "70155355"
     ```  
   
     > [!NOTE]  
-    >  Dans l’exemple précédent, **-E** n’est pas spécifié, car il s’agit de la valeur par défaut et `sqlcmd` se connecte à l’instance par défaut à l’aide de l’authentification Windows.  
+    >  Dans l’exemple précédent, **-E** n’est pas spécifié, car il s’agit `sqlcmd` de la valeur par défaut et se connecte à l’instance par défaut à l’aide de l’authentification Windows.  
   
 -   Connexion à une instance nommée à l'aide de l'authentification Windows pour exécuter de manière interactive des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70155355"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     , ou  
+     ou  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -103,7 +103,7 @@ ms.locfileid: "70155355"
     >  Pour obtenir une liste des options prises en charge par l'utilitaire `sqlcmd`, exécutez `sqlcmd -?`.  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>Exécution d'instructions Transact-SQL interactivement à l'aide de sqlcmd  
- Vous pouvez utiliser l'utilitaire `sqlcmd` interactivement pour exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une fenêtre d'invite de commandes. Pour exécuter de manière interactive des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de `sqlcmd`, exécutez l’utilitaire sans utiliser les options **-q**, **-q**, **-Z**ou **-i** pour spécifier des fichiers ou des requêtes d’entrée. Par exemple:  
+ Vous pouvez utiliser l'utilitaire `sqlcmd` interactivement pour exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une fenêtre d'invite de commandes. Pour [!INCLUDE[tsql](../../includes/tsql-md.md)] exécuter interactivement des instructions à `sqlcmd`l’aide de, exécutez l’utilitaire sans utiliser les options **-q**, **-q**, **-Z**ou **-i** pour spécifier des fichiers ou des requêtes d’entrée. Par exemple :  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -111,14 +111,16 @@ ms.locfileid: "70155355"
   
  À l'invite `sqlcmd`, vous pouvez taper à la fois des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et des commandes `sqlcmd`, telles que `GO` et `EXIT`. Chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est placée dans une mémoire tampon, appelée cache d'instruction. Ces instructions sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dès lors que vous avez tapé la commande `GO` et appuyé sur la touche ENTRÉE. Pour quitter `sqlcmd`, tapez `EXIT` ou `QUIT` au début d’une nouvelle ligne.  
   
- Pour effacer le cache d'instruction, tapez `:RESET`. Si vous tapez `^C`, `sqlcmd` se termine. `^C` peut également être utilisé pour arrêter l'exécution du cache d'instruction après la saisie d'une commande `GO`.  
+ Pour effacer le cache d'instruction, tapez `:RESET`. La `^C` frappe `sqlcmd` se termine. 
+  `^C` peut également être utilisé pour arrêter l'exécution du cache d'instruction après la saisie d'une commande `GO`.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions entrées dans une session interactive peuvent être modifiées en entrant la commande **: Ed** et l’invite de `sqlcmd`. L'éditeur s'ouvre et après avoir modifié l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] et refermé l'éditeur, l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] révisée s'affiche dans la fenêtre de commandes. Entrez `GO` pour exécuter l’instruction révisée [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]les instructions entrées dans une session interactive peuvent être modifiées en entrant la commande **: Ed** et l' `sqlcmd` invite. L'éditeur s'ouvre et après avoir modifié l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] et refermé l'éditeur, l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] révisée s'affiche dans la fenêtre de commandes. Entrez `GO` pour exécuter l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction révisée.  
   
 ## <a name="quoted-strings"></a>Chaînes entre guillemets  
- Les caractères entourés par des guillemets sont utilisés sans autre prétraitement, à l'exception des guillemets insérés au sein d'une chaîne en entrant deux guillemets consécutifs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite cette séquence de caractères comme un seul guillemet. (La traduction s'effectue toutefois sur le serveur). Les variables des scripts ne sont pas développées lorsqu'elles apparaissent au sein d'une chaîne.  
+ Les caractères entourés par des guillemets sont utilisés sans autre prétraitement, à l'exception des guillemets insérés au sein d'une chaîne en entrant deux guillemets consécutifs. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite cette séquence de caractères comme un seul guillemet. (La traduction s'effectue toutefois sur le serveur). Les variables des scripts ne sont pas développées lorsqu'elles apparaissent au sein d'une chaîne.  
   
- Par exemple:  
+ Par exemple :  
   
  `sqlcmd`  
   
@@ -131,7 +133,8 @@ ms.locfileid: "70155355"
  `Length: 5" 7'`  
   
 ## <a name="strings-that-span-multiple-lines"></a>Chaînes qui s'étendent sur plusieurs lignes  
- `sqlcmd` prend en charge les scripts comportant des chaînes qui s'étendent sur plusieurs lignes. Par exemple, l'instruction `SELECT` suivante s'étend sur plusieurs lignes mais constitue une seule chaîne exécutée lorsque vous appuyez sur la touche ENTRÉE après avoir tapé `GO`.  
+ 
+  `sqlcmd` prend en charge les scripts comportant des chaînes qui s'étendent sur plusieurs lignes. Par exemple, l'instruction `SELECT` suivante s'étend sur plusieurs lignes mais constitue une seule chaîne exécutée lorsque vous appuyez sur la touche ENTRÉE après avoir tapé `GO`.  
   
  `SELECT First line`  
   
@@ -156,7 +159,7 @@ ms.locfileid: "70155355"
   
  `1> _`  
   
- Cela signifie que vous vous êtes connecté à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que `sqlcmd` est maintenant prêt à accepter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ainsi que des commandes `sqlcmd` . Le trait de soulignement clignotant situé après `1>` est l'invite de `sqlcmd` qui marque l'emplacement où les instructions et les commandes que vous tapez sont affichées. À présent, tapez `USE AdventureWorks2012` et appuyez sur entrée, puis tapez `GO` et appuyez sur entrée. La fenêtre d'invite de commandes affiche les éléments suivants :  
+ Cela signifie que vous vous êtes connecté à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que `sqlcmd` est maintenant prêt à accepter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ainsi que des commandes `sqlcmd` . Le trait de soulignement clignotant situé après `1>` est l'invite de `sqlcmd` qui marque l'emplacement où les instructions et les commandes que vous tapez sont affichées. À présent, `USE AdventureWorks2012` tapez et appuyez sur entrée, puis `GO` tapez et appuyez sur entrée. La fenêtre d'invite de commandes affiche les éléments suivants :  
   
  `sqlcmd`  
   
@@ -170,7 +173,8 @@ ms.locfileid: "70155355"
   
  `1> _`  
   
- Appuyer sur la touche ENTRÉE après avoir tapé `USE AdventureWorks2012` correspond à demander à `sqlcmd` de commencer une nouvelle ligne. Le fait d'appuyer sur la touche ENTRÉE après avoir tapé `GO,` revient à demander à `sqlcmd` d'envoyer l'instruction `USE AdventureWorks2012` à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sqlcmd` retourne alors un message pour indiquer que l'instruction `USE` a correctement abouti et affiche une nouvelle invite `1>` qui vous signale que vous pouvez entrer une nouvelle instruction ou une nouvelle commande.  
+ Appuyer sur la touche ENTRÉE après avoir tapé `USE AdventureWorks2012` correspond à demander à `sqlcmd` de commencer une nouvelle ligne. Le fait d'appuyer sur la touche ENTRÉE après avoir tapé `GO,` revient à demander à `sqlcmd` d'envoyer l'instruction `USE AdventureWorks2012` à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  `sqlcmd` retourne alors un message pour indiquer que l'instruction `USE` a correctement abouti et affiche une nouvelle invite `1>` qui vous signale que vous pouvez entrer une nouvelle instruction ou une nouvelle commande.  
   
  L'exemple suivant affiche le contenu de la fenêtre d'invite de commandes si vous tapez une instruction `SELECT` , une commande `GO` pour exécuter `SELECT`et une commande `EXIT` pour quitter `sqlcmd`:  
   
@@ -207,7 +211,8 @@ ms.locfileid: "70155355"
  Les lignes situées après la ligne `3> GO` sont les données de sortie d'une instruction `SELECT` . Une fois les données de sortie générées, `sqlcmd` réinitialise l'invite `sqlcmd` et affiche `1>`. Après avoir entré `EXIT` sur la ligne `1>`, la fenêtre d'invite de commandes affiche la même ligne que celle qu'elle a affichée lorsque vous avez ouvert l'invite de commandes la première fois. Ceci indique que `sqlcmd` a mis fin à sa session. Vous pouvez maintenant fermer la fenêtre d'invite de commandes en tapant une autre commande `EXIT` .  
   
 ## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>Exécution de fichiers de script Transact-SQL à l'aide de sqlcmd  
- Vous pouvez utiliser `sqlcmd` pour exécuter des fichiers de script de base de données. Les fichiers de script sont des fichiers texte qui contiennent une combinaison d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], de `sqlcmd` de commandes et de variables de script. Pour plus d’informations sur la façon de générer un script pour des variables, consultez [Utiliser sqlcmd avec des variables de script](sqlcmd-use-with-scripting-variables.md). `sqlcmd` fonctionne avec les instructions, les commandes et les variables de script contenues dans un fichier de script de manière très similaire à son fonctionnement avec des instructions et des commandes entrées de manière interactive. La principale différence est que `sqlcmd` lit le fichier d'entrée sans marquer de pause au lieu d'attendre que l'utilisateur entre les instructions, les commandes et les variables de script.  
+ Vous pouvez utiliser `sqlcmd` pour exécuter des fichiers de script de base de données. Les fichiers de script sont des fichiers texte qui contiennent [!INCLUDE[tsql](../../includes/tsql-md.md)] une combinaison `sqlcmd` d’instructions, de commandes et de variables de script. Pour plus d’informations sur la façon de générer un script pour des variables, consultez [Utiliser sqlcmd avec des variables de script](sqlcmd-use-with-scripting-variables.md). 
+  `sqlcmd` fonctionne avec les instructions, les commandes et les variables de script contenues dans un fichier de script de manière très similaire à son fonctionnement avec des instructions et des commandes entrées de manière interactive. La principale différence est que `sqlcmd` lit le fichier d'entrée sans marquer de pause au lieu d'attendre que l'utilisateur entre les instructions, les commandes et les variables de script.  
   
  Il existe plusieurs manières de créer des fichiers de script de base de données :  
   
@@ -217,7 +222,7 @@ ms.locfileid: "70155355"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>A. Exécution d'un script à l'aide de sqlcmd  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>R. Exécution d'un script à l'aide de sqlcmd  
  Démarrez le Bloc-notes et tapez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
   
  `USE AdventureWorks2012;`  
@@ -310,7 +315,7 @@ ms.locfileid: "70155355"
   
  `SET NOCOUNT OFF`  
   
- À l'invite `sqlcmd` , entrez :  
+ À l’invite `sqlcmd` , entrez les informations suivantes :  
   
  `C:\sqlcmd`  
   
@@ -335,7 +340,7 @@ ms.locfileid: "70155355"
   
  `BACKUP DATABASE [$(db)] TO DISK='$(bakfile)';`  
   
- À l'invite `sqlcmd` , entrez :  
+ À l’invite `sqlcmd` , entrez les informations suivantes :  
   
  `C:\ >sqlcmd`  
   
@@ -390,7 +395,8 @@ ms.locfileid: "70155355"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Utilisation de sqlcmd dans un fichier de script Windows  
- Une commande `sqlcmd`comme `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` peut être exécutée dans un fichier. bat en même temps que VBScript. Dans ce cas, n'utilisez pas les options interactives. `sqlcmd` doit être installé sur l'ordinateur qui exécute le fichier .bat.  
+ Une `sqlcmd`commande telle que `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` peut être exécutée dans un fichier. bat en même temps que VBScript. Dans ce cas, n'utilisez pas les options interactives. 
+  `sqlcmd` doit être installé sur l'ordinateur qui exécute le fichier .bat.  
   
  Commencez par créer les quatre fichiers suivants :  
   
@@ -480,7 +486,7 @@ ms.locfileid: "70155355"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. Utilisation de sqlcmd pour définir le chiffrement sur Azure SQL Database  
- Un `sqlcmd`peut être exécuté sur une connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] données pour spécifier le chiffrement et l’approbation de certificat. Deux options « sqlcmd » «» sont disponibles :  
+ Une `sqlcmd`peut être exécutée sur une connexion [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aux données pour spécifier le chiffrement et l’approbation de certificat. Deux options « sqlcmd » «» sont disponibles :  
   
 -   Le commutateur -N est utilisé par le client pour demander une connexion chiffrée. Cette option est équivalente à l'option ADO.net `ENCRYPT = true`.  
   
@@ -562,8 +568,8 @@ SQLCMD -E -N -C
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
- [Utiliser sqlcmd avec des variables de script](sqlcmd-use-with-scripting-variables.md)   
- [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](edit-sqlcmd-scripts-with-query-editor.md)   
+ [Utiliser SQLCMD avec des variables de script](sqlcmd-use-with-scripting-variables.md)   
+ [Modifier des scripts SQLCMD à l’aide de l’éditeur de requête](edit-sqlcmd-scripts-with-query-editor.md)   
  [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)   
  [Créer une étape de travail CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
   

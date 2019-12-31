@@ -1,6 +1,6 @@
 ---
-title: Éditeur de requête du moteur de base de données (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Éditeur de requête du moteur de base de données
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48a2fc741a13a0565ab49d1974b9c2798ad7b9ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064094"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244942"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Éditeur de requête du moteur de base de données (SQL Server Management Studio)
   Utilisez l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour créer et exécuter des scripts contenant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’éditeur prend également en charge l’exécution de scripts qui contiennent des commandes **sqlcmd** .  
@@ -50,13 +50,13 @@ ms.locfileid: "66064094"
 ## <a name="working-with-the-database-engine-query-editor"></a>Utilisation de l'éditeur de requête du moteur de base de données  
  L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est l'un des quatre éditeurs implémentés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour obtenir une description de la fonctionnalité implémentée dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et des tâches principales que vous pouvez effectuer à l’aide de l’éditeur, consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
   
-## <a name="sql-editor-toolbar"></a>Barre d'outils Éditeur SQL  
+## <a name="sql-editor-toolbar"></a>Barre d'outils Éditeur SQL  
  Quand vous ouvrez l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , la barre d’outils Éditeur SQL s’affiche avec les boutons suivants.  
   
- **Se connecter**  
+ **Entre**  
  Ouvre la boîte de dialogue **Se connecter au serveur** . Utilisez cette boîte de dialogue pour établir une connexion à un serveur.  
   
- **Déconnecter**  
+ **Connect**  
  Déconnecte l'éditeur de requête actuel du serveur.  
   
  **Modifier la connexion**  
@@ -68,19 +68,19 @@ ms.locfileid: "66064094"
  **Bases de données disponibles**  
  Permet de se connecter à une autre base de données sur le même serveur.  
   
- **Execute**  
+ **Effectue**  
  Exécute le code sélectionné ou, si aucun code n'est sélectionné, exécute la totalité du code figurant dans l'éditeur de requête.  
   
- **Débogage**  
+ **Debug**  
  Active le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce débogueur prend en charge les actions de débogage comme la définition de points d’arrêt, la surveillance de variables et l’exécution pas à pas du code.  
   
- **Annuler l'exécution de la requête**  
+ **Annuler l’exécution de la requête**  
  Envoie une demande d'annulation au serveur. Certaines requêtes ne peuvent pas être annulées immédiatement et doivent attendre une condition d'annulation appropriée. Les opérations de restauration de transactions peuvent prendre un certain temps lorsque celles-ci sont annulées.  
   
- **Analyser**  
+ **Analys**  
  Vérifie la syntaxe du code sélectionné. Si aucun code n'est sélectionné, cette option vérifie la syntaxe de l'ensemble du code contenu dans la fenêtre de l'éditeur de requête.  
   
- **Afficher le plan d'exécution estimé**  
+ **Afficher le plan d’exécution estimé**  
  Demande un plan d’exécution de la requête au processeur de requêtes sans exécuter la requête et affiche le plan dans la fenêtre **Plan d’exécution** . Ce plan utilise les statistiques d'index pour estimer le nombre de lignes qui seront renvoyées pendant chaque partie de l'exécution de la requête. Le plan de requête utilisé dans la pratique peut être différent du plan d'exécution estimé. Cela peut se produire si le nombre de lignes renvoyées diffère sensiblement de l'estimation. À ce moment-là, le processeur de requêtes modifie le plan pour qu'il soit plus efficace.  
   
  **Options de requête**  
@@ -89,7 +89,7 @@ ms.locfileid: "66064094"
  **IntelliSense activé**  
  Indique si les fonctionnalités IntelliSense sont disponibles dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- **Inclure le plan d'exécution réel**  
+ **Inclure le plan d’exécution réel**  
  Exécute la requête, puis renvoie les résultats de la requête et le plan d'exécution utilisé pour la requête. Ceux-ci s’affichent sous forme de plan de requête graphique dans la fenêtre **Plan d’exécution** .  
   
  **Inclure les statistiques du client**  
@@ -98,13 +98,13 @@ ms.locfileid: "66064094"
  **Résultats dans du texte**  
  Retourne les résultats de la requête dans la fenêtre **Résultats** sous forme de texte.  
   
- **Résultats dans des grilles**  
+ **Résultats dans une grille**  
  Retourne les résultats de la requête dans la fenêtre **Résultats** sous forme d’une ou plusieurs grilles.  
   
  **Résultats dans un fichier**  
  Lors de l’exécution de la requête, la boîte de dialogue **Enregistrer les résultats** s’ouvre. Dans **Enregistrer dans**, sélectionnez le dossier dans lequel vous souhaitez enregistrer le fichier. Dans **Nom de fichier**, tapez le nom du fichier, puis cliquez sur **Enregistrer** pour enregistrer les résultats de la requête en tant que fichier de **Rapport** avec une extension .rpt. Pour accéder à des options avancées, cliquez sur la flèche de déroulement du bouton **Enregistrer** , puis cliquez sur **Enregistrer avec l’encodage**.  
   
- **Commenter la sélection**  
+ **Sélection de commentaire**  
  Transforme la ligne active en commentaire en ajoutant un opérateur de commentaire (--) en début de ligne.  
   
  **Supprimer les marques de commentaire de la sélection**  
@@ -116,7 +116,7 @@ ms.locfileid: "66064094"
  **Augmenter le retrait de ligne**  
  Déplace le texte de la ligne vers la droite en ajoutant des espaces en début de ligne.  
   
- **Spécifier les valeurs des paramètres du modèle**  
+ **Spécifier des valeurs pour les paramètres de modèle**  
  Ouvre une boîte de dialogue qui vous permet de spécifier les valeurs des paramètres des procédures stockées et des fonctions.  
   
  Vous pouvez également ajouter la barre d’outils Éditeur SQL en sélectionnant le menu **Affichage** , **Barres d’outils**, puis **Éditeur SQL**. Si vous ajoutez la barre d'outils Éditeur SQL alors qu'aucune fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'est ouverte, tous les boutons sont indisponibles.  
@@ -124,7 +124,7 @@ ms.locfileid: "66064094"
 ## <a name="sql-editor-toolbar"></a>Barre d'outils Éditeur SQL  
  Quand une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est ouverte, vous pouvez ajouter la barre d’outils Déboguer en sélectionnant successivement le menu **Affichage** , **Barres d’outils**et **Déboguer**. Si vous ajoutez la barre d'outils Déboguer alors qu'aucune fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'est ouverte, tous les boutons sont indisponibles.  
   
- **Continuer**  
+ **Pouvoir**  
  Exécute le code contenu dans la fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] jusqu'à ce qu'un point d'arrêt soit rencontré.  
   
  **Interrompre tout**  
@@ -133,7 +133,7 @@ ms.locfileid: "66064094"
  **Arrêter le débogage**  
  Sort la fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] du mode débogage et rétablit le mode d'exécution standard.  
   
- **Afficher l'instruction suivante**  
+ **Afficher l’instruction suivante**  
  Déplace le curseur jusqu'à la prochaine instruction à exécuter.  
   
  **Pas à pas détaillé**  
@@ -149,6 +149,6 @@ ms.locfileid: "66064094"
  Ouvre la fenêtre **Point d’arrêt** ou la fenêtre **Immédiat** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Raccourcis clavier SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

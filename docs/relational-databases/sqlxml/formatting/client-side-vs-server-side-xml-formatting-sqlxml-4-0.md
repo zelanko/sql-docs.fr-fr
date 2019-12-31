@@ -1,6 +1,5 @@
 ---
-title: Côté client et (SQLXML 4.0) de la mise en forme XML côté serveur | Microsoft Docs
-ms.custom: ''
+title: Mise en forme XML côté client et côté serveur (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,20 +17,21 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d02eeb0ad64a62343fda53a1907cec2b4bb9e850
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220367"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247009"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Côté client et Mise en forme XML côté serveur (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Mise en forme XML côté client et côté serveur (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique décrit les principales différences entre la mise en forme XML côté client et côté serveur dans SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Les requêtes générant plusieurs ensembles de lignes ne sont pas prises en charge dans la mise en forme côté client  
- Les requêtes qui génèrent plusieurs ensembles de lignes ne sont pas prises en charge lorsque vous utilisez la mise en forme XML côté client. Supposons par exemple que vous ayez un répertoire virtuel dans lequel une mise en forme côté client est spécifiée. Considérez cet exemple de modèle qui a deux instructions SELECT dans une  **\<SQL : >** bloc :  
+ Les requêtes qui génèrent plusieurs ensembles de lignes ne sont pas prises en charge lorsque vous utilisez la mise en forme XML côté client. Supposons par exemple que vous ayez un répertoire virtuel dans lequel une mise en forme côté client est spécifiée. Considérez cet exemple de modèle, qui contient deux instructions SELECT dans un ** \<bloc de>SQL : Query** :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,12 +42,12 @@ ms.locfileid: "68220367"
 </ROOT>  
 ```  
   
- Si vous exécutez ce modèle dans un code d'application, une erreur est alors retournée car la mise en forme XML côté client ne prend pas en charge la mise en forme de plusieurs ensembles de lignes. Si vous spécifiez les requêtes dans deux séparer  **\<SQL : >** blocs, vous obtiendrez les résultats souhaités.  
+ Si vous exécutez ce modèle dans un code d'application, une erreur est alors retournée car la mise en forme XML côté client ne prend pas en charge la mise en forme de plusieurs ensembles de lignes. Si vous spécifiez les requêtes dans deux blocs ** \<SQL : Query>** distincts, vous obtiendrez les résultats souhaités.  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp est mappé différemment dans Visual Studio du Client. Mise en forme côté serveur  
- Dans le XML côté serveur de mise en forme, la colonne de base de données de **timestamp** type mappe au type XDR i8 (lorsque l’option XMLDATA est spécifiée dans la requête).  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp est mappé différemment dans la mise en forme côté client et la mise en forme côté serveur  
+ Dans la mise en forme XML côté serveur, la colonne de base de données de type **timestamp** est mappée au type XDR i8 (lorsque l’option XMLDATA est spécifiée dans la requête).  
   
- Dans XML côté client de mise en forme, la colonne de base de données de **timestamp** type est mappé à un le **uri** ou le **bin.base64** type XDR (selon que le binary base64 option est spécifiée dans la requête). Le **bin.base64** type XDR est utile si vous utilisez les fonctionnalités de mise à jour et de chargement en masse, car ce type est converti en la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** type. De cette manière, l'opération insert, update ou delete réussit.  
+ Dans la mise en forme XML côté client, la colonne de base de données de type **timestamp** est mappée à l' **URI** ou au type XDR **bin. base64** (selon que l’option BINARY BASE64 est spécifiée dans la requête). Le type XDR **bin. base64** est utile si vous utilisez les fonctionnalités mise à jour et bulkload, car ce type est converti en type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d' **horodatage** . De cette manière, l'opération insert, update ou delete réussit.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Les sous-types Deep du type VARIANT sont utilisés dans la mise en forme côté serveur  
  Dans la mise en forme XML côté serveur, les types Deep d'un type de données VARIANT sont utilisés. Si vous utilisez la mise en forme XML côté client, les variantes sont converties en chaîne Unicode et les sous-types de VARIANT ne sont pas utilisés.  
@@ -56,7 +56,7 @@ ms.locfileid: "68220367"
  Le mode NESTED de FOR XML côté client est semblable au mode AUTO de FOR XML côté serveur, avec les exceptions suivantes :  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>Lorsque vous interrogez des vues à l'aide du mode AUTO côté serveur, le nom de la vue est retourné comme nom de l'élément dans le XML résultant.  
- Par exemple, supposons que la vue suivante est créée sur la table Person.Contact dans l’AdventureWorksdatabase :  
+ Par exemple, supposons que la vue suivante est créée sur la table Person. contact dans AdventureWorksdatabase :  
   
 ```  
 CREATE VIEW ContactView AS (SELECT ContactID as CID,  
@@ -77,7 +77,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Lorsque vous exécutez le modèle, le XML suivant est retourné (Uniquement les résultats partiels sont affichés.) Notez que les noms d’élément sont les noms des vues par rapport à laquelle la requête est exécutée.  
+ Lorsque vous exécutez le modèle, le XML suivant est retourné (Seuls les résultats partiels sont affichés.) Notez que les noms d’éléments sont les noms des vues sur lesquelles la requête est exécutée.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -87,7 +87,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Lorsque vous spécifiez la mise en forme XML côté client en utilisant le mode NESTED correspondant, les noms des tables de base sont retournés comme noms des éléments dans le XML résultant. Par exemple, le modèle modifié suivant exécute la même instruction SELECT, mais la mise en forme XML est effectuée sur la côté client (autrement dit, **client-side-xml** est définie sur true dans le modèle) :  
+ Lorsque vous spécifiez la mise en forme XML côté client en utilisant le mode NESTED correspondant, les noms des tables de base sont retournés comme noms des éléments dans le XML résultant. Par exemple, le modèle modifié suivant exécute la même instruction SELECT, mais la mise en forme XML est effectuée côté client (autrement dit, le **code XML côté client** est défini sur true dans le modèle) :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -133,7 +133,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- Lorsque vous utilisez le mode NESTED de FOR XML côté client, les noms des tables sont retournés en tant que noms des éléments dans le XML résultant. (Alias de table qui sont spécifiés dans la requête ne sont pas utilisés.) Considérons par exemple le modèle suivant :  
+ Lorsque vous utilisez le mode NESTED de FOR XML côté client, les noms des tables sont retournés en tant que noms des éléments dans le XML résultant. (Les alias de tables spécifiés dans la requête ne sont pas utilisés.) Par exemple, considérez ce modèle :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -181,7 +181,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Si la mise en forme XML est effectuée sur le serveur (**client-side-xml = « 0 »** ), vous pouvez utiliser l’alias pour les colonnes qui retournent des requêtes dbobject dans la table réelle et colonne des noms sont retournés (même si vous avez des alias spécifiés). Par exemple, le modèle suivant exécute une requête, et la mise en forme XML est effectuée sur le serveur (le **client-side-xml** option n’est pas spécifiée et la **Run On Client** option n’est pas sélectionnée pour le racine virtuelle). La requête spécifie également le mode AUTO (pas le mode NESTED côté client).  
+ Si la mise en forme XML est effectuée sur le serveur (**client-side-xml = "0"**), vous pouvez utiliser l’alias pour les colonnes qui retournent des requêtes DBOBJECT dans lesquelles les noms de tables et de colonnes réels sont retournés (même si vous avez spécifié des alias). Par exemple, le modèle suivant exécute une requête, et la mise en forme XML est effectuée sur le serveur (l’option **Client-Side-XML** n’est pas spécifiée et l’option **exécuter sur le client** n’est pas sélectionnée pour la racine virtuelle). La requête spécifie également le mode AUTO (pas le mode NESTED côté client).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -205,18 +205,18 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>Côté client et XPath côté serveur  
+### <a name="client-side-vs-server-side-xpath"></a>XPath côté client et côté serveur  
  XPath côté client et XPath côté serveur fonctionnement de la même manière, à quelques différences près :  
   
 -   Les conversions de données appliquées lorsque vous utilisez des requêtes XPath côté client sont différentes de celles qui s'appliquent lorsque vous utilisez des requêtes XPath côté serveur. Les requêtes XPath côté client utilisent CAST au lieu du mode CONVERT 126.  
   
--   Lorsque vous spécifiez **client-side-xml = « 0 »** (false) dans un modèle, vous demandez mise en forme du XML côté serveur. Par conséquent, vous ne pouvez pas spécifier FOR XML NESTED car le serveur ne reconnaît pas l'option NESTED. Cela génère une erreur. Vous devez utiliser les modes AUTO, RAW ou EXPLICIT, que le serveur reconnaît.  
+-   Lorsque vous spécifiez **client-side-xml = "0"** (false) dans un modèle, vous demandez une mise en forme XML côté serveur. Par conséquent, vous ne pouvez pas spécifier FOR XML NESTED car le serveur ne reconnaît pas l'option NESTED. Cela génère une erreur. Vous devez utiliser les modes AUTO, RAW ou EXPLICIT, que le serveur reconnaît.  
   
--   Lorsque vous spécifiez **client-side-xml = « 1 »** (true) dans un modèle, vous demandez mise en forme du XML côté client. Dans ce cas, vous pouvez spécifier FOR XML NESTED. Si vous spécifiez FOR XML AUTO, la mise en forme XML se produit côté serveur bien que **client-side-xml = « 1 »** est spécifié dans le modèle.  
+-   Lorsque vous spécifiez **client-side-xml = "1"** (true) dans un modèle, vous demandez la mise en forme XML côté client. Dans ce cas, vous pouvez spécifier FOR XML NESTED. Si vous spécifiez FOR XML AUTO, la mise en forme XML se produit côté serveur, bien que le **client-side-xml = "1"** soit spécifié dans le modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML en matière de sécurité &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [La mise en forme XML côté client &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [La mise en forme XML côté serveur &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [Considérations relatives à la sécurité XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [Mise en forme XML côté client &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [La mise en forme XML côté serveur &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

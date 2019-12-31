@@ -1,6 +1,6 @@
 ---
-title: Rechercher du texte avec des expressions régulières | Microsoft Docs
-ms.custom: ''
+title: Rechercher du texte avec des expressions régulières
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063772"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243323"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
   Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
@@ -33,7 +33,7 @@ ms.locfileid: "66063772"
 2.  Le bouton triangulaire **Générateur d'expressions** situé en regard du champ **Rechercher** devient alors disponible. Cliquez sur ce bouton pour afficher la liste des expressions régulières les plus couramment utilisées. Lorsque vous choisissez un élément dans le Générateur d'expressions, il est inséré dans la chaîne **Rechercher** .  
   
 > [!NOTE]  
->  Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ». En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).  
+>  Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ».  En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).   
   
  Le tableau ci-dessous décrit les expressions régulières disponibles dans le **Générateur d'expressions**.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "66063772"
 |Tout caractère de l'ensemble|[]|Représente tout caractère figurant entre les crochets []. Pour spécifier une plage de caractères, répertoriez les caractères de début et de fin, en les séparant par un tiret (-) ; par exemple [a-z].|  
 |Tout caractère hors de l'ensemble|[^...]|Représente tout caractère ne figurant pas dans le jeu de caractères qui suit le signe ^.|  
 |ou|&#124;|Représente l’expression placée avant ou après le symbole OU (&#124;). Critère surtout utilisé à l'intérieur d'un groupe. Par exemple, compte (courant&#124;rendu) retourne « compte courant » et « compte rendu ».|  
-|Caractère d'échappement|\|Représente le caractère qui suit la barre oblique inverse (\\) comme littéral. Cette syntaxe vous permet de rechercher les caractères utilisés dans les expressions régulières, tels { et ^. Par exemple, \\^ recherche le caractère ^.|  
+|Caractère d'échappement|\|Correspond au caractère qui suit la barre oblique\\inverse () comme littéral. Cette syntaxe vous permet de rechercher les caractères utilisés dans les expressions régulières, tels { et ^. Par exemple, \\^ recherche le caractère ^.|  
 |Expression avec balises|{}|Représente le texte avec les balises de l'expression.|  
 |Identificateur C/C++|:i|Représente l'expression ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Chaîne entre guillemets|:q|Représente l’expression (("[^"]*")&#124;('[^']\*')).|  
 |Espace ou tabulation|:b|Représente des caractères de tabulation ou d'espace.|  
-|Entier|:z|Représente l'expression ([0-9]+).|  
+|Integer|:z|Représente l'expression ([0-9]+).|  
   
  La liste de toutes les expressions régulières valides dans les opérations **Rechercher et remplacer** est beaucoup trop longue pour être affichée intégralement dans le **Générateur d'expressions**. Vous pouvez également insérer les expressions régulières suivantes dans une chaîne **Rechercher** :  
   
@@ -66,8 +66,9 @@ ms.locfileid: "66063772"
 |Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9]^4 représente toute séquence à quatre chiffres.|  
 |Regroupement|()|Regroupe une sous-expression.|  
 |Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer** , \0 insère le texte correspondant à l’expression entière.|  
-|Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
-|Champ justifié à gauche|\\(-w,n)|Dans une expression **Remplacer** , aligne à gauche la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
+|Champ justifié à droite|\\(w, n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
+|Champ justifié à gauche|
+  \\(-w,n)|Dans une expression **Remplacer** , aligne à gauche la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
 |Empêcher la concordance|~(X)|Empêche la recherche d'une concordance quand le caractère X apparaît à cet endroit dans l'expression. Par exemple, réal~(ité) correspond à « réal » dans « réalisme » et « réalisation », mais pas à « réal » dans « réalité ».|  
 |Caractère alphanumérique|:a|Représente l'expression ([a-zA-Z0-9]).|  
 |Caractère alphabétique|:c|Représente l'expression ([a-zA-Z]).|  
@@ -78,7 +79,7 @@ ms.locfileid: "66063772"
 |Caractère d'échappement|\e|Unicode U+001B.|  
 |Bell|\g|Unicode U+0007.|  
 |Retour arrière|\h|Unicode U+0008.|  
-|Onglet|\t|Représente un caractère de tabulation, Unicode U+0009.|  
+|Tab|\t|Représente un caractère de tabulation, Unicode U+0009.|  
 |Caractère Unicode|\x#### ou \u####|Représente un caractère donné selon une valeur Unicode où #### désigne 1 à 4 chiffres hexadécimaux. Vous pouvez spécifier un caractère n'appartenant pas au plan BMP (Basic Multilingual Plane), autrement dit, un substitut à l'aide du point de code ISO 10646 ou de deux points de code Unicode spécifiant les valeurs de la paire de substitution.|  
   
  Le tableau suivant répertorie la syntaxe utilisée pour les opérations de recherche à l'aide de propriétés de caractères Unicode standard. L'abréviation de deux lettres est identique à celle figurant dans la base de données de propriétés de caractères Unicode. Ces abréviations peuvent être spécifiées en tant qu'élément d'un jeu de caractères. Ainsi, l'expression [:Nd:Nl:No] représente n'importe quel type de chiffre.  
@@ -121,7 +122,7 @@ ms.locfileid: "66063772"
 |Expression|Syntaxe|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Représente n'importe quel caractère. Par exemple, :Alar retourne des mots comme « Par », « partie » ou « épargne ».|  
-|Numeric|:Nu|Représente n'importe quel nombre ou chiffre.|  
+|Chiffre|:Nu|Représente n'importe quel nombre ou chiffre.|  
 |Ponctuation|:Pu|Représente n'importe quel signe de ponctuation tel que ?, @, ', etc.|  
 |Espace blanc|:Wh|Représente n'importe quel type d'espace blanc, y compris les espaces typographiques et idéographiques.|  
 |Bidirectionnel|:Bi|Représente les caractères d'un script se lisant de droite à gauche (langue arabe ou hébraïque).|  
@@ -131,5 +132,5 @@ ms.locfileid: "66063772"
 |Idéographique/Han/Kanji|:Id|Représente des caractères idéographiques tels Han et Kanji.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et remplacement](search-and-replace.md)   
+ [Rechercher et remplacer](search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)  

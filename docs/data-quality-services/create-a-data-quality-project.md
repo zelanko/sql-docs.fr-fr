@@ -1,6 +1,5 @@
 ---
-title: Créer un projet de qualité des données | Microsoft Docs
-ms.custom: ''
+title: Créer un projet de qualité des données
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,14 +12,14 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: badc06f5bc8becdb8a948a5740888e7f97be19ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 99b869f153e6dacac799f8630283dbaf8d27660b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935526"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245486"
 ---
 # <a name="create-a-data-quality-project"></a>Créer un projet de qualité des données
 
@@ -28,19 +27,19 @@ ms.locfileid: "67935526"
 
   Cette rubrique explique comment créer un projet de qualité des données à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Un projet de qualité des données est utilisé pour exécuter l'activité de nettoyage ou de correspondance dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Vous devez disposer d'une base de connaissances appropriée à utiliser dans le projet de qualité des données pour l'activité de nettoyage ou de correspondance.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour créer un projet de qualité des données.  
   
-##  <a name="Create"></a> Créer un projet de qualité des données  
+##  <a name="Create"></a>Créer un projet de qualité des données  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Nouveau projet de qualité des données**.  
   
@@ -54,13 +53,13 @@ ms.locfileid: "67935526"
   
     4.  Dans la zone **Sélectionner une activité** , cliquez sur l'activité que vous souhaitez exécuter à l'aide de ce projet de qualité des données :  
   
-        -   **Nettoyage** : sélectionnez cette activité pour nettoyer les données sources.  
+        -   **Nettoyage**: sélectionnez cette activité pour nettoyer les données sources.  
   
-        -   **Correspondance** : sélectionnez cette activité pour effectuer la correspondance. Cette activité est disponible uniquement si la base de connaissances sélectionnée pour le projet de qualité des données contient une stratégie correspondante.  
+        -   **Correspondance**: sélectionnez cette activité pour effectuer la correspondance. Cette activité est disponible uniquement si la base de connaissances sélectionnée pour le projet de qualité des données contient une stratégie correspondante.  
   
 4.  Cliquez sur **Créer** pour créer un projet de qualité des données.  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d’un projet de qualité des données  
+##  <a name="FollowUp"></a>Suivi : après avoir créé un projet de qualité des données  
  Après avoir créé un projet de qualité des données, un Assistant vous est proposé pour effectuer l'activité sélectionnée : nettoyage ou correspondance. Pour plus d’informations sur les activités de nettoyage et de correspondance, consultez [Nettoyage des données](../data-quality-services/data-cleansing.md) et [Correspondance de données](../data-quality-services/data-matching.md).  
   
   

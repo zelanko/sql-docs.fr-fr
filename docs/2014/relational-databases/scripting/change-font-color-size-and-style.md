@@ -1,6 +1,6 @@
 ---
-title: Modifier la couleur, la taille et le style de la police | Microsoft Docs
-ms.custom: ''
+title: Modifier la couleur, la taille et le style de la police
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064183"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244988"
 ---
 # <a name="change-font-color-size-and-style"></a>Modifier la couleur, la taille et le style de la police
   Vous pouvez personnaliser l'apparence du texte dans l'Éditeur et dans d'autres emplacements dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

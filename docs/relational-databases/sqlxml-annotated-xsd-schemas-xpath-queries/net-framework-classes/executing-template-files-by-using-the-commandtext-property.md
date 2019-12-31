@@ -1,6 +1,5 @@
 ---
-title: Exécution de fichiers modèles à l’aide de la propriété CommandText | Microsoft Docs
-ms.custom: ''
+title: Exécuter des fichiers de modèle avec la propriété CommandText
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0992424ed4253bb783ad5713239e213cd2b86278
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a05f0d974a6e88b82a654c7c9aab1159544b6839
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909729"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244349"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72909729"
 </ROOT>  
 ```  
   
- Il s’agit C# de l’exemple d’application. Pour tester l'application, enregistrez le modèle (TemplateFile.xml),  puis exécutez l'application.  
+ Il s’agit de l’exemple d’application C#. Pour tester l'application, enregistrez le modèle (TemplateFile.xml),  puis exécutez l'application.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  
@@ -81,7 +81,7 @@ class Test
   
 2.  Enregistrez le modèle XML (TemplateFile.xml) fourni dans cet exemple dans un dossier.  
   
-3.  Enregistrez le C# code (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
+3.  Enregistrez le code C# (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
   
 4.  Compilez le code. Pour compiler le code à l'invite de commandes, utilisez :  
   

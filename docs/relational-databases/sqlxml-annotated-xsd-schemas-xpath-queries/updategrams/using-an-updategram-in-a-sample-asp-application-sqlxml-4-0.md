@@ -1,6 +1,5 @@
 ---
-title: À l’aide d’une mise à jour dans un exemple d’Application ASP (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Utiliser mise à jour dans un exemple d’application ASP (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d28079992cceefb913b1418c1092a5d96f3c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046532"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246092"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilisation d'un code de mise à jour (updategram) dans un exemple d'application ASP (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68046532"
   
  L'utilisateur peut alors mettre à jour les informations de contact mais pas l'ID de contact (car ContactID est la clé primaire). Après que l'utilisateur a soumis les informations, un code de mise à jour (updategram) est exécuté et tous les paramètres du formulaire sont passés au code de mise à jour.  
   
- Le modèle suivant est le premier modèle (GetContact.xml). Enregistrez ce modèle dans le répertoire associé au nom virtuel de **modèle** type.  
+ Le modèle suivant est le premier modèle (GetContact.xml). Enregistrez ce modèle dans le répertoire associé au nom virtuel du type de **modèle** .  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -50,7 +50,7 @@ ms.locfileid: "68046532"
 </root>  
 ```  
   
- Le modèle suivant est le deuxième modèle (UpdateContact.xml). Enregistrez ce modèle dans le répertoire associé au nom virtuel de **modèle** type.  
+ Le modèle suivant est le deuxième modèle (UpdateContact.xml). Enregistrez ce modèle dans le répertoire associé au nom virtuel du type de **modèle** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -161,6 +161,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité mise à jour &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

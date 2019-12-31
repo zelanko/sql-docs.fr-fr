@@ -1,6 +1,6 @@
 ---
-title: Créer un serveur inscrit (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Créer un nouveau serveur inscrit
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: cce885929deff7484a4e068bf06ac3b39dbb3062
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188140"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244669"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Créer un nouveau serveur inscrit (SQL Server Management Studio)
   Cette rubrique explique comment enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment en inscrivant ceux-ci dans le composant Serveurs inscrits de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Un serveur peut être inscrit avant la connexion ou lors de la connexion depuis l'Explorateur d'objets. Il existe une option de menu qui permet d'inscrire les instances de serveur sur l'ordinateur local.  
@@ -38,7 +38,7 @@ ms.locfileid: "68188140"
   
      Les serveurs de gestion centralisée stockent les inscriptions de serveurs dans le serveur de gestion centralisée plutôt que dans le système de fichiers. Les serveurs de gestion centralisée et les serveurs inscrits subordonnés ne peuvent être inscrits que par le biais de l'authentification Windows. Une fois qu'un serveur de gestion centralisée a été inscrit, ses serveurs inscrits associés sont affichés automatiquement. Pour plus d’informations sur les serveurs d’administration centrale, consultez [Administrer plusieurs serveurs à l’aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ne peuvent pas être désignées comme serveurs de gestion centralisée.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Pour inscrire automatiquement les instances de serveur local  
   
@@ -52,30 +52,30 @@ ms.locfileid: "68188140"
      Quand un serveur est inscrit à partir de Serveurs inscrits, la zone **Type de serveur** est en lecture seule et correspond au type de serveur affiché dans le volet Serveurs inscrits. Pour inscrire un autre type de serveur, cliquez sur **Moteur de base de données**, **Serveur d'analyse**, **Reporting Services**ou **Integration Services** dans la barre d'outils **Serveurs inscrits** avant de commencer à inscrire un nouveau serveur.  
   
      **Nom du serveur**  
-     Sélectionnez l’instance de serveur à inscrire au format suivant : *\<nom_serveur>* [\\ *\<nom_instance>* ].  
+     Sélectionnez l’instance de serveur à inscrire au format : * \<ServerName>*[\\*\<nom_instance>*].  
   
-     **Authentification**  
+     **Identification**  
      Deux modes d'authentification sont disponibles lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      **Authentification Windows**  
      Le mode d'authentification Windows permet à l'utilisateur de se connecter au moyen d'un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Authentification SQL Server**  
-     Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non approuvée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise lui-même l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
+     Quand un utilisateur se connecte avec un nom de connexion et un mot de passe spécifiés à partir d’une connexion non approuvée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise lui-même l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Pour plus d’informations, consultez [Choisir un mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md).  
+    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]Pour plus d’informations, consultez [choisir un mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md).  
   
-     **Nom d'utilisateur**  
+     **Nom d’utilisateur**  
      Spécifie le nom d'utilisateur actuel avec lequel vous vous connectez. Cette option en lecture seule est disponible uniquement si vous avez choisi de vous connecter via l'authentification Windows. Pour modifier les **Noms d'utilisateurs**, ouvrez une session sur l'ordinateur en tant qu'utilisateur différent.  
   
      **Connexion**  
      Entrez le nom d'accès avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi la connexion avec l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Mot de passe**  
+     **Password**  
      Entrez le mot de passe utilisé avec la connexion. Cette option peut être modifiée uniquement si vous avez choisi de vous connecter via l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Mémoriser le mot de passe**  
+     **Se souvenir du mot de passe**  
      Sélectionnez cette option pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiffre et stocke le mot de passe entré. Cette option n'est affichée que si vous avez choisi la connexion avec l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "68188140"
      **Test**  
      Cliquez sur cette option pour tester la connexion au serveur sélectionné dans la zone **Nom du serveur**.  
   
-     **Enregistrer**  
+     **Été**  
      Cliquez sur ce bouton pour enregistrer les paramètres des serveurs inscrits.  
   
 ## <a name="multiserver-queries"></a>Requêtes multiserveurs  
@@ -101,8 +101,8 @@ ms.locfileid: "68188140"
  Pour exécuter des requêtes sur tous les serveurs inscrits auprès d’un serveur de gestion centralisée, développez le serveur de gestion centralisée, cliquez avec le bouton droit sur le groupe de serveurs, pointez sur **Se connecter**, puis cliquez sur **Nouvelle requête**. Lorsque les requêtes sont exécutées dans la nouvelle fenêtre Éditeur de requête, elles s'exécutent contre tous les serveurs du groupe de serveurs, à l'aide des informations de connexion stockées et du contexte d'authentification Windows de l'utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Masquer les objets système dans l'Explorateur d'objets](../object/hide-system-objects-in-object-explorer.md)   
- [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
- [Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  
+ [Masquer les objets système dans l’Explorateur d’objets](../object/hide-system-objects-in-object-explorer.md)   
+ [Exporter les informations du serveur inscrit &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
+ [Importer les informations du serveur inscrit &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  
   
   

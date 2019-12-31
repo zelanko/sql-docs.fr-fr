@@ -1,5 +1,5 @@
 ---
-title: Création d’une application de fournisseur d’OLE DB SQL Server Native Client | Microsoft Docs
+title: Application de fournisseur d’OLE DB SQL Native Client
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4b872d8b12ed73079f28a0b0daff15afcc642eb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 84a920320860512dcc0cdd80619cd7aa671c96a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789242"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247131"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Création d'une application de fournisseur OLE DB de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  La création d’une application [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider implique les étapes suivantes :  
+  La création [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une application de fournisseur OLE DB Native Client implique les étapes suivantes :  
   
 1.  Établissement d'une connexion à une source de données.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "73789242"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Établissement d’une connexion à une source de données](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
+-   [Établissement d'une connexion à une source de données](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
   
 -   [Exécution d’une commande](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
   
 -   [Traitement des résultats](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
--   [Présentation des propriétés OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
+-   [À propos des propriétés de OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
 -   [Utilisation de la clause OUTPUT avec OLE DB dans SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   

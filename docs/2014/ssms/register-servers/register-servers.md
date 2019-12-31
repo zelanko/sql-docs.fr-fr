@@ -1,6 +1,6 @@
 ---
-title: Inscrire des serveurs | Microsoft Docs
-ms.custom: ''
+title: Inscrire des serveurs
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: abc12a642343e2c9bf259142680bf101cebf3e8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049315"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241320"
 ---
 # <a name="register-servers"></a>Inscrire des serveurs
   L'inscription d'un serveur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous permet de stocker les informations de connexion au serveur pour des connexions futures. Il existe trois façons d'inscrire un serveur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -72,13 +72,13 @@ ms.locfileid: "63049315"
 |Se connecter à un serveur inscrit|[Se connecter à un serveur inscrit &#40;SQL Server Management Studio&#41;](connect-to-a-registered-server-sql-server-management-studio.md)|  
 |Se déconnecter d'un serveur inscrit|[Se déconnecter d’un serveur inscrit &#40;SQL Server Management Studio&#41;](disconnect-from-a-registered-server-sql-server-management-studio.md)|  
 |Déplacer un serveur ou un groupe de serveurs inscrit|[Déplacer un serveur inscrit ou un groupe de serveurs inscrits &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)|  
-|Modifier le nom d'un serveur ou d'un groupe de serveurs inscrit|[Modifier le nom d’un serveur ou d’un groupe de serveurs inscrits &#40;SQL Server Management Studio&#41;](change-the-name-of-registered-server-or-registered-server-group.md)|  
+|Modifier le nom d'un serveur ou d'un groupe de serveurs inscrit|[Modifier le nom d’un serveur inscrit ou d’un groupe de serveurs inscrits &#40;SQL Server Management Studio&#41;](change-the-name-of-registered-server-or-registered-server-group.md)|  
 |Créer ou modifier un groupe de serveurs|[Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)|  
 |Supprimer un groupe de serveurs|[Supprimer un groupe de serveurs &#40;SQL Server Management Studio&#41;](remove-a-server-group-sql-server-management-studio.md)|  
-|Exporter des informations de serveur inscrit|[Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)|  
-|Importer des informations de serveur inscrit|[Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)|  
-|Créer un serveur de gestion centralisée et un groupe de serveurs|[Créer un serveur d’administration centralisée et un groupe de serveurs &#40;SQL Server Management Studio&#41;](create-a-central-management-server-and-server-group.md)|  
-|Exécuter des instructions sur plusieurs serveurs simultanément|[Exécuter des instructions simultanément sur plusieurs serveurs &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)|  
+|Exporter des informations de serveur inscrit|[Exporter les informations du serveur inscrit &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)|  
+|Importer des informations de serveur inscrit|[Importer les informations du serveur inscrit &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)|  
+|Créer un serveur de gestion centralisée et un groupe de serveurs|[Créer un serveur de gestion centralisée et un groupe de serveurs &#40;SQL Server Management Studio&#41;](create-a-central-management-server-and-server-group.md)|  
+|Exécuter des instructions sur plusieurs serveurs simultanément|[Exécuter des instructions sur plusieurs serveurs simultanément &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Serveurs distants](../../database-engine/configure-windows/remote-servers.md)  

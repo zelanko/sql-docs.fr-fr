@@ -1,6 +1,6 @@
 ---
-title: Correspondance automatique des paires de syntaxe | Microsoft Docs
-ms.custom: ''
+title: Correspondance automatique des paires de syntaxe
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064153"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244799"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondance automatique des paires de syntaxe
   La correspondance automatique des paires de syntaxe vous informe immédiatement si les éléments syntaxiques qui doivent être codés par paire sont correctement assortis. Cette correspondance est connue comme correspondance des séparateurs dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondance des accolades dans l’éditeur de requête XMLA Analysis Services et correspondance des parenthèses dans les éditeurs MDX et DMX.  
@@ -36,9 +36,9 @@ ms.locfileid: "66064153"
 |Séparateur de début|Séparateur de fin|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**BEGIN**|**END**|  
-|**BEGIN TRY**|**END TRY**|  
-|**BEGIN CATCH**|**END CATCH**|  
+|**COMMENCER**|**EFFET**|  
+|**COMMENCER L’ESSAI**|**END TRY**|  
+|**DÉBUT DE L’INTERCEPTION**|**FIN DE CAPTURE**|  
   
  La correspondance automatique des séparateurs ne reconnaît pas les séparateurs pour les identificateurs entre parenthèses ([ObjectName]) ou les identificateurs entre guillemets ("ObjectName"). La correspondance des paires ne fonctionne pas pour les séparateurs à guillemet simple des littéraux de chaîne ('chaîne') parce que le codage de couleur donne déjà une indication sur le fait que la chaîne a été délimitée ou pas.  
   

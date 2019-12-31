@@ -1,5 +1,5 @@
 ---
-title: sys. DM _resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+title: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f94cc3ccd0278a3ae2f46707f2680f8d198db58a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70873918"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247312"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. DM _resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -36,7 +36,7 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|ID du pool de ressources. N'accepte pas la valeur NULL.
-|**name**|sysname|Nom du pool de ressources. N'accepte pas la valeur NULL.|
+|**nomme**|sysname|Nom du pool de ressources. N'accepte pas la valeur NULL.|
 |**snapshot_time**|datetime2|Date et heure de l’instantané des statistiques du pool de ressources|
 |**duration_ms**|int|Durée entre l’instantané actuel et l’instantané précédent|
 |**statistics_start_time**|datetime2|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|
@@ -62,7 +62,7 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |**delta_read_io_throttled**|int|Nombre total d’IOs de lecture limitées depuis la capture instantanée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
 |**delta_read_bytes**|bigint|Nombre total d’octets lus depuis le dernier instantané. N'accepte pas la valeur NULL.|
 |**delta_read_io_stall_ms**|int|Durée totale (en millisecondes) entre l’arrivée et l’achèvement des e/s de lecture depuis le dernier instantané. N'accepte pas la valeur NULL.|
-|**delta_read_io_stall_queued_ms**|int|Durée totale (en millisecondes) entre l’arrivée des e/s de lecture et le problème depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Un delta_read_io_stall_queued_ms différent de zéro signifie que les e/s sont affectées par RG.|
+|**delta_read_io_stall_queued_ms**|int|Durée totale (en millisecondes) entre l’arrivée des e/s de lecture et le problème depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Une delta_read_io_stall_queued_ms différente de zéro signifie que les e/s sont affectées par RG.|
 |**delta_write_io_queued**|int|Nombre total d’IOs d’écriture mis en file d’attente depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
 |**delta_write_io_issued**|int|Nombre total d’e/s d’écriture émises depuis le dernier instantané. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S.|
 |**delta_write_io_completed**|int|L’e/s d’écriture totale est terminée depuis le dernier instantané. N'accepte pas la valeur NULL|
@@ -80,30 +80,30 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |**min_cpu_percent**|int|Configuration actuelle de la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
 |**max_cpu_percent**|int|Configuration actuelle de la bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
 |**cap_cpu_percent**|int|Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite le niveau de bande passante processeur maximal au niveau spécifié. La plage autorisée pour la valeur est comprise entre 1 et 100. N'accepte pas la valeur NULL.|
-|**min_vcores**|decimal(5,2)|Configuration actuelle de la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention du processeur.  En unités de vCores|
-|**max_vcores**|decimal(5,2)|Configuration actuelle de la bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur.  Dans l’unité de vCores|
-|**cap_vcores**|decimal(5,2)|Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront.  Dans l’unité sur vCores|
+|**min_vcores**|décimal (5, 2)|Configuration actuelle de la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention du processeur.  En unités de vCores|
+|**max_vcores**|décimal (5, 2)|Configuration actuelle de la bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur.  Dans l’unité de vCores|
+|**cap_vcores**|décimal (5, 2)|Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront.  Dans l’unité sur vCores|
 |**instance_cpu_count**|int|Nombre de PROCESSEURs configurés pour l’instance|
-|**instance_cpu_percent|decimal(5,2)|Pourcentage d’UC configuré pour l’instance|
-|**instance_vcores**|decimal(5,2)|Nombre de vCores configurés pour l’instance|
-|**delta_log_bytes_used**|decimal(5,2)|Génération totale du journal (en octets) au niveau du pool depuis le dernier instantané|
-|**avg_login_rate_percent**|decimal(5,2)|Nombre de connexions depuis le dernier instantané, par rapport à la limite de connexion|
-|**delta_vcores_used**|decimal(5,2)|Utilisation du calcul du nombre de vCores depuis le dernier instantané.|
-|**cap_vcores_used_percent**|decimal(5,2)|Utilisation moyenne du calcul en pourcentage de la limite du pool.|
-|**instance_vcores_used_percent**|decimal(5,2)|Utilisation moyenne du calcul en pourcentage de la limite de l’instance SQL.|
-|**avg_data_io_percent**|decimal(5,2)|Utilisation moyenne des e/s en pourcentage en fonction de la limite du pool.|
-|**avg_log_write_percent**|decimal(5,2)|Utilisation moyenne des ressources d’écriture en pourcentage de la limite du pool.|
-|**avg_storage_percent**|decimal(5,2)|Utilisation moyenne du stockage en pourcentage de la limite de stockage du pool.|
-|**avg_allocated_storage_percent**|decimal(5,2)|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique. Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique. Pour plus d’informations, consultez : Gestion de l’espace de fichier dans SQL DB|
-|**max_worker_percent**|decimal(5,2)|Nombre maximal de threads de travail simultanés (demandes) en pourcentage en fonction de la limite du pool.|
-|**max_session_percent**|decimal(5,2)|Nombre maximal de sessions simultanées en pourcentage en fonction de la limite du pool.|
+|**instance_cpu_percent**|décimal (5, 2)|Pourcentage d’UC configuré pour l’instance|
+|**instance_vcores**|décimal (5, 2)|Nombre de vCores configurés pour l’instance|
+|**delta_log_bytes_used**|décimal (5, 2)|Génération totale du journal (en octets) au niveau du pool depuis le dernier instantané|
+|**avg_login_rate_percent**|décimal (5, 2)|Nombre de connexions depuis le dernier instantané, par rapport à la limite de connexion|
+|**delta_vcores_used**|décimal (5, 2)|Utilisation du calcul du nombre de vCores depuis le dernier instantané.|
+|**cap_vcores_used_percent**|décimal (5, 2)|Utilisation moyenne des ressources de calcul en pourcentage de la limite du pool.|
+|**instance_vcores_used_percent**|décimal (5, 2)|Utilisation moyenne du calcul en pourcentage de la limite de l’instance SQL.|
+|**avg_data_io_percent**|décimal (5, 2)|Utilisation moyenne des E/S en pourcentage de la limite du pool.|
+|**avg_log_write_percent**|décimal (5, 2)|Utilisation moyenne des ressources d’écriture en pourcentage de la limite du pool.|
+|**avg_storage_percent**|décimal (5, 2)|Utilisation moyenne du stockage en pourcentage de la limite de stockage du pool.|
+|**avg_allocated_storage_percent**|décimal (5, 2)|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique. Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique. Pour plus d’informations, consultez Gestion de l’espace de fichiers dans la base de données SQL.|
+|**max_worker_percent**|décimal (5, 2)|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite du pool.|
+|**max_session_percent**|décimal (5, 2)|Nombre maximal de sessions simultanées en pourcentage de la limite du pool.|
 |||
 
 ## <a name="permissions"></a>Autorisations
 
 Cette vue nécessite l’autorisation VIEW SERVER STATE.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les utilisateurs peuvent accéder à cette vue de gestion dynamique pour surveiller la consommation des ressources en temps quasi réel pour le pool de charges de travail utilisateur, ainsi que pour les pools internes du système de Azure SQL Database instance.
 
@@ -118,7 +118,7 @@ L’exemple suivant retourne la quantité maximale de données de taux de journa
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-L’exemple suivant retourne des informations similaires à sys. elastic_pool_resource_stats sans avoir à se connecter au maître logique
+L’exemple suivant retourne des informations similaires en tant que sys. elastic_pool_resource_stats sans avoir à se connecter au maître logique
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,

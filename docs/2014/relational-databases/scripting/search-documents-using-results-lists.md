@@ -1,6 +1,6 @@
 ---
-title: Effectuer une recherche dans des documents à l’aide des listes de résultats | Microsoft Docs
-ms.custom: ''
+title: Effectuer une recherche dans des documents à l'aide des listes de résultats
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 957b6e46cb8c3b4cc551c616a1b547c3c1cbdeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03fa961955b963f0149fbfcd2dbdfc379bb8a7cf
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090161"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243309"
 ---
 # <a name="search-documents-using-results-lists"></a>Effectuer une recherche dans des documents à l'aide des listes de résultats
   À l’aide de la boîte de dialogue **Rechercher et remplacer** , vous pouvez rechercher et remplacer du texte dans tous les fichiers d’un projet, d’une solution ou d’un dossier du système de fichiers, même s’ils ne sont pas ouverts dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les occurrences trouvées lors d’une recherche effectuée dans la boîte de dialogue **Rechercher et remplacer** s’affichent dans les fenêtres Résultats de la recherche 1 et Résultats de la recherche 2, ce qui vous permet de voir le texte exact de la ligne contenant le résultat.  
@@ -53,18 +53,18 @@ ms.locfileid: "66090161"
   
 5.  Cliquez sur **Remplacer** pour remplacer le résultat de la recherche en cours par le texte spécifié dans la zone **Remplacer par** . Vous pouvez ignorer une occurrence isolée en cliquant sur **Suivant** ou l’ensemble d’un fichier en cliquant sur **Ignorer le fichier**.  
   
-     \- ou -  
+     \-ni  
   
      Cliquez sur **Remplacer tout** pour remplacer toutes les occurrences trouvées par le texte spécifié dans la zone **Remplacer par** . Cochez la case **Conserver les fichiers modifiés ouverts après un remplacement global** si vous souhaitez annuler certains remplacements à un autre moment.  
   
     > [!NOTE]  
-    >  La commande**Remplacer tout** remplace toutes les occurrences trouvées, notamment celles que vous avez ignouées en cliquant sur le bouton **Ignouer le fichier** ou **Suivant**. Vous pouvez utiliser **Annuler** uniquement pour les remplacements effectués dans des fichiers restant ouverts après cette opération.  
+    >  **Remplacer tout** remplace toutes les occurrences trouvées, y compris celles des fichiers que vous avez ignorés avec **ignorer le fichier** ou **suivant**. Vous pouvez utiliser **Annuler** uniquement pour les remplacements effectués dans des fichiers restant ouverts après cette opération.  
   
  Les informations relatives aux remplacements s'affichent par défaut dans la fenêtre Résultats de la recherche 1. Vous pouvez parcourir les remplacements en double-cliquant sur chaque entrée de la fenêtre Résultats de la recherche 1.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et remplacement](search-and-replace.md)   
- [Effectuer une recherche de façon interactive dans des documents](search-documents-interactively.md)   
+ [Rechercher et remplacer](search-and-replace.md)   
+ [Rechercher des documents de manière interactive](search-documents-interactively.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  
   

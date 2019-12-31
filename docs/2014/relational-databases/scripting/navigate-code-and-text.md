@@ -1,6 +1,6 @@
 ---
-title: Naviguer dans le code et le texte | Microsoft Docs
-ms.custom: ''
+title: Naviguer dans le code et le texte
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad05ca7d33e8c2d6d976ea57aace43ff2ab076f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090368"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241998"
 ---
 # <a name="navigate-code-and-text"></a>Naviguer dans le code et le texte
   Vous pouvez vous déplacer dans le texte en utilisant :  
@@ -66,7 +66,7 @@ ms.locfileid: "66090368"
 ## <a name="go-to-command"></a>Atteindre, commande  
  Utilisez la commande **Atteindre** pour accéder à un numéro de ligne spécifique. Pour afficher les numéros de ligne, dans la boîte de dialogue **Options** , cliquez sur **Éditeur de texte**, sur **Tous les langages**, sur **Général**, puis sélectionnez **Numéros de ligne**.  
   
- **Pour atteindre un numéro de ligne en particulier**  
+ **Pour accéder à un numéro de ligne spécifique**  
   
 1.  Dans le menu **Edition** , cliquez sur **Atteindre** .  
   

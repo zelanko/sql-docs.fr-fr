@@ -1,6 +1,6 @@
 ---
-title: Déplacer un serveur inscrit ou un groupe de serveurs inscrits (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Déplacer un serveur ou un groupe inscrit
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1718ef034b6650dde246f8c0bc3d4e5f02f2f2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298049"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241333"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Déplacer un serveur inscrit ou un groupe de serveurs inscrits (SQL Server Management Studio)
   Cette rubrique explique comment organiser les serveurs dans des serveurs inscrits en déplaçant un serveur inscrit ou des groupes de serveurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les groupes de serveurs peuvent se composer de serveurs inscrits ou d'autres groupes de serveurs. Les serveurs comme les groupes de serveurs peuvent être déplacés d'un groupe de serveurs vers un autre.  

@@ -1,5 +1,5 @@
 ---
-title: Envoi de données en tant que paramètre table à l’aide de données en cours d’exécution (ODBC) | Microsoft Docs
+title: Paramètre table, données en cours d’exécution (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73775905"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246371"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Cela est similaire à la procédure [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mais utilise des données en cours d’exécution pour le paramètre table.  
   
- Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser les paramètres &#40;table ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  Dans cet exemple, lorsque SQLExecute ou SQLExecDirect est appelé, le pilote retourne SQL_NEED_DATA. L’application appelle ensuite SQLParamData à plusieurs reprises jusqu’à ce que le pilote retourne une valeur autre que SQL_NEED_DATA. Le pilote retourne *ParameterValuePtr* pour informer l’application du paramètre pour lequel il demande des données. L’application appelle SQLPutData pour fournir les données de paramètre avant l’appel suivant à SQLParamData. Pour un paramètre table, l’appel à SQLPutData indique le nombre de lignes préparées pour le pilote (dans cet exemple, toujours 1). Lorsque toutes les lignes de la table ont été passées au pilote, SQLPutData est appelé pour indiquer qu’aucune ligne n’est disponible.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "73775905"
   
  Lorsque SQLPutData est appelé pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être égal à 0. Lorsque toutes les lignes de la valeur de table ont été passées, SQLPutData est appelé avec une valeur *DataPtr* de 0.  
   
-## <a name="prerequisite"></a>Condition préalable  
+## <a name="prerequisite"></a>Configuration requise  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -53,7 +53,7 @@ from @Items
   
 1.  Déclarez les variables pour les paramètres SQL. Les mémoires tampon pour les paramètres table ne doivent pas forcément être des tableaux dans cet exemple ; l'exemple passe une ligne à la fois.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -72,7 +72,7 @@ from @Items
   
 2.  Liez les paramètres. *Column* est 1, ce qui signifie qu’une ligne au plus est passée à la fois.  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -99,7 +99,7 @@ from @Items
   
 3.  Liez les colonnes pour le paramètre table.  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -117,7 +117,7 @@ from @Items
   
 4.  Initialisez les paramètres. Cet exemple attribue SQL_DATA_AT_EXEC à la taille du paramètre table, et non un nombre de lignes.  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -127,14 +127,14 @@ from @Items
   
 5.  Appelez la procédure. SQLExecDirect retourne SQL_NEED_DATA, car le paramètre table est un paramètre de données en cours d’exécution.  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  Fournissez des données de paramètre de données en cours d'exécution. Lorsque SQLParamData retourne le *ParameterValuePtr* pour un paramètre table, l’application doit préparer les colonnes pour la ou les lignes suivantes de la valeur de table. L’application appelle SQLPutData avec *DataPtr* défini sur le nombre de lignes disponibles (dans cet exemple, 1) et *StrLen_or_IndPtr* définie sur 0.  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -193,7 +193,7 @@ from @Items
   
  Cet exemple utilise la base de données par défaut. Avant de l'exécuter, exécutez les commandes suivantes dans la base de données que vous utiliserez :  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -216,7 +216,7 @@ go
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -381,7 +381,7 @@ EXIT:
   
  Cet exemple utilise la base de données par défaut. Avant de l'exécuter, exécutez les commandes suivantes dans la base de données que vous utiliserez :  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -404,7 +404,7 @@ go
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  

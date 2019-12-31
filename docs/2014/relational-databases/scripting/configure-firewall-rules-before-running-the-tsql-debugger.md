@@ -1,6 +1,6 @@
 ---
-title: Configurer le débogueur Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Configurer le débogueur Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064187"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245188"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurer le débogueur Transact-SQL
   Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s'exécute sur un autre ordinateur que l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +56,7 @@ ms.locfileid: "66064187"
   
     2.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.  
   
-    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à sqlservr.exe pour cette instance. Par défaut, sqlservr.exe est installé dans C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, où *InstanceName* représente MSSQLSERVER pour l’instance par défaut, et le nom d’instance pour toute instance nommée.  
+    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à sqlservr.exe pour cette instance. Par défaut, sqlservr. exe est installé dans C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, où *nom_instance* est MSSQLSERVER pour l’instance par défaut et le nom de l’instance pour toute instance nommée.  
   
     4.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.  
   
@@ -150,19 +150,20 @@ ms.locfileid: "66064187"
 ## <a name="requirements-for-starting-the-debugger"></a>Configuration requise pour le démarrage du débogueur  
  Toute tentative de démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] doit également respecter les conditions suivantes :  
   
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
+* 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
   
 * La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est membre du rôle serveur fixe sysadmin.  
   
 * La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.
 
-* Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service est en cours d’exécution de SQL Server doit avoir des autorisations au client d’authentification.  
+* Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel SQL Server Service est en cours d’exécution doit avoir des autorisations AUTHENTICATE sur le client.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](transact-sql-debugger.md)   
  [Exécuter le débogueur Transact-SQL](run-the-transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](step-through-transact-sql-code.md)   
- [Informations du débogueur Transact-SQL](transact-sql-debugger-information.md)   
- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Informations sur le débogueur Transact-SQL](transact-sql-debugger-information.md)   
+ [Éditeur de requête Moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

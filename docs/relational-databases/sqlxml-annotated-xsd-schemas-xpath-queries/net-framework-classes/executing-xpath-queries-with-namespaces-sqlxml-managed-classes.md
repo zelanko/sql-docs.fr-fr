@@ -1,6 +1,5 @@
 ---
-title: Exécution de requêtes XPath avec des espaces de noms (classes managées SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Exécution de requêtes XPath avec des espaces de noms (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ helpviewer_keywords:
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 884ea584ec54425d6d0ed2d134e9181cd4d56678
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: dfe1885c9162e4feee3e9620dd7168f1736c114e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909219"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243580"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Exécution de requêtes XPath avec des espaces de noms (classes managées SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72909219"
   
  Le caractère générique (*) n'étant pas prise en charge dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, vous devez spécifier la requête XPath en utilisant un préfixe d'espace de noms. Pour résoudre le préfixe, utilisez la propriété Namespaces pour spécifier la liaison d’espace de noms.  
   
- Dans l’exemple suivant, la requête XPath spécifie des espaces de noms à l’aide du caractère générique (\*) et des fonctions XPath de nom local () et d’URI (). Cette requête XPath retourne tous les éléments dont le nom local est **Employee** et l’URI de l’espace de noms est **urn : MySchema : contacts**:  
+ Dans l’exemple suivant, la requête XPath spécifie des espaces de noms à l’aide\*du caractère générique () et des fonctions XPath local name () et namespace-URI (). Cette requête XPath retourne tous les éléments dont le nom local est **Employee** et l’URI de l’espace de noms est **urn : MySchema : contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -98,7 +98,7 @@ class Test
   
 1.  Enregistrez dans un dossier le schéma XSD (MySchema.xml) fourni dans cet exemple.  
   
-2.  Enregistrez le C# code (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
+2.  Enregistrez le code C# (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
   
 3.  Compilez le code. Pour compiler le code à l'invite de commandes, utilisez :  
   

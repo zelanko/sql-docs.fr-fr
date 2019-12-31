@@ -1,6 +1,6 @@
 ---
-title: Exécuter des fichiers de script Transact-SQL à l’aide de sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0a55800ff1d707ce191d373a7348bf744ce5886
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063667"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243195"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd
   Vous pouvez utiliser `sqlcmd` pour exécuter un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] est un fichier texte qui contient une combinaison d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], de commandes `sqlcmd` et de variables de script.  
@@ -47,26 +47,26 @@ ms.locfileid: "66063667"
   
 ### <a name="to-run-the-script-file"></a>Pour exécuter le fichier de script  
   
-1.  Ouvrez une fenêtre d'invite de commandes.  
+1.  Ouvrir une fenêtre d’invite de commandes.  
   
 2.  Dans la fenêtre d’invite de commandes, entrez ce qui suit : `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
-3.  Appuyez sur Entrée.  
+3.  Appuyez sur ENTRÉE.  
   
  La liste des noms et des adresses des employés de la société [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] apparaît dans la fenêtre d'invite de commandes.  
   
 ### <a name="to-save-this-output-to-a-text-file"></a>Pour enregistrer ce résultat dans un fichier texte  
   
-1.  Ouvrez une fenêtre d'invite de commandes.  
+1.  Ouvrir une fenêtre d’invite de commandes.  
   
 2.  Dans la fenêtre d’invite de commandes, entrez ce qui suit : `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
-3.  Appuyez sur Entrée.  
+3.  Appuyez sur ENTRÉE.  
   
  Aucun résultat n'est retourné dans la fenêtre d'invite de commandes. Le résultat est au contraire envoyé dans le fichier EmpAdds.txt. Vous pouvez vérifier ce résultat en ouvrant le fichier EmpAdds.txt.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer l'utilitaire sqlcmd](sqlcmd-start-the-utility.md)   
+ [Démarrer l’utilitaire sqlcmd](sqlcmd-start-the-utility.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

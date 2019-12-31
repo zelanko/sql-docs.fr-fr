@@ -1,6 +1,6 @@
 ---
-title: Ajouter des extraits de code Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Ajouter des extraits de code Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064290"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244824"
 ---
 # <a name="add-transact-sql-snippets"></a>Ajouter des extraits de code Transact-SQL
   Vous pouvez ajouter vos propres extraits de code Transact-SQL au jeu d'extraits de code prédéfinis inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "66064290"
   
 2.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-3.  Cliquez sur le bouton **Ajouter** .  
+3.  Cliquez sur le bouton **Ajouter**.  
   
 4.  Accédez au dossier qui contient vos extraits de code et cliquez sur le bouton **Sélectionner un dossier** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064290"
   
 2.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-3.  Cliquez sur le bouton **Importer** .  
+3.  Cliquez sur le bouton **Importer**.  
   
 4.  Accédez au dossier qui contient votre extrait de code, cliquez sur le fichier .snippet, puis cliquez sur le bouton **Ouvrir** .  
   
@@ -106,11 +106,11 @@ ms.locfileid: "66064290"
   
 3.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-4.  Cliquez sur le bouton **Importer** .  
+4.  Cliquez sur le bouton **Importer**.  
   
 5.  Accédez au dossier qui contient TryCatch.snippet, cliquez sur le fichier TryCatch.snippet, puis cliquez sur le bouton **Ouvrir** . Vous ne devez pas avoir d'extrait de code TryCatch dans votre dossier **Mes extraits de code** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer des extraits de code d'entourage (surround-with) Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+ [Insérer des extraits de code d’entourage avec des extraits de code Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
   
   

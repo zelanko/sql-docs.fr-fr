@@ -1,6 +1,5 @@
 ---
-title: Exécution de requêtes XPath (Classes managées de SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Exécution de requêtes XPath (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1402886d70447a5bf0324d101136cb7c8f5ce065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 999ab1ad269b32c0e02cff2fb143777dc1e2e24a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934227"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244338"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Exécution de requêtes XPath (classes managées SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ class Test
   
 2.  Enregistrez dans un dossier le schéma XSD (MySchema.xml) fourni dans cet exemple.  
   
-3.  Enregistrez le code c# (DocSample.cs) fourni dans cet exemple dans le même dossier dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
+3.  Enregistrez le code C# (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
   
 4.  Compilez le code. Pour compiler le code à l'invite de commandes, utilisez :  
   

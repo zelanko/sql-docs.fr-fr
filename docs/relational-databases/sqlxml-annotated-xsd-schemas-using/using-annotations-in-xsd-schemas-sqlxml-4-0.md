@@ -1,6 +1,5 @@
 ---
-title: À l’aide des Annotations dans les schémas XSD (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Utilisation d’annotations dans les schémas XSD (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,13 +16,14 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ea2514071755db267065c1e5855b6c09ebf4a25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 00cb5a095e6186ed6009f94dedaa43a81f8165d9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066910"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246838"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Utilisation des annotations dans les schémas XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68066910"
   
  Si vous ne spécifiez pas les annotations, le mappage par défaut a lieu. Par défaut, un élément XSD avec un type complexe est mappé avec un nom de table (vue) de la base de données spécifiée, et un élément ou attribut avec un type simple est mappé avec la colonne du même nom en tant qu'élément ou attribut.  
   
- Ces annotations peuvent également être utilisées pour spécifier les relations hiérarchiques dans XML-donc représenter les relations dans la base de données, car un schéma XSD est simplement une vue XML de données relationnelles.  
+ Ces annotations peuvent également être utilisées pour spécifier les relations hiérarchiques dans XML, représentant ainsi les relations dans la base de données, car un schéma XSD est simplement une vue XML de données relationnelles.  
   
  Cette section fournit les descriptions des annotations que vous pouvez utiliser avec les schémas XSD, ainsi que des exemples d'utilisation.  
   
@@ -41,64 +41,64 @@ ms.locfileid: "68066910"
 >  Tous les exemples de cette section spécifient des requêtes XPath simples sur le schéma XSD annoté décrit dans chaque exemple. Ces exemples présument que vous connaissiez le langage XPath.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Annotations XSD &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [Annotations XSD &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
  Répertorie les annotations que vous pouvez utiliser avec les schémas XSD, leurs descriptions et les annotations équivalentes pour XDR.  
   
- [Mappage par défaut d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Mappage par défaut d’éléments et d’attributs XSD à des tables et des colonnes &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
  Explique le mappage par défaut et fournit des exemples de tâches en rapport avec le mappage par défaut.  
   
- [Mappage explicite d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
- Explique le mappage explicite avec le **SQL : relation** et **SQL : Field** annotations et fournit des exemples.  
+ [Mappage explicite d’éléments et d’attributs XSD à des tables et des colonnes &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
+ Explique le mappage explicite avec les annotations **SQL : relation** et **SQL : Field** , et fournit des exemples.  
   
- [Spécification de relations à l’aide de SQL : Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **SQL : Relationship** annotation.  
+ [Spécification de relations à l’aide de SQL : Relationship &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : Relationship** .  
   
- [Spécification de l’attribut SQL : inverse sur SQL : Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
- Décrit le **SQL : inverse** annotation.  
+ [Spécification de l’attribut SQL : inverse sur SQL : Relationship &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
+ Décrit l’annotation **SQL : inversée** .  
   
- [Création d’éléments constants à l’aide de sql : constante est &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **sql : constante est** annotation.  
+ [Création d’éléments constants à l’aide de SQL : is-constant &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : is-constant** .  
   
- [Exclusion d’éléments de schéma du Document XML résultant avec sql : mappé &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
- Décrit et fournit des exemples de la **sql : mappé** annotation.  
+ [Exclusion d’éléments de schéma du document XML obtenu à l’aide de SQL : mapped &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : mapped** .  
   
- [Filtrage des valeurs à l’aide de SQL : limit-champ et SQL : limit-valeur &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **SQL : limit-champ** et **SQL : limit-valeur** annotations.  
+ [Filtrage des valeurs à l’aide de SQL : Limit-Field et SQL : limit-value &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)  
+ Décrit et fournit des exemples des annotations **SQL : Limit-Field** et **SQL : limit-value** .  
   
- [Identification des colonnes de clé à l’aide de SQL : Key-champs &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **SQL : Key-champs** annotation.  
+ [Identification des colonnes clés à l’aide de SQL : key-fields &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : key-fields** .  
   
- [En spécifiant une cible Namespace à l’aide de l’attribut targetNamespace &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **targetNamespace** attribut.  
+ [Spécification d’un espace de noms cible à l’aide de l’attribut targetNamespace &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’attribut **targetNamespace** .  
   
- [Création d’ID valide, IDREF et IDREFS à des attributs de Type à l’aide de SQL : Prefix &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **SQL : Prefix** annotation.  
+ [Création d’attributs de type ID, IDREF et IDREFS valides à l’aide de SQL : prefix &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : prefix** .  
   
- [Forçages de Type de données et de l’Annotation SQL : DataType &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **SQL : DataType** annotation.  
+ [Conversions de types de données et annotation sql : DataType &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : DataType** .  
   
- [Mappage des Types de données XSD aux Types de données XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  
+ [Mappage de types de données XSD à des types de données XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  
  Fournit une table qui compare les types de données XSD, XDR et Xpath, et répertorie les conversions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appropriées.  
   
- [Création de Sections CDATA à l’aide de SQL : use-cdata &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **SQL : Use-données** annotation.  
+ [Création de sections CDATA à l’aide de SQL : use-cdata &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : Use-Data** .  
   
- [Demande de références URL à des données BLOB à l’aide de sql : encode &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **sql : encode** annotation.  
+ [Demande de références URL à des données BLOB à l’aide de SQL : encode &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : encode** .  
   
- [Récupération des données à l’aide de SQL : Overflow-champ &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)  
- Décrit et fournit des exemples de la **SQL : Overflow-champ** annotation.  
+ [Récupération de données non consommées à l’aide de SQL : overflow-field &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : overflow-field** .  
   
- [Masquage d’éléments et d’attributs à l’aide de sql:hide](../../relational-databases/sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md)  
- Décrit et fournit des exemples de la **SQL : Hide** annotation.  
+ [Masquage d'éléments et d'attributs à l'aide de sql:hide](../../relational-databases/sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : Hide** .  
   
  [Utilisation des annotations sql:identity et sql:guid](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)  
- Décrit et fournit des exemples de la **: Identity** et **sql:guid** annotations.  
+ Décrit et fournit des exemples des annotations **SQL : Identity** et **SQL : GUID** .  
   
- [Spécification de la profondeur dans les relations récursives à l’aide de sql:max-depth](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)  
- Décrit et fournit des exemples de la **SQL : max-depth** annotation.  
+ [Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)  
+ Décrit et fournit des exemples de l’annotation **SQL : max-depth** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Annoté considérations de sécurité de schéma &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité des schémas annotés &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
   
   

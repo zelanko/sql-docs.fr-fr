@@ -1,6 +1,6 @@
 ---
-title: Effectuer une recherche incrémentielle dans un document actif | Microsoft Docs
-ms.custom: ''
+title: Effectuer une recherche incrémentielle dans un document actif
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ce3f1265f33da943b7db2b3f951fd9aa6504f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063829"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243647"
 ---
 # <a name="search-an-active-document-incrementally"></a>Effectuer une recherche incrémentielle dans un document actif
   Vous pouvez effectuer une recherche incrémentielle dans un document ou une fenêtre unique en entrant du texte. L'opération de recherche met en surbrillance le premier ensemble de caractères qui correspond aux caractères entrés pendant la recherche incrémentielle dans le document ou la fenêtre. La recherche incrémentielle recherche automatiquement l'ensemble du texte dans un document ou une fenêtre, à l'exception du texte caché.  
@@ -48,9 +48,9 @@ ms.locfileid: "66063829"
 >  Pour obtenir la liste complète des touches de raccourci clavier, consultez [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et remplacement](search-and-replace.md)   
- [Effectuer une recherche de façon interactive dans des documents](search-documents-interactively.md)   
- [Effectuer une recherche dans des documents à l'aide des listes de résultats](search-documents-using-results-lists.md)   
+ [Rechercher et remplacer](search-and-replace.md)   
+ [Rechercher des documents de manière interactive](search-documents-interactively.md)   
+ [Rechercher des documents à l’aide des listes de résultats](search-documents-using-results-lists.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  
   

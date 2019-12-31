@@ -1,6 +1,6 @@
 ---
-title: Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête | Microsoft Docs
-ms.custom: ''
+title: Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0d7d34da4f26211075de05e19e223bafd0e9429
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064112"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245180"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
   Grâce à l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , vous pouvez écrire et modifier des requêtes en tant que scripts SQLCMD. Vous utilisez des scripts SQLCMD lorsque vous devez traiter des commandes Windows System et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le même script.  
@@ -38,7 +38,7 @@ ms.locfileid: "66064112"
   
 -   exécution des scripts ;  
   
--   contrôle de code source ;  
+-   Contrôle de la source  
   
 -   analyse des scripts ;  
   
@@ -76,7 +76,8 @@ ms.locfileid: "66064112"
   
     -   (6 lignes affectées)  
   
-    -   \<Informations sur le répertoire>  
+    -   
+  \<Informations sur le répertoire>  
   
     -   (4 lignes affectées)  
   
@@ -110,7 +111,8 @@ ms.locfileid: "66064112"
 -   L’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les variables d’environnement et les variables définies dans un script SQLCMD, mais il ne prend pas en charge les variables SQLCMD intégrées ni les variables **osql** . Le traitement SQLCMD de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] respecte la casse pour les variables. Par exemple, PRINT '$ (COMPUTERNAME)' génère le bon résultat et PRINT '$ (ComputerName)' retourne une erreur.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient pour les exécutions en mode normal et SQLCMD. Lorsqu'il est exécuté à partir de la ligne de commande, SQLCMD utilise le fournisseur OLE DB. Dans la mesure où des options par défaut peuvent s'appliquer, il est possible d'obtenir un comportement différent pendant l'exécution de la même requête en mode SQLCMD [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et dans l'utilitaire SQLCMD.  
+>  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient pour les exécutions en mode normal et SQLCMD. Lorsqu'il est exécuté à partir de la ligne de commande, SQLCMD utilise le fournisseur OLE DB. Dans la mesure où des options par défaut peuvent s'appliquer, il est possible d'obtenir un comportement différent pendant l'exécution de la même requête en mode SQLCMD [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et dans l'utilitaire SQLCMD.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Syntaxe SQLCMD prise en charge  
  L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les mots clés de script SQLCMD suivants :  
@@ -138,7 +140,7 @@ ms.locfileid: "66064112"
 > [!NOTE]  
 >  Pour `:error` et `:out`, `stderr` et `stdout` envoient la sortie dans l'onglet des messages.  
   
- Les commandes SQLCMD qui ne sont pas répertoriées ci-dessus ne sont pas prises en charge dans l'Éditeur de requête. Quand un script contenant des mots clés SQLCMD non pris en charge est exécuté, l’éditeur de requête envoie un message « Commande *\<commande ignorée*> ignorée » à la destination pour chaque mot clé non pris en charge. Le script s'exécute correctement mais les commandes non prises en charge sont ignorées.  
+ Les commandes SQLCMD qui ne sont pas répertoriées ci-dessus ne sont pas prises en charge dans l'Éditeur de requête. Lorsqu’un script contenant des mots clés sqlcmd qui ne sont pas pris en charge est exécuté, l’éditeur de requête envoie un message « ignorer la commande * \<ignorée commande ignorée*> » à la destination pour chaque mot clé non pris en charge. Le script s'exécute correctement mais les commandes non prises en charge sont ignorées.  
   
 > [!CAUTION]  
 >  Étant donné que vous ne démarrez pas SQLCMD à partir de la ligne de commande, l'exécution de l'Éditeur de requête en mode SQLCMD est quelque peu limitée. Vous ne pouvez pas transmettre des paramètres de ligne de commande tels que des variables, et, comme l'éditeur de requête n'a pas la possibilité de répondre aux invites du système d'exploitation, vous ne devez pas exécuter d'instructions interactives.  
@@ -159,6 +161,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

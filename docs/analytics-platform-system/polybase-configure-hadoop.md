@@ -1,25 +1,26 @@
 ---
-title: Configurer PolyBase pour accéder à des données externes dans Hadoop | Microsoft Docs
+title: 'Accéder aux données externes : Hadoop-Polybase'
 description: Explique comment configurer Polybase en parallèle Data Warehouse pour se connecter à des Hadoop externes.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227123"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245390"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
 Cet article explique comment utiliser Polybase sur une appliance APS pour interroger des données externes dans Hadoop.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 PolyBase prend en charge deux fournisseurs Hadoop, HDP (Hortonworks Data Platform) et CDH (Cloudera Distributed Hadoop). Hadoop suit le modèle « majeure.mineure.version » pour ses nouvelles versions, et toutes les versions d’une version majeure ou mineure prise en charge sont prises en charge. Les fournisseurs Hadoop suivants sont pris en charge :
  - Hortonworks HDP 1.3 sur Linux/Windows Server  
@@ -48,7 +49,7 @@ Tout d’abord, configurez APS pour utiliser votre fournisseur Hadoop spécifiqu
 
 2. Redémarrez la région APS à l’aide de la page État du service sur le Configuration Manager de l' [Appliance](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a>Activer le calcul pushdown  
+## <a id="pushdown"></a>Activer le calcul de réactivation  
 
 Pour améliorer les performances des requêtes, activez le calcul pushdown sur votre cluster Hadoop :  
   
@@ -103,7 +104,7 @@ Yarn-site.xml avec la configuration yarn.application.classpath et mapreduce.appl
 
 Si vous choisissez de rompre vos deux paramètres de configuration dans mapred-site. xml et Yarn-site. xml, les fichiers sont les suivants :
 
-**yarn-site.XML**
+**yarn-site.xml**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -174,7 +175,7 @@ Notez que nous avons ajouté la propriété mapreduce.application.classpath. Dan
 
 ## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>Exemples de fichiers XML pour les valeurs par défaut du cluster HDP 3. X
 
-**yarn-site.XML**
+**yarn-site.xml**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -226,7 +227,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Créez une source de données externe avec [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Créer une source de données externe avec [Create external data source](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

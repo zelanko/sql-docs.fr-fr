@@ -1,6 +1,6 @@
 ---
-title: Rechercher dans les fichiers | Microsoft Docs
-ms.custom: ''
+title: Rechercher dans les fichiers
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da0ea4121408c8b9e5911cc77b7790c00ec1e9dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3b3ccbab2d77f92fe9d28ae616939b8fa02ea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064021"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245166"
 ---
 # <a name="find-in-files"></a>Rechercher dans les fichiers
   L’onglet **Rechercher dans les fichiers** de la fenêtre Rechercher et remplacer vous permet de rechercher une chaîne ou une expression dans le code d’un ensemble de fichiers spécifié. Les concordances trouvées et les actions exécutées sont répertoriées dans la fenêtre Résultats de la recherche, sélectionnée dans **Options de résultat**.  
@@ -29,16 +29,16 @@ ms.locfileid: "66064021"
 ## <a name="find-what"></a>Rechercher  
  Ces commandes sous l’onglet **Rechercher dans les fichiers** vous permettent de spécifier la chaîne ou l’expression qui doit concorder.  
   
- **Find what**  
+ **Rechercher**  
  Tapez le texte à rechercher. La boîte de dialogue tente de fournir le texte recherché, à l'aide du texte sélectionné avec le curseur avant l'ouverture de la boîte de dialogue, d'un texte proche ou d'un texte qui a fait l'objet d'une recherche antérieure. Vous pouvez réutiliser une des 20 dernières chaînes de recherche en la sélectionnant dans cette liste déroulante.  
   
- **[chaînes contenant des caractères génériques]**  
+ **[chaîne avec caractères génériques]**  
  Si vous souhaitez inclure des caractères génériques tels que des astérisques (`*`) et des points d’interrogation (`?`) dans votre chaîne de recherche, cochez la case **Utiliser** sous **Options de recherche** , puis cliquez sur **Caractères génériques**.  
   
- **[expression régulière]**  
+ **[Regular expression]**  
  Pour forcer le moteur de recherche à interpréter votre chaîne de recherche comme une expression régulière, cochez la case **Utiliser** sous **Options de recherche** , puis cliquez sur **Expressions régulières**.  
   
- **Générateur d'expressions**  
+ **Générateur d’expressions**  
  Ce bouton triangulaire en regard de la zone **Rechercher** est disponible quand la case **Utiliser** est cochée sous **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, selon l’option **Utiliser** qui est sélectionnée. Tout élément sélectionné dans cette liste est ajouté à la chaîne **Rechercher** .  
   
 ## <a name="look-in"></a>Regarder dans  
@@ -47,7 +47,7 @@ ms.locfileid: "66064021"
 > [!NOTE]  
 >  Si l’option **Regarder dans** sélectionnée applique la recherche à un fichier que vous avez extrait du contrôle du code source, celle-ci se limite à la version du fichier qui a été téléchargée sur votre ordinateur local.  
   
- **Look in**  
+ **Regarder dans**  
  Sélectionnez une étendue de recherche prédéfinie dans cette liste ou entrez votre propre ensemble de répertoires à l’aide de la boîte de dialogue **Choisir des dossiers de recherche** .  
   
  **Document actif**  
@@ -56,7 +56,7 @@ ms.locfileid: "66064021"
  **Tous les documents ouverts**  
  Effectue la recherche dans tous les fichiers actuellement ouverts à des fins d'édition.  
   
- **Projet en cours**  
+ **Projet actif**  
  Effectue la recherche dans tous les fichiers du projet en cours.  
   
  **Solution complète**  
@@ -65,25 +65,25 @@ ms.locfileid: "66064021"
  **Inclure les sous-dossiers**  
  Indique que les sous-dossiers du dossier spécifié dans **Regarder dans** doivent être inclus dans la recherche. Cette option requiert un ensemble de répertoires personnalisé.  
   
- **...**  
+ **Choisissez**  
  Cliquez sur ce bouton pour afficher la boîte de dialogue **Choisir des dossiers de recherche** , qui vous permet d’assembler, de modifier, d’enregistrer et de sélectionner des ensembles nommés de répertoires à entrer dans la zone **Regarder dans** .  
   
 ## <a name="find-options"></a>Options de recherche  
  Vous pouvez développer ou réduire la section **Options de recherche** . Les options ci-après peuvent être activées ou désactivées.  
   
  **Respecter la casse**  
- Lorsque cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec le contenu et la casse. Par exemple, une recherche de **MyObject** lorsque la case **Respecter la casse** est cochée retourne « MyObject », mais pas « myobject », ni « MYOBJECT ».  
+ Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec le contenu et la casse. Par exemple, une recherche de **MyObject** lorsque la case **Respecter la casse** est cochée retourne « MyObject », mais pas « myobject », ni « MYOBJECT ».  
   
  **Mot entier**  
  Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec les mots entiers. Si vous recherchez **MonObjet** , par exemple, « MonObject » est retourné comme résultat, mais pas « CMonObjet » ou « MonObjetC ».  
   
- **Utiliser**  
+ **Faites**  
  Indique comment interpréter les caractères spéciaux qui sont entrés dans les zones de texte **Rechercher** et **Remplacer par** . Les options comprennent **Caractères génériques** et **Expressions régulières**.  
   
- **Regular Expressions**  
+ **Expressions régulières**  
  Des notations spéciales définissent des modèles de texte pour les concordances. Pour obtenir la liste, consultez [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md).  
   
- **Caractères génériques**  
+ **Les caractères génériques**  
  Les caractères spéciaux tels que les astérisques (`*`) et les points d'interrogation (`?`) représentent un ou plusieurs caractères. Pour obtenir la liste, consultez [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md).  
   
  **Examiner ces types de fichiers**  
@@ -104,16 +104,16 @@ ms.locfileid: "66064021"
 ## <a name="result-options"></a>Options de résultat  
  Détermine l’emplacement des résultats lorsque vous cliquez sur **Rechercher tout**. Vous pouvez développer ou réduire la section **Options de résultat** . Les options ci-après peuvent être activées ou désactivées.  
   
- **Fen. Résultats de la recherche 1**  
+ **Fenêtre résultats de la recherche 1**  
  Lorsque cette case à cocher est activée, les résultats de la recherche actuelle sont ajoutés au contenu de la fenêtre Résultats de la recherche 1. Cette fenêtre s'ouvre automatiquement pour afficher vos résultats de recherche. Pour l’ouvrir manuellement, cliquez sur **Autres fenêtres** dans le menu **Affichage** , puis cliquez sur **Résultats de la recherche 1**.  
   
- **Fen. Résultats de la recherche 2**  
+ **Fenêtre résultats de la recherche 2**  
  Lorsque cette case à cocher est activée, les résultats de la recherche actuelle sont ajoutés au contenu de la fenêtre Résultats de la recherche 2. Cette fenêtre s'ouvre automatiquement pour afficher vos résultats de recherche. Pour l’ouvrir manuellement, cliquez sur **Autres fenêtres** dans le menu **Affichage** , puis cliquez sur **Résultats de la recherche 2**.  
   
- **Afficher les noms des fichiers seulement**  
+ **Afficher uniquement les noms de fichiers**  
  Affiche une entrée par fichier contenant une concordance plutôt qu'une entrée par concordance dans la fenêtre Résultats de la recherche 1 ou Résultats de la recherche 2. Cette option n'est pas disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Conserver les fichiers modifiés ouverts après un remplacement global**  
+ **Conserver les fichiers modifiés ouverts après remplacer tout**  
  Lorsque cette option est activée, tous les fichiers dans lesquels des remplacements ont été effectués restent ouverts afin que vous puissiez annuler ou enregistrer ces modifications. Les contraintes de mémoire peuvent limiter le nombre de fichiers qui peuvent rester ouverts suite à une opération de remplacement.  
   
 > [!CAUTION]  
@@ -122,14 +122,14 @@ ms.locfileid: "66064021"
 ## <a name="find-and-replace-views"></a>Vues Rechercher et remplacer  
  Les onglets situés en haut de la fenêtre Rechercher et remplacer comprennent les menus **Affichage** . Ces menus vous permettent de choisir un ensemble de champs à afficher dans le volet actif. Vous pouvez laisser la fenêtre Rechercher et remplacer ancrée à un endroit qui vous convient, puis effectuer des modifications au niveau des onglets et des vues pour exécuter tout type d'opération de recherche ou de remplacement.  
   
- **Recherche rapide**  
+ **Basculer vers la recherche rapide**  
  Cet onglet de barre d’outils remplace la boîte de dialogue par celle intitulée **Recherche rapide** .  
   
- **Rechercher dans les fichiers**  
+ **Basculer vers Rechercher dans les fichiers**  
  Cet onglet de barre d’outils remplace la boîte de dialogue par celle intitulée **Rechercher dans les fichiers** .  
   
- **Rechercher un symbole**  
+ **Basculer vers Rechercher les symboles**  
  Cet onglet de barre d’outils remplace la boîte de dialogue par celle intitulée **Rechercher un symbole** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Raccourcis clavier SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

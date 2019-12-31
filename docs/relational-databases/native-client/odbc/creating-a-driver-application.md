@@ -1,5 +1,5 @@
 ---
-title: Création d’une application de pilote SQL Server Native Client ODBC | Microsoft Docs
+title: Créer SQL Native Client application ODBC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +24,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8960a75ed04e1e12f39a5f74002af6702b432480
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 0cf46cdf2fb658623a549f3eef160ae6293ab9c7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761265"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247388"
 ---
 # <a name="creating-a-driver-application"></a>Création d’une application de pilote
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "73761265"
   
 -   Elle met un terme à la connexion à la source de données.  
   
- Une application plus complexe écrite pour le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client peut également effectuer les tâches suivantes :  
+ Une application plus complexe écrite pour le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client peut également effectuer les tâches suivantes :  
   
 -   Utiliser des curseurs pour contrôler l'emplacement dans un jeu de résultats  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73761265"
   
 -   Effectuer des opérations de copie en bloc  
   
--   Gérer les opérations de données volumineuses (**varchar (max)** , **nvarchar (max)** et **varbinary (max)** colonnes)  
+-   Gérer les opérations de données volumineuses (**varchar (max)**, **nvarchar (max)** et **varbinary (max)** colonnes)  
   
 -   Utiliser la logique de reconnexion pour faciliter le basculement lorsque la mise en miroir de bases de données est configurée  
   
@@ -77,21 +77,21 @@ ms.locfileid: "73761265"
   
  Pour effectuer des appels de fonction ODBC, une application C ou C++ doit inclure les fichiers d'en-tête sql.h, sqlext.h et sqltypes.h. Pour effectuer des appels aux fonctions API du programme d'installation ODBC, une application doit inclure le fichier d'en-tête odbcinst.h. Une application ODBC Unicode doit inclure le fichier d'en-tête sqlucode.h. Les applications ODBC doivent être liées au fichier odbc32.lib. Les applications ODBC qui appellent les fonctions API du programme d'installation ODBC doivent être liées au fichier odbccp32.lib. Ces fichiers sont inclus dans le Kit de développement Platform SDK de Windows.  
   
- De nombreux pilotes ODBC, y compris le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, proposent des extensions ODBC spécifiques aux pilotes. Pour tirer parti des extensions spécifiques au pilote ODBC Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], une application doit inclure le fichier d’en-tête sqlncli. h. Ce fichier d'en-tête contient :  
+ De nombreux pilotes ODBC, y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compris le pilote ODBC Native Client, proposent des extensions ODBC spécifiques aux pilotes. Pour tirer parti des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensions spécifiques au pilote ODBC Native Client, une application doit inclure le fichier d’en-tête sqlncli. h. Ce fichier d'en-tête contient :  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] attributs de connexion spécifiques au pilote ODBC Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributs de connexion spécifiques au pilote ODBC Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] attributs d’instruction spécifiques au pilote ODBC de Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributs d’instruction spécifiques au pilote ODBC Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] attributs de colonne spécifiques au pilote ODBC Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributs de colonne spécifiques au pilote ODBC Native Client.  
   
 -   Les types de données spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Les types de données définis par l'utilisateur spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) spécifiques au pilote ODBC Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Types de [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) spécifiques au pilote ODBC Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les champs de diagnostic du pilote ODBC Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Champs de diagnostic du pilote ODBC Native Client.  
   
 -   Les codes de fonction dynamique de diagnostic spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -103,7 +103,7 @@ ms.locfileid: "73761265"
   
 -   Appelez les fonctions API de métadonnées de requête distribuée pour obtenir les listes des serveurs liés et leurs catalogues.  
   
- Toute application C C++ ou ODBC qui utilise la fonctionnalité de copie en bloc du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client doit être liée au fichier SQLNCLI11. lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli. h et SQLNCLI11. lib sont distribués dans le cadre des outils du développeur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
+ Toute application ODBC C ou C++ qui utilise la fonctionnalité de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du pilote ODBC Native Client doit être liée au fichier SQLNCLI11. lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli. h et SQLNCLI11. lib sont distribués dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cadre des outils du développeur. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
@@ -119,6 +119,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [Applications multithread](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

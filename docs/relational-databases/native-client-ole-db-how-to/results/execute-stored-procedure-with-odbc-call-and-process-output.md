@@ -1,5 +1,5 @@
 ---
-title: Exécuter une procédure stockée avec ODBC CALL et traiter la sortie | Microsoft Docs
+title: Procédure stockée, appel ODBC, sortie
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789865"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244492"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter une procédure stockée avec ODBC CALL et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73789865"
   
 2.  Créez un jeu de liaisons (un pour chaque marqueur de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-3.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor :: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
+3.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor :: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un ensemble de liaisons.  
   
 4.  Remplissez la structure DBPARAMS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73789865"
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer la procédure stockée utilisée par l'application.  
   
-```  
+```sql
 USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
@@ -78,7 +78,7 @@ ELSE
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
@@ -350,7 +350,7 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 DROP PROCEDURE myProc  
 GO  

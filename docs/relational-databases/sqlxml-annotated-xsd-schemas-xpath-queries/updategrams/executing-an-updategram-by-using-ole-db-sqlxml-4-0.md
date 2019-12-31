@@ -1,6 +1,5 @@
 ---
-title: Exécution d’une mise à jour à l’aide de OLE DB (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Exécution d’un mise à jour à l’aide de OLE DB (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aa4562f21b33966df3df17f7b486e3cc2935b52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086870"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241282"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cette rubrique fournit un exemple fonctionnel d’usingOLE DB pour exécuter une mise à jour.  
+  Cette rubrique fournit un exemple fonctionnel de usingOLE DB pour exécuter un mise à jour.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Utilisation d'ICommandStream pour définir une commande XML  
- L’interface OLE DB (version 2.6 ou version ultérieure) ICommandStream passe une commande comme un objet de flux, plutôt que sous forme de chaîne.  
+ L’interface OLE DB (version 2,6 ou ultérieure) ICommandStream passe une commande en tant qu’objet de flux, plutôt qu’en tant que chaîne.  
   
- Cette interface permet à une commande d'être encodée dans n'importe quel format pris en charge par l'analyseur XML. Lorsque ICommand::Execute est appelée, le texte de commande est lu directement du flux et aucune conversion n’est requise. Par conséquent, l’exécution de commandes XML à l’aide d’ICommandStream interface est plus efficace.  
+ Cette interface permet à une commande d'être encodée dans n'importe quel format pris en charge par l'analyseur XML. Lorsque ICommand :: Execute est appelé, le texte de la commande est lu directement dans le flux et aucune conversion n’est requise. Par conséquent, l’exécution de commandes XML à l’aide de l’interface ICommandStream est plus efficace.  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>Définition de code XML en tant que commande à l'aide d'ICommandStream et récupération les résultats sous forme d'un document XML  
- L’interface de ICommandStream peut être utilisée pour définir des documents XML en tant que commande et les résultats peuvent être récupérés sous forme d’un document XML.  
+ L’interface ICommandStream peut être utilisée pour définir des documents XML en tant que commande et les résultats peuvent être récupérés sous la forme d’un document XML.  
   
 #### <a name="executing-templates-with-xpath-queries"></a>Exécution de modèles avec des requêtes XPath  
- Le modèle XML suivant consistant en une requête XPath est spécifié en tant que commande à l’aide d’ICommandStream :  
+ Le modèle XML suivant consistant en une requête XPath est spécifié en tant que commande à l’aide de ICommandStream :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -60,19 +60,19 @@ ms.locfileid: "68086870"
 </Schema>  
 ```  
   
- La requête retourne tous les éléments d'employé. Avec le mappage par défaut, le  **\<Person.Contact >** élément est mappé à la table Person.Contact dans la base de données AdventureWorks.  
+ La requête retourne tous les éléments d'employé. Avec le mappage par défaut, l' ** \<élément person. contact>** est mappé à la table Person. contact de la base de données AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Pour définir le code XML en tant que commande et récupérer les résultats sous forme d'un document XML  
   
 1.  Initialisez et établissez une connexion à la base de données.  
   
-2.  Obtenir l’interface ICommandStream sur ICommand.  
+2.  Obtenez l’interface ICommandStream sur ICommand.  
   
 3.  Définissez les propriétés de commande nécessaires. Dans cet exemple, la propriété SSPROP_STREAM_BASEPATH spécifique au fournisseur a pour valeur le répertoire où le schéma de mappage et les fichiers modèles sont stockés.  
   
-4.  Utilisez ICommandStream::SetCommandStream pour spécifier le flux de commandes. Dans cet exemple, le modèle XML qui est exécuté est lu à partir d'un fichier. Cela s'avère utile lorsque vous souhaitez exécuter de grands modèles XML.  
+4.  Utilisez ICommandStream :: SetCommandStream pour spécifier le flux de commande. Dans cet exemple, le modèle XML qui est exécuté est lu à partir d'un fichier. Cela s'avère utile lorsque vous souhaitez exécuter de grands modèles XML.  
   
-5.  Exécutez la commande XML à l’aide de ICommand::Execute, demandant l’ID d’interface IID_ISequentialStream.  
+5.  Exécutez la commande XML à l’aide de ICommand :: Execute, en demandant l’ID d’interface IID_ISequentialStream.  
   
 6.  Traitez le résultat. Dans cet exemple, le code XML lu à partir du flux est affiché à l'écran.  
   

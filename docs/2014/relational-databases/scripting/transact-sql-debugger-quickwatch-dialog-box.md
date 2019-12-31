@@ -1,6 +1,6 @@
 ---
-title: Espion express, boîte de dialogue | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Espion express
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fcb20846ba21876044d50c80856600214eed354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d41aab8066b4ce1ee4e45fa9c363e60479868a5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063384"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243041"
 ---
 # <a name="quickwatch-dialog-box"></a>Boîte de dialogue Espion express
-  Utilisez la boîte de dialogue **Espion express** pour consulter rapidement le type de données et la valeur d’une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, une variable ou un paramètre) pendant que vous déboguez le code [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour surveiller plusieurs expressions, vous pouvez également ajouter l’expression à une fenêtre **Espion** .  
+  Utilisez la boîte de dialogue **Espion express** pour consulter rapidement le type de données et la valeur d’une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, une variable ou un paramètre) pendant que vous déboguez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour surveiller plusieurs expressions, vous pouvez également ajouter l’expression à une fenêtre **Espion** .  
   
 ## <a name="task-list"></a>Liste des tâches  
  **Pour accéder à la boîte de dialogue Espion express**  
@@ -41,26 +41,26 @@ ms.locfileid: "66063384"
   
     -   Expressions générées par l’application d’opérateurs à une ou plusieurs variables, un ou plusieurs paramètres ou une ou plusieurs fonctions système, comme @IntegerCounter + 1 ou FirstName + LastName.  
   
-    -   Instructions Transact-SQL qui retournent une valeur unique, comme : SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Instructions Transact-SQL qui retournent une seule valeur, par exemple : SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Cliquez sur **Réévaluer**.  
   
- **Pour ajouter l'expression Espion express à la fenêtre Espion**  
+ **Pour ajouter l’expression espion Express à un Fenêtre Espion**  
   
 -   Cliquez sur **Ajouter un espion**.  
   
- **Pour modifier la valeur de l'expression Espion express**  
+ **Pour modifier la valeur de l’expression espion Express**  
   
 -   Cliquez avec le bouton droit sur l’expression, puis sélectionnez **Modifier la valeur**.  
   
 ## <a name="options"></a>Options  
- **Liste d'expressions**  
+ **Liste d’expressions**  
  Affiche l'expression sélectionnée. La liste déroulante contient un ensemble d'expressions que vous pouvez choisir d'afficher. Les expressions présentes dans la liste sont celles qui sont disponibles dans l’étendue du frame de pile sélectionné dans la fenêtre **Pile des appels** . Pour afficher une autre expression, entrez-la ou sélectionnez-la dans la liste. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge les expressions suivantes : variables, paramètres et fonctions système dont les noms commencent par @@.  
   
- **Grille Valeur**  
+ **Grille de valeurs**  
  Affiche les propriétés de l'expression actuellement surveillée.  
   
- **Nom**  
+ **Nomme**  
  Expression [!INCLUDE[tsql](../../includes/tsql-md.md)] actuellement surveillée.  
   
  **Valeur**  
@@ -70,15 +70,15 @@ ms.locfileid: "66063384"
   
  La présence d'une icône de loupe dans une cellule **Valeur** indique que le visualiseur du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est disponible. Dans la liste, vous pouvez spécifier **Visualiseur de texte**, **Visualiseur XML**ou **Visualiseur HTML**. Pour démarrer un visualiseur du débogueur, cliquez sur l'icône de loupe. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] ouvre une boîte de dialogue qui affiche les données dans un format adapté au type de données.  
   
- **Type**  
+ **Entrer**  
  Affiche le type de données de l'expression.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](transact-sql-debugger.md)   
- [Informations du débogueur Transact-SQL](transact-sql-debugger-information.md)   
- [Espion (fenêtre)](transact-sql-debugger-watch-window.md)   
- [Variables locales (fenêtre)](transact-sql-debugger-locals-window.md)   
- [Fenêtre Pile des appels](transact-sql-debugger-call-stack-window.md)   
+ [Informations sur le débogueur Transact-SQL](transact-sql-debugger-information.md)   
+ [Fenêtre Espion](transact-sql-debugger-watch-window.md)   
+ [Fenêtre variables locales](transact-sql-debugger-locals-window.md)   
+ [Fenêtre pile des appels](transact-sql-debugger-call-stack-window.md)   
  [Expressions &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
   
   

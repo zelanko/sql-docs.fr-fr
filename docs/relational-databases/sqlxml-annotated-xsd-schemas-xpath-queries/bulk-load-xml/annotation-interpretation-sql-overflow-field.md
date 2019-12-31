@@ -1,6 +1,5 @@
 ---
-title: 'SQL : overflow-field (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'SQL : overflow-field (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902233"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246814"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interprétation des annotations - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Dans un schéma, vous pouvez identifier une colonne en tant que colonne de dépassement destinée à recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l’aide de la **SQL : Overflow-champ** annotation. Un schéma peut contenir plusieurs colonnes de dépassement.  
+  Dans un schéma, vous pouvez identifier une colonne en tant que colonne de dépassement destinée à recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l’aide de l’annotation **SQL : overflow-field** . Un schéma peut contenir plusieurs colonnes de dépassement.  
   
- Chaque fois qu’un nœud XML (élément ou attribut) pour lesquelles il existe un **SQL : Overflow-champ** annotation définie entre dans l’étendue, la colonne de dépassement de capacité est activée et reçoit des données non consommées. Lorsque le nœud sort de la portée, la colonne de dépassement n'est plus active et le chargement en masse XML active le champ de dépassement précédent (le cas échéant).  
+ Chaque fois qu’un nœud XML (élément ou attribut) pour lequel une annotation **SQL : overflow-field** est définie entre dans la portée, la colonne de dépassement est activée et reçoit des données non consommées. Lorsque le nœud sort de la portée, la colonne de dépassement n'est plus active et le chargement en masse XML active le champ de dépassement précédent (le cas échéant).  
   
- Quand il stocke des données dans la colonne de dépassement de capacité, le chargement en masse XML stocke également les balises d’ouverture et fermeture de l’élément parent pour lequel **SQL : Overflow-champ** est défini.  
+ À mesure qu’il stocke des données dans la colonne de dépassement, le chargement en masse XML stocke également les balises d’ouverture et de fermeture de l’élément parent pour lequel **SQL : overflow-field** est défini.  
   
- Par exemple, le schéma suivant décrit le  **\<clients >** et  **\<CustOrder >** éléments. Chacun de ces éléments identifie une colonne de dépassement :  
+ Par exemple, le schéma suivant décrit les ** \<éléments Customer>** et ** \<CustOrder>** . Chacun de ces éléments identifie une colonne de dépassement :  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +75,9 @@ ms.locfileid: "67902233"
 </xsd:schema>  
 ```  
   
- Dans le schéma, le  **\<client >** élément est mappé à la table Cust et  **\<ordre >** élément est mappé à la table CustOrder.  
+ Dans le schéma, l' ** \<élément Customer>** est mappé à la table Cust et l' ** \<élément Order>** est mappé à la table CustOrder.  
   
- Les deux le  **\<client >** et  **\<ordre >** éléments identifient une colonne de dépassement de capacité. Par conséquent, le chargement en masse XML enregistre tous les non consommées enfants éléments et attributs de la  **\<client >** élément dans la colonne de dépassement de capacité de la table Cust et tous les éléments enfants non consommées et attributs de la  **\<Ordre >** élément dans la colonne de dépassement de capacité de la table CustOrder.  
+ Les ** \<éléments Customer>** et ** \<Order>** identifient une colonne Overflow. Ainsi, le chargement en masse XML enregistre tous les éléments enfants et attributs non consommés de l' ** \<élément Customer>** dans la colonne Overflow de la table Cust, ainsi que tous les éléments enfants et attributs non consommés de l' ** \<élément Order>** dans la colonne Overflow de la table CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   

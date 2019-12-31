@@ -1,6 +1,6 @@
 ---
-title: Rechercher du texte avec des caractères génériques | Microsoft Docs
-ms.custom: ''
+title: Rechercher du texte avec des caractères génériques
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,15 +16,15 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5c3efcef4eade7c6ad2b5a5d52a1fa26a4c4ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090238"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243278"
 ---
 # <a name="search-text-with-wildcards"></a>Rechercher du texte avec des caractères génériques
-  Les expressions ci-après peuvent remplacer des caractères ou des chiffres dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+  Les expressions suivantes peuvent remplacer des caractères ou des chiffres dans le champ **Rechercher** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] la boîte de dialogue **Rechercher et remplacer** .  
   
 #### <a name="to-search-using-wildcards"></a>Pour effectuer une recherche avec des caractères génériques  
   
@@ -43,5 +43,5 @@ ms.locfileid: "66090238"
 |Jeu de caractères|[ ]|Représente tout caractère du jeu de caractères spécifié.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et remplacement](search-and-replace.md)   
+ [Rechercher et remplacer](search-and-replace.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  

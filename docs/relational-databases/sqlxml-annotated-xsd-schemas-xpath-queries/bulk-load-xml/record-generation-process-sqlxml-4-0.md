@@ -1,6 +1,5 @@
 ---
-title: Enregistrer le processus de génération (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Processus de génération d’enregistrements (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b1919afda67f421146d028ef0d5247977175a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005298"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246699"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processus de génération d'enregistrements (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68005298"
  Le chargement en masse XML gère les annotations de schéma de mappage courantes, y compris les mappages de colonne et de table (spécifiés explicitement à l'aide d'annotations ou implicitement par le biais du mappage par défaut), ainsi que les relations de jointure.  
   
 > [!NOTE]  
->  Cette rubrique suppose que vous connaissez bien les schémas de mappage XDR ou XSD annotés. Pour plus d’informations sur les schémas, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) ou [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Cette rubrique suppose que vous connaissez bien les schémas de mappage XDR ou XSD annotés. Pour plus d’informations sur les schémas, consultez [Présentation des schémas XSD Annotés &#40;sqlxml 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) ou [schémas XDR annotés &#40;dépréciés dans SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
  Pour comprendre la génération d'enregistrements, vous devez comprendre les concepts suivants :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68005298"
 -   Exceptions à la règle de génération d'enregistrements  
   
 ## <a name="scope-of-a-node"></a>Étendue d’un nœud  
- Un nœud (un élément ou un attribut) dans un document XML entre *dans l’étendue* lorsque le chargement en masse XML rencontre dans le flux de données d’entrée XML. Pour un nœud d'élément, la balise de début de l'élément place l'élément dans l'étendue. Pour un nœud d'attribut, le nom d'attribut place l'attribut dans l'étendue.  
+ Un nœud (un élément ou un attribut) dans un document XML entre dans l' *étendue* lorsque le chargement en masse XML le rencontre dans le flux de données d’entrée XML. Pour un nœud d'élément, la balise de début de l'élément place l'élément dans l'étendue. Pour un nœud d'attribut, le nom d'attribut place l'attribut dans l'étendue.  
   
  Un nœud quitte l'étendue lorsqu'il ne reste plus de données pour lui : soit au niveau de la balise de fin (dans le cas d'un nœud d'élément), soit à la fin d'une valeur d'attribut (dans le cas d'un nœud d'attribut).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68005298"
 </xsd:schema>  
 ```  
   
- Le schéma spécifie un  **\<client >** élément avec **CustomerID** et **CompanyName** attributs. Le **SQL : relation** annotation maps le  **\<client >** élément à la table Customers.  
+ Le schéma spécifie un ** \<élément Customer>** avec les attributs **CustomerID** et **CompanyName** . L’annotation **SQL : relation** mappe l' ** \<élément Customer>** à la table Customers.  
   
  Considérez ce fragment d'un document XML :  
   
@@ -90,19 +90,19 @@ ms.locfileid: "68005298"
   
  Lorsque le chargement en masse XML est fourni avec le schéma décrit dans les paragraphes précédents et les données XML comme entrée, il traite les nœuds (éléments et attributs) dans les données sources comme suit :  
   
--   La balise de début de la première  **\<client >** élément place cet élément dans l’étendue. Ce nœud est mappé à la table Customers. Par conséquent, le chargement en masse XML génère un enregistrement pour la table Customers.  
+-   La balise de début du ** \<** premier élément de>client place cet élément dans la portée. Ce nœud est mappé à la table Customers. Par conséquent, le chargement en masse XML génère un enregistrement pour la table Customers.  
   
--   Dans le schéma, tous les attributs de la  **\<client >** sont mappés aux colonnes de la table Customers. Lorsque ces attributs entrent dans l'étendue, le chargement en masse XML copie leurs valeurs dans l'enregistrement de client qui est déjà généré par l'étendue parente.  
+-   Dans le schéma, tous les attributs de l' ** \<élément Customer>** sont mappés à des colonnes de la table Customers. Lorsque ces attributs entrent dans l'étendue, le chargement en masse XML copie leurs valeurs dans l'enregistrement de client qui est déjà généré par l'étendue parente.  
   
--   Lorsque le chargement en masse XML atteint la balise de fin pour le  **\<client >** élément, l’élément est hors de portée. Cela conduit le chargement en masse XML à considérer l'enregistrement comme complet et à l'envoyer à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Lorsque le chargement en masse XML atteint la balise de fin de l' ** \<élément Customer>** , l’élément est hors de portée. Cela conduit le chargement en masse XML à considérer l'enregistrement comme complet et à l'envoyer à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Chargement en masse XML suit ce processus pour chaque suivantes  **\<client >** élément.  
+ Le chargement en masse XML suit ce processus pour chaque élément de ** \<>client** suivant.  
   
 > [!IMPORTANT]  
 >  Dans ce modèle, comme un enregistrement est inséré lorsque la balise de fin est atteinte (ou lorsque le nœud est hors de portée), vous devez définir toutes les données associées à l'enregistrement dans l'étendue du nœud.  
   
-## <a name="record-subset-and-the-key-ordering-rule"></a>Sous-ensemble d’enregistrements et de la clé de tri de règle  
- Lorsque vous spécifiez un schéma de mappage qui utilise  **\<SQL : Relationship >** , le terme de sous-ensemble fait référence au jeu d’enregistrements qui est généré sur le côté étranger de la relation. Dans l’exemple suivant, les enregistrements CustOrder sont sur le côté étranger,  **\<SQL : Relationship >** .  
+## <a name="record-subset-and-the-key-ordering-rule"></a>Sous-ensemble d’enregistrements et règle de classement des clés  
+ Lorsque vous spécifiez un schéma de mappage qui utilise ** \<SQL : Relationship>**, le terme de sous-ensemble fait référence au jeu d’enregistrements générés sur le côté étranger de la relation. Dans l’exemple suivant, les enregistrements CustOrder se trouvent sur le côté étranger, ** \<SQL : Relationship>**.  
   
  Prenons l'exemple d'une base de données contenant les tables suivantes :  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68005298"
   
  CustomerID dans la table CustOrder est une clé étrangère qui fait référence à la clé primaire CustomerID dans la table Cust.  
   
- À présent, considérez la vue XML telle qu'elle est spécifiée dans le schéma XSD annoté ci-dessous. Utilise ce schéma  **\<SQL : Relationship >** pour spécifier la relation entre les tables Cust et CustOrder.  
+ À présent, considérez la vue XML telle qu'elle est spécifiée dans le schéma XSD annoté ci-dessous. Ce schéma utilise ** \<SQL : Relationship>** pour spécifier la relation entre les tables Cust et CustOrder.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -148,19 +148,19 @@ ms.locfileid: "68005298"
   
  L'exemple de données XML et les étapes de création d'un exemple fonctionnel sont fournis ci-dessous.  
   
--   Quand un  **\<client >** nœud d’élément dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir de la  **\<CustomerID >** ,  **\<CompanyName >** et le  **\<Ville >** éléments enfants en tant que ces éléments entrent dans l’étendue.  
+-   Lorsqu’un ** \<** nœud d’élément de>client dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Le chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir des éléments ** \<CustomerID>**, ** \<CompanyName>** et ** \<City>** les éléments enfants, car ces éléments entrent dans la portée.  
   
--   Quand un  **\<ordre >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder. Chargement en masse XML copie la valeur de la **OrderID** à cet enregistrement d’attribut. La valeur requise pour la colonne CustomerID est obtenue à partir de la  **\<CustomerID >** élément enfant de le  **\<client >** élément. Chargement en masse XML utilise les informations qui sont spécifiées dans  **\<SQL : Relationship >** pour obtenir la valeur de clé étrangère CustomerID pour cet enregistrement, sauf si le **CustomerID** attribut a été spécifié dans le  **\<ordre >** élément. La règle générale est que si l’élément enfant spécifie explicitement une valeur pour l’attribut de clé étrangère, chargement en masse XML utilise cette valeur et n’obtient pas la valeur de l’élément parent en utilisant le **\<SQL : Relationship >** . Que ce  **\<ordre >** nœud d’élément est hors de portée, le chargement en masse XML envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et traite ensuite tous les subséquent  **\<ordre >** nœuds d’élément de la même manière.  
+-   Lorsqu’une ** \<commande>** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder. Le chargement en masse XML copie la valeur de l’attribut **OrderID** dans cet enregistrement. La valeur requise pour la colonne CustomerID est obtenue à partir de l' ** \<élément CustomerID>** élément enfant de l' ** \<élément Customer>** . Le chargement en masse XML utilise les informations spécifiées dans ** \<SQL : Relationship>** pour obtenir la valeur de clé étrangère CustomerID pour cet enregistrement, sauf si l’attribut **CustomerID** a été spécifié dans l' ** \<élément Order>** . La règle générale est que si l’élément enfant spécifie explicitement une valeur pour l’attribut de clé étrangère, le chargement en masse XML utilise cette valeur et n’obtient pas la valeur de l’élément parent à l’aide du ** \<>SQL : Relationship **spécifié. Dans la mesure où cet ** \<ordre>** nœud d’élément est hors de portée, le chargement en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] masse XML envoie l’enregistrement à ** \<** et traite ensuite l’ensemble des nœuds d’élément>de la même manière.  
   
--   Enfin, le  **\<client >** nœud d’élément est hors de portée. À ce stade, le chargement en masse XML envoie l'enregistrement de client à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le chargement en masse XML suit ce processus pour tous les clients suivants dans le flux de données XML.  
+-   Enfin, le ** \<** nœud de l’élément>du client est hors de portée. À ce stade, le chargement en masse XML envoie l'enregistrement de client à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le chargement en masse XML suit ce processus pour tous les clients suivants dans le flux de données XML.  
   
  Voici deux observations à propos du schéma de mappage :  
   
--   Lorsque le schéma satisfait la règle « imbrication » (par exemple, toutes les données qui sont associées au client et l’ordre est défini dans l’étendue d’associé  **\<client >** et  **\<Ordre >** nœuds d’élément), le chargement en masse réussit.  
+-   Lorsque le schéma répond à la règle de « relation contenant-contenu » (par exemple, toutes les données associées au client et à la commande sont définies dans l’étendue du ** \<client associé>** et ** \<de l’ordre>** nœuds d’élément), le chargement en masse réussit.  
   
--   Pour décrire le  **\<client >** élément, les éléments sont spécifiés dans l’ordre approprié de ses enfants. Dans ce cas, le  **\<CustomerID >** élément enfant est spécifié avant le  **\<ordre >** élément enfant. Cela signifie que dans le fichier de données XML d’entrée, le  **\<CustomerID >** valeur de l’élément est disponible en tant que la clé étrangère valeur lorsque le  **\<ordre >** élément entre dans l’étendue. Les attributs de clé sont spécifiés en premier ; ceci est la « règle de tri par clé ».  
+-   En décrivant l' ** \<élément Customer>** , ses éléments enfants sont spécifiés dans l’ordre approprié. Dans ce cas, l' ** \<élément enfant>CustomerID** est spécifié avant l' ** \<ordre>** élément enfant. Cela signifie que dans le fichier de données XML d’entrée, la valeur de l' ** \<élément CustomerID>** est disponible en tant que valeur de clé étrangère lorsque l' ** \<ordre>** élément entre dans l’étendue. Les attributs de clé sont spécifiés en premier ; ceci est la « règle de tri par clé ».  
   
-     Si vous spécifiez le  **\<CustomerID >** élément enfant après le  **\<ordre >** élément enfant, la valeur n’est pas disponible lorsque le  **\< Commande >** élément entre dans l’étendue. Lorsque le  **\</Order >** balise de fin est ensuite lu, l’enregistrement de la table CustOrder est considérée comme terminée et qu’il est inséré dans la table CustOrder avec une valeur NULL pour la colonne CustomerID, qui n’est pas le résultat souhaité.  
+     Si vous spécifiez le ** \<CustomerID>** élément enfant après l' ** \<ordre>** élément enfant, la valeur n’est pas disponible lorsque l’élément ** \<Order>** entre dans la portée. Lorsque la balise de fin de la ** \<>/Order** est ensuite lue, l’enregistrement de la table CustOrder est considéré comme terminé et est inséré dans la table CustOrder avec une valeur null pour la colonne CustomerID, ce qui n’est pas le résultat souhaité.  
   
 #### <a name="to-create-a-working-sample"></a>Pour créer un exemple fonctionnel  
   
@@ -218,9 +218,9 @@ ms.locfileid: "68005298"
     ```  
   
 ## <a name="exceptions-to-the-record-generation-rule"></a>Exceptions à la règle de génération d'enregistrements  
- Le chargement en masse XML ne génère pas d'enregistrement pour un nœud lorsqu'il entre dans l'étendue si ce nœud est de type IDREF ou IDREFS. Vous devez vous assurer qu'une description complète de l'enregistrement se produit à un point quelconque dans le schéma. Le **dt : type = « nmtokens »** annotations sont ignorées tout comme le type IDREFS est ignoré.  
+ Le chargement en masse XML ne génère pas d'enregistrement pour un nœud lorsqu'il entre dans l'étendue si ce nœud est de type IDREF ou IDREFS. Vous devez vous assurer qu'une description complète de l'enregistrement se produit à un point quelconque dans le schéma. Les annotations **DT : type = "NMTOKENS"** sont ignorées, tout comme le type IDREFS est ignoré.  
   
- Par exemple, considérez le schéma XSD suivant qui décrit  **\<client >** et  **\<ordre >** éléments. Le  **\<client >** élément inclut un **OrderList** attribut de type IDREFS. Le  **\<SQL : Relationship >** balise spécifie la relation un-à-plusieurs entre le client et une liste de commandes.  
+ Par exemple, considérez le schéma XSD suivant qui décrit ** \<les>client** et ** \<l’ordre>** éléments. L' ** \<élément Customer>** comprend un attribut **OrderList** du type IDREFS. La balise de ** \<>SQL : Relationship** spécifie la relation un-à-plusieurs entre le client et la liste de commandes.  
   
  Voici le schéma :  
   
@@ -261,9 +261,9 @@ ms.locfileid: "68005298"
 </xsd:schema>  
 ```  
   
- Étant donné que le chargement en masse ignore les nœuds de type IDREFS, il n’existe aucune génération d’enregistrements lors de la **OrderList** nœud d’attribut entre dans l’étendue. Par conséquent, si vous souhaitez que les enregistrements de commandes soient ajoutés à la table Orders, vous devez décrire ces commandes quelque part dans le schéma. Dans ce schéma, en spécifiant le  **\<ordre >** élément garantit que le chargement en masse XML ajoute les enregistrements de commande à la table Orders. Le  **\<ordre >** élément décrit tous les attributs qui sont nécessaires pour remplir l’enregistrement pour la table CustOrder.  
+ Étant donné que le chargement en masse ignore les nœuds de type IDREFS, aucune génération d’enregistrement n’est générée lorsque le nœud d’attribut **OrderList** entre dans l’étendue. Par conséquent, si vous souhaitez que les enregistrements de commandes soient ajoutés à la table Orders, vous devez décrire ces commandes quelque part dans le schéma. Dans ce schéma, la spécification de l' ** \<élément Order>** garantit que le chargement en masse XML ajoute les enregistrements de commande à la table Orders. L' ** \<élément Order>** décrit tous les attributs requis pour remplir l’enregistrement de la table CustOrder.  
   
- Vous devez vous assurer que le **CustomerID** et **OrderID** des valeurs dans le  **\<client >** élément correspondent aux valeurs dans le  **\<Ordre >** élément. Vous êtes chargé de maintenir l'intégrité référentielle.  
+ Vous devez vous assurer que les valeurs **CustomerID** et **OrderID** de l' ** \<élément Customer>** correspondent aux valeurs de l' ** \<élément Order>** . Vous êtes chargé de maintenir l'intégrité référentielle.  
   
 #### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   
