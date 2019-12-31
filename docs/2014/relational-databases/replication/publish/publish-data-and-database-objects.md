@@ -41,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
+ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199388"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479324"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
   Lors de la création d'une publication, vous choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
@@ -56,14 +56,14 @@ ms.locfileid: "68199388"
 |Tables|X|X|  
 |Tables partitionnées|X|X|  
 |Procédures stockées - Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
-|Procédures stockées - Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
-|Affichages|X|X|  
+|Procédures stockées - Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|no|  
+|Views|X|X|  
 |Vues indexées|X|X|  
-|Vues indexées comme des tables|X|non|  
+|Vues indexées comme des tables|X|no|  
 |Types définis par l'utilisateur (CLR)|X|X|  
 |Fonctions définies par l'utilisateur ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
 |Types de données d'alias|X|X|  
-|Index de texte intégral|X|X|  
+|Index en texte intégral|X|X|  
 |Objets de schéma (contraintes, index, déclencheurs DML utilisateur, propriétés étendues et classement)|X|X|  
   
 ## <a name="creating-publications"></a>Création de publications  
@@ -95,7 +95,7 @@ ms.locfileid: "68199388"
   
 -   [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md)  
   
--   [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md)  
+-   [Afficher et modifier les propriétés d'un article](view-and-modify-article-properties.md)  
   
 -   [Supprimer une publication](delete-a-publication.md)  
   
@@ -107,13 +107,13 @@ ms.locfileid: "68199388"
 ## <a name="publishing-tables"></a>Publication de tables  
  L'objet le plus couramment publié est une table. Les liens suivants donnent des informations supplémentaires sur les éléments relatifs à la publication des tables :  
   
--   [Filtrer des données publiées](filter-published-data.md)  
+-   [Filtrer les données publiées](filter-published-data.md)  
   
--   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
+-   [Options d’article pour la réplication transactionnelle](../transactional/article-options-for-transactional-replication.md)  
   
--   [Article Options for Merge Replication](../merge/article-options-for-merge-replication.md)  
+-   [Options d’article pour la réplication de fusion](../merge/article-options-for-merge-replication.md)  
   
--   [Répliquer des colonnes d’identité](replicate-identity-columns.md)  
+-   [Répliquer les colonnes d’identité](replicate-identity-columns.md)  
   
  Lors de la publication d'une table pour la réplication, vous pouvez spécifier les objets de schéma qui doivent être copiés vers l'Abonné, tels que l'intégrité référentielle déclarée (contraintes de clé primaire, contraintes référentielles, contraintes uniques), des index, des déclencheurs DML utilisateur (des déclencheurs DDL qui ne peuvent pas être répliqués), des propriétés étendues et des classements. Les propriétés étendues sont répliquées uniquement dans la synchronisation initiale entre le serveur de publication et l'Abonné. Si vous ajoutez ou modifiez une propriété étendue après la synchronisation initiale, la modification n'est pas répliquée.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68199388"
 ## <a name="publishing-views"></a>Publication de vues  
  Tous les types de réplication vous permettent de répliquer des vues. La vue (et l'index qui l'accompagne s'il s'agit d'une vue indexée) peut être copiée vers l'Abonné, mais la table de base doit aussi être répliquée.  
   
- Pour les vues indexées, la réplication transactionnelle vous permet aussi de répliquer la vue indexée en tant que table et non pas en tant que vue, éliminant ainsi la nécessité de répliquer aussi la table de base. Pour cela, spécifiez une des options « indexed view logbased » pour le paramètre *@type* de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Pour plus d’informations sur l’utilisation de **sp_addarticle**, consultez [Définir un article](define-an-article.md).  
+ Pour les vues indexées, la réplication transactionnelle vous permet aussi de répliquer la vue indexée en tant que table et non pas en tant que vue, éliminant ainsi la nécessité de répliquer aussi la table de base. Pour ce faire, spécifiez l’une des options « indexed view logbased » pour * \@* le paramètre de type de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Pour plus d’informations sur l’utilisation de **sp_addarticle**, consultez [Définir un article](define-an-article.md).  
   
 ## <a name="publishing-user-defined-functions"></a>Publication de fonctions définies par l'utilisateur  
  Les instructions CREATE FUNCTION pour les fonctions CLR et pour les fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)] sont copiées vers chaque Abonné. Dans le cas des fonctions CLR, l'assembly associé est également copié. Les modifications des fonctions sont répliquées vers les Abonnés ; les modifications aux assemblys associés ne le sont pas.  
@@ -168,9 +168,9 @@ ms.locfileid: "68199388"
 -   Si vous publiez un objet de base de données qui dépend d'un ou de plusieurs autres objets de base de données, vous devez publier tous les objets référencés. Par exemple, si vous publiez une vue qui dépend d'une table, vous devez publier la table également.  
   
     > [!NOTE]  
-    >  Si vous ajoutez un article à une publication de fusion et qu'un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l'aide du paramètre **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Lorsque vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **@processing_order** de **sp_changemergearticle**, et spécifiez le nom de la table pour le paramètre **@article** . Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
+    >  Si vous ajoutez un article à une publication de fusion et qu’un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux ** \@** Articles à l’aide du paramètre processing_order de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Quand vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **\@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **\@processing_order** de **sp_changemergearticle** et spécifiez le nom de la table pour le paramètre **\@article**. Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
   
--   Les noms de publication ne peuvent pas contenir les caractères suivants : % * [ ] | : " ? \ / \< >.  
+-   Les noms de publication ne peuvent pas contenir les caractères suivants : % * [ ] | : " ? \/ \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Limitations de la publication d'objets  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68199388"
   
 -   Les valeurs par défaut liées créées avec [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) ne sont pas répliquées (les valeurs par défaut liées sont dépréciées et ont été remplacées par les valeurs par défaut créées avec le mot clé DEFAULT de ALTER TABLE ou CREATE TABLE).  
   
--   Les fonctions contenant l'indicateur `NOEXPAND` sur des vues indexées ne peuvent pas être publiées dans la même publication que les tables référencées et les vues d'index, en raison de l'ordre dans lequel l'agent de distribution les livre. Pour contourner ce problème, placez la création de la table et de la vue indexée dans une première publication, puis ajoutez les fonctions contenant l'indicateur `NOEXPAND` sur les vues indexées à une seconde publication que vous publierez à la fin de la première publication. Ou bien, créez des scripts pour ces fonctions et exécutez-les à l’aide de la *@post_snapshot_script* paramètre de `sp_addpublication`.  
+-   Les fonctions contenant l'indicateur `NOEXPAND` sur des vues indexées ne peuvent pas être publiées dans la même publication que les tables référencées et les vues d'index, en raison de l'ordre dans lequel l'agent de distribution les livre. Pour contourner ce problème, placez la création de la table et de la vue indexée dans une première publication, puis ajoutez les fonctions contenant l'indicateur `NOEXPAND` sur les vues indexées à une seconde publication que vous publierez à la fin de la première publication. Ou bien, créez des scripts pour ces fonctions et fournissez le script * \@* à l’aide `sp_addpublication`du paramètre post_snapshot_script de.  
   
 ### <a name="schemas-and-object-ownership"></a>Schémas et propriété des objets  
  La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
@@ -197,7 +197,7 @@ ms.locfileid: "68199388"
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être changé par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md), [Définir un article](define-an-article.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md), [Définir un article](define-an-article.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publication de données sur les Abonnés exécutant des versions antérieures de SQL Server  
   
@@ -208,9 +208,9 @@ ms.locfileid: "68199388"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>Publication de tables dans plusieurs publications  
  La réplication prend en charge la publication d'articles dans plusieurs publications (y compris la réédition de données) avec les restrictions suivantes :  
   
--   Si un article est publié dans une publication transactionnelle et dans une publication de fusion, vérifiez que la propriété *@published_in_tran_pub* a la valeur TRUE pour l'article de fusion. Pour plus d’informations sur la définition de propriétés, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
+-   Si un article est publié dans une publication transactionnelle et une publication de fusion, assurez-vous * \@* que la propriété published_in_tran_pub a la valeur true pour l’article de fusion. Pour plus d’informations sur la définition de propriétés, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
   
-     Vous devez également définir la propriété *@published_in_tran_pub* si un article fait partie d'un abonnement transactionnel et qu'il est inclus dans une publication de fusion. Si tel est le cas, gardez à l'esprit que, par défaut, la réplication transactionnelle suppose que les tables sur l'Abonné soient traitées en tant qu'objets accessibles en lecture seule ; si la réplication de fusion apporte des modifications aux données d'une table dans un abonnement transactionnel, une non-convergence de données peut se produire. Pour éviter cette éventualité, il est recommandé de spécifier toute table de ce type en tant qu'objet en téléchargement seul dans la publication de fusion. Cela empêche un Abonné de fusion de télécharger les modifications apportées aux données de la table. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     Vous devez également définir la * \@propriété published_in_tran_pub* si un article fait partie d’un abonnement transactionnel et s’il est inclus dans une publication de fusion. Si tel est le cas, gardez à l'esprit que, par défaut, la réplication transactionnelle suppose que les tables sur l'Abonné soient traitées en tant qu'objets accessibles en lecture seule ; si la réplication de fusion apporte des modifications aux données d'une table dans un abonnement transactionnel, une non-convergence de données peut se produire. Pour éviter cette éventualité, il est recommandé de spécifier toute table de ce type en tant qu'objet en téléchargement seul dans la publication de fusion. Cela empêche un Abonné de fusion de télécharger les modifications apportées aux données de la table. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   Un article ne peut pas être publié à la fois dans une publication de fusion et dans une publication transactionnelle avec des abonnements mis à jour en file d'attente.  
   
@@ -220,10 +220,10 @@ ms.locfileid: "68199388"
   
     |Propriété|Paramètre dans sp_addarticle|  
     |--------------|---------------------------------|  
-    |Gestion de plages d'identités|**@auto_identity_range** (déconseillé) et **@identityrangemangementoption**|  
-    |Plage d'identités du serveur de publication|**@pub_identity_range**|  
-    |Plage d'identités|**@identity_range**|  
-    |Seuil de plage d'identités|**@threshold**|  
+    |Gestion de plages d'identités|auto_identity_range (déconseillé) et identityrangemangementoption ** \@** ** \@**|  
+    |Plage d'identités du serveur de publication|**\@pub_identity_range**|  
+    |Plage d'identités|**\@identity_range**|  
+    |Seuil de plage d'identités|**\@durée**|  
   
      Pour plus d’informations sur ces paramètres, consultez [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
@@ -231,30 +231,30 @@ ms.locfileid: "68199388"
   
     |Propriété|Paramètre dans sp_addmergearticle|  
     |--------------|--------------------------------------|  
-    |Suivi de colonne|**@column_tracking**|  
-    |Options de schéma|**@schema_option**|  
-    |Filtrage de colonnes|**@vertical_partition**|  
-    |Options de chargement de l'Abonné|**@subscriber_upload_options**|  
-    |Suivi des suppressions conditionnelles|**@delete_tracking**|  
-    |Compensation d'erreur|**@compensate_for_errors**|  
-    |Gestion de plages d'identités|**@auto_identity_range** (déconseillé) et **@identityrangemangementoption**|  
-    |Plage d'identités du serveur de publication|**@pub_identity_range**|  
-    |Plage d'identités|**@identity_range**|  
-    |Seuil de plage d'identités|**@threshold**|  
-    |Options de la partition|**@partition_options**|  
-    |Diffusion de colonne de BLOB|**@stream_blob_columns**|  
-    |Type de filtre|**@filter_type** (paramètre dans **sp_addmergefilter**)|  
+    |Suivi de colonne|**\@column_tracking**|  
+    |Options de schéma|**\@schema_option**|  
+    |Filtrage de colonnes|**\@vertical_partition**|  
+    |Options de chargement de l'Abonné|**\@subscriber_upload_options**|  
+    |Suivi des suppressions conditionnelles|**\@delete_tracking**|  
+    |Compensation d'erreur|**\@compensate_for_errors**|  
+    |Gestion de plages d'identités|auto_identity_range (déconseillé) et identityrangemangementoption ** \@** ** \@**|  
+    |Plage d'identités du serveur de publication|**\@pub_identity_range**|  
+    |Plage d'identités|**\@identity_range**|  
+    |Seuil de plage d'identités|**\@durée**|  
+    |Options de partition|**\@partition_options**|  
+    |Diffusion de colonne de BLOB|**\@stream_blob_columns**|  
+    |Type de filtre|filter_type (paramètre dans **sp_addmergefilter**) ** \@**|  
   
      Pour plus d’informations sur ces paramètres, consultez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
 -   La réplication transactionnelle et la réplication de fusion non filtrée prennent en charge la publication d'une table dans plusieurs publications, puis les abonnements dans une table unique de la base de données d'abonnement (communément appelée un scénario de cumul (roll up)). Le cumul est souvent utilisé pour agréger en une seule table des sous-ensembles de données provenant de plusieurs emplacements sur un Abonné central. Les publications de fusion filtrées ne prennent pas en charge le scénario avec un Abonné central. Pour la réplication de fusion, le cumul est généralement mis en œuvre via une seule publication avec des filtres de lignes personnalisés. Pour plus d'informations, voir [Filtres de ligne paramétrés](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [Ajouter et supprimer des Articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Configurer la distribution](../configure-distribution.md)   
  [Initialiser un abonnement](../initialize-a-subscription.md)   
- [Création de scripts de réplication](../scripting-replication.md)   
+ [Écriture de scripts de réplication](../scripting-replication.md)   
  [Sécuriser le serveur de publication](../security/secure-the-publisher.md)   
- [S'abonner à des publications](../subscribe-to-publications.md)  
+ [S’abonner à des publications](../subscribe-to-publications.md)  
   
   

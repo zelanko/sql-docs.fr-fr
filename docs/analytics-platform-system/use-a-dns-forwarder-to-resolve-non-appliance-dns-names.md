@@ -1,6 +1,6 @@
 ---
-title: Utiliser un redirecteur DNS d’Analytique Platform System | Microsoft Docs »
-description: Utiliser un redirecteur DNS pour résoudre les noms DNS non-appliance d’Analytique Platform System.
+title: Utiliser un redirecteur DNS
+description: Utilisez un redirecteur DNS pour résoudre les noms DNS non-Appliance dans Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,40 +8,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 841d2da521bada840c1298d3fb9cea28c2835b4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959827"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399431"
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Utiliser un redirecteur DNS pour résoudre les noms DNS de Non-Appliance d’Analytique Platform System
-Un redirecteur DNS peut être configuré sur les nœuds de Services de domaine Active Directory ( **_appliance\_domaine_-AD01** et  **_appliance\_ domaine_-AD02**) de votre appliance Analytique Platform System pour autoriser les scripts et les applications logicielles pour accéder aux serveurs externes.  
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance dans Analytics Platform System
+Un redirecteur DNS peut être configuré sur les nœuds Active Directory Domain Services (**_domaine d’appliance\__-ad01** et domaine d' ** _Appliance\__-AD02**) de votre appliance Analytics Platform System pour permettre aux scripts et aux applications logicielles d’accéder aux serveurs externes.  
   
-## <a name="ResolveDNS"></a>À l’aide d’un redirecteur DNS  
-L’appliance Analytique Platform System est configuré pour empêcher la résolution de noms DNS des serveurs qui ne sont pas dans l’appliance. Certains processus, tels que Windows Software Update Services (WSUS), devez accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation du système de plateforme Analytique DNS peut être configuré pour prendre en charge d’un redirecteur de nom externe qui autorise les hôtes Analytique Platform System et Machines virtuelles (VM) à utiliser les serveurs DNS externes pour résoudre les noms en dehors de l’appliance. Configuration personnalisée de suffixes DNS n’est pas possible, ce qui signifie que vous devez utiliser des noms de domaine complet pour résoudre un nom de serveur non-appliance.  
+## <a name="ResolveDNS"></a>Utilisation d’un redirecteur DNS  
+L’appliance Analytics Platform System est configurée pour empêcher la résolution des noms DNS des serveurs qui ne sont pas dans l’appliance. Certains processus, tels que Windows Software Update Services (WSUS), devront accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation, le système DNS de la plateforme d’analyse peut être configuré pour prendre en charge un redirecteur de nom externe qui permet aux ordinateurs hôtes du système de plateforme d’analyse et aux machines virtuelles d’utiliser des serveurs DNS externes pour résoudre les noms en dehors de l’appliance. La configuration personnalisée des suffixes DNS n’est pas prise en charge, ce qui signifie que vous devez utiliser des noms de domaine complets pour résoudre le nom d’un serveur non-appareil.  
   
-**Pour créer un redirecteur DNS avec l’interface utilisateur graphique de DNS**  
+**Pour créer un redirecteur DNS avec l’interface utilisateur graphique DNS**  
   
-1.  Ouvrez une session sur le  **_appliance\_domaine_-AD01** nœud.  
+1.  Connectez-vous au nœud ** _domaine du dispositif\__-ad01** .  
   
-2.  Ouvrez le Gestionnaire DNS (**dnsmgmt.msc**).  
+2.  Ouvrez le Gestionnaire DNS (**dnsmgmt. msc**).  
   
-3.  Cliquez sur le nom du serveur, puis **propriétés**.  
+3.  Cliquez avec le bouton droit sur le nom du serveur, puis cliquez sur **Propriétés**.  
   
-4.  Dans le **avancé** onglet, désélectionnez le **désactiver la récursivité (désactive également les redirecteurs)** option, puis cliquez sur **appliquer**.)  
+4.  Dans l’onglet **avancé** , désélectionnez l’option **désactiver la récursivité (désactive également les redirecteurs)** , puis cliquez sur **appliquer**.)  
   
-5.  Cliquez sur le **redirecteurs** onglet, puis cliquez sur **modifier**.  
+5.  Cliquez sur l’onglet **redirecteurs** , puis sur **modifier**.  
   
-6.  Entrez l’adresse IP pour le serveur DNS externe qui fournit la résolution de noms. Les machines virtuelles et les serveurs (hôtes) dans l’appliance seront connecte aux serveurs externes en utilisant des noms de domaine complet.  
+6.  Entrez l’adresse IP du serveur DNS externe qui fournira la résolution de noms. Les machines virtuelles et les serveurs (hôtes) de l’appliance se connectent aux serveurs externes à l’aide de noms de domaine complets.  
   
-7.  Répétez les étapes 1 à 6 sur le  **_appliance\_domaine_-AD02** nœud  
+7.  Répétez les étapes 1-6 sur le domaine de l' ** _Appliance\__-nœud AD02**  
   
-**Création d’un redirecteur DNS à l’aide de Windows PowerShell**  
+**Pour créer un redirecteur DNS à l’aide de Windows PowerShell**  
   
-1.  Ouvrez une session sur le  **_appliance\_domaine_-AD01**nœud.  
+1.  Connectez-vous au nœud ** _domaine du dispositif\__-ad01**.  
   
-2.  Exécutez le script Windows PowerShell suivant à partir de la  **_appliance\_domaine_-AD01** nœud. Avant d’exécuter le script Windows PowerShell, remplacez les adresses IP avec les adresses IP des serveurs DNS non-appliance.  
+2.  Exécutez le script Windows PowerShell suivant à partir du nœud ** _domaine\__ de l’appliance-ad01** . Avant d’exécuter le script Windows PowerShell, remplacez les adresses IP par les adresses IP de vos serveurs DNS non-appliance.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -49,25 +50,25 @@ L’appliance Analytique Platform System est configuré pour empêcher la résol
     $DNS.put()  
     ```  
   
-3.  Exécuter la même commande sur le  **_appliance\_domaine_-AD02** nœud.  
+3.  Exécutez la même commande sur le nœud ** _Domain\__-AD02** de l’appliance.  
   
 ## <a name="configuring-dns-resolution-for-wsus"></a>Configuration de la résolution DNS pour WSUS  
-SQL Server 2012 PDW fournit des fonctionnalités de mise à jour corrective et de maintenance intégrée. SQL Server PDW utilise Microsoft Update et autres technologies de maintenance de Microsoft. Pour activer les mises à jour de que l’appliance doit être en mesure de vous connecter à un référentiel d’entreprise de WSUS ou vers le dépôt WSUS public de Microsoft.  
+SQL Server PDW 2012 offre des fonctionnalités de maintenance et de mise à jour corrective intégrées. SQL Server PDW utilise Microsoft Update et d’autres technologies de maintenance Microsoft. Pour activer les mises à jour, l’appliance doit être en mesure de se connecter à un référentiel WSUS d’entreprise ou au référentiel Microsoft public WSUS.  
   
-Pour les clients que vous choisissez de configurer l’appliance pour rechercher des mises à jour sur le référentiel WSUS public de Microsoft, les instructions suivantes définissent les détails de la configuration appropriée sur l’appliance.  
+Pour les clients qui choisissent de configurer l’appliance pour rechercher des mises à jour sur le référentiel Microsoft public WSUS, les instructions suivantes définissent les détails de configuration appropriés sur l’appliance.  
   
 > [!NOTE]  
-> L’administrateur de réseau de client doit fournir l’adresse IP d’un serveur DNS d’entreprise qui peut résoudre les noms à **Microsoft.com**.  
+> L’administrateur réseau du client doit fournir l’adresse IP d’un serveur DNS d’entreprise capable de résoudre les noms sur **Microsoft.com**.  
   
-1.  À l’aide du Bureau à distance, ouvrez une session sur VMM VM (<fabric domain>- VMM) à l’aide de compte d’administrateur de domaine fabric.  
+1.  À l’aide du Bureau à distance, connectez-<fabric domain>vous à la machine virtuelle VMM (-VMM) à l’aide du compte d’administrateur de domaine de la structure.  
   
-2.  Ouvrez le panneau de configuration, cliquez sur **réseau et Internet**, puis cliquez sur **Centre réseau et partage**.  
+2.  Ouvrez le panneau de configuration, cliquez sur **réseau et Internet**, puis sur **Centre réseau et partage**.  
   
-3.  Dans la liste des connexions, cliquez sur **VMSEthernet**, puis cliquez sur **propriétés**.  
+3.  Dans la liste connexion, cliquez sur **VMSEthernet**, puis sur **Propriétés**.  
   
-4.  Sélectionnez **Internet Protocol Version 4 (TCP/IPv4)** , puis cliquez sur **propriétés**.  
+4.  Sélectionnez **Protocole Internet version 4 (TCP/IPv4)**, puis cliquez sur **Propriétés**.  
   
-5.  Dans le **serveur DNS auxiliaire** zone, ajoutez l’adresse IP fournie par l’administrateur de réseau client.  
+5.  Dans la zone **serveur DNS auxiliaire** , ajoutez l’adresse IP fournie par l’administrateur réseau du client.  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

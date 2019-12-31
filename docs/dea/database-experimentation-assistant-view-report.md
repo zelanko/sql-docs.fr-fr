@@ -2,7 +2,7 @@
 title: Afficher les rapports d’analyse pour les mises à niveau de SQL Server
 description: Afficher les rapports d’analyse dans Assistant Expérimentation de base de données
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,28 +10,28 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056660"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317742"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Afficher les rapports d’analyse dans Assistant Expérimentation de base de données
 
-Après avoir [créé votre rapport d’analyse](database-experimentation-assistant-create-report.md) dans Assistant expérimentation de base de données (DEA), suivez les étapes décrites dans cet article pour afficher le rapport et obtenir des informations sur les performances fournies par votre test A/B.
+Une fois que vous avez utilisé Assistant Expérimentation de base de données (DEA) pour [créer un rapport d’analyse](database-experimentation-assistant-create-report.md), suivez les étapes ci-dessous pour examiner le rapport pour obtenir des informations sur les performances en fonction de votre test A/B.
 
-## <a name="select-a-server"></a>Sélectionner un serveur
+## <a name="select-a-server"></a>Sélectionnez un serveur.
 
 Dans DEA, sélectionnez l’icône de menu. Dans le menu développé, sélectionnez **rapports d’analyse** en regard de l’icône de liste de vérification pour ouvrir la fenêtre rapports d’analyse.
 
-Sous **rapports d’analyse**, entrez le nom d’un ordinateur exécutant SQL Server qui a une base de données d’analyse. Sélectionnez **Se connecter**. 
+Sous **rapports d’analyse**, entrez le nom d’un ordinateur exécutant SQL Server qui a une base de données d’analyse, puis sélectionnez **se connecter**.
 
 ![Se connecter à un rapport existant](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-Si vous ne disposez pas de dépendances, la page **Configuration requise** vous invite à entrer des liens pour les installer. Installez les composants requis, puis sélectionnez **Réessayer**.
+Si vous ne disposez pas de dépendances, la page **Configuration requise** vous invite à entrer des liens pour les installer. Si nécessaire, installez les composants requis, puis sélectionnez **Réessayer**.
 
 ![Page conditions préalables](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -78,16 +78,13 @@ Vous pouvez voir les instances A et B sur lesquelles la requête s’est exécut
 Le rapport Résumé de la comparaison contient des sections informations d' **erreur** et informations **sur le plan de requête** développables. Les sections affichent les erreurs et les informations de plan pour les deux instances.
 
 Sélectionnez le secteur d’erreur (rouge) pour afficher les types d’erreurs suivants :
+
 - **Erreurs existantes**: erreurs qui se trouvaient dans un.
 - **Nouvelles Erreurs**: erreurs qui se trouvaient dans B.
 - **Erreurs résolues**: erreurs qui se trouvaient dans un mais pas dans B.
 
 ![Graphiques d’erreur](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="see-also"></a>Voir aussi
 
 - Pour savoir comment générer un rapport d’analyse à partir d’une invite de commandes, consultez [exécuter à l’invite de commandes](database-experimentation-assistant-run-command-prompt.md).
-
-- Pour une présentation de la DEA et de la démonstration de 19 minutes, regardez la vidéo suivante :
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

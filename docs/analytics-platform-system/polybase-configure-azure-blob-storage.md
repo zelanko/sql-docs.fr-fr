@@ -1,6 +1,6 @@
 ---
-title: Configurer PolyBase pour accéder aux données externes dans le stockage Blob Azure | Microsoft Docs
-description: Explique comment configurer PolyBase dans Parallel Data Warehouse pour se connecter à Hadoop externe.
+title: Utiliser Polybase pour accéder à des données externes dans le stockage d’objets BLOB Azure
+description: Explique comment configurer Polybase en parallèle Data Warehouse pour se connecter à des Hadoop externes.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960289"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400725"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer PolyBase pour accéder aux données externes dans le stockage Blob Azure
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer Polybase pour accéder à des données externes dans le stockage d’objets BLOB Azure
 
-L’article explique comment utiliser PolyBase sur une instance de SQL Server pour interroger des données externes dans le stockage Blob Azure.
+L’article explique comment utiliser Polybase sur une instance de SQL Server pour interroger des données externes dans le stockage d’objets BLOB Azure.
 
 > [!NOTE]
-> Actuellement, APS prend uniquement en charge le stockage standard à usage général v1 localement redondant (LRS) un objet Blob Azure.
+> Actuellement, les APS prennent uniquement en charge le stockage d’objets BLOB Azure à usage général v1 localement redondant (LRS).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
- - Stockage d’objets Blob Azure dans votre abonnement.
- - Un conteneur est créé dans le stockage Blob Azure.
+ - Stockage d’objets BLOB Azure dans votre abonnement.
+ - Conteneur créé dans le stockage d’objets BLOB Azure.
 
-### <a name="configure-azure-blob-storage-connectivity"></a>Configurer la connectivité du stockage Blob Azure
+### <a name="configure-azure-blob-storage-connectivity"></a>Configurer la connectivité du stockage d’objets BLOB Azure
 
-Tout d’abord, configurez les points d’accès pour utiliser le stockage Blob Azure.
+Tout d’abord, configurez les points d’accès pour utiliser le stockage d’objets BLOB Azure.
 
-1. Exécutez [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec 'connectivité hadoop' la valeur est un fournisseur de stockage Blob Azure. Pour trouver la valeur pour les fournisseurs, consultez [Configuration de la connectivité PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Exécutez [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec la valeur « connectivité Hadoop » définie sur un fournisseur de stockage d’objets BLOB Azure. Pour trouver la valeur pour les fournisseurs, consultez [Configuration de la connectivité PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -44,19 +45,19 @@ Tout d’abord, configurez les points d’accès pour utiliser le stockage Blob 
    GO
    ```  
 
-2. Redémarrer la région de points d’accès à l’aide de la page État du Service sur [Appliance Configuration Manager](launch-the-configuration-manager.md).
+2. Redémarrez la région APS à l’aide de la page État du service sur le Configuration Manager de l' [Appliance](launch-the-configuration-manager.md).
   
 ## <a name="configure-an-external-table"></a>Configurer une table externe
 
-Pour interroger les données dans votre stockage Blob Azure, vous devez définir une table externe à utiliser dans les requêtes Transact-SQL. Les étapes suivantes décrivent comment configurer la table externe.
+Pour interroger les données dans votre stockage d’objets BLOB Azure, vous devez définir une table externe à utiliser dans les requêtes Transact-SQL. Les étapes suivantes décrivent comment configurer la table externe.
 
-1. Créez une clé principale sur la base de données. Il est nécessaire pour chiffrer le secret des informations d’identification.
+1. Créez une clé principale sur la base de données. Il est nécessaire de chiffrer le secret des informations d’identification.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. Créer une information d’identification de niveau base de données pour le stockage d’objets Blob Azure.
+1. Créez des informations d’identification délimitées à la base de données pour le stockage BLOB Azure.
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -115,7 +116,7 @@ Pour interroger les données dans votre stockage Blob Azure, vous devez définir
 
 PolyBase est approprié pour trois fonctions :  
   
-- Requêtes ad hoc sur les tables externes.  
+- Requêtes ad hoc sur des tables externes.  
 - Importation de données.  
 - Exportation de données.  
 
@@ -123,7 +124,7 @@ Les requêtes suivantes fournissent un exemple avec des données fictives proven
 
 ### <a name="ad-hoc-queries"></a>Requêtes ad hoc  
 
-La requête ad hoc des jointures relationnelles avec des données dans le stockage Blob Azure. Il sélectionne les clients qui dépasser 35 mph, jointure de données structurées client stockée dans SQL Server avec les données de capteur de véhicules stockées dans le stockage Blob Azure.  
+La requête ad hoc suivante joint les données relationnelles au stockage d’objets BLOB Azure. Il sélectionne les clients qui ont une vitesse supérieure à 35 km, en joignant les données clientes structurées stockées dans SQL Server avec les données de capteur de voiture stockées dans le stockage d’objets BLOB Azure.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -135,7 +136,7 @@ ORDER BY CarSensor_Data.Speed DESC
 
 ### <a name="importing-data"></a>Importation de données  
 
-La requête suivante importe des données externes dans APS. Cet exemple importe les données pour les pilotes rapides dans les points d’accès pour effectuer une analyse plus approfondie. Pour améliorer les performances, il tire parti de la technologie Columnstore de points d’accès.  
+La requête suivante importe des données externes dans APS. Cet exemple importe des données pour des pilotes rapides dans des points d’accès afin d’effectuer une analyse plus approfondie. Pour améliorer les performances, il tire parti de la technologie ColumnStore dans APS.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -154,7 +155,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>Exportation de données  
 
-La requête suivante exporte des données à partir de points d’accès vers le stockage Blob Azure. Il peut être utilisé pour archiver des données relationnelles à des objets Blob Azure stockage toujours être en mesure de l’interroger.
+La requête suivante exporte des données à partir de points d’accès vers le stockage d’objets BLOB Azure. Il peut être utilisé pour archiver des données relationnelles dans le stockage d’objets BLOB Azure tout en étant en mesure de les interroger.
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -170,11 +171,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>Afficher les objets PolyBase dans SSDT  
+## <a name="view-polybase-objects-in-ssdt"></a>Afficher les objets Polybase dans SSDT  
 
-Dans SQL Server Data Tools, les tables externes sont affichées dans un dossier distinct **des Tables externes**. Les sources de données externes et les formats de fichiers externes figurent dans des sous-dossiers du dossier **Ressources externes**.  
+Dans SQL Server Data Tools, les tables externes sont affichées dans un dossier distinct **tables externes**. Les sources de données externes et les formats de fichiers externes figurent dans des sous-dossiers du dossier **Ressources externes**.  
   
-![Objets PolyBase dans SSDT](media/polybase/external-tables-datasource.png)  
+![Objets Polybase dans SSDT](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

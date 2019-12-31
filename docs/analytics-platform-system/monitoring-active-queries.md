@@ -1,6 +1,6 @@
 ---
-title: Surveiller les requêtes actives - Parallel Data Warehouse | Microsoft Docs
-description: Utilisez les vues système Parallel Data Warehouse et de la Console d’administration pour surveiller les requêtes actives sur le système de plateforme d’Analytique.
+title: Surveiller les requêtes actives
+description: Utilisez la console d’administration et les vues système Data Warehouse parallèles pour surveiller les requêtes actives sur Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,36 +8,37 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960495"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400913"
 ---
-# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Surveillance des requêtes actives - Parallel Data Warehouse
-Cet article explique comment utiliser la Console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Consultez [surveiller l’Appliance à l’aide de la Console d’administration](monitor-the-appliance-by-using-the-admin-console.md) et [vues système](tsql-system-views.md) pour plus d’informations sur ces outils.  
+# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Surveillance des requêtes actives-Data Warehouse parallèles
+Cet article explique comment utiliser la console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Pour plus d’informations sur ces outils, consultez [surveiller l’appliance à l’aide de la console d’administration](monitor-the-appliance-by-using-the-admin-console.md) et des [vues système](tsql-system-views.md) .  
   
-## <a name="prerequisites"></a>Prérequis  
-Quelle que soit la méthode utilisée pour surveiller les requêtes actives, la connexion doit avoir les autorisations décrites dans « Utiliser tous les de la Console d’administration » dans [accorder des autorisations pour utiliser la Console d’administration](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
+## <a name="prerequisites"></a>Conditions préalables  
+Quelle que soit la méthode utilisée pour surveiller les requêtes actives, la connexion doit avoir les autorisations décrites dans « utiliser l’ensemble de la console d’administration » dans [accorder des autorisations pour utiliser la console d’administration](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
-## <a name="PermsAdminConsole"></a>Analyse des requêtes actives  
-La Console d’administration et les vues système SQL Server PDW peuvent être utilisés pour surveiller les requêtes actives. Suivez les instructions ci-dessous.  
+## <a name="PermsAdminConsole"></a>Surveiller les requêtes actives  
+Vous pouvez utiliser la console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Procédez comme suit.  
   
-### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Pour surveiller les requêtes actives à l’aide de la Console d’administration  
+### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Pour surveiller les requêtes actives à l’aide de la console d’administration  
   
-1.  Ouvrez une session sur la Console d’administration. Consultez [surveiller l’Appliance à l’aide de la Console d’administration](monitor-the-appliance-by-using-the-admin-console.md) pour obtenir des instructions.  
+1.  Connectez-vous à la console d’administration. Pour obtenir des instructions [, consultez surveiller l’appliance à l’aide de la console d’administration](monitor-the-appliance-by-using-the-admin-console.md) .  
   
-2.  Dans le menu supérieur, cliquez sur **requêtes**. Vous verrez une table avec les informations de base sur les requêtes les plus récentes sur le matériel, y compris la connexion qui a envoyé la requête, les heures de début et de fin pour la requête et l’état actuel de la requête.  
+2.  Dans le menu supérieur, cliquez sur **requêtes**. Vous verrez un tableau contenant des informations de base sur les requêtes les plus récentes sur l’appliance, y compris la connexion qui a envoyé la requête, les heures de début et de fin de la requête et l’état actuel de la requête.  
   
-3.  Pour afficher la commande de requête, placez le pointeur de la souris sur l’ID de requête dans la colonne de gauche pour cette ligne.  
+3.  Pour afficher la commande de requête, placez le pointeur de la souris sur l’ID de la requête dans la colonne de gauche pour cette ligne.  
   
-    Pour plus d’informations pour une requête particulière, cliquez sur l’ID de requête. Vous verrez des informations, y compris la requête complète et le plan de requête avec les informations d’état pour chaque étape de l’exécution de requête. Si des erreurs ont été retournés, vous pouvez également voir des informations détaillées sur les erreurs. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
+    Pour afficher des informations plus détaillées sur une requête particulière, cliquez sur l’ID de requête. Vous verrez des informations, notamment la requête complète et le plan de requête, avec des informations d’État pour chaque étape de l’exécution de la requête. Si des erreurs ont été retournées, vous pouvez également consulter des informations détaillées sur les erreurs. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
   
-### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Pour analyser des requêtes actives en utilisant les vues système  
-La vue système principal utilisée pour surveiller les requêtes est [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Utilisez cette vue de système pour trouver le `request_id` pour une requête active ou une version récente, selon le texte de requête.  
+### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Pour surveiller les requêtes actives à l’aide des vues système  
+La vue système principale utilisée pour surveiller les requêtes est [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Utilisez cette vue système pour rechercher la `request_id` pour une requête active ou récente, en fonction du texte de la requête.  
   
-Par exemple, la requête suivante recherche le `request_id` et actuel `status` pour toute requête qui sélectionne toutes les colonnes de la `memberAddresses` table.  
+Par exemple, la requête suivante recherche le `request_id` et le actuel `status` pour toute requête qui sélectionne toutes les colonnes de `memberAddresses` la table.  
   
 ```sql  
 SELECT request_id, command, status   
@@ -46,7 +47,7 @@ WHERE command
 LIKE '%SELECT * FROM db1..memberAddresses%';  
 ```  
   
-Après le `request_id` a été identifiée pour une requête, utilisez les autres informations dans le `dm_pdw_exec_requests` pour en savoir sur le traitement de la requête de table, ou utilisez [sys.dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) pour afficher l’état de la requête individuelle étapes pour l’exécution de requête.  
+Une fois `request_id` que l’a été identifié pour une requête, utilisez les autres `dm_pdw_exec_requests` informations de la table pour en savoir plus sur le traitement de la requête, ou utilisez [sys. dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) pour afficher l’état des étapes de requête individuelles pour l’exécution de la requête.  
   
 <!-- MISSING LINKS 
 ## See Also  

@@ -1,5 +1,5 @@
 ---
-title: Documentation sur Analytics Platform System | Microsoft Docs
+title: Documentation
 description: 'Microsoft Analytics Platform System (APS) est une plateforme de données conçue pour l’entreposage des données et l’analytique de Big Data. Cette plateforme offre les avantages suivants : intégration étroite des données, traitement très rapide des requêtes, stockage hautement extensible et maintenance simple pour vos solutions décisionnelles de bout en bout.'
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153358"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401096"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -38,7 +39,7 @@ Utilisez PDW comme principal composant d’entreposage des données relationnell
 
 En plus d’améliorer les performances d’exécution des requêtes, PDW facilite les opérations suivantes :
 
-- Développez votre entrepôt de données de quelques téraoctets à plus de 6 pétaoctets de données dans un seul appareil en ajoutant des «unités d’échelle» à votre système existant.
+- Développez votre entrepôt de données de quelques téraoctets à plus de 6 pétaoctets de données dans un seul appareil en ajoutant des « unités d’échelle » à votre système existant.
 
 - Faites confiance à vos données si vous en avez besoin en raison de la redondance et de la haute disponibilité intégrées.
 

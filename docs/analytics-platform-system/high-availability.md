@@ -1,6 +1,6 @@
 ---
-title: Haute disponibilité d’Analytique Platform System | Microsoft Docs
-description: Découvrez comment Analytique Platform System (APS) est conçu pour la haute disponibilité.
+title: Haute disponibilité
+description: Découvrez comment Analytics Platform System (APS) est conçu pour la haute disponibilité.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,38 +8,39 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cdf1837bd3b3b1cdf8e189ae591cd6fbff58387a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6246ed25909a2e366d8bbafcd912a4fd923cc84a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960866"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401101"
 ---
-# <a name="analytics-platform-system-high-availability"></a>Haute disponibilité d’Analytique Platform System
-Découvrez comment Analytique Platform System (APS) est conçu pour la haute disponibilité.  
+# <a name="analytics-platform-system-high-availability"></a>Haute disponibilité du système d’analyse de plateforme
+Découvrez comment Analytics Platform System (APS) est conçu pour la haute disponibilité.  
   
-## <a name="high-availability-architecture"></a>Architecture de haute disponibilité  
-![Architecture de l’appliance](media/appliance-architecture.png "architecture de l’Appliance")  
+## <a name="high-availability-architecture"></a>Architecture haute disponibilité  
+![Architecture de l’appliance](media/appliance-architecture.png "Architecture de l’appliance")  
   
 ## <a name="network"></a>Réseau  
-Disponibilité du réseau, l’appliance APS possède deux réseaux InfiniBand. Si un des réseaux InfiniBand tombe en panne, l’autre est toujours disponible. En outre, Active Directory a répliqué les contrôleurs de domaine pour résoudre les demandes entrantes vers le réseau InfiniBand correct.  
+Pour la disponibilité du réseau, l’appliance APS a deux réseaux InfiniBand. Si l’un des réseaux InfiniBand tombe en panne, l’autre est toujours disponible. De plus, Active Directory possède des contrôleurs de domaine répliqués pour résoudre les demandes entrantes sur le réseau InfiniBand approprié.  
   
-Pour plus d’informations, consultez [cartes réseau InfiniBand configurer](configure-infiniband-network-adapters.md).  
+Pour plus d’informations, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).  
   
 ## <a name="storage"></a>Stockage  
-Pour sécuriser les données, points d’accès utilise RAID 1 pour conserver deux copies de toutes les données utilisateur de mise en miroir. En cas de défaillance d’un disque, le matériel système reconstruit les données sur un disque de rechange et définit une alerte qu’il existe une défaillance de disque.  
+Pour garantir la sécurité des données, APS utilise la mise en miroir RAID 1 pour gérer deux copies de toutes les données utilisateur. En cas de défaillance d’un disque, le système matériel reconstruit les données sur un disque de rechange et définit une alerte indiquant une défaillance de disque.  
   
-Pour conserver les données disponibles en ligne, APS utilise des espaces de stockage Windows et les volumes partagés en cluster pour gérer les disques de données utilisateur dans le stockage en attachement direct. Il existe un pool de stockage par unité d’échelle de données organisée en Volumes partagés de Cluster qui sont disponibles pour les hôtes de nœud de calcul par le biais des points de montage.  
+Pour que les données restent disponibles en ligne, APS utilise des espaces de stockage Windows et des volumes partagés en cluster pour gérer les disques de données utilisateur dans le stockage en attachement direct. Un pool de stockage par unité d’échelle de données est organisé en volumes partagés de cluster qui sont disponibles pour les hôtes de nœud de calcul par le biais de points de montage.  
   
-Pour garantir que le pool de stockage reste en ligne, chaque hôte dans l’unité d’échelle de données possède une machine virtuelle ISCSI qui ne bascule pas. Cette architecture est importante car si un hôte échoue, les données sont toujours accessibles via les autres hôtes dans l’unité d’échelle de données.  
+Pour vous assurer que le pool de stockage reste en ligne, chaque ordinateur hôte de l’unité d’échelle de données dispose d’une machine virtuelle ISCSI qui ne bascule pas. Cette architecture est importante car si un hôte échoue, les données sont toujours accessibles via les autres hôtes de l’unité d’échelle de données.  
   
 ## <a name="hosts"></a>Hôtes  
-Pour la disponibilité de l’hôte, tous les hôtes sont configurés dans un Cluster de basculement Windows. Chaque rack possède un hôte passif. Si vous le souhaitez le premier rack, qui contrôle SQL Server Parallel Data Warehouse (PDW) et l’infrastructure de l’appliance, peut avoir un second hôte passif. Si un hôte échoue, les machines virtuelles qui sont configurés pour le basculement, bascule vers un hôte passif disponible.  
+Pour la disponibilité des ordinateurs hôtes, tous les ordinateurs hôtes sont configurés dans un cluster de basculement Windows. Chaque rack a un hôte passif. Éventuellement, le premier rack, qui contrôle SQL Server les Data Warehouse parallèles et la structure de l’appareil, peut avoir un deuxième hôte passif. En cas de défaillance d’un ordinateur hôte, les ordinateurs virtuels qui sont configurés pour le basculement sont basculés vers un hôte passif disponible.  
   
-## <a name="pdw-nodes-and-appliance-fabric"></a>Nœuds PDW et fabric de l’appliance  
-Pour la haute disponibilité des nœuds PDW et l’infrastructure de l’appliance APS utilise la virtualisation. Chacun des composants de fabric PDW et appliance s’exécutent dans une machine virtuelle.  
+## <a name="pdw-nodes-and-appliance-fabric"></a>Nœuds PDW et structure d’appliances  
+Pour la haute disponibilité des nœuds PDW et de la structure d’appliances, APS utilise la virtualisation. Chacun des composants de l’infrastructure PDW et appliance s’exécute sur une machine virtuelle.  
   
-Chaque machine virtuelle est définie en tant que rôle dans le cluster de basculement Windows. En cas d’échec d’une machine virtuelle, le cluster redémarre sur un ordinateur hôte disponible passif. Les machines virtuelles sont déployées à l’aide de System Center Virtual Machine Manager. Lorsqu’un basculement se produit, la machine virtuelle en cours d’exécution sur l’ordinateur hôte passif peut toujours accéder à ses données utilisateur via le réseau InfiniBand.  
+Chaque ordinateur virtuel est défini en tant que rôle dans le cluster de basculement Windows. En cas de défaillance d’un ordinateur virtuel, le cluster le redémarre sur un hôte passif disponible. Les machines virtuelles sont déployées à l’aide de System Center Virtual Machine Manager. En cas de basculement, l’ordinateur virtuel en cours d’exécution sur l’hôte passif est toujours en mesure d’accéder à ses données utilisateur via le réseau InfiniBand.  
   
-Le nœud de contrôle et les machines virtuelles de nœud calcul sont configurés comme un cluster à nœud unique. Le cluster à nœud unique gère les réseaux InfiniBand en tant que ressource de cluster pour garantir que le cluster est toujours à l’aide de l’IP InfiniBand active. Le cluster à nœud unique gère les processus PDW qui s’exécutent au sein de la machine virtuelle. Par exemple, le cluster à nœud unique a SQL Server et le Service de déplacement des données (DMS) en tant que ressources pour qu’elle peut les recommencer dans l’ordre approprié. Le nœud contrôle de machine virtuelle contrôle également l’ordre de démarrage pour les autres machines virtuelles qui s’exécutent sur l’hôte d’orchestration.  
+Les machines virtuelles du nœud de contrôle et du nœud de calcul sont configurées en tant que cluster à nœud unique. Le cluster à nœud unique gère les réseaux InfiniBand en tant que ressource de cluster pour s’assurer que le cluster utilise toujours l’adresse IP InfiniBand active. Le cluster à nœud unique gère les processus PDW qui s’exécutent sur l’ordinateur virtuel. Par exemple, le cluster à nœud unique a SQL Server et le service de déplacement des données (DMS) en tant que ressources afin qu’il puisse les démarrer dans le bon ordre. La machine virtuelle du nœud de contrôle contrôle également l’ordre de démarrage pour les autres machines virtuelles qui s’exécutent sur l’hôte de l’orchestration.  
   

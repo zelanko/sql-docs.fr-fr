@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,34 +12,54 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899212"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564743"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>Sys.dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Affiche les informations pour tous les types de ressources dans attente [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+  Affiche des informations d’attente pour tous les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]types de ressources dans.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**bigint**|Position de la demande dans la liste d’attente.|ordinal à partir de 0. Cela n’est pas unique sur toutes les entrées de l’attente.|  
-|session_id|**nvarchar(32)**|ID de la session dans laquelle l’état d’attente s’est produite.|Consultez session_id dans [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|type|**nvarchar(255)**|Type d’attente que représente cette entrée.|Valeurs possibles :<br /><br /> Connexion<br /><br /> Concurrence des requêtes locales<br /><br /> Concurrence des requêtes distribuées<br /><br /> Accès concurrentiel DMS<br /><br /> Accès concurrentiel de sauvegarde|  
-|object_type|**nvarchar(255)**|Type d’objet qui est affectée par l’attente.|Valeurs possibles :<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **APPLICATION**|  
-|object_name|**nvarchar(386)**|Nom ou GUID de l’objet spécifié qui a été affectée par l’attente.|Tables et les vues sont affichées avec des noms en trois parties.<br /><br /> Index et les statistiques sont affichées avec des noms en quatre parties.<br /><br /> Les noms, les principaux et les bases de données sont des noms de chaîne.|  
-|request_id|**nvarchar(32)**|ID de la demande sur lequel l’état d’attente s’est produite.|Identificateur QID de la demande.<br /><br /> Identificateur GUID pour les demandes de charge.|  
-|request_time|**datetime**|Heure à laquelle le verrou ou la ressource a été demandée.||  
-|acquire_time|**datetime**|Heure à laquelle a été acquis le verrou ou une ressource.||  
+|wait_id|**bigint**|Position de la demande dans la liste d’attente.|ordinal de base 0. Cela n’est pas unique pour toutes les entrées d’attente.|  
+|session_id|**nvarchar (32)**|ID de la session dans laquelle l’état d’attente s’est produit.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|type|**nvarchar(255)**|Type d’attente représenté par cette entrée.|Valeurs possibles :<br /><br /> Connexion<br /><br /> Concurrence des requêtes locales<br /><br /> Concurrence des requêtes distribuées<br /><br /> Concurrence DMS<br /><br /> Concurrence de sauvegarde|  
+|object_type|**nvarchar(255)**|Type d’objet affecté par l’attente.|Valeurs possibles :<br /><br /> **DESSIN**<br /><br /> **DATABASE**<br /><br /> **REQUISE**<br /><br /> **SCHÉMA**<br /><br /> **OEUVRE**|  
+|object_name|**nvarchar(386**|Nom ou GUID de l’objet spécifié qui a été affecté par l’attente.|Les tables et les vues sont affichées avec des noms en trois parties.<br /><br /> Les index et les statistiques sont affichés avec des noms en quatre parties.<br /><br /> Les noms, les principaux et les bases de données sont des noms de chaîne.|  
+|request_id|**nvarchar (32)**|ID de la demande sur laquelle l’état d’attente s’est produit.|Identificateur QID de la demande.<br /><br /> Identificateur GUID pour les demandes de chargement.|  
+|request_time|**Date/heure**|Heure à laquelle le verrou ou la ressource a été demandé.||  
+|acquire_time|**Date/heure**|Heure à laquelle le verrou ou la ressource a été acquis (e).||  
 |state|**nvarchar(50)**|État de l’état d’attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**int**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**Int**|Nombre d’emplacements de concurrence (32 max) réservé pour cette demande.|1 - pour SmallRC<br /><br /> 3 - pour MediumRC<br /><br /> 7 pour LargeRC<br /><br /> 22 - pour XLargeRC|  
-|resource_class|**nvarchar(20)**|La classe de ressources pour cette demande.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|priority|**tiers**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**tiers**|Interne|Voir les [attentes des ressources de surveillance](#monitor-resource-waits) ci-dessous|  
+|resource_class|**nvarchar(20**|Interne |Voir les [attentes des ressources de surveillance](#monitor-resource-waits) ci-dessous|  
   
+## <a name="monitor-resource-waits"></a>Surveiller les attentes des ressources 
+Avec l’introduction des [groupes de charges de travail](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), les emplacements de concurrence ne sont plus applicables.  Utilisez la requête ci-dessous `resources_requested` et la colonne pour comprendre les ressources nécessaires à l’exécution de la demande.
+
+```sql
+select rw.wait_id
+      ,rw.session_id
+      ,rw.type
+      ,rw.object_type
+      ,rw.object_name
+      ,rw.request_id
+      ,rw.request_time
+      ,rw.acquire_time
+      ,rw.state
+      ,resources_requested = s.effective_request_min_resource_grant_percent
+      ,r.group_name
+  from sys.dm_workload_management_workload_groups_stats s
+  join sys.dm_pdw_exec_requests r on r.group_name = s.name collate SQL_Latin1_General_CP1_CI_AS
+  join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
+```
+
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de l’entrepôt SQL Data Warehouse et Parallel Data &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Sous-expression commune est expliqué dans Analytique Platform System | Microsoft Docs
-description: Amélioration de requête d’exemple affiche qui a été introduite dans CU7.3 de système de plateforme Analytique
+title: Sous-expression commune
+description: Affiche un exemple d’amélioration de requête introduit dans Analytics Platform System CU 7.3
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961313"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401332"
 ---
-# <a name="common-subexpression-elimination-explained"></a>Élimination de sous-expressions communes expliquée
+# <a name="common-subexpression-elimination-explained"></a>Explication de l’élimination des sous-expressions communes
 
-APS CU7.3 améliore les performances de requête avec élimination de sous-expressions communes dans l’optimiseur de requête SQL. L’amélioration améliore les requêtes de deux manières. Le premier, c’est la capacité à identifier et éliminer ces expressions permettent de réduire le temps de compilation SQL. L’avantage de la deuxième et le plus important est les opérations de déplacement de données pour ces sous-expressions redondantes sont éliminées ainsi les temps d’exécution de requêtes devient plus rapide.
+APS CU 7.3 améliore les performances des requêtes avec l’élimination de sous-expression commune dans l’optimiseur de requête SQL. L’amélioration améliore les requêtes de deux manières. Le premier avantage est la possibilité d’identifier et d’éliminer ces expressions pour réduire le temps de compilation SQL. Le deuxième avantage et le plus important est que les opérations de déplacement de données pour ces sous-expressions redondantes sont éliminées, de sorte que la durée d’exécution des requêtes est plus rapide.
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -54,14 +55,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-Considérez la requête ci-dessus à partir des outils de banc d’essai TPC-DS.  Dans la requête ci-dessus, la sous-requête est identique, mais la clause order by avec rank() sur la fonction est triée de deux manières différentes. Antérieures à CU7.3, cette sous-requête obtient évaluée et exécutée à deux reprises, une fois pour l’ordre croissant et qu’une seule fois pour l’ordre décroissant, encourir deux opérations de déplacement de données. Après avoir installé CU7.3 de points d’accès, la partie de la sous-requête sera évaluée une seule fois par conséquent, ce qui réduit le déplacement des données et la fin de la requête plus rapide.
+Examinez la requête ci-dessus à partir des outils de test TPC-DS.  Dans la requête ci-dessus, la sous-requête est la même, mais la clause ORDER BY avec Rank () sur Function est triée de deux façons différentes. Avant CU 7.3, cette sous-requête sera évaluée et exécutée deux fois, une fois pour l’ordre croissant et une fois pour l’ordre décroissant, à savoir deux opérations de déplacement de données. Après l’installation d’APS CU 7.3, la partie de sous-requête est évaluée une seule fois, réduisant ainsi le déplacement des données et la fin plus rapide de la requête.
 
-Nous avons introduit un [commutateur de fonctionnalité](appliance-feature-switch.md) appelé « OptimizeCommonSubExpressions » qui permettra de vous testez la fonctionnalité même après une migration vers CU7.3 de points d’accès. La fonctionnalité est activée par défaut mais peut être désactivée. 
+Nous avons introduit un [commutateur de fonctionnalité](appliance-feature-switch.md) appelé « OptimizeCommonSubExpressions » qui vous permet de tester la fonctionnalité, même après la mise à niveau vers APS cu 7.3. La fonctionnalité est activée par défaut, mais peut être désactivée. 
 
 > [!NOTE] 
-> Modifications apportées aux valeurs de commutateur de fonctionnalité requièrent un redémarrage du service.
+> Les modifications apportées aux valeurs de commutateur de fonctionnalité requièrent un redémarrage du service.
 
-Vous pouvez essayer l’exemple de requête en créant les tables suivantes dans votre environnement de test et en évaluant le plan explain pour la requête mentionnée ci-dessus. 
+Vous pouvez essayer l’exemple de requête en créant les tables suivantes dans votre environnement de test et en évaluant le plan d’explication pour la requête mentionnée ci-dessus. 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -117,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-Si vous examinez le plan explain de la requête, vous verrez qu’avant CU7.3 (ou lorsque le commutateur de fonctionnalité est désactivée) la requête a 17 nombre total d’opérations et après CU7.3 (ou avec le commutateur de fonctionnalité activée) la même requête montre 9 nombre total d’opérations. Si vous ne comptez que les opérations de déplacement des données, vous verrez que le plan précédent a quatre opérations de déplacement et deux opérations de déplacement dans le nouveau plan. Le nouvel optimiseur de requête a été en mesure de réduire les deux opérations de déplacement de données en réutilisant la table temporaire, il est déjà créé avec le nouveau plan, ce qui réduit le runtime de requête. 
+Si vous examinez le plan d’explication de la requête, vous verrez qu’avant CU 7.3 (ou lorsque le commutateur de fonctionnalité est désactivé), la requête a 17 nombre total d’opérations et après CU 7.3 (ou avec le commutateur de fonctionnalité activé) la même requête affiche 9 nombre total d’opérations. Si vous comptez uniquement les opérations de déplacement de données, vous verrez que le plan précédent a quatre opérations de déplacement et deux opérations de déplacement dans le nouveau plan. Le nouvel optimiseur de requête a pu réduire deux opérations de déplacement de données en réutilisant la table temporaire qu’il a déjà créée avec le nouveau plan, réduisant ainsi le runtime de requête. 
 
 

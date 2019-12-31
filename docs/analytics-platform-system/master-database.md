@@ -1,6 +1,6 @@
 ---
-title: Base de données master - Parallel Data Warehouse | Microsoft Docs
-description: En savoir plus sur la base de données master dans Parallel Data Warehouse.
+title: Base de données Master
+description: En savoir plus sur la base de données Master en parallèle Data Warehouse.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,34 +8,35 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960651"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400985"
 ---
-# <a name="master-database---parallel-data-warehouse"></a>Base de données master - Parallel Data Warehouse
-La base de données master de SQL Server PDW stocke les informations de connexion au niveau du matériel et le catalogue de base de données. Il est une base de données master SQL Server qui réside sur le nœud de contrôle. Par conséquent, il fournit des fonctionnalités similaires à SQL Server PDW comme principal fournit à SQL Server.  
+# <a name="master-database---parallel-data-warehouse"></a>Base de données Master-Data Warehouse parallèles
+La base de données Master SQL Server PDW stocke les informations de connexion au niveau de l’appareil et le catalogue de la base de données. Il s’agit d’une base de données Master SQL Server qui réside sur le nœud de contrôle. En tant que tel, il offre des fonctionnalités similaires SQL Server PDW à celles que le maître fournit pour SQL Server.  
   
-Pour plus d’informations sur les bases de données système, consultez [bases de données système](system-databases.md).  
+Pour plus d’informations sur les bases de données système, voir [bases de données système](system-databases.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
-La liste suivante décrit les opérations que vous ne pouvez effectuer sur la base de données master de SQL Server PDW.  
+La liste suivante décrit les opérations que vous ne pouvez pas effectuer sur la base de données Master SQL Server PDW.  
   
-Vous *ne peut pas :*  
+Vous *ne pouvez pas :*  
   
--   Effectuer une sauvegarde différentielle de master.  
+-   Effectuez une sauvegarde différentielle de Master.  
   
--   Créer des objets utilisateur dans master.  
+-   Créer des objets utilisateur dans Master.  
   
--   Modifier le classement du serveur principal.  
+-   Modifiez le classement de Master.  
   
--   Changer le propriétaire du maître.  
+-   Modifiez le propriétaire de la base de référence Master.  
   
--   Supprimez ou renommez master.  
+-   Supprimez ou renommez Master.  
   
--   Autorisations de modification sur master.  
+-   Modifiez les autorisations sur Master.  
   
 -   Exécutez **DBCC SHRINKLOG**.  
   
@@ -43,10 +44,10 @@ Vous *ne peut pas :*
   
 |Tâche|Description|  
 |--------|---------------|  
-|Créer une sauvegarde complète du serveur principal.|Exemple :<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Pour plus d’informations, consultez [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
-|Restaurer la base de données MASTER|Pour restaurer la base de données master, utilisez la [restaurer la base de données Master](restore-the-master-database.md) page dans l’outil de Configuration Manager.|  
-|Afficher les informations de catalogue de base de données.|`SELECT * FROM master.sys.databases;`|  
-|Afficher les informations de connexion et l’autorisation de l’échelle du système.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
+|Créez une sauvegarde complète de Master.|Exemple :<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Pour plus d’informations, consultez [Backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Restaurer la base de données MASTER|Pour restaurer la base de données Master, utilisez la page [restaurer la base de données Master](restore-the-master-database.md) dans l’outil Configuration Manager.|  
+|Affichez les informations du catalogue de la base de données.|`SELECT * FROM master.sys.databases;`|  
+|Affichez les informations de connexion et d’autorisation à l’ensemble du système.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
   
 <!-- MISSING LINKS 
 ## See Also  

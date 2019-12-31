@@ -1,6 +1,6 @@
 ---
-title: Surveiller l’intégrité de l’appliance - Analytique Platform System
-description: Comment surveiller l’état d’un appareil Analytique Platform System à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique de Parallel Data Warehouse.
+title: Surveiller l’intégrité de l’appliance
+description: Comment surveiller l’état d’une appliance système Analytics Platform à l’aide de la console d’administration, ou en interrogeant directement les vues de gestion dynamique Data Warehouse parallèle.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960613"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400993"
 ---
-# <a name="monitor-appliance-health-state"></a>État de l’intégrité de l’analyse
-Cet article explique comment surveiller l’état d’un appareil Analytique Platform System à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique de Parallel Data Warehouse. 
+# <a name="monitor-appliance-health-state"></a>Surveiller l’état d’intégrité de l’appliance
+Cet article explique comment surveiller l’état d’une appliance système Analytics Platform à l’aide de la console d’administration, ou en interrogeant directement les vues de gestion dynamique Data Warehouse parallèle. 
   
-## <a name="to-monitor-the-appliance-state"></a>Pour surveiller l’état de l’Appliance  
-Un administrateur système peut utiliser la Console d’administration ou les vues de gestion dynamique (DMV) SQL Server PDW pour récupérer la hiérarchie complète des nœuds, les composants et les logiciels. Le diagramme suivant donne une présentation de haut niveau des composants qui surveille SQL Server PDW.  
+## <a name="to-monitor-the-appliance-state"></a>Pour surveiller l’état de l’appliance  
+Un administrateur système peut utiliser la console d’administration ou les SQL Server PDW vues de gestion dynamique (DMV) pour récupérer la hiérarchie complète des nœuds, des composants et des logiciels. Le diagramme suivant offre une compréhension générale des composants analysés par SQL Server PDW.  
   
-![Présentation de la surveillance](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Vue d’ensemble de la surveillance](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
-### <a name="monitor-component-status-by-using-the-admin-console"></a>État du composant Moniteur à l’aide de la Console d’administration  
-Pour récupérer l’état du composant à l’aide de la Console d’administration :  
+### <a name="monitor-component-status-by-using-the-admin-console"></a>Surveiller l’état des composants à l’aide de la console d’administration  
+Pour récupérer l’état d’un composant à l’aide de la console d’administration :  
   
-1.  Cliquez sur le **Appliance état** onglet.  
+1.  Cliquez sur l’onglet État de l' **Appliance** .  
   
-2.  Dans la page État de l’Appliance, cliquez sur un nœud spécifique pour afficher les détails du nœud.  
+2.  Sur la page État de l’appliance, cliquez sur un nœud spécifique pour afficher les détails du nœud.  
   
-    ![État de la Console Administrateur PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![État de la console d'administration PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
-### <a name="monitor-component-status-by-using-system-views"></a>État du composant Moniteur à l’aide de vues système  
-Pour récupérer l’état du composant à l’aide de vues système, utilisez [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Par exemple, la requête suivante récupère l’état pour tous les composants.  
+### <a name="monitor-component-status-by-using-system-views"></a>Surveiller l’état des composants à l’aide des vues système  
+Pour récupérer l’état d’un composant à l’aide des vues système, utilisez [sys. dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Par exemple, la requête suivante récupère l’état de tous les composants.  
   
 ```sql  
 SELECT   
@@ -66,30 +67,30 @@ ORDER BY
    p.[property_name];  
 ```  
   
-Valeurs possibles retournées pour la propriété d’état sont :  
+Les valeurs possibles retournées pour la propriété Status sont les suivantes :  
   
--   D'accord  
+-   OK  
   
 -   Non critique  
   
 -   Critique  
   
--   Inconnu  
+-   Unknown  
   
 -   Non pris en charge  
   
 -   Inaccessible  
   
--   Irrécupérable  
+-   irrécupérable  
   
-Pour voir toutes les propriétés pour tous les composants, supprimez le `WHERE  p.property_name = 'Status'` clause.  
+Pour afficher toutes les propriétés de tous les composants, supprimez la `WHERE  p.property_name = 'Status'` clause.  
   
-Le **[update_time]** colonne affiche la dernière fois que le composant a été interrogé par les agents d’intégrité de SQL Server PDW.  
+La colonne **[update_time]** indique l’heure de la dernière interrogation du composant par les agents d’intégrité SQL Server PDW.  
   
 > [!CAUTION]  
-> Veillez à examiner le problème lorsqu’un composant n’a pas été interrogé pendant 5 minutes ou plus ; Il existe peut-être une alerte qui indique un problème avec les pulsations de logiciels.  
+> Veillez à examiner le problème lorsqu’un composant n’a pas été interrogé pendant 5 minutes ou plus ; Il peut y avoir une alerte indiquant un problème lié aux pulsations logicielles.  
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Surveillance de l’appliance &#40;Analytique Platform System&#41;](appliance-monitoring.md)  
+[Système de plateforme d’analyse de &#40;Analytics de l’appliance&#41;](appliance-monitoring.md)  
   

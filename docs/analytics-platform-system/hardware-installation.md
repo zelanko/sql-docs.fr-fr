@@ -1,5 +1,5 @@
 ---
-title: Installation matérielle-système de plateforme d’analyse (APS) | Microsoft Docs
+title: Installation matérielle
 description: Cet article explique comment déplacer, décompresser et installer le matériel de votre appareil SQL Server PDW. Cet article est purement informatif et est destiné à vous aider à comprendre le processus. Votre appliance doit être décompressée, installée et vérifiée avant d’être retournée. La participation des clients est requise pour les éléments tels que l’accès au centre de données, l’alimentation électrique et les connexions Ethernet.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc57311ae38977643be697eea5fc095ce514b0d2
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176143"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401122"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Installation matérielle pour l’appliance Analytics Platform System (APS)
 Cet article explique comment déplacer, décompresser et installer le matériel de votre appareil SQL Server PDW. Cet article est purement informatif et est destiné à vous aider à comprendre le processus. Votre appliance doit être décompressée, installée et vérifiée avant d’être retournée. La participation des clients est requise pour les éléments tels que l’accès au centre de données, l’alimentation électrique et les connexions Ethernet.  

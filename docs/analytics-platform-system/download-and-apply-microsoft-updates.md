@@ -1,6 +1,6 @@
 ---
-title: Télécharger les mises à jour de Microsoft - Analytique Platform System | Microsoft Docs
-description: Cette rubrique explique comment télécharger des mises à jour à partir du catalogue Microsoft Update pour Windows Server Update Services (WSUS) et appliquer ces mises à jour vers les serveurs d’appliance Analytique Platform System. Microsoft Update installera toutes les mises à jour applicables pour Windows et SQL Server. WSUS est installé sur l’ordinateur virtuel VMM de l’appliance.
+title: Télécharger les mises à jour Microsoft
+description: Cette rubrique explique comment télécharger des mises à jour à partir du catalogue Microsoft Update vers Windows Server Update Services (WSUS) et appliquer ces mises à jour aux serveurs d’appliances système Analytics Platform. Microsoft Update installera toutes les mises à jour applicables pour Windows et SQL Server. WSUS est installé sur la machine virtuelle VMM de l’appliance.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,161 +8,162 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 78da7bd46282bb42bc3630c71c1cafd1ea0f11bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961048"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401193"
 ---
-# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Téléchargez et appliquez les mises à jour Microsoft pour système de plateforme d’Analytique
-Cette rubrique explique comment télécharger des mises à jour à partir du catalogue Microsoft Update pour Windows Server Update Services (WSUS) et appliquer ces mises à jour vers les serveurs d’appliance Analytique Platform System. Microsoft Update installera toutes les mises à jour applicables pour Windows et SQL Server. WSUS est installé sur l’ordinateur virtuel VMM de l’appliance.  
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Télécharger et appliquer des mises à jour Microsoft pour Analytics Platform System
+Cette rubrique explique comment télécharger des mises à jour à partir du catalogue Microsoft Update vers Windows Server Update Services (WSUS) et appliquer ces mises à jour aux serveurs d’appliances système Analytics Platform. Microsoft Update installera toutes les mises à jour applicables pour Windows et SQL Server. WSUS est installé sur la machine virtuelle VMM de l’appliance.  
   
 ## <a name="TOP"></a>Avant de commencer  
   
 > [!WARNING]  
-> N’essayez pas d’appliquer les mises à jour si votre appliance ou n’importe quel composant de l’appliance est arrêté ou dans un état de pointage. Dans ce cas, contactez le support pour obtenir une assistance.  
+> N’essayez pas d’appliquer les mises à jour si votre appliance ou un composant de l’appareil est en panne ou dans un État basculé. Dans ce cas, contactez le support technique pour obtenir de l’aide.  
 >   
-> N’appliquez pas de Microsoft Updates tandis que l’appliance est en cours d’utilisation. Mise à jour peut entraîner des nœuds d’appliance à redémarrer. Les mises à jour doivent être appliquées pendant une fenêtre de maintenance lors de l’appliance n’est pas utilisée.  
+> N’appliquez pas les mises à jour Microsoft lorsque l’appliance est en cours d’utilisation. L’application de mises à jour peut entraîner le redémarrage des nœuds de l’appliance. Les mises à jour doivent être appliquées au cours d’une fenêtre de maintenance lorsque l’appliance n’est pas utilisée.  
   
-### <a name="prerequisites"></a>Prérequis  
+### <a name="prerequisites"></a>Conditions préalables  
 Avant d’effectuer ces étapes, vous devez :  
   
--   Configurer WSUS sur votre appliance en suivant les instructions dans [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytique Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+-   Configurez WSUS sur votre appareil en suivant les instructions de la procédure de [configuration de Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
--   Connaissances une administrateur de domaine Fabric compte d’informations de connexion.  
+-   Connaissance des informations de connexion du compte d’administrateur de domaine de l’infrastructure.  
   
--   Avoir une connexion avec des autorisations pour accéder à la Console d’administration Analytique Platform System et afficher des informations d’état appliance.  
+-   Disposer d’une connexion disposant d’autorisations pour accéder à la console d’administration système Analytics Platform et afficher les informations d’état de l’appliance.  
   
--   Dans la plupart des cas, WSUS doit accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation du système de plateforme Analytique DNS peut être configuré pour prendre en charge d’un redirecteur de nom externe qui autorise les hôtes de système de plateforme d’Analytique et les Machines virtuelles (VM) à utiliser les serveurs DNS externes pour résoudre les noms en dehors de la appliance. Pour plus d’informations, consultez [utiliser un redirecteur DNS pour résoudre les noms DNS Non-Appliance &#40;Analytique Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Dans la plupart des cas, WSUS doit accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation, le système DNS de la plateforme d’analyse peut être configuré pour prendre en charge un redirecteur de nom externe qui permettra aux ordinateurs hôtes du système de la plateforme d’analyse et aux machines virtuelles d’utiliser des serveurs DNS externes pour résoudre les noms en dehors de 5200. Pour plus d’informations, consultez [utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="bkmk_ImportUpdates"></a>Pour télécharger et appliquer des mises à jour Microsoft  
   
-#### <a name="verify-the-appliance-state-indicators"></a>Vérifiez les indicateurs d’état appliance  
+#### <a name="verify-the-appliance-state-indicators"></a>Vérifier les indicateurs d’état de l’appliance  
   
-1.  Ouvrez la Console d’administration et accédez à la page d’état de l’Appliance. Pour plus d’informations, consultez [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+1.  Ouvrez la console d’administration et accédez à la page État de l’appliance. Pour plus d’informations, consultez [surveiller l’appliance à l’aide de la console d’administration &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
-2.  Vérifiez les indicateurs d’état pour tous les nœuds sur l’état de l’Appliance.  
+2.  Vérifiez les indicateurs d’état de tous les nœuds de l’état de l’appliance.  
   
-    -   Il est possible de poursuivre vert ou indicateurs de NA.  
+    -   Il est possible de continuer en toute sécurité avec des indicateurs en vert ou en NA.  
   
-    -   Évaluer les erreurs d’avertissement (jaune) non critiques. Dans certains cas des messages d’avertissement ne bloquent pas les mises à jour. S’il existe une erreur de volume de disque non critiques qui n’est pas sur le lecteur C:\, vous pouvez passer à l’étape suivante avant de résoudre l’erreur de volume de disque.  
+    -   Évaluer les erreurs d’avertissement non critiques (jaunes). Dans certains cas, les messages d’avertissement ne bloquent pas les mises à jour. S’il y a une erreur de volume de disque non critique qui ne se trouve pas sur C:\ , vous pouvez passer à l’étape suivante avant de résoudre l’erreur de volume de disque.  
   
-    -   La plupart des indicateurs rouges doivent être résolues avant de continuer. S’il existe des défaillances de disque, utilisez la page des alertes de la Console Administrateur vérifier que pas plus d’une défaillance de disque au sein de chaque serveur ou de la baie de SAN. En cas de défaillance de disque ne plusieurs au sein de chaque serveur ou de la baie de SAN, vous pouvez passer à l’étape suivante avant de corriger les défaillances de disque. Veillez à contacter le support Microsoft pour résoudre les défaillances de disque dès que possible.  
+    -   La plupart des indicateurs rouges doivent être résolus avant de continuer. En cas de défaillances de disque, utilisez la page alertes de la console d’administration pour vérifier qu’il n’y a pas plus d’une défaillance de disque au sein de chaque serveur ou groupe SAN. S’il n’y a pas plus d’une défaillance de disque au sein de chaque serveur ou groupe SAN, vous pouvez passer à l’étape suivante avant de résoudre les défaillances de disque. Veillez à contacter le support Microsoft pour résoudre les défaillances de disque dès que possible.  
   
 #### <a name="synchronize-the-wsus-server"></a>Synchroniser le serveur WSUS  
   
-1.  Ouvrez une session en tant qu’un administrateur de domaine l’ordinateur virtuel VMM.  
+1.  Connectez-vous à la machine virtuelle VMM en tant qu’administrateur de domaine.  
   
-2.  Dans le **tableau de bord Gestionnaire de serveur**, dans le **outils** menu, cliquez sur **Windows Server Update Services** (**wsus.msc**).  
+2.  Dans le **tableau de bord gestionnaire de serveur**, dans le menu **Outils** , cliquez sur **Windows Server Update Services** (**WSUS. msc**).  
   
-3.  Dans la Console d’administration WSUS, cliquez sur **synchronisations**.  
+3.  Dans la console d’administration WSUS, cliquez sur **synchronisations**.  
   
-4.  Si la synchronisation n’est pas en cours d’exécution, cliquez sur **synchroniser maintenant** dans le volet droit. Dans le volet inférieur, il y aura un état de synchronisation. Attendez que la synchronisation soit terminée.  
+4.  Si la synchronisation n’est pas en cours d’exécution, cliquez sur **Synchroniser maintenant** dans le volet droit. Dans le volet inférieur, il y aura un état de synchronisation. Attendez la fin de la synchronisation.  
   
-#### <a name="approve-microsoft-updates-in-wsus"></a>Approuver les mises à jour dans WSUS  
+#### <a name="approve-microsoft-updates-in-wsus"></a>Approuver les mises à jour Microsoft dans WSUS  
   
-1.  Dans le volet gauche, de la console WSUS, cliquez sur **toutes les mises à jour**.  
+1.  Dans le volet gauche, dans la console WSUS, cliquez sur **toutes les mises à jour**.  
   
-2.  Dans le **toutes les mises à jour** volet, cliquez sur le **approbation** menu déroulant, définissez **approbation** à **toutes sauf refusées**. Cliquez sur le **état** menu déroulant, définissez **état** à **n’importe quel**. Cliquez sur **Actualiser**.  
+2.  Dans le volet **toutes les mises à jour** , cliquez sur le menu déroulant **approbation** , définissez **approbation** sur **tout sauf refusé**. Cliquez sur le menu déroulant **Status (État** ), puis définissez **Status** sur **Any (tout**). Cliquez sur **Actualiser**.  
   
-    Avec le bouton droit le **titre** colonne, puis sélectionnez **état du fichier** pour vérifier l’état du fichier une fois le téléchargement terminé.  
+    Cliquez avec le bouton droit sur la colonne **titre** et sélectionnez **État du fichier** pour vérifier l’état du fichier une fois le téléchargement terminé.  
   
-    Vous pouvez également sélectionner **mises à jour critiques** ou **mises à jour de sécurité** dans les gauche volet et affichage mises à jour disponibles pour ces catégories.  
+    Vous pouvez également sélectionner mises à jour **critiques** ou **mises à jour de sécurité** dans le volet gauche et afficher les mises à jour disponibles pour ces catégories.  
   
-    ![Sélectionnez toutes les mises à jour et modifiez un état. ](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
+    ![Sélectionner toutes les mises à jour et modifier l'état en N'importe quel](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  Sélectionnez toutes les mises à jour, puis cliquez sur le **approuver** lien dans le volet droit.  
+3.  Sélectionnez toutes les mises à jour, puis cliquez sur le lien **approuver** dans le volet droit.  
   
-    Vous pouvez également cliquez sur les mises à jour sélectionnées, puis cliquez sur **approuver**. Vous pouvez être invité à accepter le « contrat de licence Microsoft ». Dans ce cas, cliquez sur **J’accepte** dans la fenêtre pour continuer.  
+    Vous pouvez également cliquer avec le bouton droit sur les mises à jour sélectionnées, puis cliquer sur **approuver**. Vous pouvez être invité à accepter les termes du contrat de licence logiciel Microsoft. Dans ce cas, cliquez sur **J’accepte** dans la fenêtre pour continuer.  
   
-    ![Sélectionnez toutes les mises à jour applicables et cliquer sur Approuver. ](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
+    ![Sélectionner toutes les mises à jour applicables et cliquer sur Approuver.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Sélectionnez le groupe de serveurs appliance que vous avez créé dans [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytique Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+4.  Sélectionnez le groupe de serveurs d’appliance que vous avez créé dans [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Cliquez sur **approuvée pour l’installation**, puis cliquez sur **OK**.  
+5.  Cliquez sur **Approuvée pour l’installation**, puis sur **OK**.  
   
-    ![Approuver les mises à jour pour votre groupe d’ordinateurs. ](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
+    ![Approuver les mises à jour pour le groupe d'ordinateurs.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  Dans le **progression de l’approbation** boîte de dialogue, lorsque le processus d’approbation est terminé, cliquez sur **fermer**.  
+6.  Dans la boîte de dialogue progression de l' **approbation** , lorsque le processus d’approbation est terminé, cliquez sur **Fermer**.  
   
-    ![Fermer la fenêtre lorsque les mises à jour sont approuvées. ](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
+    ![Fermer la fenêtre quand des mises à jour sont approuvées.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
-#### <a name="verify-that-the-updates-are-in-wsus"></a>Vérifiez que les mises à jour WSUS  
+#### <a name="verify-that-the-updates-are-in-wsus"></a>Vérifier que les mises à jour sont dans WSUS  
   
--  Vérifiez l’état de toutes les mises à jour du fichier. Chaque fichier doit avoir une icône de flèche verte à gauche du titre. Cela indique que le fichier est prêt pour l’installation.  
+-  Vérifiez l’état des fichiers de toutes les mises à jour. Chaque fichier doit comporter une icône représentant une flèche verte à gauche du titre. Cela indique que le fichier est prêt pour l’installation.  
   
-    ![État du fichier est réussi](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUS_File_Status.png "SQL_Server_PDW_WSUS_File_Status")  
+    ![L'état du fichier est Réussi](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUS_File_Status.png "SQL_Server_PDW_WSUS_File_Status")  
   
-    Avant d’installer les mises à jour, assurez-vous qu’ils sont tous téléchargé et disponible dans la console WSUS.  
+    Avant d’installer les mises à jour, assurez-vous qu’elles sont téléchargées et disponibles dans la console WSUS.  
   
-#### <a name="to-verify-that-all-updates-are-downloaded"></a>Pour vérifier que toutes les mises à jour sont téléchargées.  
+#### <a name="to-verify-that-all-updates-are-downloaded"></a>Pour vérifier que toutes les mises à jour sont téléchargées  
   
--  Vérifier le **état du téléchargement de** des mises à jour dans la console WSUS, comme illustré dans la capture d’écran suivante. Vérifiez que **mises à jour nécessitant des fichiers** est égal à 0 pour confirmer que toutes les mises à jour sont téléchargées. Si ce nombre est supérieur à zéro, vous devrez peut-être revenir en arrière et approuver les mises à jour supplémentaires.  
+-  Vérifiez l' **État de téléchargement** des mises à jour dans la console WSUS, comme indiqué dans la capture d’écran suivante. Vérifiez que les **mises à jour nécessitant des fichiers** sont égales à 0 pour confirmer que toutes les mises à jour sont téléchargées. Si ce nombre est supérieur à zéro, vous devrez peut-être revenir en arrière et approuver des mises à jour supplémentaires.  
   
-    ![Vérifiez que toutes les mises à jour sont téléchargées. ](./media/download-and-apply-microsoft-updates/SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG.png "SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG")  
+    ![Vérifier que toutes les mises à jour sont téléchargées.](./media/download-and-apply-microsoft-updates/SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG.png "SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG")  
   
-#### <a name="apply-microsoft-updates"></a>Appliquer des mises à jour Microsoft  
+#### <a name="apply-microsoft-updates"></a>Appliquer les mises à jour Microsoft  
   
-1.  Avant de commencer, ouvrez le [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), cliquez sur le **Appliance état** onglet et vérifiez que le  **Cluster** et **réseau** colonnes show vert (ou NA) pour tous les nœuds. Si toutes les alertes existent dans une de ces colonnes, l’appliance ne peut pas être en mesure d’installer les mises à jour correctement. Résoudre toutes les alertes existantes dans le **Cluster** et **réseau** colonnes avant de continuer.  
+1.  Avant de commencer, ouvrez l' [application analyser l’appliance à l’aide de la console d’administration de &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), cliquez sur l’onglet **État** de l’appliance, puis vérifiez que les colonnes **cluster** et **réseau** affichent le vert (ou na) pour tous les nœuds. Si des alertes se trouvent dans l’une de ces colonnes, l’appliance peut ne pas être en mesure d’installer les mises à jour correctement. Traitez toutes les alertes existantes dans les colonnes de **cluster** et de **réseau** avant de continuer.  
   
-2.  Ouvrez une session sur le _< nom_domaine >_ **-HST01** nœud en tant que l’administrateur de domaine Fabric.  
+2.  Connectez-vous au nœud _<domain_name>_ **-HST01** en tant qu’administrateur de domaine de l’infrastructure.  
   
-3.  Pour appliquer toutes les mises à jour approuvées pour WSUS, exécutez le programme de mise à jour. Consultez [exécuter le programme de mise à jour](#RunUpdateWizard) ci-dessous pour obtenir des instructions.  
+3.  Pour appliquer toutes les mises à jour approuvées pour WSUS, exécutez le programme de mise à jour. Pour obtenir des instructions, consultez [exécuter le programme de mise à jour](#RunUpdateWizard) ci-dessous.  
   
 #### <a name="verify-the-updates-on-all-nodes"></a>Vérifier les mises à jour sur tous les nœuds  
   
-1.  À partir du nœud VMM, lancez la Console d’administration WSUS. Cette application peut être trouvée sous **Démarrer**, **outils d’administration**, **Windows Server Update Services**.  
+1.  À partir du nœud VMM, lancez la console d’administration WSUS. Cette application se trouve sous **Démarrer**, **Outils d’administration**, **Windows Server Update Services**.  
   
 2.  Développez **ordinateurs**.  
   
 3.  Développez **tous les ordinateurs**.  
   
-4.  Sélectionnez le groupe de serveurs appliance que vous avez créé dans [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytique Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+4.  Sélectionnez le groupe de serveurs d’appliance que vous avez créé dans [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Dans le **état** menu déroulant, sélectionnez **n’importe quel** et cliquez sur **Actualiser**.  
+5.  Dans le menu déroulant **État** , sélectionnez **n’importe laquelle** , puis cliquez sur **Actualiser**.  
   
-6.  Développez **mettre à jour des Services**, *<appliance name>* - VMM, **mises à jour**, **toutes les mises à jour**, où *<appliance name>* est le nom de votre appliance.  
+6.  Développez Services de *<appliance name>* **mise à jour**,-VMM, **mises à**jour, **toutes les mises à jour**, où *<appliance name>* est le nom de votre appliance.  
   
-7.  Dans le **toutes les mises à jour** ensemble de la fenêtre **approbation** à **toutes sauf refusées**.  
+7.  Dans la fenêtre **toutes les mises à jour** , définissez **approbation** sur **tout sauf refusée**.  
   
-8.  Dans le **toutes les mises à jour** fenêtre, définissez **état** à **ont échoué ou nécessaires**.  
+8.  Dans la fenêtre **toutes les mises à jour** , définissez **État** sur **échec ou requis**.  
   
 9. Cliquez sur **Actualiser**.  
   
-10. Si **mises à jour nécessaires** est supérieur à zéro, contactez le support technique pour obtenir une assistance.  
+10. Si les **mises à jour nécessaires** sont supérieures à zéro, contactez le support technique pour obtenir de l’aide.  
   
-#### <a name="ensure-there-are-no-critical-alerts-in-the-sql-server-pdw-admin-console"></a>Assurez-vous qu'il n’y aucune alerte critique dans la Console d’administration SQL Server PDW  
+#### <a name="ensure-there-are-no-critical-alerts-in-the-sql-server-pdw-admin-console"></a>Vérifier qu’il n’y a pas d’alertes critiques dans la console d’administration SQL Server PDW  
   
-1.  Ouvrez la Console d’administration, cliquez sur l’onglet État de l’Appliance. Consultez [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
+1.  Ouvrez la console d’administration, puis cliquez sur l’onglet État de l’appliance. Consultez [surveiller l’appliance à l’aide de la console d’administration &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
-2.  Vérifiez que le **Cluster** et **réseau** colonnes show vert (ou NA) pour tous les nœuds. Si toutes les alertes existent dans une de ces colonnes, l’appliance ne peut pas être en mesure d’installer les mises à jour correctement. Contactez le support technique s’il existe des alertes critiques.  
+2.  Vérifiez que les colonnes **cluster** et **réseau** affichent le vert (ou na) pour tous les nœuds. Si des alertes se trouvent dans l’une de ces colonnes, l’appliance peut ne pas être en mesure d’installer les mises à jour correctement. Contactez le support technique s’il existe des alertes critiques.  
   
-## <a name="RunUpdateWizard"></a>Exécutez le programme de mise à jour  
-Suivez ces instructions pour exécuter le programme de mise à jour de système de plateforme Analytique.  
+## <a name="RunUpdateWizard"></a>Exécuter le programme de mise à jour  
+Suivez ces instructions pour exécuter le programme de mise à jour du système Analytics Platform.  
   
 > [!NOTE]  
-> Le système WSUS est conçu pour exécuter en mode asynchrone peut prendre un certain temps s’appliquent pleinement toutes les mises à jour. Lancer une mise à jour une mise à jour des planifications, mais ne garantit pas l’activité de mise à jour immédiate.  
+> Le système WSUS est conçu pour s’exécuter de façon asynchrone et peut prendre un certain temps pour appliquer entièrement toutes les mises à jour. Le lancement d’une mise à jour planifie une mise à jour mais ne garantit pas l’activité immédiate des mises à jour.  
   
-1.  Assurez-vous que vous êtes connecté au nœud HST01 en tant que l’administrateur de domaine Fabric.  
+1.  Vérifiez que vous êtes connecté au nœud HST01 en tant qu’administrateur de domaine de l’infrastructure.  
   
-2.  Ouvrez une fenêtre d’invite de commandes et entrez les commandes suivantes. Remplacez *<parameter>* avec les informations désignées.  
+2.  Ouvrez une fenêtre d’invite de commandes et entrez les commandes suivantes. Remplacez *<parameter>* par les informations spécifiées.  
   
-**Pour exécuter la mise à jour de Microsoft :**  
+**Pour exécuter l’Microsoft Update :**  
   
 ```  
 C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<password>"  
 ```  
   
-**Pour signaler l’état de Microsoft Update :**  
+**Pour signaler l’état du Microsoft Update :**  
   
 ```  
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Désinstaller les mises à jour Microsoft &#40;Analytique Platform System&#41;](uninstall-microsoft-updates.md)  
-[Appliquer des correctifs de système de plateforme Analytique &#40;Analytique Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
-[Désinstallation de correctifs de système de plateforme Analytique &#40;Analytique Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Maintenance logicielle &#40;Analytique Platform System&#41;](software-servicing.md)  
+[Désinstallez les mises à jour Microsoft &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Appliquer des correctifs logiciels Analytics Platform System &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+[Désinstallation des correctifs du système de plateforme Analytics &#40;Analytics&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[Maintenance logicielle &#40;système de plateforme Analytics&#41;](software-servicing.md)  
   

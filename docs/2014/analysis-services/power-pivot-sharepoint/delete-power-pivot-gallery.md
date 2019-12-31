@@ -1,7 +1,7 @@
 ---
-title: Supprimer la galerie PowerPivot | Microsoft Docs
+title: Supprimer la Galerie PowerPivot | Microsoft Docs
 ms.custom: ''
-ms.date: 06/14/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,30 +10,30 @@ ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0019aa93459f2e46646cbbfb115b501fbf7eaff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d69bac2879b2d93c44e15c58f9ba44396d99988
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071460"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683686"
 ---
 # <a name="delete-powerpivot-gallery"></a>Supprimer une bibliothèque PowerPivot
   La suppression d’une bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] supprime également tous ses éléments, notamment l’historique d’actualisation des données pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont configurés pour l’actualisation planifiée des données.  
   
 > [!NOTE]  
->  Cette rubrique fournit des instructions sur la suppression d'une bibliothèque SharePoint. Pour obtenir des instructions sur la façon de supprimer des documents individuels dans la bibliothèque, consultez [utiliser la galerie PowerPivot](use-power-pivot-gallery.md).  
+>  Cette rubrique fournit des instructions sur la suppression d'une bibliothèque SharePoint. Pour obtenir des instructions sur la façon de supprimer des documents individuels de la bibliothèque, consultez [utiliser la Galerie PowerPivot](use-power-pivot-gallery.md).  
   
  Vous devez être propriétaire de site pour supprimer une bibliothèque.  
   
-### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>Supprimer la galerie PowerPivot SharePoint 2013  
+### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>Supprimer la Galerie PowerPivot SharePoint 2013  
   
-1.  Cliquez sur paramètres ![paramètres SharePoint](../media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint"), puis cliquez sur **paramètres du Site**.  
+1.  Cliquez sur paramètres paramètres ![SharePoint](../media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint"), puis sur **paramètres du site**.  
   
 2.  Cliquez sur **Paramètres du site**.  
   
 3.  Sous Administration de site, cliquez sur **Bibliothèques et listes du site**.  
   
-4.  Cliquez sur **personnaliser « Galerie PowerPivot »** .  
+4.  Cliquez sur **personnaliser la « Galerie PowerPivot »**.  
   
 5.  Sous Autorisations et gestion, cliquez sur **Supprimer cette bibliothèque de documents**.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "66071460"
   
 3.  Sous Administration de site, cliquez sur **Bibliothèques et listes du site**.  
   
-4.  Cliquez sur **personnaliser « Galerie PowerPivot »** .  
+4.  Cliquez sur **personnaliser la « Galerie PowerPivot »**.  
   
 5.  Sous Autorisations et gestion, cliquez sur **Supprimer cette bibliothèque**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Galerie PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [Galerie PowerPivot](../../2014-toc/index.yml)  
   
   

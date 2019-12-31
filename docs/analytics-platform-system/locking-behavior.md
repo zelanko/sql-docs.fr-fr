@@ -1,6 +1,6 @@
 ---
-title: Comportement de verrouillage - Parallel Data Warehouse | Microsoft Docs
-description: Découvrez comment Parallel Data Warehouse utilise le verrouillage pour garantir l’intégrité des transactions et de maintenir la cohérence des bases de données lorsque plusieurs utilisateurs accèdent aux données en même temps.
+title: Comportement du verrouillage
+description: Découvrez comment le Data Warehouse parallèle utilise le verrouillage pour garantir l’intégrité des transactions et maintenir la cohérence des bases de données lorsque plusieurs utilisateurs accèdent aux données en même temps.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,49 +8,50 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d93743c83d6315e6ab9484445f344b06f80be845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960643"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401002"
 ---
-# <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportement de verrouillage dans Parallel Data Warehouse
-Découvrez comment Parallel Data Warehouse utilise le verrouillage pour garantir l’intégrité des transactions et de maintenir la cohérence des bases de données lorsque plusieurs utilisateurs accèdent aux données en même temps.  
+# <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportement de verrouillage en parallèle Data Warehouse
+Découvrez comment le Data Warehouse parallèle utilise le verrouillage pour garantir l’intégrité des transactions et maintenir la cohérence des bases de données lorsque plusieurs utilisateurs accèdent aux données en même temps.  
   
-## <a name="Basics"></a>Principes fondamentaux de verrouillage  
-**Modes**  
+## <a name="Basics"></a>Notions de base du verrouillage  
+**Façons**  
   
 SQL Server PDW prend en charge quatre modes de verrouillage :  
   
-Exclusive  
-Le verrou exclusif interdit l’écriture ou de lecture à partir de l’objet verrouillé jusqu'à ce que la transaction détenant que le verrou exclusif se termine. Aucuns verrous de n’importe quel mode ne sont autorisées pendant que le verrou exclusif est en vigueur. Par exemple, DROP TABLE et CREATE DATABASE utilisent un verrou exclusif.  
+Exclusif  
+Le verrou exclusif interdit l’écriture ou la lecture de l’objet verrouillé jusqu’à ce que la transaction qui maintient le verrou exclusif se termine. Aucun autre verrou de n’importe quel mode n’est autorisé tant que le verrou exclusif est en vigueur. Par exemple, DROP TABLE et CREATe DATABASE utilisent un verrou exclusif.  
   
-Partagés  
-Le verrou partagé empêche l’émission d’un verrou exclusif sur l’objet affecté, mais permet à tous les autres modes de verrouillage. Par exemple, l’instruction SELECT lance un verrou partagé et par conséquent permet plusieurs requêtes accéder aux données sélectionnées simultanément, mais empêche les mises à jour les enregistrements lors de la lecture jusqu'à la fin de l’instruction SELECT.  
+Partagé  
+Le verrou partagé interdit l’initiation d’un verrou exclusif sur l’objet affecté, mais autorise tous les autres modes de verrouillage. Par exemple, l’instruction SELECT initie un verrou partagé et, par conséquent, permet à plusieurs requêtes d’accéder simultanément aux données sélectionnées, mais empêche les mises à jour des enregistrements en cours de lecture, jusqu’à ce que l’instruction SELECT soit terminée.  
   
 ExclusiveUpdate  
-Le verrou ExclusiveUpdate interdit l’écriture dans l’objet verrouillé, mais n’autorise pas la lecture par le biais du verrou partagé. Aucun autre verrou n’est autorisées pendant que le verrou ExclusiveUpdate est en vigueur. Par exemple, la base de données de sauvegarde et de restaurer la base de données utilisent un verrou de mise à jour Exclusive.  
+Le verrou ExclusiveUpdate interdit l’écriture dans l’objet verrouillé, mais autorise la lecture via le verrou partagé. Aucun autre verrou n’est autorisé tant que le verrou ExclusiveUpdate est en vigueur. Par exemple, BACKUP DATABASE et RESTORE DATABASE utilisent un verrou de mise à jour exclusif.  
   
 SharedUpdate  
-Le verrou SharedUpdate interdit les modes de verrouillage exclusif et ExclusiveUpdate et permet des modes de verrouillage partagé et SharedUpdate sur l’objet. SharedUpdate modifie un objet, mais ne restreint pas l’accès en lecture à celui-ci lors de la modification. Par exemple, insérer et mise à jour utiliser un verrou SharedUpdate.  
+Le verrou SharedUpdate interdit les modes de verrouillage exclusif et ExclusiveUpdate, et autorise les modes de verrouillage partagé et SharedUpdate sur l’objet. SharedUpdate modifie un objet, mais ne restreint pas l’accès en lecture au cours de la modification. Par exemple, INSERT et UPDATE utilisent un verrou SharedUpdate.  
   
 **Classes de ressources**  
   
-Verrous sont maintenus sur les classes d’objets suivantes : Base de données, schéma, objet (table, vue ou procédure), APPLICATION (utilisé en interne), EXTERNALDATASOURCE, EXTERNALFILEFORMAT et SCHEMARESOLUTION (une base de données au niveau lock effectuée lors de la création, modification ou suppression des objets de schéma ou les utilisateurs de base de données). Ces classes d’objets peuvent apparaître dans la colonne object_type de [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
+Les verrous sont conservés sur les classes d’objets suivantes : base de données, schéma, objet (table, vue ou procédure), APPLICATION (utilisée en interne), EXTERNALDATASOURCE, EXTERNALFILEFORMAT et SCHEMARESOLUTION (verrou de niveau base de données pris lors de la création, de la modification ou suppression des objets de schéma ou des utilisateurs de base de données). Ces classes d’objets peuvent apparaître dans la colonne object_type de [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
   
-## <a name="Remarks"></a>Remarques d’ordre général  
-Les verrous sont applicables aux bases de données, des tables ou des vues.  
+## <a name="Remarks"></a>Remarques générales  
+Les verrous peuvent être appliqués aux bases de données, aux tables ou aux vues.  
   
-SQL Server PDW n’implémente pas tous les niveaux d’isolation configurables. Il prend en charge le niveau d’isolement READ_UNCOMMITTED tel que défini par la norme ANSI. Toutefois, depuis la lecture d’opérations sont exécutées sous READ_UNCOMMITTED, très peu d’opérations bloquantes réellement se produire ou entraîner des conflits dans le système.  
+SQL Server PDW n’implémente aucun niveau d’isolement configurable. Il prend en charge le niveau d’isolation READ_UNCOMMITTED, tel que défini par la norme ANSI. Toutefois, étant donné que les opérations de lecture sont exécutées sous READ_UNCOMMITTED, très peu d’opérations de blocage se produisent ou conduisent à une contention dans le système.  
   
-SQL Server PDW s’appuie sur le moteur SQL Server sous-jacent pour implémenter le contrôle d’accès concurrentiel et de verrouillage. Si les opérations provoquer un blocage de SQL Server sous-jacent dans le même nœud, SQL Server PDW tire parti de la capacité de détection de blocage de SQL Server et met fin à une des instructions de blocage.  
+SQL Server PDW s’appuie sur le moteur de SQL Server sous-jacent pour implémenter le verrouillage et le contrôle d’accès concurrentiel. Si les opérations mènent à un blocage SQL Server sous-jacent au sein du même nœud, SQL Server PDW tire parti de la fonctionnalité de détection de blocage SQL Server et met fin à l’une des instructions bloquantes.  
   
 > [!NOTE]  
-> SQL Server n’autorise pas les instructions qui sont en attente de verrous soient bloquées par des demandes de verrou plus récentes. SQL Server PDW n’a pas entièrement implémentée ce processus. Dans SQL Server PDW, les demandes continues de nouveaux verrous partagés peuvent parfois bloquer une demande précédente (mais en attente) pour un verrou exclusif. Par exemple, un **mise à jour** instruction (ce qui nécessite un verrou exclusif) peut être bloquée par des verrous partagés sont accordées pour la série de **sélectionnez** instructions. Pour résoudre un processus bloqué (identifiables par le [sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DVM), arrêter l’envoi de demandes de nouveau jusqu'à ce que le verrou exclusif a été satisfait.  
+> SQL Server n’autorise pas les instructions qui attendent que les verrous soient bloqués par les demandes de verrouillage plus récentes. SQL Server PDW n’a pas entièrement implémenté ce processus. Dans SQL Server PDW, les demandes continues de nouveaux verrous partagés peuvent parfois bloquer une demande précédente (mais en attente) pour un verrou exclusif. Par exemple, une instruction **Update** (nécessitant un verrou exclusif) peut être bloquée par des verrous partagés qui sont accordés à une série d’instructions **Select** . Pour résoudre un processus bloqué (identifié par l’examen de la [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) DVM), arrêtez d’envoyer de nouvelles demandes jusqu’à ce que le verrou exclusif soit respecté.  
   
-## <a name="lock-definition-table"></a>Tableau de définition de verrou  
-SQL Server prend en charge les types suivants de verrous. Pas tous les types de verrou sont disponibles sur le nœud de contrôle, mais peuvent se produire sur les nœuds de calcul.  
+## <a name="lock-definition-table"></a>Verrouiller la table de définitions  
+SQL Server prend en charge les types de verrous suivants. Tous les types de verrous ne sont pas disponibles sur le nœud de contrôle, mais ils peuvent se produire sur les nœuds de calcul.  
   
 -   SCH-S (stabilité du schéma). Garantit que l'élément d'un schéma, tel qu'une table ou un index, n'est pas supprimé alors qu'une session contient un verrou de stabilité du schéma sur l'élément du schéma.  
   
@@ -62,25 +63,25 @@ SQL Server prend en charge les types suivants de verrous. Pas tous les types de 
   
 -   X (exclusif). La session détenant le verrou peut disposer d'un accès exclusif à la ressource.  
   
--   EST (Intent partagé). Indique l'intention de placer des verrous S sur certaines ressources subordonnées dans la hiérarchie de verrouillage.  
+-   IS (partage intentionnel). Indique l'intention de placer des verrous S sur certaines ressources subordonnées dans la hiérarchie de verrouillage.  
   
 -   IU (mise à jour intentionnelle). Indique l'intention de placer des verrous U sur certaines ressources subordonnées dans la hiérarchie de verrouillage.  
   
 -   IX (Intent exclusif). Indique l'intention de placer des verrous X sur certaines ressources subordonnées dans la hiérarchie de verrouillage.  
   
--   SIU (partagé mise à jour intentionnelle). Signale des accès partagés à une ressource dans le but de poser des verrous de mise à jour sur les ressources subordonnées dans la hiérarchie de verrouillage.  
+-   SIU (mise à jour intentionnelle partagée). Signale des accès partagés à une ressource dans le but de poser des verrous de mise à jour sur les ressources subordonnées dans la hiérarchie de verrouillage.  
   
--   SIX (partage intentionnel exclusif). Signale des accès partagés à une ressource dans le but de poser des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.  
+-   SIX (mode partagé intentionnelle exclusif). Signale des accès partagés à une ressource dans le but de poser des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.  
   
--   UIX (mise à jour intentionnelle Exclusive). Signale un verrou de mise à jour sur une ressource dans le but de poser des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.  
+-   UIX (mise à jour intentionnelle exclusive). Signale un verrou de mise à jour sur une ressource dans le but de poser des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.  
   
 -   BU. Utilisé par les opérations en bloc.  
   
--   RangeS_S (verrou d’étendue de clés partagés et de ressources partagées). Indique une analyse de plage sérialisable.  
+-   RangeS_S (verrou de plage de clés partagé et de ressource partagée). Indique une analyse de plage sérialisable.  
   
--   RangeS_U (verrou d’étendue de clés partagés et les ressources de mise à jour). Indique une analyse de mise à jour sérialisable.  
+-   RangeS_U (verrou de la plage de clés partagée et mise à jour des ressources). Indique une analyse de mise à jour sérialisable.  
   
--   RangeI_N (verrou insérer des clés et de ressources Null). Utilisé pour tester les étendues avant l'insertion d'une nouvelle clé dans un index.  
+-   RangeI_N (verrou d’insertion de la plage de clés et de ressources null). Utilisé pour tester les étendues avant l'insertion d'une nouvelle clé dans un index.  
   
 -   RangeI_S. Verrou de conversion de groupes de clés, créé par un chevauchement de verrous RangeI_N et S.  
   
@@ -92,11 +93,11 @@ SQL Server prend en charge les types suivants de verrous. Pas tous les types de 
   
 -   RangeX_U. Verrou de conversion de groupes de clés, créé par un chevauchement de verrous RangeI_N et RangeS_U.  
   
--   RangeX_X (verrou de clés exclusifs et de ressources exclusives). Verrou de conversion utilisé lors de la mise à jour d'une clé dans une étendue.  
+-   RangeX_X (verrou de plage de clés et de ressources exclusives exclusives). Verrou de conversion utilisé lors de la mise à jour d'une clé dans une étendue.  
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+[sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   

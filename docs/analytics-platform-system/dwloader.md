@@ -1,5 +1,5 @@
 ---
-title: Chargeur de ligne de commande dwloader-Parallel Data Warehouse | Microsoft Docs
+title: Chargeur de ligne de commande dwloader
 description: dwloader est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante.
 author: mzaman1
 ms.prod: sql
@@ -8,19 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 598a244849f843a2b95e6614d4e676a18ba54f61
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212268"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401175"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Chargeur de ligne de commande dwloader pour les Data Warehouse parallèles
-**dwloader** est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (mode*Append* ou *mode fastappend*), ajouter de nouvelles lignes et mettre à jour les lignes existantes (*mode upsert*), ou supprimer toutes les lignes existantes avant le chargement, puis insérer toutes les lignes dans une table vide. (*mode*de rechargement).  
+**dwloader** est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (mode*Append* ou *mode fastappend*), ajouter de nouvelles lignes et mettre à jour les lignes existantes (*mode upsert*), ou supprimer toutes les lignes existantes avant le chargement, puis insérer toutes les lignes dans une table vide (*mode de rechargement*).  
   
 **Processus de chargement des données**  
   
-1.  Préparez les données sources.  
+1.  Préparer les données source.  
   
     Utilisez votre propre processus ETL pour créer les données sources que vous souhaitez charger. Les données sources doivent être mises en forme pour correspondre au schéma de la table de destination. Stockez les données sources dans un ou plusieurs fichiers texte et copiez les fichiers texte dans le même répertoire sur votre serveur de chargement. Pour plus d’informations sur le serveur de chargement, consultez [acquérir et configurer un serveur de chargement](acquire-and-configure-loading-server.md)  
   
@@ -123,7 +124,7 @@ Affiche des informations d’aide simples sur l’utilisation du chargeur. L’a
 Une connexion d’authentification SQL Server valide avec les autorisations appropriées pour effectuer la charge.  
   
 **-P** *mot de passe*  
-Mot de passe d’un *Login_name*d’authentification SQL Server.  
+Mot de passe d’une *Login_name*d’authentification SQL Server.  
   
 **-W**  
 Utiliser l'authentification Windows. (Aucun *login_name* ou *mot de passe* requis.) 
@@ -133,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-Utilisez un fichier de paramètres, *parameter_file_name*, à la place des paramètres de ligne de commande. *parameter_file_name* peut contenir n’importe quel paramètre de ligne de commande, à l’exception de *user_name* et *Password*. Si un paramètre est spécifié sur la ligne de commande et dans le fichier de paramètres, la ligne de commande remplace le paramètre de fichier.  
+Utilisez un fichier de paramètres, *parameter_file_name*, à la place des paramètres de ligne de commande. *parameter_file_name* peut contenir n’importe quel paramètre de ligne de commande, à l’exception de *user_name* et du *mot de passe*. Si un paramètre est spécifié sur la ligne de commande et dans le fichier de paramètres, la ligne de commande remplace le paramètre de fichier.  
   
 Le fichier de paramètres contient un paramètre, sans **-** le préfixe, par ligne.  
   
@@ -146,7 +147,7 @@ Exemples :
 **-S** *target_appliance*  
 Spécifie le SQL Server PDW appliance qui recevra les données chargées.  
   
-*Pour les connexions Infiniband*, *target_appliance* est spécifié comme <-nom >-SQLCTL01. Pour configurer cette connexion nommée, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).  
+*Pour les connexions Infiniband*, *target_appliance* est spécifié comme <nom-appareil>-SQLCTL01. Pour configurer cette connexion nommée, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).  
   
 Pour les connexions Ethernet, *target_appliance* est l’adresse IP du cluster de nœuds de contrôle.  
   
@@ -156,21 +157,21 @@ En cas d’omission, la valeur par défaut de dwloader est celle qui a été sp�
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schéma*]. *table_name*  
 Nom en trois parties pour la table de destination.  
   
 **-I** *source_data_location*  
 Emplacement d’un ou plusieurs fichiers sources à charger. Chaque fichier source doit être un fichier texte ou un fichier texte compressé avec gzip. Un seul fichier source peut être compressé dans chaque fichier gzip.  
   
-Pour mettre en forme un fichier source:  
+Pour mettre en forme un fichier source :  
   
 -   Le fichier source doit être mis en forme conformément aux options de chargement.  
   
 -   Chaque ligne d’un fichier source contient les données d’une ligne de table. Les données sources doivent correspondre au schéma de la table de destination. L’ordre des colonnes et les types de données doivent également correspondre. Chaque champ de la ligne représente une colonne dans la table de destination.  
   
--   Par défaut, les champs sont de longueur variable et séparés par un délimiteur. Pour spécifier le type de délimiteur, utilisez les options de ligne de commande < variable_length_column_options >. Pour spécifier des champs de longueur fixe, utilisez les options de ligne de commande < fixed_width_column_options >.  
+-   Par défaut, les champs sont de longueur variable et séparés par un délimiteur. Pour spécifier le type de délimiteur, utilisez les options de ligne de commande <variable_length_column_options>. Pour spécifier des champs de longueur fixe, utilisez les options de ligne de commande <fixed_width_column_options>.  
   
-Pour spécifier l’emplacement des données sources:  
+Pour spécifier l’emplacement des données sources :  
   
 -   L’emplacement des données sources peut être un chemin d’accès réseau ou un chemin d’accès local à un répertoire sur le serveur de chargement.  
   
@@ -178,7 +179,7 @@ Pour spécifier l’emplacement des données sources:
   
 -   Pour spécifier certains des fichiers dans un répertoire, utilisez une combinaison de caractères et le caractère générique *.  
   
-Pour charger plusieurs fichiers à l’aide d’une commande:  
+Pour charger plusieurs fichiers à l’aide d’une commande :  
   
 -   Tous les fichiers doivent se trouver dans le même répertoire.  
   
@@ -208,12 +209,12 @@ Exemples :
 En cas d’échec de chargement, **dwloader** stocke la ligne qui n’a pas pu être chargée et la description de l’erreur les informations d’échec dans un fichier nommé *load_failure_file_name*. Si ce fichier existe déjà, dwloader remplacera le fichier existant. *load_failure_file_name* est créé lorsque le premier échec se produit. Si toutes les lignes sont chargées avec succès, *load_failure_file_name* n’est pas créé.  
   
 **-fh** *number_header_rows*  
-Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
+Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
   
 <variable_length_column_options>  
-Options pour un *source_data_file_name* qui possède des colonnes de longueur variable délimitées par des caractères. Par défaut, *source_data_file_name* contient des caractères ASCII dans les colonnes de longueur variable.  
+Les options d’une *source_data_file_name* qui contient des colonnes de longueur variable délimitées par des caractères. Par défaut, *source_data_file_name* contient des caractères ASCII dans des colonnes de longueur variable.  
   
-Pour les fichiers ASCII, les valeurs NULL sont représentées en plaçant les délimiteurs de manière consécutive. Par exemple, dans un fichier délimité par des barres verticales («|»), une valeur NULL est indiquée par «| |». Dans un fichier délimité par des virgules, la valeur NULL est indiquée par «,,». En outre, l’option **-E** (--emptyStringAsNull) doit être spécifiée. Pour plus d’informations sur-E, voir ci-dessous.  
+Pour les fichiers ASCII, les valeurs NULL sont représentées en plaçant les délimiteurs de manière consécutive. Par exemple, dans un fichier délimité par des barres verticales (« | »), une valeur NULL est indiquée par « | | ». Dans un fichier délimité par des virgules, la valeur NULL est indiquée par « ,, ». En outre, l’option **-E** (--emptyStringAsNull) doit être spécifiée. Pour plus d’informations sur-E, voir ci-dessous.  
   
 **-e** *character_encoding*  
 Spécifie un type d’encodage de caractères pour les données à charger à partir du fichier de données. Les options sont ASCII (valeur par défaut), UTF8, UTF16 ou UTF16BE, où UTF16 est Little endian et UTF16BE est Big endian. Ces options ne respectent pas la casse.  
@@ -221,13 +222,13 @@ Spécifie un type d’encodage de caractères pour les données à charger à pa
 **-t** *field_delimiter*  
 Délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ est un ou plusieurs de ces caractères d’échappement ASCII ou des valeurs hexadécimales ASCII.  
   
-|Name|Caractère d’échappement|Caractère hexadécimal|  
+|Name|Caractère d'échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
-|Onglet|\t|0x09|  
-|Retour chariot (CR)|\r|0x0d|  
+|Tab|\t|0x09|  
+|Retour chariot (CR)|\r|0x0D|  
 |Saut de ligne (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
-|Virgule|','|0x2c|  
+|Comma|','|0x2c|  
 |Guillemet double|\\"|0x22|  
 |Guillemet simple|\\'|0x27|  
   
@@ -237,32 +238,32 @@ Exemples :
   
 -t "|"  
   
--t ' '  
+-t' '  
   
 -t 0x0A  
   
 -t \t  
   
--t '~|~'  
+-t' ~ | ~ '  
   
 **-r** *row_delimiter*  
 Délimiteur pour chaque ligne du fichier de données source. Le séparateur de lignes est une ou plusieurs valeurs ASCII.  
   
 Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère de tabulation comme délimiteur, vous pouvez utiliser les caractères d’échappement (\r, \n, \t) ou leurs valeurs hexadécimales (0x, 0d, 09). Pour spécifier d’autres caractères spéciaux en tant que délimiteurs, utilisez leur valeur hexadécimale.  
   
-Exemples de CR + LF:  
+Exemples de CR + LF :  
   
 -r \r\n  
   
 -r 0x0d0x0a  
   
-Exemples de CR:  
+Exemples de CR :  
   
 -r \r  
   
 -r 0x0D  
   
-Exemples de LF:  
+Exemples de LF :  
   
 -r \n  
   
@@ -280,24 +281,24 @@ x
 -s 0X22  
   
 < fixed_width_column_options>  
-Options d’un fichier de données source contenant des colonnes de longueur fixe. Par défaut, *source_data_file_name* contient des caractères ASCII dans les colonnes de longueur variable.  
+Options d’un fichier de données source contenant des colonnes de longueur fixe. Par défaut, *source_data_file_name* contient des caractères ASCII dans des colonnes de longueur variable.  
   
 Les colonnes à largeur fixe ne sont pas prises en charge lorsque-e est UTF8.  
   
 **-w** *fixed_width_config_file*  
 Chemin d’accès et nom du fichier de configuration qui spécifie le nombre de caractères dans chaque colonne. Chaque champ doit être spécifié.  
   
-Ce fichier doit résider sur le serveur de chargement. Le chemin d’accès peut être un chemin d’accès UNC, relatif ou absolu. Chaque ligne de *fixed_width_config_file* contient le nom d’une colonne et le nombre de caractères de cette colonne. Il y a une ligne par colonne, comme suit, et l’ordre dans le fichier doit correspondre à l’ordre dans la table de destination:  
+Ce fichier doit résider sur le serveur de chargement. Le chemin d’accès peut être un chemin d’accès UNC, relatif ou absolu. Chaque ligne de *fixed_width_config_file* contient le nom d’une colonne et le nombre de caractères de cette colonne. Il y a une ligne par colonne, comme suit, et l’ordre dans le fichier doit correspondre à l’ordre dans la table de destination :  
   
 *column_name*=*num_chars*  
   
 *column_name*=*num_chars*  
   
-Exemple de fichier de configuration de largeur fixe:  
+Exemple de fichier de configuration de largeur fixe :  
   
-SalesCode=3  
+SalesCode = 3  
   
-SalesID=10  
+SalesID = 10  
   
 Exemples de lignes dans *source_data_file_name*:  
   
@@ -319,19 +320,19 @@ Délimiteur pour chaque ligne du fichier de données source. Le séparateur de l
   
 Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère de tabulation comme délimiteur, vous pouvez utiliser les caractères d’échappement (\r, \n, \t) ou leurs valeurs hexadécimales (0x, 0d, 09). Pour spécifier d’autres caractères spéciaux en tant que délimiteurs, utilisez leur valeur hexadécimale.  
   
-Exemples de CR + LF:  
+Exemples de CR + LF :  
   
 -r \r\n  
   
 -r 0x0d0x0a  
   
-Exemples de CR:  
+Exemples de CR :  
   
 -r \r  
   
 -r 0x0D  
   
-Exemples de LF:  
+Exemples de LF :  
   
 -r \n  
   
@@ -348,10 +349,10 @@ ydm et DMY autorisent les mêmes formats d’entrée. Tous deux autorisent l’a
 ydm  
 Vous pouvez uniquement charger l’entrée mise en forme en tant que ydm dans les colonnes de type de données DateTime et smalldatetime. Vous ne pouvez pas charger les valeurs ydm dans une colonne du type de données datetime2, date ou DateTimeOffset.  
   
-mja  
-mja autorise <month>. <space> <day> <comma> <year>  
+mdy  
+<month> <space> <day>mja autorise <comma>. <year>  
   
-Exemples de données d’entrée mja pour le 1er janvier 1975:  
+Exemples de données d’entrée mja pour le 1er janvier 1975 :  
   
 -   1er janvier 1975  
   
@@ -362,15 +363,15 @@ Exemples de données d’entrée mja pour le 1er janvier 1975:
 -   01011975  
   
 maj  
-Exemples de fichiers d’entrée pour le 04 mars 2010: 03-2010-04, 3/2010/4  
+Exemples de fichiers d’entrée pour le 04 mars 2010:03-2010-04, 3/2010/4  
   
 jam  
-Exemples de fichiers d’entrée pour le 04 mars 2010: 04-2010-03, 4/2010/3  
+Exemples de fichiers d’entrée pour le 04 mars 2010:04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format* est un format de date personnalisé (par exemple, mm/jj/aaaa) et inclus pour la compatibilité descendante uniquement. dwloader n’applique pas le format de date personnalisé. Au lieu de cela, lorsque vous spécifiez un format de date personnalisé, **dwloader** le convertit en paramètre correspondant AMJ, YDM, mja, MYD, Dym ou DMY.  
+*custom_date_format* est un format de date personnalisé (par exemple, mm/jj/aaaa) et inclus à des fins de compatibilité descendante uniquement. dwloader n’applique pas le format de date personnalisé. Au lieu de cela, lorsque vous spécifiez un format de date personnalisé, **dwloader** le convertit en paramètre correspondant AMJ, YDM, mja, MYD, Dym ou DMY.  
   
-Par exemple, si vous spécifiez-D MM/JJ/AAAA, dwloader s’attend à ce que toutes les entrées de date soient triées avec le mois en premier, puis le jour, puis l’année (mja). Elle n’applique pas deux mois de 2 caractères, des jours à 2 chiffres et des années à 4 chiffres, comme spécifié par le format de date personnalisé. Voici quelques exemples de la façon dont les dates peuvent être mises en forme dans le fichier d’entrée lorsque le format de date est-D MM/JJ/AAAA: 01/02/2013, Jan. 02.2013, 1/2/2013  
+Par exemple, si vous spécifiez-D MM/JJ/AAAA, dwloader s’attend à ce que toutes les entrées de date soient triées avec le mois en premier, puis le jour, puis l’année (mja). Elle n’applique pas deux mois de 2 caractères, des jours à 2 chiffres et des années à 4 chiffres, comme spécifié par le format de date personnalisé. Voici quelques exemples de formats de dates pouvant être mis en forme dans le fichier d’entrée lorsque le format de date est-D MM/JJ/AAAA : 01/02/2013, Jan. 02.2013, 1/2/2013  
   
 Pour obtenir des informations de mise en forme plus complètes, consultez [règles de conversion de types de données pour dwloader](dwloader-data-type-conversion-rules.md).  
   
@@ -391,7 +392,7 @@ Nom de la base de données qui contiendra la table de mise en lots. La valeur pa
 **-M** *load_mode_option*  
 Spécifie s’il faut ajouter, upsert ou recharger des données. Le mode par défaut est Append.  
   
-parenthèse  
+append  
 Le chargeur insère des lignes à la fin des lignes existantes dans la table de destination.  
   
 fastappend  
@@ -413,7 +414,7 @@ Si deux lignes de la table source ont des valeurs de clé de fusion correspondan
 recharger  
 Le chargeur tronque la table de destination avant d’insérer les données sources.  
   
-**-b** *batchsize*  
+**-b** *BatchSize*  
 Recommandé uniquement pour une utilisation par Support Microsoft, *BatchSize* est la taille de lot SQL Server pour la copie en bloc effectuée par DMS dans SQL Server instances sur les nœuds de calcul.  Quand la valeur *BatchSize* est spécifiée, SQL Server PDW remplace la taille de chargement par lot qui est calculée de manière dynamique pour chaque charge.  
   
 À partir de SQL Server 2012 PDW, le nœud de contrôle calcule dynamiquement une taille de lot pour chaque charge par défaut. Ce calcul automatique est basé sur plusieurs paramètres tels que la taille de la mémoire, le type de la table cible, le schéma de la table cible, le type de charge, la taille du fichier et la classe de ressources de l’utilisateur.  
@@ -426,7 +427,7 @@ Si le type de charge est FASTAPPEND, la valeur *BatchSize* s’applique au charg
 Spécifie les options permettant de déterminer le nombre d’échecs de chargement autorisés par le chargeur. Si les échecs de chargement dépassent le seuil, le chargeur s’arrêtera et ne validera aucune ligne.  
   
 **-RT** { **valeur** | pourcentage}  
-Spécifie si l’option-*reject_value* de l’option **-RV** *reject_value* est un nombre littéral de lignes (valeur) ou un taux d’échec (pourcentage). La valeur par défaut est la valeur.  
+Spécifie si le*reject_value* dans l’option **-RV** *reject_value* est un nombre littéral de lignes (valeur) ou un taux d’échec (pourcentage). La valeur par défaut est la valeur.  
   
 L’option pourcentage est un calcul en temps réel qui se produit à des intervalles en fonction de l’option-RS.  
   
@@ -435,7 +436,7 @@ Par exemple, si le chargeur tente de charger 100 lignes et que 25 échouent et 7
 **-rv** *reject_value*  
 Spécifie le nombre ou le pourcentage de rejets de ligne à autoriser avant l’arrêt du chargement. L’option **-RT** détermine si *reject_value* fait référence au nombre de lignes ou au pourcentage de lignes.  
   
-La valeur par défaut de *reject_value* est 0.  
+La *reject_value* par défaut est 0.  
   
 Lorsqu’il est utilisé avec la valeur-RT, le chargeur arrête le chargement lorsque le nombre de lignes rejetées dépasse reject_value.  
   
@@ -451,7 +452,7 @@ Exemples :
   
 ' 'est tronqué en' '  
   
-«ABC» est tronqué à «ABC»  
+« ABC » est tronqué à « ABC »  
   
 Lorsque-c est utilisé avec-E, l’opération-E se produit en premier. Les champs qui contiennent uniquement des espaces blancs sont convertis en chaîne vide et non NULL.  
   
@@ -459,23 +460,23 @@ Lorsque-c est utilisé avec-E, l’opération-E se produit en premier. Les champ
 Convertit des chaînes vides en valeurs NULL. La valeur par défaut est de ne pas effectuer ces conversions.  
   
 **-m**  
-Utilisez le mode multi-transaction pour la deuxième phase de chargement; lors du chargement de données à partir de la table de mise en lots dans une table distribuée.  
+Utilisez le mode multi-transaction pour la deuxième phase de chargement ; lors du chargement de données à partir de la table de mise en lots dans une table distribuée.  
   
 Avec **-m**, SQL Server PDW effectue et valide les charges en parallèle. Cela s’effectue beaucoup plus rapidement que le mode de chargement par défaut, mais n’est pas sécurisé pour les transactions.  
   
 Sans **-m**, SQL Server PDW effectue et valide les chargements en série sur les distributions au sein de chaque nœud de calcul, et simultanément sur les nœuds de calcul. Cette méthode est plus lente que le mode multi-transaction, mais elle est sécurisée pour les transactions.  
   
-**-m** est facultatif pour *ajouter*, *recharger*, et *upsert*.  
+**-m** est facultatif pour *Append*, *Reload*et *upsert*.  
   
 **-m** est requis pour fastappend.  
   
-**-m** ne peut pas être utilisé avec les tables répliquées.  
+**-m** ne peut pas être utilisé avec des tables répliquées.  
   
-**-m** s’applique uniquement à la deuxième phase de chargement. Elle ne s’applique pas à la première phase de chargement; chargement de données dans la table de mise en lots.  
+**-m** s’applique uniquement à la deuxième phase de chargement. Elle ne s’applique pas à la première phase de chargement ; chargement de données dans la table de mise en lots.  
   
 Il n’existe pas de restauration avec mode multi-transaction, ce qui signifie que la récupération à partir d’un échec ou d’une charge abandonnée doit être gérée par votre propre processus de chargement.  
   
-Nous vous recommandons d’utiliser **-m** uniquement lors du chargement dans une table vide afin de pouvoir effectuer une récupération sans perte de données. Pour récupérer suite à un échec de chargement: supprimez la table de destination, résolvez le problème de chargement, recréez la table de destination, puis réexécutez le chargement.  
+Nous vous recommandons d’utiliser **-m** uniquement lors du chargement dans une table vide afin de pouvoir effectuer une récupération sans perte de données. Pour récupérer suite à un échec de chargement : supprimez la table de destination, résolvez le problème de chargement, recréez la table de destination, puis réexécutez le chargement.  
   
 **-N**  
 Vérifiez que l’appliance cible dispose d’un certificat de SQL Server PDW valide d’une autorité de confiance. Utilisez-le pour vous assurer que vos données ne sont pas détournées par une personne malveillante et envoyées à un emplacement non autorisé. Le certificat doit déjà être installé sur l’appliance. La seule méthode prise en charge pour installer le certificat est que l’administrateur de l’appliance l’installe à l’aide de l’outil Configuration Manager. Demandez à l’administrateur de votre appareil si vous n’êtes pas sûr qu’un certificat approuvé est installé sur l’appareil.  
@@ -486,10 +487,10 @@ Ignorer le chargement des fichiers vides. Cela ignore également la décompressi
 **-l**  
 Disponible avec la mise à jour CU 7.4, spécifie la longueur maximale de ligne (en octets) pouvant être chargée. Les valeurs valides sont des entiers compris entre 32768 et 33554432. Utilisez uniquement lorsque cela est nécessaire pour charger des lignes volumineuses (supérieures à 32KO), car cela allouera plus de mémoire sur le client et le serveur.
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
 0 (succès) ou autre valeur entière (échec)  
   
-Dans une fenêtre de commande ou un fichier de `errorlevel` commandes, utilisez pour afficher le code de retour. Exemple :  
+Dans une fenêtre de commande ou un fichier de `errorlevel` commandes, utilisez pour afficher le code de retour. Par exemple :  
   
 ```  
 dwloader  
@@ -527,14 +528,14 @@ Les données chargées peuvent nécessiter plus ou moins d’espace sur l’appl
 Bien que **dwloader** soit un processus de transaction et s’annule normalement en cas d’échec, il ne peut pas être restauré une fois que le chargement en masse a été effectué avec succès. Pour annuler un processus **dwloader** actif, tapez Ctrl + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
-La taille totale de toutes les charges qui se produisent simultanément doit être inférieure à LOG_SIZE pour la base de données, et nous recommandons que la taille totale de toutes les charges simultanées soit inférieure à 50% du LOG_SIZE. Pour atteindre cette limite de taille, vous pouvez fractionner des charges importantes en plusieurs lots. Pour plus d’informations sur LOG_SIZE, consultez [Create Database](../t-sql/statements/create-database-parallel-data-warehouse.md) .  
+La taille totale de toutes les charges se produisant simultanément doit être inférieure à LOG_SIZE pour la base de données, et nous recommandons que la taille totale de toutes les charges simultanées soit inférieure à 50% du LOG_SIZE. Pour atteindre cette limite de taille, vous pouvez fractionner des charges importantes en plusieurs lots. Pour plus d’informations sur les LOG_SIZE, consultez [Create Database](../t-sql/statements/create-database-parallel-data-warehouse.md) .  
   
 Lors du chargement de plusieurs fichiers à l’aide d’une commande de chargement, toutes les lignes rejetées sont écrites dans le même fichier de rejet. Le fichier rejeté n’indique pas quel fichier d’entrée contient chaque ligne rejetée.  
   
-La chaîne vide ne doit pas être utilisée comme délimiteur. Lorsqu’une chaîne vide est utilisée comme délimiteur de ligne, le chargement échoue. Lorsqu’il est utilisé comme délimiteur de colonne, le chargement ignore le délimiteur et continue à utiliser la valeur par défaut «|» comme délimiteur de colonne. Lorsqu’elle est utilisée comme délimiteur de chaîne, la chaîne vide est ignorée et le comportement par défaut est appliqué.  
+La chaîne vide ne doit pas être utilisée comme délimiteur. Lorsqu’une chaîne vide est utilisée comme délimiteur de ligne, le chargement échoue. Lorsqu’il est utilisé comme délimiteur de colonne, le chargement ignore le délimiteur et continue à utiliser la valeur par défaut « | » comme délimiteur de colonne. Lorsqu’elle est utilisée comme délimiteur de chaîne, la chaîne vide est ignorée et le comportement par défaut est appliqué.  
   
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
-le comportement de verrouillage **dwloader** varie en fonction du *load_mode_option*.  
+le comportement de verrouillage **dwloader** varie en fonction de la *load_mode_option*.  
   
 -   **Append** -Append est l’option recommandée et la plus courante. Ajouter charge des données dans une table de mise en lots. Le verrouillage est décrit en détail ci-dessous.  
   
@@ -549,18 +550,18 @@ le comportement de verrouillage **dwloader** varie en fonction du *load_mode_opt
   
 Append peut être exécutée en mode multi-transactionnel (à l’aide de l’argument-m), mais elle n’est pas sécurisée pour les transactions. Par conséquent, Append doit être utilisé comme opération transactionnelle (sans utiliser l’argument-m). Malheureusement, au cours de l’opération de sélection d’insertion finale, le mode transactionnel est actuellement environ six fois plus lent que le mode multi-transactionnel.  
   
-Le mode Append charge les données en deux phases. La phase 1 charge simultanément des données à partir du fichier source dans une table de mise en lots (une fragmentation peut se produire). La phase 2 charge les données de la table de mise en lots dans la table finale. La deuxième phase effectue une **insertion into... Sélectionnez avec l’opération (TABLOCK)** . Le tableau suivant montre le comportement de verrouillage sur la table finale et le comportement de journalisation lors de l’utilisation du mode Append:  
+Le mode Append charge les données en deux phases. La phase 1 charge simultanément des données à partir du fichier source dans une table de mise en lots (une fragmentation peut se produire). La phase 2 charge les données de la table de mise en lots dans la table finale. La deuxième phase effectue une **insertion into... Sélectionnez avec l’opération (TABLOCK)** . Le tableau suivant montre le comportement de verrouillage sur la table finale et le comportement de journalisation lors de l’utilisation du mode Append :  
   
 |Type de table|Plusieurs transactions<br />Mode (-m)|La table est vide|Accès concurrentiel pris en charge|Journalisation|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Segment de mémoire (heap)|Oui|Oui|Oui|Minimales|  
-|Segment de mémoire (heap)|Oui|Non|Oui|Minimales|  
-|Segment de mémoire (heap)|Non |Oui|Non |Minimales|  
-|Segment de mémoire (heap)|Non |Non |Non |Minimales|  
-|Cl|Oui|Oui|Non |Minimales|  
-|Cl|Oui|Non|Oui|Complète|  
-|Cl|Non |Oui|Non |Minimales|  
-|Cl|Non |Non|Oui|Complète|  
+|Segment de mémoire|Oui|Oui|Oui|Minimales|  
+|Segment de mémoire|Oui|Non|Oui|Minimales|  
+|Segment de mémoire|Non|Oui|Non|Minimales|  
+|Segment de mémoire|Non|Non|Non|Minimales|  
+|CL|Oui|Oui|Non|Minimales|  
+|CL|Oui|Non|Oui|Complet|  
+|CL|Non|Oui|Non|Minimales|  
+|CL|Non|Non|Oui|Complet|  
   
 Le tableau ci-dessus affiche **dwloader** en utilisant le mode Append chargé dans un segment de mémoire ou une table d’index cluster (ci), avec ou sans l’indicateur multitransactionnel, et en chargeant dans une table vide ou une table non vide. Le comportement de verrouillage et de journalisation de chaque combinaison de charge est affiché dans le tableau. Par exemple, si vous chargez (2e) la phase avec le mode Append dans un index cluster sans mode multitransactionnel et dans une table vide, PDW crée un verrou exclusif sur la table et la journalisation est minimale. Cela signifie qu’un client ne sera pas en mesure de charger (2e) la phase et la requête simultanément dans une table vide. Toutefois, lors du chargement avec la même configuration dans une table non vide, PDW n’émet pas de verrou exclusif sur la table et l’accès concurrentiel est possible. Malheureusement, la journalisation complète se produit, ce qui ralentit le processus.  
   
@@ -603,7 +604,7 @@ L’exemple suivant fait partie d’un script de commandes qui charge des donné
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. S’il utilisait InfiniBand, le serveur *< appliance_name >*`-SQLCTL01`.  
+L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. S’il utilisait InfiniBand, le serveur *<appliance_name>* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  
@@ -672,7 +673,7 @@ Le script de l’exemple B peut être remplacé en entrant tous les paramètres 
 C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -S <Control node IP> -E -M reload -e UTF16 -i .\DimAccount.txt -T AdventureWorksPDW2012.dbo.DimAccount -R DimAccount.bad -t "|" -r \r\n -U <login> -P <password>  
 ```  
   
-Description des paramètres de ligne de commande:  
+Description des paramètres de ligne de commande :  
   
 -   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* est l’emplacement d’installation de dwloader. exe.  
   
@@ -680,7 +681,7 @@ Description des paramètres de ligne de commande:
   
 -   *-E* spécifie de charger des chaînes vides en tant que valeurs NULL.  
   
--   *-M recharger* spécifie pour tronquer la table de destination avant d’insérer la source de données.  
+-   *-M rechargement* spécifie de tronquer la table de destination avant d’insérer les données sources.  
   
 -   *-e UTF16* indique que le fichier source utilise le type d’encodage de caractères primauté des octets de poids faible (Little endian).  
   
@@ -694,7 +695,7 @@ Description des paramètres de ligne de commande:
   
 -   *-r \r\n* spécifie chaque ligne dans DimAccount. txt se termine par un retour chariot et un caractère de saut de ligne.  
   
--   *-U < login_name >-P <password> * spécifie la connexion et le mot de passe de la connexion qui dispose des autorisations nécessaires pour effectuer la charge.  
+-   *-U <login_name>-P <password> * spécifie la connexion et le mot de passe de la connexion qui dispose des autorisations nécessaires pour effectuer la charge.  
   
 
 <!-- MISSING LINK

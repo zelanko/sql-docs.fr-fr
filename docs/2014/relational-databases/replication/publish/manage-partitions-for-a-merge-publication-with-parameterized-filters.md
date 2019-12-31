@@ -14,44 +14,44 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01d2ee847c87fdab013b19edde3c20c9a03c8499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
+ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199413"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479313"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gérer les partitions d'une publication de fusion avec des filtres paramétrables
-  Cette rubrique explique comment gérer des partitions pour une publication de fusion avec des filtres paramétrables dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Les filtres de lignes paramétrables peuvent être utilisés pour générer des partitions qui ne se chevauchent pas. Ces partitions peuvent être restreintes afin qu'un seul abonnement puisse recevoir une partition donnée. Dans ces cas, un grand nombre d'abonnés se traduit par un nombre élevé de partitions, ce qui requiert ensuite un nombre égal d'instantanés partitionnés. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+  Cette rubrique explique comment gérer des partitions pour une publication de fusion avec des filtres paramétrables dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Les filtres de lignes paramétrables peuvent être utilisés pour générer des partitions qui ne se chevauchent pas. Ces partitions peuvent être restreintes afin qu'un seul abonnement puisse recevoir une partition donnée. Dans ces cas, un grand nombre d'abonnés se traduit par un nombre élevé de partitions, ce qui requiert ensuite un nombre égal d'instantanés partitionnés. Pour plus d'informations, voir [Filtres de ligne paramétrés](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
-     [Recommandations](#Recommendations)  
+     [Relatives](#Recommendations)  
   
--   **Pour gérer les partitions d'une publication de fusion avec les filtres paramétrables à l'aide de :**  
+-   **Pour gérer les partitions d’une publication de fusion avec des filtres paramétrés, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Objets RMO (Replication Management Objects)](#RMOProcedure)  
+     [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="Recommendations"></a>Relatives  
   
 -   Si vous créez un script de la topologie de réplication (ce qui est recommandé), les scripts de publication contiennent les appels de procédures stockées pour créer des partitions de données. Le script fournit une référence pour les partitions créées et un moyen permettant de recréer si nécessaire une ou plusieurs partitions. Pour plus d'informations, voir [Scripting Replication](../scripting-replication.md).  
   
--   Lorsqu'une publication a paramétré des filtres qui génèrent des abonnements avec des partitions ne se chevauchant pas, et si un abonnement particulier est perdu et doit être recréé, vous devez effectuer les opérations suivantes : supprimez la partition à laquelle s'abonner, recréez l'abonnement, puis recréez la partition. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md). La réplication génère des scripts de création pour les partitions d'Abonné existantes lors de la génération d'un script de création de publication. Pour plus d'informations, voir [Scripting Replication](../scripting-replication.md).  
+-   Lorsqu'une publication a paramétré des filtres qui génèrent des abonnements avec des partitions ne se chevauchant pas, et si un abonnement particulier est perdu et doit être recréé, vous devez effectuer les opérations suivantes : supprimez la partition à laquelle s'abonner, recréez l'abonnement, puis recréez la partition. Pour plus d'informations, voir [Filtres de ligne paramétrés](../merge/parameterized-filters-parameterized-row-filters.md). La réplication génère des scripts de création pour les partitions d'Abonné existantes lors de la génération d'un script de création de publication. Pour plus d'informations, voir [Scripting Replication](../scripting-replication.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Gérez des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md). Sur cette page, vous pouvez : créer et supprimer des partitions, autoriser des Abonnés à initier la génération et la remise d'instantanés, générer des instantanés pour une ou plusieurs partitions et nettoyer des instantanés.  
+##  <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
+ Gérez des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md). Sur cette page, vous pouvez : créer et supprimer des partitions, autoriser des Abonnés à initier la génération et la remise d'instantanés, générer des instantanés pour une ou plusieurs partitions et nettoyer des instantanés.  
   
 #### <a name="to-create-a-partition"></a>Pour créer une partition  
   
-1.  Dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **Ajouter**.  
+1.  Dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **Ajouter**.  
   
 2.  Dans la boîte de dialogue **Ajouter une partition de données** , entrez une valeur pour la valeur **HOST_NAME()** et/ou **SUSER_SNAME()** associée à la valeur que vous voulez créer.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68199413"
   
 1.  Sur la page **Partitions de données** , sélectionnez une partition dans la grille.  
   
-2.  Cliquez sur **Delete**.  
+2.  Cliquez sur **Supprimer**.  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Pour permettre aux Abonnés d'initier la génération et la remise d'instantanés  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68199413"
   
 2.  Cliquez sur **Nettoyer les instantanés existants**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
  Pour mieux gérer une publication avec des filtres paramétrables, vous pouvez énumérer par programmation les partitions existantes à l'aide de procédures stockées de réplication. Vous pouvez également créer et supprimer des partitions existantes. Vous pouvez obtenir les informations suivantes sur les partitions existantes :  
   
 -   Comment une partition est filtrée (à l’aide de [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) ou de [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql)).  
@@ -100,29 +100,29 @@ ms.locfileid: "68199413"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Pour consulter les informations sur les partitions existantes  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication** . (Facultatif) Spécifiez **@suser_sname** ou **@host_name** pour retourner uniquement les informations basées sur un critère de filtre unique.  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Spécifiez le nom de la publication ** \@** pour la publication. Facultatif Spécifiez ** \@SUSER_SNAME** ou ** \@HOST_NAME** pour retourner uniquement les informations basées sur un critère de filtrage unique.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Pour définir une nouvelle partition et générer un nouvel instantané partitionné  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication** et la valeur paramétrable qui définit la partition pour l'un des éléments suivants :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Spécifiez le nom de la publication ** \@** pour la publication et la valeur paramétrable qui définit la partition pour l’un des éléments suivants :  
   
-    -   **@suser_sname** - quand le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   SUSER_SNAME-lorsque le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;&#41;Transact-SQL ](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
   
-    -   **@host_name** - quand le filtre paramétrable est défini par la valeur retournée par [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
+    -   HOST_NAME-lorsque le filtre paramétrable est défini par la valeur retournée par [HOST_NAME &#40;&#41;Transact-SQL ](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
   
 2.  Créez et initialisez l'instantané paramétrable de cette nouvelle partition. Pour plus d'informations, voir [Créer un instantané d’une publication de fusion avec des filtres paramétrés](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Pour supprimer une partition  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication** et la valeur paramétrable qui définit la partition pour l'un des éléments suivants :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Spécifiez le nom de la publication ** \@** pour la publication et la valeur paramétrable qui définit la partition pour l’un des éléments suivants :  
   
-    -   **@suser_sname** - quand le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   SUSER_SNAME-lorsque le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;&#41;Transact-SQL ](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
   
-    -   **@host_name** - quand le filtre paramétrable est défini par la valeur retournée par [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
+    -   HOST_NAME-lorsque le filtre paramétrable est défini par la valeur retournée par [HOST_NAME &#40;&#41;Transact-SQL ](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
   
      Le travail d'instantané et les fichiers d'instantané de la partition sont également supprimés.  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="RMOProcedure"></a>Utilisation de Replication Management Objects (RMO)  
  Pour mieux gérer une publication avec les filtres paramétrables, vous pouvez par programmation créer, énumérer ou supprimer les partitions d'Abonné, en utilisant les objets RMO (Replication Management Objects). Pour plus d'informations sur la création de partitions d'Abonné, consultez [Créer un instantané d’une publication de fusion avec des filtres paramétrés](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Vous pouvez obtenir les informations suivantes sur les partitions existantes :  
   
 -   la valeur et la fonction de filtrage sur lesquelles la partition est basée ;  
@@ -160,7 +160,7 @@ ms.locfileid: "68199413"
 7.  Répétez l'étape 6 pour chaque partition supprimée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Filtres de lignes paramétrables](../merge/parameterized-filters-parameterized-row-filters.md)   
+ [Instantanés pour les publications de fusion avec des filtres paramétrés](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Se connecter à l’appliance nœuds - Analytique Platform System | Microsoft Docs
-description: Cet article explique les différentes façons de se connecter à chaque nœud dans l’appliance Analytique Platform System.
+title: Se connecter aux nœuds de l’appliance
+description: Cet article explique les différentes façons de se connecter à chaque nœud dans l’appliance Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,39 +8,40 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ae40d38768f081ea6c439c40059065d695ebee23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961085"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401247"
 ---
-# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Se connecter aux nœuds d’appliance d’Analytique Platform System
-Cet article explique les différentes façons de se connecter à chaque nœud dans l’appliance Analytique Platform System.  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Se connecter à des nœuds d’appliance dans Analytics Platform System
+Cet article explique les différentes façons de se connecter à chaque nœud dans l’appliance Analytics Platform System.  
   
 ## <a name="connecting-with-hadoop"></a>Connexion avec Hadoop  
-Avant d’utiliser Hadoop avec SQL Server PDW, demandez à votre administrateur d’appliance pour installer l’environnement d’exécution Java sur SQL Server PDW. Pour obtenir des instructions, consultez [configurer la connectivité PolyBase pour données externes &#40;Analytique Platform System&#41; ](configure-polybase-connectivity-to-external-data.md) dans le Guide des opérations Appliance.  
+Avant d’utiliser Hadoop avec SQL Server PDW, demandez à l’administrateur de l’appareil d’installer le Java Runtime Environment sur SQL Server PDW. Pour obtenir des instructions, consultez [configurer la connectivité Polybase à des données externes &#40;Analytics Platform System&#41;](configure-polybase-connectivity-to-external-data.md) dans le guide des opérations de l’appliance.  
   
-## <a name="ConnectingToIndividualNodes"></a>Connexion aux nœuds d’Appliance  
-Chacun des nœuds d’appliance est accessible directement uniquement dans les scénarios d’utilisation spécifiques et par les types d’utilisateur spécifique. Le tableau suivant répertorie chaque nœud de l’appliance et les scénarios sous lequel les utilisateurs se connectent directement à ce nœud.  
+## <a name="ConnectingToIndividualNodes"></a>Connexion à des nœuds d’appliance  
+Chacun des nœuds de l’appliance est accessible directement uniquement dans des scénarios d’utilisation spécifiques et par des types d’utilisateurs spécifiques. Le tableau suivant répertorie chaque nœud d’appliance et les scénarios dans lesquels les utilisateurs se connectent directement à ce nœud.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
 
 > [!WARNING]  
-> Modification des paramètres de base de données ou table sur des nœuds de calcul ou de contrôle sans consentement explicite de l’équipe de produit ou d’une équipe de Support client aux points d’accès peut rendre votre appliance APS la prise en charge.
+> La modification des paramètres d’une base de données ou d’une table sur des nœuds de contrôle ou de calcul sans consentement explicite de l’équipe de produit ou de l’équipe de support client APS risque de rendre votre appliance APS non prise en charge.
   
 |||  
 |-|-|  
-|**Nœud**|**Scénarios d’accès**|  
-|Nœud de contrôle|Utilisez un navigateur web pour accéder à la Console d’administration, qui s’exécute sur le nœud de contrôle. Pour plus d’informations, consultez [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Tous les outils et les applications clientes se connectent au nœud de contrôle, même si la connexion est utilise Ethernet ou InfiniBand.<br /><br />Pour configurer une connexion Ethernet au nœud de contrôle, utilisez l’adresse IP de Cluster du nœud contrôle et le port **17001**. Par exemple, « 192.168.0.1,17001 ».<br /><br />Pour configurer une connexion InfiniBand au nœud de contrôle, utilisez  <strong>*appliance_domain*-SQLCTL01</strong> et le port **17001**. À l’aide de  <strong>*appliance_domain*-SQLCTL01</strong>, le serveur DNS se connecte à votre serveur au réseau InfiniBand actif. Pour configurer votre serveur non-appliance pour l’utiliser, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L’administrateur de l’appliance se connecte au nœud de contrôle pour effectuer des opérations de gestion. Par exemple, l’administrateur de l’appliance effectue les opérations suivantes à partir du nœud de contrôle :<br /><br />Configurer le système de plateforme d’Analytique avec le **dwconfig.exe** outil de configuration.|  
-|Nœud de calcul|Calcul des connexions de nœud sont dirigées par le nœud de contrôle. Les adresses IP des nœuds de calcul ne sont jamais entrés dans les commandes de l’application en tant que paramètres.<br /><br />Pour le chargement, sauvegarde, copie de Table distante et Hadoop, SQL Server PDW envoyer ou recevoir des données directement en parallèle entre les nœuds de calcul et les serveurs non-appliance nœuds. Ces applications se connectent avec SQL Server PDW en vous connectant au nœud de contrôle, et le nœud de contrôle dirige ensuite SQL Server PDW pour établir la communication entre les nœuds de calcul et le serveur non-appliance.<br /><br />Par exemple, ces opérations de transfert de données se produisent en parallèle avec des connexions directes aux nœuds de calcul :<br /><br />Charger à partir du serveur de chargement dans SQL Server PDW.<br /><br />Sauvegarder une base de données depuis SQL Server PDW vers le serveur de sauvegarde.<br /><br />Restauration d’une base de données à partir du serveur de sauvegarde SQL Server PDW.<br /><br />Interrogation des données Hadoop à partir de SQL Server PDW.<br /><br />Exportation de données à partir de SQL Server PDW vers une table Hadoop externe.<br /><br />Copie d’une table SQL Server PDW pour une base de données SQL Server SMP distant.|  
+|**Information**|**Scénarios d’accès**|  
+|Nœud de contrôle|Utilisez un navigateur Web pour accéder à la console d’administration, qui s’exécute sur le nœud de contrôle. Pour plus d’informations, consultez [surveiller l’appliance à l’aide de la console d’administration &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Toutes les applications et tous les outils clients se connectent au nœud de contrôle, que la connexion utilise Ethernet ou InfiniBand.<br /><br />Pour configurer une connexion Ethernet au nœud de contrôle, utilisez l’adresse IP de cluster du nœud de contrôle et le port **17001**. Par exemple, « 192.168.0.1, 17001 ».<br /><br />Pour configurer une connexion InfiniBand au nœud de contrôle, utilisez <strong> *appliance_domain*-SQLCTL01</strong> et le port **17001**. À l’aide de <strong> *appliance_domain*-SQLCTL01</strong>, le serveur DNS de l’appliance connecte votre serveur au réseau InfiniBand actif. Pour configurer votre serveur non-appareil pour l’utiliser, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L’administrateur de l’appareil se connecte au nœud de contrôle pour effectuer des opérations de gestion. Par exemple, l’administrateur de l’appliance effectue les opérations suivantes à partir du nœud de contrôle :<br /><br />Configurez Analytics Platform System avec l’outil de configuration **dwconfig. exe** .|  
+|Nœud de calcul|Les connexions de nœud de calcul sont dirigées par le nœud de contrôle. Les adresses IP des nœuds de calcul ne sont jamais entrées en tant que paramètres dans les commandes d’application.<br /><br />Pour le chargement, la sauvegarde, la copie de table distante et Hadoop, SQL Server PDW envoie ou reçoit des données directement en parallèle entre les nœuds de calcul et les nœuds ou serveurs non-appliance. Ces applications se connectent avec SQL Server PDW en se connectant au nœud de contrôle, puis le nœud de contrôle dirige SQL Server PDW pour établir la communication entre les nœuds de calcul et le serveur non-appareil.<br /><br />Par exemple, ces opérations de transfert de données se produisent en parallèle avec des connexions directes aux nœuds de calcul :<br /><br />Chargement à partir du serveur de chargement vers SQL Server PDW.<br /><br />Sauvegarde d’une base de données de SQL Server PDW sur le serveur de sauvegarde.<br /><br />Restauration d’une base de données à partir du serveur de sauvegarde vers SQL Server PDW.<br /><br />Interrogation des données Hadoop à partir de SQL Server PDW.<br /><br />Exportation de données à partir d’SQL Server PDW vers une table Hadoop externe.<br /><br />Copie d’une table SQL Server PDW dans une base de données SMP SQL Server distante.|  
   
-## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>Connexion à la carte Ethernet et les réseaux InfiniBand  
-Serveurs distants peuvent se connecter via un réseau InfiniBand appliance ou via le réseau Ethernet. Pour des raisons de performances, le chargement des serveurs, les serveurs de sauvegarde et de recevoir des données via des serveurs **créer REMOTE TABLE AS SELECT** généralement, les instructions, transférer des données via le réseau InfiniBand appliance.  
+## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>Connexion aux réseaux Ethernet et InfiniBand  
+Les serveurs distants peuvent se connecter via le réseau de l’appliance InfiniBand ou via le réseau Ethernet. Pour des raisons de performances, le chargement des serveurs, des serveurs de sauvegarde et des serveurs recevant des données via la **commande créer une table DIStante en tant qu’instructions SELECT** , transfère généralement les données via le réseau de l’appliance InfiniBand.  
   
-Vous pouvez configurer des serveurs non-appliance fasse partie de votre propre client de groupe de travail ou un domaine et ensuite utiliser votre propre réseau de client pour se connecter à ces serveurs et le transfert de données sur les. En outre, les serveurs non-appliance connectés à l’appliance InfiniBand ont la possibilité pour transférer des données entre eux via le réseau InfiniBand appliance. à utiliser avec prudence, car elle peut ralentir les performances de SQL Server PDW.  
+Vous pouvez configurer des serveurs non-Appliance pour qu’ils appartiennent à votre propre domaine ou groupe de travail de client, puis utiliser votre propre réseau client pour vous connecter à ces serveurs et y transférer des données. En outre, les serveurs non-Appliance connectés à l’appliance InfiniBand ont la possibilité de transférer des données entre eux via le réseau de l’appliance InfiniBand. Soyez prudent avec cela, car cela peut ralentir les performances de SQL Server PDW.  
   
-Par exemple, cette instruction ajoute des informations d’identification réseau pour effectuer des sauvegardes via InfiniBand vers un serveur de sauvegarde qui a une adresse InfiniBand IP 192.168.0.1. Le domaine de l’appliance est *mypdw*, et l’instruction est exécutée à partir du serveur de sauvegarde. Avant d’exécuter cette instruction, vous devez renseigner vos propres paramètres.  
+Par exemple, cette instruction ajoute des informations d’identification réseau pour effectuer des sauvegardes via InfiniBand vers un serveur de sauvegarde qui a une adresse IP InfiniBand 192.168.0.1. Le domaine de l’appliance est *mypdw*et l’instruction est exécutée à partir du serveur de sauvegarde. Avant d’exécuter cette instruction, vous devez remplir vos propres paramètres.  
   
 ```  
 sqlcmd -S "mypdw-sqlctl01,17001" -U sa -P password -I -Q "exec sp_pdw_add_network_credentials '192.168.0.1', 'mypdw\Administrator', 'password'"  

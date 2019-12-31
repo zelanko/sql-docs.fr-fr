@@ -1,6 +1,6 @@
 ---
-title: Configurer Parallel Data Warehouse pour les copies de la table distante | Microsoft Docs
-description: Décrit comment configurer Parallel Data Warehouse pour utiliser la fonctionnalité de copie de table distante pour copier des tables vers les bases de données SQL Server SMP sur les serveurs non-appliance.
+title: Copies de tables distantes
+description: Décrit comment configurer des Data Warehouse parallèles pour utiliser la fonctionnalité de copie de table distante pour copier des tables vers des bases de données SMP SQL Server sur des serveurs non-appliance.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,41 +8,42 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4f3abd60cb4f87abc5e6cbdc420fc6c551b0ab15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961222"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401263"
 ---
-# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Configurer Parallel Data Warehouse pour les copies de la table distante
-Décrit comment configurer SQL Server PDW pour utiliser la fonctionnalité de copie de table distante pour copier des tables vers les bases de données SQL Server SMP sur les serveurs non-appliance.  
+# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Configurer des Data Warehouse parallèles pour les copies de tables distantes
+Décrit comment configurer SQL Server PDW pour utiliser la fonctionnalité de copie de table distante pour copier des tables vers des bases de données SMP SQL Server sur des serveurs non-appliance.  
   
-Cette rubrique décrit l’une des étapes de configuration pour la configuration de copie de la table distante. Pour obtenir la liste de toutes les étapes de configuration, consultez [copie distante de la Table](remote-table-copy.md).  
+Cette rubrique décrit l’une des étapes de configuration de la configuration de la copie des tables distantes. Pour obtenir la liste de toutes les étapes de configuration, consultez [copie de table distante](remote-table-copy.md).  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
-Pour configurer SQL Server PDW pour utiliser la copie de la table distante, vous devez :  
+Pour configurer SQL Server PDW pour utiliser la copie de table distante, vous devez :  
   
--   Disposer d’un compte d’administrateur système de plateforme d’Analytique avec la possibilité de se connecter directement à la  <strong>*appliance_domain*-AD01</strong> et  <strong>*appliance_domain*-AD02</strong> nœuds.  
+-   Disposer d’un compte d’administrateur système de plateforme d’analyse avec la possibilité de se connecter directement aux nœuds <strong> *appliance_domain*-ad01</strong> et <strong> *appliance_domain*-AD02</strong> .  
   
--   Connaître le nom d’hôte ou le nom d’adresse IP du serveur de destination.  
+-   Connaissez le nom d’hôte ou le nom IP du serveur de destination.  
   
-## <a name="HowToPDW"></a>Configurer SQL Server PDW pour la copie de la Table distante : Mettre à jour les noms d’hôte dans DNS  
-Le **CREATE REMOTE TABLE** instruction, utilisée pour les copies de la table distante, spécifie le serveur de destination à l’aide de l’adresse IP ou le nom de l’adresse IP du système Windows de SMP. Pour utiliser le nom de l’adresse IP, vous devez ajouter des entrées pour la résolution de noms réussie vers le serveur DNS.  
+## <a name="HowToPDW"></a>Configurer SQL Server PDW pour la copie de table distante : mettre à jour les noms d’hôte dans DNS  
+L’instruction **Create Remote table** , utilisée pour les copies de tables distantes, spécifie le serveur de destination à l’aide de l’adresse IP ou du nom d’adresse IP du système Windows SMP. Pour utiliser le nom IP, vous devez ajouter des entrées pour la résolution de noms réussie au serveur DNS.  
   
 Les étapes suivantes décrivent comment mettre à jour le serveur DNS.  
   
-1.  Ouvrez une session sur le nœud actif AD (normalement  <strong>*appliance_domain*-AD01</strong>).  
+1.  Connectez-vous au nœud Active Directory actif (normalement <strong> *appliance_domain*-ad01</strong>).  
   
-2.  Ouvrez le Gestionnaire DNS. Celui-ci se trouve sous **outils d’administration** dans le **Démarrer** menu.  
+2.  Ouvrez le Gestionnaire DNS. Il se trouve sous **Outils d’administration** dans le menu **Démarrer** .  
   
-3.  Utilisez le Gestionnaire DNS pour ajouter le nom de l’adresse IP.  
+3.  Utilisez le Gestionnaire DNS pour ajouter le nom d’adresse IP.  
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[Utiliser un redirecteur DNS pour résoudre les noms DNS de Non-Appliance](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[Utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
 <!-- MISSING LINKS 
 [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
 -->

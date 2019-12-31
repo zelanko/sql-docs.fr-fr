@@ -1,7 +1,7 @@
 ---
 title: Assistance utilisateur de SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -13,12 +13,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016188"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74684461"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistance utilisateur de SQL Server Management Studio
   Une assistance utilisateur est disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] via le menu ? (Aide) et la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le menu ? (Aide) de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre des accès différents aux informations concernant [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il permet également d'avoir accès à la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et aux ressources de MSDN en ligne qui n'étaient pas auparavant disponibles à partir de l'environnement d'aide. En outre, l'environnement d'aide est à présent configurable. Il peut être lancé dans l'environnement [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou dans une fenêtre externe associée.  
@@ -40,14 +40,14 @@ ms.locfileid: "63016188"
   
      Affiche automatiquement des liens vers des informations utiles lorsque les utilisateurs travaillent dans l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
--   **Favoris de l'aide**  
+-   **Favoris de l’aide**  
   
      Stocke les signets utilisateur de rubriques pour y avoir accès facilement ultérieurement.  
   
- Aide sur l'aide (Aide de l'Explorateur de documents[!INCLUDE[msCoName](../includes/msconame-md.md)] ) permet aux utilisateurs d'avoir accès à la documentation sur la visionneuse de l'aide, mais les rubriques se trouvent dans une collection distincte de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’afficheur d’aide, sélectionnez **Aide sur l’aide** dans le menu ? (Aide) de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’ajout de l’aide sur la collection de rubriques d’aide à la collection de la documentation en ligne, consultez [ajouter ou supprimer de Documentation produit de SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Aide sur l'aide (Aide de l'Explorateur de documents[!INCLUDE[msCoName](../includes/msconame-md.md)] ) permet aux utilisateurs d'avoir accès à la documentation sur la visionneuse de l'aide, mais les rubriques se trouvent dans une collection distincte de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’afficheur d’aide, sélectionnez **Aide sur l’aide** dans le menu ? (Aide) de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’ajout de l’aide sur la collection d’aide de rubriques à la collection de la documentation en ligne, consultez [Ajouter ou supprimer la documentation du produit pour SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Site MSDN et communautés SQL Server  
- L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permet également aux utilisateurs d'avoir accès au site MSDN et aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sur le web. Vous pouvez :  
+ L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permet également aux utilisateurs d'avoir accès au site MSDN et aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sur le Web. Vous pouvez :  
   
 -   accéder aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de la page Comment faire ? ;  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63016188"
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>Pour accéder aux communautés SQL Server à partir de la page Comment faire ?  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez dans le menu **?** (Aide) sur **Comment faire ?** .  
+1.  Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez dans le menu **?** (Aide) sur **Comment faire ?**.  
   
 2.  La page [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Comment faire ?** s’ouvre. Dans la barre latérale des liens vers les communautés, cliquez sur le nom de la communauté désirée.  
   

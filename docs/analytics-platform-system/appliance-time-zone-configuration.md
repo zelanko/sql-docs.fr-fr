@@ -1,6 +1,6 @@
 ---
-title: Configurer le fuseau horaire - Analytique Platform System | Microsoft Docs
-description: La page de fuseau horaire vous permet de définir le fuseau horaire pour tous les nœuds sur votre appliance Analytique Platform System (APS).
+title: Configurer le fuseau horaire
+description: La page fuseau horaire vous permet de définir le fuseau horaire de tous les nœuds de votre appliance Analytics Platform System (APS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f9997ed26cea5c63d69a7be84b25c247add9b692
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da16790d011a628bc2536de051eb1181f06b8cf
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961443"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401397"
 ---
-# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Configuration du fuseau horaire matériel - Analytique Platform System
-Le **fuseau horaire** page vous permet de définir le fuseau horaire pour tous les nœuds sur votre appliance Analytique Platform System (APS).  
+# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Configuration du fuseau horaire de l’appliance-système de plateforme d’analyse
+La page **fuseau** horaire vous permet de définir le fuseau horaire de tous les nœuds de votre appliance Analytics Platform System (APS).  
   
 ## <a name="to-set-the-time-zone"></a>Pour définir le fuseau horaire  
   
-1.  Lancez le Gestionnaire de Configuration. Pour plus d’informations, consultez [lancer le Gestionnaire de Configuration &#40;Analytique Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Lancez le Configuration Manager. Pour plus d’informations, consultez [la page lancement du&#41;Configuration Manager &#40;Analytics Platform System ](launch-the-configuration-manager.md).  
   
-2.  Arrêter les services de l’appliance à l’aide de la **l’état des Services** page dans le Gestionnaire de Configuration. Consultez [l’état des Services PDW &#40;Analytique Platform System&#41; ](pdw-services-status.md) pour obtenir des instructions.  
+2.  Arrêtez les services de l’appliance à l’aide de la page **État des services** de la Configuration Manager. Pour obtenir des instructions, consultez l' [État des services PDW &#40;Analytics Platform System&#41;](pdw-services-status.md) .  
   
-3.  Dans le volet gauche du Gestionnaire de Configuration, cliquez sur **fuseau horaire**. Sélectionnez le fuseau horaire souhaité à partir de la **fuseau horaire** menu déroulant. Selon votre emplacement, vous pouvez également choisir d’activer la case à côté **ajuster l’horloge pour l’heure d’été**.  
+3.  Dans le volet gauche de la Configuration Manager, cliquez sur **fuseau horaire**. Sélectionnez le fuseau horaire souhaité dans le menu déroulant **fuseau horaire** . En fonction de votre emplacement, vous pouvez également choisir d’activer la case à cocher en regard de l’option **Ajuster automatiquement l’horloge pour l’heure d’été**.  
   
 4.  Cliquez sur **appliquer** pour enregistrer vos modifications.  
   
-5.  Redémarrez les services de l’appliance à l’aide de la **l’état des Services** page dans le Gestionnaire de Configuration. Si vous comptez également modifier les privilèges, vous pouvez le faire avant le redémarrage de l’appliance.  
+5.  Redémarrez les services de l’appliance à l’aide de la page **État des services** de la Configuration Manager. Si vous envisagez également de modifier les privilèges, vous pouvez le faire avant de redémarrer l’appliance.  
   
 ![Temps des appliances DWConfig](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
 ## <a name="see-also"></a>Voir aussi  
-[Lancez le Gestionnaire de Configuration &#40;Analytique Platform System&#41;](launch-the-configuration-manager.md)  
+[Lancez le système de plateforme Configuration Manager &#40;Analytics&#41;](launch-the-configuration-manager.md)  
   

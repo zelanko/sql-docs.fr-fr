@@ -1,6 +1,6 @@
 ---
-title: Planification des capacités de serveur de sauvegarde - Parallel Data Warehouse | Microsoft Docs
-description: Cette feuille de planification de capacité vous aide à déterminer la configuration requise pour un serveur de sauvegarde pour la sauvegarde de base de données de Parallel Data Warehouse et les opérations de restauration. Utilisez-le pour créer votre plan d’achat nouvelle ou mise en service sauvegarde des serveurs existants.
+title: Planification de la capacité du serveur de sauvegarde
+description: Cette feuille de planification de la capacité vous aide à déterminer la configuration requise pour un serveur de sauvegarde afin d’effectuer des opérations de sauvegarde et de restauration de base de données Data Warehouse parallèles. À utiliser pour créer votre plan pour l’achat de nouveaux ou l’approvisionnement de serveurs de sauvegarde existants.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,39 +8,40 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8e7b1f43f586ae2db81fd3bc87563511a17c46ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 46dbdded5adf41a847f017cf4ee203597df13962
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961329"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401341"
 ---
-# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Feuille de planification capacité serveur de sauvegarde - Parallel Data Warehouse
-Cette feuille de planification de capacité vous aide à déterminer la configuration requise pour un serveur de sauvegarde pour la sauvegarde de base de données SQL Server PDW et opérations de restauration. Utilisez-le pour créer votre plan d’achat nouvelle ou mise en service sauvegarde des serveurs existants.  
+# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Feuille de planification de la capacité du serveur de sauvegarde-Data Warehouse parallèles
+Cette feuille de planification de la capacité vous aide à déterminer la configuration requise pour un serveur de sauvegarde afin d’effectuer des opérations de sauvegarde et de restauration de la base de données de SQL Server PDW. À utiliser pour créer votre plan pour l’achat de nouveaux ou l’approvisionnement de serveurs de sauvegarde existants.  
   
-Cette feuille de calcul est un complément des instructions dans [obtenir et configurer un serveur de sauvegarde](acquire-and-configure-backup-server.md).  
+Cette feuille de calcul est un complément aux instructions fournies dans [acquérir et configurer un serveur de sauvegarde](acquire-and-configure-backup-server.md).  
   
-## <a name="capacity-planning-worksheet-for-backup-servers"></a>Feuille de planification de capacité pour les serveurs de sauvegarde  
+## <a name="capacity-planning-worksheet-for-backup-servers"></a>Feuille de planification de la capacité pour les serveurs de sauvegarde  
 
-### <a name="notes"></a>Notes  
+### <a name="notes"></a>Remarques  
   
-1.  Cette feuille de calcul s’applique aux serveurs que vous allez effectuer des opérations de sauvegarde et de restauration pour les bases de données PDW.  
+1.  Cette feuille de calcul s’applique aux serveurs qui effectuent des opérations de sauvegarde et de restauration pour les bases de données PDW.  
   
-2.  La seule façon pour sauvegarder et restaurer des bases de données PDW consiste à utiliser les commandes de base de données de sauvegarde et restauration de base de données SQL. Toutefois, une fois les données de sauvegarde sur le serveur de sauvegarde, il existe un ensemble de fichiers de Windows. Vous pouvez archiver les fichiers de sauvegarde à partir de votre serveur vers un autre emplacement de stockage à l’aide de Windows basés sur fichier méthodes de sauvegarde traditionnelles.  
+2.  La seule façon de sauvegarder et de restaurer les bases de données PDW consiste à utiliser les commandes SQL BACKUP DATABASE et RESTORE DATABASE. Toutefois, une fois que les données de sauvegarde se trouvent sur votre serveur de sauvegarde, elles existent sous la forme d’un ensemble de fichiers Windows. Vous pouvez archiver les fichiers de sauvegarde à partir de votre serveur vers un autre emplacement de stockage à l’aide des méthodes de sauvegarde traditionnelles basées sur des fichiers Windows.  
   
-### <a name="clipboard-iconmediaclipboard-iconpng-clipboard-icon-capacity-planning-worksheet"></a>![Icône de Presse-papiers](media/clipboard-icon.png "icône Presse-papiers") feuille de planification de capacité 
+### <a name="clipboard-iconmediaclipboard-iconpng-clipboard-icon-capacity-planning-worksheet"></a>![Icône du presse-papiers](media/clipboard-icon.png "Icône du presse-papiers") Feuille de planification de la capacité 
   
-Imprimer cette feuille de calcul et la remplir avec vos propres exigences.  
+Imprimez cette feuille de calcul et remplissez-la avec vos propres exigences.  
   
-|Composant|Prérequis|Remplissez cette colonne avec vos propres exigences|Recommandations|  
+|Composant|Prérequis|Renseignez cette colonne avec vos propres exigences|Recommandations|  
 |-------------|---------------|--------------------------------------------------|-------------------|  
-|Stockage|Nombre maximal d’octets que vous envisagez de stocker sur le serveur de sauvegarde sur une période de temps donnée.|![Icône de crayon](media/pencil-icon.png "icône de crayon")|Pour déterminer les besoins de stockage, déterminez la quantité de données vous envisagez de stocker sur le serveur de sauvegarde sur une période de temps donnée.<br /><br />Les données de sauvegarde sont stockées sur le serveur de sauvegarde dans un format compressé. Taux de compression de données varie selon les caractéristiques de vos données.<br /><br />Exemple : Comme une estimation approximative, nous vous recommandons d’estimation d’un taux de compression de 7:1 par rapport à la taille de vos données non compressées. Cela suppose d’au moins 80 % des données sont stocké dans les index columnstore en cluster. Par exemple, si vous avez 700 Go de données non compressées dans une base de données et il est stocké dans les index columnstore en cluster, puis vous pouvez estimer que la sauvegarde de base de données devez environ 100 Go.<br /><br />Si vous prévoyez d’avoir plusieurs copies de sauvegardes de base de données sur le serveur de sauvegarde, vous devez prendre en compte.<br /><br />Exemple : Si vous envisagez de sauvegarder 10 bases de données qui contiennent chacun des 5 To de données non compressées, les bases de données ont une taille combinée de 50 To. Si vous envisagez de sauvegarder ces tous les jours de 10 bases de données pendant 5 jours dans une ligne, la taille totale est de 250 To. En tenant compte un taux de compression de 7:1, vous devez 250 / 7 = 35,7 To de stockage sur le serveur de sauvegarde. Nous vous recommandons d’étant conservatrice et mise en route sur 30 % de capacité supplémentaire à tenir compte des variances et de croissance.  Dans cet exemple, to 46,6 serait préférable.|  
-|Réseau|Type de connexion réseau.|![Icône de crayon](media/pencil-icon.png "icône de crayon")|Déterminer le meilleur type de connexion de réseau capable de répondre aux besoins de votre taux de charge.<br /><br />Exemple : InfiniBand ou taux de charge de 10 Gbit Ethernet fournira l’optimal. Ethernet de 1 Gbit limitera les taux de charge à 360 Go par heure ou moins.|  
-|E/S|Octets par heure pour les écritures.|![Icône de crayon](media/pencil-icon.png "icône de crayon")|Pour l’écriture des sauvegardes sur disque, de 4 To par heure vitesses d’écriture sont optimales.<br /><br />Exemple : Pour les lecteurs qui peuvent écrire des 50 Mo/s, vous devez au moins 24 disques, ainsi que pour la mise en miroir ou parité.<br /><br />Pour la capacité d’e/s, prendre en compte toutes les e/s qui se produisent sur le serveur de chargement. Si le chargement du serveur a tout autre trafic d’e/s en plus des chargements de données, telles que la réception des fichiers de données à partir d’un serveur ETL, les exigences d’e/s augmentera.|  
-|UC|Nombre de sockets.|![Icône de crayon](media/pencil-icon.png "icône de crayon")|Recevoir et stocker des fichiers de sauvegarde ne sont pas une application sollicitant beaucoup le processeur.  Au minimum, nous recommandons à l’aide d’un serveur 2 sockets fabriqués récemment.|  
-|RAM|Go de mémoire permettant à Windows en cache les fichiers au cours de charge.|![Icône de crayon](media/pencil-icon.png "icône de crayon")|Recevoir et stocker des fichiers de sauvegarde requièrent très peu de RAM sur le serveur de chargement.<br /><br />Pour déterminer la mémoire RAM requise, reportez-vous à votre installation de Windows Server et des exigences d’application tiers 3e. Nous recommandons un minimum de 32 Go si vous n’avez pas de configuration requise à partir d’autres sources.|  
+|Stockage|Nombre maximal d’octets que vous envisagez de stocker sur le serveur de sauvegarde à un moment donné.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|Pour déterminer les besoins en stockage, déterminez la quantité de données que vous envisagez de stocker sur le serveur de sauvegarde à un moment donné.<br /><br />Les données de sauvegarde sont stockées sur le serveur de sauvegarde dans un format compressé. Les taux de compression des données dépendent des caractéristiques de vos données.<br /><br />Par exemple : comme estimation approximative, nous vous recommandons d’estimer un ratio de compression de 7:1 par rapport à la taille de vos données non compressées. Cela suppose qu’au moins 80% des données sont stockées dans des index ColumnStore en cluster. Par exemple, si vous avez 700 Go de données non compressées dans une base de données et que celles-ci sont stockées dans des index ColumnStore en cluster, vous pouvez estimer que la sauvegarde de base de données nécessite environ 100 Go.<br /><br />Si vous envisagez de disposer de plusieurs copies de sauvegardes de base de données sur le serveur de sauvegarde, vous devez prendre en compte ces dernières.<br /><br />Par exemple : Si vous envisagez de sauvegarder 10 bases de données qui contiennent chacune 5 to de données non compressées, les bases de données ont une taille combinée de 50 to. Si vous envisagez de sauvegarder ces 10 bases de données quotidiennement pendant 5 jours dans une ligne, la taille totale décompressée est de 250 to. En fonction du ratio de compression 7:1, vous aurez besoin de 250/7 = 35,7 to de stockage sur votre serveur de sauvegarde. Nous vous recommandons d’être prudent et de bénéficier d’une capacité supplémentaire de 30% pour tenir compte des variations et de la croissance.  Dans cet exemple, 46,6 to serait mieux.|  
+|Réseau|Type de connexion réseau.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|Déterminez le meilleur type de connexion réseau pouvant répondre à vos besoins en termes de taux de charge.<br /><br />Par exemple : InfiniBand ou 10 Gbit offre Ethernet fournira les vitesses de chargement optimales. 1 Gbit Ethernet limite les vitesses de chargement à 360 Go par heure ou moins.|  
+|E/S|Octets par heure pour les écritures.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|Pour l’écriture de sauvegardes sur disque, les vitesses d’écriture de 4 to par heure sont optimales.<br /><br />Par exemple : pour les lecteurs qui peuvent écrire 50 Mo/s, vous devez disposer d’au moins 24 disques, ainsi que d’autres éléments pour la mise en miroir ou la parité.<br /><br />Pour la capacité d’e/s, prenez en compte toutes les e/s qui se produisent sur le serveur de chargement. Si le serveur de chargement a un autre trafic d’e/s en plus des charges de données, telles que la réception de fichiers de données à partir d’un serveur ETL, les exigences d’e/s augmentent.|  
+|UC|Nombre de Sockets.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|La réception et le stockage des fichiers de sauvegarde ne sont pas une application gourmande en ressources processeur.  Pour une configuration minimale, nous vous recommandons d’utiliser un serveur à 2 sockets fabriqué récemment.|  
+|RAM|Go de mémoire qui permet à Windows de mettre en cache les fichiers pendant les chargements.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|La réception et le stockage des fichiers de sauvegarde nécessitent très peu de RAM sur le serveur de chargement.<br /><br />Pour déterminer les besoins en RAM, consultez votre installation de Windows Server et les applications tierces requises. Nous vous recommandons un minimum de 32 Go si vous n’avez pas de spécifications provenant d’autres sources.|  
   
-Lorsque vous avez terminé la détermination de vos besoins en capacité, revenez à la [obtenir et configurer un serveur de chargement](acquire-and-configure-loading-server.md) rubrique pour planifier votre achat.  
+Lorsque vous avez terminé de déterminer vos besoins en capacité, revenez à la rubrique [acquisition et configuration d’un serveur de chargement](acquire-and-configure-loading-server.md) pour planifier votre achat.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Sauvegarde et chargement de matériel](backup-and-loading-hardware.md)  

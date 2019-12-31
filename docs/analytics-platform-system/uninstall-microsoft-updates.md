@@ -1,6 +1,6 @@
 ---
-title: Désinstaller les mises à jour de Microsoft - Analytique Platform System | Microsoft Docs »
-description: Désinstaller les mises à jour de Microsoft dans Analytique Platform System (APS).
+title: Désinstaller des mises à jour Microsoft
+description: Désinstallez les mises à jour Microsoft dans Analytics Platform System (APS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,39 +8,40 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f910eeb7f3b38d29f7ae7b084de981c22a6f3f4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959833"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399464"
 ---
-# <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Désinstaller les mises à jour de Microsoft d’Analytique Platform System
-Cet article décrit comment désinstaller une mise à jour de Microsoft précédemment installée sur l’appliance Analytique Platform System.  
+# <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Désinstaller les mises à jour Microsoft dans Analytics Platform System
+Cet article explique comment désinstaller une mise à jour Microsoft précédemment installée sur l’appliance Analytics Platform System.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Prérequis  
-Pour effectuer ces étapes, vous devez :  
+### <a name="prerequisites"></a>Conditions préalables  
+Pour effectuer ces étapes, vous aurez besoin des éléments suivants :  
   
--   Une connexion de système de plateforme d’Analytique avec des autorisations pour accéder à la Console d’administration pour surveiller l’appliance.  
+-   Une connexion Analytics Platform System avec des autorisations pour accéder à la console d’administration afin de surveiller l’appliance.  
   
--   Base de connaissances du compte d’administrateur de domaine Fabric pour vous connecter à la <em> <Fabric Domain> </em> **-HST01** nœud.  
+-   Connaissance du compte d’administrateur de domaine de l’infrastructure pour la <em> <Fabric Domain> </em>connexion au nœud **-HST01** .  
   
 ## <a name="HowToUninstallMSFT"></a>Pour désinstaller les mises à jour Microsoft  
   
-1.  Connectez-vous à la <em> <Fabric Domain> </em> **-HST01** nœud en tant que l’administrateur de domaine Fabric.  
+1.  Connectez-vous au <em> <Fabric Domain> </em>nœud **-HST01** en tant qu’administrateur de domaine de l’infrastructure.  
   
-2.  Pour désinstaller toutes les mises à jour qui sont approuvées pour WSUS désinstaller, ouvrez une fenêtre d’invite de commandes et entrez la commande suivante. Remplacez les éléments de l’espace réservé *< >* avec les informations appropriées.  
+2.  Pour désinstaller toutes les mises à jour approuvées pour WSUS, ouvrez une fenêtre d’invite de commandes et entrez la commande suivante. Remplacez les éléments d’espace réservé *<  >* par les informations appropriées.  
   
     ```  
     C:\pdwinst\media\setup.exe /action="RemoveMicrosoftUpdate" /DomainAdminPasswords="<password>"  
     ```  
   
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d'informations, consultez :
-- [Téléchargez et appliquez les mises à jour Microsoft &#40;Analytique Platform System&#41;](download-and-apply-microsoft-updates.md) 
-- [Appliquer des correctifs de système de plateforme Analytique &#40;Analytique Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
-- [Désinstallation de correctifs de système de plateforme Analytique &#40;Analytique Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-- [Maintenance logicielle &#40;Analytique Platform System&#41;](software-servicing.md)  
+Pour plus d’informations, voir :
+- [Téléchargez et appliquez les mises à jour Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) 
+- [Appliquer des correctifs logiciels Analytics Platform System &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+- [Désinstallation des correctifs du système de plateforme Analytics &#40;Analytics&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+- [Maintenance logicielle &#40;système de plateforme Analytics&#41;](software-servicing.md)  
   

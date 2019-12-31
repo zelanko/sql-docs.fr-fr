@@ -1,6 +1,6 @@
 ---
-title: Configurer Windows pour recevoir une copie de la table distante - Parallel Data Warehouse | Microsoft Docs
-description: Décrit comment acheter et configurer un système de Windows non-appliance connecté via le réseau InfiniBand pour une utilisation avec la fonctionnalité de copie de table distante dans Parallel Data Warehouse. Le système Windows hébergera la base de données SQL Server qui reçoit la copie de la table distante à partir d’une base de données SQL Server PDW. Il est vendu séparément à partir de l’appliance et connecté au réseau InfiniBand appliance.
+title: Configurer Windows pour recevoir des copies de tables distantes
+description: Décrit comment acheter et configurer un système non-appareil Windows connecté à l’aide du réseau InfiniBand pour une utilisation avec la fonctionnalité de copie de table distante en parallèle Data Warehouse. Le système Windows hébergera la base de données SQL Server qui reçoit la copie de la table distante à partir d’une base de données SQL Server PDW. Elle est achetée séparément de l’appareil et connectée au réseau de l’appliance InfiniBand.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,58 +8,59 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961309"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401315"
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Configurer un système Windows externe pour recevoir une copie de table distante à l’aide d’InfiniBand - Parallel Data Warehouse
-Décrit comment acheter et configurer un système de Windows non-appliance connecté via le réseau InfiniBand pour une utilisation avec la fonctionnalité de copie de table distante dans SQL Server PDW. Le système Windows hébergera la base de données SQL Server qui reçoit la copie de la table distante à partir d’une base de données SQL Server PDW. Il est vendu séparément à partir de l’appliance et connecté au réseau InfiniBand appliance.  
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Configurer un système Windows externe pour recevoir des copies de tables distantes à l’aide de InfiniBand-Parallel Data Warehouse
+Décrit comment acheter et configurer un système non-appareil Windows connecté à l’aide du réseau InfiniBand pour une utilisation avec la fonctionnalité de copie de table distante dans SQL Server PDW. Le système Windows hébergera la base de données SQL Server qui reçoit la copie de la table distante à partir d’une base de données SQL Server PDW. Elle est achetée séparément de l’appareil et connectée au réseau de l’appliance InfiniBand.  
   
 > [!NOTE]  
-> Connexion via le réseau InfiniBand n’est pas requise pour utiliser la copie de la table distante. Connexion via le réseau Ethernet peut être effectuée si la bande passante Ethernet répond à vos besoins.  
+> La connexion via le réseau InfiniBand n’est pas requise pour l’utilisation de la copie de table distante. La connexion via le réseau Ethernet peut être effectuée si la bande passante Ethernet répond à vos besoins.  
   
-Cette rubrique décrit l’une des étapes de configuration pour la configuration de copie de la table distante. Pour obtenir la liste de toutes les étapes de configuration, consultez [copie de Table distante](remote-table-copy.md)  
+Cette rubrique décrit l’une des étapes de configuration de la configuration de la copie des tables distantes. Pour obtenir la liste de toutes les étapes de configuration, consultez [copie de table distante](remote-table-copy.md)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
 Avant de configurer le système Windows externe, vous devez :  
   
-1.  Acheter ou fournir un système Windows qui recevra les copies à distance.  
+1.  Achetez ou fournissez un système Windows qui recevra les copies distantes.  
   
-2.  Monter en rack le système Windows dans le rack de contrôle (s’il existe suffisamment d’espace) ou suffisamment proches pour l’appliance afin que vous pouvez vous connecter au réseau InfiniBand appliance.  
+2.  Branchez le système Windows dans le rack de contrôle (s’il y a suffisamment d’espace) ou suffisamment près de l’appareil pour pouvoir le connecter au réseau de l’appliance InfiniBand.  
   
-3.  Acheter InfiniBand câbles et un adaptateur de réseau InfiniBand auprès de votre fournisseur de matériel d’appliance. Nous vous recommandons d’acheter une carte réseau avec deux ports pour une tolérance de panne lors de la réception des données exportées. Une carte réseau de deux ports est recommandée, mais n’est pas obligatoire.  
+3.  Achetez des câbles InfiniBand et une carte réseau InfiniBand auprès du fournisseur de matériel de votre appliance. Nous vous recommandons d’acheter une carte réseau avec deux ports pour la tolérance de panne lors de la réception des données exportées. Il est recommandé d’avoir une carte réseau à deux ports, mais elle n’est pas obligatoire.  
   
-## <a name="HowToWindows"></a>Configuration d’un système Windows externe pour recevoir une copie de la Table distante  
-Pour configurer le système Windows externe, utilisez les étapes suivantes :  
+## <a name="HowToWindows"></a>Configurer un système Windows externe pour recevoir des copies de tables distantes  
+Pour configurer le système Windows externe, procédez comme suit :  
   
-1.  Installez l’adaptateur de réseau InfiniBand dans votre système Windows.  
+1.  Installez la carte réseau InfiniBand dans votre système Windows.  
   
-2.  Se connecter à la carte réseau InfiniBand pour le commutateur InfiniBand principal dans le rack de contrôle à l’aide de câbles de InfiniBand.  
+2.  Connectez la carte réseau InfiniBand au commutateur InfiniBand principal dans le rack de contrôle à l’aide de câbles InfiniBand.  
   
 3.  Installez et configurez le pilote Windows approprié pour la carte réseau InfiniBand.  
   
-    Les pilotes InfiniBand pour Windows sont développés par OpenFabrics Alliance, un consortium d’entreprises de fournisseurs de InfiniBand.  Le pilote correct peut ont été distribué avec la carte réseau InfiniBand. Si ce n’est pas le cas, le pilote peut être téléchargé à partir de www.openfabrics.org.  
+    Les pilotes InfiniBand pour Windows sont développés par OpenFabrics Alliance, un consortium de l’industrie des fournisseurs InfiniBand.  Le pilote approprié a peut-être été distribué avec votre adaptateur InfiniBand. Si ce n’est pas le cas, le pilote peut être téléchargé à partir de www.openfabrics.org.  
   
-4.  Configurer l’adresse IP pour chaque port sur la carte. Les systèmes SMP sont requis pour utiliser des adresses IP statiques à partir d’une plage d’adresses réservées à cet effet. Configurer le premier port en fonction des paramètres suivants :  
+4.  Configurez l’adresse IP de chaque port de la carte. Les systèmes SMP sont requis pour utiliser des adresses IP statiques à partir d’une plage d’adresses réservée à cet effet. Configurez le premier port en fonction des paramètres suivants :  
   
-    -   Adresse IP du réseau : 172.16.132.x  
-  
-    -   Masque de sous-réseau IP : 255.255.128.0  
-  
-    -   Plage d’IP hôte : 1-254  
-  
-    Pour les cartes réseau InfiniBand avec deux ports, configurez le second port en fonction des paramètres suivants :  
-  
-    -   Adresse IP du réseau : 172.16.132.x  
+    -   Adresse réseau IP : 172.16.132. x  
   
     -   Masque de sous-réseau IP : 255.255.128.0  
   
-    -   Plage d’IP hôte : 1-254  
+    -   Plage d’hôtes IP : 1-254  
   
-5.  Si une carte à deux ports est utilisée, ou plusieurs systèmes Windows externes sont connectés à un matériel, vous pouvez affecter chaque système un numéro de hôte différent dans chaque sous-réseau IP.  
+    Pour les cartes réseau InfiniBand avec deux ports, configurez le deuxième port en fonction des paramètres suivants :  
+  
+    -   Adresse réseau IP : 172.16.132. x  
+  
+    -   Masque de sous-réseau IP : 255.255.128.0  
+  
+    -   Plage d’hôtes IP : 1-254  
+  
+5.  Si vous utilisez une carte à deux ports ou si plusieurs systèmes Windows externes sont connectés à un appareil, attribuez à chaque système un numéro d’hôte différent au sein de chaque sous-réseau IP.  
   
 <!-- MISSING LINKS 
 ## See Also  

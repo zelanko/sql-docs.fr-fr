@@ -1,6 +1,6 @@
 ---
-title: Vues de gestion dynamique SQL et Parallel Data Warehouse | Microsoft Docs
-ms.custom: ''
+title: Vues de gestion dynamique SQL et Parallel Data Warehouse
+ms.custom: seo-dt-2019
 ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -11,22 +11,22 @@ dev_langs:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a656284d74315fe14151d310f397a8810d7780e0
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: bbf63d4553630cce6d1d890f2d353442c14d6afd
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632949"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401621"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>Vues de gestion dynamique SQL et Parallel Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Cette rubrique répertorie les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vues de gestion dynamique (DMV).  
+Cette rubrique répertorie [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vues de gestion dynamique (DMV) et.  
   
- Toutes les DMV [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] commencent par **sys. dm_pdw**.  
+ Toutes [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMV commencent par **sys. dm_pdw**.  
   
-## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>Vues de gestion dynamique [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Les vues de gestion dynamique suivantes s’appliquent à la fois à [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vues de gestion dynamique  
+ Les vues de gestion dynamique suivantes s' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliquent [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]à et à :  
   
  [sys. dm_pdw_dms_cores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   
@@ -64,8 +64,8 @@ Cette rubrique répertorie les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et 
   
  [sys. dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
 
-## <a name="includesssdwincludessssdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les vues de gestion dynamique 
- Les vues de gestion dynamique suivantes s’appliquent à [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] uniquement :
+## <a name="includesssdwincludessssdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Vues de gestion dynamique 
+ Les vues de gestion dynamique suivantes s' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliquent uniquement à :
  
 [sys. dm_pdw_nodes_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
 
@@ -77,10 +77,10 @@ Cette rubrique répertorie les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et 
 
 [sys. dm_pdw_nodes_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md)
 
- [sys. dm_workload_management_workload_groups_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (version préliminaire)
+ [sys. dm_workload_management_workload_groups_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (version préliminaire)
 
-## <a name="includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] les vues de gestion dynamique  
- Les vues de gestion dynamique suivantes s’appliquent à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] uniquement :  
+## <a name="includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Vues de gestion dynamique  
+ Les vues de gestion dynamique suivantes s' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliquent uniquement à :  
   
  [sys. dm_pdw_component_health_active_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
   
@@ -103,5 +103,5 @@ Cette rubrique répertorie les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et 
  [sys. dm_pdw_query_stats_xe_file &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   

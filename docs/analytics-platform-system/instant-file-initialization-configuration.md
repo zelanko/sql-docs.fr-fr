@@ -1,6 +1,6 @@
 ---
-title: Configurer l’initialisation instantanée des fichiers - Analytique Platform System | Microsoft Docs
-description: Configurer l’initialisation instantanée des fichiers système de plateforme d’Analytique. Initialisation instantanée des fichiers est une fonctionnalité de SQL Server qui autorise les opérations de fichier de données exécuter plus rapidement.
+title: Configurer l’initialisation instantanée des fichiers
+description: Configurez l’initialisation instantanée des fichiers sur Analytics Platform System. L’initialisation instantanée de fichiers est une fonctionnalité SQL Server qui permet aux opérations de fichiers de données de s’exécuter plus rapidement.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,25 +8,26 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960733"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401115"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuration de l’initialisation instantanée des fichiers
-Initialisation instantanée des fichiers est une fonctionnalité de SQL Server qui autorise les opérations de fichier de données exécuter plus rapidement. Cochez la case pour activer l’initialisation instantanée des fichiers améliore les performances de SQL Server PDW. Toutefois, si cela pose un risque de sécurité pour vous business, puis laissez la case désactivée.  
+L’initialisation instantanée de fichiers est une fonctionnalité SQL Server qui permet aux opérations de fichiers de données de s’exécuter plus rapidement. Si vous activez la case à cocher pour activer l’initialisation instantanée des fichiers, vous améliorerez les performances de SQL Server PDW. Toutefois, si cela pose un risque de sécurité pour votre entreprise, laissez la case désactivée.  
   
 > [!IMPORTANT]  
-> Lors de l’initialisation instantanée des fichiers est activée, SQL Server ne remplace pas supprimé de bits avec des zéros.  Ce comportement peut créer une faille de sécurité si les utilisateurs non autorisés à accéder aux données supprimées. Toutefois, SQL Server PDW atténue ce risque en veillant à ce que la base de données SQL Server et les fichiers de sauvegarde sont toujours attachés à une instance de SQL Server ; seul le compte de service SQL Server et de l’administrateur local peuvent accéder aux données supprimées sur SQL Server PDW.  
+> Lorsque l’initialisation instantanée de fichiers est activée, SQL Server ne remplace pas les bits supprimés par des zéros.  Ce comportement peut créer une faille de sécurité si des utilisateurs non autorisés accèdent aux données supprimées. Toutefois, SQL Server PDW atténue ce risque en garantissant que la base de données SQL Server et les fichiers de sauvegarde sont toujours attachés à une instance de SQL Server ; seul le compte de service SQL Server et l’administrateur local peuvent accéder aux données supprimées sur SQL Server PDW.  
   
 L'initialisation instantanée des fichiers n'est pas disponible quand le chiffrement transparent des données est activé.  
   
-## <a name="add-permission-for-the-backup-account"></a>Ajoutez l’autorisation pour le compte de sauvegarde  
-Le processus de sauvegarde nécessite une information d’identification du réseau (compte d’utilisateur Windows) qui peut accéder à l’emplacement de stockage de sauvegarde. Vous autorisez PDW pour utiliser un compte à l’aide de la [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procédure. Consultez [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md) pour tout le processus de sauvegarde. Pour utiliser l’initialisation instantanée des fichiers, le compte de sauvegarde doit être accordé le `Perform volume maintenance tasks` autorisation.  
+## <a name="add-permission-for-the-backup-account"></a>Ajouter une autorisation pour le compte de sauvegarde  
+Le processus de sauvegarde nécessite des informations d’identification réseau (compte d’utilisateur Windows) qui peuvent accéder à l’emplacement de stockage de la sauvegarde. Vous autorisez PDW à utiliser le compte à l’aide de la procédure [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Consultez [Backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md) pour l’ensemble du processus de sauvegarde. Pour utiliser l’initialisation instantanée des fichiers, l' `Perform volume maintenance tasks` autorisation doit être accordée au compte de sauvegarde.  
   
-1.  Sur le serveur de sauvegarde, ouvrez le **stratégie de sécurité locale** application (`secpol.msc`).  
+1.  Sur le serveur de sauvegarde, ouvrez l’application **stratégie de sécurité locale** (`secpol.msc`).  
   
 2.  Dans le volet gauche, développez **Stratégies locales**, puis cliquez sur **Attribution des droits utilisateur**.  
   
@@ -36,22 +37,22 @@ Le processus de sauvegarde nécessite une information d’identification du rés
   
 5.  Cliquez sur **Appliquer**, puis fermez toutes les boîtes de dialogue **Stratégie de sécurité locale** .  
   
-## <a name="to-turn-instant-file-initialization-on-or-off"></a>Pour activer ou désactiver les initialisation instantanée des fichiers  
+## <a name="to-turn-instant-file-initialization-on-or-off"></a>Pour activer ou désactiver l’initialisation instantanée de fichiers  
   
-1.  Lancez le Gestionnaire de Configuration. Pour plus d’informations, consultez [lancer le Gestionnaire de Configuration &#40;Analytique Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Lancez le Configuration Manager. Pour plus d’informations, consultez [la page lancement du&#41;Configuration Manager &#40;Analytics Platform System ](launch-the-configuration-manager.md).  
   
-2.  Dans le volet gauche du Gestionnaire de Configuration, cliquez sur **initialisation instantanée des fichiers**.  
+2.  Dans le volet gauche de la Configuration Manager, cliquez sur **initialisation instantanée des fichiers**.  
   
-3.  Pour activer l’initialisation instantanée des fichiers, activez la case à côté **activer initialisation instantanée des fichiers sur tous les nœuds**. Pour désactiver l’initialisation instantanée des fichiers, désactivez la case à côté **activer initialisation instantanée des fichiers sur tous les nœuds**.  
+3.  Pour activer l’initialisation instantanée des fichiers, activez la case à cocher en regard de **activer l’initialisation instantanée des fichiers sur tous les nœuds**. Pour désactiver l’initialisation instantanée des fichiers, décochez la case en regard de **activer l’initialisation instantanée des fichiers sur tous les nœuds**.  
   
     > [!WARNING]  
-    > Lorsque vous désactivez l’initialisation instantanée des fichiers, la considération de sécurité abordée ci-dessus pour la fonctionnalité peut-être toujours appliquer aux fichiers supprimés pendant l’initialisation instantanée des fichiers a été activée.  
+    > Lorsque vous désactivez l’initialisation instantanée des fichiers, la considération de sécurité décrite ci-dessus pour cette fonctionnalité peut toujours s’appliquer aux fichiers supprimés pendant l’activation de l’initialisation instantanée des fichiers.  
   
-4.  Cliquez sur **Appliquer**. La modification sera propagée, dans les instances de SQL Server sur SQL Server PDW, lors du prochain que redémarrage des services de l’appliance. Pour redémarrer maintenant les services de l’appliance, consultez [l’état des Services PDW &#40;Analytique Platform System&#41;](pdw-services-status.md).  
+4.  Cliquez sur **Appliquer**. La modification se propage à travers les instances de SQL Server sur SQL Server PDW lors du redémarrage suivant des services de l’appliance. Pour redémarrer les services de l’appliance maintenant, consultez l' [État des services PDW &#40;Analytics Platform System&#41;](pdw-services-status.md).  
   
-5.  Vous souhaiterez peut-être répéter les étapes décrites ci-dessus en tant que **ajouter une autorisation pour le compte de sauvegarde** pour supprimer la **effectuer les tâches de maintenance de volume** autorisation.  
+5.  Vous pouvez répéter les étapes décrites ci-dessus en tant qu' **autorisation Ajouter pour le compte de sauvegarde** pour supprimer l’autorisation **effectuer des tâches de maintenance de volume** .  
   
-![DWConfig Appliance PDW initialisation instantanée des fichiers](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
+![Initialisation d'instantanés de fichier PDW des appliances DWConfig](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
 Pour plus d’informations sur l’initialisation instantanée des fichiers, consultez [initialisation instantanée des fichiers](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

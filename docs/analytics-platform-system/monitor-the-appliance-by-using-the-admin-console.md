@@ -1,6 +1,6 @@
 ---
-title: Moniteur avec la Console d’administration - Analytique Platform System | Microsoft Docs
-description: Pour le système de plateforme d’Analytique, la Console d’administration est une application web qui met en évidence les informations d’intégrité, état et les performances de l’appliance. Les utilisateurs se connecter à la Console d’administration via un navigateur internet.
+title: Surveiller avec la console d’administration
+description: Pour Analytics Platform System, la console d’administration est une application Web qui couvre les informations relatives à l’État, à l’intégrité et aux performances de l’appliance. Les utilisateurs se connectent à la console d’administration via un navigateur Internet.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,88 +8,89 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960487"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400942"
 ---
-# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Surveiller l’appliance avec la Console d’administration - Analytique Platform System
-La Console d’administration est une application web de SQL Server PDW qui met en évidence les informations d’intégrité, état et les performances de l’appliance. Les utilisateurs se connecter à la Console d’administration d’Internet Explorer.  
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Surveiller l’appliance à l’aide de la console d’administration-analyse système de plateforme
+La console d’administration est une application Web SQL Server PDW qui couvre les informations relatives à l’État, à l’intégrité et aux performances de l’appliance. Les utilisateurs se connectent à la console d’administration via Internet Explorer.  
   
-## <a name="About"></a>Sur la Console d’administration  
-![Accueil Console des appliances](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+## <a name="About"></a>À propos de la console d’administration  
+![Accueil de la console des appliances](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Appliance**  
-Dossier de base  
+Accueil  
 Fournit un résumé rapide de l’état de l’appliance.  
   
 Intégrité  
-Affiche la topologie d’appliances avec indicateurs montrant l’intégrité de chaque composant surveillé dans chaque nœud. Vous permet d’afficher l’état actuel des nœuds individuels et les propriétés des composants du nœud.  
+Affiche la topologie de l’appliance avec des indicateurs indiquant l’intégrité de chaque composant analysé au sein de chaque nœud. Vous permet d’afficher l’état actuel des nœuds et des propriétés individuels des composants de nœud.  
   
 Affiche les alertes matérielles et logicielles.  
   
 Analyseur de performances  
-Affiche des graphiques d’analyse de performances.  
+Affiche les graphiques de l’analyseur de performances.  
   
 **Parallel Data Warehouse**  
-Dossier de base  
-Fournit un résumé rapide de l’état PDW.  
+Accueil  
+Fournit un récapitulatif rapide de l’état du PDW.  
   
 Sessions  
-Affiche les sessions utilisateur actives PDW. Cela peut vous aider pour la surveillance des conflits de ressources.  
+Affiche les sessions utilisateur PDW actives. Cela peut vous aider à surveiller la contention des ressources.  
   
 Requêtes  
-Affiche une liste de requêtes en cours d’exécution et récemment terminés. Il affiche les erreurs associées, le cas échéant. Fournit également la possibilité d’afficher les détails des requête d’exécution plan et le nœud d’exécution d’informations.  
+Affiche la liste des requêtes en cours d’exécution et des requêtes terminées récemment. Il affiche les erreurs associées, le cas échéant. Permet également d’afficher les détails du plan d’exécution de la requête et les informations d’exécution du nœud.  
   
 Charges  
-Affiche de charger les plans, l’état actuel de la charge PDW et les erreurs associées, le cas échéant.  
+Affiche les plans de charge, l’état actuel des chargements PDW et les erreurs associées, le cas échéant.  
   
 Sauvegardes/restaurations  
-Affiche le journal de PDW sauvegarde et de restauration.  
+Affiche un journal des opérations de sauvegarde et de restauration PDW.  
   
 Intégrité  
-Affiche la topologie PDW avec indicateurs montrant l’intégrité de chaque composant surveillé dans chaque nœud. Vous permet d’afficher l’état actuel des nœuds individuels et les propriétés des composants du nœud.  
+Affiche la topologie PDW avec des indicateurs indiquant l’intégrité de chaque composant analysé au sein de chaque nœud. Vous permet d’afficher l’état actuel des nœuds et des propriétés individuels des composants de nœud.  
   
 Affiche les alertes matérielles et logicielles.  
   
 Ressources  
-Affiche une liste des verrous de ressources PDW et leur état actuel.  
+Affiche la liste des verrous de ressources PDW et leur état actuel.  
   
 Stockage  
 Résume l’utilisation du stockage PDW.  
   
 Analyseur de performances  
-Affiche des graphiques de moniteur de performances PDW.  
+Affiche les graphiques de l’analyseur de performances PDW.  
  
 > [!NOTE]  
-> La console d’administration a une résolution d’écran de 1024 x 768. La console d’administration affiche mieux avec une résolution d’écran de 1280 X 1024 ou plus.  
+> La console d’administration a une résolution d’écran 1024x768. La console d’administration s’affiche mieux avec une résolution d’écran de 1280 X 1024 ou supérieure.  
   
-## <a name="Connect"></a>Se connecter à la Console d’administration  
-Pour vous connecter à la Console d’administration requiert :  
+## <a name="Connect"></a>Connexion à la console d’administration  
+Pour vous connecter à la console d’administration, requiert :  
   
 -   Au moins Internet Explorer version 10.  
   
--   Autorisations d’accès de la Console d’administration. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
+-   Autorisations d’accès à la console d’administration. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   L’adresse IP du cluster de nœud de contrôle.  Obtenir auprès de votre administrateur SQL Server PDW.  
+-   Adresse IP du cluster de nœuds de contrôle.  Procurez-vous auprès de votre administrateur SQL Server PDW.  
   
-Pour vous connecter à la Console d’administration, utilisez Internet Explorer et https pour accéder à l’adresse IP du cluster de nœud de contrôle. Par exemple, si l’adresse IP du cluster de nœud de contrôle est `10.192.63.102`, entrez `https://10.192.63.102` dans la barre d’adresse de votre navigateur. Le premier écran demandera votre **connexion** et **mot de passe**. Fournir soit un compte de connexion de l’authentification SQL Server et mot de passe, ou une connexion via l’authentification Windows et mot de passe Windows. Si vous utilisez une connexion d’authentification de Windows, la Console d’administration utilisera l’emprunt d’identité.  
+Pour vous connecter à la console d’administration, utilisez Internet Explorer et HTTPS pour accéder à l’adresse IP du cluster de nœuds de contrôle. Par exemple, si l’adresse IP du cluster de nœuds de `10.192.63.102`contrôle est `https://10.192.63.102` , entrez dans la barre d’adresse de votre navigateur. Le premier écran vous demande votre **connexion** et votre **mot de passe**. Fournissez une connexion d’authentification SQL Server et un mot de passe, ou bien une connexion d’authentification Windows et un mot de passe Windows. Si vous utilisez une connexion d’authentification Windows, la console d’administration utilise l’emprunt d’identité.  
   
-## <a name="RelatedTasks"></a>Tâches de la Console d’administration  
-La Console d’administration fournit la capacité à surveiller les éléments suivants :  
+## <a name="RelatedTasks"></a>Tâches de la console d’administration  
+La console d’administration vous permet d’analyser les éléments suivants :  
   
 |||  
 |-|-|  
-|**Type d’informations**|**Accès dans la Console d’administration**|  
-|État global de l’appliance|Cliquez sur **Appliance état** dans le menu supérieur, ou **accueil**.|  
-|Alertes|Cliquez sur **alertes**. Pour plus d’informations, consultez [présentation des alertes de Console Administrateur &#40;Analytique Platform System&#41;](understanding-admin-console-alerts.md).|  
-|Composants de l’appliance et leur état|Cliquez sur **Appliance état** dans le menu supérieur, ou **accueil**.|  
-|Analysez les requêtes (y compris les requêtes, les charges, les sauvegardes et restaurations)|Cliquez sur **Sessions** pour afficher les sessions actuellement actives ou récents.<br /><br />Cliquez sur **requêtes** pour afficher les requêtes actuellement actifs ou plus récentes. Les informations affichées pour les requêtes incluent des chargements, sauvegardes et restaurations.<br /><br />Cliquez sur **verrous** pour afficher les verrous actifs.|  
-|Surveiller des informations supplémentaires pour les chargements, sauvegardes et restaurations.|Cliquez sur **charges** ou **sauvegardes/restaurations**.|  
+|**Type d’informations**|**Comment accéder à dans la console d’administration**|  
+|État global de l’appliance|Cliquez sur état de l' **Appliance** dans le menu supérieur ou **page d’hébergement**.|  
+|Alertes|Cliquez sur **Alertes**. Pour plus d’informations, voir fonctionnement des alertes de la [console d’administration &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
+|Composants de l’appliance et leur état|Cliquez sur état de l' **Appliance** dans le menu supérieur ou **page d’hébergement**.|  
+|Surveiller les demandes (y compris les requêtes, les chargements, les sauvegardes et les restaurations)|Cliquez sur **sessions** pour voir les sessions actives ou récentes.<br /><br />Cliquez sur **requêtes** pour afficher les requêtes actives ou récentes. Les informations affichées pour les requêtes incluent les charges, les sauvegardes et les restaurations.<br /><br />Cliquez sur **verrous** pour afficher les verrous actifs.|  
+|Surveiller des informations supplémentaires pour les chargements, les sauvegardes et les restaurations.|Cliquez sur **chargements** ou **sauvegardes/restaurations**.|  
 |Informations sur les performances|Cliquez sur **Analyseur de performances**.|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Surveillance de l’appliance &#40;Analytique Platform System&#41;](appliance-monitoring.md)  
+[Système de plateforme d’analyse de &#40;Analytics de l’appliance&#41;](appliance-monitoring.md)  
   

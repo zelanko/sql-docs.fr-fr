@@ -1,5 +1,5 @@
 ---
-title: Restauration d’une base de données Master-système de plateforme d’analyse (APS) | Microsoft Docs
+title: Restaurer la base de données Master
 description: Restaurez la base de données Master dans Analytics Platform System (APS).
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 624e1199fb953945ae6476a1f935dded48508bab
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176138"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400454"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Restaurer la base de données Master dans Analytics Platform System (APS)
 La page maître de la **restauration** de la SQL Server PDW Configuration Manager vous permet de restaurer la base de données Master à partir d’une sauvegarde.  
@@ -25,7 +26,7 @@ La page maître de la **restauration** de la SQL Server PDW Configuration Manage
   
 ## <a name="to-restore-the-master-database"></a>Pour restaurer la base de données master  
   
-1.  Lancez le Configuration Manager. Pour plus d’informations, consultez [lancer le &#40;système&#41;de plateforme Configuration Manager Analytics](launch-the-configuration-manager.md).  
+1.  Lancez le Configuration Manager. Pour plus d’informations, consultez [la page lancement du&#41;Configuration Manager &#40;Analytics Platform System ](launch-the-configuration-manager.md).  
   
 2.  Dans le volet gauche de la Configuration Manager, cliquez sur **restaurer la base**de référence.  
   
@@ -35,5 +36,5 @@ La page maître de la **restauration** de la SQL Server PDW Configuration Manage
   
 5.  Pour effectuer la restauration, SQL Server PDW arrête tous les services d’appliance et déconnecte tous les utilisateurs. Une fois la restauration terminée, SQL Server PDW redémarre les services de l’appliance.  
   
-![Maître de restauration PDW d’appliance DWConfig](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![Restore master PDW des appliances DWConfig](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

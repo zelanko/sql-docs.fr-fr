@@ -1,6 +1,6 @@
 ---
-title: Déterminer le nœud de cluster a échoué - Analytique Platform System | Microsoft Docs
-description: Cet article décrit comment déterminer le nom du nœud Analytique Platform System (APS) qui ont échoué après un basculement de cluster s’est produite et une alerte de basculement de cluster a été déclenchée. Dans le cadre de la résolution des problèmes d’un cluster de basculement, vous devez déterminer le nom du nœud ayant échoué avant de contacter Microsoft pour vous aider à résoudre le problème.
+title: Déterminer le nœud de cluster en échec
+description: Cet article explique comment déterminer le nom du nœud APS (Analytics Platform System) qui a échoué après un basculement de cluster et qu’une alerte de basculement de cluster a été générée. Dans le cadre du dépannage d’un basculement de cluster, vous devez déterminer le nom du nœud qui a échoué avant de contacter Microsoft pour aider à résoudre le problème.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,29 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2c17fde577b71382cd3ee63b8c6f50818184eab0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 68ebdb7f17ddee311644e11c48eaa4b586beac74
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961053"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401205"
 ---
-# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Déterminer quel cluster nœud a échoué pour l’Analytique Platform System
-Cette rubrique décrit comment déterminer le nom du nœud Analytique Platform System (APS) qui ont échoué après un basculement de cluster s’est produite et une alerte de basculement de cluster a été déclenchée. Dans le cadre de la résolution des problèmes d’un cluster de basculement, vous devez déterminer le nom du nœud ayant échoué avant de contacter Microsoft pour vous aider à résoudre le problème.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Déterminer le nœud de cluster ayant échoué pour Analytics Platform System
+Cette rubrique explique comment déterminer le nom du nœud APS (Analytics Platform System) qui a échoué après un basculement de cluster et qu’une alerte de basculement de cluster a été générée. Dans le cadre du dépannage d’un basculement de cluster, vous devez déterminer le nom du nœud qui a échoué avant de contacter Microsoft pour aider à résoudre le problème.  
   
-## <a name="Background"></a>En arrière-plan  
-Pour la haute disponibilité dans SQL Server PDW, le nœud de contrôle et les nœuds de calcul sont configurés en tant que composants actifs ou passifs des clusters de basculement Windows. Lorsqu’un serveur actif ne parvient pas à répondre aux demandes du système critiques, le serveur passif bascule et exécute les fonctions du serveur qui a échoué.  
+## <a name="Background"></a>Informations  
+Pour la haute disponibilité dans SQL Server PDW, le nœud de contrôle et les nœuds de calcul sont configurés en tant que composants actifs ou passifs des clusters de basculement Windows. Lorsqu’un serveur actif ne parvient pas à répondre aux demandes du système critique, le serveur passif bascule et exécute les fonctions du serveur qui a échoué.  
   
-Après un basculement de cluster, lorsque SQL Server PDW de rapports sur l’état du nœud, le serveur passif a un échec sur l’état. Toutefois, il n’est pas évident serveur ou du nœud a échoué, en particulier si le serveur qui a échoué est encore en ligne. Pour résoudre le problème de cluster, vous devez déterminer le nom du nœud ayant basculé.  
+Après un basculement de cluster, lorsque SQL Server PDW rapports sur l’état du nœud, le serveur passif a un État basculé. Toutefois, il n’est pas évident de savoir quel serveur ou nœud a échoué, surtout si le serveur qui a échoué est toujours en ligne. Pour résoudre le problème de défaillance du cluster, vous devez déterminer le nom du nœud qui a basculé.  
   
-## <a name="AdminConsoleSolution"></a>Solution de la Console d’administration  
+## <a name="AdminConsoleSolution"></a>Solution de la console d’administration  
   
 #### <a name="to-find-the-name-of-the-node-that-failed"></a>Pour rechercher le nom du nœud qui a échoué  
   
-1.  Ouvrez la Console d’administration. Pour plus d’informations sur la Console d’administration, consultez [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Une fois le basculement se produit, l’événement de basculement est inclus dans le nombre d’alertes sur le **intégrité** page. Il existe un **intégrité** page pour la région PDW et pour la région de l’infrastructure de l’appliance. Chaque page d’intégrité a un **alertes** onglet. Pour en savoir plus sur une alerte, cliquez sur la page de contrôle d’intégrité, l’onglet alertes et puis cliquez sur une alerte.  
+1.  Ouvrez la console d’administration. Pour plus d’informations sur la console d’administration, consultez [surveiller l’appliance à l’aide de la console d’administration &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Une fois le basculement effectué, l’événement de basculement est inclus dans le nombre d’alertes dans la page **intégrité** . Il existe une page d' **intégrité** pour la région PDW et la région de la structure de l’appareil. Chaque page d’intégrité comporte un onglet **alertes** . Pour en savoir plus sur une alerte, cliquez sur la page intégrité, sur l’onglet Alertes, puis cliquez sur une alerte.  
   
-## <a name="SystemView"></a>Solution de vue système  
-L’instruction SQL suivante montre comment utiliser le [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) vue système pour rechercher le nom du serveur qui a échoué.  
+## <a name="SystemView"></a>Solution vue système  
+L’instruction SQL suivante montre comment utiliser la vue système [sys. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) pour rechercher le nom du serveur qui a échoué.  
   
 ```sql  
 SELECT  

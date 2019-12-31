@@ -1,6 +1,6 @@
 ---
-title: Désinstallation de correctifs de système de plateforme d’Analytique dans | Microsoft Docs
-description: Désinstallation des correctifs de système de plateforme d’Analytique.
+title: Désinstaller les correctifs
+description: Désinstallez les correctifs logiciels Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,48 +8,49 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d7135972201fe8cce8a43cbd3c8fe547ce40248e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959906"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399763"
 ---
-# <a name="uninstall-analytics-platform-system-hotfixes"></a>Désinstaller des correctifs logiciels Analytique Platform System 
-Les étapes suivantes décrivent comment désinstaller un correctif Analytique Platform System précédemment installé.  
+# <a name="uninstall-analytics-platform-system-hotfixes"></a>Désinstaller les correctifs logiciels d’Analytics Platform System 
+Les étapes suivantes décrivent comment désinstaller un correctif logiciel d’Analytics Platform System précédemment installé.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Prérequis  
-Pour effectuer ces étapes, vous devez :  
+### <a name="prerequisites"></a>Conditions préalables  
+Pour effectuer ces étapes, vous aurez besoin des éléments suivants :  
   
--   Une connexion de système de plateforme d’Analytique avec des autorisations pour accéder à la Console d’administration pour surveiller l’appliance.  
+-   Une connexion Analytics Platform System avec des autorisations pour accéder à la console d’administration afin de surveiller l’appliance.  
   
--   Le compte d’administrateur de domaine à se connecter à la <em>< appliance_domain ></em> **-HST01** nœud.  
+-   Compte d’administrateur de domaine pour se connecter au nœud <em><appliance_domain></em> **-HST01** .  
   
--   Le numéro d’article pour le correctif logiciel à désinstaller.  
+-   Numéro d’article de la base de connaissances pour le correctif logiciel à désinstaller.  
   
-## <a name="HowToUninstallPDW"></a>Pour désinstaller un correctif SQL Server PDW  
+## <a name="HowToUninstallPDW"></a>Pour désinstaller un correctif logiciel SQL Server PDW  
   
-1.  Ouvrez une session sur le <em>< appliance_domain ></em> **-HST01** nœud en tant que l’administrateur de domaine Fabric.  
+1.  Connectez-vous au nœud <em><appliance_domain></em> **-HST01** en tant qu’administrateur de domaine de l’infrastructure.  
   
-2.  Utilisez l’exécution en tant qu’option de l’administrateur pour ouvrir une invite de commandes.  
+2.  Utilisez l’option Exécuter en tant qu’administrateur pour ouvrir une invite de commandes.  
   
-3.  Remplacez les répertoires par `C:\PDWINST\Patches\<kbarticle>\media` où *<kbarticle>* est le numéro d’article de Base de connaissances pour le correctif logiciel à désinstaller.  
+3.  Accédez au répertoire `C:\PDWINST\Patches\<kbarticle>\media` où *<kbarticle>* se trouve le numéro d’article de la base de connaissances pour le correctif à désinstaller.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
     ```  
   
-4.  Pour supprimer le correctif logiciel, exécutez la commande suivante.  
+4.  Pour supprimer le correctif, exécutez la commande suivante.  
   
     ```  
     setup.exe /action="removepatch" /DomainAdminPassword="<password>"  
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Téléchargez et appliquez les mises à jour Microsoft &#40;Analytique Platform System&#41;](download-and-apply-microsoft-updates.md)  
-[Désinstaller les mises à jour Microsoft &#40;Analytique Platform System&#41;](uninstall-microsoft-updates.md)  
-[Appliquer des correctifs de système de plateforme Analytique &#40;Analytique Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
-[Maintenance logicielle &#40;Analytique Platform System&#41;](software-servicing.md)  
+[Téléchargez et appliquez les mises à jour Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
+[Désinstallez les mises à jour Microsoft &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Appliquer des correctifs logiciels Analytics Platform System &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+[Maintenance logicielle &#40;système de plateforme Analytics&#41;](software-servicing.md)  
   

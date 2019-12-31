@@ -1,6 +1,6 @@
 ---
-title: Déterminer la fréquence d’interrogation - Analytique Platform System | Microsoft Docs
-description: Cet article explique comment déterminer la fréquence d’interrogation pour les alertes de l’appliance Analytique Platform System.
+title: Déterminer la fréquence d’interrogation
+description: Cet article explique comment déterminer la fréquence d’interrogation pour les alertes de l’appliance système Analytics Platform.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2d305c766801ce27268e2d3bc873d9c361c034f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961070"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401215"
 ---
 # <a name="determine-polling-frequency"></a>Déterminer la fréquence d’interrogation
-Cet article explique comment déterminer la fréquence d’interrogation pour les alertes de l’appliance Analytique Platform System.  
+Cet article explique comment déterminer la fréquence d’interrogation pour les alertes de l’appliance système Analytics Platform.  
   
 ## <a name="to-determine-the-polling-frequency"></a>Pour déterminer la fréquence d’interrogation  
-Dans la mesure où PDW ne prend pas en charge proactive notifications lorsque des alertes se produisent, la solution de surveillance doit interroger en permanence la DLL de l’appliance.  En interne, PDW interroge les composants à des intervalles différents :  
+Étant donné que PDW ne prend pas en charge les notifications proactives lorsque des alertes se produisent, la solution de surveillance doit interroger continuellement les dll de l’appliance.  En interne, PDW interroge les composants à des intervalles différents :  
   
--   Cluster - 60 secondes  
+-   Cluster-60 secondes  
   
--   Pulsation - 60 secondes  
+-   Pulsation-60 secondes  
   
--   Tous les autres composants - cinq minutes  
+-   Tous les autres composants-cinq minutes  
   
--   Compteurs de performances - trois secondes  
+-   Compteurs de performances-trois secondes  
   
-Un intervalle commun à interroger pour les alertes, qui est également utilisé par System Center, est **toutes les 15 minutes**.  Évidemment, vous pouvez interroger plus ou moins fréquemment, mais il n’est pas recommandé d’interroger moins de toutes les six heures.  
+L’intervalle courant d’interrogation des alertes, qui est également utilisé par System Center, est de **15 minutes**.  Évidemment, vous pouvez interroger plus ou moins fréquemment, mais il n’est pas recommandé de demander une interrogation inférieure à toutes les six heures.  
   
-Interrogation plus fréquente est acceptable, mais interrogation trop fréquente peut encombrer le [sys.dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV.  Interrogation trop fréquente peut rendre difficile pour les utilisateurs diagnostiquer les performances de requête des problèmes lorsque leurs se déroule rapidement hors de la vue.  
+Une interrogation plus fréquente est acceptable, mais l’interrogation trop fréquente peut encombrer la DMV [sys. dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) .  Les interrogations trop fréquentes peuvent compliquer le diagnostic des problèmes de performances des requêtes lorsqu’ils sont rapidement déverrouillés.  
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Surveillance de l’appliance &#40;Analytique Platform System&#41;](appliance-monitoring.md)  
+[Système de plateforme d’analyse de &#40;Analytics de l’appliance&#41;](appliance-monitoring.md)  
   

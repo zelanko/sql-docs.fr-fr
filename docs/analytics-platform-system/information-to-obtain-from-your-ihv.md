@@ -1,6 +1,6 @@
 ---
-title: Obtenir des informations du fabricant de matériel - Analytique Platform System | Microsoft Docs
-description: Informations à obtenir à partir de votre fabricant de matériel sur l’appliance Analytique Platform System.
+title: Obtenir des informations auprès de IHV
+description: Informations à obtenir de la part de votre IHV sur l’appliance Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,22 +8,23 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 016a20567968e45456be79c8c67e77d7c3fbb2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 730cf09ab7e45ea74070db591592fdb871243a77
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960838"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401066"
 ---
-# <a name="information-to-obtain-from-your-ihv"></a>Informations à obtenir à partir de votre fabricant de matériel
-Votre fournisseur de matériel indépendants (IHV) fournit la nouvelle appliance SQL Server PDW pour vous, ils offrent également des informations sur le matériel et la configuration qu’ils ont effectuées sur votre appliance. Vous devez ces informations pour administrer votre appliance.  
+# <a name="information-to-obtain-from-your-ihv"></a>Informations à obtenir de la part de votre IHV
+Lorsque votre fournisseur de matériel indépendant vous offre votre nouvel SQL Server PDW appliance, il fournit également des informations sur le matériel de l’appliance et sur la configuration qu’il a effectuée sur votre appliance. Vous aurez besoin de ces informations pour administrer votre appliance.  
   
-La liste suivante montre les informations qui ne sont généralement nécessaire de votre fabricant de matériel. Dans certains cas, des informations supplémentaires ou d’autres sont nécessaire. Vérifiez auprès de votre fabricant de matériel pour vous assurer que toutes les informations pertinentes a été transférées avec succès à la livraison de l’appliance.  
+La liste suivante affiche des informations qui sont généralement requises par votre IHV. Dans certains cas, des informations supplémentaires ou d’autres informations sont nécessaires. Contactez votre fabricant de matériel pour vous assurer que toutes les informations pertinentes vous ont été transférées à l’aide de la livraison de l’appliance.  
   
 |||  
 |-|-|  
-|**Plus d’informations ou de Document**|**Description**|  
-|Nomenclature (BOM)|Votre nomenclature répertorie les composants qui sont inclus dans votre appliance. Ces informations sont nécessaires pour confirmer que tous les composants ont été remis.<br /><br />**Important :** Votre nomenclature doit inclure des pondérations pour chacun des nœuds d’appliance et pour chaque rack complet. Ces informations sont importantes lorsque vous planifiez comment gérer et déplacer les composants de l’appliance, et pour vous assurer que votre centre de données peut prendre en charge l’appliance. Si votre marque BOM n’inclut pas les pondérations des nœuds, veillez à obtenir ces informations à partir de votre fabricant de matériel pour tous les nœuds.|  
-|Schémas de câblage|Diagrammes de câblage montrent comment se connecter au réseau, câbles d’alimentation et autres pour chaque appliance rack. Ces diagrammes sont nécessaires lors de l’installation de l’appliance dans votre centre de données, et chaque fois que vous devez supprimer ou remplacer un composant.|  
-|Besoins d’un rack|Avant votre appliance peut être installé dans votre centre de données, vous devez savoir si votre centre de données répond à la ventilation et la configuration requise de longueur de câble pour l’appliance, ainsi que la taille et la puissance requise pour les composants. Voir aussi nomenclature (nomenclature) ci-dessus pour plus d’informations sur les poids des composants matériel, qui est également requis.|  
+|**Informations ou document**|**Description**|  
+|Nomenclature (BOM)|Votre nomenclature répertorie les composants inclus dans votre appliance. Ces informations sont nécessaires pour confirmer que tous les composants ont été remis.<br /><br />**Important :** Votre nomenclature doit inclure des pondérations pour chacun des nœuds de l’appliance et pour chaque rack complet. Ces informations sont importantes lors de la planification de la gestion et du déplacement des composants d’appliance, et pour garantir que votre centre de données peut prendre en charge l’appliance. Si votre nomenclature n’inclut pas les poids des nœuds, assurez-vous d’obtenir ces informations auprès de votre IHV pour tous les nœuds.|  
+|Diagrammes de câblage|Les diagrammes de câblage montrent comment connecter le réseau, la puissance et d’autres câbles pour chaque rack d’appliances. Ces diagrammes sont nécessaires lors de l’installation de l’appliance dans votre centre de données, et chaque fois que vous devez supprimer ou remplacer un composant.|  
+|Exigences en matière de rack d’appliance|Avant de pouvoir installer votre appliance dans votre centre de données, vous devez savoir si votre centre de données répond aux exigences en matière de ventilation et de longueur de câble pour l’appareil, ainsi que la taille et les besoins d’alimentation des composants. Voir aussi nomenclature (BOM) ci-dessus pour plus d’informations sur les poids des composants d’appliance, qui sont également nécessaires.|  
   

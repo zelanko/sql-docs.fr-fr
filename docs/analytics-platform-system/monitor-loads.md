@@ -1,6 +1,6 @@
 ---
-title: Contrôler des chargements pour Parallel Data Warehouse | Microsoft Docs
-description: Contrôler des chargements d’actifs et récents à l’aide de la Console d’administration Analytique Platform System (APS) ou les vues du système (PDW) de l’entrepôt de données parallèle ».
+title: Surveiller les chargements
+description: Surveiller les chargements actifs et récents à l’aide de la console d’administration APS (Analytics Platform System) ou du système d’Data Warehouse parallèles (PDW).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,64 +8,65 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960605"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400964"
 ---
-# <a name="monitor-loads-into-parallel-data-warehouse"></a>Moniteur de charge dans Parallel Data Warehouse
-Moniteur actif et récent [dwloader](dwloader.md) charge à l’aide de la Console d’administration Analytique Platform System (APS) ou Parallel Data Warehouse (PDW) [vues système](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>Surveiller les chargements dans des Data Warehouse parallèles
+Surveiller les chargements [dwloader](dwloader.md) actifs et récents à l’aide de la console d’administration APS (Analytics Platform System) ou des [vues système](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)de l’Data Warehouse parallèle (PDW). 
   
 > [!TIP]  
-> Certaines charges sont lancées à l’aide des instructions INSERT ou des outils d’analyse décisionnelle qui utilisent des instructions SQL pour effectuer le chargement. 
+> Certaines charges sont lancées à l’aide d’instructions INSERT ou d’outils décisionnels qui utilisent des instructions SQL pour effectuer la charge. 
 
 <!-- MISSING LINKS
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Prérequis  
-Quelle que soit la méthode utilisée pour surveiller la charge, la connexion doit avoir l’autorisation pour accéder aux sources de données sous-jacentes. 
+## <a name="prerequisites"></a>Conditions préalables  
+Quelle que soit la méthode utilisée pour surveiller une charge, la connexion doit avoir l’autorisation d’accéder aux sources de données sous-jacentes. 
 
 <!-- MISSING LINKS
 For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
 
 --> 
   
-## <a name="monitoring-loads"></a>Surveillance des charges  
-Les sections suivantes décrivent comment contrôler des chargements.  
+## <a name="monitoring-loads"></a>Surveillance des chargements  
+Les sections suivantes décrivent comment surveiller les chargements.  
   
-### <a name="to-monitor-loads-by-using-the-admin-console"></a>Pour contrôler des chargements à l’aide de la Console d’administration  
+### <a name="to-monitor-loads-by-using-the-admin-console"></a>Pour surveiller les charges à l’aide de la console d’administration  
   
-1.  Ouvrez une session sur la Console d’administration. <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
+1.  Connectez-vous à la console d’administration. <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  Dans le menu supérieur, cliquez sur **charges**. Vous verrez un tableau triable indiquant tous les récentes et de charges actives ainsi que des informations supplémentaires, telles que la charge est terminée ou qu’il est toujours active. Cliquez sur les en-têtes de colonne pour trier les lignes.  
+2.  Dans le menu supérieur, cliquez sur **charges**. Vous verrez une table triable qui affiche tous les téléchargements récents et actifs, ainsi que des informations supplémentaires, par exemple si la charge est terminée ou si elle est toujours active. Cliquez sur les en-têtes de colonne pour trier les lignes.  
   
-3.  Pour afficher des détails supplémentaires pour une charge spécifique, cliquez sur la charge **ID** dans la colonne de gauche. Dans la vue détaillée, vous pouvez voir la progression à chaque étape de la charge.  
+3.  Pour afficher des détails supplémentaires pour une charge spécifique, cliquez sur l' **ID** de chargement dans la colonne de gauche. Dans l’affichage détaillé, vous pouvez voir la progression à chaque étape de la charge.  
   
-Consultez ces vues système pour plus d’informations sur les métadonnées relatives à la charge qui est indiquée dans la Console d’administration :  
+Pour plus d’informations sur les métadonnées relatives à la charge affichée dans la console d’administration, consultez les vues système suivantes :  
   
--   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+-   [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
-### <a name="to-monitor-loads-by-using-system-views"></a>Pour contrôler des chargements en utilisant des vues système  
-Pour surveiller les actifs et récents charges en utilisant des vues SQL Server PDW, suivez les étapes ci-dessous. Pour chaque vue système est utilisée, consultez la documentation de cette vue pour plus d’informations sur les colonnes et les valeurs possibles retournées par la vue.  
+### <a name="to-monitor-loads-by-using-system-views"></a>Pour surveiller les charges à l’aide des vues système  
+Pour surveiller les charges actives et récentes à l’aide de SQL Server PDW vues, suivez les étapes ci-dessous. Pour chaque vue système utilisée, consultez la documentation de cette vue pour obtenir des informations sur les colonnes et les valeurs potentielles retournées par la vue.  
   
-1.  Rechercher la `request_id` de la charge dans le [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) afficher par recherche de la ligne de commande du chargeur dans les `command` colonne pour cette vue.  
+1.  Recherchez la `request_id` pour la charge dans la vue [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) en recherchant la ligne de commande du chargeur dans `command` la colonne pour cette vue.  
   
-    Par exemple, la commande suivante retourne le texte de la commande et l’état actuel, ainsi que les `request_id`.  
+    Par exemple, la commande suivante retourne le texte de la commande et l’état actuel `request_id`, ainsi que le.  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Utilisez le `request_id` pour récupérer des informations supplémentaires pour la charge à l’aide de la [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) , et [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) vues. Par exemple, la requête suivante retourne le `run_id` et plus d’informations sur les heures de début, fin et durée de la charge, ainsi que toutes les erreurs et des informations sur le nombre de lignes traitées :  
+2.  Utilisez le `request_id` pour récupérer des informations supplémentaires sur la charge à l’aide des vues [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) et [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Par exemple, la requête suivante retourne les `run_id` informations et au début, à la fin et à la durée de la charge, ainsi que toutes les erreurs et les informations sur le nombre de lignes traitées :  
   
     ```sql  
     SELECT lbr.run_id,   

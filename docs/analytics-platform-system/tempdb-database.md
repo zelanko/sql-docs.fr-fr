@@ -1,5 +1,5 @@
 ---
-title: Base de données tempdb-Data Warehouse parallèle | Microsoft Docs
+title: Base de données tempdb
 description: Base de données tempdb en parallèle Data Warehouse.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6bdba302778224ab2615018d6c5dec0740328d93
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810936"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400142"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>base de données tempdb en parallèle Data Warehouse
 **tempdb** est une base de données système SQL Server PDW qui stocke des tables temporaires locales pour les bases de données utilisateur. Les tables temporaires sont souvent utilisées pour améliorer les performances des requêtes. Par exemple, vous pouvez utiliser une table temporaire pour modulariser un script et réutiliser des données calculées.  
@@ -37,7 +38,7 @@ PDW n’implémente pas les tables temporaires à l’aide de la base de donnée
 tempdb  
 **tempdb** est le SQL Server base de données tempdb. Il utilise la journalisation minimale. SQL Server utilise tempdb sur les nœuds de calcul pour stocker les tables temporaires dont il a besoin dans le cadre de l’exécution d’opérations de SQL Server.  
   
-SQL Server PDW supprime les tables de **tempdb** dans les cas suivants:  
+SQL Server PDW supprime les tables de **tempdb** dans les cas suivants :  
   
 -   L’instruction DROP TABLE est exécutée.  
   
@@ -51,7 +52,7 @@ SQL Server PDW supprime les tables de **tempdb** dans les cas suivants:
 SQL Server PDW effectue les mêmes opérations sur les tables temporaires et les tables permanentes, sauf indication contraire. Par exemple, les données des tables temporaires locales, tout comme les tables permanentes, sont distribuées ou répliquées sur les nœuds de calcul.  
   
 ## <a name="LimitationsRestrictions"></a>Limitations et restrictions  
-Limitations et restrictions relatives à la base de données**tempdb** SQL Server PDW. Vous *ne pouvez pas:*  
+Limitations et restrictions relatives à la base de données**tempdb** SQL Server PDW. Vous *ne pouvez pas :*  
   
 -   Créez une table temporaire globale qui commence par # #.  
   
@@ -59,11 +60,11 @@ Limitations et restrictions relatives à la base de données**tempdb** SQL Serve
   
 -   Modifiez les autorisations sur **tempdb** avec les instructions **Grant**, **Deny**ou **Revoke** .  
   
--   Exécutez **DBCC SHRINKLOG** pourtempdb tempdb.  
+-   Exécutez **DBCC SHRINKLOG** pour **tempdb tempdb.**  
   
 -   Effectuer des opérations DDL sur **tempdb**. Il existe deux exceptions à cela. Pour plus d’informations, consultez la liste suivante des limitations et restrictions sur les tables temporaires locales.  
   
-Limitations et restrictions sur les tables temporaires locales. Vous *ne pouvez pas:*  
+Limitations et restrictions sur les tables temporaires locales. Vous *ne pouvez pas :*  
   
 -   Renommer une table temporaire  
   

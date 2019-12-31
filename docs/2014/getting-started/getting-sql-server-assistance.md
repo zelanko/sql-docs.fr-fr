@@ -1,7 +1,7 @@
 ---
-title: Assistance sur SQL Server | Microsoft Docs
+title: Obtenir de l’aide SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/25/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
@@ -41,14 +41,15 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088559"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683604"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistance sur SQL Server
+  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   La documentation installée comme une collection locale de documentation en ligne [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -64,9 +65,9 @@ ms.locfileid: "66088559"
   
  Vous pouvez accéder à la documentation en ligne des façons suivantes :  
   
--   Une copie de la documentation en ligne de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] est publiée dans MSDN Library et TechNet Library sur Internet. Les rubriques de ces copies de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont étoffées de commentaires de la communauté, par exemple des informations supplémentaires et des exemples de code d'autres clients. Vous pouvez afficher la copie MSDN Library à le [la documentation en ligne de SQL Server 2014](../2014-toc/index.md).  
+-   Une copie de la documentation en ligne de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] est publiée dans MSDN Library et TechNet Library sur Internet. Les rubriques de ces copies de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont étoffées de commentaires de la communauté, par exemple des informations supplémentaires et des exemples de code d'autres clients. Vous pouvez consulter la copie MSDN Library dans la [documentation en ligne de SQL Server 2014](../2014-toc/index.yml).  
   
--   Vous pouvez utiliser le Gestionnaire de bibliothèque d'aide pour installer la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur local. Pour plus d’informations, consultez [ajouter ou supprimer de Documentation produit de SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+-   Vous pouvez utiliser le Gestionnaire de bibliothèque d'aide pour installer la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur local. Pour plus d’informations, consultez [Ajouter ou supprimer la documentation du produit pour SQL Server](../2014-toc/index.yml).  
   
  La documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans MSDN Library et les fichiers de documentation en ligne disponibles via le Gestionnaire de bibliothèque d'aide sont actualisés lorsque [!INCLUDE[msCoName](../includes/msconame-md.md)] publie une mise à jour de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -77,23 +78,23 @@ ms.locfileid: "66088559"
   
  Le tableau suivant décrit ces sources d'information et les personnes à qui elles sont destinées.  
   
-|Resource|Public visé|  
+|Ressource|Public|  
 |--------------|--------------|  
 |[Centre de développement SQL Server](https://msdn.microsoft.com/sqlserver/)|Les développeurs qui créent des bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], des systèmes de génération de rapports et des solutions de Business Intelligence, et qui font en sorte que leurs applications et leurs sites Web utilisent ces systèmes.|  
-|[Centre de développement XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Les créateurs de sites Web et les développeurs d'applications dont les sites et applications utilisent XML pour le stockage et la manipulation des données.|  
+|[XML Developer Center (en anglais)](https://go.microsoft.com/fwlink/?LinkId=42458)|Les créateurs de sites Web et les développeurs d'applications dont les sites et applications utilisent XML pour le stockage et la manipulation des données.|  
 |[Site TechNet SQL Server](https://technet.microsoft.com/sqlserver/dn135309)|Les administrateurs et opérateurs qui planifient, déploient, administrent et supportent des systèmes qui utilisent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="additional-online-information"></a>Autres informations en ligne  
  Des informations supplémentaires sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont disponibles sur ces sites Web [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-|Resource|Description|  
+|Ressource|Description|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fournit des informations d'avant-vente sur l'évaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'outil de stockage de données et de Business Intelligence.|  
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fournit des informations d'avant-vente sur l'évaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'outil de stockage de données et de Business Intelligence.|  
 |[Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fournit un référentiel dans lequel il est possible de chercher des articles sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rédigés par le support [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
- Les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] ont un cycle de vie de support qui détermine la durée du support pour chaque version Le support [!INCLUDE[msCoName](../includes/msconame-md.md)]  tient à jour une page qui définit le cycle de vie du support [!INCLUDE[msCoName](../includes/msconame-md.md)]. Cette page contient des liens vers d'autres pages qui indiquent la disponibilité du support pour les produits [!INCLUDE[msCoName](../includes/msconame-md.md)]. Pour plus d’informations, consultez [politique de Support Microsoft](https://go.microsoft.com/fwlink/?LinkId=98306).  
+ Les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] ont un cycle de vie de support qui détermine la durée du support pour chaque version Le support [!INCLUDE[msCoName](../includes/msconame-md.md)]  tient à jour une page qui définit le cycle de vie du support [!INCLUDE[msCoName](../includes/msconame-md.md)]. Cette page contient des liens vers d'autres pages qui indiquent la disponibilité du support pour les produits [!INCLUDE[msCoName](../includes/msconame-md.md)]. Pour plus d’informations, consultez [support Microsoft Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser la Documentation du produit pour SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Utiliser la documentation du produit pour SQL Server](../2014-toc/index.yml)  
   
   

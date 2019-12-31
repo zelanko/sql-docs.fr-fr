@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2014 Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 06/07/2019
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93a8f9ddab1fe1f78c5af94cae30c8ce7cbf2c37
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bceabba9b490be6bc2c51b4fdcce9b6b131eb0ce
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025454"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683476"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "69025454"
 La documentation est séparée par la version. Vous êtes actuellement dans la documentation SQL Server 2014 Analysis Services.
 
 - Pour en savoir plus sur SQL Server 2012 et versions antérieures, consultez [SQL Server la documentation sur les versions précédentes](https://docs.microsoft.com/previous-versions/sql/).
-- Pour en savoir plus sur SQL Server 2014, consultez la [documentation en ligne de SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
+- Pour en savoir plus sur SQL Server 2014, consultez la [documentation en ligne de SQL Server 2014](../2014-toc/index.yml)
 - Pour en savoir plus sur SQL Server 2016 et versions ultérieures, consultez [la documentation de Microsoft SQL](https://docs.microsoft.com/sql/).
 - Pour en savoir plus sur Azure Analysis Services, consultez [Azure Analysis Services documentation](https://docs.microsoft.com/azure/analysis-services/).
 
@@ -48,7 +48,7 @@ Un flux de travail classique comprend la génération d’un modèle de données
   
  Pour utiliser un modèle, il est déployé sur une instance de serveur qui exécute des bases de données dans un mode serveur particulier, ce qui rend les données accessibles aux utilisateurs autorisés qui se connectent par le biais d’Excel ou d’autres applications.  
   
- Vous pouvez installer une instance dans l’un des trois modes serveur suivants:  
+ Vous pouvez installer une instance dans l’un des trois modes serveur suivants :  
   
 -   En tant qu'instance tabulaire, avec exécution de modèles tabulaires.  
   
@@ -60,26 +60,26 @@ Un flux de travail classique comprend la génération d’un modèle de données
   
  La documentation fondamentale pour Analysis Services s'articule autour de sections qui correspondent au type de projet que vous créez. Choisissez parmi les liens suivants pour en savoir plus sur chaque mode ou fonctionnalité.  
   
- **Parcourir le contenu par domaine**  
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Comparaison des solutions &#40;tabulaires et multidimensionnelles SSAS&#41; ](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ **Parcourir le contenu par zone**  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Gestion des instances de Analysis Services](instances/analysis-services-instance-management.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Analysis Services gestion des instances](instances/analysis-services-instance-management.md)  
   
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Modélisation &#40;tabulaire de SSAS&#41; tabulaire](tabular-models/tabular-models-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [modélisation tabulaire &#40;SSAS tabulaire&#41;](tabular-models/tabular-models-ssas.md)  
   
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [ &#40;SSAS&#41; de modélisation](multidimensional-models/multidimensional-models-ssas.md) multidimensionnelle  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [&#40;la modélisation multidimensionnelle&#41;SSAS](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [SSAS&#41; d' &#40;exploration de données](data-mining/data-mining-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [exploration de données &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [PowerPivot pour SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [PowerPivot pour SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
->  Les fonctionnalités [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] varient en fonction de l’édition. Les modèles d'exploration de données et multidimensionnels sont disponibles dans l'édition standard, mais avec moins de fonctionnalités que les éditions supérieures. Les modèles tabulaires et PowerPivot pour SharePoint sont des fonctionnalités Premium et ne sont pas disponibles avec une licence d'édition standard. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]les fonctionnalités varient en fonction de l’édition. Les modèles d'exploration de données et multidimensionnels sont disponibles dans l'édition standard, mais avec moins de fonctionnalités que les éditions supérieures. Les modèles tabulaires et PowerPivot pour SharePoint sont des fonctionnalités Premium et ne sont pas disponibles avec une licence d'édition standard. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiels &#40;de Analysis Services SSAS&#41;](analysis-services-tutorials-ssas.md)   
+ [Didacticiels de Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation pour SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
- [Guide &#40;du développeur Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [Guide du développeur &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   

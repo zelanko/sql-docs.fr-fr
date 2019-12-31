@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946381"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200512"
 ---
 # <a name="primary-expressions-xquery"></a>Expressions primaires (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,17 @@ ms.locfileid: "67946381"
   
 |Référence d'entité|Représente|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|»|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
- Un littéral chaîne peut également comprendre une référence de caractère (référence de style XML à un caractère Unicode) qui est identifiée par un point de code décimal ou hexadécimal. Par exemple, le symbole Euro peut être représenté par la référence de caractère « &\#8364 ; ».  
+ Un littéral chaîne peut également comprendre une référence de caractère (référence de style XML à un caractère Unicode) qui est identifiée par un point de code décimal ou hexadécimal. Par exemple, le symbole euro peut être représenté par la référence de caractère « &\#8364 ; ».  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'appuie sur XML version 1.0 pour l'analyse.  
+>  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'appuie sur XML version 1.0 pour l'analyse.  
   
 ### <a name="examples"></a>Exemples  
  Les exemples suivants expliquent comment utiliser des littéraux, ainsi que des références d'entité et de caractère.  
@@ -64,7 +65,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -93,7 +94,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Les fonctions booléennes intégrées, **true()** et **false()** , peut être utilisé pour représenter des valeurs booléennes, comme indiqué dans l’exemple suivant.  
+ Les fonctions booléennes intégrées, **true ()** et **false ()**, peuvent être utilisées pour représenter des valeurs booléennes, comme indiqué dans l’exemple suivant.  
   
 ```  
 DECLARE @var XML  
@@ -130,7 +131,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- Vous pouvez utiliser la fonction d’extension SQL :variable() pour faire référence à des variables SQL, comme indiqué dans la requête suivante.  
+ Vous pouvez utiliser la fonction d’extension SQL : variable () pour faire référence à des variables SQL, comme illustré dans la requête suivante.  
   
 ```  
 DECLARE @price money  
@@ -151,12 +152,12 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   L'importation de modules n'est pas prise en charge.  
   
--   Les déclarations de variable externe ne sont pas prises en charge. Une solution consiste à utiliser le [:variable()](../xquery/xquery-extension-functions-sql-variable.md).  
+-   Les déclarations de variable externe ne sont pas prises en charge. Une solution consiste à utiliser la [fonction SQL : variable ()](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="context-item-expressions"></a>Expressions d'élément contextuel  
- L'élément contextuel est l'élément en cours de traitement dans le cadre d'une expression de chemin d'accès. Il est initialisé dans une instance non-NULL de type XML avec le nœud de document. Il peut également être modifié par la méthode nodes(), dans le contexte des expressions XPath ou prédicats [].  
+ L'élément contextuel est l'élément en cours de traitement dans le cadre d'une expression de chemin d'accès. Il est initialisé dans une instance non-NULL de type XML avec le nœud de document. Elle peut également être modifiée par la méthode nodes (), dans le contexte des expressions XPath ou des prédicats [].  
   
- L'élément contextuel est renvoyé par une expression contenant un point (.). Par exemple, la requête suivante évalue chaque élément <`a`> la présence de l’attribut `attr`. Si l'attribut est présent, l'élément est renvoyé. Notez que la condition exprimée dans le prédicat indique que le nœud de contexte est spécifié par un simple point.  
+ L'élément contextuel est renvoyé par une expression contenant un point (.). Par exemple, la requête suivante évalue chaque élément <`a`> pour la présence de l' `attr`attribut. Si l'attribut est présent, l'élément est renvoyé. Notez que la condition exprimée dans le prédicat indique que le nœud de contexte est spécifié par un simple point.  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Appels de fonction  
- Vous pouvez appeler les fonctions XQuery intégrées et les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctions SQL :variable() et SQL :Column(). Pour obtenir la liste des fonctions implémentées, consultez [fonctions XQuery impliquant le Type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Vous pouvez appeler les fonctions XQuery intégrées et les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctions SQL : variable () et SQL : Column (). Pour obtenir la liste des fonctions implémentées, consultez [fonctions XQuery sur le type de données XML](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limites de la mise en œuvre sont les suivantes :  
@@ -182,6 +183,5 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   L'importation de fonctions n'est pas prise en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Construction XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+ [Construction XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
+ 

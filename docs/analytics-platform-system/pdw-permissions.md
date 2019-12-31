@@ -1,6 +1,6 @@
 ---
-title: Autorisations dans Parallel Data Warehouse | Microsoft Docs
-description: Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour Parallel Data Warehouse.
+title: Autorisations
+description: Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour les Data Warehouse parallèles.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,127 +8,128 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2284c6b39693363de262e4ea307b0de45a0b6f06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960396"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400869"
 ---
-# <a name="managing-permissions-in-parallel-data-warehouse"></a>La gestion des autorisations dans Parallel Data Warehouse
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestion des autorisations dans les Data Warehouse parallèles
 Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour SQL Server PDW.  
   
-## <a name="BackupRestoreBasics"></a>Autorisation principes de base du moteur de base de données  
-Autorisations de moteur de base de données sur SQL Server PDW sont gérées au niveau du serveur via des connexions et au niveau de la base de données par le biais des utilisateurs de base de données et les rôles de base de données défini par l’utilisateur.  
+## <a name="BackupRestoreBasics"></a>Notions de base des autorisations Moteur de base de données  
+Les autorisations Moteur de base de données sur les SQL Server PDW sont gérées au niveau du serveur par le biais de connexions et au niveau de la base de données via les utilisateurs de base de données et les rôles de base de données définis par l’utilisateur.  
   
 **Connexions**  
-Les connexions sont des comptes d’utilisateur individuels pour vous connecter à l’ordinateur SQL Server PDW. SQL Server PDW prend en charge les connexions à l’aide de l’authentification de l’authentification Windows et SQL Server.  Connexions d’authentification de Windows peuvent être des utilisateurs de Windows ou des groupes Windows à partir de n’importe quel domaine approuvé par SQL Server PDW. Connexions d’authentification de SQL Server sont définies et authentifiées par SQL Server PDW et doit être créé en spécifiant un mot de passe.  
+Les connexions sont des comptes d’utilisateur individuels pour la connexion au SQL Server PDW. SQL Server PDW prend en charge les connexions à l’aide de l’authentification Windows et de l’authentification SQL Server.  Les connexions d’authentification Windows peuvent être des utilisateurs Windows ou des groupes Windows à partir de n’importe quel domaine approuvé par SQL Server PDW. SQL Server les connexions d’authentification sont définies et authentifiées par SQL Server PDW et doivent être créées en spécifiant un mot de passe.  
   
-Membres de la **sysadmin** rôle serveur fixe (tel que le **sa** connexion) peut se connecter à une base de données sans avoir à qui est mappé à un utilisateur de base de données. Elles sont mappées à la **dbo** utilisateur. Le propriétaire de la base de données est également mappé comme le **dbo** utilisateur.  
+Les membres du rôle serveur fixe **sysadmin** (par exemple, la connexion **sa** ) peuvent se connecter à une base de données sans avoir été mappés à un utilisateur de base de données. Ils sont mappés à l’utilisateur **dbo** . Le propriétaire de la base de données est également mappé en tant qu’utilisateur **dbo** .  
   
 **Rôles de serveur**  
-Il existe quatre rôles de serveur spéciaux avec un ensemble de rôles préconfigurés qui fournissent un groupe pratique d’autorisations de niveau serveur. Le **sysadmin**, **MediumRC**, **LargeRC**, et **XLargeRCfixed** les rôles de serveur sont les rôles de serveur uniquement actuellement implémentés dans SQL Server PDW. Le **sa** connexion est le seul membre de la **sysadmin** rôle serveur fixe et des connexions supplémentaires ne peuvent pas être ajouté à la **sysadmin** rôle. Connexions peuvent être accordées le **CONTROL SERVER** autorisation, qui est similaire, mais pas identiques, à la **sysadmin** rôle serveur fixe. Utilisez [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) pour ajouter des membres à d’autres rôles de serveur. SQL Server PDW ne prend pas en charge les rôles serveur définis par l’utilisateur.  
+Il existe quatre rôles de serveur spéciaux avec un ensemble de rôles préconfigurés qui fournissent un groupe pratique d’autorisations au niveau du serveur. Les rôles de serveur **sysadmin**, **MediumRC**, **LargeRC**et **XLargeRCfixed** sont les seuls rôles de serveur actuellement implémentés dans SQL Server PDW. La connexion **sa** est le seul membre du rôle serveur fixe **sysadmin** , et les connexions supplémentaires ne peuvent pas être ajoutées au rôle **sysadmin** . Les connexions peuvent être accordées à l’autorisation **Control Server** , qui est similaire, bien que non identique, au rôle serveur fixe **sysadmin** . Utilisez [ALTER Server Role](../t-sql/statements/alter-server-role-transact-sql.md) pour ajouter des membres aux autres rôles de serveur. SQL Server PDW ne prend pas en charge les rôles de serveur définis par l’utilisateur.  
   
 **Utilisateurs de base de données**  
-Connexions autorisées à accéder à une base de données par la création d’un utilisateur de base de données dans une base de données et le mappage de cet utilisateur de base de données à une connexion. En général, le nom d’utilisateur de base de données est le même que le nom de connexion, mais ce n’est pas obligatoire. Chaque utilisateur de base de données est mappé à une seule connexion. Une connexion ne peut être mappée qu’à un seul utilisateur dans une base de données, mais peut être mappée comme utilisateur de base de données dans plusieurs bases de données.  
+Les connexions sont autorisées à accéder à une base de données en créant un utilisateur de base de données dans une base de données et en mappant cet utilisateur de base de données à une connexion. En général, le nom d’utilisateur de base de données est le même que le nom de connexion, mais ce n’est pas obligatoire. Chaque utilisateur de base de données est mappé à une seule connexion. Une connexion ne peut être mappée qu’à un seul utilisateur dans une base de données, mais peut être mappée comme utilisateur de base de données dans plusieurs bases de données.  
   
-**Rôles de base de données fixe**  
-Rôles de base de données fixes sont un ensemble de rôles préconfigurés qui fournissent un groupe pratique d’autorisations de niveau de base de données. Les utilisateurs de base de données et les rôles de base de données défini par l’utilisateur peuvent être ajoutés aux rôles de base de données fixe à l’aide de la [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) procédure. Pour plus d’informations sur les rôles de base de données fixe, consultez [rôles de base de données fixes](#fixed-database-roles).  
+**Rôles de base de données fixes**  
+Les rôles de base de données fixes sont un ensemble de rôles préconfigurés qui fournissent un groupe pratique d’autorisations au niveau de la base de données. Les utilisateurs de base de données et les rôles de base de données définis par l’utilisateur peuvent être ajoutés aux rôles de base de données fixes à l’aide de la procédure [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) . Pour plus d’informations sur les rôles de base de données fixes, consultez [rôles de base de données fixes](#fixed-database-roles).  
   
-**Rôles de base de données défini par l’utilisateur**  
-Les utilisateurs avec le **CREATE ROLE** autorisation permettre créer de nouveaux rôles de base de données défini par l’utilisateur pour représenter des groupes d’utilisateurs disposant d’autorisations courantes. En général, les autorisations sont accordées ou refusées à l’ensemble du rôle, ce qui simplifie la gestion et la surveillance des autorisations.  
+**Rôles de base de données définis par l’utilisateur**  
+Les utilisateurs disposant de l’autorisation **CREATE ROLE** peuvent créer des rôles de base de données définis par l’utilisateur pour représenter des groupes d’utilisateurs disposant d’autorisations communes. En général, les autorisations sont accordées ou refusées à l’ensemble du rôle, ce qui simplifie la gestion et la surveillance des autorisations.  
   
-Des autorisations aux principaux de sécurité (connexions, utilisateurs et rôles) à l’aide de la **GRANT** instruction. Les autorisations sont refusées explicitement à l’aide de la **DENY** commande. A précédemment autorisation accordée ou refusée est supprimée à l’aide de la **RÉVOQUER** instruction. Les autorisations sont cumulatives : l’utilisateur bénéficie de toutes les autorisations accordées à lui-même, à la connexion et à toute appartenance à un groupe. Toutefois, tout refus d’autorisation remplace toutes les attributions. <!-- MISSING LINKS (For information, syntax, and available permissions with these commands, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)).  -->  
+Les autorisations sont accordées aux principaux de sécurité (connexions, utilisateurs et rôles) à l’aide de l’instruction **Grant** . Les autorisations sont refusées explicitement à l’aide de la commande **Deny** . Une autorisation précédemment accordée ou refusée est supprimée à l’aide de l’instruction **Revoke** . Les autorisations sont cumulatives : l’utilisateur bénéficie de toutes les autorisations accordées à lui-même, à la connexion et à toute appartenance à un groupe. Toutefois, tout refus d’autorisation remplace toutes les attributions. <!-- MISSING LINKS (For information, syntax, and available permissions with these commands, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)).  -->  
   
 L’exemple suivant illustre une méthode courante et recommandée pour configurer des autorisations.  
   
-1.  Si vous utilisez l’authentification Windows, créez une connexion pour chaque utilisateur de Windows ou un groupe Windows qui se connecte à SQL Server PDW. Si vous utilisez l’authentification SQL Server, créez une connexion pour chaque personne qui se connecte à SQL Server PDW.  
+1.  Si vous utilisez l’authentification Windows, créez une connexion pour chaque utilisateur Windows ou groupe Windows qui se connectera à SQL Server PDW. Si vous utilisez l’authentification SQL Server, créez une connexion pour chaque personne qui se connectera à SQL Server PDW.  
   
-2.  Créer un utilisateur de base de données pour chaque connexion dans toutes les bases de données nécessaires.  
+2.  Créez un utilisateur de base de données pour chaque connexion dans toutes les bases de données nécessaires.  
   
-3.  Créer un ou plusieurs rôles de base de données défini par l’utilisateur, chacun représentant une fonction similaire. Par exemple, analyste financier et analyste des ventes.  
+3.  Créez un ou plusieurs rôles de base de données définis par l’utilisateur, chacun représentant une fonction similaire. Par exemple, analyste financier et analyste des ventes.  
   
-4.  Ajouter des utilisateurs de base de données à un ou plusieurs rôles de base de données défini par l’utilisateur.  
+4.  Ajoutez des utilisateurs de base de données à un ou plusieurs rôles de base de données définis par l’utilisateur.  
   
 5.  Accordez des autorisations aux rôles de base de données définis par l’utilisateur.  
   
-Connexions sont des objets au niveau du serveur et peut être répertoriées en consultant [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Uniquement les autorisations de niveau serveur peuvent être accordées aux principaux de serveur.  
+Les connexions sont des objets de niveau serveur et peuvent être répertoriées en affichant [sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Seules les autorisations au niveau du serveur peuvent être accordées aux principaux de serveur.  
   
-Les utilisateurs et rôles de base de données sont des objets de niveau de base de données et peut être répertoriés en consultant [sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Uniquement les autorisations de niveau de base de données peuvent être accordées aux principaux de base de données.  
+Les utilisateurs et les rôles de base de données sont des objets de niveau base de données et peuvent être répertoriés en affichant [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Seules les autorisations au niveau de la base de données peuvent être accordées aux principaux de base de données.  
   
 ## <a name="BackupTypes"></a>Autorisations par défaut  
 La liste suivante décrit les autorisations par défaut :  
   
--   Création d’un compte de connexion par les instructions using **CREATE LOGIN** instruction, la connexion reçoit le **CONNECT SQL** autorisation permettant la connexion pour se connecter à l’ordinateur SQL Server PDW.  
+-   Lorsqu’une connexion est créée à l’aide de l’instruction **Create login** , la connexion reçoit l’autorisation **Connect SQL** , ce qui permet à la connexion de se connecter au SQL Server PDW.  
   
--   Lorsqu’un utilisateur de base de données est créé à l’aide de la **CREATE USER** instruction, l’utilisateur reçoit le **connecter ON DATABASE ::** _< nom_base_de_données >_ autorisation, ce qui permet le connexion pour se connecter à cette base de données en tant qu’utilisateur.  
+-   Lorsqu’un utilisateur de base de données est créé à l’aide de l’instruction **Create User** , il reçoit l’autorisation **Connect on database ::** _<database_name>_ , ce qui permet à la connexion de se connecter à cette base de données en tant qu’utilisateur.  
   
--   Tous les principaux, y compris le rôle PUBLIC, aucune autorisation explicite ou implicite par défaut ont l’héritage des autorisations implicites des autorisations explicites. Par conséquent, lorsque aucune autorisation explicite n’est présente, il ne peut également être aucune autorisation implicite.  
+-   Tous les principaux, y compris le rôle PUBLIC, n’ont pas d’autorisations explicites ou implicites par défaut, car les autorisations implicites sont héritées des autorisations explicites. Par conséquent, si aucune autorisation explicite n’est présente, il ne peut pas non plus y avoir d’autorisations implicites.  
   
--   Lorsqu’une connexion devient le propriétaire d’un objet ou d’une base de données, la connexion a toujours toutes les autorisations sur l’objet ou de la base de données. Les autorisations de propriété ne sont pas visibles comme des autorisations explicites. Le **GRANT**, **RÉVOQUER**, et **DENY** instructions n’ont aucun effet sur les autorisations de la propriété. La propriété peut être modifiée à l’aide de la [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md) instruction.  
+-   Lorsqu’une connexion devient le propriétaire d’un objet ou d’une base de données, la connexion a toujours toutes les autorisations sur l’objet ou la base de données. Les autorisations de propriété ne sont pas visibles en tant qu’autorisations explicites. Les instructions **Grant**, **Revoke**et **Deny** n’ont aucun effet sur les autorisations de propriété. La propriété peut être modifiée à l’aide de l’instruction [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md) .  
   
--   La connexion sa a toutes les autorisations sur l’appliance. Autorisations de propriété, les autorisations d’administrateur système ne peut pas être modifiées et similaires ne sont pas visibles comme des autorisations explicites. Le **GRANT**, **RÉVOQUER**, et **DENY** instructions n’ont aucun effet sur les autorisations d’administrateur système.  
+-   La connexion AS a toutes les autorisations sur l’appliance. De même que les autorisations de propriété, les autorisations AS ne peuvent pas être changées et ne sont pas visibles comme des autorisations explicites. Les instructions **Grant**, **Revoke**et **Deny** n’ont aucun effet sur les autorisations d’administrateur système.  
   
--   Le rôle serveur PUBLIC ne reçoit aucune autorisation par défaut et n’hérite pas des autorisations d’autres rôles de serveur. Le rôle serveur PUBLIC peut recevoir des autorisations explicites avec le **GRANT**, **RÉVOQUER**, et **DENY** instructions.  
+-   Le rôle de serveur PUBLIC ne reçoit pas d’autorisations par défaut et n’hérite pas des autorisations d’autres rôles de serveur. Le rôle serveur PUBLIC peut recevoir des autorisations explicites avec les instructions **Grant**, **Revoke**et **Deny** .  
   
--   Les transactions ne nécessitent pas d’autorisations. Tous les principaux peuvent exécuter la **BEGIN TRANSACTION**, **valider**, et **ROLLBACK** les commandes de transaction. Toutefois, un principal doit avoir les autorisations appropriées pour exécuter chaque instruction dans la transaction.  
+-   Les transactions ne nécessitent pas d’autorisations. Tous les principaux peuvent exécuter les commandes **Begin transaction**, **Commit**et **Rollback** transaction. Toutefois, un principal doit disposer des autorisations appropriées pour exécuter chaque instruction au sein de la transaction.  
   
--   L’instruction **USE** n’a pas besoin d’autorisation. Tous les principaux peuvent exécuter la **utilisez** instruction sur une base de données, mais pour accéder à une base de données, elles doivent avoir un principal d’utilisateur dans la base de données ou de l’utilisateur invité doit être activé.  
+-   L’instruction **USE** n’a pas besoin d’autorisation. Tous les principaux peuvent exécuter l’instruction **use** sur n’importe quelle base de données. Toutefois, pour accéder à une base de données, ils doivent avoir un principal d’utilisateur dans la base de données ou l’utilisateur invité doit être activé.  
   
-### <a name="the-public-role"></a>Le rôle PUBLIC  
-Toutes les nouvelles connexions d’appliance appartiennent automatiquement au rôle PUBLIC. Le rôle de serveur PUBLIC possède les caractéristiques suivantes :  
+### <a name="the-public-role"></a>Rôle PUBLIC  
+Toutes les nouvelles connexions d’appliance appartiennent automatiquement au rôle PUBLIC. Le rôle serveur PUBLIC possède les caractéristiques suivantes :  
   
--   Le rôle serveur PUBLIC dispose d’aucune autorisation par défaut.  
+-   Le rôle serveur PUBLIC n’a pas d’autorisations par défaut.  
   
--   Tous les principaux sont membres du rôle serveur PUBLIC et le rôle serveur PUBLIC n’est pas un membre d’un autre rôle de serveur.  
+-   Tous les principaux sont membres du rôle serveur PUBLIC et le rôle serveur PUBLIC n’est pas membre d’un autre rôle serveur.  
   
--   Le rôle serveur PUBLIC ne peut pas hériter des autorisations implicites. Les autorisations accordées au rôle PUBLIC doivent être accordées explicitement.  
+-   Le rôle serveur PUBLIC ne peut pas hériter des autorisations implicites. Toutes les autorisations accordées au rôle PUBLIC doivent être accordées explicitement.  
   
 ## <a name="BackupProc"></a>Détermination des autorisations  
-Une connexion ait ou non autorisé à effectuer une action spécifique varie selon les autorisations accordées ou refusées à la connexion, utilisateur et l’utilisateur est membre des rôles. Autorisations de niveau serveur (tel que **CREATE LOGIN** et **VIEW SERVER STATE**) sont disponibles pour les entités de sécurité au niveau du serveur (connexions). Autorisations de niveau de base de données (tel que **sélectionnez** à partir d’une table ou **EXECUTE** sur une procédure) sont disponibles au niveau de la base de données principaux (utilisateurs et rôles de base de données).  
+Le fait qu’une connexion ait ou non l’autorisation d’effectuer une action spécifique dépend des autorisations accordées ou refusées à la connexion, à l’utilisateur et aux rôles dont l’utilisateur est membre. Les autorisations au niveau du serveur (telles que **Create login** et **View Server State**) sont disponibles pour les principaux de niveau serveur (connexions). Les autorisations au niveau de la base de données (telles que **Select** dans une table ou **Execute** sur une procédure) sont disponibles pour les principaux au niveau de la base de données (utilisateurs et rôles de base de données).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Autorisations implicites et explicites  
-Une *autorisation explicite* est une autorisation **GRANT** ou **DENY** donnée à un principal par une instruction **GRANT** ou **DENY**. Autorisations de niveau de base de données sont répertoriées dans le [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) vue. Les autorisations au niveau du serveur sont répertoriées dans le [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vue.  
+Une *autorisation explicite* est une autorisation **GRANT** ou **DENY** donnée à un principal par une instruction **GRANT** ou **DENY**. Les autorisations au niveau de la base de données sont répertoriées dans la vue [sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Les autorisations au niveau du serveur sont répertoriées dans la vue [sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .  
   
-Un *autorisation implicite* est un **GRANT** ou **DENY** autorisation une entité de sécurité (rôle de serveur ou la connexion) a hérité. Une autorisation peut être héritée de plusieurs manières.  
+Une *autorisation implicite* est une autorisation **Grant** ou **Deny** qu’un principal (connexion ou rôle de serveur) a hérité. Une autorisation peut être héritée des manières suivantes.  
   
--   Un principal peut hériter une autorisation à partir d’un rôle si l’entité est membre du rôle, même si l’entité de sécurité n’a pas explicite **GRANT** ou **DENY** autorisation.  
+-   Un principal peut hériter d’une autorisation d’un rôle si le principal est membre du rôle même si le principal ne dispose pas d’une autorisation **Grant** ou **Deny** explicite.  
   
--   Un principal peut hériter une autorisation sur un objet subordonné (par exemple, une table) si le principal possède une autorisation sur l’une des portées parent objets (par exemple, le schéma de la table ou l’autorisation sur la base de données entière).  
+-   Un principal peut hériter d’une autorisation sur un objet subordonné (par exemple, une table) si le principal a une autorisation sur l’une des étendues parentes des objets (par exemple, le schéma de la table ou l’autorisation sur l’ensemble de la base de données).  
   
--   Un principal peut hériter d’une autorisation en demandant une autorisation qui inclut une autorisation subordonnée. Par exemple le **ALTER ANY USER** autorisation inclut les deux valeurs le **CREATE USER** et le **modifier un utilisateur ON ::** _<name>_ autorisations.  
+-   Un principal peut hériter d’une autorisation en ayant une autorisation qui comprend une autorisation subordonnée. Par exemple, l’autorisation **ALTER ANY User** comprend les autorisations **Create User** et **ALTER on User ::** _<name>_ Permissions.  
   
-### <a name="determining-permissions-when-performing-actions"></a>Détermination des autorisations lors de l’exécution des Actions  
-Le processus permettant de déterminer quelle autorisation d’affecter à une entité de sécurité est complexe. La complexité se produit lors de la détermination des autorisations implicites, car ces principaux peuvent être membres de plusieurs rôles et autorisations peuvent être passées à travers plusieurs niveaux dans la hiérarchie des rôles.  
+### <a name="determining-permissions-when-performing-actions"></a>Détermination des autorisations lors de l’exécution d’actions  
+Le processus de détermination de l’autorisation à assigner à un principal est complexe. La complexité se produit lors de la détermination des autorisations implicites, car les principaux peuvent être membres de plusieurs rôles et les autorisations peuvent être transmises via plusieurs niveaux dans la hiérarchie des rôles.  
   
-La liste suivante décrit les règles générales pour la détermination des autorisations :  
+La liste suivante décrit les règles générales permettant de déterminer les autorisations :  
   
 -   La propriété implique l’autorisation.  
   
-    Un propriétaire d’objets a toutes les autorisations sur l’objet. De même, un propriétaire de base de données a toutes les autorisations sur la base de données et toutes les autorisations sur les objets dans la base de données. Ces autorisations ne peuvent pas être modifiées.  
+    Un propriétaire d’objet dispose de toutes les autorisations sur l’objet. De même, le propriétaire d’une base de données dispose de toutes les autorisations sur la base de données et de toutes les autorisations sur les objets de la base de données. Ces autorisations ne peuvent pas être modifiées.  
   
--   Les autorisations peuvent être héritées sur plusieurs niveaux dans la hiérarchie des appartenances au rôle de serveur.  
+-   Les autorisations peuvent être héritées sur plusieurs niveaux dans la hiérarchie des appartenances aux rôles de serveur.  
   
-    Par exemple, supposons que vous avez la situation suivante :  
+    Supposons, par exemple, que vous ayez la situation suivante :  
   
-    -   David de connexion est membre du rôle de base de données PerfAnalysts.  
+    -   La connexion David est membre du rôle de base de données PerfAnalysts.  
   
-    -   PerfAnalysts est un membre du rôle de base de données Production.  
+    -   PerfAnalysts est membre de la production du rôle de base de données.  
   
-    -   David et PerfAnalysts n’ont pas **sélectionnez** autorisation sur la table Customer. L’autorisation a été révoquée ou jamais explicitement accordée.  
+    -   David et PerfAnalysts ne disposent pas de l’autorisation **Select** sur la table Customer. L’autorisation a été révoquée ou n’a jamais été explicitement accordée.  
   
-    -   Production a **sélectionnez** autorisation sur la table Customer.  
+    -   La production dispose d’une autorisation **Select** sur la table Customer.  
   
-    Dans ce cas, PerfAnalysts héritera **GRANT** hériteront des autorisations sur la table Customer de Production et David **GRANT** autorisation sur la table Customer de la Production.  
+    Dans ce cas, PerfAnalysts hérite de l’autorisation **Grant** sur la table Customer de production, et David hérite de l’autorisation **Grant** sur la table Customer de production.  
   
--   **DENY** substitue **GRANT** lorsque les autorisations sont en conflit.  
+-   **Deny** remplace les autorisations **lorsque des** autorisations sont en conflit.  
   
-    Par exemple, supposons que la connexion David dispose d’aucune autorisation sur la table Customer et est membre des deux rôles de base de données-dbgroup1, ce qui a **DENY** autorisation sur la table Customer et dbgroup2, qui a **GRANT** autorisation sur la table Customer. Dans ce cas, David hériteront le **DENY** autorisation sur la table Customer. C’est le cas si les rôles acquise leurs autorisations explicitement ou implicitement.  
+    Par exemple, supposons que la connexion David n’ait pas d’autorisations sur la table Customer et qu’elle est membre de deux rôles de base de données : dbgroup1, qui a l’autorisation **Deny** sur la table Customer et dbgroup2, qui dispose de l’autorisation **Grant** sur la table Customer. Dans ce cas, David héritera de l’autorisation **Deny** sur la table Customer. C’est le cas si les rôles ont obtenu leurs autorisations de manière explicite ou implicite.  
   
-### <a name="auditing-permissions"></a>L’audit des autorisations  
-Pour effectuer des recherches sur les autorisations d’un utilisateur de vérifier les points suivants.  
+### <a name="auditing-permissions"></a>Audit des autorisations  
+Pour rechercher les autorisations d’un utilisateur, vérifiez les éléments suivants.  
   
--   Exécutez la requête suivante pour déterminer quelles connexions sont des administrateurs système.  
+-   Exécutez la requête suivante pour déterminer les connexions qui sont des administrateurs système.  
   
     ```sql  
     SELECT SPLogins.name, 'is a member of ', SPRoles.name   
@@ -139,7 +140,7 @@ Pour effectuer des recherches sur les autorisations d’un utilisateur de vérif
         ON SRM.member_principal_id = SPLogins.principal_id;  
     ```  
   
--   Exécutez la requête suivante pour déterminer les connexions qui disposent d’autorisations explicites.  
+-   Exécutez la requête suivante pour déterminer les connexions qui ont reçu des autorisations explicites.  
   
     ```sql  
     SELECT name, 'has the ', state_desc , permission_name, ' permission'  
@@ -148,7 +149,7 @@ Pour effectuer des recherches sur les autorisations d’un utilisateur de vérif
         ON SP.grantee_principal_id = SPRoles.principal_id;  
     ```  
   
--   Exécutez la requête suivante dans une base de données utilisateur pour déterminer quels utilisateurs de base de données sont membres d’un rôle de base de données.  
+-   Exécutez la requête suivante dans une base de données utilisateur pour déterminer les utilisateurs de base de données qui sont membres d’un rôle de base de données.  
   
     ```sql  
     SELECT DPUsers.name, 'is a member of ', DPRoles.name    
@@ -159,7 +160,7 @@ Pour effectuer des recherches sur les autorisations d’un utilisateur de vérif
         ON DRM.member_principal_id = DPUsers.principal_id;  
     ```  
   
--   Exécutez la requête suivante dans une base de données utilisateur pour déterminer les utilisateurs de base de données et les rôles ont été accordés ou refusés des autorisations spécifiques. Vous devrez les affichages des requêtes supplémentaires tels que sys.objects et sys.schemas pour identifier les éléments décrits avec la major_id.  
+-   Exécutez la requête suivante dans une base de données utilisateur pour déterminer les utilisateurs et les rôles de base de données auxquels des autorisations spécifiques ont été accordées ou refusées. Vous devez interroger des vues supplémentaires telles que sys. Objects et sys. schemas pour identifier les éléments décrits avec l’major_id.  
   
     ```sql  
     SELECT DPUsers.name, 'has the ', permission_name,   
@@ -169,22 +170,22 @@ Pour effectuer des recherches sur les autorisations d’un utilisateur de vérif
         ON DP.grantee_principal_id = DPUsers.principal_id;  
     ```  
   
-## <a name="RestoreProc"></a>Meilleures pratiques de base de données autorisations  
+## <a name="RestoreProc"></a>Meilleures pratiques relatives aux autorisations de base de données  
   
--   Accorder des autorisations au niveau granulaire au plus pratique. L’octroi d’autorisations à la table ou des autorisations au niveau d’affichage peut devenir ingérables. Mais accorder des autorisations au niveau de la base de données peut être trop permissives. Si la base de données est conçue avec des schémas pour définir les limites de travail, par exemple l’octroi de l’autorisation au schéma est un compromis approprié entre le niveau de la table et le niveau de base de données.  
+-   Accordez des autorisations au niveau le plus granulaire qui est pratique. L’octroi d’autorisations au niveau de la table ou de la vue peut devenir impossible à gérer. Toutefois, l’octroi d’autorisations au niveau de la base de données peut être trop permissif. Si la base de données est conçue avec des schémas pour définir des limites de travail, peut-être que l’autorisation accordée au schéma est un compromis approprié entre le niveau de la table et le niveau de la base de données.  
   
--   Accorder des autorisations aux rôles plutôt qu’à des utilisateurs ou des connexions. Gestion des droits à l’aide de rôles au lieu d’utilisateurs facilite la rapidement accorder ou révoquer un jeu d’autorisations pour un utilisateur ou d’une connexion en les déplaçant vers ou à partir du rôle. Quand une fonction passe à partir d’une personne à l’autre, les autorisations peuvent rester intactes au niveau du rôle pendant les modifications de l’appartenance au rôle.  
+-   Accordez des autorisations à des rôles, plutôt qu’à des utilisateurs ou à des connexions. La gestion des droits à l’aide de rôles au lieu des utilisateurs permet d’accorder ou de révoquer rapidement un ensemble d’autorisations pour un utilisateur ou une connexion en les déplaçant dans ou en dehors du rôle. Lorsqu’une fonction passe d’une personne à une autre, les autorisations peuvent rester intactes au niveau du rôle pendant que l’appartenance au rôle change.  
   
--   Accorder des autorisations aux rôles basés sur la fonction et sur les rôles de groupes de niveau supérieurs qui combinent les rôles de fonction de travail basés sur le groupe d’entreprise en effectuant les actions.  
+-   Accordez des autorisations aux rôles en fonction de la fonction et sur des rôles de groupe de niveau supérieur qui combinent les rôles de fonction de travail en fonction du groupe d’entreprise effectuant les actions.  
   
--   Tous les utilisateurs finaux doivent avoir une connexion unique. Ne permettent pas aux utilisateurs de partager des connexions. En fournissant une connexion pour chaque utilisateur garantit une piste d’audit et simplifie la gestion des autorisations.  
+-   Chaque utilisateur final doit avoir une connexion unique. N’autorisez pas les utilisateurs à partager des connexions. Fournir une connexion pour chaque utilisateur garantit une piste d’audit et simplifie la gestion des autorisations.  
   
 ## <a name="fixed-database-roles"></a>Rôles de base de données fixes
-SQL Server fournit des rôles de niveau de base de données (fixes) préconfigurés pour vous aider à gérer les autorisations sur un serveur. Les rôles préconfigurés ont été résolus dans la mesure où vous ne pouvez pas modifier les autorisations affectées. Rôles de base de données défini par l’utilisateur peuvent également être créés. Vous pouvez modifier les autorisations affectées aux rôles de base de données défini par l’utilisateur.  
+SQL Server fournit des rôles préconfigurés au niveau de la base de données pour vous aider à gérer les autorisations sur un serveur. Les rôles préconfigurés sont résolus, car vous ne pouvez pas modifier les autorisations qui leur sont attribuées. Des rôles de base de données définis par l’utilisateur peuvent également être créés. Vous pouvez modifier les autorisations affectées aux rôles de base de données définis par l’utilisateur.  
   
-Les rôles sont des entités de sécurité qui regroupent d’autres principaux. Rôles de base de données sont à l’échelle de la base de données dans leur étendue des autorisations. Les utilisateurs de base de données et d’autres rôles de base de données peuvent être ajoutés en tant que membres des rôles de base de données. Les rôles de base de données fixe ne peut pas être ajoutés entre eux. (Les*rôles* sont semblables aux *groupes* du système d’exploitation Microsoft Windows.)  
+Les rôles sont des principaux de sécurité qui regroupent d’autres principaux. Les rôles de base de données sont à l’échelle de la base de données dans leur étendue d’autorisations. Les utilisateurs de base de données et autres rôles de base de données peuvent être ajoutés en tant que membres des rôles de base de données. Les rôles de base de données fixes ne peuvent pas être ajoutés les uns aux autres. (Les*rôles* sont semblables aux *groupes* du système d’exploitation Microsoft Windows.)  
   
-Il existe des rôles de base de données fixe 9.  
+Il existe 9 rôles de base de données fixes.  
   
 -   **db_owner**  
   
@@ -204,21 +205,21 @@ Il existe des rôles de base de données fixe 9.
   
 -   **db_denydatareader**  
   
-### <a name="permissions-of-the-fixed-database-roles"></a>Autorisations des rôles de base de données fixe  
-Le système de rôles serveur fixes et rôles de base de données fixe est un système hérité provient dans les années 80. Rôles fixes sont toujours pris en charge et sont utiles dans les environnements où il existe peu d’utilisateurs et les besoins de sécurité sont simples. À compter de SQL Server 2005, un système plus détaillé de l’octroi d’autorisation a été créé. Ce nouveau système est plus granulaire, en fournissant de nombreuses autres options pour l’octroi et refus d’autorisations. La complexité supplémentaire du système plus précis, il est plus difficile à apprendre, mais la plupart des systèmes d’entreprise doivent accorder des autorisations au lieu d’utiliser les rôles fixes. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md). -->Le graphique suivant montre les autorisations qui sont associées à chaque rôle de base de données fixe. Toutes les autorisations dans ce graphique de SQL Server ne sont pas disponibles (ou nécessaire) dans les points d’accès.  
+### <a name="permissions-of-the-fixed-database-roles"></a>Autorisations des rôles de base de données fixes  
+Le système des rôles serveur fixes et des rôles de base de données fixes est un système hérité issu des versions 1980. Les rôles fixes sont toujours pris en charge et sont utiles dans les environnements où il y a peu d’utilisateurs et les besoins en matière de sécurité sont simples. À partir de SQL Server 2005, un système plus détaillé d’octroi d’autorisation a été créé. Ce nouveau système est plus granulaire et offre de nombreuses autres options pour accorder et refuser des autorisations. La complexité supplémentaire du système plus granulaire rend plus difficile l’apprentissage, mais la plupart des systèmes d’entreprise doivent accorder des autorisations au lieu d’utiliser les rôles fixes. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md). -->Le graphique suivant montre les autorisations associées à chaque rôle de base de données fixe. Toutes les autorisations de ce graphique SQL Server ne sont pas disponibles (ou nécessaires) dans APS.  
   
-![Rôles de base de données fixé de sécurité APS](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
+![Rôles de base de données fixes de sécurité APS](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
   
-### <a name="related-content"></a>Contenu associé  
+### <a name="related-content"></a>Contenu connexe  
   
--   Pour créer des rôles définis par l’utilisateur, consultez [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md).  
+-   Pour créer des rôles définis par l’utilisateur, voir [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md).  
   
   
 ## <a name="fixed-server-roles"></a>Rôles serveur fixes
-Rôles serveur fixes sont créés automatiquement par SQL Server. SQL Server PDW a une implémentation limitée de rôles serveur fixes de SQL Server. Uniquement les **sysadmin** et **public** compte de connexion utilisateur en tant que membres. Le **setupadmin** et **dbcreator** sont utilisés en interne par SQL Server PDW. Membres supplémentaires ne peuvent pas être ajoutés ou supprimés à partir de n’importe quel rôle.  
+Les rôles serveur fixes sont créés automatiquement par SQL Server. SQL Server PDW a une implémentation limitée de SQL Server rôles serveur fixes. Seuls les utilisateurs **sysadmin** et **public** ont des connexions utilisateur en tant que membres. Les rôles **setupadmin** et **dbcreator** sont utilisés en interne par SQL Server PDW. Des membres supplémentaires ne peuvent pas être ajoutés ou supprimés d’un rôle.  
   
-### <a name="sysadmin-fixed-server-role"></a>sysadmin rôle serveur fixe  
-Les membres du rôle serveur fixe **sysadmin** peuvent effectuer n’importe quelle activité sur le serveur. Le **sa** connexion est le seul membre de la **sysadmin** rôle serveur fixe. Impossible d’ajouter des connexions supplémentaires à la **sysadmin** rôle serveur fixe. L’accord de l’autorisation**CONTROL SERVER** s’apparente à une appartenance au rôle serveur fixe **sysadmin**. L’exemple suivant accorde la **CONTROL SERVER** autorisation à une connexion nommée Fay.  
+### <a name="sysadmin-fixed-server-role"></a>Rôle serveur fixe sysadmin  
+Les membres du rôle serveur fixe **sysadmin** peuvent effectuer n’importe quelle activité sur le serveur. La connexion **sa** est le seul membre du rôle serveur fixe **sysadmin** . Impossible d’ajouter des connexions supplémentaires au rôle serveur fixe **sysadmin** . L’accord de l’autorisation**CONTROL SERVER** s’apparente à une appartenance au rôle serveur fixe **sysadmin**. L’exemple suivant accorde l’autorisation **Control Server** à une connexion nommée Fay.  
   
 ```sql  
 USE master;  
@@ -227,16 +228,16 @@ GRANT CONTROL SERVER TO Fay;
 ```  
   
 > [!IMPORTANT]  
-> Le **CONTROL SERVER** autorisation fournit un contrôle presque complète de SQL Server PDW. Autant que possible, fournissez les autorisations plus précises pour les connexions à la place. Par exemple, envisagez d’accorder le **VIEW SERVER STATE**, **ALTER ANY LOGIN**, **VIEW ANY DATABASE**, ou **CREATE ANY DATABASE** autorisations.  
+> L’autorisation **Control Server** fournit un contrôle presque complet de SQL Server PDW. Dans la mesure du possible, fournissez des autorisations plus granulaires aux connexions à la place. Par exemple, envisagez d’accorder l' **État du serveur d’affichage**, de **modifier une connexion**, d' **afficher une base de données**ou de **créer des autorisations de base de données** .  
   
-### <a name="public-server-role"></a>Rôle serveur public  
-Chaque nom de connexion peut se connecter à SQL Server PDW est un membre de la **public** rôle de serveur. Toutes les connexions héritent des autorisations accordées à **public** sur n’importe quel objet. Affecter uniquement **public** autorisations sur un objet lorsque vous souhaitez que l’objet soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance à la **public** rôle.  
+### <a name="public-server-role"></a>Rôle de serveur public  
+Chaque connexion qui peut se connecter à SQL Server PDW est membre du rôle serveur **public** . Toutes les connexions héritent des autorisations accordées à **public** sur n’importe quel objet. Affectez uniquement des autorisations **publiques** à un objet lorsque vous souhaitez que l’objet soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance au rôle **public** .  
   
 > [!NOTE]  
-> **public** est implémenté différemment des autres rôles. Étant donné que tous les principaux de serveur sont membres du public, l’appartenance de le **public** rôle n’est pas répertorié dans le **sys.server_role_members** DMV.  
+> **public** est implémenté différemment des autres rôles. Étant donné que tous les principaux de serveur sont membres de public, l’appartenance du rôle **public** n’est pas répertoriée dans la DMV **sys. server_role_members** .  
   
-### <a name="fixed-server-roles-vs-granting-permissions"></a>Visual Studio de rôles de serveur fixe. Octroi d’autorisations  
-Le système de rôles serveur fixes et rôles de base de données fixe est un système hérité provient dans les années 80. Rôles fixes sont toujours pris en charge et sont utiles dans les environnements où il existe peu d’utilisateurs et les besoins de sécurité sont simples. À compter de SQL Server 2005, un système plus détaillé de l’octroi d’autorisation a été créé. Ce nouveau système est plus granulaire, en fournissant de nombreuses autres options pour l’octroi et refus d’autorisations. La complexité supplémentaire du système plus précis, il est plus difficile à apprendre, mais la plupart des systèmes d’entreprise doivent accorder des autorisations au lieu d’utiliser les rôles fixes. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->  
+### <a name="fixed-server-roles-vs-granting-permissions"></a>Rôles serveur fixes et octroi d’autorisations  
+Le système des rôles serveur fixes et des rôles de base de données fixes est un système hérité issu des versions 1980. Les rôles fixes sont toujours pris en charge et sont utiles dans les environnements où il y a peu d’utilisateurs et les besoins en matière de sécurité sont simples. À partir de SQL Server 2005, un système plus détaillé d’octroi d’autorisation a été créé. Ce nouveau système est plus granulaire et offre de nombreuses autres options pour accorder et refuser des autorisations. La complexité supplémentaire du système plus granulaire rend plus difficile l’apprentissage, mais la plupart des systèmes d’entreprise doivent accorder des autorisations au lieu d’utiliser les rôles fixes. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->  
   
 ## <a name="related-topics"></a>Rubriques connexes  
   
