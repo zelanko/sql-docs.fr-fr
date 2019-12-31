@@ -10,15 +10,15 @@ helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011549"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957158"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurer la clé principale du service
   Cette rubrique explique comment restaurer la clé principale de service dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -28,17 +28,17 @@ ms.locfileid: "63011549"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Sécurité](#Security)  
+     [Caution](#Security)  
   
--   [Pour restaurer la clé principale de service à l'aide de Transact-SQL](#SSMSProcedure)  
+-   [Pour restaurer la clé principale du service à l’aide de Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="Restrictions"></a>Limitations et restrictions  
   
 -   Lorsque la clé principale de service est restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés et les secrets qui ont été chiffrés au moyen de la clé principale de service en cours, puis les chiffre au moyen de la clé principale de service chargée à partir du fichier de sauvegarde.  
   
@@ -49,22 +49,22 @@ ms.locfileid: "63011549"
 > [!CAUTION]  
 >  La clé principale de service représente la racine de la hiérarchie de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La clé principale de service sécurise de manière directe ou indirecte toutes les autres clés de l'arborescence. Si une clé dépendante ne peut pas être déchiffrée au cours d'une restauration forcée, les données sécurisées par cette clé sont perdues.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="SSMSProcedure"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>Pour restaurer la clé principale du service  
   
 1.  Récupérez une copie de la clé principale du service sauvegardée, à partir d'un support de sauvegarde physique ou d'un répertoire sur le système de fichiers local.  
   
-2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+3.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
   
-4.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+4.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
   
     ```  
     -- Restores the service master key from a backup file.  

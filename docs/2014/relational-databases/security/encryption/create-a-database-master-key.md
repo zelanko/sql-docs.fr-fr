@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 757b6c62d63da2b8f1fa33e5d704d7a2c4fabd38
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978369"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957243"
 ---
 # <a name="create-a-database-master-key"></a>Créer une clé principale de base de données
 
@@ -25,28 +25,28 @@ Cette rubrique explique comment créer une clé principale de base de données `
 
 **Dans cette rubrique**
 
-- **Avant de commencer :**
+- **Avant de commencer :**
 
-  [Sécurité](#Security)
+  [Caution](#Security)
 
-- [Pour créer une clé principale de base de données à l'aide de Transact-SQL](#TsqlProcedure)
+- [Pour créer une clé principale de base de données à l’aide de Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Avant de commencer
+## <a name="BeforeYouBegin"></a>Avant de commencer
 
-### <a name="Security"></a> Sécurité
+### <a name="Security"></a>Caution
 
-#### <a name="Permissions"></a> Autorisations
+#### <a name="Permissions"></a>Autorisations
 
 Requiert l'autorisation CONTROL sur la base de données.
 
-## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+## <a name="TsqlProcedure"></a>Utilisation de Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Pour créer une clé principale de base de données
 
 1. Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données.
-2. Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
-3. Développez **bases de données système**, cliquez `master` avec le bouton droit sur, puis cliquez sur **nouvelle requête**.
-4. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.
+2. Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
+3. Développez **Bases de données système**, cliquez avec le bouton droit sur `master`, puis cliquez sur **Nouvelle requête**.
+4. Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.
 
   ```sql
   -- Creates the master key.

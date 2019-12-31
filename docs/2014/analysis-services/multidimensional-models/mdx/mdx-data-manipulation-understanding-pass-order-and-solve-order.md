@@ -1,5 +1,5 @@
 ---
-title: Ordre de passage de comprendre et résoudre Order (MDX) | Microsoft Docs
+title: Comprendre l’ordre de passage et l’ordre de résolution (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 39e1c4ae6de01be55bf94f60e06c7979765f1b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074236"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229428"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Présentation des concepts d'ordre de passage et d'ordre de résolution (MDX)
   Lorsqu'un cube est calculé dans le cadre d'un script MDX, il peut subir de nombreuses étapes de calcul, en fonction de l'utilisation de diverses fonctionnalités liées au calcul. Chacune de ces étapes porte le nom de test de calcul.  
@@ -37,7 +37,7 @@ ms.locfileid: "66074236"
 ## <a name="solve-order"></a>Ordre de résolution  
  L'ordre de résolution détermine la priorité de calcul en cas de concurrence entre des expressions. Au sein d'un même test de calcul, l'ordre de résolution détermine deux choses :  
   
--   l’ordre dans lequel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue les dimensions, les membres, les membres calculés, les cumuls personnalisés et les cellules calculées ;  
+-   Ordre dans lequel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue les dimensions, les membres, les membres calculés, les cumuls personnalisés et les cellules calculées.  
   
 -   l’ordre dans lequel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue les membres personnalisés, les membres calculés, les cumuls personnalisés et les cellules calculées.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "66074236"
  Afin d'illustrer la complexité potentielle de l'ordre de résolution, la série suivante de requêtes MDX commence par deux requêtes qui ne présentent individuellement aucun problème d'ordre de résolution. Ces deux requêtes sont ensuite combinées dans une requête qui nécessite un ordre de résolution.  
   
 > [!NOTE]  
->  Vous pouvez exécuter ces requêtes MDX sur l'exemple de base de données multidimensionnelles Adventure Works. Vous pouvez télécharger l’exemple de [modèles multidimensionnels AdventureWorks SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) à partir du site web Codeplex.  
+>  Vous pouvez exécuter ces requêtes MDX sur l'exemple de base de données multidimensionnelles Adventure Works. Vous pouvez télécharger l’exemple de [modèles multidimensionnels AdventureWorks SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) à partir du site web Codeplex.  
   
-### <a name="query-1-differences-in-income-and-expenses"></a>Requête 1-différences de revenus et les dépenses  
+### <a name="query-1-differences-in-income-and-expenses"></a>Requête 1-différences de revenus et de dépenses  
  Pour la première requête MDX, calculez la différence entre les ventes et les coûts pour chaque année en construisant une requête MDX simple semblable à l'exemple suivant :  
   
 ```  
@@ -92,9 +92,9 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Year Difference**|($20,160.56)|$2,878.06|  
+|**Différence d’année**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2-percentage-of-income-after-expenses"></a>Requête 2-pourcentage de revenus après dépenses  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Requête 2 : pourcentage de revenus après dépenses  
  Pour la seconde requête, calculez le pourcentage de revenus après dépenses pour chaque année à l'aide de la requête MDX suivante :  
   
 ```  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  La différence entre les jeux de résultats des deux requêtes provient de la différence d'emplacement du membre calculé. Dans la première requête, le membre calculé fait partie de l'axe ROWS, et non de l'axe COLUMNS illustré dans la deuxième requête. Cette différence d'emplacement devient importante dans la requête suivante, qui combine les deux membres calculés dans une même requête MDX.  
   
-### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Interroger la différence de l’année combinées de 3 et les calculs de revenu Net  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Requête 3 : différence entre l’année combinée et le calcul du revenu net  
  Dans cette dernière requête combinant les deux exemples précédents en une seule requête MDX, l'ordre de résolution devient important en raison des calculs à la fois sur les colonnes et sur les lignes. Pour vous assurer que les calculs sont effectués dans l'ordre approprié, utilisez le mot clé `SOLVE_ORDER` afin de définir l'ordre des calculs.  
   
  Le mot clé `SOLVE_ORDER` spécifie l'ordre de résolution des membres calculés dans une requête MDX ou une commande `CREATE MEMBER`. Les valeurs entières utilisées avec le mot clé `SOLVE_ORDER` sont relatives, elles n'ont pas besoin de commencer à zéro et n'ont pas besoin d'être consécutives. La valeur indique simplement à la requête MDX de calculer un membre en fonction des valeurs dérivées du calcul des membres ayant une valeur supérieure. Si un membre calculé est défini sans le mot clé `SOLVE_ORDER`, la valeur par défaut de ce membre calculé est zéro.  
@@ -149,13 +149,14 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- Dans cet exemple de requête MDX combinée, `Profit Margin` a l’ordre de résolution le plus élevé ; il est donc prioritaire quand les deux expressions interagissent. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue la cellule en question à l’aide de la formule `Profit Margin` . Le tableau suivant présente les résultats de ces calculs imbriqués.  
+ Dans cet exemple de requête MDX combinée, `Profit Margin` a l’ordre de résolution le plus élevé ; il est donc prioritaire quand les deux expressions interagissent. 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue la cellule en question à l’aide de la formule `Profit Margin` . Le tableau suivant présente les résultats de ces calculs imbriqués.  
   
 ||Internet Sales Amount|Internet Total Product Cost|Marge de bénéfice|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
+|**Différence d’année**|($20,160.56)|$2,878.06|114.28%|  
   
  Le résultat mentionné dans la cellule partagée est basé sur la formule de `Profit Margin`. Autrement dit, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calcule le résultat de la cellule partagée avec les données `Year Difference` , ce qui donne la formule suivante (le résultat est arrondi pour plus de clarté) :  
   
@@ -163,7 +164,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- ou Gestionnaire de configuration  
+ ou  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -195,7 +196,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Différence d’année**|($20,160.56)|$2,878.06|(0.15%)|  
   
  Comme cette requête utilise la formule `Year Difference` avec les données `Profit Margin` , la formule de la cellule partagée ressemble au calcul suivant :  
   
@@ -213,9 +214,8 @@ FROM [Adventure Works]
  L'ordre de résolution peut s'avérer très délicat à gérer, notamment dans les cubes qui contiennent de très nombreuses dimensions impliquant des membres calculés, des formules de cumul personnalisé ou des cellules calculées. Au moment où [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue une requête MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en compte les valeurs d'ordre de résolution de tous les éléments impliqués dans un test de calcul donné, y compris les dimensions du cube spécifié dans la requête MDX.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
- [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
- [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Manipulation de données &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
-  
+ [CalculationCurrentPass&#41;MDX &#40;](/sql/mdx/calculationcurrentpass-mdx)   
+ [CalculationPassValue&#41;MDX &#40;](/sql/mdx/calculationpassvalue-mdx)   
+ [Instruction CREATe MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [Manipulation de données &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
   

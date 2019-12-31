@@ -1,5 +1,5 @@
 ---
-title: sys. DM _cluster_endpoints (Transact-SQL) | Microsoft Docs
+title: sys. dm_cluster_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 05076a6b694ff5861c5a7862b1f8f913ddb67fd6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536172"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947064"
 ---
-# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. DM _cluster_endpoints (Transact-SQL)
+# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|Nom du service exposé en externe dans un cluster SQL Big Data. Identificateur unique du point de terminaison. Clé pour cette vue. N'accepte pas la valeur NULL. |  
 |description|`nvarchar(4000)`|Description du service. N'accepte pas la valeur NULL. |
-|point de terminaison|`sysname`|URL de point de terminaison ou attribut de connexion. N'accepte pas la valeur NULL. |
+|endpoint|`sysname`|URL de point de terminaison ou attribut de connexion. N'accepte pas la valeur NULL. |
 |protocol_desc|`sysname`|Description du protocole de point de terminaison |
 
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert l’autorisation `VIEW SERVER STATE`.
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.
 
 ## <a name="see-also"></a>Voir aussi
 
-Qu’est-ce que [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)](.. /.. /big-data-cluster/big-data-cluster-overview.md)?
+[Que sont [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)?

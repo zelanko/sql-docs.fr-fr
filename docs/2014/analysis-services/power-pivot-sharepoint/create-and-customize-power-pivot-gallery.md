@@ -10,31 +10,31 @@ ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "70874398"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229297"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
   La Galerie PowerPivot est un type de bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données PowerPivot.  
   
-##  <a name="bkmk_top"></a> Dans cette rubrique  
+##  <a name="bkmk_top"></a>Dans cette rubrique  
   
--   [Prérequis](#prereq)  
+-   [Conditions préalables](#prereq)  
   
--   [Vue d'ensemble](#overview)  
+-   [Vue](#overview)  
   
 -   [Créer la Galerie PowerPivot](#createlib)  
   
 -   [Personnaliser une bibliothèque Galerie PowerPivot](#customize)  
   
--   [Désactiver ou masquer le bouton Actualiser](#bkmk_hide_refresh_button)  
+-   [Désactiver ou masquer le bouton actualiser](#bkmk_hide_refresh_button)  
   
--   [Passer à la vue Galerie ou Théâtre](#switch)  
+-   [Basculer vers la vue théâtre ou Galerie](#switch)  
   
-##  <a name="prereq"></a> Conditions préalables requises  
+##  <a name="prereq"></a>Conditions préalables  
   
 -   Vous devez disposer de Silverlight. Silverlight peut être téléchargé et installé via Microsoft Update. Si vous affichez une bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à l'aide d'un navigateur qui ne dispose pas de Silverlight, cliquez sur le lien dans la page pour l'installer. Vous devez fermer le navigateur puis le rouvrir une fois que vous avez installé Silverlight.  
   
@@ -42,29 +42,32 @@ ms.locfileid: "70874398"
     >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
     > Pour afficher le contenu de la bibliothèque dans Microsoft Edge, cliquez sur l’onglet **bibliothèque** dans Power Pivot Galerie, puis remplacez la vue de la bibliothèque de documents par **tous les documents**.    
     > Pour modifier l’affichage par défaut, cliquez sur l’onglet **Bibliothèque** , puis sur Modifier l’affichage. Cliquez sur Définir cet affichage comme affichage par défaut, puis sur OK pour enregistrer l’affichage par défaut.  
-    >  Pour plus d’informations sur les éléments pris en charge par Microsoft Edge, consultez le blog Windows, [une pause du passé, partie 2 : dire adieu à ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Pour plus d’informations sur les éléments pris en charge par Microsoft Edge, consultez le blog Windows, [une pause du passé, partie 2 : dire adieu à ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Vous devez être propriétaire de site pour créer une bibliothèque.  
   
 -   Vous devez disposer d'autorisations Collaboration ou supérieures pour publier ou télécharger un fichier.  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne doit pas être située dans un site sensible. Le site parent qui contient la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être ajouté dans la zone sites de confiance ou Intranet local.  
+-   
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne doit pas être située dans un site sensible. Le site parent qui contient la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être ajouté dans la zone sites de confiance ou Intranet local.  
   
 -   La solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être déployée pour votre application et la fonctionnalité [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être activée pour la collection de sites. Pour plus d’informations, consultez [déployer des solutions PowerPivot sur SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) et[activer l’intégration des fonctionnalités PowerPivot pour les collections de sites dans l’administration centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Pour être en mesure d'afficher ou de créer un rapport Reporting Services basé sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez installer le classeur et le rapport dans la même bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le rapport doit utiliser un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui contient des données incorporées ou le classeur doit contenir au plus une source de données externe qui est un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-##  <a name="overview"></a> Vue d'ensemble  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un modèle de bibliothèque disponible lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] sur un serveur SharePoint. La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combine un aperçu exact du contenu du fichier avec les informations relatives à l'origine du document. Vous pouvez voir immédiatement qui a créé le document et quand il a été modifié pour la dernière fois. Pour créer des images d'aperçu, la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] utilise un service d'instantanés capable de lire les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et les rapports Reporting Services qui contiennent des données PowerPivot. Si vous publiez un fichier que le service d'instantanés ne peut pas lire, aucune image d'aperçu n'est disponible pour ce fichier.  
+##  <a name="overview"></a>Vue  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un modèle de bibliothèque disponible lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] sur un serveur SharePoint. La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combine un aperçu exact du contenu du fichier avec les informations relatives à l'origine du document. Vous pouvez voir immédiatement qui a créé le document et quand il a été modifié pour la dernière fois. Pour créer des images d'aperçu, la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] utilise un service d'instantanés capable de lire les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et les rapports Reporting Services qui contiennent des données PowerPivot. Si vous publiez un fichier que le service d'instantanés ne peut pas lire, aucune image d'aperçu n'est disponible pour ce fichier.  
   
  Les images d'aperçu reposent sur la façon dont le classeur est restitué par Excel Services. La représentation dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être identique à celle que vous voyez quand vous affichez un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un navigateur. L'aperçu a cependant une surface d'exposition limitée. Les parties d'un classeur ou rapport peuvent être réduites de façon à s'ajuster à l'espace disponible. Vous devrez peut-être ouvrir un classeur ou un rapport pour visualiser le document dans son intégralité.  
   
  L'actualisation des données de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à partir de sources de données externes est pleinement prise en charge dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais requiert une configuration supplémentaire. Un administrateur de batterie ou de service doit ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en tant qu'emplacement approuvé Excel Services. Pour plus d'informations, consultez [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a>Créer la Galerie PowerPivot  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est créée automatiquement lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] à l'aide de l'option d'installation Nouveau serveur. Si vous avez ajouté [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à une batterie de serveurs existante ou si vous voulez disposer d'une bibliothèque supplémentaire, vous pouvez en créer une pour votre application ou votre site.  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est créée automatiquement lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] à l'aide de l'option d'installation Nouveau serveur. Si vous avez ajouté [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à une batterie de serveurs existante ou si vous voulez disposer d'une bibliothèque supplémentaire, vous pouvez en créer une pour votre application ou votre site.  
   
-1.  1.  **SharePoint 2010**: cliquez sur **Actions du site** dans l'angle supérieur gauche de la page d'accueil de votre site.  
+1.  1.  **SharePoint 2010**: cliquez sur **actions du site** dans l’angle supérieur gauche de la page d’hébergement de votre site.  
   
     2.  Cliquez sur **Autres options**.  
   
@@ -87,7 +90,8 @@ ms.locfileid: "70874398"
  Vous pouvez créer des bibliothèques [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] supplémentaires si vous appliquez des autorisations différentes pour des collections de sites ou des sites individuels.  
   
 ##  <a name="customize"></a>Personnaliser une bibliothèque Galerie PowerPivot  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint. Par conséquent, vous pouvez utiliser les outils de bibliothèque standard de SharePoint pour modifier les paramètres de la bibliothèque ou pour manipuler les documents de la bibliothèque. Vous pouvez personnaliser indépendamment chaque bibliothèque que vous créez afin qu'elle utilise des paramètres de bibliothèque ou de vue spécifiques.  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint. Par conséquent, vous pouvez utiliser les outils de bibliothèque standard de SharePoint pour modifier les paramètres de la bibliothèque ou pour manipuler les documents de la bibliothèque. Vous pouvez personnaliser indépendamment chaque bibliothèque que vous créez afin qu'elle utilise des paramètres de bibliothèque ou de vue spécifiques.  
   
  Il est possible de modifier l'ordre de tri et les filtres afin que les classeurs s'affichent différemment dans la liste. Par défaut, les documents apparaissent dans l'ordre dans lequel ils ont été ajoutés (le dernier document publié s'affiche au bas de la liste). Une fois qu'un document a été publié, son emplacement dans la liste ne change pas. Si un document est mis à jour ou publié de nouveau, son emplacement dans la liste est mis à jour.  
   
@@ -98,15 +102,16 @@ ms.locfileid: "70874398"
  Vous ne pouvez pas modifier les paramètres qui contrôlent les informations d'origine des documents. Les informations fournies sur les documents, telles que l'auteur de l'ajout ou de la dernière modification du classeur, sont déterminées par un ensemble fixe de colonnes qu'il est impossible de modifier.  
   
 #### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>Modifier l'ordre de tri, ajouter des filtres ou limiter le nombre de documents  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] affiche toujours les valeurs « Dernière modification » et « Créé par ». Vous ne pouvez pas désactiver ces colonnes. Vous ne pouvez pas activer d'autres colonnes pour la bibliothèque. Utilisez les instructions suivantes pour modifier l'ordre de tri, ajouter un filtre ou limiter le nombre de documents visibles.  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] affiche toujours les valeurs « Dernière modification » et « Créé par ». Vous ne pouvez pas désactiver ces colonnes. Vous ne pouvez pas activer d'autres colonnes pour la bibliothèque. Utilisez les instructions suivantes pour modifier l'ordre de tri, ajouter un filtre ou limiter le nombre de documents visibles.  
   
 1.  Dans un site SharePoint, ouvrez la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 2.  Dans le ruban, cliquez sur **Bibliothèque**.  
   
-3.  **SharePoint 2010 :** dans Affichages personnalisés, cliquez sur **Modifier cet affichage**.  
+3.  **SharePoint 2010 :** Dans affichages personnalisés, cliquez sur **modifier cet affichage**.  
   
-     **SharePoint 2013 :** dans **Gérer les affichages**, cliquez sur **Modifier cet affichage**.  
+     **SharePoint 2013 :** Dans **gérer les affichages**, cliquez sur **modifier l’affichage**.  
   
 4.  Dans Tri, spécifiez les critères à utiliser pour déterminer le mode d'affichage des classeurs dans la liste. Par défaut, les documents apparaissent dans l'ordre dans lequel ils ont été ajoutés.  
   
@@ -116,7 +121,7 @@ ms.locfileid: "70874398"
   
 7.  Cliquez sur **OK** pour enregistrer vos modifications.  
   
-####  <a name="bkmk_hide_refresh_button"></a> Désactiver ou masquer le bouton Actualiser  
+####  <a name="bkmk_hide_refresh_button"></a>Désactiver ou masquer le bouton actualiser  
  Vous ne pouvez pas masquer le bouton **Gérer l'actualisation des données** . Toutefois, le bouton est désactivé si l'utilisateur ne dispose pas d'autorisations suffisantes.  
   
  ![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
@@ -125,14 +130,14 @@ ms.locfileid: "70874398"
   
  Ainsi, les utilisateurs qui disposent uniquement des niveaux d'autorisation **Affichage** ou **Lecture** ne pourront pas accéder au bouton Actualiser. Le bouton Actualiser est visible mais est désactivé. Pour plus d'informations, consultez [Autorisations utilisateur et niveaux d'autorisation dans SharePoint 2013](https://technet.microsoft.com/library/cc721640.aspx).  
   
-##  <a name="switch"></a> Passer à la vue Galerie ou Théâtre  
+##  <a name="switch"></a>Basculer vers la vue théâtre ou Galerie  
  L'aperçu varie selon la façon dont vous configurez la vue pour la bibliothèque. Avec la vue Galerie, vous pouvez placer le pointeur de la souris sur une feuille de calcul spécifique dans le classeur pour placer le focus sur cette feuille dans la zone d'aperçu.  
   
  ![GMNI_ReportGallery](../media/gmni-reportgallery.gif "GMNI_ReportGallery")  
   
  Le tableau suivant décrit les différentes mises en page pour la présentation des croquis miniatures de chaque page affichée en aperçu :  
   
-|Afficher|Description|  
+|Affichage|Description|  
 |----------|-----------------|  
 |Vue Galerie (valeur par défaut)|Galerie constitue la vue par défaut pour une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'aperçu s'affiche à gauche. Des miniatures plus petites de chaque feuille de calcul s'affichent en regard de celui-ci, en ordre séquentiel de gauche à droite.|  
 |Tous les documents|Il s'agit de la mise en page standard pour les bibliothèques de documents. Vous pouvez choisir cette vue pour gérer des documents individuels ou afficher le contenu de bibliothèques sous forme de liste.<br /><br /> Utilisez cette vue pour modifier des propriétés ou pour supprimer ou déplacer des documents.<br /><br /> Si vous avez activé le contrôle de version, vous devez utiliser cette vue pour archiver des documents dans la bibliothèque ou les en extraire.|  
@@ -147,9 +152,8 @@ ms.locfileid: "70874398"
 3.  Dans Gérer les affichages, sous Affichage actuel, sélectionnez la vue que vous voulez utiliser dans la liste. Les vues prédéfinies sont les suivantes : Galerie, Théâtre et Carrousel. Vous pouvez également choisir Tous les documents si vous souhaitez déplacer, supprimer ou gérer des documents dans la bibliothèque.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résoudre les problèmes liés à une Installation PowerPivot pour SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [Résoudre les problèmes d’une installation PowerPivot pour SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
  [Utiliser la Galerie PowerPivot](use-power-pivot-gallery.md)   
  [Créer un emplacement approuvé pour les sites PowerPivot dans l’administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Supprimer une Galerie PowerPivot](delete-power-pivot-gallery.md)  
-  
+ [Supprimer une bibliothèque PowerPivot](delete-power-pivot-gallery.md)  
   

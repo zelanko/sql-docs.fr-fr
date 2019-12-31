@@ -9,32 +9,32 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011557"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957153"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurer une clé principale de base de données
   Cette rubrique décrit la restauration de la clé principale de base de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Sécurité](#Security)  
+     [Caution](#Security)  
   
--   [Pour restaurer la clé principale de base de donnée à l'aide de Transact-SQL](#SSMSProcedure)  
+-   [Pour restaurer la clé principale de base de données à l’aide de Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="Restrictions"></a>Limitations et restrictions  
   
 -   Une fois la clé principale restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés chiffrées au moyen de la clé principale active, puis chiffre ces clés au moyen de la clé principale restaurée. Cette opération gourmande en ressources doit être planifiée au cours d'une période de faible demande. Si la clé principale de base de données en cours n'est pas ouverte ou ne peut pas être ouverte, ou si une clé chiffrée à l'aide de cette clé principale ne peut pas être déchiffrée, l'opération de restauration échoue.  
   
@@ -44,22 +44,22 @@ ms.locfileid: "63011557"
   
 -   S'il n'existe aucune clé principale dans la base de données en cours, l'instruction RESTORE MASTER KEY crée une clé principale. La nouvelle clé principale n'est pas automatiquement chiffrée au moyen de la clé principale du service.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio avec Transact-SQL  
+##  <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio avec Transact-SQL  
   
 #### <a name="to-restore-the-database-master-key"></a>Pour restaurer la clé principale de base de données  
   
 1.  Récupérez une copie de la clé principale de base de données sauvegardée, à partir d'un support de sauvegarde physique ou d'un répertoire sur le système de fichiers local.  
   
-2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+3.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
   
-4.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+4.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
   
     ```  
     -- Restores the database master key of the AdventureWorks2012 database.  

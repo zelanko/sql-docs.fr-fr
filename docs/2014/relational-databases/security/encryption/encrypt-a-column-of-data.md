@@ -10,32 +10,32 @@ helpviewer_keywords:
 - encryption [SQL Server], columns
 - cryptography [SQL Server], columns
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011654"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957200"
 ---
 # <a name="encrypt-a-column-of-data"></a>Chiffrer une colonne de données
   Cette rubrique explique comment chiffrer une colonne de données à l'aide du chiffrement symétrique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] avec [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
-     [Sécurité](#Security)  
+     [Caution](#Security)  
   
--   [Pour chiffrer une colonne de données à l'aide de Transact-SQL](#TsqlProcedure)  
+-   [Pour chiffrer une colonne de données à l’aide de Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="Security"></a>Caution  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a>Autorisations  
  Les autorisations suivantes sont nécessaires pour effectuer les étapes ci-dessous :  
   
 -   Autorisation CONTROL sur la base de données.  
@@ -46,15 +46,15 @@ ms.locfileid: "63011654"
   
 -   Autorisation sur la clé, et l'autorisation VIEW DEFINITION ne doit pas lui avoir été refusée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Pour chiffrer une colonne de données à l'aide d'un chiffrement symétrique simple  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+2.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -113,11 +113,11 @@ ms.locfileid: "63011654"
   
 #### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Pour chiffrer une colonne de données à l'aide du chiffrement symétrique qui inclut un authentificateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+2.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -174,14 +174,14 @@ ms.locfileid: "63011654"
     GO  
     ```  
   
- Pour plus d'informations, consultez les documents suivants :  
+ Pour plus d’informations, consultez les rubriques suivantes :   
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CRÉER un certificat &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CRÉER une clé symétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
 -   [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [OUVRIR la clé symétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

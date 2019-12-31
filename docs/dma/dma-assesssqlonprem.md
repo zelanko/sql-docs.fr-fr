@@ -3,7 +3,7 @@ title: Effectuer une évaluation de la migration SQL Server
 titleSuffix: Data Migration Assistant
 description: Découvrez comment utiliser Assistant Migration de données pour évaluer un SQL Server local avant de migrer vers un autre SQL Server ou Azure SQL Database
 ms.custom: seo-lt-2019
-ms.date: 08/08/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +15,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056631"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001904"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de la migration SQL Server avec Assistant Migration de données
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de migration SQL Server avec l’assistant Migration de données
 
 Les instructions pas à pas suivantes vous aident à effectuer la première évaluation de la migration vers des SQL Server locaux, SQL Server s’exécutant sur une machine virtuelle Azure, ou Azure SQL Database à l’aide de Assistant Migration de données.
+
+   > [!NOTE]
+   > Assistant Migration de données v 5.0 introduit la prise en charge de l’analyse de la connectivité de base de données et des requêtes SQL incorporées dans le code de l’application. Pour plus d’informations, consultez le billet de blog [Using Assistant Migration de données pour évaluer la couche d’accès aux données d’une application](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
 ## <a name="create-an-assessment"></a>Créer une évaluation
 
@@ -54,7 +57,7 @@ Les instructions pas à pas suivantes vous aident à effectuer la première éva
    Lors de l’évaluation de votre instance de SQL Server source pour la migration vers Azure SQL Database, vous pouvez choisir l’un des types de rapport d’évaluation suivants, ou les deux :
 
     - **Vérifier la compatibilité de la base de données**
-    - **Vérifier la parité des fonctionnalités**
+    - **Vérifier la parité de fonctionnalité**
 
     ![Sélectionner le type de rapport d’évaluation pour SQL Database cible](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
@@ -107,7 +110,7 @@ Les instructions pas à pas suivantes vous aident à effectuer la première éva
         go
     ```
 
-5. Cliquez sur **suivant** pour démarrer l’évaluation.
+5. Cliquez sur **Suivant** pour démarrer l’évaluation.
 
     ![Ajouter des sources et démarrer l’évaluation](../dma/media/dma-assesssqlonprem/select-database1.png)
 
@@ -129,19 +132,19 @@ Les recommandations relatives aux fonctionnalités couvrent différents types de
 
 ![Afficher les recommandations relatives aux fonctionnalités](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Par Azure SQL Database, les évaluations fournissent des problèmes de blocage de la migration et des problèmes de parité de fonctionnalité. Passez en revue les résultats des deux catégories en sélectionnant les options spécifiques.
+Par Azure SQL Database, les évaluations fournissent des problèmes de blocage de la migration et des problèmes de parité de fonctionnalité.Passez en revue les résultats des deux catégories en sélectionnant les options spécifiques.
 
 - La catégorie de **parité de fonctionnalité de SQL Server** fournit un ensemble complet de recommandations, d’approches alternatives disponibles dans Azure et d’atténuation des étapes. Il vous aide à planifier cet effort dans vos projets de migration.
 
   ![Afficher des informations sur SQL Server parité des fonctionnalités](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- La catégorie de **problèmes de compatibilité** fournit des fonctionnalités partiellement prises en charge ou non prises en charge qui bloquent la migration de bases de données SQL Serveres locales vers des bases de données SQL Azure. Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
+- La catégorie de **problèmes de compatibilité** fournit des fonctionnalités partiellement prises en charge ou non prises en charge qui bloquent la migration de bases de données SQL Serveres locales vers des bases de données SQL Azure.Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
 
   ![Afficher les problèmes de compatibilité](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>Évaluer un patrimoine de données pour la préparation cible
 
-Si vous souhaitez étendre davantage ces évaluations à l’ensemble de l’espace de données et rechercher la disponibilité relative de SQL Server instances et de bases de données pour la migration vers Azure SQL Database, téléchargez les résultats dans le Hub Azure Migrate en sélectionnant **Télécharger sur Azure Migrate**.
+Si vous souhaitez étendre davantage ces évaluations à l’ensemble de l’espace de données et rechercher la disponibilité relative de SQL Server instances et de bases de données pour la migration vers Azure SQL Database, téléchargez les résultats dans le Hub Azure Migrate en sélectionnant **Télécharger pour Azure Migrate**.
 
 Cela vous permet d’afficher les résultats consolidés sur le projet Azure Migrate Hub.
 
@@ -153,4 +156,4 @@ Des instructions pas à pas détaillées sur les évaluations de la disponibilit
 
 Une fois que toutes les bases de données ont terminé l’évaluation, sélectionnez **Exporter le rapport** pour exporter les résultats vers un fichier JSON ou un fichier CSV. Vous pouvez ensuite analyser les données à votre convenance.
 
-Vous pouvez exécuter plusieurs évaluations simultanément et afficher l’état des évaluations en ouvrant la page **toutes les évaluations** .
+Vous pouvez exécuter plusieurs évaluations simultanément et afficher l’état des évaluations en ouvrant la page **All Assessments** (Toutes les évaluations).

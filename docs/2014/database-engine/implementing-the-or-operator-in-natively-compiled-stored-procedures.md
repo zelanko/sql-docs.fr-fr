@@ -1,5 +1,5 @@
 ---
-title: Implémentation de l’opérateur OR opérateur dans les procédures stockées compilées en mode natif | Microsoft Docs
+title: Implémentation de l’opérateur OR dans les procédures stockées compilées en mode natif | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62778910"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228208"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implémentation de l'opérateur OR dans les procédures stockées compilées en mode natif
   Les opérateurs OR ne sont pas pris en charge dans les prédicats de requête des procédures stockées compilées en mode natif. Les opérateurs NOT n'étant pas pris en charge non plus dans les prédicats de requête des procédures stockées compilées en mode natif, les effets des opérateurs OR ne peuvent pas être simulés en utilisant uniquement des opérateurs logiques équivalents. Toutefois, les effets d'un opérateur OR peuvent être simulés avec des variables de table mémoire optimisée.  
@@ -46,7 +46,7 @@ ms.locfileid: "62778910"
   
 5.  Utilisez le contenu de la variable de table mémoire optimisée comme résultat de la requête.  
   
- L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, goto [bases de données AdventureWorks - 2012, 2008R2 et 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] code échantillon à AdventureWorks2012, accédez à [exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, accédez à [bases de données AdventureWorks-2012, 2008R2 et 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] l’exemple de code à AdventureWorks2012, accédez à [SQL Server exemple d’OLTP en mémoire 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Ajoutez la procédure stockée suivante à la base de données. Nous convertirons cette procédure stockée pour utiliser la compilation native.  
   
@@ -161,7 +161,7 @@ GO
   
 5.  Utilisez le contenu de la variable de table mémoire optimisée comme résultat de la requête.  
   
- L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, goto [bases de données AdventureWorks - 2012, 2008R2 et 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] code échantillon à AdventureWorks2012, accédez à [exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, accédez à [bases de données AdventureWorks-2012, 2008R2 et 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] l’exemple de code à AdventureWorks2012, accédez à [SQL Server exemple d’OLTP en mémoire 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Ajoutez la procédure stockée suivante à la base de données. Nous convertirons cette procédure stockée pour utiliser la compilation native. Cet exemple utilise des conditions INNER JOIN.  
   
@@ -247,5 +247,4 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de migration pour les procédures stockées compilées en mode natif](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-  
   

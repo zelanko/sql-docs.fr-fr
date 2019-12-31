@@ -13,17 +13,18 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011456"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957210"
 ---
-# <a name="encryption-hierarchy"></a>Hiérarchie de chiffrement
+# <a name="encryption-hierarchy"></a>Encryption Hierarchy
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiffre les données avec un chiffrement hiérarchique et une infrastructure de gestion des clés. Chaque couche chiffre la couche qui se trouve en dessous d'elle à l'aide d'une combinaison de certificats, de clés asymétriques et de clés symétriques. Les clés asymétriques et les clés symétriques peuvent être stockées hors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un module de gestion de clés extensible (EKM, Extensible Key Management).  
   
  L'illustration suivante montre que chaque couche de la hiérarchie de chiffrement chiffre la couche qui se trouve en dessous d'elle, et affiche les configurations de chiffrement les plus communes. L'accès au sommet de la hiérarchie est généralement protégé par un mot de passe.  
@@ -55,9 +56,10 @@ ms.locfileid: "63011456"
 -   Les clés symétriques et asymétriques du module EKM peuvent protéger l'accès aux clés symétriques et asymétriques stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La ligne en pointillés associée à EKM indique que les clés du module EKM pourraient remplacer les clés symétriques et asymétriques stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="encryption-mechanisms"></a>Mécanismes de chiffrement  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit les mécanismes de chiffrement suivants :  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit les mécanismes de chiffrement suivants :  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] fonctions  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)]Mission  
   
 -   Clés asymétriques  
   
@@ -65,10 +67,10 @@ ms.locfileid: "63011456"
   
 -   Certificats  
   
--   chiffrement transparent des données  
+-   Chiffrement transparent des données  
   
 ### <a name="transact-sql-functions"></a>Fonctions Transact-SQL  
- Des éléments individuels peuvent être chiffrés dès leur insertion ou mise à jour à l’aide de fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Pour plus d’informations, consultez [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql) et [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql).  
+ Des éléments individuels peuvent être chiffrés dès leur insertion ou mise à jour à l’aide de fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Pour plus d’informations, consultez [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql) et [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql).  
   
 ### <a name="certificates"></a>Certificats  
  Un certificat de clé publique, généralement appelé simplement un certificat, est une instruction signée numériquement qui lie la valeur d'une clé publique à l'identité de la personne, de la machine ou du service qui contient la clé privée correspondante. Les certificats sont émis et signés par une autorité de certification. L'entité qui reçoit un certificat d'une autorité de certification est le sujet de ce certificat. En général, les certificats contiennent les informations suivantes.  
@@ -101,16 +103,16 @@ ms.locfileid: "63011456"
 ### <a name="symmetric-keys"></a>Clés symétriques  
  Une clé symétrique est une clé qui est utilisée pour le chiffrement et le déchiffrement. Une clé symétrique permet d'effectuer un chiffrement et un déchiffrement rapides, particulièrement adaptés à l'utilisation courante des données sensibles de la base de données.  
   
-### <a name="transparent-data-encryption"></a>chiffrement transparent des données  
- Le chiffrement transparent des données est un cas spécial de chiffrement à l'aide d'une clé symétrique. L'ensemble de la base de données est chiffré à l'aide de cette clé symétrique, appelée clé de chiffrement de base de données. La clé de chiffrement de base de données est protégée par d'autres clés ou certificats qui sont eux-mêmes protégés par la clé principale de base de données ou par une clé asymétrique stockée dans un module EKM. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
+### <a name="transparent-data-encryption"></a>Chiffrement transparent des données  
+ Le chiffrement transparent des données est un cas spécial de chiffrement à l'aide d'une clé symétrique. L'ensemble de la base de données est chiffré à l'aide de cette clé symétrique, appelée clé de chiffrement de base de données. La clé de chiffrement de base de données est protégée par d'autres clés ou certificats qui sont eux-mêmes protégés par la clé principale de base de données ou par une clé asymétrique stockée dans un module EKM. Pour plus d’informations, consultez [Chiffrement transparent des données &#40;TDE&#41;](transparent-data-encryption.md).  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
  [Sécurisation de SQL Server](../securing-sql-server.md)  
   
- [Fonctions de sécurité &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
+ [Fonctions de sécurité &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hiérarchie des autorisations &#40;moteur de base de données&#41;](../permissions-hierarchy-database-engine.md)   
+ [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../permissions-hierarchy-database-engine.md)   
  [Éléments sécurisables](../securables.md)  
   
   

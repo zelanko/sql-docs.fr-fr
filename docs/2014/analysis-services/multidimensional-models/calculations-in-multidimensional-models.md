@@ -1,7 +1,7 @@
 ---
 title: Calculs dans les modèles multidimensionnels | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 12/10/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -21,12 +21,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ecc0e4c4b2f5fdc1d6cad7ad068d9a1da440393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 838e3a8d2df72d1589fdf76198671fee571e2e62
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046625"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229421"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Calculs dans les modèles multidimensionnels
   Utilisez l’onglet **Calculs** du Concepteur de cube pour créer des membres calculés, des jeux nommés et d’autres calculs MDX (Multidimensional Expressions).  
@@ -40,13 +40,13 @@ ms.locfileid: "67046625"
 -   Le volet des expressions de calcul prend en charge un mode Formulaire et un mode Script.  
   
 > [!NOTE]  
->  Pour plus d’informations sur l’écriture de scripts MDX, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)et consultez la section ressources supplémentaires sur le [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) page sur le Site Web Microsoft TechNet. Pour plus d’informations sur les problèmes de performance liés à la conception de cubes, consultez le [Guide des performances SQL Server 2005 Analysis Services](http://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
+>  Pour plus d’informations sur les scripts MDX, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)et consultez la section ressources supplémentaires sur la page [SQL Server 2005-Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) sur le site Web Microsoft TechNet. Pour plus d’informations sur les problèmes de performance liés à la conception de cubes, consultez le [Guide des performances SQL Server 2005 Analysis Services](https://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
   
 ## <a name="creating-a-new-calculation"></a>Création d'un nouveau calcul  
  Pour créer un calcul, sous l’onglet **Calculs** du Concepteur de Cube, dans le menu **Cube** , cliquez sur **Nouveau membre calculé**, **Nouveau jeu nommé**ou **Nouvelle commande de script**, en fonction du type de calcul à créer. Vous pouvez également soit cliquer sur l’un des boutons correspondants dans la barre d’outils, soit cliquer avec le bouton droit n’importe où dans le volet **Organisateur de script** et cliquer ensuite sur l’une des commandes du menu contextuel. Cette action ajoute un nouveau calcul au volet **Organisateur de script** et affiche les champs correspondants dans le formulaire de calcul dans le volet des expressions de calcul. Si vous créez un nouveau script, cette action ouvre le mode Script dans le volet des expressions de calcul. Pour plus d’informations sur la création des trois types de calculs, consultez [Créer des membres calculés](create-calculated-members.md), [Créer des jeux nommés](create-named-sets.md)et [Définir des attributions et d’autres commandes de script](define-assignments-and-other-script-commands.md).  
   
 ## <a name="editing-scripts"></a>Modification des scripts  
- Pour modifier des scripts, utilisez le volet des expressions de calcul de l’onglet **Calculs** . Le volet des expressions de calcul propose deux modes d'affichage : un mode Script et un mode Formulaire. Le mode Formulaire affiche les expressions et les propriétés d'une commande unique. Lorsque vous modifiez un script MDX, une zone d'expression remplit entièrement la vue Formulaire.  
+ Modifiez les scripts dans le volet des expressions de calcul de l’onglet **calculs** . Le volet des expressions de calcul propose deux modes d’affichage : le mode script et le mode formulaire. Le mode Formulaire affiche les expressions et les propriétés d'une commande unique. Lorsque vous modifiez un script MDX, une zone d'expression remplit entièrement la vue Formulaire.  
   
  Le mode Script fournit un éditeur de code dans lequel vous pouvez modifier les scripts. Tant que le volet des expressions de calcul est en mode Script, le volet **Organisateur de script** est masqué. Le mode Script offre un codage en couleurs, un appariement des parenthèses, une saisie semi-automatique et des régions de code MDX. Les régions de code MDX peuvent être réduites ou développées pour faciliter la modification.  
   

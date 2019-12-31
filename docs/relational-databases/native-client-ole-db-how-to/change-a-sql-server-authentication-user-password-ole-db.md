@@ -1,5 +1,5 @@
 ---
-title: Changer un mot de passe utilisateur pour l’authentification SQL Server (OLE DB) | Microsoft Docs
+title: Mot de passe de l’utilisateur de l’authentification SQL (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b157b95fe7175fb36bf7f1e064eca2179f571e38
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 768aff63d6b1faeecc0bba555fad0f598c9015a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790146"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226165"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Modifier un mot de passe utilisateur d'authentification SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "73790146"
   Cet exemple explique comment utiliser OLE DB pour modifier le mot de passe d'un compte d'utilisateur sous Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Exemple  
  Avant la génération, mettez à jour le code C++ pour spécifier l'ID d'utilisateur, l’ancien mot de passe et le nouveau mot de passe.  
@@ -37,7 +37,7 @@ ms.locfileid: "73790146"
   
  Le serveur sur lequel vous exécutez cet exemple doit avoir au moins une connexion activée pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le serveur doit également autoriser les connexions d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
