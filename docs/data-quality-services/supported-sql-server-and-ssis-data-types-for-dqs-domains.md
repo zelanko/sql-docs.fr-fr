@@ -1,5 +1,7 @@
 ---
 title: Types de données SQL Server et SSIS pris en charge pour les domaines DQS
+description: Décrit les quatre types de données pour les domaines Data Quality Services (DQS) (données, Decimal, Integer et String) dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257770"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558165"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Types de données SQL Server et SSIS pris en charge pour les domaines DQS
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257770"
 > [!NOTE]  
 >  Dans les fichiers .xlsx et .xls, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes. Si une cellule n'est pas conforme à ce type de données, elle recevra une valeur NULL. De la même manière, dans les fichiers .csv, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes.  
   
-##  <a name="SQLServer"></a>Types de données SQL Server pris en charge  
+##  <a name="SQLServer"></a>Types de données SQL Server pris en charge 
  Le tableau suivant fournit des informations sur les types de données SQL Server pris en charge pour chaque type de données de domaine DQS :  
   
 |Type de données de domaine DQS|Type de données SQL Server pris en charge|  

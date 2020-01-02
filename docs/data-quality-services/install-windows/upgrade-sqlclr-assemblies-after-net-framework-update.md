@@ -1,5 +1,7 @@
 ---
-title: Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework
+title: Mettre à niveau les assemblys SQLCLR après la mise à jour .NET Framework
+description: Découvrez comment mettre à jour les assemblys SQLCLR utilisés par SQL Server Data Quality Services (DQS) une fois que vous avez mis à jour le .NET Framework.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ce898b31a3fa964a57492987f70356c18fd2964
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 623fbf69ef49ceb7dfea7f2d9c6e96b7520ded3e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252800"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558081"
 ---
-# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework
+# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Mettre à niveau des assemblys SQLCLR après la mise à jour du .NET Framework
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

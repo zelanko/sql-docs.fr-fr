@@ -1,5 +1,7 @@
 ---
-title: Importer les domaines d'un fichier Excel dans la découverte des connaissances
+title: Importer des domaines à partir d’un fichier Excel dans la découverte des connaissances
+description: Découvrez comment importer des domaines à partir d’un fichier Excel au cours de la découverte des connaissances pour SQL Server Data Quality Services (DQS)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 38907f70b5da4d96028833c033a3c41724c47862
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 35f5c02e7206c6a9117b31c9ca9b503fb7b6875f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241790"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557954"
 ---
-# <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importer les domaines d'un fichier Excel dans la découverte des connaissances
+# <a name="import-domains-from-an-excel-file-in-knowledge-discovery---data-quality-services-dqs"></a>Importer des domaines à partir d’un fichier Excel dans Knowledge Discovery-Data Quality Services (DQS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

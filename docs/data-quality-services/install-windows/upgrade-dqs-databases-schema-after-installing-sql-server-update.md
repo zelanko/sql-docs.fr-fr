@@ -1,5 +1,7 @@
 ---
-title: Mettre à niveau le schéma des bases de données DQS après avoir installé la mise à jour SQL Server
+title: Mettre à niveau le schéma des bases de données DQS après l’installation de SQL Server Update
+description: Apprenez à mettre à niveau l’instance de Data Quality Services (DQS) à l’aide de fichier DQSInstaller. exe après que SQL Server a été mis à jour par un correctif, un correctif ou une mise à jour cumulative.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 17151ed7f20070b7db042b0bc7e7af31bc64b80e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252808"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558049"
 ---
-# <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Mettre à niveau le schéma des bases de données DQS après avoir installé la mise à jour SQL Server
+# <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Mettre à niveau le schéma des bases de données DQS après l’installation de SQL Server Update
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
