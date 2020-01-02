@@ -1,5 +1,5 @@
 ---
-title: Paramètres de sortie de diffusion en continu la prise en charge pour l’objet BLOB | Microsoft Docs
+title: Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
