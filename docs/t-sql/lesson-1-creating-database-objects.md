@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632906"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257026"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Leçon 1 : créer et interroger des objets de base de données
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,21 +84,21 @@ Dans une fenêtre Éditeur de requêtes, tapez et exécutez le code suivant pour
   ```  
   
 ### <a name="create-the-table"></a>Créer la table
-Dans une fenêtre Éditeur de requêtes, tapez et exécutez le code suivant pour créer une simple table nommée `Products`. Les colonnes de la table sont nommées `ProductID`, `ProductName`, `Price`, et `ProductDescription`. La colonne `ProductID` est la clé primaire de la table. `int`, `varchar(25)`, `money`et `text` sont tous des types de données. Seules les colonnes `Price` et `ProductionDescription` peuvent n'avoir aucune données lors de l'insertion ou de la modification d'une ligne. Cette instruction contient un élément facultatif (`dbo.`) appelé un schéma. Le schéma est l'objet de base de données qui est propriétaire de la table. Si vous êtes administrateur, `dbo` est le schéma par défaut. `dbo` représente le propriétaire de la base de données.  
+Dans une fenêtre Éditeur de requêtes, tapez et exécutez le code suivant pour créer une simple table nommée `Products`. Les colonnes de la table sont nommées `ProductID`, `ProductName`, `Price`, et `ProductDescription`. La colonne `ProductID` est la clé primaire de la table. `int`, `varchar(25)`, `money`et `varchar(max)` sont tous des types de données. Seules les colonnes `Price` et `ProductionDescription` peuvent n'avoir aucune données lors de l'insertion ou de la modification d'une ligne. Cette instruction contient un élément facultatif (`dbo.`) appelé un schéma. Le schéma est l'objet de base de données qui est propriétaire de la table. Si vous êtes administrateur, `dbo` est le schéma par défaut. `dbo` représente le propriétaire de la base de données.  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
 ## <a name="insert-and-update-data-in-a-table"></a>Insérer et mettre à jour des données dans une table
 Une fois que vous avez créé la table **Products** , vous pouvez insérer des données dans la table à l’aide de l’instruction INSERT. Une fois les données insérées, vous allez modifier le contenu d'une ligne à l'aide d'une l'instruction UPDATE. Vous allez utiliser la clause WHERE de l'instruction UPDATE pour restreindre la mise à jour à une seule ligne. Les quatre instructions entrent les données suivantes.  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|IDProduit|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  

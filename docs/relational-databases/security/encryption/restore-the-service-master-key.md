@@ -10,14 +10,14 @@ helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c16742fe161f947e6256537ce04f36f9a07a89a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111623"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957383"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurer la clé principale du service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Requiert l'autorisation CONTROL SERVER sur le serveur.
   
 1. Récupérez une copie de la clé principale du service sauvegardée, à partir d'un support de sauvegarde physique ou d'un répertoire sur le système de fichiers local.  
   
-2. Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2. Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

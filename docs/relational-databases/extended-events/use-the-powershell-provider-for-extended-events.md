@@ -1,6 +1,5 @@
 ---
-title: Utiliser le fournisseur PowerShell pour les événements étendus | Microsoft Docs
-ms.custom: ''
+title: Utiliser le fournisseur PowerShell pour les événements étendus
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009319"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242886"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
 
@@ -44,7 +43,7 @@ ms.locfileid: "68009319"
  Le fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un outil puissant que vous pouvez utiliser pour créer, modifier et gérer des sessions Événements étendus. La section suivante fournit quelques exemples simples d'utilisation de scripts PowerShell avec des Événements étendus.  
   
 ## <a name="examples"></a>Exemples  
- Dans les exemples ci-après, notez les éléments suivants :  
+ Dans les exemples ci-après, notez les éléments suivants :  
   
 -   Les scripts doivent être exécutés à partir de l’invite PS SQLSERVER:\\> (disponible en tapant **sqlps** en réponse à une invite de commandes).  
   

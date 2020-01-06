@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ccd283aaf10837baa76ad9bbc579e5e3c9860c22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 328a6e21d32bf5c0eaa029fcb0cf6586533cac19
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130401"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249784"
 ---
 # <a name="mathematical-functions-transact-sql"></a>Fonctions mathématiques (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Les fonctions scalaires suivantes effectuent un calcul, généralement basé sur les valeurs d'entrée fournies en tant qu'arguments, et retournent une valeur numérique :  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68130401"
 > [!NOTE]  
 >  Les fonctions arithmétiques telles que ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS et SIGN retournent une valeur du même type que la valeur d'entrée. Les fonctions trigonométriques et autres, y compris EXP, LOG, LOG10, SQUARE et SQRT, convertissent leurs valeurs d’entrée en valeurs **float** et renvoient une valeur **float**.  
   
- Toutes les fonctions mathématiques, à l'exception de RAND, sont déterministes. En d'autres termes, elles retournent le même résultat chaque fois qu'elles sont appelées avec un ensemble spécifique de valeurs d'entrée. RAND est déterministe uniquement lorsqu'une valeur de départ est spécifiée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Toutes les fonctions mathématiques, à l’exception de RAND, sont des fonctions déterministes. Cela signifie qu’elles retournent les mêmes résultats chaque fois qu’elles sont appelées avec un ensemble spécifique de valeurs d’entrée. RAND est déterministe uniquement lorsqu'une valeur de départ est spécifiée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
   [Opérateurs arithmétiques &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  

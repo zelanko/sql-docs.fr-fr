@@ -3,19 +3,19 @@ title: 'Tutoriel : Créer une extension'
 titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment créer une extension pour ajouter des fonctionnalités personnalisées à Azure Data Studio.
 ms.custom: seodec18
-ms.date: 09/24/2018
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: kevcunnane
-ms.author: kcunnane
-ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8a8481653f7161b39cc752878f4544f98751261
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959086"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241764"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutoriel : Créer une extension Azure Data Studio
 

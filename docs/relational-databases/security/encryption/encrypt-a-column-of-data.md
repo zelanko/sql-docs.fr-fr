@@ -13,15 +13,15 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902980"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957414"
 ---
 # <a name="encrypt-a-column-of-data"></a>Chiffrer une colonne de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Sauvegardez toujours votre clé principale de base de données. Pour plus d’in
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Pour chiffrer une colonne de données à l'aide du chiffrement symétrique qui inclut un authentificateur  
   
-1. Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -112,7 +112,7 @@ Sauvegardez toujours votre clé principale de base de données. Pour plus d’in
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Pour chiffrer une colonne de données à l'aide d'un chiffrement symétrique simple  
   
-1. Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -166,7 +166,7 @@ Sauvegardez toujours votre clé principale de base de données. Pour plus d’in
     GO  
     ```  
   
- Pour plus d'informations, consultez les documents suivants :  
+ Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   

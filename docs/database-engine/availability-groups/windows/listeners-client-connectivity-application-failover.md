@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020808"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228251"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "68020808"
   
      Vous pouvez configurer toutes les adresses IP d'écouteur de groupe de disponibilité en vue d'utiliser le protocole DHCP (Dynamic Host Configuration Protocol) si un groupe de disponibilité réside sur un même sous-réseau. Pour les environnements de préproduction, le protocole DHCP permet une installation facile pour un groupe de disponibilité qui n'a pas besoin de la fonctionnalité de récupération d'urgence vers un site distant sur un sous-réseau distinct. Toutefois, nous déconseillons d'utiliser DHCP en même temps qu'un écouteur de groupe de disponibilité dans un environnement de production. En effet, en cas d'arrêt du système, si le bail IP DHCP expire, il faudra consacrer du temps supplémentaire pour réinscrire la nouvelle adresse IP DHCP associée au nom DNS de l'écouteur. Ce temps supplémentaire va provoquer l'échec de la connexion cliente.  
   
--   Adresses IP statiques  
+-   Adresses IP statiques  
   
      Dans les environnements de production, nous conseillons que les écouteurs de groupe de disponibilité utilisent des adresses IP statiques. De plus, dans le cas où vos groupes de disponibilité s'étendent sur plusieurs sous-réseaux dans un domaine de plusieurs sous-réseaux, un écouteur de groupe de disponibilité doit utiliser des adresses IP statiques.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68020808"
  Pour utiliser un écouteur de groupe de disponibilité pour la connexion au réplica principal en vue de l'accès en lecture-écriture, la chaîne de connexion spécifie le nom DNS de l'écouteur de groupe de disponibilité.  Si un réplica principal de groupe de disponibilité se transforme en nouveau réplica, les connexions existantes qui utilisent le nom réseau d'un écouteur de groupe de disponibilité sont déconnectées.  Les nouvelles connexions à l'écouteur du groupe de disponibilité sont ensuite dirigées vers le nouveau réplica principal. Voici un exemple de chaîne de connexion de base pour le fournisseur ADO.NET (System.Data.SqlClient) :  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  Vous pouvez néanmoins choisir de référencer directement l'instance du nom SQL Server des réplicas principaux ou secondaires au lieu d'utiliser le nom du serveur de l'écouteur du groupe de disponibilité ; toutefois, si vous choisissez d'agir ainsi, les nouvelles connexions ne seront plus dirigées automatiquement vers le réplica principal actuel.  Vous perdrez également l'avantage du routage en lecture seule.  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Voici un exemple de chaîne de connexion pour le fournisseur ADO.NET (System.Data.SqlClient) qui indique l'intention d'application en lecture seule :  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  Dans cet exemple de chaîne de connexion, le client tente de se connecter à la base de données AdventureWorks par le biais d’un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l’écouteur du groupe de disponibilité écoute sur le port 1433).  La chaîne de connexion a la propriété **ApplicationIntent** définie sur **ReadOnly**, ce qui en fait une *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Voici un exemple de chaîne de connexion du fournisseur ADO.NET (System.Data.SqlClient) qui permet le basculement de plusieurs sous-réseaux :  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  L’option de connexion **MultiSubnetFailover** doit prendre la valeur **True** même si le groupe de disponibilité s’étend sur un seul sous-réseau.  Cela vous permet de préconfigurer de nouveaux clients afin de prendre en charge la future couverture de sous-réseaux, sans recourir à de futures modifications de la chaîne de connexion du client. Par ailleurs, cela permet d'optimiser les performances de basculement pour les basculements au sein d'un seul sous-réseau.  Alors que l’option de connexion **MultiSubnetFailover** n’est pas obligatoire, elle offre l’avantage d’un basculement de sous-réseau plus rapide.  Cela est dû au fait que le pilote client essaie d'ouvrir un socket TCP pour chaque adresse IP en parallèle associée au groupe de disponibilité.  Le pilote client attend une réponse correcte de la première adresse IP et, ceci fait, l'utilise pour la connexion.  

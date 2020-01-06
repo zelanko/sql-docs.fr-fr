@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907100"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190791"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ PROSE analyse les modèles de données dans votre fichier d’entrée pour dédu
 
 Pour mieux comprendre l’amélioration apportée à l’expérience utilisateur de l’Assistant Importation de fichier plat, regardez cette vidéo :
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 Cette fonctionnalité est uniquement disponible dans SQL Server Management Studio (SSMS) version 17.3 ou ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
@@ -67,24 +67,24 @@ Le nouveau nom de table doit être unique. S’il ne l’est pas, l’Assistant 
 
 ![Assistant - Spécification](media/import-flat-file-wizard/importffspecify.png)
 
-### <a name="step-3-preview-data"></a>Étape 3 : Aperçu des données
+### <a name="step-3-preview-data"></a>Étape 3 : Aperçu des données
 L’Assistant génère un aperçu où vous pouvez voir les 50 premières lignes. Si vous rencontrez des problèmes, cliquez sur Annuler, sinon passez à la page suivante.
 
 ![Assistant - Aperçu](media/import-flat-file-wizard/importffpreview.png)
 
-### <a name="step-4-modify-columns"></a>Étape 4 : Modifier les colonnes
+### <a name="step-4-modify-columns"></a>Étape 4 : Modifier les colonnes
 L’Assistant identifie ce qu’il pense être les bons noms de colonnes, de types de données, etc. Voici où vous pouvez modifier les champs s’ils sont incorrects (par exemple, le type de données doit être une valeur float et non une valeur int).
 
 Quand vous êtes prêt, poursuivez.
 
 ![Assistant - Modification](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>Étape 5 : Résumé
+### <a name="step-5-summary"></a>Étape 5 : Résumé
 Il s’agit simplement d’une page qui résume votre configuration actuelle. Si vous voyez des problèmes, vous pouvez revenir à des sections précédentes. Sinon, cliquez sur Terminer pour tenter le processus d’importation.
 
 ![Assistant - Résumé](media/import-flat-file-wizard/importffsummary.png)
 
-### <a name="step-6-results"></a>Étape 6 : Résultats
+### <a name="step-6-results"></a>Étape 6 : Résultats
 Cette page indique si l’importation a réussi. Si une coche verte s’affiche, elle a réussi. Dans le cas contraire, vous devrez peut-être rechercher des erreurs dans votre configuration ou votre fichier d’entrée.
 
 ![Assistant - Résultats](media/import-flat-file-wizard/importffresults.png)

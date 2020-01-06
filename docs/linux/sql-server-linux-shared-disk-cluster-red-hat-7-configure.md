@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809781"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252239"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -120,7 +120,7 @@ Il existe diverses solutions pour fournir un stockage partagé. Cette procédure
 
 Sur le serveur NFS, procédez comme suit :
 
-1. Installation de `nfs-utils`.
+1. Installer `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -175,7 +175,7 @@ Sur le serveur NFS, procédez comme suit :
 
 Procédez comme suit sur tous les nœuds de cluster.
 
-1.  Installation de `nfs-utils`.
+1.  Installer `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -202,7 +202,7 @@ Pour plus d'informations sur l’utilisation NFS, consultez les ressources suiva
 
 * [Serveurs NFS et pare-feu | Échange de pile](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montage d’un volume NFS | Guide des administrateurs réseau Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuration du serveur NFS | Portail client Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Configuration du serveur NFS | Portail client Red Hat](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Monter le répertoire des fichiers de base de données pour pointer vers le stockage partagé
 

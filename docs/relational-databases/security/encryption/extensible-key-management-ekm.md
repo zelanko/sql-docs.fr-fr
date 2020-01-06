@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148794"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957394"
 ---
 # <a name="extensible-key-management-ekm"></a>Gestion de clés extensible (EKM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "70148794"
  Quand vous exécutez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une machine virtuelle Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut utiliser des clés stockées dans [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401). Pour plus d’informations, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>Configuration EKM  
- La gestion de clés extensible n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ La gestion de clés extensible n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Par défaut, la gestion de clés extensible est désactivée. Pour activer cette fonctionnalité, utilisez la commande sp_configure avec l'option et la valeur suivantes, comme dans l'exemple ci-après :  
   
@@ -102,7 +102,7 @@ GO
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>Chiffrement et déchiffrement par un périphérique EKM  
  Vous pouvez utiliser les fonctions et fonctionnalités suivantes pour chiffrer et déchiffrer des données à l'aide des clés symétriques et asymétriques :  
   
-|Fonction ou fonctionnalité|Référence|  
+|Fonction ou fonctionnalité|Informations de référence|  
 |-------------------------|---------------|  
 |Chiffrement à clé symétrique|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-symmetric-key-transact-sql.md)|  
 |Chiffrement à clé asymétrique|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-asymmetric-key-transact-sql.md)|  

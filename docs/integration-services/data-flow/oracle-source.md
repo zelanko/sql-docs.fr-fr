@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545066"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542205"
 ---
 # <a name="oracle-source"></a>Source Oracle
 
@@ -52,9 +52,9 @@ Les propriétés personnalisées de la source Oracle sont les suivantes. Toutes 
 |Nom de la propriété|Type de données|Description|
 |:-|:-|:-|
 |AccessMode|Integer (énumération)|Mode utilisé pour accéder à la base de données. Les valeurs possibles sont **Nom de la table** et **Commande SQL**. La valeur par défaut est **Nom de la table**.|
-|BatchSize|Entier|Taille du lot pour le chargement en bloc. Il s'agit du nombre d'enregistrements extraits en tant que table. <br>Cette propriété est définie uniquement par l’**Éditeur avancé**.|
-|DefaultCodePage|Entier|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. <br>Cette propriété est définie uniquement par l’**Éditeur avancé**.|
-|PreFetchCount|Entier|Nombre de lignes prérécupérées. <br>Cette propriété est définie uniquement par l’**Éditeur avancé**.|
+|BatchSize|Integer|Taille du lot pour le chargement en bloc. Il s'agit du nombre d'enregistrements extraits en tant que table. <br>Cette propriété est définie uniquement par l’**Éditeur avancé**.|
+|DefaultCodePage|Integer|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. <br>Cette propriété est définie uniquement par l’**Éditeur avancé**.|
+|PreFetchCount|Integer|Nombre de lignes prérécupérées. <br>Cette propriété est définie uniquement par l’**Éditeur avancé**.|
 |SqlCommand|String|Commande SQL à exécuter lorsque la valeur d'AccessMode est Commande SQL.|
 |TableName|String|Nom de la table contenant les données à utiliser quand AccessMode a la valeur Nom de la table.|
 
@@ -108,7 +108,7 @@ Spécifiez la méthode de sélection des données dans la source. Ces fonctions 
 |Table ou vue|Permet de récupérer les données d’une table ou d’une vue dans la source de données Oracle. Quand cette option est sélectionnée, choisissez une table ou une vue disponible dans la liste pour **Nom de la table ou de la vue**.|
 |Commande SQL|Extrayez les données de la source de données Oracle à l’aide d’une requête SQL. Quand cette option est sélectionnée, entrez une requête de l’une des manières suivantes : <br>Entrez le texte de la requête SQL dans le champ **Texte de la commande SQL** . <br>Cliquez sur **Parcourir** pour charger la requête SQL à partir d'un fichier texte. <br>Pour vérifier la syntaxe du texte de la requête, cliquez sur **Analyser** .|
 
-**Aperçu**
+**Préversion**
 
 Cliquez sur **Aperçu** pour afficher les 200 premières lignes de données extraites de la table ou de la vue sélectionnée.
 
@@ -161,7 +161,7 @@ Utilisez la page **Sortie d’erreur** de la boîte de dialogue **Éditeur de so
 **Comportement d’erreur**
 
 Sélectionnez la façon dont la source Oracle doit gérer les erreurs dans un flux : ignorer l’échec, rediriger la ligne ou faire échouer le composant.
-**Section connexe** : [Gestion des erreurs dans les données](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Section connexe** : [Gestion des erreurs dans les données](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Troncation**
 

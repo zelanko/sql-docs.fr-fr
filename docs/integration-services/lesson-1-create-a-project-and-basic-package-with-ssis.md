@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296068"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257072"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Leçon 1 : Créer un projet et un package de base avec SSIS
 
@@ -35,7 +35,7 @@ Ce tutoriel s’appuie sur Microsoft SQL Server Data Tools, ensemble d’exemple
   
 * Pour télécharger tous les packages de leçons de ce tutoriel :
 
-    1.  Accédez aux [fichiers du tutoriel Integration Services](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+    1.  Accédez aux [fichiers du tutoriel Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).
 
     2.  Sélectionnez le bouton **Télécharger**.
 
@@ -66,12 +66,12 @@ Pour bien utiliser des données sources issues d’un fichier plat, il est impor
 ## <a name="look-at-the-destination-data"></a>Examiner les données de destination
 La destination des données sources est la copie de la table de faits **FactCurrencyRate** dans **AdventureWorksDW**. La table de faits **FactCurrencyRate** contient quatre colonnes et des relations avec deux tables de dimension, comme illustré ci-après.  
   
-|Nom de la colonne|Type de données|Table de recherche|Colonne de recherche|  
+|Nom de la colonne|Type de données|Table de recherche|colonne de recherche|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|float|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|EndOfDayRate|float|None|None|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>Mapper les données sources à la destination  
 Notre analyse du format des données sources et de destination indique que des recherches sont nécessaires pour les valeurs **CurrencyKey** et **DateKey**. Les transformations qui effectuent ces recherches obtiennent ces valeurs en utilisant les autres clés des tables de dimension **DimCurrency** et **DimDate**.  
@@ -81,7 +81,7 @@ Notre analyse du format des données sources et de destination indique que des r
 |0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Date|  
-|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
@@ -100,7 +100,7 @@ Cette leçon contient les tâches suivantes :
   
 -   [Étape 7 : Ajouter et configurer la destination OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Étape 8 : Annoter et mettre en forme le package de la leçon 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Étape 8 : Annoter et formater le package de la leçon 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [Étape 9 : Tester le package de la leçon 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   

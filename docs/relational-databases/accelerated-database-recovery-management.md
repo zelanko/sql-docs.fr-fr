@@ -1,10 +1,8 @@
 ---
 title: Récupération de base de données accélérée | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130538"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245262"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Gérer la récupération de base de données accélérée
 
@@ -84,10 +83,10 @@ Le changement d’emplacement du magasin de versions persistantes est un process
    Pour être en mesure d’activer la récupération de base de données accélérée avec un nouvel emplacement pour le magasin de versions persistantes, vous devez d’abord vérifier que toutes les informations des versions ont été éliminées de l’emplacement précédent du magasin de versions persistantes. Pour forcer le nettoyage, exécutez cette commande :
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   La procédure stockée `sys.sp_persistent_version_store_cleanup` est synchrone, ce qui signifie qu’elle ne se termine pas tant que toutes les informations des versions ne sont pas nettoyées dans le magasin de versions persistantes actuel.  Une fois l’opération terminée, vous pouvez vérifier que les informations des versions sont effectivement supprimées en interrogeant la vue de gestion dynamique `sys.dm_persistent_version_store_stats` et en examinant la valeur de `persistent_version_store_size_kb`.
+   La procédure stockée `sys.sp_persistent_version_cleanup` est synchrone, ce qui signifie qu’elle ne se termine pas tant que toutes les informations des versions ne sont pas nettoyées dans le magasin de versions persistantes actuel.  Une fois l’opération terminée, vous pouvez vérifier que les informations des versions sont effectivement supprimées en interrogeant la vue de gestion dynamique `sys.dm_persistent_version_store_stats` et en examinant la valeur de `persistent_version_store_size_kb`.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

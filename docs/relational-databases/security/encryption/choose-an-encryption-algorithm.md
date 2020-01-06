@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb559315f464f2bc6310140982cc1f62960d653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e73d0d6cdf244cfb9e08993c91737a14a1d2b24b
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997665"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957455"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Choisir un algorithme de chiffrement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "67997665"
 |Chiffrement à l'aide d'une clé symétrique.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-symmetric-key-transact-sql.md)|  
 |Chiffrement à l'aide d'une clé asymétrique.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-asymmetric-key-transact-sql.md)|  
 |Chiffrement à l'aide d'un certificat.|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)|  
-|Chiffrement de fichiers de base de données à l'aide du chiffrement transparent des données.|[Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)|  
+|Chiffrement de fichiers de base de données à l'aide du chiffrement transparent des données.|[Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)|  
 |Comment chiffrer une colonne d'une table.|[Chiffrer une colonne de données](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

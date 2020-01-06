@@ -12,15 +12,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a445da2fe9474fe5215edf5aa50d56dc252a812d
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: e3fea2c9fdd532385378e2c66af08eefd4804442
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632722"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957309"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../include
  [Always Encrypted &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
  Empêche les administrateurs de base de données locaux, les opérateurs de base de données cloud ou les autres utilisateurs dotés de privilèges élevés, mais non autorisés, d’accéder aux données chiffrées.  
   
- [Masquage dynamique des données](../../../relational-databases/security/dynamic-data-masking.md)  
+ [Dynamic Data Masking (masquage des données dynamiques)](../../../relational-databases/security/dynamic-data-masking.md)  
  Limite l’exposition des données sensibles en les masquant aux utilisateurs sans privilège.  
   
  [Certificats et clés asymétriques SQL Server](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  

@@ -1,21 +1,21 @@
 ---
-title: 'Démarrage rapide : Se connecter à et interroger Azure SQL Database'
+title: Se connecter à et interroger Azure SQL Database
 titleSuffix: Azure Data Studio
 description: Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à une base de données SQL et exécuter une requête
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959435"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957073"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Démarrage rapide : Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger la base de données Azure SQL
 
@@ -48,15 +48,15 @@ Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour établir une c
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nom du serveur** | Nom complet du serveur | Par exemple : **servername.database.windows.net**. |
    | **Authentification** | Connexion SQL| Ce didacticiel utilise l’authentification SQL. |
-   | **User name** | Le nom d’utilisateur du compte administrateur du serveur | Le nom d’utilisateur du compte utilisé pour créer le serveur. |
+   | **Nom d'utilisateur** | Le nom d’utilisateur du compte administrateur du serveur | Le nom d’utilisateur du compte utilisé pour créer le serveur. |
    | **Mot de passe (connexion SQL)** | Le mot de passe du compte administrateur du serveur | Le mot de passe du compte utilisé pour créer le serveur. |
-   | **Enregistrer le mot de passe** | Oui ou Non | Sélectionnez **Oui** si vous ne souhaitez pas entrer le mot de passe à chaque fois. |
+   | **Enregistrer le mot de passe ?** | Oui ou Non | Sélectionnez **Oui** si vous ne souhaitez pas entrer le mot de passe à chaque fois. |
    | **Nom de la base de données** | *laisser vide* | Vous vous connectez uniquement au serveur ici. |
    | **Groupe de serveurs** | Sélectionnez <Default> | Vous pouvez définir ce champ sur un groupe de serveurs spécifique que vous avez créé. | 
 
    ![Icône de nouvelle connexion](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Sélectionnez **Se connecter**.
+3. Sélectionnez **Connecter**.
 
 4. Si votre serveur ne dispose pas d’une règle de pare-feu autorisant Azure Data Studio à se connecter, le formulaire **Créer une règle de pare-feu** s’ouvre. Remplissez le formulaire pour créer une nouvelle règle de pare-feu. Pour plus d’informations, consultez [Règles de pare-feu](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
