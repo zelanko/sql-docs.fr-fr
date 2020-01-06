@@ -1,7 +1,7 @@
 ---
 title: 'Tutoriel : Créer et utiliser des index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement aléatoire | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3f5d85128dd242b9499b31ad928a00a17d2b5571
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592326"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258317"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutoriel : Créer et utiliser des index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement aléatoire
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -33,7 +33,7 @@ Ce didacticiel est la continuation du [Didacticiel : Prise en main d’Always E
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>Étape 1 : Activer la récupération accélérée de la base de données (ADR) dans votre base de données
 
-Microsoft recommande fortement d'activer ADR dans votre base de données avant de créer le premier index sur une colonne prenant en charge les enclaves à l’aide d’un chiffrement aléatoire. Consultez la section [Récupération de base de données](./encryption/always-encrypted-enclaves.md##database-recovery) dans [Always Encrypted avec enclaves sécurisées](./encryption/always-encrypted-enclaves.md).
+Microsoft recommande fortement d'activer ADR dans votre base de données avant de créer le premier index sur une colonne prenant en charge les enclaves à l’aide d’un chiffrement aléatoire. Consultez la section [Récupération de base de données](./encryption/always-encrypted-enclaves.md#database-recovery) dans [Always Encrypted avec enclaves sécurisées](./encryption/always-encrypted-enclaves.md).
 
 1. Fermez toutes les instances de SSMS utilisées dans le didacticiel précédent. Ceci permet de fermer les connexions de base de données que vous avez ouvert, ce qui est nécessaire pour activer ADR.
 1. Ouvrez une nouvelle instance de SSMS et connectez-vous à votre instance de SQL Server en tant que sysadmin **sans** Always Encrypted activé pour la connexion de base de données.
@@ -41,7 +41,7 @@ Microsoft recommande fortement d'activer ADR dans votre base de données avant d
     1. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez le nom de votre serveur, sélectionnez une méthode d’authentification et spécifiez vos informations d’identification.
     1. Cliquez sur **Options >>** et sélectionnez l’onglet **Always Encrypted**.
     1. Assurez-vous que la case **Activer Always Encrypted (chiffrement de colonne)** n’est **pas** cochée.
-    1. Sélectionnez **Se connecter**.
+    1. Sélectionnez **Connecter**.
 1. Ouvrez une nouvelle fenêtre de requête et exécutez l’instruction ci-dessous pour activer ADR.
 
    ```sql
@@ -57,7 +57,7 @@ Dans cette étape, vous allez créer et tester un index sur une colonne chiffré
    1. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez le nom de votre serveur, sélectionnez une méthode d’authentification et spécifiez vos informations d’identification.
    1. Cliquez sur **Options >>** et sélectionnez l’onglet **Always Encrypted**.
    1. Cochez la case **Activer Always Encrypted (chiffrement de colonne)** et spécifiez l’URL de votre attestation d’enclave (par exemple ht<span>tp://<   span>hgs.bastion.local/Attestation).
-   1. Sélectionnez **Se connecter**.
+   1. Sélectionnez **Connecter**.
    1. S’il vous est demandé d’activer le paramétrage des requêtes Always Encrypted, cliquez sur **Activer**.
 1. Si vous n’êtes pas invité à activer le Paramétrage pour Always Encrypted, vérifiez qu’il est activé.
    1. Sélectionnez **Outils** dans le menu principal de SSMS.
@@ -104,7 +104,7 @@ Dans cette étape, vous allez créer et tester un index sur une colonne chiffré
 
    1. Dans l’onglet **Statistiques des requêtes actives** (dans la partie inférieure de la fenêtre de requête), observez que la requête utilise l’index.
 
-## <a name="step-3-create-an-index-with-role-separation"></a>Étape 3 : Créer un index avec séparation des rôles
+## <a name="step-3-create-an-index-with-role-separation"></a>Étape 3 : Créer un index avec séparation des rôles
 
 Dans cette étape, vous allez créer un index sur une colonne chiffrée, prétendant être deux utilisateurs différents. Un utilisateur est un DBA, qui doit créer un index, mais n’a pas accès aux clés. L’autre utilisateur est un propriétaire de données, qui a accès aux clés.
 

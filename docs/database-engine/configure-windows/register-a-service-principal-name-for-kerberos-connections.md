@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f41567d5c27bfb1d77010d7e0d3fe187adf9a36c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892431"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257507"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Lorsque le service du [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il tente d'enregistrer le nom de principal du service (SPN). Si le compte qui démarre SQL Server n’a pas l’autorisation d’enregistrer un SPN dans les services de domaine Active Directory, cet appel échouera et un message d’avertissement sera consigné dans le journal des événements de l’application ainsi que dans le journal des erreurs SQL Server. Pour inscrire le SPN, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit s'exécuter sous un compte intégré, tel que Système local (non recommandé) ou SERVICE RÉSEAU, ou sous un compte qui a l'autorisation d'inscrire un SPN, tel qu'un compte d'administrateur de domaine. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le système d'exploitation  [!INCLUDE[win7](../../includes/win7-md.md)] ou  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , vous pouvez exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un compte virtuel ou d'un compte de service administré (MSA). Les comptes virtuels et les comptes de service administré peuvent inscrire un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s’exécute pas sous l’un de ces comptes, le SPN n’est pas inscrit lors du démarrage et l’administrateur de domaine doit l’inscrire manuellement.  
   
 > [!NOTE]  
->  Lorsque le domaine Windows est configuré pour s'exécuter à un niveau fonctionnel inférieur à celui de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , le compte de service administré n'a pas les autorisations nécessaires pour inscrire le SPN pour le service du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Si l'authentification Kerberos est requise, l'administrateur de domaine doit inscrire manuellement les SPN [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service administré.  
-  
- L’article de la Base de connaissances [How to use Kerberos authentication in SQL Server (Procédure d’utilisation de l’authentification Kerberos dans SQL Server)](https://support.microsoft.com/kb/319723)contient des informations sur la manière d’accorder une autorisation de lecture ou d’écriture à un SPN pour un compte qui n’est pas Administrateur de domaine.  
+>  Lorsque le domaine Windows est configuré pour s'exécuter à un niveau fonctionnel inférieur à celui de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , le compte de service administré n'a pas les autorisations nécessaires pour inscrire le SPN pour le service du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Si l'authentification Kerberos est requise, l'administrateur de domaine doit inscrire manuellement les SPN [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service administré.
   
  Des informations supplémentaires sont disponibles dans l’article [How to Implement Kerberos Constrained Delegation with SQL Server 2008 (Procédure d’implémentation de la délégation contrainte Kerberos à l’aide de SQL Server 2008)](https://technet.microsoft.com/library/ee191523.aspx).  
   

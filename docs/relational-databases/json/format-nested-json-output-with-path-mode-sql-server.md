@@ -10,12 +10,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d4132db44bb52835e277733365321d85342e670
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 61c282e01a03a0b46de0c256025cb59c57304ddb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095842"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245596"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formater la sortie JSON imbriquée avec le mode PATH (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Le mode**PATH** vous permet de créer des objets wrapper et d’imbriquer des pr
   
 L’alternative consiste à utiliser l’option **AUTO** pour mettre en forme la sortie automatiquement en fonction de la structure de l’instruction **SELECT**.
  -   Pour plus d’informations sur l’option **AUTO**, consultez [Mettre en forme la sortie JSON automatiquement avec le mode AUTO](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
- -   Pour obtenir une vue d’ensemble des deux options, consultez [Mettre en forme les résultats de requête au format JSON avec FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
+ -   Pour une vue d’ensemble des deux options, consultez [Mettre en forme les résultats de requête au format JSON avec FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
  
 Voici quelques exemples de clause **FOR JSON** avec l’option **PATH** . Formatez les résultats imbriqués en utilisant des noms de colonne séparés par des points ou des requêtes imbriquées, comme indiqué dans les exemples suivants. Par défaut, les valeurs Null ne sont pas incluses dans la sortie de **FOR JSON**.  
 
@@ -47,7 +47,7 @@ SELECT TOP 5
    FOR JSON PATH   
 ```  
   
- **Result**  
+ **Résultat**  
   
 ```json  
 [{
@@ -89,17 +89,17 @@ Si vous référencez plusieurs tables dans une requête, **FOR JSON PATH** imbri
  **Requête**  
   
 ```sql  
-SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
-        OrderDate AS 'Order.Date',  
-        UnitPrice AS 'Product.Price',  
-        OrderQty AS 'Product.Quantity'  
+SELECT TOP 2 H.SalesOrderNumber AS 'Order.Number',  
+        H.OrderDate AS 'Order.Date',  
+        D.UnitPrice AS 'Product.Price',  
+        D.OrderQty AS 'Product.Quantity'  
 FROM Sales.SalesOrderHeader H  
    INNER JOIN Sales.SalesOrderDetail D  
      ON H.SalesOrderID = D.SalesOrderID  
 FOR JSON PATH   
 ```  
   
- **Result**  
+ **Résultat**  
   
 ```json  
 [{

@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032445"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325471"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
 
@@ -29,18 +29,25 @@ Installer les serveurs d’intégration SQL Server pour votre plateforme :
 ## <a name="ubuntu"></a> Installer SSIS sur Ubuntu
 Pour installer le package `mssql-server-is` sur Ubuntu, procédez comme suit :
 
-1. Importez les clés GPG de dépôt public.
+1. Importez les clés GPG de référentiel public.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 2. Enregistrez le référentiel Microsoft SQL Server Ubuntu.
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. Exécutez les commandes suivantes pour installer SQL Server Integration Services.
 
    ```bash
@@ -78,10 +85,18 @@ Pour installer le package `mssql-server-is` sur RHEL, procédez comme suit :
 
 1. Téléchargez le fichier config du référentiel Microsoft SQL Server Red Hat.
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. Exécutez les commandes suivantes pour installer SQL Server Integration Services.
 
    ```bash
@@ -131,10 +146,10 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Variables d’environnement pour une installation sans assistance
 
-| Variable d'environnement | Description |
+| Variable d’environnement | Description |
 |---|---|
 | **ACCEPT_EULA** | Accepte le contrat de licence SQL Server lorsqu’il est défini sur n’importe quelle valeur (par exemple, `Y`).|
-| **SSIS_PID** | Définit l’édition SQL Server ou la clé de produit (Product key). Les valeurs possibles sont les suivantes :<br/>Evaluation<br/>Développeur<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Une clé de produit (Product Key)<br/><br/>Si vous spécifiez une clé de produit (Product Key), elle doit se présenter sous la forme `#####-#####-#####-#####-#####`, où `#` est une lettre ou un nombre.  |
+| **SSIS_PID** | Définit l’édition SQL Server ou la clé de produit (Product key). Les valeurs possibles sont les suivantes :<br/>Évaluation<br/>Développeur<br/>Express <br/>Web <br/>standard<br/>Entreprise <br/>Une clé de produit (Product Key)<br/><br/>Si vous spécifiez une clé de produit (Product Key), elle doit se présenter sous la forme `#####-#####-#####-#####-#####`, où `#` est une lettre ou un nombre.  |
 | | |
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531300"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243595"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Comment configurer la mémoire persistante (PMEM) pour SQL Server sur Linux
 
@@ -79,7 +79,7 @@ ndctl list
 
   Une fois que l’appareil a été configuré avec ndctl, formaté et monté, vous pouvez y placer des fichiers de base de données. Vous pouvez également créer une nouvelle base de données 
 
-1. Étant donné que les appareils PMEM sont O_DIRECT sécurisés, activez l’indicateur de trace 3979 pour désactiver le mécanisme de vidage forcé. Cet indicateur de trace est un indicateur de trace de démarrage qui doit être activé à l’aide de l’utilitaire mssql-conf. Notez qu’il s’agit d’une modification de la configuration qui concerne l’ensemble du serveur et que vous ne devez pas utiliser cet indicateur de trace si vous avez des appareils non conformes à O_DIRECT, qui ont besoin du mécanisme de vidage forcé pour garantir l’intégrité des données. Pour plus d'informations, consultez https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. Étant donné que les appareils PMEM sont O_DIRECT sécurisés, activez l’indicateur de trace 3979 pour désactiver le mécanisme de vidage forcé. Cet indicateur de trace est un indicateur de trace de démarrage qui doit être activé à l’aide de l’utilitaire mssql-conf. Notez qu’il s’agit d’une modification de la configuration qui concerne l’ensemble du serveur et que vous ne devez pas utiliser cet indicateur de trace si vous avez des appareils non conformes à O_DIRECT, qui ont besoin du mécanisme de vidage forcé pour garantir l’intégrité des données. Pour plus d'informations, consultez https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Redémarrez SQL Server.
 

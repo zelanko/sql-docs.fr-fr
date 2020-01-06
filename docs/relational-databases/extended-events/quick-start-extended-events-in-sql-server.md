@@ -1,6 +1,5 @@
 ---
-title: 'Démarrage rapide : Événements étendus dans SQL Server | Microsoft Docs'
-ms.custom: ''
+title: 'Démarrage rapide : Événements étendus dans SQL Server'
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798429"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242919"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
@@ -59,7 +58,7 @@ Les prérequis suivants sont incontournables pour effectuer réellement la démo
 1. [Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
   - Chaque mois, vous devez installer la dernière mise à jour mensuelle de SSMS.
 2. Connectez-vous à Microsoft SQL Server 2014 ou version ultérieure, ou à une base de données SQL Azure où `SELECT @@version` retourne une valeur dont le premier nœud est supérieur ou égal à 12.
-3. Assurez-vous que votre compte dispose de l’ [autorisation de serveur](../../t-sql/statements/grant-server-permissions-transact-sql.md) **ALTER ANY EVENT SESSION**.
+3. Assurez-vous que votre compte dispose de l’ [autorisation de serveur](../../t-sql/statements/grant-server-permissions-transact-sql.md)**ALTER ANY EVENT SESSION**.
   - Si cela vous intéresse, vous trouverez d’autres informations sur la sécurité et les autorisations relatives aux événements étendus à la fin de cet article en [annexe](#appendix1).
 
 
@@ -80,7 +79,7 @@ Vous pouvez comprendre les étapes même si vous décidez de ne pas les exécute
 
 - Général
 - Événements
-- Stockage de données
+- Stockage des données
 - Avancé
 
 
@@ -378,7 +377,7 @@ Ensuite, nous observons qu’une partie des résultats est au format XML. Ce cod
 
 Il existe plusieurs fonctionnalités avancées dans l’interface utilisateur de SSMS qui vous permettent d’afficher les données capturées à partir d’un événement étendu. Des informations détaillées sont données ici :
 
-- [Affichage avancé des données cibles à partir d’événements étendus dans SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
+- [Affichage avancé des données cibles d’événements étendus dans SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 
 
 Pour commencer, deux options de menu contextuel intitulées **Afficher les données cibles** et **Surveiller les données actives**sont proposées.
@@ -494,7 +493,7 @@ Une description de l’utilisation des événements étendus avec des colonnes e
 
 Vous trouverez des descriptions de l’utilisation des événements étendus avec le suivi d’événements pour Windows (ETW) ici :
 
-- [Cible du suivi d'événements pour Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
+- [Suivi d’événements pour cible Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 

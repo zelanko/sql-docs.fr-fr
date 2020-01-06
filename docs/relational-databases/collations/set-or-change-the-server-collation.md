@@ -1,7 +1,7 @@
 ---
 title: Définir ou changer le classement du serveur | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81a776a0bece59f98042fec6cbf7b191ec82be1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140838"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901915"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
 
@@ -37,13 +37,13 @@ ms.locfileid: "68140838"
   
 - Vérifiez que vous disposez de toutes les informations ou de tous les scripts nécessaires pour recréer vos bases de données utilisateur et les objets qu'elles contiennent.  
   
-- Exportez toutes vos données à l’aide d’un outil tel que l’[utilitaire bcp](../../tools/bcp-utility.md). Pour plus d’informations, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+- Exportez toutes vos données à l’aide d’un outil tel que l’ [utilitaire bcp](../../tools/bcp-utility.md). Pour plus d’informations, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
 - Supprimez toutes les bases de données utilisateur.  
   
 - Recréez la base de données MASTER en spécifiant le nouveau classement dans la propriété SQLCOLLATION de la commande **setup** . Par exemple :  
   
-    ```sql  
+    ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
     /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
@@ -59,13 +59,12 @@ ms.locfileid: "68140838"
 > Au lieu de changer le classement par défaut d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier un classement par défaut pour chaque nouvelle base de données que vous créez.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Définition du classement du serveur dans Managed Instance
-
 Le classement au niveau du serveur dans Azure SQL Managed Instance peut être spécifié quand l’instance est créée et ne peut plus être modifiée. Vous pouvez définir le classement au niveau du serveur par le biais du [portail Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) ou de [PowerShell et du modèle Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) lors de la création de l’instance. Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement et les nouveaux classements UTF-8 ne peuvent pas être spécifiés comme classement au niveau du serveur.
 Si vous migrez des bases de données depuis SQL Server vers Managed Instance, vérifiez le classement du serveur dans le serveur SQL Server source à l’aide de la fonction `SERVERPROPERTY(N'Collation')`, puis créez une instance Managed Instance qui correspond au classement de votre serveur SQL Server. La migration d’une base de données depuis SQL Server vers Managed Instance sans mise en correspondance des classements au niveau du serveur peut entraîner plusieurs erreurs inattendues dans les requêtes. Vous ne pouvez pas changer le classement au niveau du serveur sur l’instance Managed Instance existante.
 
 ## <a name="see-also"></a>Voir aussi
 
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Définir ou modifier le classement de la base de données](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Définir ou modifier le classement des colonnes](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Reconstruire des bases de données système](../../relational-databases/databases/rebuild-system-databases.md)  

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119430"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247318"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 
@@ -22,10 +22,10 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors--2-to-999"></a>Erreurs -2 à 999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
-|   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   Délai d'expiration dépassé. Période de délai d'attente écoulée avant l'achèvement de l'opération, ou le serveur ne répond pas. (Microsoft SQL Server, erreur : -2).    |
-|   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Une erreur s'est produite lors de l'établissement d'une connexion au serveur. Lors de la connexion à SQL Server 2005, cet échec peut être dû au fait que sous les paramètres par défaut, SQL Server n’autorise pas les connexions distantes. (fournisseur : Interfaces réseau SQL, erreur : 28 - Le serveur ne prend pas en charge le protocole demandé) (Microsoft SQL Server, Erreur : -1).  |
+|   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   Délai expiré. Période de délai d'attente écoulée avant l'achèvement de l'opération, ou le serveur ne répond pas. (Microsoft SQL Server, erreur : -2).    |
+|   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Une erreur s'est produite lors de l'établissement d'une connexion au serveur. Lors de la connexion à SQL Server 2005, cet échec peut être dû au fait que sous les paramètres par défaut, SQL Server n’autorise pas les connexions distantes. (fournisseur : interfaces réseau SQL, erreur : 28 - Le serveur ne prend pas en charge le protocole demandé) (Microsoft SQL Server, Erreur : -1).  |
 |   [2](mssqlserver-2-database-engine-error.md) |       |       |   Une erreur s'est produite lors de l'établissement d'une connexion au serveur. Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net). |
 |   21  |   20  |   Non  |   Avertissement : Erreur irrécupérable %d à %S_DATE. Prenez note de l'erreur et de l'heure, et contactez l'administrateur système.    |
 |   [53](mssqlserver-53-database-engine-error.md)   |       |       |   Une erreur s'est produite lors de l'établissement d'une connexion au serveur. Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net).    |
@@ -159,7 +159,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   231 |   11  |   Non  |   Aucune valeur par défaut de ce type. ID = %ld, ID de base de données = %d.    |
 |   232 |   16  |   Non  |   Erreur de dépassement de capacité arithmétique pour le type de données %ls, valeur = %f. |
 |   233 |   16  |   Non  |   La colonne '%.*ls' de la table '%.* ls' ne peut pas être Null. |
-|   [233](mssqlserver-233-database-engine-error.md) |       |       |   Une connexion a été établie avec le serveur, mais une erreur s'est ensuite produite pendant le processus d'ouverture de session. (fournisseur : Fournisseur de mémoire partagée, erreur : 0 - Il n’y a pas de processus à l’autre extrémité du canal.) (Microsoft SQL Server, erreur : 233)   |
+|   [233](mssqlserver-233-database-engine-error.md) |       |       |   Une connexion a été établie avec le serveur, mais une erreur s’est ensuite produite pendant le processus de connexion. (fournisseur : Fournisseur de mémoire partagée, erreur : 0 - Il n’y a pas de processus à l’autre extrémité du canal.) (Microsoft SQL Server, erreur : 233)   |
 |   234 |   16  |   Non  |   Espace de résultats insuffisant pour convertir une valeur money en %ls. |
 |   235 |   16  |   Non  |   Impossible de convertir une valeur char en money. La syntaxe de la valeur char est incorrecte.  |
 |   236 |   16  |   Non  |   La conversion d'une valeur char en money a provoqué une erreur de dépassement de capacité de la valeur money. |
@@ -457,7 +457,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   610 |   16  |   Oui |   Valeur d'en-tête non valide à partir d'une page. Exécutez DBCC CHECKDB pour vérifier l'absence de données endommagées.  |
 |   [611](mssqlserver-611-database-engine-error.md) |   16  |   Non  |   Impossible d'insérer ou de mettre à jour une ligne, car la taille totale de colonne variable, surcharge comprise, dépasse la limite de %d octets.  |
 |   613 |   21  |   Non  |   Entrée introuvable pour l'ensemble de lignes de table de travail avec l'ID de partition %I64d dans la base de données %d.    |
-|   615 |   21  |   Oui |   L'ID de base de données %d, nom '%.*ls', est introuvable. La base de données est peut-être hors connexion. Attendez quelques minutes et réessayez. |
+|   615 |   21  |   Oui |   L'ID de base de données %d, nom '%.*ls', est introuvable. La base de données est peut-être hors connexion. Patientez quelques minutes, puis réessayez. |
 |   [617](mssqlserver-617-database-engine-error.md) |   20  |   Oui |   Le descripteur de l'ID d'objet %ld dans l'ID de base de données %d n'a pas été trouvé dans la table de hachage lors de la tentative de déhachage. Une entrée est manquante dans une table de travail. Réexécutez la requête. Si un curseur est concerné, fermez et rouvrez le curseur.    |
 |   622 |   16  |   Non  |   Aucun fichier n'a été affecté au groupe de fichiers "%.*ls". Les tables, les index et les colonnes text, ntext et image ne peuvent pas être remplis dans ce groupe de fichiers tant qu'un fichier n'a pas été ajouté. |
 |   627 |   16  |   Non  |   Impossible d'utiliser SAVE TRANSACTION dans une transaction distribuée.   |
@@ -578,7 +578,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-1000-to-1999"></a>Erreurs 1000 à 1999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Non  |   Ligne %d : la longueur ou la précision spécifiée %d n’est pas valide.   |
 |   1002    |   16  |   Non  |   Ligne %d : l’échelle spécifiée %d n’est pas valide. |
@@ -602,7 +602,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1021    |   10  |   Non  |   Avertissement FIPS : la ligne %d comporte l’instruction non ANSI '%ls'. |
 |   1022    |   10  |   Non  |   Avertissement FIPS : la ligne %d comporte la clause non ANSI '%ls'.    |
 |   1023    |   15  |   Non  |   Paramètre %d non valide spécifié pour %ls. |
-|   1024    |   10  |   Non  |   Avertissement FIPS : la ligne %d comporte la fonction non ANSI '%ls'.  |
+|   1 024    |   10  |   Non  |   Avertissement FIPS : la ligne %d comporte la fonction non ANSI '%ls'.  |
 |   1025    |   10  |   Non  |   Avertissement FIPS : la longueur de l’identificateur '%.*ls' excède 18.  |
 |   1026    |   16  |   Non  |   L'instruction GOTO ne peut pas être utilisée pour un saut dans une étendue TRY ou CATCH.  |
 |   1028    |   15  |   Non  |   Les constructions CUBE, ROLLUP et GROUPING SETS ne sont pas autorisées dans une clause GROUP BY ALL.    |
@@ -680,13 +680,13 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   [1105](mssqlserver-1105-database-engine-error.md)   |   17  |   Oui |   Impossible d’allouer de l’espace pour l’objet '%.*ls'%.* ls dans la base de données '%.*ls', car le groupe de fichiers '%.* ls' est plein. Créez de l'espace disque en supprimant des fichiers qui ne sont pas indispensables, en supprimant des objets dans le groupe de fichiers, en ajoutant des fichiers supplémentaires au groupe de fichiers ou en définissant Autogrowth à ON pour les fichiers existants dans le groupe de fichiers.    |
 |   1119    |   16  |   Non  |   Échec de la suppression de la page IAM %S_PGID, car une autre personne utilise l'objet auquel cette page IAM appartient.    |
 |   1121    |   17  |   Non  |   L'allocateur d'espace ne peut pas allouer la page dans la base de données %d.    |
-|   1122    |   14  |   Non  |   Erreur de table : page %S_PGID. Échec du test (%hs). L'adresse 0x%x n'est pas alignée.  |
-|   1123    |   14  |   Non  |   Erreur de table : page %S_PGID. Type de page inattendu %d. |
-|   1124    |   14  |   Non  |   Erreur de table : page %S_PGID. Échec du test (%hs). Emplacement %d, le décalage 0x%x n'est pas valide.  |
-|   1125    |   14  |   Non  |   Erreur de table : page %S_PGID. Échec du test (%hs). Emplacement %d, la ligne s'étend dans l'espace libre à 0x%x. |
-|   1126    |   14  |   Non  |   Erreur de table : page %S_PGID. Échec du test (%hs). Emplacement %d, le décalage 0x%x chevauche la ligne précédente. |
-|   1127    |   14  |   Non  |   Erreur de table : page %S_PGID. Échec du test (%hs). Les valeurs sont %ld et %ld.   |
-|   1128    |   14  |   Non  |   Erreur de table : page %S_PGID, ligne %d. Échec du test (%hs). Les valeurs sont %ld et %ld.   |
+|   1122    |   14  |   Non  |   Erreur de table, page %S_PGID. Échec du test (%hs). L'adresse 0x%x n'est pas alignée.  |
+|   1123    |   14  |   Non  |   Erreur de table, page %S_PGID. Type de page inattendu %d. |
+|   1124    |   14  |   Non  |   Erreur de table, page %S_PGID. Échec du test (%hs). Emplacement %d, le décalage 0x%x n'est pas valide.  |
+|   1 125    |   14  |   Non  |   Erreur de table, page %S_PGID. Échec du test (%hs). Emplacement %d, la ligne s'étend dans l'espace libre à 0x%x. |
+|   1126    |   14  |   Non  |   Erreur de table, page %S_PGID. Échec du test (%hs). Emplacement %d, le décalage 0x%x chevauche la ligne précédente. |
+|   1127    |   14  |   Non  |   Erreur de table, page %S_PGID. Échec du test (%hs). Les valeurs sont %ld et %ld.   |
+|   1128    |   14  |   Non  |   Erreur de table, page %S_PGID, ligne %d. Échec du test (%hs). Les valeurs sont %ld et %ld.   |
 |   1129    |   16  |   Non  |   Impossible de nettoyer des désallocations différées à partir du groupe de fichiers '%.*ls'.    |
 |   1130    |   10  |   Oui |   Erreur pendant l'allocation d'une extension à une table de travail. L'extension %S_PGID de TEMPDB est peut-être perdue. |
 |   1131    |   10  |   Oui |   Échec de la troncation de AppendOnlyStorageUnit 0x%p. Cette opération sera réessayée. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
@@ -814,7 +814,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1538    |   20  |   Oui |   Impossible d'insérer une ligne dans un tri lorsque le tri n'est pas dans une phase d'entrée de ligne.    |
 |   1540    |   16  |   Non  |   Impossible de trier une ligne de dimension %d supérieure au maximum autorisé %d. Pensez à soumettre à nouveau la requête avec l'indicateur ROBUST PLAN.    |
 |   1541    |   16  |   Non  |   Échec de tri. Une fonction de comparaison du type CLR défectueuse est suspectée.    |
-|   1542    |   10  |   Oui |   BobMgr::GetBuf: écriture inachevée dans le grand tampon de sortie de tri au bout de %d secondes. |
+|   1 542    |   10  |   Oui |   BobMgr::GetBuf: écriture inachevée dans le grand tampon de sortie de tri au bout de %d secondes. |
 |   1543    |   10  |   Oui |   L'erreur du système d'exploitation '%ls' provient d'une tentative de lecture de l'élément suivant : tri sur la page %S_PGID, du fichier '%ls', dans la base de données ID %d. Le tri retente la lecture.  |
 |   1701    |   16  |   Non  |   La création ou modification de la table '%.*ls' a échoué car la taille de ligne minimale serait de %d, y compris %d octets de charge interne. Cette valeur dépasse la taille de table autorisée maximale de %d octets. |
 |   1702    |   16  |   Non  |   Échec de CREATE TABLE parce que la colonne '%.*ls' de la table '%.* ls' dépasse le nombre maximal de colonnes %d.  |
@@ -1010,7 +1010,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-2000-to-2999"></a>Erreurs 2000 à 2999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Non  |   Impossible de créer une procédure de réplication avec un numéro de groupe supérieur à un.   |
 |   2003    |   16  |   Non  |   Les procédures associées à un numéro de groupe ne peuvent pas avoir des paramètres de type XML ou CLR. Le paramètre '%.*ls' de la procédure '%.* ls' est de type '%ls'.   |
@@ -1213,8 +1213,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   [2508](mssqlserver-2508-database-engine-error.md)   |   16  |   Non  |   Le nombre %.*ls pour l’objet "%.* ls", ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) est incorrect. Exécutez DBCC UPDATEUSAGE.   |
 |   2509    |   16  |   Non  |   Échec de DBCC CHECKCONSTRAINTS en raison d'une erreur de requête interne.    |
 |   2510    |   16  |   Non  |   Erreur %ls DBCC : %ls.    |
-|   [2511](mssqlserver-2511-database-engine-error.md)   |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Les clés sont désordonnées sur la page %S_PGID, slots %d et %d.   |
-|   [2512](mssqlserver-2512-database-engine-error.md)   |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Clés en double sur la page %S_PGID, emplacement %d et sur la page %S_PGID, emplacement %d.  |
+|   [2511](mssqlserver-2511-database-engine-error.md)   |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Les clés sont désordonnées sur la page %S_PGID, slots %d et %d.   |
+|   [2512](mssqlserver-2512-database-engine-error.md)   |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Clés en double sur la page %S_PGID, emplacement %d et sur la page %S_PGID, emplacement %d.  |
 |   2514    |   16  |   Non  |   Une erreur DBCC PAGE s'est produite : %ls.    |
 |   [2515](mssqlserver-2515-database-engine-error.md)   |   16  |   Non  |   La page %S_PGID, ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls) a été modifiée mais n'est pas marquée comme telle dans la bitmap de sauvegarde différentielle.  |
 |   [2516](mssqlserver-2516-database-engine-error.md)   |   16  |   Oui |   La réparation de la bitmap différentielle pour la base de données %.*ls n'est pas valide. La chaîne de sauvegarde différentielle est interrompue. Vous devez d'abord effectuer une sauvegarde complète de la base de données avant d'effectuer une sauvegarde différentielle.   |
@@ -1270,11 +1270,11 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2571    |   14  |   Non  |   L'utilisateur '%.*ls' n'est pas autorisé à exécuter DBCC %.* ls.    |
 |   2572    |   16  |   Non  |   DBCC ne peut pas libérer la DLL '%.*ls'. La DLL est en cours d'utilisation.    |
 |   2573    |   16  |   Non  |   L'ID de table ou d'objet %.*ls est introuvable. Consultez le catalogue système.  |
-|   [2574](mssqlserver-2574-database-engine-error.md)   |   16  |   Non  |   Erreur de table : la page %S_PGID est vide dans l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Cela n'est pas autorisé au niveau %d de l'arborescence binaire. |
+|   [2574](mssqlserver-2574-database-engine-error.md)   |   16  |   Non  |   Erreur de table, la page %S_PGID est vide dans l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Cela n'est pas autorisé au niveau %d de l'arborescence binaire. |
 |   [2575](mssqlserver-2575-database-engine-error.md)   |   16  |   Non  |   La page IAM %S_PGID est désignée par le prochain pointeur de la page IAM %S_PGID dans l'ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls), mais elle n'a pas été détectée lors de l'analyse.  |
 |   [2576](mssqlserver-2576-database-engine-error.md)   |   16  |   Non  |   La page IAM %S_PGID est désignée par le pointeur antérieur de la page IAM %S_PGID dans l'ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls), mais elle n'a pas été détectée lors de l'analyse.  |
 |   [2577](mssqlserver-2577-database-engine-error.md)   |   16  |   Non  |   Les numéros de séquence de chaînes sont désordonnés dans la chaîne IAM de l'ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls). La page %S_PGID avec le numéro de séquence %d pointe vers la page %S_PGID avec le numéro de séquence %d.   |
-|   [2579](mssqlserver-2579-database-engine-error.md)   |   16  |   Non  |   Erreur de table : l’extension %S_PGID de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) est en dehors des limites de cette base de données.    |
+|   [2579](mssqlserver-2579-database-engine-error.md)   |   16  |   Non  |   Erreur de table, l’extension %S_PGID de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) est en dehors des limites de cette base de données.    |
 |   2580    |   16  |   Non  |   La table '%.*ls' est une table système ou temporaire. Impossible d'appliquer DBCC CLEANTABLE à une table système ou temporaire.  |
 |   2581    |   10  |   Non  |   DBCC ne peut pas libérer la DLL "%.*ls". Cette DLL n'est pas chargée.    |
 |   2583    |   16  |   Non  |   Un nombre incorrect de paramètres a été spécifié pour l'instruction DBCC.  |
@@ -1383,7 +1383,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-3000---3999"></a>Erreurs 3000 -3999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   Non  |   Impossible d'effectuer une opération BACKUP ou RESTORE sur un instantané de base de données.   |
 |   3003    |   10  |   Non  |   Cette BACKUP WITH DIFFERENTIAL reposera sur plus d'une sauvegarde. Toutes ces sauvegardes de fichiers doivent être restaurées avant toute tentative de restauration de cette sauvegarde différentielle.    |
@@ -1405,7 +1405,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3019    |   16  |   Non  |   Le fichier de point de contrôle de redémarrage '%.*ls' résulte d'une précédente opération RESTORE interrompue, qui n'est pas cohérente avec la commande RESTORE actuelle. La commande de redémarrage doit utiliser la même syntaxe que la commande interrompue à laquelle doit s'ajouter la clause RESTART. Vous pouvez également réexécuter l'instruction actuelle sans la clause RESTART. |
 |   3021    |   16  |   Non  |   Impossible d'effectuer une sauvegarde ou une restauration dans une transaction.  |
 |   3022    |   10  |   Non  |   Cette sauvegarde est une sauvegarde de fichiers constituée de données en lecture-écriture issues d'une base de données qui utilise le modèle de récupération simple. Cela n'est approprié que si vous avez l'intention de définir le groupe de fichiers en lecture seule avant une sauvegarde de fichiers différentielle. Pour plus d'informations sur la gestion des données en lecture seule pour le modèle de récupération simple, consultez la documentation en ligne. Intéressez-vous tout particulièrement à l'utilisation des sauvegardes partielles.   |
-|   3023    |   16  |   Non  |   Les opérations de sauvegarde, de manipulation de fichiers (ALTER DATABASE ADD FILE) et de modification du chiffrement sur une base de données doivent être sérialisées. Réexécutez l'instruction après la fin de la sauvegarde en cours ou de la manipulation de fichiers. |
+|   3023    |   16  |   Non  |   La sauvegarde, les opérations de manipulation de fichiers (comme ALTER DATABASE ADD FILE) et les changements de chiffrement sur une base de données doivent être sérialisés. Réexécutez l'instruction après la fin de la sauvegarde en cours ou de la manipulation de fichiers. |
 |   3024    |   16  |   Non  |   Pour la base de données master, vous ne pouvez effectuer qu'une sauvegarde complète. Pour ce faire, utilisez BACKUP DATABASE.   |
 |   3025    |   16  |   Non  |   Nom de la base de données absent. Réexécutez l'instruction en spécifiant un nom de base de données valide.  |
 |   3027    |   16  |   Non  |   Le groupe de fichiers "%.*ls" ne fait pas partie de la base de données "%.* ls".  |
@@ -1582,7 +1582,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3270    |   16  |   Non  |   Une erreur de cohérence interne est survenue. Cette erreur est similaire à une assertion. Contactez le support technique pour obtenir de l'aide.   |
 |   [3271](mssqlserver-3271-database-engine-error.md)   |   16  |   Non  |   Une erreur d'E/S non récupérable s'est produite dans le fichier "%ls" : %ls |
 |   3272    |   16  |   Non  |   L'unité '%ls' a une taille de secteur matériel de %d, mais le paramètre de taille de bloc spécifie une valeur de recouvrement incompatible de %d. Réexécutez l'instruction avec une taille de bloc compatible.    |
-|   3276    |   16  |   Non  |   WITH SNAPSHOT peut être utilisé seulement si le jeu de sauvegarde a été créé avec WITH SNAPSHOT. |
+|   3 276    |   16  |   Non  |   WITH SNAPSHOT peut être utilisé seulement si le jeu de sauvegarde a été créé avec WITH SNAPSHOT. |
 |   3277    |   16  |   Non  |   WITH SNAPSHOT peut être utilisé seulement sur une unité virtuelle.    |
 |   3278    |   16  |   Non  |   Échec du chiffrement de la chaîne %ls    |
 |   3279    |   16  |   Non  |   L'accès est refusé en raison d'une erreur de mot de passe.  |
@@ -1633,7 +1633,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   [3452](mssqlserver-3452-database-engine-error.md)   |   10  |   Oui |   La récupération de la base de données '%.*ls' (%d) a détecté une possible incohérence de valeurs d'identité dans la table ID %d. Exécutez DBCC CHECKIDENT (’%.* ls’). |
 |   3453    |   16  |   Non  |   Cette version ne peut pas refaire une création d'index ou une opération non journalisée effectuée par SQL Server 7.0. Toute autre restauration par progression est impossible.   |
 |   3454    |   10  |   Oui |   La récupération écrit un point de contrôle dans la base de données '%.*ls' (%d). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
-|   [3456](mssqlserver-3456-database-engine-error.md)   |   21  |   Oui |   Impossible de rétablir l'enregistrement du journal %S_LSN, pour l'ID de transaction %S_XID, à la page %S_PGID, base de données '%.*ls' (ID de base de données %d). Page : LSN = %S_LSN, type = %ld. Journal : OpCode = %ld, contexte %ld, PrevPageLSN : %S_LSN. Effectuez une restauration à partir d'une sauvegarde de la base de données ou réparez la base de données.    |
+|   [3456](mssqlserver-3456-database-engine-error.md)   |   21  |   Oui |   Impossible de rétablir l'enregistrement du journal %S_LSN, pour l'ID de transaction %S_XID, à la page %S_PGID, base de données '%.*ls' (ID de base de données %d). Page : LSN = %S_LSN, type = %ld. Log : OpCode = %ld, contexte %ld, PrevPageLSN : %S_LSN. Effectuez une restauration à partir d'une sauvegarde de la base de données ou réparez la base de données.    |
 |   3457    |   21  |   Oui |   Échec de la récupération du gestionnaire des ressources du système de fichiers transactionnels '%.*ls'. Pour plus d'informations, reportez-vous au message d'erreur associé qui détermine l'action utilisateur appropriée.   |
 |   3458    |   16  |   Non  |   La récupération ne peut pas analyser la base de données "%.*ls" pour les unités d'allocation supprimées parce qu'une erreur inattendue s'est produite. Ces unités d'allocation ne peuvent pas être nettoyées.   |
 |   3505    |   14  |   Non  |   Seul le propriétaire de la base de données "%.*ls" ou une personne dotée des autorisations appropriées peut exécuter l'instruction CHECKPOINT.   |
@@ -1765,7 +1765,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3932    |   16  |   Non  |   Le nom de point d'enregistrement "%.*ls" qui a été fourni est trop long. La longueur maximale autorisée est de %d caractères. |
 |   3933    |   16  |   Non  |   Impossible de promouvoir la transaction en une transaction distribuée en raison de la présence d'un point d'enregistrement actif dans cette transaction.  |
 |   3934    |   14  |   Non  |   L'utilisateur actuel ne peut pas utiliser ce contexte de transaction FILESTREAM. Pour obtenir un contexte de transaction FILESTREAM valide, utilisez GET_FILESTREAM_TRANSACTION_CONTEXT.  |
-|   3935    |   16  |   Non  |   Impossible d'initialiser un contexte de transaction FILESTREAM. Ce problème peut être causé par une pénurie de ressources. Réessayez l'opération. Code d’erreur : 0x%x.  |
+|   3935    |   16  |   Non  |   Impossible d'initialiser un contexte de transaction FILESTREAM. Ce problème peut être causé par une pénurie de ressources. Retentez l’opération. Code d’erreur : 0x%x.  |
 |   3936    |   16  |   Non  |   Impossible de valider la transaction, car une erreur s'est produite lors de la tentative de vidage des données FILESTREAM sur le disque. Un fichier a peut-être été ouvert au moment de la validation ou une erreur d'E/S disque peut être survenue. '%.*ls' était l'un des fichiers impliqués. Code d’erreur : 0x%x  |
 |   [3937](mssqlserver-3937-database-engine-error.md)   |   16  |   Non  |   Lors de la restauration d'une transaction, une erreur s'est produite en tentant de remettre une notification de restauration au pilote de filtre FILESTREAM. Code d’erreur : 0x%0x. |
 |   3938    |   18  |   Non  |   La transaction a été arrêtée, car elle était en conflit avec l'exécution d'une opération de fermeture FILESTREAM utilisant la même transaction. La transaction sera restaurée.  |
@@ -1781,7 +1781,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3958    |   16  |   Non  |   La transaction a été abandonnée lors de l'accès à la ligne avec version dans la table '%.*ls' de la base de données '%.* ls'. La ligne avec version demandée est introuvable. Votre tempdb ne dispose probablement pas d'un espace suffisant. Consultez la documentation en ligne pour savoir comment configurer tempdb pour le contrôle de version.  |
 |   3959    |   10  |   Oui |   La banque des versions est pleine. Impossible d'ajouter de nouvelles versions. Toute transaction nécessitant l'accès à la banque des versions risque d'être restaurée. Consultez la documentation en ligne pour savoir comment configurer tempdb pour le contrôle de version.   |
 |   3960    |   16  |   Non  |   La transaction d'isolement d'instantané a été abandonnée en raison d'un conflit de mise à jour. Vous ne pouvez pas utiliser l'isolement d'instantané pour accéder à la table '%.*ls' directement ou indirectement dans la base de données '%.* ls' afin de mettre à jour, de supprimer ou d'insérer la ligne modifiée ou supprimée par une autre transaction. Réexécutez la transaction ou changez le niveau d'isolement pour l'instruction de mise à jour/suppression. |
-|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   Non  |   La transaction d'isolement d'instantané a échoué dans la base de données '%.*ls' car l'objet auquel l'instruction a eu accès a été modifié par une instruction DDL dans une autre transaction simultanée depuis le début de cette transaction. Cela est interdit, car les métadonnées n'ont pas de version. Une mise à jour simultanée des métadonnées peut provoquer des incohérences si elle est mélangée à un isolement d'instantané.  |
+|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   Non  |   La transaction d'isolement d'instantané a échoué dans la base de données '%.*ls' car l'objet auquel l'instruction a eu accès a été modifié par une instruction DDL dans une autre transaction simultanée depuis le début de cette transaction. Elle est rejetée, car les métadonnées ne font pas l’objet d’une gestion des versions. Une mise à jour simultanée des métadonnées peut provoquer des incohérences si elle est combinée avec un isolement d’instantané.  |
 |   3962    |   16  |   Non  |   La liaison à une autre transaction lors de l'exécution de la requête interne SQL Server n'est pas prise en charge. Vérifiez la définition du déclencheur LOGON et supprimez toute utilisation de sp_bindsession le cas échéant. Si cette erreur ne se produit pas lors de l'exécution du déclencheur LOGON, contactez l'équipe du support technique de production. |
 |   3963    |   16  |   Non  |   La transaction a échoué dans la base de données '%.*ls' car les transactions distribuées ne sont pas prises en charge en isolement d'instantané. |
 |   3964    |   16  |   Non  |   La transaction a échoué car cette instruction DDL n'est pas autorisée dans une transaction d'isolement d'instantané. Dans la mesure où les métadonnées n'ont pas de version, une modification des métadonnées peut provoquer des incohérences si elle est mélangée à un isolement d'instantané.  |
@@ -1824,7 +1824,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-4000-to-4999"></a>Erreurs 4000 à 4999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Non  |   Le client envoie sp_reset_connection alors que des requêtes sont toujours en attente.  |
 |   4002    |   16  |   Non  |   Le flux du protocole TDS (Tabular Data Stream) entrant est incorrect. Le flux s'est arrêté prématurément. |
@@ -1855,9 +1855,9 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4038    |   16  |   Non  |   ID de fichier %d introuvable sur le périphérique '%ls'. |
 |   4060    |   11  |   Non  |   Impossible d'ouvrir la base de données "%.*ls" demandée par la connexion. La connexion a échoué.  |
 |   4061    |   11  |   Non  |   Ni la base de données "%.*ls" demandée par la connexion, ni la base de données par défaut de l'utilisateur n'ont pu être ouvertes. La base de données master est utilisée à la place.   |
-|   4062    |   11  |   Non  |   Impossible d'ouvrir la base de données par défaut de l'utilisateur. Utilisation de la base de données master.   |
+|   4062    |   11  |   Non  |   La base de données utilisateur par défaut ne peut pas être ouverte. Utilisation de la base de données master.   |
 |   4063    |   11  |   Non  |   Impossible d'ouvrir la base de données "%.*ls" demandée par la connexion. Utilisation de la base de données par défaut de l'utilisateur "%.* ls" à la place.  |
-|   [4064](mssqlserver-4064-database-engine-error.md)   |   11  |   Non  |   Impossible d'ouvrir la base de données par défaut de l'utilisateur. Échec de la connexion.    |
+|   [4064](mssqlserver-4064-database-engine-error.md)   |   11  |   Non  |   La base de données utilisateur par défaut ne peut pas être ouverte. Échec de la connexion.    |
 |   4065    |   16  |   Oui |   L'utilisateur tente d'employer '%.*ls' par le biais d'ODS, ce qui n'est plus pris en charge. |
 |   4066    |   16  |   Non  |   Les ID de type supérieurs à 65535 ne peuvent pas être envoyés à des clients livrés dans SQL Server 2000 ou une version antérieure. |
 |   4067    |   16  |   Non  |   La sérialisation de type CLR a échoué car un cookie non valide a été spécifié.  |
@@ -1996,7 +1996,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4347    |   16  |   Non  |   La séquence de restauration actuelle a été interrompue précédemment pendant la transition vers l'état en ligne. RESTORE DATABASE WITH RECOVERY peut être utilisé pour effectuer la transition vers l'état en ligne. |
 |   4348    |   16  |   Non  |   La restauration en ligne dans la base de données '%ls' a échoué. Il peut s'avérer nécessaire d'effectuer une restauration hors ligne. Pour lancer cette opération, utilisez l'instruction BACKUP LOG WITH NORECOVERY.  |
 |   4349    |   16  |   Non  |   Le journal dans ce jeu de sauvegarde commence au numéro de séquence d'enregistrement %.*ls, ce qui est trop récent pour une application à la base de données. Cette séquence de restauration doit initialiser le journal pour commencer à LSN %.* ls. Relancez l'instruction RESTORE LOG en utilisant une sauvegarde du journal antérieure.   |
-|   4350    |   16  |   Non  |   La liste de pages fournies avec l'instruction RESTORE PAGE n'est pas correctement mise en forme. Avant que ce problème ne se produise, %d pages ont été correctement identifiées. Le problème s'est produit à l'offset de caractère %d. Assurez-vous que toutes les pages sont identifiées par paires numériques <file>:<page>, les paires étant séparées par des virgules. Par exemple : PAGE=’1:57,2:31’.   |
+|   4350    |   16  |   Non  |   La liste de pages fournies avec l'instruction RESTORE PAGE n'est pas correctement mise en forme. Avant que ce problème ne se produise, %d pages ont été correctement identifiées. Le problème s'est produit à l'offset de caractère %d. Assurez-vous que toutes les pages sont identifiées par paires numériques <file>:<page>, les paires étant séparées par des virgules. Par exemple :  PAGE=’1:57,2:31’.   |
 |   4351    |   16  |   Non  |   Les sauvegardes effectuées sur des versions antérieures de SQL Server ne sont pas prises en charge par fn_dump_dblog. |
 |   4352    |   16  |   Non  |   RESTORE LOG n'est pas pris en charge à partir de cette sauvegarde de données, car le fichier '%ls' est trop ancien. Utilisez une sauvegarde de fichier journal ordinaire pour continuer la séquence de restauration.    |
 |   4353    |   16  |   Non  |   Des réadressages de fichiers en conflit ont été spécifiés pour le fichier '%.*ls'. Une seule clause WITH MOVE doit être spécifiée par nom de fichier logique.    |
@@ -2287,7 +2287,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-5000-to-5999"></a>Erreurs 5000 à 5999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   5001    |   16  |   Non  |   L'utilisateur doit être dans la base de données master.    |
 |   5002    |   16  |   Non  |   La base de données '%.*ls' n'existe pas. Vérifiez le nom dans sys.databases, puis réessayez l'opération.  |
@@ -2469,7 +2469,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   5226    |   10  |   Non  |   %.*ls : impossible de libérer la page %d:%d (type UNLINKED_REORG_PAGE).  |
 |   5227    |   10  |   Non  |   %.*ls : %.*ls: impossible de libérer la page %d:%d (type BULK_OPERATION_PAGE).  |
 |   [5228](mssqlserver-5228-database-engine-error.md)   |   16  |   Non  |   Erreur de table : ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls), page %S_PGID, ligne %d. DBCC a détecté un nettoyage incomplet lié à une opération de construction d'index en ligne. (La valeur de la colonne « antimatière » est %d.)    |
-|   [5229](mssqlserver-5229-database-engine-error.md)   |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %l64d, ID d’unité d’allocation %l64d (type %.*ls) ; il existe une colonne « anti-matière », mais il ne s’agit pas d’un index non cluster.   |
+|   [5229](mssqlserver-5229-database-engine-error.md)   |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %l64d, ID d’unité d’allocation %l64d (type %.*ls) ; il existe une colonne « anti-matière », mais il ne s’agit pas d’un index non cluster.   |
 |   5230    |   10  |   Non  |   L'instruction de validation a été abandonnée. Impossible d'exécuter DBCC CHECKCATALOG sur TEMPDB. |
 |   [5231](mssqlserver-5231-database-engine-error.md)   |   10  |   Non  |   ID d’objet %ld (objet '%.*ls') : un blocage s’est produit lors de la tentative de verrouillage de cet objet en vue d’une vérification. Cet objet a été ignoré et il ne sera pas traité.  |
 |   5232    |   10  |   Non  |   DBCC CHECKDB ne vérifiera pas la cohérence du catalogue SQL Server ou du Service Broker parce qu'il a été impossible de créer un instantané de base de données ou parce que WITH TABLOCK a été spécifié.    |
@@ -2514,7 +2514,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   5271    |   10  |   Non  |   DBCC %ls n'a pas pu fournir de résultats pour cette commande en raison d'une erreur interne. Pour plus d'informations, examinez les autres erreurs. |
 |   5272    |   10  |   Non  |   %.*ls : la page IAM (Index Allocation Map) %d:%d n’a pas pu être déplacée, car il n’a pas été possible d’accéder à l’objet sous-jacent de façon exclusive.    |
 |   5273    |   10  |   Non  |   %.*ls : la page %d:%d n’a pas pu être déplacée, car elle appartenait à un index/segment de mémoire qui était/est dans la build en ligne.  |
-|   5274    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. %S_MSG n'est pas valide pour la page compressée ; le test interne suivant a échoué : %hs. Les valeurs sont %ld et %ld. |
+|   5274    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. %S_MSG n'est pas valide pour la page compressée ; le test interne suivant a échoué : %hs. Les valeurs sont %ld et %ld. |
 |   5275    |   10  |   Non  |   Fin de la recherche exhaustive des incohérences de '%.*ls' (ID de base de données %d). %d recherches traitées sur un total de %d. Temps écoulé : %I64d millisecondes. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.    |
 |   5276    |   10  |   Non  |   Échec de la recherche exhaustive des incohérences de '%.*ls' (ID de base de données %d) en raison de l'exception %d, état %d. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.  |
 |   5277    |   10  |   Non  |   L'instantané de base de données %ls interne a le numéro séquentiel dans le journal du point de fractionnement = %08x:%08x:%04x et le premier numéro séquentiel dans le journal = %08x:%08x:%04x. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
@@ -2663,7 +2663,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-6000-to-6999"></a>Erreurs 6000 à 6999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   Non  |   SHUTDOWN attend que le ou les processus %d soient terminés. |
 |   6004    |   10  |   Non  |   L'utilisateur n'est pas autorisé à effectuer cette action.   |
@@ -3159,7 +3159,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-7000-to-7999"></a>Erreurs 7000 à 7999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   Non  |   Le paramètre de descripteur du document OPENXML doit être du type de données int. |
 |   7001    |   16  |   Non  |   Le paramètre d'indicateurs OPENXML doit être du type de données int.   |
@@ -3512,12 +3512,12 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7898    |   10  |   Oui |   La fonctionnalité de prise en charge native du protocole SOAP par SQL Server est à présent déconseillée et sera supprimée dans une future version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent.    |
 |   7899    |   16  |   Non  |   La valeur de retour utilise un type de données non pris en charge par le protocole SOAP. Le protocole SOAP n'accepte que les types de données pris en charge dans SQL Server 2005 ou version antérieure. |
 |   [7901](mssqlserver-7901-database-engine-error.md)   |   16  |   Non  |   L’instruction de réparation n’a pas été traitée. Ce niveau de réparation n'est pas pris en charge lorsque la base de données est en mode d'urgence.   |
-|   [7903](mssqlserver-7903-database-engine-error.md)   |   16  |   Non  |   Erreur de table : le fichier orphelin "%.*ls" a été trouvé dans l’ID de répertoire FILESTREAM %.* ls de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID de colonne %d.  |
-|   [7904](mssqlserver-7904-database-engine-error.md)   |   16  |   Non  |   Erreur de table : impossible de trouver le fichier FILESTREAM "%.*ls" pour l’ID de colonne %d (ID de répertoire de colonnes %.* ls) dans l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID de page %S_PGID, ID d’emplacement %d.    |
+|   [7903](mssqlserver-7903-database-engine-error.md)   |   16  |   Non  |   Erreur de table, le fichier orphelin "%.*ls" a été trouvé dans l’ID de répertoire FILESTREAM %.* ls de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID de colonne %d.  |
+|   [7904](mssqlserver-7904-database-engine-error.md)   |   16  |   Non  |   Erreur de table, impossible de trouver le fichier FILESTREAM "%.*ls" pour l’ID de colonne %d (ID de répertoire de colonnes %.* ls) dans l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID de page %S_PGID, ID d’emplacement %d.    |
 |   [7905](mssqlserver-7905-database-engine-error.md)   |   16  |   Non  |   Erreur de base de données : le répertoire "%.*ls" n’est pas un répertoire FILESTREAM valide.  |
 |   [7906](mssqlserver-7906-database-engine-error.md)   |   16  |   Non  |   Erreur de base de données : le fichier "%.*ls" n’est pas un fichier FILESTREAM valide.    |
-|   [7907](mssqlserver-7907-database-engine-error.md)   |   16  |   Non  |   Erreur de table : le répertoire "%.*ls" sous l’ID de répertoire de l’ensemble de lignes "%.* ls" n’est pas un répertoire FILESTREAM valide. |
-|   [7908](mssqlserver-7908-database-engine-error.md)   |   16  |   Non  |   Erreur de table : le fichier "%.*ls" dans l’ID de répertoire de l’ensemble de lignes %.* ls n’est pas un fichier FILESTREAM valide.  |
+|   [7907](mssqlserver-7907-database-engine-error.md)   |   16  |   Non  |   Erreur de table, le répertoire "%.*ls" sous l’ID de répertoire de l’ensemble de lignes "%.* ls" n’est pas un répertoire FILESTREAM valide. |
+|   [7908](mssqlserver-7908-database-engine-error.md)   |   16  |   Non  |   Erreur de table, le fichier "%.*ls" dans l’ID de répertoire de l’ensemble de lignes %.* ls n’est pas un fichier FILESTREAM valide.  |
 |   7909    |   20  |   Non  |   Vous devez effectuer une restauration à partir d'une sauvegarde.  |
 |   [7910](mssqlserver-7910-database-engine-error.md)   |   10  |   Non  |   Réparation : la page %S_PGID a été allouée à l’objet ID %d, index ID %d, partition ID %I64d, unité d’allocation ID %I64d (type %.*ls). |
 |   [7911](mssqlserver-7911-database-engine-error.md)   |   10  |   Non  |   Réparation : la page %S_PGID a été libérée de l’objet ID %d, index ID %d, partition ID %I64d, unité d’allocation ID %I64d (type %.*ls). |
@@ -3541,12 +3541,12 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7929    |   16  |   Non  |   L'instruction de vérification a été annulée. La base de données contient des transactions différées.   |
 |   7930    |   16  |   Non  |   La mise en miroir doit être supprimée de la base de données pour cette commande DBCC.  |
 |   [7931](mssqlserver-7931-database-engine-error.md)   |   16  |   Non  |   Erreur de base de données : l’ID de répertoire FILESTREAM %.*ls pour une partition a été détecté deux fois.   |
-|   [7932](mssqlserver-7932-database-engine-error.md)   |   16  |   Non  |   Erreur de table : l’ID de répertoire FILESTREAM %.*ls correspondant à l’ID d’objet %d, ID d’index %d, ID de partition %I64d, figure dans le groupe de fichiers %d, alors qu’il devrait être dans le groupe de fichiers %d. |
-|   [7933](mssqlserver-7933-database-engine-error.md)   |   16  |   Non  |   Erreur de table : un ID de répertoire FILESTREAM %.*ls existe pour une partition, mais la partition correspondante n’existe pas dans la base de données.    |
-|   [7934](mssqlserver-7934-database-engine-error.md)   |   16  |   Non  |   Erreur de table : l’ID de répertoire FILESTREAM %.*ls correspondant à l’ID d’objet %d, ID d’index %d, ID de partition %I64d, est introuvable. |
-|   [7935](mssqlserver-7935-database-engine-error.md)   |   16  |   Non  |   Erreur de table : un ID de répertoire FILESTREAM %.*ls existe pour une colonne de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, mais cette colonne n’existe pas dans la partition. |
-|   [7936](mssqlserver-7936-database-engine-error.md)   |   16  |   Non  |   Erreur de table : un ID de répertoire FILESTREAM %.*ls existe pour l’ID de colonne %d de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, mais cette colonne n’est pas une colonne FILESTREAM.    |
-|   [7937](mssqlserver-7937-database-engine-error.md)   |   16  |   Non  |   Erreur de table : l’ID de répertoire FILESTREAM %.*ls correspondant à l’ID de colonne %d de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, est introuvable. |
+|   [7932](mssqlserver-7932-database-engine-error.md)   |   16  |   Non  |   Erreur de table, l’ID de répertoire FILESTREAM %.*ls correspondant à l’ID d’objet %d, ID d’index %d, ID de partition %I64d, figure dans le groupe de fichiers %d, alors qu’il devrait être dans le groupe de fichiers %d. |
+|   [7933](mssqlserver-7933-database-engine-error.md)   |   16  |   Non  |   Erreur de table, un ID de répertoire FILESTREAM %.*ls existe pour une partition, mais la partition correspondante n’existe pas dans la base de données.    |
+|   [7934](mssqlserver-7934-database-engine-error.md)   |   16  |   Non  |   Erreur de table, l’ID de répertoire FILESTREAM %.*ls correspondant à l’ID d’objet %d, ID d’index %d, ID de partition %I64d, est introuvable. |
+|   [7935](mssqlserver-7935-database-engine-error.md)   |   16  |   Non  |   Erreur de table, un ID de répertoire FILESTREAM %.*ls existe pour une colonne de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, mais cette colonne n’existe pas dans la partition. |
+|   [7936](mssqlserver-7936-database-engine-error.md)   |   16  |   Non  |   Erreur de table, un ID de répertoire FILESTREAM %.*ls existe pour l’ID de colonne %d de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, mais cette colonne n’est pas une colonne FILESTREAM.    |
+|   [7937](mssqlserver-7937-database-engine-error.md)   |   16  |   Non  |   Erreur de table, l’ID de répertoire FILESTREAM %.*ls correspondant à l’ID de colonne %d de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, est introuvable. |
 |   7938    |   16  |   Non  |   Erreur de table : ID d'objet %d, ID d'index %d, ID de partition %I64d, le nom de fichier "%.*ls" a été détecté deux fois dans le répertoire de colonne %d (pour l'ID de colonne %d).    |
 |   7939    |   16  |   Non  |   Impossible de détacher la base de données '%.*ls' parce qu'elle n'existe pas.   |
 |   7940    |   16  |   Non  |   Impossible de détacher les bases de données système master, model, msdb et tempdb.    |
@@ -3572,7 +3572,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7962    |   16  |   Non  |   BATCHID %d spécifié non valide.   |
 |   7963    |   16  |   Non  |   Erreur de base de données : le fichier "%.*ls" n’est pas un fichier FILESTREAM LOG valide.    |
 |   7964    |   10  |   Non  |   Réparation : fichier FILESTREAM "%.*ls" supprimé pour l’ID de colonne %d, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.* ls), sur la page %S_PGID, emplacement %d. |
-|   7965    |   16  |   Non  |   Erreur de table : Impossible de vérifier l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) en raison d’une ou plusieurs pages (IAM) d’allocation non valides.   |
+|   7965    |   16  |   Non  |   Erreur de table, Impossible de vérifier l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) en raison d’une ou plusieurs pages (IAM) d’allocation non valides.   |
 |   7966    |   10  |   Non  |   Avertissement : l’option NO_INDEX de %ls est utilisée. Les vérifications des index non-système seront ignorées.   |
 |   7968    |   10  |   Non  |   Informations de transaction pour la base de données '%.*ls'.   |
 |   7969    |   16  |   Non  |   Aucune transaction ouverte active.    |
@@ -3603,7 +3603,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-8000-to-8999"></a>Erreurs 8000 à 8999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   Non  |   Le flux du protocole d'appel de procédure distante du TDS (Tabular Data Stream) entrant est incorrect. Les méta-informations pour le paramètre Sql Variant ne sont pas valides. |
 |   8002    |   16  |   Non  |   Le flux du protocole d'appel de procédure distante du TDS (Tabular Data Stream) entrant est incorrect. Paramètre %d ("%.*ls") : la base de données ou le schéma spécifié pour le type de données 0x%02X (XML) n’est pas valide.    |
@@ -3715,7 +3715,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8149    |   16  |   Non  |   Les objets OLE Automation ne sont pas pris en charge en mode fibre. |
 |   8150    |   16  |   Non  |   Plusieurs contraintes NULL ont été spécifiées pour la colonne '%.*ls', table '%.* ls'. |
 |   8151    |   16  |   Non  |   Les contraintes PRIMARY KEY et UNIQUE ont été définies pour la colonne '%.*ls', table '%.* ls'. Une seule contrainte est autorisée.  |
-|   8152    |   16  |   Non  |   Les données de chaîne ou binaires seront tronquées.   |
+|   8152    |   16  |   Non  |   Les données binary ou String seront tronquées.   |
 |   8153    |   10  |   Non  |   Avertissement : la valeur NULL est éliminée par un agrégat ou par une autre opération SET.   |
 |   8154    |   15  |   Non  |   La table  '%.*ls' est ambiguë. |
 |   8155    |   15  |   Non  |   Aucun nom de colonne n'a été spécifié pour la colonne %d de '%.*ls'.  |
@@ -3752,7 +3752,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8189    |   16  |   Non  |   Vous ne disposez pas de l'autorisation nécessaire pour exécuter '%ls'.    |
 |   8190    |   16  |   Non  |   Impossible de compiler la procédure de filtre de réplication sans définir la table filtrée.  |
 |   8191    |   16  |   Non  |   Les procédures de filtre de réplication ne peuvent contenir que les instructions SELECT, GOTO, IF, WHILE, RETURN et DECLARE. |
-|   8192    |   16  |   Non  |   Les procédures de filtre de réplication ne peuvent pas contenir de paramètres.   |
+|   8 192    |   16  |   Non  |   Les procédures de filtre de réplication ne peuvent pas contenir de paramètres.   |
 |   8193    |   16  |   Non  |   Impossible d'exécuter la procédure marquée FOR REPLICATION.  |
 |   8195    |   16  |   Non  |   Impossible de créer "%.*ls" sur "%.* ls". Les déclencheurs d'insertion, de mise à jour et de suppression ne peuvent être créés que dans les tables et vues utilisateur. |
 |   8196    |   16  |   Non  |   Colonne dupliquée spécifiée comme ROWGUIDCOL.   |
@@ -4007,7 +4007,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8722    |   15  |   Non  |   Impossible d'exécuter la requête. La sémantique qui affecte l'indicateur '%.*ls' s'affiche dans la clause '%.* ls' de l'objet '%.*ls', mais pas dans la clause '%.* ls' correspondante. Modifiez la clause OPTION (TABLE HINTS...) afin que la sémantique qui affecte les indicateurs corresponde à la clause WITH. |
 |   8723    |   15  |   Non  |   Impossible d'exécuter la requête. L'objet '%.*ls' est spécifié dans la clause TABLE HINT, mais n'est pas utilisé dans la requête ou ne correspond pas à l'alias spécifié dans la requête. Les références de tables de la clause TABLE HINT doivent correspondre à la clause WITH.  |
 |   8724    |   15  |   Non  |   Impossible d'exécuter la requête. La fonction table ou OPENROWSET '%.*ls' ne peut pas être spécifiée dans la clause TABLE HINT. |
-|   8901    |   16  |   Non  |   Erreur de table : l’ID d’objet %d contient des métadonnées incohérentes. Cette erreur ne peut pas être réparée et empêche la poursuite du traitement de cet objet.  |
+|   8901    |   16  |   Non  |   Erreur de table, l’ID d’objet %d contient des métadonnées incohérentes. Cette erreur ne peut pas être réparée et empêche la poursuite du traitement de cet objet.  |
 |   8902    |   17  |   Non  |   Erreur d'allocation de mémoire lors du traitement de DBCC. |
 |   8903    |   16  |   Non  |   L'extension %S_PGID dans l'ID de base de données %d est allouée dans GAM %S_PGID et SGAM %S_PGID. |
 |   8904    |   16  |   Non  |   L'extension %S_PGID dans l'ID de base de données %d est allouée par plusieurs objets d'allocation.   |
@@ -4015,7 +4015,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8906    |   16  |   Non  |   La page %S_PGID dans l'ID de base de données %d est allouée dans SGAM %S_PGID et PFS %S_PGID, mais elle n'est allouée dans aucun IAM. Indicateurs PFS '%hs'. |
 |   8907    |   16  |   Non  |   L'index spatial, l'index XML ou la vue indexée '%.*ls' (ID d'objet %d) contient des lignes qui n'ont pas été créées par la définition de la vue. Cette erreur ne correspond pas nécessairement à un problème d'intégrité des données dans cette base de données. Pour plus d'informations sur la résolution des erreurs DBCC dans les vues indexées, consultez la documentation en ligne de SQL Server.   |
 |   8908    |   16  |   Non  |   L'index spatial, l'index XML ou la vue indexée '%.*ls' (ID d'objet %d) ne contient pas toutes les lignes créées par la définition de la vue. Cette erreur ne correspond pas nécessairement à un problème d'intégrité des données dans cette base de données. Pour plus d'informations sur la résolution des erreurs DBCC dans les index spatiaux, les index XML et les vues indexées, consultez la documentation en ligne de SQL Server. |
-|   8909    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID contient un ID de page incorrect dans son en-tête de page. PageId dans l'en-tête de page = %S_PGID.    |
+|   8909    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID contient un ID de page incorrect dans son en-tête de page. PageId dans l'en-tête de page = %S_PGID.    |
 |   8910    |   16  |   Non  |   La page %S_PGID dans l'ID de base de données %d est allouée à la fois à l'ID d'objet %d, l'ID d'index %d, l'ID de partition %I64d, l'ID d'unité d'allocation %I64d (type %.*ls) et à l'ID d'objet %d, l'ID d'index %d, l'ID de partition %I64d, l'ID d'unité d'allocation %I64d (type %.* ls).   |
 |   8911    |   10  |   Non  |   L'erreur a été résolue.    |
 |   8912    |   10  |   Non  |   %.*ls a corrigé %d erreurs d'allocation et %d erreurs de cohérence dans la base de données '%ls'.   |
@@ -4037,23 +4037,23 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8928    |   16  |   Non  |   ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) : impossible de traiter la page %S_PGID. Pour plus d'informations, examinez les autres erreurs. |
 |   8929    |   16  |   Non  |   ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) : erreurs détectées dans les données hors ligne avec l’ID %I64d possédé par enregistrement %ls identifié par %.* ls |
 |   8930    |   16  |   Non  |   Erreur de base de données : la base de données %d contient des métadonnées incohérentes. Cette erreur ne peut pas être réparée et empêche la poursuite du traitement DBCC. Effectuez la restauration à partir d'une sauvegarde.    |
-|   8931    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Discordance de niveau d’arbre B (B-tree), page %S_PGID. Le niveau %d ne correspond pas au niveau %d du parent %S_PGID. |
+|   8931    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Discordance de niveau d’arbre B (B-tree), page %S_PGID. Le niveau %d ne correspond pas au niveau %d du parent %S_PGID. |
 |   8932    |   16  |   Non  |   L'ID de groupe de fichiers %d est introuvable dans sys.filegroups pour la base de données '%ls'.    |
-|   8933    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La valeur de clé basse sur la page %S_PGID (niveau %d) n'est pas >= à la valeur de clé dans le parent %S_PGID emplacement %d.   |
-|   8934    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La valeur de clé haute sur la page %S_PGID (niveau %d) n'est pas inférieure à la valeur de clé basse dans le parent %S_PGID, emplacement %d de la page suivante %S_PGID. |
-|   8935    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le lien précédent %S_PGID sur la page %S_PGID ne correspond pas à la page précédente %S_PGID attendue par le parent %S_PGID à l'emplacement %d pour cette page.    |
-|   8936    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Non-correspondance de liaisons de chaînes de l'arbre B. %S_PGID->next = %S_PGID, but %S_PGID->prev = %S_PGID.  |
-|   8937    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page d'arbre B %S_PGID comporte deux nœuds parents %S_PGID, emplacement %d et %S_PGID, emplacement %d.   |
-|   8938    |   16  |   Non  |   Erreur de table : page %S_PGID, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Type de page inattendu %d.    |
-|   8939    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Les valeurs sont %ld et %ld.  |
-|   8940    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). L'adresse 0x%x n'est pas alignée. |
-|   8941    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Emplacement %d, le décalage 0x%x n'est pas valide. |
-|   8942    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Emplacement %d, le décalage 0x%x chevauche la ligne précédente.    |
-|   8943    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Emplacement %d, la ligne s'étend dans l'espace libre à 0x%x.    |
-|   8944    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ligne %d. Échec du test (%hs). Les valeurs sont %ld et %ld.  |
-|   8945    |   16  |   Non  |   Erreur de table : ID d’objet %d, l’ID d’index %d sera reconstruit. |
-|   8946    |   16  |   Non  |   Erreur de table : la page d’allocation %S_PGID comporte des valeurs d’en-tête de page %ls non valides. Le type est %d. Contrôlez le type, ainsi que les ID d'unité d'allocation et de page sur la page. |
-|   8947    |   16  |   Non  |   Erreur de table : plusieurs pages IAM pour l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) contiennent des allocations pour le même intervalle. Pages IAM %S_PGID et %S_PGID.   |
+|   8933    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La valeur de clé basse sur la page %S_PGID (niveau %d) n'est pas >= à la valeur de clé dans le parent %S_PGID emplacement %d.   |
+|   8934    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La valeur de clé haute sur la page %S_PGID (niveau %d) n'est pas inférieure à la valeur de clé basse dans le parent %S_PGID, emplacement %d de la page suivante %S_PGID. |
+|   8935    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le lien précédent %S_PGID sur la page %S_PGID ne correspond pas à la page précédente %S_PGID attendue par le parent %S_PGID à l'emplacement %d pour cette page.    |
+|   8936    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Non-correspondance de liaisons de chaînes de l'arbre B. %S_PGID->next = %S_PGID, but %S_PGID->prev = %S_PGID.  |
+|   8937    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page d'arbre B %S_PGID comporte deux nœuds parents %S_PGID, emplacement %d et %S_PGID, emplacement %d.   |
+|   8938    |   16  |   Non  |   Erreur de table, page %S_PGID, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Type de page inattendu %d.    |
+|   8939    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Les valeurs sont %ld et %ld.  |
+|   8940    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). L'adresse 0x%x n'est pas alignée. |
+|   8941    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Emplacement %d, le décalage 0x%x n'est pas valide. |
+|   8942    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Emplacement %d, le décalage 0x%x chevauche la ligne précédente.    |
+|   8943    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ID. Échec du test (%hs). Emplacement %d, la ligne s'étend dans l'espace libre à 0x%x.    |
+|   8944    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls), ID de page %S_PGID, ligne %d. Échec du test (%hs). Les valeurs sont %ld et %ld.  |
+|   8945    |   16  |   Non  |   Erreur de table, ID d’objet %d, l’ID d’index %d sera reconstruit. |
+|   8946    |   16  |   Non  |   Erreur de table, la page d’allocation %S_PGID comporte des valeurs d’en-tête de page %ls non valides. Le type est %d. Contrôlez le type, ainsi que les ID d'unité d'allocation et de page sur la page. |
+|   8947    |   16  |   Non  |   Erreur de table, plusieurs pages IAM pour l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) contiennent des allocations pour le même intervalle. Pages IAM %S_PGID et %S_PGID.   |
 |   8948    |   16  |   Non  |   Erreur de base de données : la page %S_PGID est marquée avec un type erroné dans la page %S_PGID. L'état PFS 0x%x attend 0x%x.  |
 |   8949    |   10  |   Non  |   %.*ls a corrigé %d erreurs d'allocation et %d erreurs de cohérence dans la table '%ls' (ID d'objet %d).   |
 |   8950    |   16  |   Non  |   %.*l a corrigé %d erreurs d'allocation et %d erreurs de cohérence non associées à un objet unique.   |
@@ -4065,13 +4065,13 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8956    |   16  |   Non  |   Ligne de données (%d:%d:%d) avec des valeurs (%ls) pointant vers la ligne de données identifiée par (%ls).    |
 |   8957    |   10  |   Oui |   %lsDBCC %ls (%ls%ls%ls)%ls exécuté par %ls a trouvé %d erreurs et en a résolu %d. Temps écoulé : %d heures %d minutes %d secondes. %.*ls  |
 |   8958    |   10  |   Non  |   %ls est le niveau minimum de réparation pour les erreurs trouvées par DBCC %ls (%ls%ls%ls).   |
-|   8959    |   16  |   Non  |   Erreur de table : la page IAM %S_PGID pour l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) est liée dans la chaîne IAM de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.* ls) par la page %S_PGID.   |
-|   8960    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page %S_PGID, emplacement %d, colonne %d n'est pas une colonne complexe valide.   |
-|   8961    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d ne correspond pas à la référence page %S_PGID, emplacement %d.    |
-|   8962    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d a le type de nœud incorrect %d. |
-|   8963    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d est de type %d. Impossible de le placer sur une page de type %d.  |
-|   8964    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d n'est pas référencé.  |
-|   8965    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d est référencé par la page %S_PGID, emplacement %d, mais n'a pas été détecté lors de l'analyse.   |
+|   8959    |   16  |   Non  |   Erreur de table, la page IAM %S_PGID pour l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) est liée dans la chaîne IAM de l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.* ls) par la page %S_PGID.   |
+|   8960    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page %S_PGID, emplacement %d, colonne %d n'est pas une colonne complexe valide.   |
+|   8961    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d ne correspond pas à la référence page %S_PGID, emplacement %d.    |
+|   8962    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d a le type de nœud incorrect %d. |
+|   8963    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d est de type %d. Impossible de le placer sur une page de type %d.  |
+|   8964    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d n'est pas référencé.  |
+|   8965    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d est référencé par la page %S_PGID, emplacement %d, mais n'a pas été détecté lors de l'analyse.   |
 |   [8966](mssqlserver-8966-database-engine-error.md)   |   22  |   Oui |   Impossible de lire et de verrouiller la page %S_PGID avec le type de verrou %ls. Échec de %ls.  |
 |   8967    |   16  |   Non  |   Une erreur interne s'est produite dans DBCC et empêche la poursuite du traitement. Contactez les services clientèle.    |
 |   8968    |   16  |   Non  |   Erreur de table : la page %ls %S_PGID (ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls)) est en dehors des limites de cette base de données.   |
@@ -4080,14 +4080,14 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8971    |   16  |   Non  |   Non-correspondance de ligne transmise : ID d’objet %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) page %S_PGID, emplacement %d pointe vers la page de ligne transmise %S_PGID, emplacement %d ; la ligne transmise pointe vers la page %S_PGID, emplacement %d  |
 |   8972    |   16  |   Non  |   Ligne transmise référencée par plusieurs lignes : ID d'objet %1!s!, ID de partition %2!s!, ID d'unité d'allocation %3!s! ID d'objet %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls), page %S_PGID, emplacement %d pointe de façon incorrecte vers la page de ligne transmise %S_PGID, emplacement %d, qui référence correctement la page %S_PGID, emplacement %d.   |
 |   8973    |   16  |   Non  |   ID d'objet CHECKTABLE %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls) a détecté deux fois la page %S_PGID, emplacement %d.  |
-|   [8974](mssqlserver-8974-database-engine-error.md)   |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d est référencé par la page %S_PGID, emplacement %d et par la page %S_PGID, emplacement %d.    |
+|   [8974](mssqlserver-8974-database-engine-error.md)   |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud de données hors ligne page %S_PGID, emplacement %d, ID de texte %I64d est référencé par la page %S_PGID, emplacement %d et par la page %S_PGID, emplacement %d.    |
 |   8975    |   10  |   Non  |   Échec de la vérification entre ensembles de lignes DBCC pour l'objet '%.*ls' (ID d'objet %d) en raison d'une erreur de requête interne %d, gravité %d, état %d. Pour plus d'informations sur cette erreur, reportez-vous à la documentation en ligne.   |
-|   8976    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page %S_PGID n'a pas été détectée lors de l'analyse alors que sa page parent %S_PGID et les pages précédentes %S_PGID la référencent. Vérifiez les erreurs précédentes.    |
-|   8977    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud parent de la page %S_PGID n'a pas été détecté. |
-|   8978    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Une référence de la page précédente %S_PGID est manquante à la page %S_PGID. Un problème de liaison de chaîne s'est peut-être produit.   |
-|   8979    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Une référence des nœuds parents (inconnu) et précédent (page %S_PGID) est manquante à la page %S_PGID. L'entrée racine est peut-être incorrecte dans le catalogue système.    |
-|   8980    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page de nœud d'index %S_PGID, emplacement %d référence la page enfant %S_PGID et la page enfant précédente %S_PGID, mais elles n'ont pas été détectées.  |
-|   8981    |   16  |   Non  |   Erreur de table : ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le pointeur suivant de %S_PGID référence la page %S_PGID. %S_PGID et son parent n'ont pas été détectés. La liaison de chaîne est peut-être incorrecte.  |
+|   8976    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page %S_PGID n'a pas été détectée lors de l'analyse alors que sa page parent %S_PGID et les pages précédentes %S_PGID la référencent. Vérifiez les erreurs précédentes.    |
+|   8977    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le nœud parent de la page %S_PGID n'a pas été détecté. |
+|   8978    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Une référence de la page précédente %S_PGID est manquante à la page %S_PGID. Un problème de liaison de chaîne s'est peut-être produit.   |
+|   8979    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Une référence des nœuds parents (inconnu) et précédent (page %S_PGID) est manquante à la page %S_PGID. L'entrée racine est peut-être incorrecte dans le catalogue système.    |
+|   8980    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). La page de nœud d'index %S_PGID, emplacement %d référence la page enfant %S_PGID et la page enfant précédente %S_PGID, mais elles n'ont pas été détectées.  |
+|   8981    |   16  |   Non  |   Erreur de table, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls). Le pointeur suivant de %S_PGID référence la page %S_PGID. %S_PGID et son parent n'ont pas été détectés. La liaison de chaîne est peut-être incorrecte.  |
 |   8982    |   16  |   Non  |   Erreur de table, liaison d’objets croisée. La page suivante %S_PGID-> dans l'ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.*ls) référence la page %S_PGID dans l'ID d'objet %d, ID d'index %d, ID de partition %I64d, ID d'unité d'allocation %I64d (type %.* ls) mais ne se trouve pas dans le même index.    |
 |   8983    |   10  |   Non  |   Fichier %d. Extensions %I64d, pages utilisées %I64d, pages réservées %I64d, extensions mixtes %I64d, pages mixtes %I64d. |
 |   8984    |   16  |   Non  |   Erreur de table : ID d'objet %d, ID d'index %d, ID de partition %I64d. Une ligne doit être dans la partition %d mais a été trouvée dans la partition %d. Clés supplémentaires ou non valides pour :    |
@@ -4110,7 +4110,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-9000-to-9999"></a>Erreurs 9000 à 9999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   [9001](mssqlserver-9001-database-engine-error.md)   |   10  |   Oui |   Le journal de la base de données '%.*ls' n'est pas disponible. Consultez le journal des événements pour voir s'il contient des messages d'erreur liés à ce problème. Résolvez toutes les erreurs et redémarrez la base de données. |
 |   [9002](mssqlserver-9002-database-engine-error.md)   |   17  |   Oui |   Le journal des transactions de la base de données '%.*ls' est plein. Pour savoir pourquoi il est impossible de réutiliser de l'espace dans le journal, consultez la colonne log_reuse_wait_desc dans sys.databases.    |
@@ -4278,8 +4278,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9463    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, xml:space contient une valeur non conforme |
 |   9464    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, le préfixe d'espace de noms XML 'xml' peut uniquement être associé à l'URI http://www.w3.org/XML/1998/namespace. Cet URI ne peut pas être utilisé avec d'autres préfixes.   |
 |   9465    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, le préfixe d'espace de noms XML 'xmlns' est réservé pour une utilisation par XML.    |
-|   9466    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms XML (http://www.w3.org/XML/1998/namespace) ) ne doit être assigné qu'au préfixe 'xml'.   |
-|   9467    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms xmlns (http://www.w3.org/2000/xmlns/) ) est réservé et ne doit pas être utilisé.   |
+|   9466    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms XML (https://www.w3.org/XML/1998/namespace) ) ne doit être assigné qu'au préfixe 'xml'.  |
+|   9467    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms xmlns (https://www.w3.org/2000/xmlns/) ) est réservé et ne doit pas être utilisé.  |
 |   9480    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, XML non pris en charge |
 |   9500    |   16  |   Non  |   Le type de données '%.*ls' utilisé dans la méthode VALUE n'est pas valide.  |
 |   9501    |   16  |   Non  |   XQuery : impossible de résoudre sql:variable('%.*ls'). La variable doit être déclarée en tant que variable TSQL scalaire.   |
@@ -4518,15 +4518,15 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9902    |   10  |   Non  |   Le catalogue de texte intégral '%ls' ('%d') de la base de données '%ls' ('%d') manque de ressources système. Toute alimentation en cours sera interrompue jusqu'à ce que davantage de ressources soient disponibles. Code de la raison : %d. Erreur : %ls. Si ce message apparaît souvent, essayez de sérialiser l'indexation de texte intégral pour plusieurs catalogues. |
 |   9903    |   10  |   Non  |   L'analyse de l'état de santé des catalogues de texte intégral a décelé une erreur pour le catalogue de texte intégral '%ls' (%d) de la base de données '%ls' (%d). Code de la raison : %d. Erreur : %ls. Le système va redémarrer tout remplissage en cours à partir du précédent point de contrôle. Si ce message apparaît souvent, consultez la documentation en ligne de SQL Server pour y trouver des conseils de dépannage. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.    |
 |   9904    |   10  |   Non  |   Le catalogue de texte intégral '%ls' (%d) de la base de données '%ls' (%d) va être remonté en vue d'une récupération suite à une erreur. Code de la raison : %d. Erreur : %ls. Si ce message apparaît souvent, consultez la documentation en ligne de SQL Server pour y trouver des conseils de dépannage. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
-|   9905    |   10  |   Non  |   Information : l’indexeur de texte intégral a demandé un changement d’état pour le catalogue '%ls' ('%d') de la base de données '%ls' ('%d'). Nouvel état : %ls, raison : %ls (%ls). |
+|   9905    |   10  |   Non  |   Pour informations : l’indexeur de texte intégral a demandé un changement d’état pour le catalogue '%ls' ('%d') de la base de données '%ls' ('%d'). Nouvel état : %ls, raison : %ls (%ls). |
 |   9906    |   10  |   Non  |   L'analyse de catalogue de texte intégral a signalé le catalogue '%ls' (%d) de la base de données '%ls' (%d) dans l'état %ls. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
 |   9907    |   10  |   Non  |   Erreur : le nombre total d’éléments de l’ID de catalogue de texte intégral '%d' dans l’ID de base de données '%d' excède la limite prise en charge. Consultez la documentation en ligne pour y trouver des conseils de dépannage. |
 |   9908    |   10  |   Non  |   Modification de l'état en %ls pour le catalogue de texte intégral '%ls' (%d) de la base de données '%ls' (%d). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.  |
 |   9909    |   10  |   Non  |   Avertissement : échec du changement d’état en %ls pour le catalogue de texte intégral '%ls' (%d) de la base de données '%ls' (%d). Erreur : %ls.    |
 |   9910    |   10  |   Non  |   Avertissement : une erreur s’est produite pendant l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls', base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : %ls.  |
-|   9911    |   10  |   Non  |   Information : alimentation %ls de texte intégral commencée pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Sous-tâches d'alimentation : %d.    |
+|   9911    |   10  |   Non  |   Pour informations : alimentation %ls de texte intégral commencée pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Sous-tâches d'alimentation : %d.    |
 |   9912    |   10  |   Non  |   Erreur : échec de l’initialisation de l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls', base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : %d.  |
-|   9913    |   10  |   Non  |   Information : reprise du remplissage de texte intégral pour la table ou la vue indexée '%ls' de la base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre précédent de documents traités : %d, erreur rencontrée : %d.   |
+|   9913    |   10  |   Non  |   Pour informations : reprise du remplissage de texte intégral pour la table ou la vue indexée '%ls' de la base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre précédent de documents traités : %d, erreur rencontrée : %d.   |
 |   9914    |   16  |   Non  |   Erreur : échec de la reprise du remplissage de %ls de texte intégral pour la table ou la vue indexée '%ls' dans la base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : 0x%x. Répétez l'opération qui a déclenché la reprise ou supprimez et recréez l'index. |
 |   9915    |   10  |   Non  |   Réinitialisation de l'alimentation %ls de texte intégral pour la table '%ls' (ID de table '%d', ID de base de données '%d') suite à une défaillance temporaire. Nombre de documents traités avant l'erreur : %d, erreurs rencontrées : %d. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.  |
 |   9916    |   10  |   Non  |   Erreur : échec de la réinitialisation de l’alimentation %ls de texte intégral à la suite d’une défaillance temporaire pour la table ou la vue indexée '%ls', base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : %d.  |
@@ -4539,8 +4539,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9923    |   10  |   Non  |   Avertissement : l’alimentation de texte intégral pour la table ou la vue indexée '%ls' a signalé un manque de ressources lors de l’envoi d’un lot de données au service MSFTESQL (ID de table ou de vue indexée '%d', ID de catalogue '%d', ID de base de données '%d'). Erreur : %ls.  |
 |   9924    |   16  |   Non  |   Échec de la reconstruction du catalogue de texte intégral '%ls' : le fichier d’en-tête du catalogue est en lecture seule.   |
 |   9925    |   16  |   Non  |   Échec de la reconstruction du catalogue de texte intégral '%ls' : le catalogue de texte intégral est en lecture seule. |
-|   9926    |   10  |   Non  |   Information : limite d’arrêt de MS Search atteinte. La requête de texte intégral a peut-être retourné moins de lignes qu'elle aurait dû.   |
-|   9927    |   10  |   Non  |   Information : la condition de recherche en texte intégral contenait un ou des mots non significatifs.  |
+|   9926    |   10  |   Non  |   Pour informations : limite d’arrêt de MS Search atteinte. La requête de texte intégral a peut-être retourné moins de lignes qu'elle aurait dû.   |
+|   9927    |   10  |   Non  |   Pour informations : la condition de recherche en texte intégral contenait un ou des mots non significatifs.  |
 |   9928    |   16  |   Non  |   Impossible d'utiliser la colonne calculée '%.*ls' pour la recherche en texte intégral, car il s'agit d'une colonne calculée non déterministe ou d'une colonne calculée non persistante imprécise.   |
 |   9929    |   16  |   Non  |   Impossible d'utiliser la colonne calculée '%.*ls' comme colonne de texte intégral pour une colonne d'image ou varbinary(MAX). Cette colonne doit être déterministe, précise ou persistante et sa taille doit être inférieure ou égale à %d caractères. |
 |   9930    |   10  |   Non  |   Type de document NULL fourni. La ligne n’est pas indexée sur le texte intégral. |
@@ -4549,22 +4549,22 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9933    |   10  |   Non  |   Erreur interne : la ligne ne sera pas indexée en texte intégral. Le gestionnaire de protocole a été appelé hors séquence. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
 |   9934    |   10  |   Non  |   Ligne introuvable. Elle a été supprimée ou mise à jour pendant l'indexation.    |
 |   9935    |   10  |   Non  |   Avertissement : le séparateur de mots, le filtre ou le gestionnaire de protocole qu’utilise le catalogue '%ls' n’existe pas sur cette instance. Utilisez sp_help_fulltext_catalog_components et sp_help_fulltext_system_components pour vérifier les composants non-correspondants. La reconstruction du catalogue est recommandée.   |
-|   9936    |   10  |   Non  |   Information : aucune langue prise en charge en texte intégral n’a été trouvée.  |
+|   9936    |   10  |   Non  |   Pour informations : aucune langue prise en charge en texte intégral n’a été trouvée.  |
 |   9937    |   16  |   Non  |   Trop de colonnes de texte intégral ou la requête de texte intégral est trop complexe pour être exécutée.    |
 |   9938    |   16  |   Non  |   L'utilisateur ou le rôle spécifié '%.*ls' est introuvable. |
 |   9939    |   16  |   Non  |   L'utilisateur ou le rôle actuel '%.*ls' ne dispose pas de l'autorisation nécessaire pour définir le propriétaire.    |
 |   9940    |   10  |   Non  |   Erreur : l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') s’est arrêtée à cause de l’erreur précédente. |
-|   9941    |   10  |   Non  |   Information : l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') est actuellement suspendue par le système parce que la base de données n’est pas disponible. Le système reprendra l'alimentation lorsque la base de données sera à nouveau disponible. |
-|   9942    |   10  |   Non  |   Information : l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') a été annulée par l’utilisateur.    |
-|   9943    |   10  |   Non  |   Information : fin du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents traités : %d. Nombre de documents en échec : %d. Nombre de documents qui seront retentés : %d.   |
-|   9944    |   10  |   Non  |   Information : deuxième tentative d’alimentation %ls de texte intégral terminée pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents retraités : %d. Nombre de documents en échec : %d. |
+|   9941    |   10  |   Non  |   Pour informations : l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') est actuellement suspendue par le système parce que la base de données n’est pas disponible. Le système reprendra l'alimentation lorsque la base de données sera à nouveau disponible. |
+|   9942    |   10  |   Non  |   Pour informations : l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') a été annulée par l’utilisateur.    |
+|   9943    |   10  |   Non  |   Pour informations : fin du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents traités : %d. Nombre de documents en échec : %d. Nombre de documents qui seront retentés : %d.   |
+|   9944    |   10  |   Non  |   Pour informations : deuxième tentative d’alimentation %ls de texte intégral terminée pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents retraités : %d. Nombre de documents en échec : %d. |
 |   9945    |   10  |   Non  |   Erreur : toutes les alimentations de texte intégral en cours pour le catalogue '%ls' ('%d') de la base de données '%ls' ('%d') ont été arrêtées à cause d’une erreur. Erreur : 0x%x.  |
 |   9947    |   10  |   Non  |   Avertissement : l’identité du catalogue de texte intégral dans le répertoire '%ls' ne correspond pas à la base de données '%.*ls'. Impossible d'attacher le catalogue de texte intégral.    |
 |   9948    |   10  |   Non  |   Avertissement : le chemin d’accès du catalogue de texte intégral '%ls' n’est pas valide. Il dépasse la limite de longueur, il s'agit d'un chemin d'accès relatif ou c'est un répertoire caché. Impossible d'attacher le catalogue de texte intégral. |
 |   9949    |   10  |   Non  |   Avertissement : toutes les alimentations de texte intégral en cours pour le catalogue de texte intégral '%ls' ('%d') de la base de données '%ls' ('%d') sont interrompues. Code de la raison : %d. Erreur : %ls. Si ce message apparaît souvent, consultez la documentation en ligne pour plus de détails sur le réglage des performances d'indexation. |
-|   9950    |   10  |   Non  |   Information : l’analyse de l’état de santé des catalogues de texte intégral a signalé une erreur pour le catalogue '%ls' ('%d') de la base de données '%ls' ('%d'). Code de la raison : %d. Erreur : %ls. Le catalogue est endommagé et toutes les alimentations en cours seront arrêtées. Reconstruisez le catalogue pour résoudre le problème et recommencez les alimentations depuis le début.  |
+|   9950    |   10  |   Non  |   Pour informations : l’analyse de l’état de santé des catalogues de texte intégral a signalé une erreur pour le catalogue '%ls' ('%d') de la base de données '%ls' ('%d'). Code de la raison : %d. Erreur : %ls. Le catalogue est endommagé et toutes les alimentations en cours seront arrêtées. Reconstruisez le catalogue pour résoudre le problème et recommencez les alimentations depuis le début.  |
 |   9951    |   10  |   Non  |   Avertissement : impossible de modifier la base de données %.*ls pendant le détachement, car elle est en état de lecture seule, de secours ou de fermeture. Le catalogue de texte intégral n'est pas supprimé et '\@keepfulltextindexfile = false' est ignoré.  |
-|   9952    |   10  |   Non  |   Information : le suivi des modifications automatiques du texte intégral est désactivé pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') à cause d’une erreur d’analyse irrécupérable. |
+|   9952    |   10  |   Non  |   Pour informations : le suivi des modifications automatiques du texte intégral est désactivé pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') à cause d’une erreur d’analyse irrécupérable. |
 |   9953    |   16  |   Non  |   Le chemin d'accès '%.*ls' comporte des attributs non valides. Ce doit être un répertoire. Il ne doit pas être caché, en lecture seule ou sur une unité amovible. |
 |   9954    |   16  |   Non  |   SQL Server n'a pas pu démarrer le processus de démon de filtre de texte intégral (erreur Windows %ls). Échec du démarrage du processus de démon de filtre de texte intégral. La fonctionnalité de recherche en texte intégral ne sera pas disponible. |
 |   [9955](mssqlserver-9955-database-engine-error.md)   |   16  |   Non  |   SQL Server n'a pas pu créer de canal nommé '%ls' pour communiquer avec le démon de filtre de texte intégral (erreur Windows : %d). Il existe déjà un canal nommé pour un processus hôte de démon de filtre, le système manque de ressources ou la recherche de numéro d'identification de sécurité (SID) du groupe de comptes du démon de filtre a échoué. Pour résoudre cette erreur, arrêtez les processus de démon de filtre de texte intégral en cours d'exécution et reconfigurez si nécessaire le compte de service du lanceur de démon de texte intégral.   |
@@ -4582,7 +4582,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9970    |   16  |   Non  |   Impossible de terminer l'opération de texte intégral, car la clé de texte intégral pour la table ou la vue indexée '%.*ls' est hors connexion.   |
 |   9971    |   10  |   Non  |   Avertissement : aucun filtre approprié n’a été trouvé pour les objets incorporés lors de l’alimentation d’index de recherche en texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Certains objets incorporés de cette ligne n'ont pas pu être indexés. |
 |   9972    |   16  |   Non  |   La base de données n'a pas démarré complètement ou son état n'est pas ONLINE. Exécutez de nouveau la commande DDL de texte intégral après que la base de données a démarré et que son état est ONLINE.  |
-|   9973    |   10  |   Non  |   Information : interruption du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents traités : %d. Nombre de documents en échec : %d.    |
+|   9973    |   10  |   Non  |   Pour informations : interruption du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents traités : %d. Nombre de documents en échec : %d.    |
 |   9974    |   10  |   Non  |   Avertissement : seul un remplissage complet peut être interrompu. La commande est ignorée. Les autres types de remplissages peuvent simplement être arrêtés et ils se poursuivront lorsque vous recommencerez le même type d'analyse.    |
 |   9975    |   10  |   Non  |   Avertissement : seule une alimentation complète interrompue peut être reprise. La commande est ignorée.    |
 |   9977    |   10  |   Non  |   Avertissement : la date d’alimentation du catalogue de texte intégral dans le répertoire '%ls' ne correspond pas à la base de données '%.*ls'. Le catalogue de texte intégral est attaché et doit peut-être être rempli à nouveau.    |
@@ -4591,14 +4591,14 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9980    |   16  |   Non  |   Les paramètres de variables ne peuvent pas être passés aux prédicats de texte intégral contains, freetext, ni aux fonctions de texte intégral containstable, freetexttable appliqués à la table distante.   |
 |   9982    |   16  |   Non  |   Impossible d'utiliser la recherche en texte intégral dans une instance utilisateur.   |
 |   9983    |   16  |   Non  |   La valeur '%ls' du composant en texte intégral '%ls' dépasse la longueur autorisée (%d caractères). Veuillez réduire la longueur de la valeur.  |
-|   9984    |   10  |   Non  |   Information : interruption du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d').   |
+|   9984    |   10  |   Non  |   Pour informations : interruption du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d').   |
 |   9998    |   16  |   Non  |   La colonne '%.*ls' ne peut pas être ajoutée à un index de recherche en texte intégral. Les index de recherche en texte intégral sont limités à 1 024 colonnes. Lorsque vous créez un index de recherche en texte intégral, ajoutez moins de colonnes.   |
-|   9999    |   16  |   Non  |   La colonne '%.*ls' de la table '%.* ls' ne peut pas être utilisée pour la recherche en texte intégral, car il s'agit d'un jeu de colonnes éparses.  |
+|   9 999    |   16  |   Non  |   La colonne '%.*ls' de la table '%.* ls' ne peut pas être utilisée pour la recherche en texte intégral, car il s'agit d'un jeu de colonnes éparses.  |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-10000-to-10999"></a>Erreurs 10 000 à 10 999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   Non  |   Erreur : fournisseur inconnu. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   Non  |   Le fournisseur rapporte une défaillance catastrophique inattendue.   |
@@ -4857,7 +4857,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-11000-to-12999"></a>Erreurs 11 000 à 12 999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   11000   |   16  |   Non  |   Code d'état inconnu pour cette colonne.    |
 |   11001   |   16  |   Non  |   Valeur non NULL retournée avec succès.   |
@@ -5064,7 +5064,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-13000-to-13999"></a>Erreurs 13 000 à 13 999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   13001   |   16  |   Non  |   nom de fichier   |
 |   13002   |   16  |   Non  |   audit   |
@@ -5088,23 +5088,23 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13027   |   0   |   Non  |   spécification de conversion   |
 |   13028   |   0   |   Non  |   index   |
 |   13029   |   0   |   Non  |   table   |
-|   13030   |   0   |   Non  |   base de données    |
+|   13030   |   0   |   Non  |   database    |
 |   13031   |   0   |   Non  |   procédure   |
 |   13032   |   0   |   Non  |   déclencheur |
 |   13033   |   0   |   Non  |   vue    |
-|   13034   |   0   |   Non  |   par défaut |
-|   13035   |   0   |   Non  |   règle    |
+|   13034   |   0   |   Non  |   default |
+|   13035   |   0   |   Non  |   rule    |
 |   13036   |   0   |   Non  |   table système    |
 |   13037   |   0   |   Non  |   type inconnu    |
 |   13038   |   0   |   Non  |   option SET  |
-|   13039   |   0   |   Non  |   column  |
-|   13040   |   0   |   Non  |   Type    |
+|   13039   |   0   |   Non  |   colonne  |
+|   13040   |   0   |   Non  |   type    |
 |   13041   |   0   |   Non  |   chaîne de caractères    |
 |   13042   |   0   |   Non  |   entier |
 |   13043   |   0   |   Non  |   identificateur  |
 |   13044   |   0   |   Non  |   nombre  |
 |   13045   |   0   |   Non  |   index |
-|   13047   |   0   |   Non  |   objet  |
+|   13047   |   0   |   Non  |   object  |
 |   13049   |   0   |   Non  |   nom de fonction intégrée  |
 |   13050   |   0   |   Non  |   fonction d'agrégation  |
 |   13051   |   0   |   Non  |   XML INDEX   |
@@ -5130,13 +5130,13 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13087   |   0   |   Non  |   drop    |
 |   13088   |   0   |   Non  |   modifier   |
 |   13089   |   0   |   Non  |   type de message    |
-|   13090   |   0   |   Non  |   contrat    |
+|   13090   |   0   |   Non  |   contract    |
 |   13092   |   0   |   Non  |   service |
 |   13093   |   0   |   Non  |   queue   |
 |   13094   |   0   |   Non  |   fonction table   |
 |   13095   |   0   |   Non  |   notification d'événement  |
 |   13096   |   0   |   Non  |   synonyme |
-|   13097   |   0   |   Non  |   verrou    |
+|   13097   |   0   |   Non  |   lock    |
 |   13098   |   0   |   Non  |   thread  |
 |   13099   |   0   |   Non  |   tampon de communication    |
 |   13100   |   0   |   Non  |   Section critique Common Language Runtime    |
@@ -5155,10 +5155,10 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13113   |   0   |   Non  |   schéma  |
 |   13114   |   0   |   Non  |   utilisateur    |
 |   13115   |   0   |   Non  |   login   |
-|   13116   |   0   |   Non  |   certificate |
+|   13116   |   0   |   Non  |   certificat |
 |   13117   |   0   |   Non  |   rôle    |
 |   13118   |   0   |   Non  |   trouver    |
-|   13119   |   0   |   Non  |   point de terminaison    |
+|   13119   |   0   |   Non  |   endpoint    |
 |   13120   |   0   |   Non  |   sql:variable    |
 |   13121   |   0   |   Non  |   sql:column  |
 |   13122   |   0   |   Non  |   espace de noms XML   |
@@ -5170,7 +5170,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13128   |   16  |   Non  |   descripteur de sécurité |
 |   13129   |   16  |   Non  |   index hypothétique  |
 |   13130   |   16  |   Non  |   index non-cluster  |
-|   13131   |   16  |   Non  |   informations d'identification  |
+|   13131   |   16  |   Non  |   credential  |
 |   13132   |   0   |   Non  |   transférer    |
 |   13133   |   0   |   Non  |   Temps d'attente cumulé (ms) par seconde    |
 |   13134   |   0   |   Non  |   Attentes démarrées par seconde    |
@@ -5184,7 +5184,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13142   |   0   |   Non  |   une instruction INSERT SELECT  |
 |   13143   |   16  |   Non  |   fonction de partition  |
 |   13144   |   16  |   Non  |   schéma de partition    |
-|   13145   |   16  |   Non  |   chiffrement  |
+|   13145   |   16  |   Non  |   le chiffrement  |
 |   13146   |   16  |   Non  |   signature   |
 |   13147   |   16  |   Non  |   password    |
 |   13148   |   16  |   Non  |   renommer  |
@@ -5309,7 +5309,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13276   |   10  |   Non  |   option de protection non valide   |
 |   13277   |   10  |   Non  |   clé de chiffrement non valide  |
 |   13278   |   10  |   Non  |   impossible de déchiffrer la page  |
-|   13279   |   10  |   Non  |   échec du déchiffrement (attendu : 0x%08x; réel : 0x%08x)   |
+|   13279   |   10  |   Non  |   échec du déchiffrement (attendu : 0x%08x; somme de contrôle réelle : 0x%08x)   |
 |   13280   |   10  |   Non  |   impossible de déchiffrer la page en l'absence de clé DEK   |
 |   13281   |   10  |   Non  |   CREATION_DISPOSITION    |
 |   13282   |   10  |   Non  |   PROVIDER_KEY_NAME   |
@@ -5328,7 +5328,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13295   |   10  |   Non  |   longueur de l'empreinte numérique de la clé du fournisseur de chiffrement    |
 |   13296   |   10  |   Non  |   longueur de l'objet blob de la clé du fournisseur de chiffrement  |
 |   13297   |   16  |   Non  |   balise de l'algorithme de chiffrement    |
-|   13298   |   16  |   Non  |   NAME    |
+|   13298   |   16  |   Non  |   name    |
 |   13299   |   16  |   Non  |   thumbprint  |
 |   13301   |   16  |   Non  |   Longueur du vecteur d'initialisation    |
 |   13302   |   16  |   Non  |   longueur en bits  |
@@ -5365,7 +5365,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-14000-to-14999"></a>Erreurs 14 000 à 14 999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   14002   |   16  |   Non  |   Le sous-système 'Sync' avec l'ID de tâche %ld est introuvable.   |
 |   14003   |   16  |   Non  |   Vous devez fournir un nom de publication. |
@@ -5387,7 +5387,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14020   |   16  |   Non  |   Impossible d'obtenir l'ID de la colonne spécifiée. Échec de la réplication du schéma. |
 |   14021   |   16  |   Non  |   La colonne n'a pas été correctement ajoutée à l'article.  |
 |   14022   |   16  |   Non  |   La valeur du paramètre \@property doit être 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option' ou 'destination_owner'.   |
-|   14023   |   16  |   Non  |   Le type doit être '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec' ou '(view|vue indexée|proc|func|agrégat|synonym) schema only'.    |
+|   14023   |   16  |   Non  |   Le type doit être '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec' ou '(view|vue indexée|proc|func|aggregate|synonym) schema only'.    |
 |   14024   |   16  |   Non  |   La valeur de la propriété 'subscriber_provider' ne peut pas être NULL. |
 |   14025   |   10  |   Non  |   Mise à jour de l'article réussie.  |
 |   14026   |   16  |   Non  |   La valeur de la propriété 'subscriber_type' n'est pas un type d'abonné hétérogène pris en charge. La valeur doit être 1 (abonné ODBC) ou 3 (abonné OLEDB).    |
@@ -5781,7 +5781,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14596   |   16  |   Non  |   Le package DTS '%s' existe dans une autre catégorie.    |
 |   14597   |   16  |   Non  |   L'ID du package DTS '%s' existe déjà sous un autre nom.   |
 |   14598   |   16  |   Non  |   Impossible de supprimer les catégories Local, Repository ou LocalDefault DTS.  |
-|   14599   |   10  |   Non  |   Nom    |
+|   14599   |   10  |   Non  |   Name    |
 |   14600   |   16  |   Non  |   Le proxy "%s" n'a pas obtenu l'autorisation d'utiliser le sous-système "%s".   |
 |   14601   |   16  |   Non  |   L'opérateur "%s" n'est pas activé et ne peut donc pas recevoir de notifications.    |
 |   14602   |   16  |   Non  |   Aucune adresse de messagerie n'a été spécifiée pour l'opérateur "%s".    |
@@ -5897,7 +5897,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-15000-to-15999"></a>Erreurs 15 000 à 15 999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   Non  |   L'objet '%ls' n'existe pas ou n'est pas un objet valide pour cette opération.    |
 |   15002   |   16  |   Non  |   La procédure '%s' ne peut pas être exécutée dans une transaction. |
@@ -6410,7 +6410,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-16000-to-17999"></a>Erreurs 16 000 à 17 999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   16901   |   16  |   Non  |   %hs : cette fonction n’est pas encore implémentée. |
 |   16902   |   16  |   Non  |   %ls : la valeur du paramètre %ls n’est pas valide. |
@@ -6665,7 +6665,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-18000-to-18999"></a>Erreurs 18000 à 18999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   18002   |   20  |   Oui |   Une exception s'est produite lors de l'exécution de la procédure stockée étendue '%.*ls' dans la bibliothèque '%.* ls'. SQL Server termine le processus %d. Type d’exception : %ls ; code d’exception : 0x%lx. |
 |   18052   |   16  |   Non  |   Erreur : %d, gravité : %d, état : %d. |
@@ -6886,7 +6886,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-19000-to-20999"></a>Erreurs 19000 à 20999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Oui |   Trace SQL ID %d a été démarrée par la connexion "%s".  |
 |   19031   |   10  |   Oui |   Trace SQL arrêtée. ID de la trace = '%d'. Nom d'utilisateur = '%s'.  |
@@ -7314,7 +7314,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-21000-to-21999"></a>Erreurs 21000 à 21999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   21000   |   16  |   Non  |   Impossible de s'abonner à une publication inactive.    |
 |   21001   |   16  |   Non  |   Impossible d'ajouter un Agent de distribution à l'abonné pour un abonnement envoyé.  |
@@ -8077,7 +8077,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-22000-to-22999"></a>Erreurs 22000 à 22999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   Non  |   La valeur fournie pour l'argument change_columns de la fonction CHANGE_TRACKING_IS_COLUMN_IN_MASK n'est pas valide. La valeur doit être un masque de bits retourné par la fonction CHANGETABLE(CHANGES ...).   |
 |   22102   |   16  |   Non  |   Les arguments fournis ne sont pas valides pour l'option CHANGES de la fonction CHANGETABLE.    |
@@ -8312,7 +8312,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   22981   |   16  |   Non  |   L'objet n'existe pas ou l'accès est refusé.  |
 |   22982   |   16  |   Non  |   Impossible de créer les procédures stockées internes servant à remplir la table de modifications pour l'instance de capture '%s' et la table source '%s.%s'. Reportez-vous aux erreurs précédentes de la session active afin d'en identifier la cause et de corriger les problèmes associés.    |
 |   22983   |   16  |   Non  |   L'index unique '%s' de la table source '%s' est utilisé par la capture de données modifiées. Pour modifier ou supprimer l'index, vous devez d'abord désactiver la capture de données modifiées sur la table. |
-|   22984   |   16  |   Non  |   Une erreur s'est produite lors de l'attente de l'événement du cache de l'historique du lecteur de journal. Cette erreur est signalée par la planification des tâches internes et peut être temporaire. Réessayez l'opération.  |
+|   22984   |   16  |   Non  |   Une erreur s'est produite lors de l'attente de l'événement du cache de l'historique du lecteur de journal. Cette erreur est signalée par la planification des tâches internes et peut être temporaire. Retentez l’opération.  |
 |   22985   |   16  |   Non  |   La capture de données modifiées n'a pas été activée pour la table source '%s.%s'. Spécifiez le nom d'une table activée pour la capture de données modifiées. Pour effectuer un rapport sur les tables activées pour la capture de données modifiées, interrogez la colonne is_tracked_by_cdc de l'affichage catalogue sys.tables. |
 |   22986   |   16  |   Non  |   Impossible d'allouer de la mémoire pour le remplissage de la capture de données modifiées. Vérifiez que SQL Server dispose d'une quantité de mémoire suffisante pour toutes les opérations. Contrôlez les paramètres de mémoire physique et virtuelle du serveur et examinez l'utilisation de la mémoire pour voir si une autre application n'en consomme pas en quantité excessive.   |
 |   22987   |   16  |   Non  |   Le remplissage de la capture de données modifiées n'a pas réussi à écrire les données BLOB d'une ou de plusieurs colonnes d'objets volumineux. Vérifiez que SQL Server dispose d'une quantité de mémoire suffisante pour toutes les opérations. Contrôlez les paramètres de mémoire physique et virtuelle du serveur et examinez l'utilisation de la mémoire pour voir si une autre application n'en consomme pas en quantité excessive.   |
@@ -8332,11 +8332,11 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-23000-to-25999"></a>Erreurs 23000 à 25999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   Non  |   Les autorisations de partage WinFS ont été endommagées {Error: %ld}. Essayez de redéfinir les autorisations de partage. |
 |   23100   |   16  |   Non  |   Paramètre(s) d'entrée non valide(s). |
-|   23101   |   16  |   Non  |   Accès refusé.   |
+|   23101   |   16  |   Non  |   L’accès est refusé.   |
 |   23102   |   16  |   Non  |   L'élément n'existe pas {ItemId: %ls}.  |
 |   23103   |   16  |   Non  |   Le dossier existe déjà {ItemId: %ls}.    |
 |   23104   |   16  |   Non  |   Le dossier n'existe pas {ItemId: %ls}.    |
@@ -8521,7 +8521,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-26000-to-27999"></a>Erreurs 26000 à 27999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Oui |   Le serveur n'a pas réussi à charger le certificat dont il a besoin pour démarrer une connexion SSL. Il a retourné l'erreur suivante : %#x. Vérifiez que les certificats sont valides. |
 |   26011   |   16  |   Oui |   Le serveur n'a pas réussi à démarrer le chiffrement en raison d'un problème avec une bibliothèque de sécurité. Celle-ci manque peut-être. Vérifiez que security.dll existe bien sur le système.    |
@@ -8636,7 +8636,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-28000-to-30999"></a>Erreurs 28000 à 30999
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   28000   |   16  |   Non  |   La clé de session déchiffrée a une taille inattendue.   |
 |   28001   |   16  |   Non  |   Un message endommagé a été reçu. Il contient des indicateurs non valides. Cette erreur s'est produite dans le message avec l'ID de conversation '%.*ls', l'initiateur %d et le numéro de séquence du message %I64d. |
@@ -8762,7 +8762,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   30045   |   17  |   Non  |   Erreur d'index de texte intégral pendant la compression ou la décompression. L'index de texte intégral est peut-être endommagé sur le disque. Exécutez dbcc checkdatabase et réalimentez l'index.   |
 |   30046   |   16  |   Non  |   SQL Server a rencontré l'erreur 0x%x lors de la communication avec le processus hôte de démon de filtre de texte intégral (FDHost). Vérifiez que le processus FDHost est en cours d'exécution. Pour redémarrer le processus FDHost, exécutez la commande sp_fulltext_service 'restart_all_fdhosts' ou redémarrez l'instance SQL Server.   |
 |   30047   |   16  |   Non  |   L'utilisateur n'est pas autorisé à %.*ls la liste de mots vides '%.* ls'.    |
-|   30048   |   10  |   Non  |   Information : la règle du dictionnaire des synonymes '%ls' dupliquée est ignorée lors du chargement du fichier du dictionnaire des synonymes pour LCID %d. Une expression du dictionnaire des synonymes en double a été trouvée dans la section <sub> d'une règle d'extension ou la section <pat> d'une règle de remplacement. Cela génère une ambiguïté et cette expression est par conséquent ignorée.  |
+|   30048   |   10  |   Non  |   Pour informations : la règle du dictionnaire des synonymes '%ls' dupliquée est ignorée lors du chargement du fichier du dictionnaire des synonymes pour LCID %d. Une expression du dictionnaire des synonymes en double a été trouvée dans la section <sub> d'une règle d'extension ou la section <pat> d'une règle de remplacement. Cela génère une ambiguïté et cette expression est par conséquent ignorée.  |
 |   30049   |   17  |   Non  |   Erreur interne du dictionnaire des synonymes de texte intégral (HRESULT = '0x%08x')  |
 |   30050   |   16  |   Non  |   Le fichier de dictionnaire des synonymes pour le LCID '%d' et le dictionnaire des synonymes global n'ont pas pu être chargés. |
 |   30051   |   16  |   Non  |   Les expressions dépassant 512 caractères Unicode ne sont pas autorisées dans un fichier de dictionnaire des synonymes. Expression : '%.*ls'.  |
@@ -8814,7 +8814,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 
 ## <a name="errors-31000-to-41400"></a>Erreurs 31000 à 41400
 
-| Error| Severity | Événement consigné | Description|
+| Error| severity | Événement consigné | Description|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   Non  |   La session '%s' existe déjà. Utilisez un autre nom de session.  |
 |   31002   |   16  |   Non  |   Cette opération ne peut être effectuée que par le propriétaire de la session.   |

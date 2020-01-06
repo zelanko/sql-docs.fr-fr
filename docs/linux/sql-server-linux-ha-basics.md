@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586755"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243586"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes de base de la disponibilité SQL Server pour les déploiements Linux
 
@@ -57,7 +57,7 @@ Cette section traite des tâches qui sont communes à tous les déploiements [!I
 La copie de fichiers d’un serveur à un autre est une tâche que toute personne utilisant [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux doit pouvoir effectuer. Cette tâche est très importante pour les configurations des groupes de disponibilité.
 
 Des choses comme les problèmes d’autorisation peuvent exister sur Linux comme sur des installations basées sur Windows. Toutefois, ceux qui sont familiarisés avec la procédure de copie d’un serveur à l’autre sur Windows n’ont peut-être pas connaissance de la façon de le faire sur Linux. Une méthode courante consiste à utiliser l’utilitaire de ligne de commande `scp`, qui correspond à la copie sécurisée. En arrière-plan, `scp` utilise OpenSSH. SSH est l’acronyme de Secure Shell. Selon la distribution Linux, OpenSSH lui-même n’est peut-être pas installé. Si ce n’est pas le cas, OpenSSH doit d’abord être installé. Pour plus d’informations sur la configuration d’OpenSSH, consultez les informations sous les liens suivants pour chaque distribution :
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentation Firewall :**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installer des packages [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pour la disponibilité
@@ -215,7 +215,7 @@ Pour plus d’informations, consultez :
 -   Documentation Hyper-V - [Utilisation du clustering invité pour la haute disponibilité](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   Livre blanc (écrit pour des déploiements basés sur Windows, mais la plupart des concepts s’appliquent toujours) - [Planification de déploiements SQL Server critiques à haute disponibilité avec VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
-### <a name="networking"></a>Réseau
+### <a name="networking"></a>Mise en réseau
 Contrairement à un WSFC, Pacemaker n’a besoin ni de nom dédié ni d’au moins une adresse IP dédiée pour le cluster Pacemaker proprement dit. Les groupes de disponibilité et les instances de cluster de basculement (FCI) ont besoin d’adresses (consultez la documentation correspondante pour plus d’informations), mais pas de noms, car il n’existe aucune ressource de nom de réseau. SLES autorise la configuration d’une adresse IP à des fins d’administration, mais ce n’est pas obligatoire, comme on peut le voir dans [Créer le cluster Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create).
 
 Comme un WSFC, Pacemaker préfèrerait une mise en réseau redondante, donc des cartes réseau distinctes (cartes réseau ou cartes réseau physiques) avec des adresses IP individuelles. En ce qui concerne la configuration du cluster, chaque adresse IP doit avoir ce que l’on appelle son propre anneau. Toutefois, comme avec les clusters WSFC aujourd’hui, de nombreuses implémentations sont virtualisées ou se trouvent dans le cloud public, où une seule carte réseau virtualisée (carte réseau virtuelle) est présentée au serveur. Si toutes les cartes réseau physiques et virtuelles sont connectées au même commutateur physique ou virtuel, il n’y pas de véritable redondance au niveau de la couche réseau. Par conséquent, la configuration de plusieurs cartes réseau est une sorte d’illusion pour la machine virtuelle. La redondance réseau est généralement intégrée à l’hyperviseur pour les déploiements virtualisés et est vraiment intégrée dans le cloud public.

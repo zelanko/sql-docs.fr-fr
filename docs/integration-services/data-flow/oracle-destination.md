@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a175c38fb591dd5805ea3e8890cf9e60392178ce
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553217"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246939"
 ---
 # <a name="oracle-destination"></a>Destination Oracle
 
@@ -81,16 +81,16 @@ Le tableau suivant décrit les propriétés personnalisées de la destination Or
 
 |Nom de la propriété|Type de données|Description|Mode de chargement|
 |:-|:-|:-|:-|
-|BatchSize|Entier|Taille du lot pour le chargement en bloc. Il s’agit du nombre de lignes chargées dans un même lot.|Utilisée uniquement en mode batch.|
-|DefaultCodePage|Entier|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. <br>**Remarque** : Cette propriété est définie uniquement par l’**Éditeur avancé**.|Utilisée pour les deux modes.|
-|FastLoad|Booléen|Indique si le chargement rapide est utilisé. La valeur par défaut est **false**. Vous pouvez aussi définir cette propriété dans l’[Éditeur de destination Oracle (page Gestionnaire de connexions)](#oracle-destination-editor-connection-manager-page). |Utilisée pour les deux modes.|
-|MaxErrors|Entier|Nombre d’erreurs qui peuvent se produire avant l’arrêt du flux de données. La valeur par défaut est **0**, ce qui signifie qu’il n’y a aucune limite quant au nombre d’erreurs.<br> Si **Rediriger le flux** est sélectionné dans la page **Gestion des erreurs**. Avant que la limite du nombre d’erreurs soit atteinte, toutes les erreurs sont retournées dans la sortie d’erreur. Pour plus d’informations, consultez [Gestion des erreurs](#error-handling).|Utilisée uniquement en mode de chargement rapide.|
-|NoLogging|Booléen|Indique si la journalisation de base de données est désactivée. La valeur par défaut est **false**, ce qui signifie que la journalisation est activée.|Utilisée pour les deux modes.|
-|Parallel|Booléen|Indique si le chargement parallèle est autorisé. **True** indique que d’autres sessions de chargement sont autorisées à s’exécuter sur la même table cible.<br> Pour plus d’informations, consultez [Parallélisme](#parallelism).|Utilisée uniquement en mode de chargement rapide.|
+|BatchSize|Integer|Taille du lot pour le chargement en bloc. Il s’agit du nombre de lignes chargées dans un même lot.|Utilisée uniquement en mode batch.|
+|DefaultCodePage|Integer|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. <br>**Remarque** : Cette propriété est définie uniquement par l’**Éditeur avancé**.|Utilisée pour les deux modes.|
+|FastLoad|Boolean|Indique si le chargement rapide est utilisé. La valeur par défaut est **false**. Vous pouvez aussi définir cette propriété dans l’[Éditeur de destination Oracle (page Gestionnaire de connexions)](#oracle-destination-editor-connection-manager-page). |Utilisée pour les deux modes.|
+|MaxErrors|Integer|Nombre d’erreurs qui peuvent se produire avant l’arrêt du flux de données. La valeur par défaut est **0**, ce qui signifie qu’il n’y a aucune limite quant au nombre d’erreurs.<br> Si **Rediriger le flux** est sélectionné dans la page **Gestion des erreurs**. Avant que la limite du nombre d’erreurs soit atteinte, toutes les erreurs sont retournées dans la sortie d’erreur. Pour plus d’informations, consultez [Gestion des erreurs](#error-handling).|Utilisée uniquement en mode de chargement rapide.|
+|NoLogging|Boolean|Indique si la journalisation de base de données est désactivée. La valeur par défaut est **false**, ce qui signifie que la journalisation est activée.|Utilisée pour les deux modes.|
+|Parallèle|Boolean|Indique si le chargement parallèle est autorisé. **True** indique que d’autres sessions de chargement sont autorisées à s’exécuter sur la même table cible.<br> Pour plus d’informations, consultez [Parallélisme](#parallelism).|Utilisée uniquement en mode de chargement rapide.|
 |TableName|String|Nom de la table contenant les données en cours d’utilisation.|Utilisée pour les deux modes.|
 |TableSubName|String|Sous-nom ou sous-partition. Cette valeur est facultative.<br> **Remarque** : Cette propriété ne peut être définie que dans l’**Éditeur avancé**.|Utilisée uniquement en mode de chargement rapide.|
-|TransactionSize|Entier|Nombre d’insertions pouvant être effectuées dans une même transaction. La valeur par défaut est la valeur **BatchSize**.|Utilisée uniquement en mode batch.|
-|TransferBufferSize|Entier|Taille de la mémoire tampon de transfert. La valeur par défaut est 64 Ko.|Utilisée uniquement en mode de chargement rapide.|
+|TransactionSize|Integer|Nombre d’insertions pouvant être effectuées dans une même transaction. La valeur par défaut est la valeur **BatchSize**.|Utilisée uniquement en mode batch.|
+|TransferBufferSize|Integer|Taille de la mémoire tampon de transfert. La valeur par défaut est 64 Ko.|Utilisée uniquement en mode de chargement rapide.|
 
 ## <a name="configuring-the-oracle-destination"></a>Configuration de la destination Oracle
 
@@ -127,7 +127,7 @@ Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Édit
 
 ### <a name="options"></a>Options
 
-**Gestionnaire de connexions**
+**Connection manager**
 
 Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions Oracle.
 
@@ -141,8 +141,8 @@ Spécifiez la méthode de sélection des données dans la source. Ces fonctions 
 
 |Option|Description|
 |:-|:-|
-|Nom de la table|Configurez la destination Oracle pour fonctionner en mode batch. Options :<br><br> **Nom de la table ou de la vue** : sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br><br> **Taille de la transaction** : entrez le nombre d’insertions qui peuvent se trouver dans une même transaction. La valeur par défaut est la valeur **BatchSize**.<br><br> **Taille du lot** : tapez la taille (nombre de lignes chargées) du lot pour le chargement en masse.
-|Nom de la table – chargement rapide|Configurez la destination Oracle pour fonctionner en mode de chargement rapide (Direct Path). <br><br>Options disponibles :<br><br> **Nom de la table ou de la vue** : sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br><br> **Chargement parallèle** : indique si le chargement parallèle est activé. Pour plus d’informations, consultez [Parallélisme](#parallelism).<br><br> **Aucune journalisation** : cochez cette case pour désactiver la journalisation de base de données. Cette journalisation est utilisée à des fins de récupération, et n’est pas liée au suivi.<br><br> **Nombre maximal d’erreurs** : nombre maximal d’erreurs pouvant se produire avant l’arrêt du flux de données. La valeur par défaut est 0, ce qui signifie qu’il n’y a aucune limite.<br><br> Toutes les erreurs sont retournées dans la sortie d’erreur.<br><br> **Taille de la mémoire tampon de transfert (Ko)**  : entrez la taille de la mémoire tampon de transfert. La taille par défaut est de 64 Ko.|
+|Nom de la table|Configurez la destination Oracle pour fonctionner en mode batch. Options :<br><br> **Nom de la table ou de la vue** : Sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br><br> **Taille de la transaction** : entrez le nombre d’insertions qui peuvent se trouver dans une même transaction. La valeur par défaut est la valeur **BatchSize**.<br><br> **Taille du lot** : tapez la taille (nombre de lignes chargées) du lot pour le chargement en masse.
+|Nom de la table – chargement rapide|Configurez la destination Oracle pour fonctionner en mode de chargement rapide (Direct Path). <br><br>Options disponibles :<br><br> **Nom de la table ou de la vue** : Sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br><br> **Chargement parallèle** : indique si le chargement parallèle est activé. Pour plus d’informations, consultez [Parallélisme](#parallelism).<br><br> **Aucune journalisation** : cochez cette case pour désactiver la journalisation de base de données. Cette journalisation est utilisée à des fins de récupération, et n’est pas liée au suivi.<br><br> **Nombre maximal d’erreurs** : nombre maximal d’erreurs pouvant se produire avant l’arrêt du flux de données. La valeur par défaut est 0, ce qui signifie qu’il n’y a aucune limite.<br><br> Toutes les erreurs sont retournées dans la sortie d’erreur.<br><br> **Taille de la mémoire tampon de transfert (Ko)**  : entrez la taille de la mémoire tampon de transfert. La taille par défaut est de 64 Ko.|
 
 **Afficher les données existantes**
 
@@ -199,7 +199,7 @@ Utilisez la page Sortie d’erreur de la boîte de dialogue Éditeur de destinat
 **Comportement d’erreur**
 
 Sélectionnez la façon dont la source Oracle doit gérer les erreurs dans un flux : ignorer l’échec, rediriger la ligne ou faire échouer le composant.
-**Section connexe** : [Gestion des erreurs dans les données](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Section connexe** : [Gestion des erreurs dans les données](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Troncation**
 

@@ -5,25 +5,25 @@ helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: cc99c51a2f2ad43ca615be0477970a59cfb75065
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727768"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957293"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Cet article explique comment identifier et résoudre les problèmes d’accès à la clé Azure Key Vault ayant configuré une base de données pour utiliser [Transparent Data Encryption (TDE) avec les clés managées par le client dans Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) pour devenir inaccessible.
+Cet article explique comment identifier et résoudre les problèmes d’accès à la clé Azure Key Vault ayant configuré une base de données pour utiliser [Transparent Data Encryption (TDE) avec les clés managées par le client dans Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) pour devenir inaccessible.
 
 ## <a name="introduction"></a>Introduction
 Lorsque TDE est configuré pour utiliser une clé managée par le client dans Azure Key Vault, l’accès en continu à ce protecteur TDE est nécessaire pour que la base de données reste en ligne.  Si le serveur SQL logique perd l’accès au protecteur TDE managé par le client dans Azure Key Vault, une base de données se mettra à rejeter toutes les connexions en affichant le message d’erreur associé, et son état passera à *Inaccessible* dans le portail Azure.
@@ -58,7 +58,7 @@ Dans cette section, nous répertorions les étapes de résolution des problèmes
 
 ### <a name="missing-server-identity"></a>Identité de serveur manquante
 
-**Message d'erreur**
+**Message d’erreur**
 
 _401 AzureKeyVaultNoServerIdentity - L’identité du serveur n’est pas correctement configurée sur le serveur. Contactez le support._
 
@@ -78,12 +78,12 @@ Utilisez la cmdlet ou commande suivante pour configurer une identité Azure AD (
 
 - Azure CLI : [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) avec l’option `--assign_identity`.
 
-Dans le portail Azure, accédez au coffre de clés, puis à **Stratégies d’accès**. Suivez ces étapes : 
+Dans le portail Azure, accédez au coffre de clés, puis à **Stratégies d’accès**. Procédez comme suit : 
 
  1. Utilisez le bouton **Ajouter** pour ajouter l’AppId du serveur créé à l’étape précédente. 
  1. Attribuez les autorisations de clé suivantes : Get, Wrap et Unwrap 
 
-Pour en savoir plus, consultez [Affecter une identité Azure AD à votre serveur](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+Pour en savoir plus, consultez [Affecter une identité Azure AD à votre serveur](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
 > Si l’instance SQL Server logique a été transférée vers un nouvel abonné après la configuration initiale de TDE avec Azure Key Vault, répétez l’étape pour configurer l’identité Azure Active Directory pour créer un nouvel ID d’application. Ensuite, ajoutez l’AppId dans le coffre de clés et attribuez les autorisations appropriées à la clé. 
@@ -91,7 +91,7 @@ Pour en savoir plus, consultez [Affecter une identité Azure AD à votre serveur
 
 ### <a name="missing-key-vault"></a>Coffre de clés manquant
 
-**Message d'erreur**
+**Message d’erreur**
 
 _503 AzureKeyVaultConnectionFailed - Impossible d’effectuer l’opération sur le serveur en raison de l’échec des tentatives de connexion à Azure Key Vault._
 
@@ -143,7 +143,7 @@ Confirmez que le protecteur TDE est présent dans Key Vault :
 
 ### <a name="missing-permissions"></a>Autorisations manquantes
 
-**Message d'erreur**
+**Message d’erreur**
 
 _401 AzureKeyVaultMissingPermissions - le serveur ne dispose pas des autorisations requises pour Azure Key Vault._
 
