@@ -2,22 +2,23 @@
 title: Extension de serveurs SQL Server Central Management
 titleSuffix: Azure Data Studio
 description: Installer et utiliser l’extension de serveurs de gestion centralisée SQL Server (préversion) pour Azure Data Studio
-ms.custom: seodec18
-ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/06/2019
+ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959203"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957023"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Extension de serveurs SQL Server Central Management (préversion)
+
 L’extension de serveurs de gestion centralisée permet aux utilisateurs de stocker une liste d'instances de SQL Server. Cette liste est organisée en un ou plusieurs groupes. Les actions prises en utilisant un groupe de serveurs de gestion centralisée s'appliquent à tous les serveurs du groupe.
 
 Cette expérience est actuellement dans sa préversion initiale. Signalez les problèmes et les demandes de fonctionnalités [ici](https://github.com/microsoft/azuredatastudio/issues).

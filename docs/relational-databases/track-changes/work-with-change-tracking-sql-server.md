@@ -22,12 +22,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2f9ba7d8701c09c50552bdc74504d6673c1df06
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 11cfb403fb6bd038549f2273810bb937e625eaf7
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095399"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564786"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utiliser le suivi des modifications (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74095399"
   
      L’illustration suivante montre comment CHANGETABLE(CHANGES ...) est utilisée pour obtenir des modifications.  
   
-     ![Exemple de résultat de requête du suivi des modifications](../../relational-databases/track-changes/media/queryoutput.gif "Exemple de résultat de requête du suivi des modifications")  
+     ![Exemple de résultat de requête du suivi des modifications](../../relational-databases/track-changes/media/queryoutput.gif "|::ref1::|")  
   
  Fonction CHANGE_TRACKING_CURRENT_VERSION()  
  Permet d'obtenir la version actuelle qui sera utilisée la prochaine fois lorsque l'interrogation change. Cette version représente la version de la dernière transaction validée.  
@@ -183,7 +183,7 @@ SELECT
       END AS CT_ThumbNailPhoto,  
       CHANGE_TRACKING_IS_COLUMN_IN_MASK(  
                      @PhotoColumnId, CT.SYS_CHANGE_COLUMNS) AS  
-                                   CT_ThumbNailPhoto_Changed  
+                                   CT_ThumbNailPhoto_Changed,  
      CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
      CT.SYS_CHANGE_CONTEXT  
 FROM  
@@ -253,7 +253,7 @@ ALTER DATABASE AdventureWorksLT
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
   
- Une transaction d'instantané est utilisée comme suit :  
+ Une transaction d'instantané est utilisée comme suit :  
   
 ```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

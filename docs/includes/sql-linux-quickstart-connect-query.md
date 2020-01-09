@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215635"
----
 ## <a name="connect-locally"></a>Se connecter localement
 
 La procédure suivante utilise **sqlcmd** pour se connecter localement à votre nouvelle instance de SQL Server.
@@ -54,7 +46,7 @@ La procédure suivante crée une base de données nommée `TestDB`.
 > [!TIP]
 > Pour en savoir plus sur l’écriture de requêtes et d’instructions Transact-SQL, consultez [Didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-### <a name="insert-data"></a>Insérer des données
+### <a name="insert-data"></a>Insertion des données
 
 Créez ensuite une table, `Inventory`, et insérez deux nouvelles lignes.
 
@@ -130,8 +122,8 @@ Si vous avez un ordinateur Windows qui peut se connecter à l’ordinateur Linux
 Pour d’autres outils qui s’exécutent sur Windows, mais se connectent à SQL Server sur Linux, consultez :
 
 - [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
-- [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
-- [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
+- [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
+- [Outils SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
 ## <a name="other-deployment-scenarios"></a>Autres scénarios de déploiement
 
@@ -139,7 +131,7 @@ Pour connaître les autres scénarios d’installation, consultez les ressources
 
 |||
 |---|---|
-| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Apprenez à mettre à niveau une installation existante de SQL Server sur Linux |
+| [Mettre à niveau](../linux/sql-server-linux-setup.md#upgrade) | Apprenez à mettre à niveau une installation existante de SQL Server sur Linux |
 | [Désinstaller](../linux/sql-server-linux-setup.md#uninstall) | Désinstallez SQL Server sous Linux |
 | [Installation sans assistance](../linux/sql-server-linux-setup.md#unattended) | Apprenez à créer un script d’installation sans invites |
 | [Installation hors connexion](../linux/sql-server-linux-setup.md#offline) | Apprenez à télécharger manuellement les packages d’installation hors connexion |
